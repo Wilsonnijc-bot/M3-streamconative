@@ -1,0 +1,424 @@
+{
+  "model": "gemini-3.8-flash",
+  "transport": "GPU-originated direct-IP 302.ai call",
+  "branch_ms": 30285.459972918034,
+  "end_to_end_memory_generation_ms": 52006.61814957857,
+  "vlm_ms": 25485.341668128967,
+  "text_embedding_ms": 4799.145333468914,
+  "graph_update_ms": 0.4628226161003113,
+  "graph_insertion_ms": 0.4134848713874817,
+  "equivalence_refresh_ms": 0.04933774471282959,
+  "text_embedding_backend": {
+    "provider": "OpenRouter",
+    "endpoint": "https://openrouter.ai/api/v1/embeddings",
+    "model": "openai/text-embedding-3-large"
+  },
+  "text_embedding_detail": {
+    "episodic_ms": 3406.067408621311,
+    "semantic_ms": 1393.0779248476028,
+    "episodic_tokens": 63,
+    "semantic_tokens": 52
+  },
+  "memory_processing": {
+    "episodic": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": 3406.067408621311,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.34414976835250854,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff"
+    },
+    "semantic": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": 1393.0779248476028,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.06933510303497314,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff"
+    }
+  },
+  "tokens": 40868,
+  "usage": {
+    "prompt_tokens": 40095,
+    "completion_tokens": 773,
+    "total_tokens": 40868,
+    "billing_usage": {
+      "source": "gemini_chat",
+      "semantic": "gemini",
+      "gemini_usage_metadata": {
+        "promptTokenCount": 40095,
+        "toolUsePromptTokenCount": 0,
+        "candidatesTokenCount": 171,
+        "totalTokenCount": 40868,
+        "thoughtsTokenCount": 602,
+        "cachedContentTokenCount": 0,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 891
+          },
+          {
+            "modality": "IMAGE",
+            "tokenCount": 39204
+          }
+        ],
+        "toolUsePromptTokensDetails": [],
+        "candidatesTokensDetails": []
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "text_tokens": 891,
+      "audio_tokens": 0,
+      "image_tokens": 39204
+    },
+    "completion_tokens_details": {
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 602
+    },
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  },
+  "raw_memory": "```json\n{\n\t\"video_description\": [\n\t\t\"A person holding a smartphone stands facing several individuals seated around a table.\",\n\t\t\"The phone holder navigates the smartphone screen to access the clock app.\",\n\t\t\"The participants around the table watch and converse among themselves.\",\n\t\t\"The phone holder switches to the stopwatch interface on the phone.\",\n\t\t\"The stopwatch timer on the phone screen is reset and activated.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The person holding the phone is setting up a stopwatch timer to record timestamps for synchronization or task timing.\",\n\t\t\"The group seated around the table is participating in a structured collaborative activity or experiment.\",\n\t\t\"<voice_0> provides instructions to set up the stopwatch and mark timestamps.\"\n\t]\n}\n```",
+  "memory": {
+    "video_description": [
+      "A person holding a smartphone stands facing several individuals seated around a table.",
+      "The phone holder navigates the smartphone screen to access the clock app.",
+      "The participants around the table watch and converse among themselves.",
+      "The phone holder switches to the stopwatch interface on the phone.",
+      "The stopwatch timer on the phone screen is reset and activated."
+    ],
+    "high_level_conclusions": [
+      "The person holding the phone is setting up a stopwatch timer to record timestamps for synchronization or task timing.",
+      "The group seated around the table is participating in a structured collaborative activity or experiment.",
+      "<voice_0> provides instructions to set up the stopwatch and mark timestamps."
+    ]
+  },
+  "graph": {
+    "counts": {
+      "nodes": 10,
+      "edges": 1,
+      "directed_edges_stored": 2,
+      "by_type": {
+        "episodic": 5,
+        "semantic": 3,
+        "voice": 2
+      }
+    },
+    "nodes": [
+      {
+        "id": 0,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好，然后一个秒表。",
+            "MAI: 对，戳一下。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 时间戳。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 2,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person holding a smartphone stands facing several individuals seated around a table."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 3,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The phone holder navigates the smartphone screen to access the clock app."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 4,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The participants around the table watch and converse among themselves."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 5,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The phone holder switches to the stopwatch interface on the phone."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 6,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The stopwatch timer on the phone screen is reset and activated."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 7,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person holding the phone is setting up a stopwatch timer to record timestamps for synchronization or task timing."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 8,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group seated around the table is participating in a structured collaborative activity or experiment."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 9,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> provides instructions to set up the stopwatch and mark timestamps."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 9,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 1,
+    "nodes": [
+      {
+        "id": 0,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好，然后一个秒表。",
+            "MAI: 对，戳一下。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 时间戳。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 2,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person holding a smartphone stands facing several individuals seated around a table."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 3,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The phone holder navigates the smartphone screen to access the clock app."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 4,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The participants around the table watch and converse among themselves."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 5,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The phone holder switches to the stopwatch interface on the phone."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 6,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The stopwatch timer on the phone screen is reset and activated."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 7,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person holding the phone is setting up a stopwatch timer to record timestamps for synchronization or task timing."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 8,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group seated around the table is participating in a structured collaborative activity or experiment."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 9,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> provides instructions to set up the stopwatch and mark timestamps."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 9,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  }
+}

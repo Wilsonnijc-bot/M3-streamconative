@@ -1,0 +1,26 @@
+# Local operating-system metadata
+.DS_Store
+
+# Downloaded Qwen model weights
+qwen35_4b/
+
+# Source video assets
+*.mp4
+
+# Local credentials
+.env
+*.env
+!*.env.example
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Generated experiment artifacts
+*.log
+*.pkl
+

@@ -1,0 +1,69 @@
+{
+  "id": "chatcmpl-202609140141039172290848268d9d6LrQFpwE0",
+  "model": "gemini-3.8-flash",
+  "object": "chat.completion",
+  "created": 1789350078,
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "```json\n{\n  \"video_description\": [\n    \"A person holding a smartphone stands facing several people seated around a table covered with equipment cases.\",\n    \"The person operates the smartphone, navigating from a settings list to the home screen.\",\n    \"The person opens the clock app to access the stopwatch function.\",\n    \"The person starts the stopwatch on the phone while keeping the camera focused on the table.\",\n    \"The individuals seated around the table observe and engage in discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are gathering for a collaborative session or user study involving the equipment laid out on the table.\",\n    \"The camera wearer sets up and starts a stopwatch on the phone to synchronize time or track duration for the upcoming activity.\"\n  ]\n}\n```"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 40094,
+    "completion_tokens": 882,
+    "total_tokens": 40976,
+    "billing_usage": {
+      "source": "gemini_chat",
+      "semantic": "gemini",
+      "gemini_usage_metadata": {
+        "promptTokenCount": 40094,
+        "toolUsePromptTokenCount": 0,
+        "candidatesTokenCount": 172,
+        "totalTokenCount": 40976,
+        "thoughtsTokenCount": 710,
+        "cachedContentTokenCount": 0,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 890
+          },
+          {
+            "modality": "IMAGE",
+            "tokenCount": 39204
+          }
+        ],
+        "toolUsePromptTokensDetails": [],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172
+          }
+        ]
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "text_tokens": 890,
+      "audio_tokens": 0,
+      "image_tokens": 39204
+    },
+    "completion_tokens_details": {
+      "text_tokens": 172,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 710
+    },
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  },
+  "_client_latency_seconds": 19.327,
+  "_http_status": 200
+}

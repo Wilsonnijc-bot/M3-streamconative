@@ -1,0 +1,394 @@
+{
+  "model": "qwen3.5-4b",
+  "transport": "local RTX 4090",
+  "branch_ms": 111448.74510169029,
+  "end_to_end_memory_generation_ms": 133169.5707589388,
+  "vlm_ms": 107613.75585198402,
+  "text_embedding_ms": 3834.5733508467674,
+  "graph_update_ms": 0.17677992582321167,
+  "graph_insertion_ms": 0.13510137796401978,
+  "equivalence_refresh_ms": 0.041678547859191895,
+  "text_embedding_backend": {
+    "provider": "OpenRouter",
+    "endpoint": "https://openrouter.ai/api/v1/embeddings",
+    "model": "openai/text-embedding-3-large"
+  },
+  "text_embedding_detail": {
+    "episodic_ms": 2458.1313878297806,
+    "semantic_ms": 1376.4419630169868,
+    "episodic_tokens": 99,
+    "semantic_tokens": 60
+  },
+  "memory_processing": {
+    "episodic": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": 2458.1313878297806,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.0996217131614685,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff"
+    },
+    "semantic": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": 1376.4419630169868,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.03547966480255127,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff"
+    }
+  },
+  "tokens": 9701,
+  "usage": {
+    "total_tokens": 9701
+  },
+  "raw_memory": "{\n\t\"video_description\": [\n\t\t\"A first-person perspective shows a person walking into a room where a group of people are sitting around a table.\",\n\t\t\"The person holding the camera approaches the table, which is covered with a checkered tablecloth and has various items on it.\",\n\t\t\"The person holds up a smartphone displaying a stopwatch application.\",\n\t\t\"The stopwatch on the phone screen counts down from 30 seconds.\",\n\t\t\"The group of people at the table watches the phone screen as the timer counts down.\",\n\t\t\"The person holding the phone lowers it after the countdown.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be preparing for a timed activity or challenge involving VR headsets.\",\n\t\t\"The person holding the camera is acting as a facilitator or host, managing the timer for the group.\",\n\t\t\"The voice instructions suggest setting up a stopwatch and wearing a device, likely the VR headset seen on the table.\"\n\t]\n}",
+  "memory": {
+    "video_description": [
+      "A first-person perspective shows a person walking into a room where a group of people are sitting around a table.",
+      "The person holding the camera approaches the table, which is covered with a checkered tablecloth and has various items on it.",
+      "The person holds up a smartphone displaying a stopwatch application.",
+      "The stopwatch on the phone screen counts down from 30 seconds.",
+      "The group of people at the table watches the phone screen as the timer counts down.",
+      "The person holding the phone lowers it after the countdown."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be preparing for a timed activity or challenge involving VR headsets.",
+      "The person holding the camera is acting as a facilitator or host, managing the timer for the group.",
+      "The voice instructions suggest setting up a stopwatch and wearing a device, likely the VR headset seen on the table."
+    ]
+  },
+  "graph": {
+    "counts": {
+      "nodes": 11,
+      "edges": 0,
+      "directed_edges_stored": 0,
+      "by_type": {
+        "episodic": 6,
+        "semantic": 3,
+        "voice": 2
+      }
+    },
+    "nodes": [
+      {
+        "id": 0,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好，然后一个秒表。",
+            "MAI: 对，戳一下。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 时间戳。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 2,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A first-person perspective shows a person walking into a room where a group of people are sitting around a table."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 3,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person holding the camera approaches the table, which is covered with a checkered tablecloth and has various items on it."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 4,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person holds up a smartphone displaying a stopwatch application."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 5,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The stopwatch on the phone screen counts down from 30 seconds."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 6,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group of people at the table watches the phone screen as the timer counts down."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 7,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person holding the phone lowers it after the countdown."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 8,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be preparing for a timed activity or challenge involving VR headsets."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 9,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person holding the camera is acting as a facilitator or host, managing the timer for the group."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 10,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The voice instructions suggest setting up a stopwatch and wearing a device, likely the VR headset seen on the table."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 0,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好，然后一个秒表。",
+            "MAI: 对，戳一下。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 时间戳。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 2,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A first-person perspective shows a person walking into a room where a group of people are sitting around a table."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 3,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person holding the camera approaches the table, which is covered with a checkered tablecloth and has various items on it."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 4,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person holds up a smartphone displaying a stopwatch application."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 5,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The stopwatch on the phone screen counts down from 30 seconds."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 6,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group of people at the table watches the phone screen as the timer counts down."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 7,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person holding the phone lowers it after the countdown."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 8,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be preparing for a timed activity or challenge involving VR headsets."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 9,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person holding the camera is acting as a facilitator or host, managing the timer for the group."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 10,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The voice instructions suggest setting up a stopwatch and wearing a device, likely the VR headset seen on the table."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  }
+}
