@@ -1,0 +1,75 @@
+{
+  "clip_id": 16,
+  "source": {
+    "segment_id": 16,
+    "source": "bedroom_01_00070000.mp4",
+    "source_clock": "00070000",
+    "start_seconds_in_source": 20.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 440.0,
+    "absolute_end_seconds": 450.0,
+    "actual_media": "/opt/streammeco/run/m3bench_bedroom_gemini/work/segments/segment_0016.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73328.89534515,
+      "prepared_perf": 73334.71038201,
+      "ordered_start_perf": 73399.262693246,
+      "consumer_wait_ms": 0.006632995791733265,
+      "ready_to_ordered_ms": 64552.31123599515,
+      "preparation_work_ms": 5809.535741995205,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera pans through a residential apartment from the entrance hallway, passing the dining area, into a bedroom.",
+      "Two women are seated on a bed covered with a blue patterned quilt.",
+      "The woman wearing a beige t-shirt sits with a downcast expression, holding tissues in her hands.",
+      "The woman wearing a white long-sleeved top faces her companion and gently holds her arm while offering comfort.",
+      "<voice_21> speaks warmly, reassuring the distressed woman that she is ready to listen."
+    ],
+    "high_level_conclusions": [
+      "<voice_21> belongs to the woman in the white sweater who is consoling the other woman.",
+      "The woman in the beige t-shirt is visibly upset or crying due to an emotional event.",
+      "The two women share a close relationship, such as good friends, roommates, or family members, with one providing compassionate emotional support."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"The camera pans through a residential apartment from the entrance hallway, passing the dining area, into a bedroom.\",\n    \"Two women are seated on a bed covered with a blue patterned quilt.\",\n    \"The woman wearing a beige t-shirt sits with a downcast expression, holding tissues in her hands.\",\n    \"The woman wearing a white long-sleeved top faces her companion and gently holds her arm while offering comfort.\",\n    \"<voice_21> speaks warmly, reassuring the distressed woman that she is ready to listen.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_21> belongs to the woman in the white sweater who is consoling the other woman.\",\n    \"The woman in the beige t-shirt is visibly upset or crying due to an emotional event.\",\n    \"The two women share a close relationship, such as good friends, roommates, or family members, with one providing compassionate emotional support.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 16,
+      "call_id": "668b77f9-4a61-417d-9176-c74b843b665b",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432215.0571218,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 22179,
+      "output_tokens": 736,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 14484.533037990332
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"The camera pans through a residential apartment from the entrance hallway, passing the dining area, into a bedroom.\",\n    \"Two women are seated on a bed covered with a blue patterned quilt.\",\n    \"The woman wearing a beige t-shirt sits with a downcast expression, holding tissues in her hands.\",\n    \"The woman wearing a white long-sleeved top faces her companion and gently holds her arm while offering comfort.\",\n    \"<voice_21> speaks warmly, reassuring the distressed woman that she is ready to listen.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_21> belongs to the woman in the white sweater who is consoling the other woman.\",\n    \"The woman in the beige t-shirt is visibly upset or crying due to an emotional event.\",\n    \"The two women share a close relationship, such as good friends, roommates, or family members, with one providing compassionate emotional support.\"\n  ]\n}\n```",
+      "total_tokens": 22915,
+      "request_end": 1789432229.5418746,
+      "latency_ms": 14484.748843999114,
+      "client_wall_clock_latency_ms": 14484.748843999114,
+      "api_request_wall_clock_latency_ms": 14484.748843999114
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_16_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

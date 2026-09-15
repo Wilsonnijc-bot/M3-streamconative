@@ -1,0 +1,76 @@
+{
+  "clip_id": 6,
+  "source": {
+    "segment_id": 6,
+    "source": "bedroom_01_00023000.mp4",
+    "source_clock": "00023000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 150.0,
+    "absolute_end_seconds": 180.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00023000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 72524.013707157,
+      "prepared_perf": 72529.780473068,
+      "ordered_start_perf": 72577.747435587,
+      "consumer_wait_ms": 0.007965005352161825,
+      "ready_to_ordered_ms": 47966.962518999935,
+      "preparation_work_ms": 5761.438282002928,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person wearing black gloves opens a ketchup packet and squeezes it onto french fries next to McDonald's packaging.",
+      "The camera pans from the kitchen area toward a corridor.",
+      "A woman wearing a white jacket and dark pants walks along the hallway holding a mug and a phone.",
+      "She enters the dining area and places her mug onto a table covered with papers.",
+      "She sits down at the table and looks down at the paperwork while holding her phone.",
+      "She speaks into her phone while examining the cluttered desk and gesturing with her hand."
+    ],
+    "high_level_conclusions": [
+      "The woman is frustrated by the cluttered condition of the desk and suspects someone named Emma caused it.",
+      "She is using her phone to leave a voice message or instruct someone named Robert to clean up the desk.",
+      "The voice <voice_10> belongs to the woman in the white jacket sitting at the table."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A person wearing black gloves opens a ketchup packet and squeezes it onto french fries next to McDonald's packaging.\",\n\t\t\"The camera pans from the kitchen area toward a corridor.\",\n\t\t\"A woman wearing a white jacket and dark pants walks along the hallway holding a mug and a phone.\",\n\t\t\"She enters the dining area and places her mug onto a table covered with papers.\",\n\t\t\"She sits down at the table and looks down at the paperwork while holding her phone.\",\n\t\t\"She speaks into her phone while examining the cluttered desk and gesturing with her hand.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The woman is frustrated by the cluttered condition of the desk and suspects someone named Emma caused it.\",\n\t\t\"She is using her phone to leave a voice message or instruct someone named Robert to clean up the desk.\",\n\t\t\"The voice <voice_10> belongs to the woman in the white jacket sitting at the table.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 6,
+      "call_id": "de04930e-2802-4724-8f48-3ebbc5a711ee",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789431399.7638435,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65760,
+      "output_tokens": 789,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 22928.57877300412
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A person wearing black gloves opens a ketchup packet and squeezes it onto french fries next to McDonald's packaging.\",\n\t\t\"The camera pans from the kitchen area toward a corridor.\",\n\t\t\"A woman wearing a white jacket and dark pants walks along the hallway holding a mug and a phone.\",\n\t\t\"She enters the dining area and places her mug onto a table covered with papers.\",\n\t\t\"She sits down at the table and looks down at the paperwork while holding her phone.\",\n\t\t\"She speaks into her phone while examining the cluttered desk and gesturing with her hand.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The woman is frustrated by the cluttered condition of the desk and suspects someone named Emma caused it.\",\n\t\t\"She is using her phone to leave a voice message or instruct someone named Robert to clean up the desk.\",\n\t\t\"The voice <voice_10> belongs to the woman in the white jacket sitting at the table.\"\n\t]\n}\n```",
+      "total_tokens": 66549,
+      "request_end": 1789431422.6925955,
+      "latency_ms": 22928.747288999148,
+      "client_wall_clock_latency_ms": 22928.747288999148,
+      "api_request_wall_clock_latency_ms": 22928.747288999148
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_6_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

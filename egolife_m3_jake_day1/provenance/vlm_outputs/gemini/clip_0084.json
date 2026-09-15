@@ -1,0 +1,80 @@
+{
+  "clip_id": 84,
+  "source": {
+    "segment_id": 84,
+    "source": "DAY1_A1_JAKE_11493000.mp4",
+    "source_clock": "11493000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42570.0,
+    "absolute_end_seconds": 42600.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0084.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 49494.587201787,
+      "prepared_perf": 49502.098202493,
+      "ordered_start_perf": 49618.120515223,
+      "consumer_wait_ms": 0.013975004549138248,
+      "ready_to_ordered_ms": 116022.31273000507,
+      "preparation_work_ms": 7505.691378995834,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group gathers around a dining table where a woman in white trims and arranges flowers.",
+      "A man in an orange shirt walks from near the whiteboard into an adjacent bedroom.",
+      "The camera wearer follows the man into the bedroom.",
+      "Inside the bedroom, a desk setup features multiple laptops and monitoring equipment.",
+      "The camera wearer examines small cards with red heart illustrations resting on a yellow stool.",
+      "The camera wearer places one of the cards onto the desk near the computer equipment.",
+      "The camera wearer leaves the bedroom and returns to the dining room.",
+      "The camera wearer sits down at the dining table with the group.",
+      "The woman in black seated at the table smiles and speaks while reacting to the ongoing discussion.",
+      "The speaker explains the rules for an activity involving presentations and an auction."
+    ],
+    "high_level_conclusions": [
+      "The group is brainstorming or rehearsing a creative game or workshop format involving storytelling and bidding.",
+      "The adjacent bedroom functions as a control room or technical workstation with multiple live monitors and laptops.",
+      "The participants share a comfortable, humorous, and collaborative working dynamic."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A group gathers around a dining table where a woman in white trims and arranges flowers.\",\n\t\t\"A man in an orange shirt walks from near the whiteboard into an adjacent bedroom.\",\n\t\t\"The camera wearer follows the man into the bedroom.\",\n\t\t\"Inside the bedroom, a desk setup features multiple laptops and monitoring equipment.\",\n\t\t\"The camera wearer examines small cards with red heart illustrations resting on a yellow stool.\",\n\t\t\"The camera wearer places one of the cards onto the desk near the computer equipment.\",\n\t\t\"The camera wearer leaves the bedroom and returns to the dining room.\",\n\t\t\"The camera wearer sits down at the dining table with the group.\",\n\t\t\"The woman in black seated at the table smiles and speaks while reacting to the ongoing discussion.\",\n\t\t\"The speaker explains the rules for an activity involving presentations and an auction.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is brainstorming or rehearsing a creative game or workshop format involving storytelling and bidding.\",\n\t\t\"The adjacent bedroom functions as a control room or technical workstation with multiple live monitors and laptops.\",\n\t\t\"The participants share a comfortable, humorous, and collaborative working dynamic.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 84,
+      "call_id": "39a4b08a-0a4f-4526-94ce-707915a6f184",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789408442.859915,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67209,
+      "output_tokens": 1193,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 247565.3852339965
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group gathers around a dining table where a woman in white trims and arranges flowers.\",\n\t\t\"A man in an orange shirt walks from near the whiteboard into an adjacent bedroom.\",\n\t\t\"The camera wearer follows the man into the bedroom.\",\n\t\t\"Inside the bedroom, a desk setup features multiple laptops and monitoring equipment.\",\n\t\t\"The camera wearer examines small cards with red heart illustrations resting on a yellow stool.\",\n\t\t\"The camera wearer places one of the cards onto the desk near the computer equipment.\",\n\t\t\"The camera wearer leaves the bedroom and returns to the dining room.\",\n\t\t\"The camera wearer sits down at the dining table with the group.\",\n\t\t\"The woman in black seated at the table smiles and speaks while reacting to the ongoing discussion.\",\n\t\t\"The speaker explains the rules for an activity involving presentations and an auction.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is brainstorming or rehearsing a creative game or workshop format involving storytelling and bidding.\",\n\t\t\"The adjacent bedroom functions as a control room or technical workstation with multiple live monitors and laptops.\",\n\t\t\"The participants share a comfortable, humorous, and collaborative working dynamic.\"\n\t]\n}\n```",
+      "total_tokens": 68402,
+      "request_end": 1789408690.425408,
+      "latency_ms": 247565.49037300283,
+      "client_wall_clock_latency_ms": 247565.49037300283,
+      "api_request_wall_clock_latency_ms": 247565.49037300283
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_84_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "clip_id": 12,
+  "source": {
+    "segment_id": 12,
+    "source": "DAY1_A1_JAKE_11150000.mp4",
+    "source_clock": "11150000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40500.0,
+    "absolute_end_seconds": 40530.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0012.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A man in an orange t-shirt examines items placed on the dining table.",
+      "A woman with pink hair walks from near the kitchen counter toward the dining table.",
+      "The man in the orange shirt pulls up a chair and sits at the dining table.",
+      "Multiple individuals sit around the checkered table, inspecting and unpacking equipment from boxes.",
+      "The camera holder moves around the table while holding a selfie stick with a mounted device.",
+      "The group members interact and talk while handling equipment at the table."
+    ],
+    "high_level_conclusions": [
+      "The group is gathering in a shared rental or villa to unpack, assemble, and set up recording or technical equipment.",
+      "<voice_0> belongs to the camera operator holding the recording stick, directing the activity and conversing with the participants.",
+      "<voice_113> is one of the group members seated at the table responding to <voice_0>."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A man in an orange t-shirt examines items placed on the dining table.\",\n  \"A woman with pink hair walks from near the kitchen counter toward the dining table.\",\n  \"The man in the orange shirt pulls up a chair and sits at the dining table.\",\n  \"Multiple individuals sit around the checkered table, inspecting and unpacking equipment from boxes.\",\n  \"The camera holder moves around the table while holding a selfie stick with a mounted device.\",\n  \"The group members interact and talk while handling equipment at the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is gathering in a shared rental or villa to unpack, assemble, and set up recording or technical equipment.\",\n  \"<voice_0> belongs to the camera operator holding the recording stick, directing the activity and conversing with the participants.\",\n  \"<voice_113> is one of the group members seated at the table responding to <voice_0>.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 12,
+      "call_id": "65108896-7ef5-4d9f-b2a0-a05fadd03413",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789403686.6162143,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66938,
+      "output_tokens": 872,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A man in an orange t-shirt examines items placed on the dining table.\",\n  \"A woman with pink hair walks from near the kitchen counter toward the dining table.\",\n  \"The man in the orange shirt pulls up a chair and sits at the dining table.\",\n  \"Multiple individuals sit around the checkered table, inspecting and unpacking equipment from boxes.\",\n  \"The camera holder moves around the table while holding a selfie stick with a mounted device.\",\n  \"The group members interact and talk while handling equipment at the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is gathering in a shared rental or villa to unpack, assemble, and set up recording or technical equipment.\",\n  \"<voice_0> belongs to the camera operator holding the recording stick, directing the activity and conversing with the participants.\",\n  \"<voice_113> is one of the group members seated at the table responding to <voice_0>.\"\n ]\n}\n```",
+      "total_tokens": 67810,
+      "request_end": 1789403736.6533952,
+      "latency_ms": 50037.180010993325,
+      "client_wall_clock_latency_ms": 50037.180010993325,
+      "api_request_wall_clock_latency_ms": 50037.180010993325
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_12_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

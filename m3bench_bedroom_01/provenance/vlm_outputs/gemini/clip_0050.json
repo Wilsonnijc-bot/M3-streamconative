@@ -1,0 +1,74 @@
+{
+  "clip_id": 50,
+  "source": {
+    "segment_id": 50,
+    "source": "bedroom_01_00230000.mp4",
+    "source_clock": "00230000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1380.0,
+    "absolute_end_seconds": 1410.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00230000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 75061.336054237,
+      "prepared_perf": 75066.677938056,
+      "ordered_start_perf": 75186.860244328,
+      "consumer_wait_ms": 0.0070829992182552814,
+      "ready_to_ordered_ms": 120182.30627199227,
+      "preparation_work_ms": 5336.550006002653,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and phones.",
+      "<voice_10>, the woman wearing a white jacket on the left, speaks while gesturing with her right hand and holding a phone in her left hand.",
+      "The woman seated on the right, wearing a light graphic t-shirt, listens attentively while resting her hand near her face.",
+      "Around nineteen seconds, the woman on the right picks up her smartphone and views the screen.",
+      "<voice_10> continues conversing and gesturing across the table until the end of the clip."
+    ],
+    "high_level_conclusions": [
+      "<voice_10> is the woman seated on the left wearing the white fleece jacket.",
+      "The two individuals share a close, informal relationship, such as friends or roommates, engaging in casual conversation over snacks."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and phones.\",\n    \"<voice_10>, the woman wearing a white jacket on the left, speaks while gesturing with her right hand and holding a phone in her left hand.\",\n    \"The woman seated on the right, wearing a light graphic t-shirt, listens attentively while resting her hand near her face.\",\n    \"Around nineteen seconds, the woman on the right picks up her smartphone and views the screen.\",\n    \"<voice_10> continues conversing and gesturing across the table until the end of the clip.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> is the woman seated on the left wearing the white fleece jacket.\",\n    \"The two individuals share a close, informal relationship, such as friends or roommates, engaging in casual conversation over snacks.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 50,
+      "call_id": "207488f4-6233-4ac4-8c50-eb773c3005ce",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789434009.2921052,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65853,
+      "output_tokens": 791,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 64958.27964199998
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and phones.\",\n    \"<voice_10>, the woman wearing a white jacket on the left, speaks while gesturing with her right hand and holding a phone in her left hand.\",\n    \"The woman seated on the right, wearing a light graphic t-shirt, listens attentively while resting her hand near her face.\",\n    \"Around nineteen seconds, the woman on the right picks up her smartphone and views the screen.\",\n    \"<voice_10> continues conversing and gesturing across the table until the end of the clip.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> is the woman seated on the left wearing the white fleece jacket.\",\n    \"The two individuals share a close, informal relationship, such as friends or roommates, engaging in casual conversation over snacks.\"\n  ]\n}\n```",
+      "total_tokens": 66644,
+      "request_end": 1789434074.250483,
+      "latency_ms": 64958.37523200316,
+      "client_wall_clock_latency_ms": 64958.37523200316,
+      "api_request_wall_clock_latency_ms": 64958.37523200316
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_50_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,377 @@
+{
+  "clip_id": 1,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00000000.mp4",
+  "end_to_end_memory_generation_ms": 35161.722534990986,
+  "latency_ms": {
+    "clip_decode": 2689.5441679953365,
+    "deepgram_asr": 472.55168000992853,
+    "mai_transcribe_asr": 986.0157889925176,
+    "asr_total": 987.2451830015052,
+    "audio_segmentation": 5.627049002214335,
+    "speech_embedding_campplus": 1027.0236969954567,
+    "facial_detection_recognition_buffalo_l": 3793.503077002242,
+    "face_clustering": 5.527632994926535,
+    "vlm_memory_generation": 20472.985519008944,
+    "text_embedding": 697.441106007318,
+    "graph_update_total": 0.32996301888488233
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 1,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 703,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789431088.4844277,
+          "status": "success",
+          "total_tokens": 149,
+          "request_end": 1789431089.1815538,
+          "latency_ms": 697.126915998524
+        }
+      ],
+      "total_tokens": 149,
+      "latency_ms": 697.441106007318
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 472.55168000992853,
+        "openrouter-mai-transcribe-2": 986.0157889925176
+      },
+      "asr_total_ms": 987.2451830015052,
+      "audio_segmentation_ms": 5.627049002214335,
+      "speech_embedding_ms": 1027.0236969954567,
+      "graph_update_ms": 0.029615999665111303,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1039.4617440033471
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3793.503077002242,
+      "face_clustering_ms": 5.527632994926535,
+      "graph_update_ms": 0.0021750020096078515,
+      "frame_count": 150,
+      "detected_face_count": 65,
+      "qualified_face_count": 3,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3834.0776080003707
+    },
+    "vlm": {
+      "context_preparation_ms": 5360.485160999815,
+      "vlm_ms": 20472.985519008944,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A young woman wearing a black winter jacket and a black baseball cap walks into a bedroom from the hallway.\",\n  \"She sets her brown backpack down on the bed.\",\n  \"She takes off her heavy black jacket, revealing a white long-sleeved top.\",\n  \"She hangs the black jacket onto the coat rack near the window.\",\n  \"She removes her black baseball cap and hangs it on the coat rack as well.\",\n  \"She turns around, adjusts her hair, and picks up her backpack and phone from the bed.\",\n  \"Slings the backpack over her shoulder, she turns and walks out of the bedroom into the living area.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman is arriving indoors and shedding her outdoor winter layers to get comfortable.\",\n  \"<voice_0> belongs to the young woman as she walks through the apartment.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A young woman wearing a black winter jacket and a black baseball cap walks into a bedroom from the hallway.",
+          "She sets her brown backpack down on the bed.",
+          "She takes off her heavy black jacket, revealing a white long-sleeved top.",
+          "She hangs the black jacket onto the coat rack near the window.",
+          "She removes her black baseball cap and hangs it on the coat rack as well.",
+          "She turns around, adjusts her hair, and picks up her backpack and phone from the bed.",
+          "Slings the backpack over her shoulder, she turns and walks out of the bedroom into the living area."
+        ],
+        "high_level_conclusions": [
+          "The woman is arriving indoors and shedding her outdoor winter layers to get comfortable.",
+          "<voice_0> belongs to the young woman as she walks through the apartment."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 1,
+          "call_id": "0dfd13b8-21e2-4eee-8366-365684b3a990",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789431068.0106323,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65657,
+          "output_tokens": 898,
+          "transport": {
+            "client_previously_used": false,
+            "tcp_connect_count": 1,
+            "tls_handshake_count": 1,
+            "http_wall_ms": 20472.87124399736
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A young woman wearing a black winter jacket and a black baseball cap walks into a bedroom from the hallway.\",\n  \"She sets her brown backpack down on the bed.\",\n  \"She takes off her heavy black jacket, revealing a white long-sleeved top.\",\n  \"She hangs the black jacket onto the coat rack near the window.\",\n  \"She removes her black baseball cap and hangs it on the coat rack as well.\",\n  \"She turns around, adjusts her hair, and picks up her backpack and phone from the bed.\",\n  \"Slings the backpack over her shoulder, she turns and walks out of the bedroom into the living area.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman is arriving indoors and shedding her outdoor winter layers to get comfortable.\",\n  \"<voice_0> belongs to the young woman as she walks through the apartment.\"\n ]\n}\n```",
+          "total_tokens": 66555,
+          "request_end": 1789431088.4836235,
+          "latency_ms": 20472.985519008944,
+          "client_wall_clock_latency_ms": 20472.985519008944,
+          "api_request_wall_clock_latency_ms": 20472.985519008944
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.25189500593114644,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.04627701127901673,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 65,
+    "qualified_faces": 3,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 2,
+    "nodes_after_clip": 10,
+    "edges_after_clip": 1,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 1
+  },
+  "generated_memory": {
+    "video_description": [
+      "A young woman wearing a black winter jacket and a black baseball cap walks into a bedroom from the hallway.",
+      "She sets her brown backpack down on the bed.",
+      "She takes off her heavy black jacket, revealing a white long-sleeved top.",
+      "She hangs the black jacket onto the coat rack near the window.",
+      "She removes her black baseball cap and hangs it on the coat rack as well.",
+      "She turns around, adjusts her hair, and picks up her backpack and phone from the bed.",
+      "Slings the backpack over her shoulder, she turns and walks out of the bedroom into the living area."
+    ],
+    "high_level_conclusions": [
+      "The woman is arriving indoors and shedding her outdoor winter layers to get comfortable.",
+      "<voice_0> belongs to the young woman as she walks through the apartment."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A young woman wearing a black winter jacket and a black baseball cap walks into a bedroom from the hallway.",
+      "She sets her brown backpack down on the bed.",
+      "She takes off her heavy black jacket, revealing a white long-sleeved top.",
+      "She hangs the black jacket onto the coat rack near the window.",
+      "She removes her black baseball cap and hangs it on the coat rack as well.",
+      "She turns around, adjusts her hair, and picks up her backpack and phone from the bed.",
+      "Slings the backpack over her shoulder, she turns and walks out of the bedroom into the living area."
+    ],
+    "high_level_conclusions": [
+      "The woman is arriving indoors and shedding her outdoor winter layers to get comfortable.",
+      "<voice_0> belongs to the young woman as she walks through the apartment."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_1_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 1,
+    "nodes": [
+      {
+        "id": 0,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: Hmm."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young woman wearing a black winter jacket and a black baseball cap walks into a bedroom from the hallway."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "She sets her brown backpack down on the bed."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 3,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "She takes off her heavy black jacket, revealing a white long-sleeved top."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 4,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "She hangs the black jacket onto the coat rack near the window."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 5,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "She removes her black baseball cap and hangs it on the coat rack as well."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 6,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "She turns around, adjusts her hair, and picks up her backpack and phone from the bed."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 7,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Slings the backpack over her shoulder, she turns and walks out of the bedroom into the living area."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 8,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman is arriving indoors and shedding her outdoor winter layers to get comfortable."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 9,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> belongs to the young woman as she walks through the apartment."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 9,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_1_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_1_graph.pkl"
+  },
+  "memory_pickle_bytes": 252285,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 72240.857773872,
+    "prepared_perf": 72244.610844795,
+    "ordered_start_perf": 72244.610988815,
+    "consumer_wait_ms": 3752.4684189993422,
+    "ready_to_ordered_ms": 0.14401999942492694,
+    "preparation_work_ms": 3752.5805899931584,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 31406.273788001272
+}

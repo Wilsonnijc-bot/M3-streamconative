@@ -1,0 +1,58 @@
+{
+  "clip_id": 6,
+  "source": {
+    "segment_id": 6,
+    "source": "DAY1_A1_JAKE_11120000.mp4",
+    "source_clock": "11120000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40320.0,
+    "absolute_end_seconds": 40350.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0006.mp4"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer places an item onto a lower shelf.",
+      "The camera wearer walks toward a dining table where a group of people is seated.",
+      "The people around the checkered table are unpacking electronics and equipment boxes.",
+      "The camera wearer reaches the table and begins unpacking a blue and cardboard box.",
+      "<voice_0> instructs the group on how to organize the unpacked items, noting to keep the outer boxes and discard the inner packaging.",
+      "The camera wearer removes wrapped accessories and instructional papers from the box to sort through them."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating to unbox and prepare technical equipment for a shoot or project.",
+      "<voice_0> acts as a coordinator, managing the organization and cleanup of the unboxing materials."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"The camera wearer places an item onto a lower shelf.\",\n\t\t\"The camera wearer walks toward a dining table where a group of people is seated.\",\n\t\t\"The people around the checkered table are unpacking electronics and equipment boxes.\",\n\t\t\"The camera wearer reaches the table and begins unpacking a blue and cardboard box.\",\n\t\t\"<voice_0> instructs the group on how to organize the unpacked items, noting to keep the outer boxes and discard the inner packaging.\",\n\t\t\"The camera wearer removes wrapped accessories and instructional papers from the box to sort through them.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is collaborating to unbox and prepare technical equipment for a shoot or project.\",\n\t\t\"<voice_0> acts as a coordinator, managing the organization and cleanup of the unboxing materials.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 6,
+      "call_id": "4f18a5e7-1bda-4835-b2da-7ae7b24e7bdf",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789397998.5808785,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66591,
+      "output_tokens": 698,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"The camera wearer places an item onto a lower shelf.\",\n\t\t\"The camera wearer walks toward a dining table where a group of people is seated.\",\n\t\t\"The people around the checkered table are unpacking electronics and equipment boxes.\",\n\t\t\"The camera wearer reaches the table and begins unpacking a blue and cardboard box.\",\n\t\t\"<voice_0> instructs the group on how to organize the unpacked items, noting to keep the outer boxes and discard the inner packaging.\",\n\t\t\"The camera wearer removes wrapped accessories and instructional papers from the box to sort through them.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is collaborating to unbox and prepare technical equipment for a shoot or project.\",\n\t\t\"<voice_0> acts as a coordinator, managing the organization and cleanup of the unboxing materials.\"\n\t]\n}\n```",
+      "total_tokens": 67289,
+      "request_end": 1789398038.2778852,
+      "latency_ms": 39697.00297399686,
+      "client_wall_clock_latency_ms": 39697.00297399686,
+      "api_request_wall_clock_latency_ms": 39697.00297399686
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_6_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

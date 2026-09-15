@@ -1,0 +1,76 @@
+{
+  "clip_id": 76,
+  "source": {
+    "segment_id": 76,
+    "source": "DAY1_A1_JAKE_11453000.mp4",
+    "source_clock": "11453000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42330.0,
+    "absolute_end_seconds": 42360.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0076.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48750.794149026,
+      "prepared_perf": 48758.275521044,
+      "ordered_start_perf": 48886.201838649,
+      "consumer_wait_ms": 0.011160998838022351,
+      "ready_to_ordered_ms": 127926.3176050008,
+      "preparation_work_ms": 7475.962133001303,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits and stands around a dining table decorated with flowers, cards, and a clapperboard.",
+      "The person recording holds a paper card with a pink heart drawing in front of the camera.",
+      "A woman in a black top sitting at the left side of the table examines and points at design materials on the table.",
+      "A man wearing an orange t-shirt walks past behind the woman in black.",
+      "A woman wearing white stands by a whiteboard in the background arranging flowers.",
+      "The woman in black discusses seed paper and design ideas with the other women seated across the table.",
+      "Two women seated opposite each other listen and comment on the design and eco-friendly features."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a creative discussion or production planning session involving eco-friendly materials such as plantable seed paper.",
+      "The participants share a collaborative and casual working relationship, discussing design aesthetics and logo placements for their project."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people sits and stands around a dining table decorated with flowers, cards, and a clapperboard.\",\n  \"The person recording holds a paper card with a pink heart drawing in front of the camera.\",\n  \"A woman in a black top sitting at the left side of the table examines and points at design materials on the table.\",\n  \"A man wearing an orange t-shirt walks past behind the woman in black.\",\n  \"A woman wearing white stands by a whiteboard in the background arranging flowers.\",\n  \"The woman in black discusses seed paper and design ideas with the other women seated across the table.\",\n  \"Two women seated opposite each other listen and comment on the design and eco-friendly features.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in a creative discussion or production planning session involving eco-friendly materials such as plantable seed paper.\",\n  \"The participants share a collaborative and casual working relationship, discussing design aesthetics and logo placements for their project.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 76,
+      "call_id": "a7a0d0e7-10f7-4d77-942f-4849ceabd526",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407712.7825744,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67212,
+      "output_tokens": 937,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 34721.79639899696
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits and stands around a dining table decorated with flowers, cards, and a clapperboard.\",\n  \"The person recording holds a paper card with a pink heart drawing in front of the camera.\",\n  \"A woman in a black top sitting at the left side of the table examines and points at design materials on the table.\",\n  \"A man wearing an orange t-shirt walks past behind the woman in black.\",\n  \"A woman wearing white stands by a whiteboard in the background arranging flowers.\",\n  \"The woman in black discusses seed paper and design ideas with the other women seated across the table.\",\n  \"Two women seated opposite each other listen and comment on the design and eco-friendly features.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in a creative discussion or production planning session involving eco-friendly materials such as plantable seed paper.\",\n  \"The participants share a collaborative and casual working relationship, discussing design aesthetics and logo placements for their project.\"\n ]\n}\n```",
+      "total_tokens": 68149,
+      "request_end": 1789407747.5045984,
+      "latency_ms": 34722.00293700007,
+      "client_wall_clock_latency_ms": 34722.00293700007,
+      "api_request_wall_clock_latency_ms": 34722.00293700007
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_76_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "clip_id": 105,
+  "source": {
+    "segment_id": 105,
+    "source": "DAY1_A1_JAKE_11590000.mp4",
+    "source_clock": "11590000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43140.0,
+    "absolute_end_seconds": 43170.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0105.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51586.306479198,
+      "prepared_perf": 51594.894636943,
+      "ordered_start_perf": 51762.841762701,
+      "consumer_wait_ms": 0.017883001419249922,
+      "ready_to_ordered_ms": 167947.12575800077,
+      "preparation_work_ms": 8582.726987995557,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people gathers around a table covered in a red-and-white checkered tablecloth in a bright room.",
+      "At the far end of the table near a whiteboard, a woman in a white blouse trims and arranges floral stems.",
+      "A woman wearing dark clothing and glasses on her head sits on the left side of the table.",
+      "Two young women sit on the far side of the table, watching the floral arrangement and chatting.",
+      "<voice_430> expresses concern that new arrivals might be too shy to share stories in front of everyone.",
+      "<voice_1206> proposes that guests receive a small gift or reward simply for introducing themselves.",
+      "<voice_441> suggests giving five coins to the first person who introduces themselves and three coins to the second.",
+      "A young man in an orange t-shirt enters the frame from the living area on the left and gestures with his raised hand.",
+      "<voice_0> suggests hiding items or coins around the house for guests to search for.",
+      "<voice_1207> compares the hidden item idea to an Easter egg hunt.",
+      "The young man in the orange t-shirt walks over toward the open kitchen area while <voice_1208> and others agree on hiding coins."
+    ],
+    "high_level_conclusions": [
+      "The group is planning and organizing an upcoming social event, workshop, or party, brainstorming icebreaker games for guests.",
+      "They are mindful of social dynamics, rejecting high-pressure activities like public storytelling in favor of lower-pressure games such as rewarded self-introductions and a coin treasure hunt.",
+      "The venue is functioning as a creative workshop and meeting space, combining floral preparations with event activity coordination."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people gathers around a table covered in a red-and-white checkered tablecloth in a bright room.\",\n  \"At the far end of the table near a whiteboard, a woman in a white blouse trims and arranges floral stems.\",\n  \"A woman wearing dark clothing and glasses on her head sits on the left side of the table.\",\n  \"Two young women sit on the far side of the table, watching the floral arrangement and chatting.\",\n  \"<voice_430> expresses concern that new arrivals might be too shy to share stories in front of everyone.\",\n  \"<voice_1206> proposes that guests receive a small gift or reward simply for introducing themselves.\",\n  \"<voice_441> suggests giving five coins to the first person who introduces themselves and three coins to the second.\",\n  \"A young man in an orange t-shirt enters the frame from the living area on the left and gestures with his raised hand.\",\n  \"<voice_0> suggests hiding items or coins around the house for guests to search for.\",\n  \"<voice_1207> compares the hidden item idea to an Easter egg hunt.\",\n  \"The young man in the orange t-shirt walks over toward the open kitchen area while <voice_1208> and others agree on hiding coins.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is planning and organizing an upcoming social event, workshop, or party, brainstorming icebreaker games for guests.\",\n  \"They are mindful of social dynamics, rejecting high-pressure activities like public storytelling in favor of lower-pressure games such as rewarded self-introductions and a coin treasure hunt.\",\n  \"The venue is functioning as a creative workshop and meeting space, combining floral preparations with event activity coordination.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 105,
+      "call_id": "5323a9cf-6f99-47fc-8613-ec1ffc4e9d97",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410589.2423518,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67839,
+      "output_tokens": 1784,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 51691.1999179938
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people gathers around a table covered in a red-and-white checkered tablecloth in a bright room.\",\n  \"At the far end of the table near a whiteboard, a woman in a white blouse trims and arranges floral stems.\",\n  \"A woman wearing dark clothing and glasses on her head sits on the left side of the table.\",\n  \"Two young women sit on the far side of the table, watching the floral arrangement and chatting.\",\n  \"<voice_430> expresses concern that new arrivals might be too shy to share stories in front of everyone.\",\n  \"<voice_1206> proposes that guests receive a small gift or reward simply for introducing themselves.\",\n  \"<voice_441> suggests giving five coins to the first person who introduces themselves and three coins to the second.\",\n  \"A young man in an orange t-shirt enters the frame from the living area on the left and gestures with his raised hand.\",\n  \"<voice_0> suggests hiding items or coins around the house for guests to search for.\",\n  \"<voice_1207> compares the hidden item idea to an Easter egg hunt.\",\n  \"The young man in the orange t-shirt walks over toward the open kitchen area while <voice_1208> and others agree on hiding coins.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is planning and organizing an upcoming social event, workshop, or party, brainstorming icebreaker games for guests.\",\n  \"They are mindful of social dynamics, rejecting high-pressure activities like public storytelling in favor of lower-pressure games such as rewarded self-introductions and a coin treasure hunt.\",\n  \"The venue is functioning as a creative workshop and meeting space, combining floral preparations with event activity coordination.\"\n ]\n}\n```",
+      "total_tokens": 69623,
+      "request_end": 1789410640.9337025,
+      "latency_ms": 51691.347284002404,
+      "client_wall_clock_latency_ms": 51691.347284002404,
+      "api_request_wall_clock_latency_ms": 51691.347284002404
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_105_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

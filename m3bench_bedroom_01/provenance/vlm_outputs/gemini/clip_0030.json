@@ -1,0 +1,74 @@
+{
+  "clip_id": 30,
+  "source": {
+    "segment_id": 30,
+    "source": "bedroom_01_00133000.mp4",
+    "source_clock": "00133000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 810.0,
+    "absolute_end_seconds": 840.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00133000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 74069.625183301,
+      "prepared_perf": 74073.904668453,
+      "ordered_start_perf": 74155.37033599,
+      "consumer_wait_ms": 0.007943992386572063,
+      "ready_to_ordered_ms": 81465.66753699153,
+      "preparation_work_ms": 4274.126991003868,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person wearing black gloves empties french fries from a red carton onto a decorative blue plate with sandwiches and banana slices.",
+      "The person opens a ketchup packet and squeezes ketchup onto the fries.",
+      "The person uses their hands to pick up the banana slices from the plate.",
+      "The person arranges the banana slices neatly on top of the sandwich bread.",
+      "The camera shifts away from the food plate toward the kitchen sink area."
+    ],
+    "high_level_conclusions": [
+      "The person is plating and assembling a meal consisting of fast food fries, sandwiches, and fresh fruit.",
+      "The use of black disposable gloves indicates food safety or hygiene precautions during preparation."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A person wearing black gloves empties french fries from a red carton onto a decorative blue plate with sandwiches and banana slices.\",\n  \"The person opens a ketchup packet and squeezes ketchup onto the fries.\",\n  \"The person uses their hands to pick up the banana slices from the plate.\",\n  \"The person arranges the banana slices neatly on top of the sandwich bread.\",\n  \"The camera shifts away from the food plate toward the kitchen sink area.\"\n ],\n \"high_level_conclusions\": [\n  \"The person is plating and assembling a meal consisting of fast food fries, sandwiches, and fresh fruit.\",\n  \"The use of black disposable gloves indicates food safety or hygiene precautions during preparation.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 30,
+      "call_id": "b7c7f752-893c-4d7d-81e2-216425b82b45",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432977.6612303,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65617,
+      "output_tokens": 365,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 20924.836805002997
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A person wearing black gloves empties french fries from a red carton onto a decorative blue plate with sandwiches and banana slices.\",\n  \"The person opens a ketchup packet and squeezes ketchup onto the fries.\",\n  \"The person uses their hands to pick up the banana slices from the plate.\",\n  \"The person arranges the banana slices neatly on top of the sandwich bread.\",\n  \"The camera shifts away from the food plate toward the kitchen sink area.\"\n ],\n \"high_level_conclusions\": [\n  \"The person is plating and assembling a meal consisting of fast food fries, sandwiches, and fresh fruit.\",\n  \"The use of black disposable gloves indicates food safety or hygiene precautions during preparation.\"\n ]\n}\n```",
+      "total_tokens": 65982,
+      "request_end": 1789432998.5861943,
+      "latency_ms": 20924.96032798954,
+      "client_wall_clock_latency_ms": 20924.96032798954,
+      "api_request_wall_clock_latency_ms": 20924.96032798954
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_30_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

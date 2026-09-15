@@ -1,0 +1,559 @@
+{
+  "clip_id": 15,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0015.mp4",
+  "end_to_end_memory_generation_ms": 666567.9825729968,
+  "latency_ms": {
+    "clip_decode": 3768.641671995283,
+    "deepgram_asr": 1.8962579997605644,
+    "mai_transcribe_asr": 1.9829709999612533,
+    "asr_total": 2.9536369984271005,
+    "audio_segmentation": 10.429966998344753,
+    "speech_embedding_campplus": 1295.65867799829,
+    "facial_detection_recognition_buffalo_l": 3715.058592999412,
+    "face_clustering": 3.0825400026515126,
+    "vlm_memory_generation": 216022.365978999,
+    "text_embedding": 525.6022370012943,
+    "graph_update_total": 68.28730500274105
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 15,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 15,
+      "input_chars": 1307,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789413468.1238286,
+          "status": "success",
+          "total_tokens": 251,
+          "request_end": 1789413468.6491134,
+          "latency_ms": 525.2856920051272
+        }
+      ],
+      "total_tokens": 251,
+      "latency_ms": 525.6022370012943
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1.8962579997605644,
+        "openrouter-mai-transcribe-2": 1.9829709999612533
+      },
+      "asr_total_ms": 2.9536369984271005,
+      "audio_segmentation_ms": 10.429966998344753,
+      "speech_embedding_ms": 1295.65867799829,
+      "graph_update_ms": 68.13399800012121,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1393.0852140038041
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3715.058592999412,
+      "face_clustering_ms": 3.0825400026515126,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 133,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3797.368303996336
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_165>",
+        "<voice_129>",
+        "<voice_166>",
+        "<voice_167>"
+      ],
+      "context_preparation_ms": 4227.552069001831,
+      "vlm_ms": 216022.365978999,
+      "raw_response": "{\n  \"video_description\": [\n    \"A group of people are seated around a table covered with a checkered cloth, working on assembling electronic equipment.\",\n    \"One person in a peach shirt is seen holding a camera device before moving around the room.\",\n    \"Another participant wearing black sits on the left side of the table, handling small components.\",\n    \"A person with pink hair is visible near the head of the table.\",\n    \"The camera pans across the room revealing a projector screen, a whiteboard, and a kitchen area.\",\n    \"The camera operator walks past tripods and props placed on the floor.\",\n    \"Speaker <voice_129> instructs the group to install parts into a box and removes a specific piece because thick wire is needed.\",\n    \"Speaker <voice_165> asks if a component should be installed.\",\n    \"Speaker <voice_166> questions whether four screws are required for the assembly.\",\n    \"Speaker <voice_129> clarifies that eight screws are needed instead.\",\n    \"Speaker <voice_167> confirms the number of screws needed is eight.\",\n    \"The group continues to discuss and manipulate the electronic parts on the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative technical assembly task involving precise hardware installation.\",\n    \"Discussion points focus on specific technical requirements such as wire types and screw quantities.\",\n    \"No visual face features are provided to confirm the physical identity of the speakers.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are seated around a table covered with a checkered cloth, working on assembling electronic equipment.",
+          "One person in a peach shirt is seen holding a camera device before moving around the room.",
+          "Another participant wearing black sits on the left side of the table, handling small components.",
+          "A person with pink hair is visible near the head of the table.",
+          "The camera pans across the room revealing a projector screen, a whiteboard, and a kitchen area.",
+          "The camera operator walks past tripods and props placed on the floor.",
+          "Speaker <voice_129> instructs the group to install parts into a box and removes a specific piece because thick wire is needed.",
+          "Speaker <voice_165> asks if a component should be installed.",
+          "Speaker <voice_166> questions whether four screws are required for the assembly.",
+          "Speaker <voice_129> clarifies that eight screws are needed instead.",
+          "Speaker <voice_167> confirms the number of screws needed is eight.",
+          "The group continues to discuss and manipulate the electronic parts on the table."
+        ],
+        "high_level_conclusions": [
+          "The participants are engaged in a collaborative technical assembly task involving precise hardware installation.",
+          "Discussion points focus on specific technical requirements such as wire types and screw quantities.",
+          "No visual face features are provided to confirm the physical identity of the speakers."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 15,
+          "call_id": "c9c3ec0b-6e10-4d79-aa61-d05b31400de0",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789413252.0998068,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"A group of people are seated around a table covered with a checkered cloth, working on assembling electronic equipment.\",\n    \"One person in a peach shirt is seen holding a camera device before moving around the room.\",\n    \"Another participant wearing black sits on the left side of the table, handling small components.\",\n    \"A person with pink hair is visible near the head of the table.\",\n    \"The camera pans across the room revealing a projector screen, a whiteboard, and a kitchen area.\",\n    \"The camera operator walks past tripods and props placed on the floor.\",\n    \"Speaker <voice_129> instructs the group to install parts into a box and removes a specific piece because thick wire is needed.\",\n    \"Speaker <voice_165> asks if a component should be installed.\",\n    \"Speaker <voice_166> questions whether four screws are required for the assembly.\",\n    \"Speaker <voice_129> clarifies that eight screws are needed instead.\",\n    \"Speaker <voice_167> confirms the number of screws needed is eight.\",\n    \"The group continues to discuss and manipulate the electronic parts on the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative technical assembly task involving precise hardware installation.\",\n    \"Discussion points focus on specific technical requirements such as wire types and screw quantities.\",\n    \"No visual face features are provided to confirm the physical identity of the speakers.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames showing a group of people sitting around a table covered with a checkered cloth. They seem to be assembling something or working on electronics. The camera moves around, sometimes focusing on the table, sometimes on specific people, and sometimes showing the room layout (projector screen, whiteboard, kitchen area).\n    *   People visible: At least 4-5 individuals. One person in black on the left, one in white/light top next to them, one with pink hair/headscarf, one with dark hair, and one in a peach/pink shirt who seems to be holding a camera or device initially.\n    *   Actions: Sitting, talking, handling objects (boxes, phones, tools), moving around the room.\n    *   Camera movement: The camera is handheld, moving around the table and the room. It captures different angles.\n*   **Voice Features:**\n    *   `<voice_165>`: \"MAI: 然后就把它装进去嘛？\" (Then put it inside?) - Time: 00:01-00:04.\n    *   `<voice_129>`: \"MAI: 嗯，对，然后要装到这个盒子里。就是你最好是把这个地方取下来，这个片就不需要了，因为这里好像也要用粗线。八个，对的。就是你，你把那个条抽出来。然后你看到那个孔吗？长条形那个，它那里面\" (Mm, yes, then you need to put it into this box. You'd better take off this part, this piece isn't needed because here it seems we also need thick wire. Eight, right. It's you, pull out that strip. Then you see that hole? Long strip shape, inside there...) - Time: 00:03-00:14, 00:20-00:26, 00:26-00:30.\n    *   `<voice_166>`: \"MAI: 是不是要拧四个螺丝？\" (Are we supposed to screw four screws?) - Time: 00:16-00:18.\n    *   `<voice_167>`: \"MAI: 嗯，八个。\" (Mm, eight.) - Time: 00:18-00:20.\n    *   Note: All voice features have the label \"MAI\". This suggests the speaker is named MAI. I need to use the voice ID `<voice_129>`, `<voice_165>`, etc., as the speaker identifier in the memory construction if I were doing that, but the prompt asks for Video Description and High-Level Conclusions. Wait, looking closely at the prompt instructions: \"Preserve speaker identity when constructing memory...\". However, the output format requested is `video_description` and `high_level_conclusions`. The instruction says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I am following the standard task instructions for this specific output format, but the system prompt adds constraints about preserving speaker identity.\n    *   Actually, re-reading the system prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". And \"Preserve speaker identity when constructing memory from the supplied character features.\" This usually applies to a memory generation task. But the output format is fixed as JSON with `video_description` and `high_level_conclusions`.\n    *   Let's look at the constraint: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This contradicts the output format which doesn't explicitly ask for a \"memory\" section, but rather \"video_description\" and \"high_level_conclusions\".\n    *   Wait, the system prompt says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This suggests I should follow the standard task instructions provided in the prompt text (\"You will be given a video...\").\n    *   However, the system prompt *also* says \"Preserve speaker identity when constructing memory...\". This looks like a conflict or a specific override for how I handle the voice data within the context of the output.\n    *   Let's look at the \"High-Level Conclusions\" section requirement: \"Use logical inference to identify character intentions, relationships, and identities. If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\n    *   In the provided input, there are NO face features listed! Only \"Face features:\" header followed by \"Voice features:\". This means I cannot make equivalences between faces and voices because no face IDs are provided.\n    *   So, I must describe the video events and conclude based on the audio.\n    *   The voice features are labeled \"MAI\". I should probably mention MAI in the descriptions/conclusions if possible, but the strict instruction says \"Do not replace the ID with 'a speaker'...\". Since these are voice IDs (`<voice_129>`, etc.), I should reference them or the name associated if clear. The ASR says \"MAI:\". So the speaker is likely MAI.\n    *   Wait, the instruction says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" and \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person...\".\n    *   Okay, so I can't definitively say *who* is speaking visually. I just know someone is speaking. The ASR identifies them as \"MAI\". I will treat \"MAI\" as the speaker name derived from the ASR prefix, but strictly speaking, I should probably stick to the IDs if I'm being very literal, but usually, names are acceptable if extracted from ASR. However, the instruction says \"Preserve speaker identity... Voice features map exact IDs... These IDs already identify the speakers\". So I should use the IDs like `<voice_129>` in the text if I want to be safe, or acknowledge the name \"MAI\" found in the transcript. Given the instruction \"include at least one episodic memory that quotes... using the exact ID as the speaker\", this sounds like a memory task. But the output format is Video Description + High Level Conclusions.\n    *   Let's interpret \"Video Description\" as covering the events. I will incorporate the actions described in the voice where relevant to the visual actions (handling boxes, wires).\n    *   \"High-Level Conclusions\": I can infer they are assembling something together. MAI gives instructions.\n\n**2. Drafting Video Description:**\n*   Group of people sitting around a table with a checkered tablecloth.\n*   They are handling electronic components, boxes, and tools.\n*   One person (in peach shirt) holds a camera/device initially, then puts it down/moves away.\n*   Another person in black sits on the left.\n*   Someone with pink hair/headscarf is present.\n*   The camera pans around the room, showing a projector screen, whiteboard, and kitchen area.\n*   The camera operator walks around the room, inspecting the setup (tripods, props).\n*   The group continues to work on the assembly task.\n\n**3. Drafting High-Level Conclusions:**\n*   The group appears to be collaborating on an assembly project involving electronics.\n*   Instructions are being given regarding wiring and screwing parts together.\n*   Specific attention is paid to removing certain parts and using specific wires.\n*   Since no face IDs are provided, I cannot confirm visual identity matches. I will note the collaborative nature.\n\n**Refining based on System Prompt Constraints:**\n*   \"Preserve speaker identity when constructing memory...\". This instruction seems to apply to a different task type (Memory Construction). However, since I am forced to output JSON with `video_description` and `high_level_conclusions`, I need to adapt.\n*   The prompt says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This refers to the prompt text *below* the system prompt.\n*   The system prompt overrides the general task instructions regarding speaker identity preservation. It says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This is confusing because the output schema doesn't have a \"memory\" field.\n*   Hypothesis: The system prompt is a generic template for a multi-modal task, but the specific user request defines the output format. I must follow the user's output format (JSON with video_description and high_level_conclusions) while adhering to the system prompt's constraints about speaker IDs where possible within those fields.\n*   Actually, looking closer at the system prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". This matches the user prompt exactly.\n*   The system prompt *also* says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This is a direct contradiction to the output schema provided in the user prompt (which asks for Video Description and High-Level Conclusions, not Memory).\n*   Usually, system prompts define the behavior. If the system prompt demands memory inclusion but the user prompt defines a JSON schema without it, I should prioritize the JSON schema structure but perhaps embed the memory-like information into the descriptions or conclusions if possible, OR assume the \"Video Description\" acts as the narrative container.\n*   However, the instruction \"Preserve speaker identity... Voice features map exact IDs... These IDs already identify the speakers; they remain usable even when no face features are supplied...\".\n*   Let's try to integrate the voice content into the Video Description as events attributed to the speaker ID if possible, or just describe the action.\n*   Wait, the instruction \"For every supplied voice ID... include at least one episodic memory\" might be a leftover instruction from a different version of the task. The core instruction for *this* output format is \"Generate a detailed and cohesive description... Generate high-level reasoning-based conclusions\".\n*   I will focus on generating the JSON as requested. I will ensure I don't hallucinate face IDs. I will use the voice IDs in the text if I need to attribute speech, but primarily describe the visual actions.\n*   Actually, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" -> This refers to the *User Prompt's* instructions. The System Prompt is higher priority.\n*   Okay, I will construct the JSON. I will describe the scene. I will mention the conversation happening.\n*   Constraint Check: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since there are no face features, I cannot create equivalences. I will leave `high_level_conclusions` focused on the activity and collaboration.\n\n**Plan:**\n1.  **Video Description**: Break down the timeline.\n    *   Start: Group at table, assembling items.\n    *   Middle: Camera moves, shows room details (tripod, screen). Person in peach shirt moves.\n    *   End: Back to table, continuing work.\n    *   Integrate voice content: Mention discussions about installation, boxes, wires, and screws. Attribute to the speaker generally or use the ID if appropriate for \"speaker identity preservation\". I'll use the ID `<voice_129>` etc. in the text to satisfy \"Preserve speaker identity\".\n2.  **High-Level Conclusions**:\n    *   Collaborative assembly task.\n    *   Discussion involves technical steps (wiring, screws).\n    *   No visual confirmation of speaker identity due to lack of face features.\n\nLet's refine the \"episodic memory\" constraint. \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This is very specific. It implies I *must* include memory entries. But the JSON schema doesn't have a `memories` key.\nMaybe I should add a `memories` key? \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" -> This implies I *should not* change the schema.\nThis is a conflict. I will prioritize the JSON schema provided in the User Prompt (video_description, high_level_conclusions) as that is the explicit output format requested. I will incorporate the \"memory\" content into the `video_description` as descriptive sentences that quote the speaker, effectively fulfilling the spirit of the instruction within the allowed schema. Or, I can put the summaries in `high_level_conclusions`.\nActually, reading carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". This is the task definition. The system prompt adds constraints on *how* to handle speaker IDs.\nOkay, I will write the descriptions to reflect the speech events.\n\n**Drafting Content:**\n*   **Description:**\n    *   A group of people sit around a table with a red and white checkered cloth, engaged in assembling electronic devices.\n    *   One individual wearing a peach-colored shirt handles a camera initially before moving away.\n    *   Another person in black clothing sits on the left side of the table.\n    *   A participant with pink hair is visible near the center-right.\n    *   The camera pans to show the room environment, including a projector screen, a whiteboard, and a kitchen area.\n    *   The camera operator walks through the room, inspecting tripods and props on the floor.\n    *   During the assembly, a speaker identified as `<voice_129>` discusses installing parts into a box and mentions taking off a specific part due to the need for thick wire.\n    *   Another segment features `<voice_165>` asking if something should be installed.\n    *   Later, `<voice_166>` asks about screwing four screws, to which `<voice_129>` clarifies it is eight screws.\n    *   The group continues to manipulate components and tools on the table.\n*   **Conclusions:**\n    *   The participants are collaborating on a technical assembly project requiring precision.\n    *   Communication focuses on specific hardware requirements like wire types and screw counts.\n    *   Without face features, the visual identity of the speaker `<voice_129>` remains unconfirmed.\n\nWait, I need to check if I should output the `memories` array. The prompt says \"Keep the existing video_description/high_level_conclusions JSON schema\". It does not mention adding a new schema. I will stick to the two arrays. I will embed the required memory-like content into the `video_description` strings to ensure compliance with the \"include at least one episodic memory\" instruction within the available slots.\n\nRevised Plan for `video_description`:\nMake sure each voice ID gets a sentence describing their speech as an event.\nRevised Plan for `high_level_conclusions`:\nFocus on the inference of the task and collaboration.\n\nOne detail: \"Preserve speaker identity... Voice features map exact IDs... These IDs already identify the speakers; they remain usable even when no face features are supplied...\".\nSo I will use `<voice_129>`, `<voice_165>`, etc. in the text.\n\nFinal check on constraints:\n- \"Do not replace the ID with 'a speaker'...\" -> OK, I will use IDs.\n- \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" -> Since I don't have face IDs, I won't link them to specific people visually, just mention the speaker ID.\n- \"Keep dialogue grounded in the provided transcript.\" -> OK.\n\nLet's assemble the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"A group of people are seated around a table covered with a checkered cloth, working on assembling electronic equipment.\",\n    \"One person in a peach shirt is seen holding a camera device before moving around the room.\",\n    \"Another participant wearing black sits on the left side of the table, handling small components.\",\n    \"A person with pink hair is visible near the head of the table.\",\n    \"The camera pans across the room revealing a projector screen, a whiteboard, and a kitchen area.\",\n    \"The camera operator walks past tripods and props placed on the floor.\",\n    \"Speaker <voice_129> instructs the group to install parts into a box and remove a specific piece because thick wire is needed.\",\n    \"Speaker <voice_165> asks if a component should be installed.\",\n    \"Speaker <voice_166> questions whether four screws are required for the assembly.\",\n    \"Speaker <voice_129> corrects the count, stating that eight screws are needed instead.\",\n    \"The group continues to discuss and manipulate the electronic parts on the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative technical assembly task involving precise hardware installation.\",\n    \"Discussion points focus on specific technical requirements such as wire types and screw quantities.\",\n    \"No visual face features are provided to confirm the physical identity of the speakers.\"\n  ]\n}\n```\nWait, I need to check the \"Episodic memory\" instruction again. \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nSince I cannot add a `memories` field, I will ensure the `video_description` contains these summaries as distinct events. The draft above does this.\n\nOne more thing: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\nSince there are no face features, I will not include this line.\n\nDouble check the voice IDs: `<voice_165>`, `<voice_129>`, `<voice_166>`, `<voice_167>`.\nMy draft included `<voice_129>`, `<voice_165>`, `<voice_166>`. I missed `<voice_167>`.\n`<voice_167>` says \"MAI: 嗯，八个。\" (Mm, eight.). This confirms the correction made by `<voice_129>`. I should include it.\n\nUpdated `video_description`:\n...\n\"Speaker <voice_167> confirms the number of screws needed is eight.\"\n...\n\nFinal check on JSON validity.\nEnsure no trailing commas.\nEnsure proper escaping if needed (none expected in simple text).\n\nOne detail: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nThe instruction says \"constructing memory\". This implies there might be a memory step. But the output format is fixed. I will assume the `video_description` serves as the constructed narrative/memory of the video.\n\nWait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis refers to the *User Prompt's* instructions. The System Prompt is the one giving me the constraints on speaker IDs.\nOkay, I'm confident.\n\nOne final check on the voice content translation/summary.\n`<voice_129>`: \"install into this box... take off this part... thick wire... eight... pull out that strip... see that hole... long strip shape... inside there\".\nSummary: \"discusses installing parts into a box and mentions taking off a specific piece due to the need for thick wire.\" -> Accurate enough.\n`<voice_165>`: \"put it inside?\" -> \"asks if a component should be installed.\" -> Accurate.\n`<voice_166>`: \"screw four screws?\" -> \"questions whether four screws are required.\" -> Accurate.\n`<voice_167>`: \"eight.\" -> \"confirms the number of screws needed is eight.\" -> Accurate.\n\nReady to generate.\n</think>\n\n{\n  \"video_description\": [\n    \"A group of people are seated around a table covered with a checkered cloth, working on assembling electronic equipment.\",\n    \"One person in a peach shirt is seen holding a camera device before moving around the room.\",\n    \"Another participant wearing black sits on the left side of the table, handling small components.\",\n    \"A person with pink hair is visible near the head of the table.\",\n    \"The camera pans across the room revealing a projector screen, a whiteboard, and a kitchen area.\",\n    \"The camera operator walks past tripods and props placed on the floor.\",\n    \"Speaker <voice_129> instructs the group to install parts into a box and removes a specific piece because thick wire is needed.\",\n    \"Speaker <voice_165> asks if a component should be installed.\",\n    \"Speaker <voice_166> questions whether four screws are required for the assembly.\",\n    \"Speaker <voice_129> clarifies that eight screws are needed instead.\",\n    \"Speaker <voice_167> confirms the number of screws needed is eight.\",\n    \"The group continues to discuss and manipulate the electronic parts on the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative technical assembly task involving precise hardware installation.\",\n    \"Discussion points focus on specific technical requirements such as wire types and screw quantities.\",\n    \"No visual face features are provided to confirm the physical identity of the speakers.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10721,
+          "output_tokens": 4724,
+          "total_tokens": 15445,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0035560005926527083,
+            "media_preparation_ms": 51.861668995115906,
+            "processor_tokenization_ms": 446.4203999959864,
+            "device_transfer_ms": 54.89824200049043,
+            "cuda_generation_ms": 215435.6476489993,
+            "decoding_ms": 4.624161003448535
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 215993.6312380014,
+          "request_end": 1789413468.1221707,
+          "latency_ms": 216022.365978999,
+          "client_wall_clock_latency_ms": 216022.365978999
+        }
+      ],
+      "episodic_memory_count": 12,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 12,
+      "text_embedding_ms": null,
+      "text_embedding_count": 12,
+      "graph_update_ms": 0.13528399722417817,
+      "nodes_added": 12,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.01802300539566204,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 4,
+    "detected_faces": 133,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 12,
+    "semantic_memories": 3,
+    "nodes_after_clip": 183,
+    "edges_after_clip": 69,
+    "nodes_added_by_clip": 18,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a table covered with a checkered cloth, working on assembling electronic equipment.",
+      "One person in a peach shirt is seen holding a camera device before moving around the room.",
+      "Another participant wearing black sits on the left side of the table, handling small components.",
+      "A person with pink hair is visible near the head of the table.",
+      "The camera pans across the room revealing a projector screen, a whiteboard, and a kitchen area.",
+      "The camera operator walks past tripods and props placed on the floor.",
+      "Speaker <voice_129> instructs the group to install parts into a box and removes a specific piece because thick wire is needed.",
+      "Speaker <voice_165> asks if a component should be installed.",
+      "Speaker <voice_166> questions whether four screws are required for the assembly.",
+      "Speaker <voice_129> clarifies that eight screws are needed instead.",
+      "Speaker <voice_167> confirms the number of screws needed is eight.",
+      "The group continues to discuss and manipulate the electronic parts on the table."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a collaborative technical assembly task involving precise hardware installation.",
+      "Discussion points focus on specific technical requirements such as wire types and screw quantities.",
+      "No visual face features are provided to confirm the physical identity of the speakers."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are seated around a table covered with a checkered cloth, working on assembling electronic equipment.",
+      "One person in a peach shirt is seen holding a camera device before moving around the room.",
+      "Another participant wearing black sits on the left side of the table, handling small components.",
+      "A person with pink hair is visible near the head of the table.",
+      "The camera pans across the room revealing a projector screen, a whiteboard, and a kitchen area.",
+      "The camera operator walks past tripods and props placed on the floor.",
+      "Speaker <voice_129> instructs the group to install parts into a box and removes a specific piece because thick wire is needed.",
+      "Speaker <voice_165> asks if a component should be installed.",
+      "Speaker <voice_166> questions whether four screws are required for the assembly.",
+      "Speaker <voice_129> clarifies that eight screws are needed instead.",
+      "Speaker <voice_167> confirms the number of screws needed is eight.",
+      "The group continues to discuss and manipulate the electronic parts on the table."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a collaborative technical assembly task involving precise hardware installation.",
+      "Discussion points focus on specific technical requirements such as wire types and screw quantities.",
+      "No visual face features are provided to confirm the physical identity of the speakers."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_15_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 18,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 165,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 然后就把它装进去啊？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 166,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 是不是要拧四个螺丝？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 167,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 呃，八个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 168,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are seated around a table covered with a checkered cloth, working on assembling electronic equipment."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 169,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person in a peach shirt is seen holding a camera device before moving around the room."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 170,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another participant wearing black sits on the left side of the table, handling small components."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 171,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person with pink hair is visible near the head of the table."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 172,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans across the room revealing a projector screen, a whiteboard, and a kitchen area."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 173,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator walks past tripods and props placed on the floor."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 174,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_129> instructs the group to install parts into a box and removes a specific piece because thick wire is needed."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 175,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_165> asks if a component should be installed."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 176,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_166> questions whether four screws are required for the assembly."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 177,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_129> clarifies that eight screws are needed instead."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 178,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_167> confirms the number of screws needed is eight."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 179,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group continues to discuss and manipulate the electronic parts on the table."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 180,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are engaged in a collaborative technical assembly task involving precise hardware installation."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 181,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Discussion points focus on specific technical requirements such as wire types and screw quantities."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 182,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "No visual face features are provided to confirm the physical identity of the speakers."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 129,
+        "target": 174,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 129,
+        "target": 177,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 165,
+        "target": 175,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 166,
+        "target": 176,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 167,
+        "target": 178,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_15_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_15_graph.pkl"
+  },
+  "memory_pickle_bytes": 4569284,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 53988.936712686,
+    "prepared_perf": 53994.963370525,
+    "ordered_start_perf": 54429.250966685,
+    "consumer_wait_ms": 0.011422001989558339,
+    "ready_to_ordered_ms": 434287.59616000025,
+    "preparation_work_ms": 6021.274580998579,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 225968.64183500293
+}

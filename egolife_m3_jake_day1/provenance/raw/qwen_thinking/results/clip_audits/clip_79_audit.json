@@ -1,0 +1,467 @@
+{
+  "clip_id": 79,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0079.mp4",
+  "end_to_end_memory_generation_ms": 630516.0639569949,
+  "latency_ms": {
+    "clip_decode": 4457.04392499465,
+    "deepgram_asr": 3.701123991049826,
+    "mai_transcribe_asr": 3.5276069975225255,
+    "asr_total": 4.5924299920443445,
+    "audio_segmentation": 6.355297999107279,
+    "speech_embedding_campplus": 388.2491420081351,
+    "facial_detection_recognition_buffalo_l": 3560.3704179957276,
+    "face_clustering": 6.528092999360524,
+    "vlm_memory_generation": 245089.4522810122,
+    "text_embedding": 599.7255859983852,
+    "graph_update_total": 144.00545597891323
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 79,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 1118,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789426757.33814,
+          "status": "success",
+          "total_tokens": 231,
+          "request_end": 1789426757.9376152,
+          "latency_ms": 599.4757959997514
+        }
+      ],
+      "total_tokens": 231,
+      "latency_ms": 599.7255859983852
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 3.701123991049826,
+        "openrouter-mai-transcribe-2": 3.5276069975225255
+      },
+      "asr_total_ms": 4.5924299920443445,
+      "audio_segmentation_ms": 6.355297999107279,
+      "speech_embedding_ms": 388.2491420081351,
+      "graph_update_ms": 142.7357679931447,
+      "asr_segment_count": 2,
+      "speech_embedding_count": 2,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 551.8414630059851
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3560.3704179957276,
+      "face_clustering_ms": 6.528092999360524,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 271,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3715.7441149902297
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_430>",
+        "<voice_186>"
+      ],
+      "context_preparation_ms": 4153.696123990812,
+      "vlm_ms": 245089.4522810122,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\",\n\t\t\"A person wearing light-colored clothing stands near the whiteboard while others sit around the table.\",\n\t\t\"Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant.\",\n\t\t\"<voice_430> asks if something should be added, stating it is quite good.\",\n\t\t\"<voice_186> explains her intention to give participants a small prize consisting of narcissus bulbs.\",\n\t\t\"<voice_186> describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.\",\n\t\t\"<voice_186> notes the aesthetic appeal and fragrance of the blooming narcissus flowers.\",\n\t\t\"A clapperboard labeled \\\"Ego Life\\\" rests on the table among various papers and items.\",\n\t\t\"The seated individuals listen attentively to the standing speaker.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_186> intends to distribute narcissus bulbs as a reward for the participants.\",\n\t\t\"The choice of narcissus bulbs is based on their resilience and ease of growth.\",\n\t\t\"The event appears to be a collaborative session focused on plant care or a similar hobby.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.",
+          "A person wearing light-colored clothing stands near the whiteboard while others sit around the table.",
+          "Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant.",
+          "<voice_430> asks if something should be added, stating it is quite good.",
+          "<voice_186> explains her intention to give participants a small prize consisting of narcissus bulbs.",
+          "<voice_186> describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.",
+          "<voice_186> notes the aesthetic appeal and fragrance of the blooming narcissus flowers.",
+          "A clapperboard labeled \"Ego Life\" rests on the table among various papers and items.",
+          "The seated individuals listen attentively to the standing speaker."
+        ],
+        "high_level_conclusions": [
+          "<voice_186> intends to distribute narcissus bulbs as a reward for the participants.",
+          "The choice of narcissus bulbs is based on their resilience and ease of growth.",
+          "The event appears to be a collaborative session focused on plant care or a similar hobby."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 79,
+          "call_id": "e1a978db-f22a-4b42-9490-675ae04ca2c7",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789426512.2476888,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\",\n\t\t\"A person wearing light-colored clothing stands near the whiteboard while others sit around the table.\",\n\t\t\"Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant.\",\n\t\t\"<voice_430> asks if something should be added, stating it is quite good.\",\n\t\t\"<voice_186> explains her intention to give participants a small prize consisting of narcissus bulbs.\",\n\t\t\"<voice_186> describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.\",\n\t\t\"<voice_186> notes the aesthetic appeal and fragrance of the blooming narcissus flowers.\",\n\t\t\"A clapperboard labeled \\\"Ego Life\\\" rests on the table among various papers and items.\",\n\t\t\"The seated individuals listen attentively to the standing speaker.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_186> intends to distribute narcissus bulbs as a reward for the participants.\",\n\t\t\"The choice of narcissus bulbs is based on their resilience and ease of growth.\",\n\t\t\"The event appears to be a collaborative session focused on plant care or a similar hobby.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The scene is consistent: a room with a table covered in a checkered cloth. Several people are present.\n    *   One person stands near a whiteboard (wearing light-colored clothing).\n    *   One person sits on the left side of the table (dark clothing).\n    *   Two people sit on the right side of the table.\n    *   There is a clapperboard on the table labeled \"Ego Life\".\n    *   The camera seems to be held by someone sitting at the table (indicated by hands appearing in some frames like 0.50s - 4.50s).\n    *   Faces are blurred out in most frames.\n*   **Voice Features:**\n    *   `<voice_430>`: \"MAI: 要不要加进去，挺好。\" (Mai: Should we add it in? It's quite good.)\n    *   `<voice_186>`: \"MAI: 然后就是，我就想给参与者就是一个小奖品，就是一束水仙种球。因为这个水仙种球，它好养，就是，呃，在我的那种植物杀手朋友身上试验过，他都能养活的东西。然后这个花开出来也特别的好看，还有清香的味道，并且你看着它。\" (Mai: Then I just want to give participants a small prize, which is a bunch of narcissus bulbs. Because these narcissus bulbs are easy to grow... I tested them on my plant-killing friends... they can survive things. And when they bloom, they look particularly nice, have a fragrant scent, and you can watch them.)\n    *   Note: The ASR identifies the speaker as \"MAI\" for both voice tracks.\n*   **Character Features:** None explicitly provided in the prompt text (\"Face features:Voice features:\" section is empty or implies none were passed separately, but the instruction says \"You will be given a video and a set of character features.\" However, looking at the raw input provided in the prompt, there is a section \"Face features:Voice features:\" followed by the JSON. Wait, the prompt text says \"Face features:Voice features:{\"...\". This looks like the input data. But there are no specific Face IDs listed like `<face_1>`. The instruction says \"Each feature has a unique ID enclosed in angle brackets.\" The voice IDs are `<voice_430>` and `<voice_186>`. There are no face IDs provided in the input block.\n*   **Constraint Checklist & Confidence Score:**\n    1. Preserve speaker identity? Yes.\n    2. Map exact IDs? Yes (`<voice_430>`, `<voice_186>`).\n    3. Include episodic memory for every voice ID with speech? Yes.\n    4. Use exact ID as speaker? Yes.\n    5. Do not replace ID with 'a speaker'? Yes.\n    6. Keep dialogue grounded? Yes.\n    7. Output valid JSON? Yes.\n    8. No extra explanation? Yes.\n\n**2. Construct Video Description:**\n*   Need to describe the scene atomically.\n*   Scene: Indoor setting, likely a meeting or workshop. Table with checkered cloth. Whiteboard in background. Clapperboard on table.\n*   People: Standing presenter (light clothes), seated audience members (left and right). Camera operator/hands visible initially.\n*   Action: Standing person talks/gestures. Seated people listen/watch. Hands appear in foreground.\n*   Specific timestamps:\n    *   0.00s - 4.50s: Hands visible in foreground, possibly gesturing or holding something. Standing person talking.\n    *   5.00s onwards: Hands move away or are less prominent. Focus on the group discussion.\n    *   Throughout: Standing person gestures towards the whiteboard or items on the table.\n\n**3. Construct High-Level Conclusions:**\n*   Identify the speaker based on voice. The ASR says \"MAI\". Since there are no face IDs provided in the input, I cannot create an equivalence statement like `Equivalence: <face_x>, <voice_y>`. I must strictly follow the instruction: \"If a face and a voice feature refer to the same character, indicate it using this exact format...\". Since no face features were supplied in the input block (only voice features are listed under \"Voice features:\"), I cannot make equivalences. I will focus on the voice conclusions.\n*   Conclusion 1: MAI is explaining a gift/prize for participants.\n*   Conclusion 2: The gift is narcissus bulbs because they are easy to grow.\n*   Conclusion 3: MAI mentions testing them on \"plant-killing friends\".\n*   Conclusion 4: The context seems to be a workshop or team building activity involving plants.\n\n**4. Refine Memory Construction:**\n*   For `<voice_430>`: \"MAI suggests adding something in, noting it is quite good.\" -> \"MAI asks if something should be added, stating it is quite good.\"\n*   For `<voice_186>`: Long transcript about giving narcissus bulbs as prizes. -> \"MAI explains her intention to give participants narcissus bulbs as a small prize.\" -> \"MAI describes the narcissus bulbs as easy to grow, having tested them on friends who struggle with plants.\" -> \"MAI notes the flowers bloom beautifully and have a fragrant scent.\"\n\n**5. Drafting the JSON:**\n\n*   `video_description`:\n    *   A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\n    *   A person wearing light-colored clothing stands near the whiteboard while others sit around the table.\n    *   Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant.\n    *   The standing individual gestures while speaking to the seated group.\n    *   A clapperboard labeled \"Ego Life\" rests on the table among various papers and items.\n    *   The seated individuals listen attentively to the standing speaker.\n    *   The standing person continues to gesture and speak throughout the sequence.\n\n*   `high_level_conclusions`:\n    *   MAI intends to distribute narcissus bulbs as a small prize to the participants.\n    *   MAI chose the narcissus bulbs because they are easy to cultivate and survived on her plant-killing friends' plants.\n    *   MAI highlights the aesthetic appeal and fragrance of the blooming narcissus flowers.\n    *   The setting appears to be a collaborative session or workshop where gifts are being discussed.\n\n**6. Final Review against Constraints:**\n*   Speaker IDs preserved? Yes (`<voice_430>`, `<voice_186>`).\n*   Episodic memories included? Yes.\n*   Valid JSON? Yes.\n*   No extra text? Yes.\n\nWait, I need to check if I missed any face features. The prompt says \"Face features:Voice features:{\"...\". It seems the input provided *is* the features list, but it only contains voice features. The instruction says \"Some features may belong to the same character.\" and \"If a face and a voice feature refer to the same character...\". Since no face features are provided in the input text block, I cannot assert equivalence. I will proceed with just the voice IDs.\n\nOne detail: The prompt says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSo I need to ensure the memory strings use `<voice_430>` and `<voice_186>` as the subject identifier.\n\nLet's refine the memory sentences to strictly follow the instruction: \"using the exact ID as the speaker\".\nExample: \"<voice_430> asks if something should be added...\"\nActually, the instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nIt doesn't explicitly say the sentence structure must be \"ID says...\", but rather \"using the exact ID as the speaker\". Usually, this means referencing the ID in the sentence. E.g., \"MAI (<voice_430>) states...\" or simply attributing the action to the ID. Given the constraint \"Do not replace the ID with 'a speaker'\", I should probably write something like:\n\"<voice_430> suggests adding something in, noting it is quite good.\"\n\"<voice_186> explains she wants to give participants a small prize consisting of narcissus bulbs.\"\n\nLet's double check the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nOkay, I will construct the memories to reference the ID directly.\n\nRevised Plan:\n1.  **Video Description**: Describe the visual scene (people, table, whiteboard, clapperboard, hands).\n2.  **High Level Conclusions**: Inferences about the plan (giving bulbs) and the nature of the event (workshop/meeting).\n3.  **Memory Construction**: Integrate the voice IDs into the descriptions/conclusions or keep them separate? The prompt asks for \"Video Description\" and \"High-Level Conclusions\". It also says \"Your task consists of two parts: 1. Video Description ... 2. High-Level Conclusions\".\n    *   Wait, the instruction \"Preserve speaker identity when constructing memory...\" seems to apply to the *output generation process*, specifically regarding how I handle the voice features within the JSON structure.\n    *   Looking at the JSON schema requested: `\"video_description\"` and `\"high_level_conclusions\"`.\n    *   The instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" implies I should put these memories somewhere. Usually, in these tasks, the \"High-Level Conclusions\" often serve as the summary/inference layer where speaker-specific details might be integrated, OR the \"Video Description\" acts as the ground truth log.\n    *   However, standard practice for this specific prompt type (often associated with video-to-text summarization with entity linking) usually expects the speaker info to be reflected in the conclusions or descriptions.\n    *   Let's look at the instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   Where do these memories go? The JSON schema only has `video_description` and `high_level_conclusions`.\n    *   Often, \"episodic memory\" refers to the content of the video description itself, annotated with the ID. Or it could be part of the high-level conclusions.\n    *   Given \"High-Level Conclusions\" are for \"reasoning-based conclusions... identify character intentions\", putting the direct quote/summary there makes sense as a conclusion about what was said/intended.\n    *   Alternatively, I can embed the speaker attribution in the video description lines.\n    *   Let's try to incorporate the speaker attribution into the `video_description` as factual accounts of what happened (who said what), and use `high_level_conclusions` for the inferences.\n    *   Actually, re-reading: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   And the constraint: \"For every supplied voice ID... include at least one episodic memory...\".\n    *   I will place the summaries attributed to the voice IDs within the `video_description` array to ensure they are captured as atomic events/facts, and perhaps reinforce in `high_level_conclusions`.\n    *   Wait, the instruction says \"Preserve speaker identity when constructing memory from the supplied character features.\" This sounds like a general rule for the whole output.\n    *   Okay, I will write the video description entries to attribute actions/speech to the voice IDs where possible.\n    *   Example: \"<voice_186> discusses giving participants narcissus bulbs as prizes.\"\n\n    *   Wait, looking closely at the prompt structure provided in the example (which isn't fully shown but implied): Usually, the \"memory\" concept is internal to the model's processing, but here I am generating the final JSON.\n    *   Let's interpret \"include at least one episodic memory\" as ensuring the transcript content is represented in the output text, linked to the ID.\n    *   I will add specific lines in `video_description` that capture the speech attributed to the voice IDs.\n\n    *   Refined Video Description:\n        *   A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\n        *   A person wearing light-colored clothing stands near the whiteboard while others sit around the table.\n        *   Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant.\n        *   <voice_430> asks if something should be added, stating it is quite good.\n        *   <voice_186> explains her intention to give participants a small prize consisting of narcissus bulbs.\n        *   <voice_186> describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.\n        *   <voice_186> notes the aesthetic appeal and fragrance of the blooming narcissus flowers.\n        *   The standing individual gestures while speaking to the seated group.\n        *   A clapperboard labeled \"Ego Life\" rests on the table among various papers and items.\n        *   The seated individuals listen attentively to the standing speaker.\n\n    *   Refined High-Level Conclusions:\n        *   MAI plans to distribute narcissus bulbs as a reward for the participants.\n        *   The choice of narcissus bulbs is based on their resilience and ease of growth.\n        *   The event appears to be a collaborative session focused on plant care or a similar hobby.\n\n    *   Wait, I need to check if I should use \"MAI\" or the ID in the conclusions. The instruction says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" and \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   So in conclusions, I should use `<voice_186>` instead of \"MAI\".\n    *   Also, since there are no face IDs, I cannot do `Equivalence: <face_x>, <voice_y>`.\n\n    *   Final check on constraints:\n        *   \"Preserve speaker identity... using the exact ID as the speaker.\" -> Done in descriptions.\n        *   \"For every supplied voice ID... include at least one episodic memory...\" -> Done in descriptions.\n        *   \"Keep dialogue grounded...\" -> Done.\n        *   \"Output Format: JSON object...\" -> Done.\n\n    *   One more thing: The prompt says \"Return one complete JSON object with video_description and high_level_conclusions arrays.\"\n    *   I need to make sure the JSON is valid.\n\n    *   Let's consolidate the video description to be concise and avoid duplicates as per instruction \"Be concise and avoid duplicate events.\"\n    *   I'll merge the speech attributions into fewer lines if possible, or keep them distinct if they represent different moments. The speech spans multiple seconds.\n    *   Line 1: General scene setup.\n    *   Line 2: Standing person speaking.\n    *   Line 3: <voice_430> comment.\n    *   Line 4: <voice_186> main explanation about the prize.\n    *   Line 5: Details about the prize (bulbs).\n    *   Line 6: Details about the prize (growth/bloom).\n    *   Line 7: Visuals (clapperboard, etc.).\n\n    *   Actually, I can combine the speech points into one or two strong descriptive sentences to save space, but the instruction says \"Preserve distinct substantive utterances as separate atomic memories.\" So I should split them.\n    *   Utterance 1: \"要不要加进去，挺好。\" (Should we add it? It's good.)\n    *   Utterance 2: \"然后就是，我就想给参与者就是一个小奖品，就是一束水仙种球...\" (Then I just want to give participants a small prize...)\n    *   So I will have separate entries for these.\n\n    *   Wait, the instruction says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". It doesn't say *every* utterance needs a separate line, but \"distinct substantive utterances as separate atomic memories\".\n    *   So I will create separate lines for the distinct parts of the speech.\n\n    *   Wait, I need to check if I should put the memories in `video_description` or `high_level_conclusions`.\n    *   \"Video Description... Generate a detailed and cohesive description... cover all observable and inferable events.\"\n    *   \"High-Level Conclusions... Generate high-level reasoning-based conclusions... identify character intentions...\"\n    *   Speech content is an event. Intentions are conclusions.\n    *   So I will put the speech summaries in `video_description` (as observed events) and the intent analysis in `high_level_conclusions`.\n    *   However, the instruction \"For every supplied voice ID... include at least one episodic memory...\" might imply I should ensure the ID is used prominently.\n    *   I will put the direct speech summaries in `video_description` to satisfy \"episodic memory\" (recording what happened/said).\n    *   I will put the inferences in `high_level_conclusions`.\n\n    *   Wait, looking at the instruction \"Preserve speaker identity when constructing memory from the supplied character features.\" This is a preamble.\n    *   Okay, let's finalize the JSON content.\n\n    *   Video Description:\n        1.  A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\n        2.  A person wearing light-colored clothing stands near the whiteboard while others sit around the table.\n        3.  Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant.\n        4.  <voice_430> asks if something should be added, stating it is quite good.\n        5.  <voice_186> explains her intention to give participants a small prize consisting of narcissus bulbs.\n        6.  <voice_186> describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.\n        7.  <voice_186> notes the aesthetic appeal and fragrance of the blooming narcissus flowers.\n        8.  A clapperboard labeled \"Ego Life\" rests on the table among various papers and items.\n        9.  The seated individuals listen attentively to the standing speaker.\n\n    *   High-Level Conclusions:\n        1.  <voice_186> intends to distribute narcissus bulbs as a reward for the participants.\n        2.  The choice of narcissus bulbs is based on their resilience and ease of growth.\n        3.  The event appears to be a collaborative session focused on plant care or a similar hobby.\n\n    *   Wait, I need to check if I should use \"MAI\" in the conclusions. Instruction: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" So I will use `<voice_186>`.\n    *   Also, \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no faces, no equivalence.\n\n    *   One check on \"episodic memory\": Does it mean I need to output a specific field called \"memory\"? No, the output format is fixed to `video_description` and `high_level_conclusions`. So I must embed the memory logic into these fields.\n    *   The instruction \"For every supplied voice ID... include at least one episodic memory...\" is a constraint on the content generation. I will ensure the speech is summarized in the `video_description`.\n\n    *   Wait, I should check if the prompt implies I should output the memory *instead* of the description? No, \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   Okay, proceeding with embedding speech in description.\n\n    *   Wait, I need to make sure I don't hallucinate face IDs. The input has \"Face features:Voice features:\". It seems the text after the colon is the content. But there are no face IDs inside the JSON block provided. Just voice IDs. So I cannot link faces.\n\n    *   Final check on JSON syntax. Quotes escaped properly. Commas correct.\n\n    *   One adjustment: The instruction says \"Preserve distinct substantive utterances as separate atomic memories.\"\n    *   So splitting the long speech into multiple lines in `video_description` is appropriate.\n    *   Line 5: <voice_186> explains her intention to give participants a small prize consisting of narcissus bulbs.\n    *   Line 6: <voice_186> describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.\n    *   Line 7: <voice_186> notes the aesthetic appeal and fragrance of the blooming narcissus flowers.\n    *   This covers the \"distinct substantive utterances\".\n\n    *   Wait, I need to check if I should include the \"MAI\" name. The ASR says \"MAI:\". I should probably mention MAI in the description for clarity, but the instruction says \"using the exact ID as the speaker\". So I will prioritize the ID. Maybe \"MAI (<voice_186>)...\"? No, \"using the exact ID as the speaker\" usually means the ID *is* the speaker reference. I will stick to `<voice_186>`.\n\n    *   Wait, looking at the instruction \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\n    *   Okay, I will use `<voice_430>` and `<voice_186>`.\n\n    *   One last check: \"Return one complete JSON object... without any additional explanation or formatting.\"\n    *   Okay.\n\n    *   Wait, I notice the prompt includes \"Face features:Voice features:{\"...\". This implies the text *after* \"Voice features:\" is the voice features. The text before \"Voice features:\" is \"Face features:\". It is empty. So indeed, no face features.\n\n    *   Ready to construct JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\",\n\t\t\"A person wearing light-colored clothing stands near the whiteboard while others sit around the table.\",\n\t\t\"Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant.\",\n\t\t\"<voice_430> asks if something should be added, stating it is quite good.\",\n\t\t\"<voice_186> explains her intention to give participants a small prize consisting of narcissus bulbs.\",\n\t\t\"<voice_186> describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.\",\n\t\t\"<voice_186> notes the aesthetic appeal and fragrance of the blooming narcissus flowers.\",\n\t\t\"A clapperboard labeled \\\"Ego Life\\\" rests on the table among various papers and items.\",\n\t\t\"The seated individuals listen attentively to the standing speaker.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_186> intends to distribute narcissus bulbs as a reward for the participants.\",\n\t\t\"The choice of narcissus bulbs is based on their resilience and ease of growth.\",\n\t\t\"The event appears to be a collaborative session focused on plant care or a similar hobby.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10573,
+          "output_tokens": 5360,
+          "total_tokens": 15933,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.00197399640455842,
+            "media_preparation_ms": 65.51135100016836,
+            "processor_tokenization_ms": 358.6727539950516,
+            "device_transfer_ms": 57.05351600772701,
+            "cuda_generation_ms": 244573.27964999422,
+            "decoding_ms": 4.994527000235394
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 245059.6857460041,
+          "request_end": 1789426757.3371441,
+          "latency_ms": 245089.4522810122,
+          "client_wall_clock_latency_ms": 245089.4522810122
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.09929599764291197,
+      "nodes_added": 9,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 1.1703919881256297,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 2,
+    "speech_embeddings": 2,
+    "voice_identities": 2,
+    "detected_faces": 271,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1029,
+    "edges_after_clip": 359,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.",
+      "A person wearing light-colored clothing stands near the whiteboard while others sit around the table.",
+      "Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant.",
+      "<voice_430> asks if something should be added, stating it is quite good.",
+      "<voice_186> explains her intention to give participants a small prize consisting of narcissus bulbs.",
+      "<voice_186> describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.",
+      "<voice_186> notes the aesthetic appeal and fragrance of the blooming narcissus flowers.",
+      "A clapperboard labeled \"Ego Life\" rests on the table among various papers and items.",
+      "The seated individuals listen attentively to the standing speaker."
+    ],
+    "high_level_conclusions": [
+      "<voice_186> intends to distribute narcissus bulbs as a reward for the participants.",
+      "The choice of narcissus bulbs is based on their resilience and ease of growth.",
+      "The event appears to be a collaborative session focused on plant care or a similar hobby."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.",
+      "A person wearing light-colored clothing stands near the whiteboard while others sit around the table.",
+      "Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant.",
+      "<voice_430> asks if something should be added, stating it is quite good.",
+      "<voice_186> explains her intention to give participants a small prize consisting of narcissus bulbs.",
+      "<voice_186> describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.",
+      "<voice_186> notes the aesthetic appeal and fragrance of the blooming narcissus flowers.",
+      "A clapperboard labeled \"Ego Life\" rests on the table among various papers and items.",
+      "The seated individuals listen attentively to the standing speaker."
+    ],
+    "high_level_conclusions": [
+      "<voice_186> intends to distribute narcissus bulbs as a reward for the participants.",
+      "The choice of narcissus bulbs is based on their resilience and ease of growth.",
+      "The event appears to be a collaborative session focused on plant care or a similar hobby."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_79_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 1017,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1018,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing light-colored clothing stands near the whiteboard while others sit around the table."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1019,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1020,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_430> asks if something should be added, stating it is quite good."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1021,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_186> explains her intention to give participants a small prize consisting of narcissus bulbs."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1022,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_186> describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1023,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_186> notes the aesthetic appeal and fragrance of the blooming narcissus flowers."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1024,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard labeled \"Ego Life\" rests on the table among various papers and items."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1025,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The seated individuals listen attentively to the standing speaker."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1026,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_186> intends to distribute narcissus bulbs as a reward for the participants."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1027,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The choice of narcissus bulbs is based on their resilience and ease of growth."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1028,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The event appears to be a collaborative session focused on plant care or a similar hobby."
+          ],
+          "timestamp": 79
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 186,
+        "target": 1021,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 186,
+        "target": 1022,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 186,
+        "target": 1023,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 186,
+        "target": 1026,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 430,
+        "target": 1020,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_79_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_79_graph.pkl"
+  },
+  "memory_pickle_bytes": 24550374,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 67314.446889073,
+    "prepared_perf": 67320.611399079,
+    "ordered_start_perf": 67688.862046759,
+    "consumer_wait_ms": 0.011530995834618807,
+    "ready_to_ordered_ms": 368250.6476799899,
+    "preparation_work_ms": 6159.181440001703,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 254114.57896199136
+}

@@ -1,0 +1,439 @@
+{
+  "clip_id": 3,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking/work/segments/segment_0003.mp4",
+  "end_to_end_memory_generation_ms": 554585.420864998,
+  "latency_ms": {
+    "clip_decode": 6493.11686999863,
+    "deepgram_asr": 2.0837280026171356,
+    "mai_transcribe_asr": 1298.6878159936168,
+    "asr_total": 1301.0630040007527,
+    "audio_segmentation": 6.093420000979677,
+    "speech_embedding_campplus": 182.02986400137888,
+    "facial_detection_recognition_buffalo_l": 3335.4906210006448,
+    "face_clustering": 6.846618001873139,
+    "vlm_memory_generation": 162843.4188570027,
+    "text_embedding": 611.0688159969868,
+    "graph_update_total": 4.001865003374405
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 3,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 1378,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789407766.475439,
+          "status": "success",
+          "total_tokens": 265,
+          "request_end": 1789407767.0861504,
+          "latency_ms": 610.7134389967541
+        }
+      ],
+      "total_tokens": 265,
+      "latency_ms": 611.0688159969868
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.0837280026171356,
+        "openrouter-mai-transcribe-2": 1298.6878159936168
+      },
+      "asr_total_ms": 1301.0630040007527,
+      "audio_segmentation_ms": 6.093420000979677,
+      "speech_embedding_ms": 182.02986400137888,
+      "graph_update_ms": 3.871581000566948,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 205.15320599952247
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3335.4906210006448,
+      "face_clustering_ms": 6.846618001873139,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 320,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3518.3009629981825
+    },
+    "vlm": {
+      "context_preparation_ms": 4265.683279001678,
+      "vlm_ms": 162843.4188570027,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth in a room with professional lighting equipment.\",\n\t\t\"The table is cluttered with several black hard cases, papers, and small electronic accessories.\",\n\t\t\"The person filming (POV) gestures towards the items on the table while engaging with the group.\",\n\t\t\"The individual in the center wearing a white shirt appears to be the primary listener or participant in the discussion.\",\n\t\t\"The person on the right with curly hair and glasses is handling items on the table.\",\n\t\t\"The person on the far right with blonde hair is seen looking at a device and subsequently puts on a headset or camera over their eyes.\",\n\t\t\"At approximately 00:26, the POV person holds up a small black object, likely a USB drive, showing it to the group.\",\n\t\t\"The group continues to discuss the items, appearing to brainstorm or troubleshoot a technical issue.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be a team of photographers or videographers conducting a gear review or planning session.\",\n\t\t\"The conversation focuses on data management, specifically discussing a USB drive and a hard disk as backup solutions.\",\n\t\t\"The participants seem to be brainstorming ways to overcome a creative or technical block, referred to as being 'stuck in thought'.\",\n\t\t\"The use of headsets or cameras by the blonde participant suggests they might be testing new technology or reviewing footage.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth in a room with professional lighting equipment.",
+          "The table is cluttered with several black hard cases, papers, and small electronic accessories.",
+          "The person filming (POV) gestures towards the items on the table while engaging with the group.",
+          "The individual in the center wearing a white shirt appears to be the primary listener or participant in the discussion.",
+          "The person on the right with curly hair and glasses is handling items on the table.",
+          "The person on the far right with blonde hair is seen looking at a device and subsequently puts on a headset or camera over their eyes.",
+          "At approximately 00:26, the POV person holds up a small black object, likely a USB drive, showing it to the group.",
+          "The group continues to discuss the items, appearing to brainstorm or troubleshoot a technical issue."
+        ],
+        "high_level_conclusions": [
+          "The group appears to be a team of photographers or videographers conducting a gear review or planning session.",
+          "The conversation focuses on data management, specifically discussing a USB drive and a hard disk as backup solutions.",
+          "The participants seem to be brainstorming ways to overcome a creative or technical block, referred to as being 'stuck in thought'.",
+          "The use of headsets or cameras by the blonde participant suggests they might be testing new technology or reviewing footage."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 3,
+          "call_id": "9d5e40b3-3c0b-4180-b943-50ca51cf3b97",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789407603.630884,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth in a room with professional lighting equipment.\",\n\t\t\"The table is cluttered with several black hard cases, papers, and small electronic accessories.\",\n\t\t\"The person filming (POV) gestures towards the items on the table while engaging with the group.\",\n\t\t\"The individual in the center wearing a white shirt appears to be the primary listener or participant in the discussion.\",\n\t\t\"The person on the right with curly hair and glasses is handling items on the table.\",\n\t\t\"The person on the far right with blonde hair is seen looking at a device and subsequently puts on a headset or camera over their eyes.\",\n\t\t\"At approximately 00:26, the POV person holds up a small black object, likely a USB drive, showing it to the group.\",\n\t\t\"The group continues to discuss the items, appearing to brainstorm or troubleshoot a technical issue.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be a team of photographers or videographers conducting a gear review or planning session.\",\n\t\t\"The conversation focuses on data management, specifically discussing a USB drive and a hard disk as backup solutions.\",\n\t\t\"The participants seem to be brainstorming ways to overcome a creative or technical block, referred to as being 'stuck in thought'.\",\n\t\t\"The use of headsets or cameras by the blonde participant suggests they might be testing new technology or reviewing footage.\"\n\t]\n}",
+          "raw_response": "The user wants me to analyze a video clip and generate a description along with some high-level conclusions based on visual and audio cues.\n\n**1. Video Analysis:**\n*   **Scene:** A group of people sitting around a table covered with a checkered cloth. There are black cases (likely for cameras or lenses), papers, and other items on the table. The room looks like a studio or a meeting room with a whiteboard and lighting equipment visible.\n*   **Characters:**\n    *   Person 1 (Left): Wearing dark clothing, long hair.\n    *   Person 2 (Center/Back): Wearing a white shirt.\n    *   Person 3 (Right/Back): Blonde hair, wearing a white top.\n    *   Person 4 (Right/Front): Dark curly hair, glasses, pinkish top.\n    *   Person 5 (Foreground/POV): Only hands/arms are visible, wearing a blue sleeve. This person seems to be holding a camera or phone, filming the others.\n*   **Action:**\n    *   The group appears to be discussing something related to the items on the table.\n    *   The POV person gestures towards the items.\n    *   At various points, the POV person holds up a small object (looks like a USB drive or small electronic component) and shows it to the group.\n    *   The person on the right (glasses) is handling some items, possibly opening a case.\n    *   The person in the back (blonde) is looking at a phone or device.\n    *   The person on the left is listening and occasionally gesturing.\n    *   The person in the center is observing.\n    *   Around 00:26-00:28, the POV person holds up a small black object (USB stick?) and talks about it.\n    *   Around 00:28, the blonde person puts on VR goggles/headset.\n    *   The overall vibe is a collaborative discussion, perhaps a review or a planning session for photography/videography gear.\n\n**2. Audio Analysis (Voice Features):**\n*   `<voice_0>`: Spoken by someone named MAI (likely the person in the white shirt or the blonde person, but context suggests the speaker is addressing the group). The ASR mentions \"this side there are four... USB... hard disk\". It discusses a situation where they were stuck in deep thought (\"chilled out\") and needed a backup. It sounds like a casual conversation about equipment.\n*   `<voice_21>`: \"First look, open and see.\" This happens around 00:26-00:28. This aligns with the POV person showing an object.\n\n**3. Synthesizing the Description:**\n*   Start with the setting: A group meeting around a table with tech gear.\n*   Describe the interaction: They are discussing equipment.\n*   Specific actions: The POV person gestures and shows a small item (USB/hard disk). The group listens. One person puts on a headset later.\n*   Connect to audio: The speaker (MAI) talks about having a backup and being stuck in thought.\n\n**4. High-Level Conclusions:**\n*   The group is likely photographers or videographers given the cases and lighting gear.\n*   They are troubleshooting or reviewing equipment.\n*   The mention of \"backup\" and \"hard disk\" confirms data storage is a topic.\n*   The \"VR headset\" usage suggests they might be testing virtual reality content or just wearing them for comfort/focus. Wait, looking closely at 00:24+, the blonde person puts on what looks like a VR headset or maybe just sunglasses/goggles. Let's assume VR or similar tech. Actually, looking closer at the end, the blonde person is holding a camera up to their eye, not necessarily VR. Wait, let me re-examine. At 00:24, the blonde person lifts a black object to their eyes. It looks like a camera viewfinder or a VR headset. Given the context of \"photography gear\", it could be a camera. But the prompt mentions \"voice features\" which implies audio recognition. The text says \"MAI: ...\". So I need to link voices to faces if possible.\n*   Voice `<voice_0>` seems to be the main speaker throughout the first part. Who is speaking? The person in the white shirt (center) seems to be the most active listener/speaker candidate initially, or maybe the POV person is narrating? No, the ASR says \"MAI: ...\". Usually, names correspond to speakers. Let's assume the person in the white shirt is MAI. Or the person on the left.\n*   Voice `<voice_21>` \"First look, open and see\" corresponds to the POV person showing the object.\n*   Let's look for equivalence. The prompt asks to identify if a face and voice refer to the same character.\n    *   `<voice_0>` is a long monologue. It sounds like the person in the white shirt (center) or the person on the left.\n    *   `<voice_21>` is short.\n    *   Without specific audio-to-face mapping tools, I have to infer from typical setups. Often, the person facing the camera or the central figure speaks.\n    *   However, the instruction says \"If a face and a voice feature refer to the same character, indicate it\". Since I don't have explicit labels linking them, I have to make a reasonable guess or leave it blank if unsure. But usually, in these tasks, there's a clear link.\n    *   Let's look at the timestamps. `<voice_0>` starts at 00:00. The video starts at 00:00. The person in the white shirt is looking forward. The person on the left is looking down/at the table. The POV person is moving.\n    *   Actually, usually, the \"MAI\" label implies a specific person. In many datasets, MAI is a common name.\n    *   Let's assume the person in the white shirt (center) is the primary speaker for `<voice_0>`.\n    *   Let's assume the POV person (blue sleeve) is the one saying `<voice_21>` (\"First look, open and see\").\n    *   Wait, the prompt asks for \"Equivalence: <face_x>, <voice_y>\". I need to find the face IDs. The input doesn't provide face IDs explicitly like `<face_1>`, it just says \"Face features:\". Ah, the input *doesn't* list face features with IDs in the prompt text provided! It just lists \"Face features:\" and then \"Voice features:\". Wait, looking at the raw prompt, there are no face IDs listed in the text block.\n    *   Re-reading the prompt: \"Each feature is either a face (represented by a video frame with a bounding box) or a voice... Each feature has a unique ID enclosed in angle brackets.\"\n    *   BUT, the input provided *only* has \"Face features:\" (empty?) and \"Voice features:\" (with IDs).\n    *   Wait, I missed something. The prompt says \"You will be given a video and a set of character features.\" Then it lists \"Face features:\" and \"Voice features:\". Under \"Face features:\", there is nothing. Under \"Voice features:\", there are IDs `<voice_0>` and `<voice_21>`.\n    *   This implies I cannot definitively link a face to a voice unless I infer it strongly or if I missed a face ID in the text.\n    *   Let me check the video frames again. Are there bounding boxes? No, just images.\n    *   Okay, I will proceed by describing the video and making general conclusions. If I can't confirm a specific face ID (since none are provided in the text input), I won't force an equivalence unless I'm sure.\n    *   *Correction*: The prompt template usually provides face IDs like `<face_1>`. Here, the input section \"Face features:\" is empty. This is strange. Maybe I am supposed to infer the IDs? No, that's impossible.\n    *   Perhaps the \"Face features\" line was meant to contain IDs but is empty in the prompt provided to me.\n    *   I will focus on the video description and general conclusions. For the equivalence part, since no face IDs are provided, I cannot generate `Equivalence: <face_x>, <voice_y>`. I will skip that or state that identification requires face IDs.\n    *   *Wait*, looking at the prompt structure again: \"Face features:Voice features:{\"...}\". It seems the Face features section is missing or empty.\n    *   I will write the description and conclusions based on the available info.\n\n**Refining the Description:**\n*   00:00 - 00:25: Group discussion around a table with camera gear. POV person gestures. Speaker (MAI) talks about a USB/HDD and being stuck in thought.\n*   00:26 - 00:28: POV person holds up a small object (USB?). Voice says \"First look, open and see\".\n*   00:28 - End: Blonde person puts on a headset/camera. Group continues discussion.\n\n**Refining Conclusions:**\n*   The group is collaborating on technical equipment (cameras, storage).\n*   They are discussing a backup plan or a solution to a problem (\"stuck in thought\").\n*   The use of VR headsets or cameras suggests a tech-focused activity.\n\n**Final Check on Output Format:**\n*   JSON object.\n*   `video_description`: array of strings.\n*   `high_level_conclusions`: array of strings.\n*   Include `Equivalence` if applicable. Since no face IDs are in the input, I will omit this specific format or note that it's not possible. However, standard behavior for these prompts usually implies I should try to match. But without IDs, I can't. I'll stick to general conclusions.\n\nLet's look really closely at the prompt text provided.\n\"Face features:Voice features:{\"...\"\"\nIt seems the Face features are indeed empty. I will proceed without face equivalences.\n\nOne detail: The prompt asks to \"Use the provided feature IDs as references to characters (when applicable)\". Since no face IDs are provided, I can't reference them.\n\nLet's draft the response.\n\n**Video Description:**\n1.  A group of five people are gathered around a table covered with a red-and-white checkered cloth in a room equipped with lighting and a whiteboard.\n2.  Several black protective cases, likely for camera lenses or bodies, are arranged on the table along with papers and other small items.\n3.  The person filming (POV) gestures towards the items on the table while interacting with the group.\n4.  The person in the center wearing a white shirt appears to be leading the discussion or listening intently.\n5.  The person on the right with curly hair and glasses handles items on the table.\n6.  The person on the far right (blonde hair) is seen looking at a device and later putting on a headset or camera.\n7.  The POV person holds up a small black object, possibly a USB drive, showing it to the group.\n8.  The group engages in a discussion, seemingly troubleshooting or reviewing the equipment.\n\n**High Level Conclusions:**\n1.  The group is likely a team of photographers or videographers organizing or reviewing their gear.\n2.  The discussion involves data storage solutions, specifically mentioning a USB drive and a hard disk as backups.\n3.  The atmosphere is collaborative, with members actively participating in the decision-making process regarding the equipment.\n4.  The mention of being \"stuck in thought\" suggests they are brainstorming a solution to a technical issue.\n\nSince I cannot verify face IDs, I will not include the Equivalence line.\n\nWait, looking at the prompt again, maybe I missed the face IDs in the \"Face features:\" line?\n\"Face features:Voice features:{\"\nNo, it's definitely empty.\n\nOkay, ready to generate JSON.\n\nOne small correction: The prompt says \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since I don't have face IDs, I can't do this. I will just provide the descriptions and conclusions.\n\nActually, looking at the video, the person in the white shirt (center) is the most prominent speaker candidate for the long monologue `<voice_0>`. The POV person is the one doing the action for `<voice_21>`. But without IDs, I can't write `Equivalence: <face_center>, <voice_0>`. I will leave it out to be safe and accurate to the provided data.\n\nWait, I should check if there are implicit IDs. No.\nI will just produce the JSON.\n\nOne final check on the video content:\n- 00:00-00:25: Discussion.\n- 00:26: POV holds up object. Voice: \"First look, open and see.\"\n- 00:28: Blonde person puts on something over eyes. Looks like a VR headset or maybe a camera. Given the \"USB/HDD\" talk, maybe they are testing a VR app or just wearing it.\n- The table has many black cases.\n- The room has a projector screen and lights.\n\nDescription points:\n- Group meeting.\n- Table with gear.\n- Discussion about USB/HDD backup.\n- POV shows object.\n- Blonde person uses headset/camera.\n\nConclusions:\n- Tech review/meeting.\n- Backup strategy discussed.\n- Collaborative environment.\n\nLet's write the JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth in a room with professional lighting equipment.\",\n\t\t\"The table is cluttered with several black hard cases, papers, and small electronic accessories.\",\n\t\t\"The person filming (POV) gestures towards the items on the table while engaging with the group.\",\n\t\t\"The individual in the center wearing a white shirt appears to be the primary listener or participant in the discussion.\",\n\t\t\"The person on the right with curly hair and glasses is handling items on the table.\",\n\t\t\"The person on the far right with blonde hair is seen looking at a device and subsequently puts on a headset or camera over their eyes.\",\n\t\t\"At approximately 00:26, the POV person holds up a small black object, likely a USB drive, showing it to the group.\",\n\t\t\"The group continues to discuss the items, appearing to brainstorm or troubleshoot a technical issue.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be a team of photographers or videographers conducting a gear review or planning session.\",\n\t\t\"The conversation focuses on data management, specifically discussing a USB drive and a hard disk as backup solutions.\",\n\t\t\"The participants seem to be brainstorming ways to overcome a creative or technical block, referred to as being 'stuck in thought'.\",\n\t\t\"The use of headsets or cameras by the blonde participant suggests they might be testing new technology or reviewing footage.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10333,
+          "output_tokens": 3316,
+          "total_tokens": 13649,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0018319988157600164,
+            "media_preparation_ms": 52.38934500084724,
+            "processor_tokenization_ms": 470.1117439981317,
+            "device_transfer_ms": 39.64538600121159,
+            "cuda_generation_ms": 162247.3916290037,
+            "decoding_ms": 3.8703190002706833
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 162813.59400200017,
+          "request_end": 1789407766.4743044,
+          "latency_ms": 162843.4188570027,
+          "client_wall_clock_latency_ms": 162843.4188570027
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.10337399726267904,
+      "nodes_added": 8,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.02691000554477796,
+      "nodes_added": 4,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 2,
+    "detected_faces": 320,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 4,
+    "nodes_after_clip": 34,
+    "edges_after_clip": 0,
+    "nodes_added_by_clip": 13,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth in a room with professional lighting equipment.",
+      "The table is cluttered with several black hard cases, papers, and small electronic accessories.",
+      "The person filming (POV) gestures towards the items on the table while engaging with the group.",
+      "The individual in the center wearing a white shirt appears to be the primary listener or participant in the discussion.",
+      "The person on the right with curly hair and glasses is handling items on the table.",
+      "The person on the far right with blonde hair is seen looking at a device and subsequently puts on a headset or camera over their eyes.",
+      "At approximately 00:26, the POV person holds up a small black object, likely a USB drive, showing it to the group.",
+      "The group continues to discuss the items, appearing to brainstorm or troubleshoot a technical issue."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be a team of photographers or videographers conducting a gear review or planning session.",
+      "The conversation focuses on data management, specifically discussing a USB drive and a hard disk as backup solutions.",
+      "The participants seem to be brainstorming ways to overcome a creative or technical block, referred to as being 'stuck in thought'.",
+      "The use of headsets or cameras by the blonde participant suggests they might be testing new technology or reviewing footage."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth in a room with professional lighting equipment.",
+      "The table is cluttered with several black hard cases, papers, and small electronic accessories.",
+      "The person filming (POV) gestures towards the items on the table while engaging with the group.",
+      "The individual in the center wearing a white shirt appears to be the primary listener or participant in the discussion.",
+      "The person on the right with curly hair and glasses is handling items on the table.",
+      "The person on the far right with blonde hair is seen looking at a device and subsequently puts on a headset or camera over their eyes.",
+      "At approximately 00:26, the POV person holds up a small black object, likely a USB drive, showing it to the group.",
+      "The group continues to discuss the items, appearing to brainstorm or troubleshoot a technical issue."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be a team of photographers or videographers conducting a gear review or planning session.",
+      "The conversation focuses on data management, specifically discussing a USB drive and a hard disk as backup solutions.",
+      "The participants seem to be brainstorming ways to overcome a creative or technical block, referred to as being 'stuck in thought'.",
+      "The use of headsets or cameras by the blonde participant suggests they might be testing new technology or reviewing footage."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking/results/clip_audits/clip_3_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 13,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 21,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 先看，拆开看。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 22,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth in a room with professional lighting equipment."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 23,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The table is cluttered with several black hard cases, papers, and small electronic accessories."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 24,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person filming (POV) gestures towards the items on the table while engaging with the group."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 25,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The individual in the center wearing a white shirt appears to be the primary listener or participant in the discussion."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 26,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person on the right with curly hair and glasses is handling items on the table."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 27,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person on the far right with blonde hair is seen looking at a device and subsequently puts on a headset or camera over their eyes."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 28,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At approximately 00:26, the POV person holds up a small black object, likely a USB drive, showing it to the group."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 29,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group continues to discuss the items, appearing to brainstorm or troubleshoot a technical issue."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 30,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be a team of photographers or videographers conducting a gear review or planning session."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 31,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The conversation focuses on data management, specifically discussing a USB drive and a hard disk as backup solutions."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 32,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants seem to be brainstorming ways to overcome a creative or technical block, referred to as being 'stuck in thought'."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 33,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The use of headsets or cameras by the blonde participant suggests they might be testing new technology or reviewing footage."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking/results/clip_audits/clip_3_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking/results/clip_audits/clip_3_graph.pkl"
+  },
+  "memory_pickle_bytes": 875683,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 48399.340963557,
+    "prepared_perf": 48409.336962573,
+    "ordered_start_perf": 48782.439333676,
+    "consumer_wait_ms": 0.023012995370663702,
+    "ready_to_ordered_ms": 373102.3711029993,
+    "preparation_work_ms": 9995.601368995267,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 171446.14753399946
+}

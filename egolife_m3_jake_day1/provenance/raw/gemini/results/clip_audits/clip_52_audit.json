@@ -1,0 +1,410 @@
+{
+  "clip_id": 52,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0052.mp4",
+  "end_to_end_memory_generation_ms": 156768.68142500462,
+  "latency_ms": {
+    "clip_decode": 3751.1479139939183,
+    "deepgram_asr": 837.5991569992038,
+    "mai_transcribe_asr": 884.5527390003554,
+    "asr_total": 885.7169090042589,
+    "audio_segmentation": 6.466576000093482,
+    "speech_embedding_campplus": 539.2852930017398,
+    "facial_detection_recognition_buffalo_l": 3570.5089980037883,
+    "face_clustering": 5.733718004194088,
+    "vlm_memory_generation": 22780.211623998184,
+    "text_embedding": 384.55937499384163,
+    "graph_update_total": 162.74536800483475
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 52,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 931,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789406292.6959257,
+          "status": "success",
+          "total_tokens": 196,
+          "request_end": 1789406293.0803683,
+          "latency_ms": 384.44328799960203
+        }
+      ],
+      "total_tokens": 196,
+      "latency_ms": 384.55937499384163
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 837.5991569992038,
+        "openrouter-mai-transcribe-2": 884.5527390003554
+      },
+      "asr_total_ms": 885.7169090042589,
+      "audio_segmentation_ms": 6.466576000093482,
+      "speech_embedding_ms": 539.2852930017398,
+      "graph_update_ms": 162.6013770001009,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 725.4825939962757
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3570.5089980037883,
+      "face_clustering_ms": 5.733718004194088,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 203,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3684.089064001455
+    },
+    "vlm": {
+      "context_preparation_ms": 4219.645079996553,
+      "vlm_ms": 22780.211623998184,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A person carries a long cardboard box of flowers from the hallway into the room.\",\n  \"Several people are gathered around a dining table covered with a pink-and-white checkered tablecloth.\",\n  \"<voice_430> discusses the idea of buying flowers rather than trying to grow plants during a short shooting period.\",\n  \"The person carrying the box places it on the center of the table in front of the group.\",\n  \"<voice_595> explains that the flowers were shipped from Yunnan and mentions having ordered peonies.\",\n  \"A woman with light reddish-blonde hair helps open the cardboard box on the table.\",\n  \"The woman unpacks the protective paper wrap to check the flowers inside.\",\n  \"A woman wearing a white shirt stands up from the table and walks toward the back of the room.\"\n ],\n \"high_level_conclusions\": [\n  \"The package contains fresh cut flowers (peonies) ordered as props or materials for an ongoing video shoot.\",\n  \"<voice_595> is the person who purchased the fresh flowers shipped by express delivery from Yunnan.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A person carries a long cardboard box of flowers from the hallway into the room.",
+          "Several people are gathered around a dining table covered with a pink-and-white checkered tablecloth.",
+          "<voice_430> discusses the idea of buying flowers rather than trying to grow plants during a short shooting period.",
+          "The person carrying the box places it on the center of the table in front of the group.",
+          "<voice_595> explains that the flowers were shipped from Yunnan and mentions having ordered peonies.",
+          "A woman with light reddish-blonde hair helps open the cardboard box on the table.",
+          "The woman unpacks the protective paper wrap to check the flowers inside.",
+          "A woman wearing a white shirt stands up from the table and walks toward the back of the room."
+        ],
+        "high_level_conclusions": [
+          "The package contains fresh cut flowers (peonies) ordered as props or materials for an ongoing video shoot.",
+          "<voice_595> is the person who purchased the fresh flowers shipped by express delivery from Yunnan."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 52,
+          "call_id": "4156cfad-76e3-428b-8cd7-05edeced9c26",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789406269.914915,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66909,
+          "output_tokens": 1157,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 22780.1154139961
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A person carries a long cardboard box of flowers from the hallway into the room.\",\n  \"Several people are gathered around a dining table covered with a pink-and-white checkered tablecloth.\",\n  \"<voice_430> discusses the idea of buying flowers rather than trying to grow plants during a short shooting period.\",\n  \"The person carrying the box places it on the center of the table in front of the group.\",\n  \"<voice_595> explains that the flowers were shipped from Yunnan and mentions having ordered peonies.\",\n  \"A woman with light reddish-blonde hair helps open the cardboard box on the table.\",\n  \"The woman unpacks the protective paper wrap to check the flowers inside.\",\n  \"A woman wearing a white shirt stands up from the table and walks toward the back of the room.\"\n ],\n \"high_level_conclusions\": [\n  \"The package contains fresh cut flowers (peonies) ordered as props or materials for an ongoing video shoot.\",\n  \"<voice_595> is the person who purchased the fresh flowers shipped by express delivery from Yunnan.\"\n ]\n}\n```",
+          "total_tokens": 68066,
+          "request_end": 1789406292.6951296,
+          "latency_ms": 22780.211623998184,
+          "client_wall_clock_latency_ms": 22780.211623998184,
+          "api_request_wall_clock_latency_ms": 22780.211623998184
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.08259600144810975,
+      "nodes_added": 8,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.06139500328572467,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 2,
+    "detected_faces": 203,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 2,
+    "nodes_after_clip": 606,
+    "edges_after_clip": 127,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 3
+  },
+  "generated_memory": {
+    "video_description": [
+      "A person carries a long cardboard box of flowers from the hallway into the room.",
+      "Several people are gathered around a dining table covered with a pink-and-white checkered tablecloth.",
+      "<voice_430> discusses the idea of buying flowers rather than trying to grow plants during a short shooting period.",
+      "The person carrying the box places it on the center of the table in front of the group.",
+      "<voice_595> explains that the flowers were shipped from Yunnan and mentions having ordered peonies.",
+      "A woman with light reddish-blonde hair helps open the cardboard box on the table.",
+      "The woman unpacks the protective paper wrap to check the flowers inside.",
+      "A woman wearing a white shirt stands up from the table and walks toward the back of the room."
+    ],
+    "high_level_conclusions": [
+      "The package contains fresh cut flowers (peonies) ordered as props or materials for an ongoing video shoot.",
+      "<voice_595> is the person who purchased the fresh flowers shipped by express delivery from Yunnan."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A person carries a long cardboard box of flowers from the hallway into the room.",
+      "Several people are gathered around a dining table covered with a pink-and-white checkered tablecloth.",
+      "<voice_430> discusses the idea of buying flowers rather than trying to grow plants during a short shooting period.",
+      "The person carrying the box places it on the center of the table in front of the group.",
+      "<voice_595> explains that the flowers were shipped from Yunnan and mentions having ordered peonies.",
+      "A woman with light reddish-blonde hair helps open the cardboard box on the table.",
+      "The woman unpacks the protective paper wrap to check the flowers inside.",
+      "A woman wearing a white shirt stands up from the table and walks toward the back of the room."
+    ],
+    "high_level_conclusions": [
+      "The package contains fresh cut flowers (peonies) ordered as props or materials for an ongoing video shoot.",
+      "<voice_595> is the person who purchased the fresh flowers shipped by express delivery from Yunnan."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_52_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 3,
+    "nodes": [
+      {
+        "id": 595,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 直接那个顺风发光。",
+            "MAI: 云南的花，是，它好像有两个包，对，我买了芍药啊。啊，刚好一些花要找个简。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 596,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person carries a long cardboard box of flowers from the hallway into the room."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 597,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Several people are gathered around a dining table covered with a pink-and-white checkered tablecloth."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 598,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_430> discusses the idea of buying flowers rather than trying to grow plants during a short shooting period."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 599,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person carrying the box places it on the center of the table in front of the group."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 600,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_595> explains that the flowers were shipped from Yunnan and mentions having ordered peonies."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 601,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman with light reddish-blonde hair helps open the cardboard box on the table."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 602,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman unpacks the protective paper wrap to check the flowers inside."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 603,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman wearing a white shirt stands up from the table and walks toward the back of the room."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 604,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The package contains fresh cut flowers (peonies) ordered as props or materials for an ongoing video shoot."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 605,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_595> is the person who purchased the fresh flowers shipped by express delivery from Yunnan."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 430,
+        "target": 598,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 595,
+        "target": 600,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 595,
+        "target": 605,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_52_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_52_graph.pkl"
+  },
+  "memory_pickle_bytes": 13700333,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 47323.208771221,
+    "prepared_perf": 47329.572949363,
+    "ordered_start_perf": 47447.13094093,
+    "consumer_wait_ms": 0.012272997992113233,
+    "ready_to_ordered_ms": 117557.99156700232,
+    "preparation_work_ms": 6358.820171000843,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 31796.357406004972
+}

@@ -1,0 +1,81 @@
+{
+  "clip_id": 73,
+  "source": {
+    "segment_id": 73,
+    "source": "DAY1_A1_JAKE_11440000.mp4",
+    "source_clock": "11440000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42240.0,
+    "absolute_end_seconds": 42270.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0073.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48633.311642697,
+      "prepared_perf": 48645.718834264,
+      "ordered_start_perf": 48705.211408554,
+      "consumer_wait_ms": 0.010861003829631954,
+      "ready_to_ordered_ms": 59492.57429000136,
+      "preparation_work_ms": 12401.790639996761,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "From a first-person perspective, Jake sits at a table and types on his smartphone.",
+      "Several people are gathered around the table decorated with flowers, stationery, and a clapperboard.",
+      "In the background, a woman in a white shirt arranges green foliage and flowers.",
+      "Two women are seated on the opposite side of the table engaged in conversation.",
+      "Jake stops typing and sets his phone down on the table.",
+      "A woman wearing glasses and dark clothing stands beside Jake, holding a tote bag.",
+      "At 00:16, <voice_825> utters an exclamation.",
+      "The woman in dark clothing takes out a pink card illustrated with a peach-heart pattern and hands it to Jake.",
+      "Jake accepts the pink card from her hands.",
+      "At 00:27, <voice_0> comments playfully that she feels disliked or dismissed.",
+      "The woman looks at Jake and smiles after handing over the card."
+    ],
+    "high_level_conclusions": [
+      "The people gathered in the room are preparing for a project or event, as evidenced by the clapperboard, floral arrangements, and handwritten cards.",
+      "The card handed to Jake is likely a greeting or congratulatory card prepared for the occasion.",
+      "The remark by <voice_0> ('被嫌弃了') is made in a lighthearted, playful manner in response to Jake's reaction upon receiving the card."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"From a first-person perspective, Jake sits at a table and types on his smartphone.\",\n  \"Several people are gathered around the table decorated with flowers, stationery, and a clapperboard.\",\n  \"In the background, a woman in a white shirt arranges green foliage and flowers.\",\n  \"Two women are seated on the opposite side of the table engaged in conversation.\",\n  \"Jake stops typing and sets his phone down on the table.\",\n  \"A woman wearing glasses and dark clothing stands beside Jake, holding a tote bag.\",\n  \"At 00:16, <voice_825> utters an exclamation.\",\n  \"The woman in dark clothing takes out a pink card illustrated with a peach-heart pattern and hands it to Jake.\",\n  \"Jake accepts the pink card from her hands.\",\n  \"At 00:27, <voice_0> comments playfully that she feels disliked or dismissed.\",\n  \"The woman looks at Jake and smiles after handing over the card.\"\n ],\n \"high_level_conclusions\": [\n  \"The people gathered in the room are preparing for a project or event, as evidenced by the clapperboard, floral arrangements, and handwritten cards.\",\n  \"The card handed to Jake is likely a greeting or congratulatory card prepared for the occasion.\",\n  \"The remark by <voice_0> ('被嫌弃了') is made in a lighthearted, playful manner in response to Jake's reaction upon receiving the card.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 73,
+      "call_id": "a5537a05-1ffa-4980-be1d-ac91082e9be7",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407528.355805,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66416,
+      "output_tokens": 1225,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 34740.54588400031
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"From a first-person perspective, Jake sits at a table and types on his smartphone.\",\n  \"Several people are gathered around the table decorated with flowers, stationery, and a clapperboard.\",\n  \"In the background, a woman in a white shirt arranges green foliage and flowers.\",\n  \"Two women are seated on the opposite side of the table engaged in conversation.\",\n  \"Jake stops typing and sets his phone down on the table.\",\n  \"A woman wearing glasses and dark clothing stands beside Jake, holding a tote bag.\",\n  \"At 00:16, <voice_825> utters an exclamation.\",\n  \"The woman in dark clothing takes out a pink card illustrated with a peach-heart pattern and hands it to Jake.\",\n  \"Jake accepts the pink card from her hands.\",\n  \"At 00:27, <voice_0> comments playfully that she feels disliked or dismissed.\",\n  \"The woman looks at Jake and smiles after handing over the card.\"\n ],\n \"high_level_conclusions\": [\n  \"The people gathered in the room are preparing for a project or event, as evidenced by the clapperboard, floral arrangements, and handwritten cards.\",\n  \"The card handed to Jake is likely a greeting or congratulatory card prepared for the occasion.\",\n  \"The remark by <voice_0> ('被嫌弃了') is made in a lighthearted, playful manner in response to Jake's reaction upon receiving the card.\"\n ]\n}\n```",
+      "total_tokens": 67641,
+      "request_end": 1789407563.0965319,
+      "latency_ms": 34740.71435099904,
+      "client_wall_clock_latency_ms": 34740.71435099904,
+      "api_request_wall_clock_latency_ms": 34740.71435099904
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_73_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

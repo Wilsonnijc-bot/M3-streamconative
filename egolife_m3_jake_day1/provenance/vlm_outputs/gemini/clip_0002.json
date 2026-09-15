@@ -1,0 +1,59 @@
+{
+  "clip_id": 2,
+  "source": {
+    "segment_id": 2,
+    "source": "DAY1_A1_JAKE_11100000.mp4",
+    "source_clock": "11100000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40200.0,
+    "absolute_end_seconds": 40230.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0002.mp4"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer holds out a smartphone to the people seated around the table.",
+      "The participants reach out and take turns tapping the smartphone screen.",
+      "The woman in black seated on the left takes the smartphone, taps the screen, and returns it.",
+      "The camera wearer takes the phone back, stops the timer, and sets it down.",
+      "The camera wearer picks up a mounting stick on the table.",
+      "<voice_0> directs everyone to tap the phone screen and proposes discussing their plans for the final day."
+    ],
+    "high_level_conclusions": [
+      "Tapping the smartphone screen in turn serves to synchronize timestamps across individual wearable recording devices.",
+      "<voice_0> functions as the leader or coordinator organizing the group's agenda.",
+      "The group is conducting an introductory coordination meeting before proceeding with their planned activities."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"The camera wearer holds out a smartphone to the people seated around the table.\",\n  \"The participants reach out and take turns tapping the smartphone screen.\",\n  \"The woman in black seated on the left takes the smartphone, taps the screen, and returns it.\",\n  \"The camera wearer takes the phone back, stops the timer, and sets it down.\",\n  \"The camera wearer picks up a mounting stick on the table.\",\n  \"<voice_0> directs everyone to tap the phone screen and proposes discussing their plans for the final day.\"\n ],\n \"high_level_conclusions\": [\n  \"Tapping the smartphone screen in turn serves to synchronize timestamps across individual wearable recording devices.\",\n  \"<voice_0> functions as the leader or coordinator organizing the group's agenda.\",\n  \"The group is conducting an introductory coordination meeting before proceeding with their planned activities.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 2,
+      "call_id": "2febc75a-6a1a-4905-bf3b-4934d0fdd39c",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789397034.7613645,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66746,
+      "output_tokens": 1012,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"The camera wearer holds out a smartphone to the people seated around the table.\",\n  \"The participants reach out and take turns tapping the smartphone screen.\",\n  \"The woman in black seated on the left takes the smartphone, taps the screen, and returns it.\",\n  \"The camera wearer takes the phone back, stops the timer, and sets it down.\",\n  \"The camera wearer picks up a mounting stick on the table.\",\n  \"<voice_0> directs everyone to tap the phone screen and proposes discussing their plans for the final day.\"\n ],\n \"high_level_conclusions\": [\n  \"Tapping the smartphone screen in turn serves to synchronize timestamps across individual wearable recording devices.\",\n  \"<voice_0> functions as the leader or coordinator organizing the group's agenda.\",\n  \"The group is conducting an introductory coordination meeting before proceeding with their planned activities.\"\n ]\n}\n```",
+      "total_tokens": 67758,
+      "request_end": 1789397132.5864232,
+      "latency_ms": 97825.05627199862,
+      "client_wall_clock_latency_ms": 97825.05627199862,
+      "api_request_wall_clock_latency_ms": 97825.05627199862
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_2_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

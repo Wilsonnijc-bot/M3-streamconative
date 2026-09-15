@@ -1,0 +1,76 @@
+{
+  "clip_id": 29,
+  "source": {
+    "segment_id": 29,
+    "source": "DAY1_A1_JAKE_11230000.mp4",
+    "source_clock": "11230000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40980.0,
+    "absolute_end_seconds": 41010.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0029.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46095.522191534,
+      "prepared_perf": 46105.932150042,
+      "ordered_start_perf": 46105.932371538,
+      "consumer_wait_ms": 10406.676204001997,
+      "ready_to_ordered_ms": 0.2214960040873848,
+      "preparation_work_ms": 10409.431094994943,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a dining table covered with a red-and-white checkered tablecloth.",
+      "The camera wearer and the young man in the brown shirt on the right finish packing items into a blue and white product box.",
+      "The camera wearer closes the box and aligns it with a second box on the table.",
+      "The young man in the brown shirt finishes packing his items and leans back.",
+      "Across the table, a young woman in a patterned top holds and inspects another blue box.",
+      "The camera wearer stacks two blue-and-white boxes together and places them on their lap.",
+      "The group around the table engages in conversation following the completion of the packing task."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a collaborative group activity or study session involving packing equipment into boxes.",
+      "The group concludes an initial task and transitions into discussing upcoming plans and invitations for the final day of their activity."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a dining table covered with a red-and-white checkered tablecloth.\",\n    \"The camera wearer and the young man in the brown shirt on the right finish packing items into a blue and white product box.\",\n    \"The camera wearer closes the box and aligns it with a second box on the table.\",\n    \"The young man in the brown shirt finishes packing his items and leans back.\",\n    \"Across the table, a young woman in a patterned top holds and inspects another blue box.\",\n    \"The camera wearer stacks two blue-and-white boxes together and places them on their lap.\",\n    \"The group around the table engages in conversation following the completion of the packing task.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative group activity or study session involving packing equipment into boxes.\",\n    \"The group concludes an initial task and transitions into discussing upcoming plans and invitations for the final day of their activity.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 29,
+      "call_id": "68e8da49-fa93-4852-9caa-23ce5e672be1",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404931.5858896,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66897,
+      "output_tokens": 1122,
+      "transport": {
+        "client_previously_used": false,
+        "tcp_connect_count": 1,
+        "tls_handshake_count": 1,
+        "http_wall_ms": 38296.120170001814
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a dining table covered with a red-and-white checkered tablecloth.\",\n    \"The camera wearer and the young man in the brown shirt on the right finish packing items into a blue and white product box.\",\n    \"The camera wearer closes the box and aligns it with a second box on the table.\",\n    \"The young man in the brown shirt finishes packing his items and leans back.\",\n    \"Across the table, a young woman in a patterned top holds and inspects another blue box.\",\n    \"The camera wearer stacks two blue-and-white boxes together and places them on their lap.\",\n    \"The group around the table engages in conversation following the completion of the packing task.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative group activity or study session involving packing equipment into boxes.\",\n    \"The group concludes an initial task and transitions into discussing upcoming plans and invitations for the final day of their activity.\"\n  ]\n}\n```",
+      "total_tokens": 68019,
+      "request_end": 1789404969.8821435,
+      "latency_ms": 38296.25077699893,
+      "client_wall_clock_latency_ms": 38296.25077699893,
+      "api_request_wall_clock_latency_ms": 38296.25077699893
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_29_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "question_id": "Q09",
+  "candidate_mapping": {
+    "0": "D",
+    "1": "B",
+    "2": "A",
+    "3": "C"
+  },
+  "grades": {
+    "0": {
+      "correct": false,
+      "reason": "Claims insufficient information instead of providing the time."
+    },
+    "1": {
+      "correct": false,
+      "reason": "Claims insufficient information instead of providing the time."
+    },
+    "2": {
+      "correct": true,
+      "reason": "Correctly states the time as 4:00 PM, which matches the reference."
+    },
+    "3": {
+      "correct": false,
+      "reason": "Claims insufficient information instead of providing the time."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q09",
+    "method": null,
+    "call_id": "8cc6e137-6244-447f-9fa9-2d0969f62ccb",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437145.0736916,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 191,
+    "output_tokens": 263,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 2046.122372004902
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"Claims insufficient information instead of providing the time.\"\n  },\n  \"1\": {\n    \"correct\": false,\n    \"reason\": \"Claims insufficient information instead of providing the time.\"\n  },\n  \"2\": {\n    \"correct\": true,\n    \"reason\": \"Correctly states the time as 4:00 PM, which matches the reference.\"\n  },\n  \"3\": {\n    \"correct\": false,\n    \"reason\": \"Claims insufficient information instead of providing the time.\"\n  }\n}\n```",
+    "total_tokens": 454,
+    "request_end": 1789437147.1198738,
+    "latency_ms": 2046.1811019922607,
+    "client_wall_clock_latency_ms": 2046.1811019922607,
+    "api_request_wall_clock_latency_ms": 2046.1811019922607
+  },
+  "included_in_qa_latency": false
+}

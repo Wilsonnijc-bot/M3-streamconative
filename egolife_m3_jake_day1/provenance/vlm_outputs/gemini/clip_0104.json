@@ -1,0 +1,75 @@
+{
+  "clip_id": 104,
+  "source": {
+    "segment_id": 104,
+    "source": "DAY1_A1_JAKE_11583000.mp4",
+    "source_clock": "11583000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43110.0,
+    "absolute_end_seconds": 43140.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0104.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51510.587041687,
+      "prepared_perf": 51518.22505498,
+      "ordered_start_perf": 51704.622291283,
+      "consumer_wait_ms": 0.02282299828948453,
+      "ready_to_ordered_ms": 186397.23630299704,
+      "preparation_work_ms": 7632.357873000728,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer sits at a table and looks at a smartphone screen.",
+      "The camera wearer places the smartphone down onto the table beside a clapperboard.",
+      "A group of people are gathered around the table, with one woman standing by a whiteboard arranging flowers.",
+      "A young man in an orange T-shirt enters the kitchen doorway and converses with the group using <voice_229> and <voice_1197>.",
+      "The man in the orange T-shirt gestures outward while proposing an idea about players receiving tokens upon entry.",
+      "A woman sitting to the left of the camera wearer speaks using <voice_1017>, discussing that participants should earn currency by telling stories."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a discussion or brainstorming session regarding the rules and mechanics of an interactive activity or game involving tasks, tokens, and storytelling.",
+      "The atmosphere is collaborative and casual, with participants freely pitching ideas for user interaction and reward systems."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"The camera wearer sits at a table and looks at a smartphone screen.\",\n    \"The camera wearer places the smartphone down onto the table beside a clapperboard.\",\n    \"A group of people are gathered around the table, with one woman standing by a whiteboard arranging flowers.\",\n    \"A young man in an orange T-shirt enters the kitchen doorway and converses with the group using <voice_229> and <voice_1197>.\",\n    \"The man in the orange T-shirt gestures outward while proposing an idea about players receiving tokens upon entry.\",\n    \"A woman sitting to the left of the camera wearer speaks using <voice_1017>, discussing that participants should earn currency by telling stories.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a discussion or brainstorming session regarding the rules and mechanics of an interactive activity or game involving tasks, tokens, and storytelling.\",\n    \"The atmosphere is collaborative and casual, with participants freely pitching ideas for user interaction and reward systems.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 104,
+      "call_id": "6cc5ef33-27ef-4590-9b04-0c3baec34e21",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410529.5028448,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66975,
+      "output_tokens": 1286,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 45319.63718099723
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer sits at a table and looks at a smartphone screen.\",\n    \"The camera wearer places the smartphone down onto the table beside a clapperboard.\",\n    \"A group of people are gathered around the table, with one woman standing by a whiteboard arranging flowers.\",\n    \"A young man in an orange T-shirt enters the kitchen doorway and converses with the group using <voice_229> and <voice_1197>.\",\n    \"The man in the orange T-shirt gestures outward while proposing an idea about players receiving tokens upon entry.\",\n    \"A woman sitting to the left of the camera wearer speaks using <voice_1017>, discussing that participants should earn currency by telling stories.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a discussion or brainstorming session regarding the rules and mechanics of an interactive activity or game involving tasks, tokens, and storytelling.\",\n    \"The atmosphere is collaborative and casual, with participants freely pitching ideas for user interaction and reward systems.\"\n  ]\n}\n```",
+      "total_tokens": 68261,
+      "request_end": 1789410574.8226786,
+      "latency_ms": 45319.82957400032,
+      "client_wall_clock_latency_ms": 45319.82957400032,
+      "api_request_wall_clock_latency_ms": 45319.82957400032
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_104_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "clip_id": 144,
+  "source": {
+    "segment_id": 144,
+    "source": "DAY1_A1_JAKE_12170000.mp4",
+    "source_clock": "12170000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 27.18000000000029,
+    "absolute_start_seconds": 44220.0,
+    "absolute_end_seconds": 44247.18,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0144.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 54053.450509216,
+      "prepared_perf": 54062.258995251,
+      "ordered_start_perf": 54187.950796413,
+      "consumer_wait_ms": 0.04471500142244622,
+      "ready_to_ordered_ms": 125691.80116200005,
+      "preparation_work_ms": 8803.048576002766,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a dining table covered with a red-and-white checkered tablecloth.",
+      "A laptop and a water bottle sit on the table in the foreground.",
+      "A woman wearing a black top sits on the left side of the table, holding and reading from an open booklet.",
+      "A woman wearing a white shirt stands beside a whiteboard at the head of the table.",
+      "A woman in a light patterned outfit sits across the table listening to the discussion.",
+      "A person seated on the right side reaches their arm across the table during the conversation.",
+      "The woman in the black top lowers the booklet and places it onto the table.",
+      "The group converses about the schedule, data collection, and arrangements for dinner."
+    ],
+    "high_level_conclusions": [
+      "The individuals are coordinating an experimental recording session or project, referencing schedules, participants ('guest part'), and data transmission from recording glasses.",
+      "The participants agree to pause recording during dinner to avoid damaging the wearable recording equipment.",
+      "The group decides to order pizza for dinner rather than cook or have a barbecue."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a dining table covered with a red-and-white checkered tablecloth.\",\n    \"A laptop and a water bottle sit on the table in the foreground.\",\n    \"A woman wearing a black top sits on the left side of the table, holding and reading from an open booklet.\",\n    \"A woman wearing a white shirt stands beside a whiteboard at the head of the table.\",\n    \"A woman in a light patterned outfit sits across the table listening to the discussion.\",\n    \"A person seated on the right side reaches their arm across the table during the conversation.\",\n    \"The woman in the black top lowers the booklet and places it onto the table.\",\n    \"The group converses about the schedule, data collection, and arrangements for dinner.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals are coordinating an experimental recording session or project, referencing schedules, participants ('guest part'), and data transmission from recording glasses.\",\n    \"The participants agree to pause recording during dinner to avoid damaging the wearable recording equipment.\",\n    \"The group decides to order pizza for dinner rather than cook or have a barbecue.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 144,
+      "call_id": "5c3a5296-1192-4363-9dc6-3de131eeb114",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789413013.8728638,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 61650,
+      "output_tokens": 2046,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 75950.74736300012
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a dining table covered with a red-and-white checkered tablecloth.\",\n    \"A laptop and a water bottle sit on the table in the foreground.\",\n    \"A woman wearing a black top sits on the left side of the table, holding and reading from an open booklet.\",\n    \"A woman wearing a white shirt stands beside a whiteboard at the head of the table.\",\n    \"A woman in a light patterned outfit sits across the table listening to the discussion.\",\n    \"A person seated on the right side reaches their arm across the table during the conversation.\",\n    \"The woman in the black top lowers the booklet and places it onto the table.\",\n    \"The group converses about the schedule, data collection, and arrangements for dinner.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals are coordinating an experimental recording session or project, referencing schedules, participants ('guest part'), and data transmission from recording glasses.\",\n    \"The participants agree to pause recording during dinner to avoid damaging the wearable recording equipment.\",\n    \"The group decides to order pizza for dinner rather than cook or have a barbecue.\"\n  ]\n}\n```",
+      "total_tokens": 63696,
+      "request_end": 1789413089.8238015,
+      "latency_ms": 75950.9283840016,
+      "client_wall_clock_latency_ms": 75950.9283840016,
+      "api_request_wall_clock_latency_ms": 75950.9283840016
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_144_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

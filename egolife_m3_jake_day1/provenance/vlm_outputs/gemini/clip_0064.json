@@ -1,0 +1,77 @@
+{
+  "clip_id": 64,
+  "source": {
+    "segment_id": 64,
+    "source": "DAY1_A1_JAKE_11400000.mp4",
+    "source_clock": "11400000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42000.0,
+    "absolute_end_seconds": 42030.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0064.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47934.046646493,
+      "prepared_perf": 47941.389715634,
+      "ordered_start_perf": 48030.315685481,
+      "consumer_wait_ms": 0.012664000678341836,
+      "ready_to_ordered_ms": 88925.96984699776,
+      "preparation_work_ms": 7337.721772004443,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Several people are gathered around a table covered with a red-and-white checkered tablecloth in a room.",
+      "A woman seated on the right wearing a patterned blue dress gestures actively while speaking to the group.",
+      "A woman wearing a white blouse stands at the head of the table, handling flowers and wrapping materials.",
+      "A woman dressed in black sits on the left side of the table, listening to the discussion.",
+      "A woman with dyed pink hair stands near a whiteboard in the background, observing the others.",
+      "A young man enters the background near the doorway behind the standing woman.",
+      "A clapperboard and camera accessories rest on the table in front of the first-person viewer."
+    ],
+    "high_level_conclusions": [
+      "The setting is a film or video production environment, as evidenced by the clapperboard and setup.",
+      "The woman in the blue dress is proposing and explaining a DIY cardboard dog craft idea to the group.",
+      "The atmosphere is collaborative and casual as the group discusses props or creative concepts."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"Several people are gathered around a table covered with a red-and-white checkered tablecloth in a room.\",\n  \"A woman seated on the right wearing a patterned blue dress gestures actively while speaking to the group.\",\n  \"A woman wearing a white blouse stands at the head of the table, handling flowers and wrapping materials.\",\n  \"A woman dressed in black sits on the left side of the table, listening to the discussion.\",\n  \"A woman with dyed pink hair stands near a whiteboard in the background, observing the others.\",\n  \"A young man enters the background near the doorway behind the standing woman.\",\n  \"A clapperboard and camera accessories rest on the table in front of the first-person viewer.\"\n ],\n \"high_level_conclusions\": [\n  \"The setting is a film or video production environment, as evidenced by the clapperboard and setup.\",\n  \"The woman in the blue dress is proposing and explaining a DIY cardboard dog craft idea to the group.\",\n  \"The atmosphere is collaborative and casual as the group discusses props or creative concepts.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 64,
+      "call_id": "c5aac55f-729e-459d-9074-942b3e309692",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406855.3195384,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67667,
+      "output_tokens": 1613,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 32993.24741199962
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"Several people are gathered around a table covered with a red-and-white checkered tablecloth in a room.\",\n  \"A woman seated on the right wearing a patterned blue dress gestures actively while speaking to the group.\",\n  \"A woman wearing a white blouse stands at the head of the table, handling flowers and wrapping materials.\",\n  \"A woman dressed in black sits on the left side of the table, listening to the discussion.\",\n  \"A woman with dyed pink hair stands near a whiteboard in the background, observing the others.\",\n  \"A young man enters the background near the doorway behind the standing woman.\",\n  \"A clapperboard and camera accessories rest on the table in front of the first-person viewer.\"\n ],\n \"high_level_conclusions\": [\n  \"The setting is a film or video production environment, as evidenced by the clapperboard and setup.\",\n  \"The woman in the blue dress is proposing and explaining a DIY cardboard dog craft idea to the group.\",\n  \"The atmosphere is collaborative and casual as the group discusses props or creative concepts.\"\n ]\n}\n```",
+      "total_tokens": 69280,
+      "request_end": 1789406888.3128843,
+      "latency_ms": 32993.34150100185,
+      "client_wall_clock_latency_ms": 32993.34150100185,
+      "api_request_wall_clock_latency_ms": 32993.34150100185
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_64_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "clip_id": 39,
+  "source": {
+    "segment_id": 39,
+    "source": "DAY1_A1_JAKE_11280000.mp4",
+    "source_clock": "11280000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41280.0,
+    "absolute_end_seconds": 41310.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0039.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46557.625170869,
+      "prepared_perf": 46565.833177088,
+      "ordered_start_perf": 46678.110119466,
+      "consumer_wait_ms": 0.014047000149730593,
+      "ready_to_ordered_ms": 112276.94237799733,
+      "preparation_work_ms": 8202.64249900356,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a checkered dining table while a person in an orange shirt stands by a whiteboard writing.",
+      "<voice_0> gives verbal instructions on writing code names or labels on the whiteboard.",
+      "An arm reaches out from the foreground pointing toward the whiteboard.",
+      "The person at the whiteboard continues writing as instructed.",
+      "<voice_453> asks whose item or drawing is being referenced.",
+      "<voice_454> identifies one of the items as belonging to Tasha.",
+      "<voice_455> identifies another item as belonging to Yuxuan."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in an interactive planning or game session involving labels and assignments on a whiteboard.",
+      "<voice_0> serves as a facilitator directing how participants and characters are marked on the board."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a checkered dining table while a person in an orange shirt stands by a whiteboard writing.\",\n  \"<voice_0> gives verbal instructions on writing code names or labels on the whiteboard.\",\n  \"An arm reaches out from the foreground pointing toward the whiteboard.\",\n  \"The person at the whiteboard continues writing as instructed.\",\n  \"<voice_453> asks whose item or drawing is being referenced.\",\n  \"<voice_454> identifies one of the items as belonging to Tasha.\",\n  \"<voice_455> identifies another item as belonging to Yuxuan.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in an interactive planning or game session involving labels and assignments on a whiteboard.\",\n  \"<voice_0> serves as a facilitator directing how participants and characters are marked on the board.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 39,
+      "call_id": "33d4af43-ff38-4e11-8e47-d40aa432c9ec",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405501.7864807,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67283,
+      "output_tokens": 835,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 31438.593596001738
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a checkered dining table while a person in an orange shirt stands by a whiteboard writing.\",\n  \"<voice_0> gives verbal instructions on writing code names or labels on the whiteboard.\",\n  \"An arm reaches out from the foreground pointing toward the whiteboard.\",\n  \"The person at the whiteboard continues writing as instructed.\",\n  \"<voice_453> asks whose item or drawing is being referenced.\",\n  \"<voice_454> identifies one of the items as belonging to Tasha.\",\n  \"<voice_455> identifies another item as belonging to Yuxuan.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in an interactive planning or game session involving labels and assignments on a whiteboard.\",\n  \"<voice_0> serves as a facilitator directing how participants and characters are marked on the board.\"\n ]\n}\n```",
+      "total_tokens": 68118,
+      "request_end": 1789405533.2252035,
+      "latency_ms": 31438.71716799913,
+      "client_wall_clock_latency_ms": 31438.71716799913,
+      "api_request_wall_clock_latency_ms": 31438.71716799913
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_39_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

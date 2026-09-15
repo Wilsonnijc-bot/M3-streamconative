@@ -1,0 +1,453 @@
+{
+  "model": "gemini-3.8-flash",
+  "transport": "GPU-originated direct-IP 302.ai call",
+  "branch_ms": 13792.447612000615,
+  "end_to_end_memory_generation_ms": 32339.180515999942,
+  "vlm_ms": 12124.9691790008,
+  "text_embedding_ms": 1666.4683990002231,
+  "graph_update_ms": 0.46812999971734826,
+  "graph_insertion_ms": 0.3789610000239918,
+  "equivalence_refresh_ms": 0.08916899969335645,
+  "text_embedding_backend": {
+    "provider": "OpenRouter",
+    "endpoint": "https://openrouter.ai/api/v1/embeddings",
+    "model": "openai/text-embedding-3-large"
+  },
+  "text_embedding_detail": {
+    "episodic_ms": 1292.9337519999535,
+    "semantic_ms": 373.5346470002696,
+    "episodic_tokens": 74,
+    "semantic_tokens": 28
+  },
+  "memory_processing": {
+    "episodic": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": 1292.9337519999535,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.3532619994075503,
+      "nodes_added": 6,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff"
+    },
+    "semantic": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": 373.5346470002696,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.02569900061644148,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff"
+    }
+  },
+  "tokens": 40743,
+  "usage": {
+    "prompt_tokens": 40095,
+    "completion_tokens": 648,
+    "total_tokens": 40743,
+    "billing_usage": {
+      "source": "gemini_chat",
+      "semantic": "gemini",
+      "gemini_usage_metadata": {
+        "promptTokenCount": 40095,
+        "toolUsePromptTokenCount": 0,
+        "candidatesTokenCount": 155,
+        "totalTokenCount": 40743,
+        "thoughtsTokenCount": 493,
+        "cachedContentTokenCount": 0,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 891
+          },
+          {
+            "modality": "IMAGE",
+            "tokenCount": 39204
+          }
+        ],
+        "toolUsePromptTokensDetails": [],
+        "candidatesTokensDetails": []
+      }
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "text_tokens": 891,
+      "audio_tokens": 0,
+      "image_tokens": 39204
+    },
+    "completion_tokens_details": {
+      "text_tokens": 0,
+      "audio_tokens": 0,
+      "image_tokens": 0,
+      "reasoning_tokens": 493
+    },
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "input_tokens_details": null,
+    "claude_cache_creation_5_m_tokens": 0,
+    "claude_cache_creation_1_h_tokens": 0
+  },
+  "raw_memory": "```json\n{\n  \"video_description\": [\n    \"The camera wearer holds a smartphone facing a group seated around a table.\",\n    \"The camera wearer navigates the phone interface to open the stopwatch tool.\",\n    \"Several participants sit around the table with equipment cases and items laid out.\",\n    \"<voice_0> instructs to prepare a stopwatch.\",\n    \"<voice_1> mentions a timestamp.\",\n    \"The camera wearer activates the stopwatch display on the smartphone.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The camera wearer is syncing timestamps across devices for an upcoming recording session.\",\n    \"<voice_0> is actively directing or coordinating the preparation procedure.\"\n  ]\n}\n```",
+  "generation": null,
+  "memory": {
+    "video_description": [
+      "The camera wearer holds a smartphone facing a group seated around a table.",
+      "The camera wearer navigates the phone interface to open the stopwatch tool.",
+      "Several participants sit around the table with equipment cases and items laid out.",
+      "<voice_0> instructs to prepare a stopwatch.",
+      "<voice_1> mentions a timestamp.",
+      "The camera wearer activates the stopwatch display on the smartphone."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer is syncing timestamps across devices for an upcoming recording session.",
+      "<voice_0> is actively directing or coordinating the preparation procedure."
+    ]
+  },
+  "graph": {
+    "counts": {
+      "nodes": 10,
+      "edges": 3,
+      "directed_edges_stored": 6,
+      "by_type": {
+        "episodic": 6,
+        "semantic": 2,
+        "voice": 2
+      }
+    },
+    "nodes": [
+      {
+        "id": 0,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好，然后一个秒表。",
+            "MAI: 对，戳一下。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 时间戳。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 2,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer holds a smartphone facing a group seated around a table."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 3,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer navigates the phone interface to open the stopwatch tool."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 4,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Several participants sit around the table with equipment cases and items laid out."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 5,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> instructs to prepare a stopwatch."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 6,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1> mentions a timestamp."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 7,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer activates the stopwatch display on the smartphone."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 8,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera wearer is syncing timestamps across devices for an upcoming recording session."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 9,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> is actively directing or coordinating the preparation procedure."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 5,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 9,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 3,
+    "nodes": [
+      {
+        "id": 0,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好，然后一个秒表。",
+            "MAI: 对，戳一下。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 时间戳。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 2,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer holds a smartphone facing a group seated around a table."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 3,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer navigates the phone interface to open the stopwatch tool."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 4,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Several participants sit around the table with equipment cases and items laid out."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 5,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> instructs to prepare a stopwatch."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 6,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1> mentions a timestamp."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 7,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer activates the stopwatch display on the smartphone."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 8,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera wearer is syncing timestamps across devices for an upcoming recording session."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 9,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> is actively directing or coordinating the preparation procedure."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 5,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 9,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1,
+        "target": 6,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "clip_id": 112,
+  "source": {
+    "segment_id": 112,
+    "source": "DAY1_A1_JAKE_12023000.mp4",
+    "source_clock": "12023000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 5.080000000001746,
+    "absolute_start_seconds": 43350.0,
+    "absolute_end_seconds": 43355.08,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0112.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 52141.955274249,
+      "prepared_perf": 52145.764541255,
+      "ordered_start_perf": 52265.520826413,
+      "consumer_wait_ms": 0.010249001206830144,
+      "ready_to_ordered_ms": 119756.28515800054,
+      "preparation_work_ms": 3803.919870995742,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered inside a room around a dining table.",
+      "A person in an orange shirt stands beside a whiteboard, gesturing and pointing at it.",
+      "A person in a light shirt stands next to the whiteboard, engaging with the person in orange.",
+      "A person wearing dark clothing sits at the left end of the table.",
+      "Two people, including one with long pink hair, sit on the right side of the table watching the whiteboard.",
+      "A film clapperboard and various work materials rest on the table.",
+      "A film light with a softbox is visible in the background on the left."
+    ],
+    "high_level_conclusions": [
+      "The individuals appear to be a film or video production crew holding a production meeting or scene briefing.",
+      "The person at the whiteboard is leading the discussion, likely outlining a schedule or storyboard."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered inside a room around a dining table.\",\n    \"A person in an orange shirt stands beside a whiteboard, gesturing and pointing at it.\",\n    \"A person in a light shirt stands next to the whiteboard, engaging with the person in orange.\",\n    \"A person wearing dark clothing sits at the left end of the table.\",\n    \"Two people, including one with long pink hair, sit on the right side of the table watching the whiteboard.\",\n    \"A film clapperboard and various work materials rest on the table.\",\n    \"A film light with a softbox is visible in the background on the left.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals appear to be a film or video production crew holding a production meeting or scene briefing.\",\n    \"The person at the whiteboard is leading the discussion, likely outlining a schedule or storyboard.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 112,
+      "call_id": "56979a39-1c20-4e53-980b-29bafec3e23d",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789411082.56069,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 12435,
+      "output_tokens": 644,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 10929.61306500365
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered inside a room around a dining table.\",\n    \"A person in an orange shirt stands beside a whiteboard, gesturing and pointing at it.\",\n    \"A person in a light shirt stands next to the whiteboard, engaging with the person in orange.\",\n    \"A person wearing dark clothing sits at the left end of the table.\",\n    \"Two people, including one with long pink hair, sit on the right side of the table watching the whiteboard.\",\n    \"A film clapperboard and various work materials rest on the table.\",\n    \"A film light with a softbox is visible in the background on the left.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals appear to be a film or video production crew holding a production meeting or scene briefing.\",\n    \"The person at the whiteboard is leading the discussion, likely outlining a schedule or storyboard.\"\n  ]\n}\n```",
+      "total_tokens": 13079,
+      "request_end": 1789411093.4904296,
+      "latency_ms": 10929.736466998293,
+      "client_wall_clock_latency_ms": 10929.736466998293,
+      "api_request_wall_clock_latency_ms": 10929.736466998293
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_112_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

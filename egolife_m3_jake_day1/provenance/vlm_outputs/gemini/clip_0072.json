@@ -1,0 +1,73 @@
+{
+  "clip_id": 72,
+  "source": {
+    "segment_id": 72,
+    "source": "DAY1_A1_JAKE_11433000.mp4",
+    "source_clock": "11433000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42210.0,
+    "absolute_end_seconds": 42240.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0072.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48612.911372804,
+      "prepared_perf": 48620.57538501,
+      "ordered_start_perf": 48670.186073642,
+      "consumer_wait_ms": 0.009397001122124493,
+      "ready_to_ordered_ms": 49610.68863199762,
+      "preparation_work_ms": 7658.631336998951,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer sits before a table and browses through their smartphone.",
+      "Several people are gathered around a table with a film clapperboard and flowers.",
+      "A woman sitting across the table speaks while inspecting items.",
+      "The camera wearer switches to a messaging application on their phone and begins typing a message."
+    ],
+    "high_level_conclusions": [
+      "The people present are participating in a film or video production setup.",
+      "<voice_818> belongs to the woman sitting on the right discussing props or flowers."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"The camera wearer sits before a table and browses through their smartphone.\",\n    \"Several people are gathered around a table with a film clapperboard and flowers.\",\n    \"A woman sitting across the table speaks while inspecting items.\",\n    \"The camera wearer switches to a messaging application on their phone and begins typing a message.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The people present are participating in a film or video production setup.\",\n    \"<voice_818> belongs to the woman sitting on the right discussing props or flowers.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 72,
+      "call_id": "b6b04634-446c-457f-801a-47a74fcf8260",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407493.1058347,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66369,
+      "output_tokens": 665,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 24555.56986099691
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer sits before a table and browses through their smartphone.\",\n    \"Several people are gathered around a table with a film clapperboard and flowers.\",\n    \"A woman sitting across the table speaks while inspecting items.\",\n    \"The camera wearer switches to a messaging application on their phone and begins typing a message.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The people present are participating in a film or video production setup.\",\n    \"<voice_818> belongs to the woman sitting on the right discussing props or flowers.\"\n  ]\n}\n```",
+      "total_tokens": 67034,
+      "request_end": 1789407517.6615105,
+      "latency_ms": 24555.67151199648,
+      "client_wall_clock_latency_ms": 24555.67151199648,
+      "api_request_wall_clock_latency_ms": 24555.67151199648
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_72_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

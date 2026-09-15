@@ -1,0 +1,77 @@
+{
+  "clip_id": 55,
+  "source": {
+    "segment_id": 55,
+    "source": "bedroom_01_00253000.mp4",
+    "source_clock": "00253000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1530.0,
+    "absolute_end_seconds": 1560.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00253000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 75344.867338129,
+      "prepared_perf": 75352.445741844,
+      "ordered_start_perf": 75423.263270572,
+      "consumer_wait_ms": 0.006622009095735848,
+      "ready_to_ordered_ms": 70817.5287280028,
+      "preparation_work_ms": 7573.085452997475,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and phones.",
+      "The woman on the right gestures with her hands while speaking to the woman on the left.",
+      "The woman on the left rests her chin on her hand and holds a smartphone while listening.",
+      "The woman on the right finishes speaking and places her hands on the table.",
+      "The woman on the left starts speaking in response.",
+      "The woman on the right leans forward to look at and interact with a phone on the table.",
+      "The woman on the left continues talking and observing her friend."
+    ],
+    "high_level_conclusions": [
+      "<voice_322> corresponds to the woman sitting on the right.",
+      "<voice_10> corresponds to the woman sitting on the left.",
+      "The two women are friends or classmates having a casual conversation about balancing study and leisure."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and phones.\",\n    \"The woman on the right gestures with her hands while speaking to the woman on the left.\",\n    \"The woman on the left rests her chin on her hand and holds a smartphone while listening.\",\n    \"The woman on the right finishes speaking and places her hands on the table.\",\n    \"The woman on the left starts speaking in response.\",\n    \"The woman on the right leans forward to look at and interact with a phone on the table.\",\n    \"The woman on the left continues talking and observing her friend.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_322> corresponds to the woman sitting on the right.\",\n    \"<voice_10> corresponds to the woman sitting on the left.\",\n    \"The two women are friends or classmates having a casual conversation about balancing study and leisure.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 55,
+      "call_id": "8358300c-fd3e-4682-a333-0054503d96ed",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789434246.2272182,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65925,
+      "output_tokens": 1096,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 19478.197604010347
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and phones.\",\n    \"The woman on the right gestures with her hands while speaking to the woman on the left.\",\n    \"The woman on the left rests her chin on her hand and holds a smartphone while listening.\",\n    \"The woman on the right finishes speaking and places her hands on the table.\",\n    \"The woman on the left starts speaking in response.\",\n    \"The woman on the right leans forward to look at and interact with a phone on the table.\",\n    \"The woman on the left continues talking and observing her friend.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_322> corresponds to the woman sitting on the right.\",\n    \"<voice_10> corresponds to the woman sitting on the left.\",\n    \"The two women are friends or classmates having a casual conversation about balancing study and leisure.\"\n  ]\n}\n```",
+      "total_tokens": 67021,
+      "request_end": 1789434265.705502,
+      "latency_ms": 19478.280919996905,
+      "client_wall_clock_latency_ms": 19478.280919996905,
+      "api_request_wall_clock_latency_ms": 19478.280919996905
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_55_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

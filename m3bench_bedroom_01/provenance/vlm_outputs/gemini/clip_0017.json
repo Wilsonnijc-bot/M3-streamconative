@@ -1,0 +1,77 @@
+{
+  "clip_id": 17,
+  "source": {
+    "segment_id": 17,
+    "source": "bedroom_01_00073000.mp4",
+    "source_clock": "00073000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 450.0,
+    "absolute_end_seconds": 480.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00073000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73366.591515828,
+      "prepared_perf": 73370.980545178,
+      "ordered_start_perf": 73417.036259247,
+      "consumer_wait_ms": 0.010078001650981605,
+      "ready_to_ordered_ms": 46055.71406900708,
+      "preparation_work_ms": 4383.79279000219,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two young women sit next to each other on the edge of a bed in a bedroom.",
+      "<voice_155>, dressed in a beige t-shirt and dark trousers, holds her hand to her head with an upset expression and explains that she failed her sophomore final exam.",
+      "<voice_21>, wearing a white top and dark pants, turns toward <voice_155> to listen and ask which exam it was.",
+      "<voice_155> lowers her head into her hand and begins crying in frustration and sadness.",
+      "<voice_21> reaches out to comfort <voice_155>, speaking soothingly to encourage her not to cry and praising how hard she has been working.",
+      "<voice_155> keeps her head down, holding a tissue or phone in her lap as she continues to weep.",
+      "<voice_21> continues consoling <voice_155> with an empathetic and supportive tone throughout the conversation."
+    ],
+    "high_level_conclusions": [
+      "The two women share a close relationship, likely as close friends or college roommates.",
+      "<voice_155>, named Emma, is experiencing emotional distress over academic failure despite having put in sustained effort.",
+      "<voice_21> demonstrates deep empathy, patience, and emotional support to help soothe Emma."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"Two young women sit next to each other on the edge of a bed in a bedroom.\",\n  \"<voice_155>, dressed in a beige t-shirt and dark trousers, holds her hand to her head with an upset expression and explains that she failed her sophomore final exam.\",\n  \"<voice_21>, wearing a white top and dark pants, turns toward <voice_155> to listen and ask which exam it was.\",\n  \"<voice_155> lowers her head into her hand and begins crying in frustration and sadness.\",\n  \"<voice_21> reaches out to comfort <voice_155>, speaking soothingly to encourage her not to cry and praising how hard she has been working.\",\n  \"<voice_155> keeps her head down, holding a tissue or phone in her lap as she continues to weep.\",\n  \"<voice_21> continues consoling <voice_155> with an empathetic and supportive tone throughout the conversation.\"\n ],\n \"high_level_conclusions\": [\n  \"The two women share a close relationship, likely as close friends or college roommates.\",\n  \"<voice_155>, named Emma, is experiencing emotional distress over academic failure despite having put in sustained effort.\",\n  \"<voice_21> demonstrates deep empathy, patience, and emotional support to help soothe Emma.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 17,
+      "call_id": "25540652-1a82-4dd8-973d-703406069b65",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432238.5131814,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65842,
+      "output_tokens": 1117,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 14575.81183599541
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"Two young women sit next to each other on the edge of a bed in a bedroom.\",\n  \"<voice_155>, dressed in a beige t-shirt and dark trousers, holds her hand to her head with an upset expression and explains that she failed her sophomore final exam.\",\n  \"<voice_21>, wearing a white top and dark pants, turns toward <voice_155> to listen and ask which exam it was.\",\n  \"<voice_155> lowers her head into her hand and begins crying in frustration and sadness.\",\n  \"<voice_21> reaches out to comfort <voice_155>, speaking soothingly to encourage her not to cry and praising how hard she has been working.\",\n  \"<voice_155> keeps her head down, holding a tissue or phone in her lap as she continues to weep.\",\n  \"<voice_21> continues consoling <voice_155> with an empathetic and supportive tone throughout the conversation.\"\n ],\n \"high_level_conclusions\": [\n  \"The two women share a close relationship, likely as close friends or college roommates.\",\n  \"<voice_155>, named Emma, is experiencing emotional distress over academic failure despite having put in sustained effort.\",\n  \"<voice_21> demonstrates deep empathy, patience, and emotional support to help soothe Emma.\"\n ]\n}\n```",
+      "total_tokens": 66959,
+      "request_end": 1789432253.0891013,
+      "latency_ms": 14575.918034010101,
+      "client_wall_clock_latency_ms": 14575.918034010101,
+      "api_request_wall_clock_latency_ms": 14575.918034010101
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_17_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

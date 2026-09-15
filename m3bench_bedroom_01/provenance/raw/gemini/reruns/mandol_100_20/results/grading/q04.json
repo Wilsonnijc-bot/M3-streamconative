@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "The candidate claims there is insufficient information instead of providing the required answer."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q04",
+    "method": "D",
+    "call_id": "815277b8-6c5d-4134-a10c-1ee0d2c006e6",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439972.931328,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 160,
+    "output_tokens": 126,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 5397.2661569860065
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"The candidate claims there is insufficient information instead of providing the required answer.\"\n  }\n}\n```",
+    "total_tokens": 286,
+    "request_end": 1789439978.3286552,
+    "latency_ms": 5397.326209989842,
+    "client_wall_clock_latency_ms": 5397.326209989842,
+    "api_request_wall_clock_latency_ms": 5397.326209989842
+  },
+  "included_in_qa_latency": false
+}

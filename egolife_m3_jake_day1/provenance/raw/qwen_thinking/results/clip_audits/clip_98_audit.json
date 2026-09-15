@@ -1,0 +1,361 @@
+{
+  "clip_id": 98,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0098.mp4",
+  "end_to_end_memory_generation_ms": 189274.54644699174,
+  "latency_ms": {
+    "clip_decode": 242.41617099323776,
+    "deepgram_asr": 147.64100599859376,
+    "mai_transcribe_asr": 119676.19846200978,
+    "asr_total": 119681.71069800155,
+    "audio_segmentation": 0.22626500867772847,
+    "speech_embedding_campplus": null,
+    "facial_detection_recognition_buffalo_l": 2269.9030299991136,
+    "face_clustering": 0.214082989259623,
+    "vlm_memory_generation": 63767.25390400679,
+    "text_embedding": 622.0554489991628,
+    "graph_update_total": 0.35991601180285215
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 98,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 695,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789436717.3335197,
+          "status": "success",
+          "total_tokens": 133,
+          "request_end": 1789436717.9553223,
+          "latency_ms": 621.8036060017766
+        }
+      ],
+      "total_tokens": 133,
+      "latency_ms": 622.0554489991628
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 147.64100599859376,
+        "openrouter-mai-transcribe-2": 119676.19846200978
+      },
+      "asr_total_ms": 119681.71069800155,
+      "audio_segmentation_ms": 0.22626500867772847,
+      "speech_embedding_ms": null,
+      "graph_update_ms": null,
+      "asr_segment_count": 0,
+      "speech_embedding_count": 0,
+      "voice_identity_count": 0,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [
+        "openrouter-mai-transcribe-2: RuntimeError: ASR provider 'openrouter-mai-transcribe-2' failed on attempt 2/2: ASRHTTPError: openrouter transcription HTTP 503: {\"error\":{\"message\":\"Provider returned 503\",\"code\":503}}"
+      ],
+      "asr_successful_providers": [
+        "deepgram-asr"
+      ],
+      "total_ms": 0.8998620032798499
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2269.9030299991136,
+      "face_clustering_ms": 0.214082989259623,
+      "graph_update_ms": null,
+      "frame_count": 1,
+      "detected_face_count": 3,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2272.128923999844
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [],
+      "context_preparation_ms": 22.456173988757655,
+      "vlm_ms": 63767.25390400679,
+      "raw_response": "{\n  \"video_description\": [\n    \"A group of four individuals are gathered around a wooden table in a room.\",\n    \"One person sits on the left side of the table wearing a black top.\",\n    \"Another individual stands behind the table in the center wearing a white shirt.\",\n    \"A third person sits on the right side of the table with long dark hair.\",\n    \"The camera perspective is from a first-person viewpoint, showing the legs of the person holding the camera in the foreground.\",\n    \"Professional filming equipment, including a projector and softbox lights, is visible in the background.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The setup with lighting rigs and a projector indicates a film or media production environment.\",\n    \"The group appears to be collaborating on a project involving the items on the table.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of four individuals are gathered around a wooden table in a room.",
+          "One person sits on the left side of the table wearing a black top.",
+          "Another individual stands behind the table in the center wearing a white shirt.",
+          "A third person sits on the right side of the table with long dark hair.",
+          "The camera perspective is from a first-person viewpoint, showing the legs of the person holding the camera in the foreground.",
+          "Professional filming equipment, including a projector and softbox lights, is visible in the background."
+        ],
+        "high_level_conclusions": [
+          "The setup with lighting rigs and a projector indicates a film or media production environment.",
+          "The group appears to be collaborating on a project involving the items on the table."
+        ]
+      },
+      "media": {
+        "frame_count": 1,
+        "video_duration_seconds": 0.05
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 98,
+          "call_id": "b953ad54-8140-4fa8-b4ed-0b2dabb1066a",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789436653.5652328,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 1,
+            "video_duration_seconds": 0.05
+          },
+          "response": "{\n  \"video_description\": [\n    \"A group of four individuals are gathered around a wooden table in a room.\",\n    \"One person sits on the left side of the table wearing a black top.\",\n    \"Another individual stands behind the table in the center wearing a white shirt.\",\n    \"A third person sits on the right side of the table with long dark hair.\",\n    \"The camera perspective is from a first-person viewpoint, showing the legs of the person holding the camera in the foreground.\",\n    \"Professional filming equipment, including a projector and softbox lights, is visible in the background.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The setup with lighting rigs and a projector indicates a film or media production environment.\",\n    \"The group appears to be collaborating on a project involving the items on the table.\"\n  ]\n}",
+          "raw_response": "The user wants me to process a video frame and associated character features to generate a JSON output containing a \"video_description\" and \"high_level_conclusions\".\n\n**Input Analysis:**\n*   **Video Frame:** Shows a room with four people around a table. There's a projector screen, lighting equipment, and a whiteboard. The perspective is first-person (POV), showing legs in the foreground.\n    *   Person 1 (Left): Sitting, dark hair, wearing black top.\n    *   Person 2 (Center/Back): Standing, light skin, wearing white top.\n    *   Person 3 (Right): Sitting, long dark hair, wearing white/light top.\n    *   Person 4 (Foreground): Legs visible, likely the camera wearer.\n*   **Character Features:**\n    *   Face features: None provided (`{}`).\n    *   Voice features: None provided (`{}`).\n*   **Timestamp:** 11:56:30:00, DAY 1.\n*   **Camera Label:** A1_JAKE.\n\n**Task Requirements:**\n1.  **Video Description:** Detailed, cohesive description covering observable events. Focus on atomic events/facts. Use feature IDs if available (none here).\n2.  **High-Level Conclusions:** Reasoning-based conclusions about intentions, relationships, identities. Use `Equivalence` format if face and voice match (not applicable here as there are none).\n3.  **Constraints:**\n    *   Preserve speaker identity (N/A here).\n    *   No invented face/voice equivalences.\n    *   Valid JSON only.\n    *   Concise.\n\n**Drafting Video Description:**\n*   Event 1: A group of four individuals are gathered around a wooden table in a room equipped with filming gear (projector, lights).\n*   Event 2: One person sits on the left side of the table wearing dark clothing.\n*   Event 3: Another individual stands behind the table in the center, wearing a white shirt.\n*   Event 4: A third person sits on the right side of the table with long dark hair.\n*   Event 5: The camera perspective is from a first-person viewpoint, showing the legs of the person holding the camera in the immediate foreground.\n*   Event 6: Various items like bottles and papers are scattered on the table.\n\n**Drafting High-Level Conclusions:**\n*   Since there are no face or voice features provided, I cannot make specific identity claims or equivalences.\n*   However, the presence of filming equipment suggests a production setting.\n*   The gathering implies collaboration or discussion.\n*   I need to ensure I don't hallucinate equivalences since the prompt says \"If a face and a voice feature refer to the same character...\". Since there are none, I won't add any Equivalence lines unless I can infer something general, but the instruction specifically asks for `Equivalence: <face_x>, <voice_y>` format for those cases. Without data, I'll leave the array empty or just put general inferences if allowed. Looking at the schema, it expects strings. I will stick to safe inferences based on the visual context.\n*   Actually, looking closely at the prompt instructions: \"Use logical inference to identify character intentions, relationships, and identities.\"\n*   Inference: The setup indicates a film or photography shoot is taking place.\n*   Inference: The group is engaged in a collaborative activity involving the table materials.\n\nLet's refine the descriptions to be strictly atomic.\n\n*   \"A group of four people are seated or standing around a table in a room with professional lighting equipment.\"\n*   \"One individual sits on the left wearing a black top.\"\n*   \"Another individual stands behind the table wearing a white top.\"\n*   \"A third individual sits on the right with long dark hair.\"\n*   \"The camera wearer's legs are visible in the foreground.\"\n*   \"Filming equipment including a projector and softbox lights are visible in the background.\"\n\nFor high_level_conclusions:\n*   \"The presence of lighting rigs and a projector suggests a film or media production environment.\"\n*   \"The arrangement of people around a table with scattered items indicates a collaborative work session or meeting.\"\n\nWait, I need to check if I missed any implicit IDs. The prompt says \"Face features: Voice features:{}\". So definitely empty.\n\nFinal check on constraints: \"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\" -> Okay, so I won't claim who is who visually beyond describing appearance.\n\nLet's construct the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"A group of four individuals are gathered around a wooden table in a room.\",\n    \"One person sits on the left side of the table wearing a black top.\",\n    \"Another individual stands behind the table in the center wearing a white shirt.\",\n    \"A third person sits on the right side of the table with long dark hair.\",\n    \"The camera perspective is from a first-person viewpoint, showing the legs of the person holding the camera in the foreground.\",\n    \"Professional filming equipment, including a projector and softbox lights, is visible in the background.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The setup with lighting rigs and a projector indicates a film or media production environment.\",\n    \"The group appears to be collaborating on a project involving the items on the table.\"\n  ]\n}\n```\nThis looks correct and adheres to the constraints. I will remove the extra newlines in the thought block and output the raw JSON.\n</think>\n\n{\n  \"video_description\": [\n    \"A group of four individuals are gathered around a wooden table in a room.\",\n    \"One person sits on the left side of the table wearing a black top.\",\n    \"Another individual stands behind the table in the center wearing a white shirt.\",\n    \"A third person sits on the right side of the table with long dark hair.\",\n    \"The camera perspective is from a first-person viewpoint, showing the legs of the person holding the camera in the foreground.\",\n    \"Professional filming equipment, including a projector and softbox lights, is visible in the background.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The setup with lighting rigs and a projector indicates a film or media production environment.\",\n    \"The group appears to be collaborating on a project involving the items on the table.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 770,
+          "output_tokens": 1393,
+          "total_tokens": 2163,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0015629921108484268,
+            "media_preparation_ms": 8.521716998075135,
+            "processor_tokenization_ms": 89.53253499930725,
+            "device_transfer_ms": 2.902549007558264,
+            "cuda_generation_ms": 63658.42764401168,
+            "decoding_ms": 1.9029090035473928
+          },
+          "submitted_image_count": 1,
+          "processed_image_count": 1,
+          "video_frame_count": 1,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 63761.50760699238,
+          "request_end": 1789436717.3324912,
+          "latency_ms": 63767.25390400679,
+          "client_wall_clock_latency_ms": 63767.25390400679
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.28967400430701673,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.07024200749583542,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 1,
+    "asr_segments": 0,
+    "speech_embeddings": 0,
+    "voice_identities": 0,
+    "detected_faces": 3,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1302,
+    "edges_after_clip": 467,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of four individuals are gathered around a wooden table in a room.",
+      "One person sits on the left side of the table wearing a black top.",
+      "Another individual stands behind the table in the center wearing a white shirt.",
+      "A third person sits on the right side of the table with long dark hair.",
+      "The camera perspective is from a first-person viewpoint, showing the legs of the person holding the camera in the foreground.",
+      "Professional filming equipment, including a projector and softbox lights, is visible in the background."
+    ],
+    "high_level_conclusions": [
+      "The setup with lighting rigs and a projector indicates a film or media production environment.",
+      "The group appears to be collaborating on a project involving the items on the table."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of four individuals are gathered around a wooden table in a room.",
+      "One person sits on the left side of the table wearing a black top.",
+      "Another individual stands behind the table in the center wearing a white shirt.",
+      "A third person sits on the right side of the table with long dark hair.",
+      "The camera perspective is from a first-person viewpoint, showing the legs of the person holding the camera in the foreground.",
+      "Professional filming equipment, including a projector and softbox lights, is visible in the background."
+    ],
+    "high_level_conclusions": [
+      "The setup with lighting rigs and a projector indicates a film or media production environment.",
+      "The group appears to be collaborating on a project involving the items on the table."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_98_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1294,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of four individuals are gathered around a wooden table in a room."
+          ],
+          "timestamp": 98
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1295,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person sits on the left side of the table wearing a black top."
+          ],
+          "timestamp": 98
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1296,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another individual stands behind the table in the center wearing a white shirt."
+          ],
+          "timestamp": 98
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1297,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A third person sits on the right side of the table with long dark hair."
+          ],
+          "timestamp": 98
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1298,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera perspective is from a first-person viewpoint, showing the legs of the person holding the camera in the foreground."
+          ],
+          "timestamp": 98
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1299,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Professional filming equipment, including a projector and softbox lights, is visible in the background."
+          ],
+          "timestamp": 98
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1300,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The setup with lighting rigs and a projector indicates a film or media production environment."
+          ],
+          "timestamp": 98
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1301,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be collaborating on a project involving the items on the table."
+          ],
+          "timestamp": 98
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_98_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_98_graph.pkl"
+  },
+  "memory_pickle_bytes": 30953941,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 77715.956617674,
+    "prepared_perf": 77836.158735255,
+    "ordered_start_perf": 77836.158987439,
+    "consumer_wait_ms": 120198.86648700049,
+    "ready_to_ordered_ms": 0.2521840069675818,
+    "preparation_work_ms": 120201.57767500496,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 66688.96084099833
+}

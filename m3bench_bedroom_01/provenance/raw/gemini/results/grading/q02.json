@@ -1,0 +1,56 @@
+{
+  "question_id": "Q02",
+  "candidate_mapping": {
+    "0": "D",
+    "1": "B",
+    "2": "C",
+    "3": "A"
+  },
+  "grades": {
+    "0": {
+      "correct": true,
+      "reason": "Correctly states that her tidying habit is not good."
+    },
+    "1": {
+      "correct": true,
+      "reason": "Correctly states that her tidying habit is not good."
+    },
+    "2": {
+      "correct": true,
+      "reason": "Correctly states that her tidying habit is not good."
+    },
+    "3": {
+      "correct": true,
+      "reason": "Correctly states that her tidying habit is not good."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q02",
+    "method": null,
+    "call_id": "28aede5b-f300-4a48-a4ed-d3994a808b86",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437119.770803,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 252,
+    "output_tokens": 374,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 3938.8946600083727
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": true,\n    \"reason\": \"Correctly states that her tidying habit is not good.\"\n  },\n  \"1\": {\n    \"correct\": true,\n    \"reason\": \"Correctly states that her tidying habit is not good.\"\n  },\n  \"2\": {\n    \"correct\": true,\n    \"reason\": \"Correctly states that her tidying habit is not good.\"\n  },\n  \"3\": {\n    \"correct\": true,\n    \"reason\": \"Correctly states that her tidying habit is not good.\"\n  }\n}\n```",
+    "total_tokens": 626,
+    "request_end": 1789437123.7098007,
+    "latency_ms": 3938.996502009104,
+    "client_wall_clock_latency_ms": 3938.996502009104,
+    "api_request_wall_clock_latency_ms": 3938.996502009104
+  },
+  "included_in_qa_latency": false
+}

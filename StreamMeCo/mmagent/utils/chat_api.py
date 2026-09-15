@@ -17,6 +17,7 @@ import math
 import os
 import openai
 import httpx
+import cloud_http
 from concurrent.futures import ThreadPoolExecutor
 from time import sleep
 import logging
@@ -86,6 +87,8 @@ def _get_client_or_raise(model):
 MAX_RETRIES = 5
 
 def get_response(model, messages, timeout=30):
+    if os.environ.get("EGOLIFE_GEMINI_ONLY") == "1":
+        raise RuntimeError("Generic chat is forbidden; use audited Gemini runtime")
     """Get chat completion response from specified model.
 
     Args:
@@ -173,34 +176,27 @@ def get_embedding(model, text, timeout=15):
     return response.data[0].embedding, response.usage.total_tokens
 
 
+def get_embeddings_batch(model, texts, timeout=120, metrics=None):
+    return cloud_http.embed_batch(_get_client_or_raise(model), config[model].get('model',model),
+        texts, timeout=timeout, attempts=int(os.environ.get('EGOLIFE_EMBEDDING_MAX_ATTEMPTS','2')),metrics=metrics)
+
+
 def get_embedding_with_retry(model, text, timeout=15):
-    """Retry get_embedding up to MAX_RETRIES times with error handling.
-
-    Args:
-        model (str): Model identifier
-        text (str): Text to embed
-
-    Returns:
-        tuple: (embedding vector, total tokens used)
-        
-    Raises:
-        Exception: If all retries fail
-    """
+    attempts = int(os.environ.get('EGOLIFE_EMBEDDING_MAX_ATTEMPTS', '2')) if os.environ.get('EGOLIFE_RESULTS') else MAX_RETRIES
     last_exception = None
-    for i in range(MAX_RETRIES):
+    for i in range(attempts):
         try:
             return get_embedding(model, text, timeout)
-        except Exception as e:
-            last_exception = e
-            sleep(20)
-            logger.warning(f"Retry {i} times, exception: {e} from get embedding")
-            continue
-    if last_exception is not None:
-        raise Exception(
-            f"Failed to get embedding after {MAX_RETRIES} retries for model '{model}'. "
-            f"Last error: {type(last_exception).__name__}: {last_exception}"
-        ) from last_exception
-    raise Exception(f"Failed to get embedding after {MAX_RETRIES} retries for model '{model}'")
+        except Exception as exc:
+            last_exception = exc
+            logger.warning("Embedding attempt %d/%d failed: %s", i + 1, attempts, exc)
+            if i + 1 < attempts:
+                sleep(min(2 ** (i + 1), 10) if os.environ.get('EGOLIFE_RESULTS') else 20)
+    raise RuntimeError(
+        f"Failed to get embedding after {attempts} retries for model '{model}'. "
+        f"Last error: {type(last_exception).__name__}: {last_exception}"
+    ) from last_exception
+
 
 def parallel_get_embedding(model, texts, timeout=15):
     """Process multiple texts in parallel to get embeddings.
@@ -394,7 +390,7 @@ def transcribe_audio(model, audio_data, audio_format="wav", timeout=180):
             "language": model_config.get("language", "multi"),
             "diarize_model": model_config.get("diarize_model", "latest"),
         }
-        response = httpx.post(
+        response = cloud_http.post(
             f"{base_url}/v1/listen",
             params=params,
             headers={
@@ -415,7 +411,7 @@ def transcribe_audio(model, audio_data, audio_format="wav", timeout=180):
                 "options": {"azure": {"diarization": {"enabled": True}}},
             },
         }
-        response = httpx.post(
+        response = cloud_http.post(
             f"{base_url}/audio/transcriptions",
             headers={
                 "Authorization": f"Bearer {_api_key(model)}",
@@ -430,25 +426,19 @@ def transcribe_audio(model, audio_data, audio_format="wav", timeout=180):
         raise ValueError(f"Unsupported transcription provider for '{model}': {provider}")
 
     if response.is_error:
-        raise RuntimeError(
-            f"{provider} transcription failed with HTTP {response.status_code}: "
-            f"{response.text[:1000]}"
-        )
+        from .asr_resilience import ASRHTTPError
+        raise ASRHTTPError(provider, response.status_code, response.text, response.headers.get("Retry-After"))
     return _normalize_transcription(response.json())
 
 
-def transcribe_audio_with_retry(model, audio_data, audio_format="wav", timeout=180):
-    retries = config[model].get("retries", 2)
-    last_exception = None
-    for attempt in range(retries):
-        try:
-            return transcribe_audio(model, audio_data, audio_format=audio_format, timeout=timeout)
-        except Exception as exc:
-            last_exception = exc
-            logger.warning("ASR provider '%s' attempt %d/%d failed: %s", model, attempt + 1, retries, exc)
-            if attempt + 1 < retries:
-                sleep(min(2 ** attempt, 5))
-    raise RuntimeError(f"ASR provider '{model}' failed after {retries} attempts") from last_exception
+def transcribe_audio_with_retry(model, audio_data, audio_format="wav", timeout=180, context=None):
+    from .asr_resilience import transcribe_resilient
+    root = os.environ.get("EGOLIFE_RESULTS")
+    return transcribe_resilient(
+        model, audio_data, audio_format, config[model],
+        lambda: transcribe_audio(model, audio_data, audio_format=audio_format, timeout=timeout),
+        retries=int(os.environ.get("EGOLIFE_ASR_MAX_ATTEMPTS", "2")) if root else config[model].get("retries", 2), root=root, context=context,
+    )
 
 
 def parallel_transcribe_audio_files(model, file_paths):

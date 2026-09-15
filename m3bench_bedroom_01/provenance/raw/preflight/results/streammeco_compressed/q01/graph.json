@@ -1,0 +1,134 @@
+{
+  "counts": {
+    "nodes": 8,
+    "edges": 1,
+    "directed_edges_stored": 2,
+    "by_type": {
+      "episodic": 5,
+      "semantic": 2,
+      "voice": 1
+    }
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "type": "voice",
+      "metadata": {
+        "contents": [
+          "MAI: Hmm."
+        ]
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        192
+      ]
+    },
+    {
+      "id": 1,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "A young woman wearing a black winter jacket and a black baseball cap walks into a bedroom from the hallway."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 2,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "She sets her brown backpack down on the bed."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 3,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "She takes off her heavy black jacket, revealing a white long-sleeved top."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 5,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "She removes her black baseball cap and hangs it on the coat rack as well."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 7,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "Slings the backpack over her shoulder, she turns and walks out of the bedroom into the living area."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 8,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The woman is arriving indoors and shedding her outdoor winter layers to get comfortable."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 9,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "<voice_0> belongs to the young woman as she walks through the apartment."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 9,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "semantic"
+    }
+  ]
+}

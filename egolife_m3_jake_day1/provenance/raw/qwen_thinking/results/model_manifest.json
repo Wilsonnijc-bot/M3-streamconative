@@ -1,0 +1,21 @@
+{
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "checkpoint": "/opt/streammeco/models/Qwen3.5-4B",
+  "provider": "local CUDA",
+  "execution_policy": "user-authorized concurrent GPU workers with Gemini; latency potentially contended",
+  "fallbacks": false,
+  "memory_lineage": "fresh shared Qwen stream",
+  "vlm_fps": 2.0,
+  "face_preprocessing_fps": 5,
+  "generation": {
+    "thinking": true,
+    "max_new_tokens": 16384,
+    "do_sample": false,
+    "memory_repetition_penalty": 1.08,
+    "text_repetition_penalty": 1.0
+  },
+  "prompt_change": "Qwen-only identity system prompt v2: preserve supplied speaker IDs and transcript coverage; unchanged shared base prompt and decoding",
+  "sampling": "same explicit timestamped JPEG image sequence as Gemini; no processor video resampling",
+  "ttft_ms": null,
+  "cache_policy": "successful ASR only; cache read wall time separate from original provider acquisition"
+}

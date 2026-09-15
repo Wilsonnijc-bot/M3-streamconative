@@ -1,0 +1,371 @@
+{
+  "clip_id": 42,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00193000.mp4",
+  "end_to_end_memory_generation_ms": 221702.89174999925,
+  "latency_ms": {
+    "clip_decode": 3999.346726006479,
+    "deepgram_asr": 928.6765049910173,
+    "mai_transcribe_asr": 969.0491399960592,
+    "asr_total": 970.0479219900444,
+    "audio_segmentation": 6.508072998258285,
+    "speech_embedding_campplus": 1354.9905989930267,
+    "facial_detection_recognition_buffalo_l": 3294.2779190052534,
+    "face_clustering": 8.20864700654056,
+    "vlm_memory_generation": 136362.03745099192,
+    "text_embedding": 605.9149329958018,
+    "graph_update_total": 90.93726899300236
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 42,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 903,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789433621.174701,
+          "status": "success",
+          "total_tokens": 179,
+          "request_end": 1789433621.7803988,
+          "latency_ms": 605.6983360031154
+        }
+      ],
+      "total_tokens": 179,
+      "latency_ms": 605.9149329958018
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 928.6765049910173,
+        "openrouter-mai-transcribe-2": 969.0491399960592
+      },
+      "asr_total_ms": 970.0479219900444,
+      "audio_segmentation_ms": 6.508072998258285,
+      "speech_embedding_ms": 1354.9905989930267,
+      "graph_update_ms": 90.85524400870781,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1468.8045929942746
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3294.2779190052534,
+      "face_clustering_ms": 8.20864700654056,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 300,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3466.724838988739
+    },
+    "vlm": {
+      "context_preparation_ms": 4923.816948008607,
+      "vlm_ms": 136362.03745099192,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table covered with a blue tablecloth, which has food, drinks, and phones on it.\",\n    \"The woman on the right rests her hands near her face and speaks about her thoughts on programming and future goals.\",\n    \"The woman on the left holds a phone in one hand while occasionally snacking on food from the tray.\",\n    \"The woman on the left picks up a white mug and takes a sip while listening.\",\n    \"The woman on the left lowers her mug and offers words of encouragement to the woman on the right.\",\n    \"The woman on the left continues to look at her phone and eat snacks while the conversation proceeds.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women are friends having an informal, relaxed discussion over snacks.\",\n    \"The conversation centers on academic and career aspirations, specifically programming and post-graduation ambitions.\",\n    \"The woman on the left acts in a supportive role, validating and encouraging the other woman's goals.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit opposite each other at a dining table covered with a blue tablecloth, which has food, drinks, and phones on it.",
+          "The woman on the right rests her hands near her face and speaks about her thoughts on programming and future goals.",
+          "The woman on the left holds a phone in one hand while occasionally snacking on food from the tray.",
+          "The woman on the left picks up a white mug and takes a sip while listening.",
+          "The woman on the left lowers her mug and offers words of encouragement to the woman on the right.",
+          "The woman on the left continues to look at her phone and eat snacks while the conversation proceeds."
+        ],
+        "high_level_conclusions": [
+          "The two women are friends having an informal, relaxed discussion over snacks.",
+          "The conversation centers on academic and career aspirations, specifically programming and post-graduation ambitions.",
+          "The woman on the left acts in a supportive role, validating and encouraging the other woman's goals."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 42,
+          "call_id": "742a2593-d164-43e1-85af-2402b3057c78",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789433484.8118706,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66110,
+          "output_tokens": 1507,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 136361.94838299707
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table covered with a blue tablecloth, which has food, drinks, and phones on it.\",\n    \"The woman on the right rests her hands near her face and speaks about her thoughts on programming and future goals.\",\n    \"The woman on the left holds a phone in one hand while occasionally snacking on food from the tray.\",\n    \"The woman on the left picks up a white mug and takes a sip while listening.\",\n    \"The woman on the left lowers her mug and offers words of encouragement to the woman on the right.\",\n    \"The woman on the left continues to look at her phone and eat snacks while the conversation proceeds.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women are friends having an informal, relaxed discussion over snacks.\",\n    \"The conversation centers on academic and career aspirations, specifically programming and post-graduation ambitions.\",\n    \"The woman on the left acts in a supportive role, validating and encouraging the other woman's goals.\"\n  ]\n}\n```",
+          "total_tokens": 67617,
+          "request_end": 1789433621.1739109,
+          "latency_ms": 136362.03745099192,
+          "client_wall_clock_latency_ms": 136362.03745099192,
+          "api_request_wall_clock_latency_ms": 136362.03745099192
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.06324899732135236,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.018775986973196268,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 4,
+    "detected_faces": 300,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 3,
+    "nodes_after_clip": 417,
+    "edges_after_clip": 133,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table covered with a blue tablecloth, which has food, drinks, and phones on it.",
+      "The woman on the right rests her hands near her face and speaks about her thoughts on programming and future goals.",
+      "The woman on the left holds a phone in one hand while occasionally snacking on food from the tray.",
+      "The woman on the left picks up a white mug and takes a sip while listening.",
+      "The woman on the left lowers her mug and offers words of encouragement to the woman on the right.",
+      "The woman on the left continues to look at her phone and eat snacks while the conversation proceeds."
+    ],
+    "high_level_conclusions": [
+      "The two women are friends having an informal, relaxed discussion over snacks.",
+      "The conversation centers on academic and career aspirations, specifically programming and post-graduation ambitions.",
+      "The woman on the left acts in a supportive role, validating and encouraging the other woman's goals."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table covered with a blue tablecloth, which has food, drinks, and phones on it.",
+      "The woman on the right rests her hands near her face and speaks about her thoughts on programming and future goals.",
+      "The woman on the left holds a phone in one hand while occasionally snacking on food from the tray.",
+      "The woman on the left picks up a white mug and takes a sip while listening.",
+      "The woman on the left lowers her mug and offers words of encouragement to the woman on the right.",
+      "The woman on the left continues to look at her phone and eat snacks while the conversation proceeds."
+    ],
+    "high_level_conclusions": [
+      "The two women are friends having an informal, relaxed discussion over snacks.",
+      "The conversation centers on academic and career aspirations, specifically programming and post-graduation ambitions.",
+      "The woman on the left acts in a supportive role, validating and encouraging the other woman's goals."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_42_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 407,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: graduation in the future, I really hope to become someone who can make a significant major Mhmm. In the society. Yeah. I believe in you. And, | MAI: In the society.",
+            "Deepgram: graduation in the future, I really hope to become someone who can make a significant major Mhmm. In the society. Yeah. I believe in you. And, | MAI: Yeah, I believe in you."
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 408,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit opposite each other at a dining table covered with a blue tablecloth, which has food, drinks, and phones on it."
+          ],
+          "timestamp": 42
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 409,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right rests her hands near her face and speaks about her thoughts on programming and future goals."
+          ],
+          "timestamp": 42
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 410,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left holds a phone in one hand while occasionally snacking on food from the tray."
+          ],
+          "timestamp": 42
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 411,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left picks up a white mug and takes a sip while listening."
+          ],
+          "timestamp": 42
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 412,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left lowers her mug and offers words of encouragement to the woman on the right."
+          ],
+          "timestamp": 42
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 413,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left continues to look at her phone and eat snacks while the conversation proceeds."
+          ],
+          "timestamp": 42
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 414,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women are friends having an informal, relaxed discussion over snacks."
+          ],
+          "timestamp": 42
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 415,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The conversation centers on academic and career aspirations, specifically programming and post-graduation ambitions."
+          ],
+          "timestamp": 42
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 416,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the left acts in a supportive role, validating and encouraging the other woman's goals."
+          ],
+          "timestamp": 42
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_42_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_42_graph.pkl"
+  },
+  "memory_pickle_bytes": 10917627,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 74586.961212296,
+    "prepared_perf": 74592.041710151,
+    "ordered_start_perf": 74661.080485314,
+    "consumer_wait_ms": 0.007765003829263151,
+    "ready_to_ordered_ms": 69038.77516300417,
+    "preparation_work_ms": 5075.179822990322,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 146829.6837700036
+}

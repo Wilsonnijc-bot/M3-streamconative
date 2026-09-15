@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "The candidate incorrectly states there is insufficient information instead of identifying the taller coat rack."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q01",
+    "method": "D",
+    "call_id": "22b073cb-3bf7-4ab2-9a57-4b7075581eb0",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439897.469269,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 166,
+    "output_tokens": 136,
+    "transport": {
+      "client_previously_used": false,
+      "tcp_connect_count": 1,
+      "tls_handshake_count": 1,
+      "http_wall_ms": 2932.5726319948444
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"The candidate incorrectly states there is insufficient information instead of identifying the taller coat rack.\"\n  }\n}\n```",
+    "total_tokens": 302,
+    "request_end": 1789439900.401901,
+    "latency_ms": 2932.6303900015773,
+    "client_wall_clock_latency_ms": 2932.6303900015773,
+    "api_request_wall_clock_latency_ms": 2932.6303900015773
+  },
+  "included_in_qa_latency": false
+}

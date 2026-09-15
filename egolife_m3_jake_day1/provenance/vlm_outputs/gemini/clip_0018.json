@@ -1,0 +1,60 @@
+{
+  "clip_id": 18,
+  "source": {
+    "segment_id": 18,
+    "source": "DAY1_A1_JAKE_11180000.mp4",
+    "source_clock": "11180000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40680.0,
+    "absolute_end_seconds": 40710.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0018.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a table covered in a red-and-white checkered cloth, working with wearable electronic devices and packaging.",
+      "The camera wearer raises their right hand and gestures toward the woman sitting on the left in black clothing.",
+      "The woman in black touches her hair and headset straps, adjusting her hair to tuck it away from her face.",
+      "The woman continues tucking strands of hair back behind her ears and under the device strap.",
+      "Other participants around the table continue assembling, inspecting, and putting on their respective glasses and devices."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer advises the woman in black that her hair is obstructing a camera lens on her wearable device.",
+      "The woman adjusts and secures her hair to ensure the recording equipment has a clear field of view.",
+      "The participants are configuring head-mounted cameras or smart glasses in preparation for a recorded session."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a table covered in a red-and-white checkered cloth, working with wearable electronic devices and packaging.\",\n  \"The camera wearer raises their right hand and gestures toward the woman sitting on the left in black clothing.\",\n  \"The woman in black touches her hair and headset straps, adjusting her hair to tuck it away from her face.\",\n  \"The woman continues tucking strands of hair back behind her ears and under the device strap.\",\n  \"Other participants around the table continue assembling, inspecting, and putting on their respective glasses and devices.\"\n ],\n \"high_level_conclusions\": [\n  \"The camera wearer advises the woman in black that her hair is obstructing a camera lens on her wearable device.\",\n  \"The woman adjusts and secures her hair to ensure the recording equipment has a clear field of view.\",\n  \"The participants are configuring head-mounted cameras or smart glasses in preparation for a recorded session.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 18,
+      "call_id": "9da1b0fb-fc73-49b5-a8c8-9ae7cbfa9e41",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404118.929879,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67065,
+      "output_tokens": 1117,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a table covered in a red-and-white checkered cloth, working with wearable electronic devices and packaging.\",\n  \"The camera wearer raises their right hand and gestures toward the woman sitting on the left in black clothing.\",\n  \"The woman in black touches her hair and headset straps, adjusting her hair to tuck it away from her face.\",\n  \"The woman continues tucking strands of hair back behind her ears and under the device strap.\",\n  \"Other participants around the table continue assembling, inspecting, and putting on their respective glasses and devices.\"\n ],\n \"high_level_conclusions\": [\n  \"The camera wearer advises the woman in black that her hair is obstructing a camera lens on her wearable device.\",\n  \"The woman adjusts and secures her hair to ensure the recording equipment has a clear field of view.\",\n  \"The participants are configuring head-mounted cameras or smart glasses in preparation for a recorded session.\"\n ]\n}\n```",
+      "total_tokens": 68182,
+      "request_end": 1789404142.907344,
+      "latency_ms": 23977.461904003576,
+      "client_wall_clock_latency_ms": 23977.461904003576,
+      "api_request_wall_clock_latency_ms": 23977.461904003576
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_18_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

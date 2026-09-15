@@ -1,0 +1,75 @@
+{
+  "clip_id": 5,
+  "source": {
+    "segment_id": 5,
+    "source": "bedroom_01_00020000.mp4",
+    "source_clock": "00020000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 120.0,
+    "absolute_end_seconds": 150.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00020000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 72438.464723811,
+      "prepared_perf": 72442.204929568,
+      "ordered_start_perf": 72550.352250844,
+      "consumer_wait_ms": 0.009777999366633594,
+      "ready_to_ordered_ms": 108147.32127598836,
+      "preparation_work_ms": 3734.7580850037048,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera moves through a narrow kitchen toward a food preparation surface.",
+      "A food spread consisting of McDonald's fries, a slice of cake, and bread slices is arranged on the surface.",
+      "A person wearing black gloves picks up a strawberry and places it atop the slice of cake.",
+      "The person lifts the red fry box and empties the french fries onto the brown paper tray.",
+      "The person places the empty fry container to the side.",
+      "The person picks up a McDonald's ketchup packet and tears it open."
+    ],
+    "high_level_conclusions": [
+      "The person is preparing a food arrangement, likely for a meal review, mukbang, or presentation.",
+      "The use of black disposable gloves indicates a focus on cleanliness or food preparation aesthetics."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"The camera moves through a narrow kitchen toward a food preparation surface.\",\n    \"A food spread consisting of McDonald's fries, a slice of cake, and bread slices is arranged on the surface.\",\n    \"A person wearing black gloves picks up a strawberry and places it atop the slice of cake.\",\n    \"The person lifts the red fry box and empties the french fries onto the brown paper tray.\",\n    \"The person places the empty fry container to the side.\",\n    \"The person picks up a McDonald's ketchup packet and tears it open.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The person is preparing a food arrangement, likely for a meal review, mukbang, or presentation.\",\n    \"The use of black disposable gloves indicates a focus on cleanliness or food preparation aesthetics.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 5,
+      "call_id": "301ea6da-4904-401f-81d3-c17e6c904f11",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789431371.8311942,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65617,
+      "output_tokens": 599,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 18495.26343299658
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"The camera moves through a narrow kitchen toward a food preparation surface.\",\n    \"A food spread consisting of McDonald's fries, a slice of cake, and bread slices is arranged on the surface.\",\n    \"A person wearing black gloves picks up a strawberry and places it atop the slice of cake.\",\n    \"The person lifts the red fry box and empties the french fries onto the brown paper tray.\",\n    \"The person places the empty fry container to the side.\",\n    \"The person picks up a McDonald's ketchup packet and tears it open.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The person is preparing a food arrangement, likely for a meal review, mukbang, or presentation.\",\n    \"The use of black disposable gloves indicates a focus on cleanliness or food preparation aesthetics.\"\n  ]\n}\n```",
+      "total_tokens": 66216,
+      "request_end": 1789431390.3265738,
+      "latency_ms": 18495.376004997524,
+      "client_wall_clock_latency_ms": 18495.376004997524,
+      "api_request_wall_clock_latency_ms": 18495.376004997524
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_5_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

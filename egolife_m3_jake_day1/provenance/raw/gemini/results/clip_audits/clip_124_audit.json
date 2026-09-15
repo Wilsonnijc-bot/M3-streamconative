@@ -1,0 +1,532 @@
+{
+  "clip_id": 124,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0124.mp4",
+  "end_to_end_memory_generation_ms": 175812.0279759969,
+  "latency_ms": {
+    "clip_decode": 5364.219817995036,
+    "deepgram_asr": 290.1489180003409,
+    "mai_transcribe_asr": 1015.3664820027188,
+    "asr_total": 1016.4593709996552,
+    "audio_segmentation": 11.006239001289941,
+    "speech_embedding_campplus": 2036.0547509990283,
+    "facial_detection_recognition_buffalo_l": 4099.548971003969,
+    "face_clustering": 5.706701995222829,
+    "vlm_memory_generation": 42040.40096799872,
+    "text_embedding": 493.4361740015447,
+    "graph_update_total": 2113.7507610037574
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 124,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 14,
+      "input_chars": 1395,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789411792.0858843,
+          "status": "success",
+          "total_tokens": 301,
+          "request_end": 1789411792.5791097,
+          "latency_ms": 493.2256679967395
+        }
+      ],
+      "total_tokens": 301,
+      "latency_ms": 493.4361740015447
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 290.1489180003409,
+        "openrouter-mai-transcribe-2": 1015.3664820027188
+      },
+      "asr_total_ms": 1016.4593709996552,
+      "audio_segmentation_ms": 11.006239001289941,
+      "speech_embedding_ms": 2036.0547509990283,
+      "graph_update_ms": 2113.6017210010323,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 4186.2199929964845
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4099.548971003969,
+      "face_clustering_ms": 5.706701995222829,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 195,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4212.153780004883
+    },
+    "vlm": {
+      "context_preparation_ms": 4311.273327002709,
+      "vlm_ms": 42040.40096799872,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a checkered tablecloth table holding a discussion, with an open laptop placed in front of the camera.\",\n  \"A woman in a dark jacket sits on the left side of the table looking down at her phone.\",\n  \"A woman with dyed reddish hair sits on the right side of the table, while another woman sits further down across the table.\",\n  \"<voice_1447> suggests doing things one by one.\",\n  \"A person dressed in a white outfit walks across the room from the left background toward the kitchen window on the right.\",\n  \"<voice_0> explains that there are four items that have not yet been fully assembled and will be set up later.\",\n  \"The person in front of the camera operates the laptop trackpad to navigate through windows.\",\n  \"<voice_595> inquires whether the afternoon tea time should be scheduled after 4:20.\",\n  \"<voice_1448> and <voice_1449> agree with the proposal, with <voice_1449> remarking on eating while working.\",\n  \"<voice_732> points out that afternoon tea is usually held between 3:00 and 5:00.\",\n  \"<voice_0> asks if some members of the team can start preparing beforehand.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is holding an organizational meeting to coordinate an upcoming event schedule and assign tasks.\",\n  \"The group members are actively discussing the timeline for afternoon tea to ensure it integrates smoothly into their workflow.\",\n  \"The person operating the laptop is reviewing or updating schedules and notes during the group discussion.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a checkered tablecloth table holding a discussion, with an open laptop placed in front of the camera.",
+          "A woman in a dark jacket sits on the left side of the table looking down at her phone.",
+          "A woman with dyed reddish hair sits on the right side of the table, while another woman sits further down across the table.",
+          "<voice_1447> suggests doing things one by one.",
+          "A person dressed in a white outfit walks across the room from the left background toward the kitchen window on the right.",
+          "<voice_0> explains that there are four items that have not yet been fully assembled and will be set up later.",
+          "The person in front of the camera operates the laptop trackpad to navigate through windows.",
+          "<voice_595> inquires whether the afternoon tea time should be scheduled after 4:20.",
+          "<voice_1448> and <voice_1449> agree with the proposal, with <voice_1449> remarking on eating while working.",
+          "<voice_732> points out that afternoon tea is usually held between 3:00 and 5:00.",
+          "<voice_0> asks if some members of the team can start preparing beforehand."
+        ],
+        "high_level_conclusions": [
+          "The group is holding an organizational meeting to coordinate an upcoming event schedule and assign tasks.",
+          "The group members are actively discussing the timeline for afternoon tea to ensure it integrates smoothly into their workflow.",
+          "The person operating the laptop is reviewing or updating schedules and notes during the group discussion."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 124,
+          "call_id": "129e5338-0632-4b78-8b8b-f9a3d4ab3480",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789411750.044642,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67372,
+          "output_tokens": 2197,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 42040.30036900076
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a checkered tablecloth table holding a discussion, with an open laptop placed in front of the camera.\",\n  \"A woman in a dark jacket sits on the left side of the table looking down at her phone.\",\n  \"A woman with dyed reddish hair sits on the right side of the table, while another woman sits further down across the table.\",\n  \"<voice_1447> suggests doing things one by one.\",\n  \"A person dressed in a white outfit walks across the room from the left background toward the kitchen window on the right.\",\n  \"<voice_0> explains that there are four items that have not yet been fully assembled and will be set up later.\",\n  \"The person in front of the camera operates the laptop trackpad to navigate through windows.\",\n  \"<voice_595> inquires whether the afternoon tea time should be scheduled after 4:20.\",\n  \"<voice_1448> and <voice_1449> agree with the proposal, with <voice_1449> remarking on eating while working.\",\n  \"<voice_732> points out that afternoon tea is usually held between 3:00 and 5:00.\",\n  \"<voice_0> asks if some members of the team can start preparing beforehand.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is holding an organizational meeting to coordinate an upcoming event schedule and assign tasks.\",\n  \"The group members are actively discussing the timeline for afternoon tea to ensure it integrates smoothly into their workflow.\",\n  \"The person operating the laptop is reviewing or updating schedules and notes during the group discussion.\"\n ]\n}\n```",
+          "total_tokens": 69569,
+          "request_end": 1789411792.0850463,
+          "latency_ms": 42040.40096799872,
+          "client_wall_clock_latency_ms": 42040.40096799872,
+          "api_request_wall_clock_latency_ms": 42040.40096799872
+        }
+      ],
+      "episodic_memory_count": 11,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 11,
+      "text_embedding_ms": null,
+      "text_embedding_count": 11,
+      "graph_update_ms": 0.12883200543001294,
+      "nodes_added": 11,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.020207997295074165,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 6,
+    "detected_faces": 195,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 11,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1464,
+    "edges_after_clip": 278,
+    "nodes_added_by_clip": 17,
+    "edges_added_by_clip": 7
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a checkered tablecloth table holding a discussion, with an open laptop placed in front of the camera.",
+      "A woman in a dark jacket sits on the left side of the table looking down at her phone.",
+      "A woman with dyed reddish hair sits on the right side of the table, while another woman sits further down across the table.",
+      "<voice_1447> suggests doing things one by one.",
+      "A person dressed in a white outfit walks across the room from the left background toward the kitchen window on the right.",
+      "<voice_0> explains that there are four items that have not yet been fully assembled and will be set up later.",
+      "The person in front of the camera operates the laptop trackpad to navigate through windows.",
+      "<voice_595> inquires whether the afternoon tea time should be scheduled after 4:20.",
+      "<voice_1448> and <voice_1449> agree with the proposal, with <voice_1449> remarking on eating while working.",
+      "<voice_732> points out that afternoon tea is usually held between 3:00 and 5:00.",
+      "<voice_0> asks if some members of the team can start preparing beforehand."
+    ],
+    "high_level_conclusions": [
+      "The group is holding an organizational meeting to coordinate an upcoming event schedule and assign tasks.",
+      "The group members are actively discussing the timeline for afternoon tea to ensure it integrates smoothly into their workflow.",
+      "The person operating the laptop is reviewing or updating schedules and notes during the group discussion."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a checkered tablecloth table holding a discussion, with an open laptop placed in front of the camera.",
+      "A woman in a dark jacket sits on the left side of the table looking down at her phone.",
+      "A woman with dyed reddish hair sits on the right side of the table, while another woman sits further down across the table.",
+      "<voice_1447> suggests doing things one by one.",
+      "A person dressed in a white outfit walks across the room from the left background toward the kitchen window on the right.",
+      "<voice_0> explains that there are four items that have not yet been fully assembled and will be set up later.",
+      "The person in front of the camera operates the laptop trackpad to navigate through windows.",
+      "<voice_595> inquires whether the afternoon tea time should be scheduled after 4:20.",
+      "<voice_1448> and <voice_1449> agree with the proposal, with <voice_1449> remarking on eating while working.",
+      "<voice_732> points out that afternoon tea is usually held between 3:00 and 5:00.",
+      "<voice_0> asks if some members of the team can start preparing beforehand."
+    ],
+    "high_level_conclusions": [
+      "The group is holding an organizational meeting to coordinate an upcoming event schedule and assign tasks.",
+      "The group members are actively discussing the timeline for afternoon tea to ensure it integrates smoothly into their workflow.",
+      "The person operating the laptop is reviewing or updating schedules and notes during the group discussion."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_124_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 17,
+    "edges_added": 7,
+    "nodes": [
+      {
+        "id": 1447,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 像这个，我们是就一个一个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1448,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对，大家"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1449,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 四点二十之后。",
+            "MAI: 连吃连干。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1450,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a checkered tablecloth table holding a discussion, with an open laptop placed in front of the camera."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1451,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a dark jacket sits on the left side of the table looking down at her phone."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1452,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman with dyed reddish hair sits on the right side of the table, while another woman sits further down across the table."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1453,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1447> suggests doing things one by one."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1454,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person dressed in a white outfit walks across the room from the left background toward the kitchen window on the right."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1455,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> explains that there are four items that have not yet been fully assembled and will be set up later."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1456,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in front of the camera operates the laptop trackpad to navigate through windows."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1457,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_595> inquires whether the afternoon tea time should be scheduled after 4:20."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1458,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1448> and <voice_1449> agree with the proposal, with <voice_1449> remarking on eating while working."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1459,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_732> points out that afternoon tea is usually held between 3:00 and 5:00."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1460,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> asks if some members of the team can start preparing beforehand."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1461,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is holding an organizational meeting to coordinate an upcoming event schedule and assign tasks."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1462,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group members are actively discussing the timeline for afternoon tea to ensure it integrates smoothly into their workflow."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1463,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person operating the laptop is reviewing or updating schedules and notes during the group discussion."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1455,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 1460,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 595,
+        "target": 1457,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 732,
+        "target": 1459,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1447,
+        "target": 1453,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1448,
+        "target": 1458,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1449,
+        "target": 1458,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_124_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_124_graph.pkl"
+  },
+  "memory_pickle_bytes": 33756663,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52803.742641739,
+    "prepared_perf": 52812.293155719,
+    "ordered_start_perf": 52921.620419106,
+    "consumer_wait_ms": 0.01290400541620329,
+    "ready_to_ordered_ms": 109327.26338700013,
+    "preparation_work_ms": 8545.011071000772,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 55246.11230799928
+}

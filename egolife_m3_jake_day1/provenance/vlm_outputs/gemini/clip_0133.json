@@ -1,0 +1,75 @@
+{
+  "clip_id": 133,
+  "source": {
+    "segment_id": 133,
+    "source": "DAY1_A1_JAKE_12113000.mp4",
+    "source_clock": "12113000",
+    "start_seconds_in_source": 12.040000000000873,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43902.04,
+    "absolute_end_seconds": 43920.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0133.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 53447.032907089,
+      "prepared_perf": 53453.726572653,
+      "ordered_start_perf": 53547.96285667,
+      "consumer_wait_ms": 0.019766994228120893,
+      "ready_to_ordered_ms": 94236.28401699534,
+      "preparation_work_ms": 6687.9645730004995,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sit around a checkered dining table engaged in a planning discussion.",
+      "A woman near the back reaches across the table and picks up a bunch of green leafy vegetables.",
+      "The camera pans toward the living room, revealing a projector screen and a checkerboard calibration target.",
+      "A man in an orange t-shirt walks in from the kitchen area while on a phone call.",
+      "The man in the orange t-shirt stands near the whiteboard at the head of the table.",
+      "The group discusses scheduling dinner and drinks between 5:00 and 6:00 PM."
+    ],
+    "high_level_conclusions": [
+      "The group is planning a timetable for an upcoming event or party, discussing dinner and drink arrangements.",
+      "The setting is a shared apartment or living room serving as a collaborative workspace."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people sit around a checkered dining table engaged in a planning discussion.\",\n\t\t\"A woman near the back reaches across the table and picks up a bunch of green leafy vegetables.\",\n\t\t\"The camera pans toward the living room, revealing a projector screen and a checkerboard calibration target.\",\n\t\t\"A man in an orange t-shirt walks in from the kitchen area while on a phone call.\",\n\t\t\"The man in the orange t-shirt stands near the whiteboard at the head of the table.\",\n\t\t\"The group discusses scheduling dinner and drinks between 5:00 and 6:00 PM.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is planning a timetable for an upcoming event or party, discussing dinner and drink arrangements.\",\n\t\t\"The setting is a shared apartment or living room serving as a collaborative workspace.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 133,
+      "call_id": "7ab281af-3e84-4523-8e56-02f888150321",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412370.8312624,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 40474,
+      "output_tokens": 1146,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 19828.028502997768
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people sit around a checkered dining table engaged in a planning discussion.\",\n\t\t\"A woman near the back reaches across the table and picks up a bunch of green leafy vegetables.\",\n\t\t\"The camera pans toward the living room, revealing a projector screen and a checkerboard calibration target.\",\n\t\t\"A man in an orange t-shirt walks in from the kitchen area while on a phone call.\",\n\t\t\"The man in the orange t-shirt stands near the whiteboard at the head of the table.\",\n\t\t\"The group discusses scheduling dinner and drinks between 5:00 and 6:00 PM.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is planning a timetable for an upcoming event or party, discussing dinner and drink arrangements.\",\n\t\t\"The setting is a shared apartment or living room serving as a collaborative workspace.\"\n\t]\n}\n```",
+      "total_tokens": 41620,
+      "request_end": 1789412390.659408,
+      "latency_ms": 19828.14243800385,
+      "client_wall_clock_latency_ms": 19828.14243800385,
+      "api_request_wall_clock_latency_ms": 19828.14243800385
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_133_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "question_id": "Q05",
+  "candidate_mapping": {
+    "0": "C",
+    "1": "D",
+    "2": "B",
+    "3": "A"
+  },
+  "grades": {
+    "0": {
+      "correct": false,
+      "reason": "Omitted the plan to work on innovative applications, and included unsupported details (sharing her first successful project)."
+    },
+    "1": {
+      "correct": false,
+      "reason": "Incorrectly claims the information is insufficient to answer the question."
+    },
+    "2": {
+      "correct": false,
+      "reason": "Omitted the plan to work on innovative applications, and included unsupported details (sharing her first successful project)."
+    },
+    "3": {
+      "correct": false,
+      "reason": "Omitted the plan to work on innovative applications."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q05",
+    "method": null,
+    "call_id": "f8131d6b-ef67-43b4-9723-2290e4fe856a",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437131.8570485,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 236,
+    "output_tokens": 444,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 3416.4555780007504
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"Omitted the plan to work on innovative applications, and included unsupported details (sharing her first successful project).\"\n  },\n  \"1\": {\n    \"correct\": false,\n    \"reason\": \"Incorrectly claims the information is insufficient to answer the question.\"\n  },\n  \"2\": {\n    \"correct\": false,\n    \"reason\": \"Omitted the plan to work on innovative applications, and included unsupported details (sharing her first successful project).\"\n  },\n  \"3\": {\n    \"correct\": false,\n    \"reason\": \"Omitted the plan to work on innovative applications.\"\n  }\n}\n```",
+    "total_tokens": 680,
+    "request_end": 1789437135.27357,
+    "latency_ms": 3416.5202400035923,
+    "client_wall_clock_latency_ms": 3416.5202400035923,
+    "api_request_wall_clock_latency_ms": 3416.5202400035923
+  },
+  "included_in_qa_latency": false
+}

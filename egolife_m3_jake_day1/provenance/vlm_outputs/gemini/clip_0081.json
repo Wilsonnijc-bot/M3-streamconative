@@ -1,0 +1,75 @@
+{
+  "clip_id": 81,
+  "source": {
+    "segment_id": 81,
+    "source": "DAY1_A1_JAKE_11480000.mp4",
+    "source_clock": "11480000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42480.0,
+    "absolute_end_seconds": 42510.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0081.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 49123.420274473,
+      "prepared_perf": 49130.334927555,
+      "ordered_start_perf": 49281.718203181,
+      "consumer_wait_ms": 0.014867997379042208,
+      "ready_to_ordered_ms": 151383.2756260017,
+      "preparation_work_ms": 6909.321022998483,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table covered with a checkered tablecloth, flowers, cards, and a film clapperboard.",
+      "A woman wearing a white outfit stands at the head of the table near a whiteboard, arranging flowers.",
+      "A woman in a black top sits at the left foreground of the table, resting her chin on her hand and listening to the conversation.",
+      "Two young women sit across the table on the right side, chatting and watching the flower arrangement.",
+      "A person in an orange shirt stands and moves around in the background near the doorway.",
+      "The camera wearer rests their hands on their lap while observing the room and listening to the discussion."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a casual creative meeting or workshop involving floral arrangement and prop preparation.",
+      "The conversation focuses on dining at Haidilao and its promotional collaboration involving potted plants and merchandise."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a table covered with a checkered tablecloth, flowers, cards, and a film clapperboard.\",\n  \"A woman wearing a white outfit stands at the head of the table near a whiteboard, arranging flowers.\",\n  \"A woman in a black top sits at the left foreground of the table, resting her chin on her hand and listening to the conversation.\",\n  \"Two young women sit across the table on the right side, chatting and watching the flower arrangement.\",\n  \"A person in an orange shirt stands and moves around in the background near the doorway.\",\n  \"The camera wearer rests their hands on their lap while observing the room and listening to the discussion.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in a casual creative meeting or workshop involving floral arrangement and prop preparation.\",\n  \"The conversation focuses on dining at Haidilao and its promotional collaboration involving potted plants and merchandise.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 81,
+      "call_id": "1f858261-3b64-4591-90dc-0eb3380cb41d",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789408107.8713794,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67335,
+      "output_tokens": 1119,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 198975.36853000202
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a table covered with a checkered tablecloth, flowers, cards, and a film clapperboard.\",\n  \"A woman wearing a white outfit stands at the head of the table near a whiteboard, arranging flowers.\",\n  \"A woman in a black top sits at the left foreground of the table, resting her chin on her hand and listening to the conversation.\",\n  \"Two young women sit across the table on the right side, chatting and watching the flower arrangement.\",\n  \"A person in an orange shirt stands and moves around in the background near the doorway.\",\n  \"The camera wearer rests their hands on their lap while observing the room and listening to the discussion.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in a casual creative meeting or workshop involving floral arrangement and prop preparation.\",\n  \"The conversation focuses on dining at Haidilao and its promotional collaboration involving potted plants and merchandise.\"\n ]\n}\n```",
+      "total_tokens": 68454,
+      "request_end": 1789408306.846851,
+      "latency_ms": 198975.4658419988,
+      "client_wall_clock_latency_ms": 198975.4658419988,
+      "api_request_wall_clock_latency_ms": 198975.4658419988
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_81_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

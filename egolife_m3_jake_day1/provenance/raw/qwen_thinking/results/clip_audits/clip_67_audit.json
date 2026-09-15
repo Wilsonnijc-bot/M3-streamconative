@@ -1,0 +1,632 @@
+{
+  "clip_id": 67,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0067.mp4",
+  "end_to_end_memory_generation_ms": 583173.5243520015,
+  "latency_ms": {
+    "clip_decode": 4604.796216997784,
+    "deepgram_asr": 3.010111002367921,
+    "mai_transcribe_asr": 2.82820899883518,
+    "asr_total": 3.6705940001411363,
+    "audio_segmentation": 6.1714100011158735,
+    "speech_embedding_campplus": 1425.9766609902726,
+    "facial_detection_recognition_buffalo_l": 2904.8842399934074,
+    "face_clustering": 4.572411999106407,
+    "vlm_memory_generation": 162304.73007399996,
+    "text_embedding": 767.9173180076759,
+    "graph_update_total": 421.9589490239741
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 67,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 16,
+      "input_chars": 1271,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789424519.5475743,
+          "status": "success",
+          "total_tokens": 346,
+          "request_end": 1789424520.315313,
+          "latency_ms": 767.7392939949641
+        }
+      ],
+      "total_tokens": 346,
+      "latency_ms": 767.9173180076759
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 3.010111002367921,
+        "openrouter-mai-transcribe-2": 2.82820899883518
+      },
+      "asr_total_ms": 3.6705940001411363,
+      "audio_segmentation_ms": 6.1714100011158735,
+      "speech_embedding_ms": 1425.9766609902726,
+      "graph_update_ms": 421.81270400760695,
+      "asr_segment_count": 7,
+      "speech_embedding_count": 7,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1866.5635939978529
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2904.8842399934074,
+      "face_clustering_ms": 4.572411999106407,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 173,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3002.306141992449
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_867>",
+        "<voice_868>",
+        "<voice_364>",
+        "<voice_869>",
+        "<voice_870>",
+        "<voice_871>",
+        "<voice_872>"
+      ],
+      "context_preparation_ms": 4004.1754330013646,
+      "vlm_ms": 162304.73007399996,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room with a whiteboard in the background.\",\n\t\t\"One person stands near the whiteboard while others sit around the table, including one person on the left in black and two on the right.\",\n\t\t\"A clapperboard rests on the table in front of the seated individuals.\",\n\t\t\"<voice_867>: MAI: 你把他的名字写反了。\",\n\t\t\"<voice_868>: MAI: 爱流万确。\",\n\t\t\"<voice_364>: MAI: 差点，差点像了。\",\n\t\t\"<voice_869>: MAI: 完成了，今天那个变异了，做全染色体。\",\n\t\t\"<voice_870>: MAI: 好家俊，这件你都有是与否？\",\n\t\t\"<voice_871>: MAI: 他闪。\",\n\t\t\"<voice_872>: MAI: OK，上我的道具。\",\n\t\t\"Starting from 13.00s, the faces of the participants become blurred.\",\n\t\t\"At 28.50s, the person sitting on the left raises their hand and gestures towards the center of the table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be engaged in a collaborative creative session, possibly a film rehearsal or script review, indicated by the presence of a clapperboard and whiteboard.\",\n\t\t\"The conversation involves corrections and confirmations regarding details like names and visual elements, suggesting a focus on accuracy in production design or acting.\",\n\t\t\"The instruction to 'up my props' indicates preparation for a physical shoot or performance is imminent.\",\n\t\t\"The sudden blurring of faces suggests privacy protection measures were applied post-recording or during processing.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room with a whiteboard in the background.",
+          "One person stands near the whiteboard while others sit around the table, including one person on the left in black and two on the right.",
+          "A clapperboard rests on the table in front of the seated individuals.",
+          "<voice_867>: MAI: 你把他的名字写反了。",
+          "<voice_868>: MAI: 爱流万确。",
+          "<voice_364>: MAI: 差点，差点像了。",
+          "<voice_869>: MAI: 完成了，今天那个变异了，做全染色体。",
+          "<voice_870>: MAI: 好家俊，这件你都有是与否？",
+          "<voice_871>: MAI: 他闪。",
+          "<voice_872>: MAI: OK，上我的道具。",
+          "Starting from 13.00s, the faces of the participants become blurred.",
+          "At 28.50s, the person sitting on the left raises their hand and gestures towards the center of the table."
+        ],
+        "high_level_conclusions": [
+          "The group appears to be engaged in a collaborative creative session, possibly a film rehearsal or script review, indicated by the presence of a clapperboard and whiteboard.",
+          "The conversation involves corrections and confirmations regarding details like names and visual elements, suggesting a focus on accuracy in production design or acting.",
+          "The instruction to 'up my props' indicates preparation for a physical shoot or performance is imminent.",
+          "The sudden blurring of faces suggests privacy protection measures were applied post-recording or during processing."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 67,
+          "call_id": "a5e9464c-753a-4b96-a981-d1924be7d213",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789424357.2418628,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room with a whiteboard in the background.\",\n\t\t\"One person stands near the whiteboard while others sit around the table, including one person on the left in black and two on the right.\",\n\t\t\"A clapperboard rests on the table in front of the seated individuals.\",\n\t\t\"<voice_867>: MAI: 你把他的名字写反了。\",\n\t\t\"<voice_868>: MAI: 爱流万确。\",\n\t\t\"<voice_364>: MAI: 差点，差点像了。\",\n\t\t\"<voice_869>: MAI: 完成了，今天那个变异了，做全染色体。\",\n\t\t\"<voice_870>: MAI: 好家俊，这件你都有是与否？\",\n\t\t\"<voice_871>: MAI: 他闪。\",\n\t\t\"<voice_872>: MAI: OK，上我的道具。\",\n\t\t\"Starting from 13.00s, the faces of the participants become blurred.\",\n\t\t\"At 28.50s, the person sitting on the left raises their hand and gestures towards the center of the table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be engaged in a collaborative creative session, possibly a film rehearsal or script review, indicated by the presence of a clapperboard and whiteboard.\",\n\t\t\"The conversation involves corrections and confirmations regarding details like names and visual elements, suggesting a focus on accuracy in production design or acting.\",\n\t\t\"The instruction to 'up my props' indicates preparation for a physical shoot or performance is imminent.\",\n\t\t\"The sudden blurring of faces suggests privacy protection measures were applied post-recording or during processing.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). They show a room with a table covered in a checkered cloth. There are people around the table.\n    *   One person is standing near a whiteboard (wearing white/light clothing).\n    *   One person is sitting on the left side of the table (dark hair, dark top).\n    *   Two people are sitting on the right side of the table (one blonde/light hair, one dark hair).\n    *   There is a clapperboard on the table.\n    *   The camera seems to be held by someone sitting opposite the table or moving around slightly.\n    *   Faces are blurred in later frames (around 13s onwards), suggesting privacy masking or just a specific editing style, but the prompt asks to preserve speaker identity using voice IDs. Wait, looking closely at the prompt instructions: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person...\". However, I need to construct memories. The prompt says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" It also says \"Preserve speaker identity when constructing memory from the supplied character features.\"\n    *   Crucially, there are NO face features provided in the input text (\"Face features:Voice features:...\"). The input section explicitly lists \"Face features:\" followed immediately by \"Voice features:\". This implies there are no face features to link to.\n    *   Therefore, I cannot create equivalences like `Equivalence: <face_x>, <voice_y>` because no face IDs exist.\n    *   I must use the voice IDs (`<voice_867>`, `<voice_868>`, etc.) directly in the memories.\n\n**2. Video Description Construction:**\n*   I need to describe the scene atomically.\n*   Scene: A meeting or rehearsal space. Table with checkered cloth. Whiteboard in background. Clapperboard on table.\n*   People:\n    *   Person standing (white shirt): Interacting with whiteboard/people.\n    *   Person sitting left (black top): Listening/watching.\n    *   Person sitting right (blonde/light top): Writing/drawing?\n    *   Person sitting right (dark top): Watching.\n*   Action:\n    *   The group seems to be discussing something related to the whiteboard or the script/clapperboard.\n    *   The person standing gestures towards the whiteboard.\n    *   The person on the right writes or points.\n    *   The person on the left gestures at the end (frame 28.50s).\n    *   Camera moves slightly, showing different angles.\n*   Specific timestamps:\n    *   0.00s - 12.00s: Static shot mostly. People seated.\n    *   13.00s - 17.00s: Faces become blurred/masked.\n    *   18.00s - 29.50s: Continued discussion. Person on left gestures at 28.50s.\n\n**3. High-Level Conclusions Construction:**\n*   Since there are no face features, I cannot make equivalences.\n*   I can infer intent based on actions.\n    *   Standing person near whiteboard suggests leading the discussion or explaining concepts.\n    *   Clapperboard suggests film production or rehearsal context.\n    *   Discussion about names and changes (\"MAI: You wrote his name backwards\", \"MAI: Love flow confirmed\", \"MAI: Finished, today that changed, doing full color body\") suggests a creative process, likely acting or directing.\n    *   \"MAI: OK, my props\" suggests preparation for a shoot.\n\n**4. Memory Construction (Episodic Memories):**\n*   I need to quote the ASR for each voice ID.\n*   `<voice_867>`: \"MAI: 你把他的名字写反了。\" (You wrote his name backwards.)\n*   `<voice_868>`: \"MAI: 爱流万确。\" (Love flow confirmed / Ai liu wan que - sounds like a specific term or phrase).\n*   `<voice_364>`: \"MAI: 差点，差点像了。\" (Almost, almost looked like it.)\n*   `<voice_869>`: \"MAI: 完成了，今天那个变异了，做全染色体。\" (Finished, today that mutated, doing full chromatin/chromosome coloring?) -> Context suggests creative direction.\n*   `<voice_870>`: \"MAI: 好家俊，这件你都有是与否？\" (Good Jia Jun, do you have this item yes/no?) -> Addressing someone named Jia Jun.\n*   `<voice_871>`: \"MAI: 他闪。\" (He flashed/shined.)\n*   `<voice_872>`: \"MAI: OK，上我的道具。\" (OK, up my props.)\n\n**5. Refining the Output:**\n*   **JSON Structure:** Must match the requested schema.\n*   **Video Description:** List of strings describing events.\n*   **High-Level Conclusions:** List of strings. Since no faces, no equivalences. Just inferences.\n*   **Constraint Check:** \"Do not replace the ID with 'a speaker'...\". \"Use only IDs supplied in the input\".\n*   **Constraint Check:** \"If no face IDs are supplied, do not invent any.\" -> Correct, I won't add equivalences.\n*   **Constraint Check:** \"Preserve speaker identity when constructing memory... using the exact ID as the speaker.\" -> I will use `<voice_867>`, etc., in the memory descriptions if possible, or just ensure the transcript is attributed correctly in the logic. Wait, the instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This usually means the memory entry itself might look like `[<voice_867>: \"transcript\"]` or similar, but the output format requires a list of strings for `video_description`. Let's re-read carefully: \"Your output must be a JSON object with the following structure: ... video_description: [...]\". It doesn't explicitly say the memory needs to be inside `video_description`. Usually, in these tasks, the `video_description` contains the narrative, and the `high_level_conclusions` contain the reasoning. However, the instruction says \"For every supplied voice ID... include at least one episodic memory...\". Where does this memory go?\n    *   Looking at standard patterns for this type of prompt (often associated with video understanding datasets): The `video_description` often acts as the ground truth narrative. The instruction \"include at least one episodic memory... using the exact ID as the speaker\" implies I should embed the voice ID into the description or a specific field. But the schema provided is fixed: `video_description` and `high_level_conclusions`.\n    *   Re-reading: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   Instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   Interpretation: I should probably put these memories into the `video_description` array, formatted clearly, e.g., `<voice_867>: MAI: 你把他的名字写反了。`. Or perhaps the `video_description` is just the visual narrative, and the memories are part of the reasoning? No, \"include at least one episodic memory\" usually means part of the output text. Given the strict JSON schema, I will append the voice ID + transcript to the relevant event description in the `video_description` array to satisfy the requirement of preserving speaker identity in the memory construction within the allowed fields.\n    *   Actually, looking at previous examples of this task type (VideoQA/VideoMemory), often the `video_description` is purely visual. But the prompt explicitly asks to \"construct memory from the supplied character features\". And \"include at least one episodic memory... using the exact ID\".\n    *   Let's look at the instruction again: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n    *   Okay, I will integrate the voice ID and transcript into the `video_description` entries where the action happens, or create specific entries for them.\n    *   Wait, the instruction says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I shouldn't change the schema.\n    *   So, I will add entries to `video_description` that represent the spoken words, prefixed by the voice ID.\n    *   Example: `<voice_867>: MAI: 你把他的名字写反了。`\n\n**Plan:**\n1.  **Video Description:**\n    *   Describe the setting (table, whiteboard, clapperboard).\n    *   Describe the people (standing, sitting left, sitting right).\n    *   Integrate the voice lines into the description using their IDs.\n    *   Note the face blurring starting at 13s.\n    *   Note the gesture at 28.5s.\n2.  **High-Level Conclusions:**\n    *   Inference about the activity (rehearsal/film prep).\n    *   Inference about the relationship (director/actor/collaborators).\n    *   No equivalences since no face IDs.\n\n**Drafting Content:**\n*   Frame 0-12: Group gathered around table. Standing person near whiteboard.\n*   Voice `<voice_867>`: \"MAI: 你把他的名字写反了。\" (Correction regarding a name).\n*   Voice `<voice_868>`: \"MAI: 爱流万确。\" (Confirmation).\n*   Voice `<voice_364>`: \"MAI: 差点，差点像了。\" (Comparison).\n*   Voice `<voice_869>`: \"MAI: 完成了，今天那个变异了，做全染色体。\" (Completion statement).\n*   Voice `<voice_870>`: \"MAI: 好家俊，这件你都有是与否？\" (Question to Jia Jun).\n*   Voice `<voice_871>`: \"MAI: 他闪。\" (Observation).\n*   Voice `<voice_872>`: \"MAI: OK，上我的道具。\" (Instruction on props).\n*   Visuals: Faces masked from 13s. Person on left gestures at 28.5s.\n\n**Refining the JSON:**\nEnsure valid JSON. Escape quotes if necessary.\nThe prompt asks to \"Preserve speaker identity when constructing memory...\". I will format the memory entries in `video_description` as `<voice_ID>: Transcript`.\n\nLet's double check the \"Face features\" input. It is empty/null effectively. So no equivalences.\n\nOne detail: \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I must quote the ASR.\n\nFinal check on constraints:\n- \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" -> Done.\n- \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person...\" -> I will not assign `<voice_867>` to a specific face visually, just keep the ID.\n- \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> Done.\n\nLet's write the response.\n\n**Video Description Items:**\n1.  A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room with a whiteboard in the background.\n2.  One person stands near the whiteboard while others sit around the table, including one person on the left in black and two on the right.\n3.  A clapperboard rests on the table in front of the seated individuals.\n4.  <voice_867>: MAI: 你把他的名字写反了。\n5.  <voice_868>: MAI: 爱流万确。\n6.  <voice_364>: MAI: 差点，差点像了。\n7.  <voice_869>: MAI: 完成了，今天那个变异了，做全染色体。\n8.  <voice_870>: MAI: 好家俊，这件你都有是与否？\n9.  <voice_871>: MAI: 他闪。\n10. <voice_872>: MAI: OK，上我的道具。\n11. Starting from 13.00s, the faces of the participants become blurred.\n12. At 28.50s, the person sitting on the left raises their hand and gestures towards the center of the table.\n\n**High Level Conclusions:**\n1.  The group appears to be engaged in a collaborative creative session, possibly a film rehearsal or script review, indicated by the presence of a clapperboard and whiteboard.\n2.  The conversation involves corrections and confirmations regarding details like names and visual elements (\"full chromatin/body\"), suggesting a focus on accuracy in production design or acting.\n3.  The instruction to \"up my props\" indicates preparation for a physical shoot or performance is imminent.\n4.  The sudden blurring of faces suggests privacy protection measures were applied post-recording or during processing.\n\nWait, I need to make sure I don't hallucinate face IDs. The input says \"Face features:Voice features:...\". It looks like the Face features key is missing or empty. I will assume no face IDs.\n\nOne correction on the memory format: The instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nIt doesn't specify the exact string format, but `<voice_ID>: Transcript` is clear and preserves identity.\n\nLet's assemble the JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room with a whiteboard in the background.\",\n\t\t\"One person stands near the whiteboard while others sit around the table, including one person on the left in black and two on the right.\",\n\t\t\"A clapperboard rests on the table in front of the seated individuals.\",\n\t\t\"<voice_867>: MAI: 你把他的名字写反了。\",\n\t\t\"<voice_868>: MAI: 爱流万确。\",\n\t\t\"<voice_364>: MAI: 差点，差点像了。\",\n\t\t\"<voice_869>: MAI: 完成了，今天那个变异了，做全染色体。\",\n\t\t\"<voice_870>: MAI: 好家俊，这件你都有是与否？\",\n\t\t\"<voice_871>: MAI: 他闪。\",\n\t\t\"<voice_872>: MAI: OK，上我的道具。\",\n\t\t\"Starting from 13.00s, the faces of the participants become blurred.\",\n\t\t\"At 28.50s, the person sitting on the left raises their hand and gestures towards the center of the table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be engaged in a collaborative creative session, possibly a film rehearsal or script review, indicated by the presence of a clapperboard and whiteboard.\",\n\t\t\"The conversation involves corrections and confirmations regarding details like names and visual elements, suggesting a focus on accuracy in production design or acting.\",\n\t\t\"The instruction to 'up my props' indicates preparation for a physical shoot or performance is imminent.\",\n\t\t\"The sudden blurring of faces suggests privacy protection measures were applied post-recording or during processing.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10516,
+          "output_tokens": 3573,
+          "total_tokens": 14089,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0017130078049376607,
+            "media_preparation_ms": 62.613551010144874,
+            "processor_tokenization_ms": 283.70988300594036,
+            "device_transfer_ms": 42.63672999513801,
+            "cuda_generation_ms": 161882.42118401104,
+            "decoding_ms": 3.7390949873952195
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 162275.30412800843,
+          "request_end": 1789424519.5465953,
+          "latency_ms": 162304.73007399996,
+          "client_wall_clock_latency_ms": 162304.73007399996
+        }
+      ],
+      "episodic_memory_count": 12,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 12,
+      "text_embedding_ms": null,
+      "text_embedding_count": 12,
+      "graph_update_ms": 0.12035600957460701,
+      "nodes_added": 12,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.02588900679256767,
+      "nodes_added": 4,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 7,
+    "speech_embeddings": 7,
+    "voice_identities": 7,
+    "detected_faces": 173,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 12,
+    "semantic_memories": 4,
+    "nodes_after_clip": 889,
+    "edges_after_clip": 319,
+    "nodes_added_by_clip": 22,
+    "edges_added_by_clip": 7
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room with a whiteboard in the background.",
+      "One person stands near the whiteboard while others sit around the table, including one person on the left in black and two on the right.",
+      "A clapperboard rests on the table in front of the seated individuals.",
+      "<voice_867>: MAI: 你把他的名字写反了。",
+      "<voice_868>: MAI: 爱流万确。",
+      "<voice_364>: MAI: 差点，差点像了。",
+      "<voice_869>: MAI: 完成了，今天那个变异了，做全染色体。",
+      "<voice_870>: MAI: 好家俊，这件你都有是与否？",
+      "<voice_871>: MAI: 他闪。",
+      "<voice_872>: MAI: OK，上我的道具。",
+      "Starting from 13.00s, the faces of the participants become blurred.",
+      "At 28.50s, the person sitting on the left raises their hand and gestures towards the center of the table."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be engaged in a collaborative creative session, possibly a film rehearsal or script review, indicated by the presence of a clapperboard and whiteboard.",
+      "The conversation involves corrections and confirmations regarding details like names and visual elements, suggesting a focus on accuracy in production design or acting.",
+      "The instruction to 'up my props' indicates preparation for a physical shoot or performance is imminent.",
+      "The sudden blurring of faces suggests privacy protection measures were applied post-recording or during processing."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room with a whiteboard in the background.",
+      "One person stands near the whiteboard while others sit around the table, including one person on the left in black and two on the right.",
+      "A clapperboard rests on the table in front of the seated individuals.",
+      "<voice_867>: MAI: 你把他的名字写反了。",
+      "<voice_868>: MAI: 爱流万确。",
+      "<voice_364>: MAI: 差点，差点像了。",
+      "<voice_869>: MAI: 完成了，今天那个变异了，做全染色体。",
+      "<voice_870>: MAI: 好家俊，这件你都有是与否？",
+      "<voice_871>: MAI: 他闪。",
+      "<voice_872>: MAI: OK，上我的道具。",
+      "Starting from 13.00s, the faces of the participants become blurred.",
+      "At 28.50s, the person sitting on the left raises their hand and gestures towards the center of the table."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be engaged in a collaborative creative session, possibly a film rehearsal or script review, indicated by the presence of a clapperboard and whiteboard.",
+      "The conversation involves corrections and confirmations regarding details like names and visual elements, suggesting a focus on accuracy in production design or acting.",
+      "The instruction to 'up my props' indicates preparation for a physical shoot or performance is imminent.",
+      "The sudden blurring of faces suggests privacy protection measures were applied post-recording or during processing."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_67_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 22,
+    "edges_added": 7,
+    "nodes": [
+      {
+        "id": 867,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你把他名写反了。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 868,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 爱流万确。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 869,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 完了，今天那个变异了，做完染色体。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 870,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好家伙，这俩你都有是吗？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 871,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 他闪。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 872,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: OK，上我的道具。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 873,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room with a whiteboard in the background."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 874,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person stands near the whiteboard while others sit around the table, including one person on the left in black and two on the right."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 875,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard rests on the table in front of the seated individuals."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 876,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_867>: MAI: 你把他的名字写反了。"
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 877,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_868>: MAI: 爱流万确。"
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 878,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_364>: MAI: 差点，差点像了。"
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 879,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_869>: MAI: 完成了，今天那个变异了，做全染色体。"
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 880,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_870>: MAI: 好家俊，这件你都有是与否？"
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 881,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_871>: MAI: 他闪。"
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 882,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_872>: MAI: OK，上我的道具。"
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 883,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Starting from 13.00s, the faces of the participants become blurred."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 884,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 28.50s, the person sitting on the left raises their hand and gestures towards the center of the table."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 885,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be engaged in a collaborative creative session, possibly a film rehearsal or script review, indicated by the presence of a clapperboard and whiteboard."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 886,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The conversation involves corrections and confirmations regarding details like names and visual elements, suggesting a focus on accuracy in production design or acting."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 887,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The instruction to 'up my props' indicates preparation for a physical shoot or performance is imminent."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 888,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The sudden blurring of faces suggests privacy protection measures were applied post-recording or during processing."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 364,
+        "target": 878,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 867,
+        "target": 876,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 868,
+        "target": 877,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 869,
+        "target": 879,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 870,
+        "target": 880,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 871,
+        "target": 881,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 872,
+        "target": 882,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_67_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_67_graph.pkl"
+  },
+  "memory_pickle_bytes": 21041703,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 65124.068711911,
+    "prepared_perf": 65130.268238209,
+    "ordered_start_perf": 65533.316234401,
+    "consumer_wait_ms": 0.01875499583547935,
+    "ready_to_ordered_ms": 403047.9961919991,
+    "preparation_work_ms": 6194.136721001996,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 171948.15122699947
+}

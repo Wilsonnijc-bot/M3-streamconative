@@ -1,0 +1,534 @@
+{
+  "clip_id": 111,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0111.mp4",
+  "end_to_end_memory_generation_ms": 540748.8805870089,
+  "latency_ms": {
+    "clip_decode": 5551.113920999342,
+    "deepgram_asr": 893.5006349929608,
+    "mai_transcribe_asr": 952.4781060026726,
+    "asr_total": 953.72680699802,
+    "audio_segmentation": 6.805736993555911,
+    "speech_embedding_campplus": 992.9722389933886,
+    "facial_detection_recognition_buffalo_l": 3857.822170990403,
+    "face_clustering": 8.416718992521055,
+    "vlm_memory_generation": 164942.6256529987,
+    "text_embedding": 782.9216550017009,
+    "graph_update_total": 519.2861950054066
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 111,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 745,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789439385.3448265,
+          "status": "success",
+          "total_tokens": 223,
+          "request_end": 1789439386.127532,
+          "latency_ms": 782.7061190037057
+        }
+      ],
+      "total_tokens": 223,
+      "latency_ms": 782.9216550017009
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 893.5006349929608,
+        "openrouter-mai-transcribe-2": 952.4781060026726
+      },
+      "asr_total_ms": 953.72680699802,
+      "audio_segmentation_ms": 6.805736993555911,
+      "speech_embedding_ms": 992.9722389933886,
+      "graph_update_ms": 513.4417310036952,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1528.641137003433
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3857.822170990403,
+      "face_clustering_ms": 8.416718992521055,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 331,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4046.1577999958536
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_364>",
+        "<voice_261>",
+        "<voice_277>",
+        "<voice_1496>",
+        "<voice_1497>"
+      ],
+      "context_preparation_ms": 4080.0650029996177,
+      "vlm_ms": 164942.6256529987,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table with a red-and-white checkered tablecloth.\",\n\t\t\"One person stands near a whiteboard while others sit around the table.\",\n\t\t\"A clapperboard is placed on the table in the foreground.\",\n\t\t\"Lighting equipment is visible in the background.\",\n\t\t\"Audio from <voice_364> states: '3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。'\",\n\t\t\"Audio from <voice_261> states: '给他们一点活动。'\",\n\t\t\"Audio from <voice_277> states: '原谅。'\",\n\t\t\"Audio from <voice_1496> states: '入场式的。'\",\n\t\t\"Audio from <voice_1497> states: '可以。'\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is discussing the logistics of an event, specifically entry timing and activities.\",\n\t\t\"<voice_364> proposes a gradual entry schedule from 2 PM to 3 PM.\",\n\t\t\"<voice_1496> identifies the event type as an entrance ceremony.\",\n\t\t\"<voice_1497> validates the proposed arrangement.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a table with a red-and-white checkered tablecloth.",
+          "One person stands near a whiteboard while others sit around the table.",
+          "A clapperboard is placed on the table in the foreground.",
+          "Lighting equipment is visible in the background.",
+          "Audio from <voice_364> states: '3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。'",
+          "Audio from <voice_261> states: '给他们一点活动。'",
+          "Audio from <voice_277> states: '原谅。'",
+          "Audio from <voice_1496> states: '入场式的。'",
+          "Audio from <voice_1497> states: '可以。'"
+        ],
+        "high_level_conclusions": [
+          "The group is discussing the logistics of an event, specifically entry timing and activities.",
+          "<voice_364> proposes a gradual entry schedule from 2 PM to 3 PM.",
+          "<voice_1496> identifies the event type as an entrance ceremony.",
+          "<voice_1497> validates the proposed arrangement."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 111,
+          "call_id": "57e7b777-3544-4bb8-978f-5d7af642b321",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789439220.4012282,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table with a red-and-white checkered tablecloth.\",\n\t\t\"One person stands near a whiteboard while others sit around the table.\",\n\t\t\"A clapperboard is placed on the table in the foreground.\",\n\t\t\"Lighting equipment is visible in the background.\",\n\t\t\"Audio from <voice_364> states: '3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。'\",\n\t\t\"Audio from <voice_261> states: '给他们一点活动。'\",\n\t\t\"Audio from <voice_277> states: '原谅。'\",\n\t\t\"Audio from <voice_1496> states: '入场式的。'\",\n\t\t\"Audio from <voice_1497> states: '可以。'\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is discussing the logistics of an event, specifically entry timing and activities.\",\n\t\t\"<voice_364> proposes a gradual entry schedule from 2 PM to 3 PM.\",\n\t\t\"<voice_1496> identifies the event type as an entrance ceremony.\",\n\t\t\"<voice_1497> validates the proposed arrangement.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON output based on a video clip and some character features (voice features).\n\n**Input Analysis:**\n*   **Video Frames:** I have a sequence of frames from 0.00s to 29.50s. The scene shows a group of people around a table with a clapperboard. There's a whiteboard in the background. One person is standing near the whiteboard, others are seated. The camera seems to be held by someone sitting at the table (POV shot).\n*   **Character Features:** Only voice features are provided.\n    *   `<voice_364>`: \"MAI: 3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。\" (Time: 00:00 - 00:09)\n    *   `<voice_261>`: \"MAI: 给他们一点活动。\" (Time: 00:10 - 00:12)\n    *   `<voice_277>`: \"MAI: 原谅。\" (Time: 00:11 - 00:13)\n    *   `<voice_1496>`: \"MAI: 入场式的。\" (Time: 00:14 - 00:16)\n    *   `<voice_1497>`: \"MAI: 可以。\" (Time: 00:19 - 00:21)\n*   **Task:**\n    1.  Generate `video_description`: Atomic events describing the video.\n    2.  Generate `high_level_conclusions`: Inferences about intentions/identities. Since there are no face features provided, I cannot make equivalences like `Equivalence: <face_x>, <voice_y>`. I need to check if the prompt implies I should ignore face features if none are supplied. Yes, \"If no face IDs are supplied, do not invent any.\" So the `high_level_conclusions` array might just contain inferences based on the context or be empty regarding equivalences. However, looking at the instruction \"Use logical inference to identify character intentions... If a face and a voice feature refer to the same character, indicate it...\", since I don't have face features, I can't confirm equivalences. I will focus on the video description and perhaps general inferences if possible, but strictly speaking, without face IDs, I can't form the specific equivalence strings requested unless I infer something else. Wait, the instruction says \"If a face and a voice feature refer to the same character, indicate it using this exact format\". Since I don't have face features, I cannot create these lines. I will leave them out or put general inferences. Actually, looking at the strict constraint \"Preserve speaker identity when constructing memory from the supplied character features\", I need to ensure the descriptions reflect the audio content attributed to the voice IDs. But the `video_description` part asks for \"observable and inferable events\". The `high_level_conclusions` asks for \"reasoning-based conclusions\".\n    *   Wait, the prompt says \"Your task consists of two parts: 1. Video Description ... 2. High-Level Conclusions\".\n    *   The system instruction says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This sounds like a \"Memory Construction\" task usually associated with a different schema, but here the output schema is fixed as `video_description` and `high_level_conclusions`.\n    *   Let's re-read the system instruction carefully: \"Preserve speaker identity when constructing memory from the supplied character features... Output Format: Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\".\n    *   Okay, so I need to adapt the \"memory construction\" requirement into the `video_description` and `high_level_conclusions` fields.\n    *   Specifically: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This likely means the `video_description` should mention the audio events.\n    *   And: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> This applies to `high_level_conclusions`.\n    *   Constraint: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person... If no face IDs are supplied, do not invent any.\" -> This means I cannot say \"Person X said Y\". I must use the voice ID in the text if I attribute speech to a specific entity in the conclusion, or just describe the audio event generally while referencing the ID.\n    *   Actually, usually in these tasks, `video_description` describes visual actions. If audio is present, it's often described as \"Audio of <voice_ID> says...\".\n    *   Let's draft the `video_description`. It needs to cover the visual scene + the audio events linked to the voice IDs.\n    *   Visuals: Group meeting, whiteboard, clapperboard, lighting equipment. People seated and standing. Camera POV.\n    *   Audio: MAI speaks multiple times.\n    *   Drafting descriptions:\n        1.  A group of people are gathered around a table with a red-and-white checkered tablecloth in a room with a whiteboard.\n        2.  One person stands near the whiteboard while others sit around the table.\n        3.  A clapperboard sits on the table in front of the seated individuals.\n        4.  Lighting equipment is visible in the background.\n        5.  Audio from <voice_364> discusses scheduling entry times between 2 PM and 3 PM.\n        6.  Audio from <voice_261> suggests giving them some activity time.\n        7.  Audio from <voice_277> mentions forgiveness.\n        8.  Audio from <voice_1496> refers to an entrance ceremony.\n        9.  Audio from <voice_1497> agrees with a statement.\n    *   Drafting `high_level_conclusions`:\n        1.  The discussion involves planning logistics related to timing and entry procedures.\n        2.  <voice_364> proposes a timeline for gradual entry.\n        3.  <voice_1496> confirms the nature of the event as an entrance ceremony.\n        4.  Since no face features are provided, I cannot link voices to faces. I will stick to the voice IDs in the conclusions where appropriate to satisfy \"retain that speaker's exact voice ID\".\n\n    *   Refining constraints: \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I must quote or summarize accurately.\n    *   \"Include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". This instruction seems to apply to the overall task of \"constructing memory\". Given the output schema, I will embed these summaries into the `video_description` or `high_level_conclusions`. Usually, `video_description` is chronological events. `high_level_conclusions` are inferences. I'll put the direct quotes/summaries in `video_description` as events involving audio. Or maybe `high_level_conclusions`? The instruction says \"For every supplied voice ID... include at least one episodic memory...\". An episodic memory is usually a specific event. So `video_description` is the right place for the \"events\" including speech.\n    *   Wait, the instruction also says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" This points towards `high_level_conclusions`.\n    *   Let's combine.\n    *   `video_description`: Describe the visual scene and the specific audio events attributed to the voice IDs.\n    *   `high_level_conclusions`: Summarize the intent/logic discussed, keeping voice IDs.\n\n    *   Wait, checking the instruction again: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\n    *   Okay, I will treat the audio events as part of the video description narrative.\n    *   Also, \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" -> This refers to the output format.\n    *   \"Be concise and avoid duplicate events.\"\n\n    *   Plan:\n        *   `video_description`: List the visual setup and then list the audio events with their timestamps/content mapped to the voice IDs.\n        *   `high_level_conclusions`: Infer the purpose of the meeting (planning an event/entrance) and attribute the key decisions to the voice IDs.\n\n    *   Specific Voice Content:\n        *   `<voice_364>`: Suggests 2pm-3pm entry, gradual.\n        *   `<voice_261>`: Give them some activity.\n        *   `<voice_277>`: Forgiveness.\n        *   `<voice_1496>`: Entrance style/ceremony.\n        *   `<voice_1497>`: Okay/Agree.\n\n    *   Wait, I need to check if I should output the \"Equivalence\" line. \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since there are NO face features in the input (\"Face features:Voice features:\" section is empty for faces), I cannot create any Equivalence lines. I will omit them.\n\n    *   Final check on constraints: \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" -> I won't assign voice IDs to specific people visually because I don't see faces. I will just reference the voice ID.\n\n    *   Structure:\n        ```json\n        {\n          \"video_description\": [\n            \"A group of people are gathered around a table with a red-and-white checkered tablecloth.\",\n            \"One person stands near a whiteboard while others sit around the table.\",\n            \"A clapperboard rests on the table in the foreground.\",\n            \"Lighting equipment is visible in the background.\",\n            \"Audio from <voice_364> discusses scheduling entry times between 2 PM and 3 PM.\",\n            \"Audio from <voice_261> suggests allowing them some activity time.\",\n            \"Audio from <voice_277> mentions forgiveness.\",\n            \"Audio from <voice_1496> refers to an entrance ceremony.\",\n            \"Audio from <voice_1497> agrees with the plan.\"\n          ],\n          \"high_level_conclusions\": [\n            \"The group is discussing the logistics of an event, specifically entry timing and activities.\",\n            \"<voice_364> proposes a gradual entry schedule from 2 PM to 3 PM.\",\n            \"<voice_1496> identifies the event type as an entrance ceremony.\",\n            \"<voice_1497> validates the proposed arrangement.\"\n          ]\n        }\n        ```\n    *   Wait, the instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". My `video_description` entries above do exactly this (episodic memory = event occurrence).\n    *   Also \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> Done in `high_level_conclusions`.\n    *   \"Do not replace the ID with 'a speaker'...\" -> Done.\n    *   \"If no face IDs are supplied, do not invent any.\" -> Done.\n\n    *   One detail: \"Video frame at 0.00s\" ... \"Video frame at 29.50s\". The video is continuous. I should probably group the visual description first, then the audio events chronologically.\n    *   The prompt asks for \"atomic event or fact\".\n    *   Let's refine the descriptions to be very atomic.\n    *   1. A group of people are seated around a table covered with a red-and-white checkered cloth.\n    *   2. A person stands near a whiteboard in the background.\n    *   3. A clapperboard is placed on the table.\n    *   4. Lighting equipment is positioned in the room.\n    *   5. Audio from <voice_364> states \"3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。\" (3 o'clock, 3 o'clock. Should be gradual entry from 2 to 3, then those who arrive earlier in front.)\n    *   6. Audio from <voice_261> says \"给他们一点活动。\" (Give them some activity.)\n    *   7. Audio from <voice_277> says \"原谅。\" (Forgive.)\n    *   8. Audio from <voice_1496> says \"入场式的。\" (Entrance ceremony style.)\n    *   9. Audio from <voice_1497> says \"可以。\" (Okay.)\n\n    *   Wait, I should check if I need to translate the ASR. The prompt provides ASR in Chinese. I should probably keep the original ASR or a faithful summary. \"quotes or faithfully summarizes\". Keeping the original ASR is safest for fidelity.\n    *   Also, ensure JSON validity. Escape quotes if necessary. The ASR contains Chinese characters, which are fine in JSON strings.\n\n    *   Re-checking \"Preserve speaker identity when constructing memory from the supplied character features.\"\n    *   \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   This confirms my plan for `video_description`.\n\n    *   Re-checking \"Keep the existing video_description/high_level_conclusions JSON schema\".\n    *   The schema provided in the prompt example is:\n        ```json\n        {\n            \"video_description\": [\n                \"...\",\n                \"...\"\n            ],\n            \"high_level_conclusions\": [\n                \"...\",\n                \"Equivalence: <face_1>, <voice_2>\"\n            ]\n        }\n        ```\n    *   I will follow this structure.\n\n    *   One more thing: \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I will use the actual ASR text.\n\n    *   Final check on `high_level_conclusions`. \"Use logical inference to identify character intentions, relationships, and identities.\"\n    *   Since I can't identify identities visually, I will focus on intentions/logistics.\n    *   \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no faces, no equivalences.\n\n    *   Wait, is there any implicit face info? \"Face features:Voice features:{\"...}\". The text after \"Face features:\" is empty before \"Voice features:\". So definitely no face features.\n\n    *   Okay, ready to construct the JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table with a red-and-white checkered tablecloth.\",\n\t\t\"One person stands near a whiteboard while others sit around the table.\",\n\t\t\"A clapperboard is placed on the table in the foreground.\",\n\t\t\"Lighting equipment is visible in the background.\",\n\t\t\"Audio from <voice_364> states: '3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。'\",\n\t\t\"Audio from <voice_261> states: '给他们一点活动。'\",\n\t\t\"Audio from <voice_277> states: '原谅。'\",\n\t\t\"Audio from <voice_1496> states: '入场式的。'\",\n\t\t\"Audio from <voice_1497> states: '可以。'\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is discussing the logistics of an event, specifically entry timing and activities.\",\n\t\t\"<voice_364> proposes a gradual entry schedule from 2 PM to 3 PM.\",\n\t\t\"<voice_1496> identifies the event type as an entrance ceremony.\",\n\t\t\"<voice_1497> validates the proposed arrangement.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10389,
+          "output_tokens": 3636,
+          "total_tokens": 14025,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0016530102584511042,
+            "media_preparation_ms": 61.06593400181737,
+            "processor_tokenization_ms": 851.5052949951496,
+            "device_transfer_ms": 43.47350899479352,
+            "cuda_generation_ms": 163953.32178600074,
+            "decoding_ms": 3.3372559992130846
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 164912.86482200667,
+          "request_end": 1789439385.3438563,
+          "latency_ms": 164942.6256529987,
+          "client_wall_clock_latency_ms": 164942.6256529987
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.12621699715964496,
+      "nodes_added": 9,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 5.718247004551813,
+      "nodes_added": 4,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 5,
+    "detected_faces": 331,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 4,
+    "nodes_after_clip": 1511,
+    "edges_after_clip": 562,
+    "nodes_added_by_clip": 15,
+    "edges_added_by_clip": 8
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table with a red-and-white checkered tablecloth.",
+      "One person stands near a whiteboard while others sit around the table.",
+      "A clapperboard is placed on the table in the foreground.",
+      "Lighting equipment is visible in the background.",
+      "Audio from <voice_364> states: '3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。'",
+      "Audio from <voice_261> states: '给他们一点活动。'",
+      "Audio from <voice_277> states: '原谅。'",
+      "Audio from <voice_1496> states: '入场式的。'",
+      "Audio from <voice_1497> states: '可以。'"
+    ],
+    "high_level_conclusions": [
+      "The group is discussing the logistics of an event, specifically entry timing and activities.",
+      "<voice_364> proposes a gradual entry schedule from 2 PM to 3 PM.",
+      "<voice_1496> identifies the event type as an entrance ceremony.",
+      "<voice_1497> validates the proposed arrangement."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a table with a red-and-white checkered tablecloth.",
+      "One person stands near a whiteboard while others sit around the table.",
+      "A clapperboard is placed on the table in the foreground.",
+      "Lighting equipment is visible in the background.",
+      "Audio from <voice_364> states: '3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。'",
+      "Audio from <voice_261> states: '给他们一点活动。'",
+      "Audio from <voice_277> states: '原谅。'",
+      "Audio from <voice_1496> states: '入场式的。'",
+      "Audio from <voice_1497> states: '可以。'"
+    ],
+    "high_level_conclusions": [
+      "The group is discussing the logistics of an event, specifically entry timing and activities.",
+      "<voice_364> proposes a gradual entry schedule from 2 PM to 3 PM.",
+      "<voice_1496> identifies the event type as an entrance ceremony.",
+      "<voice_1497> validates the proposed arrangement."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_111_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 15,
+    "edges_added": 8,
+    "nodes": [
+      {
+        "id": 1496,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 入场式的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1497,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 可以。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1498,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a table with a red-and-white checkered tablecloth."
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1499,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person stands near a whiteboard while others sit around the table."
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1500,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard is placed on the table in the foreground."
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1501,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Lighting equipment is visible in the background."
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1502,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Audio from <voice_364> states: '3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。'"
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1503,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Audio from <voice_261> states: '给他们一点活动。'"
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1504,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Audio from <voice_277> states: '原谅。'"
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1505,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Audio from <voice_1496> states: '入场式的。'"
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1506,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Audio from <voice_1497> states: '可以。'"
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1507,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is discussing the logistics of an event, specifically entry timing and activities."
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1508,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_364> proposes a gradual entry schedule from 2 PM to 3 PM."
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1509,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1496> identifies the event type as an entrance ceremony."
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1510,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1497> validates the proposed arrangement."
+          ],
+          "timestamp": 111
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 261,
+        "target": 1503,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 277,
+        "target": 1504,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 364,
+        "target": 1502,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 364,
+        "target": 1508,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1496,
+        "target": 1505,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1496,
+        "target": 1509,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1497,
+        "target": 1506,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1497,
+        "target": 1510,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_111_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_111_graph.pkl"
+  },
+  "memory_pickle_bytes": 36072083,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 80032.400145325,
+    "prepared_perf": 80040.594985279,
+    "ordered_start_perf": 80394.958955756,
+    "consumer_wait_ms": 0.008515999070368707,
+    "ready_to_ordered_ms": 354363.97047698847,
+    "preparation_work_ms": 8189.462795009604,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 175389.58264399844
+}

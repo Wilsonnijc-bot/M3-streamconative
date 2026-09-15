@@ -1,0 +1,76 @@
+{
+  "clip_id": 3,
+  "source": {
+    "segment_id": 3,
+    "source": "bedroom_01_00010000.mp4",
+    "source_clock": "00010000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 60.0,
+    "absolute_end_seconds": 90.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00010000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 72390.220123323,
+      "prepared_perf": 72395.753229898,
+      "ordered_start_perf": 72438.4647818,
+      "consumer_wait_ms": 0.007583992555737495,
+      "ready_to_ordered_ms": 42711.55190200079,
+      "preparation_work_ms": 5532.738093999797,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person wearing black gloves unscrews a bottle of coffee.",
+      "The person pours the coffee into a white mug on the counter.",
+      "The person recaps the bottle and picks up the mug.",
+      "The person carries the mug across the room toward a woman seated at a dining table.",
+      "The woman takes the coffee mug and speaks.",
+      "The woman sips the beverage before setting it down and looking at her smartphone.",
+      "The person filming steps back as the woman continues working."
+    ],
+    "high_level_conclusions": [
+      "The woman speaking is <voice_21>, who humorously addresses the person serving her as a robot.",
+      "The person in black gloves prepared and delivered a drink to support the woman while she studied."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A person wearing black gloves unscrews a bottle of coffee.\",\n    \"The person pours the coffee into a white mug on the counter.\",\n    \"The person recaps the bottle and picks up the mug.\",\n    \"The person carries the mug across the room toward a woman seated at a dining table.\",\n    \"The woman takes the coffee mug and speaks.\",\n    \"The woman sips the beverage before setting it down and looking at her smartphone.\",\n    \"The person filming steps back as the woman continues working.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman speaking is <voice_21>, who humorously addresses the person serving her as a robot.\",\n    \"The person in black gloves prepared and delivered a drink to support the woman while she studied.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 3,
+      "call_id": "8ff4703e-1cb8-4f60-ba50-b43fa2a77258",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789431259.437821,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65690,
+      "output_tokens": 962,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 77240.1410129969
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A person wearing black gloves unscrews a bottle of coffee.\",\n    \"The person pours the coffee into a white mug on the counter.\",\n    \"The person recaps the bottle and picks up the mug.\",\n    \"The person carries the mug across the room toward a woman seated at a dining table.\",\n    \"The woman takes the coffee mug and speaks.\",\n    \"The woman sips the beverage before setting it down and looking at her smartphone.\",\n    \"The person filming steps back as the woman continues working.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman speaking is <voice_21>, who humorously addresses the person serving her as a robot.\",\n    \"The person in black gloves prepared and delivered a drink to support the woman while she studied.\"\n  ]\n}\n```",
+      "total_tokens": 66652,
+      "request_end": 1789431336.6780572,
+      "latency_ms": 77240.23365699395,
+      "client_wall_clock_latency_ms": 77240.23365699395,
+      "api_request_wall_clock_latency_ms": 77240.23365699395
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_3_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

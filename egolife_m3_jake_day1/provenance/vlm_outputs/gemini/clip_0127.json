@@ -1,0 +1,79 @@
+{
+  "clip_id": 127,
+  "source": {
+    "segment_id": 127,
+    "source": "DAY1_A1_JAKE_12093000.mp4",
+    "source_clock": "12093000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43770.0,
+    "absolute_end_seconds": 43800.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0127.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 52979.741937369,
+      "prepared_perf": 52990.110437449,
+      "ordered_start_perf": 53153.637220915,
+      "consumer_wait_ms": 0.012172000424470752,
+      "ready_to_ordered_ms": 163526.78346599714,
+      "preparation_work_ms": 10363.161560002482,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a table decorated with flowers, drinks, and a laptop.",
+      "<voice_0> inquires about the price of an item.",
+      "<voice_1488> states that it cannot be bought.",
+      "<voice_0> asks if it is because the item is too expensive, and <voice_1489> wonders if it costs tens of thousands.",
+      "<voice_1490> clarifies that it costs a few thousand.",
+      "<voice_1491> holds up her phone to display a reference photo to the others.",
+      "<voice_1140> and <voice_1494> praise the look of the item shown on the screen.",
+      "<voice_1493> comments that the example matches what she envisioned.",
+      "<voice_1495> gestures around the table, describing how she plans to sit there during academic conferences.",
+      "<voice_1496> and <voice_1497> respond in agreement and tease about being academic figures while laughing."
+    ],
+    "high_level_conclusions": [
+      "The woman in black sitting on the left is sharing references on her phone to plan the room and flower arrangements for future video conferences.",
+      "The people at the table share a relaxed, informal, and friendly relationship, joking casually about academic meetings."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a table decorated with flowers, drinks, and a laptop.\",\n  \"<voice_0> inquires about the price of an item.\",\n  \"<voice_1488> states that it cannot be bought.\",\n  \"<voice_0> asks if it is because the item is too expensive, and <voice_1489> wonders if it costs tens of thousands.\",\n  \"<voice_1490> clarifies that it costs a few thousand.\",\n  \"<voice_1491> holds up her phone to display a reference photo to the others.\",\n  \"<voice_1140> and <voice_1494> praise the look of the item shown on the screen.\",\n  \"<voice_1493> comments that the example matches what she envisioned.\",\n  \"<voice_1495> gestures around the table, describing how she plans to sit there during academic conferences.\",\n  \"<voice_1496> and <voice_1497> respond in agreement and tease about being academic figures while laughing.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman in black sitting on the left is sharing references on her phone to plan the room and flower arrangements for future video conferences.\",\n  \"The people at the table share a relaxed, informal, and friendly relationship, joking casually about academic meetings.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 127,
+      "call_id": "5cc5fe9b-584b-4078-b7dd-f99860c99f33",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789411982.8130312,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67649,
+      "output_tokens": 1357,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 26596.092977997614
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a table decorated with flowers, drinks, and a laptop.\",\n  \"<voice_0> inquires about the price of an item.\",\n  \"<voice_1488> states that it cannot be bought.\",\n  \"<voice_0> asks if it is because the item is too expensive, and <voice_1489> wonders if it costs tens of thousands.\",\n  \"<voice_1490> clarifies that it costs a few thousand.\",\n  \"<voice_1491> holds up her phone to display a reference photo to the others.\",\n  \"<voice_1140> and <voice_1494> praise the look of the item shown on the screen.\",\n  \"<voice_1493> comments that the example matches what she envisioned.\",\n  \"<voice_1495> gestures around the table, describing how she plans to sit there during academic conferences.\",\n  \"<voice_1496> and <voice_1497> respond in agreement and tease about being academic figures while laughing.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman in black sitting on the left is sharing references on her phone to plan the room and flower arrangements for future video conferences.\",\n  \"The people at the table share a relaxed, informal, and friendly relationship, joking casually about academic meetings.\"\n ]\n}\n```",
+      "total_tokens": 69006,
+      "request_end": 1789412009.4093146,
+      "latency_ms": 26596.27367900248,
+      "client_wall_clock_latency_ms": 26596.27367900248,
+      "api_request_wall_clock_latency_ms": 26596.27367900248
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_127_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

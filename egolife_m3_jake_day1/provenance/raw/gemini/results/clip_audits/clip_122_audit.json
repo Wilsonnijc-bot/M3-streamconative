@@ -1,0 +1,365 @@
+{
+  "clip_id": 122,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0122.mp4",
+  "end_to_end_memory_generation_ms": 172464.84279700235,
+  "latency_ms": {
+    "clip_decode": 6088.755521996063,
+    "deepgram_asr": 925.8922300068662,
+    "mai_transcribe_asr": 1046.6788400008227,
+    "asr_total": 1049.0661840012763,
+    "audio_segmentation": 6.361716004903428,
+    "speech_embedding_campplus": 954.1713829967193,
+    "facial_detection_recognition_buffalo_l": 3945.720429997891,
+    "face_clustering": 3.769796996493824,
+    "vlm_memory_generation": 59377.63637700118,
+    "text_embedding": 465.4137149991584,
+    "graph_update_total": 549.8997320028138
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 122,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 606,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789411688.4864893,
+          "status": "success",
+          "total_tokens": 113,
+          "request_end": 1789411688.9517658,
+          "latency_ms": 465.27715700358385
+        }
+      ],
+      "total_tokens": 113,
+      "latency_ms": 465.4137149991584
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 925.8922300068662,
+        "openrouter-mai-transcribe-2": 1046.6788400008227
+      },
+      "asr_total_ms": 1049.0661840012763,
+      "audio_segmentation_ms": 6.361716004903428,
+      "speech_embedding_ms": 954.1713829967193,
+      "graph_update_ms": 549.8194899992086,
+      "asr_segment_count": 4,
+      "speech_embedding_count": 4,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1522.5055490009254
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3945.720429997891,
+      "face_clustering_ms": 3.769796996493824,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 106,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4007.3497139965184
+    },
+    "vlm": {
+      "context_preparation_ms": 4135.596947002341,
+      "vlm_ms": 59377.63637700118,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"Jake gathers his laptop and cables from the bed in the bedroom.\",\n  \"Jake connects a cable adapter to his laptop.\",\n  \"Jake walks out of the bedroom into the living area.\",\n  \"Several group members are gathered around the dining table discussing event logistics.\",\n  \"Jake sits down beside the table holding a clapperboard and his laptop.\",\n  \"The group discusses arrangements for the food and afternoon tea segments.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is conducting a pre-production or event planning meeting, evidenced by filming equipment, a clapperboard, and schedule discussions.\",\n  \"Jake acts as a crew member preparing equipment and coordinating with the team.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Jake gathers his laptop and cables from the bed in the bedroom.",
+          "Jake connects a cable adapter to his laptop.",
+          "Jake walks out of the bedroom into the living area.",
+          "Several group members are gathered around the dining table discussing event logistics.",
+          "Jake sits down beside the table holding a clapperboard and his laptop.",
+          "The group discusses arrangements for the food and afternoon tea segments."
+        ],
+        "high_level_conclusions": [
+          "The group is conducting a pre-production or event planning meeting, evidenced by filming equipment, a clapperboard, and schedule discussions.",
+          "Jake acts as a crew member preparing equipment and coordinating with the team."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 122,
+          "call_id": "b2aa34c2-6603-4103-8461-97287b63b260",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789411629.107947,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66803,
+          "output_tokens": 689,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 59377.50841600064
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"Jake gathers his laptop and cables from the bed in the bedroom.\",\n  \"Jake connects a cable adapter to his laptop.\",\n  \"Jake walks out of the bedroom into the living area.\",\n  \"Several group members are gathered around the dining table discussing event logistics.\",\n  \"Jake sits down beside the table holding a clapperboard and his laptop.\",\n  \"The group discusses arrangements for the food and afternoon tea segments.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is conducting a pre-production or event planning meeting, evidenced by filming equipment, a clapperboard, and schedule discussions.\",\n  \"Jake acts as a crew member preparing equipment and coordinating with the team.\"\n ]\n}\n```",
+          "total_tokens": 67492,
+          "request_end": 1789411688.4855864,
+          "latency_ms": 59377.63637700118,
+          "client_wall_clock_latency_ms": 59377.63637700118,
+          "api_request_wall_clock_latency_ms": 59377.63637700118
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.06454100366681814,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.015700999938417226,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 4,
+    "speech_embeddings": 4,
+    "voice_identities": 4,
+    "detected_faces": 106,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1430,
+    "edges_after_clip": 271,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "Jake gathers his laptop and cables from the bed in the bedroom.",
+      "Jake connects a cable adapter to his laptop.",
+      "Jake walks out of the bedroom into the living area.",
+      "Several group members are gathered around the dining table discussing event logistics.",
+      "Jake sits down beside the table holding a clapperboard and his laptop.",
+      "The group discusses arrangements for the food and afternoon tea segments."
+    ],
+    "high_level_conclusions": [
+      "The group is conducting a pre-production or event planning meeting, evidenced by filming equipment, a clapperboard, and schedule discussions.",
+      "Jake acts as a crew member preparing equipment and coordinating with the team."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Jake gathers his laptop and cables from the bed in the bedroom.",
+      "Jake connects a cable adapter to his laptop.",
+      "Jake walks out of the bedroom into the living area.",
+      "Several group members are gathered around the dining table discussing event logistics.",
+      "Jake sits down beside the table holding a clapperboard and his laptop.",
+      "The group discusses arrangements for the food and afternoon tea segments."
+    ],
+    "high_level_conclusions": [
+      "The group is conducting a pre-production or event planning meeting, evidenced by filming equipment, a clapperboard, and schedule discussions.",
+      "Jake acts as a crew member preparing equipment and coordinating with the team."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_122_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1420,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 哦，六六个月，然后多的就放这种公共的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1421,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 啊，要有一直有一个酒保在那边。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1422,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake gathers his laptop and cables from the bed in the bedroom."
+          ],
+          "timestamp": 122
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1423,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake connects a cable adapter to his laptop."
+          ],
+          "timestamp": 122
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1424,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake walks out of the bedroom into the living area."
+          ],
+          "timestamp": 122
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1425,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Several group members are gathered around the dining table discussing event logistics."
+          ],
+          "timestamp": 122
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1426,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake sits down beside the table holding a clapperboard and his laptop."
+          ],
+          "timestamp": 122
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1427,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group discusses arrangements for the food and afternoon tea segments."
+          ],
+          "timestamp": 122
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1428,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is conducting a pre-production or event planning meeting, evidenced by filming equipment, a clapperboard, and schedule discussions."
+          ],
+          "timestamp": 122
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1429,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Jake acts as a crew member preparing equipment and coordinating with the team."
+          ],
+          "timestamp": 122
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_122_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_122_graph.pkl"
+  },
+  "memory_pickle_bytes": 32983285,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52703.494109303,
+    "prepared_perf": 52712.189304366,
+    "ordered_start_perf": 52803.742869988,
+    "consumer_wait_ms": 0.02113899972755462,
+    "ready_to_ordered_ms": 91553.5656219945,
+    "preparation_work_ms": 8689.91720500344,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 69510.6144609963
+}

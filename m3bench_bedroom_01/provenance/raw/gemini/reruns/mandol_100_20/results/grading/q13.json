@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "The candidate incorrectly states that the information is insufficient to determine the severity, whereas the reference confirms it is not serious."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q13",
+    "method": "D",
+    "call_id": "d1e7594f-3e2c-4842-be58-f59dfcf5ae41",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789440014.0814316,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 165,
+    "output_tokens": 189,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 5520.098003995372
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"The candidate incorrectly states that the information is insufficient to determine the severity, whereas the reference confirms it is not serious.\"\n  }\n}\n```",
+    "total_tokens": 354,
+    "request_end": 1789440019.6015968,
+    "latency_ms": 5520.163485998637,
+    "client_wall_clock_latency_ms": 5520.163485998637,
+    "api_request_wall_clock_latency_ms": 5520.163485998637
+  },
+  "included_in_qa_latency": false
+}

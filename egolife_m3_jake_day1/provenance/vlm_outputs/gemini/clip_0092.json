@@ -1,0 +1,76 @@
+{
+  "clip_id": 92,
+  "source": {
+    "segment_id": 92,
+    "source": "DAY1_A1_JAKE_11533000.mp4",
+    "source_clock": "11533000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42810.0,
+    "absolute_end_seconds": 42840.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0092.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 50253.848599348,
+      "prepared_perf": 50261.471524285,
+      "ordered_start_perf": 50539.3972745,
+      "consumer_wait_ms": 0.015849996998440474,
+      "ready_to_ordered_ms": 277925.7502149994,
+      "preparation_work_ms": 7617.535070996382,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A woman in a black top sits at the dining table and playfully looks through a rolled-up wrapper like a telescope.",
+      "A person in an orange shirt writes or draws on a whiteboard mounted against the wall.",
+      "A woman in a white shirt arranges flowers and packaging materials on the table near the whiteboard.",
+      "A woman sitting on the right side of the table observes and attends to items on the table.",
+      "The person in the orange shirt finishes at the whiteboard and walks toward the back of the room.",
+      "The woman in the black top puts down the rolled wrapper and converses with others around the table."
+    ],
+    "high_level_conclusions": [
+      "The individuals form a creative team or production crew preparing props and discussing their daily schedule.",
+      "<voice_1059> and <voice_1060> discuss weather conditions and the possibility of staying outside in the courtyard into the evening.",
+      "<voice_0> suggests using the courtyard for a barbecue if the weather remains favorable."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A woman in a black top sits at the dining table and playfully looks through a rolled-up wrapper like a telescope.\",\n  \"A person in an orange shirt writes or draws on a whiteboard mounted against the wall.\",\n  \"A woman in a white shirt arranges flowers and packaging materials on the table near the whiteboard.\",\n  \"A woman sitting on the right side of the table observes and attends to items on the table.\",\n  \"The person in the orange shirt finishes at the whiteboard and walks toward the back of the room.\",\n  \"The woman in the black top puts down the rolled wrapper and converses with others around the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The individuals form a creative team or production crew preparing props and discussing their daily schedule.\",\n  \"<voice_1059> and <voice_1060> discuss weather conditions and the possibility of staying outside in the courtyard into the evening.\",\n  \"<voice_0> suggests using the courtyard for a barbecue if the weather remains favorable.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 92,
+      "call_id": "b76b3bd5-3f25-4f99-a1bb-94a898786284",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789409364.6828706,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67037,
+      "output_tokens": 927,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 43846.18496400071
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A woman in a black top sits at the dining table and playfully looks through a rolled-up wrapper like a telescope.\",\n  \"A person in an orange shirt writes or draws on a whiteboard mounted against the wall.\",\n  \"A woman in a white shirt arranges flowers and packaging materials on the table near the whiteboard.\",\n  \"A woman sitting on the right side of the table observes and attends to items on the table.\",\n  \"The person in the orange shirt finishes at the whiteboard and walks toward the back of the room.\",\n  \"The woman in the black top puts down the rolled wrapper and converses with others around the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The individuals form a creative team or production crew preparing props and discussing their daily schedule.\",\n  \"<voice_1059> and <voice_1060> discuss weather conditions and the possibility of staying outside in the courtyard into the evening.\",\n  \"<voice_0> suggests using the courtyard for a barbecue if the weather remains favorable.\"\n ]\n}\n```",
+      "total_tokens": 67964,
+      "request_end": 1789409408.529141,
+      "latency_ms": 43846.26770899922,
+      "client_wall_clock_latency_ms": 43846.26770899922,
+      "api_request_wall_clock_latency_ms": 43846.26770899922
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_92_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

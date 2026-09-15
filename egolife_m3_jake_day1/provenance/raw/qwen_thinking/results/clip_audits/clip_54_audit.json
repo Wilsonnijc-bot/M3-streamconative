@@ -1,0 +1,394 @@
+{
+  "clip_id": 54,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0054.mp4",
+  "end_to_end_memory_generation_ms": 464947.12757399975,
+  "latency_ms": {
+    "clip_decode": 1747.7339239994762,
+    "deepgram_asr": 1.6495040035806596,
+    "mai_transcribe_asr": 1.560999000503216,
+    "asr_total": 2.504873998987023,
+    "audio_segmentation": 1.6136260019266047,
+    "speech_embedding_campplus": null,
+    "facial_detection_recognition_buffalo_l": 1357.4828839991824,
+    "face_clustering": 2.6809849950950593,
+    "vlm_memory_generation": 94998.59722400288,
+    "text_embedding": 513.8938279997092,
+    "graph_update_total": 0.0730580068193376
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 54,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 783,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789421918.7760983,
+          "status": "success",
+          "total_tokens": 153,
+          "request_end": 1789421919.289739,
+          "latency_ms": 513.6412919964641
+        }
+      ],
+      "total_tokens": 153,
+      "latency_ms": 513.8938279997092
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1.6495040035806596,
+        "openrouter-mai-transcribe-2": 1.560999000503216
+      },
+      "asr_total_ms": 2.504873998987023,
+      "audio_segmentation_ms": 1.6136260019266047,
+      "speech_embedding_ms": null,
+      "graph_update_ms": null,
+      "asr_segment_count": 0,
+      "speech_embedding_count": 0,
+      "voice_identity_count": 0,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 3.289922002295498
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 1357.4828839991824,
+      "face_clustering_ms": 2.6809849950950593,
+      "graph_update_ms": null,
+      "frame_count": 55,
+      "detected_face_count": 90,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 1410.5630070043844
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [],
+      "context_preparation_ms": 1651.9007200040505,
+      "vlm_ms": 94998.59722400288,
+      "raw_response": "{\n  \"video_description\": [\n    \"A group of four individuals are gathered around a table covered with a red and white checkered tablecloth.\",\n    \"One person sits on the left wearing dark clothing and a head-mounted device.\",\n    \"Another person stands near the center wearing a white shirt.\",\n    \"A third person stands on the right wearing a blue patterned outfit.\",\n    \"A fourth person stands in the background wearing an orange top.\",\n    \"A clapperboard rests on the table in front of the seated person.\",\n    \"The standing individuals appear to be handling items inside a wooden box on the table.\",\n    \"The person in the background observes the activity at the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The presence of a clapperboard indicates a film or video production rehearsal is taking place.\",\n    \"The group is collaboratively working on a project involving props or scripts located in the wooden box.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of four individuals are gathered around a table covered with a red and white checkered tablecloth.",
+          "One person sits on the left wearing dark clothing and a head-mounted device.",
+          "Another person stands near the center wearing a white shirt.",
+          "A third person stands on the right wearing a blue patterned outfit.",
+          "A fourth person stands in the background wearing an orange top.",
+          "A clapperboard rests on the table in front of the seated person.",
+          "The standing individuals appear to be handling items inside a wooden box on the table.",
+          "The person in the background observes the activity at the table."
+        ],
+        "high_level_conclusions": [
+          "The presence of a clapperboard indicates a film or video production rehearsal is taking place.",
+          "The group is collaboratively working on a project involving props or scripts located in the wooden box."
+        ]
+      },
+      "media": {
+        "frame_count": 22,
+        "video_duration_seconds": 10.9
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 54,
+          "call_id": "4f022be0-5c02-4005-99c1-276120679b0e",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789421823.7767315,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 22,
+            "video_duration_seconds": 10.9
+          },
+          "response": "{\n  \"video_description\": [\n    \"A group of four individuals are gathered around a table covered with a red and white checkered tablecloth.\",\n    \"One person sits on the left wearing dark clothing and a head-mounted device.\",\n    \"Another person stands near the center wearing a white shirt.\",\n    \"A third person stands on the right wearing a blue patterned outfit.\",\n    \"A fourth person stands in the background wearing an orange top.\",\n    \"A clapperboard rests on the table in front of the seated person.\",\n    \"The standing individuals appear to be handling items inside a wooden box on the table.\",\n    \"The person in the background observes the activity at the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The presence of a clapperboard indicates a film or video production rehearsal is taking place.\",\n    \"The group is collaboratively working on a project involving props or scripts located in the wooden box.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and character features.\n\n**Input Analysis:**\n*   **Video Frames:** I have a sequence of frames from 0.00s to 10.50s.\n    *   The setting appears to be a room with a table covered in a red and white checkered tablecloth.\n    *   There are four people visible.\n        *   Person 1: Sitting on the left, wearing black/dark clothing, possibly wearing a VR headset or mask.\n        *   Person 2: Standing/sitting near the center-left, wearing a white shirt.\n        *   Person 3: Standing/sitting near the center-right, wearing a blue/green patterned dress or overalls.\n        *   Person 4: Standing in the background on the left, wearing a peach/orange top.\n    *   Action: They seem to be interacting with objects on the table. There is a wooden box or tray. At some point, a clapperboard is visible on the table. It looks like a rehearsal or a filming session.\n    *   Camera movement: The camera seems handheld or mounted on someone moving around slightly.\n*   **Character Features:**\n    *   Face features: None provided (`{}`).\n    *   Voice features: None provided (`{}`).\n\n**Task Requirements:**\n1.  **Video Description:** Generate a detailed, cohesive description covering atomic events. Since there are no voice or face features provided, I cannot link specific IDs to people. I must describe the visual actions generally but use the \"speaker\" constraint carefully. Wait, the prompt says \"Use the provided feature IDs as references to characters (when applicable)\". Since there are *no* feature IDs provided in the input text (only empty JSON objects `{}`), I cannot use `<face_x>` or `<voice_y>`. I must describe the visual elements directly.\n    *   *Correction*: The prompt instructions say \"Preserve speaker identity when constructing memory...\". However, the input data explicitly shows `Voice features:{}` and `Face features:{}`. This means there are no IDs to preserve. I will describe the visual actions without referencing specific IDs since none exist.\n    *   *Wait*, looking closely at the prompt structure usually associated with these tasks, often there *are* IDs provided in a hidden context or I need to look for them. But here, the input block clearly shows `Face features:{}` and `Voice features:{}`.\n    *   *Re-reading the system instruction*: \"Preserve speaker identity when constructing memory from the supplied character features.\" -> \"For every supplied voice ID with nonempty speech...\". Since there are no voice IDs, I don't need to create memory entries based on speech.\n    *   *Constraint Check*: \"Keep the existing video_description/high_level_conclusions JSON schema...\".\n    *   *Constraint Check*: \"If a face and a voice feature refer to the same character, indicate it...\". Since neither exists, no equivalences.\n\n**Drafting Video Description:**\n*   Frame 0.00 - 0.50: Four individuals are gathered around a table with a checkered cloth. One person sits facing away/left in dark clothes. Another stands in white. Another stands in blue/green. A fourth stands in the background in orange.\n*   Frame 1.00 - 2.00: The group continues to interact. The person in white and the person in blue/green seem to be handling something on the table.\n*   Frame 2.50 - 4.00: A clapperboard is clearly visible on the table. The person in white and the person in blue/green are focused on a wooden box/tray.\n*   Frame 4.50 - 6.00: The person in the background (orange) moves slightly. The person in dark clothes remains seated.\n*   Frame 6.50 - 10.50: The interaction continues around the table. The lighting suggests daytime.\n\n**Drafting High-Level Conclusions:**\n*   Since there are no voice or face features, I cannot make specific identity claims like \"Person X is the director\".\n*   However, I can infer intent based on visual cues. The presence of a clapperboard suggests a film or video production rehearsal.\n*   The group is collaborating around a central object (the box/tray).\n\n**Refining Output:**\nSince the input explicitly provides empty feature sets, I will strictly follow the visual evidence. I will not invent IDs.\n\n*   *Self-Correction on \"Memory\"*: The prompt asks to \"construct memory from the supplied character features\". Since features are empty, I just produce the standard JSON output requested in the \"Output Format\" section, which asks for `video_description` and `high_level_conclusions`. The \"memory\" part of the system instruction seems to apply if there *were* voice features to transcribe. Without them, I skip that specific generation step and focus on the visual description.\n\nLet's write the descriptions.\n1.  People gather around a table.\n2.  A clapperboard is placed on the table.\n3.  Individuals interact with items in a wooden box.\n4.  One individual wears a VR headset/mask.\n\nLet's refine the \"High-Level Conclusions\".\n*   The presence of a clapperboard indicates a filming or rehearsal context.\n*   The group is engaged in a collaborative activity involving props or scripts.\n\nWait, I need to check if I missed any subtle IDs in the prompt text.\n\"Face features:Voice features:{}\". No, definitely empty.\n\nOkay, proceeding with generating the JSON.\n\n**Video Description Steps:**\n1.  A group of four people are situated in a room around a table covered with a red and white checkered tablecloth.\n2.  One person is seated on the left side of the table wearing dark clothing and a head-mounted device.\n3.  Another person stands near the center wearing a white shirt.\n4.  A third person stands near the right side wearing a blue patterned outfit.\n5.  A fourth person stands in the background wearing an orange top.\n6.  On the table, a clapperboard is visible, suggesting a filming or rehearsal session.\n7.  The individuals appear to be organizing or examining items within a wooden box or tray on the table.\n8.  The person in the background shifts position slightly while observing the others.\n\n**High-Level Conclusions:**\n1.  The presence of a clapperboard and the arrangement of people suggest a film production rehearsal or a creative workshop.\n2.  The group is focused on a shared task involving the contents of the wooden box.\n\nFinal check of constraints:\n- Valid JSON.\n- No extra text.\n- Concise.\n\nOne detail: The prompt mentions \"Preserve speaker identity...\". Since there are no speakers, this is N/A.\nThe prompt mentions \"Use the provided feature IDs...\". None provided.\nSo I will just describe the visuals.\n\nLet's combine into the final JSON structure.\n\n```json\n{\n  \"video_description\": [\n    \"A group of four individuals are gathered around a table covered with a red and white checkered tablecloth.\",\n    \"One person sits on the left wearing dark clothing and a head-mounted device.\",\n    \"Another person stands near the center wearing a white shirt.\",\n    \"A third person stands on the right wearing a blue patterned outfit.\",\n    \"A fourth person stands in the background wearing an orange top.\",\n    \"A clapperboard rests on the table in front of the seated person.\",\n    \"The standing individuals appear to be handling items inside a wooden box on the table.\",\n    \"The person in the background observes the activity at the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The presence of a clapperboard indicates a film or video production rehearsal is taking place.\",\n    \"The group is collaboratively working on a project involving props or scripts located in the wooden box.\"\n  ]\n}\n```\nThis looks correct and adheres to the constraints given the empty feature inputs.\n</think>\n\n{\n  \"video_description\": [\n    \"A group of four individuals are gathered around a table covered with a red and white checkered tablecloth.\",\n    \"One person sits on the left wearing dark clothing and a head-mounted device.\",\n    \"Another person stands near the center wearing a white shirt.\",\n    \"A third person stands on the right wearing a blue patterned outfit.\",\n    \"A fourth person stands in the background wearing an orange top.\",\n    \"A clapperboard rests on the table in front of the seated person.\",\n    \"The standing individuals appear to be handling items inside a wooden box on the table.\",\n    \"The person in the background observes the activity at the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The presence of a clapperboard indicates a film or video production rehearsal is taking place.\",\n    \"The group is collaboratively working on a project involving props or scripts located in the wooden box.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 4027,
+          "output_tokens": 1964,
+          "total_tokens": 5991,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0023139946279115975,
+            "media_preparation_ms": 21.89624699531123,
+            "processor_tokenization_ms": 922.7478780012461,
+            "device_transfer_ms": 19.14988899807213,
+            "cuda_generation_ms": 94016.82679000078,
+            "decoding_ms": 2.6651149964891374
+          },
+          "submitted_image_count": 22,
+          "processed_image_count": 22,
+          "video_frame_count": 22,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 94983.51770499721,
+          "request_end": 1789421918.7753332,
+          "latency_ms": 94998.59722400288,
+          "client_wall_clock_latency_ms": 94998.59722400288
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.06021300214342773,
+      "nodes_added": 8,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.012845004675909877,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 55,
+    "asr_segments": 0,
+    "speech_embeddings": 0,
+    "voice_identities": 0,
+    "detected_faces": 90,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 2,
+    "nodes_after_clip": 705,
+    "edges_after_clip": 257,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of four individuals are gathered around a table covered with a red and white checkered tablecloth.",
+      "One person sits on the left wearing dark clothing and a head-mounted device.",
+      "Another person stands near the center wearing a white shirt.",
+      "A third person stands on the right wearing a blue patterned outfit.",
+      "A fourth person stands in the background wearing an orange top.",
+      "A clapperboard rests on the table in front of the seated person.",
+      "The standing individuals appear to be handling items inside a wooden box on the table.",
+      "The person in the background observes the activity at the table."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard indicates a film or video production rehearsal is taking place.",
+      "The group is collaboratively working on a project involving props or scripts located in the wooden box."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of four individuals are gathered around a table covered with a red and white checkered tablecloth.",
+      "One person sits on the left wearing dark clothing and a head-mounted device.",
+      "Another person stands near the center wearing a white shirt.",
+      "A third person stands on the right wearing a blue patterned outfit.",
+      "A fourth person stands in the background wearing an orange top.",
+      "A clapperboard rests on the table in front of the seated person.",
+      "The standing individuals appear to be handling items inside a wooden box on the table.",
+      "The person in the background observes the activity at the table."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard indicates a film or video production rehearsal is taking place.",
+      "The group is collaboratively working on a project involving props or scripts located in the wooden box."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_54_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 695,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of four individuals are gathered around a table covered with a red and white checkered tablecloth."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 696,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person sits on the left wearing dark clothing and a head-mounted device."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 697,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another person stands near the center wearing a white shirt."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 698,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A third person stands on the right wearing a blue patterned outfit."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 699,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A fourth person stands in the background wearing an orange top."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 700,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard rests on the table in front of the seated person."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 701,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The standing individuals appear to be handling items inside a wooden box on the table."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 702,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the background observes the activity at the table."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 703,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The presence of a clapperboard indicates a film or video production rehearsal is taking place."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 704,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is collaboratively working on a project involving props or scripts located in the wooden box."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_54_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_54_graph.pkl"
+  },
+  "memory_pickle_bytes": 16650005,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 62641.239460141,
+    "prepared_perf": 62644.010075139,
+    "ordered_start_perf": 63006.256786782,
+    "consumer_wait_ms": 0.014677003491669893,
+    "ready_to_ordered_ms": 362246.71164300526,
+    "preparation_work_ms": 2765.3205140013597,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 98579.94133399916
+}

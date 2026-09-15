@@ -79,27 +79,37 @@ def extract_frames(video, start_time=None, interval=None, sample_fps=10):
     return frames
 
 # TODO: check if there is a better way to do this without repeatedly opening and closing the video file
-def process_video_clip(video_path, fps=5, audio_fps=16000): 
-    try: 
-        base64_data = {}
+def process_video_clip(video_path, fps=5, audio_fps=16000, audio_duration_limit=None):
+    """Decode a clip, using FFmpeg directly for sub-second audio boundaries."""
+    video = None
+    try:
         video = VideoFileClip(video_path)
-        base64_data["video"] = base64.b64encode(open(video_path, "rb").read())
-        base64_data["frames"] = extract_frames(video, sample_fps=fps)
-        
-        if video.audio is None:
-            base64_data["audio"] = None
-        else:
-            with tempfile.NamedTemporaryFile(suffix=".wav") as audio_tempfile:
-                video.audio.write_audiofile(audio_tempfile.name, codec="pcm_s16le", fps=audio_fps)
-                audio_tempfile.seek(0)
-                base64_data["audio"] = base64.b64encode(audio_tempfile.read())
-        
-        video.close()
-        return base64_data["video"], base64_data["frames"], base64_data["audio"]
-
-    except Exception as e:
-        logger.error(f"Error processing video clip: {str(e)}")
+        with open(video_path, 'rb') as handle:
+            encoded_video = base64.b64encode(handle.read())
+        frames = extract_frames(video, sample_fps=fps)
+        audio = None
+        if video.audio is not None:
+            with tempfile.NamedTemporaryFile(suffix='.wav') as target:
+                if video.duration < 1.0:
+                    duration = min(video.duration, audio_duration_limit) if audio_duration_limit is not None else video.duration
+                    subprocess.run([
+                        'ffmpeg','-hide_banner','-loglevel','error','-y',
+                        '-i',str(video_path),'-map','0:a:0','-vn','-t',f'{duration:.6f}',
+                        '-ac','2','-ar',str(audio_fps),'-c:a','pcm_s16le',target.name,
+                    ],check=True,capture_output=True)
+                    print(f'SHORT_CLIP_AUDIO_FFMPEG duration={duration:.6f} path={video_path}',flush=True)
+                else:
+                    video.audio.write_audiofile(target.name,codec='pcm_s16le',fps=audio_fps)
+                target.seek(0)
+                audio = base64.b64encode(target.read())
+        return encoded_video,frames,audio
+    except Exception as exc:
+        logger.error('Error processing video clip: %s',exc)
         raise
+    finally:
+        if video is not None:
+            video.close()
+
 
 def verify_video_processing(video_path, output_dir, interval, strict=False):
     """Verify that a video was properly split into clips by checking the number of clips.

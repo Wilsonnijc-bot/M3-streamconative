@@ -1,0 +1,78 @@
+{
+  "clip_id": 94,
+  "source": {
+    "segment_id": 94,
+    "source": "DAY1_A1_JAKE_11543000.mp4",
+    "source_clock": "11543000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42870.0,
+    "absolute_end_seconds": 42900.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0094.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 50539.397172308,
+      "prepared_perf": 50548.117865589,
+      "ordered_start_perf": 50718.117598104,
+      "consumer_wait_ms": 0.007775000995025039,
+      "ready_to_ordered_ms": 169999.73251499614,
+      "preparation_work_ms": 8715.331801002321,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "At the beginning of the clip, a young man in an orange T-shirt stands in the room before walking away toward the doorway.",
+      "A woman in a black jacket sits at the checkered dining table, holding and reading a dark folder.",
+      "A woman dressed in a white shirt stands beside a whiteboard, trimming and arranging pink flowers.",
+      "Two women sit on the far side of the dining table, listening and engaging in the conversation.",
+      "The participants discuss food preparation details, including thawing and cutting meat, and grilling.",
+      "The conversation transitions into planning drinks and cocktails, mentioning the need for ice cubes.",
+      "The woman with reddish hair gestures toward the kitchen during the conversation about obtaining ice.",
+      "The camera wearer briefly turns to face the open kitchen area before panning back toward the dining table."
+    ],
+    "high_level_conclusions": [
+      "The group is planning and coordinating tasks for an upcoming meal or gathering, focusing on food prep and beverage arrangements.",
+      "The presence of a film clapperboard on the dining table indicates that the gathering is associated with a film production or video shooting project.",
+      "The casual, cooperative discussion reflects a familiar and comfortable working or personal relationship among the individuals."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"At the beginning of the clip, a young man in an orange T-shirt stands in the room before walking away toward the doorway.\",\n    \"A woman in a black jacket sits at the checkered dining table, holding and reading a dark folder.\",\n    \"A woman dressed in a white shirt stands beside a whiteboard, trimming and arranging pink flowers.\",\n    \"Two women sit on the far side of the dining table, listening and engaging in the conversation.\",\n    \"The participants discuss food preparation details, including thawing and cutting meat, and grilling.\",\n    \"The conversation transitions into planning drinks and cocktails, mentioning the need for ice cubes.\",\n    \"The woman with reddish hair gestures toward the kitchen during the conversation about obtaining ice.\",\n    \"The camera wearer briefly turns to face the open kitchen area before panning back toward the dining table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is planning and coordinating tasks for an upcoming meal or gathering, focusing on food prep and beverage arrangements.\",\n    \"The presence of a film clapperboard on the dining table indicates that the gathering is associated with a film production or video shooting project.\",\n    \"The casual, cooperative discussion reflects a familiar and comfortable working or personal relationship among the individuals.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 94,
+      "call_id": "b39e81d5-bdb4-417e-befc-b42d1f4084bc",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789409543.643519,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67223,
+      "output_tokens": 2097,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 109926.4012939966
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"At the beginning of the clip, a young man in an orange T-shirt stands in the room before walking away toward the doorway.\",\n    \"A woman in a black jacket sits at the checkered dining table, holding and reading a dark folder.\",\n    \"A woman dressed in a white shirt stands beside a whiteboard, trimming and arranging pink flowers.\",\n    \"Two women sit on the far side of the dining table, listening and engaging in the conversation.\",\n    \"The participants discuss food preparation details, including thawing and cutting meat, and grilling.\",\n    \"The conversation transitions into planning drinks and cocktails, mentioning the need for ice cubes.\",\n    \"The woman with reddish hair gestures toward the kitchen during the conversation about obtaining ice.\",\n    \"The camera wearer briefly turns to face the open kitchen area before panning back toward the dining table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is planning and coordinating tasks for an upcoming meal or gathering, focusing on food prep and beverage arrangements.\",\n    \"The presence of a film clapperboard on the dining table indicates that the gathering is associated with a film production or video shooting project.\",\n    \"The casual, cooperative discussion reflects a familiar and comfortable working or personal relationship among the individuals.\"\n  ]\n}\n```",
+      "total_tokens": 69320,
+      "request_end": 1789409653.5700111,
+      "latency_ms": 109926.48797500442,
+      "client_wall_clock_latency_ms": 109926.48797500442,
+      "api_request_wall_clock_latency_ms": 109926.48797500442
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_94_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

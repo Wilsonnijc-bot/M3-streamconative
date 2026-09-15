@@ -1,0 +1,76 @@
+{
+  "clip_id": 65,
+  "source": {
+    "segment_id": 65,
+    "source": "DAY1_A1_JAKE_11403000.mp4",
+    "source_clock": "11403000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42030.0,
+    "absolute_end_seconds": 42060.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0065.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47981.227043371,
+      "prepared_perf": 48110.475996487,
+      "ordered_start_perf": 48110.476127533,
+      "consumer_wait_ms": 34646.83735300059,
+      "ready_to_ordered_ms": 0.1310459992964752,
+      "preparation_work_ms": 129243.62636400474,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a checkered tablecloth, holding a creative meeting in a room.",
+      "A clapperboard marked with project details and 'Egolife' lies on the table alongside notes, props, and a flower bouquet.",
+      "<voice_311> discusses utilizing leftover cardboard boxes for eco-friendliness to match an Earth theme, before suggesting the idea of performing a short skit.",
+      "The camera wearer briefly turns away from the table, looking towards the open kitchen, bright exterior window, and hallway.",
+      "The camera wearer turns back to face the group around the meeting table.",
+      "<voice_732> continues explaining the idea of staging a short skit, noting that there is currently no ready-made script available.",
+      "The participants around the table attentively listen to the discussion."
+    ],
+    "high_level_conclusions": [
+      "<voice_311> and <voice_732> belong to the same person, who is actively leading the discussion and proposing ideas for the project.",
+      "The group is conducting a pre-production brainstorming and planning session for an independent film or video shoot."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table with a checkered tablecloth, holding a creative meeting in a room.\",\n    \"A clapperboard marked with project details and 'Egolife' lies on the table alongside notes, props, and a flower bouquet.\",\n    \"<voice_311> discusses utilizing leftover cardboard boxes for eco-friendliness to match an Earth theme, before suggesting the idea of performing a short skit.\",\n    \"The camera wearer briefly turns away from the table, looking towards the open kitchen, bright exterior window, and hallway.\",\n    \"The camera wearer turns back to face the group around the meeting table.\",\n    \"<voice_732> continues explaining the idea of staging a short skit, noting that there is currently no ready-made script available.\",\n    \"The participants around the table attentively listen to the discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_311> and <voice_732> belong to the same person, who is actively leading the discussion and proposing ideas for the project.\",\n    \"The group is conducting a pre-production brainstorming and planning session for an independent film or video shoot.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 65,
+      "call_id": "fba0c7ba-abc0-4d9f-8ee0-367bca5acca4",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406933.507914,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67475,
+      "output_tokens": 1675,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 62812.85762100015
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table with a checkered tablecloth, holding a creative meeting in a room.\",\n    \"A clapperboard marked with project details and 'Egolife' lies on the table alongside notes, props, and a flower bouquet.\",\n    \"<voice_311> discusses utilizing leftover cardboard boxes for eco-friendliness to match an Earth theme, before suggesting the idea of performing a short skit.\",\n    \"The camera wearer briefly turns away from the table, looking towards the open kitchen, bright exterior window, and hallway.\",\n    \"The camera wearer turns back to face the group around the meeting table.\",\n    \"<voice_732> continues explaining the idea of staging a short skit, noting that there is currently no ready-made script available.\",\n    \"The participants around the table attentively listen to the discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_311> and <voice_732> belong to the same person, who is actively leading the discussion and proposing ideas for the project.\",\n    \"The group is conducting a pre-production brainstorming and planning session for an independent film or video shoot.\"\n  ]\n}\n```",
+      "total_tokens": 69150,
+      "request_end": 1789406996.3209066,
+      "latency_ms": 62812.98503200378,
+      "client_wall_clock_latency_ms": 62812.98503200378,
+      "api_request_wall_clock_latency_ms": 62812.98503200378
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_65_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

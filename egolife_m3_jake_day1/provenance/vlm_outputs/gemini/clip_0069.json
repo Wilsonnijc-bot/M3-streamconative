@@ -1,0 +1,74 @@
+{
+  "clip_id": 69,
+  "source": {
+    "segment_id": 69,
+    "source": "DAY1_A1_JAKE_11423000.mp4",
+    "source_clock": "11423000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42150.0,
+    "absolute_end_seconds": 42180.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0069.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48299.7574612,
+      "prepared_perf": 48307.453685156,
+      "ordered_start_perf": 48546.749112485,
+      "consumer_wait_ms": 0.009928997315000743,
+      "ready_to_ordered_ms": 239295.42732900154,
+      "preparation_work_ms": 7691.003208994516,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer stands near a dining table where multiple people are gathered.",
+      "The camera wearer takes out and unlocks a smartphone.",
+      "<voice_352> mentions that an item was purchased but might not arrive, adding that they will check.",
+      "The camera wearer sits down on a chair in front of the table while looking at the phone.",
+      "The camera wearer opens apps and browses content on the phone screen."
+    ],
+    "high_level_conclusions": [
+      "<voice_352> refers to an ongoing order or delivery that the characters are awaiting.",
+      "The camera wearer uses their phone to check the status or details of the mentioned purchase."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"The camera wearer stands near a dining table where multiple people are gathered.\",\n  \"The camera wearer takes out and unlocks a smartphone.\",\n  \"<voice_352> mentions that an item was purchased but might not arrive, adding that they will check.\",\n  \"The camera wearer sits down on a chair in front of the table while looking at the phone.\",\n  \"The camera wearer opens apps and browses content on the phone screen.\"\n ],\n \"high_level_conclusions\": [\n  \"<voice_352> refers to an ongoing order or delivery that the characters are awaiting.\",\n  \"The camera wearer uses their phone to check the status or details of the mentioned purchase.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 69,
+      "call_id": "edf9ed22-28a5-4c31-9a5c-bb30327257f2",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407369.588121,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66465,
+      "output_tokens": 891,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 55678.40905699995
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"The camera wearer stands near a dining table where multiple people are gathered.\",\n  \"The camera wearer takes out and unlocks a smartphone.\",\n  \"<voice_352> mentions that an item was purchased but might not arrive, adding that they will check.\",\n  \"The camera wearer sits down on a chair in front of the table while looking at the phone.\",\n  \"The camera wearer opens apps and browses content on the phone screen.\"\n ],\n \"high_level_conclusions\": [\n  \"<voice_352> refers to an ongoing order or delivery that the characters are awaiting.\",\n  \"The camera wearer uses their phone to check the status or details of the mentioned purchase.\"\n ]\n}\n```",
+      "total_tokens": 67356,
+      "request_end": 1789407425.2666588,
+      "latency_ms": 55678.52741100069,
+      "client_wall_clock_latency_ms": 55678.52741100069,
+      "api_request_wall_clock_latency_ms": 55678.52741100069
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_69_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,451 @@
+{
+  "clip_id": 32,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0032.mp4",
+  "end_to_end_memory_generation_ms": 560882.0179229951,
+  "latency_ms": {
+    "clip_decode": 3826.78678999946,
+    "deepgram_asr": 2.052452000498306,
+    "mai_transcribe_asr": 2.3373060030280612,
+    "asr_total": 3.4319260012125596,
+    "audio_segmentation": 6.346287998894695,
+    "speech_embedding_campplus": 275.2067979963613,
+    "facial_detection_recognition_buffalo_l": 2672.092444001464,
+    "face_clustering": 0.13792900426778942,
+    "vlm_memory_generation": 165613.91459700098,
+    "text_embedding": 607.3608109945781,
+    "graph_update_total": 35.159220002242364
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 32,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 1119,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789417122.3354537,
+          "status": "success",
+          "total_tokens": 242,
+          "request_end": 1789417122.9425495,
+          "latency_ms": 607.0962929952657
+        }
+      ],
+      "total_tokens": 242,
+      "latency_ms": 607.3608109945781
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.052452000498306,
+        "openrouter-mai-transcribe-2": 2.3373060030280612
+      },
+      "asr_total_ms": 3.4319260012125596,
+      "audio_segmentation_ms": 6.346287998894695,
+      "speech_embedding_ms": 275.2067979963613,
+      "graph_update_ms": 35.030978004215285,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 329.2217950001941
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2672.092444001464,
+      "face_clustering_ms": 0.13792900426778942,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 3,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2674.475400002848
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_398>"
+      ],
+      "context_preparation_ms": 4277.166059997398,
+      "vlm_ms": 165613.91459700098,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"The camera is positioned in a room containing cardboard boxes, a tripod, and a shoe rack.\",\n\t\t\"Audio from `<voice_398>` is captured stating, 'Pia, | MAI: 笔应该在上面，等一下嘛。笔。'\",\n\t\t\"The camera operator walks through a doorway into a hallway area.\",\n\t\t\"The view shifts to show a washing machine and more boxes in the adjacent room.\",\n\t\t\"The camera proceeds to ascend a wooden staircase.\",\n\t\t\"Upon reaching the top, the camera enters a room furnished with a desk, chairs, and a large white projection screen.\",\n\t\t\"The camera operator reaches out and picks up a black and white film clapperboard resting on the desk.\",\n\t\t\"Holding the clapperboard, the camera turns and begins descending the staircase again.\",\n\t\t\"The camera passes through a doorway into a room where several people are seated around a table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The presence of a clapperboard, tripods, and a projection screen indicates that the space is being used for filming or photography production.\",\n\t\t\"The movement between rooms suggests the camera wearer is setting up or moving equipment for a shoot.\",\n\t\t\"The audio suggests a conversation about locating a pen, possibly related to writing notes or scripts for the upcoming activity.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera is positioned in a room containing cardboard boxes, a tripod, and a shoe rack.",
+          "Audio from `<voice_398>` is captured stating, 'Pia, | MAI: 笔应该在上面，等一下嘛。笔。'",
+          "The camera operator walks through a doorway into a hallway area.",
+          "The view shifts to show a washing machine and more boxes in the adjacent room.",
+          "The camera proceeds to ascend a wooden staircase.",
+          "Upon reaching the top, the camera enters a room furnished with a desk, chairs, and a large white projection screen.",
+          "The camera operator reaches out and picks up a black and white film clapperboard resting on the desk.",
+          "Holding the clapperboard, the camera turns and begins descending the staircase again.",
+          "The camera passes through a doorway into a room where several people are seated around a table."
+        ],
+        "high_level_conclusions": [
+          "The presence of a clapperboard, tripods, and a projection screen indicates that the space is being used for filming or photography production.",
+          "The movement between rooms suggests the camera wearer is setting up or moving equipment for a shoot.",
+          "The audio suggests a conversation about locating a pen, possibly related to writing notes or scripts for the upcoming activity."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 32,
+          "call_id": "c67ced78-43a4-4464-b205-5e210a90763b",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789416956.7201738,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"The camera is positioned in a room containing cardboard boxes, a tripod, and a shoe rack.\",\n\t\t\"Audio from `<voice_398>` is captured stating, 'Pia, | MAI: 笔应该在上面，等一下嘛。笔。'\",\n\t\t\"The camera operator walks through a doorway into a hallway area.\",\n\t\t\"The view shifts to show a washing machine and more boxes in the adjacent room.\",\n\t\t\"The camera proceeds to ascend a wooden staircase.\",\n\t\t\"Upon reaching the top, the camera enters a room furnished with a desk, chairs, and a large white projection screen.\",\n\t\t\"The camera operator reaches out and picks up a black and white film clapperboard resting on the desk.\",\n\t\t\"Holding the clapperboard, the camera turns and begins descending the staircase again.\",\n\t\t\"The camera passes through a doorway into a room where several people are seated around a table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The presence of a clapperboard, tripods, and a projection screen indicates that the space is being used for filming or photography production.\",\n\t\t\"The movement between rooms suggests the camera wearer is setting up or moving equipment for a shoot.\",\n\t\t\"The audio suggests a conversation about locating a pen, possibly related to writing notes or scripts for the upcoming activity.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and character features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are 30 frames showing a first-person perspective (POV) of someone moving through a house.\n    *   Starts in a room with boxes, tripods, and a projector screen.\n    *   Walks down a hallway/staircase area.\n    *   Goes up some stairs.\n    *   Enters another room with a table, chairs, and a projector screen.\n    *   Picks up a clapperboard.\n    *   Walks back down the stairs holding the clapperboard.\n    *   Ends near a door where people are sitting at a table.\n*   **Character Features:**\n    *   **Face features:** None provided.\n    *   **Voice features:** One voice ID `<voice_398>` with ASR text: \"Pia, | MAI: 笔应该在上面，等一下嘛。笔。\" (Pia, | MAI: The pen should be on top, wait a bit. Pen.)\n    *   **Timestamp:** The voice occurs between 00:02 and 00:30. This corresponds to the beginning of the video sequence.\n\n**2. Construct Video Description:**\n*   I need to break down the movement into atomic events.\n*   Frame 0.00 - 2.50: The camera is in a room with boxes and equipment. Someone is walking around.\n*   Frame 3.00 - 10.00: Moving through hallways and up/down stairs.\n*   Frame 10.50 - 15.00: Entering a room with a desk/table and projector screen.\n*   Frame 15.50 - 16.00: Picking up a clapperboard from the table.\n*   Frame 16.50 - 20.00: Looking around the room, then turning away.\n*   Frame 20.50 - 29.00: Walking out of the room, going back down the stairs while holding the clapperboard.\n*   Frame 29.50 - End: Arriving at a room where people are gathered around a table.\n\n**3. Construct High-Level Conclusions:**\n*   The prompt asks for reasoning-based conclusions.\n*   Since there are no face features, I cannot make equivalences like `Equivalence: <face_x>, <voice_y>`.\n*   However, the instruction says: \"If a face and a voice feature refer to the same character, indicate it...\". Since there are no faces, I won't add an equivalence line unless I can infer something strong, but the rules say \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" There is no evidence linking the voice to a specific visible person in the frames provided (though the voice happens early, the camera moves away). Wait, looking closely at the voice timestamps (00:02-00:30), this is right at the start. The camera is moving. It's likely the camera wearer speaking or reacting. But without a face ID, I can't confirm.\n*   Actually, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   Wait, the prompt asks for \"Video Description\" and \"High-Level Conclusions\". It doesn't explicitly ask for \"Episodic Memory\" in the output JSON structure provided in the *first* part of the prompt (\"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions\").\n*   However, the *system instruction* at the very top says: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\n*   BUT, the *user prompt* defines the output format strictly as:\n    ```json\n    {\n        \"video_description\": [...],\n        \"high_level_conclusions\": [...]\n    }\n    ```\n*   There is a conflict between the system instruction (which talks about \"memory\") and the user prompt (which asks for \"Video Description\" and \"High-Level Conclusions\"). Usually, the user prompt overrides the system instruction regarding the final output format, but the system instruction might imply how to handle the voice data within those fields.\n*   Let's re-read the system instruction carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions... Output Format: ... video_description ... high_level_conclusions\".\n*   Okay, so I need to fit the voice information into these sections.\n*   The system instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   Where does this \"episodic memory\" go? The user prompt doesn't have a \"memories\" field. It has \"video_description\" and \"high_level_conclusions\".\n*   Perhaps the \"video_description\" should include the action associated with the voice? Or maybe the \"high_level_conclusions\"?\n*   Let's look at the constraint: \"Preserve speaker identity when constructing memory...\". This suggests I need to treat the voice as a character.\n*   Since there are no face features, I cannot create an equivalence.\n*   I will incorporate the voice event into the video description as an observation of audio occurring during the visual sequence.\n*   Wait, the system instruction also says: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should follow the User Prompt's schema.\n*   So, I will describe the visual actions. I will mention the audio in the video description if possible, or perhaps in the high level conclusions if it relates to intent.\n*   Actually, usually in these tasks, if there's a voice, it's often linked to a person. Here, no face.\n*   Let's draft the video description focusing on the visual flow.\n    *   Person walks through a cluttered room.\n    *   Moves towards stairs.\n    *   Ascends stairs.\n    *   Enters a room with a projector screen.\n    *   Picks up a clapperboard.\n    *   Descends stairs holding clapperboard.\n    *   Enters a room with people.\n*   Now for the voice: \"Pia, | MAI: 笔应该在上面，等一下嘛。笔。\" (Pen should be on top, wait a bit. Pen.)\n*   This sounds like someone asking for a pen or checking its location.\n*   Since I can't link it to a face, I'll just note the audio event in the description or conclusions. Given the strict schema, I'll put the audio context in the video description as an observed event.\n*   Wait, the system instruction says \"include at least one episodic memory\". If I don't have a \"memories\" field, maybe I should interpret \"video_description\" as the place for these memories? Or maybe I should ignore the \"memory\" part if the schema doesn't support it?\n*   \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" -> This refers to the User Prompt's schema.\n*   The System Instruction seems to be a general guideline for handling voice data in similar tasks, but the specific task here defines the output. I will try to integrate the voice info naturally.\n*   Actually, looking at the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\", if I can't output a memory field, I might have to skip this specific requirement or embed it.\n*   However, the most important constraint is \"Preserve speaker identity... using the exact ID as the speaker.\"\n*   Let's assume the \"video_description\" acts as the narrative log. I will mention the audio.\n*   Wait, I see \"A1_JAKE\" in the corner of the video frames. This is likely the camera wearer's name or device name.\n*   The voice says \"Pia, | MAI...\". This implies multiple speakers or a specific address.\n*   Since I cannot verify who is speaking visually, I will just report the audio event.\n\n**Refining the Plan:**\n1.  **Video Description:** List the movements chronologically. Mention the audio event at the start.\n2.  **High-Level Conclusions:** Since there are no faces, no equivalences. Maybe infer the purpose of the clapperboard (filming/preparing for filming).\n\n**Drafting Content:**\n*   **Description:**\n    *   Camera starts in a room with boxes and lighting equipment.\n    *   Audio heard: \"Pia, | MAI: 笔应该在上面，等一下嘛。笔。\" (Pia, | MAI: The pen should be on top, wait a bit. Pen.)\n    *   Camera moves through a doorway into a hallway.\n    *   Camera ascends a wooden staircase.\n    *   Camera enters a room containing a desk, chairs, and a large projection screen.\n    *   Hands reach out and pick up a film clapperboard from the desk.\n    *   Camera turns and descends the staircase again, holding the clapperboard.\n    *   Camera enters a room where individuals are seated around a table.\n*   **Conclusions:**\n    *   The presence of a clapperboard and lighting equipment suggests preparation for a photoshoot or video recording session.\n    *   The movement pattern indicates navigating between different areas of the residence.\n\n**Checking Constraints:**\n*   \"Preserve speaker identity... using the exact ID as the speaker.\" -> I will use `<voice_398>` in my internal logic, but since the output schema doesn't explicitly demand a \"speaker\" tag in the text strings, I will ensure the transcript is quoted accurately if I include it.\n*   \"Do not replace the ID with 'a speaker'...\" -> I won't write \"a speaker\". I'll just quote the text.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> I must output valid JSON.\n\nLet's double check the voice ID usage. The system instruction says \"include at least one episodic memory that quotes... using the exact ID as the speaker.\" Since I don't have a \"memories\" key, I will append this to the video description as an event involving that voice. Or, I can treat the video description as the memory stream.\nActually, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I shouldn't change the schema. The system instruction about \"memory\" might be a generic template instruction that conflicts slightly with the specific user prompt's schema. I will prioritize the user prompt's schema but ensure the voice content is represented faithfully.\nWait, if I don't include the ID in the text, am I violating \"using the exact ID as the speaker\"?\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis is tricky. If I write `\"The camera captures audio from <voice_398>: '...'` that satisfies it.\n\nLet's refine the video description to include the voice event clearly.\nEvent 1: Camera is in a room. Audio from `<voice_398>` is heard saying \"Pia, | MAI: 笔应该在上面，等一下嘛。笔。\"\nThen the rest of the movement.\n\nWait, looking at the frames, the voice is 00:02-00:30. The camera is moving.\nFrame 0.00 to 2.50 covers the start.\nSo I will combine them.\n\nOne detail: \"A1_JAKE\" is in the corner. Is this a face ID? No, it looks like a timestamp/device label. The prompt says \"Each feature is either a face... or a voice...\". \"A1_JAKE\" is not in angle brackets like `<face_x>`. So it's not a feature ID.\n\nOkay, ready to construct JSON.\n\n**Video Description Items:**\n1.  The camera is positioned in a room containing cardboard boxes, a tripod, and a shoe rack.\n2.  An audio segment from `<voice_398>` is recorded stating, \"Pia, | MAI: 笔应该在上面，等一下嘛。笔。\"\n3.  The camera operator walks through a doorway into a hallway area.\n4.  The view shifts to show a washing machine and more boxes in the adjacent room.\n5.  The camera proceeds to ascend a wooden staircase.\n6.  Upon reaching the top, the camera enters a room furnished with a desk, chairs, and a large white projection screen.\n7.  The camera operator reaches out and picks up a black and white film clapperboard resting on the desk.\n8.  Holding the clapperboard, the camera turns and begins descending the staircase again.\n9.  The camera passes through a doorway into a room where several people are seated around a table.\n\n**High Level Conclusions:**\n1.  The presence of a clapperboard, tripods, and a projection screen indicates that the space is being used for filming or photography production.\n2.  The movement between rooms suggests the camera wearer is setting up or moving equipment for a shoot.\n3.  The audio suggests a conversation about locating a pen, possibly related to writing notes or scripts for the upcoming activity.\n\nWait, I need to check if I should output the voice ID in the text. \"using the exact ID as the speaker\". Yes, I will include `<voice_398>` in the description.\n\nFinal check on JSON validity.\nKeys: \"video_description\", \"high_level_conclusions\".\nValues: Arrays of strings.\n\nOne correction: The prompt says \"Preserve speaker identity when constructing memory...\". And \"For every supplied voice ID... include at least one episodic memory...\".\nSince I don't have a \"memories\" field, I will assume the \"video_description\" serves this purpose in this specific schema variation, or I will just ensure the voice is mentioned with the ID.\nActually, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis implies I should NOT add a \"memories\" field. I will just incorporate the voice info into the description/conclusions as requested by the voice constraints (quote transcript, use ID).\n\nLet's finalize the text.\nVoice: \"Pia, | MAI: 笔应该在上面，等一下嘛。笔。\"\nID: `<voice_398>`\n\nDescription Item: \"Audio from `<voice_398>` is captured stating, 'Pia, | MAI: 笔应该在上面，等一下嘛。笔。'\"\n\nThis seems safe and compliant.\n\nOne more thing: \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I will quote the ASR exactly.\n\nOkay, generating JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"The camera is positioned in a room containing cardboard boxes, a tripod, and a shoe rack.\",\n\t\t\"Audio from `<voice_398>` is captured stating, 'Pia, | MAI: 笔应该在上面，等一下嘛。笔。'\",\n\t\t\"The camera operator walks through a doorway into a hallway area.\",\n\t\t\"The view shifts to show a washing machine and more boxes in the adjacent room.\",\n\t\t\"The camera proceeds to ascend a wooden staircase.\",\n\t\t\"Upon reaching the top, the camera enters a room furnished with a desk, chairs, and a large white projection screen.\",\n\t\t\"The camera operator reaches out and picks up a black and white film clapperboard resting on the desk.\",\n\t\t\"Holding the clapperboard, the camera turns and begins descending the staircase again.\",\n\t\t\"The camera passes through a doorway into a room where several people are seated around a table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The presence of a clapperboard, tripods, and a projection screen indicates that the space is being used for filming or photography production.\",\n\t\t\"The movement between rooms suggests the camera wearer is setting up or moving equipment for a shoot.\",\n\t\t\"The audio suggests a conversation about locating a pen, possibly related to writing notes or scripts for the upcoming activity.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10070,
+          "output_tokens": 3628,
+          "total_tokens": 13698,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0020740044419653714,
+            "media_preparation_ms": 54.78673899779096,
+            "processor_tokenization_ms": 277.13060499809217,
+            "device_transfer_ms": 42.04113500600215,
+            "cuda_generation_ms": 165209.5632729979,
+            "decoding_ms": 3.538482000294607
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 165587.21694799897,
+          "request_end": 1789417122.334091,
+          "latency_ms": 165613.91459700098,
+          "client_wall_clock_latency_ms": 165613.91459700098
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.11020799865946174,
+      "nodes_added": 9,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.01803399936761707,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 3,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 3,
+    "nodes_after_clip": 411,
+    "edges_after_clip": 142,
+    "nodes_added_by_clip": 13,
+    "edges_added_by_clip": 1
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera is positioned in a room containing cardboard boxes, a tripod, and a shoe rack.",
+      "Audio from `<voice_398>` is captured stating, 'Pia, | MAI: 笔应该在上面，等一下嘛。笔。'",
+      "The camera operator walks through a doorway into a hallway area.",
+      "The view shifts to show a washing machine and more boxes in the adjacent room.",
+      "The camera proceeds to ascend a wooden staircase.",
+      "Upon reaching the top, the camera enters a room furnished with a desk, chairs, and a large white projection screen.",
+      "The camera operator reaches out and picks up a black and white film clapperboard resting on the desk.",
+      "Holding the clapperboard, the camera turns and begins descending the staircase again.",
+      "The camera passes through a doorway into a room where several people are seated around a table."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard, tripods, and a projection screen indicates that the space is being used for filming or photography production.",
+      "The movement between rooms suggests the camera wearer is setting up or moving equipment for a shoot.",
+      "The audio suggests a conversation about locating a pen, possibly related to writing notes or scripts for the upcoming activity."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera is positioned in a room containing cardboard boxes, a tripod, and a shoe rack.",
+      "Audio from `<voice_398>` is captured stating, 'Pia, | MAI: 笔应该在上面，等一下嘛。笔。'",
+      "The camera operator walks through a doorway into a hallway area.",
+      "The view shifts to show a washing machine and more boxes in the adjacent room.",
+      "The camera proceeds to ascend a wooden staircase.",
+      "Upon reaching the top, the camera enters a room furnished with a desk, chairs, and a large white projection screen.",
+      "The camera operator reaches out and picks up a black and white film clapperboard resting on the desk.",
+      "Holding the clapperboard, the camera turns and begins descending the staircase again.",
+      "The camera passes through a doorway into a room where several people are seated around a table."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard, tripods, and a projection screen indicates that the space is being used for filming or photography production.",
+      "The movement between rooms suggests the camera wearer is setting up or moving equipment for a shoot.",
+      "The audio suggests a conversation about locating a pen, possibly related to writing notes or scripts for the upcoming activity."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_32_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 13,
+    "edges_added": 1,
+    "nodes": [
+      {
+        "id": 398,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Pia, | MAI: 笔应该在上面，等一下啊。笔。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 399,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera is positioned in a room containing cardboard boxes, a tripod, and a shoe rack."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 400,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Audio from `<voice_398>` is captured stating, 'Pia, | MAI: 笔应该在上面，等一下嘛。笔。'"
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 401,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator walks through a doorway into a hallway area."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 402,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The view shifts to show a washing machine and more boxes in the adjacent room."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 403,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera proceeds to ascend a wooden staircase."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 404,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Upon reaching the top, the camera enters a room furnished with a desk, chairs, and a large white projection screen."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 405,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator reaches out and picks up a black and white film clapperboard resting on the desk."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 406,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Holding the clapperboard, the camera turns and begins descending the staircase again."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 407,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera passes through a doorway into a room where several people are seated around a table."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 408,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The presence of a clapperboard, tripods, and a projection screen indicates that the space is being used for filming or photography production."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 409,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The movement between rooms suggests the camera wearer is setting up or moving equipment for a shoot."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 410,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The audio suggests a conversation about locating a pen, possibly related to writing notes or scripts for the upcoming activity."
+          ],
+          "timestamp": 32
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 398,
+        "target": 400,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_32_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_32_graph.pkl"
+  },
+  "memory_pickle_bytes": 9767498,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 57748.9352884,
+    "prepared_perf": 57755.009737727,
+    "ordered_start_perf": 58135.540702967,
+    "consumer_wait_ms": 0.01075100590242073,
+    "ready_to_ordered_ms": 380530.96524000284,
+    "preparation_work_ms": 6069.049778998306,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 173504.2517490001
+}

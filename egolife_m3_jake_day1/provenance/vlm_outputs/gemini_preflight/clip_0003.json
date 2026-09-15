@@ -1,0 +1,53 @@
+{
+  "clip_id": 3,
+  "source": {
+    "source": "DAY1_A1_JAKE_11103000.mp4",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a table covered with electronic equipment, cases, and packages.",
+      "The camera holder points to boxes and equipment on the table while speaking to the group.",
+      "A woman in a black top reaches out to touch and inspect a white and blue box.",
+      "Other group members listen attentively while observing the items on the table.",
+      "The camera holder manipulates a handheld selfie stick or mini tripod."
+    ],
+    "high_level_conclusions": [
+      "The camera holder is leading the discussion and introducing the hardware equipment and backup tasks to the team.",
+      "The group is preparing for a collaborative technical session involving VR equipment and storage devices.",
+      "<voice_0> is spoken by the camera holder/presenter."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"high_level_conclusions\": [\n  \"The camera holder is leading the discussion and introducing the hardware equipment and backup tasks to the team.\",\n  \"The group is preparing for a collaborative technical session involving VR equipment and storage devices.\",\n  \"<voice_0> is spoken by the camera holder/presenter.\"\n ],\n \"video_description\": [\n  \"A group of people sits around a table covered with electronic equipment, cases, and packages.\",\n  \"The camera holder points to boxes and equipment on the table while speaking to the group.\",\n  \"A woman in a black top reaches out to touch and inspect a white and blue box.\",\n  \"Other group members listen attentively while observing the items on the table.\",\n  \"The camera holder manipulates a handheld selfie stick or mini tripod.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 3,
+      "call_id": "248c1af9-3532-40ba-b49a-f80921ec8042",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789397151.918851,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67025,
+      "output_tokens": 841,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"high_level_conclusions\": [\n  \"The camera holder is leading the discussion and introducing the hardware equipment and backup tasks to the team.\",\n  \"The group is preparing for a collaborative technical session involving VR equipment and storage devices.\",\n  \"<voice_0> is spoken by the camera holder/presenter.\"\n ],\n \"video_description\": [\n  \"A group of people sits around a table covered with electronic equipment, cases, and packages.\",\n  \"The camera holder points to boxes and equipment on the table while speaking to the group.\",\n  \"A woman in a black top reaches out to touch and inspect a white and blue box.\",\n  \"Other group members listen attentively while observing the items on the table.\",\n  \"The camera holder manipulates a handheld selfie stick or mini tripod.\"\n ]\n}\n```",
+      "total_tokens": 67866,
+      "request_end": 1789397174.2117436,
+      "latency_ms": 22292.88947999885,
+      "client_wall_clock_latency_ms": 22292.88947999885,
+      "api_request_wall_clock_latency_ms": 22292.88947999885
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini_preflight/provenance/memory_construction_latency.jsonl",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini_preflight/provenance/memory_gemini_calls.jsonl"
+  ]
+}

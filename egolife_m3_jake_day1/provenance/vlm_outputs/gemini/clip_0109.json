@@ -1,0 +1,77 @@
+{
+  "clip_id": 109,
+  "source": {
+    "segment_id": 109,
+    "source": "DAY1_A1_JAKE_12010000.mp4",
+    "source_clock": "12010000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43260.0,
+    "absolute_end_seconds": 43290.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0109.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51887.327461103,
+      "prepared_perf": 51896.225436568,
+      "ordered_start_perf": 52084.658851005,
+      "consumer_wait_ms": 0.028684000426437706,
+      "ready_to_ordered_ms": 188433.41443700047,
+      "preparation_work_ms": 8892.627791996347,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table covered with a checkered tablecloth, containing flowers, scripts, and a film clapperboard.",
+      "A woman in black wearing sunglasses is seated at the foreground of the table examining materials.",
+      "A woman in white stands beside a whiteboard at the end of the table.",
+      "A young man in an orange t-shirt walks across the room toward the kitchen doorway and talks (<voice_1266>).",
+      "A hand reaches in from the right edge of the frame holding a pen or marker.",
+      "The young man in the orange shirt turns and walks toward the back of the kitchen.",
+      "A woman with pink hair gets up from her chair at the table and heads into the kitchen."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be a film or video production team holding a production meeting or script/timeline discussion.",
+      "<voice_1266> is spoken by the young man wearing the orange t-shirt who suggests writing an international/English version.",
+      "<voice_0> corresponds to the person off-camera on the right who extends their hand with the marker to work on the timeline."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table covered with a checkered tablecloth, containing flowers, scripts, and a film clapperboard.\",\n  \"A woman in black wearing sunglasses is seated at the foreground of the table examining materials.\",\n  \"A woman in white stands beside a whiteboard at the end of the table.\",\n  \"A young man in an orange t-shirt walks across the room toward the kitchen doorway and talks (<voice_1266>).\",\n  \"A hand reaches in from the right edge of the frame holding a pen or marker.\",\n  \"The young man in the orange shirt turns and walks toward the back of the kitchen.\",\n  \"A woman with pink hair gets up from her chair at the table and heads into the kitchen.\"\n ],\n \"high_level_conclusions\": [\n  \"The group appears to be a film or video production team holding a production meeting or script/timeline discussion.\",\n  \"<voice_1266> is spoken by the young man wearing the orange t-shirt who suggests writing an international/English version.\",\n  \"<voice_0> corresponds to the person off-camera on the right who extends their hand with the marker to work on the timeline.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 109,
+      "call_id": "46c9af67-2db7-46c1-8703-5cd28bede746",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410913.0177124,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67039,
+      "output_tokens": 1142,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 41317.95003799925
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table covered with a checkered tablecloth, containing flowers, scripts, and a film clapperboard.\",\n  \"A woman in black wearing sunglasses is seated at the foreground of the table examining materials.\",\n  \"A woman in white stands beside a whiteboard at the end of the table.\",\n  \"A young man in an orange t-shirt walks across the room toward the kitchen doorway and talks (<voice_1266>).\",\n  \"A hand reaches in from the right edge of the frame holding a pen or marker.\",\n  \"The young man in the orange shirt turns and walks toward the back of the kitchen.\",\n  \"A woman with pink hair gets up from her chair at the table and heads into the kitchen.\"\n ],\n \"high_level_conclusions\": [\n  \"The group appears to be a film or video production team holding a production meeting or script/timeline discussion.\",\n  \"<voice_1266> is spoken by the young man wearing the orange t-shirt who suggests writing an international/English version.\",\n  \"<voice_0> corresponds to the person off-camera on the right who extends their hand with the marker to work on the timeline.\"\n ]\n}\n```",
+      "total_tokens": 68181,
+      "request_end": 1789410954.3357937,
+      "latency_ms": 41318.077488998824,
+      "client_wall_clock_latency_ms": 41318.077488998824,
+      "api_request_wall_clock_latency_ms": 41318.077488998824
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_109_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,429 @@
+{
+  "clip_id": 74,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0074.mp4",
+  "end_to_end_memory_generation_ms": 135598.73686799983,
+  "latency_ms": {
+    "clip_decode": 4893.326277997403,
+    "deepgram_asr": 869.1259379993426,
+    "mai_transcribe_asr": 1829.2411439979332,
+    "asr_total": 1830.7373889983865,
+    "audio_segmentation": 10.115575998497661,
+    "speech_embedding_campplus": 407.78503799811006,
+    "facial_detection_recognition_buffalo_l": 4353.435769000498,
+    "face_clustering": 6.715881994750816,
+    "vlm_memory_generation": 43250.224872004765,
+    "text_embedding": 575.2433520028717,
+    "graph_update_total": 139.05091600463493
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 74,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 1194,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789407618.2831094,
+          "status": "success",
+          "total_tokens": 232,
+          "request_end": 1789407618.8582265,
+          "latency_ms": 575.117454995052
+        }
+      ],
+      "total_tokens": 232,
+      "latency_ms": 575.2433520028717
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 869.1259379993426,
+        "openrouter-mai-transcribe-2": 1829.2411439979332
+      },
+      "asr_total_ms": 1830.7373889983865,
+      "audio_segmentation_ms": 10.115575998497661,
+      "speech_embedding_ms": 407.78503799811006,
+      "graph_update_ms": 138.2812770025339,
+      "asr_segment_count": 2,
+      "speech_embedding_count": 2,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 573.6088169942377
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4353.435769000498,
+      "face_clustering_ms": 6.715881994750816,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 250,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4499.90869499743
+    },
+    "vlm": {
+      "context_preparation_ms": 4438.635867998528,
+      "vlm_ms": 43250.224872004765,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a red-and-white checkered tablecloth.\",\n  \"A young woman in a black cardigan sits at the table holding a small yellow fabric pouch.\",\n  \"A person asks whether they should unpack the item, speaking <voice_0>.\",\n  \"The woman in black puts down the pouch and reaches across the table to pick up several paper cards.\",\n  \"A speaker explains that the cards are handmade seed paper crafted from discarded coffee grounds and paper pulp embedded with sunflower seeds, speaking <voice_500>.\",\n  \"A woman in a white shirt stands in the background near a whiteboard, trimming plants and flowers.\",\n  \"The woman in black holds the seed paper cards in her hands and examines them attentively.\",\n  \"Other companions seated across the table listen to the explanation and observe.\",\n  \"One of the seated women claps her hands as the discussion continues.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are engaged in a creative or eco-friendly workshop involving handmade crafts, flowers, and recycled paper goods.\",\n  \"<voice_500> is demonstrating and explaining the design concept and environmental features of their DIY seed paper.\",\n  \"The woman seated in black is an active participant, showing curiosity and interest in the handmade craft items.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people is gathered around a table with a red-and-white checkered tablecloth.",
+          "A young woman in a black cardigan sits at the table holding a small yellow fabric pouch.",
+          "A person asks whether they should unpack the item, speaking <voice_0>.",
+          "The woman in black puts down the pouch and reaches across the table to pick up several paper cards.",
+          "A speaker explains that the cards are handmade seed paper crafted from discarded coffee grounds and paper pulp embedded with sunflower seeds, speaking <voice_500>.",
+          "A woman in a white shirt stands in the background near a whiteboard, trimming plants and flowers.",
+          "The woman in black holds the seed paper cards in her hands and examines them attentively.",
+          "Other companions seated across the table listen to the explanation and observe.",
+          "One of the seated women claps her hands as the discussion continues."
+        ],
+        "high_level_conclusions": [
+          "The participants are engaged in a creative or eco-friendly workshop involving handmade crafts, flowers, and recycled paper goods.",
+          "<voice_500> is demonstrating and explaining the design concept and environmental features of their DIY seed paper.",
+          "The woman seated in black is an active participant, showing curiosity and interest in the handmade craft items."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 74,
+          "call_id": "0800937a-5db6-459f-839a-58dcffcf6a02",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789407575.0320075,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66957,
+          "output_tokens": 1883,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 43250.096659998235
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a red-and-white checkered tablecloth.\",\n  \"A young woman in a black cardigan sits at the table holding a small yellow fabric pouch.\",\n  \"A person asks whether they should unpack the item, speaking <voice_0>.\",\n  \"The woman in black puts down the pouch and reaches across the table to pick up several paper cards.\",\n  \"A speaker explains that the cards are handmade seed paper crafted from discarded coffee grounds and paper pulp embedded with sunflower seeds, speaking <voice_500>.\",\n  \"A woman in a white shirt stands in the background near a whiteboard, trimming plants and flowers.\",\n  \"The woman in black holds the seed paper cards in her hands and examines them attentively.\",\n  \"Other companions seated across the table listen to the explanation and observe.\",\n  \"One of the seated women claps her hands as the discussion continues.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are engaged in a creative or eco-friendly workshop involving handmade crafts, flowers, and recycled paper goods.\",\n  \"<voice_500> is demonstrating and explaining the design concept and environmental features of their DIY seed paper.\",\n  \"The woman seated in black is an active participant, showing curiosity and interest in the handmade craft items.\"\n ]\n}\n```",
+          "total_tokens": 68840,
+          "request_end": 1789407618.282238,
+          "latency_ms": 43250.224872004765,
+          "client_wall_clock_latency_ms": 43250.224872004765,
+          "api_request_wall_clock_latency_ms": 43250.224872004765
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.08928900206228718,
+      "nodes_added": 9,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.680350000038743,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 2,
+    "speech_embeddings": 2,
+    "voice_identities": 2,
+    "detected_faces": 250,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 3,
+    "nodes_after_clip": 852,
+    "edges_after_clip": 186,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 3
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a red-and-white checkered tablecloth.",
+      "A young woman in a black cardigan sits at the table holding a small yellow fabric pouch.",
+      "A person asks whether they should unpack the item, speaking <voice_0>.",
+      "The woman in black puts down the pouch and reaches across the table to pick up several paper cards.",
+      "A speaker explains that the cards are handmade seed paper crafted from discarded coffee grounds and paper pulp embedded with sunflower seeds, speaking <voice_500>.",
+      "A woman in a white shirt stands in the background near a whiteboard, trimming plants and flowers.",
+      "The woman in black holds the seed paper cards in her hands and examines them attentively.",
+      "Other companions seated across the table listen to the explanation and observe.",
+      "One of the seated women claps her hands as the discussion continues."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a creative or eco-friendly workshop involving handmade crafts, flowers, and recycled paper goods.",
+      "<voice_500> is demonstrating and explaining the design concept and environmental features of their DIY seed paper.",
+      "The woman seated in black is an active participant, showing curiosity and interest in the handmade craft items."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a red-and-white checkered tablecloth.",
+      "A young woman in a black cardigan sits at the table holding a small yellow fabric pouch.",
+      "A person asks whether they should unpack the item, speaking <voice_0>.",
+      "The woman in black puts down the pouch and reaches across the table to pick up several paper cards.",
+      "A speaker explains that the cards are handmade seed paper crafted from discarded coffee grounds and paper pulp embedded with sunflower seeds, speaking <voice_500>.",
+      "A woman in a white shirt stands in the background near a whiteboard, trimming plants and flowers.",
+      "The woman in black holds the seed paper cards in her hands and examines them attentively.",
+      "Other companions seated across the table listen to the explanation and observe.",
+      "One of the seated women claps her hands as the discussion continues."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a creative or eco-friendly workshop involving handmade crafts, flowers, and recycled paper goods.",
+      "<voice_500> is demonstrating and explaining the design concept and environmental features of their DIY seed paper.",
+      "The woman seated in black is an active participant, showing curiosity and interest in the handmade craft items."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_74_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 3,
+    "nodes": [
+      {
+        "id": 840,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people is gathered around a table with a red-and-white checkered tablecloth."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 841,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young woman in a black cardigan sits at the table holding a small yellow fabric pouch."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 842,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person asks whether they should unpack the item, speaking <voice_0>."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 843,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in black puts down the pouch and reaches across the table to pick up several paper cards."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 844,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A speaker explains that the cards are handmade seed paper crafted from discarded coffee grounds and paper pulp embedded with sunflower seeds, speaking <voice_500>."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 845,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a white shirt stands in the background near a whiteboard, trimming plants and flowers."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 846,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in black holds the seed paper cards in her hands and examines them attentively."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 847,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Other companions seated across the table listen to the explanation and observe."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 848,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One of the seated women claps her hands as the discussion continues."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 849,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are engaged in a creative or eco-friendly workshop involving handmade crafts, flowers, and recycled paper goods."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 850,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_500> is demonstrating and explaining the design concept and environmental features of their DIY seed paper."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 851,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman seated in black is an active participant, showing curiosity and interest in the handmade craft items."
+          ],
+          "timestamp": 74
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 842,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 500,
+        "target": 844,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 500,
+        "target": 850,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_74_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_74_graph.pkl"
+  },
+  "memory_pickle_bytes": 19640225,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 48670.185978995,
+    "prepared_perf": 48678.609391645,
+    "ordered_start_perf": 48750.794219208,
+    "consumer_wait_ms": 0.00831500074127689,
+    "ready_to_ordered_ms": 72184.82756300364,
+    "preparation_work_ms": 8418.071394000435,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 53341.19065700361
+}

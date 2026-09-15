@@ -1,0 +1,331 @@
+{
+  "clip_id": 56,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0056.mp4",
+  "end_to_end_memory_generation_ms": 131758.42237700272,
+  "latency_ms": {
+    "clip_decode": 3426.235270999314,
+    "deepgram_asr": 1847.5106440018862,
+    "mai_transcribe_asr": 1160.2128380036447,
+    "asr_total": 1848.3731460000854,
+    "audio_segmentation": 13.211646997660864,
+    "speech_embedding_campplus": 609.1396550036734,
+    "facial_detection_recognition_buffalo_l": 2596.3025580058456,
+    "face_clustering": 0.5183449975447729,
+    "vlm_memory_generation": 34533.503808001115,
+    "text_embedding": 409.741847004625,
+    "graph_update_total": 183.61395499960054
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 56,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 6,
+      "input_chars": 587,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789406477.5966158,
+          "status": "success",
+          "total_tokens": 110,
+          "request_end": 1789406478.006113,
+          "latency_ms": 409.4978790017194
+        }
+      ],
+      "total_tokens": 110,
+      "latency_ms": 409.741847004625
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1847.5106440018862,
+        "openrouter-mai-transcribe-2": 1160.2128380036447
+      },
+      "asr_total_ms": 1848.3731460000854,
+      "audio_segmentation_ms": 13.211646997660864,
+      "speech_embedding_ms": 609.1396550036734,
+      "graph_update_ms": 183.53499499789905,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 822.3210200012545
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2596.3025580058456,
+      "face_clustering_ms": 0.5183449975447729,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 8,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2602.8066860017134
+    },
+    "vlm": {
+      "context_preparation_ms": 3327.0374619969516,
+      "vlm_ms": 34533.503808001115,
+      "raw_response": "```json\n{\n\t\"video_description\": [\n\t\t\"A person uses both hands to adjust and secure a small action camera mounted on a door frame.\",\n\t\t\"The person takes their hands off the mounted camera after finishing the adjustment.\",\n\t\t\"The person turns around from the doorway toward the open living area.\",\n\t\t\"A group of people is gathered around a table in the room, handling crafting materials and flowers.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The camera wearer was setting up or calibrating a surveillance/recording device before observing the room.\",\n\t\t\"The individuals at the table are engaged in a floral craft or flower-pressing activity, discussing botanical species and preparation times.\"\n\t]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A person uses both hands to adjust and secure a small action camera mounted on a door frame.",
+          "The person takes their hands off the mounted camera after finishing the adjustment.",
+          "The person turns around from the doorway toward the open living area.",
+          "A group of people is gathered around a table in the room, handling crafting materials and flowers."
+        ],
+        "high_level_conclusions": [
+          "The camera wearer was setting up or calibrating a surveillance/recording device before observing the room.",
+          "The individuals at the table are engaged in a floral craft or flower-pressing activity, discussing botanical species and preparation times."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 56,
+          "call_id": "473252cc-86e2-4785-834d-f9b7ba6e35ab",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789406443.062101,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66709,
+          "output_tokens": 913,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 34533.398239000235
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A person uses both hands to adjust and secure a small action camera mounted on a door frame.\",\n\t\t\"The person takes their hands off the mounted camera after finishing the adjustment.\",\n\t\t\"The person turns around from the doorway toward the open living area.\",\n\t\t\"A group of people is gathered around a table in the room, handling crafting materials and flowers.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The camera wearer was setting up or calibrating a surveillance/recording device before observing the room.\",\n\t\t\"The individuals at the table are engaged in a floral craft or flower-pressing activity, discussing botanical species and preparation times.\"\n\t]\n}\n```",
+          "total_tokens": 67622,
+          "request_end": 1789406477.5956078,
+          "latency_ms": 34533.503808001115,
+          "client_wall_clock_latency_ms": 34533.503808001115,
+          "api_request_wall_clock_latency_ms": 34533.503808001115
+        }
+      ],
+      "episodic_memory_count": 4,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.06537399895023555,
+      "nodes_added": 4,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.013586002751253545,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 3,
+    "detected_faces": 8,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 4,
+    "semantic_memories": 2,
+    "nodes_after_clip": 642,
+    "edges_after_clip": 131,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A person uses both hands to adjust and secure a small action camera mounted on a door frame.",
+      "The person takes their hands off the mounted camera after finishing the adjustment.",
+      "The person turns around from the doorway toward the open living area.",
+      "A group of people is gathered around a table in the room, handling crafting materials and flowers."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer was setting up or calibrating a surveillance/recording device before observing the room.",
+      "The individuals at the table are engaged in a floral craft or flower-pressing activity, discussing botanical species and preparation times."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A person uses both hands to adjust and secure a small action camera mounted on a door frame.",
+      "The person takes their hands off the mounted camera after finishing the adjustment.",
+      "The person turns around from the doorway toward the open living area.",
+      "A group of people is gathered around a table in the room, handling crafting materials and flowers."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer was setting up or calibrating a surveillance/recording device before observing the room.",
+      "The individuals at the table are engaged in a floral craft or flower-pressing activity, discussing botanical species and preparation times."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_56_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 634,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯，百合。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 635,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 百合兰。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 636,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person uses both hands to adjust and secure a small action camera mounted on a door frame."
+          ],
+          "timestamp": 56
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 637,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person takes their hands off the mounted camera after finishing the adjustment."
+          ],
+          "timestamp": 56
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 638,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person turns around from the doorway toward the open living area."
+          ],
+          "timestamp": 56
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 639,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people is gathered around a table in the room, handling crafting materials and flowers."
+          ],
+          "timestamp": 56
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 640,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera wearer was setting up or calibrating a surveillance/recording device before observing the room."
+          ],
+          "timestamp": 56
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 641,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The individuals at the table are engaged in a floral craft or flower-pressing activity, discussing botanical species and preparation times."
+          ],
+          "timestamp": 56
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_56_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_56_graph.pkl"
+  },
+  "memory_pickle_bytes": 14603484,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 47533.179758907,
+    "prepared_perf": 47539.810327513,
+    "ordered_start_perf": 47622.080432181,
+    "consumer_wait_ms": 0.007203998393379152,
+    "ready_to_ordered_ms": 82270.1046680013,
+    "preparation_work_ms": 6625.05661600153,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 41697.2586280026
+}

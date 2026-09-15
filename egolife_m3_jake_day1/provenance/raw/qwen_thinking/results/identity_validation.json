@@ -1,0 +1,73 @@
+{
+  "status": "failed",
+  "scope": "two-segment identity-reference and graph-link test; transcript fidelity also requires review",
+  "rows": [
+    {
+      "segment_id": 1,
+      "supplied_voice_ids": [
+        "<voice_0>",
+        "<voice_1>"
+      ],
+      "episodic_voice_ids": [
+        "<voice_0>",
+        "<voice_1>"
+      ],
+      "new_voice_memory_edges": 5,
+      "frames": 36,
+      "thinking_completed": true,
+      "generation_seconds": 151.37953415199445,
+      "output_tokens": 3240,
+      "memory": {
+        "video_description": [
+          "The camera wearer holds a smartphone displaying a white screen while observing a group of people seated around a table.",
+          "At timestamp 00:04, <voice_0> announces, 'Good, then a stopwatch.'",
+          "The group remains seated at the table with various items spread across the surface.",
+          "At timestamp 00:12, <voice_1> states, 'Time ding.'",
+          "At timestamp 00:13, <voice_0> confirms, 'Yes, ding once.'",
+          "The camera wearer manipulates the smartphone screen, revealing a countdown timer.",
+          "The timer progresses from approximately 23 minutes down to zero.",
+          "The camera wearer places a hand on a black case resting on the table near the end of the sequence."
+        ],
+        "high_level_conclusions": [
+          "The participants appear to be engaging in a timed activity or challenge facilitated by the smartphone.",
+          "Speaker MAI (<voice_0>, <voice_1>) is responsible for initiating and signaling the timing mechanism.",
+          "No facial features are provided to visually identify the speaker MAI among the group members."
+        ]
+      },
+      "problems": []
+    },
+    {
+      "segment_id": 2,
+      "supplied_voice_ids": [
+        "<voice_0>"
+      ],
+      "episodic_voice_ids": [],
+      "new_voice_memory_edges": 1,
+      "frames": 60,
+      "thinking_completed": true,
+      "generation_seconds": 138.31690121899737,
+      "output_tokens": 3011,
+      "memory": {
+        "video_description": [
+          "A group of five individuals sits around a rectangular table covered with a red and white checkered cloth.",
+          "The camera wearer distributes black carrying cases to the participants seated at the table.",
+          "Each participant places the contents of the case, which appear to be earplugs, into their ears.",
+          "The camera wearer confirms that all group members have successfully put on the earplugs.",
+          "The camera wearer holds up a smartphone displaying a digital timer set to zero.",
+          "The group discusses their plans for the final day of their current activity."
+        ],
+        "high_level_conclusions": [
+          "The group is preparing for a discussion session scheduled for their last day.",
+          "Participants utilize earplugs to manage auditory environment before the discussion begins.",
+          "The speaker identified as <voice_0> coordinates the distribution of equipment and initiates the session."
+        ]
+      },
+      "problems": [
+        "missing episodic speaker references: ['<voice_0>']"
+      ]
+    }
+  ],
+  "problems": [
+    "segment 2: missing episodic speaker references: ['<voice_0>']"
+  ]
+}

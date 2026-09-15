@@ -1,0 +1,76 @@
+{
+  "clip_id": 73,
+  "source": {
+    "segment_id": 73,
+    "source": "bedroom_01_00343000.mp4",
+    "source_clock": "00343000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 2070.0,
+    "absolute_end_seconds": 2100.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00343000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 76813.419045445,
+      "prepared_perf": 76818.78362524,
+      "ordered_start_perf": 76879.755256199,
+      "consumer_wait_ms": 0.01571900793351233,
+      "ready_to_ordered_ms": 60971.63095900032,
+      "preparation_work_ms": 5359.28647100809,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and a mobile device.",
+      "The woman on the left, holding a phone, speaks while resting her chin on her hand.",
+      "The woman on the right initially rests her head on her hand, looking downward and listening.",
+      "The woman on the right raises her head, makes eye contact, and begins speaking while gesturing with her hands.",
+      "The woman on the left listens to her companion and reaches to pick up snacks from the table."
+    ],
+    "high_level_conclusions": [
+      "The woman on the left is named Lily, as directly addressed by the other woman.",
+      "The two women are close friends engaged in a casual, supportive, and reflective conversation.",
+      "The speaker <voice_10> corresponds to the woman on the left.",
+      "The speaker <voice_322> corresponds to the woman on the right."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and a mobile device.\",\n    \"The woman on the left, holding a phone, speaks while resting her chin on her hand.\",\n    \"The woman on the right initially rests her head on her hand, looking downward and listening.\",\n    \"The woman on the right raises her head, makes eye contact, and begins speaking while gesturing with her hands.\",\n    \"The woman on the left listens to her companion and reaches to pick up snacks from the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the left is named Lily, as directly addressed by the other woman.\",\n    \"The two women are close friends engaged in a casual, supportive, and reflective conversation.\",\n    \"The speaker <voice_10> corresponds to the woman on the left.\",\n    \"The speaker <voice_322> corresponds to the woman on the right.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 73,
+      "call_id": "464fe975-93bd-454d-b804-f3675d3f4962",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789435703.5700548,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66032,
+      "output_tokens": 865,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 23358.51383500267
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and a mobile device.\",\n    \"The woman on the left, holding a phone, speaks while resting her chin on her hand.\",\n    \"The woman on the right initially rests her head on her hand, looking downward and listening.\",\n    \"The woman on the right raises her head, makes eye contact, and begins speaking while gesturing with her hands.\",\n    \"The woman on the left listens to her companion and reaches to pick up snacks from the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the left is named Lily, as directly addressed by the other woman.\",\n    \"The two women are close friends engaged in a casual, supportive, and reflective conversation.\",\n    \"The speaker <voice_10> corresponds to the woman on the left.\",\n    \"The speaker <voice_322> corresponds to the woman on the right.\"\n  ]\n}\n```",
+      "total_tokens": 66897,
+      "request_end": 1789435726.9286866,
+      "latency_ms": 23358.62925100082,
+      "client_wall_clock_latency_ms": 23358.62925100082,
+      "api_request_wall_clock_latency_ms": 23358.62925100082
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_73_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

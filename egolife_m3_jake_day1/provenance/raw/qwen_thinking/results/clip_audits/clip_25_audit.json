@@ -1,0 +1,500 @@
+{
+  "clip_id": 25,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0025.mp4",
+  "end_to_end_memory_generation_ms": 1040309.530298,
+  "latency_ms": {
+    "clip_decode": 3536.688395004603,
+    "deepgram_asr": 2.502046001609415,
+    "mai_transcribe_asr": 2.2614439949393272,
+    "asr_total": 3.7818070049979724,
+    "audio_segmentation": 8.77224600117188,
+    "speech_embedding_campplus": 1166.672211002151,
+    "facial_detection_recognition_buffalo_l": 2987.6696490027825,
+    "face_clustering": 3.7627259953296743,
+    "vlm_memory_generation": 187946.53842999833,
+    "text_embedding": 549.3860280039371,
+    "graph_update_total": 139.60920300451107
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 25,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 1247,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789415872.8316295,
+          "status": "success",
+          "total_tokens": 239,
+          "request_end": 1789415873.3807147,
+          "latency_ms": 549.085673999798
+        }
+      ],
+      "total_tokens": 239,
+      "latency_ms": 549.3860280039371
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.502046001609415,
+        "openrouter-mai-transcribe-2": 2.2614439949393272
+      },
+      "asr_total_ms": 3.7818070049979724,
+      "audio_segmentation_ms": 8.77224600117188,
+      "speech_embedding_ms": 1166.672211002151,
+      "graph_update_ms": 139.44175700453343,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1326.410173001932
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2987.6696490027825,
+      "face_clustering_ms": 3.7627259953296743,
+      "graph_update_ms": null,
+      "frame_count": 140,
+      "detected_face_count": 144,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3071.7000549993827
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_296>",
+        "<voice_297>",
+        "<voice_0>",
+        "<voice_298>"
+      ],
+      "context_preparation_ms": 4299.849834998895,
+      "vlm_ms": 187946.53842999833,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"Four individuals are seated around a table covered with a checkered cloth, examining electronic components and cardboard boxes.\",\n\t\t\"A person wearing a white shirt and glasses in the foreground handles small black devices and wires.\",\n\t\t\"The camera wearer, wearing a blue shirt, holds a large blue box labeled HONOR and opens it to reveal a device inside.\",\n\t\t\"Other participants, including one with blonde hair and another with dark hair, assist by organizing items on the table.\",\n\t\t\"<voice_296> states 'Can enter.' during the initial phase of the interaction.\",\n\t\t\"<voice_297> responds 'Okay, I've been through the field already' and compares the current task to university wiring projects.\",\n\t\t\"<voice_0> asks '<voice_297> if they have played through the field before' and questions if the activity involves IoT technology.\",\n\t\t\"<voice_298> clarifies the terminology used, specifying 'wall panel.'\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is engaged in a collaborative technical setup or unboxing session involving smart hardware and networking equipment.\",\n\t\t\"Based on <voice_297>'s statement, the participants possess prior professional or academic experience with similar infrastructure tasks.\",\n\t\t\"The discussion revolves around terminology related to networking or smart home installations, indicating a specialized context.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Four individuals are seated around a table covered with a checkered cloth, examining electronic components and cardboard boxes.",
+          "A person wearing a white shirt and glasses in the foreground handles small black devices and wires.",
+          "The camera wearer, wearing a blue shirt, holds a large blue box labeled HONOR and opens it to reveal a device inside.",
+          "Other participants, including one with blonde hair and another with dark hair, assist by organizing items on the table.",
+          "<voice_296> states 'Can enter.' during the initial phase of the interaction.",
+          "<voice_297> responds 'Okay, I've been through the field already' and compares the current task to university wiring projects.",
+          "<voice_0> asks '<voice_297> if they have played through the field before' and questions if the activity involves IoT technology.",
+          "<voice_298> clarifies the terminology used, specifying 'wall panel.'"
+        ],
+        "high_level_conclusions": [
+          "The group is engaged in a collaborative technical setup or unboxing session involving smart hardware and networking equipment.",
+          "Based on <voice_297>'s statement, the participants possess prior professional or academic experience with similar infrastructure tasks.",
+          "The discussion revolves around terminology related to networking or smart home installations, indicating a specialized context."
+        ]
+      },
+      "media": {
+        "frame_count": 56,
+        "video_duration_seconds": 27.85
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 25,
+          "call_id": "9713f6bf-20ae-417b-9792-89860f77d2d9",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789415684.8838696,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 56,
+            "video_duration_seconds": 27.85
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"Four individuals are seated around a table covered with a checkered cloth, examining electronic components and cardboard boxes.\",\n\t\t\"A person wearing a white shirt and glasses in the foreground handles small black devices and wires.\",\n\t\t\"The camera wearer, wearing a blue shirt, holds a large blue box labeled HONOR and opens it to reveal a device inside.\",\n\t\t\"Other participants, including one with blonde hair and another with dark hair, assist by organizing items on the table.\",\n\t\t\"<voice_296> states 'Can enter.' during the initial phase of the interaction.\",\n\t\t\"<voice_297> responds 'Okay, I've been through the field already' and compares the current task to university wiring projects.\",\n\t\t\"<voice_0> asks '<voice_297> if they have played through the field before' and questions if the activity involves IoT technology.\",\n\t\t\"<voice_298> clarifies the terminology used, specifying 'wall panel.'\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is engaged in a collaborative technical setup or unboxing session involving smart hardware and networking equipment.\",\n\t\t\"Based on <voice_297>'s statement, the participants possess prior professional or academic experience with similar infrastructure tasks.\",\n\t\t\"The discussion revolves around terminology related to networking or smart home installations, indicating a specialized context.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 27.50s). The camera seems to be held by someone sitting around a table. There are four people visible around a table covered with a checkered cloth. They appear to be unboxing or assembling electronic devices.\n    *   Person 1 (Left foreground): Reddish hair, white shirt, glasses.\n    *   Person 2 (Top left): Blonde/light hair, white shirt.\n    *   Person 3 (Top right): Dark hair, patterned top.\n    *   Person 4 (Right background): Dark hair, brownish shirt.\n    *   Camera wearer (POV): Blue shirt sleeves visible later in the video.\n*   **Voice Features:**\n    *   `<voice_296>`: \"MAI: 可以进场。\" (Can enter.) - Time: 00:00-00:02\n    *   `<voice_297>`: \"MAI: 可以，我已经进过场了。\" (Okay, I've been through the field already.) & \"MAI: 我觉得我们大学那些接线的，墙板的，和进场没啥区别。\" (I think our university wiring, wall panels, and entering the field aren't much different.) - Time: 00:02-00:04, 00:08-00:14\n    *   `<voice_0>`: \"MAI: 啊，你你你进过场玩过？\" (Ah, you, you, you played through the field?) & \"MAI: 物联网吗？还是什么？\" (IoT? Or something else?) - Time: 00:05-00:08, 00:13-00:16\n    *   `<voice_298>`: \"MAI: 墙板。\" (Wall panel.) - Time: 00:16-00:20\n\n**2. Map Voice IDs to Visuals:**\n*   The prompt instructions say: \"Preserve speaker identity when constructing memory... Use only IDs supplied in the input\".\n*   However, there's a specific instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   Wait, looking closely at the voice features, they all have \"MAI:\" prefix in the ASR text. This suggests `MAI` might be the name of the speaker associated with these voices, but the IDs are `<voice_296>`, etc.\n*   Actually, usually in these tasks, the voice ID *is* the identifier. The ASR text contains the spoken words.\n*   Let's look at the instruction again: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\n*   So I need to use `<voice_296>`, `<voice_297>`, `<voice_0>`, `<voice_298>` as the speaker identifiers in the memory/conclusion section if I were generating memory. But the output format requested is just `video_description` and `high_level_conclusions`.\n*   Wait, the prompt says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". It doesn't explicitly ask for a \"Memory\" section in the final JSON output, unlike the system prompt instructions about \"constructing memory\".\n*   Let's re-read the system prompt carefully. \"Preserve speaker identity when constructing memory from the supplied character features... Output Format: ... video_description ... high_level_conclusions\".\n*   Okay, so I don't need to output a separate memory block. I need to incorporate the speaker identity into the descriptions/conclusions where appropriate, specifically regarding the \"Equivalence\" part.\n*   The instruction says: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\n*   I need to figure out who is speaking.\n    *   `<voice_296>`: \"Can enter.\" -> Likely the person asking permission or stating readiness.\n    *   `<voice_297>`: \"Okay, I've been through the field already.\" -> Responding to `<voice_296>`.\n    *   `<voice_0>`: \"Ah, did you play through the field?\" -> Asking about experience.\n    *   `<voice_298>`: \"Wall panel.\" -> Answering a question about what they are doing.\n*   Looking at the video, there isn't explicit audio visualization linking faces to voices directly (no lip-sync analysis provided in the prompt text, just frames). However, the prompt asks me to preserve speaker identity.\n*   Usually, in these datasets (like Charades or similar), the voice ID corresponds to a specific person. Without explicit mapping (e.g., Face ID <face_1> = Voice ID <voice_0>), I cannot definitively claim equivalence unless I infer it strongly or if the prompt implies it.\n*   Wait, the prompt says \"Some features may belong to the same character.\" and \"If a face and a voice feature refer to the same character, indicate it...\".\n*   Since I don't have Face IDs in the input data provided in the prompt text (only \"Face features:\" header but no actual list follows, wait... let me check the raw input again).\n*   Ah, the input ends with \"Voice features:...\". There is NO \"Face features:\" list below it in the provided text block! It just says \"Face features:Voice features:\". This looks like a formatting error in the prompt provided to me, or the face features are missing.\n*   Let's look really closely at the input provided.\n    *   \"Face features:Voice features:{...}\"\n    *   There are no face bounding boxes or IDs listed.\n    *   Therefore, I cannot create equivalences like `Equivalence: <face_1>, <voice_296>` because I don't have `<face_1>`.\n    *   I must follow the instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   So, since no face IDs are supplied, I cannot make Equivalence statements. I will omit them or ensure I don't hallucinate them.\n    *   Wait, the instruction says \"Keep the existing video_description/high_level_conclusions JSON schema...\". And \"If a face and a voice feature refer to the same character, indicate it...\". If I can't determine it, I shouldn't invent it.\n    *   However, I still need to describe the video and handle the voice features. The instruction says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". But the output format doesn't have a \"memory\" key. It has \"video_description\" and \"high_level_conclusions\".\n    *   Perhaps the \"episodic memory\" requirement is part of the general instruction for *this* task type (which seems to be a variation of a retrieval-augmented generation task), but the specific output format requested here is just JSON with those two keys.\n    *   Let's re-read the specific output instruction: \"Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\".\n    *   Okay, I will integrate the voice information into the descriptions and conclusions.\n    *   Since I don't have face IDs, I won't use the `Equivalence:` format. I will just describe the actions and the conversation content attributed to the voice IDs generally or just the content itself if the context allows.\n    *   Actually, looking at the instruction \"Preserve speaker identity when constructing memory...\". Maybe I should treat the voice IDs as the primary identifiers for the speakers in my text.\n    *   Let's draft the video description based on visual actions.\n        *   Group of people around a table.\n        *   Unboxing items (boxes, electronics).\n        *   Handling cables/wires.\n        *   One person (POV) holds a blue box.\n        *   Another person (white shirt, red hair) handles items.\n        *   Conversation happens about \"entering the field\" (likely a metaphor for setting up equipment or a specific activity) and \"wall panels\".\n    *   Drafting descriptions:\n        *   Four individuals sit around a table covered with a checkered tablecloth, engaging in an activity involving electronic components and cardboard boxes.\n        *   A person wearing a white shirt and glasses sits in the foreground left, handling small black objects and wires.\n        *   The camera wearer, wearing a blue shirt, manipulates a large blue box containing electronic equipment.\n        *   Other participants, including one with blonde hair and another with dark hair, assist by organizing items on the table.\n        *   The group discusses technical aspects, mentioning terms like \"field,\" \"wiring,\" and \"wall panels.\"\n    *   Drafting conclusions:\n        *   The group appears to be collaborating on a setup or installation project involving networking or IoT hardware.\n        *   The discussion about \"entering the field\" suggests familiarity with previous setups or training.\n        *   The mention of \"wall panels\" indicates the work involves physical infrastructure or mounting.\n\n    *   Wait, I need to check if I missed any Face IDs.\n    *   Input text: \"Face features:Voice features:{...}\"\n    *   It seems the Face features section is empty or merged. There are no `<face_x>` IDs.\n    *   So I strictly follow: \"If no face IDs are supplied, do not invent any.\" and \"Do not assign it to the camera wearer or another visible person...\".\n    *   So I will not write `Equivalence: ...`.\n    *   I will write the descriptions focusing on the visual actions and the content of the speech provided by the voice IDs.\n\n    *   Refining Video Description:\n        *   Frame 0-10: People sitting around a table with boxes.\n        *   Frame 10-20: POV person holding a blue box labeled \"HONOR\".\n        *   Frame 20+: Opening the box, taking out a device.\n        *   Conversation: Someone mentions \"entering the field\" and \"wall panels\".\n\n    *   Refining High Level Conclusions:\n        *   The group is likely preparing for a technical demonstration or installation.\n        *   The dialogue indicates prior experience with similar setups (\"entered the field\").\n        *   The specific terminology (\"wall panels\", \"IoT\") points towards smart home or network infrastructure work.\n\n    *   Wait, I need to make sure I don't violate the \"Preserve speaker identity\" rule if I were writing memory. Since I am writing descriptions, I can attribute the speech to the voice IDs if needed, but since I can't link them to faces, I'll just report the speech content in the description or conclusion.\n    *   Actually, the instruction says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This sounds like a constraint for a specific task format (like a memory bank). But the output format requested is fixed JSON.\n    *   Hypothesis: The prompt instructions are generic for a \"Character Memory\" task, but the specific request here is for \"Video Description\" and \"High-Level Conclusions\". I should adapt the \"memory\" requirement into the available fields.\n    *   How to include the memory? Maybe in `video_description`? \"Person with voice <voice_296> says 'Can enter'.\"\n    *   Or maybe `high_level_conclusions`? \"Speaker <voice_297> confirms prior experience with field entry.\"\n    *   Let's try to embed the voice attribution in the text where possible, using the IDs.\n    *   Example: \"Individuals seated around the table discuss their experience, with <voice_296> stating 'Can enter' and <voice_297> responding 'Okay, I've been through the field already'.\"\n    *   This satisfies \"include at least one episodic memory... using the exact ID\".\n\n    *   Let's check the constraints again. \"Do not replace the ID with 'a speaker'...\". \"Use only IDs supplied in the input\".\n    *   Okay, I will use the IDs in the text.\n\n    *   Plan:\n        1.  Create `video_description` array with atomic events describing the visual scene and the speech attributed to the voice IDs.\n        2.  Create `high_level_conclusions` array with inferences about the activity and the speakers' expertise, citing the voice IDs.\n        3.  Ensure no `Equivalence:` lines are generated since no face IDs exist.\n\n    *   Specific Events:\n        *   Group gathering around table.\n        *   Unboxing Honor device.\n        *   Discussion about \"field\" and \"wall panels\".\n        *   Handling cables.\n\n    *   Specific Speech Integration:\n        *   <voice_296>: \"Can enter.\"\n        *   <voice_297>: \"Okay, I've been through the field already.\" / \"University wiring... no difference.\"\n        *   <voice_0>: \"Did you play through the field?\" / \"IoT?\"\n        *   <voice_298>: \"Wall panel.\"\n\n    *   Wait, I see `<voice_0>` and `<voice_296>`, `<voice_297>`, `<voice_298>`.\n    *   I need to make sure I don't confuse them.\n    *   I will construct the sentences carefully.\n\n    *   One more check: \"Preserve speaker identity when constructing memory...\". Since I am not outputting a memory block, I will interpret this as ensuring the descriptions reflect the speakers correctly using their IDs.\n\n    *   Final check on JSON validity. No trailing commas. Double quotes.\n\n    *   Wait, looking at the input again, \"Face features:Voice features:\" suggests the Face features might be empty or the label is just there. Given the instruction \"If no face IDs are supplied, do not invent any\", I will proceed assuming no face IDs.\n\n    *   Let's refine the descriptions to be atomic.\n    *   1. Four people sit around a table with a checkered cloth, surrounded by open boxes and electronic components.\n    *   2. A person in a white shirt and glasses handles small black devices while others organize items.\n    *   3. The camera wearer holds a blue box labeled HONOR and opens it to reveal a device inside.\n    *   4. During the session, <voice_296> states \"Can enter.\"\n    *   5. <voice_297> responds affirmatively, noting prior experience with \"entering the field\" and comparing it to university wiring projects.\n    *   6. <voice_0> asks if the participant has played through the field before and speculates about IoT technology.\n    *   7. <voice_298> clarifies the term used is \"wall panel.\"\n\n    *   Conclusions:\n    *   1. The group is engaged in a collaborative technical setup or unboxing session involving smart hardware.\n    *   2. The dialogue suggests the participants have prior professional or academic experience with similar infrastructure tasks.\n    *   3. The discussion revolves around terminology related to networking or smart home installations.\n\n    *   Wait, I need to check if I should put the speech in `video_description` or `high_level_conclusions`. The instruction says \"include at least one episodic memory...\". Episodic memory usually describes *what happened*. So putting the quote in the description makes sense.\n    *   Also, \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" So in conclusions, I should cite the ID if relevant.\n    *   Conclusion 2 could be: \"Based on <voice_297>'s statement, the group possesses prior experience with field entry and wiring.\"\n\n    *   Let's finalize the JSON structure.\n\n    *   One detail: \"A1_JAKE\" is in the corner. This is likely the camera ID or location tag, not a speaker ID. I should ignore it for speaker identification.\n\n    *   Ready to construct JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"Four individuals are seated around a table covered with a checkered cloth, examining electronic components and cardboard boxes.\",\n\t\t\"A person wearing a white shirt and glasses in the foreground handles small black devices and wires.\",\n\t\t\"The camera wearer, wearing a blue shirt, holds a large blue box labeled HONOR and opens it to reveal a device inside.\",\n\t\t\"Other participants, including one with blonde hair and another with dark hair, assist by organizing items on the table.\",\n\t\t\"<voice_296> states 'Can enter.' during the initial phase of the interaction.\",\n\t\t\"<voice_297> responds 'Okay, I've been through the field already' and compares the current task to university wiring projects.\",\n\t\t\"<voice_0> asks '<voice_297> if they have played through the field before' and questions if the activity involves IoT technology.\",\n\t\t\"<voice_298> clarifies the terminology used, specifying 'wall panel.'\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is engaged in a collaborative technical setup or unboxing session involving smart hardware and networking equipment.\",\n\t\t\"Based on <voice_297>'s statement, the participants possess prior professional or academic experience with similar infrastructure tasks.\",\n\t\t\"The discussion revolves around terminology related to networking or smart home installations, indicating a specialized context.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 9849,
+          "output_tokens": 3958,
+          "total_tokens": 13807,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002615000994410366,
+            "media_preparation_ms": 50.612695995368995,
+            "processor_tokenization_ms": 597.2148319997359,
+            "device_transfer_ms": 45.13432599924272,
+            "cuda_generation_ms": 187216.46905499802,
+            "decoding_ms": 4.780850998940878
+          },
+          "submitted_image_count": 56,
+          "processed_image_count": 56,
+          "video_frame_count": 56,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 187914.4799140049,
+          "request_end": 1789415872.830411,
+          "latency_ms": 187946.53842999833,
+          "client_wall_clock_latency_ms": 187946.53842999833
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.12164899817435071,
+      "nodes_added": 8,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.045797001803293824,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 140,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 4,
+    "detected_faces": 144,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 3,
+    "nodes_after_clip": 310,
+    "edges_after_clip": 116,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "Four individuals are seated around a table covered with a checkered cloth, examining electronic components and cardboard boxes.",
+      "A person wearing a white shirt and glasses in the foreground handles small black devices and wires.",
+      "The camera wearer, wearing a blue shirt, holds a large blue box labeled HONOR and opens it to reveal a device inside.",
+      "Other participants, including one with blonde hair and another with dark hair, assist by organizing items on the table.",
+      "<voice_296> states 'Can enter.' during the initial phase of the interaction.",
+      "<voice_297> responds 'Okay, I've been through the field already' and compares the current task to university wiring projects.",
+      "<voice_0> asks '<voice_297> if they have played through the field before' and questions if the activity involves IoT technology.",
+      "<voice_298> clarifies the terminology used, specifying 'wall panel.'"
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a collaborative technical setup or unboxing session involving smart hardware and networking equipment.",
+      "Based on <voice_297>'s statement, the participants possess prior professional or academic experience with similar infrastructure tasks.",
+      "The discussion revolves around terminology related to networking or smart home installations, indicating a specialized context."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Four individuals are seated around a table covered with a checkered cloth, examining electronic components and cardboard boxes.",
+      "A person wearing a white shirt and glasses in the foreground handles small black devices and wires.",
+      "The camera wearer, wearing a blue shirt, holds a large blue box labeled HONOR and opens it to reveal a device inside.",
+      "Other participants, including one with blonde hair and another with dark hair, assist by organizing items on the table.",
+      "<voice_296> states 'Can enter.' during the initial phase of the interaction.",
+      "<voice_297> responds 'Okay, I've been through the field already' and compares the current task to university wiring projects.",
+      "<voice_0> asks '<voice_297> if they have played through the field before' and questions if the activity involves IoT technology.",
+      "<voice_298> clarifies the terminology used, specifying 'wall panel.'"
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a collaborative technical setup or unboxing session involving smart hardware and networking equipment.",
+      "Based on <voice_297>'s statement, the participants possess prior professional or academic experience with similar infrastructure tasks.",
+      "The discussion revolves around terminology related to networking or smart home installations, indicating a specialized context."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_25_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 296,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 可以进场。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 297,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 可以，我已经进过场了。",
+            "MAI: 我觉得我们大学那些接线的，焊板子的，跟进场没啥区别。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 298,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 焊板。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 299,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Four individuals are seated around a table covered with a checkered cloth, examining electronic components and cardboard boxes."
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 300,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing a white shirt and glasses in the foreground handles small black devices and wires."
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 301,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer, wearing a blue shirt, holds a large blue box labeled HONOR and opens it to reveal a device inside."
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 302,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Other participants, including one with blonde hair and another with dark hair, assist by organizing items on the table."
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 303,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_296> states 'Can enter.' during the initial phase of the interaction."
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 304,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_297> responds 'Okay, I've been through the field already' and compares the current task to university wiring projects."
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 305,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> asks '<voice_297> if they have played through the field before' and questions if the activity involves IoT technology."
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 306,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_298> clarifies the terminology used, specifying 'wall panel.'"
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 307,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is engaged in a collaborative technical setup or unboxing session involving smart hardware and networking equipment."
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 308,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Based on <voice_297>'s statement, the participants possess prior professional or academic experience with similar infrastructure tasks."
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 309,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The discussion revolves around terminology related to networking or smart home installations, indicating a specialized context."
+          ],
+          "timestamp": 25
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 305,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 296,
+        "target": 303,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 297,
+        "target": 304,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 297,
+        "target": 305,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 297,
+        "target": 308,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 298,
+        "target": 306,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_25_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_25_graph.pkl"
+  },
+  "memory_pickle_bytes": 7434515,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 56019.936457334,
+    "prepared_perf": 56025.935420266,
+    "ordered_start_perf": 56862.54274387,
+    "consumer_wait_ms": 0.017243000911548734,
+    "ready_to_ordered_ms": 836607.3236039956,
+    "preparation_work_ms": 5993.589117002557,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 197196.71647799987
+}

@@ -1,0 +1,79 @@
+{
+  "clip_id": 85,
+  "source": {
+    "segment_id": 85,
+    "source": "DAY1_A1_JAKE_11500000.mp4",
+    "source_clock": "11500000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42600.0,
+    "absolute_end_seconds": 42630.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0085.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 49565.024337585,
+      "prepared_perf": 49573.681446107,
+      "ordered_start_perf": 49878.252417348,
+      "consumer_wait_ms": 0.010047995601780713,
+      "ready_to_ordered_ms": 304570.9712409953,
+      "preparation_work_ms": 8651.825874003407,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a pink-and-white checkered tablecloth in a room, with production equipment and a whiteboard visible in the background.",
+      "On the table lie pink carnations, green plants, a clapperboard labeled 'Egolife', water bottles, and stationery.",
+      "At the end of the table, a person stands near the whiteboard holding green stems and arranging floral items.",
+      "<voice_332> explains a game or activity mechanism where participants will each share a story or incident to be evaluated by the group.",
+      "<voice_330> chimes in to ask whether the story's rating determines how many coins are rewarded.",
+      "<voice_332> confirms that coins will be awarded based on the evaluation of the stories.",
+      "The woman seated on the left in a black outfit turns back toward the speaker and makes a humorous comparison (<voice_979>) about trading stories for items.",
+      "<voice_980> acknowledges the remark with a brief response.",
+      "<voice_332> continues explaining that the earned coins will then be used in an auction to bid on secondhand or unused items brought by the guests."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a pre-production meeting or rehearsal, discussing rules and activities for an upcoming filming segment of 'Egolife'.",
+      "The planned segment combines personal storytelling with an internal economy and secondhand auction system to create engaging interaction among guests.",
+      "The woman in black sitting in the foreground shares a relaxed and friendly rapport with the speaker, chiming in humorously to reference a well-known story or cultural trope."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a pink-and-white checkered tablecloth in a room, with production equipment and a whiteboard visible in the background.\",\n  \"On the table lie pink carnations, green plants, a clapperboard labeled 'Egolife', water bottles, and stationery.\",\n  \"At the end of the table, a person stands near the whiteboard holding green stems and arranging floral items.\",\n  \"<voice_332> explains a game or activity mechanism where participants will each share a story or incident to be evaluated by the group.\",\n  \"<voice_330> chimes in to ask whether the story's rating determines how many coins are rewarded.\",\n  \"<voice_332> confirms that coins will be awarded based on the evaluation of the stories.\",\n  \"The woman seated on the left in a black outfit turns back toward the speaker and makes a humorous comparison (<voice_979>) about trading stories for items.\",\n  \"<voice_980> acknowledges the remark with a brief response.\",\n  \"<voice_332> continues explaining that the earned coins will then be used in an auction to bid on secondhand or unused items brought by the guests.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are engaged in a pre-production meeting or rehearsal, discussing rules and activities for an upcoming filming segment of 'Egolife'.\",\n  \"The planned segment combines personal storytelling with an internal economy and secondhand auction system to create engaging interaction among guests.\",\n  \"The woman in black sitting in the foreground shares a relaxed and friendly rapport with the speaker, chiming in humorously to reference a well-known story or cultural trope.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 85,
+      "call_id": "cc224c2a-a0eb-4afa-824d-36ea7897a803",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789408703.3677154,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67340,
+      "output_tokens": 1504,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 40333.00441999745
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a pink-and-white checkered tablecloth in a room, with production equipment and a whiteboard visible in the background.\",\n  \"On the table lie pink carnations, green plants, a clapperboard labeled 'Egolife', water bottles, and stationery.\",\n  \"At the end of the table, a person stands near the whiteboard holding green stems and arranging floral items.\",\n  \"<voice_332> explains a game or activity mechanism where participants will each share a story or incident to be evaluated by the group.\",\n  \"<voice_330> chimes in to ask whether the story's rating determines how many coins are rewarded.\",\n  \"<voice_332> confirms that coins will be awarded based on the evaluation of the stories.\",\n  \"The woman seated on the left in a black outfit turns back toward the speaker and makes a humorous comparison (<voice_979>) about trading stories for items.\",\n  \"<voice_980> acknowledges the remark with a brief response.\",\n  \"<voice_332> continues explaining that the earned coins will then be used in an auction to bid on secondhand or unused items brought by the guests.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are engaged in a pre-production meeting or rehearsal, discussing rules and activities for an upcoming filming segment of 'Egolife'.\",\n  \"The planned segment combines personal storytelling with an internal economy and secondhand auction system to create engaging interaction among guests.\",\n  \"The woman in black sitting in the foreground shares a relaxed and friendly rapport with the speaker, chiming in humorously to reference a well-known story or cultural trope.\"\n ]\n}\n```",
+      "total_tokens": 68844,
+      "request_end": 1789408743.700856,
+      "latency_ms": 40333.13821200136,
+      "client_wall_clock_latency_ms": 40333.13821200136,
+      "api_request_wall_clock_latency_ms": 40333.13821200136
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_85_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "clip_id": 29,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0029.mp4",
+  "end_to_end_memory_generation_ms": 62104.65955299878,
+  "latency_ms": {
+    "clip_decode": 6688.84953300585,
+    "deepgram_asr": 602.3526470016805,
+    "mai_transcribe_asr": 1034.895245997177,
+    "asr_total": 1046.1660770015442,
+    "audio_segmentation": 10.15427100355737,
+    "speech_embedding_campplus": 1247.2883099981118,
+    "facial_detection_recognition_buffalo_l": 6093.671085000096,
+    "face_clustering": 12.241666998306755,
+    "vlm_memory_generation": 38296.25077699893,
+    "text_embedding": 881.8913350041839,
+    "graph_update_total": 125.44994099880569
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 29,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 896,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789404969.8830366,
+          "status": "success",
+          "total_tokens": 171,
+          "request_end": 1789404970.7645812,
+          "latency_ms": 881.544962998305
+        }
+      ],
+      "total_tokens": 171,
+      "latency_ms": 881.8913350041839
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 602.3526470016805,
+        "openrouter-mai-transcribe-2": 1034.895245997177
+      },
+      "asr_total_ms": 1046.1660770015442,
+      "audio_segmentation_ms": 10.15427100355737,
+      "speech_embedding_ms": 1247.2883099981118,
+      "graph_update_ms": 125.2391739981249,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1399.4033159979153
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 6093.671085000096,
+      "face_clustering_ms": 12.241666998306755,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 398,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 6318.54888000089
+    },
+    "vlm": {
+      "context_preparation_ms": 4317.43999599712,
+      "vlm_ms": 38296.25077699893,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a dining table covered with a red-and-white checkered tablecloth.\",\n    \"The camera wearer and the young man in the brown shirt on the right finish packing items into a blue and white product box.\",\n    \"The camera wearer closes the box and aligns it with a second box on the table.\",\n    \"The young man in the brown shirt finishes packing his items and leans back.\",\n    \"Across the table, a young woman in a patterned top holds and inspects another blue box.\",\n    \"The camera wearer stacks two blue-and-white boxes together and places them on their lap.\",\n    \"The group around the table engages in conversation following the completion of the packing task.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative group activity or study session involving packing equipment into boxes.\",\n    \"The group concludes an initial task and transitions into discussing upcoming plans and invitations for the final day of their activity.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people sits around a dining table covered with a red-and-white checkered tablecloth.",
+          "The camera wearer and the young man in the brown shirt on the right finish packing items into a blue and white product box.",
+          "The camera wearer closes the box and aligns it with a second box on the table.",
+          "The young man in the brown shirt finishes packing his items and leans back.",
+          "Across the table, a young woman in a patterned top holds and inspects another blue box.",
+          "The camera wearer stacks two blue-and-white boxes together and places them on their lap.",
+          "The group around the table engages in conversation following the completion of the packing task."
+        ],
+        "high_level_conclusions": [
+          "The participants are engaged in a collaborative group activity or study session involving packing equipment into boxes.",
+          "The group concludes an initial task and transitions into discussing upcoming plans and invitations for the final day of their activity."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 29,
+          "call_id": "68e8da49-fa93-4852-9caa-23ce5e672be1",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789404931.5858896,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66897,
+          "output_tokens": 1122,
+          "transport": {
+            "client_previously_used": false,
+            "tcp_connect_count": 1,
+            "tls_handshake_count": 1,
+            "http_wall_ms": 38296.120170001814
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a dining table covered with a red-and-white checkered tablecloth.\",\n    \"The camera wearer and the young man in the brown shirt on the right finish packing items into a blue and white product box.\",\n    \"The camera wearer closes the box and aligns it with a second box on the table.\",\n    \"The young man in the brown shirt finishes packing his items and leans back.\",\n    \"Across the table, a young woman in a patterned top holds and inspects another blue box.\",\n    \"The camera wearer stacks two blue-and-white boxes together and places them on their lap.\",\n    \"The group around the table engages in conversation following the completion of the packing task.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative group activity or study session involving packing equipment into boxes.\",\n    \"The group concludes an initial task and transitions into discussing upcoming plans and invitations for the final day of their activity.\"\n  ]\n}\n```",
+          "total_tokens": 68019,
+          "request_end": 1789404969.8821435,
+          "latency_ms": 38296.25077699893,
+          "client_wall_clock_latency_ms": 38296.25077699893,
+          "api_request_wall_clock_latency_ms": 38296.25077699893
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.19753199740080163,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.013235003279987723,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 2,
+    "detected_faces": 398,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 2,
+    "nodes_after_clip": 330,
+    "edges_after_clip": 71,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a dining table covered with a red-and-white checkered tablecloth.",
+      "The camera wearer and the young man in the brown shirt on the right finish packing items into a blue and white product box.",
+      "The camera wearer closes the box and aligns it with a second box on the table.",
+      "The young man in the brown shirt finishes packing his items and leans back.",
+      "Across the table, a young woman in a patterned top holds and inspects another blue box.",
+      "The camera wearer stacks two blue-and-white boxes together and places them on their lap.",
+      "The group around the table engages in conversation following the completion of the packing task."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a collaborative group activity or study session involving packing equipment into boxes.",
+      "The group concludes an initial task and transitions into discussing upcoming plans and invitations for the final day of their activity."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people sits around a dining table covered with a red-and-white checkered tablecloth.",
+      "The camera wearer and the young man in the brown shirt on the right finish packing items into a blue and white product box.",
+      "The camera wearer closes the box and aligns it with a second box on the table.",
+      "The young man in the brown shirt finishes packing his items and leans back.",
+      "Across the table, a young woman in a patterned top holds and inspects another blue box.",
+      "The camera wearer stacks two blue-and-white boxes together and places them on their lap.",
+      "The group around the table engages in conversation following the completion of the packing task."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a collaborative group activity or study session involving packing equipment into boxes.",
+      "The group concludes an initial task and transitions into discussing upcoming plans and invitations for the final day of their activity."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_29_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 321,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people sits around a dining table covered with a red-and-white checkered tablecloth."
+          ],
+          "timestamp": 29
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 322,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer and the young man in the brown shirt on the right finish packing items into a blue and white product box."
+          ],
+          "timestamp": 29
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 323,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer closes the box and aligns it with a second box on the table."
+          ],
+          "timestamp": 29
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 324,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The young man in the brown shirt finishes packing his items and leans back."
+          ],
+          "timestamp": 29
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 325,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Across the table, a young woman in a patterned top holds and inspects another blue box."
+          ],
+          "timestamp": 29
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 326,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer stacks two blue-and-white boxes together and places them on their lap."
+          ],
+          "timestamp": 29
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 327,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group around the table engages in conversation following the completion of the packing task."
+          ],
+          "timestamp": 29
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 328,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are engaged in a collaborative group activity or study session involving packing equipment into boxes."
+          ],
+          "timestamp": 29
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 329,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group concludes an initial task and transitions into discussing upcoming plans and invitations for the final day of their activity."
+          ],
+          "timestamp": 29
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_29_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_29_graph.pkl"
+  },
+  "memory_pickle_bytes": 7642135,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 46095.522191534,
+    "prepared_perf": 46105.932150042,
+    "ordered_start_perf": 46105.932371538,
+    "consumer_wait_ms": 10406.676204001997,
+    "ready_to_ordered_ms": 0.2214960040873848,
+    "preparation_work_ms": 10409.431094994943,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 51216.68246400077
+}

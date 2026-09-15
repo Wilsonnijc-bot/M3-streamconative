@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "The candidate fails to answer the question, claiming insufficient information, whereas the reference specifies about 4 PM."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q09",
+    "method": "D",
+    "call_id": "8165f42c-0185-4fdb-b81d-d939352d7b25",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439991.860238,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 139,
+    "output_tokens": 109,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 3368.2134590053465
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"The candidate fails to answer the question, claiming insufficient information, whereas the reference specifies about 4 PM.\"\n  }\n}\n```",
+    "total_tokens": 248,
+    "request_end": 1789439995.2285242,
+    "latency_ms": 3368.285033997381,
+    "client_wall_clock_latency_ms": 3368.285033997381,
+    "api_request_wall_clock_latency_ms": 3368.285033997381
+  },
+  "included_in_qa_latency": false
+}

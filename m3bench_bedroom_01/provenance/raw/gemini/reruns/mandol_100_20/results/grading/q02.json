@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": true,
+    "reason": "The answer correctly states that Emma's tidying up habit is not good, matching the reference."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q02",
+    "method": "D",
+    "call_id": "b47a03ed-60d7-498f-ba52-6affe4356af7",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439900.402583,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 176,
+    "output_tokens": 141,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 5431.262518002768
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\"0\": {\"correct\": true, \"reason\": \"The answer correctly states that Emma's tidying up habit is not good, matching the reference.\"}}\n```",
+    "total_tokens": 317,
+    "request_end": 1789439905.833906,
+    "latency_ms": 5431.3215389993275,
+    "client_wall_clock_latency_ms": 5431.3215389993275,
+    "api_request_wall_clock_latency_ms": 5431.3215389993275
+  },
+  "included_in_qa_latency": false
+}

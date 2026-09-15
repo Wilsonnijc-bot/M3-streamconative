@@ -1,0 +1,322 @@
+{
+  "clip_id": 102,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0102.mp4",
+  "end_to_end_memory_generation_ms": 172996.50549799844,
+  "latency_ms": {
+    "clip_decode": 5087.816522995126,
+    "deepgram_asr": 6179.854506000993,
+    "mai_transcribe_asr": 891.1874670011457,
+    "asr_total": 6180.332545998681,
+    "audio_segmentation": 6.888169999001548,
+    "speech_embedding_campplus": 923.711095994804,
+    "facial_detection_recognition_buffalo_l": 3385.9222489991225,
+    "face_clustering": 7.9414310021093115,
+    "vlm_memory_generation": 64745.16956399748,
+    "text_embedding": 486.2745979989995,
+    "graph_update_total": 384.9054360034643
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 102,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 810,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789410398.6807902,
+          "status": "success",
+          "total_tokens": 154,
+          "request_end": 1789410399.1668327,
+          "latency_ms": 486.04284199973335
+        }
+      ],
+      "total_tokens": 154,
+      "latency_ms": 486.2745979989995
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 6179.854506000993,
+        "openrouter-mai-transcribe-2": 891.1874670011457
+      },
+      "asr_total_ms": 6180.332545998681,
+      "audio_segmentation_ms": 6.888169999001548,
+      "speech_embedding_ms": 923.711095994804,
+      "graph_update_ms": 384.83001500571845,
+      "asr_segment_count": 4,
+      "speech_embedding_count": 4,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1329.2137169992202
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3385.9222489991225,
+      "face_clustering_ms": 7.9414310021093115,
+      "graph_update_ms": null,
+      "frame_count": 120,
+      "detected_face_count": 298,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3558.895879003103
+    },
+    "vlm": {
+      "context_preparation_ms": 3167.67106000043,
+      "vlm_ms": 64745.16956399748,
+      "raw_response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table in a room discussing event plans, with flowers, a whiteboard, and a clapperboard nearby.\",\n\t\t\"A young man in an orange T-shirt stands on the left side of the room, listening and gesturing.\",\n\t\t\"A woman dressed in black sits at the dining table, attentively participating in the discussion.\",\n\t\t\"A woman in white stands beside the whiteboard in the background, handling plants and flowers.\",\n\t\t\"The group discusses rules for an upcoming activity, specifically addressing time control, ways to obtain currency, and an auction process.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is in the pre-production or planning stage of an activity or filming session involving an auction mechanism.\",\n\t\t\"The speaker is proposing procedural adjustments to keep the event within a manageable timeframe while preserving the core auction concept.\"\n\t]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a table in a room discussing event plans, with flowers, a whiteboard, and a clapperboard nearby.",
+          "A young man in an orange T-shirt stands on the left side of the room, listening and gesturing.",
+          "A woman dressed in black sits at the dining table, attentively participating in the discussion.",
+          "A woman in white stands beside the whiteboard in the background, handling plants and flowers.",
+          "The group discusses rules for an upcoming activity, specifically addressing time control, ways to obtain currency, and an auction process."
+        ],
+        "high_level_conclusions": [
+          "The group is in the pre-production or planning stage of an activity or filming session involving an auction mechanism.",
+          "The speaker is proposing procedural adjustments to keep the event within a manageable timeframe while preserving the core auction concept."
+        ]
+      },
+      "media": {
+        "frame_count": 48,
+        "video_duration_seconds": 23.95
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 102,
+          "call_id": "daa1dba4-52e2-4ff6-8eb2-2c28f50db1b9",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789410333.9348395,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 53818,
+          "output_tokens": 799,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 64745.05964799755
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table in a room discussing event plans, with flowers, a whiteboard, and a clapperboard nearby.\",\n\t\t\"A young man in an orange T-shirt stands on the left side of the room, listening and gesturing.\",\n\t\t\"A woman dressed in black sits at the dining table, attentively participating in the discussion.\",\n\t\t\"A woman in white stands beside the whiteboard in the background, handling plants and flowers.\",\n\t\t\"The group discusses rules for an upcoming activity, specifically addressing time control, ways to obtain currency, and an auction process.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is in the pre-production or planning stage of an activity or filming session involving an auction mechanism.\",\n\t\t\"The speaker is proposing procedural adjustments to keep the event within a manageable timeframe while preserving the core auction concept.\"\n\t]\n}\n```",
+          "total_tokens": 54617,
+          "request_end": 1789410398.6800156,
+          "latency_ms": 64745.16956399748,
+          "client_wall_clock_latency_ms": 64745.16956399748,
+          "api_request_wall_clock_latency_ms": 64745.16956399748
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.06122499326011166,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.014196004485711455,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 120,
+    "asr_segments": 4,
+    "speech_embeddings": 4,
+    "voice_identities": 3,
+    "detected_faces": 298,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1184,
+    "edges_after_clip": 227,
+    "nodes_added_by_clip": 7,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table in a room discussing event plans, with flowers, a whiteboard, and a clapperboard nearby.",
+      "A young man in an orange T-shirt stands on the left side of the room, listening and gesturing.",
+      "A woman dressed in black sits at the dining table, attentively participating in the discussion.",
+      "A woman in white stands beside the whiteboard in the background, handling plants and flowers.",
+      "The group discusses rules for an upcoming activity, specifically addressing time control, ways to obtain currency, and an auction process."
+    ],
+    "high_level_conclusions": [
+      "The group is in the pre-production or planning stage of an activity or filming session involving an auction mechanism.",
+      "The speaker is proposing procedural adjustments to keep the event within a manageable timeframe while preserving the core auction concept."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a table in a room discussing event plans, with flowers, a whiteboard, and a clapperboard nearby.",
+      "A young man in an orange T-shirt stands on the left side of the room, listening and gesturing.",
+      "A woman dressed in black sits at the dining table, attentively participating in the discussion.",
+      "A woman in white stands beside the whiteboard in the background, handling plants and flowers.",
+      "The group discusses rules for an upcoming activity, specifically addressing time control, ways to obtain currency, and an auction process."
+    ],
+    "high_level_conclusions": [
+      "The group is in the pre-production or planning stage of an activity or filming session involving an auction mechanism.",
+      "The speaker is proposing procedural adjustments to keep the event within a manageable timeframe while preserving the core auction concept."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_102_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 7,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1177,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a table in a room discussing event plans, with flowers, a whiteboard, and a clapperboard nearby."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1178,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young man in an orange T-shirt stands on the left side of the room, listening and gesturing."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1179,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman dressed in black sits at the dining table, attentively participating in the discussion."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1180,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in white stands beside the whiteboard in the background, handling plants and flowers."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1181,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group discusses rules for an upcoming activity, specifically addressing time control, ways to obtain currency, and an auction process."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1182,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is in the pre-production or planning stage of an activity or filming session involving an auction mechanism."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1183,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The speaker is proposing procedural adjustments to keep the event within a manageable timeframe while preserving the core auction concept."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_102_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_102_graph.pkl"
+  },
+  "memory_pickle_bytes": 27323262,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 51413.143813982,
+    "prepared_perf": 51425.69290158,
+    "ordered_start_perf": 51510.587447762,
+    "consumer_wait_ms": 0.032141004339791834,
+    "ready_to_ordered_ms": 84894.54618200398,
+    "preparation_work_ms": 12543.858758996066,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 73291.10283599584
+}

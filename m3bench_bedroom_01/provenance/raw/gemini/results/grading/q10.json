@@ -1,0 +1,56 @@
+{
+  "question_id": "Q10",
+  "candidate_mapping": {
+    "0": "B",
+    "1": "D",
+    "2": "C",
+    "3": "A"
+  },
+  "grades": {
+    "0": {
+      "correct": false,
+      "reason": "Incorrectly states that the information is insufficient instead of listing the items."
+    },
+    "1": {
+      "correct": false,
+      "reason": "Omits ketchup and the specific types of coffee (mocha) and cake (strawberry)."
+    },
+    "2": {
+      "correct": false,
+      "reason": "Incorrectly states that the information is insufficient instead of listing the items."
+    },
+    "3": {
+      "correct": false,
+      "reason": "Includes incorrect items (bread slices, McDonald's) and omits ketchup as well as specific details for the coffee (mocha) and cake (strawberry)."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q10",
+    "method": null,
+    "call_id": "588799b4-f253-4a90-a3da-104707c65215",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437147.1205406,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 227,
+    "output_tokens": 392,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 4706.922027995461
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"Incorrectly states that the information is insufficient instead of listing the items.\"\n  },\n  \"1\": {\n    \"correct\": false,\n    \"reason\": \"Omits ketchup and the specific types of coffee (mocha) and cake (strawberry).\"\n  },\n  \"2\": {\n    \"correct\": false,\n    \"reason\": \"Incorrectly states that the information is insufficient instead of listing the items.\"\n  },\n  \"3\": {\n    \"correct\": false,\n    \"reason\": \"Includes incorrect items (bread slices, McDonald's) and omits ketchup as well as specific details for the coffee (mocha) and cake (strawberry).\"\n  }\n}\n```",
+    "total_tokens": 619,
+    "request_end": 1789437151.8275266,
+    "latency_ms": 4706.984956006636,
+    "client_wall_clock_latency_ms": 4706.984956006636,
+    "api_request_wall_clock_latency_ms": 4706.984956006636
+  },
+  "included_in_qa_latency": false
+}

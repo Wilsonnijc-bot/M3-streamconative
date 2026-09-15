@@ -1,0 +1,155 @@
+{
+  "counts": {
+    "nodes": 10,
+    "edges": 0,
+    "directed_edges_stored": 0,
+    "by_type": {
+      "episodic": 5,
+      "semantic": 3,
+      "voice": 2
+    }
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "type": "voice",
+      "metadata": {
+        "contents": [
+          "MAI: 好，然后一个秒表。",
+          "MAI: 对，戳一下。"
+        ]
+      },
+      "embedding_count": 2,
+      "embedding_dimensions": [
+        192,
+        192
+      ]
+    },
+    {
+      "id": 1,
+      "type": "voice",
+      "metadata": {
+        "contents": [
+          "MAI: 时间戳。"
+        ]
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        192
+      ]
+    },
+    {
+      "id": 2,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "A group of five people are seated around a table covered with a checkered cloth in a well-lit room."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 3,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera, held by a person standing (first-person perspective), displays a smartphone screen showing a countdown timer."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 4,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The timer counts down from approximately 23 seconds to 0 seconds while the group watches attentively."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 5,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "As the timer reaches zero, the person holding the phone lowers it and reaches towards the table."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 6,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The participants appear to be waiting for the timer to finish before proceeding with the next step."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 7,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The group is participating in a timed activity or game facilitated by the person holding the camera and phone."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 8,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The voice track confirms the presence of a stopwatch and timing signals, indicating a structured exercise."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 9,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The person operating the phone acts as the timer and likely the leader of the current segment."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    }
+  ],
+  "edges": []
+}

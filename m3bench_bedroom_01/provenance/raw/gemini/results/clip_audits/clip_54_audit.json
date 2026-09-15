@@ -1,0 +1,516 @@
+{
+  "clip_id": 54,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00250000.mp4",
+  "end_to_end_memory_generation_ms": 125382.09645399184,
+  "latency_ms": {
+    "clip_decode": 4125.370911002392,
+    "deepgram_asr": 291.8491710006492,
+    "mai_transcribe_asr": 1184.295009006746,
+    "asr_total": 1185.0225879898062,
+    "audio_segmentation": 6.317292005405761,
+    "speech_embedding_campplus": 1218.8745739986189,
+    "facial_detection_recognition_buffalo_l": 3367.4365330080036,
+    "face_clustering": 9.756647006724961,
+    "vlm_memory_generation": 29543.773566998425,
+    "text_embedding": 586.8074559984962,
+    "graph_update_total": 110.11747000156902
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 54,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 979,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789434235.657188,
+          "status": "success",
+          "total_tokens": 225,
+          "request_end": 1789434236.2438378,
+          "latency_ms": 586.6504510049708
+        }
+      ],
+      "total_tokens": 225,
+      "latency_ms": 586.8074559984962
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 291.8491710006492,
+        "openrouter-mai-transcribe-2": 1184.295009006746
+      },
+      "asr_total_ms": 1185.0225879898062,
+      "audio_segmentation_ms": 6.317292005405761,
+      "speech_embedding_ms": 1218.8745739986189,
+      "graph_update_ms": 107.95226600021124,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1347.1464550093515
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3367.4365330080036,
+      "face_clustering_ms": 9.756647006724961,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 295,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3538.040434999857
+    },
+    "vlm": {
+      "context_preparation_ms": 4816.781736008124,
+      "vlm_ms": 29543.773566998425,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women sit across from each other at a dining table laid with food and drinks.\",\n    \"The woman on the left, speaking as <voice_321>, talks and proposes a toast to an upcoming decision.\",\n    \"The woman on the right responds affirmatively as <voice_515>.\",\n    \"The woman on the right reaches across the table to pick up a bottle of juice.\",\n    \"The woman on the left lifts her mug to initiate the toast, speaking as <voice_516>.\",\n    \"Both women clink their drinks together across the table.\",\n    \"Each woman takes a sip from her drink.\",\n    \"The woman on the right, speaking as <voice_322>, thanks Lidi and talks about her plans to travel with friends.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the left is named Lidi (<voice_321>).\",\n    \"The two women are close friends or classmates having a casual meal and conversation.\",\n    \"The woman on the right has made a major decision regarding her upcoming semester to travel and pursue meaningful goals.\",\n    \"<voice_321> and <voice_516> belong to the woman on the left.\",\n    \"<voice_515> and <voice_322> belong to the woman on the right.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit across from each other at a dining table laid with food and drinks.",
+          "The woman on the left, speaking as <voice_321>, talks and proposes a toast to an upcoming decision.",
+          "The woman on the right responds affirmatively as <voice_515>.",
+          "The woman on the right reaches across the table to pick up a bottle of juice.",
+          "The woman on the left lifts her mug to initiate the toast, speaking as <voice_516>.",
+          "Both women clink their drinks together across the table.",
+          "Each woman takes a sip from her drink.",
+          "The woman on the right, speaking as <voice_322>, thanks Lidi and talks about her plans to travel with friends."
+        ],
+        "high_level_conclusions": [
+          "The woman on the left is named Lidi (<voice_321>).",
+          "The two women are close friends or classmates having a casual meal and conversation.",
+          "The woman on the right has made a major decision regarding her upcoming semester to travel and pursue meaningful goals.",
+          "<voice_321> and <voice_516> belong to the woman on the left.",
+          "<voice_515> and <voice_322> belong to the woman on the right."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 54,
+          "call_id": "1908424c-34b5-4efa-9bb8-bc976b7e68ea",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789434206.1123276,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66050,
+          "output_tokens": 2344,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 29543.673819003743
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit across from each other at a dining table laid with food and drinks.\",\n    \"The woman on the left, speaking as <voice_321>, talks and proposes a toast to an upcoming decision.\",\n    \"The woman on the right responds affirmatively as <voice_515>.\",\n    \"The woman on the right reaches across the table to pick up a bottle of juice.\",\n    \"The woman on the left lifts her mug to initiate the toast, speaking as <voice_516>.\",\n    \"Both women clink their drinks together across the table.\",\n    \"Each woman takes a sip from her drink.\",\n    \"The woman on the right, speaking as <voice_322>, thanks Lidi and talks about her plans to travel with friends.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the left is named Lidi (<voice_321>).\",\n    \"The two women are close friends or classmates having a casual meal and conversation.\",\n    \"The woman on the right has made a major decision regarding her upcoming semester to travel and pursue meaningful goals.\",\n    \"<voice_321> and <voice_516> belong to the woman on the left.\",\n    \"<voice_515> and <voice_322> belong to the woman on the right.\"\n  ]\n}\n```",
+          "total_tokens": 68394,
+          "request_end": 1789434235.6561036,
+          "latency_ms": 29543.773566998425,
+          "client_wall_clock_latency_ms": 29543.773566998425,
+          "api_request_wall_clock_latency_ms": 29543.773566998425
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 5
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.09171200508717448,
+      "nodes_added": 8,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 2.0734919962706044,
+      "nodes_added": 5,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 4,
+    "detected_faces": 295,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 5,
+    "nodes_after_clip": 530,
+    "edges_after_clip": 172,
+    "nodes_added_by_clip": 15,
+    "edges_added_by_clip": 9
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit across from each other at a dining table laid with food and drinks.",
+      "The woman on the left, speaking as <voice_321>, talks and proposes a toast to an upcoming decision.",
+      "The woman on the right responds affirmatively as <voice_515>.",
+      "The woman on the right reaches across the table to pick up a bottle of juice.",
+      "The woman on the left lifts her mug to initiate the toast, speaking as <voice_516>.",
+      "Both women clink their drinks together across the table.",
+      "Each woman takes a sip from her drink.",
+      "The woman on the right, speaking as <voice_322>, thanks Lidi and talks about her plans to travel with friends."
+    ],
+    "high_level_conclusions": [
+      "The woman on the left is named Lidi (<voice_321>).",
+      "The two women are close friends or classmates having a casual meal and conversation.",
+      "The woman on the right has made a major decision regarding her upcoming semester to travel and pursue meaningful goals.",
+      "<voice_321> and <voice_516> belong to the woman on the left.",
+      "<voice_515> and <voice_322> belong to the woman on the right."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit across from each other at a dining table laid with food and drinks.",
+      "The woman on the left, speaking as <voice_321>, talks and proposes a toast to an upcoming decision.",
+      "The woman on the right responds affirmatively as <voice_515>.",
+      "The woman on the right reaches across the table to pick up a bottle of juice.",
+      "The woman on the left lifts her mug to initiate the toast, speaking as <voice_516>.",
+      "Both women clink their drinks together across the table.",
+      "Each woman takes a sip from her drink.",
+      "The woman on the right, speaking as <voice_322>, thanks Lidi and talks about her plans to travel with friends."
+    ],
+    "high_level_conclusions": [
+      "The woman on the left is named Lidi (<voice_321>).",
+      "The two women are close friends or classmates having a casual meal and conversation.",
+      "The woman on the right has made a major decision regarding her upcoming semester to travel and pursue meaningful goals.",
+      "<voice_321> and <voice_516> belong to the woman on the left.",
+      "<voice_515> and <voice_322> belong to the woman on the right."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_54_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 15,
+    "edges_added": 9,
+    "nodes": [
+      {
+        "id": 515,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: for this decision. Mhmm. Okay? Mhmm. Just have | MAI: Mm.",
+            "Deepgram: Mhmm. Okay? Mhmm. Just have | MAI: Mm-hmm."
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 516,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: cheers just with your cheers. Okay. Okay? Have a cheers. | MAI: Okay, have a cheers."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 517,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit across from each other at a dining table laid with food and drinks."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 518,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left, speaking as <voice_321>, talks and proposes a toast to an upcoming decision."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 519,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right responds affirmatively as <voice_515>."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 520,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right reaches across the table to pick up a bottle of juice."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 521,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left lifts her mug to initiate the toast, speaking as <voice_516>."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 522,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Both women clink their drinks together across the table."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 523,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Each woman takes a sip from her drink."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 524,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right, speaking as <voice_322>, thanks Lidi and talks about her plans to travel with friends."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 525,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the left is named Lidi (<voice_321>)."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 526,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women are close friends or classmates having a casual meal and conversation."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 527,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the right has made a major decision regarding her upcoming semester to travel and pursue meaningful goals."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 528,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_321> and <voice_516> belong to the woman on the left."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 529,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_515> and <voice_322> belong to the woman on the right."
+          ],
+          "timestamp": 54
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 321,
+        "target": 518,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 321,
+        "target": 525,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 321,
+        "target": 528,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 322,
+        "target": 524,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 322,
+        "target": 529,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 515,
+        "target": 519,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 515,
+        "target": 529,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 516,
+        "target": 521,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 516,
+        "target": 528,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_54_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_54_graph.pkl"
+  },
+  "memory_pickle_bytes": 13935394,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 75297.758773206,
+    "prepared_perf": 75303.175229215,
+    "ordered_start_perf": 75382.381529005,
+    "consumer_wait_ms": 0.011701995390467346,
+    "ready_to_ordered_ms": 79206.29978999204,
+    "preparation_work_ms": 5411.136724011158,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 39837.37965999171
+}

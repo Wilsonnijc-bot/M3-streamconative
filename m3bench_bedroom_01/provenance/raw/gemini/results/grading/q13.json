@@ -1,0 +1,56 @@
+{
+  "question_id": "Q13",
+  "candidate_mapping": {
+    "0": "A",
+    "1": "C",
+    "2": "D",
+    "3": "B"
+  },
+  "grades": {
+    "0": {
+      "correct": true,
+      "reason": "Directly matches the reference statement that the allergy is not serious."
+    },
+    "1": {
+      "correct": false,
+      "reason": "Incorrectly claims the information is insufficient instead of stating that it is not serious."
+    },
+    "2": {
+      "correct": false,
+      "reason": "Incorrectly claims the information is insufficient instead of stating that it is not serious."
+    },
+    "3": {
+      "correct": false,
+      "reason": "Incorrectly claims the information is insufficient instead of stating that it is not serious."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q13",
+    "method": null,
+    "call_id": "a548a4ac-ed86-4c71-b5ed-f36d4250239d",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437159.840496,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 254,
+    "output_tokens": 373,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 4308.129434008151
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": true,\n    \"reason\": \"Directly matches the reference statement that the allergy is not serious.\"\n  },\n  \"1\": {\n    \"correct\": false,\n    \"reason\": \"Incorrectly claims the information is insufficient instead of stating that it is not serious.\"\n  },\n  \"2\": {\n    \"correct\": false,\n    \"reason\": \"Incorrectly claims the information is insufficient instead of stating that it is not serious.\"\n  },\n  \"3\": {\n    \"correct\": false,\n    \"reason\": \"Incorrectly claims the information is insufficient instead of stating that it is not serious.\"\n  }\n}\n```",
+    "total_tokens": 627,
+    "request_end": 1789437164.1486864,
+    "latency_ms": 4308.189236995531,
+    "client_wall_clock_latency_ms": 4308.189236995531,
+    "api_request_wall_clock_latency_ms": 4308.189236995531
+  },
+  "included_in_qa_latency": false
+}

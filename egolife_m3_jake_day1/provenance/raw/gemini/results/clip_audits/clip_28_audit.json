@@ -1,0 +1,394 @@
+{
+  "clip_id": 28,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0028.mp4",
+  "end_to_end_memory_generation_ms": 111969.87195900147,
+  "latency_ms": {
+    "clip_decode": 5649.385002994677,
+    "deepgram_asr": 545.7097229955252,
+    "mai_transcribe_asr": 1073.016362999624,
+    "asr_total": 1092.4215229970287,
+    "audio_segmentation": 8.290913996461313,
+    "speech_embedding_campplus": 1552.3710220004432,
+    "facial_detection_recognition_buffalo_l": 5393.161485000746,
+    "face_clustering": 287.07304899580777,
+    "vlm_memory_generation": 66817.26949900622,
+    "text_embedding": 501.63961400539847,
+    "graph_update_total": 210.59335399331758
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 833,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789404889.5373702,
+          "status": "success",
+          "total_tokens": 156,
+          "request_end": 1789404890.0390027,
+          "latency_ms": 501.6330719954567
+        }
+      ],
+      "total_tokens": 156,
+      "latency_ms": 501.63961400539847
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 545.7097229955252,
+        "openrouter-mai-transcribe-2": 1073.016362999624
+      },
+      "asr_total_ms": 1092.4215229970287,
+      "audio_segmentation_ms": 8.290913996461313,
+      "speech_embedding_ms": 1552.3710220004432,
+      "graph_update_ms": 210.51076599542284,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1790.7305869957781
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 5393.161485000746,
+      "face_clustering_ms": 287.07304899580777,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 290,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 5836.352856000303
+    },
+    "vlm": {
+      "context_preparation_ms": 4369.918349002546,
+      "vlm_ms": 66817.26949900622,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Several individuals sit around a dining table covered with a pink checkered tablecloth.\",\n    \"A young man in an orange t-shirt sits on the right holding and inspecting a black rectangular device.\",\n    \"A cardboard box and various small items rest in the middle of the table.\",\n    \"People at the table engage in conversation while assembling or handling equipment.\",\n    \"The camera wearer gestures toward the small cardboard box on the table.\",\n    \"A person seated across reaches over and places a black component into the box on the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is collaborating on an assembly or packaging task involving electronic components.\",\n    \"The camera wearer acts in an instructional or evaluative capacity, directing where finished items should be placed.\",\n    \"The young man in the orange t-shirt is being lightheartedly teased about missing an opportunity or completing a step late.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Several individuals sit around a dining table covered with a pink checkered tablecloth.",
+          "A young man in an orange t-shirt sits on the right holding and inspecting a black rectangular device.",
+          "A cardboard box and various small items rest in the middle of the table.",
+          "People at the table engage in conversation while assembling or handling equipment.",
+          "The camera wearer gestures toward the small cardboard box on the table.",
+          "A person seated across reaches over and places a black component into the box on the table."
+        ],
+        "high_level_conclusions": [
+          "The group is collaborating on an assembly or packaging task involving electronic components.",
+          "The camera wearer acts in an instructional or evaluative capacity, directing where finished items should be placed.",
+          "The young man in the orange t-shirt is being lightheartedly teased about missing an opportunity or completing a step late."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 28,
+          "call_id": "a9f6e9bb-b173-4813-9ca3-f41d9203322b",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789404822.7191803,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67319,
+          "output_tokens": 886,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 66817.1649329961
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Several individuals sit around a dining table covered with a pink checkered tablecloth.\",\n    \"A young man in an orange t-shirt sits on the right holding and inspecting a black rectangular device.\",\n    \"A cardboard box and various small items rest in the middle of the table.\",\n    \"People at the table engage in conversation while assembling or handling equipment.\",\n    \"The camera wearer gestures toward the small cardboard box on the table.\",\n    \"A person seated across reaches over and places a black component into the box on the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is collaborating on an assembly or packaging task involving electronic components.\",\n    \"The camera wearer acts in an instructional or evaluative capacity, directing where finished items should be placed.\",\n    \"The young man in the orange t-shirt is being lightheartedly teased about missing an opportunity or completing a step late.\"\n  ]\n}\n```",
+          "total_tokens": 68205,
+          "request_end": 1789404889.5364535,
+          "latency_ms": 66817.26949900622,
+          "client_wall_clock_latency_ms": 66817.26949900622,
+          "api_request_wall_clock_latency_ms": 66817.26949900622
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.0645729960524477,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.018015001842286438,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 6,
+    "detected_faces": 290,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 3,
+    "nodes_after_clip": 321,
+    "edges_after_clip": 71,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "Several individuals sit around a dining table covered with a pink checkered tablecloth.",
+      "A young man in an orange t-shirt sits on the right holding and inspecting a black rectangular device.",
+      "A cardboard box and various small items rest in the middle of the table.",
+      "People at the table engage in conversation while assembling or handling equipment.",
+      "The camera wearer gestures toward the small cardboard box on the table.",
+      "A person seated across reaches over and places a black component into the box on the table."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating on an assembly or packaging task involving electronic components.",
+      "The camera wearer acts in an instructional or evaluative capacity, directing where finished items should be placed.",
+      "The young man in the orange t-shirt is being lightheartedly teased about missing an opportunity or completing a step late."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Several individuals sit around a dining table covered with a pink checkered tablecloth.",
+      "A young man in an orange t-shirt sits on the right holding and inspecting a black rectangular device.",
+      "A cardboard box and various small items rest in the middle of the table.",
+      "People at the table engage in conversation while assembling or handling equipment.",
+      "The camera wearer gestures toward the small cardboard box on the table.",
+      "A person seated across reaches over and places a black component into the box on the table."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating on an assembly or packaging task involving electronic components.",
+      "The camera wearer acts in an instructional or evaluative capacity, directing where finished items should be placed.",
+      "The young man in the orange t-shirt is being lightheartedly teased about missing an opportunity or completing a step late."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_28_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 309,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 拧完应该就做好了。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 310,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 应该是吧。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 311,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: 你仁你也 | MAI: 你可以把钱放在里面，我需要装的话让自己装。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 312,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Several individuals sit around a dining table covered with a pink checkered tablecloth."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 313,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young man in an orange t-shirt sits on the right holding and inspecting a black rectangular device."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 314,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A cardboard box and various small items rest in the middle of the table."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 315,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "People at the table engage in conversation while assembling or handling equipment."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 316,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer gestures toward the small cardboard box on the table."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 317,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person seated across reaches over and places a black component into the box on the table."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 318,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is collaborating on an assembly or packaging task involving electronic components."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 319,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera wearer acts in an instructional or evaluative capacity, directing where finished items should be placed."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 320,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The young man in the orange t-shirt is being lightheartedly teased about missing an opportunity or completing a step late."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_28_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_28_graph.pkl"
+  },
+  "memory_pickle_bytes": 7389671,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 45964.931493297,
+    "prepared_perf": 45973.611825393,
+    "ordered_start_perf": 45997.108331746,
+    "consumer_wait_ms": 0.025528002879582345,
+    "ready_to_ordered_ms": 23496.50635299622,
+    "preparation_work_ms": 8679.350199003238,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 79319.42329899903
+}

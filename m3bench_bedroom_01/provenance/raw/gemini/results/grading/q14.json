@@ -1,0 +1,56 @@
+{
+  "question_id": "Q14",
+  "candidate_mapping": {
+    "0": "B",
+    "1": "A",
+    "2": "D",
+    "3": "C"
+  },
+  "grades": {
+    "0": {
+      "correct": true,
+      "reason": "Matches the reference occupation."
+    },
+    "1": {
+      "correct": true,
+      "reason": "Matches the reference occupation."
+    },
+    "2": {
+      "correct": false,
+      "reason": "States that the information is insufficient instead of providing the occupation."
+    },
+    "3": {
+      "correct": false,
+      "reason": "States that the information is insufficient instead of providing the occupation."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q14",
+    "method": null,
+    "call_id": "91179cf2-b9c8-4aec-8dd0-914916ced899",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437164.1493628,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 169,
+    "output_tokens": 216,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 2308.4309639962157
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": true,\n    \"reason\": \"Matches the reference occupation.\"\n  },\n  \"1\": {\n    \"correct\": true,\n    \"reason\": \"Matches the reference occupation.\"\n  },\n  \"2\": {\n    \"correct\": false,\n    \"reason\": \"States that the information is insufficient instead of providing the occupation.\"\n  },\n  \"3\": {\n    \"correct\": false,\n    \"reason\": \"States that the information is insufficient instead of providing the occupation.\"\n  }\n}\n```",
+    "total_tokens": 385,
+    "request_end": 1789437166.457854,
+    "latency_ms": 2308.490064999205,
+    "client_wall_clock_latency_ms": 2308.490064999205,
+    "api_request_wall_clock_latency_ms": 2308.490064999205
+  },
+  "included_in_qa_latency": false
+}

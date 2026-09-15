@@ -1,0 +1,631 @@
+{
+  "clip_id": 17,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0017.mp4",
+  "end_to_end_memory_generation_ms": 668493.5380950046,
+  "latency_ms": {
+    "clip_decode": 3668.949639002676,
+    "deepgram_asr": 3.087570999923628,
+    "mai_transcribe_asr": 2.408852997177746,
+    "asr_total": 3.682298003695905,
+    "audio_segmentation": 11.140725000586826,
+    "speech_embedding_campplus": 1703.453702000843,
+    "facial_detection_recognition_buffalo_l": 4006.239365997317,
+    "face_clustering": 10.392246003902983,
+    "vlm_memory_generation": 244792.0776980027,
+    "text_embedding": 580.0187549975817,
+    "graph_update_total": 140.39536300697364
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 17,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 15,
+      "input_chars": 1281,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789413910.299722,
+          "status": "success",
+          "total_tokens": 257,
+          "request_end": 1789413910.879414,
+          "latency_ms": 579.6942439992563
+        }
+      ],
+      "total_tokens": 257,
+      "latency_ms": 580.0187549975817
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 3.087570999923628,
+        "openrouter-mai-transcribe-2": 2.408852997177746
+      },
+      "asr_total_ms": 3.682298003695905,
+      "audio_segmentation_ms": 11.140725000586826,
+      "speech_embedding_ms": 1703.453702000843,
+      "graph_update_ms": 131.8210370009183,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 9,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1867.3091819946421
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4006.239365997317,
+      "face_clustering_ms": 10.392246003902983,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 224,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4146.565718998318
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_199>",
+        "<voice_200>",
+        "<voice_0>",
+        "<voice_201>",
+        "<voice_202>",
+        "<voice_146>",
+        "<voice_203>",
+        "<voice_204>",
+        "<voice_129>"
+      ],
+      "context_preparation_ms": 4162.1376179973595,
+      "vlm_ms": 244792.0776980027,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a rectangular table covered with a red and white checkered cloth.\",\n\t\t\"The room contains a projector screen, a whiteboard, and a red refrigerator visible in the background.\",\n\t\t\"Participants are gathered around the table, handling various electronic components and tools.\",\n\t\t\"A person in a pink shirt is prominently featured handling objects on the table.\",\n\t\t\"The camera moves around the table, providing different perspectives of the group's activity.\",\n\t\t\"Close-up shots show hands manipulating devices and items on the checkered table surface.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_199>: Initiates the conversation with a brief acknowledgment.\",\n\t\t\"<voice_200>: Questions the definition of the term, asking if it refers to an integrated circuit.\",\n\t\t\"<voice_0>: Reflects on previous struggles with magnetic issues compared to the current session.\",\n\t\t\"<voice_201>: Observes that the group is receiving the information well today.\",\n\t\t\"<voice_202>: Asks for clarification on the specific matter being discussed.\",\n\t\t\"<voice_146>: Notes that an accessory was included but provides no additional value.\",\n\t\t\"<voice_203>: Identifies that the wire cutter does not possess magnetic properties.\",\n\t\t\"<voice_204>: Confirms the attribute of magnetism in the context of the problem.\",\n\t\t\"<voice_129>: Clarifies that the action involves placing the wire cutter.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are seated around a rectangular table covered with a red and white checkered cloth.",
+          "The room contains a projector screen, a whiteboard, and a red refrigerator visible in the background.",
+          "Participants are gathered around the table, handling various electronic components and tools.",
+          "A person in a pink shirt is prominently featured handling objects on the table.",
+          "The camera moves around the table, providing different perspectives of the group's activity.",
+          "Close-up shots show hands manipulating devices and items on the checkered table surface."
+        ],
+        "high_level_conclusions": [
+          "<voice_199>: Initiates the conversation with a brief acknowledgment.",
+          "<voice_200>: Questions the definition of the term, asking if it refers to an integrated circuit.",
+          "<voice_0>: Reflects on previous struggles with magnetic issues compared to the current session.",
+          "<voice_201>: Observes that the group is receiving the information well today.",
+          "<voice_202>: Asks for clarification on the specific matter being discussed.",
+          "<voice_146>: Notes that an accessory was included but provides no additional value.",
+          "<voice_203>: Identifies that the wire cutter does not possess magnetic properties.",
+          "<voice_204>: Confirms the attribute of magnetism in the context of the problem.",
+          "<voice_129>: Clarifies that the action involves placing the wire cutter."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 17,
+          "call_id": "a6a57ac5-4885-4029-8aec-619fb0b03b55",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789413665.5060766,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a rectangular table covered with a red and white checkered cloth.\",\n\t\t\"The room contains a projector screen, a whiteboard, and a red refrigerator visible in the background.\",\n\t\t\"Participants are gathered around the table, handling various electronic components and tools.\",\n\t\t\"A person in a pink shirt is prominently featured handling objects on the table.\",\n\t\t\"The camera moves around the table, providing different perspectives of the group's activity.\",\n\t\t\"Close-up shots show hands manipulating devices and items on the checkered table surface.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_199>: Initiates the conversation with a brief acknowledgment.\",\n\t\t\"<voice_200>: Questions the definition of the term, asking if it refers to an integrated circuit.\",\n\t\t\"<voice_0>: Reflects on previous struggles with magnetic issues compared to the current session.\",\n\t\t\"<voice_201>: Observes that the group is receiving the information well today.\",\n\t\t\"<voice_202>: Asks for clarification on the specific matter being discussed.\",\n\t\t\"<voice_146>: Notes that an accessory was included but provides no additional value.\",\n\t\t\"<voice_203>: Identifies that the wire cutter does not possess magnetic properties.\",\n\t\t\"<voice_204>: Confirms the attribute of magnetism in the context of the problem.\",\n\t\t\"<voice_129>: Clarifies that the action involves placing the wire cutter.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be handheld or mounted on someone moving around a table.\n    *   **Scene:** A room with a checkered tablecloth table. Several people are sitting around it.\n    *   **People:**\n        *   One person in a pink/orange shirt (let's call them Person P). They seem to be handling objects on the table.\n        *   One person in black/dark clothes (Person B).\n        *   One person in white/light clothes (Person W).\n        *   One person with long dark hair (Person D).\n        *   One person with reddish/blonde hair (Person R).\n        *   There's also a camera wearer whose legs/hands might be visible occasionally (e.g., feet at the bottom).\n    *   **Action:** People are gathered around a table, seemingly working on electronics or assembling something. There are boxes, tools, and devices on the table. The camera moves around the table, showing different angles.\n    *   **Environment:** Looks like a workshop or a casual meeting space. There's a projector screen, a whiteboard, and some lighting equipment.\n*   **Voice Features:**\n    *   `<voice_199>`: \"Mai: 嗯，那个。\" (Mm, that.) - Time: 00:00-00:03\n    *   `<voice_200>`: \"Mai: 应该是什么意思？集成电路还是什么？\" (What should it mean? Integrated circuit or something?) - Time: 00:03-00:06\n    *   `<voice_0>`: \"Mai: 上一回我们一直在扛磁吸的问题，但是好像今天大家都没有什么。\" (Last time we were always struggling with magnetic issues, but it seems everyone today doesn't have much.) - Time: 00:11-00:16\n    *   `<voice_201>`: \"Mai: 今天大家好像接受良好。\" (Everyone seems to accept well today.) - Time: 00:16-00:19\n    *   `<voice_202>`: \"Mai: 什么事？\" (What matter?) - Time: 00:19-00:21\n    *   `<voice_146>`: \"Mai: 毕-毕竟附赠了这个，不可能给你什么。\" (Bi-Bi since it came with this, impossible to give you anything.) - Time: 00:20-00:24\n    *   `<voice_203>`: \"Mai: 就是这个扎丝刀它没有磁吸。\" (It's just this wire cutter, it doesn't have magnetic.) - Time: 00:23-00:26\n    *   `<voice_204>`: \"Mai: 磁吸。\" (Magnetic.) - Time: 00:25-00:27\n    *   `<voice_129>`: \"Mai: 对，所以就是在放扎丝的时候。\" (Yes, so it is when putting the wire cutter.) - Time: 00:26-00:30\n\n**2. Construct Video Description:**\n*   I need to describe the visual events atomically.\n*   Frame 0.00s - 1.50s: Group of people sitting around a table covered with a red and white checkered cloth. They appear to be engaged in a discussion or activity involving items on the table.\n*   Frame 2.00s - 5.00s: The camera pans slightly, revealing more of the room including a red refrigerator and a doorway. A person in a pink shirt is seated prominently.\n*   Frame 5.50s - 10.00s: The camera continues to move around the table. The person in the pink shirt is seen handling objects. Other participants are focused on their own tasks or listening.\n*   Frame 10.50s - 15.00s: The view shifts closer to the table. Various electronic components, boxes, and tools are visible. The person in the pink shirt is manipulating a device.\n*   Frame 15.50s - 20.00s: The camera focuses on the group interaction. Hands are moving over the table surface.\n*   Frame 20.50s - 25.00s: The camera angle changes again, showing the person in the pink shirt more clearly interacting with items.\n*   Frame 25.50s - 29.50s: The group remains seated around the table, continuing their work/discussion. The camera captures close-ups of hands and objects on the table.\n\n**3. Construct High-Level Conclusions:**\n*   Based on the voice features, there is a speaker named \"Mai\". Since the prompt asks to preserve speaker identity using exact IDs, I need to link the voice ID to the speaker name if possible, or just use the ID. The ASR says \"MAI:\". So the speaker is Mai.\n*   Wait, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" AND \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   However, looking at the `high_level_conclusions` section of the output format example: `\"Equivalence: <face_x>, <voice_y>\"`. This implies I need to resolve identities if possible. But the prompt instructions say: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person... If no face IDs are supplied, do not invent any.\"\n*   In the provided input, there are NO face features listed in the text block (\"Face features:Voice features:...\"). It just jumps straight to voice features.\n*   Therefore, I cannot create an \"Equivalence\" statement because I don't have face IDs to match against. I can only state the conclusions based on the audio content.\n*   The voice features contain multiple utterances from `<voice_0>`, `<voice_129>`, `<voice_146>`, `<voice_199>`, `<voice_200>`, `<voice_201>`, `<voice_202>`, `<voice_203>`, `<voice_204>`. All seem to be attributed to \"MAI\" in the ASR. This suggests Mai is the primary speaker or the one being addressed. Actually, usually \"MAI:\" indicates the speaker tag. Let's assume these are all from the same person or the system tagged them similarly. Given the context \"Mai: ...\", it's likely one person speaking.\n*   Wait, looking closely at the timestamps:\n    *   00:00-00:03: voice_199\n    *   00:03-00:06: voice_200\n    *   00:11-00:16: voice_0\n    *   00:16-00:19: voice_201\n    *   00:19-00:21: voice_202\n    *   00:20-00:24: voice_146\n    *   00:23-00:26: voice_203\n    *   00:25-00:27: voice_204\n    *   00:26-00:30: voice_129\n*   The instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   And: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n*   Wait, the instruction about \"episodic memory\" seems specific to a previous turn or a specific task type (like memory retrieval). Here I am asked to generate `video_description` and `high_level_conclusions`.\n*   Re-reading the prompt instructions carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n*   BUT the system prompt says: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\n*   This creates a conflict. The user prompt defines the output schema (`video_description`, `high_level_conclusions`). The system prompt defines how to handle voice features (include episodic memory).\n*   Usually, the system prompt overrides regarding content generation rules. However, the output schema is fixed. Where do I put the \"episodic memory\"?\n*   Looking at the `high_level_conclusions` field in the requested JSON: \"each string is one high-level inference or identity resolution\".\n*   Maybe the \"episodic memory\" requirement applies to the `video_description` or `high_level_conclusions`?\n*   Let's look at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   If I put this in `high_level_conclusions`, it fits the \"reasoning-based conclusions\" slot better than `video_description` which is \"atomic event description\".\n*   However, `high_level_conclusions` usually implies inference. Quoting a transcript is factual summary.\n*   Let's check the constraint: \"Do not substitute a plausible scene description for what the speaker actually said.\"\n*   Okay, I will incorporate the voice summaries into the `high_level_conclusions` array as they represent the semantic content/conclusion of the conversation. Or perhaps I should treat the voice summaries as part of the description of the event? No, `video_description` is visual.\n*   Actually, looking at the system prompt again: \"Preserve speaker identity when constructing memory...\". This sounds like a general instruction for the model's behavior regarding voice data.\n*   Let's try to fit the voice summaries into `high_level_conclusions` as they capture the \"semantic conclusion\" aspect mentioned in the system prompt (\"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\").\n*   Wait, the system prompt says \"include at least one episodic memory...\". It doesn't explicitly say where. But given the output schema, `high_level_conclusions` is the best place for textual summaries of speech if `video_description` is strictly visual.\n*   However, standard practice for these tasks often puts speech summaries in the description if it describes the action. But here `video_description` is \"atomic event description\".\n*   Let's look at the example output format provided in the prompt:\n    ```json\n    {\n        \"video_description\": [ \"...\", \"...\" ],\n        \"high_level_conclusions\": [ \"...\", \"Equivalence: ...\" ]\n    }\n    ```\n*   I will add the voice summaries to `high_level_conclusions` to ensure compliance with \"include at least one episodic memory... using the exact ID\". I'll phrase them as summaries of the conversation points.\n*   Also, I need to check if there are Face IDs. The input says \"Face features:Voice features:...\". It seems empty or missing. So no Equivalence statements.\n*   I need to make sure I use the exact IDs: `<voice_0>`, `<voice_129>`, etc.\n\n**Plan:**\n1.  **Video Description:** Describe the visual sequence of people sitting around a table, handling objects, camera movement.\n2.  **High-Level Conclusions:** Include summaries of the spoken content associated with the specific voice IDs, ensuring the ID is used as the speaker identifier within the sentence structure (or just quoting the ID). The instruction says \"using the exact ID as the speaker\". Example: \"Speaker <voice_0> states: '...'\". Or simply include the quote. Let's follow the instruction \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So, e.g., \"`<voice_0>`: Last time we were always struggling with magnetic issues...\"\n    *   Wait, the instruction says \"retain that speaker's exact voice ID\".\n    *   Let's draft the conclusions based on the voice content.\n    *   Conclusion 1: `<voice_0>` discusses previous struggles with magnetic issues.\n    *   Conclusion 2: `<voice_129>` confirms details about placing the wire cutter.\n    *   Conclusion 3: `<voice_199>` initiates the conversation.\n    *   I will combine these into coherent sentences referencing the IDs.\n\n**Refining Video Description:**\n*   Start with the group setting.\n*   Mention the table and items.\n*   Mention the camera movement.\n*   Mention the specific actions (handling devices).\n\n**Refining High Level Conclusions:**\n*   Need to ensure I cover the voice IDs provided.\n*   `<voice_0>`: Discusses past magnetic issues vs current lack thereof.\n*   `<voice_129>`: Confirms timing regarding wire placement.\n*   `<voice_199>`: Initial acknowledgment.\n*   `<voice_200>`: Questions meaning of integrated circuits.\n*   `<voice_201>`: Comments on reception.\n*   `<voice_202>`: Asks what happened.\n*   `<voice_146>`: Mentions a gift/accessory.\n*   `<voice_203>`: Identifies the wire cutter lacks magnetism.\n*   `<voice_204>`: Confirms magnetism.\n\nSince there are many voice IDs, I should probably summarize the main points rather than listing every single second-by-second transcript if it makes the list too long, but the instruction says \"For every supplied voice ID... include at least one episodic memory\". This implies I should cover all of them. I will group them logically or list them sequentially. Given the constraint \"Be concise and avoid duplicate events\", I will try to group related thoughts under the ID.\n\nActually, looking at the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This is a strong constraint. I must include entries for `<voice_0>`, `<voice_129>`, `<voice_146>`, `<voice_199>`, `<voice_200>`, `<voice_201>`, `<voice_202>`, `<voice_203>`, `<voice_204>`.\n\nLet's construct the JSON.\n\n**Video Description:**\n1.  A group of individuals is seated around a rectangular table covered with a red and white checkered cloth in a room equipped with a projector screen and whiteboard.\n2.  The camera pans across the room, revealing a red refrigerator and a doorway before focusing back on the table.\n3.  Participants are engaged in activities involving various electronic components and tools placed on the table.\n4.  A person wearing a pink shirt is actively handling objects while others observe or work on their own tasks.\n5.  The camera moves around the table, capturing close-up views of the items and the participants' hands.\n6.  Throughout the clip, the group appears to be discussing technical aspects of the items on the table.\n\n**High Level Conclusions:**\n1.  `<voice_199>` acknowledges a topic during the initial segment of the recording.\n2.  `<voice_200>` questions whether the subject refers to an integrated circuit or something else.\n3.  `<voice_0>` mentions that the group previously struggled with magnetic issues but notes a change in the day's progress.\n4.  `<voice_201>` observes that the group seems to be accepting the situation well.\n5.  `<voice_202>` inquires about the specific matter being discussed.\n6.  `<voice_146>` comments on an accessory included with the item, stating it offers nothing extra.\n7.  `<voice_203>` identifies that the wire cutter specifically lacks magnetic functionality.\n8.  `<voice_204>` confirms the presence of magnetism in relation to the issue.\n9.  `<voice_129>` clarifies that the relevant action occurs when placing the wire cutter.\n\nWait, I need to check if I can merge some. The instruction says \"For every supplied voice ID... include at least one episodic memory\". So I need to ensure all IDs are represented. I will write them out clearly.\n\nOne detail: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" I will use the IDs from the input text.\n\nFinal check on constraints:\n- \"Preserve speaker identity... using the exact ID as the speaker.\" -> I will prefix the sentences with the ID.\n- \"Do not assign it to the camera wearer... without supporting evidence.\" -> I won't assign voice to faces since none are provided.\n- \"Keep the existing video_description/high_level_conclusions JSON schema\".\n\nLet's assemble the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"A group of people are seated around a table covered with a red and white checkered cloth.\",\n    \"The room contains a projector screen, a whiteboard, and a red refrigerator visible in the background.\",\n    \"Participants are gathered around the table, handling various electronic components and tools.\",\n    \"A person in a pink shirt is prominently featured handling objects on the table.\",\n    \"The camera moves around the table, providing different perspectives of the group's activity.\",\n    \"Close-up shots show hands manipulating devices and items on the checkered table surface.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_199>: Initiates the conversation with a brief acknowledgment.\",\n    \"<voice_200>: Questions the definition of the term, asking if it refers to an integrated circuit.\",\n    \"<voice_0>: Reflects on previous struggles with magnetic issues compared to the current session.\",\n    \"<voice_201>: Observes that the group is receiving the information well today.\",\n    \"<voice_202>: Asks for clarification on the specific matter being discussed.\",\n    \"<voice_146>: Notes that an accessory was included but provides no additional value.\",\n    \"<voice_203>: Identifies that the wire cutter does not possess magnetic properties.\",\n    \"<voice_204>: Confirms the attribute of magnetism in the context of the problem.\",\n    \"<voice_129>: Clarifies that the action involves placing the wire cutter.\"\n  ]\n}\n```\nWait, I should check if I need to quote the transcript exactly or summarize. \"quotes or faithfully summarizes\". I will summarize to keep it concise but reference the ID.\nAlso, I need to make sure I don't miss any voice ID.\nInput IDs: `<voice_199>`, `<voice_200>`, `<voice_0>`, `<voice_201>`, `<voice_202>`, `<voice_146>`, `<voice_203>`, `<voice_204>`, `<voice_129>`.\nMy list covers all of them.\n\nOne more thing: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since there are no face features, I will not include any Equivalence lines.\n\nDouble check the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSo my `high_level_conclusions` effectively serve as these episodic memories.\n\nOne small adjustment: Ensure the JSON is valid. Escape quotes if necessary. The ASR text contains Chinese characters. I should probably include the Chinese text in the summary to be faithful, or just the English translation if the prompt implies English output. The prompt instructions are in English, but the ASR is Chinese. I will provide the summary in English as per the prompt language, but maybe include the original text if it helps fidelity. However, \"faithfully summarizes\" usually means English summary. I'll stick to English summary for consistency with the prompt language, but ensure the ID is prominent.\nActually, looking at the instruction \"Preserve speaker identity... using the exact ID as the speaker.\"\nOkay, I will proceed.\n\nOne detail: \"Do not substitute a plausible scene description for what the speaker actually said.\" This applies to `video_description`. My `video_description` is visual.\n\"For every supplied voice ID... include at least one episodic memory...\". This goes into `high_level_conclusions`.\n\nLet's refine the descriptions to be very clear.\n\nVideo Description:\n1. A group of people sit around a table with a red and white checkered tablecloth in a room with a projector screen and whiteboard.\n2. The camera pans to show a red refrigerator and a doorway near the entrance.\n3. Individuals are seated and handling various electronic devices and tools on the table.\n4. A person wearing a pink shirt is seen manipulating items while others watch or work.\n5. The camera moves around the table, offering close-up views of the participants and the objects on the table.\n6. The group appears engaged in a collaborative activity involving the items on the table.\n\nHigh Level Conclusions:\n1. `<voice_199>` begins the interaction with a short affirmative response.\n2. `<voice_200>` seeks clarification on whether the term refers to an integrated circuit.\n3. `<voice_0>` recalls previous difficulties with magnetic issues but notes improvement today.\n4. `<voice_201>` remarks that the group seems to be accepting the situation positively.\n5. `<voice_202>` asks what specific matter is being discussed.\n6. `<voice_146>` mentions an included accessory that adds no value.\n7. `<voice_203>` specifies that the wire cutter lacks magnetic capability.\n8. `<voice_204>` confirms the magnetic nature of the component.\n9. `<voice_129>` explains that the process involves placing the wire cutter.\n\nThis looks solid. I will ensure the JSON syntax is correct.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a rectangular table covered with a red and white checkered cloth.\",\n\t\t\"The room contains a projector screen, a whiteboard, and a red refrigerator visible in the background.\",\n\t\t\"Participants are gathered around the table, handling various electronic components and tools.\",\n\t\t\"A person in a pink shirt is prominently featured handling objects on the table.\",\n\t\t\"The camera moves around the table, providing different perspectives of the group's activity.\",\n\t\t\"Close-up shots show hands manipulating devices and items on the checkered table surface.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_199>: Initiates the conversation with a brief acknowledgment.\",\n\t\t\"<voice_200>: Questions the definition of the term, asking if it refers to an integrated circuit.\",\n\t\t\"<voice_0>: Reflects on previous struggles with magnetic issues compared to the current session.\",\n\t\t\"<voice_201>: Observes that the group is receiving the information well today.\",\n\t\t\"<voice_202>: Asks for clarification on the specific matter being discussed.\",\n\t\t\"<voice_146>: Notes that an accessory was included but provides no additional value.\",\n\t\t\"<voice_203>: Identifies that the wire cutter does not possess magnetic properties.\",\n\t\t\"<voice_204>: Confirms the attribute of magnetism in the context of the problem.\",\n\t\t\"<voice_129>: Clarifies that the action involves placing the wire cutter.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10860,
+          "output_tokens": 5336,
+          "total_tokens": 16196,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0021839950932189822,
+            "media_preparation_ms": 52.5062990054721,
+            "processor_tokenization_ms": 767.7446200032136,
+            "device_transfer_ms": 46.27275800157804,
+            "cuda_generation_ms": 243889.55136799632,
+            "decoding_ms": 4.787159996340051
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 244761.1694629959,
+          "request_end": 1789413910.2981567,
+          "latency_ms": 244792.0776980027,
+          "client_wall_clock_latency_ms": 244792.0776980027
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 9
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.07962900417624041,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 8.494697001879103,
+      "nodes_added": 9,
+      "directed_edges_added": 18,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 9,
+    "detected_faces": 224,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 9,
+    "nodes_after_clip": 220,
+    "edges_after_clip": 83,
+    "nodes_added_by_clip": 21,
+    "edges_added_by_clip": 9
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a rectangular table covered with a red and white checkered cloth.",
+      "The room contains a projector screen, a whiteboard, and a red refrigerator visible in the background.",
+      "Participants are gathered around the table, handling various electronic components and tools.",
+      "A person in a pink shirt is prominently featured handling objects on the table.",
+      "The camera moves around the table, providing different perspectives of the group's activity.",
+      "Close-up shots show hands manipulating devices and items on the checkered table surface."
+    ],
+    "high_level_conclusions": [
+      "<voice_199>: Initiates the conversation with a brief acknowledgment.",
+      "<voice_200>: Questions the definition of the term, asking if it refers to an integrated circuit.",
+      "<voice_0>: Reflects on previous struggles with magnetic issues compared to the current session.",
+      "<voice_201>: Observes that the group is receiving the information well today.",
+      "<voice_202>: Asks for clarification on the specific matter being discussed.",
+      "<voice_146>: Notes that an accessory was included but provides no additional value.",
+      "<voice_203>: Identifies that the wire cutter does not possess magnetic properties.",
+      "<voice_204>: Confirms the attribute of magnetism in the context of the problem.",
+      "<voice_129>: Clarifies that the action involves placing the wire cutter."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are seated around a rectangular table covered with a red and white checkered cloth.",
+      "The room contains a projector screen, a whiteboard, and a red refrigerator visible in the background.",
+      "Participants are gathered around the table, handling various electronic components and tools.",
+      "A person in a pink shirt is prominently featured handling objects on the table.",
+      "The camera moves around the table, providing different perspectives of the group's activity.",
+      "Close-up shots show hands manipulating devices and items on the checkered table surface."
+    ],
+    "high_level_conclusions": [
+      "<voice_199>: Initiates the conversation with a brief acknowledgment.",
+      "<voice_200>: Questions the definition of the term, asking if it refers to an integrated circuit.",
+      "<voice_0>: Reflects on previous struggles with magnetic issues compared to the current session.",
+      "<voice_201>: Observes that the group is receiving the information well today.",
+      "<voice_202>: Asks for clarification on the specific matter being discussed.",
+      "<voice_146>: Notes that an accessory was included but provides no additional value.",
+      "<voice_203>: Identifies that the wire cutter does not possess magnetic properties.",
+      "<voice_204>: Confirms the attribute of magnetism in the context of the problem.",
+      "<voice_129>: Clarifies that the action involves placing the wire cutter."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_17_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 21,
+    "edges_added": 9,
+    "nodes": [
+      {
+        "id": 199,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 呃，那个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 200,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 应该是啥意思？集成电路还是什么？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 201,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 今天大家好像接受良好。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 202,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 什么事情？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 203,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 就是-就是这个螺丝刀它没有磁吸。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 204,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 磁吸。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 205,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are seated around a rectangular table covered with a red and white checkered cloth."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 206,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The room contains a projector screen, a whiteboard, and a red refrigerator visible in the background."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 207,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Participants are gathered around the table, handling various electronic components and tools."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 208,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person in a pink shirt is prominently featured handling objects on the table."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 209,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera moves around the table, providing different perspectives of the group's activity."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 210,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Close-up shots show hands manipulating devices and items on the checkered table surface."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 211,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_199>: Initiates the conversation with a brief acknowledgment."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 212,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_200>: Questions the definition of the term, asking if it refers to an integrated circuit."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 213,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0>: Reflects on previous struggles with magnetic issues compared to the current session."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 214,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_201>: Observes that the group is receiving the information well today."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 215,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_202>: Asks for clarification on the specific matter being discussed."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 216,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_146>: Notes that an accessory was included but provides no additional value."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 217,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_203>: Identifies that the wire cutter does not possess magnetic properties."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 218,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_204>: Confirms the attribute of magnetism in the context of the problem."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 219,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_129>: Clarifies that the action involves placing the wire cutter."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 213,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 129,
+        "target": 219,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 146,
+        "target": 216,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 199,
+        "target": 211,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 200,
+        "target": 212,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 201,
+        "target": 214,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 202,
+        "target": 215,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 203,
+        "target": 217,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 204,
+        "target": 218,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_17_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_17_graph.pkl"
+  },
+  "memory_pickle_bytes": 5351034,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 54429.250888528,
+    "prepared_perf": 54435.09614486,
+    "ordered_start_perf": 54841.821375243,
+    "consumer_wait_ms": 0.009348004823550582,
+    "ready_to_ordered_ms": 406725.2303830028,
+    "preparation_work_ms": 5839.94808299758,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 255559.6018119977
+}

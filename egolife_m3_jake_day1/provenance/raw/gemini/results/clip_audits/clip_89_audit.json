@@ -1,0 +1,348 @@
+{
+  "clip_id": 89,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0089.mp4",
+  "end_to_end_memory_generation_ms": 284475.9343650003,
+  "latency_ms": {
+    "clip_decode": 4788.178191003681,
+    "deepgram_asr": 999.5995959980064,
+    "mai_transcribe_asr": 1060.227722999116,
+    "asr_total": 1061.8294699961552,
+    "audio_segmentation": 7.375764005701058,
+    "speech_embedding_campplus": 1002.0968270036974,
+    "facial_detection_recognition_buffalo_l": 3605.1131089989212,
+    "face_clustering": 8.139081997796893,
+    "vlm_memory_generation": 64380.31666499592,
+    "text_embedding": 509.0554440030246,
+    "graph_update_total": 425.5814029893372
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 89,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 626,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789409066.2171159,
+          "status": "success",
+          "total_tokens": 119,
+          "request_end": 1789409066.7259429,
+          "latency_ms": 508.82775600621244
+        }
+      ],
+      "total_tokens": 119,
+      "latency_ms": 509.0554440030246
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 999.5995959980064,
+        "openrouter-mai-transcribe-2": 1060.227722999116
+      },
+      "asr_total_ms": 1061.8294699961552,
+      "audio_segmentation_ms": 7.375764005701058,
+      "speech_embedding_ms": 1002.0968270036974,
+      "graph_update_ms": 425.52047799836146,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1449.8743639996974
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3605.1131089989212,
+      "face_clustering_ms": 8.139081997796893,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 326,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3792.1430459973635
+    },
+    "vlm": {
+      "context_preparation_ms": 3826.393271003326,
+      "vlm_ms": 64380.31666499592,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a table in a room discussing hospitality arrangements.\",\n    \"Flowers, a clapperboard, and drinks rest on the checkered table.\",\n    \"In the background, an individual handles greenery and floral arrangements near a whiteboard.\",\n    \"A woman in a black top sits at the near side of the table listening to the discussion.\",\n    \"Two participants sit across the table, contributing to ideas about serving drinks and coffee to guests.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is actively brainstorming hospitality and beverage plans for an event or shoot.\",\n    \"The combination of a clapperboard and floral materials suggests production planning or workshop preparation.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people sits around a table in a room discussing hospitality arrangements.",
+          "Flowers, a clapperboard, and drinks rest on the checkered table.",
+          "In the background, an individual handles greenery and floral arrangements near a whiteboard.",
+          "A woman in a black top sits at the near side of the table listening to the discussion.",
+          "Two participants sit across the table, contributing to ideas about serving drinks and coffee to guests."
+        ],
+        "high_level_conclusions": [
+          "The group is actively brainstorming hospitality and beverage plans for an event or shoot.",
+          "The combination of a clapperboard and floral materials suggests production planning or workshop preparation."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 89,
+          "call_id": "db18d536-cf2d-4da2-9cc0-a8742c877386",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789409001.83554,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67148,
+          "output_tokens": 767,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 64380.17764400138
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a table in a room discussing hospitality arrangements.\",\n    \"Flowers, a clapperboard, and drinks rest on the checkered table.\",\n    \"In the background, an individual handles greenery and floral arrangements near a whiteboard.\",\n    \"A woman in a black top sits at the near side of the table listening to the discussion.\",\n    \"Two participants sit across the table, contributing to ideas about serving drinks and coffee to guests.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is actively brainstorming hospitality and beverage plans for an event or shoot.\",\n    \"The combination of a clapperboard and floral materials suggests production planning or workshop preparation.\"\n  ]\n}\n```",
+          "total_tokens": 67915,
+          "request_end": 1789409066.215859,
+          "latency_ms": 64380.31666499592,
+          "client_wall_clock_latency_ms": 64380.31666499592,
+          "api_request_wall_clock_latency_ms": 64380.31666499592
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.04799999442184344,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.01292499655392021,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 5,
+    "detected_faces": 326,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1038,
+    "edges_after_clip": 208,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a table in a room discussing hospitality arrangements.",
+      "Flowers, a clapperboard, and drinks rest on the checkered table.",
+      "In the background, an individual handles greenery and floral arrangements near a whiteboard.",
+      "A woman in a black top sits at the near side of the table listening to the discussion.",
+      "Two participants sit across the table, contributing to ideas about serving drinks and coffee to guests."
+    ],
+    "high_level_conclusions": [
+      "The group is actively brainstorming hospitality and beverage plans for an event or shoot.",
+      "The combination of a clapperboard and floral materials suggests production planning or workshop preparation."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people sits around a table in a room discussing hospitality arrangements.",
+      "Flowers, a clapperboard, and drinks rest on the checkered table.",
+      "In the background, an individual handles greenery and floral arrangements near a whiteboard.",
+      "A woman in a black top sits at the near side of the table listening to the discussion.",
+      "Two participants sit across the table, contributing to ideas about serving drinks and coffee to guests."
+    ],
+    "high_level_conclusions": [
+      "The group is actively brainstorming hospitality and beverage plans for an event or shoot.",
+      "The combination of a clapperboard and floral materials suggests production planning or workshop preparation."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_89_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1029,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对，就是可以请大家喝。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1030,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 笑得这么"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1031,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people sits around a table in a room discussing hospitality arrangements."
+          ],
+          "timestamp": 89
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1032,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Flowers, a clapperboard, and drinks rest on the checkered table."
+          ],
+          "timestamp": 89
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1033,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "In the background, an individual handles greenery and floral arrangements near a whiteboard."
+          ],
+          "timestamp": 89
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1034,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a black top sits at the near side of the table listening to the discussion."
+          ],
+          "timestamp": 89
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1035,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two participants sit across the table, contributing to ideas about serving drinks and coffee to guests."
+          ],
+          "timestamp": 89
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1036,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is actively brainstorming hospitality and beverage plans for an event or shoot."
+          ],
+          "timestamp": 89
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1037,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The combination of a clapperboard and floral materials suggests production planning or workshop preparation."
+          ],
+          "timestamp": 89
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_89_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_89_graph.pkl"
+  },
+  "memory_pickle_bytes": 23863642,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 49969.214292441,
+    "prepared_perf": 49976.784254884,
+    "ordered_start_perf": 50177.865215941,
+    "consumer_wait_ms": 0.011764001101255417,
+    "ready_to_ordered_ms": 201080.9610569995,
+    "preparation_work_ms": 7564.6598280000035,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 73961.11845000269
+}

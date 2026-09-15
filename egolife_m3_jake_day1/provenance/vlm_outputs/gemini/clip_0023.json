@@ -1,0 +1,61 @@
+{
+  "clip_id": 23,
+  "source": {
+    "segment_id": 23,
+    "source": "DAY1_A1_JAKE_11203000.mp4",
+    "source_clock": "11203000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40830.0,
+    "absolute_end_seconds": 40860.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0023.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Jake points out the screws on both sides of a small black component to the woman sitting in black clothing.",
+      "The participants sit around a table covered with a pink checkered tablecloth, assembling and inspecting wearable devices and accessories.",
+      "Jake moves past the table and assists the person wearing an orange shirt with fitting a component into the device.",
+      "The person in the orange shirt holds the device while Jake demonstrates how to position it properly.",
+      "Jake steps back away from the table into the center of the room.",
+      "Jake claps his hands together to mark synchronization in front of the camera."
+    ],
+    "high_level_conclusions": [
+      "The participants are preparing and assembling smart glasses or body-worn recording gear for a study or data collection session.",
+      "Jake (<voice_0>) acts as an instructor or technical guide, actively assisting team members with hardware setup.",
+      "Jake performs a hand clap at the end of the clip as a multi-modal synchronization marker for the cameras and sensors."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"Jake points out the screws on both sides of a small black component to the woman sitting in black clothing.\",\n  \"The participants sit around a table covered with a pink checkered tablecloth, assembling and inspecting wearable devices and accessories.\",\n  \"Jake moves past the table and assists the person wearing an orange shirt with fitting a component into the device.\",\n  \"The person in the orange shirt holds the device while Jake demonstrates how to position it properly.\",\n  \"Jake steps back away from the table into the center of the room.\",\n  \"Jake claps his hands together to mark synchronization in front of the camera.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are preparing and assembling smart glasses or body-worn recording gear for a study or data collection session.\",\n  \"Jake (<voice_0>) acts as an instructor or technical guide, actively assisting team members with hardware setup.\",\n  \"Jake performs a hand clap at the end of the clip as a multi-modal synchronization marker for the cameras and sensors.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 23,
+      "call_id": "c68ebac9-94b3-41cf-b2e8-3878a4ac9d71",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404477.2496037,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67566,
+      "output_tokens": 1025,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"Jake points out the screws on both sides of a small black component to the woman sitting in black clothing.\",\n  \"The participants sit around a table covered with a pink checkered tablecloth, assembling and inspecting wearable devices and accessories.\",\n  \"Jake moves past the table and assists the person wearing an orange shirt with fitting a component into the device.\",\n  \"The person in the orange shirt holds the device while Jake demonstrates how to position it properly.\",\n  \"Jake steps back away from the table into the center of the room.\",\n  \"Jake claps his hands together to mark synchronization in front of the camera.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are preparing and assembling smart glasses or body-worn recording gear for a study or data collection session.\",\n  \"Jake (<voice_0>) acts as an instructor or technical guide, actively assisting team members with hardware setup.\",\n  \"Jake performs a hand clap at the end of the clip as a multi-modal synchronization marker for the cameras and sensors.\"\n ]\n}\n```",
+      "total_tokens": 68591,
+      "request_end": 1789404532.3750405,
+      "latency_ms": 55125.43586099491,
+      "client_wall_clock_latency_ms": 55125.43586099491,
+      "api_request_wall_clock_latency_ms": 55125.43586099491
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_23_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

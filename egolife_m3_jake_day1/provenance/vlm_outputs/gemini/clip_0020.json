@@ -1,0 +1,60 @@
+{
+  "clip_id": 20,
+  "source": {
+    "segment_id": 20,
+    "source": "DAY1_A1_JAKE_11190000.mp4",
+    "source_clock": "11190000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40740.0,
+    "absolute_end_seconds": 40770.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0020.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a checkered table covered with equipment boxes and electronic gear.",
+      "A person wearing an orange shirt examines and adjusts a black handheld device.",
+      "A person in black on the left handles and inspects a small electronic device.",
+      "The individuals converse with each other while handling the devices on the table.",
+      "The camera wearer sits at the end of the table observing the group."
+    ],
+    "high_level_conclusions": [
+      "The group is preparing and setting up electronic or filming equipment together.",
+      "The participants are engaged in a casual discussion about choosing energetic video or dance content.",
+      "The social atmosphere among the participants is informal and collaborative."
+    ]
+  },
+  "selected_final_text": "{\n  \"video_description\": [\n    \"A group of people sits around a checkered table covered with equipment boxes and electronic gear.\",\n    \"A person wearing an orange shirt examines and adjusts a black handheld device.\",\n    \"A person in black on the left handles and inspects a small electronic device.\",\n    \"The individuals converse with each other while handling the devices on the table.\",\n    \"The camera wearer sits at the end of the table observing the group.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is preparing and setting up electronic or filming equipment together.\",\n    \"The participants are engaged in a casual discussion about choosing energetic video or dance content.\",\n    \"The social atmosphere among the participants is informal and collaborative.\"\n  ]\n}",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 20,
+      "call_id": "ce8c71ad-b074-42a0-bb40-fa26a62ba0ce",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404293.3316636,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66954,
+      "output_tokens": 1297,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "{\n  \"video_description\": [\n    \"A group of people sits around a checkered table covered with equipment boxes and electronic gear.\",\n    \"A person wearing an orange shirt examines and adjusts a black handheld device.\",\n    \"A person in black on the left handles and inspects a small electronic device.\",\n    \"The individuals converse with each other while handling the devices on the table.\",\n    \"The camera wearer sits at the end of the table observing the group.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is preparing and setting up electronic or filming equipment together.\",\n    \"The participants are engaged in a casual discussion about choosing energetic video or dance content.\",\n    \"The social atmosphere among the participants is informal and collaborative.\"\n  ]\n}",
+      "total_tokens": 68251,
+      "request_end": 1789404318.124242,
+      "latency_ms": 24792.577152999,
+      "client_wall_clock_latency_ms": 24792.577152999,
+      "api_request_wall_clock_latency_ms": 24792.577152999
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_20_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

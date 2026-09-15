@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "The candidate fails to provide Emma's afternoon tea, incorrectly claiming the information is insufficient, and omits essential items such as ketchup and banana cake."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q11",
+    "method": "D",
+    "call_id": "b4469488-ac54-42d3-9016-26f84b2e672b",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439998.7266788,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 161,
+    "output_tokens": 136,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 3798.771385991131
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n \"0\": {\n  \"correct\": false,\n  \"reason\": \"The candidate fails to provide Emma's afternoon tea, incorrectly claiming the information is insufficient, and omits essential items such as ketchup and banana cake.\"\n }\n}\n```",
+    "total_tokens": 297,
+    "request_end": 1789440002.5255072,
+    "latency_ms": 3798.827069986146,
+    "client_wall_clock_latency_ms": 3798.827069986146,
+    "api_request_wall_clock_latency_ms": 3798.827069986146
+  },
+  "included_in_qa_latency": false
+}

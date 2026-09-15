@@ -1,0 +1,58 @@
+{
+  "clip_id": 7,
+  "source": {
+    "segment_id": 7,
+    "source": "DAY1_A1_JAKE_11123000.mp4",
+    "source_clock": "11123000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40350.0,
+    "absolute_end_seconds": 40380.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0007.mp4"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a checkered table unboxing electronic equipment.",
+      "The camera wearer takes packaging materials from the table and collects a box piece from a woman across the table.",
+      "The camera wearer walks over to cardboard disposal boxes on the floor and deposits packaging materials inside.",
+      "The camera wearer walks back toward the table.",
+      "The camera wearer picks up a small tripod from the floor.",
+      "The camera wearer speaks to the group (<voice_0>) while adjusting the tripod and gesturing toward the board."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer is the speaker (<voice_0>), serving as an organizer guiding the team through the equipment setup.",
+      "The group is systematically preparing equipment, likely for a recording session or project setup."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a checkered table unboxing electronic equipment.\",\n    \"The camera wearer takes packaging materials from the table and collects a box piece from a woman across the table.\",\n    \"The camera wearer walks over to cardboard disposal boxes on the floor and deposits packaging materials inside.\",\n    \"The camera wearer walks back toward the table.\",\n    \"The camera wearer picks up a small tripod from the floor.\",\n    \"The camera wearer speaks to the group (<voice_0>) while adjusting the tripod and gesturing toward the board.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The camera wearer is the speaker (<voice_0>), serving as an organizer guiding the team through the equipment setup.\",\n    \"The group is systematically preparing equipment, likely for a recording session or project setup.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 7,
+      "call_id": "b2e7ad34-8032-4df9-9ca5-aa7c449c4718",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789403175.5576522,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66659,
+      "output_tokens": 1022,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a checkered table unboxing electronic equipment.\",\n    \"The camera wearer takes packaging materials from the table and collects a box piece from a woman across the table.\",\n    \"The camera wearer walks over to cardboard disposal boxes on the floor and deposits packaging materials inside.\",\n    \"The camera wearer walks back toward the table.\",\n    \"The camera wearer picks up a small tripod from the floor.\",\n    \"The camera wearer speaks to the group (<voice_0>) while adjusting the tripod and gesturing toward the board.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The camera wearer is the speaker (<voice_0>), serving as an organizer guiding the team through the equipment setup.\",\n    \"The group is systematically preparing equipment, likely for a recording session or project setup.\"\n  ]\n}\n```",
+      "total_tokens": 67681,
+      "request_end": 1789403256.6823235,
+      "latency_ms": 81124.66841699643,
+      "client_wall_clock_latency_ms": 81124.66841699643,
+      "api_request_wall_clock_latency_ms": 81124.66841699643
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_7_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

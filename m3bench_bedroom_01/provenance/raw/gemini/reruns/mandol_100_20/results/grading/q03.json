@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": true,
+    "reason": "The candidate captures the essential details, conveying that she is strict/places high expectations and cares heavily about her grades/academic performance."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q03",
+    "method": "D",
+    "call_id": "91291685-fe95-4677-b016-d7f14f73500a",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439905.8344927,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 161,
+    "output_tokens": 174,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 67096.03672100639
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\"0\": {\"correct\": true, \"reason\": \"The candidate captures the essential details, conveying that she is strict/places high expectations and cares heavily about her grades/academic performance.\"}}\n```",
+    "total_tokens": 335,
+    "request_end": 1789439972.9306052,
+    "latency_ms": 67096.11119100009,
+    "client_wall_clock_latency_ms": 67096.11119100009,
+    "api_request_wall_clock_latency_ms": 67096.11119100009
+  },
+  "included_in_qa_latency": false
+}

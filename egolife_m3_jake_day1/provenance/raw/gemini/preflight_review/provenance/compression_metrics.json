@@ -1,0 +1,34 @@
+[
+  {
+    "question_id": "1",
+    "snapshot": "q01",
+    "nodes_before": 30,
+    "nodes_after": 23,
+    "node_type_counts_before": {
+      "episodic": 18,
+      "semantic": 9,
+      "voice": 3
+    },
+    "node_type_counts_after": {
+      "episodic": 14,
+      "semantic": 6,
+      "voice": 3
+    },
+    "memory_bytes_before": 764291,
+    "memory_bytes_after": 569633,
+    "compression_ratio_nodes": 0.7666666666666667,
+    "compression_ratio_bytes": 0.7453090511336651,
+    "compression_latency_ms": 51.51470900455024,
+    "gemini_calls": 0,
+    "gemini_latency_ms": 0.0,
+    "streammeco_summary": {
+      "first_total": 20,
+      "first_kept": 15,
+      "first_removed": 5,
+      "second_total": 7,
+      "second_kept": 5,
+      "second_removed": 2,
+      "total_removed": 7
+    }
+  }
+]

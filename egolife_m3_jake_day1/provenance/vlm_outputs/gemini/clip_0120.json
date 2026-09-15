@@ -1,0 +1,75 @@
+{
+  "clip_id": 120,
+  "source": {
+    "segment_id": 120,
+    "source": "DAY1_A1_JAKE_12060000.mp4",
+    "source_clock": "12060000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43560.0,
+    "absolute_end_seconds": 43590.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0120.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 52562.323350107,
+      "prepared_perf": 52570.208151329,
+      "ordered_start_perf": 52703.494170129,
+      "consumer_wait_ms": 0.007594004273414612,
+      "ready_to_ordered_ms": 133286.0187999977,
+      "preparation_work_ms": 7879.276870000467,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Jake walks across the living room toward a group gathered around a dining table.",
+      "Several people sit and stand around the table discussing an event plan written on a whiteboard.",
+      "Jake holds and inspects a white charger and cable beside the whiteboard.",
+      "A woman wearing a white shirt and light skirt picks up a small bucket and carries it toward the kitchen.",
+      "The woman walks past the kitchen counter and heads back into the main room.",
+      "Jake looks around the hallway and toward the bright kitchen window."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a production or event planning meeting to finalize schedules and activities.",
+      "Jake is managing electronic devices or power accessories while the meeting proceeds."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"Jake walks across the living room toward a group gathered around a dining table.\",\n  \"Several people sit and stand around the table discussing an event plan written on a whiteboard.\",\n  \"Jake holds and inspects a white charger and cable beside the whiteboard.\",\n  \"A woman wearing a white shirt and light skirt picks up a small bucket and carries it toward the kitchen.\",\n  \"The woman walks past the kitchen counter and heads back into the main room.\",\n  \"Jake looks around the hallway and toward the bright kitchen window.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is holding a production or event planning meeting to finalize schedules and activities.\",\n  \"Jake is managing electronic devices or power accessories while the meeting proceeds.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 120,
+      "call_id": "072e4d64-7882-46ea-a7e4-9060b726f450",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789411529.5011046,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67254,
+      "output_tokens": 1069,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 35166.92840800533
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"Jake walks across the living room toward a group gathered around a dining table.\",\n  \"Several people sit and stand around the table discussing an event plan written on a whiteboard.\",\n  \"Jake holds and inspects a white charger and cable beside the whiteboard.\",\n  \"A woman wearing a white shirt and light skirt picks up a small bucket and carries it toward the kitchen.\",\n  \"The woman walks past the kitchen counter and heads back into the main room.\",\n  \"Jake looks around the hallway and toward the bright kitchen window.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is holding a production or event planning meeting to finalize schedules and activities.\",\n  \"Jake is managing electronic devices or power accessories while the meeting proceeds.\"\n ]\n}\n```",
+      "total_tokens": 68323,
+      "request_end": 1789411564.6682093,
+      "latency_ms": 35167.09578400332,
+      "client_wall_clock_latency_ms": 35167.09578400332,
+      "api_request_wall_clock_latency_ms": 35167.09578400332
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_120_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

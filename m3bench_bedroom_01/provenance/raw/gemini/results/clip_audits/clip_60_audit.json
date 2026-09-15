@@ -1,0 +1,330 @@
+{
+  "clip_id": 60,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00280000.mp4",
+  "end_to_end_memory_generation_ms": 187509.62448200153,
+  "latency_ms": {
+    "clip_decode": 4057.1071629965445,
+    "deepgram_asr": 807.9462599998806,
+    "mai_transcribe_asr": 1250.6544619973283,
+    "asr_total": 1251.5054240066092,
+    "audio_segmentation": 6.563853996340185,
+    "speech_embedding_campplus": 478.13482698984444,
+    "facial_detection_recognition_buffalo_l": 3435.6312200106913,
+    "face_clustering": 6.858377004391514,
+    "vlm_memory_generation": 58819.607360012014,
+    "text_embedding": 509.75497100444045,
+    "graph_update_total": 45.71512099937536
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 60,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 616,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789435108.2646692,
+          "status": "success",
+          "total_tokens": 117,
+          "request_end": 1789435108.774185,
+          "latency_ms": 509.51626199821476
+        }
+      ],
+      "total_tokens": 117,
+      "latency_ms": 509.75497100444045
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 807.9462599998806,
+        "openrouter-mai-transcribe-2": 1250.6544619973283
+      },
+      "asr_total_ms": 1251.5054240066092,
+      "audio_segmentation_ms": 6.563853996340185,
+      "speech_embedding_ms": 478.13482698984444,
+      "graph_update_ms": 41.20717699697707,
+      "asr_segment_count": 2,
+      "speech_embedding_count": 2,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 539.9487980030244
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3435.6312200106913,
+      "face_clustering_ms": 6.858377004391514,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 297,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3603.4220830042614
+    },
+    "vlm": {
+      "context_preparation_ms": 5016.915116997552,
+      "vlm_ms": 58819.607360012014,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and mobile devices.\",\n    \"The woman on the left holds a tablet device while snacking and listening.\",\n    \"The woman on the right holds a smartphone and speaks continuously throughout the interaction.\",\n    \"The woman on the left rests her chin on her hand, focusing on the woman speaking.\",\n    \"The woman on the right gestures with her hands as she finishes speaking.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the right (<voice_322>) is sharing her educational background and professional programming goals.\",\n    \"The two individuals share an informal, comfortable relationship in a casual domestic setting.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit opposite each other at a dining table set with food, drinks, and mobile devices.",
+          "The woman on the left holds a tablet device while snacking and listening.",
+          "The woman on the right holds a smartphone and speaks continuously throughout the interaction.",
+          "The woman on the left rests her chin on her hand, focusing on the woman speaking.",
+          "The woman on the right gestures with her hands as she finishes speaking."
+        ],
+        "high_level_conclusions": [
+          "The woman on the right (<voice_322>) is sharing her educational background and professional programming goals.",
+          "The two individuals share an informal, comfortable relationship in a casual domestic setting."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 60,
+          "call_id": "f8189296-d55c-49f3-a905-56d3ceb5e4d5",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789435049.444298,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65844,
+          "output_tokens": 926,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 58819.522830992355
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and mobile devices.\",\n    \"The woman on the left holds a tablet device while snacking and listening.\",\n    \"The woman on the right holds a smartphone and speaks continuously throughout the interaction.\",\n    \"The woman on the left rests her chin on her hand, focusing on the woman speaking.\",\n    \"The woman on the right gestures with her hands as she finishes speaking.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the right (<voice_322>) is sharing her educational background and professional programming goals.\",\n    \"The two individuals share an informal, comfortable relationship in a casual domestic setting.\"\n  ]\n}\n```",
+          "total_tokens": 66770,
+          "request_end": 1789435108.263908,
+          "latency_ms": 58819.607360012014,
+          "client_wall_clock_latency_ms": 58819.607360012014,
+          "api_request_wall_clock_latency_ms": 58819.607360012014
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.051776994951069355,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 4.45616700744722,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 2,
+    "speech_embeddings": 2,
+    "voice_identities": 1,
+    "detected_faces": 297,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 589,
+    "edges_after_clip": 187,
+    "nodes_added_by_clip": 7,
+    "edges_added_by_clip": 1
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and mobile devices.",
+      "The woman on the left holds a tablet device while snacking and listening.",
+      "The woman on the right holds a smartphone and speaks continuously throughout the interaction.",
+      "The woman on the left rests her chin on her hand, focusing on the woman speaking.",
+      "The woman on the right gestures with her hands as she finishes speaking."
+    ],
+    "high_level_conclusions": [
+      "The woman on the right (<voice_322>) is sharing her educational background and professional programming goals.",
+      "The two individuals share an informal, comfortable relationship in a casual domestic setting."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and mobile devices.",
+      "The woman on the left holds a tablet device while snacking and listening.",
+      "The woman on the right holds a smartphone and speaks continuously throughout the interaction.",
+      "The woman on the left rests her chin on her hand, focusing on the woman speaking.",
+      "The woman on the right gestures with her hands as she finishes speaking."
+    ],
+    "high_level_conclusions": [
+      "The woman on the right (<voice_322>) is sharing her educational background and professional programming goals.",
+      "The two individuals share an informal, comfortable relationship in a casual domestic setting."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_60_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 7,
+    "edges_added": 1,
+    "nodes": [
+      {
+        "id": 582,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit opposite each other at a dining table set with food, drinks, and mobile devices."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 583,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left holds a tablet device while snacking and listening."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 584,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right holds a smartphone and speaks continuously throughout the interaction."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 585,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left rests her chin on her hand, focusing on the woman speaking."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 586,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right gestures with her hands as she finishes speaking."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 587,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the right (<voice_322>) is sharing her educational background and professional programming goals."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 588,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two individuals share an informal, comfortable relationship in a casual domestic setting."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 322,
+        "target": 587,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_60_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_60_graph.pkl"
+  },
+  "memory_pickle_bytes": 15484958,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 76108.162805617,
+    "prepared_perf": 76113.62582076,
+    "ordered_start_perf": 76226.145940295,
+    "consumer_wait_ms": 0.00862700107973069,
+    "ready_to_ordered_ms": 112520.11953499459,
+    "preparation_work_ms": 5457.67306900234,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 68496.47289099812
+}

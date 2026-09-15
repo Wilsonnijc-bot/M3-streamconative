@@ -1,0 +1,56 @@
+{
+  "question_id": "Q08",
+  "candidate_mapping": {
+    "0": "B",
+    "1": "D",
+    "2": "A",
+    "3": "C"
+  },
+  "grades": {
+    "0": {
+      "correct": false,
+      "reason": "Incorrectly states that the information is insufficient instead of identifying the shorter coat rack."
+    },
+    "1": {
+      "correct": false,
+      "reason": "Incorrectly states that the information is insufficient instead of identifying the shorter coat rack."
+    },
+    "2": {
+      "correct": true,
+      "reason": "Correctly identifies the shorter coat rack."
+    },
+    "3": {
+      "correct": false,
+      "reason": "Incorrectly states that the information is insufficient instead of identifying the shorter coat rack."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q08",
+    "method": null,
+    "call_id": "41ab53c2-8f54-4b5a-a77d-53b4045997a9",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437142.112122,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 232,
+    "output_tokens": 238,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 2960.8044439955847
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"Incorrectly states that the information is insufficient instead of identifying the shorter coat rack.\"\n  },\n  \"1\": {\n    \"correct\": false,\n    \"reason\": \"Incorrectly states that the information is insufficient instead of identifying the shorter coat rack.\"\n  },\n  \"2\": {\n    \"correct\": true,\n    \"reason\": \"Correctly identifies the shorter coat rack.\"\n  },\n  \"3\": {\n    \"correct\": false,\n    \"reason\": \"Incorrectly states that the information is insufficient instead of identifying the shorter coat rack.\"\n  }\n}\n```",
+    "total_tokens": 470,
+    "request_end": 1789437145.072994,
+    "latency_ms": 2960.8709899912355,
+    "client_wall_clock_latency_ms": 2960.8709899912355,
+    "api_request_wall_clock_latency_ms": 2960.8709899912355
+  },
+  "included_in_qa_latency": false
+}

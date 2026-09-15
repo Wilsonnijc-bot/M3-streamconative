@@ -1,0 +1,354 @@
+{
+  "clip_id": 86,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0086.mp4",
+  "end_to_end_memory_generation_ms": 350925.10351500096,
+  "latency_ms": {
+    "clip_decode": 4277.119416001369,
+    "deepgram_asr": 822.8270330000669,
+    "mai_transcribe_asr": 1039.6547190030105,
+    "asr_total": 1040.6683859982877,
+    "audio_segmentation": 6.823058000009041,
+    "speech_embedding_campplus": 1320.274839999911,
+    "facial_detection_recognition_buffalo_l": 4161.489956997684,
+    "face_clustering": 8.608371004811488,
+    "vlm_memory_generation": 25147.94415600045,
+    "text_embedding": 418.90738099755254,
+    "graph_update_total": 485.6030590090086
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 86,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 829,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789408781.6984801,
+          "status": "success",
+          "total_tokens": 157,
+          "request_end": 1789408782.1170256,
+          "latency_ms": 418.5462310051662
+        }
+      ],
+      "total_tokens": 157,
+      "latency_ms": 418.90738099755254
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 822.8270330000669,
+        "openrouter-mai-transcribe-2": 1039.6547190030105
+      },
+      "asr_total_ms": 1040.6683859982877,
+      "audio_segmentation_ms": 6.823058000009041,
+      "speech_embedding_ms": 1320.274839999911,
+      "graph_update_ms": 485.4964580008527,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1826.772273001552
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4161.489956997684,
+      "face_clustering_ms": 8.608371004811488,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 349,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4358.616901001369
+    },
+    "vlm": {
+      "context_preparation_ms": 4055.5710539993015,
+      "vlm_ms": 25147.94415600045,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a dining table covered with a checkered tablecloth, engaged in a discussion.\",\n  \"Flowers, a clapperboard, drinks, and personal accessories rest on the table.\",\n  \"A woman stands near a whiteboard in the background, arranging cut flowers and greenery.\",\n  \"A person enters the room from an adjacent doorway in the background.\",\n  \"A woman seated on the left side of the table listens to the group discussion and puts on glasses.\",\n  \"Two women seated on the right side of the table listen attentively, with one touching her hair.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are planning or brainstorming an interactive event involving secondhand item exchanges, auctions, and storytelling connected to environmental concepts.\",\n  \"The woman standing near the whiteboard appears to be facilitating or leading a floral arrangement workshop or related demonstration.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people sits around a dining table covered with a checkered tablecloth, engaged in a discussion.",
+          "Flowers, a clapperboard, drinks, and personal accessories rest on the table.",
+          "A woman stands near a whiteboard in the background, arranging cut flowers and greenery.",
+          "A person enters the room from an adjacent doorway in the background.",
+          "A woman seated on the left side of the table listens to the group discussion and puts on glasses.",
+          "Two women seated on the right side of the table listen attentively, with one touching her hair."
+        ],
+        "high_level_conclusions": [
+          "The participants are planning or brainstorming an interactive event involving secondhand item exchanges, auctions, and storytelling connected to environmental concepts.",
+          "The woman standing near the whiteboard appears to be facilitating or leading a floral arrangement workshop or related demonstration."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 86,
+          "call_id": "cb6d8259-69e7-445c-9821-bd7c6e0fe269",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789408756.549372,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67185,
+          "output_tokens": 985,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 25147.81439100625
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a dining table covered with a checkered tablecloth, engaged in a discussion.\",\n  \"Flowers, a clapperboard, drinks, and personal accessories rest on the table.\",\n  \"A woman stands near a whiteboard in the background, arranging cut flowers and greenery.\",\n  \"A person enters the room from an adjacent doorway in the background.\",\n  \"A woman seated on the left side of the table listens to the group discussion and puts on glasses.\",\n  \"Two women seated on the right side of the table listen attentively, with one touching her hair.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are planning or brainstorming an interactive event involving secondhand item exchanges, auctions, and storytelling connected to environmental concepts.\",\n  \"The woman standing near the whiteboard appears to be facilitating or leading a floral arrangement workshop or related demonstration.\"\n ]\n}\n```",
+          "total_tokens": 68170,
+          "request_end": 1789408781.6973186,
+          "latency_ms": 25147.94415600045,
+          "client_wall_clock_latency_ms": 25147.94415600045,
+          "api_request_wall_clock_latency_ms": 25147.94415600045
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.08919800166040659,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.01740300649544224,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 5,
+    "detected_faces": 349,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1002,
+    "edges_after_clip": 208,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a dining table covered with a checkered tablecloth, engaged in a discussion.",
+      "Flowers, a clapperboard, drinks, and personal accessories rest on the table.",
+      "A woman stands near a whiteboard in the background, arranging cut flowers and greenery.",
+      "A person enters the room from an adjacent doorway in the background.",
+      "A woman seated on the left side of the table listens to the group discussion and puts on glasses.",
+      "Two women seated on the right side of the table listen attentively, with one touching her hair."
+    ],
+    "high_level_conclusions": [
+      "The participants are planning or brainstorming an interactive event involving secondhand item exchanges, auctions, and storytelling connected to environmental concepts.",
+      "The woman standing near the whiteboard appears to be facilitating or leading a floral arrangement workshop or related demonstration."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people sits around a dining table covered with a checkered tablecloth, engaged in a discussion.",
+      "Flowers, a clapperboard, drinks, and personal accessories rest on the table.",
+      "A woman stands near a whiteboard in the background, arranging cut flowers and greenery.",
+      "A person enters the room from an adjacent doorway in the background.",
+      "A woman seated on the left side of the table listens to the group discussion and puts on glasses.",
+      "Two women seated on the right side of the table listen attentively, with one touching her hair."
+    ],
+    "high_level_conclusions": [
+      "The participants are planning or brainstorming an interactive event involving secondhand item exchanges, auctions, and storytelling connected to environmental concepts.",
+      "The woman standing near the whiteboard appears to be facilitating or leading a floral arrangement workshop or related demonstration."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_86_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 993,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 购买。",
+            "MAI: 购买他们自己带来的闲置物品。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 994,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people sits around a dining table covered with a checkered tablecloth, engaged in a discussion."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 995,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Flowers, a clapperboard, drinks, and personal accessories rest on the table."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 996,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman stands near a whiteboard in the background, arranging cut flowers and greenery."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 997,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person enters the room from an adjacent doorway in the background."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 998,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman seated on the left side of the table listens to the group discussion and puts on glasses."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 999,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women seated on the right side of the table listen attentively, with one touching her hair."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1000,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are planning or brainstorming an interactive event involving secondhand item exchanges, auctions, and storytelling connected to environmental concepts."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1001,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman standing near the whiteboard appears to be facilitating or leading a floral arrangement workshop or related demonstration."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_86_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_86_graph.pkl"
+  },
+  "memory_pickle_bytes": 23135258,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 49618.120458026,
+    "prepared_perf": 49625.668950041,
+    "ordered_start_perf": 49931.340235373,
+    "consumer_wait_ms": 0.008005001291166991,
+    "ready_to_ordered_ms": 305671.28533199866,
+    "preparation_work_ms": 7543.1501459970605,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 35811.118418998376
+}

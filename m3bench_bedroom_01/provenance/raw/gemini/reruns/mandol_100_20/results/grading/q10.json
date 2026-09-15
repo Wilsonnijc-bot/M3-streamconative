@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "Includes an extraneous/unsupported item (bread slices) and incorrectly claims Lily is not mentioned/uncertain."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q10",
+    "method": "D",
+    "call_id": "ed54de05-1ca6-4279-9c35-917f473b89eb",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439995.2292607,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 217,
+    "output_tokens": 550,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 3496.6687349951826
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"Includes an extraneous/unsupported item (bread slices) and incorrectly claims Lily is not mentioned/uncertain.\"\n  }\n}\n```",
+    "total_tokens": 767,
+    "request_end": 1789439998.7259927,
+    "latency_ms": 3496.7303710000124,
+    "client_wall_clock_latency_ms": 3496.7303710000124,
+    "api_request_wall_clock_latency_ms": 3496.7303710000124
+  },
+  "included_in_qa_latency": false
+}

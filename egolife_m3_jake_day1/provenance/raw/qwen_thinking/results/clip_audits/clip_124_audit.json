@@ -1,0 +1,544 @@
+{
+  "clip_id": 124,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0124.mp4",
+  "end_to_end_memory_generation_ms": 536989.0899860038,
+  "latency_ms": {
+    "clip_decode": 5406.725150998682,
+    "deepgram_asr": 836.317355002393,
+    "mai_transcribe_asr": 1207.5970519945258,
+    "asr_total": 1208.9409009931842,
+    "audio_segmentation": 7.223448003060184,
+    "speech_embedding_campplus": 1360.6456840061583,
+    "facial_detection_recognition_buffalo_l": 3807.6701890095137,
+    "face_clustering": 4.916565012536012,
+    "vlm_memory_generation": 216643.6757479969,
+    "text_embedding": 585.50538700365,
+    "graph_update_total": 1031.3539130002027
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 124,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 976,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789441746.3229067,
+          "status": "success",
+          "total_tokens": 255,
+          "request_end": 1789441746.9082928,
+          "latency_ms": 585.3868039994268
+        }
+      ],
+      "total_tokens": 255,
+      "latency_ms": 585.50538700365
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 836.317355002393,
+        "openrouter-mai-transcribe-2": 1207.5970519945258
+      },
+      "asr_total_ms": 1208.9409009931842,
+      "audio_segmentation_ms": 7.223448003060184,
+      "speech_embedding_ms": 1360.6456840061583,
+      "graph_update_ms": 1031.2287490087328,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2415.5971280124504
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3807.6701890095137,
+      "face_clustering_ms": 4.916565012536012,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 195,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3919.0400789957494
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1687>",
+        "<voice_0>",
+        "<voice_678>",
+        "<voice_1688>",
+        "<voice_1689>",
+        "<voice_841>",
+        "<voice_364>"
+      ],
+      "context_preparation_ms": 4234.0921760041965,
+      "vlm_ms": 216643.6757479969,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"At 00:00, <voice_1687> remarks, 'Like this, we are just one one.'\",\n\t\t\"At 00:02, <voice_0> notes, 'We have four. Now haven't finished yet, install one by one.'\",\n\t\t\"At 00:07, <voice_678> queries about scheduling afternoon tea after 4:20.\",\n\t\t\"At 00:14, <voice_1688> confirms, 'Yes, everyone.'\",\n\t\t\"At 00:15, <voice_1689> specifies the time as 'Four twenty' and mentions eating.\",\n\t\t\"At 00:17, <voice_841> explains afternoon tea typically occurs between 3 and 5 PM.\",\n\t\t\"At 00:21, <voice_364> suggests some members could finish their tasks first.\",\n\t\t\"A woman in white enters the room at 05:00 and exits at 26:00.\",\n\t\t\"A man in a pink shirt becomes visible near the balcony at 17:50.\",\n\t\t\"The participants continue working on laptops and discussing the plan.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is coordinating an installation project involving four distinct items or units.\",\n\t\t\"They are discussing scheduling a break for afternoon tea during the work session.\",\n\t\t\"The woman in black appears to be leading the discussion regarding the installation progress and timing.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "At 00:00, <voice_1687> remarks, 'Like this, we are just one one.'",
+          "At 00:02, <voice_0> notes, 'We have four. Now haven't finished yet, install one by one.'",
+          "At 00:07, <voice_678> queries about scheduling afternoon tea after 4:20.",
+          "At 00:14, <voice_1688> confirms, 'Yes, everyone.'",
+          "At 00:15, <voice_1689> specifies the time as 'Four twenty' and mentions eating.",
+          "At 00:17, <voice_841> explains afternoon tea typically occurs between 3 and 5 PM.",
+          "At 00:21, <voice_364> suggests some members could finish their tasks first.",
+          "A woman in white enters the room at 05:00 and exits at 26:00.",
+          "A man in a pink shirt becomes visible near the balcony at 17:50.",
+          "The participants continue working on laptops and discussing the plan."
+        ],
+        "high_level_conclusions": [
+          "The group is coordinating an installation project involving four distinct items or units.",
+          "They are discussing scheduling a break for afternoon tea during the work session.",
+          "The woman in black appears to be leading the discussion regarding the installation progress and timing."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 124,
+          "call_id": "3a2d5ac5-cdd3-441b-ae5a-540fd5e9a1b2",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789441529.6781533,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"At 00:00, <voice_1687> remarks, 'Like this, we are just one one.'\",\n\t\t\"At 00:02, <voice_0> notes, 'We have four. Now haven't finished yet, install one by one.'\",\n\t\t\"At 00:07, <voice_678> queries about scheduling afternoon tea after 4:20.\",\n\t\t\"At 00:14, <voice_1688> confirms, 'Yes, everyone.'\",\n\t\t\"At 00:15, <voice_1689> specifies the time as 'Four twenty' and mentions eating.\",\n\t\t\"At 00:17, <voice_841> explains afternoon tea typically occurs between 3 and 5 PM.\",\n\t\t\"At 00:21, <voice_364> suggests some members could finish their tasks first.\",\n\t\t\"A woman in white enters the room at 05:00 and exits at 26:00.\",\n\t\t\"A man in a pink shirt becomes visible near the balcony at 17:50.\",\n\t\t\"The participants continue working on laptops and discussing the plan.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is coordinating an installation project involving four distinct items or units.\",\n\t\t\"They are discussing scheduling a break for afternoon tea during the work session.\",\n\t\t\"The woman in black appears to be leading the discussion regarding the installation progress and timing.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be held by someone sitting at a table (POV shot).\n    *   People present:\n        *   Person 1 (Left): Woman with dark hair, wearing black/dark clothes, sitting at the table. She interacts with a laptop and gestures.\n        *   Person 2 (Right): Woman with long pinkish/blonde hair, white t-shirt, sitting at the table.\n        *   Person 3 (Background Right): Woman with dark hair, sitting further back.\n        *   Person 4 (Standing Left): Woman in white/light clothing, enters around 5.00s, moves around, leaves around 26.00s.\n        *   Person 5 (Standing Background): Man in pink/orange shirt, appears later (around 17.50s), stands near the window/balcony area.\n        *   Camera Wearer: Hands are visible holding the device or resting on the table/laptop.\n    *   Setting: Room with a table covered in a checkered cloth, laptops, flowers, whiteboard, projector screen. Looks like a meeting or workshop space.\n    *   Actions:\n        *   0.00 - 5.00: Group discussion around the table. Laptop is open.\n        *   5.00 - 26.00: Woman in white walks in, talks, then leaves.\n        *   17.50 onwards: Man in pink shirt appears near the balcony/window.\n        *   Throughout: The woman in black is actively talking and gesturing towards the laptop/screen. The woman in white listens.\n*   **Voice Features:**\n    *   `<voice_1687>`: \"Like this, we are just one one.\" (00:00 - 00:03) -> Speaker MAI.\n    *   `<voice_0>`: \"We have four. Now haven't finished yet, install one by one.\" (00:02 - 00:07) -> Speaker MAI.\n    *   `<voice_678>`: \"That afternoon tea time shouldn't be after four twenty? Or maybe insert that place.\" (00:07 - 00:15) -> Speaker MAI.\n    *   `<voice_1688>`: \"Yes, everyone.\" (00:14 - 00:16) -> Speaker MAI.\n    *   `<voice_1689>`: \"Four twenty. And eat and drink dryly.\" (00:15 - 00:18) -> Speaker MAI.\n    *   `<voice_841>`: \"Because generally speaking afternoon tea is three to five o'clock this time.\" (00:17 - 00:21) -> Speaker MAI.\n    *   `<voice_364>`: \"Maybe some of us, or we can finish first, can we?\" ... \"Just those.\" (00:21 - 00:30) -> Speaker MAI.\n    *   Note: All voice features seem to be attributed to \"MAI\". I need to check if there are multiple speakers. The ASR text says \"MAI:\" at the beginning of almost every segment. This suggests MAI is the primary speaker, possibly addressing others. However, looking closely at the timestamps and content, it seems like a continuous monologue or turn-taking where MAI is the main voice captured. Wait, usually voice features distinguish speakers. Here, all snippets start with \"MAI:\". This implies MAI is the speaker for these specific voice IDs. I need to map these IDs to the visible people if possible, but the prompt says \"A voice ID does not establish which visible person is speaking... without supporting evidence.\" Since all transcripts say \"MAI:\", I will treat them as belonging to the speaker labeled MAI. In the context of the video, the woman in black seems to be the one leading the conversation about the schedule/installation. Let's assume `<voice_0>`, `<voice_1687>`, etc., correspond to the woman in black based on her active speaking role, though strictly I shouldn't infer visual identity without explicit face/voice mapping. However, the instruction says \"Use only IDs supplied in the input\". It also says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" So I must use the IDs.\n    *   Wait, the instruction says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   Actually, looking at the voice features provided in the prompt text block: `{\"<voice_1687>\": [...], \"<voice_0>\": [...]}`. These are the inputs. I need to create memories for these.\n    *   Wait, the prompt asks for \"Video Description\" and \"High-Level Conclusions\". It doesn't explicitly ask for a \"Memory\" section in the final JSON output, but the system instructions say \"Preserve speaker identity when constructing memory...\". However, the Output Format section defines the JSON structure as `video_description` and `high_level_conclusions`. The system instructions seem to be guiding how to handle the voice data *within* the task, likely implying that the `video_description` should incorporate the audio content or that the `high_level_conclusions` should reflect the dialogue.\n    *   Re-reading the system instructions carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". The system instructions about \"memory\" seem to be part of the general persona/instruction set for handling voice data, but the specific output format requested overrides the general \"memory\" construction unless implied within the descriptions.\n    *   Actually, looking at the previous turns or standard behavior for this type of prompt: Usually, the \"Video Description\" should describe the visual events, potentially mentioning what was heard if relevant to the action. The \"High-Level Conclusions\" should reason about the situation.\n    *   Crucially, the system instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This sounds like a requirement for the *content* of the response, but the *format* is fixed JSON. This might mean I need to embed this information into the `video_description` or `high_level_conclusions`. Given the constraint \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged\", I should probably integrate the spoken words into the description of the scene where they occur.\n    *   Wait, the instruction \"include at least one episodic memory\" usually refers to a specific field in a different schema (like a knowledge base). But here I am outputting `video_description` and `high_level_conclusions`. I will interpret \"episodic memory\" as a descriptive sentence within the `video_description` array that captures the auditory event.\n    *   Also, \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" This suggests I should mention the voice ID in the conclusions if I'm inferring who spoke.\n    *   Let's look at the voice content again. All say \"MAI:\". This implies MAI is the speaker. I don't see a face ID for MAI. I see faces blurred. I cannot link a voice ID to a face ID definitively without explicit equivalence. So I will not put \"Equivalence: ...\" unless I find strong evidence. The prompt says \"If a face and a voice feature refer to the same character, indicate it...\". Since I don't have face IDs for the voices (only voice IDs), I can't make equivalences.\n    *   Wait, the prompt provides \"Face features:\" but it's empty in the input text provided to me? No, the input text shows \"Face features:Voice features:...\". It looks like the Face features list is missing or empty in the provided text block. Ah, looking closely at the raw input: \"Face features:Voice features:{...}\". There is nothing between the colon and the voice features. This means no face features were supplied.\n    *   Instruction: \"If no face IDs are supplied, do not invent any.\" So I cannot claim Equivalence.\n    *   Instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   How to fit this into `video_description`? I will add sentences describing the audio events. E.g., \"Speaker <voice_0> states: 'We have four...'\".\n    *   Instruction: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This confirms the JSON structure.\n\n**Plan:**\n1.  **Video Description:** Break down the video chronologically. Include visual actions and integrate the voice transcripts associated with the timestamps.\n    *   Start with the group setting.\n    *   Mention the woman in black speaking (using voice IDs).\n    *   Mention the woman in white entering/leaving.\n    *   Mention the man appearing.\n    *   Ensure all voice IDs (`<voice_1687>`, `<voice_0>`, `<voice_678>`, `<voice_1688>`, `<voice_1689>`, `<voice_841>`, `<voice_364>`) are represented in the description.\n2.  **High-Level Conclusions:** Reason about the context. They are discussing installation/schedule (\"install one by one\", \"afternoon tea\"). It seems like a planning session.\n    *   Conclude that the group is coordinating tasks involving installation.\n    *   Conclude regarding the schedule discussion (afternoon tea time).\n    *   Since I cannot confirm face/voice equivalence, I won't add Equivalence lines. I will focus on the activity.\n\n**Drafting Content:**\n*   **Description:**\n    *   Scene starts with a group around a table.\n    *   At 00:00, `<voice_1687>` speaks about being \"just one one\".\n    *   At 00:02, `<voice_0>` mentions having \"four\" items and installing them one by one.\n    *   At 00:07, `<voice_678>` discusses afternoon tea time scheduling (4:20 PM?).\n    *   At 00:14, `<voice_1688>` confirms \"Yes, everyone\".\n    *   At 00:15, `<voice_1689>` specifies \"Four twenty\" and eating/drinking.\n    *   At 00:17, `<voice_841>` explains afternoon tea is typically 3-5 PM.\n    *   At 00:21, `<voice_364>` asks if they can finish some work first.\n    *   Visuals: Woman in black leads discussion. Woman in white sits. Woman in white enters later (05:00), walks around, leaves (26:00). Man in pink appears (17:50).\n*   **Conclusions:**\n    *   The group is planning an installation process involving four units/items.\n    *   They are negotiating a break time (afternoon tea) during the work session.\n    *   The environment is a workspace with technical equipment (laptops, whiteboard).\n\n**Refining Voice Integration:**\nThe instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSo I will write sentences like: \"At 00:00, <voice_1687> remarks, 'Like this, we are just one one.'\"\nThis satisfies the requirement while keeping the JSON structure valid.\n\n**Checking Constraints:**\n*   \"Do not replace the ID with 'a speaker'...\" -> Must use `<voice_X>`.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> Yes.\n*   \"Be concise and avoid duplicate events.\" -> Combine visual and audio where appropriate.\n\n**Final Polish:**\nEnsure the JSON is valid. Escape quotes if necessary.\nThe voice IDs are `<voice_1687>`, `<voice_0>`, `<voice_678>`, `<voice_1688>`, `<voice_1689>`, `<voice_841>`, `<voice_364>`.\nAll transcripts start with \"MAI:\". I will attribute the speech to the ID directly.\n\nLet's construct the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"At 00:00, <voice_1687> states, 'Like this, we are just one one.'\",\n    \"At 00:02, <voice_0> explains, 'We have four. Now haven't finished yet, install one by one.'\",\n    \"At 00:07, <voice_678> asks about the afternoon tea time, suggesting it shouldn't be after 4:20.\",\n    \"At 00:14, <voice_1688> responds affirmatively, saying 'Yes, everyone.'\",\n    \"At 00:15, <voice_1689> reiterates 'Four twenty' and mentions eating and drinking.\",\n    \"At 00:17, <voice_841> clarifies that afternoon tea is generally between 3 and 5 o'clock.\",\n    \"At 00:21, <voice_364> proposes that some people might finish their work first.\",\n    \"A woman in a white outfit enters the room around 05:00 and moves around before leaving at 26:00.\",\n    \"A man in a pink shirt appears near the balcony area starting at 17:50.\",\n    \"The group remains seated around a table with laptops and a whiteboard throughout the session.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is coordinating an installation project involving four distinct items or units.\",\n    \"They are discussing scheduling a break for afternoon tea during the work session.\",\n    \"The woman in black appears to be leading the discussion regarding the installation progress and timing.\"\n  ]\n}\n```\nWait, I need to check if I missed any voice IDs.\nInput: `<voice_1687>`, `<voice_0>`, `<voice_678>`, `<voice_1688>`, `<voice_1689>`, `<voice_841>`, `<voice_364>`.\nMy draft covers all of them.\nOne detail: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". My draft includes one per ID.\nAlso \"Preserve speaker identity when constructing memory...\". Done.\n\"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" I am not assigning voice IDs to specific faces because I don't have face IDs. I am just quoting the ID. This is safe.\n\"Keep the existing video_description/high_level_conclusions JSON schema...\". Done.\n\nOne small adjustment: The instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". I am doing exactly that.\nAlso \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" I don't have a known speaker (face ID), so I won't use IDs in conclusions unless I infer equivalence (which I can't). I'll stick to general conclusions about the group.\n\nWait, looking at the instruction \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID... include at least one episodic memory...\". This implies the output *is* the memory construction essentially, wrapped in the JSON schema.\nOkay, I will proceed with the drafted JSON.\n\nDouble Check Voice Transcripts:\n1687: \"MAI: 像这个，我们就是一个一个。\" -> \"Like this, we are just one one.\"\n0: \"MAI: 我们有四个。现在还没装完，一会装一下。\" -> \"We have four. Now haven't finished yet, install one by one.\"\n678: \"MAI: 那那下午茶时间要不要插到四点二十之后？要不就插那个地方。\" -> \"That afternoon tea time shouldn't be after 4:20? Or maybe insert that place.\"\n1688: \"MAI: 对，大家\" -> \"Yes, everyone.\"\n1689: \"MAI: 四点二十。连吃连干。\" -> \"Four twenty. Eat and drink dryly.\" (Or continuously).\n841: \"MAI: 因为一般来说下午茶都是三点到五点这个时间。\" -> \"Because generally speaking afternoon tea is three to five o'clock this time.\"\n364: \"MAI: 可能我们一部分人，还是我们先做好，我们可以先做好吗？\" ... \"就是那些。\" -> \"Maybe some of us... can we finish first... Just those.\"\n\nMy summaries are accurate enough.\n\nOne thing: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features are provided in the input text (it says \"Face features:Voice features:...\"), I cannot make equivalences. I will omit this line.\n\nFinal check on JSON validity. Quotes escaped properly. Arrays correct.\n\nOne detail: \"Video frame at 0.00s\" ... \"Video frame at 29.50s\". The description should cover the flow.\nI will combine the visual movement of the woman in white and the man into the description to keep it concise.\n\nRevised Description Plan:\n1. Intro: Group at table.\n2. Audio integration (0-21s).\n3. Visual changes (Woman in white enters/leaves, Man appears).\n4. Closing state.\n\nLet's refine the specific sentences for the JSON.\n\"At 00:00, <voice_1687> remarks, 'Like this, we are just one one.'\"\n\"At 00:02, <voice_0> notes, 'We have four. Now haven't finished yet, install one by one.'\"\n\"At 00:07, <voice_678> queries about scheduling afternoon tea after 4:20.\"\n\"At 00:14, <voice_1688> confirms, 'Yes, everyone.'\"\n\"At 00:15, <voice_1689> specifies the time as 'Four twenty' and mentions eating.\"\n\"At 00:17, <voice_841> explains afternoon tea typically occurs between 3 and 5 PM.\"\n\"At 00:21, <voice_364> suggests some members could finish their tasks first.\"\n\"A woman in white enters the room at 05:00 and exits at 26:00.\"\n\"A man in a pink shirt becomes visible near the balcony at 17:50.\"\n\"The participants continue working on laptops and discussing the plan.\"\n\nThis looks solid.\n\nOne constraint: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nAnd \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis confirms my approach.\n\nOne more check: \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I am quoting/summarizing the transcript, not substituting.\n\"Do not replace the ID with 'a speaker'...\" -> I am using `<voice_X>`.\n\nReady to generate JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"At 00:00, <voice_1687> remarks, 'Like this, we are just one one.'\",\n\t\t\"At 00:02, <voice_0> notes, 'We have four. Now haven't finished yet, install one by one.'\",\n\t\t\"At 00:07, <voice_678> queries about scheduling afternoon tea after 4:20.\",\n\t\t\"At 00:14, <voice_1688> confirms, 'Yes, everyone.'\",\n\t\t\"At 00:15, <voice_1689> specifies the time as 'Four twenty' and mentions eating.\",\n\t\t\"At 00:17, <voice_841> explains afternoon tea typically occurs between 3 and 5 PM.\",\n\t\t\"At 00:21, <voice_364> suggests some members could finish their tasks first.\",\n\t\t\"A woman in white enters the room at 05:00 and exits at 26:00.\",\n\t\t\"A man in a pink shirt becomes visible near the balcony at 17:50.\",\n\t\t\"The participants continue working on laptops and discussing the plan.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is coordinating an installation project involving four distinct items or units.\",\n\t\t\"They are discussing scheduling a break for afternoon tea during the work session.\",\n\t\t\"The woman in black appears to be leading the discussion regarding the installation progress and timing.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10923,
+          "output_tokens": 4814,
+          "total_tokens": 15737,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0020339939510449767,
+            "media_preparation_ms": 63.26992699177936,
+            "processor_tokenization_ms": 396.9221900042612,
+            "device_transfer_ms": 45.99043898633681,
+            "cuda_generation_ms": 216104.3275169941,
+            "decoding_ms": 4.0914520068326965
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 216614.7690420039,
+          "request_end": 1789441746.3218317,
+          "latency_ms": 216643.6757479969,
+          "client_wall_clock_latency_ms": 216643.6757479969
+        }
+      ],
+      "episodic_memory_count": 10,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 10,
+      "text_embedding_ms": null,
+      "text_embedding_count": 10,
+      "graph_update_ms": 0.10335400293115526,
+      "nodes_added": 10,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.021809988538734615,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 7,
+    "detected_faces": 195,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 10,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1703,
+    "edges_after_clip": 633,
+    "nodes_added_by_clip": 16,
+    "edges_added_by_clip": 7
+  },
+  "generated_memory": {
+    "video_description": [
+      "At 00:00, <voice_1687> remarks, 'Like this, we are just one one.'",
+      "At 00:02, <voice_0> notes, 'We have four. Now haven't finished yet, install one by one.'",
+      "At 00:07, <voice_678> queries about scheduling afternoon tea after 4:20.",
+      "At 00:14, <voice_1688> confirms, 'Yes, everyone.'",
+      "At 00:15, <voice_1689> specifies the time as 'Four twenty' and mentions eating.",
+      "At 00:17, <voice_841> explains afternoon tea typically occurs between 3 and 5 PM.",
+      "At 00:21, <voice_364> suggests some members could finish their tasks first.",
+      "A woman in white enters the room at 05:00 and exits at 26:00.",
+      "A man in a pink shirt becomes visible near the balcony at 17:50.",
+      "The participants continue working on laptops and discussing the plan."
+    ],
+    "high_level_conclusions": [
+      "The group is coordinating an installation project involving four distinct items or units.",
+      "They are discussing scheduling a break for afternoon tea during the work session.",
+      "The woman in black appears to be leading the discussion regarding the installation progress and timing."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "At 00:00, <voice_1687> remarks, 'Like this, we are just one one.'",
+      "At 00:02, <voice_0> notes, 'We have four. Now haven't finished yet, install one by one.'",
+      "At 00:07, <voice_678> queries about scheduling afternoon tea after 4:20.",
+      "At 00:14, <voice_1688> confirms, 'Yes, everyone.'",
+      "At 00:15, <voice_1689> specifies the time as 'Four twenty' and mentions eating.",
+      "At 00:17, <voice_841> explains afternoon tea typically occurs between 3 and 5 PM.",
+      "At 00:21, <voice_364> suggests some members could finish their tasks first.",
+      "A woman in white enters the room at 05:00 and exits at 26:00.",
+      "A man in a pink shirt becomes visible near the balcony at 17:50.",
+      "The participants continue working on laptops and discussing the plan."
+    ],
+    "high_level_conclusions": [
+      "The group is coordinating an installation project involving four distinct items or units.",
+      "They are discussing scheduling a break for afternoon tea during the work session.",
+      "The woman in black appears to be leading the discussion regarding the installation progress and timing."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_124_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 16,
+    "edges_added": 7,
+    "nodes": [
+      {
+        "id": 1687,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 像这个，我们是就一个一个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1688,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对，大家"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1689,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 四点二十之后。",
+            "MAI: 连吃连干。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1690,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:00, <voice_1687> remarks, 'Like this, we are just one one.'"
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1691,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:02, <voice_0> notes, 'We have four. Now haven't finished yet, install one by one.'"
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1692,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:07, <voice_678> queries about scheduling afternoon tea after 4:20."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1693,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:14, <voice_1688> confirms, 'Yes, everyone.'"
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1694,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:15, <voice_1689> specifies the time as 'Four twenty' and mentions eating."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1695,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:17, <voice_841> explains afternoon tea typically occurs between 3 and 5 PM."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1696,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:21, <voice_364> suggests some members could finish their tasks first."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1697,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in white enters the room at 05:00 and exits at 26:00."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1698,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A man in a pink shirt becomes visible near the balcony at 17:50."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1699,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The participants continue working on laptops and discussing the plan."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1700,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is coordinating an installation project involving four distinct items or units."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1701,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "They are discussing scheduling a break for afternoon tea during the work session."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1702,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman in black appears to be leading the discussion regarding the installation progress and timing."
+          ],
+          "timestamp": 124
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1691,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 364,
+        "target": 1696,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 678,
+        "target": 1692,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 841,
+        "target": 1695,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1687,
+        "target": 1690,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1688,
+        "target": 1693,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1689,
+        "target": 1694,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_124_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_124_graph.pkl"
+  },
+  "memory_pickle_bytes": 40648776,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 82396.933827631,
+    "prepared_perf": 82405.148520706,
+    "ordered_start_perf": 82702.794346918,
+    "consumer_wait_ms": 0.00850600190460682,
+    "ready_to_ordered_ms": 297645.8262119995,
+    "preparation_work_ms": 8208.505836009863,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 227800.63124799926
+}

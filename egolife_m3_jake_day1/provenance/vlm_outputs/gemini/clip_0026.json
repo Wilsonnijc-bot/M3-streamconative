@@ -1,0 +1,59 @@
+{
+  "clip_id": 26,
+  "source": {
+    "segment_id": 26,
+    "source": "DAY1_A1_JAKE_11213000.mp4",
+    "source_clock": "11213000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40890.0,
+    "absolute_end_seconds": 40920.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0026.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a checkered table assembling and organizing electronic devices and packaging boxes.",
+      "The camera wearer holds a blue and white external drive enclosure box while standing near the table.",
+      "The people at the table joke about operating like an assembly line with different technician tiers.",
+      "The camera wearer walks from the dining area into an adjoining bedroom where more equipment and packaging boxes are placed on the bed.",
+      "The camera wearer sets the box down on the bed and turns back toward the main room."
+    ],
+    "high_level_conclusions": [
+      "The group is systematically preparing, testing, or packing electronic equipment for a project in an assembly-line fashion.",
+      "The camera wearer serves as a runner transporting packaged items between the workstation table and the staging area on the bed."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a checkered table assembling and organizing electronic devices and packaging boxes.\",\n  \"The camera wearer holds a blue and white external drive enclosure box while standing near the table.\",\n  \"The people at the table joke about operating like an assembly line with different technician tiers.\",\n  \"The camera wearer walks from the dining area into an adjoining bedroom where more equipment and packaging boxes are placed on the bed.\",\n  \"The camera wearer sets the box down on the bed and turns back toward the main room.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is systematically preparing, testing, or packing electronic equipment for a project in an assembly-line fashion.\",\n  \"The camera wearer serves as a runner transporting packaged items between the workstation table and the staging area on the bed.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 26,
+      "call_id": "babadb95-f7b4-431d-91aa-7c85e9013e35",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404636.5544987,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66843,
+      "output_tokens": 748,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a checkered table assembling and organizing electronic devices and packaging boxes.\",\n  \"The camera wearer holds a blue and white external drive enclosure box while standing near the table.\",\n  \"The people at the table joke about operating like an assembly line with different technician tiers.\",\n  \"The camera wearer walks from the dining area into an adjoining bedroom where more equipment and packaging boxes are placed on the bed.\",\n  \"The camera wearer sets the box down on the bed and turns back toward the main room.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is systematically preparing, testing, or packing electronic equipment for a project in an assembly-line fashion.\",\n  \"The camera wearer serves as a runner transporting packaged items between the workstation table and the staging area on the bed.\"\n ]\n}\n```",
+      "total_tokens": 67591,
+      "request_end": 1789404683.3741534,
+      "latency_ms": 46819.656453997595,
+      "client_wall_clock_latency_ms": 46819.656453997595,
+      "api_request_wall_clock_latency_ms": 46819.656453997595
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_26_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

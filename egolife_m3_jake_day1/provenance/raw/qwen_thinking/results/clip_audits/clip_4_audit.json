@@ -1,0 +1,538 @@
+{
+  "clip_id": 4,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0004.mp4",
+  "end_to_end_memory_generation_ms": 334599.9244679988,
+  "latency_ms": {
+    "clip_decode": 7526.345458994911,
+    "deepgram_asr": 1062.3297130005085,
+    "mai_transcribe_asr": 1545.6555229975493,
+    "asr_total": 1550.9872900001938,
+    "audio_segmentation": 5.905594996875152,
+    "speech_embedding_campplus": 1494.819658997585,
+    "facial_detection_recognition_buffalo_l": 3850.2982669961057,
+    "face_clustering": 7.10687900573248,
+    "vlm_memory_generation": 166630.04258900037,
+    "text_embedding": 468.97601900127484,
+    "graph_update_total": 25.78244699543575
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 4,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 977,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789411224.993902,
+          "status": "success",
+          "total_tokens": 202,
+          "request_end": 1789411225.4625309,
+          "latency_ms": 468.63008799846284
+        }
+      ],
+      "total_tokens": 202,
+      "latency_ms": 468.97601900127484
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1062.3297130005085,
+        "openrouter-mai-transcribe-2": 1545.6555229975493
+      },
+      "asr_total_ms": 1550.9872900001938,
+      "audio_segmentation_ms": 5.905594996875152,
+      "speech_embedding_ms": 1494.819658997585,
+      "graph_update_ms": 24.11083899642108,
+      "asr_segment_count": 7,
+      "speech_embedding_count": 7,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1539.6358610014431
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3850.2982669961057,
+      "face_clustering_ms": 7.10687900573248,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 269,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4005.805353001051
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_31>",
+        "<voice_32>",
+        "<voice_0>",
+        "<voice_33>",
+        "<voice_34>"
+      ],
+      "context_preparation_ms": 4342.24743800587,
+      "vlm_ms": 166630.04258900037,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"Four individuals wearing VR headsets sit around a table with a checkered cloth and black carrying cases.\",\n\t\t\"Speaker <voice_31> speaks the name Sakiko.\",\n\t\t\"Speaker <voice_32> inquires about the number of people, stating Only four? and confirming Yes, only four.\",\n\t\t\"Speaker <voice_0> affirms the count and explains, Yes. Because you are the mentor.\",\n\t\t\"Speaker <voice_33> identifies themselves as a Tutor. Yes.\",\n\t\t\"Speaker <voice_34> notes that they have already installed the equipment.\",\n\t\t\"The camera operator interacts with the items on the table, handling a black case and a cable.\",\n\t\t\"The camera pans to show the surrounding room environment.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The scene depicts a group session involving VR technology, likely a training or instructional setting.\",\n\t\t\"Speaker <voice_0> establishes a hierarchical relationship by identifying the camera wearer as a mentor.\",\n\t\t\"Speaker <voice_33> corroborates the presence of a tutor in the group.\",\n\t\t\"The participants discuss logistical details such as participant count and equipment status.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Four individuals wearing VR headsets sit around a table with a checkered cloth and black carrying cases.",
+          "Speaker <voice_31> speaks the name Sakiko.",
+          "Speaker <voice_32> inquires about the number of people, stating Only four? and confirming Yes, only four.",
+          "Speaker <voice_0> affirms the count and explains, Yes. Because you are the mentor.",
+          "Speaker <voice_33> identifies themselves as a Tutor. Yes.",
+          "Speaker <voice_34> notes that they have already installed the equipment.",
+          "The camera operator interacts with the items on the table, handling a black case and a cable.",
+          "The camera pans to show the surrounding room environment."
+        ],
+        "high_level_conclusions": [
+          "The scene depicts a group session involving VR technology, likely a training or instructional setting.",
+          "Speaker <voice_0> establishes a hierarchical relationship by identifying the camera wearer as a mentor.",
+          "Speaker <voice_33> corroborates the presence of a tutor in the group.",
+          "The participants discuss logistical details such as participant count and equipment status."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 4,
+          "call_id": "590515b2-dd98-41f9-84b1-af53bb754481",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789411058.3625133,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"Four individuals wearing VR headsets sit around a table with a checkered cloth and black carrying cases.\",\n\t\t\"Speaker <voice_31> speaks the name Sakiko.\",\n\t\t\"Speaker <voice_32> inquires about the number of people, stating Only four? and confirming Yes, only four.\",\n\t\t\"Speaker <voice_0> affirms the count and explains, Yes. Because you are the mentor.\",\n\t\t\"Speaker <voice_33> identifies themselves as a Tutor. Yes.\",\n\t\t\"Speaker <voice_34> notes that they have already installed the equipment.\",\n\t\t\"The camera operator interacts with the items on the table, handling a black case and a cable.\",\n\t\t\"The camera pans to show the surrounding room environment.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The scene depicts a group session involving VR technology, likely a training or instructional setting.\",\n\t\t\"Speaker <voice_0> establishes a hierarchical relationship by identifying the camera wearer as a mentor.\",\n\t\t\"Speaker <voice_33> corroborates the presence of a tutor in the group.\",\n\t\t\"The participants discuss logistical details such as participant count and equipment status.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be held by someone standing near a table where four people are sitting. They appear to be wearing VR headsets initially. The camera moves around, showing different angles of the room and the people. Towards the end, the camera operator interacts with objects on the table (black cases).\n*   **Character Features:**\n    *   **Face Features:** None explicitly provided in the text prompt (only \"Face features:\" followed by empty or implied context, but looking closely at the prompt structure, there are no specific `<face_x>` IDs listed in the \"Face features:\" section like there might be in a real scenario, just \"Voice features:\". Wait, looking at the raw prompt again: \"Face features:Voice features:{\"...\". It seems face features are missing or empty in the provided text block. I need to check if I missed anything. Ah, the prompt says \"Each feature is either a face... or a voice...\". In the provided text under \"Face features:\", it's blank. Under \"Voice features:\", there are IDs `<voice_31>`, `<voice_32>`, `<voice_0>`, `<voice_33>`, `<voice_34>`.\n    *   **Voice Features:**\n        *   `<voice_31>`: \"MAI: 咲子。\" (Sakiko?) - Time 00:03-00:05.\n        *   `<voice_32>`: \"MAI: 只有四个吗？\" (Only four?), \"MAI: 对，只有四个。\" (Yes, only four.) - Time 00:05-00:08.\n        *   `<voice_0>`: \"MAI: 对。因为你你是 mentor。\" (Yes. Because you are the mentor.), \"MAI: 我先把这些脚带好吧。\" (Let me take these foot straps first.) - Time 00:09-00:14, 00:22-00:25.\n        *   `<voice_33>`: \"MAI: Tutor. 对。\" (Tutor. Yes.) - Time 00:14-00:16.\n        *   `<voice_34>`: \"MAI: 我已经装过这个东西了。\" (I have already installed this thing.) - Time 00:15-00:18.\n\n**2. Construct Video Description:**\n*   The video shows a group of people sitting around a table covered with a red-and-white checkered cloth.\n*   They seem to be preparing for or engaging in a VR activity, as some are wearing VR headsets.\n*   There are black carrying cases on the table.\n*   The camera perspective shifts, sometimes showing the camera operator's hands reaching for items.\n*   At the beginning, the group is seated.\n*   Around 12.50s, a hand reaches out towards the camera.\n*   Around 21.00s, the camera operator picks up a black case.\n*   Around 24.00s, the camera operator handles a cable or strap.\n*   The camera pans around the room, showing a window, a whiteboard, and other furniture.\n*   The lighting changes slightly as the camera moves.\n\n**3. Construct High-Level Conclusions:**\n*   Since there are no explicit face IDs provided in the input text (the \"Face features:\" section is empty), I cannot create equivalences like `Equivalence: <face_x>, <voice_y>`.\n*   However, the instructions say: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features were supplied, I cannot make this claim.\n*   I need to check if I can infer identities. The voice features mention \"mentor\" and \"tutor\".\n*   `<voice_0>` mentions \"Because you are the mentor.\" This implies the speaker (`<voice_0>`) is addressing someone who is the mentor.\n*   `<voice_33>` says \"Tutor. Yes.\"\n*   Without face IDs, I cannot link them visually. I will stick to describing the actions and the audio content without making false visual claims.\n*   Wait, the instruction says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" and \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n*   So, since no face IDs are supplied, I will not include any `Equivalence:` lines.\n*   I will summarize the conversation in the descriptions or conclusions based on the ASR provided.\n\n**Refining the Plan:**\n*   **Video Description:** Break down the video into atomic events.\n    *   Group sitting at table with VR gear.\n    *   Camera operator interacting with the group.\n    *   Specific actions like picking up cases.\n    *   Camera panning around the room.\n*   **High-Level Conclusions:**\n    *   Identify the nature of the gathering (likely a tutorial or training session involving VR).\n    *   Note the roles mentioned (\"mentor\", \"tutor\").\n    *   Since no face IDs exist, I won't list equivalences.\n\n**Drafting the Content:**\n\n*   *Description:*\n    *   Four individuals sit around a table with a checkered tablecloth, wearing VR headsets.\n    *   Black carrying cases are placed on the table.\n    *   The camera operator stands nearby, observing the group.\n    *   The camera operator reaches out and touches the VR headset/cases.\n    *   The camera pans to show the room layout including a window and whiteboard.\n    *   Audio indicates discussion about the number of participants and roles (mentor/tutor).\n\n*   *Conclusions:*\n    *   The group appears to be participating in a VR training or educational session led by a mentor.\n    *   The speaker `<voice_0>` addresses the camera wearer as a mentor.\n    *   The speaker `<voice_33>` confirms the role of a tutor.\n\nWait, I need to check the instruction regarding memory construction. \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nAh, the prompt asks for \"Video Description\" and \"High-Level Conclusions\". It does *not* ask for a \"Memory\" section in the final JSON output format provided in the \"Output Format\" section.\nThe Output Format is:\n```json\n{\n\t\"video_description\": [...],\n\t\"high_level_conclusions\": [...]\n}\n```\nHowever, the system instruction says: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory...\"\nThis seems contradictory. The system instruction talks about \"memory\", but the user prompt defines the output format as `video_description` and `high_level_conclusions`.\nUsually, in these tasks, the \"High-Level Conclusions\" often serve as the summary/reasoning part where memory might be embedded, OR the system instruction is a general guideline for how to handle the data internally, but the specific output format overrides it.\nLet's look closely at the User Prompt's \"Output Format\":\n\"Your output must be a JSON object with the following structure: ... video_description ... high_level_conclusions ...\"\nIt does NOT ask for a memory field.\nHowever, the System Instruction says: \"Preserve speaker identity when constructing memory...\". This suggests I should incorporate the speaker info into the descriptions/conclusions effectively.\nActually, reading the System Instruction again: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". Then it lists constraints about preserving speaker identity.\nOkay, I will integrate the speaker IDs into the descriptions/conclusions where appropriate to satisfy the constraint \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" and \"For every supplied voice ID... include at least one episodic memory...\". Since the output format doesn't have a specific \"memory\" key, I will embed these summaries into the `video_description` or `high_level_conclusions` fields, likely within the `video_description` as atomic events or in `high_level_conclusions` as reasoning.\nActually, looking at the instruction \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This sounds like it belongs in a memory retrieval step. But since I am generating the final JSON, I should probably put these summaries in the `video_description` as descriptive sentences or in `high_level_conclusions`. Given the constraint \"Keep the existing video_description/high_level_conclusions JSON schema\", I should fit it there.\nLet's try to put the specific utterances in the `video_description` as observed events involving the speaker, or in `high_level_conclusions` if it's a conclusion.\nActually, the instruction says \"For every supplied voice ID... include at least one episodic memory\". This usually implies a separate field in similar tasks. But here the schema is fixed. I will interpret \"episodic memory\" as a sentence in the `video_description` that captures the action/speech. Or perhaps the `high_level_conclusions` is where the reasoning happens.\nLet's look at the constraint: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> This goes in `high_level_conclusions`.\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> This is tricky if there's no memory field. I will add a sentence in `video_description` for each voice ID that describes the speech event.\nWait, if I put it in `video_description`, it becomes part of the visual description. That works.\nExample: \"Speaker <voice_0> states: 'Because you are the mentor.'\"\n\nLet's refine the plan.\n1.  **Video Description**: List atomic events. Include the speech events attributed to the voice IDs.\n    *   Event: People sitting at table.\n    *   Event: Speaker `<voice_31>` says \"Sakiko.\"\n    *   Event: Speaker `<voice_32>` asks \"Only four?\" and answers \"Yes, only four.\"\n    *   Event: Speaker `<voice_0>` says \"Yes. Because you are the mentor.\"\n    *   Event: Speaker `<voice_33>` says \"Tutor. Yes.\"\n    *   Event: Speaker `<voice_34>` says \"I have already installed this thing.\"\n    *   Event: Camera operator picks up cases.\n2.  **High-Level Conclusions**: Reasoning.\n    *   The group is discussing the setup of a VR session.\n    *   Speaker `<voice_0>` identifies the camera wearer as a mentor.\n    *   Speaker `<voice_33>` confirms the role of a tutor.\n    *   No face IDs provided, so no equivalences.\n\nWait, I need to check if I missed any Face IDs.\nInput: \"Face features:Voice features:{\"...\nThere is nothing after \"Face features:\". It looks like the input was truncated or empty for faces. I must assume no face IDs are available.\nSo, no `Equivalence:` lines.\n\nOne detail: \"Preserve speaker identity when constructing memory...\". Since I don't have a memory field, I will ensure the speaker IDs are used in the text generation as requested (\"using the exact ID as the speaker\").\n\nLet's write the JSON.\n\n**Video Description Items:**\n1.  Four people are seated around a table with a checkered cloth, wearing VR headsets.\n2.  Black carrying cases are arranged on the table.\n3.  Speaker `<voice_31>` utters \"Sakiko.\"\n4.  Speaker `<voice_32>` asks \"Only four?\" and confirms \"Yes, only four.\"\n5.  Speaker `<voice_0>` responds \"Yes. Because you are the mentor.\"\n6.  Speaker `<voice_33>` states \"Tutor. Yes.\"\n7.  Speaker `<voice_34>` mentions having already installed something.\n8.  The camera operator reaches for the VR equipment on the table.\n9.  The camera pans around the room, revealing a window and a whiteboard.\n10. The camera operator handles a black case and a cable.\n\n**High-Level Conclusions Items:**\n1.  The group is engaged in a VR-related activity, possibly a tutorial or training session.\n2.  Speaker `<voice_0>` addresses the camera wearer specifically as a mentor.\n3.  Speaker `<voice_33>` acknowledges the role of a tutor.\n4.  The discussion involves counting participants and verifying equipment installation.\n\nDouble Check Constraints:\n- \"Do not replace the ID with 'a speaker'...\" -> I will use `<voice_X>`.\n- \"If no face IDs are supplied, do not invent any.\" -> Correct.\n- \"Keep the existing video_description/high_level_conclusions JSON schema\" -> Correct.\n- \"Be concise and avoid duplicate events.\" -> I will merge related actions.\n\nRevised Video Description:\n1.  Four individuals wearing VR headsets sit around a table with a checkered cloth and black carrying cases.\n2.  Speaker `<voice_31>` speaks the name \"Sakiko.\"\n3.  Speaker `<voice_32>` inquires about the number of people, stating \"Only four?\" and confirming \"Yes, only four.\"\n4.  Speaker `<voice_0>` affirms the count and explains, \"Yes. Because you are the mentor.\"\n5.  Speaker `<voice_33>` identifies themselves as a \"Tutor. Yes.\"\n6.  Speaker `<voice_34>` notes that they have already installed the equipment.\n7.  The camera operator interacts with the items on the table, handling a black case and a cable.\n8.  The camera pans to show the surrounding room environment.\n\nRevised High-Level Conclusions:\n1.  The scene depicts a group session involving VR technology, likely a training or instructional setting.\n2.  Speaker `<voice_0>` establishes a hierarchical relationship by identifying the camera wearer as a mentor.\n3.  Speaker `<voice_33>` corroborates the presence of a tutor in the group.\n4.  The participants discuss logistical details such as participant count and equipment status.\n\nLooks good. I will ensure the JSON is valid.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"Four individuals wearing VR headsets sit around a table with a checkered cloth and black carrying cases.\",\n\t\t\"Speaker <voice_31> speaks the name Sakiko.\",\n\t\t\"Speaker <voice_32> inquires about the number of people, stating Only four? and confirming Yes, only four.\",\n\t\t\"Speaker <voice_0> affirms the count and explains, Yes. Because you are the mentor.\",\n\t\t\"Speaker <voice_33> identifies themselves as a Tutor. Yes.\",\n\t\t\"Speaker <voice_34> notes that they have already installed the equipment.\",\n\t\t\"The camera operator interacts with the items on the table, handling a black case and a cable.\",\n\t\t\"The camera pans to show the surrounding room environment.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The scene depicts a group session involving VR technology, likely a training or instructional setting.\",\n\t\t\"Speaker <voice_0> establishes a hierarchical relationship by identifying the camera wearer as a mentor.\",\n\t\t\"Speaker <voice_33> corroborates the presence of a tutor in the group.\",\n\t\t\"The participants discuss logistical details such as participant count and equipment status.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10433,
+          "output_tokens": 3539,
+          "total_tokens": 13972,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002754997694864869,
+            "media_preparation_ms": 69.7845159957069,
+            "processor_tokenization_ms": 626.5301090024877,
+            "device_transfer_ms": 44.73038000287488,
+            "cuda_generation_ms": 165848.71345199645,
+            "decoding_ms": 6.109525005740579
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 166596.11100199982,
+          "request_end": 1789411224.9925613,
+          "latency_ms": 166630.04258900037,
+          "client_wall_clock_latency_ms": 166630.04258900037
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.11442600225564092,
+      "nodes_added": 8,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 1.5571819967590272,
+      "nodes_added": 4,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 7,
+    "speech_embeddings": 7,
+    "voice_identities": 5,
+    "detected_faces": 269,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 4,
+    "nodes_after_clip": 47,
+    "edges_after_clip": 17,
+    "nodes_added_by_clip": 16,
+    "edges_added_by_clip": 7
+  },
+  "generated_memory": {
+    "video_description": [
+      "Four individuals wearing VR headsets sit around a table with a checkered cloth and black carrying cases.",
+      "Speaker <voice_31> speaks the name Sakiko.",
+      "Speaker <voice_32> inquires about the number of people, stating Only four? and confirming Yes, only four.",
+      "Speaker <voice_0> affirms the count and explains, Yes. Because you are the mentor.",
+      "Speaker <voice_33> identifies themselves as a Tutor. Yes.",
+      "Speaker <voice_34> notes that they have already installed the equipment.",
+      "The camera operator interacts with the items on the table, handling a black case and a cable.",
+      "The camera pans to show the surrounding room environment."
+    ],
+    "high_level_conclusions": [
+      "The scene depicts a group session involving VR technology, likely a training or instructional setting.",
+      "Speaker <voice_0> establishes a hierarchical relationship by identifying the camera wearer as a mentor.",
+      "Speaker <voice_33> corroborates the presence of a tutor in the group.",
+      "The participants discuss logistical details such as participant count and equipment status."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Four individuals wearing VR headsets sit around a table with a checkered cloth and black carrying cases.",
+      "Speaker <voice_31> speaks the name Sakiko.",
+      "Speaker <voice_32> inquires about the number of people, stating Only four? and confirming Yes, only four.",
+      "Speaker <voice_0> affirms the count and explains, Yes. Because you are the mentor.",
+      "Speaker <voice_33> identifies themselves as a Tutor. Yes.",
+      "Speaker <voice_34> notes that they have already installed the equipment.",
+      "The camera operator interacts with the items on the table, handling a black case and a cable.",
+      "The camera pans to show the surrounding room environment."
+    ],
+    "high_level_conclusions": [
+      "The scene depicts a group session involving VR technology, likely a training or instructional setting.",
+      "Speaker <voice_0> establishes a hierarchical relationship by identifying the camera wearer as a mentor.",
+      "Speaker <voice_33> corroborates the presence of a tutor in the group.",
+      "The participants discuss logistical details such as participant count and equipment status."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_4_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 16,
+    "edges_added": 7,
+    "nodes": [
+      {
+        "id": 31,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 哇哦。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 32,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 只有四个吗？",
+            "MAI: 对，只有四个。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 33,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: Tutor。对。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 34,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我已经装过这个东西了。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 35,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Four individuals wearing VR headsets sit around a table with a checkered cloth and black carrying cases."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 36,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_31> speaks the name Sakiko."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 37,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_32> inquires about the number of people, stating Only four? and confirming Yes, only four."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 38,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_0> affirms the count and explains, Yes. Because you are the mentor."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 39,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_33> identifies themselves as a Tutor. Yes."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 40,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_34> notes that they have already installed the equipment."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 41,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator interacts with the items on the table, handling a black case and a cable."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 42,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans to show the surrounding room environment."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 43,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The scene depicts a group session involving VR technology, likely a training or instructional setting."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 44,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_0> establishes a hierarchical relationship by identifying the camera wearer as a mentor."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 45,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_33> corroborates the presence of a tutor in the group."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 46,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants discuss logistical details such as participant count and equipment status."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 38,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 44,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 31,
+        "target": 36,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 32,
+        "target": 37,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 33,
+        "target": 39,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 33,
+        "target": 45,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 34,
+        "target": 40,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_4_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_4_graph.pkl"
+  },
+  "memory_pickle_bytes": 1138375,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52077.705842237,
+    "prepared_perf": 52089.777956729,
+    "ordered_start_perf": 52235.253922984,
+    "consumer_wait_ms": 0.009587995009496808,
+    "ready_to_ordered_ms": 145475.96625499864,
+    "preparation_work_ms": 12071.263958998316,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 176991.10632800148
+}

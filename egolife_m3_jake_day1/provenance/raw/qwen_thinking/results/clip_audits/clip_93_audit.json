@@ -1,0 +1,475 @@
+{
+  "clip_id": 93,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0093.mp4",
+  "end_to_end_memory_generation_ms": 622795.4022199992,
+  "latency_ms": {
+    "clip_decode": 5288.163239005371,
+    "deepgram_asr": 669.8425750073511,
+    "mai_transcribe_asr": 1062.8013200039277,
+    "asr_total": 1063.5406620131107,
+    "audio_segmentation": 6.686747001367621,
+    "speech_embedding_campplus": 1762.7364479994867,
+    "facial_detection_recognition_buffalo_l": 4001.9702770077856,
+    "face_clustering": 11.212671000976115,
+    "vlm_memory_generation": 198801.58902300172,
+    "text_embedding": 586.4528989914106,
+    "graph_update_total": 845.1647740002954
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 93,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 1077,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789429658.7252605,
+          "status": "success",
+          "total_tokens": 207,
+          "request_end": 1789429659.3115168,
+          "latency_ms": 586.2566680007149
+        }
+      ],
+      "total_tokens": 207,
+      "latency_ms": 586.4528989914106
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 669.8425750073511,
+        "openrouter-mai-transcribe-2": 1062.8013200039277
+      },
+      "asr_total_ms": 1063.5406620131107,
+      "audio_segmentation_ms": 6.686747001367621,
+      "speech_embedding_ms": 1762.7364479994867,
+      "graph_update_ms": 845.0700969988247,
+      "asr_segment_count": 10,
+      "speech_embedding_count": 10,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2629.6691190073034
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4001.9702770077856,
+      "face_clustering_ms": 11.212671000976115,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 344,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4199.0245249908185
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1219>",
+        "<voice_1112>",
+        "<voice_364>",
+        "<voice_144>",
+        "<voice_973>",
+        "<voice_1220>",
+        "<voice_1221>"
+      ],
+      "context_preparation_ms": 3870.4751769982977,
+      "vlm_ms": 198801.58902300172,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room.\",\n\t\t\"A person wearing a pink t-shirt stands near a projection screen on the left side of the room.\",\n\t\t\"Another person in a white shirt stands behind the table, organizing items.\",\n\t\t\"Two women are seated at the table, engaged in conversation.\",\n\t\t\"A clapperboard rests on the table in front of the seated individuals.\",\n\t\t\"The person in the pink shirt gestures while speaking to the group.\",\n\t\t\"The person in the white shirt picks up a book or script from the table.\",\n\t\t\"The camera view shows legs of the person holding the camera in the foreground.\",\n\t\t\"The person in the pink shirt walks towards the projection screen at the end of the sequence.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be rehearsing or preparing for a production, indicated by the presence of a clapperboard and scripts.\",\n\t\t\"The conversation involves practical details about meal preparation, specifically charcoal and cutting meat, suggesting a break or catering arrangement.\",\n\t\t\"The participants discuss knife usage, indicating a shared activity involving food preparation.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room.",
+          "A person wearing a pink t-shirt stands near a projection screen on the left side of the room.",
+          "Another person in a white shirt stands behind the table, organizing items.",
+          "Two women are seated at the table, engaged in conversation.",
+          "A clapperboard rests on the table in front of the seated individuals.",
+          "The person in the pink shirt gestures while speaking to the group.",
+          "The person in the white shirt picks up a book or script from the table.",
+          "The camera view shows legs of the person holding the camera in the foreground.",
+          "The person in the pink shirt walks towards the projection screen at the end of the sequence."
+        ],
+        "high_level_conclusions": [
+          "The group appears to be rehearsing or preparing for a production, indicated by the presence of a clapperboard and scripts.",
+          "The conversation involves practical details about meal preparation, specifically charcoal and cutting meat, suggesting a break or catering arrangement.",
+          "The participants discuss knife usage, indicating a shared activity involving food preparation."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 93,
+          "call_id": "0f8f3f0c-e9a8-4958-a33f-cad344eb1b89",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789429459.9225473,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room.\",\n\t\t\"A person wearing a pink t-shirt stands near a projection screen on the left side of the room.\",\n\t\t\"Another person in a white shirt stands behind the table, organizing items.\",\n\t\t\"Two women are seated at the table, engaged in conversation.\",\n\t\t\"A clapperboard rests on the table in front of the seated individuals.\",\n\t\t\"The person in the pink shirt gestures while speaking to the group.\",\n\t\t\"The person in the white shirt picks up a book or script from the table.\",\n\t\t\"The camera view shows legs of the person holding the camera in the foreground.\",\n\t\t\"The person in the pink shirt walks towards the projection screen at the end of the sequence.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be rehearsing or preparing for a production, indicated by the presence of a clapperboard and scripts.\",\n\t\t\"The conversation involves practical details about meal preparation, specifically charcoal and cutting meat, suggesting a break or catering arrangement.\",\n\t\t\"The participants discuss knife usage, indicating a shared activity involving food preparation.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). They show a room with people sitting around a table.\n    *   There's a person standing in a pink/orange t-shirt (let's call him Person A).\n    *   There's a person standing in a white shirt (let's call him Person B).\n    *   There are people sitting at the table. One woman in black (Person C), one woman in white/green (Person D), and possibly others partially visible.\n    *   The camera seems to be held by someone lying down or reclining (legs visible in foreground).\n    *   There's a clapperboard on the table.\n    *   The setting looks like a rehearsal space or a casual meeting room.\n*   **Voice Features:**\n    *   `<voice_1219>`: \"你也弄弄了。| MAI: 还要买碳，对吧？\" (You also messed up. | MAI: You still need to buy charcoal, right?) -> Timestamp 00:00 - 00:02. Speaker is likely the person in the pink shirt (Person A) asking about charcoal, or reacting to something. Wait, the ASR says \"MAI: ...\". This implies the speaker is MAI. But the first part \"你也弄弄了\" sounds like a response. Let's look closer. Actually, usually the label before the pipe `|` is the previous speaker or context. Here it says `Deepgram: ...`. It seems there might be multiple speakers or just one labeled MAI. Let's assume the speaker is MAI based on the explicit \"MAI:\" tag in some lines.\n    *   `<voice_1112>`: \"你也弄弄了。| MAI: 碳，这些其实外卖都有。\" (You also messed up. | MAI: Charcoal, these are actually available in takeout.) -> Timestamp 00:01 - 00:05. Speaker is MAI.\n    *   `<voice_364>`: \"哦哦哦。行，行。\" (Oh oh oh. Okay, okay.) -> Timestamp 00:04 - 00:07. Speaker is MAI. Also later: \"能不能切个肉什么的吗？\" (Can you cut some meat?), \"能切，都能切呀，都能切。\" (Yes can cut, can cut everything.), \"各位都能切了。\" (Everyone can cut.) -> Timestamp 00:19 - 00:26. Speaker is MAI.\n    *   `<voice_144>`: \"大家平时用餐如何？就会使用刀吗？\" (How do everyone eat normally? Will you use knives?) -> Timestamp 00:11 - 00:16. Speaker is MAI.\n    *   `<voice_973>`: \"什么会使用？\" (What use?) -> Timestamp 00:18 - 00:20. Speaker is MAI.\n    *   `<voice_1220>`: \"有大家这句话我就放心了。\" (With everyone saying this I feel relieved.) -> Timestamp 00:26 - 00:28. Speaker is MAI.\n    *   `<voice_1221>`: \"因-因为你不切。\" (Because you don't cut.) -> Timestamp 00:27 - 00:29. Speaker is MAI.\n\n    *Correction on Voice Analysis:* All voice features seem to have \"MAI\" explicitly mentioned in the ASR text or implied as the speaker. However, looking at the timestamps and the flow:\n    *   00:00-00:02: Someone asks about charcoal (\"还要买碳\").\n    *   00:01-00:05: Response about charcoal being in takeout.\n    *   00:04-00:07: Acknowledgment (\"Okay\").\n    *   00:11-00:16: Question about eating habits/knives.\n    *   00:18-00:20: Clarification question.\n    *   00:19-00:26: Reassurance that everyone can cut meat.\n    *   00:26-00:29: Relief and reason (because you don't cut).\n\n    Wait, the prompt says \"Preserve speaker identity... Voice features map exact IDs such as <voice_0> to timestamped transcripts.\"\n    The provided voice features list IDs like `<voice_1219>`, `<voice_1112>`, etc., but the content often attributes speech to \"MAI\".\n    The instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    So I need to create memories for `<voice_1219>`, `<voice_1112>`, `<voice_364>`, `<voice_144>`, `<voice_973>`, `<voice_1220>`, `<voice_1221>`.\n    Since all seem to be spoken by \"MAI\" (or attributed to her in the text), I will treat them as the same speaker entity for the purpose of the memory construction, but I must use the specific IDs provided in the input for the memory generation.\n    Wait, looking closely at the ASR:\n    `<voice_1219>`: \"Deepgram: 你也弄弄了。| MAI: 还要买碳，对吧？\" -> This looks like a mix. Maybe the first part is someone else and the second is MAI? Or maybe the whole thing is MAI? The label \"MAI:\" appears after the pipe. Usually, this means the speaker is MAI.\n    `<voice_1112>`: \"Deepgram: 你也弄弄了。| MAI: 碳，这些其实外卖都有。\" -> Again, MAI speaks.\n    `<voice_364>`: \"MAI: 哦哦哦。行，行。\" -> MAI speaks.\n    `<voice_144>`: \"MAI: 大家平时用餐如何？就会使用刀吗？\" -> MAI speaks.\n    `<voice_973>`: \"MAI: 什么会使用？\" -> MAI speaks.\n    `<voice_1220>`: \"MAI: 有大家这句话我就放心了。\" -> MAI speaks.\n    `<voice_1221>`: \"MAI: 因-因为你不切。\" -> MAI speaks.\n\n    It seems all voice features correspond to the speaker \"MAI\". I need to construct memories for each ID.\n    The instruction says: \"Do not replace the ID with 'a speaker'...\".\n    So I will write memories like: `<voice_1219>` says \"You also messed up. MAI: You still need to buy charcoal, right?\" (Wait, the ID is the speaker). So `<voice_1219>` says \"You also messed up. You still need to buy charcoal, right?\".\n    Actually, looking at the pattern, it seems the system might have mislabeled or the input format is slightly ambiguous. But I must follow the instruction: \"using the exact ID as the speaker\".\n    So for `<voice_1219>`, the memory should quote the transcript associated with that ID.\n    Transcript: \"你也弄弄了。| MAI: 还要买碳，对吧？\"\n    Memory: `<voice_1219>` mentions that someone messed up and asks if they still need to buy charcoal.\n    Wait, the instruction says \"Preserve speaker identity... Voice features map exact IDs... These IDs already identify the speakers\".\n    So I will attribute the speech to `<voice_1219>`.\n\n    **Visual Identification:**\n    The prompt asks to preserve speaker identity. It doesn't give me face IDs explicitly linked to names like \"MAI\". It gives Face features section which is empty in the prompt text provided (\"Face features:Voice features:...\"). Wait, the prompt text ends with \"Face features:Voice features:...\". It seems the Face features section is missing or empty in the provided text block.\n    Ah, looking at the raw input: \"Face features:Voice features:{...}\". There are no face features listed.\n    Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    So I cannot link `<voice_1219>` to a specific face ID because none are provided. I must just use the voice ID in the memory.\n\n    **Task 1: Video Description**\n    I need to describe the video events atomically.\n    - People are gathered around a table with a checkered tablecloth.\n    - A person in a pink shirt stands near a whiteboard/screen.\n    - A person in a white shirt stands near the table.\n    - Two women sit at the table.\n    - There is a clapperboard on the table.\n    - The person in the pink shirt gestures and moves around.\n    - The person in the white shirt interacts with items on the table.\n    - The camera perspective is from someone lying down (legs visible).\n    - Time progresses from 00:00 to 29.50s.\n    - Events:\n        - Group discussion/rehearsal setting.\n        - Person in pink shirt talks/gestures.\n        - Person in white shirt handles papers/items.\n        - Woman in black sits at table.\n        - Woman in green/white sits at table.\n        - Clapperboard is visible.\n        - Lighting changes slightly (ceiling light on/off?).\n        - Person in pink walks away towards the screen at the end.\n\n    **Task 2: High-Level Conclusions**\n    - Reasoning about intentions: They seem to be preparing for something (clapperboard suggests filming/rehearsal).\n    - Discussion about charcoal/meat cutting suggests meal preparation or a break during rehearsal.\n    - No face IDs provided, so no Equivalence statements possible.\n    - I need to check if I missed any face IDs. The input text says \"Face features:Voice features:\". It stops there. No face data.\n    - So `high_level_conclusions` will contain reasoning about the activity (rehearsal/meal prep) but no Equivalence strings.\n\n    **Refining Video Description:**\n    - Frame 0.00-0.50: Wide shot of room, group at table.\n    - Frame 1.00-4.50: Person in pink shirt stands left, talking/gesturing. Person in white shirt stands back.\n    - Frame 5.00-11.00: Person in white shirt moves around table, handling items.\n    - Frame 12.00-14.00: Person in pink shirt continues talking.\n    - Frame 15.00-17.00: Person in white shirt holds papers/book.\n    - Frame 18.00-22.00: Person in pink shirt stands, gesturing.\n    - Frame 23.00-25.00: Close up on table/clapperboard.\n    - Frame 26.00-29.00: Person in pink shirt walks towards the projection screen.\n\n    **Refining Memories:**\n    I need to create memories for each voice ID.\n    - `<voice_1219>`: Discusses charcoal purchase.\n    - `<voice_1112>`: Mentions charcoal availability in takeout.\n    - `<voice_364>`: Acknowledges and discusses cutting meat.\n    - `<voice_144>`: Asks about knife usage during meals.\n    - `<voice_973>`: Clarifies usage of knives.\n    - `<voice_1220>`: Expresses relief hearing confirmation.\n    - `<voice_1221>`: Explains reason regarding cutting.\n\n    Wait, the instruction says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n    I should combine related speeches if they form a coherent thought process, or keep them separate if they are distinct atomic memories. The instruction says \"Preserve distinct substantive utterances as separate atomic memories.\"\n    So I will create separate entries for each ID since they are distinct IDs.\n\n    **Constraint Check:**\n    - \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" -> OK.\n    - \"If no face IDs are supplied, do not invent any.\" -> OK.\n    - \"Output Format: JSON object\".\n    - \"Be concise and avoid duplicate events.\"\n\n    **Drafting Content:**\n    Video Description:\n    1. A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room with a whiteboard.\n    2. A person wearing a pink t-shirt stands near a projection screen on the left side of the room.\n    3. Another person in a white shirt stands behind the table, organizing items.\n    4. Two women are seated at the table, engaged in conversation.\n    5. A clapperboard rests on the table in front of the seated individuals.\n    6. The person in the pink shirt gestures while speaking to the group.\n    7. The person in the white shirt picks up a book or script from the table.\n    8. The camera view shifts slightly, showing legs of the person holding the camera in the foreground.\n    9. The person in the pink shirt walks towards the projection screen at the end of the sequence.\n\n    High Level Conclusions:\n    1. The group appears to be rehearsing or preparing for a production, indicated by the presence of a clapperboard and scripts.\n    2. The conversation involves practical details about meal preparation, specifically charcoal and cutting meat, suggesting a break or catering arrangement.\n    3. The participants discuss knife usage, indicating a shared activity involving food preparation.\n    (No Equivalence since no face IDs).\n\n    Wait, I need to make sure I don't hallucinate face IDs. The input has \"Face features:Voice features:\". It implies the Face features section is empty or missing. I will proceed assuming no face IDs.\n\n    One detail: The prompt says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"Voice features map exact IDs such as <voice_0> to timestamped transcripts.\"\n    So I must use `<voice_1219>`, `<voice_1112>`, etc. in the memory descriptions.\n\n    Let's refine the memories to be \"episodic memory that quotes or faithfully summarizes that speaker's transcript\".\n    Example: `<voice_1219>` states that someone messed up and asks if they still need to buy charcoal.\n    Example: `<voice_1112>` clarifies that charcoal is available in takeout.\n    Example: `<voice_364>` acknowledges the request and confirms that everyone can cut meat.\n    Example: `<voice_144>` asks how everyone eats normally and if they use knives.\n    Example: `<voice_973>` seeks clarification on what \"use\" refers to.\n    Example: `<voice_1220>` expresses relief upon hearing confirmation from everyone.\n    Example: `<voice_1221>` explains that the concern was due to the inability to cut.\n\n    Wait, I need to check if I should merge them. \"Preserve distinct substantive utterances as separate atomic memories.\"\n    Since they are different IDs, they represent different speech segments. I will list them separately.\n\n    Final check on JSON structure.\n    `video_description`: array of strings.\n    `high_level_conclusions`: array of strings. Can include \"Equivalence: ...\" if applicable. None here.\n\n    One thing: The prompt says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n    And \"Output Format: Your output must be a JSON object...\".\n    I will ensure valid JSON.\n\n    Let's double check the voice content translation/meaning.\n    `<voice_1219>`: \"你也弄弄了。| MAI: 还要买碳，对吧？\" -> \"You also messed up. | MAI: You still need to buy charcoal, right?\"\n    `<voice_1112>`: \"你也弄弄了。| MAI: 碳，这些其实外卖都有。\" -> \"You also messed up. | MAI: Charcoal, these are actually available in takeout.\"\n    `<voice_364>`: \"MAI: 哦哦哦。行，行。\" -> \"MAI: Oh oh oh. Okay, okay.\" AND \"MAI: 能不能切个肉什么的吗？\" -> \"Can you cut some meat?\" AND \"MAI: 能切，都能切呀，都能切。\" -> \"Yes can cut, can cut everything.\" AND \"MAI: 各位都能切了。\" -> \"Everyone can cut.\"\n    `<voice_144>`: \"MAI: 大家平时用餐如何？就会使用刀吗？\" -> \"MAI: How do everyone eat normally? Will you use knives?\"\n    `<voice_973>`: \"MAI: 什么会使用？\" -> \"MAI: What use?\"\n    `<voice_1220>`: \"MAI: 有大家这句话我就放心了。\" -> \"MAI: With everyone saying this I feel relieved.\"\n    `<voice_1221>`: \"MAI: 因-因为你不切。\" -> \"MAI: Because you don't cut.\"\n\n    Okay, I will formulate the memories based on these.\n\n    One constraint: \"Do not substitute a plausible scene description for what the speaker actually said.\"\n    So memories must reflect the speech content accurately.\n\n    Let's assemble the JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room.\",\n\t\t\"A person wearing a pink t-shirt stands near a projection screen on the left side of the room.\",\n\t\t\"Another person in a white shirt stands behind the table, organizing items.\",\n\t\t\"Two women are seated at the table, engaged in conversation.\",\n\t\t\"A clapperboard rests on the table in front of the seated individuals.\",\n\t\t\"The person in the pink shirt gestures while speaking to the group.\",\n\t\t\"The person in the white shirt picks up a book or script from the table.\",\n\t\t\"The camera view shows legs of the person holding the camera in the foreground.\",\n\t\t\"The person in the pink shirt walks towards the projection screen at the end of the sequence.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be rehearsing or preparing for a production, indicated by the presence of a clapperboard and scripts.\",\n\t\t\"The conversation involves practical details about meal preparation, specifically charcoal and cutting meat, suggesting a break or catering arrangement.\",\n\t\t\"The participants discuss knife usage, indicating a shared activity involving food preparation.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10877,
+          "output_tokens": 4339,
+          "total_tokens": 15216,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002173997927457094,
+            "media_preparation_ms": 61.60482199629769,
+            "processor_tokenization_ms": 351.0368129936978,
+            "device_transfer_ms": 40.22936400724575,
+            "cuda_generation_ms": 198316.46929999988,
+            "decoding_ms": 4.028437993838452
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 198773.5446000006,
+          "request_end": 1789429658.7241387,
+          "latency_ms": 198801.58902300172,
+          "client_wall_clock_latency_ms": 198801.58902300172
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.07453899888787419,
+      "nodes_added": 9,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.02013800258282572,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 10,
+    "speech_embeddings": 10,
+    "voice_identities": 7,
+    "detected_faces": 344,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1234,
+    "edges_after_clip": 442,
+    "nodes_added_by_clip": 15,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room.",
+      "A person wearing a pink t-shirt stands near a projection screen on the left side of the room.",
+      "Another person in a white shirt stands behind the table, organizing items.",
+      "Two women are seated at the table, engaged in conversation.",
+      "A clapperboard rests on the table in front of the seated individuals.",
+      "The person in the pink shirt gestures while speaking to the group.",
+      "The person in the white shirt picks up a book or script from the table.",
+      "The camera view shows legs of the person holding the camera in the foreground.",
+      "The person in the pink shirt walks towards the projection screen at the end of the sequence."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be rehearsing or preparing for a production, indicated by the presence of a clapperboard and scripts.",
+      "The conversation involves practical details about meal preparation, specifically charcoal and cutting meat, suggesting a break or catering arrangement.",
+      "The participants discuss knife usage, indicating a shared activity involving food preparation."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room.",
+      "A person wearing a pink t-shirt stands near a projection screen on the left side of the room.",
+      "Another person in a white shirt stands behind the table, organizing items.",
+      "Two women are seated at the table, engaged in conversation.",
+      "A clapperboard rests on the table in front of the seated individuals.",
+      "The person in the pink shirt gestures while speaking to the group.",
+      "The person in the white shirt picks up a book or script from the table.",
+      "The camera view shows legs of the person holding the camera in the foreground.",
+      "The person in the pink shirt walks towards the projection screen at the end of the sequence."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be rehearsing or preparing for a production, indicated by the presence of a clapperboard and scripts.",
+      "The conversation involves practical details about meal preparation, specifically charcoal and cutting meat, suggesting a break or catering arrangement.",
+      "The participants discuss knife usage, indicating a shared activity involving food preparation."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_93_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 15,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1219,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: 你也말 말了。 | MAI: 还要买碳，对吧？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1220,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 有大家这句话我就放心了。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1221,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 因-因为你不切。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1222,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1223,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing a pink t-shirt stands near a projection screen on the left side of the room."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1224,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another person in a white shirt stands behind the table, organizing items."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1225,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women are seated at the table, engaged in conversation."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1226,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard rests on the table in front of the seated individuals."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1227,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the pink shirt gestures while speaking to the group."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1228,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the white shirt picks up a book or script from the table."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1229,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera view shows legs of the person holding the camera in the foreground."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1230,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the pink shirt walks towards the projection screen at the end of the sequence."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1231,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be rehearsing or preparing for a production, indicated by the presence of a clapperboard and scripts."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1232,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The conversation involves practical details about meal preparation, specifically charcoal and cutting meat, suggesting a break or catering arrangement."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1233,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants discuss knife usage, indicating a shared activity involving food preparation."
+          ],
+          "timestamp": 93
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_93_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_93_graph.pkl"
+  },
+  "memory_pickle_bytes": 29352126,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 70223.513422615,
+    "prepared_perf": 70231.433736094,
+    "ordered_start_perf": 70633.817649108,
+    "consumer_wait_ms": 0.009116993169300258,
+    "ready_to_ordered_ms": 402383.9130139968,
+    "preparation_work_ms": 7914.8692909948295,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 210092.38979700604
+}

@@ -1,0 +1,354 @@
+{
+  "clip_id": 101,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0101.mp4",
+  "end_to_end_memory_generation_ms": 144068.308599999,
+  "latency_ms": {
+    "clip_decode": 2167.985193998902,
+    "deepgram_asr": 1014.1059890011093,
+    "mai_transcribe_asr": 1371.690280000621,
+    "asr_total": 1380.2222420054022,
+    "audio_segmentation": 1.6367399948649108,
+    "speech_embedding_campplus": 342.69455000321614,
+    "facial_detection_recognition_buffalo_l": 799.9121419998119,
+    "face_clustering": 3.3818730007624254,
+    "vlm_memory_generation": 29326.42151699838,
+    "text_embedding": 570.0924750053673,
+    "graph_update_total": 112.69749300117837
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 101,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 797,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789410321.10431,
+          "status": "success",
+          "total_tokens": 167,
+          "request_end": 1789410321.674154,
+          "latency_ms": 569.8443679939373
+        }
+      ],
+      "total_tokens": 167,
+      "latency_ms": 570.0924750053673
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1014.1059890011093,
+        "openrouter-mai-transcribe-2": 1371.690280000621
+      },
+      "asr_total_ms": 1380.2222420054022,
+      "audio_segmentation_ms": 1.6367399948649108,
+      "speech_embedding_ms": 342.69455000321614,
+      "graph_update_ms": 98.5511749968282,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 446.07563199679134
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 799.9121419998119,
+      "face_clustering_ms": 3.3818730007624254,
+      "graph_update_ms": null,
+      "frame_count": 31,
+      "detected_face_count": 76,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 846.7612299937173
+    },
+    "vlm": {
+      "context_preparation_ms": 625.8038300002227,
+      "vlm_ms": 29326.42151699838,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered in an indoor room with a large table in the center.\",\n    \"On the table rests a film clapperboard, bottled water, flowers, and other equipment.\",\n    \"A person wearing an orange T-shirt enters from the left and stands with hands on hips, observing the group.\",\n    \"A person dressed in dark clothing sits at the table, looking down at a phone.\",\n    \"In the background, another person stands next to a whiteboard holding flowers.\",\n    \"<voice_0> speaks, remarking that the schedule or duration might take around an hour to an hour and a half.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The presence of a clapperboard, studio lighting equipment, and scheduling discussions indicates the group is a film or video production crew coordinating a shoot.\",\n    \"<voice_0> is discussing time management and estimated duration for the team's upcoming task or shoot.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered in an indoor room with a large table in the center.",
+          "On the table rests a film clapperboard, bottled water, flowers, and other equipment.",
+          "A person wearing an orange T-shirt enters from the left and stands with hands on hips, observing the group.",
+          "A person dressed in dark clothing sits at the table, looking down at a phone.",
+          "In the background, another person stands next to a whiteboard holding flowers.",
+          "<voice_0> speaks, remarking that the schedule or duration might take around an hour to an hour and a half."
+        ],
+        "high_level_conclusions": [
+          "The presence of a clapperboard, studio lighting equipment, and scheduling discussions indicates the group is a film or video production crew coordinating a shoot.",
+          "<voice_0> is discussing time management and estimated duration for the team's upcoming task or shoot."
+        ]
+      },
+      "media": {
+        "frame_count": 13,
+        "video_duration_seconds": 6.1
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 101,
+          "call_id": "5e6d1462-2a8b-4eec-8c12-f97ac3477ea6",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789410291.7769659,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 14964,
+          "output_tokens": 1207,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 29326.298473999486
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered in an indoor room with a large table in the center.\",\n    \"On the table rests a film clapperboard, bottled water, flowers, and other equipment.\",\n    \"A person wearing an orange T-shirt enters from the left and stands with hands on hips, observing the group.\",\n    \"A person dressed in dark clothing sits at the table, looking down at a phone.\",\n    \"In the background, another person stands next to a whiteboard holding flowers.\",\n    \"<voice_0> speaks, remarking that the schedule or duration might take around an hour to an hour and a half.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The presence of a clapperboard, studio lighting equipment, and scheduling discussions indicates the group is a film or video production crew coordinating a shoot.\",\n    \"<voice_0> is discussing time management and estimated duration for the team's upcoming task or shoot.\"\n  ]\n}\n```",
+          "total_tokens": 16171,
+          "request_end": 1789410321.1033907,
+          "latency_ms": 29326.42151699838,
+          "client_wall_clock_latency_ms": 29326.42151699838,
+          "api_request_wall_clock_latency_ms": 29326.42151699838
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.07651500345673412,
+      "nodes_added": 6,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 14.069803000893444,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 31,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 76,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1177,
+    "edges_after_clip": 227,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered in an indoor room with a large table in the center.",
+      "On the table rests a film clapperboard, bottled water, flowers, and other equipment.",
+      "A person wearing an orange T-shirt enters from the left and stands with hands on hips, observing the group.",
+      "A person dressed in dark clothing sits at the table, looking down at a phone.",
+      "In the background, another person stands next to a whiteboard holding flowers.",
+      "<voice_0> speaks, remarking that the schedule or duration might take around an hour to an hour and a half."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard, studio lighting equipment, and scheduling discussions indicates the group is a film or video production crew coordinating a shoot.",
+      "<voice_0> is discussing time management and estimated duration for the team's upcoming task or shoot."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered in an indoor room with a large table in the center.",
+      "On the table rests a film clapperboard, bottled water, flowers, and other equipment.",
+      "A person wearing an orange T-shirt enters from the left and stands with hands on hips, observing the group.",
+      "A person dressed in dark clothing sits at the table, looking down at a phone.",
+      "In the background, another person stands next to a whiteboard holding flowers.",
+      "<voice_0> speaks, remarking that the schedule or duration might take around an hour to an hour and a half."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard, studio lighting equipment, and scheduling discussions indicates the group is a film or video production crew coordinating a shoot.",
+      "<voice_0> is discussing time management and estimated duration for the team's upcoming task or shoot."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_101_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 1169,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered in an indoor room with a large table in the center."
+          ],
+          "timestamp": 101
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1170,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "On the table rests a film clapperboard, bottled water, flowers, and other equipment."
+          ],
+          "timestamp": 101
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1171,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing an orange T-shirt enters from the left and stands with hands on hips, observing the group."
+          ],
+          "timestamp": 101
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1172,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person dressed in dark clothing sits at the table, looking down at a phone."
+          ],
+          "timestamp": 101
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1173,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "In the background, another person stands next to a whiteboard holding flowers."
+          ],
+          "timestamp": 101
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1174,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> speaks, remarking that the schedule or duration might take around an hour to an hour and a half."
+          ],
+          "timestamp": 101
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1175,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The presence of a clapperboard, studio lighting equipment, and scheduling discussions indicates the group is a film or video production crew coordinating a shoot."
+          ],
+          "timestamp": 101
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1176,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> is discussing time management and estimated duration for the team's upcoming task or shoot."
+          ],
+          "timestamp": 101
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1174,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 1176,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_101_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_101_graph.pkl"
+  },
+  "memory_pickle_bytes": 27122841,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 51364.583100455,
+    "prepared_perf": 51368.745104972,
+    "ordered_start_perf": 51474.620402322,
+    "consumer_wait_ms": 0.007313996320590377,
+    "ready_to_ordered_ms": 105875.29735000135,
+    "preparation_work_ms": 4156.419979997736,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 31832.555469001818
+}

@@ -1,0 +1,77 @@
+{
+  "clip_id": 55,
+  "source": {
+    "segment_id": 55,
+    "source": "DAY1_A1_JAKE_11353000.mp4",
+    "source_clock": "11353000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41730.0,
+    "absolute_end_seconds": 41760.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0055.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47481.027771868,
+      "prepared_perf": 47487.987112832,
+      "ordered_start_perf": 47578.834759335,
+      "consumer_wait_ms": 0.008976996468845755,
+      "ready_to_ordered_ms": 90847.64650299621,
+      "preparation_work_ms": 6953.927157999715,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people gathers around a dining table covered with a pink checkered tablecloth in an apartment.",
+      "A woman in a white top unboxes flowers and supplies from a cardboard box on the table.",
+      "A woman sitting in a black shirt and a woman standing in a patterned dress observe and help with the flower unpacking.",
+      "A young man in an orange shirt stands in the background watching before walking around the room.",
+      "The camera wearer places an animal-patterned stool onto the floor.",
+      "The camera wearer takes out a smartphone and operates it.",
+      "The camera wearer walks toward the hallway next to a red refrigerator and closes the door."
+    ],
+    "high_level_conclusions": [
+      "The group is preparing floral props and materials, including flower pressers and desiccants, likely for an art project or video shoot.",
+      "<voice_622> is explaining the purchased floral preservation items to the others at the table.",
+      "The camera wearer steps away from the group to check information on the phone and close the door."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people gathers around a dining table covered with a pink checkered tablecloth in an apartment.\",\n  \"A woman in a white top unboxes flowers and supplies from a cardboard box on the table.\",\n  \"A woman sitting in a black shirt and a woman standing in a patterned dress observe and help with the flower unpacking.\",\n  \"A young man in an orange shirt stands in the background watching before walking around the room.\",\n  \"The camera wearer places an animal-patterned stool onto the floor.\",\n  \"The camera wearer takes out a smartphone and operates it.\",\n  \"The camera wearer walks toward the hallway next to a red refrigerator and closes the door.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is preparing floral props and materials, including flower pressers and desiccants, likely for an art project or video shoot.\",\n  \"<voice_622> is explaining the purchased floral preservation items to the others at the table.\",\n  \"The camera wearer steps away from the group to check information on the phone and close the door.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 55,
+      "call_id": "f8f4c290-18c8-4ba0-aeee-3d87a92de58e",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406401.6378314,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66619,
+      "output_tokens": 1239,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 32904.53924500616
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people gathers around a dining table covered with a pink checkered tablecloth in an apartment.\",\n  \"A woman in a white top unboxes flowers and supplies from a cardboard box on the table.\",\n  \"A woman sitting in a black shirt and a woman standing in a patterned dress observe and help with the flower unpacking.\",\n  \"A young man in an orange shirt stands in the background watching before walking around the room.\",\n  \"The camera wearer places an animal-patterned stool onto the floor.\",\n  \"The camera wearer takes out a smartphone and operates it.\",\n  \"The camera wearer walks toward the hallway next to a red refrigerator and closes the door.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is preparing floral props and materials, including flower pressers and desiccants, likely for an art project or video shoot.\",\n  \"<voice_622> is explaining the purchased floral preservation items to the others at the table.\",\n  \"The camera wearer steps away from the group to check information on the phone and close the door.\"\n ]\n}\n```",
+      "total_tokens": 67858,
+      "request_end": 1789406434.542502,
+      "latency_ms": 32904.666244998225,
+      "client_wall_clock_latency_ms": 32904.666244998225,
+      "api_request_wall_clock_latency_ms": 32904.666244998225
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_55_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

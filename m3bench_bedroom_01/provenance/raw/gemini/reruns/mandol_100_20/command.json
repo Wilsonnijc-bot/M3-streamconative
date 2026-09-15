@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/opt/streammeco/mandol-venv/bin/python",
+    "/opt/streammeco/run/m3bench_bedroom_gemini/reruns/mandol_100_20/code/bedroom_mandol.py",
+    "eval",
+    "--qa",
+    "/opt/streammeco/run/m3bench_bedroom_gemini/questions.json",
+    "--results",
+    "/opt/streammeco/run/m3bench_bedroom_gemini/reruns/mandol_100_20/results",
+    "--limit",
+    "15",
+    "--candidate-k",
+    "100",
+    "--top-k",
+    "20"
+  ],
+  "cwd": "/opt/streammeco/run/m3bench_bedroom_gemini/code/Mandol"
+}

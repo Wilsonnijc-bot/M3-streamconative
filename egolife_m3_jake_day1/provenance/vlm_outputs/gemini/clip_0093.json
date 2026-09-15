@@ -1,0 +1,76 @@
+{
+  "clip_id": 93,
+  "source": {
+    "segment_id": 93,
+    "source": "DAY1_A1_JAKE_11540000.mp4",
+    "source_clock": "11540000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42840.0,
+    "absolute_end_seconds": 42870.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0093.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 50479.134501772,
+      "prepared_perf": 50486.822327986,
+      "ordered_start_perf": 50595.970571862,
+      "consumer_wait_ms": 0.00821600406197831,
+      "ready_to_ordered_ms": 109148.24387599947,
+      "preparation_work_ms": 7682.3961949994555,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A young man wearing an orange t-shirt stands in the room talking to the people gathered around the table.",
+      "A woman dressed in white stands near the whiteboard, arranging materials and flowers on the table.",
+      "A woman dressed in black sitting at the table raises a wrapped object while speaking to the group.",
+      "The woman in black asks the others about their culinary skills and whether they can use a knife.",
+      "The young man in the orange shirt responds to her question while gesturing with his hands.",
+      "The young man turns and walks toward the background of the room.",
+      "The people around the table continue discussing food preparation and cutting meat."
+    ],
+    "high_level_conclusions": [
+      "The group is organizing and delegating tasks for an upcoming meal or barbecue, as indicated by the discussion about charcoal and knife preparation skills.",
+      "The woman sitting in black is acting in an organizing role, checking on the cooking abilities of the members to divide responsibilities."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A young man wearing an orange t-shirt stands in the room talking to the people gathered around the table.\",\n\t\t\"A woman dressed in white stands near the whiteboard, arranging materials and flowers on the table.\",\n\t\t\"A woman dressed in black sitting at the table raises a wrapped object while speaking to the group.\",\n\t\t\"The woman in black asks the others about their culinary skills and whether they can use a knife.\",\n\t\t\"The young man in the orange shirt responds to her question while gesturing with his hands.\",\n\t\t\"The young man turns and walks toward the background of the room.\",\n\t\t\"The people around the table continue discussing food preparation and cutting meat.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is organizing and delegating tasks for an upcoming meal or barbecue, as indicated by the discussion about charcoal and knife preparation skills.\",\n\t\t\"The woman sitting in black is acting in an organizing role, checking on the cooking abilities of the members to divide responsibilities.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 93,
+      "call_id": "6a7a0e86-7e47-45d8-9e9f-f45ed7c745cf",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789409422.3685026,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67301,
+      "output_tokens": 1444,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 108081.87153600011
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A young man wearing an orange t-shirt stands in the room talking to the people gathered around the table.\",\n\t\t\"A woman dressed in white stands near the whiteboard, arranging materials and flowers on the table.\",\n\t\t\"A woman dressed in black sitting at the table raises a wrapped object while speaking to the group.\",\n\t\t\"The woman in black asks the others about their culinary skills and whether they can use a knife.\",\n\t\t\"The young man in the orange shirt responds to her question while gesturing with his hands.\",\n\t\t\"The young man turns and walks toward the background of the room.\",\n\t\t\"The people around the table continue discussing food preparation and cutting meat.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is organizing and delegating tasks for an upcoming meal or barbecue, as indicated by the discussion about charcoal and knife preparation skills.\",\n\t\t\"The woman sitting in black is acting in an organizing role, checking on the cooking abilities of the members to divide responsibilities.\"\n\t]\n}\n```",
+      "total_tokens": 68745,
+      "request_end": 1789409530.4504695,
+      "latency_ms": 108081.96363899333,
+      "client_wall_clock_latency_ms": 108081.96363899333,
+      "api_request_wall_clock_latency_ms": 108081.96363899333
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_93_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

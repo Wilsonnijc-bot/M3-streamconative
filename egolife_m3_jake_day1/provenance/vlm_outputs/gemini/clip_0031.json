@@ -1,0 +1,75 @@
+{
+  "clip_id": 31,
+  "source": {
+    "segment_id": 31,
+    "source": "DAY1_A1_JAKE_11240000.mp4",
+    "source_clock": "11240000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41040.0,
+    "absolute_end_seconds": 41070.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0031.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46095.524259504,
+      "prepared_perf": 46106.600939259,
+      "ordered_start_perf": 46194.315551245,
+      "consumer_wait_ms": 0.016030004189815372,
+      "ready_to_ordered_ms": 87714.61198600446,
+      "preparation_work_ms": 11076.057543999923,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Jake carries a long cardboard package through the hallway toward the living area.",
+      "In the living area, several people are gathered around a dining table while a man in an orange t-shirt stands nearby.",
+      "Jake continues walking through the living area holding the cardboard package.",
+      "Jake enters a bedroom containing messy beds, laptops, and various equipment.",
+      "Jake puts down the package and turns around to walk back toward the living room.",
+      "The people gathered around the dining table continue talking amongst themselves."
+    ],
+    "high_level_conclusions": [
+      "Jake is delivering or storing a long package into the bedroom.",
+      "The group gathered around the table in the living room is having a relaxed conversation about pens, devices, and tasks."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"Jake carries a long cardboard package through the hallway toward the living area.\",\n  \"In the living area, several people are gathered around a dining table while a man in an orange t-shirt stands nearby.\",\n  \"Jake continues walking through the living area holding the cardboard package.\",\n  \"Jake enters a bedroom containing messy beds, laptops, and various equipment.\",\n  \"Jake puts down the package and turns around to walk back toward the living room.\",\n  \"The people gathered around the dining table continue talking amongst themselves.\"\n ],\n \"high_level_conclusions\": [\n  \"Jake is delivering or storing a long package into the bedroom.\",\n  \"The group gathered around the table in the living room is having a relaxed conversation about pens, devices, and tasks.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 31,
+      "call_id": "e0586ede-b397-4d29-a421-e340a69167f4",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405018.4210098,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67148,
+      "output_tokens": 1124,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 22875.411253000493
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"Jake carries a long cardboard package through the hallway toward the living area.\",\n  \"In the living area, several people are gathered around a dining table while a man in an orange t-shirt stands nearby.\",\n  \"Jake continues walking through the living area holding the cardboard package.\",\n  \"Jake enters a bedroom containing messy beds, laptops, and various equipment.\",\n  \"Jake puts down the package and turns around to walk back toward the living room.\",\n  \"The people gathered around the dining table continue talking amongst themselves.\"\n ],\n \"high_level_conclusions\": [\n  \"Jake is delivering or storing a long package into the bedroom.\",\n  \"The group gathered around the table in the living room is having a relaxed conversation about pens, devices, and tasks.\"\n ]\n}\n```",
+      "total_tokens": 68272,
+      "request_end": 1789405041.2965302,
+      "latency_ms": 22875.517813998158,
+      "client_wall_clock_latency_ms": 22875.517813998158,
+      "api_request_wall_clock_latency_ms": 22875.517813998158
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_31_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "clip_id": 143,
+  "source": {
+    "segment_id": 143,
+    "source": "DAY1_A1_JAKE_12163000.mp4",
+    "source_clock": "12163000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 44190.0,
+    "absolute_end_seconds": 44220.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0143.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 54011.806746365,
+      "prepared_perf": 54021.230488332,
+      "ordered_start_perf": 54099.390686283,
+      "consumer_wait_ms": 0.019466999219730496,
+      "ready_to_ordered_ms": 78160.19795099419,
+      "preparation_work_ms": 9418.244263004453,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group is gathered around a table covered in a pink-and-white checkered tablecloth discussing an event plan.",
+      "The camera wearer has a laptop open on the table displaying a document.",
+      "A woman wearing a black jacket sits on the left side of the table, participating in the conversation.",
+      "A woman in a white blouse stands behind the table near a whiteboard holding a notebook or booklet.",
+      "A woman in a patterned green top sits on the right side of the table.",
+      "<voice_1681> discusses preparing dessert ingredients like red beans, taro balls, and coconut jelly, suggesting some can be bought ready-made.",
+      "<voice_1682> asks if ingredients for taro balls have been prepared.",
+      "<voice_1683> replies that materials for taro balls were not purchased.",
+      "<voice_1684> and <voice_1685> discuss whether ready-made taro balls can be directly purchased.",
+      "<voice_1681> reviews the schedule on the laptop, planning the dessert tasting session following a 4:20 presentation.",
+      "Near the end of the clip, another person with dyed light-red hair appears on the right edge of the frame."
+    ],
+    "high_level_conclusions": [
+      "The participants are coordinating an upcoming event that includes an introductory presentation followed by a dessert tasting session.",
+      "The group aims to streamline preparation by buying pre-made ingredients like taro balls to save cooking time before the scheduled tasting."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group is gathered around a table covered in a pink-and-white checkered tablecloth discussing an event plan.\",\n  \"The camera wearer has a laptop open on the table displaying a document.\",\n  \"A woman wearing a black jacket sits on the left side of the table, participating in the conversation.\",\n  \"A woman in a white blouse stands behind the table near a whiteboard holding a notebook or booklet.\",\n  \"A woman in a patterned green top sits on the right side of the table.\",\n  \"<voice_1681> discusses preparing dessert ingredients like red beans, taro balls, and coconut jelly, suggesting some can be bought ready-made.\",\n  \"<voice_1682> asks if ingredients for taro balls have been prepared.\",\n  \"<voice_1683> replies that materials for taro balls were not purchased.\",\n  \"<voice_1684> and <voice_1685> discuss whether ready-made taro balls can be directly purchased.\",\n  \"<voice_1681> reviews the schedule on the laptop, planning the dessert tasting session following a 4:20 presentation.\",\n  \"Near the end of the clip, another person with dyed light-red hair appears on the right edge of the frame.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are coordinating an upcoming event that includes an introductory presentation followed by a dessert tasting session.\",\n  \"The group aims to streamline preparation by buying pre-made ingredients like taro balls to save cooking time before the scheduled tasting.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 143,
+      "call_id": "655b3fec-8159-445b-836b-72d2cfa8cd0d",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412926.098988,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67319,
+      "output_tokens": 1715,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 74125.87444100063
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group is gathered around a table covered in a pink-and-white checkered tablecloth discussing an event plan.\",\n  \"The camera wearer has a laptop open on the table displaying a document.\",\n  \"A woman wearing a black jacket sits on the left side of the table, participating in the conversation.\",\n  \"A woman in a white blouse stands behind the table near a whiteboard holding a notebook or booklet.\",\n  \"A woman in a patterned green top sits on the right side of the table.\",\n  \"<voice_1681> discusses preparing dessert ingredients like red beans, taro balls, and coconut jelly, suggesting some can be bought ready-made.\",\n  \"<voice_1682> asks if ingredients for taro balls have been prepared.\",\n  \"<voice_1683> replies that materials for taro balls were not purchased.\",\n  \"<voice_1684> and <voice_1685> discuss whether ready-made taro balls can be directly purchased.\",\n  \"<voice_1681> reviews the schedule on the laptop, planning the dessert tasting session following a 4:20 presentation.\",\n  \"Near the end of the clip, another person with dyed light-red hair appears on the right edge of the frame.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are coordinating an upcoming event that includes an introductory presentation followed by a dessert tasting session.\",\n  \"The group aims to streamline preparation by buying pre-made ingredients like taro balls to save cooking time before the scheduled tasting.\"\n ]\n}\n```",
+      "total_tokens": 69034,
+      "request_end": 1789413000.224985,
+      "latency_ms": 74125.99250299536,
+      "client_wall_clock_latency_ms": 74125.99250299536,
+      "api_request_wall_clock_latency_ms": 74125.99250299536
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_143_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

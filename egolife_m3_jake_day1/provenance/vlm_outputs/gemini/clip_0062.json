@@ -1,0 +1,77 @@
+{
+  "clip_id": 62,
+  "source": {
+    "segment_id": 62,
+    "source": "DAY1_A1_JAKE_11390000.mp4",
+    "source_clock": "11390000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41940.0,
+    "absolute_end_seconds": 41970.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0062.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47786.108349543,
+      "prepared_perf": 47792.787879816,
+      "ordered_start_perf": 47934.046713969,
+      "consumer_wait_ms": 0.009547999070491642,
+      "ready_to_ordered_ms": 141258.83415299904,
+      "preparation_work_ms": 6674.132222004118,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a dining table covered in a pink checkered tablecloth.",
+      "A person calls out the next speaker to present.",
+      "A woman seated on the right side of the table begins sharing her proposal.",
+      "A woman standing in the center in a white blouse trims and organizes flowers and materials on the table.",
+      "A woman with dyed light hair stands beside her, inspecting and arranging plant stems.",
+      "A woman sitting on the left in dark clothing listens to the discussion.",
+      "The woman seated on the right gestures with her hands while elaborating on her DIY jellyfish lamp concept for Earth Day."
+    ],
+    "high_level_conclusions": [
+      "The individuals are holding a creative planning or proposal meeting centered on DIY activities for Earth Day.",
+      "<voice_311> is presenting her proposal to craft eco-friendly jellyfish lamps instead of buying commercial kits.",
+      "<voice_699> and <voice_700> act as moderators or coordinators managing the order of presentations in the meeting."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a dining table covered in a pink checkered tablecloth.\",\n    \"A person calls out the next speaker to present.\",\n    \"A woman seated on the right side of the table begins sharing her proposal.\",\n    \"A woman standing in the center in a white blouse trims and organizes flowers and materials on the table.\",\n    \"A woman with dyed light hair stands beside her, inspecting and arranging plant stems.\",\n    \"A woman sitting on the left in dark clothing listens to the discussion.\",\n    \"The woman seated on the right gestures with her hands while elaborating on her DIY jellyfish lamp concept for Earth Day.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals are holding a creative planning or proposal meeting centered on DIY activities for Earth Day.\",\n    \"<voice_311> is presenting her proposal to craft eco-friendly jellyfish lamps instead of buying commercial kits.\",\n    \"<voice_699> and <voice_700> act as moderators or coordinators managing the order of presentations in the meeting.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 62,
+      "call_id": "eda6d70a-c6d6-45e1-aff1-f77d9d4becb9",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406757.742377,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67405,
+      "output_tokens": 1804,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 35909.30692300026
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a dining table covered in a pink checkered tablecloth.\",\n    \"A person calls out the next speaker to present.\",\n    \"A woman seated on the right side of the table begins sharing her proposal.\",\n    \"A woman standing in the center in a white blouse trims and organizes flowers and materials on the table.\",\n    \"A woman with dyed light hair stands beside her, inspecting and arranging plant stems.\",\n    \"A woman sitting on the left in dark clothing listens to the discussion.\",\n    \"The woman seated on the right gestures with her hands while elaborating on her DIY jellyfish lamp concept for Earth Day.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals are holding a creative planning or proposal meeting centered on DIY activities for Earth Day.\",\n    \"<voice_311> is presenting her proposal to craft eco-friendly jellyfish lamps instead of buying commercial kits.\",\n    \"<voice_699> and <voice_700> act as moderators or coordinators managing the order of presentations in the meeting.\"\n  ]\n}\n```",
+      "total_tokens": 69209,
+      "request_end": 1789406793.6518257,
+      "latency_ms": 35909.44568499981,
+      "client_wall_clock_latency_ms": 35909.44568499981,
+      "api_request_wall_clock_latency_ms": 35909.44568499981
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_62_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

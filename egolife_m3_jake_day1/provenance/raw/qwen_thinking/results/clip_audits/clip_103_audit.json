@@ -1,0 +1,475 @@
+{
+  "clip_id": 103,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0103.mp4",
+  "end_to_end_memory_generation_ms": 536303.3009220089,
+  "latency_ms": {
+    "clip_decode": 4771.475303001353,
+    "deepgram_asr": 865.5581769999117,
+    "mai_transcribe_asr": 1164.0025740052806,
+    "asr_total": 1165.4390869953204,
+    "audio_segmentation": 6.88929099123925,
+    "speech_embedding_campplus": 872.4774059955962,
+    "facial_detection_recognition_buffalo_l": 4057.1983919944614,
+    "face_clustering": 7.92794898734428,
+    "vlm_memory_generation": 195503.96031700075,
+    "text_embedding": 542.1668140043039,
+    "graph_update_total": 373.4475129895145
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 103,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 1013,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789437639.0245452,
+          "status": "success",
+          "total_tokens": 198,
+          "request_end": 1789437639.5664926,
+          "latency_ms": 541.9481209974037
+        }
+      ],
+      "total_tokens": 198,
+      "latency_ms": 542.1668140043039
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 865.5581769999117,
+        "openrouter-mai-transcribe-2": 1164.0025740052806
+      },
+      "asr_total_ms": 1165.4390869953204,
+      "audio_segmentation_ms": 6.88929099123925,
+      "speech_embedding_ms": 872.4774059955962,
+      "graph_update_ms": 368.75386799511034,
+      "asr_segment_count": 4,
+      "speech_embedding_count": 4,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1263.496507992386
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4057.1983919944614,
+      "face_clustering_ms": 7.92794898734428,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 328,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4240.480391003075
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_637>",
+        "<voice_517>",
+        "<voice_364>",
+        "<voice_1357>"
+      ],
+      "context_preparation_ms": 3945.6664270110196,
+      "vlm_ms": 195503.96031700075,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table in a room featuring a whiteboard.\",\n\t\t\"A person wearing a pink shirt enters the room and stands near the wall.\",\n\t\t\"An individual in a white shirt stands by the whiteboard, gesturing during the discussion.\",\n\t\t\"Two other participants sit at the table while the group converses.\",\n\t\t\"The camera wearer remains seated in the foreground with legs visible throughout most of the clip.\",\n\t\t\"Towards the end of the sequence, the camera wearer picks up a smartphone and interacts with the screen.\",\n\t\t\"Various individuals engage in conversation and gesture towards the whiteboard and each other.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker `<voice_637>` discusses a filming schedule estimating 45 minutes for 9 people at 5 minutes each.\",\n\t\t\"Speaker `<voice_517>` mentions distributing coins and playing a game involving shaking dice.\",\n\t\t\"Speaker `<voice_364>` confirms agreement to the proposed game.\",\n\t\t\"Speaker `<voice_1357>` notes someone arriving at the doorway.\",\n\t\t\"The group appears to be coordinating a session involving timing calculations and planned breaks.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a table in a room featuring a whiteboard.",
+          "A person wearing a pink shirt enters the room and stands near the wall.",
+          "An individual in a white shirt stands by the whiteboard, gesturing during the discussion.",
+          "Two other participants sit at the table while the group converses.",
+          "The camera wearer remains seated in the foreground with legs visible throughout most of the clip.",
+          "Towards the end of the sequence, the camera wearer picks up a smartphone and interacts with the screen.",
+          "Various individuals engage in conversation and gesture towards the whiteboard and each other."
+        ],
+        "high_level_conclusions": [
+          "Speaker `<voice_637>` discusses a filming schedule estimating 45 minutes for 9 people at 5 minutes each.",
+          "Speaker `<voice_517>` mentions distributing coins and playing a game involving shaking dice.",
+          "Speaker `<voice_364>` confirms agreement to the proposed game.",
+          "Speaker `<voice_1357>` notes someone arriving at the doorway.",
+          "The group appears to be coordinating a session involving timing calculations and planned breaks."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 103,
+          "call_id": "14c8149b-ff26-4c52-b649-bffcc9530b13",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789437443.5195107,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table in a room featuring a whiteboard.\",\n\t\t\"A person wearing a pink shirt enters the room and stands near the wall.\",\n\t\t\"An individual in a white shirt stands by the whiteboard, gesturing during the discussion.\",\n\t\t\"Two other participants sit at the table while the group converses.\",\n\t\t\"The camera wearer remains seated in the foreground with legs visible throughout most of the clip.\",\n\t\t\"Towards the end of the sequence, the camera wearer picks up a smartphone and interacts with the screen.\",\n\t\t\"Various individuals engage in conversation and gesture towards the whiteboard and each other.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker `<voice_637>` discusses a filming schedule estimating 45 minutes for 9 people at 5 minutes each.\",\n\t\t\"Speaker `<voice_517>` mentions distributing coins and playing a game involving shaking dice.\",\n\t\t\"Speaker `<voice_364>` confirms agreement to the proposed game.\",\n\t\t\"Speaker `<voice_1357>` notes someone arriving at the doorway.\",\n\t\t\"The group appears to be coordinating a session involving timing calculations and planned breaks.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be held by someone sitting down (legs visible in foreground).\n    *   People present:\n        *   Person standing near whiteboard (white shirt).\n        *   Person sitting at table (black top).\n        *   Person sitting at table (light top/grey hair).\n        *   Person entering/exiting or moving around (orange/pink shirt).\n        *   Camera wearer (legs visible, later holding phone).\n    *   Setting: Room with a whiteboard, table with items (clapperboard, water bottle), looks like a rehearsal or meeting space.\n    *   Action: People are talking, gesturing, looking at the whiteboard. Someone enters briefly. Later, the camera wearer holds up a phone.\n*   **Voice Features:**\n    *   `<voice_637>`: \"MAI: 拍戏过程，这个是要保留的，大概像九个人的话，每个人五分钟就四十五，一个小时半，就按一个小时算。\" (Translation: Filming process, this needs to be kept. Roughly if there are nine people, five minutes each is forty-five... half an hour, count as one hour.) -> Speaker MAI.\n    *   `<voice_517>`: \"MAI: 正常给大家发一些币，然后通过摇动子，大家玩一会。\" (Translation: Normally give everyone some coins/bits, then through shaking the dice/sub, play for a while.) -> Speaker MAI.\n    *   `<voice_364>`: \"MAI: 对对对。整点游戏可以。\" (Translation: Yes yes yes. Hour game is okay.) -> Speaker MAI.\n    *   `<voice_1357>`: \"MAI: 门门口再来一个。\" (Translation: Come another one at the door.) -> Speaker MAI.\n\n**2. Construct Video Description:**\n*   Need to describe the scene chronologically based on frames.\n*   Frames 0.00 - 1.00: Group sitting around a table. One person stands near whiteboard.\n*   Frames 1.00 - 5.00: Person in orange shirt enters/moves into frame left.\n*   Frames 5.00 - 19.00: Group continues discussion. Person in white shirt gestures towards whiteboard.\n*   Frames 19.00 - 20.00: Person in orange shirt exits or moves away.\n*   Frames 20.00 - 22.00: Person in orange shirt walks back into frame.\n*   Frames 22.00 - 23.00: Person in orange shirt leaves again.\n*   Frames 23.00 - 25.00: Focus shifts slightly. Camera wearer's legs become more prominent.\n*   Frames 25.00 - 29.50: Camera wearer picks up a phone and looks at it. Others continue talking.\n\n**3. Construct High-Level Conclusions:**\n*   The voice features all attribute speech to \"MAI\".\n*   Since I don't have explicit face IDs linked to names in the prompt's provided text (only generic `<face_x>` placeholders usually, but here none are explicitly mapped to names in the *input* section provided in the prompt description, wait, let me check the prompt again).\n*   Prompt says: \"Each feature is either a face ... or a voice ... Each feature has a unique ID enclosed in angle brackets.\"\n*   The input provided *in the prompt block* lists Face features: (Empty list? No, wait, looking at the raw text provided in the prompt... Ah, the prompt text says \"Face features:Voice features:\" followed by the JSON. It seems the Face features list might be empty or missing in the provided text snippet, or I need to look closer. Actually, looking at the very beginning of the prompt text provided by the user: \"Face features:Voice features:{...}\". It implies the Face features list is empty or not provided in the specific text block I see. Wait, usually there are face IDs like `<face_1>`. Let me re-read carefully.\n*   Okay, the prompt text provided ends with `Voice features:{...}`. There is no `Face features:` section with actual data before that line in the provided text block. Wait, looking at the very top of the user message: \"Face features:Voice features:{...}\". This suggests the Face features list is empty or omitted.\n*   However, the instruction says: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\n*   Without face IDs provided in the input, I cannot make equivalences. I must stick to the provided IDs.\n*   Wait, I need to check if I missed face IDs. Scanning the text... \"Face features:Voice features:{...}\". It looks like the Face features part is just a label and then immediately Voice features starts. Or perhaps the Face features are empty.\n*   Let's assume Face features are empty based on the text provided.\n*   Therefore, I cannot create Equivalence statements because I lack face IDs.\n*   I can still make high-level conclusions about the activity (filming discussion, scheduling).\n*   Speaker MAI is discussing filming schedules and games.\n\n**Refining Video Description:**\n*   Start with the group setting.\n*   Mention the person in the orange shirt entering and leaving.\n*   Mention the camera wearer interacting with a phone at the end.\n*   Mention the discussion about filming duration and games.\n\n**Refining High-Level Conclusions:**\n*   Since no face IDs are provided, I cannot link them.\n*   I can conclude about the context: They are discussing a filming schedule (9 people, 5 mins each).\n*   They are planning a break/game involving coins/dice.\n\n**Wait, one constraint:** \"Preserve speaker identity when constructing memory from the supplied character features.\" \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   Wait, the prompt asks for \"Video Description\" and \"High-Level Conclusions\". It does *not* ask for \"Memory\".\n*   The system instruction says: \"Preserve speaker identity when constructing memory from the supplied character features.\" AND \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n*   BUT the Output Format section says: \"Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\".\n*   There is a conflict between the System Instruction (\"include at least one episodic memory\") and the Output Format (which doesn't mention memory).\n*   Usually, the Output Format overrides the general system instruction regarding the final structure. However, the System Instruction says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n*   Wait, looking closely at the System Instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This sounds like a requirement for the *content* generation, possibly within the descriptions or conclusions.\n*   But the Output Format is strict JSON.\n*   Let's look at the \"Task Instructions\" in the System Prompt again. \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n*   This implies I should follow the Output Format strictly. The instruction about \"episodic memory\" might be a leftover from a different task template or applies to how I describe the actions (i.e., describing the speech act).\n*   Actually, reading the System Instruction carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". Then \"Output Format: ... video_description ... high_level_conclusions\".\n*   The instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" seems to contradict the Output Format if interpreted as a separate field.\n*   However, often these prompts want the speech integrated into the description or conclusions.\n*   Let's try to integrate the speech summaries into the descriptions or conclusions where appropriate, ensuring the ID is used if needed for attribution, though the Output Format doesn't explicitly ask for IDs in the strings unless it's an equivalence.\n*   Wait, the System Instruction says: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" and \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   So in `high_level_conclusions`, I should probably use the voice ID if referring to the speaker.\n*   In `video_description`, I should describe the visual events.\n*   The instruction \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\" is tricky. If I put it in `video_description`, it becomes a description of speech. If I put it in `high_level_conclusions`, it becomes a summary of intent.\n*   Given the strict JSON schema, I will incorporate the speech content into the descriptions/conclusions naturally, attributing it to the voice ID if necessary for clarity, or just summarizing the action.\n*   Actually, looking at the instruction \"Preserve speaker identity when constructing memory...\", it might imply I should treat the voice features as defining the speaker's identity in the context of the memory.\n*   Let's prioritize the Output Format. I will write the descriptions and conclusions. I will ensure the voice content is reflected in the conclusions or descriptions.\n*   Wait, I need to check if there are Face IDs hidden. \"Face features:Voice features:{...}\". It really looks like Face features is empty.\n*   Okay, Plan:\n    1.  Describe the scene visually.\n    2.  Include the speech content in the descriptions/conclusions attributed to `<voice_637>`, etc., or summarize the intent.\n    3.  Since no face IDs exist, no Equivalence lines.\n    4.  Ensure JSON validity.\n\n**Drafting Content:**\n*   **Description:**\n    *   A group of people are gathered around a table in a room with a whiteboard.\n    *   A person wearing a pink/orange shirt enters the room and stands near the wall.\n    *   Another person in a white shirt stands by the whiteboard, gesturing.\n    *   Two others sit at the table.\n    *   The camera wearer sits with legs visible in the foreground.\n    *   Towards the end, the camera wearer picks up a smartphone and interacts with it.\n*   **Conclusions:**\n    *   The group appears to be discussing a filming schedule.\n    *   Speaker `<voice_637>` mentions a plan for 9 people, 5 minutes each, totaling roughly an hour.\n    *   Speaker `<voice_517>` discusses giving out coins/bits and playing a game.\n    *   Speaker `<voice_364>` agrees to the game idea.\n    *   Speaker `<voice_1357>` mentions someone coming to the door.\n\n**Refining for Constraints:**\n*   \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I must quote or summarize faithfully.\n*   \"Use only IDs supplied in the input\".\n*   \"Keep the existing video_description/high_level_conclusions JSON schema\".\n\nLet's assemble the JSON.\n\nOne detail: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis instruction is quite specific. It likely means I should embed this information in the output. Since the output format is fixed to `video_description` and `high_level_conclusions`, I will place the speech summaries in `high_level_conclusions` as they represent the \"reasoning/intent\" derived from the speech, or in `video_description` as the audio event. Given \"High-Level Conclusions\" allows for \"identity resolution\" and \"intentions\", putting the speech summary there fits best as a conclusion about what was discussed.\nHowever, `video_description` is for \"observable and inferable events\". Hearing speech is observable.\nI'll put the specific speech content in `high_level_conclusions` as it relates to the \"semantic conclusion\" and \"intentions\".\nActually, the instruction says \"include at least one episodic memory\". An episodic memory usually describes an event.\nMaybe I should add a sentence in `video_description` like \"Speaker `<voice_637>` states: 'Filming process...'\".\nBut the instruction also says \"Keep the existing video_description/high_level_conclusions JSON schema\".\nOkay, I will integrate the speech into the descriptions/conclusions.\n\nLet's check the Face Features again. The text provided is:\n`Face features:Voice features:{...}`\nIt seems the Face features list is effectively empty or not populated in the provided text block. I will proceed assuming no face IDs.\n\nFinal check on constraints:\n- \"Preserve speaker identity... using the exact ID as the speaker.\"\n- \"Do not replace the ID with 'a speaker'...\"\n- \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n\nSo in `high_level_conclusions`, I will write things like: \"Speaker `<voice_637>` proposes a filming schedule of 5 minutes per person for 9 individuals.\"\n\nLet's construct the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"A group of people are seated around a table in a room with a whiteboard.\",\n    \"A person in a pink shirt enters the room and stands near the wall.\",\n    \"Another individual in a white shirt stands by the whiteboard, gesturing towards it.\",\n    \"Two other participants sit at the table observing the discussion.\",\n    \"The camera wearer remains seated in the foreground with legs visible.\",\n    \"Towards the end of the clip, the camera wearer retrieves a smartphone and begins to interact with the screen.\",\n    \"Throughout the sequence, various individuals engage in conversation and gesture.\"\n  ],\n  \"high_level_conclusions\": [\n    \"Speaker `<voice_637>` discusses a filming schedule estimating 45 minutes for 9 people at 5 minutes each.\",\n    \"Speaker `<voice_517>` mentions distributing coins and playing a game via shaking dice.\",\n    \"Speaker `<voice_364>` confirms agreement to the proposed game.\",\n    \"Speaker `<voice_1357>` notes someone arriving at the doorway.\",\n    \"The group appears to be coordinating a session involving timing and breaks.\"\n  ]\n}\n```\nWait, I need to make sure I don't miss the \"episodic memory\" requirement if it implies something else. \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\nSince I am outputting JSON, I can't add a new key. I must fit it into existing keys.\nPutting the quote in `high_level_conclusions` works well as a summary of the discussion point.\nAlso, I need to ensure I don't hallucinate face IDs.\nThe prompt text provided: \"Face features:Voice features:{...}\"\nThis implies Face features is empty.\nOkay, ready to generate.\n\nOne correction: The instruction says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\nI have 4 voice IDs. I have included summaries for all 4 in `high_level_conclusions`. This satisfies the condition within the available schema fields.\n\nDouble Check: \"Do not substitute a plausible scene description for what the speaker actually said.\"\nMy conclusions summarize the ASR text faithfully.\n\"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\"\nI am not asserting equivalence because no face IDs were provided. I am using the voice IDs directly.\n\nOne more thing: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nThis reinforces using `<voice_X>`.\n\nFinal check on JSON syntax.\nQuotes escaped properly? Yes.\nArrays correct? Yes.\nNo extra text? Yes.\n\nOne detail: \"Video frame at 0.00s ... Video frame at 29.50s\".\nThe description covers the whole range.\nThe conclusions cover the speech content.\n\nWait, looking at the instruction \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\nDoes \"episodic memory\" mean I need to phrase it like a memory? E.g., \"Memory: Speaker X said...\".\nGiven the schema, I will just write the sentence. The term \"episodic memory\" in the system instruction likely refers to the *type* of content (an event involving the speaker), not necessarily a specific tag.\nI will formulate the sentences to reflect the speech content clearly.\n\nRevised `high_level_conclusions`:\n1. Speaker `<voice_637>` explains the filming process involves retaining details, calculating time for 9 people at 5 minutes each.\n2. Speaker `<voice_517>` plans to distribute coins and play a game involving shaking dice.\n3. Speaker `<voice_364>` agrees to the game plan.\n4. Speaker `<voice_1357>` mentions another person coming to the door.\n\nThis looks solid.\n\nOne small check: \"Face features:Voice features:{...}\". Is it possible `<face_1>` etc are implied? No, I must use \"IDs supplied in the input\". If none are supplied, I can't use them.\nOkay.\n\nFinal check on the generated JSON structure.\n`\"video_description\": [\"...\", \"...\"]`\n`\"high_level_conclusions\": [\"...\", \"...\"]`\nAll good.\n\nOne detail in the prompt: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis confirms I shouldn't change the keys.\n\nLet's finalize the text.\nDescription:\n- Group around table.\n- Pink shirt person enters/leaves.\n- White shirt person at board.\n- Camera wearer uses phone.\nConclusions:\n- Summaries of the 4 voice tracks.\n\nReady.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table in a room featuring a whiteboard.\",\n\t\t\"A person wearing a pink shirt enters the room and stands near the wall.\",\n\t\t\"An individual in a white shirt stands by the whiteboard, gesturing during the discussion.\",\n\t\t\"Two other participants sit at the table while the group converses.\",\n\t\t\"The camera wearer remains seated in the foreground with legs visible throughout most of the clip.\",\n\t\t\"Towards the end of the sequence, the camera wearer picks up a smartphone and interacts with the screen.\",\n\t\t\"Various individuals engage in conversation and gesture towards the whiteboard and each other.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker `<voice_637>` discusses a filming schedule estimating 45 minutes for 9 people at 5 minutes each.\",\n\t\t\"Speaker `<voice_517>` mentions distributing coins and playing a game involving shaking dice.\",\n\t\t\"Speaker `<voice_364>` confirms agreement to the proposed game.\",\n\t\t\"Speaker `<voice_1357>` notes someone arriving at the doorway.\",\n\t\t\"The group appears to be coordinating a session involving timing calculations and planned breaks.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10539,
+          "output_tokens": 4313,
+          "total_tokens": 14852,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0023439934011548758,
+            "media_preparation_ms": 66.9481060031103,
+            "processor_tokenization_ms": 437.747265008511,
+            "device_transfer_ms": 46.869596000760794,
+            "cuda_generation_ms": 194918.3517950005,
+            "decoding_ms": 4.259256995283067
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 195474.34523899574,
+          "request_end": 1789437639.0234752,
+          "latency_ms": 195503.96031700075,
+          "client_wall_clock_latency_ms": 195503.96031700075
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 5
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.09067099017556757,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 4.602974004228599,
+      "nodes_added": 5,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 4,
+    "speech_embeddings": 4,
+    "voice_identities": 4,
+    "detected_faces": 328,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 5,
+    "nodes_after_clip": 1370,
+    "edges_after_clip": 491,
+    "nodes_added_by_clip": 13,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table in a room featuring a whiteboard.",
+      "A person wearing a pink shirt enters the room and stands near the wall.",
+      "An individual in a white shirt stands by the whiteboard, gesturing during the discussion.",
+      "Two other participants sit at the table while the group converses.",
+      "The camera wearer remains seated in the foreground with legs visible throughout most of the clip.",
+      "Towards the end of the sequence, the camera wearer picks up a smartphone and interacts with the screen.",
+      "Various individuals engage in conversation and gesture towards the whiteboard and each other."
+    ],
+    "high_level_conclusions": [
+      "Speaker `<voice_637>` discusses a filming schedule estimating 45 minutes for 9 people at 5 minutes each.",
+      "Speaker `<voice_517>` mentions distributing coins and playing a game involving shaking dice.",
+      "Speaker `<voice_364>` confirms agreement to the proposed game.",
+      "Speaker `<voice_1357>` notes someone arriving at the doorway.",
+      "The group appears to be coordinating a session involving timing calculations and planned breaks."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a table in a room featuring a whiteboard.",
+      "A person wearing a pink shirt enters the room and stands near the wall.",
+      "An individual in a white shirt stands by the whiteboard, gesturing during the discussion.",
+      "Two other participants sit at the table while the group converses.",
+      "The camera wearer remains seated in the foreground with legs visible throughout most of the clip.",
+      "Towards the end of the sequence, the camera wearer picks up a smartphone and interacts with the screen.",
+      "Various individuals engage in conversation and gesture towards the whiteboard and each other."
+    ],
+    "high_level_conclusions": [
+      "Speaker `<voice_637>` discusses a filming schedule estimating 45 minutes for 9 people at 5 minutes each.",
+      "Speaker `<voice_517>` mentions distributing coins and playing a game involving shaking dice.",
+      "Speaker `<voice_364>` confirms agreement to the proposed game.",
+      "Speaker `<voice_1357>` notes someone arriving at the doorway.",
+      "The group appears to be coordinating a session involving timing calculations and planned breaks."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_103_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 13,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 1357,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 门门口再来一个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1358,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a table in a room featuring a whiteboard."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1359,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing a pink shirt enters the room and stands near the wall."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1360,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "An individual in a white shirt stands by the whiteboard, gesturing during the discussion."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1361,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two other participants sit at the table while the group converses."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1362,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer remains seated in the foreground with legs visible throughout most of the clip."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1363,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Towards the end of the sequence, the camera wearer picks up a smartphone and interacts with the screen."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1364,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Various individuals engage in conversation and gesture towards the whiteboard and each other."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1365,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker `<voice_637>` discusses a filming schedule estimating 45 minutes for 9 people at 5 minutes each."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1366,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker `<voice_517>` mentions distributing coins and playing a game involving shaking dice."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1367,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker `<voice_364>` confirms agreement to the proposed game."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1368,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker `<voice_1357>` notes someone arriving at the doorway."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1369,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be coordinating a session involving timing calculations and planned breaks."
+          ],
+          "timestamp": 103
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 364,
+        "target": 1367,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 517,
+        "target": 1366,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 637,
+        "target": 1365,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1357,
+        "target": 1368,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_103_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_103_graph.pkl"
+  },
+  "memory_pickle_bytes": 32689547,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 78290.274897196,
+    "prepared_perf": 78297.671877365,
+    "ordered_start_perf": 78618.419950222,
+    "consumer_wait_ms": 0.019336002878844738,
+    "ready_to_ordered_ms": 320748.07285699353,
+    "preparation_work_ms": 7391.541310003959,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 205503.54938799865
+}

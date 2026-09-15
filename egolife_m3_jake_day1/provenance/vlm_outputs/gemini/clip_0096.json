@@ -1,0 +1,77 @@
+{
+  "clip_id": 96,
+  "source": {
+    "segment_id": 96,
+    "source": "DAY1_A1_JAKE_11553000.mp4",
+    "source_clock": "11553000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42930.0,
+    "absolute_end_seconds": 42960.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0096.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 50718.117544573,
+      "prepared_perf": 50725.945192971,
+      "ordered_start_perf": 50887.003674166,
+      "consumer_wait_ms": 0.010730000212788582,
+      "ready_to_ordered_ms": 161058.48119500297,
+      "preparation_work_ms": 7822.403327998472,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The person holding the camera types on a smartphone with a slate resting on the table.",
+      "Several people sit around a table covered in a checkered tablecloth with flowers, papers, and bottles.",
+      "A woman in a white shirt stands near a whiteboard examining flowers.",
+      "The camera person puts down the phone and leaves the slate on the table.",
+      "A young man in an orange shirt enters and stands near the background observing the group.",
+      "The woman near the whiteboard gestures towards it as the discussion about the event schedule continues.",
+      "The attendees listen and exchange ideas regarding the time management for the event."
+    ],
+    "high_level_conclusions": [
+      "The group is discussing and organizing an event schedule or workflow.",
+      "The person speaking with voice <voice_1029> is pointing at the whiteboard while explaining event logistics, indicating they are in a coordinating or leading role.",
+      "The person recording sets aside their phone and slate to focus on the conversation."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"high_level_conclusions\": [\n  \"The group is discussing and organizing an event schedule or workflow.\",\n  \"The person speaking with voice <voice_1029> is pointing at the whiteboard while explaining event logistics, indicating they are in a coordinating or leading role.\",\n  \"The person recording sets aside their phone and slate to focus on the conversation.\"\n ],\n \"video_description\": [\n  \"The person holding the camera types on a smartphone with a slate resting on the table.\",\n  \"Several people sit around a table covered in a checkered tablecloth with flowers, papers, and bottles.\",\n  \"A woman in a white shirt stands near a whiteboard examining flowers.\",\n  \"The camera person puts down the phone and leaves the slate on the table.\",\n  \"A young man in an orange shirt enters and stands near the background observing the group.\",\n  \"The woman near the whiteboard gestures towards it as the discussion about the event schedule continues.\",\n  \"The attendees listen and exchange ideas regarding the time management for the event.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 96,
+      "call_id": "6a96afbb-d949-474a-a877-3d1500263ae0",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789409710.840239,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67341,
+      "output_tokens": 231,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 49696.83514499775
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"high_level_conclusions\": [\n  \"The group is discussing and organizing an event schedule or workflow.\",\n  \"The person speaking with voice <voice_1029> is pointing at the whiteboard while explaining event logistics, indicating they are in a coordinating or leading role.\",\n  \"The person recording sets aside their phone and slate to focus on the conversation.\"\n ],\n \"video_description\": [\n  \"The person holding the camera types on a smartphone with a slate resting on the table.\",\n  \"Several people sit around a table covered in a checkered tablecloth with flowers, papers, and bottles.\",\n  \"A woman in a white shirt stands near a whiteboard examining flowers.\",\n  \"The camera person puts down the phone and leaves the slate on the table.\",\n  \"A young man in an orange shirt enters and stands near the background observing the group.\",\n  \"The woman near the whiteboard gestures towards it as the discussion about the event schedule continues.\",\n  \"The attendees listen and exchange ideas regarding the time management for the event.\"\n ]\n}\n```",
+      "total_tokens": 67572,
+      "request_end": 1789409760.5371668,
+      "latency_ms": 49696.92469500296,
+      "client_wall_clock_latency_ms": 49696.92469500296,
+      "api_request_wall_clock_latency_ms": 49696.92469500296
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_96_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

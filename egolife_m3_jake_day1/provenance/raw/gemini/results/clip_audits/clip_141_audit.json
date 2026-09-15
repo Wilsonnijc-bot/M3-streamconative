@@ -1,0 +1,472 @@
+{
+  "clip_id": 141,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0141.mp4",
+  "end_to_end_memory_generation_ms": 204521.00610500202,
+  "latency_ms": {
+    "clip_decode": 6903.221101005329,
+    "deepgram_asr": 902.4499699953594,
+    "mai_transcribe_asr": 969.8664070019731,
+    "asr_total": 970.8272950010723,
+    "audio_segmentation": 6.766940001398325,
+    "speech_embedding_campplus": 1686.791569001798,
+    "facial_detection_recognition_buffalo_l": 4176.385528000537,
+    "face_clustering": 7.5508759982767515,
+    "vlm_memory_generation": 26738.09964799875,
+    "text_embedding": 663.7477249969379,
+    "graph_update_total": 1129.1672899969853
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 141,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 1145,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789412865.5451872,
+          "status": "success",
+          "total_tokens": 241,
+          "request_end": 1789412866.2084053,
+          "latency_ms": 663.2198430015706
+        }
+      ],
+      "total_tokens": 241,
+      "latency_ms": 663.7477249969379
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 902.4499699953594,
+        "openrouter-mai-transcribe-2": 969.8664070019731
+      },
+      "asr_total_ms": 970.8272950010723,
+      "audio_segmentation_ms": 6.766940001398325,
+      "speech_embedding_ms": 1686.791569001798,
+      "graph_update_ms": 1128.963285998907,
+      "asr_segment_count": 8,
+      "speech_embedding_count": 8,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2839.841480999894
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4176.385528000537,
+      "face_clustering_ms": 7.5508759982767515,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 309,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4352.070103996084
+    },
+    "vlm": {
+      "context_preparation_ms": 3807.742775999941,
+      "vlm_ms": 26738.09964799875,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people are sitting and standing around a table with a red-and-white checkered tablecloth.\",\n  \"On the left, a woman in a black jacket sits at the table holding and adjusting a rolled brown object.\",\n  \"A woman in a white long-sleeved shirt stands near the whiteboard in the background, organizing and moving items on the table.\",\n  \"<voice_0> asks whether preparations should be done on the same day or the day before.\",\n  \"<voice_500> explains that items requiring refrigeration, such as tiramisu, should be made the day before.\",\n  \"<voice_1478> suggests making something like qingbuliang by buying coconut milk.\",\n  \"<voice_1654> and <voice_1655> join in discussing the preparation details.\",\n  \"<voice_500> agrees that ingredients can be prepped the day before and mentions making desserts using gelatin sheets and coconut milk.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in planning and brainstorming food or dessert offerings for an event, stall, or activity.\",\n  \"They are weighing the convenience and feasibility of desserts that can be pre-made and refrigerated versus assembled on the day.\",\n  \"The atmosphere is collaborative and casual as they evaluate practical recipes and ingredient requirements.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are sitting and standing around a table with a red-and-white checkered tablecloth.",
+          "On the left, a woman in a black jacket sits at the table holding and adjusting a rolled brown object.",
+          "A woman in a white long-sleeved shirt stands near the whiteboard in the background, organizing and moving items on the table.",
+          "<voice_0> asks whether preparations should be done on the same day or the day before.",
+          "<voice_500> explains that items requiring refrigeration, such as tiramisu, should be made the day before.",
+          "<voice_1478> suggests making something like qingbuliang by buying coconut milk.",
+          "<voice_1654> and <voice_1655> join in discussing the preparation details.",
+          "<voice_500> agrees that ingredients can be prepped the day before and mentions making desserts using gelatin sheets and coconut milk."
+        ],
+        "high_level_conclusions": [
+          "The group is engaged in planning and brainstorming food or dessert offerings for an event, stall, or activity.",
+          "They are weighing the convenience and feasibility of desserts that can be pre-made and refrigerated versus assembled on the day.",
+          "The atmosphere is collaborative and casual as they evaluate practical recipes and ingredient requirements."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 141,
+          "call_id": "394a3a5b-9b93-4033-92d1-bcc2ebeee73e",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789412838.8059657,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67375,
+          "output_tokens": 1661,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 26737.942471998394
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people are sitting and standing around a table with a red-and-white checkered tablecloth.\",\n  \"On the left, a woman in a black jacket sits at the table holding and adjusting a rolled brown object.\",\n  \"A woman in a white long-sleeved shirt stands near the whiteboard in the background, organizing and moving items on the table.\",\n  \"<voice_0> asks whether preparations should be done on the same day or the day before.\",\n  \"<voice_500> explains that items requiring refrigeration, such as tiramisu, should be made the day before.\",\n  \"<voice_1478> suggests making something like qingbuliang by buying coconut milk.\",\n  \"<voice_1654> and <voice_1655> join in discussing the preparation details.\",\n  \"<voice_500> agrees that ingredients can be prepped the day before and mentions making desserts using gelatin sheets and coconut milk.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in planning and brainstorming food or dessert offerings for an event, stall, or activity.\",\n  \"They are weighing the convenience and feasibility of desserts that can be pre-made and refrigerated versus assembled on the day.\",\n  \"The atmosphere is collaborative and casual as they evaluate practical recipes and ingredient requirements.\"\n ]\n}\n```",
+          "total_tokens": 69036,
+          "request_end": 1789412865.544076,
+          "latency_ms": 26738.09964799875,
+          "client_wall_clock_latency_ms": 26738.09964799875,
+          "api_request_wall_clock_latency_ms": 26738.09964799875
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.18156199803343043,
+      "nodes_added": 8,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.02244200004497543,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 8,
+    "speech_embeddings": 8,
+    "voice_identities": 6,
+    "detected_faces": 309,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1668,
+    "edges_after_clip": 313,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are sitting and standing around a table with a red-and-white checkered tablecloth.",
+      "On the left, a woman in a black jacket sits at the table holding and adjusting a rolled brown object.",
+      "A woman in a white long-sleeved shirt stands near the whiteboard in the background, organizing and moving items on the table.",
+      "<voice_0> asks whether preparations should be done on the same day or the day before.",
+      "<voice_500> explains that items requiring refrigeration, such as tiramisu, should be made the day before.",
+      "<voice_1478> suggests making something like qingbuliang by buying coconut milk.",
+      "<voice_1654> and <voice_1655> join in discussing the preparation details.",
+      "<voice_500> agrees that ingredients can be prepped the day before and mentions making desserts using gelatin sheets and coconut milk."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in planning and brainstorming food or dessert offerings for an event, stall, or activity.",
+      "They are weighing the convenience and feasibility of desserts that can be pre-made and refrigerated versus assembled on the day.",
+      "The atmosphere is collaborative and casual as they evaluate practical recipes and ingredient requirements."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are sitting and standing around a table with a red-and-white checkered tablecloth.",
+      "On the left, a woman in a black jacket sits at the table holding and adjusting a rolled brown object.",
+      "A woman in a white long-sleeved shirt stands near the whiteboard in the background, organizing and moving items on the table.",
+      "<voice_0> asks whether preparations should be done on the same day or the day before.",
+      "<voice_500> explains that items requiring refrigeration, such as tiramisu, should be made the day before.",
+      "<voice_1478> suggests making something like qingbuliang by buying coconut milk.",
+      "<voice_1654> and <voice_1655> join in discussing the preparation details.",
+      "<voice_500> agrees that ingredients can be prepped the day before and mentions making desserts using gelatin sheets and coconut milk."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in planning and brainstorming food or dessert offerings for an event, stall, or activity.",
+      "They are weighing the convenience and feasibility of desserts that can be pre-made and refrigerated versus assembled on the day.",
+      "The atmosphere is collaborative and casual as they evaluate practical recipes and ingredient requirements."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_141_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 1654,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 清补凉的话。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1655,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 面是不是好调一点？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1656,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对对对。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1657,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are sitting and standing around a table with a red-and-white checkered tablecloth."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1658,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "On the left, a woman in a black jacket sits at the table holding and adjusting a rolled brown object."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1659,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a white long-sleeved shirt stands near the whiteboard in the background, organizing and moving items on the table."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1660,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> asks whether preparations should be done on the same day or the day before."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1661,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_500> explains that items requiring refrigeration, such as tiramisu, should be made the day before."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1662,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1478> suggests making something like qingbuliang by buying coconut milk."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1663,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1654> and <voice_1655> join in discussing the preparation details."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1664,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_500> agrees that ingredients can be prepped the day before and mentions making desserts using gelatin sheets and coconut milk."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1665,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is engaged in planning and brainstorming food or dessert offerings for an event, stall, or activity."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1666,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "They are weighing the convenience and feasibility of desserts that can be pre-made and refrigerated versus assembled on the day."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1667,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The atmosphere is collaborative and casual as they evaluate practical recipes and ingredient requirements."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1660,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 500,
+        "target": 1661,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 500,
+        "target": 1664,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1478,
+        "target": 1662,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1654,
+        "target": 1663,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1655,
+        "target": 1663,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_141_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_141_graph.pkl"
+  },
+  "memory_pickle_bytes": 38126261,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 53848.701251317,
+    "prepared_perf": 53858.245072508,
+    "ordered_start_perf": 54011.806878954,
+    "consumer_wait_ms": 0.017271995602641255,
+    "ready_to_ordered_ms": 153561.80644599954,
+    "preparation_work_ms": 9538.556872001209,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 38406.08175200032
+}

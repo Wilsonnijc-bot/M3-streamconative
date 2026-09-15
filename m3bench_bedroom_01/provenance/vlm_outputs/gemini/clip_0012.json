@@ -1,0 +1,78 @@
+{
+  "clip_id": 12,
+  "source": {
+    "segment_id": 12,
+    "source": "bedroom_01_00053000.mp4",
+    "source_clock": "00053000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 330.0,
+    "absolute_end_seconds": 360.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00053000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 72751.795346171,
+      "prepared_perf": 72756.489281,
+      "ordered_start_perf": 72842.835186395,
+      "consumer_wait_ms": 0.008264993084594607,
+      "ready_to_ordered_ms": 86345.90539499186,
+      "preparation_work_ms": 4688.617494000937,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person in a yellow jacket walks past a dining table where a woman is working on a laptop.",
+      "The woman sitting at the table speaks, gesturing toward the trash cans on the floor.",
+      "The person in the yellow jacket turns back and drops an item into the small bin.",
+      "The person in the yellow jacket then walks through the corridor into a bedroom.",
+      "Inside the bedroom, the person sits on the bed while holding a mobile phone.",
+      "She removes her grey cap and tosses it onto the bed.",
+      "She stands up, takes off her yellow jacket, and throws it onto the bed.",
+      "She lies down on her side on the bed, looking at her phone."
+    ],
+    "high_level_conclusions": [
+      "The woman seated at the table is the speaker of <voice_10>.",
+      "The person wearing the yellow jacket is named Emma, whom the seated woman addresses.",
+      "Emma complies with the woman's request to throw something into the bin before heading into the bedroom to rest."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A person in a yellow jacket walks past a dining table where a woman is working on a laptop.\",\n    \"The woman sitting at the table speaks, gesturing toward the trash cans on the floor.\",\n    \"The person in the yellow jacket turns back and drops an item into the small bin.\",\n    \"The person in the yellow jacket then walks through the corridor into a bedroom.\",\n    \"Inside the bedroom, the person sits on the bed while holding a mobile phone.\",\n    \"She removes her grey cap and tosses it onto the bed.\",\n    \"She stands up, takes off her yellow jacket, and throws it onto the bed.\",\n    \"She lies down on her side on the bed, looking at her phone.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman seated at the table is the speaker of <voice_10>.\",\n    \"The person wearing the yellow jacket is named Emma, whom the seated woman addresses.\",\n    \"Emma complies with the woman's request to throw something into the bin before heading into the bedroom to rest.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 12,
+      "call_id": "d0f09295-be19-4c7d-a352-0d2427170f42",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789431664.6610193,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65704,
+      "output_tokens": 976,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 47483.22408901004
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A person in a yellow jacket walks past a dining table where a woman is working on a laptop.\",\n    \"The woman sitting at the table speaks, gesturing toward the trash cans on the floor.\",\n    \"The person in the yellow jacket turns back and drops an item into the small bin.\",\n    \"The person in the yellow jacket then walks through the corridor into a bedroom.\",\n    \"Inside the bedroom, the person sits on the bed while holding a mobile phone.\",\n    \"She removes her grey cap and tosses it onto the bed.\",\n    \"She stands up, takes off her yellow jacket, and throws it onto the bed.\",\n    \"She lies down on her side on the bed, looking at her phone.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman seated at the table is the speaker of <voice_10>.\",\n    \"The person wearing the yellow jacket is named Emma, whom the seated woman addresses.\",\n    \"Emma complies with the woman's request to throw something into the bin before heading into the bedroom to rest.\"\n  ]\n}\n```",
+      "total_tokens": 66680,
+      "request_end": 1789431712.1443763,
+      "latency_ms": 47483.35356300231,
+      "client_wall_clock_latency_ms": 47483.35356300231,
+      "api_request_wall_clock_latency_ms": 47483.35356300231
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_12_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

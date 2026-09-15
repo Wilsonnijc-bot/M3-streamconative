@@ -1,0 +1,59 @@
+{
+  "clip_id": 16,
+  "source": {
+    "segment_id": 16,
+    "source": "DAY1_A1_JAKE_11170000.mp4",
+    "source_clock": "11170000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40620.0,
+    "absolute_end_seconds": 40650.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0016.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is seated around a table covered with a red-and-white checkered tablecloth, assembling electronic components.",
+      "One participant gives instructions regarding screw holes and distinguishing between large and small screws.",
+      "A person reaches across the table to show a black component to another participant.",
+      "Participants continue assembling their individual components while discussing the assembly steps.",
+      "The camera shifts position and perspective, looking down onto the table from above as work continues."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a collaborative workshop or assembly task involving hardware components.",
+      "Participants share instructions and verify assembly steps with each other to avoid errors."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is seated around a table covered with a red-and-white checkered tablecloth, assembling electronic components.\",\n  \"One participant gives instructions regarding screw holes and distinguishing between large and small screws.\",\n  \"A person reaches across the table to show a black component to another participant.\",\n  \"Participants continue assembling their individual components while discussing the assembly steps.\",\n  \"The camera shifts position and perspective, looking down onto the table from above as work continues.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in a collaborative workshop or assembly task involving hardware components.\",\n  \"Participants share instructions and verify assembly steps with each other to avoid errors.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 16,
+      "call_id": "b0f1f228-1b80-49a6-a1b3-c24c8c8364f1",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789403976.6339726,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67411,
+      "output_tokens": 746,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is seated around a table covered with a red-and-white checkered tablecloth, assembling electronic components.\",\n  \"One participant gives instructions regarding screw holes and distinguishing between large and small screws.\",\n  \"A person reaches across the table to show a black component to another participant.\",\n  \"Participants continue assembling their individual components while discussing the assembly steps.\",\n  \"The camera shifts position and perspective, looking down onto the table from above as work continues.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in a collaborative workshop or assembly task involving hardware components.\",\n  \"Participants share instructions and verify assembly steps with each other to avoid errors.\"\n ]\n}\n```",
+      "total_tokens": 68157,
+      "request_end": 1789404035.4294457,
+      "latency_ms": 58795.46919400309,
+      "client_wall_clock_latency_ms": 58795.46919400309,
+      "api_request_wall_clock_latency_ms": 58795.46919400309
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_16_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

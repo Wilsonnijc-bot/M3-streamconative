@@ -1,0 +1,382 @@
+{
+  "clip_id": 38,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00173000.mp4",
+  "end_to_end_memory_generation_ms": 174430.70911499672,
+  "latency_ms": {
+    "clip_decode": 3843.0926889996044,
+    "deepgram_asr": 525.4932169918902,
+    "mai_transcribe_asr": 1049.241398999584,
+    "asr_total": 1075.7471599936252,
+    "audio_segmentation": 7.320979988435283,
+    "speech_embedding_campplus": 1100.6090260052588,
+    "facial_detection_recognition_buffalo_l": 3644.737613009056,
+    "face_clustering": 6.962836007005535,
+    "vlm_memory_generation": 56994.75450000318,
+    "text_embedding": 539.140327993664,
+    "graph_update_total": 79.28129100764636
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 38,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 745,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789433365.6255815,
+          "status": "success",
+          "total_tokens": 146,
+          "request_end": 1789433366.1645684,
+          "latency_ms": 538.986968997051
+        }
+      ],
+      "total_tokens": 146,
+      "latency_ms": 539.140327993664
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 525.4932169918902,
+        "openrouter-mai-transcribe-2": 1049.241398999584
+      },
+      "asr_total_ms": 1075.7471599936252,
+      "audio_segmentation_ms": 7.320979988435283,
+      "speech_embedding_ms": 1100.6090260052588,
+      "graph_update_ms": 79.20523600478191,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1202.6216789963655
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3644.737613009056,
+      "face_clustering_ms": 6.962836007005535,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 306,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3817.3317089967895
+    },
+    "vlm": {
+      "context_preparation_ms": 4995.503162994282,
+      "vlm_ms": 56994.75450000318,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food and drinks.\",\n    \"The woman on the left holds a smartphone and speaks while gesturing with her left hand.\",\n    \"The woman on the right initially leans forward resting her head on her clasped hands.\",\n    \"The woman on the right lifts her head and looks across at the woman on the left.\",\n    \"The woman on the right rests her chin on her hands and expresses feeling overwhelmed by pressure.\",\n    \"The woman on the left continues to counsel and reassure the woman on the right.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the left is acting as a supportive friend offering advice and comfort.\",\n    \"The woman on the right is dealing with emotional stress or anxiety about her situation.\",\n    \"The two individuals share an intimate, trusting personal relationship.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit opposite each other at a dining table set with food and drinks.",
+          "The woman on the left holds a smartphone and speaks while gesturing with her left hand.",
+          "The woman on the right initially leans forward resting her head on her clasped hands.",
+          "The woman on the right lifts her head and looks across at the woman on the left.",
+          "The woman on the right rests her chin on her hands and expresses feeling overwhelmed by pressure.",
+          "The woman on the left continues to counsel and reassure the woman on the right."
+        ],
+        "high_level_conclusions": [
+          "The woman on the left is acting as a supportive friend offering advice and comfort.",
+          "The woman on the right is dealing with emotional stress or anxiety about her situation.",
+          "The two individuals share an intimate, trusting personal relationship."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 38,
+          "call_id": "d11229fc-4524-4686-927e-9a8424186318",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789433308.630082,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66068,
+          "output_tokens": 1162,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 56994.64007600909
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food and drinks.\",\n    \"The woman on the left holds a smartphone and speaks while gesturing with her left hand.\",\n    \"The woman on the right initially leans forward resting her head on her clasped hands.\",\n    \"The woman on the right lifts her head and looks across at the woman on the left.\",\n    \"The woman on the right rests her chin on her hands and expresses feeling overwhelmed by pressure.\",\n    \"The woman on the left continues to counsel and reassure the woman on the right.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the left is acting as a supportive friend offering advice and comfort.\",\n    \"The woman on the right is dealing with emotional stress or anxiety about her situation.\",\n    \"The two individuals share an intimate, trusting personal relationship.\"\n  ]\n}\n```",
+          "total_tokens": 67230,
+          "request_end": 1789433365.624839,
+          "latency_ms": 56994.75450000318,
+          "client_wall_clock_latency_ms": 56994.75450000318,
+          "api_request_wall_clock_latency_ms": 56994.75450000318
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.05920200783293694,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.016852995031513274,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 6,
+    "detected_faces": 306,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 3,
+    "nodes_after_clip": 380,
+    "edges_after_clip": 129,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food and drinks.",
+      "The woman on the left holds a smartphone and speaks while gesturing with her left hand.",
+      "The woman on the right initially leans forward resting her head on her clasped hands.",
+      "The woman on the right lifts her head and looks across at the woman on the left.",
+      "The woman on the right rests her chin on her hands and expresses feeling overwhelmed by pressure.",
+      "The woman on the left continues to counsel and reassure the woman on the right."
+    ],
+    "high_level_conclusions": [
+      "The woman on the left is acting as a supportive friend offering advice and comfort.",
+      "The woman on the right is dealing with emotional stress or anxiety about her situation.",
+      "The two individuals share an intimate, trusting personal relationship."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food and drinks.",
+      "The woman on the left holds a smartphone and speaks while gesturing with her left hand.",
+      "The woman on the right initially leans forward resting her head on her clasped hands.",
+      "The woman on the right lifts her head and looks across at the woman on the left.",
+      "The woman on the right rests her chin on her hands and expresses feeling overwhelmed by pressure.",
+      "The woman on the left continues to counsel and reassure the woman on the right."
+    ],
+    "high_level_conclusions": [
+      "The woman on the left is acting as a supportive friend offering advice and comfort.",
+      "The woman on the right is dealing with emotional stress or anxiety about her situation.",
+      "The two individuals share an intimate, trusting personal relationship."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_38_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 369,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Know your future is full of possibilities. You are still young. | MAI: You know, your future is full of possibilities."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 370,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: new future for you to explore. So just keep it move on. | MAI: Mm-hmm."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 371,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit opposite each other at a dining table set with food and drinks."
+          ],
+          "timestamp": 38
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 372,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left holds a smartphone and speaks while gesturing with her left hand."
+          ],
+          "timestamp": 38
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 373,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right initially leans forward resting her head on her clasped hands."
+          ],
+          "timestamp": 38
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 374,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right lifts her head and looks across at the woman on the left."
+          ],
+          "timestamp": 38
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 375,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right rests her chin on her hands and expresses feeling overwhelmed by pressure."
+          ],
+          "timestamp": 38
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 376,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left continues to counsel and reassure the woman on the right."
+          ],
+          "timestamp": 38
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 377,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the left is acting as a supportive friend offering advice and comfort."
+          ],
+          "timestamp": 38
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 378,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the right is dealing with emotional stress or anxiety about her situation."
+          ],
+          "timestamp": 38
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 379,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two individuals share an intimate, trusting personal relationship."
+          ],
+          "timestamp": 38
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_38_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_38_graph.pkl"
+  },
+  "memory_pickle_bytes": 9966163,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 74378.60531225,
+    "prepared_perf": 74383.653135097,
+    "ordered_start_perf": 74484.792250538,
+    "consumer_wait_ms": 0.00644200190436095,
+    "ready_to_ordered_ms": 101139.11544099392,
+    "preparation_work_ms": 5042.368605005322,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 67551.66957199981
+}

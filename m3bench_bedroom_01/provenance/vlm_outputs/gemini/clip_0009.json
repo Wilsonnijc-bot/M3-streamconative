@@ -1,0 +1,74 @@
+{
+  "clip_id": 9,
+  "source": {
+    "segment_id": 9,
+    "source": "bedroom_01_00040000.mp4",
+    "source_clock": "00040000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 240.0,
+    "absolute_end_seconds": 270.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00040000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 72610.000100975,
+      "prepared_perf": 72614.289588115,
+      "ordered_start_perf": 72702.598764215,
+      "consumer_wait_ms": 0.009587995009496808,
+      "ready_to_ordered_ms": 88309.17609999597,
+      "preparation_work_ms": 4284.2103430011775,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A young woman sits at a dining table working on a laptop.",
+      "She adjusts a backpack next to her chair.",
+      "She reaches across the table to pick up a sheet of paper from a stack.",
+      "She holds up the paper in front of her laptop and reads through it."
+    ],
+    "high_level_conclusions": [
+      "The woman is examining an academic curriculum or class schedule belonging to Emma.",
+      "She expresses surprise at the difficulty and volume of courses, specifically highlighting linear algebra.",
+      "The speech in <voice_21> belongs to the woman sitting at the table."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A young woman sits at a dining table working on a laptop.\",\n    \"She adjusts a backpack next to her chair.\",\n    \"She reaches across the table to pick up a sheet of paper from a stack.\",\n    \"She holds up the paper in front of her laptop and reads through it.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman is examining an academic curriculum or class schedule belonging to Emma.\",\n    \"She expresses surprise at the difficulty and volume of courses, specifically highlighting linear algebra.\",\n    \"The speech in <voice_21> belongs to the woman sitting at the table.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 9,
+      "call_id": "2e40e899-f87a-4747-a036-ccd43c90013b",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789431524.6783512,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65775,
+      "output_tokens": 827,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 39524.038436007686
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A young woman sits at a dining table working on a laptop.\",\n    \"She adjusts a backpack next to her chair.\",\n    \"She reaches across the table to pick up a sheet of paper from a stack.\",\n    \"She holds up the paper in front of her laptop and reads through it.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman is examining an academic curriculum or class schedule belonging to Emma.\",\n    \"She expresses surprise at the difficulty and volume of courses, specifically highlighting linear algebra.\",\n    \"The speech in <voice_21> belongs to the woman sitting at the table.\"\n  ]\n}\n```",
+      "total_tokens": 66602,
+      "request_end": 1789431564.2024724,
+      "latency_ms": 39524.117835986544,
+      "client_wall_clock_latency_ms": 39524.117835986544,
+      "api_request_wall_clock_latency_ms": 39524.117835986544
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_9_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

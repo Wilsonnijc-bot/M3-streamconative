@@ -1,0 +1,479 @@
+{
+  "clip_id": 20,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0020.mp4",
+  "end_to_end_memory_generation_ms": 588276.9874629958,
+  "latency_ms": {
+    "clip_decode": 3744.912046000536,
+    "deepgram_asr": 1.7486010037828237,
+    "mai_transcribe_asr": 1.9629430025815964,
+    "asr_total": 2.890629999455996,
+    "audio_segmentation": 7.179961998190265,
+    "speech_embedding_campplus": 1427.8518639985123,
+    "facial_detection_recognition_buffalo_l": 3463.7739960016916,
+    "face_clustering": 6.22429299983196,
+    "vlm_memory_generation": 196853.36059999827,
+    "text_embedding": 474.3305150041124,
+    "graph_update_total": 146.14499500748934
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 20,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 785,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789414498.7621386,
+          "status": "success",
+          "total_tokens": 272,
+          "request_end": 1789414499.236095,
+          "latency_ms": 473.9571620011702
+        }
+      ],
+      "total_tokens": 272,
+      "latency_ms": 474.3305150041124
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1.7486010037828237,
+        "openrouter-mai-transcribe-2": 1.9629430025815964
+      },
+      "asr_total_ms": 2.890629999455996,
+      "audio_segmentation_ms": 7.179961998190265,
+      "speech_embedding_ms": 1427.8518639985123,
+      "graph_update_ms": 145.99240800453117,
+      "asr_segment_count": 7,
+      "speech_embedding_count": 7,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1597.2460220000357
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3463.7739960016916,
+      "face_clustering_ms": 6.22429299983196,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 220,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3591.161682001257
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_247>",
+        "<voice_248>",
+        "<voice_0>",
+        "<voice_249>",
+        "<voice_250>",
+        "<voice_235>"
+      ],
+      "context_preparation_ms": 4157.378777003032,
+      "vlm_ms": 196853.36059999827,
+      "raw_response": "{\n  \"video_description\": [\n    \"At 00:00, <voice_247> remarks, 'MAI: 给大家一个比较干的。' while four individuals sit around a checkered table.\",\n    \"At 00:04, <voice_248> identifies 'MAI: 那个东北女的机器人。' amidst the group discussion.\",\n    \"At 00:10, <voice_0> responds with 'MAI: 可以，可以，来自东方的小小鲸鱼.' regarding the item being discussed.\",\n    \"At 00:14, <voice_0> adds 'MAI: 对。跳吧，要不然.' suggesting movement.\",\n    \"At 00:19, <voice_250> instructs 'MAI: 不要抓着来呀。这个半蹲就行.' regarding posture.\",\n    \"At 00:28, <voice_235> confirms 'MAI: 对对，固定.' validating the setup.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is conducting a review or test session involving a device described as a 'robot' or linked to 'Little Whale'.\",\n    \"Participants exchange feedback on the device's characteristics ('dry') and provide physical guidance ('half-squat').\",\n    \"The session concludes with validation of the equipment's stability ('fixed').\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "At 00:00, <voice_247> remarks, 'MAI: 给大家一个比较干的。' while four individuals sit around a checkered table.",
+          "At 00:04, <voice_248> identifies 'MAI: 那个东北女的机器人。' amidst the group discussion.",
+          "At 00:10, <voice_0> responds with 'MAI: 可以，可以，来自东方的小小鲸鱼.' regarding the item being discussed.",
+          "At 00:14, <voice_0> adds 'MAI: 对。跳吧，要不然.' suggesting movement.",
+          "At 00:19, <voice_250> instructs 'MAI: 不要抓着来呀。这个半蹲就行.' regarding posture.",
+          "At 00:28, <voice_235> confirms 'MAI: 对对，固定.' validating the setup."
+        ],
+        "high_level_conclusions": [
+          "The group is conducting a review or test session involving a device described as a 'robot' or linked to 'Little Whale'.",
+          "Participants exchange feedback on the device's characteristics ('dry') and provide physical guidance ('half-squat').",
+          "The session concludes with validation of the equipment's stability ('fixed')."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 20,
+          "call_id": "ffcbe558-1da2-46a8-8254-87b92a57c476",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789414301.907733,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"At 00:00, <voice_247> remarks, 'MAI: 给大家一个比较干的。' while four individuals sit around a checkered table.\",\n    \"At 00:04, <voice_248> identifies 'MAI: 那个东北女的机器人。' amidst the group discussion.\",\n    \"At 00:10, <voice_0> responds with 'MAI: 可以，可以，来自东方的小小鲸鱼.' regarding the item being discussed.\",\n    \"At 00:14, <voice_0> adds 'MAI: 对。跳吧，要不然.' suggesting movement.\",\n    \"At 00:19, <voice_250> instructs 'MAI: 不要抓着来呀。这个半蹲就行.' regarding posture.\",\n    \"At 00:28, <voice_235> confirms 'MAI: 对对，固定.' validating the setup.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is conducting a review or test session involving a device described as a 'robot' or linked to 'Little Whale'.\",\n    \"Participants exchange feedback on the device's characteristics ('dry') and provide physical guidance ('half-squat').\",\n    \"The session concludes with validation of the equipment's stability ('fixed').\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be held by someone sitting at a table. There are four people visible around a wooden table with a red and white checkered tablecloth.\n    *   Person 1 (Left): Wearing black, interacting with something on the table (maybe a phone or device).\n    *   Person 2 (Center-Left): Partially visible behind Person 1, wearing light-colored top.\n    *   Person 3 (Center-Right): Wearing a hijab/headscarf, looking towards the center/right.\n    *   Person 4 (Right): Wearing a pinkish/orange t-shirt, holding a black object (looks like a VR headset or controller), manipulating it.\n    *   Camera wearer: Visible legs/knees at the bottom of the frame.\n*   **Voice Features:**\n    *   `<voice_247>`: \"MAI: 给大家一个比较干的。\" (Giving everyone a relatively dry one.) - Time: 00:00-00:02.\n    *   `<voice_248>`: \"MAI: 那个东北女的机器人。\" (That Northeastern woman's robot.) - Time: 00:04-00:07.\n    *   `<voice_0>`: \"MAI: 可以，可以，来自东方的小小鲸鱼。\" (Okay, okay, Little Whale from the East.) & \"MAI: 对。跳吧，要不然。\" (Yes. Jump, otherwise.) - Time: 00:10-00:18.\n    *   `<voice_249>`: \"MAI: 坐有劲。\" (Sitting strong/powerful?) - Time: 00:13-00:15.\n    *   `<voice_250>`: \"MAI: 不要抓着来呀。这个半蹲就行。\" (Don't grab it come on. This half-squat is fine.) - Time: 00:19-00:29.\n    *   `<voice_235>`: \"MAI: 对对，固定。\" (Yes yes, fixed/steady.) - Time: 00:28-00:30.\n\n**2. Map Voices to Visuals:**\n*   The prompt instructions say: \"Preserve speaker identity when constructing memory... Voice features map exact IDs such as <voice_0> to timestamped transcripts.\"\n*   I need to associate these voices with the visible people if possible, but the instruction also says: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\"\n*   However, there is a specific instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   Looking at the video, there isn't explicit audio visualization linking specific faces to specific voice IDs in the provided text data (no timestamps matching specific faces perfectly without assumption). But usually, in these tasks, if I can't link them visually, I just use the voice ID.\n*   Wait, the instruction says: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   Let's look at the actions.\n    *   Person on the right (pink shirt) is handling a black object (VR headset?).\n    *   Person on the left (black shirt) is looking down at something.\n    *   The voice mentions \"Northeastern woman's robot\", \"Little Whale from the East\", \"half-squat\".\n    *   Without clear visual confirmation of who speaks, I must rely on the voice IDs provided.\n    *   Actually, looking closely at the prompt requirements: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\n    *   The prompt asks to preserve speaker identity. Since I don't have face IDs linked to voice IDs explicitly in the input text (only voice IDs are listed), I will treat the voice IDs as the primary identifiers for the speech events.\n    *   Wait, I see \"Face features:\" section is empty in the prompt provided? No, it says \"Face features:Voice features:\". It looks like the Face features list might be missing or empty in the provided text block. Ah, looking at the raw text: \"Face features:Voice features:{...}\". It seems the Face features part is empty or merged.\n    *   Okay, so I only have Voice IDs. I cannot make Equivalence claims because I don't have Face IDs to compare against.\n    *   I need to construct the Video Description based on visual observation.\n    *   I need to construct High-Level Conclusions based on the speech + visual context.\n\n**3. Drafting Video Description:**\n*   Scene: Indoor room, wooden table with checkered cloth. Four people seated.\n*   Action: People are gathered around a table. One person (right, pink shirt) holds a black device (VR headset?). Another person (left, black shirt) interacts with items on the table.\n*   Timeline:\n    *   00:00-00:02: Group discussion.\n    *   00:04-00:07: Discussion continues.\n    *   00:10-00:18: More talking.\n    *   00:19-00:29: Instructions about posture (\"half-squat\").\n    *   00:28-00:30: Confirmation (\"fixed\").\n*   Specifics: The person on the right seems to be demonstrating or explaining something involving the black object. The person on the left is observing or working on something nearby.\n\n**4. Drafting High-Level Conclusions:**\n*   The speakers are giving instructions or descriptions related to a product or activity (likely VR given the headset-like object).\n*   Speaker `<voice_247>` mentions \"dry\" (maybe referring to the experience or the object).\n*   Speaker `<voice_248>` identifies a \"Northeastern woman's robot\".\n*   Speaker `<voice_0>` mentions \"Little Whale from the East\" and suggests jumping.\n*   Speaker `<voice_250>` gives physical instructions (\"half-squat\", \"don't grab\").\n*   Speaker `<voice_235>` confirms stability (\"fixed\").\n*   Conclusion: The group is likely testing or discussing a VR setup or a similar interactive device. They are providing feedback and instructions.\n\n**5. Refining Output:**\n*   **JSON Structure:** `video_description` array, `high_level_conclusions` array.\n*   **Constraint Check:** \"Do not replace the ID with 'a speaker'...\". \"Include at least one episodic memory that quotes... using the exact ID\".\n*   **Wait**, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   This implies the `video_description` should contain these memories.\n*   Example: \"At 00:00, <voice_247> states: 'MAI: 给大家一个比较干的。'\"\n*   Also, \"Keep the existing video_description/high_level_conclusions JSON schema\".\n*   The schema expects strings in arrays.\n*   So, I will put the quoted speech into the `video_description` array as atomic events.\n*   For `high_level_conclusions`, I will summarize the intent.\n\n**Let's check the voice IDs again.**\n*   `<voice_247>`: \"MAI: 给大家一个比较干的。\"\n*   `<voice_248>`: \"MAI: 那个东北女的机器人。\"\n*   `<voice_0>`: \"MAI: 可以，可以，来自东方的小小鲸鱼。\" / \"MAI: 对。跳吧，要不然。\"\n*   `<voice_249>`: \"MAI: 坐有劲。\"\n*   `<voice_250>`: \"MAI: 不要抓着来呀。这个半蹲就行。\"\n*   `<voice_235>`: \"MAI: 对对，固定。\"\n\n**Constructing Video Description:**\n1.  At 00:00, <voice_247> remarks, \"MAI: 给大家一个比较干的。\" while the group sits around the table.\n2.  At 00:04, <voice_248> identifies \"MAI: 那个东北女的机器人。\" during the discussion.\n3.  At 00:10, <voice_0> responds with \"MAI: 可以，可以，来自东方的小小鲸鱼。\" regarding the item being discussed.\n4.  At 00:14, <voice_0> adds \"MAI: 对。跳吧，要不然。\" suggesting movement.\n5.  At 00:19, <voice_250> instructs, \"MAI: 不要抓着来呀。这个半蹲就行。\" regarding posture.\n6.  At 00:28, <voice_235> confirms, \"MAI: 对对，固定。\" validating the setup.\n\n**Constructing High-Level Conclusions:**\n1.  The participants are evaluating a piece of technology, possibly a VR headset or robot, referred to as the \"Northeastern woman's robot\" and associated with \"Little Whale from the East\".\n2.  The interaction involves both verbal assessment (\"dry\") and physical demonstration instructions (\"half-squat\", \"jump\"), indicating a hands-on testing session.\n3.  The consensus on \"fixed\" suggests the equipment is stable enough for the proposed activities.\n\n**Final Review against constraints:**\n*   \"Preserve speaker identity... Voice features map exact IDs... These IDs already identify the speakers; they remain usable even when no face features are supplied\". -> OK, I used the voice IDs.\n*   \"For every supplied voice ID with nonempty speech, include at least one episodic memory... using the exact ID as the speaker.\" -> OK, included in video_description.\n*   \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" -> I am not assigning voice IDs to specific faces since I don't have face IDs to match them to. I am just attributing the speech to the ID.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema\". -> OK.\n\nOne detail: \"MAI:\" prefix is in the ASR. I should probably keep it or just quote the content. The instruction says \"quotes or faithfully summarizes that speaker's transcript\". I will include the full transcript including the speaker label if present in the ASR field, or just the content. The ASR field contains \"MAI: ...\". I will use that.\n\nWait, looking at the instruction: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\nThe input provides `<voice_247>`, etc. I will use these.\n\nLet's refine the video description sentences to be atomic events.\n\"At 00:00, <voice_247> comments, 'MAI: 给大家一个比较干的。' regarding the current state.\"\n\"At 00:04, <voice_248> refers to 'MAI: 那个东北女的机器人。' identifying a specific entity.\"\n\"At 00:10, <voice_0> acknowledges with 'MAI: 可以，可以，来自东方的小小鲸鱼。' describing the source.\"\n\"At 00:14, <voice_0> suggests action with 'MAI: 对。跳吧，要不然。' proposing movement.\"\n\"At 00:19, <voice_250> guides physical positioning with 'MAI: 不要抓着来呀。这个半蹲就行。' advising a half-squat stance.\"\n\"At 00:28, <voice_235> validates the stability with 'MAI: 对对，固定。' confirming the setup is secure.\"\n\nHigh level conclusions:\n\"The group is engaged in a collaborative review or testing session involving a device described as a 'robot' or associated with 'Little Whale'.\nParticipants provide mixed feedback ranging from descriptive ('dry') to instructional ('half-squat'), suggesting a practical demonstration of functionality.\nThe repeated affirmation of 'fixed' indicates satisfaction with the stability of the equipment being tested.\"\n\nWait, I need to check if I should merge multiple lines for one speaker into one memory or keep them separate. \"Preserve distinct substantive utterances as separate atomic memories.\"\nSo `<voice_0>` has two distinct utterances. I should create two entries for `<voice_0>`.\nSame for others.\n\nRevised Plan:\nVideo Description:\n1. At 00:00, <voice_247> states, \"MAI: 给大家一个比较干的。\"\n2. At 00:04, <voice_248> mentions, \"MAI: 那个东北女的机器人。\"\n3. At 00:10, <voice_0> replies, \"MAI: 可以，可以，来自东方的小小鲸鱼。\"\n4. At 00:14, <voice_0> continues, \"MAI: 对。跳吧，要不然。\"\n5. At 00:19, <voice_250> advises, \"MAI: 不要抓着来呀。这个半蹲就行。\"\n6. At 00:28, <voice_235> confirms, \"MAI: 对对，固定。\"\n\nHigh Level Conclusions:\n1. The participants are discussing and testing a device, potentially a VR headset or robot, referencing specific names like \"Little Whale\".\n2. The conversation shifts from identification to physical interaction instructions, such as squatting and jumping.\n3. The group reaches a consensus on the stability (\"fixed\") of the equipment after initial instructions.\n\nWait, I need to ensure I don't hallucinate face IDs. The prompt says \"Face features:Voice features:\". It seems the Face features section is empty in the provided text. So I cannot make Equivalence statements. I will leave `high_level_conclusions` without Equivalence lines unless I find a way. But the instruction says \"If a face and a voice feature refer to the same character, indicate it...\". Since I don't have face features, I can't indicate it. I will just write general conclusions.\n\nActually, looking at the very beginning of the prompt: \"You will be given a video and a set of character features.\" Then \"Face features:Voice features:\". It looks like the text for Face features is missing or empty. I will proceed assuming no face IDs are available to link.\n\nOne more check: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nThis means I must use the Voice IDs in the memory construction.\n\nFinal check on JSON validity.\nDouble quotes for keys and strings.\nNo trailing commas.\nArrays properly closed.\n\nLet's assemble the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"At 00:00, <voice_247> remarks, 'MAI: 给大家一个比较干的。'\",\n    \"At 00:04, <voice_248> identifies 'MAI: 那个东北女的机器人。'\",\n    \"At 00:10, <voice_0> responds with 'MAI: 可以，可以，来自东方的小小鲸鱼。'\",\n    \"At 00:14, <voice_0> adds 'MAI: 对。跳吧，要不然。'\",\n    \"At 00:19, <voice_250> instructs 'MAI: 不要抓着来呀。这个半蹲就行。'\",\n    \"At 00:28, <voice_235> confirms 'MAI: 对对，固定。'\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is conducting a review or test session involving a device described as a 'robot' or linked to 'Little Whale'.\",\n    \"Participants exchange feedback on the device's characteristics ('dry') and provide physical guidance ('half-squat').\",\n    \"The session concludes with validation of the equipment's stability ('fixed').\"\n  ]\n}\n```\nWait, I should check if I need to mention the visual context in the video description. \"Generate a detailed and cohesive description of the current video clip... cover all observable and inferable events.\"\nMy draft above focuses heavily on the speech. I should add visual context.\n\"At 00:00, <voice_247> remarks, 'MAI: 给大家一个比较干的。' while four individuals sit around a checkered table.\"\n\"At 00:04, <voice_248> identifies 'MAI: 那个东北女的机器人。' amidst the group discussion.\"\n...\nThis makes it better.\n\nAlso, check \"Preserve distinct substantive utterances as separate atomic memories.\"\nSo for `<voice_0>`, I have two separate entries. That matches my plan.\n\nOne detail: \"MAI:\" is part of the transcript. I will keep it.\n\nFinal check on constraints:\n- \"Do not replace the ID with 'a speaker'...\" -> Used `<voice_XX>`.\n- \"Use only IDs supplied in the input\" -> Used `<voice_247>`, etc.\n- \"Keep the existing video_description/high_level_conclusions JSON schema\" -> Done.\n- \"Be concise and avoid duplicate events.\" -> The speech events are distinct.\n\nReady to generate.\n</think>\n\n{\n  \"video_description\": [\n    \"At 00:00, <voice_247> remarks, 'MAI: 给大家一个比较干的。' while four individuals sit around a checkered table.\",\n    \"At 00:04, <voice_248> identifies 'MAI: 那个东北女的机器人。' amidst the group discussion.\",\n    \"At 00:10, <voice_0> responds with 'MAI: 可以，可以，来自东方的小小鲸鱼.' regarding the item being discussed.\",\n    \"At 00:14, <voice_0> adds 'MAI: 对。跳吧，要不然.' suggesting movement.\",\n    \"At 00:19, <voice_250> instructs 'MAI: 不要抓着来呀。这个半蹲就行.' regarding posture.\",\n    \"At 00:28, <voice_235> confirms 'MAI: 对对，固定.' validating the setup.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is conducting a review or test session involving a device described as a 'robot' or linked to 'Little Whale'.\",\n    \"Participants exchange feedback on the device's characteristics ('dry') and provide physical guidance ('half-squat').\",\n    \"The session concludes with validation of the equipment's stability ('fixed').\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10562,
+          "output_tokens": 4283,
+          "total_tokens": 14845,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0015929981600493193,
+            "media_preparation_ms": 58.94544199691154,
+            "processor_tokenization_ms": 707.5418759995955,
+            "device_transfer_ms": 43.23184899840271,
+            "cuda_generation_ms": 196008.5620030004,
+            "decoding_ms": 4.002802998002153
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 196822.44592999632,
+          "request_end": 1789414498.7610965,
+          "latency_ms": 196853.36059999827,
+          "client_wall_clock_latency_ms": 196853.36059999827
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.13080600183457136,
+      "nodes_added": 6,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.021781001123599708,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 7,
+    "speech_embeddings": 7,
+    "voice_identities": 6,
+    "detected_faces": 220,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 3,
+    "nodes_after_clip": 260,
+    "edges_after_clip": 100,
+    "nodes_added_by_clip": 13,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "At 00:00, <voice_247> remarks, 'MAI: 给大家一个比较干的。' while four individuals sit around a checkered table.",
+      "At 00:04, <voice_248> identifies 'MAI: 那个东北女的机器人。' amidst the group discussion.",
+      "At 00:10, <voice_0> responds with 'MAI: 可以，可以，来自东方的小小鲸鱼.' regarding the item being discussed.",
+      "At 00:14, <voice_0> adds 'MAI: 对。跳吧，要不然.' suggesting movement.",
+      "At 00:19, <voice_250> instructs 'MAI: 不要抓着来呀。这个半蹲就行.' regarding posture.",
+      "At 00:28, <voice_235> confirms 'MAI: 对对，固定.' validating the setup."
+    ],
+    "high_level_conclusions": [
+      "The group is conducting a review or test session involving a device described as a 'robot' or linked to 'Little Whale'.",
+      "Participants exchange feedback on the device's characteristics ('dry') and provide physical guidance ('half-squat').",
+      "The session concludes with validation of the equipment's stability ('fixed')."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "At 00:00, <voice_247> remarks, 'MAI: 给大家一个比较干的。' while four individuals sit around a checkered table.",
+      "At 00:04, <voice_248> identifies 'MAI: 那个东北女的机器人。' amidst the group discussion.",
+      "At 00:10, <voice_0> responds with 'MAI: 可以，可以，来自东方的小小鲸鱼.' regarding the item being discussed.",
+      "At 00:14, <voice_0> adds 'MAI: 对。跳吧，要不然.' suggesting movement.",
+      "At 00:19, <voice_250> instructs 'MAI: 不要抓着来呀。这个半蹲就行.' regarding posture.",
+      "At 00:28, <voice_235> confirms 'MAI: 对对，固定.' validating the setup."
+    ],
+    "high_level_conclusions": [
+      "The group is conducting a review or test session involving a device described as a 'robot' or linked to 'Little Whale'.",
+      "Participants exchange feedback on the device's characteristics ('dry') and provide physical guidance ('half-squat').",
+      "The session concludes with validation of the equipment's stability ('fixed')."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_20_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 13,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 247,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 给大家一个比较干劲的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 248,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那个东北女警的机器人。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 249,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 贼有劲。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 250,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 不要扛着来吧。这个半牵就行。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 251,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:00, <voice_247> remarks, 'MAI: 给大家一个比较干的。' while four individuals sit around a checkered table."
+          ],
+          "timestamp": 20
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 252,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:04, <voice_248> identifies 'MAI: 那个东北女的机器人。' amidst the group discussion."
+          ],
+          "timestamp": 20
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 253,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:10, <voice_0> responds with 'MAI: 可以，可以，来自东方的小小鲸鱼.' regarding the item being discussed."
+          ],
+          "timestamp": 20
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 254,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:14, <voice_0> adds 'MAI: 对。跳吧，要不然.' suggesting movement."
+          ],
+          "timestamp": 20
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 255,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:19, <voice_250> instructs 'MAI: 不要抓着来呀。这个半蹲就行.' regarding posture."
+          ],
+          "timestamp": 20
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 256,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:28, <voice_235> confirms 'MAI: 对对，固定.' validating the setup."
+          ],
+          "timestamp": 20
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 257,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is conducting a review or test session involving a device described as a 'robot' or linked to 'Little Whale'."
+          ],
+          "timestamp": 20
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 258,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Participants exchange feedback on the device's characteristics ('dry') and provide physical guidance ('half-squat')."
+          ],
+          "timestamp": 20
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 259,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The session concludes with validation of the equipment's stability ('fixed')."
+          ],
+          "timestamp": 20
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 253,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 254,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 235,
+        "target": 256,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 247,
+        "target": 251,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 248,
+        "target": 252,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 250,
+        "target": 255,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_20_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_20_graph.pkl"
+  },
+  "memory_pickle_bytes": 6242263,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 55097.839289365,
+    "prepared_perf": 55103.868530852,
+    "ordered_start_perf": 55479.006653405,
+    "consumer_wait_ms": 0.007162998372223228,
+    "ready_to_ordered_ms": 375138.12255299854,
+    "preparation_work_ms": 6023.915714999021,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 206676.0226940023
+}

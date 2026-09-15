@@ -1,0 +1,76 @@
+{
+  "clip_id": 53,
+  "source": {
+    "segment_id": 53,
+    "source": "bedroom_01_00243000.mp4",
+    "source_clock": "00243000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1470.0,
+    "absolute_end_seconds": 1500.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00243000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 75261.882864009,
+      "prepared_perf": 75267.131973879,
+      "ordered_start_perf": 75344.86739124,
+      "consumer_wait_ms": 0.008577000699006021,
+      "ready_to_ordered_ms": 77735.41736099287,
+      "preparation_work_ms": 5243.728458008263,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women are seated opposite each other at a dining table with a blue tablecloth containing food, drinks, and a mobile phone on a stand.",
+      "<voice_10>, sitting on the left, speaks animatedly while gesturing with her right hand.",
+      "<voice_321>, seated on the right, listens attentively while picking up and eating a french fry.",
+      "<voice_321> rests her chin on her hands, nodding and listening to the conversation.",
+      "<voice_10> pauses talking and leans her head on her hand to listen.",
+      "<voice_321> begins speaking in response, expressing agreement."
+    ],
+    "high_level_conclusions": [
+      "<voice_10> and <voice_321> appear to be close friends having a casual and supportive discussion over food.",
+      "<voice_10> is offering reassurance and perspective, arguing that personal worth and life experiences should not be judged solely by academic test results.",
+      "<voice_321> is receptive and aligns with <voice_10>'s philosophy regarding academic pressure."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women are seated opposite each other at a dining table with a blue tablecloth containing food, drinks, and a mobile phone on a stand.\",\n    \"<voice_10>, sitting on the left, speaks animatedly while gesturing with her right hand.\",\n    \"<voice_321>, seated on the right, listens attentively while picking up and eating a french fry.\",\n    \"<voice_321> rests her chin on her hands, nodding and listening to the conversation.\",\n    \"<voice_10> pauses talking and leans her head on her hand to listen.\",\n    \"<voice_321> begins speaking in response, expressing agreement.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> and <voice_321> appear to be close friends having a casual and supportive discussion over food.\",\n    \"<voice_10> is offering reassurance and perspective, arguing that personal worth and life experiences should not be judged solely by academic test results.\",\n    \"<voice_321> is receptive and aligns with <voice_10>'s philosophy regarding academic pressure.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 53,
+      "call_id": "a6977687-77e7-43a6-93be-790f320e7929",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789434167.5932958,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65878,
+      "output_tokens": 1957,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 27293.34280200419
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women are seated opposite each other at a dining table with a blue tablecloth containing food, drinks, and a mobile phone on a stand.\",\n    \"<voice_10>, sitting on the left, speaks animatedly while gesturing with her right hand.\",\n    \"<voice_321>, seated on the right, listens attentively while picking up and eating a french fry.\",\n    \"<voice_321> rests her chin on her hands, nodding and listening to the conversation.\",\n    \"<voice_10> pauses talking and leans her head on her hand to listen.\",\n    \"<voice_321> begins speaking in response, expressing agreement.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> and <voice_321> appear to be close friends having a casual and supportive discussion over food.\",\n    \"<voice_10> is offering reassurance and perspective, arguing that personal worth and life experiences should not be judged solely by academic test results.\",\n    \"<voice_321> is receptive and aligns with <voice_10>'s philosophy regarding academic pressure.\"\n  ]\n}\n```",
+      "total_tokens": 67835,
+      "request_end": 1789434194.8867369,
+      "latency_ms": 27293.43854400213,
+      "client_wall_clock_latency_ms": 27293.43854400213,
+      "api_request_wall_clock_latency_ms": 27293.43854400213
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_53_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "clip_id": 46,
+  "source": {
+    "segment_id": 46,
+    "source": "bedroom_01_00210000.mp4",
+    "source_clock": "00210000",
+    "start_seconds_in_source": 5.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1265.0,
+    "absolute_end_seconds": 1290.0,
+    "actual_media": "/opt/streammeco/run/m3bench_bedroom_gemini/work/segments/segment_0046.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 74849.093216176,
+      "prepared_perf": 74854.621853415,
+      "ordered_start_perf": 74909.293799947,
+      "consumer_wait_ms": 0.011832002201117575,
+      "ready_to_ordered_ms": 54671.94653200568,
+      "preparation_work_ms": 5523.310085001867,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women are seated at a dining table with snacks, drinks, and their phones.",
+      "The camera moves away from the dining area, traveling down a hallway into the kitchen.",
+      "A plate of food containing fries and a banana sandwich is picked up from atop an appliance in the kitchen.",
+      "The person carrying the plate walks back through the hallway toward the dining area.",
+      "A person wearing black gloves sets the plate down in front of the woman seated on the right.",
+      "The woman on the right adjusts the plate in front of her and begins talking to the other woman.",
+      "The woman on the left continues eating fries while checking her mobile phone."
+    ],
+    "high_level_conclusions": [
+      "The woman on the right speaks using <voice_10>, thanking the server and addressing the other woman as Emma.",
+      "The woman seated on the left is Emma.",
+      "The two women are friends or housemates sharing food in a casual domestic setting."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"Two women are seated at a dining table with snacks, drinks, and their phones.\",\n  \"The camera moves away from the dining area, traveling down a hallway into the kitchen.\",\n  \"A plate of food containing fries and a banana sandwich is picked up from atop an appliance in the kitchen.\",\n  \"The person carrying the plate walks back through the hallway toward the dining area.\",\n  \"A person wearing black gloves sets the plate down in front of the woman seated on the right.\",\n  \"The woman on the right adjusts the plate in front of her and begins talking to the other woman.\",\n  \"The woman on the left continues eating fries while checking her mobile phone.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman on the right speaks using <voice_10>, thanking the server and addressing the other woman as Emma.\",\n  \"The woman seated on the left is Emma.\",\n  \"The two women are friends or housemates sharing food in a casual domestic setting.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 46,
+      "call_id": "626062bf-96a3-4970-a4b4-63dee69c36ee",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789433728.7343426,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 54887,
+      "output_tokens": 1591,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 28714.71421800379
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"Two women are seated at a dining table with snacks, drinks, and their phones.\",\n  \"The camera moves away from the dining area, traveling down a hallway into the kitchen.\",\n  \"A plate of food containing fries and a banana sandwich is picked up from atop an appliance in the kitchen.\",\n  \"The person carrying the plate walks back through the hallway toward the dining area.\",\n  \"A person wearing black gloves sets the plate down in front of the woman seated on the right.\",\n  \"The woman on the right adjusts the plate in front of her and begins talking to the other woman.\",\n  \"The woman on the left continues eating fries while checking her mobile phone.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman on the right speaks using <voice_10>, thanking the server and addressing the other woman as Emma.\",\n  \"The woman seated on the left is Emma.\",\n  \"The two women are friends or housemates sharing food in a casual domestic setting.\"\n ]\n}\n```",
+      "total_tokens": 56478,
+      "request_end": 1789433757.4491563,
+      "latency_ms": 28714.81160199619,
+      "client_wall_clock_latency_ms": 28714.81160199619,
+      "api_request_wall_clock_latency_ms": 28714.81160199619
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_46_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

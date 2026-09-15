@@ -1,0 +1,673 @@
+{
+  "clip_id": 120,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0120.mp4",
+  "end_to_end_memory_generation_ms": 618808.761739987,
+  "latency_ms": {
+    "clip_decode": 5320.5000040034065,
+    "deepgram_asr": 732.0833559933817,
+    "mai_transcribe_asr": 2238.5034570033895,
+    "asr_total": 2239.698725999915,
+    "audio_segmentation": 7.0413740031654015,
+    "speech_embedding_campplus": 1674.5753580034943,
+    "facial_detection_recognition_buffalo_l": 3181.723279005382,
+    "face_clustering": 1.166052999906242,
+    "vlm_memory_generation": 166774.70424400235,
+    "text_embedding": 619.2197060008766,
+    "graph_update_total": 1037.0165170170367
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 120,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 17,
+      "input_chars": 1412,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789441031.8672643,
+          "status": "success",
+          "total_tokens": 362,
+          "request_end": 1789441032.4863386,
+          "latency_ms": 619.0749050001614
+        }
+      ],
+      "total_tokens": 362,
+      "latency_ms": 619.2197060008766
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 732.0833559933817,
+        "openrouter-mai-transcribe-2": 2238.5034570033895
+      },
+      "asr_total_ms": 2239.698725999915,
+      "audio_segmentation_ms": 7.0413740031654015,
+      "speech_embedding_ms": 1674.5753580034943,
+      "graph_update_ms": 1036.6481840028428,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 8,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2735.941006001667
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3181.723279005382,
+      "face_clustering_ms": 1.166052999906242,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 27,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3197.881622996647
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_312>",
+        "<voice_1619>",
+        "<voice_1620>",
+        "<voice_1621>",
+        "<voice_1599>",
+        "<voice_1622>",
+        "<voice_1623>",
+        "<voice_1624>"
+      ],
+      "context_preparation_ms": 4205.1904760010075,
+      "vlm_ms": 166774.70424400235,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"The camera pans across an empty room featuring a tripod, cardboard boxes, and a projector screen.\",\n\t\t\"At 00:01, <voice_312> suggests, 'Then what else do we have, or we can come early to liven up the atmosphere.'\",\n\t\t\"The view shifts to reveal a group of people gathered around a table with a whiteboard.\",\n\t\t\"At 00:08, <voice_1619> agrees, stating, 'Yes, I think let's start first.'\",\n\t\t\"At 00:10, <voice_1620> confirms, 'Let's start first,' and specifies the time slot from 3:40 to 4:30.\",\n\t\t\"At 00:14, <voice_1621> comments, 'The meeting is so long.'\",\n\t\t\"At 00:15, <voice_1599> estimates the duration, mentioning 'About 78 minutes' and 'About 40 minutes.'\",\n\t\t\"At 00:21, <voice_1622> mentions the time '4:20.'\",\n\t\t\"At 00:22, <voice_1623> adds the number '20.'\",\n\t\t\"At 00:26, <voice_1624> proposes, 'Or directly turn this segment into ours overall.'\",\n\t\t\"A person wearing a white outfit stands near the whiteboard while others sit at the table.\",\n\t\t\"The person in white walks away from the table towards a doorway.\",\n\t\t\"The camera follows the person into a kitchen area where they stand near the window.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is engaged in planning a structured session, evidenced by the whiteboard and discussion of specific time slots.\",\n\t\t\"<voice_312> initiates the conversation regarding setting the mood for the gathering.\",\n\t\t\"<voice_1620> confirms the start time and agenda structure for the meeting.\",\n\t\t\"The discussion involves logistical details regarding the total duration and scheduling of segments.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera pans across an empty room featuring a tripod, cardboard boxes, and a projector screen.",
+          "At 00:01, <voice_312> suggests, 'Then what else do we have, or we can come early to liven up the atmosphere.'",
+          "The view shifts to reveal a group of people gathered around a table with a whiteboard.",
+          "At 00:08, <voice_1619> agrees, stating, 'Yes, I think let's start first.'",
+          "At 00:10, <voice_1620> confirms, 'Let's start first,' and specifies the time slot from 3:40 to 4:30.",
+          "At 00:14, <voice_1621> comments, 'The meeting is so long.'",
+          "At 00:15, <voice_1599> estimates the duration, mentioning 'About 78 minutes' and 'About 40 minutes.'",
+          "At 00:21, <voice_1622> mentions the time '4:20.'",
+          "At 00:22, <voice_1623> adds the number '20.'",
+          "At 00:26, <voice_1624> proposes, 'Or directly turn this segment into ours overall.'",
+          "A person wearing a white outfit stands near the whiteboard while others sit at the table.",
+          "The person in white walks away from the table towards a doorway.",
+          "The camera follows the person into a kitchen area where they stand near the window."
+        ],
+        "high_level_conclusions": [
+          "The group is engaged in planning a structured session, evidenced by the whiteboard and discussion of specific time slots.",
+          "<voice_312> initiates the conversation regarding setting the mood for the gathering.",
+          "<voice_1620> confirms the start time and agenda structure for the meeting.",
+          "The discussion involves logistical details regarding the total duration and scheduling of segments."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 120,
+          "call_id": "3aad1981-0e44-403e-80ea-7dea00e152f3",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789440865.091421,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"The camera pans across an empty room featuring a tripod, cardboard boxes, and a projector screen.\",\n\t\t\"At 00:01, <voice_312> suggests, 'Then what else do we have, or we can come early to liven up the atmosphere.'\",\n\t\t\"The view shifts to reveal a group of people gathered around a table with a whiteboard.\",\n\t\t\"At 00:08, <voice_1619> agrees, stating, 'Yes, I think let's start first.'\",\n\t\t\"At 00:10, <voice_1620> confirms, 'Let's start first,' and specifies the time slot from 3:40 to 4:30.\",\n\t\t\"At 00:14, <voice_1621> comments, 'The meeting is so long.'\",\n\t\t\"At 00:15, <voice_1599> estimates the duration, mentioning 'About 78 minutes' and 'About 40 minutes.'\",\n\t\t\"At 00:21, <voice_1622> mentions the time '4:20.'\",\n\t\t\"At 00:22, <voice_1623> adds the number '20.'\",\n\t\t\"At 00:26, <voice_1624> proposes, 'Or directly turn this segment into ours overall.'\",\n\t\t\"A person wearing a white outfit stands near the whiteboard while others sit at the table.\",\n\t\t\"The person in white walks away from the table towards a doorway.\",\n\t\t\"The camera follows the person into a kitchen area where they stand near the window.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is engaged in planning a structured session, evidenced by the whiteboard and discussion of specific time slots.\",\n\t\t\"<voice_312> initiates the conversation regarding setting the mood for the gathering.\",\n\t\t\"<voice_1620> confirms the start time and agenda structure for the meeting.\",\n\t\t\"The discussion involves logistical details regarding the total duration and scheduling of segments.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   0.00s - 4.50s: The camera pans around an empty room. There's a tripod, boxes, a projector screen, and a whiteboard. No people are clearly interacting yet, just the camera moving.\n    *   5.00s - 19.00s: The camera turns to reveal a group of people sitting around a table. One person (wearing a white top/skirt) stands near a whiteboard. Others are seated. The camera moves closer to the whiteboard. Someone is holding a marker or device.\n    *   19.50s - 22.50s: The person in white walks away from the table towards a door/hallway.\n    *   23.00s - 25.50s: The camera follows the person in white into a hallway/kitchen area.\n    *   26.00s - 29.50s: The person in white is now in the kitchen area, possibly talking or looking out the window. Another person is seated at the table in the background.\n*   **Voice Features:**\n    *   `<voice_312>`: \"MAI: 然后还有什么我们的，或者我们可以提前来活跃一下这个气氛。\" (Then what else do we have, or we can come early to liven up the atmosphere.) -> Speaker MAI.\n    *   `<voice_1619>`: \"MAI: 喏，对，我觉得我们先开始吧。\" (Here, yes, I think let's start first.) -> Speaker MAI.\n    *   `<voice_1620>`: \"MAI: 我们先开始。\" (Let's start first.) / \"MAI: 3点40到4点半是我们先开始。\" (3:40 to 4:30 is us starting first.) -> Speaker MAI.\n    *   `<voice_1621>`: \"MAI: 会议这么长。\" (The meeting is so long.) -> Speaker MAI.\n    *   `<voice_1599>`: \"MAI: 七十八分钟差不多。七十八分钟，40分钟差不多。\" (About 78 minutes. 78 minutes, about 40 minutes.) -> Speaker MAI.\n    *   `<voice_1622>`: \"MAI: 4点20。\" (4:20.) -> Speaker MAI.\n    *   `<voice_1623>`: \"MAI: 20。\" (20.) -> Speaker MAI.\n    *   `<voice_1624>`: \"MAI: 或者直接把他们这段变成我们整体的。\" (Or directly turn this segment into ours overall.) -> Speaker MAI.\n    *   All voice features are attributed to `<voice_312>` or similar IDs associated with \"MAI\". Wait, looking closely at the provided text:\n        *   `<voice_312>` starts at 00:01.\n        *   `<voice_1619>` starts at 00:08.\n        *   `<voice_1620>` starts at 00:10.\n        *   `<voice_1621>` starts at 00:14.\n        *   `<voice_1599>` starts at 00:15.\n        *   `<voice_1622>` starts at 00:21.\n        *   `<voice_1623>` starts at 00:22.\n        *   `<voice_1624>` starts at 00:26.\n    *   The prompt says \"Each feature has a unique ID enclosed in angle brackets.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory... using the exact ID as the speaker.\"\n    *   However, there are no *face* features provided in the input section (\"Face features:\"). Only \"Voice features:\".\n    *   The instruction says: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   So, I must use the voice IDs (`<voice_312>`, etc.) in the memory descriptions but *not* link them to specific faces like `<face_1>` because none were provided.\n    *   Wait, the instruction also says: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   And: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\n    *   The prompt asks for \"Memory\" construction in the system instructions, but the actual task description says \"Video Description\" and \"High-Level Conclusions\".\n    *   Let's re-read the specific task instructions vs the system instructions.\n    *   System Instructions: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\n    *   Task Instructions: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions... Output Format: ... video_description ... high_level_conclusions\".\n    *   This is slightly conflicting. The system instructions talk about \"memory\", but the task output format asks for \"video_description\" and \"high_level_conclusions\". Usually, in these tasks, the \"Video Description\" acts as the narrative/memory. I need to integrate the voice features into the video description as spoken actions/dialogue.\n    *   Actually, looking at the system instructions again: \"Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\". It doesn't explicitly ask for a \"memory\" field in the final output, but the system instructions say \"include at least one episodic memory\". This implies the content of the `video_description` should reflect these memories/events.\n    *   Crucially: \"Do not replace the ID with 'a speaker'...\". So I must use `<voice_312>`, `<voice_1619>`, etc., in the text where appropriate to denote who spoke.\n    *   Since there are no face features, I cannot create equivalences like `Equivalence: <face_1>, <voice_312>`. I must follow the rule: \"If no face IDs are supplied, do not invent any.\"\n\n**2. Constructing Video Description:**\n*   Need to describe the visual flow and incorporate the audio events linked to the voice IDs.\n*   0.00s-4.50s: Camera pans room. Empty space, tripod, boxes.\n*   5.00s+: People appear. Group discussion. Whiteboard present.\n*   Audio integration:\n    *   `<voice_312>` speaks around 00:01-00:09. Content: Livening up atmosphere.\n    *   `<voice_1619>` speaks around 00:08-00:11. Content: Start first.\n    *   `<voice_1620>` speaks around 00:10-00:14. Content: Start first, time slots.\n    *   `<voice_1621>` speaks around 00:14-00:16. Content: Meeting is long.\n    *   `<voice_1599>` speaks around 00:15-00:21. Content: Duration estimates (78 mins, 40 mins).\n    *   `<voice_1622>` speaks around 00:21-00:23. Content: Time 4:20.\n    *   `<voice_1623>` speaks around 00:22-00:24. Content: 20.\n    *   `<voice_1624>` speaks around 00:26-00:30. Content: Turn segment into whole.\n*   Visuals match the timing roughly (people gathered, discussing, then person in white leaves).\n*   I need to write atomic sentences describing these events.\n\n**3. Constructing High-Level Conclusions:**\n*   Reasoning about intentions/identities.\n*   Since no face IDs are provided, I cannot confirm who is who visually.\n*   However, the voice features are all labeled \"MAI\". This suggests MAI is the speaker.\n*   Conclusion: MAI is leading the discussion/planning session.\n*   Constraint Check: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features exist, I cannot make this statement. I will omit it or ensure I don't hallucinate a face ID.\n*   Wait, the instruction says \"Use only IDs supplied in the input\". The input has voice IDs. It does not have face IDs. So I cannot write `Equivalence: <face_1>, <voice_312>`.\n*   I will focus on the activity: Planning a meeting/session involving time slots and atmosphere.\n\n**4. Refining the Output:**\n*   Ensure JSON validity.\n*   Ensure voice IDs are used correctly in the description.\n*   Ensure no face IDs are invented.\n\n**Drafting Video Description:**\n1.  The camera pans across an empty room containing a tripod, cardboard boxes, and a projector screen.\n2.  At 00:01, <voice_312> mentions livening up the atmosphere.\n3.  The view shifts to show a group of people gathered around a table with a whiteboard.\n4.  Around 00:08, <voice_1619> agrees to start the session.\n5.  <voice_1620> specifies the schedule, noting 3:40 to 4:30 is their start time.\n6.  <voice_1621> comments that the meeting is quite long.\n7.  <voice_1599> discusses duration, estimating around 78 minutes or 40 minutes.\n8.  <voice_1622> and <voice_1623> mention specific times, 4:20 and 20 respectively.\n9.  <voice_1624> suggests integrating a segment into the overall plan.\n10. A person wearing a white outfit stands near the whiteboard while others sit.\n11. Later, the person in white walks away from the table towards a doorway.\n12. The camera follows the person into a kitchen area where they stand near the window.\n\n**Drafting High-Level Conclusions:**\n1.  The group appears to be planning a structured session or meeting, indicated by the whiteboard and discussion of time slots.\n2.  <voice_312> initiates the conversation regarding setting the mood for the gathering.\n3.  <voice_1620> confirms the start time and agenda structure.\n4.  The discussion involves logistical details about duration and scheduling.\n\n**Final Review against Constraints:**\n*   \"Preserve speaker identity... using the exact ID as the speaker.\" -> Done (<voice_312>, etc.).\n*   \"Do not replace the ID with 'a speaker'...\" -> Done.\n*   \"If no face IDs are supplied, do not invent any.\" -> Done.\n*   \"Output Format: JSON object\". -> Done.\n*   \"Be concise and avoid duplicate events.\" -> Will merge related timestamps if possible, but keeping atomic events is safer for the description part.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema\". -> Done.\n\nOne detail: The prompt asks to \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". This usually applies to a specific \"Memory\" generation task. Here, the output format is fixed to `video_description` and `high_level_conclusions`. I will embed the quoted/transcribed speech within the video description sentences to satisfy the spirit of preserving the transcript while adhering to the output schema.\n\nWait, looking at the system instructions again: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nAnd the system instruction preamble: \"Preserve speaker identity when constructing memory... For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\nThis implies the `video_description` array *is* the place for these memories. I will formulate the sentences to include the quote/summary.\n\nLet's refine the sentences to be strictly atomic events.\n- \"At 00:01, <voice_312> states, 'Then what else do we have, or we can come early to liven up the atmosphere.'\"\n- \"Around 00:08, <voice_1619> responds, 'Yes, I think let's start first.'\"\n- \"At 00:10, <voice_1620> declares, 'Let's start first,' and notes the time slot from 3:40 to 4:30.\"\n- \"At 00:14, <voice_1621> remarks, 'The meeting is so long.'\"\n- \"At 00:15, <voice_1599> calculates the duration, saying 'About 78 minutes.' and 'About 40 minutes.'\"\n- \"At 00:21, <voice_1622> mentions '4:20.'\"\n- \"At 00:22, <voice_1623> says '20.'\"\n- \"At 00:26, <voice_1624> suggests, 'Or directly turn this segment into ours overall.'\"\n\nVisuals:\n- \"The camera pans a room with a tripod and boxes before revealing a group meeting.\"\n- \"A person in white stands by a whiteboard while others sit at a table.\"\n- \"The person in white walks away from the table into the kitchen area.\"\n\nOkay, ready to construct JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"The camera pans across an empty room featuring a tripod, cardboard boxes, and a projector screen.\",\n\t\t\"At 00:01, <voice_312> suggests, 'Then what else do we have, or we can come early to liven up the atmosphere.'\",\n\t\t\"The view shifts to reveal a group of people gathered around a table with a whiteboard.\",\n\t\t\"At 00:08, <voice_1619> agrees, stating, 'Yes, I think let's start first.'\",\n\t\t\"At 00:10, <voice_1620> confirms, 'Let's start first,' and specifies the time slot from 3:40 to 4:30.\",\n\t\t\"At 00:14, <voice_1621> comments, 'The meeting is so long.'\",\n\t\t\"At 00:15, <voice_1599> estimates the duration, mentioning 'About 78 minutes' and 'About 40 minutes.'\",\n\t\t\"At 00:21, <voice_1622> mentions the time '4:20.'\",\n\t\t\"At 00:22, <voice_1623> adds the number '20.'\",\n\t\t\"At 00:26, <voice_1624> proposes, 'Or directly turn this segment into ours overall.'\",\n\t\t\"A person wearing a white outfit stands near the whiteboard while others sit at the table.\",\n\t\t\"The person in white walks away from the table towards a doorway.\",\n\t\t\"The camera follows the person into a kitchen area where they stand near the window.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is engaged in planning a structured session, evidenced by the whiteboard and discussion of specific time slots.\",\n\t\t\"<voice_312> initiates the conversation regarding setting the mood for the gathering.\",\n\t\t\"<voice_1620> confirms the start time and agenda structure for the meeting.\",\n\t\t\"The discussion involves logistical details regarding the total duration and scheduling of segments.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10818,
+          "output_tokens": 3699,
+          "total_tokens": 14517,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0021539890440180898,
+            "media_preparation_ms": 56.17696899571456,
+            "processor_tokenization_ms": 323.49722301296424,
+            "device_transfer_ms": 47.45999300212134,
+            "cuda_generation_ms": 166315.85496201296,
+            "decoding_ms": 3.1624270050087944
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 166746.32209599076,
+          "request_end": 1789441031.8661296,
+          "latency_ms": 166774.70424400235,
+          "client_wall_clock_latency_ms": 166774.70424400235
+        }
+      ],
+      "episodic_memory_count": 13,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 13,
+      "text_embedding_ms": null,
+      "text_embedding_count": 13,
+      "graph_update_ms": 0.17165200551971793,
+      "nodes_added": 13,
+      "directed_edges_added": 16,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.19668100867420435,
+      "nodes_added": 4,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 8,
+    "detected_faces": 27,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 13,
+    "semantic_memories": 4,
+    "nodes_after_clip": 1642,
+    "edges_after_clip": 615,
+    "nodes_added_by_clip": 23,
+    "edges_added_by_clip": 10
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera pans across an empty room featuring a tripod, cardboard boxes, and a projector screen.",
+      "At 00:01, <voice_312> suggests, 'Then what else do we have, or we can come early to liven up the atmosphere.'",
+      "The view shifts to reveal a group of people gathered around a table with a whiteboard.",
+      "At 00:08, <voice_1619> agrees, stating, 'Yes, I think let's start first.'",
+      "At 00:10, <voice_1620> confirms, 'Let's start first,' and specifies the time slot from 3:40 to 4:30.",
+      "At 00:14, <voice_1621> comments, 'The meeting is so long.'",
+      "At 00:15, <voice_1599> estimates the duration, mentioning 'About 78 minutes' and 'About 40 minutes.'",
+      "At 00:21, <voice_1622> mentions the time '4:20.'",
+      "At 00:22, <voice_1623> adds the number '20.'",
+      "At 00:26, <voice_1624> proposes, 'Or directly turn this segment into ours overall.'",
+      "A person wearing a white outfit stands near the whiteboard while others sit at the table.",
+      "The person in white walks away from the table towards a doorway.",
+      "The camera follows the person into a kitchen area where they stand near the window."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in planning a structured session, evidenced by the whiteboard and discussion of specific time slots.",
+      "<voice_312> initiates the conversation regarding setting the mood for the gathering.",
+      "<voice_1620> confirms the start time and agenda structure for the meeting.",
+      "The discussion involves logistical details regarding the total duration and scheduling of segments."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera pans across an empty room featuring a tripod, cardboard boxes, and a projector screen.",
+      "At 00:01, <voice_312> suggests, 'Then what else do we have, or we can come early to liven up the atmosphere.'",
+      "The view shifts to reveal a group of people gathered around a table with a whiteboard.",
+      "At 00:08, <voice_1619> agrees, stating, 'Yes, I think let's start first.'",
+      "At 00:10, <voice_1620> confirms, 'Let's start first,' and specifies the time slot from 3:40 to 4:30.",
+      "At 00:14, <voice_1621> comments, 'The meeting is so long.'",
+      "At 00:15, <voice_1599> estimates the duration, mentioning 'About 78 minutes' and 'About 40 minutes.'",
+      "At 00:21, <voice_1622> mentions the time '4:20.'",
+      "At 00:22, <voice_1623> adds the number '20.'",
+      "At 00:26, <voice_1624> proposes, 'Or directly turn this segment into ours overall.'",
+      "A person wearing a white outfit stands near the whiteboard while others sit at the table.",
+      "The person in white walks away from the table towards a doorway.",
+      "The camera follows the person into a kitchen area where they stand near the window."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in planning a structured session, evidenced by the whiteboard and discussion of specific time slots.",
+      "<voice_312> initiates the conversation regarding setting the mood for the gathering.",
+      "<voice_1620> confirms the start time and agenda structure for the meeting.",
+      "The discussion involves logistical details regarding the total duration and scheduling of segments."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_120_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 23,
+    "edges_added": 10,
+    "nodes": [
+      {
+        "id": 1619,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯，对，我觉得我们先开始吧。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1620,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我们先开始。",
+            "MAI: 3点40到4点半是我们先开始。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1621,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 会会这么长。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1622,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 4点20。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1623,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 20。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1624,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 或者直接把他们把这段变成我们整体的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1625,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans across an empty room featuring a tripod, cardboard boxes, and a projector screen."
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1626,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:01, <voice_312> suggests, 'Then what else do we have, or we can come early to liven up the atmosphere.'"
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1627,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The view shifts to reveal a group of people gathered around a table with a whiteboard."
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1628,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:08, <voice_1619> agrees, stating, 'Yes, I think let's start first.'"
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1629,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:10, <voice_1620> confirms, 'Let's start first,' and specifies the time slot from 3:40 to 4:30."
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1630,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:14, <voice_1621> comments, 'The meeting is so long.'"
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1631,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:15, <voice_1599> estimates the duration, mentioning 'About 78 minutes' and 'About 40 minutes.'"
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1632,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:21, <voice_1622> mentions the time '4:20.'"
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1633,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:22, <voice_1623> adds the number '20.'"
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1634,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:26, <voice_1624> proposes, 'Or directly turn this segment into ours overall.'"
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1635,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing a white outfit stands near the whiteboard while others sit at the table."
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1636,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in white walks away from the table towards a doorway."
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1637,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera follows the person into a kitchen area where they stand near the window."
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1638,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is engaged in planning a structured session, evidenced by the whiteboard and discussion of specific time slots."
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1639,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_312> initiates the conversation regarding setting the mood for the gathering."
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1640,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1620> confirms the start time and agenda structure for the meeting."
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1641,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The discussion involves logistical details regarding the total duration and scheduling of segments."
+          ],
+          "timestamp": 120
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 312,
+        "target": 1626,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 312,
+        "target": 1639,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1599,
+        "target": 1631,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1619,
+        "target": 1628,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1620,
+        "target": 1629,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1620,
+        "target": 1640,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1621,
+        "target": 1630,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1622,
+        "target": 1632,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1623,
+        "target": 1633,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1624,
+        "target": 1634,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_120_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_120_graph.pkl"
+  },
+  "memory_pickle_bytes": 39170434,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 81600.671654774,
+    "prepared_perf": 81610.021934332,
+    "ordered_start_perf": 82038.938843319,
+    "consumer_wait_ms": 0.0148980034282431,
+    "ready_to_ordered_ms": 428916.90898699744,
+    "preparation_work_ms": 9344.961346010678,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 177535.48383399902
+}

@@ -1,0 +1,78 @@
+{
+  "clip_id": 88,
+  "source": {
+    "segment_id": 88,
+    "source": "DAY1_A1_JAKE_11513000.mp4",
+    "source_clock": "11513000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42690.0,
+    "absolute_end_seconds": 42720.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0088.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 49931.340181752,
+      "prepared_perf": 49938.738971205,
+      "ordered_start_perf": 50124.322066817,
+      "consumer_wait_ms": 0.0324300053762272,
+      "ready_to_ordered_ms": 185583.0956120044,
+      "preparation_work_ms": 7393.485654996766,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table covered with a red-and-white checkered tablecloth in a room.",
+      "On the table lie various flowers, wrapping materials, a clapperboard, and a phone.",
+      "A woman in a white blouse stands near a whiteboard holding green plant branches and flowers.",
+      "A woman wearing black clothing sits at the left side of the table, listening and examining a small brown paper box.",
+      "Two women sit across the table on the right, listening to the discussion.",
+      "Another person enters the background doorway behind the woman in white.",
+      "The woman in black gestures with the folded paper box while discussing its purpose.",
+      "The person holding the camera rests their hands on a patterned pouch on their lap while observing the group."
+    ],
+    "high_level_conclusions": [
+      "The participants are planning an event or activity involving handmade crafts and an auction system.",
+      "The woman seated on the left in black proposes or shows her folded craft box as an item intended to be auctioned.",
+      "The group collaborates on defining roles and procedures, such as inviting attendees and preparing products for the event."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table covered with a red-and-white checkered tablecloth in a room.\",\n  \"On the table lie various flowers, wrapping materials, a clapperboard, and a phone.\",\n  \"A woman in a white blouse stands near a whiteboard holding green plant branches and flowers.\",\n  \"A woman wearing black clothing sits at the left side of the table, listening and examining a small brown paper box.\",\n  \"Two women sit across the table on the right, listening to the discussion.\",\n  \"Another person enters the background doorway behind the woman in white.\",\n  \"The woman in black gestures with the folded paper box while discussing its purpose.\",\n  \"The person holding the camera rests their hands on a patterned pouch on their lap while observing the group.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are planning an event or activity involving handmade crafts and an auction system.\",\n  \"The woman seated on the left in black proposes or shows her folded craft box as an item intended to be auctioned.\",\n  \"The group collaborates on defining roles and procedures, such as inviting attendees and preparing products for the event.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 88,
+      "call_id": "b43d52d9-86ba-4150-86db-4d1807ecb1e7",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789408949.6024208,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67033,
+      "output_tokens": 1163,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 40709.56998899783
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table covered with a red-and-white checkered tablecloth in a room.\",\n  \"On the table lie various flowers, wrapping materials, a clapperboard, and a phone.\",\n  \"A woman in a white blouse stands near a whiteboard holding green plant branches and flowers.\",\n  \"A woman wearing black clothing sits at the left side of the table, listening and examining a small brown paper box.\",\n  \"Two women sit across the table on the right, listening to the discussion.\",\n  \"Another person enters the background doorway behind the woman in white.\",\n  \"The woman in black gestures with the folded paper box while discussing its purpose.\",\n  \"The person holding the camera rests their hands on a patterned pouch on their lap while observing the group.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are planning an event or activity involving handmade crafts and an auction system.\",\n  \"The woman seated on the left in black proposes or shows her folded craft box as an item intended to be auctioned.\",\n  \"The group collaborates on defining roles and procedures, such as inviting attendees and preparing products for the event.\"\n ]\n}\n```",
+      "total_tokens": 68196,
+      "request_end": 1789408990.312088,
+      "latency_ms": 40709.66495600442,
+      "client_wall_clock_latency_ms": 40709.66495600442,
+      "api_request_wall_clock_latency_ms": 40709.66495600442
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_88_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

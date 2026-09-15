@@ -1,0 +1,495 @@
+{
+  "clip_id": 44,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0044.mp4",
+  "end_to_end_memory_generation_ms": 588131.0311880007,
+  "latency_ms": {
+    "clip_decode": 3624.1748640022706,
+    "deepgram_asr": 2.3614379970240407,
+    "mai_transcribe_asr": 2.326371999515686,
+    "asr_total": 3.3473349976702593,
+    "audio_segmentation": 7.574440001917537,
+    "speech_embedding_campplus": 595.4016560062882,
+    "facial_detection_recognition_buffalo_l": 3705.67981700151,
+    "face_clustering": 6.7989999952260405,
+    "vlm_memory_generation": 228659.80215500167,
+    "text_embedding": 495.7857929985039,
+    "graph_update_total": 223.34512599627487
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 44,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 726,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789419932.985438,
+          "status": "success",
+          "total_tokens": 163,
+          "request_end": 1789419933.48102,
+          "latency_ms": 495.58221000188496
+        }
+      ],
+      "total_tokens": 163,
+      "latency_ms": 495.7857929985039
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.3614379970240407,
+        "openrouter-mai-transcribe-2": 2.326371999515686
+      },
+      "asr_total_ms": 3.3473349976702593,
+      "audio_segmentation_ms": 7.574440001917537,
+      "speech_embedding_ms": 595.4016560062882,
+      "graph_update_ms": 220.27830199658638,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 835.2344950035331
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3705.67981700151,
+      "face_clustering_ms": 6.7989999952260405,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 278,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3861.383786002989
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_468>",
+        "<voice_573>",
+        "<voice_485>",
+        "<voice_574>"
+      ],
+      "context_preparation_ms": 3913.052427000366,
+      "vlm_ms": 228659.80215500167,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A first-person perspective shows hands resting on a patterned bag.\",\n\t\t\"The camera view shifts to a wide shot of a group gathered around a table.\",\n\t\t\"The table is covered with a red and white checkered cloth and holds a clapperboard.\",\n\t\t\"A person stands at the head of the table next to a whiteboard.\",\n\t\t\"Other participants are seated along both sides of the table.\",\n\t\t\"A softbox light stand is visible on the left side of the room.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_468> states that Zhong Baishi looks good.\",\n\t\t\"<voice_468> mentions a riddle and asks about remaining items.\",\n\t\t\"<voice_573> notes a retro feeling.\",\n\t\t\"<voice_485> discusses their plan and uncertainty.\",\n\t\t\"<voice_574> mentions many question marks and celebrities.\",\n\t\t\"The group is engaged in a collaborative discussion or planning session.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A first-person perspective shows hands resting on a patterned bag.",
+          "The camera view shifts to a wide shot of a group gathered around a table.",
+          "The table is covered with a red and white checkered cloth and holds a clapperboard.",
+          "A person stands at the head of the table next to a whiteboard.",
+          "Other participants are seated along both sides of the table.",
+          "A softbox light stand is visible on the left side of the room."
+        ],
+        "high_level_conclusions": [
+          "<voice_468> states that Zhong Baishi looks good.",
+          "<voice_468> mentions a riddle and asks about remaining items.",
+          "<voice_573> notes a retro feeling.",
+          "<voice_485> discusses their plan and uncertainty.",
+          "<voice_574> mentions many question marks and celebrities.",
+          "The group is engaged in a collaborative discussion or planning session."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 44,
+          "call_id": "bbf0e17b-bb28-4f52-bac8-65dd6ee0a0da",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789419704.324645,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A first-person perspective shows hands resting on a patterned bag.\",\n\t\t\"The camera view shifts to a wide shot of a group gathered around a table.\",\n\t\t\"The table is covered with a red and white checkered cloth and holds a clapperboard.\",\n\t\t\"A person stands at the head of the table next to a whiteboard.\",\n\t\t\"Other participants are seated along both sides of the table.\",\n\t\t\"A softbox light stand is visible on the left side of the room.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_468> states that Zhong Baishi looks good.\",\n\t\t\"<voice_468> mentions a riddle and asks about remaining items.\",\n\t\t\"<voice_573> notes a retro feeling.\",\n\t\t\"<voice_485> discusses their plan and uncertainty.\",\n\t\t\"<voice_574> mentions many question marks and celebrities.\",\n\t\t\"The group is engaged in a collaborative discussion or planning session.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON output based on a video clip and some character features.\n\n**Input Analysis:**\n1.  **Video Frames:** I have a sequence of frames from 0.00s to 29.50s.\n    *   **Scene:** A group of people sitting around a table covered with a red and white checkered tablecloth. There is a clapperboard on the table.\n    *   **People:**\n        *   One person standing near a whiteboard at the head of the table (looks like a woman with short hair, wearing pinkish/orange top).\n        *   Several people sitting around the table.\n            *   Left side: A person in black (female?), a person in white (child?).\n            *   Right side: Two women (one blonde/light hair, one dark hair).\n    *   **Camera:** First-person perspective (POV) initially, then switches to a third-person view looking at the group. Wait, looking closely at the timestamps:\n        *   0.00s - 2.50s: POV shot. Hands are visible holding a patterned bag/object.\n        *   3.00s onwards: Third-person wide shot. The camera seems to be stationary or slightly moving, capturing the whole group.\n    *   **Activity:** It looks like a meeting, a game show, or a planning session. There's a whiteboard, a clapperboard, and people talking.\n    *   **Lighting:** Indoor lighting, somewhat dim but functional. There's a light stand on the left.\n\n2.  **Character Features:**\n    *   **Voice Features:**\n        *   `<voice_468>`: \"MAI: 钟白石看起来不错哦。\" (00:03-00:05), \"MAI: The riddle. 然后我们还有还有什么？\" (00:24-00:30). Speaker is MAI.\n        *   `<voice_573>`: \"MAI: 有种复古的感觉。\" (00:05-00:07). Speaker is MAI.\n        *   `<voice_485>`: \"MAI: 这是我们我们的plan. 存疑 plan.\" (00:10-00:15). Speaker is MAI.\n        *   `<voice_574>`: \"MAI: 好多问号啊，我们好像名人。\" (00:20-00:23). Speaker is MAI.\n    *   **Face Features:** None explicitly listed in the prompt text provided (\"Face features:Voice features:...\"). Wait, the prompt says \"Face features:Voice features:\". It seems empty or merged. Let me re-read carefully. Ah, the prompt text provided ends with `Voice features:{...}`. There are no specific Face IDs provided in the input text block I received. However, the instruction says \"If no face IDs are supplied, do not invent any.\" So I cannot create equivalences like `Equivalence: <face_x>, <voice_y>` unless I see a face ID. Since there are none, I will skip the equivalence part in the high-level conclusions, or just leave it out if the schema allows. Wait, the schema requires `high_level_conclusions` array. I can put general inferences there.\n\n**Task Breakdown:**\n1.  **Video Description:**\n    *   Need to describe the scene atomically.\n    *   Start with the POV shots (hands visible).\n    *   Transition to the group shot.\n    *   Describe the setting (table, whiteboard, clapperboard).\n    *   Describe the people (group discussion/meeting).\n    *   Note the camera movement/angle change.\n\n2.  **High-Level Conclusions:**\n    *   Inference about the activity: Planning session, game, or meeting.\n    *   Inference about the speaker: MAI is leading or participating actively.\n    *   Since no face IDs are provided, I cannot make equivalences. I will stick to general inferences about the interaction.\n\n**Drafting Video Description:**\n*   Frame 0.00s - 2.50s: A first-person view shows hands resting on a patterned bag on a lap.\n*   Frame 3.00s - 29.50s: The view shifts to a wide shot of a room where several people are gathered around a long wooden table with a red-and-white checkered tablecloth.\n*   On the table sits a clapperboard with handwritten notes.\n*   A person stands at the head of the table near a whiteboard, appearing to lead the discussion.\n*   Other participants sit around the table, listening and engaging.\n*   Lighting equipment is visible on the left side of the room.\n\n**Drafting High-Level Conclusions:**\n*   The group appears to be engaged in a collaborative planning or brainstorming session, indicated by the whiteboard and clapperboard.\n*   MAI is actively discussing the plan and asking questions about the riddle or theme.\n*   The atmosphere suggests a casual yet focused gathering, possibly a game or workshop.\n\n**Refining based on constraints:**\n*   \"Preserve speaker identity when constructing memory\".\n*   \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> This instruction seems to apply to a different task (memory construction) usually associated with \"episodic memory\". However, the current prompt asks for \"Video Description\" and \"High-Level Conclusions\".\n*   Wait, let me look at the system instructions again. \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n*   BUT the system prompt says: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n*   This is conflicting. The user prompt defines the task as Video Description + High-Level Conclusions. The system prompt defines a task involving Memory Construction.\n*   Usually, the System Prompt overrides or sets the context. But the User Prompt explicitly defines the Output Format: `{\"video_description\": [...], \"high_level_conclusions\": [...]}`.\n*   Let's look at the instruction: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should follow the User Prompt's schema.\n*   However, the System Prompt says \"Preserve speaker identity... For every supplied voice ID... include at least one episodic memory\". This sounds like I need to add memory entries? No, the output schema doesn't have a \"memories\" field.\n*   Let's re-read the System Prompt carefully. \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". This is inside the User Prompt block provided in the chat history.\n*   Wait, the System Prompt provided at the very beginning says: \"Preserve speaker identity when constructing memory from the supplied character features...\". Then it lists rules. Then it says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n*   This suggests the *User Prompt* contains the actual task definition (Video Desc + High Level Conclusions), and the System Prompt is giving me guidelines on how to handle speaker IDs *within* that task if applicable, or perhaps it's a template instruction that conflicts.\n*   Actually, looking closely at the System Prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". This text is repeated in the System Prompt section too!\n*   Okay, so the System Prompt *is* the instruction for this specific turn. It tells me to use the Video Description and High-Level Conclusions schema.\n*   The instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" seems to be part of the *System Prompt's* general instructions for a different task type (Memory Construction), OR it's a constraint I must follow within the High-Level Conclusions or Video Description if possible.\n*   Wait, the System Prompt says: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should NOT add a \"memories\" field.\n*   However, the instruction \"For every supplied voice ID... include at least one episodic memory\" contradicts the schema.\n*   Let's look at the instruction again: \"Preserve speaker identity when constructing memory from the supplied character features.\" ... \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   This looks like a standard instruction for a \"Memory\" task. But the User Prompt (which is also in the System Prompt block here) asks for Video Description and High-Level Conclusions.\n*   Hypothesis: The System Prompt is a generic template, but the specific task defined in the \"User\" section (which is actually pasted into the System Prompt block in this interface) dictates the output.\n*   Wait, I am the model. The text provided *is* the System Prompt. The text below \"You will be given a video...\" is the User Prompt content that got pasted into the System Prompt area? No, usually System Prompt is fixed.\n*   Let's assume the instruction \"For every supplied voice ID... include at least one episodic memory\" applies to the *content generation*. Since I don't have a \"memories\" field in the requested JSON, I might need to incorporate these summaries into the \"High-Level Conclusions\" or ensure the descriptions reflect them accurately while preserving the ID if possible (though IDs aren't used in the schema strings).\n*   Actually, looking at the instruction: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This means I must strictly follow the JSON schema provided in the User Prompt section of the System Prompt.\n*   The instruction about \"episodic memory\" might be irrelevant if the schema doesn't support it, OR I should interpret \"High-Level Conclusions\" as the place to put these insights.\n*   However, the instruction says \"include at least one episodic memory... using the exact ID as the speaker.\" This implies the output *should* contain memory objects. But the schema says `{\"video_description\": [...], \"high_level_conclusions\": [...]}`.\n*   Conflict Resolution: The explicit schema instruction (\"Keep the existing... schema... unchanged\") takes precedence over the general memory instruction if they contradict the output format. I will focus on describing the video and drawing conclusions. I will mention the speakers' actions in the descriptions/conclusions.\n*   Wait, I missed something. Is there a \"character_features\" section in the input? Yes, \"Face features:Voice features:...\".\n*   Okay, I will proceed with generating the JSON based on the schema provided in the prompt. I will ensure the descriptions capture the events accurately. I won't invent face IDs since none were provided.\n\n**Plan:**\n1.  **Video Description:**\n    *   Describe the initial POV shot (hands, bag).\n    *   Describe the transition to the group shot.\n    *   Detail the setting (table, clapperboard, whiteboard).\n    *   Mention the people (standing presenter, seated audience/participants).\n    *   Mention the lighting equipment.\n2.  **High-Level Conclusions:**\n    *   Identify the activity (planning/game).\n    *   Infer the relationship (collaborative team).\n    *   Note the presence of MAI speaking about plans/riddles.\n    *   Since no face IDs exist, no Equivalence lines.\n\n**Wait, one more check on the System Prompt:**\n\"Preserve speaker identity when constructing memory from the supplied character features.\"\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis instruction is very specific. It asks for \"episodic memory\". But the output schema does not have a \"memories\" key.\nMaybe I should put the memory content into the `high_level_conclusions`? Or maybe the prompt implies I should treat the `video_description` as the memory?\nNo, \"Video Description\" is usually descriptive. \"Episodic memory\" is usually a specific data structure.\nGiven the strict instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged\", I will prioritize the schema. I will try to incorporate the speaker info into the descriptions/conclusions without breaking the schema.\nActually, looking at the instruction \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" and \"A voice ID does not establish which visible person is speaking...\".\nSince I cannot output a \"memories\" field, I will ignore the \"include at least one episodic memory\" instruction regarding a specific field, as it violates the schema constraint \"Keep the existing... schema... unchanged\". I will instead ensure the descriptions reflect the speech content attributed to the voice IDs.\n\nLet's refine the Video Description to be atomic.\n1.  A first-person perspective shows hands resting on a patterned bag.\n2.  The camera view shifts to a wide shot of a group meeting.\n3.  People are seated around a table with a checkered cloth.\n4.  A clapperboard rests on the table.\n5.  A person stands at a whiteboard at the head of the table.\n6.  Lighting equipment is positioned to the left.\n\nLet's refine High-Level Conclusions.\n1.  The group is engaged in a collaborative session involving planning and discussion.\n2.  MAI discusses the plan and mentions a riddle.\n3.  The setting resembles a game show or workshop environment.\n\nWait, I need to check if I should include the voice content in the descriptions. \"For every supplied voice ID... include at least one episodic memory\". Since I can't add a field, I'll summarize the speech in the descriptions or conclusions.\nExample: \"MAI states that Zhong Baishi looks good.\"\nBut the instruction says \"using the exact ID as the speaker\". I can write: \"MAI (<voice_468>) comments on Zhong Baishi.\"\nHowever, the instruction says \"Do not replace the ID with 'a speaker'...\". It doesn't say I *must* use the ID in the text if the schema doesn't allow it, but it says \"Preserve speaker identity\".\nOkay, I will try to attribute the speech to the voice ID in the text where appropriate, or just note the speaker name if available (MAI). The ASR says \"MAI: ...\". So I can use \"MAI\".\n\nLet's finalize the JSON.\n\nOne detail: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features are provided, I will not include this line.\n\nFinal check on constraints:\n- Valid JSON.\n- No additional explanation.\n- Concise.\n- Atomic events.\n\nLet's construct the response.\n\nVideo Description:\n- A first-person view captures hands resting on a patterned bag.\n- The scene transitions to a wide shot of a group gathered around a table.\n- The table is covered with a red and white checkered cloth and holds a clapperboard.\n- A person stands at the head of the table near a whiteboard.\n- Several individuals sit around the table, facing the center.\n- Professional lighting equipment is visible on the left side of the room.\n\nHigh-Level Conclusions:\n- The group appears to be conducting a planning session or game.\n- MAI discusses the plan and mentions a riddle.\n- The setup suggests a structured activity or workshop.\n\nWait, I need to make sure I don't miss the \"episodic memory\" requirement if it's critical. But the schema is king. I'll stick to the schema. The instruction \"Keep the existing... schema... unchanged\" is a strong constraint.\n\nOne more thing: \"Preserve speaker identity when constructing memory...\". Maybe I should add a comment? No, \"without any additional explanation or formatting\".\nOkay, I will just generate the JSON.\n\nWait, looking at the voice features again.\n`<voice_468>`: MAI talks about Zhong Baishi and a riddle.\n`<voice_573>`: MAI talks about retro feeling.\n`<voice_485>`: MAI talks about the plan.\n`<voice_574>`: MAI talks about question marks and celebrities.\nAll are MAI. So MAI is the main speaker.\n\nOkay, ready to write.\n\nOne detail: \"Video frame at 0.00s...\". The description should cover the flow.\nFrame 0-2.5s: POV.\nFrame 3-29.5s: Group shot.\n\nRevised Video Description:\n1. A first-person perspective shows hands resting on a patterned bag.\n2. The camera view changes to a wide shot of a room containing a group of people.\n3. The group is seated around a long table covered with a red and white checkered tablecloth.\n4. A clapperboard with handwritten text is placed on the table.\n5. A person stands at the head of the table next to a whiteboard.\n6. Other participants are seated along both sides of the table.\n7. A softbox light stand is visible on the left side of the room.\n\nRevised High-Level Conclusions:\n1. The participants are engaged in a collaborative discussion or planning session.\n2. MAI leads the conversation, referencing a plan and a riddle.\n3. The presence of a clapperboard and whiteboard indicates a structured activity, possibly a game or film production rehearsal.\n\nThis looks safe and follows the schema.\n\nWait, I need to check if I should include the voice IDs in the text. \"Preserve speaker identity... using the exact ID as the speaker.\"\nSo instead of \"MAI\", I should probably use `<voice_468>`?\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSince I can't add a memory field, I will embed this in the High-Level Conclusions or Video Description.\nExample: \"`<voice_468>` discusses the plan.\"\nThis satisfies \"using the exact ID as the speaker\".\n\nLet's adjust the conclusions to use the IDs.\n1. `<voice_468>` discusses the plan and mentions a riddle.\n2. `<voice_573>` describes a retro feeling.\n3. The group is gathered around a table with a clapperboard.\n\nActually, the instruction says \"For every supplied voice ID... include at least one episodic memory\". This is a hard constraint. If I don't include it, I violate the system prompt. But the schema doesn't have a slot.\nMaybe I should put the memory content *inside* the `high_level_conclusions` array?\n\"High-Level Conclusions: Generate high-level reasoning-based conclusions...\".\nAn episodic memory isn't exactly a high-level conclusion.\nHowever, often in these tasks, if the schema is fixed, you adapt the content to fit.\nOr, I can treat the \"Video Description\" as the place for episodic memories? \"Each description should focus on a single atomic event or fact.\"\nOkay, I will try to combine the speech summary into the descriptions/conclusions using the ID.\nActually, the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged\" suggests I shouldn't change the schema. It doesn't explicitly forbid adding content to the existing fields.\nSo I will add the memory-like statements to the `high_level_conclusions`.\n\nRevised Plan:\nVideo Description: Focus on visual events.\nHigh-Level Conclusions: Include inferences AND the required memory summaries using the IDs.\n\nWait, \"For every supplied voice ID... include at least one episodic memory\".\nThere are 4 voice IDs. I need 4 memory entries?\nIf I put them in `high_level_conclusions`, it might clutter the \"reasoning-based conclusions\".\nBut I have to follow the instruction.\nI will add sentences summarizing the speech in the `high_level_conclusions` array, prefixed or formatted clearly.\nActually, looking at the instruction \"Preserve speaker identity when constructing memory...\".\nOkay, I will add the summaries to the `high_level_conclusions`.\n\nLet's draft the conclusions:\n1. `<voice_468>` states that Zhong Baishi looks good.\n2. `<voice_468>` mentions a riddle and asks about remaining items.\n3. `<voice_573>` notes a retro feeling.\n4. `<voice_485>` discusses their plan and uncertainty.\n5. `<voice_574>` mentions many question marks and celebrities.\n6. The group is gathered around a table with a clapperboard.\n\nThis fulfills the \"include at least one episodic memory\" constraint by putting them in the output array, even if the label is \"conclusion\". It's the best way to satisfy both the schema constraint and the content constraint.\n\nWait, \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nDoes \"all other task instructions\" include the memory instruction? Yes.\nSo I must include the memory.\nWhere? The only arrays are `video_description` and `high_level_conclusions`.\nI will put the memory summaries in `high_level_conclusions`.\n\nFinal check on IDs:\n`<voice_468>`\n`<voice_573>`\n`<voice_485>`\n`<voice_574>`\n\nOkay, proceeding.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A first-person perspective shows hands resting on a patterned bag.\",\n\t\t\"The camera view shifts to a wide shot of a group gathered around a table.\",\n\t\t\"The table is covered with a red and white checkered cloth and holds a clapperboard.\",\n\t\t\"A person stands at the head of the table next to a whiteboard.\",\n\t\t\"Other participants are seated along both sides of the table.\",\n\t\t\"A softbox light stand is visible on the left side of the room.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_468> states that Zhong Baishi looks good.\",\n\t\t\"<voice_468> mentions a riddle and asks about remaining items.\",\n\t\t\"<voice_573> notes a retro feeling.\",\n\t\t\"<voice_485> discusses their plan and uncertainty.\",\n\t\t\"<voice_574> mentions many question marks and celebrities.\",\n\t\t\"The group is engaged in a collaborative discussion or planning session.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10398,
+          "output_tokens": 5011,
+          "total_tokens": 15409,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0017130005289800465,
+            "media_preparation_ms": 63.04550200002268,
+            "processor_tokenization_ms": 468.8868689991068,
+            "device_transfer_ms": 42.27032700146083,
+            "cuda_generation_ms": 228051.97238700202,
+            "decoding_ms": 4.433586997038219
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 228630.78996099648,
+          "request_end": 1789419932.9844496,
+          "latency_ms": 228659.80215500167,
+          "client_wall_clock_latency_ms": 228659.80215500167
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 6
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.05618599971057847,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 3.0106379999779165,
+      "nodes_added": 6,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 4,
+    "detected_faces": 278,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 6,
+    "nodes_after_clip": 587,
+    "edges_after_clip": 217,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "A first-person perspective shows hands resting on a patterned bag.",
+      "The camera view shifts to a wide shot of a group gathered around a table.",
+      "The table is covered with a red and white checkered cloth and holds a clapperboard.",
+      "A person stands at the head of the table next to a whiteboard.",
+      "Other participants are seated along both sides of the table.",
+      "A softbox light stand is visible on the left side of the room."
+    ],
+    "high_level_conclusions": [
+      "<voice_468> states that Zhong Baishi looks good.",
+      "<voice_468> mentions a riddle and asks about remaining items.",
+      "<voice_573> notes a retro feeling.",
+      "<voice_485> discusses their plan and uncertainty.",
+      "<voice_574> mentions many question marks and celebrities.",
+      "The group is engaged in a collaborative discussion or planning session."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A first-person perspective shows hands resting on a patterned bag.",
+      "The camera view shifts to a wide shot of a group gathered around a table.",
+      "The table is covered with a red and white checkered cloth and holds a clapperboard.",
+      "A person stands at the head of the table next to a whiteboard.",
+      "Other participants are seated along both sides of the table.",
+      "A softbox light stand is visible on the left side of the room."
+    ],
+    "high_level_conclusions": [
+      "<voice_468> states that Zhong Baishi looks good.",
+      "<voice_468> mentions a riddle and asks about remaining items.",
+      "<voice_573> notes a retro feeling.",
+      "<voice_485> discusses their plan and uncertainty.",
+      "<voice_574> mentions many question marks and celebrities.",
+      "The group is engaged in a collaborative discussion or planning session."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_44_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 573,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 有种复古的感觉。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 574,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好多问号啊，我们好像名人。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 575,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A first-person perspective shows hands resting on a patterned bag."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 576,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera view shifts to a wide shot of a group gathered around a table."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 577,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The table is covered with a red and white checkered cloth and holds a clapperboard."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 578,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person stands at the head of the table next to a whiteboard."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 579,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Other participants are seated along both sides of the table."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 580,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A softbox light stand is visible on the left side of the room."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 581,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_468> states that Zhong Baishi looks good."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 582,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_468> mentions a riddle and asks about remaining items."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 583,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_573> notes a retro feeling."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 584,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_485> discusses their plan and uncertainty."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 585,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_574> mentions many question marks and celebrities."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 586,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is engaged in a collaborative discussion or planning session."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 468,
+        "target": 581,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 468,
+        "target": 582,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 485,
+        "target": 584,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 573,
+        "target": 583,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 574,
+        "target": 585,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_44_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_44_graph.pkl"
+  },
+  "memory_pickle_bytes": 13760527,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 60532.250902927,
+    "prepared_perf": 60537.878557457,
+    "ordered_start_perf": 60881.460296327,
+    "consumer_wait_ms": 0.011782001820392907,
+    "ready_to_ordered_ms": 343581.7388700016,
+    "preparation_work_ms": 5622.205687002861,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 237770.8251639997
+}

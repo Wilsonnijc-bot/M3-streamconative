@@ -1,0 +1,421 @@
+{
+  "clip_id": 119,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0119.mp4",
+  "end_to_end_memory_generation_ms": 187005.5569649994,
+  "latency_ms": {
+    "clip_decode": 6087.549748001038,
+    "deepgram_asr": 853.5531689994968,
+    "mai_transcribe_asr": 1002.876891005144,
+    "asr_total": 1004.1716279956745,
+    "audio_segmentation": 6.4604650033288635,
+    "speech_embedding_campplus": 1546.320328998263,
+    "facial_detection_recognition_buffalo_l": 3617.625238999608,
+    "face_clustering": 2.867590003006626,
+    "vlm_memory_generation": 90227.78255799494,
+    "text_embedding": 471.7825769985211,
+    "graph_update_total": 776.7213729894138
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 119,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 901,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789411515.8071845,
+          "status": "success",
+          "total_tokens": 163,
+          "request_end": 1789411516.2788272,
+          "latency_ms": 471.64341600000625
+        }
+      ],
+      "total_tokens": 163,
+      "latency_ms": 471.7825769985211
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 853.5531689994968,
+        "openrouter-mai-transcribe-2": 1002.876891005144
+      },
+      "asr_total_ms": 1004.1716279956745,
+      "audio_segmentation_ms": 6.4604650033288635,
+      "speech_embedding_ms": 1546.320328998263,
+      "graph_update_ms": 776.6362829934224,
+      "asr_segment_count": 7,
+      "speech_embedding_count": 7,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2344.4897870067507
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3617.625238999608,
+      "face_clustering_ms": 2.867590003006626,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 77,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3662.8545409985236
+    },
+    "vlm": {
+      "context_preparation_ms": 4231.708712999534,
+      "vlm_ms": 90227.78255799494,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer handles an electronic device and cable on a bedside table before standing up.\",\n    \"The camera wearer walks out of the bedroom into the adjoining living room.\",\n    \"A group of people is gathered around a dining table covered with a checkered tablecloth.\",\n    \"A person standing by the whiteboard at the end of the table writes notes during the discussion.\",\n    \"A woman dressed in white walks toward the kitchen area and returns toward the table.\",\n    \"Multiple individuals around the table discuss the schedule and duration of segments, specifically contrasting general sections with guest parts.\",\n    \"A clapperboard, floral arrangements, and notebooks are laid out on the meeting table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is holding a production or pre-shoot planning meeting, coordinating shoot schedules, guest segments, and equipment.\",\n    \"The camera wearer is assisting with technical setup or equipment management before joining the team discussion.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera wearer handles an electronic device and cable on a bedside table before standing up.",
+          "The camera wearer walks out of the bedroom into the adjoining living room.",
+          "A group of people is gathered around a dining table covered with a checkered tablecloth.",
+          "A person standing by the whiteboard at the end of the table writes notes during the discussion.",
+          "A woman dressed in white walks toward the kitchen area and returns toward the table.",
+          "Multiple individuals around the table discuss the schedule and duration of segments, specifically contrasting general sections with guest parts.",
+          "A clapperboard, floral arrangements, and notebooks are laid out on the meeting table."
+        ],
+        "high_level_conclusions": [
+          "The group is holding a production or pre-shoot planning meeting, coordinating shoot schedules, guest segments, and equipment.",
+          "The camera wearer is assisting with technical setup or equipment management before joining the team discussion."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 119,
+          "call_id": "70b5f8f1-f1fc-4197-aaf3-f321dbf98a5f",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789411425.578506,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67046,
+          "output_tokens": 1195,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 90227.64357500273
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer handles an electronic device and cable on a bedside table before standing up.\",\n    \"The camera wearer walks out of the bedroom into the adjoining living room.\",\n    \"A group of people is gathered around a dining table covered with a checkered tablecloth.\",\n    \"A person standing by the whiteboard at the end of the table writes notes during the discussion.\",\n    \"A woman dressed in white walks toward the kitchen area and returns toward the table.\",\n    \"Multiple individuals around the table discuss the schedule and duration of segments, specifically contrasting general sections with guest parts.\",\n    \"A clapperboard, floral arrangements, and notebooks are laid out on the meeting table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is holding a production or pre-shoot planning meeting, coordinating shoot schedules, guest segments, and equipment.\",\n    \"The camera wearer is assisting with technical setup or equipment management before joining the team discussion.\"\n  ]\n}\n```",
+          "total_tokens": 68241,
+          "request_end": 1789411515.8062925,
+          "latency_ms": 90227.78255799494,
+          "client_wall_clock_latency_ms": 90227.78255799494,
+          "api_request_wall_clock_latency_ms": 90227.78255799494
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.06939999730093405,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.01568999869050458,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 7,
+    "speech_embeddings": 7,
+    "voice_identities": 7,
+    "detected_faces": 77,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1395,
+    "edges_after_clip": 269,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer handles an electronic device and cable on a bedside table before standing up.",
+      "The camera wearer walks out of the bedroom into the adjoining living room.",
+      "A group of people is gathered around a dining table covered with a checkered tablecloth.",
+      "A person standing by the whiteboard at the end of the table writes notes during the discussion.",
+      "A woman dressed in white walks toward the kitchen area and returns toward the table.",
+      "Multiple individuals around the table discuss the schedule and duration of segments, specifically contrasting general sections with guest parts.",
+      "A clapperboard, floral arrangements, and notebooks are laid out on the meeting table."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a production or pre-shoot planning meeting, coordinating shoot schedules, guest segments, and equipment.",
+      "The camera wearer is assisting with technical setup or equipment management before joining the team discussion."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera wearer handles an electronic device and cable on a bedside table before standing up.",
+      "The camera wearer walks out of the bedroom into the adjoining living room.",
+      "A group of people is gathered around a dining table covered with a checkered tablecloth.",
+      "A person standing by the whiteboard at the end of the table writes notes during the discussion.",
+      "A woman dressed in white walks toward the kitchen area and returns toward the table.",
+      "Multiple individuals around the table discuss the schedule and duration of segments, specifically contrasting general sections with guest parts.",
+      "A clapperboard, floral arrangements, and notebooks are laid out on the meeting table."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a production or pre-shoot planning meeting, coordinating shoot schedules, guest segments, and equipment.",
+      "The camera wearer is assisting with technical setup or equipment management before joining the team discussion."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_119_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1381,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 一个半小时差不多。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1382,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你-你-你不用。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1383,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 他们带多少东西。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1384,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 以及他们是矮人还是异人？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1385,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对，这个就不确定。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1386,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer handles an electronic device and cable on a bedside table before standing up."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1387,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer walks out of the bedroom into the adjoining living room."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1388,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people is gathered around a dining table covered with a checkered tablecloth."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1389,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person standing by the whiteboard at the end of the table writes notes during the discussion."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1390,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman dressed in white walks toward the kitchen area and returns toward the table."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1391,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Multiple individuals around the table discuss the schedule and duration of segments, specifically contrasting general sections with guest parts."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1392,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard, floral arrangements, and notebooks are laid out on the meeting table."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1393,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is holding a production or pre-shoot planning meeting, coordinating shoot schedules, guest segments, and equipment."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1394,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera wearer is assisting with technical setup or equipment management before joining the team discussion."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_119_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_119_graph.pkl"
+  },
+  "memory_pickle_bytes": 32257064,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52516.267085103,
+    "prepared_perf": 52525.195793564,
+    "ordered_start_perf": 52599.715456823,
+    "consumer_wait_ms": 0.011663003533612937,
+    "ready_to_ordered_ms": 74519.66325900139,
+    "preparation_work_ms": 8923.345451999921,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 100941.8224070032
+}

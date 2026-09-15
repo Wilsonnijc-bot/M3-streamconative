@@ -1,0 +1,59 @@
+{
+  "clip_id": 22,
+  "source": {
+    "segment_id": 22,
+    "source": "DAY1_A1_JAKE_11200000.mp4",
+    "source_clock": "11200000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40800.0,
+    "absolute_end_seconds": 40830.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0022.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of young people sit around a table covered with a pink checkered tablecloth.",
+      "A young man in an orange t-shirt examines and handles a small electronic device at the table.",
+      "A woman in a black shirt adjusts and works on a device on the other side of the table.",
+      "Several other individuals sit nearby, handling items and chatting.",
+      "The camera shifts viewpoint while the group continues testing and handling equipment."
+    ],
+    "high_level_conclusions": [
+      "The group is gathered in an informal setting to collaboratively inspect, assemble, or test equipment.",
+      "The atmosphere is casual and relaxed as participants multitask between handling gadgets and chatting."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of young people sit around a table covered with a pink checkered tablecloth.\",\n  \"A young man in an orange t-shirt examines and handles a small electronic device at the table.\",\n  \"A woman in a black shirt adjusts and works on a device on the other side of the table.\",\n  \"Several other individuals sit nearby, handling items and chatting.\",\n  \"The camera shifts viewpoint while the group continues testing and handling equipment.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is gathered in an informal setting to collaboratively inspect, assemble, or test equipment.\",\n  \"The atmosphere is casual and relaxed as participants multitask between handling gadgets and chatting.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 22,
+      "call_id": "2af2a43c-b3be-442d-a93b-f5f6ccb192f4",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404400.6338193,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66528,
+      "output_tokens": 672,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of young people sit around a table covered with a pink checkered tablecloth.\",\n  \"A young man in an orange t-shirt examines and handles a small electronic device at the table.\",\n  \"A woman in a black shirt adjusts and works on a device on the other side of the table.\",\n  \"Several other individuals sit nearby, handling items and chatting.\",\n  \"The camera shifts viewpoint while the group continues testing and handling equipment.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is gathered in an informal setting to collaboratively inspect, assemble, or test equipment.\",\n  \"The atmosphere is casual and relaxed as participants multitask between handling gadgets and chatting.\"\n ]\n}\n```",
+      "total_tokens": 67200,
+      "request_end": 1789404456.2549546,
+      "latency_ms": 55621.134954999434,
+      "client_wall_clock_latency_ms": 55621.134954999434,
+      "api_request_wall_clock_latency_ms": 55621.134954999434
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_22_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

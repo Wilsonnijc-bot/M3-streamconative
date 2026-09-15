@@ -1,0 +1,74 @@
+{
+  "clip_id": 67,
+  "source": {
+    "segment_id": 67,
+    "source": "bedroom_01_00313000.mp4",
+    "source_clock": "00313000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1890.0,
+    "absolute_end_seconds": 1920.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00313000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 76550.03876638,
+      "prepared_perf": 76555.358636428,
+      "ordered_start_perf": 76663.368432242,
+      "consumer_wait_ms": 0.009758994565345347,
+      "ready_to_ordered_ms": 108009.79581399588,
+      "preparation_work_ms": 5314.3336979992455,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table filled with food and drinks.",
+      "The woman on the left holds a smartphone with one hand while resting her head against the other.",
+      "The woman on the right clasps her hands beneath her chin, looking across the table and speaking via <voice_322>.",
+      "The woman on the right reflects on a quote from The Old Man and the Sea and discusses programming and creativity via <voice_322>.",
+      "The woman on the left listens while adjusting her hair and touching her face."
+    ],
+    "high_level_conclusions": [
+      "The speaker (<voice_322>) views the companion as a mentor or experienced peer, seeking advice on managing work, programming, and creative pursuits.",
+      "The two share a close, comfortable relationship, engaging in a relaxed and intellectual conversation over a casual meal."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table filled with food and drinks.\",\n    \"The woman on the left holds a smartphone with one hand while resting her head against the other.\",\n    \"The woman on the right clasps her hands beneath her chin, looking across the table and speaking via <voice_322>.\",\n    \"The woman on the right reflects on a quote from The Old Man and the Sea and discusses programming and creativity via <voice_322>.\",\n    \"The woman on the left listens while adjusting her hair and touching her face.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_322>) views the companion as a mentor or experienced peer, seeking advice on managing work, programming, and creative pursuits.\",\n    \"The two share a close, comfortable relationship, engaging in a relaxed and intellectual conversation over a casual meal.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 67,
+      "call_id": "69803b99-6e5a-4f58-8240-b684912fde1b",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789435487.048638,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66030,
+      "output_tokens": 1281,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 28353.484676001244
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table filled with food and drinks.\",\n    \"The woman on the left holds a smartphone with one hand while resting her head against the other.\",\n    \"The woman on the right clasps her hands beneath her chin, looking across the table and speaking via <voice_322>.\",\n    \"The woman on the right reflects on a quote from The Old Man and the Sea and discusses programming and creativity via <voice_322>.\",\n    \"The woman on the left listens while adjusting her hair and touching her face.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_322>) views the companion as a mentor or experienced peer, seeking advice on managing work, programming, and creative pursuits.\",\n    \"The two share a close, comfortable relationship, engaging in a relaxed and intellectual conversation over a casual meal.\"\n  ]\n}\n```",
+      "total_tokens": 67311,
+      "request_end": 1789435515.4022088,
+      "latency_ms": 28353.5680519999,
+      "client_wall_clock_latency_ms": 28353.5680519999,
+      "api_request_wall_clock_latency_ms": 28353.5680519999
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_67_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

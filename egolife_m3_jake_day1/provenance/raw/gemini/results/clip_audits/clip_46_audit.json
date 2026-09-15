@@ -1,0 +1,350 @@
+{
+  "clip_id": 46,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0046.mp4",
+  "end_to_end_memory_generation_ms": 159934.84269700275,
+  "latency_ms": {
+    "clip_decode": 4023.418302000209,
+    "deepgram_asr": 564.836796002055,
+    "mai_transcribe_asr": 936.2740200012922,
+    "asr_total": 937.2497770018526,
+    "audio_segmentation": 13.72121500025969,
+    "speech_embedding_campplus": 1198.547375999624,
+    "facial_detection_recognition_buffalo_l": 3517.514360995847,
+    "face_clustering": 4.455943999346346,
+    "vlm_memory_generation": 19743.951289005054,
+    "text_embedding": 372.40275800286327,
+    "graph_update_total": 438.1536529981531
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 46,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 591,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789405970.2203069,
+          "status": "success",
+          "total_tokens": 108,
+          "request_end": 1789405970.5925212,
+          "latency_ms": 372.21483400207944
+        }
+      ],
+      "total_tokens": 108,
+      "latency_ms": 372.40275800286327
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 564.836796002055,
+        "openrouter-mai-transcribe-2": 936.2740200012922
+      },
+      "asr_total_ms": 937.2497770018526,
+      "audio_segmentation_ms": 13.72121500025969,
+      "speech_embedding_ms": 1198.547375999624,
+      "graph_update_ms": 438.0814370015287,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1667.736220995721
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3517.514360995847,
+      "face_clustering_ms": 4.455943999346346,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 158,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3608.713754998462
+    },
+    "vlm": {
+      "context_preparation_ms": 3998.51776399737,
+      "vlm_ms": 19743.951289005054,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"The camera moves around the living area toward a dining table where several people are gathered.\",\n  \"A person standing by the whiteboard wipes markings off and writes new information.\",\n  \"A person at the whiteboard counts and discusses numbers related to the schedule.\",\n  \"A clapperboard rests on the checkered tablecloth in the foreground.\",\n  \"The group members sit around the table watching the board and engaging in discussion.\"\n ],\n \"high_level_conclusions\": [\n  \"The team is conducting a film production meeting to plan shooting schedules and logistics.\",\n  \"The individual at the whiteboard is acting as the coordinator leading the planning session.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera moves around the living area toward a dining table where several people are gathered.",
+          "A person standing by the whiteboard wipes markings off and writes new information.",
+          "A person at the whiteboard counts and discusses numbers related to the schedule.",
+          "A clapperboard rests on the checkered tablecloth in the foreground.",
+          "The group members sit around the table watching the board and engaging in discussion."
+        ],
+        "high_level_conclusions": [
+          "The team is conducting a film production meeting to plan shooting schedules and logistics.",
+          "The individual at the whiteboard is acting as the coordinator leading the planning session."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 46,
+          "call_id": "face3c67-03b3-4215-953a-99bc12801fd6",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789405950.4755378,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67163,
+          "output_tokens": 707,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 19743.82890799461
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"The camera moves around the living area toward a dining table where several people are gathered.\",\n  \"A person standing by the whiteboard wipes markings off and writes new information.\",\n  \"A person at the whiteboard counts and discusses numbers related to the schedule.\",\n  \"A clapperboard rests on the checkered tablecloth in the foreground.\",\n  \"The group members sit around the table watching the board and engaging in discussion.\"\n ],\n \"high_level_conclusions\": [\n  \"The team is conducting a film production meeting to plan shooting schedules and logistics.\",\n  \"The individual at the whiteboard is acting as the coordinator leading the planning session.\"\n ]\n}\n```",
+          "total_tokens": 67870,
+          "request_end": 1789405970.2194915,
+          "latency_ms": 19743.951289005054,
+          "client_wall_clock_latency_ms": 19743.951289005054,
+          "api_request_wall_clock_latency_ms": 19743.951289005054
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.05986299947835505,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.01235299714608118,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 5,
+    "detected_faces": 158,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 543,
+    "edges_after_clip": 123,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera moves around the living area toward a dining table where several people are gathered.",
+      "A person standing by the whiteboard wipes markings off and writes new information.",
+      "A person at the whiteboard counts and discusses numbers related to the schedule.",
+      "A clapperboard rests on the checkered tablecloth in the foreground.",
+      "The group members sit around the table watching the board and engaging in discussion."
+    ],
+    "high_level_conclusions": [
+      "The team is conducting a film production meeting to plan shooting schedules and logistics.",
+      "The individual at the whiteboard is acting as the coordinator leading the planning session."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera moves around the living area toward a dining table where several people are gathered.",
+      "A person standing by the whiteboard wipes markings off and writes new information.",
+      "A person at the whiteboard counts and discusses numbers related to the schedule.",
+      "A clapperboard rests on the checkered tablecloth in the foreground.",
+      "The group members sit around the table watching the board and engaging in discussion."
+    ],
+    "high_level_conclusions": [
+      "The team is conducting a film production meeting to plan shooting schedules and logistics.",
+      "The individual at the whiteboard is acting as the coordinator leading the planning session."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_46_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 534,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 擦，擦掉，擦掉。",
+            "MAI: 处理一下。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 535,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 添了多少麻。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 536,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera moves around the living area toward a dining table where several people are gathered."
+          ],
+          "timestamp": 46
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 537,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person standing by the whiteboard wipes markings off and writes new information."
+          ],
+          "timestamp": 46
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 538,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person at the whiteboard counts and discusses numbers related to the schedule."
+          ],
+          "timestamp": 46
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 539,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard rests on the checkered tablecloth in the foreground."
+          ],
+          "timestamp": 46
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 540,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group members sit around the table watching the board and engaging in discussion."
+          ],
+          "timestamp": 46
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 541,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The team is conducting a film production meeting to plan shooting schedules and logistics."
+          ],
+          "timestamp": 46
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 542,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The individual at the whiteboard is acting as the coordinator leading the planning session."
+          ],
+          "timestamp": 46
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_46_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_46_graph.pkl"
+  },
+  "memory_pickle_bytes": 12226415,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 46997.549599813,
+    "prepared_perf": 47004.516243792,
+    "ordered_start_perf": 47127.134750333,
+    "consumer_wait_ms": 0.010450006811879575,
+    "ready_to_ordered_ms": 122618.50654100272,
+    "preparation_work_ms": 6959.922342997743,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 29393.342338000366
+}

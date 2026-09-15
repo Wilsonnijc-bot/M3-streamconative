@@ -1,0 +1,76 @@
+{
+  "clip_id": 22,
+  "source": {
+    "segment_id": 22,
+    "source": "bedroom_01_00100000.mp4",
+    "source_clock": "00100000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 600.0,
+    "absolute_end_seconds": 630.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00100000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73578.713756856,
+      "prepared_perf": 73583.264839999,
+      "ordered_start_perf": 73658.754619417,
+      "consumer_wait_ms": 0.009768002200871706,
+      "ready_to_ordered_ms": 75489.77941799967,
+      "preparation_work_ms": 4545.6058389972895,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit beside each other on a bed with a blue bedspread in a bedroom.",
+      "The woman wearing a beige t-shirt talks with the woman wearing a white top.",
+      "The woman in the white top asks a question regarding a failed academic course.",
+      "The woman in the beige t-shirt lowers her head in disappointment while discussing her failed subject.",
+      "The woman in the white top reaches forward to hold hands with the other woman and console her."
+    ],
+    "high_level_conclusions": [
+      "<voice_179>, <voice_155>, and <voice_208> belong to the woman in the beige t-shirt.",
+      "<voice_10> and <voice_21> belong to the woman in the white sweater.",
+      "The woman in the beige shirt is upset and demoralized after failing a course in what she considered her best subject.",
+      "The woman in the white sweater acts as a comforting, supportive friend or family member."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit beside each other on a bed with a blue bedspread in a bedroom.\",\n    \"The woman wearing a beige t-shirt talks with the woman wearing a white top.\",\n    \"The woman in the white top asks a question regarding a failed academic course.\",\n    \"The woman in the beige t-shirt lowers her head in disappointment while discussing her failed subject.\",\n    \"The woman in the white top reaches forward to hold hands with the other woman and console her.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_179>, <voice_155>, and <voice_208> belong to the woman in the beige t-shirt.\",\n    \"<voice_10> and <voice_21> belong to the woman in the white sweater.\",\n    \"The woman in the beige shirt is upset and demoralized after failing a course in what she considered her best subject.\",\n    \"The woman in the white sweater acts as a comforting, supportive friend or family member.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 22,
+      "call_id": "7cd1233f-507c-48b8-a4b2-0ac196da29d4",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432481.6705823,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66057,
+      "output_tokens": 1504,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 32839.54064700811
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit beside each other on a bed with a blue bedspread in a bedroom.\",\n    \"The woman wearing a beige t-shirt talks with the woman wearing a white top.\",\n    \"The woman in the white top asks a question regarding a failed academic course.\",\n    \"The woman in the beige t-shirt lowers her head in disappointment while discussing her failed subject.\",\n    \"The woman in the white top reaches forward to hold hands with the other woman and console her.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_179>, <voice_155>, and <voice_208> belong to the woman in the beige t-shirt.\",\n    \"<voice_10> and <voice_21> belong to the woman in the white sweater.\",\n    \"The woman in the beige shirt is upset and demoralized after failing a course in what she considered her best subject.\",\n    \"The woman in the white sweater acts as a comforting, supportive friend or family member.\"\n  ]\n}\n```",
+      "total_tokens": 67561,
+      "request_end": 1789432514.5102296,
+      "latency_ms": 32839.64499300055,
+      "client_wall_clock_latency_ms": 32839.64499300055,
+      "api_request_wall_clock_latency_ms": 32839.64499300055
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_22_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

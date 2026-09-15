@@ -1,0 +1,12 @@
+{
+  "status": "partial_improvement_not_accepted",
+  "findings": [
+    "Segment 1 retains both supplied voice IDs in episodic text and adds five voice-memory edges.",
+    "Segment 2 retains voice_0 only in a semantic conclusion; episodic speaker coverage fails, with one new voice-memory edge.",
+    "MAI is an ASR provider label, but segment 1 treats it as a person and groups two voice IDs under that name.",
+    "The supplied \u65f6\u95f4\u6233 transcript means timestamp; the generated Time ding is not a faithful translation.",
+    "Both calls completed thinking at 2 FPS without truncation: 36/60 frames; 151.4/138.3 seconds CUDA generation."
+  ],
+  "gemini_prompt_unchanged": true,
+  "full_benchmark_launched_for_this_prompt": false
+}

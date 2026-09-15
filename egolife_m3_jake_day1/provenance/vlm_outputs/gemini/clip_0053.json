@@ -1,0 +1,75 @@
+{
+  "clip_id": 53,
+  "source": {
+    "segment_id": 53,
+    "source": "DAY1_A1_JAKE_11350000.mp4",
+    "source_clock": "11350000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 19.110000000000582,
+    "absolute_start_seconds": 41700.0,
+    "absolute_end_seconds": 41719.11,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0053.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47383.583731158,
+      "prepared_perf": 47388.749278776,
+      "ordered_start_perf": 47481.027921911,
+      "consumer_wait_ms": 0.00933800038183108,
+      "ready_to_ordered_ms": 92278.64313500322,
+      "preparation_work_ms": 5157.3311789979925,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered in the living room around a table and whiteboard, discussing their rehearsal or shoot setup.",
+      "<voice_429> asks whether they should start the scene or finish practicing the subsequent parts.",
+      "The camera wearer turns and walks into the adjacent bedroom, showing a computer workstation and bed.",
+      "<voice_0> responds, suggesting they show it first and commenting positively on someone's performance.",
+      "The camera wearer turns around inside the bedroom and walks back out into the living room.",
+      "A young man in an orange t-shirt walks across the living room as a woman in a white dress approaches the table."
+    ],
+    "high_level_conclusions": [
+      "The group is preparing and rehearsing for a video shoot, evident from the clapperboard, lighting equipment, and script/notes on the whiteboard.",
+      "<voice_0> acts in a directorial or supervisory capacity, guiding the rehearsal flow and praising the participant."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered in the living room around a table and whiteboard, discussing their rehearsal or shoot setup.\",\n  \"<voice_429> asks whether they should start the scene or finish practicing the subsequent parts.\",\n  \"The camera wearer turns and walks into the adjacent bedroom, showing a computer workstation and bed.\",\n  \"<voice_0> responds, suggesting they show it first and commenting positively on someone's performance.\",\n  \"The camera wearer turns around inside the bedroom and walks back out into the living room.\",\n  \"A young man in an orange t-shirt walks across the living room as a woman in a white dress approaches the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is preparing and rehearsing for a video shoot, evident from the clapperboard, lighting equipment, and script/notes on the whiteboard.\",\n  \"<voice_0> acts in a directorial or supervisory capacity, guiding the rehearsal flow and praising the participant.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 53,
+      "call_id": "ae7d1521-d036-4f2b-a3b0-b2bc57d6e71d",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406300.8034613,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 43498,
+      "output_tokens": 1222,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 43924.06389499956
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered in the living room around a table and whiteboard, discussing their rehearsal or shoot setup.\",\n  \"<voice_429> asks whether they should start the scene or finish practicing the subsequent parts.\",\n  \"The camera wearer turns and walks into the adjacent bedroom, showing a computer workstation and bed.\",\n  \"<voice_0> responds, suggesting they show it first and commenting positively on someone's performance.\",\n  \"The camera wearer turns around inside the bedroom and walks back out into the living room.\",\n  \"A young man in an orange t-shirt walks across the living room as a woman in a white dress approaches the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is preparing and rehearsing for a video shoot, evident from the clapperboard, lighting equipment, and script/notes on the whiteboard.\",\n  \"<voice_0> acts in a directorial or supervisory capacity, guiding the rehearsal flow and praising the participant.\"\n ]\n}\n```",
+      "total_tokens": 44720,
+      "request_end": 1789406344.7276533,
+      "latency_ms": 43924.18915899907,
+      "client_wall_clock_latency_ms": 43924.18915899907,
+      "api_request_wall_clock_latency_ms": 43924.18915899907
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_53_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

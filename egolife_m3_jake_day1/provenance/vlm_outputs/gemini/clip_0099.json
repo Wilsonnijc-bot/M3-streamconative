@@ -1,0 +1,81 @@
+{
+  "clip_id": 99,
+  "source": {
+    "segment_id": 99,
+    "source": "DAY1_A1_JAKE_11563000.mp4",
+    "source_clock": "11563000",
+    "start_seconds_in_source": 0.029999999998835847,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42990.03,
+    "absolute_end_seconds": 43020.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0099.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51225.404775328,
+      "prepared_perf": 51231.846907534,
+      "ordered_start_perf": 51364.583173963,
+      "consumer_wait_ms": 0.01410699769621715,
+      "ready_to_ordered_ms": 132736.26642899762,
+      "preparation_work_ms": 6441.832192002039,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Several people sit around a table covered in a checkered tablecloth in a bright room.",
+      "A woman in a white top stands by a whiteboard handling pink flowers.",
+      "A woman seated on the left looks down while holding a mobile phone.",
+      "Two women sit on the right side of the table participating in the discussion.",
+      "At 00:01, <voice_290> expresses thoughts about performing.",
+      "At 00:05, <voice_1139> suggests dancing instead.",
+      "At 00:08, <voice_912> mentions the lyric about dancing rather than dating.",
+      "At 00:11, <voice_699> agrees on dancing and suggests leaving a timeline.",
+      "The camera position shifts forward, bringing the table into a closer perspective.",
+      "At 00:17, <voice_1140> raises concern about glasses falling off during a dance.",
+      "At 00:21, <voice_332> suggests doing a simpler routine and gestures playfully with her hands."
+    ],
+    "high_level_conclusions": [
+      "The group is brainstorming ideas for an upcoming performance or video shoot.",
+      "<voice_1140> is spoken by the woman seated in the black top on the left, who is wearing glasses.",
+      "<voice_332> belongs to the woman seated on the right in the green dress, who demonstrates the hand dance routine."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"Several people sit around a table covered in a checkered tablecloth in a bright room.\",\n  \"A woman in a white top stands by a whiteboard handling pink flowers.\",\n  \"A woman seated on the left looks down while holding a mobile phone.\",\n  \"Two women sit on the right side of the table participating in the discussion.\",\n  \"At 00:01, <voice_290> expresses thoughts about performing.\",\n  \"At 00:05, <voice_1139> suggests dancing instead.\",\n  \"At 00:08, <voice_912> mentions the lyric about dancing rather than dating.\",\n  \"At 00:11, <voice_699> agrees on dancing and suggests leaving a timeline.\",\n  \"The camera position shifts forward, bringing the table into a closer perspective.\",\n  \"At 00:17, <voice_1140> raises concern about glasses falling off during a dance.\",\n  \"At 00:21, <voice_332> suggests doing a simpler routine and gestures playfully with her hands.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is brainstorming ideas for an upcoming performance or video shoot.\",\n  \"<voice_1140> is spoken by the woman seated in the black top on the left, who is wearing glasses.\",\n  \"<voice_332> belongs to the woman seated on the right in the green dress, who demonstrates the hand dance routine.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 99,
+      "call_id": "b96173fb-3c7c-4c30-bc17-79e0a9fa171f",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410189.286686,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66930,
+      "output_tokens": 1159,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 36113.08259699581
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"Several people sit around a table covered in a checkered tablecloth in a bright room.\",\n  \"A woman in a white top stands by a whiteboard handling pink flowers.\",\n  \"A woman seated on the left looks down while holding a mobile phone.\",\n  \"Two women sit on the right side of the table participating in the discussion.\",\n  \"At 00:01, <voice_290> expresses thoughts about performing.\",\n  \"At 00:05, <voice_1139> suggests dancing instead.\",\n  \"At 00:08, <voice_912> mentions the lyric about dancing rather than dating.\",\n  \"At 00:11, <voice_699> agrees on dancing and suggests leaving a timeline.\",\n  \"The camera position shifts forward, bringing the table into a closer perspective.\",\n  \"At 00:17, <voice_1140> raises concern about glasses falling off during a dance.\",\n  \"At 00:21, <voice_332> suggests doing a simpler routine and gestures playfully with her hands.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is brainstorming ideas for an upcoming performance or video shoot.\",\n  \"<voice_1140> is spoken by the woman seated in the black top on the left, who is wearing glasses.\",\n  \"<voice_332> belongs to the woman seated on the right in the green dress, who demonstrates the hand dance routine.\"\n ]\n}\n```",
+      "total_tokens": 68089,
+      "request_end": 1789410225.3998652,
+      "latency_ms": 36113.17634299485,
+      "client_wall_clock_latency_ms": 36113.17634299485,
+      "api_request_wall_clock_latency_ms": 36113.17634299485
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_99_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

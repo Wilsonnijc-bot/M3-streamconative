@@ -1,0 +1,458 @@
+{
+  "clip_id": 36,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0036.mp4",
+  "end_to_end_memory_generation_ms": 232328.60524699936,
+  "latency_ms": {
+    "clip_decode": 4037.0690760028083,
+    "deepgram_asr": 321.54740399710136,
+    "mai_transcribe_asr": 930.8357699992484,
+    "asr_total": 932.4749539955519,
+    "audio_segmentation": 7.790666000801139,
+    "speech_embedding_campplus": 1061.7746320058359,
+    "facial_detection_recognition_buffalo_l": 3842.298934003338,
+    "face_clustering": 4.9963500059675425,
+    "vlm_memory_generation": 73919.89428899979,
+    "text_embedding": 477.25885499676224,
+    "graph_update_total": 325.5615420130198
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 36,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 817,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789405370.1734526,
+          "status": "success",
+          "total_tokens": 171,
+          "request_end": 1789405370.6504729,
+          "latency_ms": 477.02081699389964
+        }
+      ],
+      "total_tokens": 171,
+      "latency_ms": 477.25885499676224
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 321.54740399710136,
+        "openrouter-mai-transcribe-2": 930.8357699992484
+      },
+      "asr_total_ms": 932.4749539955519,
+      "audio_segmentation_ms": 7.790666000801139,
+      "speech_embedding_ms": 1061.7746320058359,
+      "graph_update_ms": 325.423974005389,
+      "asr_segment_count": 8,
+      "speech_embedding_count": 8,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1411.0366009990685
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3842.298934003338,
+      "face_clustering_ms": 4.9963500059675425,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 192,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3953.5190370006603
+    },
+    "vlm": {
+      "context_preparation_ms": 3865.239307997399,
+      "vlm_ms": 73919.89428899979,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a long table with a checkered tablecloth in a meeting room.\",\n  \"A person stands at the far end of the table writing and drawing on a whiteboard.\",\n  \"<voice_0> suggests keeping the drawing simple and notes that small balls might suffice.\",\n  \"The camera-wearer raises an arm and points toward the whiteboard.\",\n  \"<voice_416> suggests drawing a dragon and remarks on the order of male and female participants.\",\n  \"<voice_417> and <voice_418> discuss inviting female participants.\",\n  \"The person at the whiteboard continues writing as the discussion proceeds.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is organizing and planning the rules or order of a game or collaborative activity.\",\n  \"The person at the whiteboard acts as the facilitator or scorekeeper for the group.\",\n  \"The camera-wearer actively engages in the discussion by gesturing toward the whiteboard.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people sits around a long table with a checkered tablecloth in a meeting room.",
+          "A person stands at the far end of the table writing and drawing on a whiteboard.",
+          "<voice_0> suggests keeping the drawing simple and notes that small balls might suffice.",
+          "The camera-wearer raises an arm and points toward the whiteboard.",
+          "<voice_416> suggests drawing a dragon and remarks on the order of male and female participants.",
+          "<voice_417> and <voice_418> discuss inviting female participants.",
+          "The person at the whiteboard continues writing as the discussion proceeds."
+        ],
+        "high_level_conclusions": [
+          "The group is organizing and planning the rules or order of a game or collaborative activity.",
+          "The person at the whiteboard acts as the facilitator or scorekeeper for the group.",
+          "The camera-wearer actively engages in the discussion by gesturing toward the whiteboard."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 36,
+          "call_id": "b81101ae-a342-4856-aa27-0cf64024707c",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789405296.252672,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67067,
+          "output_tokens": 1006,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 73919.79759700189
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a long table with a checkered tablecloth in a meeting room.\",\n  \"A person stands at the far end of the table writing and drawing on a whiteboard.\",\n  \"<voice_0> suggests keeping the drawing simple and notes that small balls might suffice.\",\n  \"The camera-wearer raises an arm and points toward the whiteboard.\",\n  \"<voice_416> suggests drawing a dragon and remarks on the order of male and female participants.\",\n  \"<voice_417> and <voice_418> discuss inviting female participants.\",\n  \"The person at the whiteboard continues writing as the discussion proceeds.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is organizing and planning the rules or order of a game or collaborative activity.\",\n  \"The person at the whiteboard acts as the facilitator or scorekeeper for the group.\",\n  \"The camera-wearer actively engages in the discussion by gesturing toward the whiteboard.\"\n ]\n}\n```",
+          "total_tokens": 68073,
+          "request_end": 1789405370.1725698,
+          "latency_ms": 73919.89428899979,
+          "client_wall_clock_latency_ms": 73919.89428899979,
+          "api_request_wall_clock_latency_ms": 73919.89428899979
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.12037600390613079,
+      "nodes_added": 7,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.017192003724630922,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 8,
+    "speech_embeddings": 8,
+    "voice_identities": 5,
+    "detected_faces": 192,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 3,
+    "nodes_after_clip": 429,
+    "edges_after_clip": 98,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a long table with a checkered tablecloth in a meeting room.",
+      "A person stands at the far end of the table writing and drawing on a whiteboard.",
+      "<voice_0> suggests keeping the drawing simple and notes that small balls might suffice.",
+      "The camera-wearer raises an arm and points toward the whiteboard.",
+      "<voice_416> suggests drawing a dragon and remarks on the order of male and female participants.",
+      "<voice_417> and <voice_418> discuss inviting female participants.",
+      "The person at the whiteboard continues writing as the discussion proceeds."
+    ],
+    "high_level_conclusions": [
+      "The group is organizing and planning the rules or order of a game or collaborative activity.",
+      "The person at the whiteboard acts as the facilitator or scorekeeper for the group.",
+      "The camera-wearer actively engages in the discussion by gesturing toward the whiteboard."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people sits around a long table with a checkered tablecloth in a meeting room.",
+      "A person stands at the far end of the table writing and drawing on a whiteboard.",
+      "<voice_0> suggests keeping the drawing simple and notes that small balls might suffice.",
+      "The camera-wearer raises an arm and points toward the whiteboard.",
+      "<voice_416> suggests drawing a dragon and remarks on the order of male and female participants.",
+      "<voice_417> and <voice_418> discuss inviting female participants.",
+      "The person at the whiteboard continues writing as the discussion proceeds."
+    ],
+    "high_level_conclusions": [
+      "The group is organizing and planning the rules or order of a game or collaborative activity.",
+      "The person at the whiteboard acts as the facilitator or scorekeeper for the group.",
+      "The camera-wearer actively engages in the discussion by gesturing toward the whiteboard."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_36_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 415,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 画上去。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 416,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 画小龙吧，男人先右点，女生再。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 417,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你邀请。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 418,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你邀请的女生吗？",
+            "MAI: 啊。",
+            "MAI: 哦，那我也邀请一位女生。"
+          ]
+        },
+        "embedding_count": 3,
+        "embedding_dimensions": [
+          192,
+          192,
+          192
+        ]
+      },
+      {
+        "id": 419,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people sits around a long table with a checkered tablecloth in a meeting room."
+          ],
+          "timestamp": 36
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 420,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person stands at the far end of the table writing and drawing on a whiteboard."
+          ],
+          "timestamp": 36
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 421,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> suggests keeping the drawing simple and notes that small balls might suffice."
+          ],
+          "timestamp": 36
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 422,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera-wearer raises an arm and points toward the whiteboard."
+          ],
+          "timestamp": 36
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 423,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_416> suggests drawing a dragon and remarks on the order of male and female participants."
+          ],
+          "timestamp": 36
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 424,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_417> and <voice_418> discuss inviting female participants."
+          ],
+          "timestamp": 36
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 425,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person at the whiteboard continues writing as the discussion proceeds."
+          ],
+          "timestamp": 36
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 426,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is organizing and planning the rules or order of a game or collaborative activity."
+          ],
+          "timestamp": 36
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 427,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person at the whiteboard acts as the facilitator or scorekeeper for the group."
+          ],
+          "timestamp": 36
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 428,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera-wearer actively engages in the discussion by gesturing toward the whiteboard."
+          ],
+          "timestamp": 36
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 421,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 416,
+        "target": 423,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 417,
+        "target": 424,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 418,
+        "target": 424,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_36_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_36_graph.pkl"
+  },
+  "memory_pickle_bytes": 9740130,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 46325.191951001,
+    "prepared_perf": 46332.420438882,
+    "ordered_start_perf": 46473.226609798,
+    "consumer_wait_ms": 0.007955000910442322,
+    "ready_to_ordered_ms": 140806.17091600288,
+    "preparation_work_ms": 7223.025054001482,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 83629.10050799837
+}

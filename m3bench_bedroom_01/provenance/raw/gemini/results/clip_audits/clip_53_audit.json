@@ -1,0 +1,427 @@
+{
+  "clip_id": 53,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00243000.mp4",
+  "end_to_end_memory_generation_ms": 120371.88746999891,
+  "latency_ms": {
+    "clip_decode": 3770.3391639952315,
+    "deepgram_asr": 908.6406080023153,
+    "mai_transcribe_asr": 1357.8575999999885,
+    "asr_total": 1359.402678994229,
+    "audio_segmentation": 8.95637201028876,
+    "speech_embedding_campplus": 341.575450001983,
+    "facial_detection_recognition_buffalo_l": 3249.9551140062977,
+    "face_clustering": 7.635543996002525,
+    "vlm_memory_generation": 27293.43854400213,
+    "text_embedding": 457.5914940069197,
+    "graph_update_total": 46.579751986428164
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 53,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 884,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789434194.8875127,
+          "status": "success",
+          "total_tokens": 198,
+          "request_end": 1789434195.3449469,
+          "latency_ms": 457.43467900319956
+        }
+      ],
+      "total_tokens": 198,
+      "latency_ms": 457.5914940069197
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 908.6406080023153,
+        "openrouter-mai-transcribe-2": 1357.8575999999885
+      },
+      "asr_total_ms": 1359.402678994229,
+      "audio_segmentation_ms": 8.95637201028876,
+      "speech_embedding_ms": 341.575450001983,
+      "graph_update_ms": 34.81044499494601,
+      "asr_segment_count": 2,
+      "speech_embedding_count": 2,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 402.1788719983306
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3249.9551140062977,
+      "face_clustering_ms": 7.635543996002525,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 288,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3417.1666680049384
+    },
+    "vlm": {
+      "context_preparation_ms": 4896.8380320002325,
+      "vlm_ms": 27293.43854400213,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women are seated opposite each other at a dining table with a blue tablecloth containing food, drinks, and a mobile phone on a stand.\",\n    \"<voice_10>, sitting on the left, speaks animatedly while gesturing with her right hand.\",\n    \"<voice_321>, seated on the right, listens attentively while picking up and eating a french fry.\",\n    \"<voice_321> rests her chin on her hands, nodding and listening to the conversation.\",\n    \"<voice_10> pauses talking and leans her head on her hand to listen.\",\n    \"<voice_321> begins speaking in response, expressing agreement.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> and <voice_321> appear to be close friends having a casual and supportive discussion over food.\",\n    \"<voice_10> is offering reassurance and perspective, arguing that personal worth and life experiences should not be judged solely by academic test results.\",\n    \"<voice_321> is receptive and aligns with <voice_10>'s philosophy regarding academic pressure.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women are seated opposite each other at a dining table with a blue tablecloth containing food, drinks, and a mobile phone on a stand.",
+          "<voice_10>, sitting on the left, speaks animatedly while gesturing with her right hand.",
+          "<voice_321>, seated on the right, listens attentively while picking up and eating a french fry.",
+          "<voice_321> rests her chin on her hands, nodding and listening to the conversation.",
+          "<voice_10> pauses talking and leans her head on her hand to listen.",
+          "<voice_321> begins speaking in response, expressing agreement."
+        ],
+        "high_level_conclusions": [
+          "<voice_10> and <voice_321> appear to be close friends having a casual and supportive discussion over food.",
+          "<voice_10> is offering reassurance and perspective, arguing that personal worth and life experiences should not be judged solely by academic test results.",
+          "<voice_321> is receptive and aligns with <voice_10>'s philosophy regarding academic pressure."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 53,
+          "call_id": "a6977687-77e7-43a6-93be-790f320e7929",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789434167.5932958,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65878,
+          "output_tokens": 1957,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 27293.34280200419
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women are seated opposite each other at a dining table with a blue tablecloth containing food, drinks, and a mobile phone on a stand.\",\n    \"<voice_10>, sitting on the left, speaks animatedly while gesturing with her right hand.\",\n    \"<voice_321>, seated on the right, listens attentively while picking up and eating a french fry.\",\n    \"<voice_321> rests her chin on her hands, nodding and listening to the conversation.\",\n    \"<voice_10> pauses talking and leans her head on her hand to listen.\",\n    \"<voice_321> begins speaking in response, expressing agreement.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> and <voice_321> appear to be close friends having a casual and supportive discussion over food.\",\n    \"<voice_10> is offering reassurance and perspective, arguing that personal worth and life experiences should not be judged solely by academic test results.\",\n    \"<voice_321> is receptive and aligns with <voice_10>'s philosophy regarding academic pressure.\"\n  ]\n}\n```",
+          "total_tokens": 67835,
+          "request_end": 1789434194.8867369,
+          "latency_ms": 27293.43854400213,
+          "client_wall_clock_latency_ms": 27293.43854400213,
+          "api_request_wall_clock_latency_ms": 27293.43854400213
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.08318699838127941,
+      "nodes_added": 6,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 11.686119993100874,
+      "nodes_added": 3,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 2,
+    "speech_embeddings": 2,
+    "voice_identities": 2,
+    "detected_faces": 288,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 3,
+    "nodes_after_clip": 515,
+    "edges_after_clip": 163,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 10
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women are seated opposite each other at a dining table with a blue tablecloth containing food, drinks, and a mobile phone on a stand.",
+      "<voice_10>, sitting on the left, speaks animatedly while gesturing with her right hand.",
+      "<voice_321>, seated on the right, listens attentively while picking up and eating a french fry.",
+      "<voice_321> rests her chin on her hands, nodding and listening to the conversation.",
+      "<voice_10> pauses talking and leans her head on her hand to listen.",
+      "<voice_321> begins speaking in response, expressing agreement."
+    ],
+    "high_level_conclusions": [
+      "<voice_10> and <voice_321> appear to be close friends having a casual and supportive discussion over food.",
+      "<voice_10> is offering reassurance and perspective, arguing that personal worth and life experiences should not be judged solely by academic test results.",
+      "<voice_321> is receptive and aligns with <voice_10>'s philosophy regarding academic pressure."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women are seated opposite each other at a dining table with a blue tablecloth containing food, drinks, and a mobile phone on a stand.",
+      "<voice_10>, sitting on the left, speaks animatedly while gesturing with her right hand.",
+      "<voice_321>, seated on the right, listens attentively while picking up and eating a french fry.",
+      "<voice_321> rests her chin on her hands, nodding and listening to the conversation.",
+      "<voice_10> pauses talking and leans her head on her hand to listen.",
+      "<voice_321> begins speaking in response, expressing agreement."
+    ],
+    "high_level_conclusions": [
+      "<voice_10> and <voice_321> appear to be close friends having a casual and supportive discussion over food.",
+      "<voice_10> is offering reassurance and perspective, arguing that personal worth and life experiences should not be judged solely by academic test results.",
+      "<voice_321> is receptive and aligns with <voice_10>'s philosophy regarding academic pressure."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_53_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 10,
+    "nodes": [
+      {
+        "id": 506,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women are seated opposite each other at a dining table with a blue tablecloth containing food, drinks, and a mobile phone on a stand."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 507,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_10>, sitting on the left, speaks animatedly while gesturing with her right hand."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 508,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_321>, seated on the right, listens attentively while picking up and eating a french fry."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 509,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_321> rests her chin on her hands, nodding and listening to the conversation."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 510,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_10> pauses talking and leans her head on her hand to listen."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 511,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_321> begins speaking in response, expressing agreement."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 512,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_10> and <voice_321> appear to be close friends having a casual and supportive discussion over food."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 513,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_10> is offering reassurance and perspective, arguing that personal worth and life experiences should not be judged solely by academic test results."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 514,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_321> is receptive and aligns with <voice_10>'s philosophy regarding academic pressure."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 10,
+        "target": 507,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 10,
+        "target": 510,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 10,
+        "target": 512,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 10,
+        "target": 513,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 10,
+        "target": 514,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 321,
+        "target": 508,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 321,
+        "target": 509,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 321,
+        "target": 511,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 321,
+        "target": 512,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 321,
+        "target": 514,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_53_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_53_graph.pkl"
+  },
+  "memory_pickle_bytes": 13564112,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 75261.882864009,
+    "prepared_perf": 75267.131973879,
+    "ordered_start_perf": 75344.86739124,
+    "consumer_wait_ms": 0.008577000699006021,
+    "ready_to_ordered_ms": 77735.41736099287,
+    "preparation_work_ms": 5243.728458008263,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 36481.42833999009
+}

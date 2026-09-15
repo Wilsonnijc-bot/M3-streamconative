@@ -1,0 +1,62 @@
+{
+  "clip_id": 8,
+  "source": {
+    "segment_id": 8,
+    "source": "DAY1_A1_JAKE_11130000.mp4",
+    "source_clock": "11130000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40380.0,
+    "absolute_end_seconds": 40410.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0008.mp4"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer stands near a dining table where several people are seated.",
+      "<voice_0> speaks to the group, gesturing toward the adjacent bedroom.",
+      "A man in an orange t-shirt stands up from the table.",
+      "The camera wearer adjusts a light reflector stand placed near the doorway.",
+      "The camera wearer walks into the adjoining bedroom.",
+      "The man in orange and a woman follow the camera wearer and stand near the doorway.",
+      "<voice_0> points towards the desk equipped with multiple laptops and electronic gear.",
+      "<voice_0> counts and explains the computer setup on the desk to the people standing by the door.",
+      "The man in the orange shirt leans against the doorframe, listening attentively."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is the camera wearer, who is giving a tour of his bedroom and multi-computer workstation to the group.",
+      "The people gathered at the table are colleagues or participants collaborating on a project or shoot.",
+      "The bedroom doubles as an intensive computing workstation, equipped with several laptops and monitors."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"high_level_conclusions\": [\n  \"<voice_0> is the camera wearer, who is giving a tour of his bedroom and multi-computer workstation to the group.\",\n  \"The people gathered at the table are colleagues or participants collaborating on a project or shoot.\",\n  \"The bedroom doubles as an intensive computing workstation, equipped with several laptops and monitors.\"\n ],\n \"video_description\": [\n  \"The camera wearer stands near a dining table where several people are seated.\",\n  \"<voice_0> speaks to the group, gesturing toward the adjacent bedroom.\",\n  \"A man in an orange t-shirt stands up from the table.\",\n  \"The camera wearer adjusts a light reflector stand placed near the doorway.\",\n  \"The camera wearer walks into the adjoining bedroom.\",\n  \"The man in orange and a woman follow the camera wearer and stand near the doorway.\",\n  \"<voice_0> points towards the desk equipped with multiple laptops and electronic gear.\",\n  \"<voice_0> counts and explains the computer setup on the desk to the people standing by the door.\",\n  \"The man in the orange shirt leans against the doorframe, listening attentively.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 8,
+      "call_id": "bf55f10a-5422-4011-9bf0-441f1e7b6955",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789403287.5078564,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66797,
+      "output_tokens": 887,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"high_level_conclusions\": [\n  \"<voice_0> is the camera wearer, who is giving a tour of his bedroom and multi-computer workstation to the group.\",\n  \"The people gathered at the table are colleagues or participants collaborating on a project or shoot.\",\n  \"The bedroom doubles as an intensive computing workstation, equipped with several laptops and monitors.\"\n ],\n \"video_description\": [\n  \"The camera wearer stands near a dining table where several people are seated.\",\n  \"<voice_0> speaks to the group, gesturing toward the adjacent bedroom.\",\n  \"A man in an orange t-shirt stands up from the table.\",\n  \"The camera wearer adjusts a light reflector stand placed near the doorway.\",\n  \"The camera wearer walks into the adjoining bedroom.\",\n  \"The man in orange and a woman follow the camera wearer and stand near the doorway.\",\n  \"<voice_0> points towards the desk equipped with multiple laptops and electronic gear.\",\n  \"<voice_0> counts and explains the computer setup on the desk to the people standing by the door.\",\n  \"The man in the orange shirt leans against the doorframe, listening attentively.\"\n ]\n}\n```",
+      "total_tokens": 67684,
+      "request_end": 1789403314.0742908,
+      "latency_ms": 26566.43498199992,
+      "client_wall_clock_latency_ms": 26566.43498199992,
+      "api_request_wall_clock_latency_ms": 26566.43498199992
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_8_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

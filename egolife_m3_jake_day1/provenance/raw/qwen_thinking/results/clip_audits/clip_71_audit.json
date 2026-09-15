@@ -1,0 +1,394 @@
+{
+  "clip_id": 71,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0071.mp4",
+  "end_to_end_memory_generation_ms": 441918.86011100723,
+  "latency_ms": {
+    "clip_decode": 3297.4268319958355,
+    "deepgram_asr": 1.5573499986203387,
+    "mai_transcribe_asr": 1.5355970099335536,
+    "asr_total": 2.0847319974564016,
+    "audio_segmentation": 3.7781179999001324,
+    "speech_embedding_campplus": null,
+    "facial_detection_recognition_buffalo_l": 2289.622980999411,
+    "face_clustering": 1.5213320002658293,
+    "vlm_memory_generation": 85453.0412729946,
+    "text_embedding": 403.26748898951337,
+    "graph_update_total": 0.0854199897730723
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 71,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 781,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789425149.1552658,
+          "status": "success",
+          "total_tokens": 147,
+          "request_end": 1789425149.558415,
+          "latency_ms": 403.149467005278
+        }
+      ],
+      "total_tokens": 147,
+      "latency_ms": 403.26748898951337
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1.5573499986203387,
+        "openrouter-mai-transcribe-2": 1.5355970099335536
+      },
+      "asr_total_ms": 2.0847319974564016,
+      "audio_segmentation_ms": 3.7781179999001324,
+      "speech_embedding_ms": null,
+      "graph_update_ms": null,
+      "asr_segment_count": 0,
+      "speech_embedding_count": 0,
+      "voice_identity_count": 0,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 6.7573740088846534
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2289.622980999411,
+      "face_clustering_ms": 1.5213320002658293,
+      "graph_update_ms": null,
+      "frame_count": 110,
+      "detected_face_count": 45,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2317.451909999363
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [],
+      "context_preparation_ms": 3169.8420030006673,
+      "vlm_ms": 85453.0412729946,
+      "raw_response": "{\n  \"video_description\": [\n    \"A person is seated and scrolling through a smartphone application.\",\n    \"In the background, a person wearing a white shirt stands behind a table covered with props.\",\n    \"An individual is seated at the table to the right.\",\n    \"A woman in a black top enters the scene from the left side.\",\n    \"The woman in black approaches the table and interacts with the person in white.\",\n    \"A person wearing an orange shirt walks into the frame from the left background.\",\n    \"The camera wearer continues to look at their phone while observing the activity around them.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The setting appears to be a film production environment, evidenced by the clapperboard and whiteboard.\",\n    \"The woman in black seems to be coordinating or preparing materials at the table.\",\n    \"Multiple participants are present, indicating a collaborative meeting or rehearsal.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A person is seated and scrolling through a smartphone application.",
+          "In the background, a person wearing a white shirt stands behind a table covered with props.",
+          "An individual is seated at the table to the right.",
+          "A woman in a black top enters the scene from the left side.",
+          "The woman in black approaches the table and interacts with the person in white.",
+          "A person wearing an orange shirt walks into the frame from the left background.",
+          "The camera wearer continues to look at their phone while observing the activity around them."
+        ],
+        "high_level_conclusions": [
+          "The setting appears to be a film production environment, evidenced by the clapperboard and whiteboard.",
+          "The woman in black seems to be coordinating or preparing materials at the table.",
+          "Multiple participants are present, indicating a collaborative meeting or rehearsal."
+        ]
+      },
+      "media": {
+        "frame_count": 44,
+        "video_duration_seconds": 22.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 71,
+          "call_id": "988938ff-48db-40d5-a71d-060a260ade81",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789425063.701396,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 44,
+            "video_duration_seconds": 22.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"A person is seated and scrolling through a smartphone application.\",\n    \"In the background, a person wearing a white shirt stands behind a table covered with props.\",\n    \"An individual is seated at the table to the right.\",\n    \"A woman in a black top enters the scene from the left side.\",\n    \"The woman in black approaches the table and interacts with the person in white.\",\n    \"A person wearing an orange shirt walks into the frame from the left background.\",\n    \"The camera wearer continues to look at their phone while observing the activity around them.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The setting appears to be a film production environment, evidenced by the clapperboard and whiteboard.\",\n    \"The woman in black seems to be coordinating or preparing materials at the table.\",\n    \"Multiple participants are present, indicating a collaborative meeting or rehearsal.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and character features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** I have a sequence of frames from 0.00s to 21.50s.\n    *   **0.00s - 13.50s:** The camera is held by someone sitting down (POV). They are looking at a smartphone screen. In the background, there's a table with various items (clapperboard, water bottle, laptop, flowers). A person in white stands behind the table. Another person sits to the right.\n    *   **14.00s - 14.50s:** The camera angle shifts slightly or the person moves. A woman in a black top enters the frame from the left. She seems to be interacting with the person standing behind the table.\n    *   **15.00s - 18.00s:** The woman in black is now clearly visible standing near the table. She is holding something small, possibly a phone or a prop. The person in white is still there. Another person in a peach/orange shirt walks into the frame from the left around 17.00s.\n    *   **18.50s - 21.50s:** The camera returns to the POV of the person sitting down, looking at their phone again. The woman in black is partially visible on the left. The person in white is in the background.\n*   **Character Features:**\n    *   `Face features`: `{}` (Empty)\n    *   `Voice features`: `{}` (Empty)\n\n**2. Construct Video Description:**\n*   I need to describe the events atomically.\n*   Event 1: A person (camera wearer) is sitting and scrolling/looking at a smartphone.\n*   Event 2: In the background, a person in a white shirt stands behind a table covered with props like a clapperboard and flowers.\n*   Event 3: Another person is seated to the right of the table.\n*   Event 4: Around 14s, a woman wearing a black cardigan/top enters the scene from the left side.\n*   Event 5: The woman in black interacts with the person in white near the table.\n*   Event 6: A third person wearing an orange/peach shirt walks past the woman in black towards the left background.\n*   Event 7: The camera wearer continues to look at their phone while observing the activity around them.\n\n**3. Construct High-Level Conclusions:**\n*   Since there are no face features or voice features provided (`{}`), I cannot make specific equivalences like \"Equivalence: <face_1>, <voice_2>\".\n*   However, I can infer general context. It looks like a film set or rehearsal space (clapperboard, whiteboard, props).\n*   The camera wearer seems to be waiting or monitoring something via their phone.\n*   There is no explicit identity resolution possible due to missing features.\n*   Wait, the prompt says \"If a face and a voice feature refer to the same character, indicate it...\". Since there are none, I just leave that part empty or don't add false equivalences.\n*   I should check if I can infer anything about the relationship. The woman in black seems to be directing or managing the scene, interacting with the person in white who might be an actor or assistant. The person in orange walks through casually.\n*   Actually, looking closely at the prompt requirements: \"Use logical inference to identify character intentions, relationships, and identities.\" Without features, I can't identify specific identities. I can only describe actions.\n*   Let's stick to describing the scene dynamics.\n*   Conclusion 1: The setting appears to be a film production environment, indicated by the presence of a clapperboard, script, and whiteboard.\n*   Conclusion 2: The person in the black top appears to be coordinating or directing the activities at the table.\n*   Conclusion 3: The camera wearer is likely a crew member or director monitoring timing or notes on their device.\n\n**Refining the Output:**\n*   The prompt asks for \"Equivalence: <face_x>, <voice_y>\" format *if* they exist. Since they don't, I won't use that string unless I find a match. I found none.\n*   I need to ensure the JSON structure is correct.\n\n**Drafting the JSON:**\n```json\n{\n  \"video_description\": [\n    \"A person is sitting and looking at a smartphone.\",\n    \"In the background, a person in a white shirt stands behind a table with filming equipment.\",\n    \"Another individual is seated to the right of the table.\",\n    \"A woman in a black top enters the frame and approaches the table.\",\n    \"She interacts with the person in the white shirt.\",\n    \"A person in an orange shirt walks past the group.\",\n    \"The camera wearer continues to scroll on their phone while observing the scene.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The environment suggests a film set or rehearsal space due to the clapperboard and whiteboard.\",\n    \"The woman in black appears to be taking charge or organizing the items on the table.\",\n    \"The camera wearer is focused on their device, possibly checking a schedule or script.\"\n  ]\n}\n```\nWait, I need to check if I missed any subtle cues. The prompt mentions \"Preserve speaker identity...\". But there are no voice features. So I ignore that part.\nThe prompt says \"Keep the existing video_description/high_level_conclusions JSON schema\".\nThe prompt says \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since inputs are empty, I don't need to add this line.\n\nLet's double check the frames.\nFrames 0-13: Static shot of phone usage. Background people are relatively static.\nFrame 14: Woman in black enters.\nFrames 15-18: Woman in black is prominent. Person in orange enters.\nFrames 19-21: Back to phone usage view.\n\nOkay, the description looks solid.\n\nOne detail: \"Do not substitute a plausible scene description for what the speaker actually said.\" - No speech here.\n\"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" - I am describing visible actions.\n\nFinal check on constraints:\n- Valid JSON.\n- No extra text.\n- Concise.\n\nLet's refine the descriptions to be strictly atomic events.\n1. Camera wearer holds a smartphone and scrolls through content.\n2. A person in a white shirt stands behind a table cluttered with items including a clapperboard and flowers.\n3. A second person sits at the table to the right.\n4. A woman wearing a black cardigan walks into the room from the left.\n5. The woman in black stands near the table and interacts with the person in white.\n6. A man in an orange t-shirt walks into the frame from the left background.\n7. The camera wearer remains seated, continuing to interact with the smartphone.\n\nConclusions:\n1. The presence of a clapperboard and script indicates a film or video production setup.\n2. The woman in black appears to be facilitating a discussion or preparation at the table.\n3. Multiple individuals are present, suggesting a collaborative work session.\n\nThis looks good. I will formulate the final JSON.\n</think>\n\n{\n  \"video_description\": [\n    \"A person is seated and scrolling through a smartphone application.\",\n    \"In the background, a person wearing a white shirt stands behind a table covered with props.\",\n    \"An individual is seated at the table to the right.\",\n    \"A woman in a black top enters the scene from the left side.\",\n    \"The woman in black approaches the table and interacts with the person in white.\",\n    \"A person wearing an orange shirt walks into the frame from the left background.\",\n    \"The camera wearer continues to look at their phone while observing the activity around them.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The setting appears to be a film production environment, evidenced by the clapperboard and whiteboard.\",\n    \"The woman in black seems to be coordinating or preparing materials at the table.\",\n    \"Multiple participants are present, indicating a collaborative meeting or rehearsal.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 7459,
+          "output_tokens": 1845,
+          "total_tokens": 9304,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002574990503489971,
+            "media_preparation_ms": 41.83034200104885,
+            "processor_tokenization_ms": 188.4427540062461,
+            "device_transfer_ms": 38.61304800375365,
+            "cuda_generation_ms": 85156.0117189947,
+            "decoding_ms": 2.5365429901285097
+          },
+          "submitted_image_count": 44,
+          "processed_image_count": 44,
+          "video_frame_count": 44,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 85427.63343999104,
+          "request_end": 1789425149.15444,
+          "latency_ms": 85453.0412729946,
+          "client_wall_clock_latency_ms": 85453.0412729946
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.05084498843643814,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.03457500133663416,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 110,
+    "asr_segments": 0,
+    "speech_embeddings": 0,
+    "voice_identities": 0,
+    "detected_faces": 45,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 3,
+    "nodes_after_clip": 931,
+    "edges_after_clip": 328,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A person is seated and scrolling through a smartphone application.",
+      "In the background, a person wearing a white shirt stands behind a table covered with props.",
+      "An individual is seated at the table to the right.",
+      "A woman in a black top enters the scene from the left side.",
+      "The woman in black approaches the table and interacts with the person in white.",
+      "A person wearing an orange shirt walks into the frame from the left background.",
+      "The camera wearer continues to look at their phone while observing the activity around them."
+    ],
+    "high_level_conclusions": [
+      "The setting appears to be a film production environment, evidenced by the clapperboard and whiteboard.",
+      "The woman in black seems to be coordinating or preparing materials at the table.",
+      "Multiple participants are present, indicating a collaborative meeting or rehearsal."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A person is seated and scrolling through a smartphone application.",
+      "In the background, a person wearing a white shirt stands behind a table covered with props.",
+      "An individual is seated at the table to the right.",
+      "A woman in a black top enters the scene from the left side.",
+      "The woman in black approaches the table and interacts with the person in white.",
+      "A person wearing an orange shirt walks into the frame from the left background.",
+      "The camera wearer continues to look at their phone while observing the activity around them."
+    ],
+    "high_level_conclusions": [
+      "The setting appears to be a film production environment, evidenced by the clapperboard and whiteboard.",
+      "The woman in black seems to be coordinating or preparing materials at the table.",
+      "Multiple participants are present, indicating a collaborative meeting or rehearsal."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_71_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 921,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person is seated and scrolling through a smartphone application."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 922,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "In the background, a person wearing a white shirt stands behind a table covered with props."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 923,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "An individual is seated at the table to the right."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 924,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a black top enters the scene from the left side."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 925,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in black approaches the table and interacts with the person in white."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 926,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing an orange shirt walks into the frame from the left background."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 927,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer continues to look at their phone while observing the activity around them."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 928,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The setting appears to be a film production environment, evidenced by the clapperboard and whiteboard."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 929,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman in black seems to be coordinating or preparing materials at the table."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 930,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Multiple participants are present, indicating a collaborative meeting or rehearsal."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_71_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_71_graph.pkl"
+  },
+  "memory_pickle_bytes": 22111530,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 65894.55199014,
+    "prepared_perf": 65899.133326974,
+    "ordered_start_perf": 66243.326894146,
+    "consumer_wait_ms": 0.020107996533624828,
+    "ready_to_ordered_ms": 344193.56717199844,
+    "preparation_work_ms": 4575.9766989940545,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 91352.02916899289
+}

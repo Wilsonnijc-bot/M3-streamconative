@@ -1,0 +1,380 @@
+{
+  "clip_id": 60,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0060.mp4",
+  "end_to_end_memory_generation_ms": 146305.14885199955,
+  "latency_ms": {
+    "clip_decode": 3916.2423870002385,
+    "deepgram_asr": 917.2520440042717,
+    "mai_transcribe_asr": 1120.9867040015524,
+    "asr_total": 1136.5849919966422,
+    "audio_segmentation": 8.705212996574119,
+    "speech_embedding_campplus": 628.7929699974484,
+    "facial_detection_recognition_buffalo_l": 4178.391298999486,
+    "face_clustering": 10.543978998612147,
+    "vlm_memory_generation": 59974.99188899383,
+    "text_embedding": 1676.6984810019494,
+    "graph_update_total": 236.89290601032553
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 60,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 782,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789406670.070427,
+          "status": "success",
+          "total_tokens": 161,
+          "request_end": 1789406671.7468357,
+          "latency_ms": 1676.4094570025918
+        }
+      ],
+      "total_tokens": 161,
+      "latency_ms": 1676.6984810019494
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 917.2520440042717,
+        "openrouter-mai-transcribe-2": 1120.9867040015524
+      },
+      "asr_total_ms": 1136.5849919966422,
+      "audio_segmentation_ms": 8.705212996574119,
+      "speech_embedding_ms": 628.7929699974484,
+      "graph_update_ms": 236.73523900652071,
+      "asr_segment_count": 4,
+      "speech_embedding_count": 4,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 890.6418090045918
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4178.391298999486,
+      "face_clustering_ms": 10.543978998612147,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 442,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4425.413416996889
+    },
+    "vlm": {
+      "context_preparation_ms": 4145.195966004394,
+      "vlm_ms": 59974.99188899383,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"Four women stand and sit around a table covered with a checkered tablecloth, discussing craft and activity plans.\",\n  \"On the table are flowers, paper materials, and a film clapperboard.\",\n  \"A woman with reddish-orange hair in a white T-shirt talks actively, gesturing with her hands.\",\n  \"The other women at the table listen attentively, occasionally nodding and chiming in.\",\n  \"A young man in an orange T-shirt enters the room from the left and stops to observe the discussion.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is planning an interactive craft or workshop session involving pressed flowers, greeting cards, and acrylic frames.\",\n  \"The person speaking (<voice_667> / <voice_430>) is taking the lead in organizing or proposing event ideas.\",\n  \"The man entering the room is another member of the project or household joining the gathering.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Four women stand and sit around a table covered with a checkered tablecloth, discussing craft and activity plans.",
+          "On the table are flowers, paper materials, and a film clapperboard.",
+          "A woman with reddish-orange hair in a white T-shirt talks actively, gesturing with her hands.",
+          "The other women at the table listen attentively, occasionally nodding and chiming in.",
+          "A young man in an orange T-shirt enters the room from the left and stops to observe the discussion."
+        ],
+        "high_level_conclusions": [
+          "The group is planning an interactive craft or workshop session involving pressed flowers, greeting cards, and acrylic frames.",
+          "The person speaking (<voice_667> / <voice_430>) is taking the lead in organizing or proposing event ideas.",
+          "The man entering the room is another member of the project or household joining the gathering."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 60,
+          "call_id": "fca32d16-bb6c-41d5-9ae8-cb7f14880235",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789406610.0944455,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67371,
+          "output_tokens": 965,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 59974.87972900126
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"Four women stand and sit around a table covered with a checkered tablecloth, discussing craft and activity plans.\",\n  \"On the table are flowers, paper materials, and a film clapperboard.\",\n  \"A woman with reddish-orange hair in a white T-shirt talks actively, gesturing with her hands.\",\n  \"The other women at the table listen attentively, occasionally nodding and chiming in.\",\n  \"A young man in an orange T-shirt enters the room from the left and stops to observe the discussion.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is planning an interactive craft or workshop session involving pressed flowers, greeting cards, and acrylic frames.\",\n  \"The person speaking (<voice_667> / <voice_430>) is taking the lead in organizing or proposing event ideas.\",\n  \"The man entering the room is another member of the project or household joining the gathering.\"\n ]\n}\n```",
+          "total_tokens": 68336,
+          "request_end": 1789406670.0694394,
+          "latency_ms": 59974.99188899383,
+          "client_wall_clock_latency_ms": 59974.99188899383,
+          "api_request_wall_clock_latency_ms": 59974.99188899383
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.07495200406992808,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.08271499973488972,
+      "nodes_added": 3,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 4,
+    "speech_embeddings": 4,
+    "voice_identities": 4,
+    "detected_faces": 442,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 687,
+    "edges_after_clip": 151,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "Four women stand and sit around a table covered with a checkered tablecloth, discussing craft and activity plans.",
+      "On the table are flowers, paper materials, and a film clapperboard.",
+      "A woman with reddish-orange hair in a white T-shirt talks actively, gesturing with her hands.",
+      "The other women at the table listen attentively, occasionally nodding and chiming in.",
+      "A young man in an orange T-shirt enters the room from the left and stops to observe the discussion."
+    ],
+    "high_level_conclusions": [
+      "The group is planning an interactive craft or workshop session involving pressed flowers, greeting cards, and acrylic frames.",
+      "The person speaking (<voice_667> / <voice_430>) is taking the lead in organizing or proposing event ideas.",
+      "The man entering the room is another member of the project or household joining the gathering."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Four women stand and sit around a table covered with a checkered tablecloth, discussing craft and activity plans.",
+      "On the table are flowers, paper materials, and a film clapperboard.",
+      "A woman with reddish-orange hair in a white T-shirt talks actively, gesturing with her hands.",
+      "The other women at the table listen attentively, occasionally nodding and chiming in.",
+      "A young man in an orange T-shirt enters the room from the left and stops to observe the discussion."
+    ],
+    "high_level_conclusions": [
+      "The group is planning an interactive craft or workshop session involving pressed flowers, greeting cards, and acrylic frames.",
+      "The person speaking (<voice_667> / <voice_430>) is taking the lead in organizing or proposing event ideas.",
+      "The man entering the room is another member of the project or household joining the gathering."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_60_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 677,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯嗯。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 678,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 然后画一样，对，然后"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 679,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Four women stand and sit around a table covered with a checkered tablecloth, discussing craft and activity plans."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 680,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "On the table are flowers, paper materials, and a film clapperboard."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 681,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman with reddish-orange hair in a white T-shirt talks actively, gesturing with her hands."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 682,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The other women at the table listen attentively, occasionally nodding and chiming in."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 683,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young man in an orange T-shirt enters the room from the left and stops to observe the discussion."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 684,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is planning an interactive craft or workshop session involving pressed flowers, greeting cards, and acrylic frames."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 685,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person speaking (<voice_667> / <voice_430>) is taking the lead in organizing or proposing event ideas."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 686,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The man entering the room is another member of the project or household joining the gathering."
+          ],
+          "timestamp": 60
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 430,
+        "target": 685,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 667,
+        "target": 685,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_60_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_60_graph.pkl"
+  },
+  "memory_pickle_bytes": 15633474,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 47712.34791461,
+    "prepared_perf": 47719.420586428,
+    "ordered_start_perf": 47786.108475199,
+    "consumer_wait_ms": 0.012853997759521008,
+    "ready_to_ordered_ms": 66687.88877099723,
+    "preparation_work_ms": 7067.231843000627,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 71116.76696700306
+}

@@ -1,0 +1,75 @@
+{
+  "clip_id": 98,
+  "source": {
+    "segment_id": 98,
+    "source": "DAY1_A1_JAKE_11563000.mp4",
+    "source_clock": "11563000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 0.029999999998835847,
+    "absolute_start_seconds": 42990.0,
+    "absolute_end_seconds": 42990.03,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0098.mp4",
+    "asr_failures": [
+      "openrouter-mai-transcribe-2: RuntimeError: ASR provider 'openrouter-mai-transcribe-2' failed on attempt 2/2: ASRHTTPError: openrouter transcription HTTP 503: {\"error\":{\"message\":\"Provider returned 503\",\"code\":503}}"
+    ],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51225.404320832,
+      "prepared_perf": 51347.673758594,
+      "ordered_start_perf": 51347.673870154,
+      "consumer_wait_ms": 122266.9947750037,
+      "ready_to_ordered_ms": 0.11156000255141407,
+      "preparation_work_ms": 122269.07395700255,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer sits with legs extended in front of a table covered with a checkered tablecloth.",
+      "A film clapperboard, scripts, and beverages sit on the table.",
+      "A woman in white stands near a whiteboard and speaks to the group.",
+      "A woman wearing black sits on the left side of the table, engaged in conversation.",
+      "A woman with long dark hair sits across the table reviewing documents."
+    ],
+    "high_level_conclusions": [
+      "The scene depicts a film crew or cast gathering for a production meeting or rehearsal, indicated by the clapperboard and studio equipment."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"The camera wearer sits with legs extended in front of a table covered with a checkered tablecloth.\",\n  \"A film clapperboard, scripts, and beverages sit on the table.\",\n  \"A woman in white stands near a whiteboard and speaks to the group.\",\n  \"A woman wearing black sits on the left side of the table, engaged in conversation.\",\n  \"A woman with long dark hair sits across the table reviewing documents.\"\n ],\n \"high_level_conclusions\": [\n  \"The scene depicts a film crew or cast gathering for a production meeting or rehearsal, indicated by the clapperboard and studio equipment.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 98,
+      "call_id": "729507a4-768a-4d0e-b93e-880b6aa59499",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410164.354396,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 1455,
+      "output_tokens": 795,
+      "transport": {
+        "client_previously_used": false,
+        "tcp_connect_count": 1,
+        "tls_handshake_count": 1,
+        "http_wall_ms": 10566.870233997179
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"The camera wearer sits with legs extended in front of a table covered with a checkered tablecloth.\",\n  \"A film clapperboard, scripts, and beverages sit on the table.\",\n  \"A woman in white stands near a whiteboard and speaks to the group.\",\n  \"A woman wearing black sits on the left side of the table, engaged in conversation.\",\n  \"A woman with long dark hair sits across the table reviewing documents.\"\n ],\n \"high_level_conclusions\": [\n  \"The scene depicts a film crew or cast gathering for a production meeting or rehearsal, indicated by the clapperboard and studio equipment.\"\n ]\n}\n```",
+      "total_tokens": 2250,
+      "request_end": 1789410174.9213755,
+      "latency_ms": 10566.975412002648,
+      "client_wall_clock_latency_ms": 10566.975412002648,
+      "api_request_wall_clock_latency_ms": 10566.975412002648
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_98_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

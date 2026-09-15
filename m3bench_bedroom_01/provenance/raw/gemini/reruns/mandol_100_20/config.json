@@ -1,0 +1,333 @@
+{
+  "dataset": "bedroom",
+  "candidate_k": 100,
+  "top_k": 20,
+  "embedding_provider": "302.ai",
+  "rerank_provider": "302.ai",
+  "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+  "rerank_model": "Qwen/Qwen3-Reranker-0.6B",
+  "provider_attempt": "OpenRouter live requests returned HTTP 404; both model catalogs had zero endpoints.",
+  "index_policy": "Reuse original 302.ai indexes; no reconstruction or embedding change.",
+  "parallel_policy": "Two dataset reruns may overlap; shared API/GPU contention is possible.",
+  "baseline_sha256": "e73bd06c78e7bfdd0b2f59622e982f3b416b11b3c0a34c489af1790629b12804",
+  "entrypoint_sha256": "bcd951d7819fb79eee42f53305e1f38a541a40040b442846543a53b67b61af77",
+  "inputs": [
+    {
+      "question_index": 1,
+      "question_id": "Q01",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q01/graph",
+      "files": {
+        "graph_state.json": "517f16336fbd1463dd34508118a7effa4e7ca673ffa345e4b464207c840a5ed1",
+        "m3_adapter_manifest.json": "bc7e66cdf595f3c5b7db3a678fd307f48fb2285a936cb8674dcc76b787cb9165",
+        "retrieval_indices/bm25/bm25_index.pkl": "bb8a9bd4dcf9aeb3ea292eda9c2b58bf3da5736aa04e6cdf7dc931ad33e7d6ad",
+        "retrieval_indices/splade/splade_index.pkl": "9f71df8445144207fa9e3ce233b7c0362b0cd2ff85fbd66cafddea99a8be36cb",
+        "rx_graph.pkl": "33966754d15c7dd295578542fddb6dd44e570b57a976acd637aafbcee2e684b9",
+        "semantic_map_data/dense_uids.json": "e20f9ef04851c0b69d73bc23af1f13d18a5851cea34a0467b228d57b87cdb42d",
+        "semantic_map_data/dense_vectors.safetensors": "34b02991c8b198c16c7655a84564c9d7ce720b4783998be1a75a976bcc7bbe72",
+        "semantic_map_data/faiss_index.bin": "ed072461763b7b40ab5d31734100262a52692bf67487496aecdbf93f0662a9f4",
+        "semantic_map_data/global_id_mapping.json": "53e36c609456ac099e6e6a59d858f429d84d71b9fc5b81d58d2acf71e2c3a992",
+        "semantic_map_data/id_mapping.json": "53e36c609456ac099e6e6a59d858f429d84d71b9fc5b81d58d2acf71e2c3a992",
+        "semantic_map_data/int_id_to_uid.json": "4c1df42507e2016ba90397727dff3f17a4c13e5833cf45b356eb4b1e4bd81a4f",
+        "semantic_map_data/semantic_map_meta.json": "ab41a23cfed836f156f7959712d0114cd3021f5f938bd1486c0fa5c4b2f259f0",
+        "semantic_map_data/sparse_uids.json": "fc01a45ef6f055002205d8f1b57be5a013aadc38ded368c4649fcecf5aa76cdf",
+        "semantic_map_data/sparse_vectors.safetensors": "6ba5aba658df441c02aee3ce864c1a18e4a8ef490e98be65310ffdf2815d60ba"
+      }
+    },
+    {
+      "question_index": 2,
+      "question_id": "Q02",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q02/graph",
+      "files": {
+        "graph_state.json": "7b2ff9ed0287b9ee1f0d1d07c60821e049d887e06cfeea013fbe96bfc5dbcfb9",
+        "m3_adapter_manifest.json": "f6d9f23dfe8502f263a5a6871c17afc896a61fdb262fa189ba111c4a226c6dce",
+        "retrieval_indices/bm25/bm25_index.pkl": "15d6ca94bfe68d4c97fd9e7f24cfc287e7c1e53c227c1644d855e27132140a85",
+        "retrieval_indices/splade/splade_index.pkl": "e6fb6de850278e5a502de5bb6eeac83a1ef62d2b0db2a8065fa767e6f281e6ae",
+        "rx_graph.pkl": "626c91f5e3a8af20e32cfd78736853ba2d457afb53511ac2f546a3d267c30f16",
+        "semantic_map_data/dense_uids.json": "7d85b17d9c8079f3e77768cc5c3452de2024109d1270c4e3f37091023ca3ac15",
+        "semantic_map_data/dense_vectors.safetensors": "e7730c7f339a53267f5bc08adac83034f64a3b54f12baf622aa00590912b3490",
+        "semantic_map_data/faiss_index.bin": "4fa4ed1d270c33bda235f9c0c7c587ed07bb8c853d5f6f7f123e8c6f4798d298",
+        "semantic_map_data/global_id_mapping.json": "2051065beed672019388e948b9774d2da43e6ad1cf08a0855144bbc23157bb9d",
+        "semantic_map_data/id_mapping.json": "2051065beed672019388e948b9774d2da43e6ad1cf08a0855144bbc23157bb9d",
+        "semantic_map_data/int_id_to_uid.json": "df4dc70d9ed33f6fb020f4acc0e8f8efba604fd3cf5ffcc6ab5dde3e1ed0889c",
+        "semantic_map_data/semantic_map_meta.json": "2547930a63aa4fe563747e4476c3f8c2fecd1c844462c77c087fb0f23d6cee15",
+        "semantic_map_data/sparse_uids.json": "082d295747324ee6fd15bba92a2ad1e78314915e5a0117dad1344dbc15b6a524",
+        "semantic_map_data/sparse_vectors.safetensors": "d4ae5fe36f843dbe86619fbcaa221dd12e736748cf53273803525f924e205eec"
+      }
+    },
+    {
+      "question_index": 3,
+      "question_id": "Q03",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q03/graph",
+      "files": {
+        "graph_state.json": "88ad191356a356615256f358ccdf989bf99075cfb975b71cc0db66d2d4a67eb3",
+        "m3_adapter_manifest.json": "64fa0fc0b714b672dcd1bc9d5190b7d827c4a7f6636c0a0dbd67b46867d245d2",
+        "retrieval_indices/bm25/bm25_index.pkl": "2e5b7d041b5e08c09ac1f6e5601d4682a87ee0b7046a9ffafae396d7de0c767f",
+        "retrieval_indices/splade/splade_index.pkl": "cdf7f585dac21d01508df0989eb6ec8affc1aff3c42b7d402472fbe62e0b772a",
+        "rx_graph.pkl": "833845a137ed07d166396cb9bb1b1019c95ceb8eeb133fe4501c289c2f0e94d7",
+        "semantic_map_data/dense_uids.json": "4daeed7bbf33926734106774970ef66a10fe58fc32916806736035d488b2560d",
+        "semantic_map_data/dense_vectors.safetensors": "3e417856fb1ef4d5a4c029ad8df52727f066f63e911aabc7faae21e8cda0723b",
+        "semantic_map_data/faiss_index.bin": "dfa8ef05a27c3606ed8ee83c92244c56e816066a3104a59ba80c832bbb071454",
+        "semantic_map_data/global_id_mapping.json": "64d5e22dca895204dc36f3d7c1c425ad148cba45b4dce9fda7ced19d8cb3af29",
+        "semantic_map_data/id_mapping.json": "64d5e22dca895204dc36f3d7c1c425ad148cba45b4dce9fda7ced19d8cb3af29",
+        "semantic_map_data/int_id_to_uid.json": "2efb43953732e7d0c156e56c5ce03fa0b1a1dc36daa07e45d09a385f98921a77",
+        "semantic_map_data/semantic_map_meta.json": "02dab1a4e0461bbb10eedb65219a7cba3f60bce34cd54248a49628d6bddd9cf2",
+        "semantic_map_data/sparse_uids.json": "75ab0d8d173107f07ed47d14b1382a022983df13e4b5a7f6218fd26bbff9fe4b",
+        "semantic_map_data/sparse_vectors.safetensors": "d4ae5fe36f843dbe86619fbcaa221dd12e736748cf53273803525f924e205eec"
+      }
+    },
+    {
+      "question_index": 4,
+      "question_id": "Q04",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q04/graph",
+      "files": {
+        "graph_state.json": "0348ee438eeaac81827618d4ac43c70a26a615d7204b000719ccf2bea416b172",
+        "m3_adapter_manifest.json": "60b449ecee58b7df7defb198f547a4edc18cd34126997e91d2a090ca8d43418f",
+        "retrieval_indices/bm25/bm25_index.pkl": "5829cdce87af2984b14f56e2b112a8a5b06c4e3d90a209052da63e2da2aebd32",
+        "retrieval_indices/splade/splade_index.pkl": "0dac19b9f15c99fcc4a6d8930bc66f24eed626343a90a8830b4c18598a2ce7f2",
+        "rx_graph.pkl": "71f2432fd82224990df3ae745fd60123b04eadf87f38d63313b54657041b12e7",
+        "semantic_map_data/dense_uids.json": "59660cb78e942e48b85ae970c44d82f8da762ffbd85b120c3c9646a4147921ba",
+        "semantic_map_data/dense_vectors.safetensors": "f3dd605b47db2d7b80d0c682f19d4d31050d3523d408100101dd639657b2f748",
+        "semantic_map_data/faiss_index.bin": "48f112a51f1f38c62a5e18989fde053aeec3af4abec92749df5fde7065046721",
+        "semantic_map_data/global_id_mapping.json": "54a7708458efe046baf70634a1a43ca9fda5b4032a83112ca5f5aa77bf1d1bd9",
+        "semantic_map_data/id_mapping.json": "54a7708458efe046baf70634a1a43ca9fda5b4032a83112ca5f5aa77bf1d1bd9",
+        "semantic_map_data/int_id_to_uid.json": "b586aaeb9ba26dd7b13acfff4f61d9845973d87a62c1248494ac27055c4da922",
+        "semantic_map_data/semantic_map_meta.json": "de5c8b2d67c7d5aff8bd2f6ec7516472743bf8f97c738de01da4620bb7263e3a",
+        "semantic_map_data/sparse_uids.json": "241056cc383c303fa3c8f47d9fd8584acdd4e883b4edc6ecaeac036aa0ecf30a",
+        "semantic_map_data/sparse_vectors.safetensors": "d4ae5fe36f843dbe86619fbcaa221dd12e736748cf53273803525f924e205eec"
+      }
+    },
+    {
+      "question_index": 5,
+      "question_id": "Q05",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q05/graph",
+      "files": {
+        "graph_state.json": "e18de381028f8294a72c3c1fe35def4fc96822969b7e3c08786b0bece07d92d6",
+        "m3_adapter_manifest.json": "8de2bd73f19edf303ec04c60f5404ef5775660ae5053f31f65814453140ebdf6",
+        "retrieval_indices/bm25/bm25_index.pkl": "ea3942151d42cf63b66a7f54c3581ffad486d5e4a350d08bc7ad7341d722d8b8",
+        "retrieval_indices/splade/splade_index.pkl": "251817e8e9f7b7b3fcc072242299144683fd08ffa5cc88f5c7120f928928cbf4",
+        "rx_graph.pkl": "440fddbe79981b50ca4997d486fe7fe21e1279d67f3b42a87af5f5ccd03e359d",
+        "semantic_map_data/dense_uids.json": "2d6491fac8d3534b5727833808dbfbcb217c6b01ba78e92cc833048ca9306bcc",
+        "semantic_map_data/dense_vectors.safetensors": "dccea7d6a0c335d943f441130e91acb528f9d3e4f49b73406428cd2d378fb64d",
+        "semantic_map_data/faiss_index.bin": "a6152483ddc08237b8bebdeb30b57ed55194f64d7d91470ac66dfb45d444170d",
+        "semantic_map_data/global_id_mapping.json": "1289647e8455ad7c5f93cca7a6808c5a392d38460d6384a774458a756083796f",
+        "semantic_map_data/id_mapping.json": "1289647e8455ad7c5f93cca7a6808c5a392d38460d6384a774458a756083796f",
+        "semantic_map_data/int_id_to_uid.json": "378bd687cefbb5452d72b0b8ae858ad644187260f30690ba2d6c3258f00359b0",
+        "semantic_map_data/semantic_map_meta.json": "76f4cdde5c73f15b226b1458f9b162952741c5bfb6a470ce1322978b5837c016",
+        "semantic_map_data/sparse_uids.json": "52a9a84d036307177078ee73f78ed9d6664d88aa94dcda1720774aebce43a00d",
+        "semantic_map_data/sparse_vectors.safetensors": "d4ae5fe36f843dbe86619fbcaa221dd12e736748cf53273803525f924e205eec"
+      }
+    },
+    {
+      "question_index": 6,
+      "question_id": "Q06",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q06/graph",
+      "files": {
+        "graph_state.json": "0ed9dcc171a70f0d0987be5f64ba2ee4a32b49d39a364c74e84837e359f9e753",
+        "m3_adapter_manifest.json": "4ff707fadab2019d6d02a4f9c34fc2a910a4bb2fd8fee6bd3a342aec0556a512",
+        "retrieval_indices/bm25/bm25_index.pkl": "973f605f447a28911b1a43ea807766f87b133a65f565f063ebab4925c968930c",
+        "retrieval_indices/splade/splade_index.pkl": "116991b87085c7b0036762d6169c1babcc680d4e13cc682ef4ed42e9d807672c",
+        "rx_graph.pkl": "e36e1fcd5cf0254423f512bcd1f1291b37bb285ff4c2b3edec1f306deb0224b2",
+        "semantic_map_data/dense_uids.json": "1f4229abdb484a57bb6a26145e6e9aeadd29e6a78880ecbbd190cb9bcf504de7",
+        "semantic_map_data/dense_vectors.safetensors": "d63fc1974af0e35087d97de6819723fef8af95f162555ce27b0d57f494282d9f",
+        "semantic_map_data/faiss_index.bin": "3a50069003862b2c00c974474f3e3a6eeaf834cb2d665e6a55b0b64c8f548b1f",
+        "semantic_map_data/global_id_mapping.json": "3e83f67f78dac053d40f843eb6521fae73685dbebe4a60bd0b87e0e529dd2459",
+        "semantic_map_data/id_mapping.json": "3e83f67f78dac053d40f843eb6521fae73685dbebe4a60bd0b87e0e529dd2459",
+        "semantic_map_data/int_id_to_uid.json": "7ec360fb8583863bfcf1e19ce4796d87f31f626d7daa76c755f5bdf5d3848232",
+        "semantic_map_data/semantic_map_meta.json": "91429f629ba44d47e6d32ca93ba1ff61d2af17419878292da67a2b7619dd1dcd",
+        "semantic_map_data/sparse_uids.json": "04c714a2372344b24ce4a30ac854fde08fcd09bd19dfbd8941569c5ea3b143a0",
+        "semantic_map_data/sparse_vectors.safetensors": "d4ae5fe36f843dbe86619fbcaa221dd12e736748cf53273803525f924e205eec"
+      }
+    },
+    {
+      "question_index": 7,
+      "question_id": "Q07",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q07/graph",
+      "files": {
+        "graph_state.json": "f97aaf9b084e98e556df38228f879ff7bf6f0c51a363db647b2c0153c9626c3b",
+        "m3_adapter_manifest.json": "a1071e09ba84f05c31f1328b1164480ab428e350c45f41a44ecc7a95c2e06809",
+        "retrieval_indices/bm25/bm25_index.pkl": "f7cfb2bda627e4c0d36492bda8fd88790fbfe680b782cebfb936c190fd7f7086",
+        "retrieval_indices/splade/splade_index.pkl": "27103403783c560891e524d5bf8378a49f4442467b54f7da67018e64e924a7a5",
+        "rx_graph.pkl": "32676e7c08ca8c28dcf098c5e3826a0fc48c4a2efd67b07e92d4d14feb6bbf3f",
+        "semantic_map_data/dense_uids.json": "edf169c18b7a32ea51474f8111612675a2eb05015534d2d19f79f550e72043f8",
+        "semantic_map_data/dense_vectors.safetensors": "2176cf4ae1bca1d3bd0c79ca5fe80f2a920bb569f773e7d887558b5441626353",
+        "semantic_map_data/faiss_index.bin": "b320bae29d39f302746c48189c5c5da63f2517f57d10b4618165eab63e37706a",
+        "semantic_map_data/global_id_mapping.json": "b7187480f15e8eb3bf54c048e3d5ffd599e45f3f57cf18dacb91435604c7cf53",
+        "semantic_map_data/id_mapping.json": "b7187480f15e8eb3bf54c048e3d5ffd599e45f3f57cf18dacb91435604c7cf53",
+        "semantic_map_data/int_id_to_uid.json": "c6907278ef9372dc7818dd6baa0ea95e2c2c177a749bc41520619ae97e7da55e",
+        "semantic_map_data/semantic_map_meta.json": "3d30ffda606026f6c0ea46596df1aec1c9c206d910b0e3fdcb305be72ad31edf",
+        "semantic_map_data/sparse_uids.json": "82c6ae17bf65cc6967460e43e679f65a22288719a66364ba473faf7d2bbd9a01",
+        "semantic_map_data/sparse_vectors.safetensors": "d4ae5fe36f843dbe86619fbcaa221dd12e736748cf53273803525f924e205eec"
+      }
+    },
+    {
+      "question_index": 8,
+      "question_id": "Q08",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q08/graph",
+      "files": {
+        "graph_state.json": "55c4a34d6e91e70bed377470079a423a2531477d58066423b02e0e932bd8b6e0",
+        "m3_adapter_manifest.json": "23e89d3302ae22c6e7b7eb0aa087e3932a474ae7e1e1b8925c5a5778d1d087e2",
+        "retrieval_indices/bm25/bm25_index.pkl": "9612a489d7fe0b52776c5464233d74ab118c90b92e2b79fedcc9475a0b49e32d",
+        "retrieval_indices/splade/splade_index.pkl": "d856471792c82205c0681a6dd9c262d9cae9f0fd61ac3091aa9ea709517844ec",
+        "rx_graph.pkl": "1c7eb3561c3108e0f3bf803aadb373b7b677e504e77ae6b2e09a4cea9e7c8e2d",
+        "semantic_map_data/dense_uids.json": "a4a27a5a882d584af7eddbb7ace3e2f0c66cc0f358ad37da4950cacbc9e8d8f4",
+        "semantic_map_data/dense_vectors.safetensors": "c3c5735a3140c26a6498eb8ce481bb86b5516184d6f6a479434f44978b09764d",
+        "semantic_map_data/faiss_index.bin": "61d4253d9892133cca630079d286474ae1add022716832f336408d229d0cfceb",
+        "semantic_map_data/global_id_mapping.json": "20aa84789427f0c8e3aad5715520e78aba3a032d8cc4e1813d75f0b232aa071c",
+        "semantic_map_data/id_mapping.json": "20aa84789427f0c8e3aad5715520e78aba3a032d8cc4e1813d75f0b232aa071c",
+        "semantic_map_data/int_id_to_uid.json": "a60a126ef467ade1d5ba8592b1807d91f4b6b0b716d9380a7f01185c0c272417",
+        "semantic_map_data/semantic_map_meta.json": "e4a9088aca568d298749a753ee817d2923ae525bb39ad323294255fc27621984",
+        "semantic_map_data/sparse_uids.json": "b629652f82cc8d6f255252c9a01444f24bca5382d752e64de442370ccc7fcecf",
+        "semantic_map_data/sparse_vectors.safetensors": "6ba5aba658df441c02aee3ce864c1a18e4a8ef490e98be65310ffdf2815d60ba"
+      }
+    },
+    {
+      "question_index": 9,
+      "question_id": "Q09",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q09/graph",
+      "files": {
+        "graph_state.json": "ba8daf7135e259d6852d3c7bc7b13999f428c5bddc9b2bf077c56a9c7117a564",
+        "m3_adapter_manifest.json": "8bb1066fa8adbffea4bf772ecc0214494e6d9879afab216b99f8c553524ab509",
+        "retrieval_indices/bm25/bm25_index.pkl": "d923524ab7db3b1a80008cfaa8247308fc1f252d143c05eac5e9be17e715ac26",
+        "retrieval_indices/splade/splade_index.pkl": "34fe3dacbe3009b87480a73dd5faa0f414b377a87fc0b4a8d1c9fd14cc0ac2b7",
+        "rx_graph.pkl": "4d1901ca79106f101ccf19ef14668eca9a6c9b88e7cbd30e61b5cd5cc377041a",
+        "semantic_map_data/dense_uids.json": "c3744228881c2e8c5f814b6c5a8244deb6cf4f4cbe114adc541ccd0266588cf9",
+        "semantic_map_data/dense_vectors.safetensors": "e5f100712da655564a5038433a25d4ef48ef9bb978e395716263bb81b6735cf4",
+        "semantic_map_data/faiss_index.bin": "e967f4b7ed9fd087f259f4588d89eaa37003f32b7e905e8469e1095416fb9fe9",
+        "semantic_map_data/global_id_mapping.json": "a9e8b8db7a4454dc6f39b242f25e7755c52979f04ed94ff503444f1f1f62fb65",
+        "semantic_map_data/id_mapping.json": "a9e8b8db7a4454dc6f39b242f25e7755c52979f04ed94ff503444f1f1f62fb65",
+        "semantic_map_data/int_id_to_uid.json": "fdd7d1e7c816d4c94f1f7957b6b785353c139752a0774e750f061b524a10988c",
+        "semantic_map_data/semantic_map_meta.json": "e12354c402f305d1911035ac322b258976d78f0dcb882221d947dde625895e42",
+        "semantic_map_data/sparse_uids.json": "267dc7c863fcf13178cd24c1e9ecf7276a48e16f67d86252a62cacadec0b468d",
+        "semantic_map_data/sparse_vectors.safetensors": "d1315b5a67d93118c95d47266c1cb9d0f7a94945dad145b4e03aecbbaa23036a"
+      }
+    },
+    {
+      "question_index": 10,
+      "question_id": "Q10",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q10/graph",
+      "files": {
+        "graph_state.json": "d780afcafb2cd389c92f828e1313b53693595712b4504d4d5361231b19f72842",
+        "m3_adapter_manifest.json": "82810d5c09c4dd478ccd302545cd4faeb6a182585df58fbbb922a12b95523681",
+        "retrieval_indices/bm25/bm25_index.pkl": "0163d1afafc87445eaa47c1653627501d89b111c954b640f461eeaff301f09ae",
+        "retrieval_indices/splade/splade_index.pkl": "c511e0c681812100400a691c6858d7aee7d4a80beeba4a2fb1cb6a8e94f54587",
+        "rx_graph.pkl": "ac59dd0c87b81d9dfe3a356abd3dd2f8accb358b247314c81e1e568b98a07384",
+        "semantic_map_data/dense_uids.json": "efc86a0e0e11a6c00552e0305a30ce59936979b873016b0b19926a8db5e89824",
+        "semantic_map_data/dense_vectors.safetensors": "8c9b5bef88082981cd5ffaf2cb19f288b69513c269edc62ea913e22a8789d8e0",
+        "semantic_map_data/faiss_index.bin": "8f3c1e30efbd0f07b244eb8a81537b7df79ce0b2a07d2209472977d5decb9e7a",
+        "semantic_map_data/global_id_mapping.json": "014d49a696f8637a83fd62116727de74cf8dc190b627e29720585d3e75735f21",
+        "semantic_map_data/id_mapping.json": "014d49a696f8637a83fd62116727de74cf8dc190b627e29720585d3e75735f21",
+        "semantic_map_data/int_id_to_uid.json": "42eb5e69cce3318165c925afbb35b53a723cb8bf15a1f254d50c551b612f4591",
+        "semantic_map_data/semantic_map_meta.json": "515f51168ea977b704da94b00f35ef4fef35d96cd028a695c8d5478e4c4acb87",
+        "semantic_map_data/sparse_uids.json": "4733ec41e1de5b34f10af80c11f4d26c5eb274199f3e4be5cd2cb08c991d7634",
+        "semantic_map_data/sparse_vectors.safetensors": "1c87c79e30c68549d8e018e5e227974ede17e0647e0366c2c4c2f9cfbe621a4d"
+      }
+    },
+    {
+      "question_index": 11,
+      "question_id": "Q11",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q11/graph",
+      "files": {
+        "graph_state.json": "3ac0379a062b41a79d4a37079c202f30aca9234f3789db97204ee3324966dfd2",
+        "m3_adapter_manifest.json": "3a01d64c071fb2bd4d569d099f0c02ed3eb868c20eb731228c47452683412260",
+        "retrieval_indices/bm25/bm25_index.pkl": "6f83b0015d9534d4ac078d8ddf6159d0793ea55b3ad4253576e380c9a30c3096",
+        "retrieval_indices/splade/splade_index.pkl": "4947e5174bd15e33dc7d1ba1344d0c7f624e46791bc212236d059c6f7e8ecf65",
+        "rx_graph.pkl": "ac8788ce32311ff22e7d11c9d8284f6a254ad52fb4b5bf4db3d8d7cc2f067b55",
+        "semantic_map_data/dense_uids.json": "27583e6114f7e5e551cbad980e95c223ab3c380916f4cec2ca310fe6c535472c",
+        "semantic_map_data/dense_vectors.safetensors": "8b2f2de7aa687902fe42b842e937e807ab1ed3ef121735d05c93762a245c40b8",
+        "semantic_map_data/faiss_index.bin": "0d7e7df0ff101ee0d9d2e67c8f6763edd93fdb9333b5b3318d7b3b20c45aa732",
+        "semantic_map_data/global_id_mapping.json": "8da872aec8c954e1fc2e75d27249c18ac4f72f6b3cf4a63408c6e2eee7e123d8",
+        "semantic_map_data/id_mapping.json": "8da872aec8c954e1fc2e75d27249c18ac4f72f6b3cf4a63408c6e2eee7e123d8",
+        "semantic_map_data/int_id_to_uid.json": "969baeca68bf051a13c72f92f636c697c265512984bb6626992dab918549cfcd",
+        "semantic_map_data/semantic_map_meta.json": "026a0201cc6189997c23d17980f247231e21d2781114432c24889758ab94e911",
+        "semantic_map_data/sparse_uids.json": "abcf37d04c27fe7dc6046e71f7c3a1b41776dacceabc8312f50e4cea0c88550c",
+        "semantic_map_data/sparse_vectors.safetensors": "82bbaa1c7488a8d58de04af492c579294edcebe08dd6fb998f6df7dfb3bb1849"
+      }
+    },
+    {
+      "question_index": 12,
+      "question_id": "Q12",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q12/graph",
+      "files": {
+        "graph_state.json": "13a9b454183b82f0430bda1b7d4707136324e3016557bdf63c4731405c8b3979",
+        "m3_adapter_manifest.json": "b021a2c63cd8cb2cdf0e0b1497d2a7eca7d5702fd5a34229fb50b94de8d2de2d",
+        "retrieval_indices/bm25/bm25_index.pkl": "1058924ad5fffb3361d737c44978b0ccecd716281d3993fd1a2a5107aa507720",
+        "retrieval_indices/splade/splade_index.pkl": "996595761559f9bf14d714c5f0aab180a81eabc311cd8079c9ba792f607f770f",
+        "rx_graph.pkl": "cf7a2d01ecb7b24aac0dd076c77729989d72eb6fec58e950c0539ae2f8c3b13e",
+        "semantic_map_data/dense_uids.json": "69c40b63fe5cfacd4dc2fd0e338a89784ed16a2f650a37cd996e598fcb6c77da",
+        "semantic_map_data/dense_vectors.safetensors": "53ab59428a69aa4a2066c0e982e4a642074ce44514ccf26958093e69e6506160",
+        "semantic_map_data/faiss_index.bin": "f17e33bc91b38bcc805b8dfb683d36acfa28431eb7cae513700e72e4f759ca42",
+        "semantic_map_data/global_id_mapping.json": "39acd86589c547838053bf6f73d1bec1411b26ed952512ee1d7d90cd3901ba69",
+        "semantic_map_data/id_mapping.json": "39acd86589c547838053bf6f73d1bec1411b26ed952512ee1d7d90cd3901ba69",
+        "semantic_map_data/int_id_to_uid.json": "0d54352c7453e78570c3acd6921dd14ec8dd63e6a599924a7e15b975be7a2708",
+        "semantic_map_data/semantic_map_meta.json": "aec76401712d4bf71bcecc391f57ee04bd97004842e137570521dc4c58d5f2dc",
+        "semantic_map_data/sparse_uids.json": "df1f00c2cb518d3c923c24c0513244485b545ba3b7c918bf78e7c9643fdc68a6",
+        "semantic_map_data/sparse_vectors.safetensors": "d4ae5fe36f843dbe86619fbcaa221dd12e736748cf53273803525f924e205eec"
+      }
+    },
+    {
+      "question_index": 13,
+      "question_id": "Q13",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q13/graph",
+      "files": {
+        "graph_state.json": "aa683a34d559cd43e52b035de870b6ed453030d17b2e4f1f571aa8fa3b4e5e9d",
+        "m3_adapter_manifest.json": "a6a8e03023bff1afe5f899e3e9c38a58ddeef356700d99d606452136cb228f72",
+        "retrieval_indices/bm25/bm25_index.pkl": "6d26a4b32193c92e379b6a4329314a23d5fb9867ba9622e26bd3d25f5aaa7bdb",
+        "retrieval_indices/splade/splade_index.pkl": "764ad1275131e098bd208dbe6eb7cc2e4c9829636a5221e24e0d10a6552c3534",
+        "rx_graph.pkl": "ee87f02d600d764da14fd0ac955a013ef8a44d2750e63cb5f87ab63bfddeece4",
+        "semantic_map_data/dense_uids.json": "dcde70641f2330dea982df076791c6a0eda64ed677a155109aaa2fa80db295b7",
+        "semantic_map_data/dense_vectors.safetensors": "3347bd5c6b30d406670a64f13525d2f69527fa49488d3dd4a4e45915d89a1be9",
+        "semantic_map_data/faiss_index.bin": "2ebe5580da5d3b0100b21d7eb9326a1c3ff8b5f5e9a8066866ec3637fbedefd3",
+        "semantic_map_data/global_id_mapping.json": "e09b9dca5470341886ae27a778fe84d9db49d8964cead9aa0099ceb28a19dcd8",
+        "semantic_map_data/id_mapping.json": "e09b9dca5470341886ae27a778fe84d9db49d8964cead9aa0099ceb28a19dcd8",
+        "semantic_map_data/int_id_to_uid.json": "0f90c63ee93943576e0a4a416329b768ca241b0a5c4044105bc72dac5d2add6d",
+        "semantic_map_data/semantic_map_meta.json": "f2061a3b3ae2806820de041fcb01693a5e7d135a3e676c415b003801abc2f3ff",
+        "semantic_map_data/sparse_uids.json": "dd79f92eb04f9776cf7693d862d883505c1eada85bc8de74b7c9d79bee723c5d",
+        "semantic_map_data/sparse_vectors.safetensors": "d4ae5fe36f843dbe86619fbcaa221dd12e736748cf53273803525f924e205eec"
+      }
+    },
+    {
+      "question_index": 14,
+      "question_id": "Q14",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q14/graph",
+      "files": {
+        "graph_state.json": "978c3e2008436deaf8f0d6d65ffdcbed34bd114a85e932cc5ff850027bcb8551",
+        "m3_adapter_manifest.json": "395c8191064b1c4a654228b50bba87fa726f28d9acb4b505ff243ed2326bc247",
+        "retrieval_indices/bm25/bm25_index.pkl": "ceb6bdf1dcf879698dadfe0795253dad7f66a06fae59b7b237f808c0f073b43b",
+        "retrieval_indices/splade/splade_index.pkl": "6e60b506c0c4d0c2a2c57b0828a9162eb31f67bd3945e9cbc6a24f044407db9c",
+        "rx_graph.pkl": "b1eed3bb0ee6fc17218023268233ec9fc3c7381f421eb1ea2a27a104384ec961",
+        "semantic_map_data/dense_uids.json": "6f0bf7c6657b2530340f7f67140a7f65b6420ba1c7bac838bee6bc4e45bfc644",
+        "semantic_map_data/dense_vectors.safetensors": "eddbb5e69736ea8b70d9366aeda940da7537bd106210cf5c557b5ff92a1b0562",
+        "semantic_map_data/faiss_index.bin": "acecc4dfd71acbe9b1584aa9855318f71b8ff36431180ca8a9f7309f47fbd966",
+        "semantic_map_data/global_id_mapping.json": "662658d66e0dfbdec6027451782083a3733ac3898013d97981a28fcb9723d60c",
+        "semantic_map_data/id_mapping.json": "662658d66e0dfbdec6027451782083a3733ac3898013d97981a28fcb9723d60c",
+        "semantic_map_data/int_id_to_uid.json": "7eb8aab31d5c4dd16ebcf575b61497cb39677aaabd3e64f6cd4ba618e9e6008e",
+        "semantic_map_data/semantic_map_meta.json": "596c9af30edb5dd84e1e6ba2e0566f2cc75294d5657ae84b602fea239ca4683f",
+        "semantic_map_data/sparse_uids.json": "ad1a9757bc98964a8f399c3b0965f3e6165ae2113e3cc741825f4a4a97e8cc98",
+        "semantic_map_data/sparse_vectors.safetensors": "d4ae5fe36f843dbe86619fbcaa221dd12e736748cf53273803525f924e205eec"
+      }
+    },
+    {
+      "question_index": 15,
+      "question_id": "Q15",
+      "graph": "/opt/streammeco/run/m3bench_bedroom_gemini/results/mandol_adapted/q15/graph",
+      "files": {
+        "graph_state.json": "433e66d7ab56fc6147ad536f5b64f55941de2cc38b9ca60d1b16ad4f1a30d410",
+        "m3_adapter_manifest.json": "820261a676bc8104990a40572a6111edb159367e68317bbedb9e734fffffb02d",
+        "retrieval_indices/bm25/bm25_index.pkl": "f9429eda7a0129ed91a2e697a8f067b50927920dee5cd745d2daea65adeaf438",
+        "retrieval_indices/splade/splade_index.pkl": "95ae85c5d905964b8a428ce202df576895236b82b48659df50cb8acf51989180",
+        "rx_graph.pkl": "a1ce5f813510e81f52c5f5cf688f15233e41a344a4f86bfb4c444ac2e21233e7",
+        "semantic_map_data/dense_uids.json": "dced81212fb5062bf6f46f05c00358234feeef055a1765e4531ebb77373dacc5",
+        "semantic_map_data/dense_vectors.safetensors": "d8896c858e3815f2fac22aebe670629569a46ea5cb6328a5023087da6c74ca50",
+        "semantic_map_data/faiss_index.bin": "c01db8eccc919a328ee1b5d904235ba5ec5d57e23aff071bf60d86d0b39925dc",
+        "semantic_map_data/global_id_mapping.json": "0a0e9b73b177da8c448178c80637897d07230480fcfec058e7b3b3ed02d53cbb",
+        "semantic_map_data/id_mapping.json": "0a0e9b73b177da8c448178c80637897d07230480fcfec058e7b3b3ed02d53cbb",
+        "semantic_map_data/int_id_to_uid.json": "84faad2a2e3bf9316608a12652deca75ffcd18ed06c8249a0ddd600b0a7f85a2",
+        "semantic_map_data/semantic_map_meta.json": "aa847ab9a86c8e80a9e3bfd2f959e65bdaa1def45414840969789ac57bb4a774",
+        "semantic_map_data/sparse_uids.json": "ae703a78109a085a4b2f612437debd172c28706015188bc4be91e0af19bc18a6",
+        "semantic_map_data/sparse_vectors.safetensors": "d4ae5fe36f843dbe86619fbcaa221dd12e736748cf53273803525f924e205eec"
+      }
+    }
+  ],
+  "question_count": 15,
+  "timing_policy": "Original warm retrieval functions; setup and grading excluded."
+}

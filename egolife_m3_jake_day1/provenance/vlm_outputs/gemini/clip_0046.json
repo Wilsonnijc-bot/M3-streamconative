@@ -1,0 +1,74 @@
+{
+  "clip_id": 46,
+  "source": {
+    "segment_id": 46,
+    "source": "DAY1_A1_JAKE_11313000.mp4",
+    "source_clock": "11313000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41490.0,
+    "absolute_end_seconds": 41520.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0046.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46997.549599813,
+      "prepared_perf": 47004.516243792,
+      "ordered_start_perf": 47127.134750333,
+      "consumer_wait_ms": 0.010450006811879575,
+      "ready_to_ordered_ms": 122618.50654100272,
+      "preparation_work_ms": 6959.922342997743,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera moves around the living area toward a dining table where several people are gathered.",
+      "A person standing by the whiteboard wipes markings off and writes new information.",
+      "A person at the whiteboard counts and discusses numbers related to the schedule.",
+      "A clapperboard rests on the checkered tablecloth in the foreground.",
+      "The group members sit around the table watching the board and engaging in discussion."
+    ],
+    "high_level_conclusions": [
+      "The team is conducting a film production meeting to plan shooting schedules and logistics.",
+      "The individual at the whiteboard is acting as the coordinator leading the planning session."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"The camera moves around the living area toward a dining table where several people are gathered.\",\n  \"A person standing by the whiteboard wipes markings off and writes new information.\",\n  \"A person at the whiteboard counts and discusses numbers related to the schedule.\",\n  \"A clapperboard rests on the checkered tablecloth in the foreground.\",\n  \"The group members sit around the table watching the board and engaging in discussion.\"\n ],\n \"high_level_conclusions\": [\n  \"The team is conducting a film production meeting to plan shooting schedules and logistics.\",\n  \"The individual at the whiteboard is acting as the coordinator leading the planning session.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 46,
+      "call_id": "face3c67-03b3-4215-953a-99bc12801fd6",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405950.4755378,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67163,
+      "output_tokens": 707,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 19743.82890799461
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"The camera moves around the living area toward a dining table where several people are gathered.\",\n  \"A person standing by the whiteboard wipes markings off and writes new information.\",\n  \"A person at the whiteboard counts and discusses numbers related to the schedule.\",\n  \"A clapperboard rests on the checkered tablecloth in the foreground.\",\n  \"The group members sit around the table watching the board and engaging in discussion.\"\n ],\n \"high_level_conclusions\": [\n  \"The team is conducting a film production meeting to plan shooting schedules and logistics.\",\n  \"The individual at the whiteboard is acting as the coordinator leading the planning session.\"\n ]\n}\n```",
+      "total_tokens": 67870,
+      "request_end": 1789405970.2194915,
+      "latency_ms": 19743.951289005054,
+      "client_wall_clock_latency_ms": 19743.951289005054,
+      "api_request_wall_clock_latency_ms": 19743.951289005054
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_46_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,583 @@
+{
+  "clip_id": 40,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0040.mp4",
+  "end_to_end_memory_generation_ms": 1141776.0782499972,
+  "latency_ms": {
+    "clip_decode": 3538.787746001617,
+    "deepgram_asr": 2.8667340011452325,
+    "mai_transcribe_asr": 2.648552996106446,
+    "asr_total": 3.4248840020154603,
+    "audio_segmentation": 9.205494003253989,
+    "speech_embedding_campplus": 702.7437249998911,
+    "facial_detection_recognition_buffalo_l": 3482.568743995216,
+    "face_clustering": 19.732339002075605,
+    "vlm_memory_generation": 192453.4655680036,
+    "text_embedding": 1903.5919070011005,
+    "graph_update_total": 294.1481469970313
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 40,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 986,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789419127.902032,
+          "status": "success",
+          "total_tokens": 292,
+          "request_end": 1789419129.805431,
+          "latency_ms": 1903.3993350021774
+        }
+      ],
+      "total_tokens": 292,
+      "latency_ms": 1903.5919070011005
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.8667340011452325,
+        "openrouter-mai-transcribe-2": 2.648552996106446
+      },
+      "asr_total_ms": 3.4248840020154603,
+      "audio_segmentation_ms": 9.205494003253989,
+      "speech_embedding_ms": 702.7437249998911,
+      "graph_update_ms": 293.38946899952134,
+      "asr_segment_count": 7,
+      "speech_embedding_count": 7,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1020.414170998265
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3482.568743995216,
+      "face_clustering_ms": 19.732339002075605,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 218,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3618.8988069989136
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_467>",
+        "<voice_516>",
+        "<voice_517>",
+        "<voice_518>",
+        "<voice_519>",
+        "<voice_520>"
+      ],
+      "context_preparation_ms": 3862.407495995285,
+      "vlm_ms": 192453.4655680036,
+      "raw_response": "{\n  \"video_description\": [\n    \"A group of people are seated around a long wooden table covered with a red and white checkered tablecloth.\",\n    \"One individual stands at the head of the table writing on a whiteboard mounted on the wall.\",\n    \"Several others are seated around the table, observing the whiteboard and engaging in conversation.\",\n    \"A clapperboard rests on the table near the foreground, along with a plastic water bottle.\",\n    \"The speaker <voice_467> addresses the group saying 'MAI: 喏，紫夏，然后对。LYS.'\",\n    \"Later, the speaker <voice_516> asks 'MAI: 这位是谁的？'\",\n    \"The speaker <voice_517> responds 'MAI: 我紫夏，或者写个L也行。'\",\n    \"The speaker <voice_518> continues the discussion asking 'MAI: 还有呢？你要你请两个。'\",\n    \"The speaker <voice_519> adds 'MAI: 对，但有一个可能来不了。'\",\n    \"Finally, the speaker <voice_520> clarifies 'MAI: 性别？', followed by 'MAI: 都是女的。'\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker <voice_467> is leading a session involving name identification and attendance checks.\",\n    \"The speaker <voice_517> identifies herself as Zi Xia.\",\n    \"The speaker <voice_520> confirms that all participants in the group are female.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are seated around a long wooden table covered with a red and white checkered tablecloth.",
+          "One individual stands at the head of the table writing on a whiteboard mounted on the wall.",
+          "Several others are seated around the table, observing the whiteboard and engaging in conversation.",
+          "A clapperboard rests on the table near the foreground, along with a plastic water bottle.",
+          "The speaker <voice_467> addresses the group saying 'MAI: 喏，紫夏，然后对。LYS.'",
+          "Later, the speaker <voice_516> asks 'MAI: 这位是谁的？'",
+          "The speaker <voice_517> responds 'MAI: 我紫夏，或者写个L也行。'",
+          "The speaker <voice_518> continues the discussion asking 'MAI: 还有呢？你要你请两个。'",
+          "The speaker <voice_519> adds 'MAI: 对，但有一个可能来不了。'",
+          "Finally, the speaker <voice_520> clarifies 'MAI: 性别？', followed by 'MAI: 都是女的。'"
+        ],
+        "high_level_conclusions": [
+          "The speaker <voice_467> is leading a session involving name identification and attendance checks.",
+          "The speaker <voice_517> identifies herself as Zi Xia.",
+          "The speaker <voice_520> confirms that all participants in the group are female."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 40,
+          "call_id": "43d080b4-99fc-4677-bf9b-7eb184bd5a74",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789418935.4475968,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"A group of people are seated around a long wooden table covered with a red and white checkered tablecloth.\",\n    \"One individual stands at the head of the table writing on a whiteboard mounted on the wall.\",\n    \"Several others are seated around the table, observing the whiteboard and engaging in conversation.\",\n    \"A clapperboard rests on the table near the foreground, along with a plastic water bottle.\",\n    \"The speaker <voice_467> addresses the group saying 'MAI: 喏，紫夏，然后对。LYS.'\",\n    \"Later, the speaker <voice_516> asks 'MAI: 这位是谁的？'\",\n    \"The speaker <voice_517> responds 'MAI: 我紫夏，或者写个L也行。'\",\n    \"The speaker <voice_518> continues the discussion asking 'MAI: 还有呢？你要你请两个。'\",\n    \"The speaker <voice_519> adds 'MAI: 对，但有一个可能来不了。'\",\n    \"Finally, the speaker <voice_520> clarifies 'MAI: 性别？', followed by 'MAI: 都是女的。'\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker <voice_467> is leading a session involving name identification and attendance checks.\",\n    \"The speaker <voice_517> identifies herself as Zi Xia.\",\n    \"The speaker <voice_520> confirms that all participants in the group are female.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). They show a group of people sitting around a table covered with a red-and-white checkered tablecloth. One person (standing, wearing pink/orange) is writing on a whiteboard. Others are seated, listening or looking at the board. There's a clapperboard on the table. The camera seems to be held by someone sitting at the table (visible legs/hands occasionally).\n*   **Voice Features:**\n    *   `<voice_467>`: \"MAI: 喏，紫夏，然后对。LYS.\" (00:00 - 00:05) -> Speaker MAI addressing LYS and Zi Xia.\n    *   `<voice_516>`: \"MAI: 这位是谁的？\" (00:12 - 00:14) -> Speaker MAI asking about ownership/identity.\n    *   `<voice_517>`: \"MAI: 我紫夏，或者写个L也行。\" (00:13 - 00:18) -> Speaker MAI identifying herself as Zi Xia or suggesting 'L'.\n    *   `<voice_518>`: \"MAI: 还有呢？你要你请两个。\" (00:22 - 00:25) -> Speaker MAI asking if there are more, mentioning \"two\".\n    *   `<voice_519>`: \"MAI: 对，但有一个可能来不了。\" (00:25 - 00:27) -> Speaker MAI confirming but noting absence possibility.\n    *   `<voice_520>`: \"MAI: 性别？\", \"MAI: 都是女的。\" (00:27 - 00:30) -> Speaker MAI asking about gender, stating they are all female.\n\n**2. Construct Video Description:**\n*   I need to describe the visual events atomically.\n*   Scene: A meeting or rehearsal room. Table with checkered cloth. Whiteboard. Clapperboard.\n*   Action: One person stands at the head of the table writing on the whiteboard. Others sit around.\n*   Camera movement: Slight shifts, zooming perhaps? The view is fisheye/wide-angle.\n*   Specific details: A bottle on the table. A person holding the camera (legs visible later).\n*   Since I don't have specific timestamps for every action change in the prompt's text description section (it just lists frames), I'll synthesize a coherent narrative flow based on the static nature of the scene across most frames. It looks like a continuous shot of a session.\n*   Wait, the instruction says \"Use the provided feature IDs as references to characters (when applicable)\". But I don't have Face IDs in the input data provided in the prompt text (only Voice IDs). The prompt says \"Face features:Voice features:\" but then lists only Voice features. Actually, looking closely at the prompt structure: \"Face features:Voice features:{\"...}\". It seems Face features might be empty or missing in the provided text block, or I missed them. Let me re-read carefully.\n    *   \"Face features:Voice features:{\"<voice_467>\": ...}\"\n    *   It looks like the Face features section is empty or merged. There are no `<face_x>` tags in the provided text.\n    *   Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   So I must use Voice IDs in descriptions if needed, but primarily describe visuals.\n    *   Wait, the instruction says \"Use the provided feature IDs as references to characters (when applicable)\". Since I have voice IDs, I can reference the speaker MAI using `<voice_467>`, etc., in the description if I want to link audio to visual context generally, but I shouldn't claim who exactly is speaking visually without face confirmation. However, usually, in these tasks, if voice is provided, I can mention \"The person speaking `<voice_467>`...\" or similar if I'm describing the audio part of the video description. But the prompt asks for \"Video Description\" covering observable events.\n    *   Let's stick to visual description primarily, but acknowledge the audio if relevant to the scene (e.g., \"While `<voice_467>` speaks...\").\n    *   Actually, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This applies to the *memory* generation part usually, but here the output format is `video_description` and `high_level_conclusions`.\n    *   Wait, the prompt instructions say: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   BUT the system prompt says: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n    *   This is conflicting. The system prompt talks about \"memory\", but the user prompt defines the output format as `video_description` and `high_level_conclusions`.\n    *   Usually, the system prompt overrides regarding the *content* requirements (like preserving speaker IDs), while the user prompt defines the *structure*.\n    *   Let's look at the User Prompt again. \"Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\".\n    *   Okay, I need to fit the \"memory\" requirement into `video_description` or `high_level_conclusions`?\n    *   System Prompt: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\n    *   This implies the `video_description` or `high_level_conclusions` should contain these summaries. Given `video_description` is for atomic events, maybe I should add sentences summarizing the speech within the description or ensure the conclusions capture the intent.\n    *   Actually, often in these multi-modal tasks, the \"Video Description\" acts as the ground truth summary. I will incorporate the speech summaries into the `video_description` as events involving the speaker.\n    *   Also, `high_level_conclusions` needs to handle equivalences. Since no face IDs are provided, I cannot create `Equivalence: <face_x>, <voice_y>`. I will leave that field empty or just put general conclusions. Wait, the instruction says \"If a face and a voice feature refer to the same character, indicate it...\". Since I have no face features, I can't make equivalences. I will just write conclusions based on the voice content.\n\n**3. Drafting Content:**\n\n*   **Video Description:**\n    *   Group of people around a table.\n    *   Person standing writes on whiteboard.\n    *   People seated listen.\n    *   Audio: `<voice_467>` speaks \"MAI: 喏，紫夏，然后对。LYS.\"\n    *   Audio: `<voice_516>` asks \"MAI: 这位是谁的？\"\n    *   Audio: `<voice_517>` answers \"MAI: 我紫夏，或者写个L也行。\"\n    *   Audio: `<voice_518>` asks \"MAI: 还有呢？你要你请两个。\"\n    *   Audio: `<voice_519>` replies \"MAI: 对，但有一个可能来不了。\"\n    *   Audio: `<voice_520>` confirms gender \"MAI: 性别？\", \"MAI: 都是女的。\"\n    *   Visuals: Clapperboard on table. Bottle. Lighting changes slightly (maybe flash?).\n    *   Constraint: \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I must quote or summarize faithfully.\n    *   Constraint: \"Preserve speaker identity... using the exact ID as the speaker.\" -> I will use `<voice_467>`, etc. in the text.\n\n*   **High-Level Conclusions:**\n    *   MAI is organizing a group activity or class.\n    *   MAI identifies herself as Zi Xia.\n    *   Discussion involves names and attendance.\n    *   All participants seem to be female.\n\n**Refining the Output:**\n*   Ensure JSON validity.\n*   Ensure no extra text.\n*   Check constraints: \"Keep the existing video_description/high_level_conclusions JSON schema\".\n*   Check constraint: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". I will embed these into the `video_description` array items.\n\n**Drafting Video Description Items:**\n1.  A group of individuals are gathered around a long wooden table covered with a red and white checkered tablecloth in a room with a slanted ceiling.\n2.  One individual stands at the head of the table, writing on a whiteboard mounted on the wall.\n3.  Several others are seated around the table, observing the whiteboard and engaging in conversation.\n4.  A clapperboard rests on the table near the foreground, along with a plastic water bottle.\n5.  The person speaking `<voice_467>` addresses the group saying \"MAI: 喏，紫夏，然后对。LYS.\".\n6.  Later, the speaker `<voice_516>` asks \"MAI: 这位是谁的？\".\n7.  The speaker `<voice_517>` responds \"MAI: 我紫夏，或者写个L也行。\".\n8.  The speaker `<voice_518>` continues the discussion asking \"MAI: 还有呢？你要你请两个。\".\n9.  The speaker `<voice_519>` adds \"MAI: 对，但有一个可能来不了。\".\n10. Finally, the speaker `<voice_520>` clarifies \"MAI: 性别？\", followed by \"MAI: 都是女的。\".\n\n**Drafting High Level Conclusions:**\n1.  The group appears to be preparing for a recording or rehearsal session, indicated by the clapperboard and whiteboard setup.\n2.  The speaker MAI is taking charge of the session, managing introductions and logistics.\n3.  MAI identifies herself as Zi Xia during the interaction.\n4.  The group consists entirely of females according to the speaker's statement.\n\n**Final Review against Constraints:**\n*   \"Preserve speaker identity... using the exact ID as the speaker.\" -> Done in description.\n*   \"Do not replace the ID with 'a speaker'...\" -> Done.\n*   \"If no face IDs are supplied, do not invent any.\" -> No face IDs in input, so no equivalences.\n*   \"Keep dialogue grounded...\" -> Quoted directly.\n*   \"Output Format: JSON object\".\n\nOne detail: The prompt says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". I've done this in the video description.\nAlso, \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> I should probably mention MAI in conclusions too.\n\nLet's refine the JSON structure.\n\n```json\n{\n  \"video_description\": [\n    \"A group of people are seated around a table with a red and white checkered tablecloth in a room.\",\n    \"One person stands at the front of the table writing on a whiteboard.\",\n    \"A clapperboard sits on the table in the foreground.\",\n    \"The speaker <voice_467> says 'MAI: 喏，紫夏，然后对。LYS.'\",\n    \"The speaker <voice_516> asks 'MAI: 这位是谁的？'\",\n    \"The speaker <voice_517> states 'MAI: 我紫夏，或者写个L也行。'\",\n    \"The speaker <voice_518> asks 'MAI: 还有呢？你要你请两个。'\",\n    \"The speaker <voice_519> mentions 'MAI: 对，但有一个可能来不了。'\",\n    \"The speaker <voice_520> asks 'MAI: 性别？' and confirms 'MAI: 都是女的。'\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker MAI is leading a session involving name identification and attendance checks.\",\n    \"MAI identifies herself as Zi Xia.\",\n    \"All participants in the group are female.\"\n  ]\n}\n```\nWait, I need to check if I should merge some descriptions to be more \"atomic\". The list above looks fine.\nAlso, check \"Equivalence\" format. Since no faces, I won't use it.\nCheck \"Preserve speaker identity\". Yes, used `<voice_x>`.\nCheck \"Do not substitute plausible scene description\". I described the scene accurately.\n\nOne small thing: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". I have included them.\n\"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> In conclusions, I mentioned \"speaker MAI\". Is \"MAI\" the ID? No, MAI is the name in the ASR (\"MAI: ...\"). The ID is `<voice_467>`.\nInstruction: \"retain that speaker's exact voice ID\".\nSo instead of \"The speaker MAI...\", I should say \"The speaker <voice_467>...\" or similar if referring to the entity.\nActually, the instruction says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\nSo in conclusions: \"The speaker <voice_467> is leading a session...\"\nAnd \"The speaker <voice_517> identifies herself as Zi Xia.\"\nThis ensures strict adherence to the system prompt's instruction about speaker IDs in conclusions.\n\nRevised Conclusions:\n1. The speaker <voice_467> is leading a session involving name identification and attendance checks.\n2. The speaker <voice_517> identifies herself as Zi Xia.\n3. The speaker <voice_520> confirms that all participants are female.\n\nWait, looking at the instruction: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\nInput IDs: `<voice_467>`, `<voice_516>`, `<voice_517>`, `<voice_518>`, `<voice_519>`, `<voice_520>`.\nOkay, I will use these.\n\nOne more check on \"episodic memory\". The system prompt says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". This sounds like it belongs in the `video_description` array where I describe events. I have done this.\n\nFinal check on JSON syntax.\nDouble quotes for keys and strings.\nNo trailing commas.\n\nOne detail: \"Video frame at 0.00s\" ... \"Video frame at 29.50s\". The description covers the whole duration.\nThe prompt asks to \"Preserve speaker identity when constructing memory from the supplied character features.\"\nAnd \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSo in the `video_description` array, I should explicitly use the ID.\nExample: \"The speaker <voice_467> says '...'\".\n\nOkay, ready to generate.\n\nOne nuance: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\nSince I have NO face features in the input (the text \"Face features:Voice features:\" suggests Face features might be empty or the label was cut off, but no `<face_x>` tags appear anywhere in the provided text block), I cannot create equivalences. I will omit this key-value pair or just not include it in the array since the instruction says \"indicate it...\". If none exist, I don't need to indicate anything. The `high_level_conclusions` array contains strings. I can just put the conclusions.\n\nWait, looking at the raw input text provided in the prompt:\n\"Face features:Voice features:{\"<voice_467>\": ...\"\nIt seems \"Face features:\" is followed immediately by \"Voice features:\". There are no face IDs listed.\nSo I will proceed without equivalences.\n\nOne final check on the `video_description` content.\n\"Each description should focus on a single atomic event or fact.\"\nMy draft items are mostly single facts/events.\nItem 5-10 are speech events.\nItems 1-4 are visual events.\nThis fits.\n\nOne constraint: \"Be concise and avoid duplicate events.\"\nI will combine visual observations if possible, but keeping speech separate is necessary due to the \"quote transcript\" rule.\nI'll keep the visual description first, then the speech events.\n\nLet's assemble the JSON.\n</think>\n\n{\n  \"video_description\": [\n    \"A group of people are seated around a long wooden table covered with a red and white checkered tablecloth.\",\n    \"One individual stands at the head of the table writing on a whiteboard mounted on the wall.\",\n    \"Several others are seated around the table, observing the whiteboard and engaging in conversation.\",\n    \"A clapperboard rests on the table near the foreground, along with a plastic water bottle.\",\n    \"The speaker <voice_467> addresses the group saying 'MAI: 喏，紫夏，然后对。LYS.'\",\n    \"Later, the speaker <voice_516> asks 'MAI: 这位是谁的？'\",\n    \"The speaker <voice_517> responds 'MAI: 我紫夏，或者写个L也行。'\",\n    \"The speaker <voice_518> continues the discussion asking 'MAI: 还有呢？你要你请两个。'\",\n    \"The speaker <voice_519> adds 'MAI: 对，但有一个可能来不了。'\",\n    \"Finally, the speaker <voice_520> clarifies 'MAI: 性别？', followed by 'MAI: 都是女的。'\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker <voice_467> is leading a session involving name identification and attendance checks.\",\n    \"The speaker <voice_517> identifies herself as Zi Xia.\",\n    \"The speaker <voice_520> confirms that all participants in the group are female.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10513,
+          "output_tokens": 4205,
+          "total_tokens": 14718,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002154003595933318,
+            "media_preparation_ms": 62.27740100439405,
+            "processor_tokenization_ms": 633.5701999996672,
+            "device_transfer_ms": 42.49359700042987,
+            "cuda_generation_ms": 191682.14123000507,
+            "decoding_ms": 3.966714000853244
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 192424.66896500264,
+          "request_end": 1789419127.9010835,
+          "latency_ms": 192453.4655680036,
+          "client_wall_clock_latency_ms": 192453.4655680036
+        }
+      ],
+      "episodic_memory_count": 10,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 10,
+      "text_embedding_ms": null,
+      "text_embedding_count": 10,
+      "graph_update_ms": 0.13101600052323192,
+      "nodes_added": 10,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.627661996986717,
+      "nodes_added": 3,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 7,
+    "speech_embeddings": 7,
+    "voice_identities": 6,
+    "detected_faces": 218,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 10,
+    "semantic_memories": 3,
+    "nodes_after_clip": 534,
+    "edges_after_clip": 194,
+    "nodes_added_by_clip": 18,
+    "edges_added_by_clip": 9
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a long wooden table covered with a red and white checkered tablecloth.",
+      "One individual stands at the head of the table writing on a whiteboard mounted on the wall.",
+      "Several others are seated around the table, observing the whiteboard and engaging in conversation.",
+      "A clapperboard rests on the table near the foreground, along with a plastic water bottle.",
+      "The speaker <voice_467> addresses the group saying 'MAI: 喏，紫夏，然后对。LYS.'",
+      "Later, the speaker <voice_516> asks 'MAI: 这位是谁的？'",
+      "The speaker <voice_517> responds 'MAI: 我紫夏，或者写个L也行。'",
+      "The speaker <voice_518> continues the discussion asking 'MAI: 还有呢？你要你请两个。'",
+      "The speaker <voice_519> adds 'MAI: 对，但有一个可能来不了。'",
+      "Finally, the speaker <voice_520> clarifies 'MAI: 性别？', followed by 'MAI: 都是女的。'"
+    ],
+    "high_level_conclusions": [
+      "The speaker <voice_467> is leading a session involving name identification and attendance checks.",
+      "The speaker <voice_517> identifies herself as Zi Xia.",
+      "The speaker <voice_520> confirms that all participants in the group are female."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are seated around a long wooden table covered with a red and white checkered tablecloth.",
+      "One individual stands at the head of the table writing on a whiteboard mounted on the wall.",
+      "Several others are seated around the table, observing the whiteboard and engaging in conversation.",
+      "A clapperboard rests on the table near the foreground, along with a plastic water bottle.",
+      "The speaker <voice_467> addresses the group saying 'MAI: 喏，紫夏，然后对。LYS.'",
+      "Later, the speaker <voice_516> asks 'MAI: 这位是谁的？'",
+      "The speaker <voice_517> responds 'MAI: 我紫夏，或者写个L也行。'",
+      "The speaker <voice_518> continues the discussion asking 'MAI: 还有呢？你要你请两个。'",
+      "The speaker <voice_519> adds 'MAI: 对，但有一个可能来不了。'",
+      "Finally, the speaker <voice_520> clarifies 'MAI: 性别？', followed by 'MAI: 都是女的。'"
+    ],
+    "high_level_conclusions": [
+      "The speaker <voice_467> is leading a session involving name identification and attendance checks.",
+      "The speaker <voice_517> identifies herself as Zi Xia.",
+      "The speaker <voice_520> confirms that all participants in the group are female."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_40_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 18,
+    "edges_added": 9,
+    "nodes": [
+      {
+        "id": 516,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 这这位是谁的？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 517,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我丽夏，或者写个L也行。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 518,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 还有呢？你要你要请两个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 519,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对，但有一个可能来不了。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 520,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 性别？",
+            "MAI: 都是女的。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 521,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are seated around a long wooden table covered with a red and white checkered tablecloth."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 522,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One individual stands at the head of the table writing on a whiteboard mounted on the wall."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 523,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Several others are seated around the table, observing the whiteboard and engaging in conversation."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 524,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard rests on the table near the foreground, along with a plastic water bottle."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 525,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The speaker <voice_467> addresses the group saying 'MAI: 喏，紫夏，然后对。LYS.'"
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 526,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Later, the speaker <voice_516> asks 'MAI: 这位是谁的？'"
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 527,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The speaker <voice_517> responds 'MAI: 我紫夏，或者写个L也行。'"
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 528,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The speaker <voice_518> continues the discussion asking 'MAI: 还有呢？你要你请两个。'"
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 529,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The speaker <voice_519> adds 'MAI: 对，但有一个可能来不了。'"
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 530,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Finally, the speaker <voice_520> clarifies 'MAI: 性别？', followed by 'MAI: 都是女的。'"
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 531,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The speaker <voice_467> is leading a session involving name identification and attendance checks."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 532,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The speaker <voice_517> identifies herself as Zi Xia."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 533,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The speaker <voice_520> confirms that all participants in the group are female."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 467,
+        "target": 525,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 467,
+        "target": 531,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 516,
+        "target": 526,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 517,
+        "target": 527,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 517,
+        "target": 532,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 518,
+        "target": 528,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 519,
+        "target": 529,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 520,
+        "target": 530,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 520,
+        "target": 533,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_40_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_40_graph.pkl"
+  },
+  "memory_pickle_bytes": 12443100,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 59174.920765768,
+    "prepared_perf": 59180.49707467,
+    "ordered_start_perf": 60112.597946498,
+    "consumer_wait_ms": 0.0113119967863895,
+    "ready_to_ordered_ms": 932100.8718279991,
+    "preparation_work_ms": 5570.987248000165,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 202861.89559200284
+}

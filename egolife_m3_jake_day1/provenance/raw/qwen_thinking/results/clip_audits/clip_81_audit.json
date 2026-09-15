@@ -1,0 +1,484 @@
+{
+  "clip_id": 81,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0081.mp4",
+  "end_to_end_memory_generation_ms": 631180.6451289885,
+  "latency_ms": {
+    "clip_decode": 4333.919928001706,
+    "deepgram_asr": 2.766926001640968,
+    "mai_transcribe_asr": 2.5579230132279918,
+    "asr_total": 3.857707997667603,
+    "audio_segmentation": 8.42315900081303,
+    "speech_embedding_campplus": 1555.0916270003654,
+    "facial_detection_recognition_buffalo_l": 3881.619680003496,
+    "face_clustering": 7.353345994488336,
+    "vlm_memory_generation": 155741.39872999513,
+    "text_embedding": 466.91683199605905,
+    "graph_update_total": 714.3178260157583
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 81,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 1045,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789427132.5950422,
+          "status": "success",
+          "total_tokens": 211,
+          "request_end": 1789427133.0618029,
+          "latency_ms": 466.7608680028934
+        }
+      ],
+      "total_tokens": 211,
+      "latency_ms": 466.91683199605905
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.766926001640968,
+        "openrouter-mai-transcribe-2": 2.5579230132279918
+      },
+      "asr_total_ms": 3.857707997667603,
+      "audio_segmentation_ms": 8.42315900081303,
+      "speech_embedding_ms": 1555.0916270003654,
+      "graph_update_ms": 714.2141010117484,
+      "asr_segment_count": 10,
+      "speech_embedding_count": 10,
+      "voice_identity_count": 9,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2294.295907995547
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3881.619680003496,
+      "face_clustering_ms": 7.353345994488336,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 303,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4054.0200030081905
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1044>",
+        "<voice_1045>",
+        "<voice_1046>",
+        "<voice_483>",
+        "<voice_1047>",
+        "<voice_1048>",
+        "<voice_1049>",
+        "<voice_261>",
+        "<voice_636>"
+      ],
+      "context_preparation_ms": 4022.2206430044025,
+      "vlm_ms": 155741.39872999513,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"At 00:00, a group of people gather around a table covered with a red-and-white checkered cloth, featuring flowers and a clapperboard.\",\n\t\t\"A person in a light-colored top stands near a whiteboard while others sit around the table.\",\n\t\t\"At 00:04, the standing person discusses a potential collaboration between Haidilao and a plant-related theme.\",\n\t\t\"At 00:12, the seated individual on the left listens attentively while the person standing elaborates on a subscription plan.\",\n\t\t\"At 00:20, the camera perspective shifts to show the legs of the person holding the camera.\",\n\t\t\"At 00:25, a person in an orange shirt walks into the background near a projector screen.\",\n\t\t\"Throughout the clip, the group remains engaged in a discussion about planting activities and brand collaborations.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be coordinating a project involving planting or a subscription service related to plants.\",\n\t\t\"MAI is the primary speaker driving the discussion about the specific plans and brands involved.\",\n\t\t\"The setting includes filming equipment (clapperboard), suggesting a production environment.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "At 00:00, a group of people gather around a table covered with a red-and-white checkered cloth, featuring flowers and a clapperboard.",
+          "A person in a light-colored top stands near a whiteboard while others sit around the table.",
+          "At 00:04, the standing person discusses a potential collaboration between Haidilao and a plant-related theme.",
+          "At 00:12, the seated individual on the left listens attentively while the person standing elaborates on a subscription plan.",
+          "At 00:20, the camera perspective shifts to show the legs of the person holding the camera.",
+          "At 00:25, a person in an orange shirt walks into the background near a projector screen.",
+          "Throughout the clip, the group remains engaged in a discussion about planting activities and brand collaborations."
+        ],
+        "high_level_conclusions": [
+          "The group appears to be coordinating a project involving planting or a subscription service related to plants.",
+          "MAI is the primary speaker driving the discussion about the specific plans and brands involved.",
+          "The setting includes filming equipment (clapperboard), suggesting a production environment."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 81,
+          "call_id": "3bf7beab-05b0-47fa-8252-7b3990421f3c",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789426976.852326,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"At 00:00, a group of people gather around a table covered with a red-and-white checkered cloth, featuring flowers and a clapperboard.\",\n\t\t\"A person in a light-colored top stands near a whiteboard while others sit around the table.\",\n\t\t\"At 00:04, the standing person discusses a potential collaboration between Haidilao and a plant-related theme.\",\n\t\t\"At 00:12, the seated individual on the left listens attentively while the person standing elaborates on a subscription plan.\",\n\t\t\"At 00:20, the camera perspective shifts to show the legs of the person holding the camera.\",\n\t\t\"At 00:25, a person in an orange shirt walks into the background near a projector screen.\",\n\t\t\"Throughout the clip, the group remains engaged in a discussion about planting activities and brand collaborations.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be coordinating a project involving planting or a subscription service related to plants.\",\n\t\t\"MAI is the primary speaker driving the discussion about the specific plans and brands involved.\",\n\t\t\"The setting includes filming equipment (clapperboard), suggesting a production environment.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be a wide-angle or fisheye lens (indicated by the circular vignette).\n    *   **Setting:** A room with a table covered in a red-and-white checkered tablecloth. There's a whiteboard on the wall.\n    *   **People:**\n        *   One person sitting on the left (dark hair, black top).\n        *   One person standing near the whiteboard (white/light pink top).\n        *   One person sitting on the right (blonde/light hair, white top).\n        *   One person sitting further right (dark hair, patterned top).\n        *   Another person appears briefly in the background (orange shirt) around 25s.\n        *   The camera wearer (POV) is visible in some frames (legs/feet at the bottom).\n    *   **Objects:** Flowers, papers, a clapperboard on the table, a water bottle.\n    *   **Action:** People seem to be interacting, possibly preparing something or discussing. The person in white stands up and moves around the table. The person on the left is seated mostly still. The person on the right is seated.\n*   **Voice Features:**\n    *   `<voice_1044>`: \"¿Halliéoláo? | MAI: 也可以种一些。\" (Can also plant some.) - Timestamp 00:00-00:02.\n    *   `<voice_1045>`: \"¿Halliéoláo? Ok. | MAI: 海底捞。\" (Haidilao.) - Timestamp 00:01-00:03.\n    *   `<voice_1046>`: \"¿Halliéoláo? Ok. | MAI: 那个那个橘猫草也可以种。\" (That orange cat grass can also be planted.) - Timestamp 00:02-00:05.\n    *   `<voice_483>`: \"MAI: 海底捞最近不是跟樱桃小丸子联名点，它那个那个植绒。\" (Haidilao recently isn't cherry blossom collaboration point... velvet planting?) - Timestamp 00:04-00:10.\n    *   `<voice_1047>`: \"MAI: OK.\", \"MAI: 嗯。\" - Timestamp 00:09-00:12.\n    *   `<voice_1048>`: \"MAI: 挺好。\" (Pretty good.) - Timestamp 00:11-00:13.\n    *   `<voice_1049>`: \"MAI: 我说他就不动，我就过来观察。我本来想买植绒，我想订阅一个月。\" (I said he wouldn't move, so I came over to observe. I originally wanted to buy velvet planting, I want to subscribe for a month.) - Timestamp 00:12-00:22.\n    *   `<voice_261>`: \"MAI: 走，上海底捞种树去。\" (Let's go, to Haidilao plant trees.) - Timestamp 00:22-00:24.\n    *   `<voice_636>`: \"MAI: 好，到了我了。\" (Okay, it's my turn.) - Timestamp 00:25-00:28.\n\n**2. Map Voice to Visuals:**\n*   The prompt asks to preserve speaker identity using voice IDs.\n*   Most speech is attributed to \"MAI\".\n*   In the video, there is a person standing near the whiteboard wearing light clothing who seems to be leading the conversation or moving around actively. This likely corresponds to MAI.\n*   The person on the left is seated and listening/reacting.\n*   The person on the right is seated.\n*   Since there are no explicit face IDs provided in the `character_features` section (only voice features are listed in the text block), I cannot create equivalences like `Equivalence: <face_x>, <voice_y>` unless I infer them from the context or if the prompt implies I should use the provided voice IDs directly in the descriptions/conclusions without mapping to faces if faces aren't explicitly tagged with IDs in the input data structure provided in the prompt description (though the prompt says \"Each feature is either a face... or a voice...\"). Wait, looking closely at the input provided in the prompt:\n    *   \"Face features:\" is empty.\n    *   \"Voice features:\" contains the list above.\n    *   Therefore, I cannot make equivalences because there are no face IDs. I must strictly follow the instruction: \"If no face IDs are supplied, do not invent any.\" and \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\"\n    *   However, the instruction also says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So I need to create memories for `<voice_1044>`, `<voice_1045>`, etc., attributing them to the speaker (MAI).\n    *   Wait, the instruction says \"using the exact ID as the speaker\". It doesn't say I have to link it to a specific person visually if I don't know who it is, but I should describe the scene where the voice occurs.\n    *   Actually, usually in these tasks, if there are no face IDs, I just describe the scene generally or attribute the voice to the generic speaker ID. But the instruction says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID... include at least one episodic memory... using the exact ID as the speaker.\"\n    *   So the memory strings should look like: \"[<voice_ID>] Speaker says X.\"\n    *   Let's re-read carefully: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   Okay, I will construct the memories using the voice IDs.\n\n**3. Construct Video Description:**\n*   Need to break down the video into atomic events.\n*   Scene: Group of people around a table with flowers and a clapperboard.\n*   Action: Person in white stands and talks. Others listen.\n*   Specific timestamps match the voice clips roughly.\n*   Frame 0.00s - 10.00s: Group gathered around table. Person in white stands near whiteboard. Conversation about planting/planting velvet.\n*   Frame 10.00s - 20.00s: Person in white continues talking/moving. Person on left seated.\n*   Frame 20.00s - 25.00s: Camera pans slightly, showing legs of camera wearer. Person in orange shirt enters background.\n*   Frame 25.00s - End: Person in orange shirt walks away. Person in white gestures.\n\n**4. Construct High-Level Conclusions:**\n*   Since there are no face IDs, I cannot state equivalences.\n*   I need to reason about the situation. They are discussing planting things (\"plant some\", \"cat grass\", \"velvet planting\", \"subscribe for a month\"). This sounds like a discussion about a subscription service or a gardening project, possibly related to the brand \"Haidilao\" mentioned in the ASR (which might be a metaphorical reference or a specific product line).\n*   The presence of a clapperboard suggests a filming session or rehearsal.\n*   The conversation shifts from general planting to a specific plan involving \"subscription\" and \"Haidilao\".\n*   Conclusion: The group is planning a project involving planting or subscriptions, potentially linked to a brand collaboration or a specific product line discussed by MAI.\n\n**5. Refine Output:**\n*   Ensure JSON validity.\n*   Ensure voice IDs are used correctly in memories.\n*   Ensure no face IDs are invented.\n\n**Drafting Memories:**\n*   `<voice_1044>`: MAI suggests planting some items.\n*   `<voice_1045>`: MAI mentions Haidilao.\n*   `<voice_1046>`: MAI mentions orange cat grass can be planted.\n*   `<voice_483>`: MAI discusses Haidilao's recent collaboration with Cherry Blossom Little Winkle (Cherry Blossom Mommy) regarding velvet planting.\n*   `<voice_1047>`: MAI confirms OK.\n*   `<voice_1048>`: MAI says it's pretty good.\n*   `<voice_1049>`: MAI explains she observed someone not moving and wanted to subscribe to a monthly velvet planting plan.\n*   `<voice_261>`: MAI suggests going to Haidilao to plant trees.\n*   `<voice_636>`: MAI indicates it is her turn.\n\n**Drafting Video Description:**\n*   At 00:00, a group of individuals gathers around a table covered with a checkered cloth, featuring flowers and a clapperboard.\n*   A person in a light-colored top stands near a whiteboard while others sit around the table.\n*   At 00:04, the person standing discusses a potential collaboration between Haidilao and a plant-related theme.\n*   At 00:12, the seated individual on the left listens attentively while the person standing elaborates on a subscription plan.\n*   At 00:20, the camera perspective shifts to show the legs of the person holding the camera.\n*   At 00:25, a person in an orange shirt walks into the background near a projector screen.\n*   Throughout the clip, the group remains engaged in a discussion about planting activities.\n\n**Drafting High-Level Conclusions:**\n*   The group appears to be coordinating a project involving planting or a subscription service related to plants.\n*   MAI is the primary speaker driving the discussion about the specific plans and brands involved.\n*   The setting includes filming equipment (clapperboard), suggesting a production environment.\n\n**Final Check against Constraints:**\n*   \"Preserve speaker identity... using the exact ID as the speaker.\" -> Done in memories.\n*   \"Do not replace the ID with 'a speaker'...\" -> Done.\n*   \"If no face IDs are supplied, do not invent any.\" -> Correctly handled (no Equivalence lines).\n*   \"Keep dialogue grounded...\" -> Done.\n*   \"Output Format: JSON object...\" -> Will ensure strict JSON.\n\nOne detail: The prompt says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". I should probably combine short ones or keep them distinct if they represent different moments. The instruction says \"Preserve distinct substantive utterances as separate atomic memories.\" So I will split them if they are distinct enough, but grouping conversational turns makes sense for flow. However, to be safe and precise with \"distinct substantive utterances\", I will treat the main blocks of speech as memories.\nActually, looking at the instruction: \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". It implies one per voice ID is sufficient, but \"Preserve distinct substantive utterances as separate atomic memories\" suggests splitting if there are multiple distinct topics. Given the short nature of some, I'll group the conversational exchanges under their respective voice IDs to summarize the interaction accurately without being overly granular if it breaks the flow too much, but since the instruction emphasizes preserving distinct utterances, I will try to capture the main points associated with each ID.\nWait, \"For every supplied voice ID... include at least one episodic memory\". So one per ID is the minimum requirement. I will provide one summary memory per voice ID to satisfy the constraint efficiently.\n\nRevised Plan for Memories:\n*   `<voice_1044>`: MAI suggests planting some items.\n*   `<voice_1045>`: MAI mentions Haidilao.\n*   `<voice_1046>`: MAI notes orange cat grass can be planted.\n*   `<voice_483>`: MAI discusses Haidilao's collaboration with Cherry Blossom Little Winkle regarding velvet planting.\n*   `<voice_1047>`: MAI confirms the details are okay.\n*   `<voice_1048>`: MAI comments that the idea is quite good.\n*   `<voice_1049>`: MAI explains she observed someone not moving and intended to subscribe to a monthly velvet planting plan.\n*   `<voice_261>`: MAI proposes going to Haidilao to plant trees.\n*   `<voice_636>`: MAI states it is now her turn.\n\nWait, I need to check if I should put the voice ID inside the memory string or just use it to identify the speaker. \"using the exact ID as the speaker\". Example: `[<voice_1044>] MAI says...`. Or just the text. The instruction says \"include at least one episodic memory... using the exact ID as the speaker.\" Usually, this means the memory text itself identifies the speaker via the ID. E.g., \"At 00:00, <voice_1044> speaks: '...'\". I will format it clearly.\n\nLet's refine the JSON structure.\n`\"video_description\": [...]`\n`\"high_level_conclusions\": [...]`\n\nI will write the descriptions to be concise and atomic.\n\nOne correction: The prompt says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" I am using the IDs from the input (`<voice_1044>`, etc.).\n\nLet's assemble the JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"At 00:00, a group of people gather around a table covered with a red-and-white checkered cloth, featuring flowers and a clapperboard.\",\n\t\t\"A person in a light-colored top stands near a whiteboard while others sit around the table.\",\n\t\t\"At 00:04, the standing person discusses a potential collaboration between Haidilao and a plant-related theme.\",\n\t\t\"At 00:12, the seated individual on the left listens attentively while the person standing elaborates on a subscription plan.\",\n\t\t\"At 00:20, the camera perspective shifts to show the legs of the person holding the camera.\",\n\t\t\"At 00:25, a person in an orange shirt walks into the background near a projector screen.\",\n\t\t\"Throughout the clip, the group remains engaged in a discussion about planting activities and brand collaborations.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be coordinating a project involving planting or a subscription service related to plants.\",\n\t\t\"MAI is the primary speaker driving the discussion about the specific plans and brands involved.\",\n\t\t\"The setting includes filming equipment (clapperboard), suggesting a production environment.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10912,
+          "output_tokens": 3390,
+          "total_tokens": 14302,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0016529957065358758,
+            "media_preparation_ms": 64.66466801066417,
+            "processor_tokenization_ms": 411.5263600106118,
+            "device_transfer_ms": 39.487606001785025,
+            "cuda_generation_ms": 155191.44422699173,
+            "decoding_ms": 3.7363659939728677
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 155711.03516800213,
+          "request_end": 1789427132.5937266,
+          "latency_ms": 155741.39872999513,
+          "client_wall_clock_latency_ms": 155741.39872999513
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.0739090028218925,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.029816001188009977,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 10,
+    "speech_embeddings": 10,
+    "voice_identities": 9,
+    "detected_faces": 303,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1060,
+    "edges_after_clip": 364,
+    "nodes_added_by_clip": 16,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "At 00:00, a group of people gather around a table covered with a red-and-white checkered cloth, featuring flowers and a clapperboard.",
+      "A person in a light-colored top stands near a whiteboard while others sit around the table.",
+      "At 00:04, the standing person discusses a potential collaboration between Haidilao and a plant-related theme.",
+      "At 00:12, the seated individual on the left listens attentively while the person standing elaborates on a subscription plan.",
+      "At 00:20, the camera perspective shifts to show the legs of the person holding the camera.",
+      "At 00:25, a person in an orange shirt walks into the background near a projector screen.",
+      "Throughout the clip, the group remains engaged in a discussion about planting activities and brand collaborations."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be coordinating a project involving planting or a subscription service related to plants.",
+      "MAI is the primary speaker driving the discussion about the specific plans and brands involved.",
+      "The setting includes filming equipment (clapperboard), suggesting a production environment."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "At 00:00, a group of people gather around a table covered with a red-and-white checkered cloth, featuring flowers and a clapperboard.",
+      "A person in a light-colored top stands near a whiteboard while others sit around the table.",
+      "At 00:04, the standing person discusses a potential collaboration between Haidilao and a plant-related theme.",
+      "At 00:12, the seated individual on the left listens attentively while the person standing elaborates on a subscription plan.",
+      "At 00:20, the camera perspective shifts to show the legs of the person holding the camera.",
+      "At 00:25, a person in an orange shirt walks into the background near a projector screen.",
+      "Throughout the clip, the group remains engaged in a discussion about planting activities and brand collaborations."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be coordinating a project involving planting or a subscription service related to plants.",
+      "MAI is the primary speaker driving the discussion about the specific plans and brands involved.",
+      "The setting includes filming equipment (clapperboard), suggesting a production environment."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_81_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 16,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1044,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: ¿Halliéoláo? | MAI: 也可以种一些。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1045,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: ¿Halliéoláo? Ok. | MAI: 海底捞。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1046,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: ¿Halliéoláo? Ok. | MAI: 那那个豌豆苗也可以种。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1047,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: OK。",
+            "MAI: 嗯。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1048,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 特好。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1049,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我说他摆不动，我就过来订阅。我本来想买盆栽，我想订阅一个月。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1050,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:00, a group of people gather around a table covered with a red-and-white checkered cloth, featuring flowers and a clapperboard."
+          ],
+          "timestamp": 81
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1051,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person in a light-colored top stands near a whiteboard while others sit around the table."
+          ],
+          "timestamp": 81
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1052,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:04, the standing person discusses a potential collaboration between Haidilao and a plant-related theme."
+          ],
+          "timestamp": 81
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1053,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:12, the seated individual on the left listens attentively while the person standing elaborates on a subscription plan."
+          ],
+          "timestamp": 81
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1054,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:20, the camera perspective shifts to show the legs of the person holding the camera."
+          ],
+          "timestamp": 81
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1055,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:25, a person in an orange shirt walks into the background near a projector screen."
+          ],
+          "timestamp": 81
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1056,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Throughout the clip, the group remains engaged in a discussion about planting activities and brand collaborations."
+          ],
+          "timestamp": 81
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1057,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be coordinating a project involving planting or a subscription service related to plants."
+          ],
+          "timestamp": 81
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1058,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "MAI is the primary speaker driving the discussion about the specific plans and brands involved."
+          ],
+          "timestamp": 81
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1059,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The setting includes filming equipment (clapperboard), suggesting a production environment."
+          ],
+          "timestamp": 81
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_81_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_81_graph.pkl"
+  },
+  "memory_pickle_bytes": 25219410,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 67688.861934048,
+    "prepared_perf": 67694.669928024,
+    "ordered_start_perf": 68151.427496144,
+    "consumer_wait_ms": 0.012042990420013666,
+    "ready_to_ordered_ms": 456757.568119996,
+    "preparation_work_ms": 5802.678997002658,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 166582.20610501303
+}

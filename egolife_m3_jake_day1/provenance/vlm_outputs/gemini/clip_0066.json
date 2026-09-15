@@ -1,0 +1,78 @@
+{
+  "clip_id": 66,
+  "source": {
+    "segment_id": 66,
+    "source": "DAY1_A1_JAKE_11410000.mp4",
+    "source_clock": "11410000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42060.0,
+    "absolute_end_seconds": 42090.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0066.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48030.315589139,
+      "prepared_perf": 48037.62036369,
+      "ordered_start_perf": 48184.911690722,
+      "consumer_wait_ms": 0.010809999366756529,
+      "ready_to_ordered_ms": 147291.32703199866,
+      "preparation_work_ms": 7299.548617003893,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a checkered tablecloth, conducting a production meeting.",
+      "A clapperboard and various props rest on the table in front of the participants.",
+      "A woman sitting on the right side of the table speaks and gestures while discussing script ideas.",
+      "Another participant contributes to the discussion regarding time limitations for writing a script.",
+      "Two people stand in the background near a whiteboard with notes written on it.",
+      "The woman sitting on the right concludes her explanation about utilizing an existing script.",
+      "A woman with pink hair checks her phone and mentions Lucia to the group.",
+      "The group continues discussing casting and roles for the shoot."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating on a film or video production project and facing tight time constraints.",
+      "They are considering adapting an existing script or short video concept rather than writing an original one from scratch.",
+      "The participants are dividing roles and referencing specific individuals, such as Lucia, for their shoot."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table with a checkered tablecloth, conducting a production meeting.\",\n    \"A clapperboard and various props rest on the table in front of the participants.\",\n    \"A woman sitting on the right side of the table speaks and gestures while discussing script ideas.\",\n    \"Another participant contributes to the discussion regarding time limitations for writing a script.\",\n    \"Two people stand in the background near a whiteboard with notes written on it.\",\n    \"The woman sitting on the right concludes her explanation about utilizing an existing script.\",\n    \"A woman with pink hair checks her phone and mentions Lucia to the group.\",\n    \"The group continues discussing casting and roles for the shoot.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is collaborating on a film or video production project and facing tight time constraints.\",\n    \"They are considering adapting an existing script or short video concept rather than writing an original one from scratch.\",\n    \"The participants are dividing roles and referencing specific individuals, such as Lucia, for their shoot.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 66,
+      "call_id": "a0f85257-da21-4d85-902a-5f1f16be012e",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407011.2806542,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67202,
+      "output_tokens": 1400,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 100882.51919599861
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table with a checkered tablecloth, conducting a production meeting.\",\n    \"A clapperboard and various props rest on the table in front of the participants.\",\n    \"A woman sitting on the right side of the table speaks and gestures while discussing script ideas.\",\n    \"Another participant contributes to the discussion regarding time limitations for writing a script.\",\n    \"Two people stand in the background near a whiteboard with notes written on it.\",\n    \"The woman sitting on the right concludes her explanation about utilizing an existing script.\",\n    \"A woman with pink hair checks her phone and mentions Lucia to the group.\",\n    \"The group continues discussing casting and roles for the shoot.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is collaborating on a film or video production project and facing tight time constraints.\",\n    \"They are considering adapting an existing script or short video concept rather than writing an original one from scratch.\",\n    \"The participants are dividing roles and referencing specific individuals, such as Lucia, for their shoot.\"\n  ]\n}\n```",
+      "total_tokens": 68602,
+      "request_end": 1789407112.163288,
+      "latency_ms": 100882.63106600061,
+      "client_wall_clock_latency_ms": 100882.63106600061,
+      "api_request_wall_clock_latency_ms": 100882.63106600061
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_66_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

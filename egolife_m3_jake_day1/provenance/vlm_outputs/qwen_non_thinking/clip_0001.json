@@ -1,0 +1,79 @@
+{
+  "clip_id": 1,
+  "source": {
+    "source": "DAY1_A1_JAKE_11094208.mp4",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 17.62999999999738
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A first-person view shows a hand holding a smartphone displaying a timer application.",
+      "The person holding the phone stands in front of a group of five people sitting around a table.",
+      "The group members are wearing VR headsets and appear to be engaged in an activity.",
+      "At 00:04, the person holding the phone begins speaking while looking at the screen.",
+      "The person holding the phone interacts with the smartphone interface, scrolling through options.",
+      "At 00:12, the person initiates the timer function on the smartphone.",
+      "The timer on the phone counts down from 00:02:30 to 00:00:00.",
+      "Once the timer reaches zero, the person places their hands on the table near the participants."
+    ],
+    "high_level_conclusions": [
+      "Equivalence: <face_0>, <voice_0>",
+      "Equivalence: <face_1>, <voice_1>",
+      "The group of people is participating in a virtual reality session or game.",
+      "The person filming is acting as a moderator or facilitator for the session.",
+      "The use of a countdown timer suggests a timed challenge or specific duration for the VR activity."
+    ]
+  },
+  "selected_final_text": "```json\n{\n    \"video_description\": [\n        \"A first-person view shows a hand holding a smartphone displaying a timer application.\",\n        \"The person holding the phone stands in front of a group of five people sitting around a table.\",\n        \"The group members are wearing VR headsets and appear to be engaged in an activity.\",\n        \"At 00:04, the person holding the phone begins speaking while looking at the screen.\",\n        \"The person holding the phone interacts with the smartphone interface, scrolling through options.\",\n        \"At 00:12, the person initiates the timer function on the smartphone.\",\n        \"The timer on the phone counts down from 00:02:30 to 00:00:00.\",\n        \"Once the timer reaches zero, the person places their hands on the table near the participants.\"\n    ],\n    \"high_level_conclusions\": [\n        \"Equivalence: <face_0>, <voice_0>\",\n        \"Equivalence: <face_1>, <voice_1>\",\n        \"The group of people is participating in a virtual reality session or game.\",\n        \"The person filming is acting as a moderator or facilitator for the session.\",\n        \"The use of a countdown timer suggests a timed challenge or specific duration for the VR activity.\"\n    ]\n}\n```\n",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 1,
+      "call_id": "7167ba17-003b-4c49-8f5a-a7e211d2159a",
+      "purpose": "memory_construction",
+      "model": "Qwen/Qwen3.5-4B",
+      "provider": "local CUDA",
+      "request_start": 1789406972.4818642,
+      "ttft_ms": null,
+      "media": {
+        "frame_count": 36,
+        "video_duration_seconds": 17.6
+      },
+      "response": "```json\n{\n    \"video_description\": [\n        \"A first-person view shows a hand holding a smartphone displaying a timer application.\",\n        \"The person holding the phone stands in front of a group of five people sitting around a table.\",\n        \"The group members are wearing VR headsets and appear to be engaged in an activity.\",\n        \"At 00:04, the person holding the phone begins speaking while looking at the screen.\",\n        \"The person holding the phone interacts with the smartphone interface, scrolling through options.\",\n        \"At 00:12, the person initiates the timer function on the smartphone.\",\n        \"The timer on the phone counts down from 00:02:30 to 00:00:00.\",\n        \"Once the timer reaches zero, the person places their hands on the table near the participants.\"\n    ],\n    \"high_level_conclusions\": [\n        \"Equivalence: <face_0>, <voice_0>\",\n        \"Equivalence: <face_1>, <voice_1>\",\n        \"The group of people is participating in a virtual reality session or game.\",\n        \"The person filming is acting as a moderator or facilitator for the session.\",\n        \"The use of a countdown timer suggests a timed challenge or specific duration for the VR activity.\"\n    ]\n}\n```\n",
+      "returned_model": "Qwen/Qwen3.5-4B",
+      "input_tokens": 6156,
+      "output_tokens": 297,
+      "total_tokens": 6453,
+      "finish_reason": "stop",
+      "generation": {
+        "max_new_tokens": 8192,
+        "do_sample": false,
+        "repetition_penalty": 1.08
+      },
+      "timings": {
+        "queue_wait_ms": 0.001753003743942827,
+        "media_preparation_ms": 40.598884006612934,
+        "processor_tokenization_ms": 206.63147500454215,
+        "device_transfer_ms": 29.868140998587478,
+        "cuda_generation_ms": 22269.18083200144,
+        "decoding_ms": 0.8579119967180304
+      },
+      "submitted_image_count": 36,
+      "processed_image_count": 36,
+      "video_frame_count": 36,
+      "vlm_fps": 2.0,
+      "cuda_synchronized": true,
+      "server_total_ms": 22547.284601001593,
+      "request_end": 1789406995.0505748,
+      "latency_ms": 22568.70521199744,
+      "client_wall_clock_latency_ms": 22568.70521199744
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/qwen_non_thinking/results/clip_audits/clip_1_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/qwen_non_thinking/results/qwen_calls.jsonl"
+  ]
+}

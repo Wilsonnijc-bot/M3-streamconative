@@ -1,0 +1,82 @@
+{
+  "clip_id": 67,
+  "source": {
+    "segment_id": 67,
+    "source": "DAY1_A1_JAKE_11413000.mp4",
+    "source_clock": "11413000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42090.0,
+    "absolute_end_seconds": 42120.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0067.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48075.829204249,
+      "prepared_perf": 48206.710415234,
+      "ordered_start_perf": 48299.757531652,
+      "consumer_wait_ms": 0.009406998287886381,
+      "ready_to_ordered_ms": 93047.11641799804,
+      "preparation_work_ms": 130881.06611300464,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a red-and-white checkered tablecloth in a room, with a clapperboard resting on the table.",
+      "A person with reddish-brown hair stands by a whiteboard at the far end of the room.",
+      "A person sitting on the right side of the table points toward the whiteboard.",
+      "<voice_755> points out that a name was written backward on the board.",
+      "<voice_756> reads out or corrects the characters written on the whiteboard.",
+      "<voice_0> remarks that it was almost right.",
+      "A man briefly enters the frame in the background near the doorway behind the whiteboard.",
+      "<voice_757> jokes about a mutation occurring after chromosome testing, eliciting amusement.",
+      "The woman in black sitting on the left side of the table smiles and laughs along with the discussion.",
+      "<voice_758> jokingly asks if someone has both of them.",
+      "<voice_759> makes a brief comment during the conversation.",
+      "<voice_760> cheerfully calls for their prop to be brought out while gesturing with their hand.",
+      "The woman in black looks toward the camera with an amused expression."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be a film or video production crew preparing for a scene, indicated by the clapperboard, lighting equipment, and discussion of props and boards.",
+      "The atmosphere among the team members is casual, lighthearted, and collaborative as they joke and laugh together during preparation."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a red-and-white checkered tablecloth in a room, with a clapperboard resting on the table.\",\n  \"A person with reddish-brown hair stands by a whiteboard at the far end of the room.\",\n  \"A person sitting on the right side of the table points toward the whiteboard.\",\n  \"<voice_755> points out that a name was written backward on the board.\",\n  \"<voice_756> reads out or corrects the characters written on the whiteboard.\",\n  \"<voice_0> remarks that it was almost right.\",\n  \"A man briefly enters the frame in the background near the doorway behind the whiteboard.\",\n  \"<voice_757> jokes about a mutation occurring after chromosome testing, eliciting amusement.\",\n  \"The woman in black sitting on the left side of the table smiles and laughs along with the discussion.\",\n  \"<voice_758> jokingly asks if someone has both of them.\",\n  \"<voice_759> makes a brief comment during the conversation.\",\n  \"<voice_760> cheerfully calls for their prop to be brought out while gesturing with their hand.\",\n  \"The woman in black looks toward the camera with an amused expression.\"\n ],\n \"high_level_conclusions\": [\n  \"The group appears to be a film or video production crew preparing for a scene, indicated by the clapperboard, lighting equipment, and discussion of props and boards.\",\n  \"The atmosphere among the team members is casual, lighthearted, and collaborative as they joke and laugh together during preparation.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 67,
+      "call_id": "4200966b-ef3e-4bf7-8a86-fb0c7e6836ef",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407123.466121,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66896,
+      "output_tokens": 1378,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 181682.16585399932
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a red-and-white checkered tablecloth in a room, with a clapperboard resting on the table.\",\n  \"A person with reddish-brown hair stands by a whiteboard at the far end of the room.\",\n  \"A person sitting on the right side of the table points toward the whiteboard.\",\n  \"<voice_755> points out that a name was written backward on the board.\",\n  \"<voice_756> reads out or corrects the characters written on the whiteboard.\",\n  \"<voice_0> remarks that it was almost right.\",\n  \"A man briefly enters the frame in the background near the doorway behind the whiteboard.\",\n  \"<voice_757> jokes about a mutation occurring after chromosome testing, eliciting amusement.\",\n  \"The woman in black sitting on the left side of the table smiles and laughs along with the discussion.\",\n  \"<voice_758> jokingly asks if someone has both of them.\",\n  \"<voice_759> makes a brief comment during the conversation.\",\n  \"<voice_760> cheerfully calls for their prop to be brought out while gesturing with their hand.\",\n  \"The woman in black looks toward the camera with an amused expression.\"\n ],\n \"high_level_conclusions\": [\n  \"The group appears to be a film or video production crew preparing for a scene, indicated by the clapperboard, lighting equipment, and discussion of props and boards.\",\n  \"The atmosphere among the team members is casual, lighthearted, and collaborative as they joke and laugh together during preparation.\"\n ]\n}\n```",
+      "total_tokens": 68274,
+      "request_end": 1789407305.1484058,
+      "latency_ms": 181682.2784360047,
+      "client_wall_clock_latency_ms": 181682.2784360047,
+      "api_request_wall_clock_latency_ms": 181682.2784360047
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_67_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

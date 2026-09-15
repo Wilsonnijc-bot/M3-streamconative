@@ -1,0 +1,453 @@
+{
+  "clip_id": 97,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0097.mp4",
+  "end_to_end_memory_generation_ms": 668799.7886500088,
+  "latency_ms": {
+    "clip_decode": 5937.201823006035,
+    "deepgram_asr": 250.93888000992592,
+    "mai_transcribe_asr": 1193.153603002429,
+    "asr_total": 1194.0951840078924,
+    "audio_segmentation": 6.17681400035508,
+    "speech_embedding_campplus": 1031.909575991449,
+    "facial_detection_recognition_buffalo_l": 4100.0066499982495,
+    "face_clustering": 24.695704007172026,
+    "vlm_memory_generation": 224503.16460400063,
+    "text_embedding": 670.573711002362,
+    "graph_update_total": 518.4367489855504
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 97,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 1020,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789430602.169244,
+          "status": "success",
+          "total_tokens": 209,
+          "request_end": 1789430602.8396232,
+          "latency_ms": 670.3795550129144
+        }
+      ],
+      "total_tokens": 209,
+      "latency_ms": 670.573711002362
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 250.93888000992592,
+        "openrouter-mai-transcribe-2": 1193.153603002429
+      },
+      "asr_total_ms": 1194.0951840078924,
+      "audio_segmentation_ms": 6.17681400035508,
+      "speech_embedding_ms": 1031.909575991449,
+      "graph_update_ms": 512.7767480007606,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1563.3538139954908
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4100.0066499982495,
+      "face_clustering_ms": 24.695704007172026,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 340,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4310.6292839947855
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_364>",
+        "<voice_276>",
+        "<voice_737>",
+        "<voice_500>",
+        "<voice_841>"
+      ],
+      "context_preparation_ms": 3998.5805039905244,
+      "vlm_ms": 224503.16460400063,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"Three individuals are gathered around a wooden table covered with a red-and-white checkered cloth in a room equipped with lighting gear and a whiteboard.\",\n\t\t\"A person wearing a white shirt stands near the whiteboard while two others sit at the table.\",\n\t\t\"An individual wearing an orange t-shirt enters the room from the left side and stands near a projector screen.\",\n\t\t\"The person in the white shirt gestures towards the whiteboard during the discussion.\",\n\t\t\"The person in the black top sits at the table interacting with various items on the table.\",\n\t\t\"The camera wearer remains seated, their legs visible in the foreground throughout the clip.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_364> states that the preparations were done over the past few days and asks if others should dance instead of wasting time on short dramas.\",\n\t\t\"Speaker <voice_276> asks if they should dance alone.\",\n\t\t\"Speaker <voice_737> confirms that Lin Han can also dance.\",\n\t\t\"Speaker <voice_500> asks if Shu can also dance.\",\n\t\t\"Speaker <voice_841> suggests they could proceed if there is a ready-made script available.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Three individuals are gathered around a wooden table covered with a red-and-white checkered cloth in a room equipped with lighting gear and a whiteboard.",
+          "A person wearing a white shirt stands near the whiteboard while two others sit at the table.",
+          "An individual wearing an orange t-shirt enters the room from the left side and stands near a projector screen.",
+          "The person in the white shirt gestures towards the whiteboard during the discussion.",
+          "The person in the black top sits at the table interacting with various items on the table.",
+          "The camera wearer remains seated, their legs visible in the foreground throughout the clip."
+        ],
+        "high_level_conclusions": [
+          "Speaker <voice_364> states that the preparations were done over the past few days and asks if others should dance instead of wasting time on short dramas.",
+          "Speaker <voice_276> asks if they should dance alone.",
+          "Speaker <voice_737> confirms that Lin Han can also dance.",
+          "Speaker <voice_500> asks if Shu can also dance.",
+          "Speaker <voice_841> suggests they could proceed if there is a ready-made script available."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 97,
+          "call_id": "2535e0b8-4d00-4f15-bb57-b5e483ace232",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789430377.6651568,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"Three individuals are gathered around a wooden table covered with a red-and-white checkered cloth in a room equipped with lighting gear and a whiteboard.\",\n\t\t\"A person wearing a white shirt stands near the whiteboard while two others sit at the table.\",\n\t\t\"An individual wearing an orange t-shirt enters the room from the left side and stands near a projector screen.\",\n\t\t\"The person in the white shirt gestures towards the whiteboard during the discussion.\",\n\t\t\"The person in the black top sits at the table interacting with various items on the table.\",\n\t\t\"The camera wearer remains seated, their legs visible in the foreground throughout the clip.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_364> states that the preparations were done over the past few days and asks if others should dance instead of wasting time on short dramas.\",\n\t\t\"Speaker <voice_276> asks if they should dance alone.\",\n\t\t\"Speaker <voice_737> confirms that Lin Han can also dance.\",\n\t\t\"Speaker <voice_500> asks if Shu can also dance.\",\n\t\t\"Speaker <voice_841> suggests they could proceed if there is a ready-made script available.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be held by someone sitting down (legs visible in foreground).\n    *   There are three people around a table initially. One standing (white shirt), one seated left (black top), one seated right (light top).\n    *   Later, a fourth person enters from the left wearing an orange/pink t-shirt and light pants.\n    *   They seem to be discussing something related to props or preparation (clapperboard on table, items on table).\n    *   The person in white gestures towards a whiteboard.\n    *   The person in black interacts with items on the table.\n    *   The person in orange moves around, sometimes gesturing.\n    *   The camera wearer (legs visible) is observing.\n*   **Voice Features:**\n    *   `<voice_364>`: \"MAI: 然后，唉，就这些准备都是我们这几天准备，对吧？其他的浪费时间的小短剧。跳舞吗？\" (Then, uh, these preparations are ours over these few days, right? Other time-wasting short dramas. Dance?)\n    *   `<voice_276>`: \"MAI: 我一个人跳舞吗？\" (Me alone dance?)\n    *   `<voice_737>`: \"MAI: 林涵也，对，林涵也可以跳。\" (Lin Han also, yes, Lin Han can also dance.)\n    *   `<voice_500>`: \"MAI: 舒也可以跳，是吗？\" (Shu can also dance, is that so?)\n    *   `<voice_841>`: \"MAI: 如果有现成的剧本的话，我们可以。\" (If there's a ready-made script, we can.)\n    *   Note: All voices are labeled \"MAI\". This suggests a single speaker or a system labeling them all as MAI, but usually, in these tasks, if multiple voice IDs exist, they might correspond to different people, or it's a specific dataset quirk where one person speaks multiple lines. However, looking closely at the timestamps and content, it looks like one continuous conversation where the speaker changes or the same person is addressing others. Wait, the prompt says \"Each feature is either a face... or a voice... Each feature has a unique ID\". Here I have 5 voice IDs. Usually, this implies 5 different speakers or the same speaker identified differently. But the ASR text starts with \"MAI:\" for all of them. This is suspicious. It might mean the speaker is named Mai, or the transcription tool added \"MAI:\". Let's assume the voice IDs represent the audio tracks. Since I don't have face IDs linked to these specific voice IDs in the input (only generic \"Face features:\" which is empty in the prompt text provided, wait, let me check the prompt again).\n    *   Ah, the prompt text says \"Face features:Voice features:...\". It doesn't list any Face features explicitly with IDs like `<face_1>`. It just lists the Voice features.\n    *   Instruction: \"Preserve speaker identity when constructing memory from the supplied character features.\" \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So I need to create memories for `<voice_364>`, `<voice_276>`, `<voice_737>`, `<voice_500>`, `<voice_841>`.\n    *   Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   Okay, since no face IDs are supplied in the input block (it just says \"Face features:Voice features:...\"), I cannot link faces to voices. I must use the voice IDs strictly.\n    *   Wait, looking at the raw input provided in the prompt: \"Face features:Voice features:{...}\". There are no actual face objects listed with IDs like `<face_1>`. Just the voice features.\n    *   Therefore, I cannot make equivalences like `Equivalence: <face_x>, <voice_y>`. I must leave `high_level_conclusions` focused on the dialogue/inference without asserting visual identity unless I see face IDs.\n    *   Actually, I need to check if there are implicit face IDs. The prompt says \"You will be given a video and a set of character features.\" Then it shows \"Face features:Voice features:...\". It seems the Face features section is empty or missing IDs. I will proceed assuming no face IDs are available to link.\n    *   Wait, I need to look closer at the prompt structure. \"Face features:Voice features:{...}\". It looks like the Face features part is empty.\n    *   Constraint: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\n    *   Constraint: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So I need to generate memories for each voice ID.\n    *   Constraint: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n    *   Constraint: \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I need to quote the ASR.\n\n**2. Constructing Video Description:**\n*   Need to describe the visual events atomically.\n*   Scene: Room with a table, whiteboard, lighting equipment.\n*   People: Person in black (seated left), Person in white (standing/moving near whiteboard), Person in light top (seated right), Person in orange (enters later, stands left).\n*   Action: Discussing preparations, props, dancing, scripts. Camera wearer is present (legs visible).\n*   Timeline:\n    *   0-17s: Group discussion around table. White shirt person gestures at board. Orange shirt person enters/interacts.\n    *   18-22s: Orange shirt person stands prominently.\n    *   23-29s: Focus returns to table group. Orange shirt person moves away/stands back.\n*   Draft descriptions:\n    *   Three individuals are gathered around a wooden table covered with a red-and-white checkered cloth in a room equipped with lighting gear and a whiteboard.\n    *   A person wearing a white shirt stands near the whiteboard while two others sit at the table.\n    *   Another individual wearing an orange t-shirt enters the room from the left side and stands near a projector screen.\n    *   The person in the white shirt gestures towards the whiteboard during the discussion.\n    *   The person in the black top sits at the table interacting with various items.\n    *   The camera wearer remains seated, their legs visible in the foreground throughout the clip.\n    *   The group appears to be planning or reviewing materials, possibly for a production or rehearsal.\n\n**3. Constructing High-Level Conclusions:**\n*   Since I cannot link faces to voices (no face IDs provided), I cannot state who said what visually.\n*   However, I can infer intent from the dialogue.\n*   Dialogue themes: Preparation, wasting time, dancing, scripts.\n*   Inferences:\n    *   The group is discussing potential activities or scripts for a project.\n    *   There is a consideration of whether certain members (Mai, Lin Han, Shu) should participate in dancing.\n    *   They are evaluating the efficiency of their preparations versus creating new content (\"time-wasting short dramas\").\n    *   They are open to using existing scripts if available.\n*   Since I can't confirm visual identity, I won't write \"Person X said Y\". I will write about the group's discussion.\n*   Wait, the instruction says: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   So I can say: \"Speaker <voice_364> discusses preparations made over several days.\"\n*   Or: \"Discussion involves questions about whether specific individuals like Lin Han or Shu should dance.\"\n*   I need to be careful not to hallucinate face links.\n*   Let's draft conclusions:\n    *   Speaker <voice_364> confirms preparations done over recent days and asks if others should dance.\n    *   Speaker <voice_276> questions if they should dance individually.\n    *   Speaker <voice_737> affirms that Lin Han is capable of dancing.\n    *   Speaker <voice_500> asks if Shu can also dance.\n    *   Speaker <voice_841> mentions the possibility of using an existing script.\n    *   The group is deliberating on the nature of upcoming activities, weighing prepared materials against improvisation or new scripts.\n\n**4. Refining Output:**\n*   Ensure JSON validity.\n*   Ensure no extra text.\n*   Check constraints: \"Preserve speaker identity... using the exact ID as the speaker.\"\n*   Check constraint: \"Do not replace the ID with 'a speaker'...\".\n*   Check constraint: \"If no face IDs are supplied, do not invent any.\" (Confirmed, none supplied).\n*   Check constraint: \"Keep dialogue grounded... Do not substitute a plausible scene description for what the speaker actually said.\" -> I will quote the ASR in the memories.\n\n**Memory Construction:**\n*   `<voice_364>`: \"MAI: 然后，唉，就这些准备都是我们这几天准备，对吧？其他的浪费时间的小短剧。跳舞吗？\" -> Memory: Speaker <voice_364> states that the preparations were done over the past few days and asks if others should dance instead of wasting time on short dramas.\n*   `<voice_276>`: \"MAI: 我一个人跳舞吗？\" -> Memory: Speaker <voice_276> asks if they should dance alone.\n*   `<voice_737>`: \"MAI: 林涵也，对，林涵也可以跳。\" -> Memory: Speaker <voice_737> confirms that Lin Han can also dance.\n*   `<voice_500>`: \"MAI: 舒也可以跳，是吗？\" -> Memory: Speaker <voice_500> asks if Shu can also dance.\n*   `<voice_841>`: \"MAI: 如果有现成的剧本的话，我们可以。\" -> Memory: Speaker <voice_841> suggests they could proceed if there is a ready-made script available.\n\nWait, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSo I need to put these into the `high_level_conclusions` array? No, the instruction says \"include at least one episodic memory...\". Where do memories go?\nLooking at the schema provided in the prompt:\n```json\n{\n\t\"video_description\": [ ... ],\n\t\"high_level_conclusions\": [ ... ]\n}\n```\nUsually, \"episodic memory\" refers to the content of the description or a specific field. But the schema only has `video_description` and `high_level_conclusions`.\nRe-reading the first paragraph: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nHowever, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nThis sounds like I should add a field or integrate it. But the schema is fixed: `\"video_description\"` and `\"high_level_conclusions\"`.\nOften in these tasks, \"episodic memory\" is expected within the `high_level_conclusions` or `video_description`. Given the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged\", I must fit the memory requirement into one of these fields.\nGiven \"High-Level Conclusions\" often contains reasoning and facts derived from the video/audio, putting the quoted memories there makes sense as factual assertions about the audio content.\nAlternatively, `video_description` describes visual events. `high_level_conclusions` describes reasoning.\nLet's look at similar tasks. Usually, if there's a specific instruction to include memories, it might imply adding a third field, but the instruction says \"Keep the existing... schema... unchanged\". This implies I must embed the memory logic into the existing fields.\nSince `video_description` is for \"observable and inferable events\", and `high_level_conclusions` is for \"reasoning-based conclusions... intentions, relationships, and identities\", the memory (which is a direct quote/transcript summary) fits best in `high_level_conclusions` as a factual conclusion about the audio content, OR I treat the transcript summary as part of the description of the interaction.\nHowever, the instruction specifically says \"include at least one episodic memory...\".\nLet's try to put the memory summaries in `high_level_conclusions` as they represent specific knowledge extracted from the audio stream which informs the conclusion.\nActually, re-reading carefully: \"For every supplied voice ID... include at least one episodic memory...\".\nIf I put them in `high_level_conclusions`, they act as specific data points.\nLet's draft the `high_level_conclusions` to include these memory statements.\nExample: \"Speaker <voice_364> states: 'Then, uh, these preparations are ours over these few days, right? Other time-wasting short dramas. Dance?'\"\nThis satisfies \"quotes or faithfully summarizes... using the exact ID\".\n\nWait, I need to check if I can add a third field. \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This strongly suggests I cannot add a new key like \"memories\". I must use the existing keys.\nSo I will place the memory summaries in `high_level_conclusions`.\n\nOne more thing: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\nSo I will write sentences like \"Speaker <voice_364> indicates...\" followed by the quote.\n\nLet's refine the plan.\n**Video Description:**\n1.  Three people are gathered around a table in a room with lighting equipment and a whiteboard.\n2.  A person in a white shirt stands near the whiteboard while two others sit at the table.\n3.  An individual in an orange shirt enters the room and stands near a projector screen.\n4.  The group engages in a discussion involving items on the table and gestures toward the whiteboard.\n5.  The camera wearer remains seated with legs visible in the foreground.\n\n**High-Level Conclusions:**\n1.  Speaker <voice_364> discusses preparations made over the past few days and asks if others should dance rather than waste time on short dramas.\n2.  Speaker <voice_276> questions whether they should dance alone.\n3.  Speaker <voice_737> confirms that Lin Han is also capable of dancing.\n4.  Speaker <voice_500> asks if Shu can also dance.\n5.  Speaker <voice_841> suggests they could proceed if a ready-made script is available.\n\nWait, I need to make sure I don't violate \"Do not substitute a plausible scene description for what the speaker actually said.\"\nIn the conclusions, I am quoting/saying what they said. That is fine.\nIn the video description, I am describing visuals. That is fine.\n\nOne detail: \"If no face IDs are supplied, do not invent any.\"\nI have confirmed no face IDs are in the input.\nSo I will not use `Equivalence:` lines.\n\nFinal check on JSON structure.\nKeys: `video_description`, `high_level_conclusions`.\nValues: Arrays of strings.\n\nLet's assemble the JSON.\n\nOne nuance: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis instruction seems to imply I should create a specific type of entry. Since I can't add a new key, I will incorporate these as specific entries in `high_level_conclusions` that function as the \"memory\" records requested.\n\nWait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nDoes \"all other task instructions\" include the instruction about memories? Yes.\nSo I must follow the memory instruction using the existing schema.\nPlacing them in `high_level_conclusions` is the most logical place for \"conclusions\" regarding the audio content.\n\nLet's finalize the text for the memories.\nQuote `<voice_364>`: \"MAI: 然后，唉，就这些准备都是我们这几天准备，对吧？其他的浪费时间的小短剧。跳舞吗？\"\nSummary: Speaker <voice_364> mentions preparations done over the last few days and asks if others should dance.\nQuote `<voice_276>`: \"MAI: 我一个人跳舞吗？\"\nSummary: Speaker <voice_276> asks if they should dance alone.\nQuote `<voice_737>`: \"MAI: 林涵也，对，林涵也可以跳。\"\nSummary: Speaker <voice_737> confirms Lin Han can also dance.\nQuote `<voice_500>`: \"MAI: 舒也可以跳，是吗？\"\nSummary: Speaker <voice_500> asks if Shu can also dance.\nQuote `<voice_841>`: \"MAI: 如果有现成的剧本的话，我们可以。\"\nSummary: Speaker <voice_841> notes they could use a ready-made script.\n\nI will formulate these as full sentences in the JSON array.\n\nOne check on \"episodic memory\". Usually, this means a specific record. I'll ensure they stand out as factual reports of the speech.\n\nDouble check: \"Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\"\nOkay, I will use `<voice_X>`.\n\nDouble check: \"Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\"\nI will use the ASR text directly or very close to it.\n\nLet's write the response.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"Three individuals are gathered around a wooden table covered with a red-and-white checkered cloth in a room equipped with lighting gear and a whiteboard.\",\n\t\t\"A person wearing a white shirt stands near the whiteboard while two others sit at the table.\",\n\t\t\"An individual wearing an orange t-shirt enters the room from the left side and stands near a projector screen.\",\n\t\t\"The person in the white shirt gestures towards the whiteboard during the discussion.\",\n\t\t\"The person in the black top sits at the table interacting with various items on the table.\",\n\t\t\"The camera wearer remains seated, their legs visible in the foreground throughout the clip.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_364> states that the preparations were done over the past few days and asks if others should dance instead of wasting time on short dramas.\",\n\t\t\"Speaker <voice_276> asks if they should dance alone.\",\n\t\t\"Speaker <voice_737> confirms that Lin Han can also dance.\",\n\t\t\"Speaker <voice_500> asks if Shu can also dance.\",\n\t\t\"Speaker <voice_841> suggests they could proceed if there is a ready-made script available.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10531,
+          "output_tokens": 4393,
+          "total_tokens": 14924,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0015529949450865388,
+            "media_preparation_ms": 61.5088199992897,
+            "processor_tokenization_ms": 367.08305300271604,
+            "device_transfer_ms": 39.70786499849055,
+            "cuda_generation_ms": 224001.36730700615,
+            "decoding_ms": 4.29848900239449
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 224474.14199799823,
+          "request_end": 1789430602.168325,
+          "latency_ms": 224503.16460400063,
+          "client_wall_clock_latency_ms": 224503.16460400063
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 5
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.050834991270676255,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 5.609165993519127,
+      "nodes_added": 5,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 5,
+    "detected_faces": 340,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 5,
+    "nodes_after_clip": 1294,
+    "edges_after_clip": 467,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "Three individuals are gathered around a wooden table covered with a red-and-white checkered cloth in a room equipped with lighting gear and a whiteboard.",
+      "A person wearing a white shirt stands near the whiteboard while two others sit at the table.",
+      "An individual wearing an orange t-shirt enters the room from the left side and stands near a projector screen.",
+      "The person in the white shirt gestures towards the whiteboard during the discussion.",
+      "The person in the black top sits at the table interacting with various items on the table.",
+      "The camera wearer remains seated, their legs visible in the foreground throughout the clip."
+    ],
+    "high_level_conclusions": [
+      "Speaker <voice_364> states that the preparations were done over the past few days and asks if others should dance instead of wasting time on short dramas.",
+      "Speaker <voice_276> asks if they should dance alone.",
+      "Speaker <voice_737> confirms that Lin Han can also dance.",
+      "Speaker <voice_500> asks if Shu can also dance.",
+      "Speaker <voice_841> suggests they could proceed if there is a ready-made script available."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Three individuals are gathered around a wooden table covered with a red-and-white checkered cloth in a room equipped with lighting gear and a whiteboard.",
+      "A person wearing a white shirt stands near the whiteboard while two others sit at the table.",
+      "An individual wearing an orange t-shirt enters the room from the left side and stands near a projector screen.",
+      "The person in the white shirt gestures towards the whiteboard during the discussion.",
+      "The person in the black top sits at the table interacting with various items on the table.",
+      "The camera wearer remains seated, their legs visible in the foreground throughout the clip."
+    ],
+    "high_level_conclusions": [
+      "Speaker <voice_364> states that the preparations were done over the past few days and asks if others should dance instead of wasting time on short dramas.",
+      "Speaker <voice_276> asks if they should dance alone.",
+      "Speaker <voice_737> confirms that Lin Han can also dance.",
+      "Speaker <voice_500> asks if Shu can also dance.",
+      "Speaker <voice_841> suggests they could proceed if there is a ready-made script available."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_97_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 1283,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Three individuals are gathered around a wooden table covered with a red-and-white checkered cloth in a room equipped with lighting gear and a whiteboard."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1284,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing a white shirt stands near the whiteboard while two others sit at the table."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1285,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "An individual wearing an orange t-shirt enters the room from the left side and stands near a projector screen."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1286,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the white shirt gestures towards the whiteboard during the discussion."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1287,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the black top sits at the table interacting with various items on the table."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1288,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer remains seated, their legs visible in the foreground throughout the clip."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1289,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_364> states that the preparations were done over the past few days and asks if others should dance instead of wasting time on short dramas."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1290,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_276> asks if they should dance alone."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1291,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_737> confirms that Lin Han can also dance."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1292,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_500> asks if Shu can also dance."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1293,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_841> suggests they could proceed if there is a ready-made script available."
+          ],
+          "timestamp": 97
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 276,
+        "target": 1290,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 364,
+        "target": 1289,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 500,
+        "target": 1292,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 737,
+        "target": 1291,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 841,
+        "target": 1293,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_97_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_97_graph.pkl"
+  },
+  "memory_pickle_bytes": 30731411,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 71120.993040358,
+    "prepared_perf": 71129.681974521,
+    "ordered_start_perf": 71552.291265713,
+    "consumer_wait_ms": 0.010158997611142695,
+    "ready_to_ordered_ms": 422609.29119199864,
+    "preparation_work_ms": 8683.720551998704,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 235055.083913001
+}

@@ -1,0 +1,73 @@
+{
+  "clip_id": 132,
+  "source": {
+    "segment_id": 132,
+    "source": "DAY1_A1_JAKE_12113000.mp4",
+    "source_clock": "12113000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 12.040000000000873,
+    "absolute_start_seconds": 43890.0,
+    "absolute_end_seconds": 43902.04,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0132.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 53289.651112562,
+      "prepared_perf": 53295.439329396,
+      "ordered_start_perf": 53485.877321467,
+      "consumer_wait_ms": 0.018243998056277633,
+      "ready_to_ordered_ms": 190437.992070998,
+      "preparation_work_ms": 5782.759241999884,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a checkered table engaged in a discussion.",
+      "The woman on the left in a dark jacket actively talks and gestures with her hands.",
+      "A woman in a white top stands up behind the table, picks up a bouquet of pink flowers, and moves them aside.",
+      "The other women seated along the right side of the table listen attentively."
+    ],
+    "high_level_conclusions": [
+      "The speaker (<voice_1029>) is coordinating an event schedule, proposing an evening session for personal storytelling when participants are more comfortable and emotionally receptive.",
+      "The group is holding a casual planning or workshop meeting."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a checkered table engaged in a discussion.\",\n  \"The woman on the left in a dark jacket actively talks and gestures with her hands.\",\n  \"A woman in a white top stands up behind the table, picks up a bouquet of pink flowers, and moves them aside.\",\n  \"The other women seated along the right side of the table listen attentively.\"\n ],\n \"high_level_conclusions\": [\n  \"The speaker (<voice_1029>) is coordinating an event schedule, proposing an evening session for personal storytelling when participants are more comfortable and emotionally receptive.\",\n  \"The group is holding a casual planning or workshop meeting.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 132,
+      "call_id": "58305083-90a9-481b-8c0d-dd4c5be59802",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412305.6706188,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 28175,
+      "output_tokens": 794,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 52410.31250500237
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a checkered table engaged in a discussion.\",\n  \"The woman on the left in a dark jacket actively talks and gestures with her hands.\",\n  \"A woman in a white top stands up behind the table, picks up a bouquet of pink flowers, and moves them aside.\",\n  \"The other women seated along the right side of the table listen attentively.\"\n ],\n \"high_level_conclusions\": [\n  \"The speaker (<voice_1029>) is coordinating an event schedule, proposing an evening session for personal storytelling when participants are more comfortable and emotionally receptive.\",\n  \"The group is holding a casual planning or workshop meeting.\"\n ]\n}\n```",
+      "total_tokens": 28969,
+      "request_end": 1789412358.0810466,
+      "latency_ms": 52410.424546003924,
+      "client_wall_clock_latency_ms": 52410.424546003924,
+      "api_request_wall_clock_latency_ms": 52410.424546003924
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_132_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

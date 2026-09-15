@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "Omits joining new projects and working on innovative applications, and incorrectly includes sharing her first successful project."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q05",
+    "method": "D",
+    "call_id": "daa78e15-c9ea-468e-bce3-b4cdbac669b9",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439978.3294196,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 161,
+    "output_tokens": 165,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 4178.4052760049235
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\"0\": {\"correct\": false, \"reason\": \"Omits joining new projects and working on innovative applications, and incorrectly includes sharing her first successful project.\"}}\n```",
+    "total_tokens": 326,
+    "request_end": 1789439982.5078824,
+    "latency_ms": 4178.461032002815,
+    "client_wall_clock_latency_ms": 4178.461032002815,
+    "api_request_wall_clock_latency_ms": 4178.461032002815
+  },
+  "included_in_qa_latency": false
+}

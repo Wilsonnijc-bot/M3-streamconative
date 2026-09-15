@@ -1,0 +1,73 @@
+{
+  "clip_id": 69,
+  "source": {
+    "segment_id": 69,
+    "source": "bedroom_01_00323000.mp4",
+    "source_clock": "00323000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1950.0,
+    "absolute_end_seconds": 1980.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00323000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 76663.368366839,
+      "prepared_perf": 76668.85052925,
+      "ordered_start_perf": 76738.574064844,
+      "consumer_wait_ms": 0.02190200029872358,
+      "ready_to_ordered_ms": 69723.53559399198,
+      "preparation_work_ms": 5476.677622005809,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and a tablet.",
+      "The woman on the left talks while gesturing with her right hand.",
+      "The woman on the right rests her chin on her hand and listens intently.",
+      "The woman on the left brings her hand up to support her chin while continuing to speak."
+    ],
+    "high_level_conclusions": [
+      "The woman seated on the left is the speaker behind <voice_10>, sharing personal reflections on everyday life.",
+      "The two women share a close, comfortable relationship, engaging in a deep discussion over snacks."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and a tablet.\",\n    \"The woman on the left talks while gesturing with her right hand.\",\n    \"The woman on the right rests her chin on her hand and listens intently.\",\n    \"The woman on the left brings her hand up to support her chin while continuing to speak.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman seated on the left is the speaker behind <voice_10>, sharing personal reflections on everyday life.\",\n    \"The two women share a close, comfortable relationship, engaging in a deep discussion over snacks.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 69,
+      "call_id": "c87d391d-839f-4980-a0f3-c781195d6bb4",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789435561.831044,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65812,
+      "output_tokens": 705,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 26298.806001010234
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and a tablet.\",\n    \"The woman on the left talks while gesturing with her right hand.\",\n    \"The woman on the right rests her chin on her hand and listens intently.\",\n    \"The woman on the left brings her hand up to support her chin while continuing to speak.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman seated on the left is the speaker behind <voice_10>, sharing personal reflections on everyday life.\",\n    \"The two women share a close, comfortable relationship, engaging in a deep discussion over snacks.\"\n  ]\n}\n```",
+      "total_tokens": 66517,
+      "request_end": 1789435588.12994,
+      "latency_ms": 26298.89316399931,
+      "client_wall_clock_latency_ms": 26298.89316399931,
+      "api_request_wall_clock_latency_ms": 26298.89316399931
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_69_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

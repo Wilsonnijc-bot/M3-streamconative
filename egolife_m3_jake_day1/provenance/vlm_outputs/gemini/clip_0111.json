@@ -1,0 +1,75 @@
+{
+  "clip_id": 111,
+  "source": {
+    "segment_id": 111,
+    "source": "DAY1_A1_JAKE_12020000.mp4",
+    "source_clock": "12020000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43320.0,
+    "absolute_end_seconds": 43350.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0111.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 52084.65869491,
+      "prepared_perf": 52093.355787822,
+      "ordered_start_perf": 52199.196753866,
+      "consumer_wait_ms": 0.014939003449399024,
+      "ready_to_ordered_ms": 105840.9660440011,
+      "preparation_work_ms": 8691.75559499854,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table with a checkered tablecloth in a room, conducting a planning meeting.",
+      "A person wearing an orange shirt stands next to a whiteboard, writing notes and discussing details.",
+      "A woman in a white blouse stands beside the whiteboard, interacting with the presenter.",
+      "Several people sit around the table listening and taking part in the discussion.",
+      "A film clapperboard, flowers, water bottles, and stationery are laid out on the table.",
+      "The group discusses scheduling and timeline details, specifically regarding arrivals between 2:00 and 3:00."
+    ],
+    "high_level_conclusions": [
+      "The participants appear to be a creative or film production crew conducting a pre-shoot scheduling or event planning meeting.",
+      "The discussion focuses on event logistics and participant arrival arrangements."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table with a checkered tablecloth in a room, conducting a planning meeting.\",\n\t\t\"A person wearing an orange shirt stands next to a whiteboard, writing notes and discussing details.\",\n\t\t\"A woman in a white blouse stands beside the whiteboard, interacting with the presenter.\",\n\t\t\"Several people sit around the table listening and taking part in the discussion.\",\n\t\t\"A film clapperboard, flowers, water bottles, and stationery are laid out on the table.\",\n\t\t\"The group discusses scheduling and timeline details, specifically regarding arrivals between 2:00 and 3:00.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants appear to be a creative or film production crew conducting a pre-shoot scheduling or event planning meeting.\",\n\t\t\"The discussion focuses on event logistics and participant arrival arrangements.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 111,
+      "call_id": "a2da7ace-821b-4100-9480-4643dbf0bb4f",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789411025.001414,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66741,
+      "output_tokens": 1248,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 52933.51024900039
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table with a checkered tablecloth in a room, conducting a planning meeting.\",\n\t\t\"A person wearing an orange shirt stands next to a whiteboard, writing notes and discussing details.\",\n\t\t\"A woman in a white blouse stands beside the whiteboard, interacting with the presenter.\",\n\t\t\"Several people sit around the table listening and taking part in the discussion.\",\n\t\t\"A film clapperboard, flowers, water bottles, and stationery are laid out on the table.\",\n\t\t\"The group discusses scheduling and timeline details, specifically regarding arrivals between 2:00 and 3:00.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants appear to be a creative or film production crew conducting a pre-shoot scheduling or event planning meeting.\",\n\t\t\"The discussion focuses on event logistics and participant arrival arrangements.\"\n\t]\n}\n```",
+      "total_tokens": 67989,
+      "request_end": 1789411077.9351122,
+      "latency_ms": 52933.6721840009,
+      "client_wall_clock_latency_ms": 52933.6721840009,
+      "api_request_wall_clock_latency_ms": 52933.6721840009
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_111_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

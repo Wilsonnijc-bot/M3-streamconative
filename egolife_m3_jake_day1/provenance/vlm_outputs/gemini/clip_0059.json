@@ -1,0 +1,75 @@
+{
+  "clip_id": 59,
+  "source": {
+    "segment_id": 59,
+    "source": "DAY1_A1_JAKE_11373000.mp4",
+    "source_clock": "11373000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41850.0,
+    "absolute_end_seconds": 41880.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0059.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47665.06283163,
+      "prepared_perf": 47672.909881151,
+      "ordered_start_perf": 47751.397091731,
+      "consumer_wait_ms": 0.010700998245738447,
+      "ready_to_ordered_ms": 78487.21058000228,
+      "preparation_work_ms": 7841.49436000007,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group gathers around a table containing flowers, notebooks, and a clapperboard.",
+      "<voice_0> gestures with his hands above the table while asking about the planned format.",
+      "<voice_667> explains the plan to distribute flowers into individual vases and let them bloom.",
+      "<voice_668> responds with a brief verbal acknowledgement.",
+      "<voice_667> demonstrates how flowers are cut and pressed flat using hand gestures."
+    ],
+    "high_level_conclusions": [
+      "The group is organizing an artistic or filming activity focused on flower pressing.",
+      "<voice_0> is the camera operator (Jake) seeking clarification on how the scene or activity will unfold.",
+      "<voice_667> serves as the instructor or organizer guiding the group through the craft steps."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group gathers around a table containing flowers, notebooks, and a clapperboard.\",\n  \"<voice_0> gestures with his hands above the table while asking about the planned format.\",\n  \"<voice_667> explains the plan to distribute flowers into individual vases and let them bloom.\",\n  \"<voice_668> responds with a brief verbal acknowledgement.\",\n  \"<voice_667> demonstrates how flowers are cut and pressed flat using hand gestures.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is organizing an artistic or filming activity focused on flower pressing.\",\n  \"<voice_0> is the camera operator (Jake) seeking clarification on how the scene or activity will unfold.\",\n  \"<voice_667> serves as the instructor or organizer guiding the group through the craft steps.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 59,
+      "call_id": "ce74cee6-66a4-4f69-a697-fc5ab4646f04",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406576.2114654,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67384,
+      "output_tokens": 912,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 22315.02226399607
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group gathers around a table containing flowers, notebooks, and a clapperboard.\",\n  \"<voice_0> gestures with his hands above the table while asking about the planned format.\",\n  \"<voice_667> explains the plan to distribute flowers into individual vases and let them bloom.\",\n  \"<voice_668> responds with a brief verbal acknowledgement.\",\n  \"<voice_667> demonstrates how flowers are cut and pressed flat using hand gestures.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is organizing an artistic or filming activity focused on flower pressing.\",\n  \"<voice_0> is the camera operator (Jake) seeking clarification on how the scene or activity will unfold.\",\n  \"<voice_667> serves as the instructor or organizer guiding the group through the craft steps.\"\n ]\n}\n```",
+      "total_tokens": 68296,
+      "request_end": 1789406598.5266974,
+      "latency_ms": 22315.22984500043,
+      "client_wall_clock_latency_ms": 22315.22984500043,
+      "api_request_wall_clock_latency_ms": 22315.22984500043
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_59_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

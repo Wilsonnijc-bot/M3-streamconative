@@ -1,0 +1,628 @@
+{
+  "clip_id": 127,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0127.mp4",
+  "end_to_end_memory_generation_ms": 217469.76213699963,
+  "latency_ms": {
+    "clip_decode": 7322.680429002503,
+    "deepgram_asr": 1267.5962490029633,
+    "mai_transcribe_asr": 1125.9532620024402,
+    "asr_total": 1268.2323970002471,
+    "audio_segmentation": 7.7703060014755465,
+    "speech_embedding_campplus": 3427.9671360054635,
+    "facial_detection_recognition_buffalo_l": 3886.315251002088,
+    "face_clustering": 6.95884799642954,
+    "vlm_memory_generation": 26596.27367900248,
+    "text_embedding": 661.1712669982808,
+    "graph_update_total": 2145.5614369988325
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 127,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 1033,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789412009.410621,
+          "status": "success",
+          "total_tokens": 243,
+          "request_end": 1789412010.0715444,
+          "latency_ms": 660.9240519974264
+        }
+      ],
+      "total_tokens": 243,
+      "latency_ms": 661.1712669982808
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1267.5962490029633,
+        "openrouter-mai-transcribe-2": 1125.9532620024402
+      },
+      "asr_total_ms": 1268.2323970002471,
+      "audio_segmentation_ms": 7.7703060014755465,
+      "speech_embedding_ms": 3427.9671360054635,
+      "graph_update_ms": 2145.2139120010543,
+      "asr_segment_count": 18,
+      "speech_embedding_count": 18,
+      "voice_identity_count": 13,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 5600.7886160005
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3886.315251002088,
+      "face_clustering_ms": 6.95884799642954,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 208,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4006.200073999935
+    },
+    "vlm": {
+      "context_preparation_ms": 3918.320937998942,
+      "vlm_ms": 26596.27367900248,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a table decorated with flowers, drinks, and a laptop.\",\n  \"<voice_0> inquires about the price of an item.\",\n  \"<voice_1488> states that it cannot be bought.\",\n  \"<voice_0> asks if it is because the item is too expensive, and <voice_1489> wonders if it costs tens of thousands.\",\n  \"<voice_1490> clarifies that it costs a few thousand.\",\n  \"<voice_1491> holds up her phone to display a reference photo to the others.\",\n  \"<voice_1140> and <voice_1494> praise the look of the item shown on the screen.\",\n  \"<voice_1493> comments that the example matches what she envisioned.\",\n  \"<voice_1495> gestures around the table, describing how she plans to sit there during academic conferences.\",\n  \"<voice_1496> and <voice_1497> respond in agreement and tease about being academic figures while laughing.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman in black sitting on the left is sharing references on her phone to plan the room and flower arrangements for future video conferences.\",\n  \"The people at the table share a relaxed, informal, and friendly relationship, joking casually about academic meetings.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people sits around a table decorated with flowers, drinks, and a laptop.",
+          "<voice_0> inquires about the price of an item.",
+          "<voice_1488> states that it cannot be bought.",
+          "<voice_0> asks if it is because the item is too expensive, and <voice_1489> wonders if it costs tens of thousands.",
+          "<voice_1490> clarifies that it costs a few thousand.",
+          "<voice_1491> holds up her phone to display a reference photo to the others.",
+          "<voice_1140> and <voice_1494> praise the look of the item shown on the screen.",
+          "<voice_1493> comments that the example matches what she envisioned.",
+          "<voice_1495> gestures around the table, describing how she plans to sit there during academic conferences.",
+          "<voice_1496> and <voice_1497> respond in agreement and tease about being academic figures while laughing."
+        ],
+        "high_level_conclusions": [
+          "The woman in black sitting on the left is sharing references on her phone to plan the room and flower arrangements for future video conferences.",
+          "The people at the table share a relaxed, informal, and friendly relationship, joking casually about academic meetings."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 127,
+          "call_id": "5cc5fe9b-584b-4078-b7dd-f99860c99f33",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789411982.8130312,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67649,
+          "output_tokens": 1357,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 26596.092977997614
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a table decorated with flowers, drinks, and a laptop.\",\n  \"<voice_0> inquires about the price of an item.\",\n  \"<voice_1488> states that it cannot be bought.\",\n  \"<voice_0> asks if it is because the item is too expensive, and <voice_1489> wonders if it costs tens of thousands.\",\n  \"<voice_1490> clarifies that it costs a few thousand.\",\n  \"<voice_1491> holds up her phone to display a reference photo to the others.\",\n  \"<voice_1140> and <voice_1494> praise the look of the item shown on the screen.\",\n  \"<voice_1493> comments that the example matches what she envisioned.\",\n  \"<voice_1495> gestures around the table, describing how she plans to sit there during academic conferences.\",\n  \"<voice_1496> and <voice_1497> respond in agreement and tease about being academic figures while laughing.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman in black sitting on the left is sharing references on her phone to plan the room and flower arrangements for future video conferences.\",\n  \"The people at the table share a relaxed, informal, and friendly relationship, joking casually about academic meetings.\"\n ]\n}\n```",
+          "total_tokens": 69006,
+          "request_end": 1789412009.4093146,
+          "latency_ms": 26596.27367900248,
+          "client_wall_clock_latency_ms": 26596.27367900248,
+          "api_request_wall_clock_latency_ms": 26596.27367900248
+        }
+      ],
+      "episodic_memory_count": 10,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 10,
+      "text_embedding_ms": null,
+      "text_embedding_count": 10,
+      "graph_update_ms": 0.31336999381892383,
+      "nodes_added": 10,
+      "directed_edges_added": 24,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.034155003959313035,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 18,
+    "speech_embeddings": 18,
+    "voice_identities": 13,
+    "detected_faces": 208,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 10,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1510,
+    "edges_after_clip": 290,
+    "nodes_added_by_clip": 22,
+    "edges_added_by_clip": 12
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a table decorated with flowers, drinks, and a laptop.",
+      "<voice_0> inquires about the price of an item.",
+      "<voice_1488> states that it cannot be bought.",
+      "<voice_0> asks if it is because the item is too expensive, and <voice_1489> wonders if it costs tens of thousands.",
+      "<voice_1490> clarifies that it costs a few thousand.",
+      "<voice_1491> holds up her phone to display a reference photo to the others.",
+      "<voice_1140> and <voice_1494> praise the look of the item shown on the screen.",
+      "<voice_1493> comments that the example matches what she envisioned.",
+      "<voice_1495> gestures around the table, describing how she plans to sit there during academic conferences.",
+      "<voice_1496> and <voice_1497> respond in agreement and tease about being academic figures while laughing."
+    ],
+    "high_level_conclusions": [
+      "The woman in black sitting on the left is sharing references on her phone to plan the room and flower arrangements for future video conferences.",
+      "The people at the table share a relaxed, informal, and friendly relationship, joking casually about academic meetings."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people sits around a table decorated with flowers, drinks, and a laptop.",
+      "<voice_0> inquires about the price of an item.",
+      "<voice_1488> states that it cannot be bought.",
+      "<voice_0> asks if it is because the item is too expensive, and <voice_1489> wonders if it costs tens of thousands.",
+      "<voice_1490> clarifies that it costs a few thousand.",
+      "<voice_1491> holds up her phone to display a reference photo to the others.",
+      "<voice_1140> and <voice_1494> praise the look of the item shown on the screen.",
+      "<voice_1493> comments that the example matches what she envisioned.",
+      "<voice_1495> gestures around the table, describing how she plans to sit there during academic conferences.",
+      "<voice_1496> and <voice_1497> respond in agreement and tease about being academic figures while laughing."
+    ],
+    "high_level_conclusions": [
+      "The woman in black sitting on the left is sharing references on her phone to plan the room and flower arrangements for future video conferences.",
+      "The people at the table share a relaxed, informal, and friendly relationship, joking casually about academic meetings."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_127_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 22,
+    "edges_added": 12,
+    "nodes": [
+      {
+        "id": 1488,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 不能买。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1489,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 上万？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1490,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯，几千块钱吧。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1491,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 产品它就类似这样。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1492,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 哦，OK。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1493,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 差不多是我设想的那大块。",
+            "MAI: 嗯，对。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1494,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好漂亮。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1495,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 到时候坐在这里，可以",
+            "MAI: 我每次开学术会议的时候。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1496,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对对对，就是为了这个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1497,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 学术蝗虫。",
+            "MAI: 对对对。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1498,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people sits around a table decorated with flowers, drinks, and a laptop."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1499,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> inquires about the price of an item."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1500,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1488> states that it cannot be bought."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1501,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> asks if it is because the item is too expensive, and <voice_1489> wonders if it costs tens of thousands."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1502,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1490> clarifies that it costs a few thousand."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1503,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1491> holds up her phone to display a reference photo to the others."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1504,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1140> and <voice_1494> praise the look of the item shown on the screen."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1505,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1493> comments that the example matches what she envisioned."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1506,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1495> gestures around the table, describing how she plans to sit there during academic conferences."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1507,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1496> and <voice_1497> respond in agreement and tease about being academic figures while laughing."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1508,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman in black sitting on the left is sharing references on her phone to plan the room and flower arrangements for future video conferences."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1509,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The people at the table share a relaxed, informal, and friendly relationship, joking casually about academic meetings."
+          ],
+          "timestamp": 127
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1499,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 1501,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1140,
+        "target": 1504,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1488,
+        "target": 1500,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1489,
+        "target": 1501,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1490,
+        "target": 1502,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1491,
+        "target": 1503,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1493,
+        "target": 1505,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1494,
+        "target": 1504,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1495,
+        "target": 1506,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1496,
+        "target": 1507,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1497,
+        "target": 1507,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_127_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_127_graph.pkl"
+  },
+  "memory_pickle_bytes": 34571182,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52979.741937369,
+    "prepared_perf": 52990.110437449,
+    "ordered_start_perf": 53153.637220915,
+    "consumer_wait_ms": 0.012172000424470752,
+    "ready_to_ordered_ms": 163526.78346599714,
+    "preparation_work_ms": 10363.161560002482,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 40787.872196000535
+}

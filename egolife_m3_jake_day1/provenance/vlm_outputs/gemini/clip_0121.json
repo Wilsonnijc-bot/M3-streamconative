@@ -1,0 +1,76 @@
+{
+  "clip_id": 121,
+  "source": {
+    "segment_id": 121,
+    "source": "DAY1_A1_JAKE_12063000.mp4",
+    "source_clock": "12063000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43590.0,
+    "absolute_end_seconds": 43620.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0121.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 52599.715390017,
+      "prepared_perf": 52607.974027141,
+      "ordered_start_perf": 52752.686659039,
+      "consumer_wait_ms": 0.025998000637628138,
+      "ready_to_ordered_ms": 144712.63189800084,
+      "preparation_work_ms": 8253.124915994704,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Jake inspects and handles a power bank connected to a small camera mounted on the wall near the kitchen window.",
+      "Jake places the power bank down and walks away from the kitchen counter.",
+      "Jake enters the adjacent living area where several people are gathered around a table with props, flowers, and equipment.",
+      "Jake walks past the group at the table and heads into a nearby bedroom.",
+      "Jake approaches the bed in the room, where multiple electronic devices and cables are laid out.",
+      "Jake picks up a laptop from the bed."
+    ],
+    "high_level_conclusions": [
+      "Jake is performing technical checks and handling equipment for an ongoing production or event setup.",
+      "<voice_1409> and <voice_1410> are discussing the rules and setup of an interactive activity designed like a small marketplace with specialized currency.",
+      "The bedroom is functioning as a temporary monitoring or technical workstation, as indicated by the cluster of laptops, displays, and gear."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Jake inspects and handles a power bank connected to a small camera mounted on the wall near the kitchen window.\",\n    \"Jake places the power bank down and walks away from the kitchen counter.\",\n    \"Jake enters the adjacent living area where several people are gathered around a table with props, flowers, and equipment.\",\n    \"Jake walks past the group at the table and heads into a nearby bedroom.\",\n    \"Jake approaches the bed in the room, where multiple electronic devices and cables are laid out.\",\n    \"Jake picks up a laptop from the bed.\"\n  ],\n  \"high_level_conclusions\": [\n    \"Jake is performing technical checks and handling equipment for an ongoing production or event setup.\",\n    \"<voice_1409> and <voice_1410> are discussing the rules and setup of an interactive activity designed like a small marketplace with specialized currency.\",\n    \"The bedroom is functioning as a temporary monitoring or technical workstation, as indicated by the cluster of laptops, displays, and gear.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 121,
+      "call_id": "46465fc9-ce64-44d0-b36e-5e832dbc5c4d",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789411578.3591886,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67007,
+      "output_tokens": 1872,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 37674.09874100122
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Jake inspects and handles a power bank connected to a small camera mounted on the wall near the kitchen window.\",\n    \"Jake places the power bank down and walks away from the kitchen counter.\",\n    \"Jake enters the adjacent living area where several people are gathered around a table with props, flowers, and equipment.\",\n    \"Jake walks past the group at the table and heads into a nearby bedroom.\",\n    \"Jake approaches the bed in the room, where multiple electronic devices and cables are laid out.\",\n    \"Jake picks up a laptop from the bed.\"\n  ],\n  \"high_level_conclusions\": [\n    \"Jake is performing technical checks and handling equipment for an ongoing production or event setup.\",\n    \"<voice_1409> and <voice_1410> are discussing the rules and setup of an interactive activity designed like a small marketplace with specialized currency.\",\n    \"The bedroom is functioning as a temporary monitoring or technical workstation, as indicated by the cluster of laptops, displays, and gear.\"\n  ]\n}\n```",
+      "total_tokens": 68879,
+      "request_end": 1789411616.0334826,
+      "latency_ms": 37674.27439200401,
+      "client_wall_clock_latency_ms": 37674.27439200401,
+      "api_request_wall_clock_latency_ms": 37674.27439200401
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_121_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

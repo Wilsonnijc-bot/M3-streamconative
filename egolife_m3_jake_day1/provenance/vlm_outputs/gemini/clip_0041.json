@@ -1,0 +1,79 @@
+{
+  "clip_id": 41,
+  "source": {
+    "segment_id": 41,
+    "source": "DAY1_A1_JAKE_11290000.mp4",
+    "source_clock": "11290000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41340.0,
+    "absolute_end_seconds": 41370.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0041.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46678.110060525,
+      "prepared_perf": 46687.797444192,
+      "ordered_start_perf": 46788.918751832,
+      "consumer_wait_ms": 0.008164002792909741,
+      "ready_to_ordered_ms": 101121.30764000176,
+      "preparation_work_ms": 9682.148419000441,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a long table covered with a pink checkered tablecloth in an indoor room.",
+      "A clapperboard rests on the table in the foreground.",
+      "A person wearing a peach-colored shirt stands by a whiteboard at the end of the table, writing notes.",
+      "<voice_476> speaks between 00:03 and 00:16 about sending a star mark.",
+      "The person at the whiteboard finishes writing and turns toward the seated participants.",
+      "<voice_417> speaks from 00:16 to 00:23, counting and mentioning six guests.",
+      "<voice_0> chimes in from 00:23 to 00:27, correcting or clarifying that there are four to six guests.",
+      "<voice_383> confirms from 00:26 to 00:30 that it is four to six guests.",
+      "The participants seated around the table listen attentively to the discussion."
+    ],
+    "high_level_conclusions": [
+      "The individuals are holding a production meeting or planning session for a shoot or event, as indicated by the clapperboard, whiteboard, and discussion regarding guest logistics.",
+      "The person standing near the whiteboard serves as the facilitator or director leading the briefing.",
+      "The participants are collaboratively confirming and clarifying the required count of guests for the upcoming schedule."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a long table covered with a pink checkered tablecloth in an indoor room.\",\n    \"A clapperboard rests on the table in the foreground.\",\n    \"A person wearing a peach-colored shirt stands by a whiteboard at the end of the table, writing notes.\",\n    \"<voice_476> speaks between 00:03 and 00:16 about sending a star mark.\",\n    \"The person at the whiteboard finishes writing and turns toward the seated participants.\",\n    \"<voice_417> speaks from 00:16 to 00:23, counting and mentioning six guests.\",\n    \"<voice_0> chimes in from 00:23 to 00:27, correcting or clarifying that there are four to six guests.\",\n    \"<voice_383> confirms from 00:26 to 00:30 that it is four to six guests.\",\n    \"The participants seated around the table listen attentively to the discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals are holding a production meeting or planning session for a shoot or event, as indicated by the clapperboard, whiteboard, and discussion regarding guest logistics.\",\n    \"The person standing near the whiteboard serves as the facilitator or director leading the briefing.\",\n    \"The participants are collaboratively confirming and clarifying the required count of guests for the upcoming schedule.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 41,
+      "call_id": "bc401b76-7632-4c33-81ad-fdb03f8b0d21",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405611.7872984,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66723,
+      "output_tokens": 1564,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 56266.56910699967
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a long table covered with a pink checkered tablecloth in an indoor room.\",\n    \"A clapperboard rests on the table in the foreground.\",\n    \"A person wearing a peach-colored shirt stands by a whiteboard at the end of the table, writing notes.\",\n    \"<voice_476> speaks between 00:03 and 00:16 about sending a star mark.\",\n    \"The person at the whiteboard finishes writing and turns toward the seated participants.\",\n    \"<voice_417> speaks from 00:16 to 00:23, counting and mentioning six guests.\",\n    \"<voice_0> chimes in from 00:23 to 00:27, correcting or clarifying that there are four to six guests.\",\n    \"<voice_383> confirms from 00:26 to 00:30 that it is four to six guests.\",\n    \"The participants seated around the table listen attentively to the discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals are holding a production meeting or planning session for a shoot or event, as indicated by the clapperboard, whiteboard, and discussion regarding guest logistics.\",\n    \"The person standing near the whiteboard serves as the facilitator or director leading the briefing.\",\n    \"The participants are collaboratively confirming and clarifying the required count of guests for the upcoming schedule.\"\n  ]\n}\n```",
+      "total_tokens": 68287,
+      "request_end": 1789405668.0539966,
+      "latency_ms": 56266.692489996785,
+      "client_wall_clock_latency_ms": 56266.692489996785,
+      "api_request_wall_clock_latency_ms": 56266.692489996785
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_41_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

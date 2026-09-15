@@ -1,0 +1,76 @@
+{
+  "clip_id": 27,
+  "source": {
+    "segment_id": 27,
+    "source": "bedroom_01_00120000.mp4",
+    "source_clock": "00120000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 720.0,
+    "absolute_end_seconds": 750.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00120000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73880.848498682,
+      "prepared_perf": 73885.734077706,
+      "ordered_start_perf": 74002.375873303,
+      "consumer_wait_ms": 0.008246002835221589,
+      "ready_to_ordered_ms": 116641.79559699551,
+      "preparation_work_ms": 4880.345256999135,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person carries a food tray containing french fries and a slice of cake into the dining room.",
+      "Two young women walk into the room toward the dining table.",
+      "The woman in the white jacket sits down at the dining table next to an open laptop while holding her phone.",
+      "The woman in the oversized beige T-shirt adjusts her chair and sits opposite her.",
+      "The food tray is placed onto the table in front of them.",
+      "The woman in the beige T-shirt looks down at her phone on the table.",
+      "The woman in the white jacket speaks while holding her phone and gesturing towards the table."
+    ],
+    "high_level_conclusions": [
+      "The two women are gathering at the table to have afternoon tea while using their devices.",
+      "The woman in the white jacket addresses the first-person camera operator as a robot, instructing it to clean up the table."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A person carries a food tray containing french fries and a slice of cake into the dining room.\",\n  \"Two young women walk into the room toward the dining table.\",\n  \"The woman in the white jacket sits down at the dining table next to an open laptop while holding her phone.\",\n  \"The woman in the oversized beige T-shirt adjusts her chair and sits opposite her.\",\n  \"The food tray is placed onto the table in front of them.\",\n  \"The woman in the beige T-shirt looks down at her phone on the table.\",\n  \"The woman in the white jacket speaks while holding her phone and gesturing towards the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The two women are gathering at the table to have afternoon tea while using their devices.\",\n  \"The woman in the white jacket addresses the first-person camera operator as a robot, instructing it to clean up the table.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 27,
+      "call_id": "ae754e72-dfed-4650-93ec-f146a40cdd54",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432825.4440455,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65797,
+      "output_tokens": 905,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 56662.38344600424
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A person carries a food tray containing french fries and a slice of cake into the dining room.\",\n  \"Two young women walk into the room toward the dining table.\",\n  \"The woman in the white jacket sits down at the dining table next to an open laptop while holding her phone.\",\n  \"The woman in the oversized beige T-shirt adjusts her chair and sits opposite her.\",\n  \"The food tray is placed onto the table in front of them.\",\n  \"The woman in the beige T-shirt looks down at her phone on the table.\",\n  \"The woman in the white jacket speaks while holding her phone and gesturing towards the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The two women are gathering at the table to have afternoon tea while using their devices.\",\n  \"The woman in the white jacket addresses the first-person camera operator as a robot, instructing it to clean up the table.\"\n ]\n}\n```",
+      "total_tokens": 66702,
+      "request_end": 1789432882.1065216,
+      "latency_ms": 56662.47261299577,
+      "client_wall_clock_latency_ms": 56662.47261299577,
+      "api_request_wall_clock_latency_ms": 56662.47261299577
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_27_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

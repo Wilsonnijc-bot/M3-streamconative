@@ -1,0 +1,77 @@
+{
+  "clip_id": 91,
+  "source": {
+    "segment_id": 91,
+    "source": "DAY1_A1_JAKE_11530000.mp4",
+    "source_clock": "11530000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42780.0,
+    "absolute_end_seconds": 42810.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0091.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 50177.865145828,
+      "prepared_perf": 50184.875452615,
+      "ordered_start_perf": 50479.134594687,
+      "consumer_wait_ms": 0.014026998542249203,
+      "ready_to_ordered_ms": 294259.1420719982,
+      "preparation_work_ms": 7005.003915000998,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table inside a room, with flowers, a clapperboard, and papers laid out on the table.",
+      "A woman standing near the whiteboard in the background trims and arranges lily stems and green leaves.",
+      "A woman seated on the left side of the table examines dark bouquet wrapping paper and flowers.",
+      "A person wearing an orange shirt walks into the room through the doorway in the background.",
+      "Two women sit on the right side of the table, watching the floral preparations and listening to the discussion.",
+      "<voice_0> discusses whether lunch should be provided on the final day and asks how many people will attend.",
+      "<voice_1029> suggests that they do not need to provide lunch, proposing instead to offer some desserts or afternoon tea.",
+      "<voice_0> agrees with the afternoon tea idea and suggests scheduling the event timeline from the afternoon until the evening."
+    ],
+    "high_level_conclusions": [
+      "The participants are coordinating an event or video production schedule, handling both timeline planning and floral prop arrangements.",
+      "<voice_0> and <voice_1029> reach a consensus on catering logistics, opting for an afternoon tea format rather than a full meal to simplify arrangements."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table inside a room, with flowers, a clapperboard, and papers laid out on the table.\",\n    \"A woman standing near the whiteboard in the background trims and arranges lily stems and green leaves.\",\n    \"A woman seated on the left side of the table examines dark bouquet wrapping paper and flowers.\",\n    \"A person wearing an orange shirt walks into the room through the doorway in the background.\",\n    \"Two women sit on the right side of the table, watching the floral preparations and listening to the discussion.\",\n    \"<voice_0> discusses whether lunch should be provided on the final day and asks how many people will attend.\",\n    \"<voice_1029> suggests that they do not need to provide lunch, proposing instead to offer some desserts or afternoon tea.\",\n    \"<voice_0> agrees with the afternoon tea idea and suggests scheduling the event timeline from the afternoon until the evening.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are coordinating an event or video production schedule, handling both timeline planning and floral prop arrangements.\",\n    \"<voice_0> and <voice_1029> reach a consensus on catering logistics, opting for an afternoon tea format rather than a full meal to simplify arrangements.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 91,
+      "call_id": "e9d22d93-7ff9-421e-80c5-cd2f8df15881",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789409303.0232394,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67116,
+      "output_tokens": 1385,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 48819.77330699738
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table inside a room, with flowers, a clapperboard, and papers laid out on the table.\",\n    \"A woman standing near the whiteboard in the background trims and arranges lily stems and green leaves.\",\n    \"A woman seated on the left side of the table examines dark bouquet wrapping paper and flowers.\",\n    \"A person wearing an orange shirt walks into the room through the doorway in the background.\",\n    \"Two women sit on the right side of the table, watching the floral preparations and listening to the discussion.\",\n    \"<voice_0> discusses whether lunch should be provided on the final day and asks how many people will attend.\",\n    \"<voice_1029> suggests that they do not need to provide lunch, proposing instead to offer some desserts or afternoon tea.\",\n    \"<voice_0> agrees with the afternoon tea idea and suggests scheduling the event timeline from the afternoon until the evening.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are coordinating an event or video production schedule, handling both timeline planning and floral prop arrangements.\",\n    \"<voice_0> and <voice_1029> reach a consensus on catering logistics, opting for an afternoon tea format rather than a full meal to simplify arrangements.\"\n  ]\n}\n```",
+      "total_tokens": 68501,
+      "request_end": 1789409351.8431563,
+      "latency_ms": 48819.91401100095,
+      "client_wall_clock_latency_ms": 48819.91401100095,
+      "api_request_wall_clock_latency_ms": 48819.91401100095
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_91_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

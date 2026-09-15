@@ -1,0 +1,339 @@
+{
+  "clip_id": 7,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00030000.mp4",
+  "end_to_end_memory_generation_ms": 111393.7536799931,
+  "latency_ms": {
+    "clip_decode": 3108.072051007184,
+    "deepgram_asr": 803.010281000752,
+    "mai_transcribe_asr": 999.6582599997055,
+    "asr_total": 1000.8487970044371,
+    "audio_segmentation": 3.65857599535957,
+    "speech_embedding_campplus": null,
+    "facial_detection_recognition_buffalo_l": 2268.31747299002,
+    "face_clustering": 2.998875002958812,
+    "vlm_memory_generation": 42691.10246199125,
+    "text_embedding": 475.5370969942305,
+    "graph_update_total": 0.07222601561807096
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 7,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 768,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789431474.4274228,
+          "status": "success",
+          "total_tokens": 149,
+          "request_end": 1789431474.902799,
+          "latency_ms": 475.3765659988858
+        }
+      ],
+      "total_tokens": 149,
+      "latency_ms": 475.5370969942305
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 803.010281000752,
+        "openrouter-mai-transcribe-2": 999.6582599997055
+      },
+      "asr_total_ms": 1000.8487970044371,
+      "audio_segmentation_ms": 3.65857599535957,
+      "speech_embedding_ms": null,
+      "graph_update_ms": null,
+      "asr_segment_count": 0,
+      "speech_embedding_count": 0,
+      "voice_identity_count": 0,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 7.476269005564973
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2268.31747299002,
+      "face_clustering_ms": 2.998875002958812,
+      "graph_update_ms": 0.002305008820258081,
+      "frame_count": 150,
+      "detected_face_count": 27,
+      "qualified_face_count": 2,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2287.67558898835
+    },
+    "vlm": {
+      "context_preparation_ms": 6183.712887010188,
+      "vlm_ms": 42691.10246199125,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A young woman in a white jacket sits at a table cluttered with papers, stationery, and drinks.\",\n  \"She holds and looks at a smartphone attached to a portable charger.\",\n  \"A person wearing black gloves examines and moves printed documents scattered across the table.\",\n  \"The gloved person inspects a painted table runner decorated with fish artwork.\",\n  \"The gloved person uses small paper tools and stencils to adjust the painted surface of the runner.\",\n  \"The woman turns toward the back of her chair and searches inside a studded brown backpack.\"\n ],\n \"high_level_conclusions\": [\n  \"The person in black gloves is engaged in a precise artistic craft or examination task requiring protection for the materials.\",\n  \"The woman and the gloved individual are sharing a workspace, though the woman is occupied with personal items and her bag.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A young woman in a white jacket sits at a table cluttered with papers, stationery, and drinks.",
+          "She holds and looks at a smartphone attached to a portable charger.",
+          "A person wearing black gloves examines and moves printed documents scattered across the table.",
+          "The gloved person inspects a painted table runner decorated with fish artwork.",
+          "The gloved person uses small paper tools and stencils to adjust the painted surface of the runner.",
+          "The woman turns toward the back of her chair and searches inside a studded brown backpack."
+        ],
+        "high_level_conclusions": [
+          "The person in black gloves is engaged in a precise artistic craft or examination task requiring protection for the materials.",
+          "The woman and the gloved individual are sharing a workspace, though the woman is occupied with personal items and her bag."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 7,
+          "call_id": "591f16fc-aa1d-4bd4-9c57-c2c55b580f31",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789431431.7354913,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65617,
+          "output_tokens": 845,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 42690.95421300153
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A young woman in a white jacket sits at a table cluttered with papers, stationery, and drinks.\",\n  \"She holds and looks at a smartphone attached to a portable charger.\",\n  \"A person wearing black gloves examines and moves printed documents scattered across the table.\",\n  \"The gloved person inspects a painted table runner decorated with fish artwork.\",\n  \"The gloved person uses small paper tools and stencils to adjust the painted surface of the runner.\",\n  \"The woman turns toward the back of her chair and searches inside a studded brown backpack.\"\n ],\n \"high_level_conclusions\": [\n  \"The person in black gloves is engaged in a precise artistic craft or examination task requiring protection for the materials.\",\n  \"The woman and the gloved individual are sharing a workspace, though the woman is occupied with personal items and her bag.\"\n ]\n}\n```",
+          "total_tokens": 66462,
+          "request_end": 1789431474.4265974,
+          "latency_ms": 42691.10246199125,
+          "client_wall_clock_latency_ms": 42691.10246199125,
+          "api_request_wall_clock_latency_ms": 42691.10246199125
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.057568002375774086,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.012353004422038794,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 0,
+    "speech_embeddings": 0,
+    "voice_identities": 0,
+    "detected_faces": 27,
+    "qualified_faces": 2,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 2,
+    "nodes_after_clip": 67,
+    "edges_after_clip": 18,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A young woman in a white jacket sits at a table cluttered with papers, stationery, and drinks.",
+      "She holds and looks at a smartphone attached to a portable charger.",
+      "A person wearing black gloves examines and moves printed documents scattered across the table.",
+      "The gloved person inspects a painted table runner decorated with fish artwork.",
+      "The gloved person uses small paper tools and stencils to adjust the painted surface of the runner.",
+      "The woman turns toward the back of her chair and searches inside a studded brown backpack."
+    ],
+    "high_level_conclusions": [
+      "The person in black gloves is engaged in a precise artistic craft or examination task requiring protection for the materials.",
+      "The woman and the gloved individual are sharing a workspace, though the woman is occupied with personal items and her bag."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A young woman in a white jacket sits at a table cluttered with papers, stationery, and drinks.",
+      "She holds and looks at a smartphone attached to a portable charger.",
+      "A person wearing black gloves examines and moves printed documents scattered across the table.",
+      "The gloved person inspects a painted table runner decorated with fish artwork.",
+      "The gloved person uses small paper tools and stencils to adjust the painted surface of the runner.",
+      "The woman turns toward the back of her chair and searches inside a studded brown backpack."
+    ],
+    "high_level_conclusions": [
+      "The person in black gloves is engaged in a precise artistic craft or examination task requiring protection for the materials.",
+      "The woman and the gloved individual are sharing a workspace, though the woman is occupied with personal items and her bag."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_7_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 59,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young woman in a white jacket sits at a table cluttered with papers, stationery, and drinks."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 60,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "She holds and looks at a smartphone attached to a portable charger."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 61,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing black gloves examines and moves printed documents scattered across the table."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 62,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The gloved person inspects a painted table runner decorated with fish artwork."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 63,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The gloved person uses small paper tools and stencils to adjust the painted surface of the runner."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 64,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman turns toward the back of her chair and searches inside a studded brown backpack."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 65,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person in black gloves is engaged in a precise artistic craft or examination task requiring protection for the materials."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 66,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman and the gloved individual are sharing a workspace, though the woman is occupied with personal items and her bag."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_7_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_7_graph.pkl"
+  },
+  "memory_pickle_bytes": 1739261,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 72550.352119318,
+    "prepared_perf": 72554.571789573,
+    "ordered_start_perf": 72610.000245676,
+    "consumer_wait_ms": 0.0115610018838197,
+    "ready_to_ordered_ms": 55428.45610299264,
+    "preparation_work_ms": 4214.210106001701,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 51646.93726100086
+}

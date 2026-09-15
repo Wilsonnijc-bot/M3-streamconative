@@ -1,0 +1,555 @@
+{
+  "clip_id": 12,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0012.mp4",
+  "end_to_end_memory_generation_ms": 694478.7444160029,
+  "latency_ms": {
+    "clip_decode": 3603.398423998442,
+    "deepgram_asr": 2.657983000972308,
+    "mai_transcribe_asr": 2.472453998052515,
+    "asr_total": 3.3833569978014566,
+    "audio_segmentation": 6.324583999230526,
+    "speech_embedding_campplus": 738.0362750045606,
+    "facial_detection_recognition_buffalo_l": 3525.928536997526,
+    "face_clustering": 8.103532003588043,
+    "vlm_memory_generation": 242674.4091080036,
+    "text_embedding": 622.955209997599,
+    "graph_update_total": 35.16790499998024
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 12,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 16,
+      "input_chars": 1604,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789412801.3707368,
+          "status": "success",
+          "total_tokens": 515,
+          "request_end": 1789412801.9935524,
+          "latency_ms": 622.8159989987034
+        }
+      ],
+      "total_tokens": 515,
+      "latency_ms": 622.955209997599
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.657983000972308,
+        "openrouter-mai-transcribe-2": 2.472453998052515
+      },
+      "asr_total_ms": 3.3833569978014566,
+      "audio_segmentation_ms": 6.324583999230526,
+      "speech_embedding_ms": 738.0362750045606,
+      "graph_update_ms": 29.908552998676896,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 790.5339849967277
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3525.928536997526,
+      "face_clustering_ms": 8.103532003588043,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 219,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3656.058521999512
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_0>",
+        "<voice_112>"
+      ],
+      "context_preparation_ms": 5889.81535199855,
+      "vlm_ms": 242674.4091080036,
+      "raw_response": "{\n  \"video_description\": [\n    \"At 0.00s, a person in a pink shirt stands near a table while another person stands by the window.\",\n    \"At 0.50s, a person wearing a white top and hijab enters the room from the right.\",\n    \"At 0.01s, speaker <voice_0> states: 'MAI: 没有，没那么有钱。就我们只能相信这个墙壁，或者相信北京电力吧。对。' (No, not that rich. We can only trust this wall, or trust Beijing power.)\",\n    \"At 5.00s, a person in a black top sits down at the table on the left side.\",\n    \"At 6.00s, the group gathers around the table, which is cluttered with boxes and electronic devices.\",\n    \"At 7.00s, a person in a pink shirt sits down on a chair at the table.\",\n    \"From 8.00s to 20.00s, the group remains seated around the table, appearing to work on or inspect items placed on the checkered tablecloth.\",\n    \"At 0.15s, speaker <voice_0> states: 'MAI: 好，你们都开始装了。' (Okay, you guys have started installing.)\",\n    \"At 0.21s, speaker <voice_0> states: 'MAI: 可以边聊边装吧。' (We can chat while installing.)\",\n    \"At 0.23s, speaker <voice_0> states: 'MAI: 嗯，或者说你们先带，你们带了什么呀？你们带了什么？嗯，这个，这-' (Um, or rather you bring first, what did you bring? What did you bring? Um, this, this-) \",\n    \"At 0.20s, speaker <voice_112> states: 'MAI: 可以。' (Okay.)\",\n    \"At 27.00s, a hand holding a selfie stick or camera pole comes into view from the bottom right.\",\n    \"At 29.00s, hands reach towards the camera lens from the foreground.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a collaborative installation or setup process involving electronic equipment.\",\n    \"Speaker <voice_0> appears to be leading the discussion and providing instructions regarding the installation progress.\",\n    \"The participants are discussing logistical details such as equipment brought and financial resources before proceeding.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "At 0.00s, a person in a pink shirt stands near a table while another person stands by the window.",
+          "At 0.50s, a person wearing a white top and hijab enters the room from the right.",
+          "At 0.01s, speaker <voice_0> states: 'MAI: 没有，没那么有钱。就我们只能相信这个墙壁，或者相信北京电力吧。对。' (No, not that rich. We can only trust this wall, or trust Beijing power.)",
+          "At 5.00s, a person in a black top sits down at the table on the left side.",
+          "At 6.00s, the group gathers around the table, which is cluttered with boxes and electronic devices.",
+          "At 7.00s, a person in a pink shirt sits down on a chair at the table.",
+          "From 8.00s to 20.00s, the group remains seated around the table, appearing to work on or inspect items placed on the checkered tablecloth.",
+          "At 0.15s, speaker <voice_0> states: 'MAI: 好，你们都开始装了。' (Okay, you guys have started installing.)",
+          "At 0.21s, speaker <voice_0> states: 'MAI: 可以边聊边装吧。' (We can chat while installing.)",
+          "At 0.23s, speaker <voice_0> states: 'MAI: 嗯，或者说你们先带，你们带了什么呀？你们带了什么？嗯，这个，这-' (Um, or rather you bring first, what did you bring? What did you bring? Um, this, this-)",
+          "At 0.20s, speaker <voice_112> states: 'MAI: 可以。' (Okay.)",
+          "At 27.00s, a hand holding a selfie stick or camera pole comes into view from the bottom right.",
+          "At 29.00s, hands reach towards the camera lens from the foreground."
+        ],
+        "high_level_conclusions": [
+          "The group is engaged in a collaborative installation or setup process involving electronic equipment.",
+          "Speaker <voice_0> appears to be leading the discussion and providing instructions regarding the installation progress.",
+          "The participants are discussing logistical details such as equipment brought and financial resources before proceeding."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 12,
+          "call_id": "dab422ff-080f-44a7-bf4b-1b6a9bf44b7e",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789412558.6954482,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"At 0.00s, a person in a pink shirt stands near a table while another person stands by the window.\",\n    \"At 0.50s, a person wearing a white top and hijab enters the room from the right.\",\n    \"At 0.01s, speaker <voice_0> states: 'MAI: 没有，没那么有钱。就我们只能相信这个墙壁，或者相信北京电力吧。对。' (No, not that rich. We can only trust this wall, or trust Beijing power.)\",\n    \"At 5.00s, a person in a black top sits down at the table on the left side.\",\n    \"At 6.00s, the group gathers around the table, which is cluttered with boxes and electronic devices.\",\n    \"At 7.00s, a person in a pink shirt sits down on a chair at the table.\",\n    \"From 8.00s to 20.00s, the group remains seated around the table, appearing to work on or inspect items placed on the checkered tablecloth.\",\n    \"At 0.15s, speaker <voice_0> states: 'MAI: 好，你们都开始装了。' (Okay, you guys have started installing.)\",\n    \"At 0.21s, speaker <voice_0> states: 'MAI: 可以边聊边装吧。' (We can chat while installing.)\",\n    \"At 0.23s, speaker <voice_0> states: 'MAI: 嗯，或者说你们先带，你们带了什么呀？你们带了什么？嗯，这个，这-' (Um, or rather you bring first, what did you bring? What did you bring? Um, this, this-) \",\n    \"At 0.20s, speaker <voice_112> states: 'MAI: 可以。' (Okay.)\",\n    \"At 27.00s, a hand holding a selfie stick or camera pole comes into view from the bottom right.\",\n    \"At 29.00s, hands reach towards the camera lens from the foreground.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a collaborative installation or setup process involving electronic equipment.\",\n    \"Speaker <voice_0> appears to be leading the discussion and providing instructions regarding the installation progress.\",\n    \"The participants are discussing logistical details such as equipment brought and financial resources before proceeding.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   The video shows a room with a table covered in a red-and-white checkered tablecloth.\n    *   There are several people present.\n    *   Initially (0.00s - 4.00s), there are three people standing near the window/table area. One person in a pinkish shirt stands centrally. Another person in a white top and hijab enters from the right. A third person is near the window.\n    *   Around 5.00s, more people join the table. A person in a black top sits down on the left. Another person in a white top sits next to them.\n    *   By 6.00s onwards, the group settles around the table. There appear to be about 5-6 people seated or standing around the table.\n    *   They seem to be working on something on the table, possibly assembling or organizing items (boxes, phones, etc.).\n    *   The camera perspective shifts slightly, sometimes showing a tripod or selfie stick being held by someone off-camera (likely the camera operator).\n    *   Towards the end (28.00s+), the camera moves closer to the table, and hands reach into the frame, suggesting interaction with the camera or objects on the table.\n*   **Voice Features:**\n    *   `<voice_0>`: Contains multiple segments spoken by \"MAI\".\n        *   00:01-00:12: Discusses money, trusting a wall or Beijing power.\n        *   00:15-00:18: Says \"Okay, you guys have started installing.\"\n        *   00:21-00:24: Suggests chatting while installing.\n        *   00:23-00:30: Asks what they brought.\n    *   `<voice_112>`:\n        *   00:20-00:22: Says \"Okay.\" (Also attributed to MAI in ASR, but ID is different). Wait, looking closely at the ASR text for `<voice_112>`, it says \"MAI: 可以。\" (Okay.). This seems like a response to a question.\n\n**2. Construct Video Description:**\n*   Need to describe the sequence of events atomically.\n*   Start with the initial state: People entering/standing in the room.\n*   Describe the gathering around the table.\n*   Describe the activity: Working on items, sitting down.\n*   Mention the camera movement/handling.\n\n**Drafting Video Description:**\n*   At 0.00s, a person in a pink shirt stands near a table while another person in a blue/green outfit stands by the window.\n*   At 0.50s, a person wearing a white top and hijab enters the room from the right side.\n*   At 1.00s, the person in the pink shirt stands facing the window, while the person in the hijab stands near the door.\n*   At 5.00s, a person in a black top sits down at the table on the left side.\n*   At 6.00s, the group gathers around the table, which is cluttered with boxes and electronic devices.\n*   At 7.00s, a person in a pink shirt sits down on a chair at the table.\n*   From 8.00s to 20.00s, the group remains seated around the table, appearing to work on or inspect items placed on the checkered tablecloth.\n*   At 27.00s, a hand holding a selfie stick or camera pole comes into view from the bottom right.\n*   At 29.00s, hands reach towards the camera lens from the foreground.\n\n**3. Construct High-Level Conclusions:**\n*   Need to infer intentions/relationships.\n*   The voice features attribute speech to \"MAI\". Since I don't have explicit face IDs linked to voices in the prompt's feature list (only generic `<voice_0>`, `<voice_112>`), I need to be careful. The prompt instructions say: \"For every supplied voice ID with nonempty speech, include at least one episodic memory... using the exact ID as the speaker.\" AND \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   However, the instruction also says: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\"\n*   Looking at the provided JSON schema request, it asks for `high_level_conclusions`. Usually, this involves inferring who is doing what.\n*   The voice features mention \"MAI\". Is \"MAI\" a name? Or just a label? In the context of the task, usually, if there's a specific name mentioned in ASR, it might correspond to a character. But here, the ASR explicitly tags the speaker as \"MAI\".\n*   Wait, the prompt instructions say: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" And \"Preserve distinct substantive utterances as separate atomic memories.\"\n*   Actually, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This applies to the *memory construction* part usually found in these tasks. But the current output format requested is `video_description` and `high_level_conclusions`.\n*   Let's re-read the specific constraints for *this* turn.\n    *   \"Your task consists of two parts: 1. Video Description ... 2. High-Level Conclusions ...\"\n    *   \"Output Format: ... video_description ... high_level_conclusions ...\"\n    *   \"Preserve speaker identity when constructing memory from the supplied character features.\" -> This instruction seems to apply to a general task template, but the specific output format requested here is JSON with `video_description` and `high_level_conclusions`.\n    *   Wait, the system prompt says: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This looks like conflicting instructions if I am supposed to output *only* the JSON described in the user prompt.\n    *   Let's look at the User Prompt again. It defines the task: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions... Output Format: JSON...\".\n    *   The System Prompt says: \"Preserve speaker identity when constructing memory...\". This suggests I should incorporate the voice information into the descriptions/conclusions where appropriate, specifically regarding speaker identification if possible, or at least acknowledge the voice IDs if they are relevant to the narrative.\n    *   However, the constraint \"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence\" is crucial. I cannot link `<voice_0>` to a specific face unless I know for sure. The ASR says \"MAI:\", implying a name. I can treat \"MAI\" as a speaker identifier within the text, but I shouldn't claim `<voice_0>` belongs to Face X unless there's a link.\n    *   Actually, usually in these datasets (like ActivityNet or similar), voice IDs often map to specific people. But without explicit mapping in the input (like `<face_1>: <voice_0>`), I must follow the rule: \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\"\n    *   So, in `high_level_conclusions`, I can mention that a speaker named MAI is giving instructions, but I cannot equate `<voice_0>` to a specific face ID like `<face_1>`.\n    *   Wait, the instruction says: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" This implies I *should* use the voice ID in the conclusion if I'm talking about that speaker.\n    *   So, Conclusion: \"Speaker MAI (<voice_0>) instructs the group to install equipment and chat while working.\"\n    *   Also, `<voice_112>` confirms agreement (\"Okay.\").\n\n**Refining the Plan:**\n1.  **Video Description:** Chronological account of the visual events. Focus on the group gathering, sitting, and working.\n2.  **High-Level Conclusions:**\n    *   Infer the activity: Installation/setup of equipment.\n    *   Identify the speaker: MAI (<voice_0>).\n    *   Note the interaction: Group discussion and confirmation.\n    *   Avoid linking voice to specific faces since no face IDs are provided in the input features list (only video frames are provided, no explicit `<face_X>` lists in the text input, though the prompt mentions \"character features\" generally, the actual input block only shows \"Face features:\" and \"Voice features:\" headers but empty content under Face features, and content under Voice features).\n    *   Wait, looking closely at the input: \"Face features:Voice features:\". There is no content under Face features. Just the header. Then \"Voice features:\" followed by the JSON.\n    *   This means I have NO face IDs to reference. Therefore, I cannot create equivalences like `Equivalence: <face_1>, <voice_0>`.\n    *   I must strictly follow: \"If no face IDs are supplied, do not invent any.\"\n    *   So `high_level_conclusions` will focus on the actions and the voice content without assigning visual identities.\n\n**Revised Plan:**\n*   **Video Description:**\n    *   Scene starts with people standing in a room.\n    *   Person in pink shirt stands centrally.\n    *   Person in hijab enters.\n    *   More people sit around a table with electronics.\n    *   Camera operator adjusts position/stick.\n    *   Group works together.\n*   **High-Level Conclusions:**\n    *   Speaker MAI (<voice_0>) provides guidance on installation and equipment.\n    *   The group engages in collaborative work involving technical devices.\n    *   Confirmation received from another participant (<voice_112>).\n\nLet's double check the \"Memory\" instruction vs \"Video Description\" instruction.\nSystem Prompt: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nUser Prompt: \"Output Format: ... video_description ... high_level_conclusions ...\"\nThis is a conflict. The System Prompt describes a task (constructing memory), but the User Prompt describes a specific output format (JSON with video description and conclusions).\nUsually, the User Prompt overrides the System Prompt regarding the *output format*, but the System Prompt sets the *behavioral constraints*.\nHowever, the System Prompt says \"Preserve speaker identity when constructing memory...\". If I am writing a `video_description`, I should probably integrate the voice info there if it describes the action.\nBut the specific instruction \"include at least one episodic memory\" sounds like it belongs to a different output structure (often a list of memories).\nGiven the strict JSON schema requested (`video_description` array, `high_level_conclusions` array), I will adapt the \"episodic memory\" requirement into the `video_description` or `high_level_conclusions` where it fits best, ensuring the voice ID is used if referring to the speaker.\nActually, reading the System Prompt again: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". This matches the User Prompt exactly.\nSo I will follow the User Prompt's structure.\nConstraint: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSince I am outputting `video_description` strings, I can make one of those strings an \"episodic memory\" style summary including the quote and ID.\nExample: \"Speaker <voice_0> states: 'MAI: 没有，没那么有钱...' (No, not that rich...)\".\nWait, the instruction says \"using the exact ID as the speaker\". So instead of saying \"MAI says...\", I should say \"<voice_0> says...\".\nAnd \"Preserve distinct substantive utterances as separate atomic memories.\"\nSo I should break down the speech into separate sentences in the description if they are distinct events.\nActually, the `video_description` is meant to be \"atomic event or fact\".\nSo:\n1. Visual event: People gather.\n2. Audio event: <voice_0> speaks about money/installation.\n3. Visual event: People sit.\n4. Audio event: <voice_0> asks what they brought.\n5. Audio event: <voice_112> responds.\n\nLet's refine the `video_description` to include the audio events as facts.\nAnd `high_level_conclusions` for the inference.\n\n**Final Check on Constraints:**\n*   \"Do not replace the ID with 'a speaker'...\" -> Must use `<voice_0>`, `<voice_112>`.\n*   \"Do not assign it to the camera wearer... without supporting evidence.\" -> No face IDs, so no assignment.\n*   \"Keep dialogue grounded in the provided transcript.\" -> Use the ASR text.\n*   \"Output Format: JSON...\"\n\n**Plan:**\n1.  **Video Description:**\n    *   Frame 0-4s: People standing, one enters.\n    *   Frame 5-10s: People sit at table.\n    *   Frame 10-20s: Group works on items.\n    *   Frame 27-29s: Camera interaction.\n    *   Integrate Voice Events:\n        *   <voice_0> discusses financial status/trust.\n        *   <voice_0> confirms installation progress.\n        *   <voice_0> suggests chatting during work.\n        *   <voice_0> asks about carried items.\n        *   <voice_112> agrees.\n2.  **High-Level Conclusions:**\n    *   Group is preparing/installing equipment.\n    *   <voice_0> acts as the coordinator/instructor.\n    *   Collaboration is taking place.\n\nOne detail: \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript... using the exact ID as the speaker.\"\nI will ensure the description includes these quotes attributed to the IDs.\n\nLet's write the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"At 0.00s, a person in a pink shirt stands near a table while another person stands by the window.\",\n    \"At 0.50s, a person wearing a white top and hijab enters the room from the right.\",\n    \"At 5.00s, a person in a black top sits down at the table on the left side.\",\n    \"At 6.00s, the group gathers around the table, which is cluttered with boxes and electronic devices.\",\n    \"At 7.00s, a person in a pink shirt sits down on a chair at the table.\",\n    \"From 8.00s to 20.00s, the group remains seated around the table, appearing to work on or inspect items placed on the checkered tablecloth.\",\n    \"At 27.00s, a hand holding a selfie stick or camera pole comes into view from the bottom right.\",\n    \"At 29.00s, hands reach towards the camera lens from the foreground.\",\n    \"Speaker <voice_0> states: 'MAI: 没有，没那么有钱。就我们只能相信这个墙壁，或者相信北京电力吧。对。' (No, not that rich. We can only trust this wall, or trust Beijing power.)\",\n    \"Speaker <voice_0> states: 'MAI: 好，你们都开始装了。' (Okay, you guys have started installing.)\",\n    \"Speaker <voice_0> states: 'MAI: 可以边聊边装吧。' (We can chat while installing.)\",\n    \"Speaker <voice_0> states: 'MAI: 嗯，或者说你们先带，你们带了什么呀？你们带了什么？嗯，这个，这-' (Um, or rather you bring first, what did you bring? What did you bring? Um, this, this-) \",\n    \"Speaker <voice_112> states: 'MAI: 可以。' (Okay.)\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a collaborative installation or setup process involving electronic equipment.\",\n    \"Speaker <voice_0> appears to be leading the discussion and providing instructions regarding the installation progress.\",\n    \"The participants are discussing logistical details such as equipment brought and financial resources before proceeding.\"\n  ]\n}\n```\nWait, I need to check the instruction \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\nDoes putting the quotes in `video_description` count as \"episodic memory\"? Yes, likely.\nAlso, I need to make sure I don't hallucinate face IDs. I haven't done that.\nI need to make sure I don't use 'a speaker'. I used `<voice_0>`.\nI need to make sure I don't invent face equivalences. I haven't.\n\nOne small correction: The instruction says \"include at least one episodic memory...\". It doesn't say *all* must be in the description, but since I need to preserve the transcript, putting them in the description is the safest way to satisfy both the \"grounded in transcript\" and \"preserve ID\" rules within the allowed output fields.\nAlso, the instruction \"Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\" supports quoting the ASR directly.\n\nOne more thing: The instruction says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" I am using `<voice_0>` and `<voice_112>` which are in the input.\n\nFinal check on the JSON structure.\n`video_description`: Array of strings.\n`high_level_conclusions`: Array of strings.\nValid JSON.\n\nOne detail on the voice text: The ASR contains Chinese characters. I should keep them as is or translate? The instruction says \"quotes or faithfully summarizes that speaker's transcript\". Quoting is safer. I will keep the Chinese characters as they are part of the transcript provided.\n\nWait, looking at the instruction \"Preserve speaker identity when constructing memory from the supplied character features.\"\nIt also says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis implies I should treat the transcript lines as memories.\nI will add them to the `video_description` array.\n\nOne potential issue: The `video_description` is supposed to be \"atomic event or fact\". Long quotes might violate \"concise\". But the instruction explicitly asks to include the transcript/memory. I will try to keep the description flow natural while embedding the required memory elements.\nActually, I can combine the visual action with the audio event.\n\"At 0.01s, <voice_0> begins speaking about financial status and trust in infrastructure.\"\nThis satisfies both.\n\nLet's refine the `video_description` entries to be more concise and integrated.\n1. Visual + Audio: <voice_0> discusses money and trust.\n2. Visual: Person enters.\n3. Visual: People sit.\n4. Audio: <voice_0> confirms installation.\n5. Audio: <voice_0> suggests chatting.\n6. Audio: <voice_0> asks about items.\n7. Audio: <voice_112> agrees.\n8. Visual: Camera adjustment.\n\nThis covers all requirements.\n\nOne final check on constraints: \"Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\" -> I will use `<voice_0>`.\n\"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> I will use `<voice_0>` in conclusions.\n\nOkay, ready to generate.\n</think>\n\n{\n  \"video_description\": [\n    \"At 0.00s, a person in a pink shirt stands near a table while another person stands by the window.\",\n    \"At 0.50s, a person wearing a white top and hijab enters the room from the right.\",\n    \"At 0.01s, speaker <voice_0> states: 'MAI: 没有，没那么有钱。就我们只能相信这个墙壁，或者相信北京电力吧。对。' (No, not that rich. We can only trust this wall, or trust Beijing power.)\",\n    \"At 5.00s, a person in a black top sits down at the table on the left side.\",\n    \"At 6.00s, the group gathers around the table, which is cluttered with boxes and electronic devices.\",\n    \"At 7.00s, a person in a pink shirt sits down on a chair at the table.\",\n    \"From 8.00s to 20.00s, the group remains seated around the table, appearing to work on or inspect items placed on the checkered tablecloth.\",\n    \"At 0.15s, speaker <voice_0> states: 'MAI: 好，你们都开始装了。' (Okay, you guys have started installing.)\",\n    \"At 0.21s, speaker <voice_0> states: 'MAI: 可以边聊边装吧。' (We can chat while installing.)\",\n    \"At 0.23s, speaker <voice_0> states: 'MAI: 嗯，或者说你们先带，你们带了什么呀？你们带了什么？嗯，这个，这-' (Um, or rather you bring first, what did you bring? What did you bring? Um, this, this-) \",\n    \"At 0.20s, speaker <voice_112> states: 'MAI: 可以。' (Okay.)\",\n    \"At 27.00s, a hand holding a selfie stick or camera pole comes into view from the bottom right.\",\n    \"At 29.00s, hands reach towards the camera lens from the foreground.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a collaborative installation or setup process involving electronic equipment.\",\n    \"Speaker <voice_0> appears to be leading the discussion and providing instructions regarding the installation progress.\",\n    \"The participants are discussing logistical details such as equipment brought and financial resources before proceeding.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10523,
+          "output_tokens": 5094,
+          "total_tokens": 15617,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002054002834483981,
+            "media_preparation_ms": 61.03622900263872,
+            "processor_tokenization_ms": 2759.284323998145,
+            "device_transfer_ms": 46.43193200172391,
+            "cuda_generation_ms": 239770.4878250006,
+            "decoding_ms": 4.9751600017771125
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 242642.4501500005,
+          "request_end": 1789412801.3698606,
+          "latency_ms": 242674.4091080036,
+          "client_wall_clock_latency_ms": 242674.4091080036
+        }
+      ],
+      "episodic_memory_count": 13,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 13,
+      "text_embedding_ms": null,
+      "text_embedding_count": 13,
+      "graph_update_ms": 0.14567300240742043,
+      "nodes_added": 13,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 5.113678998895921,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 2,
+    "detected_faces": 219,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 13,
+    "semantic_memories": 3,
+    "nodes_after_clip": 129,
+    "edges_after_clip": 42,
+    "nodes_added_by_clip": 17,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "At 0.00s, a person in a pink shirt stands near a table while another person stands by the window.",
+      "At 0.50s, a person wearing a white top and hijab enters the room from the right.",
+      "At 0.01s, speaker <voice_0> states: 'MAI: 没有，没那么有钱。就我们只能相信这个墙壁，或者相信北京电力吧。对。' (No, not that rich. We can only trust this wall, or trust Beijing power.)",
+      "At 5.00s, a person in a black top sits down at the table on the left side.",
+      "At 6.00s, the group gathers around the table, which is cluttered with boxes and electronic devices.",
+      "At 7.00s, a person in a pink shirt sits down on a chair at the table.",
+      "From 8.00s to 20.00s, the group remains seated around the table, appearing to work on or inspect items placed on the checkered tablecloth.",
+      "At 0.15s, speaker <voice_0> states: 'MAI: 好，你们都开始装了。' (Okay, you guys have started installing.)",
+      "At 0.21s, speaker <voice_0> states: 'MAI: 可以边聊边装吧。' (We can chat while installing.)",
+      "At 0.23s, speaker <voice_0> states: 'MAI: 嗯，或者说你们先带，你们带了什么呀？你们带了什么？嗯，这个，这-' (Um, or rather you bring first, what did you bring? What did you bring? Um, this, this-)",
+      "At 0.20s, speaker <voice_112> states: 'MAI: 可以。' (Okay.)",
+      "At 27.00s, a hand holding a selfie stick or camera pole comes into view from the bottom right.",
+      "At 29.00s, hands reach towards the camera lens from the foreground."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a collaborative installation or setup process involving electronic equipment.",
+      "Speaker <voice_0> appears to be leading the discussion and providing instructions regarding the installation progress.",
+      "The participants are discussing logistical details such as equipment brought and financial resources before proceeding."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "At 0.00s, a person in a pink shirt stands near a table while another person stands by the window.",
+      "At 0.50s, a person wearing a white top and hijab enters the room from the right.",
+      "At 0.01s, speaker <voice_0> states: 'MAI: 没有，没那么有钱。就我们只能相信这个墙壁，或者相信北京电力吧。对。' (No, not that rich. We can only trust this wall, or trust Beijing power.)",
+      "At 5.00s, a person in a black top sits down at the table on the left side.",
+      "At 6.00s, the group gathers around the table, which is cluttered with boxes and electronic devices.",
+      "At 7.00s, a person in a pink shirt sits down on a chair at the table.",
+      "From 8.00s to 20.00s, the group remains seated around the table, appearing to work on or inspect items placed on the checkered tablecloth.",
+      "At 0.15s, speaker <voice_0> states: 'MAI: 好，你们都开始装了。' (Okay, you guys have started installing.)",
+      "At 0.21s, speaker <voice_0> states: 'MAI: 可以边聊边装吧。' (We can chat while installing.)",
+      "At 0.23s, speaker <voice_0> states: 'MAI: 嗯，或者说你们先带，你们带了什么呀？你们带了什么？嗯，这个，这-' (Um, or rather you bring first, what did you bring? What did you bring? Um, this, this-)",
+      "At 0.20s, speaker <voice_112> states: 'MAI: 可以。' (Okay.)",
+      "At 27.00s, a hand holding a selfie stick or camera pole comes into view from the bottom right.",
+      "At 29.00s, hands reach towards the camera lens from the foreground."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a collaborative installation or setup process involving electronic equipment.",
+      "Speaker <voice_0> appears to be leading the discussion and providing instructions regarding the installation progress.",
+      "The participants are discussing logistical details such as equipment brought and financial resources before proceeding."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_12_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 17,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 112,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 可以。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 113,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 0.00s, a person in a pink shirt stands near a table while another person stands by the window."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 114,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 0.50s, a person wearing a white top and hijab enters the room from the right."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 115,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 0.01s, speaker <voice_0> states: 'MAI: 没有，没那么有钱。就我们只能相信这个墙壁，或者相信北京电力吧。对。' (No, not that rich. We can only trust this wall, or trust Beijing power.)"
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 116,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 5.00s, a person in a black top sits down at the table on the left side."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 117,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 6.00s, the group gathers around the table, which is cluttered with boxes and electronic devices."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 118,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 7.00s, a person in a pink shirt sits down on a chair at the table."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 119,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "From 8.00s to 20.00s, the group remains seated around the table, appearing to work on or inspect items placed on the checkered tablecloth."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 120,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 0.15s, speaker <voice_0> states: 'MAI: 好，你们都开始装了。' (Okay, you guys have started installing.)"
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 121,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 0.21s, speaker <voice_0> states: 'MAI: 可以边聊边装吧。' (We can chat while installing.)"
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 122,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 0.23s, speaker <voice_0> states: 'MAI: 嗯，或者说你们先带，你们带了什么呀？你们带了什么？嗯，这个，这-' (Um, or rather you bring first, what did you bring? What did you bring? Um, this, this-)"
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 123,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 0.20s, speaker <voice_112> states: 'MAI: 可以。' (Okay.)"
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 124,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 27.00s, a hand holding a selfie stick or camera pole comes into view from the bottom right."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 125,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 29.00s, hands reach towards the camera lens from the foreground."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 126,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is engaged in a collaborative installation or setup process involving electronic equipment."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 127,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_0> appears to be leading the discussion and providing instructions regarding the installation progress."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 128,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are discussing logistical details such as equipment brought and financial resources before proceeding."
+          ],
+          "timestamp": 12
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 115,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 120,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 121,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 122,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 127,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 112,
+        "target": 123,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_12_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_12_graph.pkl"
+  },
+  "memory_pickle_bytes": 3314217,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 53294.368491735,
+    "prepared_perf": 53299.984541522,
+    "ordered_start_perf": 53735.010605278,
+    "consumer_wait_ms": 0.012724005500786006,
+    "ready_to_ordered_ms": 435026.0637560059,
+    "preparation_work_ms": 5608.30191399873,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 253641.0241939957
+}

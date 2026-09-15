@@ -1,0 +1,527 @@
+{
+  "clip_id": 114,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0114.mp4",
+  "end_to_end_memory_generation_ms": 468086.4198009949,
+  "latency_ms": {
+    "clip_decode": 4672.785439994186,
+    "deepgram_asr": 403.9796550059691,
+    "mai_transcribe_asr": 1255.9271520003676,
+    "asr_total": 1257.3204079963034,
+    "audio_segmentation": 7.495083991670981,
+    "speech_embedding_campplus": 878.5461520019453,
+    "facial_detection_recognition_buffalo_l": 3541.8126120057423,
+    "face_clustering": 5.965349992038682,
+    "vlm_memory_generation": 186917.0623760001,
+    "text_embedding": 754.1333420085721,
+    "graph_update_total": 521.1631029960699
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 114,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 1483,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789439853.6576993,
+          "status": "success",
+          "total_tokens": 333,
+          "request_end": 1789439854.411597,
+          "latency_ms": 753.8981809921097
+        }
+      ],
+      "total_tokens": 333,
+      "latency_ms": 754.1333420085721
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 403.9796550059691,
+        "openrouter-mai-transcribe-2": 1255.9271520003676
+      },
+      "asr_total_ms": 1257.3204079963034,
+      "audio_segmentation_ms": 7.495083991670981,
+      "speech_embedding_ms": 878.5461520019453,
+      "graph_update_ms": 520.9442710038275,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1420.2263670013053
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3541.8126120057423,
+      "face_clustering_ms": 5.965349992038682,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 175,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3641.871343992534
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1528>",
+        "<voice_1219>",
+        "<voice_1529>",
+        "<voice_1530>",
+        "<voice_1170>"
+      ],
+      "context_preparation_ms": 4145.481362007558,
+      "vlm_ms": 186917.0623760001,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals gathers around a table covered with a red-and-white checkered cloth, surrounded by props including a clapperboard, flowers, and papers.\",\n\t\t\"At 00:11, <voice_1528> asks 'Second point, anything else?' while standing near a whiteboard.\",\n\t\t\"Immediately after, <voice_1219> inquires 'Then what about point three?' during the ongoing discussion.\",\n\t\t\"<voice_1529> responds at 00:17, stating that point three work is mainly things society workers do.\",\n\t\t\"At 00:20, <voice_1530> asks 'So like these?' regarding the proposed activities.\",\n\t\t\"From 00:22 to 00:30, <voice_1170> explains a plan where participants obtain currency first before promoting their own products, noting uncertainty about their true nature.\",\n\t\t\"Between 00:16 and 00:21, the camera pans away from the group to focus on a blue shelving unit displaying a yellow sun-shaped plush toy and various small items.\",\n\t\t\"The camera then returns to a wider view of the room, showing the group continuing their meeting near the window and whiteboard.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The presence of a clapperboard and whiteboard indicates the group is engaged in a collaborative project, likely scriptwriting or filming preparation.\",\n\t\t\"MAI (<voice_1528>, <voice_1219>, <voice_1529>, <voice_1530>, <voice_1170>) acts as the primary speaker, leading the conversation regarding a business strategy involving currency acquisition and product distribution.\",\n\t\t\"The casual setting with personal items like a plush toy suggests a relaxed, informal workspace rather than a formal corporate office.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of individuals gathers around a table covered with a red-and-white checkered cloth, surrounded by props including a clapperboard, flowers, and papers.",
+          "At 00:11, <voice_1528> asks 'Second point, anything else?' while standing near a whiteboard.",
+          "Immediately after, <voice_1219> inquires 'Then what about point three?' during the ongoing discussion.",
+          "<voice_1529> responds at 00:17, stating that point three work is mainly things society workers do.",
+          "At 00:20, <voice_1530> asks 'So like these?' regarding the proposed activities.",
+          "From 00:22 to 00:30, <voice_1170> explains a plan where participants obtain currency first before promoting their own products, noting uncertainty about their true nature.",
+          "Between 00:16 and 00:21, the camera pans away from the group to focus on a blue shelving unit displaying a yellow sun-shaped plush toy and various small items.",
+          "The camera then returns to a wider view of the room, showing the group continuing their meeting near the window and whiteboard."
+        ],
+        "high_level_conclusions": [
+          "The presence of a clapperboard and whiteboard indicates the group is engaged in a collaborative project, likely scriptwriting or filming preparation.",
+          "MAI (<voice_1528>, <voice_1219>, <voice_1529>, <voice_1530>, <voice_1170>) acts as the primary speaker, leading the conversation regarding a business strategy involving currency acquisition and product distribution.",
+          "The casual setting with personal items like a plush toy suggests a relaxed, informal workspace rather than a formal corporate office."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 114,
+          "call_id": "6d7d3e1d-8cd7-43c9-b41b-416222f36e36",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789439666.7395968,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals gathers around a table covered with a red-and-white checkered cloth, surrounded by props including a clapperboard, flowers, and papers.\",\n\t\t\"At 00:11, <voice_1528> asks 'Second point, anything else?' while standing near a whiteboard.\",\n\t\t\"Immediately after, <voice_1219> inquires 'Then what about point three?' during the ongoing discussion.\",\n\t\t\"<voice_1529> responds at 00:17, stating that point three work is mainly things society workers do.\",\n\t\t\"At 00:20, <voice_1530> asks 'So like these?' regarding the proposed activities.\",\n\t\t\"From 00:22 to 00:30, <voice_1170> explains a plan where participants obtain currency first before promoting their own products, noting uncertainty about their true nature.\",\n\t\t\"Between 00:16 and 00:21, the camera pans away from the group to focus on a blue shelving unit displaying a yellow sun-shaped plush toy and various small items.\",\n\t\t\"The camera then returns to a wider view of the room, showing the group continuing their meeting near the window and whiteboard.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The presence of a clapperboard and whiteboard indicates the group is engaged in a collaborative project, likely scriptwriting or filming preparation.\",\n\t\t\"MAI (<voice_1528>, <voice_1219>, <voice_1529>, <voice_1530>, <voice_1170>) acts as the primary speaker, leading the conversation regarding a business strategy involving currency acquisition and product distribution.\",\n\t\t\"The casual setting with personal items like a plush toy suggests a relaxed, informal workspace rather than a formal corporate office.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   The video shows a group of people in a room, likely a home studio or living area.\n    *   There's a table with various items: a clapperboard, flowers, papers, bottles.\n    *   One person (wearing white/light clothing) stands near a whiteboard.\n    *   Another person (pinkish top) stands near the window/balcony door.\n    *   Two people sit at the table.\n    *   The camera moves around the room, showing different angles.\n    *   At the beginning, the camera is stationary looking at the group.\n    *   Around 16s-17s, the camera pans away from the group towards a shelf with a yellow sun plushie.\n    *   Around 22s, the camera returns to the group but from a wider angle.\n    *   The text overlay says \"A1_JAKE DAY1\".\n    *   There is a clapperboard visible with \"The Works\" written on it.\n*   **Voice Features:**\n    *   `<voice_1528>`: \"MAI: 第二点，还有什么？\" (Second point, anything else?) - Time: 00:11-00:15\n    *   `<voice_1219>`: \"MAI: 然后三点干嘛了？\" (Then what about point three?) - Time: 00:15-00:17\n    *   `<voice_1529>`: \"MAI: 三点工作主要是社会打工做的事。\" (Point three work is mainly things society workers do.) - Time: 00:17-00:21\n    *   `<voice_1530>`: \"MAI: 那这像这些吗？\" (So like these?) - Time: 00:20-00:22\n    *   `<voice_1170>`: \"MAI: 这些就是我们让他们先获得会货币之后，我们再推销我们的产品。其实感觉不确定他们到底是不是...\" (These are what we let them get currency first, then we promote our products. Actually feel uncertain if they really are...) - Time: 00:22-00:30\n    *   Note: All voices are labeled \"MAI\". This suggests the speaker is MAI. I need to check if there are face features to link this voice to a specific person.\n    *   Looking at the prompt instructions: \"Preserve speaker identity when constructing memory... Voice features map exact IDs such as <voice_0> to timestamped transcripts.\"\n    *   Wait, the prompt says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   However, the prompt also says \"Keep the existing video_description/high_level_conclusions JSON schema...\". It doesn't explicitly ask for a \"memory\" section in the output JSON, but rather asks for `video_description` and `high_level_conclusions`.\n    *   Let's re-read the system instruction carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions... Output Format: ... video_description ... high_level_conclusions\".\n    *   The system instruction *also* says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This seems contradictory to the requested output format which only has `video_description` and `high_level_conclusions`.\n    *   Usually, in these tasks, the \"episodic memory\" part might be implicitly handled within the `video_description` or `high_level_conclusions`, OR the prompt implies I should add a field. But the instruction says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should stick to the schema provided in the \"Output Format\" section.\n    *   Wait, looking closely at the system instruction: \"Preserve speaker identity when constructing memory from the supplied character features.\" This sounds like a general instruction for how to handle data, but the specific task output format is defined below.\n    *   Let's look at the \"Output Format\" again. It asks for `video_description` and `high_level_conclusions`.\n    *   The system instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This is a constraint on the *content* generation, likely meaning I should incorporate the speech into the descriptions/conclusions.\n    *   However, usually, if there's a specific schema requirement, I must follow it. The schema provided is just `video_description` and `high_level_conclusions`.\n    *   Let's assume the \"episodic memory\" requirement means I should describe the actions/speech happening in the video description.\n    *   Crucially, I need to check if there are Face Features. The input says \"Face features:Voice features:\". It seems empty or missing.\n    *   \"If no face IDs are supplied, do not invent any.\" -> So I cannot create equivalences like `Equivalence: <face_1>, <voice_2>`.\n    *   \"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\" -> Since no face features are provided, I cannot link the voice \"MAI\" to a specific face ID. I can only mention the voice ID in the context of the audio heard.\n    *   Wait, the instruction says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" The input provides `<voice_1528>`, etc.\n    *   The instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This is tricky. If I put it in `video_description`, it becomes a description of the audio.\n    *   Let's draft the `video_description` focusing on the visual events and incorporating the audio where relevant.\n    *   Visuals: Group discussion, planning, filming setup (clapperboard), camera movement.\n    *   Audio: MAI explaining points about work/currency/products.\n\n**2. Drafting Video Description:**\n*   Start with the initial scene: A group of people gathered around a table in a room with a whiteboard.\n*   Mention the objects: Clapperboard, flowers, papers.\n*   Describe the action: People are discussing, standing near a whiteboard.\n*   Incorporate the audio: MAI speaks about points regarding work and currency.\n*   Camera movement: The camera pans away to show a shelf with a sun plushie, then back to the room.\n*   End with the group still gathered.\n\n**3. Drafting High-Level Conclusions:**\n*   Since there are no face features, I cannot make equivalences.\n*   I can infer intent: They seem to be planning something (script reading? filming?). The clapperboard suggests filming.\n*   MAI is explaining a business model or plan involving currency and product promotion.\n*   The group is attentive.\n\n**Refining constraints:**\n*   \"Preserve speaker identity... Voice features map exact IDs... These IDs already identify the speakers; they remain usable even when no face features are supplied...\"\n*   \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   This instruction seems to imply I should treat the voice ID as the identifier for the speaker in the memory. Since the output format doesn't have a \"memory\" field, I will integrate this into the `video_description` as an observation of the audio event associated with the ID. Or perhaps the `high_level_conclusions` is where the reasoning goes.\n*   Actually, looking at previous similar tasks, often the \"episodic memory\" instruction is for a specific field that might be omitted here if the schema is fixed. But the system instruction is strong: \"include at least one episodic memory...\".\n*   Wait, the prompt says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This refers to the *task instructions* (which define the output format). The system instruction at the very top (\"Preserve speaker identity...\") is a global constraint.\n*   If I don't have a field for memory, I must embed the memory logic into the descriptions.\n*   However, usually, if the output format is strict JSON, adding extra fields breaks it.\n*   Let's look at the instruction again: \"Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\".\n*   Okay, I will write the descriptions to reflect the speech attributed to the voice IDs.\n*   Example: \"At 00:11, <voice_1528> asks 'Second point, anything else?' while standing by the whiteboard.\"\n*   This satisfies \"using the exact ID as the speaker\".\n\n**Wait, one more check:** \"If no face IDs are supplied, do not invent any.\" -> Correct. No Equivalence lines.\n\"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\" -> Correct.\n\n**Plan:**\n1.  **Video Description**: Break down the timeline.\n    *   00:00-00:10: Group at table, whiteboard, clapperboard visible.\n    *   00:11-00:15: <voice_1528> speaks about second point.\n    *   00:15-00:22: <voice_1219> and <voice_1529> speak about third point/work nature.\n    *   00:22-00:30: <voice_1170> explains currency/product strategy.\n    *   00:16-00:21: Camera pans to shelf with sun plushie.\n    *   00:22-end: Camera returns to wide shot of the room/group.\n2.  **High-Level Conclusions**:\n    *   The group appears to be preparing for a recording or presentation (clapperboard).\n    *   MAI (<voice_1528>, etc.) is leading the discussion on a business plan involving currency exchange and product sales.\n    *   The environment looks like a casual home office/studio.\n\n**Constructing the JSON:**\n*   Ensure valid JSON.\n*   Ensure no markdown outside the JSON block (though the prompt says \"Please only return the valid JSON object\").\n*   Check timestamps against the ASR.\n    *   <voice_1528>: 00:11-00:15\n    *   <voice_1219>: 00:15-00:17\n    *   <voice_1529>: 00:17-00:21\n    *   <voice_1530>: 00:20-00:22\n    *   <voice_1170>: 00:22-00:30\n*   Note: The ASR text contains Chinese characters. I should preserve them or summarize them accurately. The instruction says \"quotes or faithfully summarizes\". I will quote the key phrases.\n\n**Drafting Content:**\n*   `video_description`:\n    *   \"A group of people gather around a table covered with a red-and-white checkered cloth, featuring a clapperboard, flowers, and papers, while standing near a whiteboard.\"\n    *   \"At 00:11, <voice_1528> asks 'Second point, anything else?' during the discussion.\"\n    *   \"Subsequently, <voice_1219> inquires about the third point, followed by <voice_1529> stating that point three involves work typically done by society workers.\"\n    *   \"Around 00:20, <voice_1530> questions if the situation resembles others.\"\n    *   \"From 00:22 to 00:30, <voice_1170> explains a plan where participants receive currency first before promoting their own products, expressing uncertainty about their true nature.\"\n    *   \"Between 00:16 and 00:21, the camera pans away from the group to show a blue shelving unit holding a yellow sun-shaped plush toy and various items.\"\n    *   \"The camera then returns to a wider view of the room, showing the group continuing their meeting near the window and whiteboard.\"\n*   `high_level_conclusions`:\n    *   \"The presence of a clapperboard and whiteboard indicates the group is engaged in a collaborative project, possibly scriptwriting or filming preparation.\"\n    *   \"MAI (<voice_1528>, <voice_1219>, <voice_1529>, <voice_1530>, <voice_1170>) leads the conversation regarding a business strategy involving currency acquisition and product distribution.\"\n    *   \"The casual setting with personal items like a plush toy suggests a relaxed, informal workspace.\"\n\n**Final Review against Constraints:**\n*   \"Preserve speaker identity... Voice features map exact IDs... These IDs already identify the speakers; they remain usable even when no face features are supplied...\" -> Used `<voice_XX>` in descriptions.\n*   \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> Included in `video_description`.\n*   \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> Used in `high_level_conclusions`.\n*   \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\" -> Did not assign to specific faces, used voice IDs directly.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> Followed.\n*   \"Output Format: ... valid JSON object... without any additional explanation...\" -> Will ensure this.\n\nOne detail: \"include at least one episodic memory\". I am putting it in `video_description`. Is that allowed? The instruction says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". It doesn't explicitly forbid putting memory details in the description. Given the schema constraint, this is the best place.\n\nLet's refine the descriptions to be more \"atomic\" as per \"Each description should focus on a single atomic event or fact.\"\n*   Event 1: Group gathering.\n*   Event 2: Voice 1528 speaks.\n*   Event 3: Voice 1219 speaks.\n*   Event 4: Voice 1529 speaks.\n*   Event 5: Voice 1530 speaks.\n*   Event 6: Voice 1170 speaks.\n*   Event 7: Camera pans to shelf.\n*   Event 8: Camera returns.\n\nThis fits well.\n\nOne correction: The prompt says \"include at least one episodic memory...\". It might be expecting a specific format if there was a memory field, but since there isn't, embedding it in the description is the logical interpretation of \"constructing memory from the supplied character features\" within the context of the available output fields.\n\nWait, looking at the instruction \"Preserve speaker identity when constructing memory from the supplied character features.\" This is a system instruction. The user prompt says \"Your task consists of two parts...\".\nOkay, I will proceed with embedding the voice info in the description.\n\nDouble check the voice IDs in the input vs my usage.\nInput: `<voice_1528>`, `<voice_1219>`, `<voice_1529>`, `<voice_1530>`, `<voice_1170>`.\nMy usage: Matches exactly.\n\nOne final check on the `high_level_conclusions`.\n\"Use logical inference to identify character intentions, relationships, and identities.\"\nSince I can't identify identities visually, I will infer roles based on the voice activity (MAI seems to be the main speaker/explainer).\n\"Equivalence: <face_x>, <voice_y>\" -> Only if face features exist. None exist. So no equivalence lines.\n\nReady to generate JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of individuals gathers around a table covered with a red-and-white checkered cloth, surrounded by props including a clapperboard, flowers, and papers.\",\n\t\t\"At 00:11, <voice_1528> asks 'Second point, anything else?' while standing near a whiteboard.\",\n\t\t\"Immediately after, <voice_1219> inquires 'Then what about point three?' during the ongoing discussion.\",\n\t\t\"<voice_1529> responds at 00:17, stating that point three work is mainly things society workers do.\",\n\t\t\"At 00:20, <voice_1530> asks 'So like these?' regarding the proposed activities.\",\n\t\t\"From 00:22 to 00:30, <voice_1170> explains a plan where participants obtain currency first before promoting their own products, noting uncertainty about their true nature.\",\n\t\t\"Between 00:16 and 00:21, the camera pans away from the group to focus on a blue shelving unit displaying a yellow sun-shaped plush toy and various small items.\",\n\t\t\"The camera then returns to a wider view of the room, showing the group continuing their meeting near the window and whiteboard.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The presence of a clapperboard and whiteboard indicates the group is engaged in a collaborative project, likely scriptwriting or filming preparation.\",\n\t\t\"MAI (<voice_1528>, <voice_1219>, <voice_1529>, <voice_1530>, <voice_1170>) acts as the primary speaker, leading the conversation regarding a business strategy involving currency acquisition and product distribution.\",\n\t\t\"The casual setting with personal items like a plush toy suggests a relaxed, informal workspace rather than a formal corporate office.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10546,
+          "output_tokens": 4138,
+          "total_tokens": 14684,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002254004357382655,
+            "media_preparation_ms": 69.39651600259822,
+            "processor_tokenization_ms": 323.8246030086884,
+            "device_transfer_ms": 44.892518999404274,
+            "cuda_generation_ms": 186448.83767300053,
+            "decoding_ms": 2.2481070045614615
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 186889.38693900127,
+          "request_end": 1789439853.656662,
+          "latency_ms": 186917.0623760001,
+          "client_wall_clock_latency_ms": 186917.0623760001
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.10409599053673446,
+      "nodes_added": 8,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.11473600170575082,
+      "nodes_added": 3,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 5,
+    "detected_faces": 175,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1542,
+    "edges_after_clip": 575,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 10
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of individuals gathers around a table covered with a red-and-white checkered cloth, surrounded by props including a clapperboard, flowers, and papers.",
+      "At 00:11, <voice_1528> asks 'Second point, anything else?' while standing near a whiteboard.",
+      "Immediately after, <voice_1219> inquires 'Then what about point three?' during the ongoing discussion.",
+      "<voice_1529> responds at 00:17, stating that point three work is mainly things society workers do.",
+      "At 00:20, <voice_1530> asks 'So like these?' regarding the proposed activities.",
+      "From 00:22 to 00:30, <voice_1170> explains a plan where participants obtain currency first before promoting their own products, noting uncertainty about their true nature.",
+      "Between 00:16 and 00:21, the camera pans away from the group to focus on a blue shelving unit displaying a yellow sun-shaped plush toy and various small items.",
+      "The camera then returns to a wider view of the room, showing the group continuing their meeting near the window and whiteboard."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard and whiteboard indicates the group is engaged in a collaborative project, likely scriptwriting or filming preparation.",
+      "MAI (<voice_1528>, <voice_1219>, <voice_1529>, <voice_1530>, <voice_1170>) acts as the primary speaker, leading the conversation regarding a business strategy involving currency acquisition and product distribution.",
+      "The casual setting with personal items like a plush toy suggests a relaxed, informal workspace rather than a formal corporate office."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of individuals gathers around a table covered with a red-and-white checkered cloth, surrounded by props including a clapperboard, flowers, and papers.",
+      "At 00:11, <voice_1528> asks 'Second point, anything else?' while standing near a whiteboard.",
+      "Immediately after, <voice_1219> inquires 'Then what about point three?' during the ongoing discussion.",
+      "<voice_1529> responds at 00:17, stating that point three work is mainly things society workers do.",
+      "At 00:20, <voice_1530> asks 'So like these?' regarding the proposed activities.",
+      "From 00:22 to 00:30, <voice_1170> explains a plan where participants obtain currency first before promoting their own products, noting uncertainty about their true nature.",
+      "Between 00:16 and 00:21, the camera pans away from the group to focus on a blue shelving unit displaying a yellow sun-shaped plush toy and various small items.",
+      "The camera then returns to a wider view of the room, showing the group continuing their meeting near the window and whiteboard."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard and whiteboard indicates the group is engaged in a collaborative project, likely scriptwriting or filming preparation.",
+      "MAI (<voice_1528>, <voice_1219>, <voice_1529>, <voice_1530>, <voice_1170>) acts as the primary speaker, leading the conversation regarding a business strategy involving currency acquisition and product distribution.",
+      "The casual setting with personal items like a plush toy suggests a relaxed, informal workspace rather than a formal corporate office."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_114_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 10,
+    "nodes": [
+      {
+        "id": 1528,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 第二点，还有什么？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1529,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 三点工作主要是社会打工做的事。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1530,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那这像这些呢？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1531,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of individuals gathers around a table covered with a red-and-white checkered cloth, surrounded by props including a clapperboard, flowers, and papers."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1532,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:11, <voice_1528> asks 'Second point, anything else?' while standing near a whiteboard."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1533,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Immediately after, <voice_1219> inquires 'Then what about point three?' during the ongoing discussion."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1534,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1529> responds at 00:17, stating that point three work is mainly things society workers do."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1535,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:20, <voice_1530> asks 'So like these?' regarding the proposed activities."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1536,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "From 00:22 to 00:30, <voice_1170> explains a plan where participants obtain currency first before promoting their own products, noting uncertainty about their true nature."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1537,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Between 00:16 and 00:21, the camera pans away from the group to focus on a blue shelving unit displaying a yellow sun-shaped plush toy and various small items."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1538,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera then returns to a wider view of the room, showing the group continuing their meeting near the window and whiteboard."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1539,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The presence of a clapperboard and whiteboard indicates the group is engaged in a collaborative project, likely scriptwriting or filming preparation."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1540,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_1528>, <voice_1219>, <voice_1529>, <voice_1530>, <voice_1170>) acts as the primary speaker, leading the conversation regarding a business strategy involving currency acquisition and product distribution."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1541,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The casual setting with personal items like a plush toy suggests a relaxed, informal workspace rather than a formal corporate office."
+          ],
+          "timestamp": 114
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 1170,
+        "target": 1536,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1170,
+        "target": 1540,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1219,
+        "target": 1533,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1219,
+        "target": 1540,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1528,
+        "target": 1532,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1528,
+        "target": 1540,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1529,
+        "target": 1534,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1529,
+        "target": 1540,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1530,
+        "target": 1535,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1530,
+        "target": 1540,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_114_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_114_graph.pkl"
+  },
+  "memory_pickle_bytes": 36861123,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 80573.345997904,
+    "prepared_perf": 80581.034140691,
+    "ordered_start_perf": 80841.378724243,
+    "consumer_wait_ms": 0.0071129907155409455,
+    "ready_to_ordered_ms": 260344.58355199604,
+    "preparation_work_ms": 7682.70112000755,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 196881.72587800364
+}

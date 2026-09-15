@@ -1,0 +1,76 @@
+{
+  "clip_id": 2,
+  "source": {
+    "source": "DAY1_A1_JAKE_11100000.mp4",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of five people are seated around a table covered with a checkered cloth.",
+      "The person filming extends their hand towards the others, gesturing for them to put on VR headsets.",
+      "Participants begin putting on black VR headsets over their eyes.",
+      "After everyone puts on the headset, the camera operator picks up a smartphone.",
+      "The camera operator holds the phone up, displaying a timer application.",
+      "The timer on the phone screen counts upwards from zero."
+    ],
+    "high_level_conclusions": [
+      "Equivalence: <face_0>, <voice_0>",
+      "The speaker identified as MAI is the person sitting at the head of the table wearing a white shirt.",
+      "The group activity involves preparing for a session using virtual reality equipment.",
+      "The use of a timer suggests the upcoming activity is time-bound or requires precise timing."
+    ]
+  },
+  "selected_final_text": "```json\n{\n    \"video_description\": [\n        \"A group of five people are seated around a table covered with a checkered cloth.\",\n        \"The person filming extends their hand towards the others, gesturing for them to put on VR headsets.\",\n        \"Participants begin putting on black VR headsets over their eyes.\",\n        \"After everyone puts on the headset, the camera operator picks up a smartphone.\",\n        \"The camera operator holds the phone up, displaying a timer application.\",\n        \"The timer on the phone screen counts upwards from zero.\"\n    ],\n    \"high_level_conclusions\": [\n        \"Equivalence: <face_0>, <voice_0>\",\n        \"The speaker identified as MAI is the person sitting at the head of the table wearing a white shirt.\",\n        \"The group activity involves preparing for a session using virtual reality equipment.\",\n        \"The use of a timer suggests the upcoming activity is time-bound or requires precise timing.\"\n    ]\n}\n```\n",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 2,
+      "call_id": "4e40c831-9caf-4e40-80c7-d2be91a0e4a6",
+      "purpose": "memory_construction",
+      "model": "Qwen/Qwen3.5-4B",
+      "provider": "local CUDA",
+      "request_start": 1789407005.3890061,
+      "ttft_ms": null,
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "response": "```json\n{\n    \"video_description\": [\n        \"A group of five people are seated around a table covered with a checkered cloth.\",\n        \"The person filming extends their hand towards the others, gesturing for them to put on VR headsets.\",\n        \"Participants begin putting on black VR headsets over their eyes.\",\n        \"After everyone puts on the headset, the camera operator picks up a smartphone.\",\n        \"The camera operator holds the phone up, displaying a timer application.\",\n        \"The timer on the phone screen counts upwards from zero.\"\n    ],\n    \"high_level_conclusions\": [\n        \"Equivalence: <face_0>, <voice_0>\",\n        \"The speaker identified as MAI is the person sitting at the head of the table wearing a white shirt.\",\n        \"The group activity involves preparing for a session using virtual reality equipment.\",\n        \"The use of a timer suggests the upcoming activity is time-bound or requires precise timing.\"\n    ]\n}\n```\n",
+      "returned_model": "Qwen/Qwen3.5-4B",
+      "input_tokens": 10088,
+      "output_tokens": 216,
+      "total_tokens": 10304,
+      "finish_reason": "stop",
+      "generation": {
+        "max_new_tokens": 8192,
+        "do_sample": false,
+        "repetition_penalty": 1.08
+      },
+      "timings": {
+        "queue_wait_ms": 0.0017130005289800465,
+        "media_preparation_ms": 82.79083800152875,
+        "processor_tokenization_ms": 2567.301517003216,
+        "device_transfer_ms": 41.90506300074048,
+        "cuda_generation_ms": 13635.176130999753,
+        "decoding_ms": 0.761381998017896
+      },
+      "submitted_image_count": 60,
+      "processed_image_count": 60,
+      "video_frame_count": 60,
+      "vlm_fps": 2.0,
+      "cuda_synchronized": true,
+      "server_total_ms": 16328.2113499954,
+      "request_end": 1789407021.752143,
+      "latency_ms": 16363.133245002246,
+      "client_wall_clock_latency_ms": 16363.133245002246
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/qwen_non_thinking/results/clip_audits/clip_2_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/qwen_non_thinking/results/qwen_calls.jsonl"
+  ]
+}

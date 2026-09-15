@@ -1,0 +1,326 @@
+{
+  "clip_id": 7,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0007.mp4",
+  "end_to_end_memory_generation_ms": 497236.4072510027,
+  "latency_ms": {
+    "clip_decode": 3841.495460997976,
+    "deepgram_asr": 2.081859995087143,
+    "mai_transcribe_asr": 2.1346099965739995,
+    "asr_total": 3.2325880019925535,
+    "audio_segmentation": 5.597017996478826,
+    "speech_embedding_campplus": 249.44753300223965,
+    "facial_detection_recognition_buffalo_l": 3354.203251998115,
+    "face_clustering": 334.7179349948419,
+    "vlm_memory_generation": 214584.46680199995,
+    "text_embedding": 303.64271299913526,
+    "graph_update_total": 6.755858004908077
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 7,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 5,
+      "input_chars": 486,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789411722.4684308,
+          "status": "success",
+          "total_tokens": 99,
+          "request_end": 1789411722.7719436,
+          "latency_ms": 303.5132699951646
+        }
+      ],
+      "total_tokens": 99,
+      "latency_ms": 303.64271299913526
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.081859995087143,
+        "openrouter-mai-transcribe-2": 2.1346099965739995
+      },
+      "asr_total_ms": 3.2325880019925535,
+      "audio_segmentation_ms": 5.597017996478826,
+      "speech_embedding_ms": 249.44753300223965,
+      "graph_update_ms": 4.146788000070956,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 276.2530809995951
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3354.203251998115,
+      "face_clustering_ms": 334.7179349948419,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 192,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3796.3919999965583
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_0>"
+      ],
+      "context_preparation_ms": 4502.938525998616,
+      "vlm_ms": 214584.46680199995,
+      "raw_response": "{\n  \"video_description\": [\n    \"A group of people sit around a table with a checkered cloth, examining boxes and items.\",\n    \"The camera operator packs items into a cardboard box on the floor before returning to the table.\",\n    \"<voice_0> explains that the current setup is temporary and the item is for later use during deep thought, inviting the group to observe the location.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> is demonstrating a product to the group, outlining its intended future application.\",\n    \"The session appears to be a collaborative review or unboxing.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people sit around a table with a checkered cloth, examining boxes and items.",
+          "The camera operator packs items into a cardboard box on the floor before returning to the table.",
+          "<voice_0> explains that the current setup is temporary and the item is for later use during deep thought, inviting the group to observe the location."
+        ],
+        "high_level_conclusions": [
+          "<voice_0> is demonstrating a product to the group, outlining its intended future application.",
+          "The session appears to be a collaborative review or unboxing."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 7,
+          "call_id": "540437d2-dc9e-4b1e-99d6-828cb2668ed3",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789411507.8828542,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"A group of people sit around a table with a checkered cloth, examining boxes and items.\",\n    \"The camera operator packs items into a cardboard box on the floor before returning to the table.\",\n    \"<voice_0> explains that the current setup is temporary and the item is for later use during deep thought, inviting the group to observe the location.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> is demonstrating a product to the group, outlining its intended future application.\",\n    \"The session appears to be a collaborative review or unboxing.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are 30 frames (0.00s to 29.50s). The camera is first-person (POV).\n    *   **Scene:** A room with a table covered in a red-and-white checkered cloth. Several people are sitting around the table.\n    *   **People:**\n        *   Person 1 (Left): White shirt, dark hair.\n        *   Person 2 (Center-Left): Black top, dark hair.\n        *   Person 3 (Center-Right): Blonde/light hair, white top.\n        *   Person 4 (Right): Dark hair, glasses, patterned top.\n        *   Person 5 (Far Right/Back): Pinkish top.\n        *   Camera Operator (POV): Hands are visible manipulating objects.\n    *   **Action:**\n        *   0.00s - 10.00s: The POV person is handling items on the table, specifically opening boxes and looking at small objects (maybe tech gadgets or accessories). They hand something to the person in the black top.\n        *   10.00s - 15.00s: The POV person picks up a cardboard box and walks away from the table towards the floor/wall area where more boxes are stacked.\n        *   15.00s - 16.00s: The POV person puts items into a large open box on the floor.\n        *   16.00s - 20.00s: The POV person walks back towards the table.\n        *   20.00s - 25.00s: The POV person is standing near the table again.\n        *   25.00s - 29.50s: The POV person picks up a tripod leg/stick and gestures with their hands, pointing towards the group or the setup.\n*   **Voice Features:**\n    *   `<voice_0>`: Starts at 00:16, ends at 00:29.\n    *   **ASR:** \"MAI: 好，那就先做成这样。这个是等大家陷入沉思的时候再用，但是这个我可以和大家先讲一下，这个东西是什么？大家可以看这个地方。\" (Translation: \"Okay, then let's just make it like this for now. This is used when everyone is lost in thought, but I can explain this to everyone first, what is this thing? You guys can look at this place.\")\n    *   **Speaker Identification:** The ASR starts with \"MAI:\". This suggests the speaker is named Mai. However, the prompt instructions say: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" It also says \"A voice ID does not establish which visible person is speaking... Do not assign it to the camera wearer or another visible person... without supporting evidence.\"\n    *   Wait, the instruction says: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" And \"Preserve speaker identity when constructing memory from the supplied character features.\"\n    *   The voice feature is `<voice_0>`. The text starts with \"MAI:\", implying the speaker is Mai. But I need to be careful about assigning visual identity. The prompt says \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" Since there is no explicit face ID linked to `<voice_0>` in the `Face features` section (which is empty), I cannot confirm who is speaking visually.\n    *   However, usually, if a name is spoken (\"MAI:\"), it identifies the speaker. But the constraint says \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" Since I don't have face IDs, I shouldn't link `<voice_0>` to a specific face ID like `<face_1>`.\n    *   Wait, looking closely at the prompt requirements: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So, in the `video_description`, I need to describe the action happening during the speech.\n    *   In `high_level_conclusions`, I need to reason about the content.\n    *   The prompt asks to preserve speaker identity. The voice ID is `<voice_0>`. The transcript mentions \"MAI\". This implies the speaker is likely Mai. But since I don't have face IDs, I can't create an \"Equivalence\" line unless I'm sure. The prompt says \"If a face and a voice feature refer to the same character, indicate it...\". Since no face features are provided in the input block (`Face features:` is empty), I cannot establish an equivalence.\n    *   Actually, looking at the input provided in the prompt: `Face features:` is empty. `Voice features:` contains `<voice_0>`.\n    *   So I cannot link `<voice_0>` to a face.\n    *   I must use `<voice_0>` in the memory/conclusion.\n\n**2. Constructing Video Description:**\n*   Need atomic events.\n*   Event 1: Group sitting around table with boxes/items.\n*   Event 2: POV person handles items, interacts with person in black.\n*   Event 3: POV person moves to floor, packs items into a box.\n*   Event 4: POV person returns to table area.\n*   Event 5: POV person holds a stick/tripod part and gestures while speaking (corresponding to `<voice_0>` time 00:16-00:29). Note: The timestamps in the frames are 0.00 to 29.50. The voice is 00:16 to 00:29. This aligns with frames 16.00s onwards.\n*   Frame 16.00s shows the person walking back. Frame 25.00s shows holding the stick. Frame 29.50s shows gesturing.\n*   Let's refine the events based on the flow.\n    *   0.00-10.00: Unpacking/handling items at the table.\n    *   10.00-15.00: Moving to pack items into a box on the floor.\n    *   15.00-20.00: Packing continues/moving back.\n    *   20.00-25.00: Standing near table.\n    *   25.00-29.50: Holding a long object (tripod leg?), gesturing, speaking.\n\n**3. Constructing High-Level Conclusions:**\n*   Reasoning: The speaker (<voice_0>) explains a concept (\"this thing\") and says it's for later (\"lost in thought\"), suggesting a tutorial or demonstration context.\n*   Identity: The speaker refers to themselves as \"MAI\". Since no face ID is provided, I cannot equate it to a face. I will just mention the voice ID.\n*   Intent: Explaining a product/setup to the group.\n\n**4. Formatting:**\n*   JSON structure required.\n*   `video_description`: Array of strings.\n*   `high_level_conclusions`: Array of strings.\n*   Constraint Checklist & Confidence Score:\n    1. Preserve speaker identity? Yes, use `<voice_0>`.\n    2. Include episodic memory quoting transcript? Yes, in video description or conclusion? The prompt says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". Usually, this goes into the video description as an event involving speech. Or I can put it in high level conclusions. The prompt says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". It doesn't explicitly say where the memory goes, but standard practice for these tasks is often in the description or a specific field. Wait, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This sounds like a requirement for the output content generally. Given the JSON structure, putting it in `video_description` as an event describing the speech makes sense, or perhaps a specific sentence in `high_level_conclusions`. Let's look at the example structure provided in the prompt... wait, there is no example output provided, just the schema.\n    *   Re-reading: \"Your output must be a JSON object...\".\n    *   Okay, I will add a sentence in `video_description` describing the speech event using `<voice_0>`.\n    *   Also, \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> I'll put this in `high_level_conclusions`.\n\n**Refining the Plan:**\n*   **Video Description:**\n    *   Describe the group setting.\n    *   Describe the unpacking/packing actions.\n    *   Describe the speech event at the end involving `<voice_0>`.\n*   **High Level Conclusions:**\n    *   Infer the purpose of the gathering (unboxing/demo).\n    *   State the speaker's intent based on `<voice_0>`.\n\n**Drafting Content:**\n*   `video_description`:\n    *   \"A group of people sit around a table covered with a checkered cloth, examining various items and boxes.\"\n    *   \"The camera operator handles small objects and passes them to a person wearing black.\"\n    *   \"The camera operator moves to the floor and places items into a large cardboard box.\"\n    *   \"At timestamp 00:16, the camera operator speaks, explaining a device intended for later use when the group is thinking deeply, while gesturing with a tripod leg.\" (Using `<voice_0>`).\n*   `high_level_conclusions`:\n    *   \"<voice_0> is explaining a specific item to the group, indicating a planned future usage scenario.\"\n    *   \"The session appears to involve unboxing and reviewing new products together.\"\n\nWait, I need to check the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis implies I should write something like: \"The camera operator says: '<voice_0>: MAI: 好，那就先做成这样...'\".\nActually, the instruction says \"using the exact ID as the speaker\". So instead of saying \"The camera operator says...\", I should probably attribute it to `<voice_0>`.\nExample: \"<voice_0> states: 'MAI: 好，那就先做成这样。...'\"\n\nLet's combine this.\n\n**Final Check on Constraints:**\n*   \"Preserve speaker identity... Voice features map exact IDs such as <voice_0>... These IDs already identify the speakers; they remain usable even when no face features are supplied\".\n*   \"For every supplied voice ID... include at least one episodic memory... using the exact ID as the speaker.\"\n*   \"Do not replace the ID with 'a speaker'...\"\n*   \"Keep dialogue grounded in the provided transcript.\"\n\nSo in the `video_description`, I will include a sentence describing the speech attributed to `<voice_0>`.\nIn `high_level_conclusions`, I will reason about the content.\n\nOne detail: The prompt says \"Face features:Voice features:...\". The Face features section is empty. So I definitely cannot link `<voice_0>` to a face.\n\nLet's write the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"A group of individuals sits around a table covered with a red and white checkered cloth, surrounded by boxes and electronic devices.\",\n    \"The camera operator manipulates items on the table and exchanges them with a person wearing a black top.\",\n    \"The camera operator moves away from the table to pack items into a large cardboard box on the floor.\",\n    \"After packing, the camera operator returns to the table area and holds a tripod leg while speaking.\",\n    \"<voice_0> explains that the current setup is temporary and the item being discussed is meant for later use when the group is deep in thought, inviting others to observe the location.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> is demonstrating a product or setup to the group, outlining its intended future application.\",\n    \"The interaction suggests a collaborative review or unboxing session among friends or colleagues.\"\n  ]\n}\n```\nWait, I need to make sure I quote or summarize faithfully.\nTranscript: \"MAI: 好，那就先做成这样。这个是等大家陷入沉思的时候再用，但是这个我可以和大家先讲一下，这个东西是什么？大家可以看这个地方。\"\nMy summary: \"<voice_0> explains that the current setup is temporary and the item being discussed is meant for later use when the group is deep in thought, inviting others to observe the location.\" -> This captures the essence well enough for a summary/memory.\n\nOne correction: The prompt says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\nI will ensure the sentence clearly attributes the speech to `<voice_0>`.\n\nAlso, checking the timestamps. The voice is 00:16 to 00:29. The frames show the action continuing until the end. The description covers the whole clip.\n\nOne more check on \"episodic memory\". Usually, this means a specific event. Describing the speech as an event fits.\n\nLet's finalize the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"Several people are seated around a table with a checkered tablecloth, engaging with various boxes and items.\",\n    \"The camera operator handles objects on the table and interacts with a person dressed in black.\",\n    \"The camera operator moves to the floor to organize items into a large cardboard box.\",\n    \"Returning to the table, the camera operator holds a tripod component and begins speaking.\",\n    \"<voice_0> states: 'MAI: 好，那就先做成这样。这个是等大家陷入沉思的时候再用，但是这个我可以和大家先讲一下，这个东西是什么？大家可以看这个地方。'\",\n    \"The group listens attentively as the explanation continues.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> indicates a plan to demonstrate a specific item to the group, noting its utility for future contemplation.\",\n    \"The session involves unpacking and discussing new equipment in a casual setting.\"\n  ]\n}\n```\nWait, I should check if I need to translate the ASR. The prompt provides ASR in Chinese. I should probably keep the original text or provide a faithful summary. The instruction says \"quotes or faithfully summarizes\". Quoting the original text is safer for \"faithfully summarizes\" if it's short, but summarizing is better for \"memory\". However, since it's a specific transcript requirement, quoting might be best to ensure fidelity. But the instruction says \"using the exact ID as the speaker\".\nLet's try to summarize it slightly to fit the flow, or quote it directly.\n\"Quotes or faithfully summarizes\". I will quote the key parts or the full text if it fits. The text is short enough.\nActually, looking at previous similar tasks, usually, a summary is preferred for descriptions, but quoting ensures accuracy. I'll provide a summary that captures the meaning accurately.\n\"MAI: ...\" is part of the transcript.\nI will write: \"<voice_0> explains that the current arrangement is provisional and the item is reserved for later use during deep thought, offering a preliminary explanation while pointing out the relevant location.\"\n\nWait, I need to check if I should output the translation. The prompt gives ASR in Chinese. I should probably keep the Chinese text or translate it. Since the user prompt is in English, translating the ASR to English in the description is usually expected for an English response, unless specified otherwise. The instruction says \"quotes or faithfully summarizes that speaker's transcript\". The transcript is in Chinese. I will translate it to English for the output description to maintain consistency with the rest of the text (which is English).\nActually, looking at the instruction \"Preserve speaker identity... Voice features map exact IDs...\". It doesn't explicitly say to translate. But the output language of the prompt is English. I will translate the ASR for the description to make it readable, or keep the Chinese if I want to be strictly faithful to the \"transcript\".\n\"quotes ... that speaker's transcript\". The transcript is the ASR provided.\nI will quote the ASR directly to be safe on \"faithfully summarizes\" / \"quotes\".\nActually, \"quotes ... transcript\" implies using the text.\nI will use the Chinese text in the description to be precise, or translate it. Given the system prompt is English, I'll translate it for readability but mark it as the transcript.\nWait, \"Do not substitute a plausible scene description for what the speaker actually said.\"\nOkay, I will include the ASR text.\n\nRevised plan for `video_description`:\n...\n\"<voice_0> says: 'MAI: 好，那就先做成这样。这个是等大家陷入沉思的时候再用，但是这个我可以和大家先讲一下，这个东西是什么？大家可以看这个地方。'\"\n...\n\nAnd `high_level_conclusions`:\n\"<voice_0> is explaining a product to the group, suggesting a future context for its use.\"\n\nLet's double check the \"Face features\" input. It is empty. So no Equivalence lines.\n\nOne final check on constraints: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThe schema is:\n```json\n{\n\t\"video_description\": [\n\t\t\"...\",\n\t\t\"...\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"...\",\n\t\t\"Equivalence: <face_1>, <voice_2>\"\n\t]\n}\n```\nI will follow this exactly.\n\nOne detail: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSo I must ensure `<voice_0>` is used in the memory.\n\nOkay, ready to generate.\n\nOne small adjustment: The prompt says \"Return one complete JSON object... Be concise and avoid duplicate events.\"\nI will merge some events if possible.\nEvent 1: Group at table.\nEvent 2: Camera operator packs items.\nEvent 3: Camera operator speaks (<voice_0>).\n\nLet's refine the list.\n1. \"A group of people sit around a table with a checkered cloth, examining boxes and items.\"\n2. \"The camera operator packs items into a cardboard box on the floor before returning to the table.\"\n3. \"<voice_0> explains that the current setup is temporary and the item is for later use during deep thought, inviting the group to observe the location.\"\n\nThis looks good.\n\nFor high_level_conclusions:\n1. \"<voice_0> is demonstrating a product to the group, outlining its intended future application.\"\n2. \"The session appears to be a collaborative review or unboxing.\"\n\nNo Equivalence lines because no face features.\n\nWait, I should check if I need to translate the ASR. The prompt provides ASR in Chinese. The output instructions are in English. Usually, translations are expected. I will translate the ASR for the description to ensure the \"memory\" is understandable in the context of the English output, while attributing it to `<voice_0>`.\nActually, \"quotes ... transcript\". If I translate, am I quoting the transcript? Technically no. I am summarizing the meaning. To be safe on \"quotes\", I could put the Chinese text. But for an English model response, English is better. I'll translate it.\n\"MAI: Okay, so let's just make it like this for now. This is used when everyone is lost in thought, but I can explain this to everyone first, what is this thing? You guys can look at this place.\"\nThis is a faithful summary/translation.\n\nOkay, proceeding.\n</think>\n\n{\n  \"video_description\": [\n    \"A group of people sit around a table with a checkered cloth, examining boxes and items.\",\n    \"The camera operator packs items into a cardboard box on the floor before returning to the table.\",\n    \"<voice_0> explains that the current setup is temporary and the item is for later use during deep thought, inviting the group to observe the location.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> is demonstrating a product to the group, outlining its intended future application.\",\n    \"The session appears to be a collaborative review or unboxing.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10276,
+          "output_tokens": 4592,
+          "total_tokens": 14868,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0030459996196441352,
+            "media_preparation_ms": 96.5698380023241,
+            "processor_tokenization_ms": 561.2728510022862,
+            "device_transfer_ms": 61.14075300138211,
+            "cuda_generation_ms": 213825.50136699865,
+            "decoding_ms": 6.33792099688435
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 214551.09151599754,
+          "request_end": 1789411722.467324,
+          "latency_ms": 214584.46680199995,
+          "client_wall_clock_latency_ms": 214584.46680199995
+        }
+      ],
+      "episodic_memory_count": 3,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.08194400288630277,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 2.527126001950819,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 192,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 3,
+    "semantic_memories": 2,
+    "nodes_after_clip": 71,
+    "edges_after_clip": 23,
+    "nodes_added_by_clip": 5,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people sit around a table with a checkered cloth, examining boxes and items.",
+      "The camera operator packs items into a cardboard box on the floor before returning to the table.",
+      "<voice_0> explains that the current setup is temporary and the item is for later use during deep thought, inviting the group to observe the location."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is demonstrating a product to the group, outlining its intended future application.",
+      "The session appears to be a collaborative review or unboxing."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people sit around a table with a checkered cloth, examining boxes and items.",
+      "The camera operator packs items into a cardboard box on the floor before returning to the table.",
+      "<voice_0> explains that the current setup is temporary and the item is for later use during deep thought, inviting the group to observe the location."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is demonstrating a product to the group, outlining its intended future application.",
+      "The session appears to be a collaborative review or unboxing."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_7_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 5,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 66,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people sit around a table with a checkered cloth, examining boxes and items."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 67,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator packs items into a cardboard box on the floor before returning to the table."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 68,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> explains that the current setup is temporary and the item is for later use during deep thought, inviting the group to observe the location."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 69,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> is demonstrating a product to the group, outlining its intended future application."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 70,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The session appears to be a collaborative review or unboxing."
+          ],
+          "timestamp": 7
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 68,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 69,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_7_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_7_graph.pkl"
+  },
+  "memory_pickle_bytes": 1809788,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52412.382988464,
+    "prepared_perf": 52417.814279419,
+    "ordered_start_perf": 52686.032307172,
+    "consumer_wait_ms": 0.013135999324731529,
+    "ready_to_ordered_ms": 268218.02775299875,
+    "preparation_work_ms": 5425.911033002194,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 223468.67745599593
+}

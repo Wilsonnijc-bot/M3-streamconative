@@ -1,0 +1,77 @@
+{
+  "clip_id": 100,
+  "source": {
+    "segment_id": 100,
+    "source": "DAY1_A1_JAKE_11570000.mp4",
+    "source_clock": "11570000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43020.0,
+    "absolute_end_seconds": 43050.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0100.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51225.405679479,
+      "prepared_perf": 51233.165180255,
+      "ordered_start_perf": 51413.143867825,
+      "consumer_wait_ms": 0.008916998922359198,
+      "ready_to_ordered_ms": 179978.68757000106,
+      "preparation_work_ms": 7758.537763998902,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a pink-and-white checkered tablecloth.",
+      "A woman in a white top stands at the back of the table arranging flowers near a whiteboard.",
+      "A young woman in dark clothes and glasses sits in the foreground using her mobile phone.",
+      "Two young women sit along the right side of the table participating in the conversation.",
+      "A young man in an orange T-shirt gestures with his arms in the background before stepping back.",
+      "The woman in dark clothes laughs and displays her phone screen on the table to discuss purchasing options.",
+      "A clapperboard and film production materials rest in the foreground of the table."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a creative or film pre-production meeting, discussing shooting schedules, props, and Douyin choreography.",
+      "The woman seated in dark clothes actively contributes to budget and prop decisions, advocating for buying physical items rather than virtual goods.",
+      "The group maintains a casual, collaborative, and cheerful working atmosphere."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a pink-and-white checkered tablecloth.\",\n  \"A woman in a white top stands at the back of the table arranging flowers near a whiteboard.\",\n  \"A young woman in dark clothes and glasses sits in the foreground using her mobile phone.\",\n  \"Two young women sit along the right side of the table participating in the conversation.\",\n  \"A young man in an orange T-shirt gestures with his arms in the background before stepping back.\",\n  \"The woman in dark clothes laughs and displays her phone screen on the table to discuss purchasing options.\",\n  \"A clapperboard and film production materials rest in the foreground of the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are engaged in a creative or film pre-production meeting, discussing shooting schedules, props, and Douyin choreography.\",\n  \"The woman seated in dark clothes actively contributes to budget and prop decisions, advocating for buying physical items rather than virtual goods.\",\n  \"The group maintains a casual, collaborative, and cheerful working atmosphere.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 100,
+      "call_id": "3b9c5903-39a5-48c0-9d8f-20075a40dd99",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410239.0830388,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67297,
+      "output_tokens": 1227,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 47969.166335999034
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a pink-and-white checkered tablecloth.\",\n  \"A woman in a white top stands at the back of the table arranging flowers near a whiteboard.\",\n  \"A young woman in dark clothes and glasses sits in the foreground using her mobile phone.\",\n  \"Two young women sit along the right side of the table participating in the conversation.\",\n  \"A young man in an orange T-shirt gestures with his arms in the background before stepping back.\",\n  \"The woman in dark clothes laughs and displays her phone screen on the table to discuss purchasing options.\",\n  \"A clapperboard and film production materials rest in the foreground of the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are engaged in a creative or film pre-production meeting, discussing shooting schedules, props, and Douyin choreography.\",\n  \"The woman seated in dark clothes actively contributes to budget and prop decisions, advocating for buying physical items rather than virtual goods.\",\n  \"The group maintains a casual, collaborative, and cheerful working atmosphere.\"\n ]\n}\n```",
+      "total_tokens": 68524,
+      "request_end": 1789410287.0522945,
+      "latency_ms": 47969.252688999404,
+      "client_wall_clock_latency_ms": 47969.252688999404,
+      "api_request_wall_clock_latency_ms": 47969.252688999404
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_100_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

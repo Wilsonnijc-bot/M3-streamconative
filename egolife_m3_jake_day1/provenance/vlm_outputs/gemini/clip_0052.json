@@ -1,0 +1,77 @@
+{
+  "clip_id": 52,
+  "source": {
+    "segment_id": 52,
+    "source": "DAY1_A1_JAKE_11343000.mp4",
+    "source_clock": "11343000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41670.0,
+    "absolute_end_seconds": 41700.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0052.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47323.208771221,
+      "prepared_perf": 47329.572949363,
+      "ordered_start_perf": 47447.13094093,
+      "consumer_wait_ms": 0.012272997992113233,
+      "ready_to_ordered_ms": 117557.99156700232,
+      "preparation_work_ms": 6358.820171000843,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person carries a long cardboard box of flowers from the hallway into the room.",
+      "Several people are gathered around a dining table covered with a pink-and-white checkered tablecloth.",
+      "<voice_430> discusses the idea of buying flowers rather than trying to grow plants during a short shooting period.",
+      "The person carrying the box places it on the center of the table in front of the group.",
+      "<voice_595> explains that the flowers were shipped from Yunnan and mentions having ordered peonies.",
+      "A woman with light reddish-blonde hair helps open the cardboard box on the table.",
+      "The woman unpacks the protective paper wrap to check the flowers inside.",
+      "A woman wearing a white shirt stands up from the table and walks toward the back of the room."
+    ],
+    "high_level_conclusions": [
+      "The package contains fresh cut flowers (peonies) ordered as props or materials for an ongoing video shoot.",
+      "<voice_595> is the person who purchased the fresh flowers shipped by express delivery from Yunnan."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A person carries a long cardboard box of flowers from the hallway into the room.\",\n  \"Several people are gathered around a dining table covered with a pink-and-white checkered tablecloth.\",\n  \"<voice_430> discusses the idea of buying flowers rather than trying to grow plants during a short shooting period.\",\n  \"The person carrying the box places it on the center of the table in front of the group.\",\n  \"<voice_595> explains that the flowers were shipped from Yunnan and mentions having ordered peonies.\",\n  \"A woman with light reddish-blonde hair helps open the cardboard box on the table.\",\n  \"The woman unpacks the protective paper wrap to check the flowers inside.\",\n  \"A woman wearing a white shirt stands up from the table and walks toward the back of the room.\"\n ],\n \"high_level_conclusions\": [\n  \"The package contains fresh cut flowers (peonies) ordered as props or materials for an ongoing video shoot.\",\n  \"<voice_595> is the person who purchased the fresh flowers shipped by express delivery from Yunnan.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 52,
+      "call_id": "4156cfad-76e3-428b-8cd7-05edeced9c26",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406269.914915,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66909,
+      "output_tokens": 1157,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 22780.1154139961
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A person carries a long cardboard box of flowers from the hallway into the room.\",\n  \"Several people are gathered around a dining table covered with a pink-and-white checkered tablecloth.\",\n  \"<voice_430> discusses the idea of buying flowers rather than trying to grow plants during a short shooting period.\",\n  \"The person carrying the box places it on the center of the table in front of the group.\",\n  \"<voice_595> explains that the flowers were shipped from Yunnan and mentions having ordered peonies.\",\n  \"A woman with light reddish-blonde hair helps open the cardboard box on the table.\",\n  \"The woman unpacks the protective paper wrap to check the flowers inside.\",\n  \"A woman wearing a white shirt stands up from the table and walks toward the back of the room.\"\n ],\n \"high_level_conclusions\": [\n  \"The package contains fresh cut flowers (peonies) ordered as props or materials for an ongoing video shoot.\",\n  \"<voice_595> is the person who purchased the fresh flowers shipped by express delivery from Yunnan.\"\n ]\n}\n```",
+      "total_tokens": 68066,
+      "request_end": 1789406292.6951296,
+      "latency_ms": 22780.211623998184,
+      "client_wall_clock_latency_ms": 22780.211623998184,
+      "api_request_wall_clock_latency_ms": 22780.211623998184
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_52_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

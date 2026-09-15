@@ -1,0 +1,78 @@
+{
+  "clip_id": 117,
+  "source": {
+    "segment_id": 117,
+    "source": "DAY1_A1_JAKE_12043000.mp4",
+    "source_clock": "12043000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43470.0,
+    "absolute_end_seconds": 43500.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0117.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 52398.153367163,
+      "prepared_perf": 52406.707909969,
+      "ordered_start_perf": 52516.267246787,
+      "consumer_wait_ms": 0.021460000425577164,
+      "ready_to_ordered_ms": 109559.33681799797,
+      "preparation_work_ms": 8549.190876998182,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer holds a black case and walks across the living room toward a table where several people are gathered.",
+      "At the table, several people are engaged in group work, with flowers, papers, and equipment spread out.",
+      "The camera wearer approaches the table and notices a power bank and cable plugged in.",
+      "<voice_0> comments that someone has kept the device plugged in and praises the power bank, then asks whose it is.",
+      "<voice_1358> answers that the power bank belongs to them.",
+      "<voice_352> instructs them to plug it in and find a spot.",
+      "The camera wearer turns around and walks back toward the storage rack and shelves near the entrance.",
+      "The camera wearer looks down at another black equipment case resting on the floor while holding the case in their hands."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is the camera wearer (Jake), who is managing gear and checking on power banks and equipment charging status.",
+      "<voice_1358> is one of the team members seated at the table who owns the power bank.",
+      "The group in the room is actively collaborating and preparing for an event or production shoot involving floral and recording equipment."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"The camera wearer holds a black case and walks across the living room toward a table where several people are gathered.\",\n  \"At the table, several people are engaged in group work, with flowers, papers, and equipment spread out.\",\n  \"The camera wearer approaches the table and notices a power bank and cable plugged in.\",\n  \"<voice_0> comments that someone has kept the device plugged in and praises the power bank, then asks whose it is.\",\n  \"<voice_1358> answers that the power bank belongs to them.\",\n  \"<voice_352> instructs them to plug it in and find a spot.\",\n  \"The camera wearer turns around and walks back toward the storage rack and shelves near the entrance.\",\n  \"The camera wearer looks down at another black equipment case resting on the floor while holding the case in their hands.\"\n ],\n \"high_level_conclusions\": [\n  \"<voice_0> is the camera wearer (Jake), who is managing gear and checking on power banks and equipment charging status.\",\n  \"<voice_1358> is one of the team members seated at the table who owns the power bank.\",\n  \"The group in the room is actively collaborating and preparing for an event or production shoot involving floral and recording equipment.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 117,
+      "call_id": "379a12b5-9e16-4da7-b1d7-45f565ee7238",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789411343.0916002,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66764,
+      "output_tokens": 1503,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 31439.82708200201
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"The camera wearer holds a black case and walks across the living room toward a table where several people are gathered.\",\n  \"At the table, several people are engaged in group work, with flowers, papers, and equipment spread out.\",\n  \"The camera wearer approaches the table and notices a power bank and cable plugged in.\",\n  \"<voice_0> comments that someone has kept the device plugged in and praises the power bank, then asks whose it is.\",\n  \"<voice_1358> answers that the power bank belongs to them.\",\n  \"<voice_352> instructs them to plug it in and find a spot.\",\n  \"The camera wearer turns around and walks back toward the storage rack and shelves near the entrance.\",\n  \"The camera wearer looks down at another black equipment case resting on the floor while holding the case in their hands.\"\n ],\n \"high_level_conclusions\": [\n  \"<voice_0> is the camera wearer (Jake), who is managing gear and checking on power banks and equipment charging status.\",\n  \"<voice_1358> is one of the team members seated at the table who owns the power bank.\",\n  \"The group in the room is actively collaborating and preparing for an event or production shoot involving floral and recording equipment.\"\n ]\n}\n```",
+      "total_tokens": 68267,
+      "request_end": 1789411374.5316317,
+      "latency_ms": 31440.0272089988,
+      "client_wall_clock_latency_ms": 31440.0272089988,
+      "api_request_wall_clock_latency_ms": 31440.0272089988
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_117_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

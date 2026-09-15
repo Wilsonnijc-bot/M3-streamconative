@@ -1,0 +1,75 @@
+{
+  "clip_id": 77,
+  "source": {
+    "segment_id": 77,
+    "source": "DAY1_A1_JAKE_11460000.mp4",
+    "source_clock": "11460000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42360.0,
+    "absolute_end_seconds": 42390.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0077.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48805.929345184,
+      "prepared_perf": 48813.519975884,
+      "ordered_start_perf": 48934.972603958,
+      "consumer_wait_ms": 0.013625998690258712,
+      "ready_to_ordered_ms": 121452.62807399558,
+      "preparation_work_ms": 7580.156549003732,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Several people are gathered around a table with a checkered tablecloth covered with flowers, drinks, and a clapperboard.",
+      "A character speaks cheerfully off-camera at the beginning of the clip.",
+      "A woman wearing a white shirt walks up near the whiteboard at the end of the table.",
+      "The woman in the white shirt shows a puzzle box and describes its circular base and animal shapes to the group.",
+      "The woman seated on the left in dark clothing picks up her smartphone and places it by her ear.",
+      "The other individuals seated around the table observe and listen to the discussion about the puzzle."
+    ],
+    "high_level_conclusions": [
+      "The group is gathered in a creative or production meeting, as suggested by the presence of a film clapperboard, whiteboard, and casual setting.",
+      "The speaker in white bought a challenging animal puzzle as a group activity or gift and is sharing details about it."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Several people are gathered around a table with a checkered tablecloth covered with flowers, drinks, and a clapperboard.\",\n    \"A character speaks cheerfully off-camera at the beginning of the clip.\",\n    \"A woman wearing a white shirt walks up near the whiteboard at the end of the table.\",\n    \"The woman in the white shirt shows a puzzle box and describes its circular base and animal shapes to the group.\",\n    \"The woman seated on the left in dark clothing picks up her smartphone and places it by her ear.\",\n    \"The other individuals seated around the table observe and listen to the discussion about the puzzle.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is gathered in a creative or production meeting, as suggested by the presence of a film clapperboard, whiteboard, and casual setting.\",\n    \"The speaker in white bought a challenging animal puzzle as a group activity or gift and is sharing details about it.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 77,
+      "call_id": "bd214a85-f571-4516-bee7-174ce53f4620",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407759.7605197,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66856,
+      "output_tokens": 999,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 44386.13582500693
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Several people are gathered around a table with a checkered tablecloth covered with flowers, drinks, and a clapperboard.\",\n    \"A character speaks cheerfully off-camera at the beginning of the clip.\",\n    \"A woman wearing a white shirt walks up near the whiteboard at the end of the table.\",\n    \"The woman in the white shirt shows a puzzle box and describes its circular base and animal shapes to the group.\",\n    \"The woman seated on the left in dark clothing picks up her smartphone and places it by her ear.\",\n    \"The other individuals seated around the table observe and listen to the discussion about the puzzle.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is gathered in a creative or production meeting, as suggested by the presence of a film clapperboard, whiteboard, and casual setting.\",\n    \"The speaker in white bought a challenging animal puzzle as a group activity or gift and is sharing details about it.\"\n  ]\n}\n```",
+      "total_tokens": 67855,
+      "request_end": 1789407804.1467822,
+      "latency_ms": 44386.255779005296,
+      "client_wall_clock_latency_ms": 44386.255779005296,
+      "api_request_wall_clock_latency_ms": 44386.255779005296
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_77_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

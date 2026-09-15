@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "The candidate states that Lily's occupation cannot be determined instead of identifying her as a designer."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q14",
+    "method": "D",
+    "call_id": "f3d45160-1bd0-47e0-b8a5-8cb529aed94c",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789440019.602208,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 137,
+    "output_tokens": 132,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 2456.7857649963116
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n \"0\": {\n  \"correct\": false,\n  \"reason\": \"The candidate states that Lily's occupation cannot be determined instead of identifying her as a designer.\"\n }\n}\n```",
+    "total_tokens": 269,
+    "request_end": 1789440022.059076,
+    "latency_ms": 2456.8667279963847,
+    "client_wall_clock_latency_ms": 2456.8667279963847,
+    "api_request_wall_clock_latency_ms": 2456.8667279963847
+  },
+  "included_in_qa_latency": false
+}

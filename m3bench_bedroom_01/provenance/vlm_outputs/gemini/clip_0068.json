@@ -1,0 +1,76 @@
+{
+  "clip_id": 68,
+  "source": {
+    "segment_id": 68,
+    "source": "bedroom_01_00320000.mp4",
+    "source_clock": "00320000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1920.0,
+    "absolute_end_seconds": 1950.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00320000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 76583.562422215,
+      "prepared_perf": 76588.824706207,
+      "ordered_start_perf": 76703.212119241,
+      "consumer_wait_ms": 0.007365000783465803,
+      "ready_to_ordered_ms": 114387.41303399729,
+      "preparation_work_ms": 5256.960238999454,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women are seated opposite each other at a dining table set with food, drinks, and documents.",
+      "The woman on the right speaks to the woman on the left using <voice_322>.",
+      "The woman on the left looks at a tablet resting on the table.",
+      "The woman on the right gestures with her hands as she finishes asking her question.",
+      "The woman on the left responds using <voice_10>, turning her attention to her conversation partner.",
+      "The woman on the left gestures with her hand while explaining her perspective."
+    ],
+    "high_level_conclusions": [
+      "The conversation resembles a casual interview or discussion about career and personal balance.",
+      "The speaker <voice_10> identifies as a designer explaining professional aspirations.",
+      "The two individuals share a comfortable and informal interpersonal relationship."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"Two women are seated opposite each other at a dining table set with food, drinks, and documents.\",\n\t\t\"The woman on the right speaks to the woman on the left using <voice_322>.\",\n\t\t\"The woman on the left looks at a tablet resting on the table.\",\n\t\t\"The woman on the right gestures with her hands as she finishes asking her question.\",\n\t\t\"The woman on the left responds using <voice_10>, turning her attention to her conversation partner.\",\n\t\t\"The woman on the left gestures with her hand while explaining her perspective.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The conversation resembles a casual interview or discussion about career and personal balance.\",\n\t\t\"The speaker <voice_10> identifies as a designer explaining professional aspirations.\",\n\t\t\"The two individuals share a comfortable and informal interpersonal relationship.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 68,
+      "call_id": "237b54b7-d55f-4120-a935-1163ab237802",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789435526.4035127,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65926,
+      "output_tokens": 1078,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 24599.90719599591
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"Two women are seated opposite each other at a dining table set with food, drinks, and documents.\",\n\t\t\"The woman on the right speaks to the woman on the left using <voice_322>.\",\n\t\t\"The woman on the left looks at a tablet resting on the table.\",\n\t\t\"The woman on the right gestures with her hands as she finishes asking her question.\",\n\t\t\"The woman on the left responds using <voice_10>, turning her attention to her conversation partner.\",\n\t\t\"The woman on the left gestures with her hand while explaining her perspective.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The conversation resembles a casual interview or discussion about career and personal balance.\",\n\t\t\"The speaker <voice_10> identifies as a designer explaining professional aspirations.\",\n\t\t\"The two individuals share a comfortable and informal interpersonal relationship.\"\n\t]\n}\n```",
+      "total_tokens": 67004,
+      "request_end": 1789435551.0035095,
+      "latency_ms": 24599.99435899954,
+      "client_wall_clock_latency_ms": 24599.99435899954,
+      "api_request_wall_clock_latency_ms": 24599.99435899954
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_68_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

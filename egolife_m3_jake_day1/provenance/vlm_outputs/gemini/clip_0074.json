@@ -1,0 +1,79 @@
+{
+  "clip_id": 74,
+  "source": {
+    "segment_id": 74,
+    "source": "DAY1_A1_JAKE_11443000.mp4",
+    "source_clock": "11443000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42270.0,
+    "absolute_end_seconds": 42300.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0074.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48670.185978995,
+      "prepared_perf": 48678.609391645,
+      "ordered_start_perf": 48750.794219208,
+      "consumer_wait_ms": 0.00831500074127689,
+      "ready_to_ordered_ms": 72184.82756300364,
+      "preparation_work_ms": 8418.071394000435,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a red-and-white checkered tablecloth.",
+      "A young woman in a black cardigan sits at the table holding a small yellow fabric pouch.",
+      "A person asks whether they should unpack the item, speaking <voice_0>.",
+      "The woman in black puts down the pouch and reaches across the table to pick up several paper cards.",
+      "A speaker explains that the cards are handmade seed paper crafted from discarded coffee grounds and paper pulp embedded with sunflower seeds, speaking <voice_500>.",
+      "A woman in a white shirt stands in the background near a whiteboard, trimming plants and flowers.",
+      "The woman in black holds the seed paper cards in her hands and examines them attentively.",
+      "Other companions seated across the table listen to the explanation and observe.",
+      "One of the seated women claps her hands as the discussion continues."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a creative or eco-friendly workshop involving handmade crafts, flowers, and recycled paper goods.",
+      "<voice_500> is demonstrating and explaining the design concept and environmental features of their DIY seed paper.",
+      "The woman seated in black is an active participant, showing curiosity and interest in the handmade craft items."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a red-and-white checkered tablecloth.\",\n  \"A young woman in a black cardigan sits at the table holding a small yellow fabric pouch.\",\n  \"A person asks whether they should unpack the item, speaking <voice_0>.\",\n  \"The woman in black puts down the pouch and reaches across the table to pick up several paper cards.\",\n  \"A speaker explains that the cards are handmade seed paper crafted from discarded coffee grounds and paper pulp embedded with sunflower seeds, speaking <voice_500>.\",\n  \"A woman in a white shirt stands in the background near a whiteboard, trimming plants and flowers.\",\n  \"The woman in black holds the seed paper cards in her hands and examines them attentively.\",\n  \"Other companions seated across the table listen to the explanation and observe.\",\n  \"One of the seated women claps her hands as the discussion continues.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are engaged in a creative or eco-friendly workshop involving handmade crafts, flowers, and recycled paper goods.\",\n  \"<voice_500> is demonstrating and explaining the design concept and environmental features of their DIY seed paper.\",\n  \"The woman seated in black is an active participant, showing curiosity and interest in the handmade craft items.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 74,
+      "call_id": "0800937a-5db6-459f-839a-58dcffcf6a02",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407575.0320075,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66957,
+      "output_tokens": 1883,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 43250.096659998235
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a red-and-white checkered tablecloth.\",\n  \"A young woman in a black cardigan sits at the table holding a small yellow fabric pouch.\",\n  \"A person asks whether they should unpack the item, speaking <voice_0>.\",\n  \"The woman in black puts down the pouch and reaches across the table to pick up several paper cards.\",\n  \"A speaker explains that the cards are handmade seed paper crafted from discarded coffee grounds and paper pulp embedded with sunflower seeds, speaking <voice_500>.\",\n  \"A woman in a white shirt stands in the background near a whiteboard, trimming plants and flowers.\",\n  \"The woman in black holds the seed paper cards in her hands and examines them attentively.\",\n  \"Other companions seated across the table listen to the explanation and observe.\",\n  \"One of the seated women claps her hands as the discussion continues.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are engaged in a creative or eco-friendly workshop involving handmade crafts, flowers, and recycled paper goods.\",\n  \"<voice_500> is demonstrating and explaining the design concept and environmental features of their DIY seed paper.\",\n  \"The woman seated in black is an active participant, showing curiosity and interest in the handmade craft items.\"\n ]\n}\n```",
+      "total_tokens": 68840,
+      "request_end": 1789407618.282238,
+      "latency_ms": 43250.224872004765,
+      "client_wall_clock_latency_ms": 43250.224872004765,
+      "api_request_wall_clock_latency_ms": 43250.224872004765
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_74_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

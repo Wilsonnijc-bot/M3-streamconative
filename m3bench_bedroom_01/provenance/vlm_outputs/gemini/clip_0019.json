@@ -1,0 +1,75 @@
+{
+  "clip_id": 19,
+  "source": {
+    "segment_id": 19,
+    "source": "bedroom_01_00083000.mp4",
+    "source_clock": "00083000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 510.0,
+    "absolute_end_seconds": 540.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00083000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73417.036192371,
+      "prepared_perf": 73421.434549418,
+      "ordered_start_perf": 73488.727986779,
+      "consumer_wait_ms": 0.012864009477198124,
+      "ready_to_ordered_ms": 67293.43736100418,
+      "preparation_work_ms": 4393.047409001156,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two young women sit on the edge of a bed engaged in conversation.",
+      "The woman in the beige t-shirt (<voice_179>) talks about having an allergic reaction to strawberries.",
+      "The woman wearing a cream sweater (<voice_10>) questions why she ate strawberries right before an examination.",
+      "The woman in the beige shirt (<voice_179>) explains that she only had a small amount and did not anticipate the severity of the reaction.",
+      "The woman in the cream sweater (<voice_180>) remarks on her carelessness as the discussion concludes."
+    ],
+    "high_level_conclusions": [
+      "The two women share a close relationship, likely friends or roommates.",
+      "The woman in beige is remorseful about eating an allergen before an important exam.",
+      "The woman in the cream sweater expresses concern mixed with reprimand over her friend's lack of caution."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"Two young women sit on the edge of a bed engaged in conversation.\",\n\t\t\"The woman in the beige t-shirt (<voice_179>) talks about having an allergic reaction to strawberries.\",\n\t\t\"The woman wearing a cream sweater (<voice_10>) questions why she ate strawberries right before an examination.\",\n\t\t\"The woman in the beige shirt (<voice_179>) explains that she only had a small amount and did not anticipate the severity of the reaction.\",\n\t\t\"The woman in the cream sweater (<voice_180>) remarks on her carelessness as the discussion concludes.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The two women share a close relationship, likely friends or roommates.\",\n\t\t\"The woman in beige is remorseful about eating an allergen before an important exam.\",\n\t\t\"The woman in the cream sweater expresses concern mixed with reprimand over her friend's lack of caution.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 19,
+      "call_id": "d7ea3fb7-3a09-4c12-94be-ac51b3d428f2",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432311.2133846,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66043,
+      "output_tokens": 1060,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 79891.0194249911
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"Two young women sit on the edge of a bed engaged in conversation.\",\n\t\t\"The woman in the beige t-shirt (<voice_179>) talks about having an allergic reaction to strawberries.\",\n\t\t\"The woman wearing a cream sweater (<voice_10>) questions why she ate strawberries right before an examination.\",\n\t\t\"The woman in the beige shirt (<voice_179>) explains that she only had a small amount and did not anticipate the severity of the reaction.\",\n\t\t\"The woman in the cream sweater (<voice_180>) remarks on her carelessness as the discussion concludes.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The two women share a close relationship, likely friends or roommates.\",\n\t\t\"The woman in beige is remorseful about eating an allergen before an important exam.\",\n\t\t\"The woman in the cream sweater expresses concern mixed with reprimand over her friend's lack of caution.\"\n\t]\n}\n```",
+      "total_tokens": 67103,
+      "request_end": 1789432391.1045523,
+      "latency_ms": 79891.16247399943,
+      "client_wall_clock_latency_ms": 79891.16247399943,
+      "api_request_wall_clock_latency_ms": 79891.16247399943
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_19_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

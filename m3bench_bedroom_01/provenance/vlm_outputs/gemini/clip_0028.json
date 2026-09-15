@@ -1,0 +1,79 @@
+{
+  "clip_id": 28,
+  "source": {
+    "segment_id": 28,
+    "source": "bedroom_01_00123000.mp4",
+    "source_clock": "00123000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 750.0,
+    "absolute_end_seconds": 780.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00123000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73917.402870121,
+      "prepared_perf": 73921.786623477,
+      "ordered_start_perf": 74069.62526776,
+      "consumer_wait_ms": 0.011633004760369658,
+      "ready_to_ordered_ms": 147838.6442829942,
+      "preparation_work_ms": 4378.446071001235,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person wearing black gloves picks up a laptop from a table.",
+      "The person puts the laptop into a black protective sleeve.",
+      "The person sets the laptop sleeve down near the edge of the table.",
+      "The person picks up a crumpled paper towel from the table.",
+      "The person places a pen back into the pen holder on the table.",
+      "The person throws the crumpled paper towel into a pink trash can on the floor.",
+      "The person picks up an empty plastic bottle from the table and tosses it into the pink trash can.",
+      "The person adjusts the coffee mug and a food tray containing french fries and a slice of cake on the table.",
+      "A woman sitting on the right side of the table puts down her mobile phone and clasps her hands.",
+      "Another woman is seen sitting on the left side of the table, looking at her smartphone."
+    ],
+    "high_level_conclusions": [
+      "The person wearing black gloves is clearing and organizing the table from a first-person perspective.",
+      "The setting is a casual gathering where the two seated women are eating, studying, or relaxing with their phones."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A person wearing black gloves picks up a laptop from a table.\",\n    \"The person puts the laptop into a black protective sleeve.\",\n    \"The person sets the laptop sleeve down near the edge of the table.\",\n    \"The person picks up a crumpled paper towel from the table.\",\n    \"The person places a pen back into the pen holder on the table.\",\n    \"The person throws the crumpled paper towel into a pink trash can on the floor.\",\n    \"The person picks up an empty plastic bottle from the table and tosses it into the pink trash can.\",\n    \"The person adjusts the coffee mug and a food tray containing french fries and a slice of cake on the table.\",\n    \"A woman sitting on the right side of the table puts down her mobile phone and clasps her hands.\",\n    \"Another woman is seen sitting on the left side of the table, looking at her smartphone.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The person wearing black gloves is clearing and organizing the table from a first-person perspective.\",\n    \"The setting is a casual gathering where the two seated women are eating, studying, or relaxing with their phones.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 28,
+      "call_id": "28b0ebd0-e2b4-4dc2-805f-cf762cbd56b2",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432892.47595,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65618,
+      "output_tokens": 1631,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 27032.64733699325
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A person wearing black gloves picks up a laptop from a table.\",\n    \"The person puts the laptop into a black protective sleeve.\",\n    \"The person sets the laptop sleeve down near the edge of the table.\",\n    \"The person picks up a crumpled paper towel from the table.\",\n    \"The person places a pen back into the pen holder on the table.\",\n    \"The person throws the crumpled paper towel into a pink trash can on the floor.\",\n    \"The person picks up an empty plastic bottle from the table and tosses it into the pink trash can.\",\n    \"The person adjusts the coffee mug and a food tray containing french fries and a slice of cake on the table.\",\n    \"A woman sitting on the right side of the table puts down her mobile phone and clasps her hands.\",\n    \"Another woman is seen sitting on the left side of the table, looking at her smartphone.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The person wearing black gloves is clearing and organizing the table from a first-person perspective.\",\n    \"The setting is a casual gathering where the two seated women are eating, studying, or relaxing with their phones.\"\n  ]\n}\n```",
+      "total_tokens": 67249,
+      "request_end": 1789432919.5086892,
+      "latency_ms": 27032.73654700024,
+      "client_wall_clock_latency_ms": 27032.73654700024,
+      "api_request_wall_clock_latency_ms": 27032.73654700024
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_28_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

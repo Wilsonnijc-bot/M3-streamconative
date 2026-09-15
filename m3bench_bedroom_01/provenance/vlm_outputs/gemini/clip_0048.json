@@ -1,0 +1,77 @@
+{
+  "clip_id": 48,
+  "source": {
+    "segment_id": 48,
+    "source": "bedroom_01_00220000.mp4",
+    "source_clock": "00220000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1320.0,
+    "absolute_end_seconds": 1350.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00220000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 74909.293744092,
+      "prepared_perf": 74914.210581066,
+      "ordered_start_perf": 75061.336118538,
+      "consumer_wait_ms": 0.013324999599717557,
+      "ready_to_ordered_ms": 147125.53747200582,
+      "preparation_work_ms": 4911.468042002525,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and documents.",
+      "The woman on the right picks up a snack from her plate and eats it.",
+      "The woman on the left holds a smartphone and speaks to the other woman.",
+      "The woman on the right rests her arms on the table and listens attentively.",
+      "The woman on the left gestures with her hand while talking and then sets the phone down.",
+      "The woman on the right responds while looking toward the table."
+    ],
+    "high_level_conclusions": [
+      "The two women are friends or classmates having a casual discussion at home.",
+      "They are discussing school life, examinations, and the balance of extracurricular activities.",
+      "<voice_310> and <voice_10> belong to the woman on the left asking a question.",
+      "<voice_322> belongs to the woman on the right sharing her perspective in response."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and documents.\",\n    \"The woman on the right picks up a snack from her plate and eats it.\",\n    \"The woman on the left holds a smartphone and speaks to the other woman.\",\n    \"The woman on the right rests her arms on the table and listens attentively.\",\n    \"The woman on the left gestures with her hand while talking and then sets the phone down.\",\n    \"The woman on the right responds while looking toward the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women are friends or classmates having a casual discussion at home.\",\n    \"They are discussing school life, examinations, and the balance of extracurricular activities.\",\n    \"<voice_310> and <voice_10> belong to the woman on the left asking a question.\",\n    \"<voice_322> belongs to the woman on the right sharing her perspective in response.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 48,
+      "call_id": "1b3e1bb0-1965-47ea-a30e-01e47b0723bb",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789433885.0750337,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65950,
+      "output_tokens": 1546,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 79629.44276900089
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and documents.\",\n    \"The woman on the right picks up a snack from her plate and eats it.\",\n    \"The woman on the left holds a smartphone and speaks to the other woman.\",\n    \"The woman on the right rests her arms on the table and listens attentively.\",\n    \"The woman on the left gestures with her hand while talking and then sets the phone down.\",\n    \"The woman on the right responds while looking toward the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women are friends or classmates having a casual discussion at home.\",\n    \"They are discussing school life, examinations, and the balance of extracurricular activities.\",\n    \"<voice_310> and <voice_10> belong to the woman on the left asking a question.\",\n    \"<voice_322> belongs to the woman on the right sharing her perspective in response.\"\n  ]\n}\n```",
+      "total_tokens": 67496,
+      "request_end": 1789433964.7045875,
+      "latency_ms": 79629.54988199635,
+      "client_wall_clock_latency_ms": 79629.54988199635,
+      "api_request_wall_clock_latency_ms": 79629.54988199635
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_48_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "latency_mode": "warm_retrieval_uncached_question",
+  "gpu_exclusive": false,
+  "note": "The Qwen thinking identity-v2 full benchmark was active on the same Hyperstack VM/GPU during Gemini QA evaluation. Warm-engine timings are actual observations under potentially contended GPU load, not an isolated-GPU benchmark. The amount of interference was not measured.",
+  "evidence": "At 2026-09-14T21:23:07Z the Qwen benchmark build process had elapsed 02:48:31, placing its start around 18:34:36Z; Gemini QA completed before 19:48:52Z. Both use instance 1042997's RTX A6000.",
+  "qa_rerun_for_report_fix": false
+}

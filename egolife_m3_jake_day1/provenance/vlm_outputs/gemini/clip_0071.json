@@ -1,0 +1,77 @@
+{
+  "clip_id": 71,
+  "source": {
+    "segment_id": 71,
+    "source": "DAY1_A1_JAKE_11430000.mp4",
+    "source_clock": "11430000",
+    "start_seconds_in_source": 8.019999999996799,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42188.02,
+    "absolute_end_seconds": 42210.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0071.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48546.749036893,
+      "prepared_perf": 48551.978741727,
+      "ordered_start_perf": 48633.311741021,
+      "consumer_wait_ms": 0.008386006811633706,
+      "ready_to_ordered_ms": 81332.99929400528,
+      "preparation_work_ms": 5222.751148001407,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer sits near a dining table, holding a smartphone with both hands and browsing through an application.",
+      "On the checkered tablecloth, a film clapperboard, a water bottle, papers, and various props and equipment are laid out.",
+      "In the background, a person stands behind the table handling plants and flower stems.",
+      "Another person sits at the right side of the table, touching items placed there.",
+      "A woman wearing a dark top and cardigan approaches the table while carrying a yellow bag.",
+      "A man wearing an orange shirt walks across the room in the background.",
+      "The woman in the dark cardigan stands beside the table, examining the contents of her bag and holding an item.",
+      "The camera wearer continues to tap and scroll through content on their phone screen."
+    ],
+    "high_level_conclusions": [
+      "The scene depicts a film or video production crew preparing on set, as evidenced by the clapperboard labeled with production details, camera accessories, and staff preparing props.",
+      "The camera wearer is taking a break or waiting between production activities, remaining engrossed in their mobile phone while others manage equipment and props around the room."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"The camera wearer sits near a dining table, holding a smartphone with both hands and browsing through an application.\",\n  \"On the checkered tablecloth, a film clapperboard, a water bottle, papers, and various props and equipment are laid out.\",\n  \"In the background, a person stands behind the table handling plants and flower stems.\",\n  \"Another person sits at the right side of the table, touching items placed there.\",\n  \"A woman wearing a dark top and cardigan approaches the table while carrying a yellow bag.\",\n  \"A man wearing an orange shirt walks across the room in the background.\",\n  \"The woman in the dark cardigan stands beside the table, examining the contents of her bag and holding an item.\",\n  \"The camera wearer continues to tap and scroll through content on their phone screen.\"\n ],\n \"high_level_conclusions\": [\n  \"The scene depicts a film or video production crew preparing on set, as evidenced by the clapperboard labeled with production details, camera accessories, and staff preparing props.\",\n  \"The camera wearer is taking a break or waiting between production activities, remaining engrossed in their mobile phone while others manage equipment and props around the room.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 71,
+      "call_id": "56eefbbc-1d36-4ad3-8ea3-f67250e95ee8",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407454.1784792,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 48693,
+      "output_tokens": 907,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 28381.160296994494
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"The camera wearer sits near a dining table, holding a smartphone with both hands and browsing through an application.\",\n  \"On the checkered tablecloth, a film clapperboard, a water bottle, papers, and various props and equipment are laid out.\",\n  \"In the background, a person stands behind the table handling plants and flower stems.\",\n  \"Another person sits at the right side of the table, touching items placed there.\",\n  \"A woman wearing a dark top and cardigan approaches the table while carrying a yellow bag.\",\n  \"A man wearing an orange shirt walks across the room in the background.\",\n  \"The woman in the dark cardigan stands beside the table, examining the contents of her bag and holding an item.\",\n  \"The camera wearer continues to tap and scroll through content on their phone screen.\"\n ],\n \"high_level_conclusions\": [\n  \"The scene depicts a film or video production crew preparing on set, as evidenced by the clapperboard labeled with production details, camera accessories, and staff preparing props.\",\n  \"The camera wearer is taking a break or waiting between production activities, remaining engrossed in their mobile phone while others manage equipment and props around the room.\"\n ]\n}\n```",
+      "total_tokens": 49600,
+      "request_end": 1789407482.559813,
+      "latency_ms": 28381.331157994282,
+      "client_wall_clock_latency_ms": 28381.331157994282,
+      "api_request_wall_clock_latency_ms": 28381.331157994282
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_71_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

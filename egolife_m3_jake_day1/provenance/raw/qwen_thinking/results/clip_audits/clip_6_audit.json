@@ -1,0 +1,442 @@
+{
+  "clip_id": 6,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0006.mp4",
+  "end_to_end_memory_generation_ms": 450699.44046500314,
+  "latency_ms": {
+    "clip_decode": 3978.586883000389,
+    "deepgram_asr": 262.25751799938735,
+    "mai_transcribe_asr": 1236.2424739985727,
+    "asr_total": 1238.19318900496,
+    "audio_segmentation": 5.737403997045476,
+    "speech_embedding_campplus": 338.4596620016964,
+    "facial_detection_recognition_buffalo_l": 4111.777441001323,
+    "face_clustering": 7.442574999004137,
+    "vlm_memory_generation": 152590.2757790027,
+    "text_embedding": 758.4677209961228,
+    "graph_update_total": 6.91008099965984
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 6,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 846,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789411498.349188,
+          "status": "success",
+          "total_tokens": 182,
+          "request_end": 1789411499.1074636,
+          "latency_ms": 758.2762209931388
+        }
+      ],
+      "total_tokens": 182,
+      "latency_ms": 758.4677209961228
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 262.25751799938735,
+        "openrouter-mai-transcribe-2": 1236.2424739985727
+      },
+      "asr_total_ms": 1238.19318900496,
+      "audio_segmentation_ms": 5.737403997045476,
+      "speech_embedding_ms": 338.4596620016964,
+      "graph_update_ms": 4.764019999129232,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 358.03908999514533
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4111.777441001323,
+      "face_clustering_ms": 7.442574999004137,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 165,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4282.079584001622
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_0>"
+      ],
+      "context_preparation_ms": 5434.477536997292,
+      "vlm_ms": 152590.2757790027,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"At 0.00s, a person places a black bag onto a green shelving unit.\",\n\t\t\"The camera pans to reveal cardboard boxes stacked on the floor near a doorway.\",\n\t\t\"A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth.\",\n\t\t\"From 11.50s onwards, the first-person perspective shows hands reaching for and manipulating items on the table.\",\n\t\t\"Multiple participants are seen examining electronic devices and unpacking boxes.\",\n\t\t\"<voice_0> asks how the items look after being opened.\",\n\t\t\"<voice_0> instructs to keep the box.\",\n\t\t\"<voice_0> suggests discarding the item inside the package.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is participating in a collaborative product unboxing or review session.\",\n\t\t\"<voice_0> is acting as a facilitator or host guiding the discussion on the unboxed items.\",\n\t\t\"The setting appears to be a prepared space for filming or demonstrating the products.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "At 0.00s, a person places a black bag onto a green shelving unit.",
+          "The camera pans to reveal cardboard boxes stacked on the floor near a doorway.",
+          "A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth.",
+          "From 11.50s onwards, the first-person perspective shows hands reaching for and manipulating items on the table.",
+          "Multiple participants are seen examining electronic devices and unpacking boxes.",
+          "<voice_0> asks how the items look after being opened.",
+          "<voice_0> instructs to keep the box.",
+          "<voice_0> suggests discarding the item inside the package."
+        ],
+        "high_level_conclusions": [
+          "The group is participating in a collaborative product unboxing or review session.",
+          "<voice_0> is acting as a facilitator or host guiding the discussion on the unboxed items.",
+          "The setting appears to be a prepared space for filming or demonstrating the products."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 6,
+          "call_id": "bd1f72b2-c45b-49d1-9e8b-2ec31177b1ce",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789411345.7576962,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"At 0.00s, a person places a black bag onto a green shelving unit.\",\n\t\t\"The camera pans to reveal cardboard boxes stacked on the floor near a doorway.\",\n\t\t\"A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth.\",\n\t\t\"From 11.50s onwards, the first-person perspective shows hands reaching for and manipulating items on the table.\",\n\t\t\"Multiple participants are seen examining electronic devices and unpacking boxes.\",\n\t\t\"<voice_0> asks how the items look after being opened.\",\n\t\t\"<voice_0> instructs to keep the box.\",\n\t\t\"<voice_0> suggests discarding the item inside the package.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is participating in a collaborative product unboxing or review session.\",\n\t\t\"<voice_0> is acting as a facilitator or host guiding the discussion on the unboxed items.\",\n\t\t\"The setting appears to be a prepared space for filming or demonstrating the products.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   0.00s - 2.50s: First-person view (POV) of someone placing a black bag on a shelf. The camera moves around a room. There's a shelf with boxes and items.\n    *   3.00s onwards: The camera pans to reveal a group of people sitting around a table covered with a red-and-white checkered tablecloth. They seem to be unboxing or examining products. There are multiple people: one in black on the left, one in white behind them, one in pink/orange on the right, and others further back.\n    *   11.50s - 29.50s: The POV person interacts with the items on the table. They pick up boxes, papers, and small electronic devices (looks like cameras or similar gadgets). Other participants are also handling items.\n    *   The camera angle is fisheye/360-degree style.\n    *   Text overlay: \"A1_JAKE\", \"DAY1\".\n\n*   **Voice Features:**\n    *   `<voice_0>`: Transcript is in Chinese (\"MAI: 好，大家拆出来可以变成什么样了？拆开，这个盒子要留着。嗯，这里面这个东西可以丢掉，这个东西都丢掉吧。\").\n    *   Time: 00:08 - 00:22.\n    *   Speaker: MAI.\n\n**2. Construct Video Description:**\n*   Need to describe the sequence of events atomically.\n*   Start with the initial action: Placing a bag on a shelf.\n*   Transition to the main scene: Group gathering around a table.\n*   Describe the activity: Unboxing/examining items.\n*   Mention the interaction: Hands reaching out, passing items.\n*   Note the environment: Room with shelves, table, window.\n\n**Drafting Video Description:**\n*   At 0.00s, a person places a black bag onto a green shelf unit.\n*   The camera pans across the room showing cardboard boxes on the floor near a door.\n*   The view shifts to show a group of five people seated around a rectangular table covered with a red and white checkered cloth.\n*   The participants are engaged in unboxing various electronic devices and accessories.\n*   The first-person perspective shows hands reaching for items on the table, including white boxes and packaged electronics.\n*   Another participant in an orange shirt handles a black device.\n*   A participant in a black top on the left side examines a small black object.\n*   The group continues to sort through packaging materials and components spread across the table.\n\n**3. Construct High-Level Conclusions:**\n*   Need to infer intent/identity.\n*   The voice feature `<voice_0>` corresponds to \"MAI\".\n*   The transcript suggests MAI is leading the discussion about unboxing (\"拆出来可以变成什么样了？\").\n*   Since there are no face features explicitly linked to names in the prompt (only generic descriptions), I need to be careful. Wait, the prompt says \"Use the provided feature IDs as references to characters (when applicable)\". It doesn't give explicit face IDs like `<face_1>`.\n*   However, usually, if there's a voice ID, I might try to link it if possible, but here I don't have specific face IDs provided in the \"Face features:\" section (it's empty).\n*   Wait, looking closely at the prompt structure: \"Face features:Voice features:\". The Face features section is empty.\n*   So I cannot create an `Equivalence` statement because I lack face IDs.\n*   I can still make general conclusions about the activity.\n*   Conclusion 1: The group is conducting a product unboxing session or review.\n*   Conclusion 2: MAI is likely the moderator or host asking questions about the products.\n*   Conclusion 3: The setting appears to be a casual meeting room or studio setup for filming/reviewing.\n\n**Refining Output:**\n*   Check constraints: \"Preserve speaker identity... use the exact ID as the speaker.\" -> I need to mention MAI in the text if possible, or just rely on the video description. The instruction says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". Wait, that instruction is for a different task type (memory construction). Let me re-read the system prompt vs the user prompt.\n*   User Prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n*   System Prompt: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n*   This is conflicting. The user prompt asks for a specific JSON format (`video_description`, `high_level_conclusions`). The system prompt seems to be instructions for a *different* task (memory construction) or perhaps I need to adapt the system prompt's rules to the user's requested output format?\n*   Actually, looking at the user prompt again: \"You will be given a video and a set of character features... Your task consists of two parts...\". This looks like a standard video understanding task.\n*   However, the *System Prompt* at the very top says: \"Preserve speaker identity when constructing memory from the supplied character features...\". And then \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n*   This implies I should follow the System Prompt's rules regarding speaker IDs *within* the context of the User Prompt's output format.\n*   So, in the `video_description` or `high_level_conclusions`, I should reference the voice ID `<voice_0>` if relevant, or ensure the speaker is identified correctly.\n*   Wait, the System Prompt says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". But the User Prompt asks for `video_description` and `high_level_conclusions`.\n*   Usually, `video_description` describes *what happened*. `high_level_conclusions` describes *reasoning*.\n*   If I strictly follow the System Prompt's instruction about \"episodic memory\", that sounds like a specific field name. But the User Prompt defines the JSON schema strictly: `\"video_description\": [...]`, `\"high_level_conclusions\": [...]`.\n*   I must follow the User Prompt's JSON schema. I will incorporate the speaker info into the descriptions/conclusions where appropriate, ensuring the ID `<voice_0>` is used if referring to the speaker, or identifying them as MAI.\n*   Actually, the System Prompt says \"Do not replace the ID with 'a speaker'...\". So I should probably use `<voice_0>` in the text if I'm talking about that specific utterance.\n*   Let's look at the \"High-Level Conclusions\" instruction in the User Prompt: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since there are no face features, I won't add Equivalence lines.\n*   I will write the video description focusing on the actions.\n*   I will write the high-level conclusions focusing on the nature of the event (unboxing) and the role of the speaker (MAI).\n\n**Revised Plan:**\n1.  **Video Description:**\n    *   Person places bag on shelf.\n    *   Camera pans to room with boxes.\n    *   Group sits at table.\n    *   First-person view shows hands interacting with items.\n    *   Others examine devices.\n2.  **High-Level Conclusions:**\n    *   Event is a collaborative unboxing session.\n    *   MAI (<voice_0>) is discussing the condition/potential of the unboxed items.\n    *   Participants are actively sorting through components.\n\nLet's refine the text to match the \"atomic event\" requirement.\n- Frame 0.00-2.50: POV person places a black bag on a shelf.\n- Frame 3.00-10.00: Camera reveals a group of people gathered around a table for a meeting or activity.\n- Frame 11.50-29.50: The group engages in unboxing, handling various electronic devices and packaging materials.\n- Throughout: The first-person perspective indicates the viewer is part of the group.\n\nWait, I need to check if I need to quote the transcript in the video description. The system prompt says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". This is tricky because the output fields are fixed. I'll put the summary in the video description or high level conclusions. Given \"episodic memory\" usually implies a narrative element, I'll fit it into the video description or a specific sentence.\nActually, the system prompt says \"Preserve speaker identity...\". I will mention `<voice_0>` in the text.\n\nLet's draft the response.\n\n**Video Description:**\n- At 0.00s, a person places a black bag onto a green shelving unit.\n- The camera pans to show cardboard boxes stacked on the floor near a doorway.\n- The view shifts to a room where several individuals are seated around a table with a checkered tablecloth.\n- From 11.50s onwards, the first-person perspective shows hands reaching for and manipulating items on the table.\n- Multiple participants are seen examining electronic devices and unpacking boxes.\n- At 00:08, `<voice_0>` speaks about the state of the unboxed items, suggesting some packaging should be kept while others discarded.\n\n**High-Level Conclusions:**\n- The group is participating in a product unboxing or review session.\n- `<voice_0>` (MAI) is facilitating the discussion regarding the contents of the packages.\n- The presence of multiple participants handling similar items suggests a shared experience or collaborative testing.\n\nWait, I need to make sure I don't hallucinate face IDs. The prompt says \"If a face and a voice feature refer to the same character, indicate it...\". Since I have no face features, I can't do this.\nHowever, I should check if I can identify who MAI is visually. No, faces are blurred/masked in the images. So I cannot confirm equivalence.\n\nFinal check on constraints:\n- \"Preserve speaker identity... use the exact ID as the speaker.\" -> I will use `<voice_0>`.\n- \"Do not replace the ID with 'a speaker'...\" -> Okay.\n- \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> Okay.\n\nOne detail: The system prompt mentions \"constructing memory\". The user prompt asks for \"Video Description\" and \"High-Level Conclusions\". I will treat the \"Video Description\" as the narrative/memory construction part requested by the system prompt, adapted to the user's schema.\n\nLet's finalize the JSON content.\n\nVideo Description:\n1. A person places a black bag on a shelf.\n2. The camera pans to show boxes on the floor.\n3. A group of people sit around a table.\n4. The first-person view shows hands interacting with items on the table.\n5. Participants examine electronic devices.\n6. `<voice_0>` discusses keeping certain packaging and discarding others during the unboxing process.\n\nHigh Level Conclusions:\n1. The activity is a collective unboxing session involving multiple participants.\n2. `<voice_0>` acts as a guide or host questioning the outcome of the unboxing.\n3. The environment is set up for a recording or live demonstration.\n\nWait, I should check the timestamps. The voice is 00:08-00:22. The video starts at 0.00. So the voice happens early in the sequence shown in the frames (frames 3.00+ correspond to later times, but the audio is overlaid). The frames show time progressing from 11:12:00:00 to 11:12:29:10. The ASR says 00:08-00:22 relative to the clip start presumably.\nThe frames show the group sitting down and starting to interact.\nOkay, I will proceed.\n\nOne correction: The system prompt says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". I will ensure this is included in the `video_description` array as a descriptive sentence.\n\nAlso, \"Preserve distinct substantive utterances as separate atomic memories.\" -> I should split the transcript if there are distinct parts.\nTranscript: \"MAI: 好，大家拆出来可以变成什么样了？拆开，这个盒子要留着。嗯，这里面这个东西可以丢掉，这个东西都丢掉吧。\"\nDistinct parts:\n1. Asking how it looks after opening.\n2. Telling to keep the box.\n3. Suggesting to discard the item inside.\nI will combine these into a coherent description or split them if they represent distinct actions. Since it's a continuous speech block in the data, I'll summarize it as one event in the description unless the prompt implies splitting. \"Preserve distinct substantive utterances as separate atomic memories\" suggests splitting.\nSo:\n- `<voice_0>` asks how the items look after being opened.\n- `<voice_0>` instructs to keep the box.\n- `<voice_0>` suggests discarding the item inside.\n\nThis fits the \"atomic memories\" idea better.\n\nLet's assemble the JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"At 0.00s, a person places a black bag onto a green shelving unit.\",\n\t\t\"The camera pans to reveal cardboard boxes stacked on the floor near a doorway.\",\n\t\t\"A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth.\",\n\t\t\"From 11.50s onwards, the first-person perspective shows hands reaching for and manipulating items on the table.\",\n\t\t\"Multiple participants are seen examining electronic devices and unpacking boxes.\",\n\t\t\"<voice_0> asks how the items look after being opened.\",\n\t\t\"<voice_0> instructs to keep the box.\",\n\t\t\"<voice_0> suggests discarding the item inside the package.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is participating in a collaborative product unboxing or review session.\",\n\t\t\"<voice_0> is acting as a facilitator or host guiding the discussion on the unboxed items.\",\n\t\t\"The setting appears to be a prepared space for filming or demonstrating the products.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10220,
+          "output_tokens": 3239,
+          "total_tokens": 13459,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.003036002453882247,
+            "media_preparation_ms": 53.92074400151614,
+            "processor_tokenization_ms": 1269.120686003589,
+            "device_transfer_ms": 45.86892000224907,
+            "cuda_generation_ms": 151182.6677930003,
+            "decoding_ms": 5.6364519987255335
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 152557.49321099574,
+          "request_end": 1789411498.3479834,
+          "latency_ms": 152590.2757790027,
+          "client_wall_clock_latency_ms": 152590.2757790027
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.10617999942041934,
+      "nodes_added": 8,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 2.0398810011101887,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 165,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 3,
+    "nodes_after_clip": 66,
+    "edges_after_clip": 21,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "At 0.00s, a person places a black bag onto a green shelving unit.",
+      "The camera pans to reveal cardboard boxes stacked on the floor near a doorway.",
+      "A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth.",
+      "From 11.50s onwards, the first-person perspective shows hands reaching for and manipulating items on the table.",
+      "Multiple participants are seen examining electronic devices and unpacking boxes.",
+      "<voice_0> asks how the items look after being opened.",
+      "<voice_0> instructs to keep the box.",
+      "<voice_0> suggests discarding the item inside the package."
+    ],
+    "high_level_conclusions": [
+      "The group is participating in a collaborative product unboxing or review session.",
+      "<voice_0> is acting as a facilitator or host guiding the discussion on the unboxed items.",
+      "The setting appears to be a prepared space for filming or demonstrating the products."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "At 0.00s, a person places a black bag onto a green shelving unit.",
+      "The camera pans to reveal cardboard boxes stacked on the floor near a doorway.",
+      "A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth.",
+      "From 11.50s onwards, the first-person perspective shows hands reaching for and manipulating items on the table.",
+      "Multiple participants are seen examining electronic devices and unpacking boxes.",
+      "<voice_0> asks how the items look after being opened.",
+      "<voice_0> instructs to keep the box.",
+      "<voice_0> suggests discarding the item inside the package."
+    ],
+    "high_level_conclusions": [
+      "The group is participating in a collaborative product unboxing or review session.",
+      "<voice_0> is acting as a facilitator or host guiding the discussion on the unboxed items.",
+      "The setting appears to be a prepared space for filming or demonstrating the products."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_6_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 55,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 0.00s, a person places a black bag onto a green shelving unit."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 56,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans to reveal cardboard boxes stacked on the floor near a doorway."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 57,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 58,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "From 11.50s onwards, the first-person perspective shows hands reaching for and manipulating items on the table."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 59,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Multiple participants are seen examining electronic devices and unpacking boxes."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 60,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> asks how the items look after being opened."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 61,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> instructs to keep the box."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 62,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> suggests discarding the item inside the package."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 63,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is participating in a collaborative product unboxing or review session."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 64,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> is acting as a facilitator or host guiding the discussion on the unboxed items."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 65,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The setting appears to be a prepared space for filming or demonstrating the products."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 60,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 61,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 62,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 64,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_6_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_6_graph.pkl"
+  },
+  "memory_pickle_bytes": 1668758,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52235.2538468,
+    "prepared_perf": 52242.652444165,
+    "ordered_start_perf": 52522.416424816,
+    "consumer_wait_ms": 0.01049999991664663,
+    "ready_to_ordered_ms": 279763.98065099784,
+    "preparation_work_ms": 7393.145754002035,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 163427.9721369967
+}

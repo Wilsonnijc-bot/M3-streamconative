@@ -1,0 +1,1117 @@
+{
+  "version": "3.0_safetensors",
+  "config": {
+    "embedding_dim": 1024,
+    "faiss_index_type": "IDMap,Flat",
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "supported_modalities": [
+      "text"
+    ],
+    "image_model": null,
+    "text_model": "Qwen/Qwen3-Embedding-0.6B"
+  },
+  "memory_spaces": {
+    "hierarchical_memory": {
+      "name": "hierarchical_memory",
+      "unit_uids": [],
+      "child_space_names": [
+        "hierarchical_memory:L1_Summary",
+        "hierarchical_memory:L0_Observation",
+        "hierarchical_memory:L2_Insight"
+      ],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L0_Observation": {
+      "name": "hierarchical_memory:L0_Observation",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L1_Summary": {
+      "name": "hierarchical_memory:L1_Summary",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L2_Insight": {
+      "name": "hierarchical_memory:L2_Insight",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation": {
+      "name": "entity_relation",
+      "unit_uids": [],
+      "child_space_names": [
+        "entity_relation:entities",
+        "entity_relation:mentions",
+        "entity_relation:relations"
+      ],
+      "faiss_index_type": null
+    },
+    "entity_relation:entities": {
+      "name": "entity_relation:entities",
+      "unit_uids": [
+        "m3:jake-day1-q01:entity:character_0",
+        "m3:jake-day1-q01:entity:character_1",
+        "m3:jake-day1-q01:entity:character_2"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation:mentions": {
+      "name": "entity_relation:mentions",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation:relations": {
+      "name": "entity_relation:relations",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "episodic_memory": {
+      "name": "episodic_memory",
+      "unit_uids": [
+        "m3:jake-day1-q01:clip:1:episodic:2",
+        "m3:jake-day1-q01:clip:1:episodic:4",
+        "m3:jake-day1-q01:clip:1:episodic:7",
+        "m3:jake-day1-q01:clip:3:episodic:24",
+        "m3:jake-day1-q01:clip:1:episodic:5",
+        "m3:jake-day1-q01:clip:2:episodic:15",
+        "m3:jake-day1-q01:clip:2:episodic:17",
+        "m3:jake-day1-q01:clip:2:episodic:14",
+        "m3:jake-day1-q01:clip:1:episodic:8",
+        "m3:jake-day1-q01:clip:2:episodic:13",
+        "m3:jake-day1-q01:clip:3:episodic:25",
+        "m3:jake-day1-q01:clip:3:episodic:26",
+        "m3:jake-day1-q01:clip:3:episodic:22",
+        "m3:jake-day1-q01:clip:2:episodic:16",
+        "m3:jake-day1-q01:clip:3:episodic:23",
+        "m3:jake-day1-q01:clip:1:episodic:3",
+        "m3:jake-day1-q01:clip:1:episodic:6",
+        "m3:jake-day1-q01:clip:2:episodic:12"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:jake-day1-q01": {
+      "name": "m3:video:jake-day1-q01",
+      "unit_uids": [],
+      "child_space_names": [
+        "m3:video:jake-day1-q01:block:0"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:type:semantic": {
+      "name": "m3:type:semantic",
+      "unit_uids": [
+        "m3:jake-day1-q01:clip:2:semantic:19",
+        "m3:jake-day1-q01:clip:2:semantic:18",
+        "m3:jake-day1-q01:clip:3:semantic:29",
+        "m3:jake-day1-q01:clip:1:semantic:11",
+        "m3:jake-day1-q01:clip:3:semantic:27",
+        "m3:jake-day1-q01:clip:2:semantic:20",
+        "m3:jake-day1-q01:clip:3:semantic:28",
+        "m3:jake-day1-q01:clip:1:semantic:10",
+        "m3:jake-day1-q01:clip:1:semantic:9"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:jake-day1-q01:block:0": {
+      "name": "m3:video:jake-day1-q01:block:0",
+      "unit_uids": [
+        "m3:jake-day1-q01:clip:1:episodic:4",
+        "m3:jake-day1-q01:clip:2:semantic:18",
+        "m3:jake-day1-q01:clip:2:episodic:16",
+        "m3:jake-day1-q01:clip:2:semantic:20",
+        "m3:jake-day1-q01:clip:2:episodic:12",
+        "m3:jake-day1-q01:clip:1:episodic:7",
+        "m3:jake-day1-q01:clip:2:semantic:19",
+        "m3:jake-day1-q01:clip:1:semantic:11",
+        "m3:jake-day1-q01:clip:2:episodic:17",
+        "m3:jake-day1-q01:clip:2:episodic:13",
+        "m3:jake-day1-q01:clip:3:episodic:23",
+        "m3:jake-day1-q01:clip:3:semantic:29",
+        "m3:jake-day1-q01:clip:3:semantic:28",
+        "m3:jake-day1-q01:clip:1:episodic:3",
+        "m3:jake-day1-q01:clip:1:episodic:2",
+        "m3:jake-day1-q01:clip:1:episodic:5",
+        "m3:jake-day1-q01:clip:2:episodic:15",
+        "m3:jake-day1-q01:clip:1:semantic:10",
+        "m3:jake-day1-q01:clip:3:episodic:26",
+        "m3:jake-day1-q01:clip:1:episodic:8",
+        "m3:jake-day1-q01:clip:3:episodic:24",
+        "m3:jake-day1-q01:clip:2:episodic:14",
+        "m3:jake-day1-q01:clip:3:semantic:27",
+        "m3:jake-day1-q01:clip:3:episodic:22",
+        "m3:jake-day1-q01:clip:1:semantic:9",
+        "m3:jake-day1-q01:clip:1:episodic:6",
+        "m3:jake-day1-q01:clip:3:episodic:25"
+      ],
+      "child_space_names": [
+        "m3:video:jake-day1-q01:clip:2",
+        "m3:video:jake-day1-q01:clip:3",
+        "m3:video:jake-day1-q01:clip:1"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:video:jake-day1-q01:clip:1": {
+      "name": "m3:video:jake-day1-q01:clip:1",
+      "unit_uids": [
+        "m3:jake-day1-q01:clip:1:episodic:2",
+        "m3:jake-day1-q01:clip:1:episodic:4",
+        "m3:jake-day1-q01:clip:1:episodic:7",
+        "m3:jake-day1-q01:clip:1:episodic:5",
+        "m3:jake-day1-q01:clip:1:semantic:11",
+        "m3:jake-day1-q01:clip:1:episodic:8",
+        "m3:jake-day1-q01:clip:1:episodic:3",
+        "m3:jake-day1-q01:clip:1:semantic:10",
+        "m3:jake-day1-q01:clip:1:semantic:9",
+        "m3:jake-day1-q01:clip:1:episodic:6"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:jake-day1-q01:clip:2": {
+      "name": "m3:video:jake-day1-q01:clip:2",
+      "unit_uids": [
+        "m3:jake-day1-q01:clip:2:semantic:18",
+        "m3:jake-day1-q01:clip:2:semantic:19",
+        "m3:jake-day1-q01:clip:2:episodic:17",
+        "m3:jake-day1-q01:clip:2:episodic:14",
+        "m3:jake-day1-q01:clip:2:episodic:13",
+        "m3:jake-day1-q01:clip:2:episodic:16",
+        "m3:jake-day1-q01:clip:2:semantic:20",
+        "m3:jake-day1-q01:clip:2:episodic:15",
+        "m3:jake-day1-q01:clip:2:episodic:12"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:jake-day1-q01:clip:3": {
+      "name": "m3:video:jake-day1-q01:clip:3",
+      "unit_uids": [
+        "m3:jake-day1-q01:clip:3:episodic:24",
+        "m3:jake-day1-q01:clip:3:semantic:27",
+        "m3:jake-day1-q01:clip:3:episodic:22",
+        "m3:jake-day1-q01:clip:3:episodic:23",
+        "m3:jake-day1-q01:clip:3:semantic:29",
+        "m3:jake-day1-q01:clip:3:semantic:28",
+        "m3:jake-day1-q01:clip:3:episodic:26",
+        "m3:jake-day1-q01:clip:3:episodic:25"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    }
+  },
+  "memory_units_meta": {
+    "m3:jake-day1-q01:entity:character_0": {
+      "uid": "m3:jake-day1-q01:entity:character_0",
+      "raw_data": {
+        "text_content": "M3 person character_0 in video jake-day1-q01",
+        "entity_id": "character_0",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          0
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:jake-day1-q01:entity:character_1": {
+      "uid": "m3:jake-day1-q01:entity:character_1",
+      "raw_data": {
+        "text_content": "M3 person character_1 in video jake-day1-q01",
+        "entity_id": "character_1",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          1
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:jake-day1-q01:entity:character_2": {
+      "uid": "m3:jake-day1-q01:entity:character_2",
+      "raw_data": {
+        "text_content": "M3 person character_2 in video jake-day1-q01",
+        "entity_id": "character_2",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          21
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:jake-day1-q01:clip:1:episodic:2": {
+      "uid": "m3:jake-day1-q01:clip:1:episodic:2",
+      "raw_data": {
+        "text_content": "A first-person perspective shows a person holding a smartphone while standing in front of a table where several individuals are seated."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "2",
+        "video_id": "jake-day1-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "2",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:1:episodic:3": {
+      "uid": "m3:jake-day1-q01:clip:1:episodic:3",
+      "raw_data": {
+        "text_content": "Multiple people are gathered around the table, which is covered with a checkered tablecloth and holding various equipment cases and devices."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "3",
+        "video_id": "jake-day1-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "3",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:1:episodic:4": {
+      "uid": "m3:jake-day1-q01:clip:1:episodic:4",
+      "raw_data": {
+        "text_content": "<voice_0> speaks, suggesting to bring up a stopwatch."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "4",
+        "video_id": "jake-day1-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "4",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:1:episodic:5": {
+      "uid": "m3:jake-day1-q01:clip:1:episodic:5",
+      "raw_data": {
+        "text_content": "The person holding the phone navigates through the home screen to locate and open the clock or stopwatch app."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "5",
+        "video_id": "jake-day1-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "5",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:1:episodic:6": {
+      "uid": "m3:jake-day1-q01:clip:1:episodic:6",
+      "raw_data": {
+        "text_content": "<voice_1> mentions a timestamp."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "6",
+        "video_id": "jake-day1-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_1"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "6",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:1:episodic:7": {
+      "uid": "m3:jake-day1-q01:clip:1:episodic:7",
+      "raw_data": {
+        "text_content": "<voice_0> confirms to tap or record the timestamp."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "7",
+        "video_id": "jake-day1-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "7",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:1:episodic:8": {
+      "uid": "m3:jake-day1-q01:clip:1:episodic:8",
+      "raw_data": {
+        "text_content": "The person holding the smartphone opens the stopwatch, resets the timer, and starts it."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "8",
+        "video_id": "jake-day1-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "8",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:1:semantic:10": {
+      "uid": "m3:jake-day1-q01:clip:1:semantic:10",
+      "raw_data": {
+        "text_content": "<voice_0> is guiding or directing the procedure for synchronizing the devices."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "10",
+        "video_id": "jake-day1-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "10",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:1:semantic:11": {
+      "uid": "m3:jake-day1-q01:clip:1:semantic:11",
+      "raw_data": {
+        "text_content": "The person holding the phone is carrying out the instruction to display and run the stopwatch for the session."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "11",
+        "video_id": "jake-day1-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "11",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:1:semantic:9": {
+      "uid": "m3:jake-day1-q01:clip:1:semantic:9",
+      "raw_data": {
+        "text_content": "The group is preparing to calibrate or synchronize recording equipment by using a smartphone stopwatch as a visible visual time reference."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "9",
+        "video_id": "jake-day1-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "9",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:2:episodic:12": {
+      "uid": "m3:jake-day1-q01:clip:2:episodic:12",
+      "raw_data": {
+        "text_content": "The camera wearer holds out a smartphone to the people seated around the table."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "12",
+        "video_id": "jake-day1-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "12",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:2:episodic:13": {
+      "uid": "m3:jake-day1-q01:clip:2:episodic:13",
+      "raw_data": {
+        "text_content": "The participants reach out and take turns tapping the smartphone screen."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "13",
+        "video_id": "jake-day1-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "13",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:2:episodic:14": {
+      "uid": "m3:jake-day1-q01:clip:2:episodic:14",
+      "raw_data": {
+        "text_content": "The woman in black seated on the left takes the smartphone, taps the screen, and returns it."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "14",
+        "video_id": "jake-day1-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "14",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:2:episodic:15": {
+      "uid": "m3:jake-day1-q01:clip:2:episodic:15",
+      "raw_data": {
+        "text_content": "The camera wearer takes the phone back, stops the timer, and sets it down."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "15",
+        "video_id": "jake-day1-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "15",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:2:episodic:16": {
+      "uid": "m3:jake-day1-q01:clip:2:episodic:16",
+      "raw_data": {
+        "text_content": "The camera wearer picks up a mounting stick on the table."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "16",
+        "video_id": "jake-day1-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "16",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:2:episodic:17": {
+      "uid": "m3:jake-day1-q01:clip:2:episodic:17",
+      "raw_data": {
+        "text_content": "<voice_0> directs everyone to tap the phone screen and proposes discussing their plans for the final day."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "17",
+        "video_id": "jake-day1-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "17",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:2:semantic:18": {
+      "uid": "m3:jake-day1-q01:clip:2:semantic:18",
+      "raw_data": {
+        "text_content": "Tapping the smartphone screen in turn serves to synchronize timestamps across individual wearable recording devices."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "18",
+        "video_id": "jake-day1-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "18",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:2:semantic:19": {
+      "uid": "m3:jake-day1-q01:clip:2:semantic:19",
+      "raw_data": {
+        "text_content": "<voice_0> functions as the leader or coordinator organizing the group's agenda."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "19",
+        "video_id": "jake-day1-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "19",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:2:semantic:20": {
+      "uid": "m3:jake-day1-q01:clip:2:semantic:20",
+      "raw_data": {
+        "text_content": "The group is conducting an introductory coordination meeting before proceeding with their planned activities."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "20",
+        "video_id": "jake-day1-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "20",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:3:episodic:22": {
+      "uid": "m3:jake-day1-q01:clip:3:episodic:22",
+      "raw_data": {
+        "text_content": "A group of people sits around a table covered with electronic equipment, cases, and packages."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "22",
+        "video_id": "jake-day1-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "22",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:3:episodic:23": {
+      "uid": "m3:jake-day1-q01:clip:3:episodic:23",
+      "raw_data": {
+        "text_content": "The camera holder points to boxes and equipment on the table while speaking to the group."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "23",
+        "video_id": "jake-day1-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "23",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:3:episodic:24": {
+      "uid": "m3:jake-day1-q01:clip:3:episodic:24",
+      "raw_data": {
+        "text_content": "A woman in a black top reaches out to touch and inspect a white and blue box."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "24",
+        "video_id": "jake-day1-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "24",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:3:episodic:25": {
+      "uid": "m3:jake-day1-q01:clip:3:episodic:25",
+      "raw_data": {
+        "text_content": "Other group members listen attentively while observing the items on the table."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "25",
+        "video_id": "jake-day1-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "25",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:3:episodic:26": {
+      "uid": "m3:jake-day1-q01:clip:3:episodic:26",
+      "raw_data": {
+        "text_content": "The camera holder manipulates a handheld selfie stick or mini tripod."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "26",
+        "video_id": "jake-day1-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "26",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:3:semantic:27": {
+      "uid": "m3:jake-day1-q01:clip:3:semantic:27",
+      "raw_data": {
+        "text_content": "The camera holder is leading the discussion and introducing the hardware equipment and backup tasks to the team."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "27",
+        "video_id": "jake-day1-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "27",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:3:semantic:28": {
+      "uid": "m3:jake-day1-q01:clip:3:semantic:28",
+      "raw_data": {
+        "text_content": "The group is preparing for a collaborative technical session involving VR equipment and storage devices."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "28",
+        "video_id": "jake-day1-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "28",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake-day1-q01:clip:3:semantic:29": {
+      "uid": "m3:jake-day1-q01:clip:3:semantic:29",
+      "raw_data": {
+        "text_content": "<voice_0> is spoken by the camera holder/presenter."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "29",
+        "video_id": "jake-day1-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "29",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    }
+  },
+  "internal_state": {
+    "_next_int_id": 30,
+    "_uid_to_int_id": {
+      "m3:jake-day1-q01:entity:character_0": 0,
+      "m3:jake-day1-q01:entity:character_1": 1,
+      "m3:jake-day1-q01:entity:character_2": 2,
+      "m3:jake-day1-q01:clip:1:episodic:2": 3,
+      "m3:jake-day1-q01:clip:1:episodic:3": 4,
+      "m3:jake-day1-q01:clip:1:episodic:4": 5,
+      "m3:jake-day1-q01:clip:1:episodic:5": 6,
+      "m3:jake-day1-q01:clip:1:episodic:6": 7,
+      "m3:jake-day1-q01:clip:1:episodic:7": 8,
+      "m3:jake-day1-q01:clip:1:episodic:8": 9,
+      "m3:jake-day1-q01:clip:1:semantic:10": 10,
+      "m3:jake-day1-q01:clip:1:semantic:11": 11,
+      "m3:jake-day1-q01:clip:1:semantic:9": 12,
+      "m3:jake-day1-q01:clip:2:episodic:12": 13,
+      "m3:jake-day1-q01:clip:2:episodic:13": 14,
+      "m3:jake-day1-q01:clip:2:episodic:14": 15,
+      "m3:jake-day1-q01:clip:2:episodic:15": 16,
+      "m3:jake-day1-q01:clip:2:episodic:16": 17,
+      "m3:jake-day1-q01:clip:2:episodic:17": 18,
+      "m3:jake-day1-q01:clip:2:semantic:18": 19,
+      "m3:jake-day1-q01:clip:2:semantic:19": 20,
+      "m3:jake-day1-q01:clip:2:semantic:20": 21,
+      "m3:jake-day1-q01:clip:3:episodic:22": 22,
+      "m3:jake-day1-q01:clip:3:episodic:23": 23,
+      "m3:jake-day1-q01:clip:3:episodic:24": 24,
+      "m3:jake-day1-q01:clip:3:episodic:25": 25,
+      "m3:jake-day1-q01:clip:3:episodic:26": 26,
+      "m3:jake-day1-q01:clip:3:semantic:27": 27,
+      "m3:jake-day1-q01:clip:3:semantic:28": 28,
+      "m3:jake-day1-q01:clip:3:semantic:29": 29
+    },
+    "_modified_units": [
+      "m3:jake-day1-q01:clip:1:episodic:4",
+      "m3:jake-day1-q01:clip:2:semantic:18",
+      "m3:jake-day1-q01:entity:character_2",
+      "m3:jake-day1-q01:clip:2:episodic:16",
+      "m3:jake-day1-q01:clip:2:semantic:20",
+      "m3:jake-day1-q01:clip:2:episodic:12",
+      "m3:jake-day1-q01:clip:1:episodic:7",
+      "m3:jake-day1-q01:clip:2:semantic:19",
+      "m3:jake-day1-q01:clip:1:semantic:11",
+      "m3:jake-day1-q01:clip:2:episodic:17",
+      "m3:jake-day1-q01:clip:2:episodic:13",
+      "m3:jake-day1-q01:clip:3:episodic:23",
+      "m3:jake-day1-q01:entity:character_0",
+      "m3:jake-day1-q01:clip:3:semantic:28",
+      "m3:jake-day1-q01:clip:1:episodic:3",
+      "m3:jake-day1-q01:clip:3:semantic:29",
+      "m3:jake-day1-q01:clip:1:episodic:2",
+      "m3:jake-day1-q01:clip:1:episodic:5",
+      "m3:jake-day1-q01:entity:character_1",
+      "m3:jake-day1-q01:clip:2:episodic:15",
+      "m3:jake-day1-q01:clip:1:semantic:10",
+      "m3:jake-day1-q01:clip:3:episodic:26",
+      "m3:jake-day1-q01:clip:1:episodic:8",
+      "m3:jake-day1-q01:clip:3:episodic:24",
+      "m3:jake-day1-q01:clip:2:episodic:14",
+      "m3:jake-day1-q01:clip:3:semantic:27",
+      "m3:jake-day1-q01:clip:3:episodic:22",
+      "m3:jake-day1-q01:clip:1:semantic:9",
+      "m3:jake-day1-q01:clip:1:episodic:6",
+      "m3:jake-day1-q01:clip:3:episodic:25"
+    ],
+    "_deleted_units": [],
+    "_access_counts": {
+      "m3:jake-day1-q01:entity:character_0": 1,
+      "m3:jake-day1-q01:entity:character_1": 1,
+      "m3:jake-day1-q01:entity:character_2": 1,
+      "m3:jake-day1-q01:clip:1:episodic:2": 1,
+      "m3:jake-day1-q01:clip:1:episodic:3": 1,
+      "m3:jake-day1-q01:clip:1:episodic:4": 1,
+      "m3:jake-day1-q01:clip:1:episodic:5": 1,
+      "m3:jake-day1-q01:clip:1:episodic:6": 1,
+      "m3:jake-day1-q01:clip:1:episodic:7": 1,
+      "m3:jake-day1-q01:clip:1:episodic:8": 1,
+      "m3:jake-day1-q01:clip:1:semantic:10": 1,
+      "m3:jake-day1-q01:clip:1:semantic:11": 1,
+      "m3:jake-day1-q01:clip:1:semantic:9": 1,
+      "m3:jake-day1-q01:clip:2:episodic:12": 1,
+      "m3:jake-day1-q01:clip:2:episodic:13": 1,
+      "m3:jake-day1-q01:clip:2:episodic:14": 1,
+      "m3:jake-day1-q01:clip:2:episodic:15": 1,
+      "m3:jake-day1-q01:clip:2:episodic:16": 1,
+      "m3:jake-day1-q01:clip:2:episodic:17": 1,
+      "m3:jake-day1-q01:clip:2:semantic:18": 1,
+      "m3:jake-day1-q01:clip:2:semantic:19": 1,
+      "m3:jake-day1-q01:clip:2:semantic:20": 1,
+      "m3:jake-day1-q01:clip:3:episodic:22": 1,
+      "m3:jake-day1-q01:clip:3:episodic:23": 1,
+      "m3:jake-day1-q01:clip:3:episodic:24": 1,
+      "m3:jake-day1-q01:clip:3:episodic:25": 1,
+      "m3:jake-day1-q01:clip:3:episodic:26": 1,
+      "m3:jake-day1-q01:clip:3:semantic:27": 1,
+      "m3:jake-day1-q01:clip:3:semantic:28": 1,
+      "m3:jake-day1-q01:clip:3:semantic:29": 1
+    }
+  },
+  "retrieval": {
+    "indices_saved": {},
+    "frozen_matrices_saved": {}
+  },
+  "high_level_memory_build": {}
+}

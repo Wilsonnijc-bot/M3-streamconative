@@ -1,0 +1,75 @@
+{
+  "clip_id": 70,
+  "source": {
+    "segment_id": 70,
+    "source": "DAY1_A1_JAKE_11430000.mp4",
+    "source_clock": "11430000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 8.019999999996799,
+    "absolute_start_seconds": 42180.0,
+    "absolute_end_seconds": 42188.02,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0070.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48492.81647787,
+      "prepared_perf": 48496.813695581,
+      "ordered_start_perf": 48612.911462623,
+      "consumer_wait_ms": 0.010668998584151268,
+      "ready_to_ordered_ms": 116097.7670420034,
+      "preparation_work_ms": 3991.825239994796,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person records from a first-person perspective while holding and looking at a smartphone.",
+      "A table covered with a pink-and-white checkered tablecloth is situated in front of the person, holding a film clapperboard, flowers, and drinks.",
+      "In the background, a person in white stands near the table arranging flowers.",
+      "Another person is seated to the right side of the table.",
+      "<voice_798> observes that the content shows the three of them.",
+      "<voice_799> confirms in agreement."
+    ],
+    "high_level_conclusions": [
+      "The person holding the phone is browsing photos or social media involving the individuals present.",
+      "<voice_798> and <voice_799> are looking at or discussing the photos displayed on the device."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A person records from a first-person perspective while holding and looking at a smartphone.\",\n    \"A table covered with a pink-and-white checkered tablecloth is situated in front of the person, holding a film clapperboard, flowers, and drinks.\",\n    \"In the background, a person in white stands near the table arranging flowers.\",\n    \"Another person is seated to the right side of the table.\",\n    \"<voice_798> observes that the content shows the three of them.\",\n    \"<voice_799> confirms in agreement.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The person holding the phone is browsing photos or social media involving the individuals present.\",\n    \"<voice_798> and <voice_799> are looking at or discussing the photos displayed on the device.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 70,
+      "call_id": "3feb4e2f-a70a-42f9-99ef-d9042b60ff1b",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407429.9885783,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 19219,
+      "output_tokens": 636,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 14699.467710001045
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A person records from a first-person perspective while holding and looking at a smartphone.\",\n    \"A table covered with a pink-and-white checkered tablecloth is situated in front of the person, holding a film clapperboard, flowers, and drinks.\",\n    \"In the background, a person in white stands near the table arranging flowers.\",\n    \"Another person is seated to the right side of the table.\",\n    \"<voice_798> observes that the content shows the three of them.\",\n    \"<voice_799> confirms in agreement.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The person holding the phone is browsing photos or social media involving the individuals present.\",\n    \"<voice_798> and <voice_799> are looking at or discussing the photos displayed on the device.\"\n  ]\n}\n```",
+      "total_tokens": 19855,
+      "request_end": 1789407444.6881592,
+      "latency_ms": 14699.57709499431,
+      "client_wall_clock_latency_ms": 14699.57709499431,
+      "api_request_wall_clock_latency_ms": 14699.57709499431
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_70_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

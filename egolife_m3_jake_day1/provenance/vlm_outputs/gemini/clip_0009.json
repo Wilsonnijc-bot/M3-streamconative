@@ -1,0 +1,79 @@
+{
+  "clip_id": 9,
+  "source": {
+    "segment_id": 9,
+    "source": "DAY1_A1_JAKE_11133000.mp4",
+    "source_clock": "11133000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40410.0,
+    "absolute_end_seconds": 40440.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0009.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person holding the camera gestures toward a desk and shelving unit set up with multiple laptops and storage drives.",
+      "Three people stand by the doorway, listening to <voice_0> speak.",
+      "<voice_0> points to different laptops on the desk and rack while explaining how data from recording glasses is transferred.",
+      "<voice_0> turns between the laptops and the listeners by the door while speaking.",
+      "<voice_0> points towards specific drive slots on the shelf rack to indicate assigned units."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is the camera wearer (Jake), who is giving instructions to the other participants.",
+      "The room serves as a data collection and equipment management station for a multi-person recording study.",
+      "<voice_0> explains the workflow for offloading recorded video data from smart glasses to designated laptops and hard drives."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A person holding the camera gestures toward a desk and shelving unit set up with multiple laptops and storage drives.\",\n    \"Three people stand by the doorway, listening to <voice_0> speak.\",\n    \"<voice_0> points to different laptops on the desk and rack while explaining how data from recording glasses is transferred.\",\n    \"<voice_0> turns between the laptops and the listeners by the door while speaking.\",\n    \"<voice_0> points towards specific drive slots on the shelf rack to indicate assigned units.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> is the camera wearer (Jake), who is giving instructions to the other participants.\",\n    \"The room serves as a data collection and equipment management station for a multi-person recording study.\",\n    \"<voice_0> explains the workflow for offloading recorded video data from smart glasses to designated laptops and hard drives.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 9,
+      "call_id": "12366c48-bc10-4aac-9977-81ba04f236d2",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789403330.4242117,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "request_end": 1789403403.1218386,
+      "latency_ms": 72697.62116900529,
+      "client_wall_clock_latency_ms": 72697.62116900529,
+      "api_request_wall_clock_latency_ms": 72697.62116900529
+    },
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 9,
+      "call_id": "64f0d558-ef6a-4413-8659-6d1c6627bc38",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789403491.2565448,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67167,
+      "output_tokens": 680,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A person holding the camera gestures toward a desk and shelving unit set up with multiple laptops and storage drives.\",\n    \"Three people stand by the doorway, listening to <voice_0> speak.\",\n    \"<voice_0> points to different laptops on the desk and rack while explaining how data from recording glasses is transferred.\",\n    \"<voice_0> turns between the laptops and the listeners by the door while speaking.\",\n    \"<voice_0> points towards specific drive slots on the shelf rack to indicate assigned units.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> is the camera wearer (Jake), who is giving instructions to the other participants.\",\n    \"The room serves as a data collection and equipment management station for a multi-person recording study.\",\n    \"<voice_0> explains the workflow for offloading recorded video data from smart glasses to designated laptops and hard drives.\"\n  ]\n}\n```",
+      "total_tokens": 67847,
+      "request_end": 1789403542.4317,
+      "latency_ms": 51175.154381999164,
+      "client_wall_clock_latency_ms": 51175.154381999164,
+      "api_request_wall_clock_latency_ms": 51175.154381999164
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_9_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

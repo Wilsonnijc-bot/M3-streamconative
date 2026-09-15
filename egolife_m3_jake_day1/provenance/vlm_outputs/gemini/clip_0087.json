@@ -1,0 +1,74 @@
+{
+  "clip_id": 87,
+  "source": {
+    "segment_id": 87,
+    "source": "DAY1_A1_JAKE_11510000.mp4",
+    "source_clock": "11510000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42660.0,
+    "absolute_end_seconds": 42690.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0087.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 49878.252357175,
+      "prepared_perf": 49886.747943952,
+      "ordered_start_perf": 49969.214388281,
+      "consumer_wait_ms": 0.01632999919820577,
+      "ready_to_ordered_ms": 82466.44432899484,
+      "preparation_work_ms": 8488.995314000931,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table decorated with flowers and stationery in a workshop room.",
+      "A woman standing in front of a whiteboard inspects and trims plant stems.",
+      "The woman seated on the left rests her arms on the table and participates in the conversation.",
+      "Two women sitting on the right side of the table listen and gesture while taking part in the discussion.",
+      "The participants discuss the auction rules and economic circulation mechanism for their session."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a structured workshop or game combining flower arrangement with an internal trading/auction system.",
+      "The group maintains a collaborative and friendly atmosphere as they clarify activity guidelines."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table decorated with flowers and stationery in a workshop room.\",\n    \"A woman standing in front of a whiteboard inspects and trims plant stems.\",\n    \"The woman seated on the left rests her arms on the table and participates in the conversation.\",\n    \"Two women sitting on the right side of the table listen and gesture while taking part in the discussion.\",\n    \"The participants discuss the auction rules and economic circulation mechanism for their session.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a structured workshop or game combining flower arrangement with an internal trading/auction system.\",\n    \"The group maintains a collaborative and friendly atmosphere as they clarify activity guidelines.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 87,
+      "call_id": "c358f0a0-fdea-48a7-ba2f-3a15def91f54",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789408794.637856,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67364,
+      "output_tokens": 935,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 142063.07735500013
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table decorated with flowers and stationery in a workshop room.\",\n    \"A woman standing in front of a whiteboard inspects and trims plant stems.\",\n    \"The woman seated on the left rests her arms on the table and participates in the conversation.\",\n    \"Two women sitting on the right side of the table listen and gesture while taking part in the discussion.\",\n    \"The participants discuss the auction rules and economic circulation mechanism for their session.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a structured workshop or game combining flower arrangement with an internal trading/auction system.\",\n    \"The group maintains a collaborative and friendly atmosphere as they clarify activity guidelines.\"\n  ]\n}\n```",
+      "total_tokens": 68299,
+      "request_end": 1789408936.7010503,
+      "latency_ms": 142063.19075800275,
+      "client_wall_clock_latency_ms": 142063.19075800275,
+      "api_request_wall_clock_latency_ms": 142063.19075800275
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_87_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

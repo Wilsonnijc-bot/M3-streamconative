@@ -1,0 +1,453 @@
+{
+  "clip_id": 95,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0095.mp4",
+  "end_to_end_memory_generation_ms": 290860.4992429973,
+  "latency_ms": {
+    "clip_decode": 5892.130072003056,
+    "deepgram_asr": 1518.0189230013639,
+    "mai_transcribe_asr": 1191.8986930031679,
+    "asr_total": 1518.7296820004121,
+    "audio_segmentation": 6.286008996539749,
+    "speech_embedding_campplus": 1523.4125240021967,
+    "facial_detection_recognition_buffalo_l": 3870.042225003999,
+    "face_clustering": 6.883412999741267,
+    "vlm_memory_generation": 32819.8209589973,
+    "text_embedding": 410.20617300091544,
+    "graph_update_total": 817.6234039929113
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 95,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 1045,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789409699.4841247,
+          "status": "success",
+          "total_tokens": 207,
+          "request_end": 1789409699.8941023,
+          "latency_ms": 409.979817995918
+        }
+      ],
+      "total_tokens": 207,
+      "latency_ms": 410.20617300091544
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1518.0189230013639,
+        "openrouter-mai-transcribe-2": 1191.8986930031679
+      },
+      "asr_total_ms": 1518.7296820004121,
+      "audio_segmentation_ms": 6.286008996539749,
+      "speech_embedding_ms": 1523.4125240021967,
+      "graph_update_ms": 817.5451479983167,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 8,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2362.7778330046567
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3870.042225003999,
+      "face_clustering_ms": 6.883412999741267,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 307,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4046.368536997761
+    },
+    "vlm": {
+      "context_preparation_ms": 4046.275862994662,
+      "vlm_ms": 32819.8209589973,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a dining table decorated with flowers, notebooks, a clapperboard, and a water bottle.\",\n    \"A woman in a white blouse stands next to a whiteboard, inspecting and handling dried flower stems.\",\n    \"A woman seated on the left side holds a dark cone-shaped wrapping sleeve.\",\n    \"Two women sit on the opposite side of the table, listening and engaging in the conversation.\",\n    \"A young man in an orange shirt stands in the background near the doorway.\",\n    \"The person holding the camera brings up a smartphone, unlocks it, and begins browsing and typing on it.\",\n    \"The participants discuss making clear ice molds using distilled or boiled water.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals are part of a film or video production team, as evidenced by the clapperboard on the table labeled for the project 'Egolife'.\",\n    \"The group is brainstorming cost-effective and practical ways to create clear ice as a prop for their shoot.\",\n    \"The atmosphere is collaborative and casual, with team members troubleshooting prop creation while someone questions the absurdity or direction of the task.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a dining table decorated with flowers, notebooks, a clapperboard, and a water bottle.",
+          "A woman in a white blouse stands next to a whiteboard, inspecting and handling dried flower stems.",
+          "A woman seated on the left side holds a dark cone-shaped wrapping sleeve.",
+          "Two women sit on the opposite side of the table, listening and engaging in the conversation.",
+          "A young man in an orange shirt stands in the background near the doorway.",
+          "The person holding the camera brings up a smartphone, unlocks it, and begins browsing and typing on it.",
+          "The participants discuss making clear ice molds using distilled or boiled water."
+        ],
+        "high_level_conclusions": [
+          "The individuals are part of a film or video production team, as evidenced by the clapperboard on the table labeled for the project 'Egolife'.",
+          "The group is brainstorming cost-effective and practical ways to create clear ice as a prop for their shoot.",
+          "The atmosphere is collaborative and casual, with team members troubleshooting prop creation while someone questions the absurdity or direction of the task."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 95,
+          "call_id": "acafbde4-b872-4963-8e11-1e44d8ddc01a",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789409666.6623404,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67249,
+          "output_tokens": 1194,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 32819.70169599663
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a dining table decorated with flowers, notebooks, a clapperboard, and a water bottle.\",\n    \"A woman in a white blouse stands next to a whiteboard, inspecting and handling dried flower stems.\",\n    \"A woman seated on the left side holds a dark cone-shaped wrapping sleeve.\",\n    \"Two women sit on the opposite side of the table, listening and engaging in the conversation.\",\n    \"A young man in an orange shirt stands in the background near the doorway.\",\n    \"The person holding the camera brings up a smartphone, unlocks it, and begins browsing and typing on it.\",\n    \"The participants discuss making clear ice molds using distilled or boiled water.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals are part of a film or video production team, as evidenced by the clapperboard on the table labeled for the project 'Egolife'.\",\n    \"The group is brainstorming cost-effective and practical ways to create clear ice as a prop for their shoot.\",\n    \"The atmosphere is collaborative and casual, with team members troubleshooting prop creation while someone questions the absurdity or direction of the task.\"\n  ]\n}\n```",
+          "total_tokens": 68443,
+          "request_end": 1789409699.482164,
+          "latency_ms": 32819.8209589973,
+          "client_wall_clock_latency_ms": 32819.8209589973,
+          "api_request_wall_clock_latency_ms": 32819.8209589973
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.05796799814561382,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.02028799644904211,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 8,
+    "detected_faces": 307,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1114,
+    "edges_after_clip": 216,
+    "nodes_added_by_clip": 16,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a dining table decorated with flowers, notebooks, a clapperboard, and a water bottle.",
+      "A woman in a white blouse stands next to a whiteboard, inspecting and handling dried flower stems.",
+      "A woman seated on the left side holds a dark cone-shaped wrapping sleeve.",
+      "Two women sit on the opposite side of the table, listening and engaging in the conversation.",
+      "A young man in an orange shirt stands in the background near the doorway.",
+      "The person holding the camera brings up a smartphone, unlocks it, and begins browsing and typing on it.",
+      "The participants discuss making clear ice molds using distilled or boiled water."
+    ],
+    "high_level_conclusions": [
+      "The individuals are part of a film or video production team, as evidenced by the clapperboard on the table labeled for the project 'Egolife'.",
+      "The group is brainstorming cost-effective and practical ways to create clear ice as a prop for their shoot.",
+      "The atmosphere is collaborative and casual, with team members troubleshooting prop creation while someone questions the absurdity or direction of the task."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a dining table decorated with flowers, notebooks, a clapperboard, and a water bottle.",
+      "A woman in a white blouse stands next to a whiteboard, inspecting and handling dried flower stems.",
+      "A woman seated on the left side holds a dark cone-shaped wrapping sleeve.",
+      "Two women sit on the opposite side of the table, listening and engaging in the conversation.",
+      "A young man in an orange shirt stands in the background near the doorway.",
+      "The person holding the camera brings up a smartphone, unlocks it, and begins browsing and typing on it.",
+      "The participants discuss making clear ice molds using distilled or boiled water."
+    ],
+    "high_level_conclusions": [
+      "The individuals are part of a film or video production team, as evidenced by the clapperboard on the table labeled for the project 'Egolife'.",
+      "The group is brainstorming cost-effective and practical ways to create clear ice as a prop for their shoot.",
+      "The atmosphere is collaborative and casual, with team members troubleshooting prop creation while someone questions the absurdity or direction of the task."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_95_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 16,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1098,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 发现蛮简单。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1099,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 只不过是冻出来可能没有",
+            "MAI: 哎，我们有透明。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1100,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我们有冰箱，就买个那个模具倒点水前先冻一下。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1101,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 用蒸馏水就行。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1102,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯，蒸馏水。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1103,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我们到底是在搞什么？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1104,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a dining table decorated with flowers, notebooks, a clapperboard, and a water bottle."
+          ],
+          "timestamp": 95
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1105,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a white blouse stands next to a whiteboard, inspecting and handling dried flower stems."
+          ],
+          "timestamp": 95
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1106,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman seated on the left side holds a dark cone-shaped wrapping sleeve."
+          ],
+          "timestamp": 95
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1107,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit on the opposite side of the table, listening and engaging in the conversation."
+          ],
+          "timestamp": 95
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1108,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young man in an orange shirt stands in the background near the doorway."
+          ],
+          "timestamp": 95
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1109,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person holding the camera brings up a smartphone, unlocks it, and begins browsing and typing on it."
+          ],
+          "timestamp": 95
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1110,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The participants discuss making clear ice molds using distilled or boiled water."
+          ],
+          "timestamp": 95
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1111,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The individuals are part of a film or video production team, as evidenced by the clapperboard on the table labeled for the project 'Egolife'."
+          ],
+          "timestamp": 95
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1112,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is brainstorming cost-effective and practical ways to create clear ice as a prop for their shoot."
+          ],
+          "timestamp": 95
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1113,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The atmosphere is collaborative and casual, with team members troubleshooting prop creation while someone questions the absurdity or direction of the task."
+          ],
+          "timestamp": 95
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_95_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_95_graph.pkl"
+  },
+  "memory_pickle_bytes": 25524449,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 50595.970520365,
+    "prepared_perf": 50605.196501616,
+    "ordered_start_perf": 50841.111840426,
+    "consumer_wait_ms": 0.008145994797814637,
+    "ready_to_ordered_ms": 235915.33880999486,
+    "preparation_work_ms": 9220.714920003957,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 43689.20491300378
+}

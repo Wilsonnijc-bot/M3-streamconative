@@ -1,0 +1,56 @@
+{
+  "question_id": "Q12",
+  "candidate_mapping": {
+    "0": "B",
+    "1": "C",
+    "2": "D",
+    "3": "A"
+  },
+  "grades": {
+    "0": {
+      "correct": false,
+      "reason": "Omits the essential detail from the reference that what really matters is Emma's health."
+    },
+    "1": {
+      "correct": false,
+      "reason": "Omits the essential detail from the reference that what really matters is Emma's health."
+    },
+    "2": {
+      "correct": false,
+      "reason": "States that memories are insufficient and does not answer the question."
+    },
+    "3": {
+      "correct": false,
+      "reason": "Omits the essential detail from the reference that what really matters is Emma's health."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q12",
+    "method": null,
+    "call_id": "13d3e654-074e-43dd-875f-abee0caa7f73",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437155.8036952,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 233,
+    "output_tokens": 345,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 4035.9806180058513
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n \"0\": {\n  \"correct\": false,\n  \"reason\": \"Omits the essential detail from the reference that what really matters is Emma's health.\"\n },\n \"1\": {\n  \"correct\": false,\n  \"reason\": \"Omits the essential detail from the reference that what really matters is Emma's health.\"\n },\n \"2\": {\n  \"correct\": false,\n  \"reason\": \"States that memories are insufficient and does not answer the question.\"\n },\n \"3\": {\n  \"correct\": false,\n  \"reason\": \"Omits the essential detail from the reference that what really matters is Emma's health.\"\n }\n}\n```",
+    "total_tokens": 578,
+    "request_end": 1789437159.8397357,
+    "latency_ms": 4036.039710001205,
+    "client_wall_clock_latency_ms": 4036.039710001205,
+    "api_request_wall_clock_latency_ms": 4036.039710001205
+  },
+  "included_in_qa_latency": false
+}

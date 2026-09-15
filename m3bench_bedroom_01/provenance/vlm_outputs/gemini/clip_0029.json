@@ -1,0 +1,79 @@
+{
+  "clip_id": 29,
+  "source": {
+    "segment_id": 29,
+    "source": "bedroom_01_00130000.mp4",
+    "source_clock": "00130000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 780.0,
+    "absolute_end_seconds": 810.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00130000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 74002.375815644,
+      "prepared_perf": 74007.215700803,
+      "ordered_start_perf": 74106.97052616,
+      "consumer_wait_ms": 0.010841002222150564,
+      "ready_to_ordered_ms": 99754.82535699848,
+      "preparation_work_ms": 4834.601708003902,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "<face_282> sits at the dining table opposite <face_32> and tells her she wants something to eat.",
+      "<face_32> speaks to a robot assistant, requesting afternoon tea for Emma.",
+      "<face_282> instructs the robot that she does not want coffee and asks for ketchup on her fries.",
+      "<face_32> eats french fries while listening.",
+      "The camera pans from the dining area into the kitchen.",
+      "A person wearing black gloves handles a McDonald's container and arranges food on a plate in the kitchen."
+    ],
+    "high_level_conclusions": [
+      "<face_32> is named Lily, and <face_282> is named Emma.",
+      "<face_32> and <face_282> are friends or housemates ordering food using a smart robot assistant.",
+      "The person in the kitchen wearing black gloves is fulfilling their afternoon tea order.",
+      "Equivalence: <face_32>, <voice_10>",
+      "Equivalence: <face_282>, <voice_281>",
+      "Equivalence: <face_282>, <voice_179>"
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"<face_282> sits at the dining table opposite <face_32> and tells her she wants something to eat.\",\n    \"<face_32> speaks to a robot assistant, requesting afternoon tea for Emma.\",\n    \"<face_282> instructs the robot that she does not want coffee and asks for ketchup on her fries.\",\n    \"<face_32> eats french fries while listening.\",\n    \"The camera pans from the dining area into the kitchen.\",\n    \"A person wearing black gloves handles a McDonald's container and arranges food on a plate in the kitchen.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<face_32> is named Lily, and <face_282> is named Emma.\",\n    \"<face_32> and <face_282> are friends or housemates ordering food using a smart robot assistant.\",\n    \"The person in the kitchen wearing black gloves is fulfilling their afternoon tea order.\",\n    \"Equivalence: <face_32>, <voice_10>\",\n    \"Equivalence: <face_282>, <voice_281>\",\n    \"Equivalence: <face_282>, <voice_179>\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 29,
+      "call_id": "ee0b460f-98b9-47e6-a3f6-86088b6e0763",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432930.5353692,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 68100,
+      "output_tokens": 1291,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 37265.64887900895
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"<face_282> sits at the dining table opposite <face_32> and tells her she wants something to eat.\",\n    \"<face_32> speaks to a robot assistant, requesting afternoon tea for Emma.\",\n    \"<face_282> instructs the robot that she does not want coffee and asks for ketchup on her fries.\",\n    \"<face_32> eats french fries while listening.\",\n    \"The camera pans from the dining area into the kitchen.\",\n    \"A person wearing black gloves handles a McDonald's container and arranges food on a plate in the kitchen.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<face_32> is named Lily, and <face_282> is named Emma.\",\n    \"<face_32> and <face_282> are friends or housemates ordering food using a smart robot assistant.\",\n    \"The person in the kitchen wearing black gloves is fulfilling their afternoon tea order.\",\n    \"Equivalence: <face_32>, <voice_10>\",\n    \"Equivalence: <face_282>, <voice_281>\",\n    \"Equivalence: <face_282>, <voice_179>\"\n  ]\n}\n```",
+      "total_tokens": 69391,
+      "request_end": 1789432967.8011487,
+      "latency_ms": 37265.77634799469,
+      "client_wall_clock_latency_ms": 37265.77634799469,
+      "api_request_wall_clock_latency_ms": 37265.77634799469
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_29_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

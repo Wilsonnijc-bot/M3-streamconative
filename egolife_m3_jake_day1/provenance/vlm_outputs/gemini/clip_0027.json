@@ -1,0 +1,95 @@
+{
+  "clip_id": 27,
+  "source": {
+    "segment_id": 27,
+    "source": "DAY1_A1_JAKE_11220000.mp4",
+    "source_clock": "11220000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40920.0,
+    "absolute_end_seconds": 40950.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0027.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 45964.930724652,
+      "prepared_perf": 45972.447448294,
+      "ordered_start_perf": 45972.448460508,
+      "consumer_wait_ms": 7515.729011996882,
+      "ready_to_ordered_ms": 1.0122140010935254,
+      "preparation_work_ms": 7516.132630997163,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Several people sit around a table covered in a red-and-white checkered tablecloth.",
+      "A man wearing an orange t-shirt tries to fit a hard drive into an enclosure.",
+      "<voice_0> tells the man in orange that he has inserted it the wrong way and points out the screws on the side.",
+      "Hands reach into the frame from the foreground to gesture at the hard drive.",
+      "The man in orange continues manipulating the hard drive enclosure.",
+      "<voice_299> insists on trying to install the drive himself.",
+      "<voice_229> jokes that it is a hard drive championship as the man continues working on the device."
+    ],
+    "high_level_conclusions": [
+      "The group is gathered around a table assembling or handling computer hardware and hard drive accessories.",
+      "The interaction is casual and friendly, with members giving guidance and jokingly framing the task as a competition."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"high_level_conclusions\": [\n  \"The group is gathered around a table assembling or handling computer hardware and hard drive accessories.\",\n  \"The interaction is casual and friendly, with members giving guidance and jokingly framing the task as a competition.\"\n ],\n \"video_description\": [\n  \"Several people sit around a table covered in a red-and-white checkered tablecloth.\",\n  \"A man wearing an orange t-shirt tries to fit a hard drive into an enclosure.\",\n  \"<voice_0> tells the man in orange that he has inserted it the wrong way and points out the screws on the side.\",\n  \"Hands reach into the frame from the foreground to gesture at the hard drive.\",\n  \"The man in orange continues manipulating the hard drive enclosure.\",\n  \"<voice_299> insists on trying to install the drive himself.\",\n  \"<voice_229> jokes that it is a hard drive championship as the man continues working on the device.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 27,
+      "call_id": "5d1757e4-f044-4d04-815b-019935e3d290",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404700.025235,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "request_end": 1789404709.8494096,
+      "latency_ms": 9824.175202003971,
+      "client_wall_clock_latency_ms": 9824.175202003971,
+      "api_request_wall_clock_latency_ms": 9824.175202003971
+    },
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 27,
+      "call_id": "981ec599-ec63-4a0e-9d56-af490ebc4353",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404790.6005015,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66764,
+      "output_tokens": 1036,
+      "transport": {
+        "client_previously_used": false,
+        "tcp_connect_count": 1,
+        "tls_handshake_count": 1,
+        "http_wall_ms": 18671.059599000728
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"high_level_conclusions\": [\n  \"The group is gathered around a table assembling or handling computer hardware and hard drive accessories.\",\n  \"The interaction is casual and friendly, with members giving guidance and jokingly framing the task as a competition.\"\n ],\n \"video_description\": [\n  \"Several people sit around a table covered in a red-and-white checkered tablecloth.\",\n  \"A man wearing an orange t-shirt tries to fit a hard drive into an enclosure.\",\n  \"<voice_0> tells the man in orange that he has inserted it the wrong way and points out the screws on the side.\",\n  \"Hands reach into the frame from the foreground to gesture at the hard drive.\",\n  \"The man in orange continues manipulating the hard drive enclosure.\",\n  \"<voice_299> insists on trying to install the drive himself.\",\n  \"<voice_229> jokes that it is a hard drive championship as the man continues working on the device.\"\n ]\n}\n```",
+      "total_tokens": 67800,
+      "request_end": 1789404809.2717054,
+      "latency_ms": 18671.2011540003,
+      "client_wall_clock_latency_ms": 18671.2011540003,
+      "api_request_wall_clock_latency_ms": 18671.2011540003
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_27_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

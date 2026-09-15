@@ -1,0 +1,73 @@
+{
+  "clip_id": 56,
+  "source": {
+    "segment_id": 56,
+    "source": "DAY1_A1_JAKE_11360000.mp4",
+    "source_clock": "11360000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41760.0,
+    "absolute_end_seconds": 41790.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0056.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47533.179758907,
+      "prepared_perf": 47539.810327513,
+      "ordered_start_perf": 47622.080432181,
+      "consumer_wait_ms": 0.007203998393379152,
+      "ready_to_ordered_ms": 82270.1046680013,
+      "preparation_work_ms": 6625.05661600153,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person uses both hands to adjust and secure a small action camera mounted on a door frame.",
+      "The person takes their hands off the mounted camera after finishing the adjustment.",
+      "The person turns around from the doorway toward the open living area.",
+      "A group of people is gathered around a table in the room, handling crafting materials and flowers."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer was setting up or calibrating a surveillance/recording device before observing the room.",
+      "The individuals at the table are engaged in a floral craft or flower-pressing activity, discussing botanical species and preparation times."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A person uses both hands to adjust and secure a small action camera mounted on a door frame.\",\n\t\t\"The person takes their hands off the mounted camera after finishing the adjustment.\",\n\t\t\"The person turns around from the doorway toward the open living area.\",\n\t\t\"A group of people is gathered around a table in the room, handling crafting materials and flowers.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The camera wearer was setting up or calibrating a surveillance/recording device before observing the room.\",\n\t\t\"The individuals at the table are engaged in a floral craft or flower-pressing activity, discussing botanical species and preparation times.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 56,
+      "call_id": "473252cc-86e2-4785-834d-f9b7ba6e35ab",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406443.062101,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66709,
+      "output_tokens": 913,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 34533.398239000235
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A person uses both hands to adjust and secure a small action camera mounted on a door frame.\",\n\t\t\"The person takes their hands off the mounted camera after finishing the adjustment.\",\n\t\t\"The person turns around from the doorway toward the open living area.\",\n\t\t\"A group of people is gathered around a table in the room, handling crafting materials and flowers.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The camera wearer was setting up or calibrating a surveillance/recording device before observing the room.\",\n\t\t\"The individuals at the table are engaged in a floral craft or flower-pressing activity, discussing botanical species and preparation times.\"\n\t]\n}\n```",
+      "total_tokens": 67622,
+      "request_end": 1789406477.5956078,
+      "latency_ms": 34533.503808001115,
+      "client_wall_clock_latency_ms": 34533.503808001115,
+      "api_request_wall_clock_latency_ms": 34533.503808001115
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_56_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

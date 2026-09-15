@@ -1,0 +1,56 @@
+{
+  "question_id": "Q01",
+  "candidate_mapping": {
+    "0": "B",
+    "1": "D",
+    "2": "C",
+    "3": "A"
+  },
+  "grades": {
+    "0": {
+      "correct": false,
+      "reason": "Claims insufficient information instead of providing the correct answer."
+    },
+    "1": {
+      "correct": false,
+      "reason": "Claims insufficient information instead of providing the correct answer."
+    },
+    "2": {
+      "correct": false,
+      "reason": "Claims insufficient information instead of providing the correct answer."
+    },
+    "3": {
+      "correct": true,
+      "reason": "Correctly identifies the taller coat rack."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q01",
+    "method": null,
+    "call_id": "8cb30226-a643-4f14-8e29-39013c966823",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437110.486131,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 206,
+    "output_tokens": 267,
+    "transport": {
+      "client_previously_used": false,
+      "tcp_connect_count": 1,
+      "tls_handshake_count": 1,
+      "http_wall_ms": 9283.96082999825
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"Claims insufficient information instead of providing the correct answer.\"\n  },\n  \"1\": {\n    \"correct\": false,\n    \"reason\": \"Claims insufficient information instead of providing the correct answer.\"\n  },\n  \"2\": {\n    \"correct\": false,\n    \"reason\": \"Claims insufficient information instead of providing the correct answer.\"\n  },\n  \"3\": {\n    \"correct\": true,\n    \"reason\": \"Correctly identifies the taller coat rack.\"\n  }\n}\n```",
+    "total_tokens": 473,
+    "request_end": 1789437119.770158,
+    "latency_ms": 9284.02531100437,
+    "client_wall_clock_latency_ms": 9284.02531100437,
+    "api_request_wall_clock_latency_ms": 9284.02531100437
+  },
+  "included_in_qa_latency": false
+}

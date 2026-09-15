@@ -1,0 +1,333 @@
+{
+  "clip_id": 9,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0009.mp4",
+  "end_to_end_memory_generation_ms": 62721.211181997205,
+  "latency_ms": {
+    "clip_decode": 5004.910762996587,
+    "deepgram_asr": null,
+    "mai_transcribe_asr": null,
+    "asr_total": null,
+    "audio_segmentation": null,
+    "speech_embedding_campplus": null,
+    "facial_detection_recognition_buffalo_l": null,
+    "face_clustering": null,
+    "vlm_memory_generation": 51175.154381999164,
+    "text_embedding": 2350.894862996938,
+    "graph_update_total": 11.44632000796264
+  },
+  "stage_details": {
+    "voice": {
+      "cache_hit": true,
+      "asr_provider_ms": {},
+      "asr_total_ms": null,
+      "audio_segmentation_ms": null,
+      "speech_embedding_ms": null,
+      "graph_update_ms": 4.356959005235694,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "cache_load_ms": 7.788586000970099,
+      "total_ms": 12.17457099846797
+    },
+    "face": {
+      "cache_hit": true,
+      "face_detection_recognition_ms": null,
+      "face_clustering_ms": null,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 76,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "cache_load_ms": 12.156486001913436,
+      "total_ms": 12.225154998304788
+    },
+    "vlm": {
+      "context_preparation_ms": 4157.225186994765,
+      "vlm_ms": 51175.154381999164,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A person holding the camera gestures toward a desk and shelving unit set up with multiple laptops and storage drives.\",\n    \"Three people stand by the doorway, listening to <voice_0> speak.\",\n    \"<voice_0> points to different laptops on the desk and rack while explaining how data from recording glasses is transferred.\",\n    \"<voice_0> turns between the laptops and the listeners by the door while speaking.\",\n    \"<voice_0> points towards specific drive slots on the shelf rack to indicate assigned units.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> is the camera wearer (Jake), who is giving instructions to the other participants.\",\n    \"The room serves as a data collection and equipment management station for a multi-person recording study.\",\n    \"<voice_0> explains the workflow for offloading recorded video data from smart glasses to designated laptops and hard drives.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A person holding the camera gestures toward a desk and shelving unit set up with multiple laptops and storage drives.",
+          "Three people stand by the doorway, listening to <voice_0> speak.",
+          "<voice_0> points to different laptops on the desk and rack while explaining how data from recording glasses is transferred.",
+          "<voice_0> turns between the laptops and the listeners by the door while speaking.",
+          "<voice_0> points towards specific drive slots on the shelf rack to indicate assigned units."
+        ],
+        "high_level_conclusions": [
+          "<voice_0> is the camera wearer (Jake), who is giving instructions to the other participants.",
+          "The room serves as a data collection and equipment management station for a multi-person recording study.",
+          "<voice_0> explains the workflow for offloading recorded video data from smart glasses to designated laptops and hard drives."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 9,
+          "call_id": "64f0d558-ef6a-4413-8659-6d1c6627bc38",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789403491.2565448,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67167,
+          "output_tokens": 680,
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A person holding the camera gestures toward a desk and shelving unit set up with multiple laptops and storage drives.\",\n    \"Three people stand by the doorway, listening to <voice_0> speak.\",\n    \"<voice_0> points to different laptops on the desk and rack while explaining how data from recording glasses is transferred.\",\n    \"<voice_0> turns between the laptops and the listeners by the door while speaking.\",\n    \"<voice_0> points towards specific drive slots on the shelf rack to indicate assigned units.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> is the camera wearer (Jake), who is giving instructions to the other participants.\",\n    \"The room serves as a data collection and equipment management station for a multi-person recording study.\",\n    \"<voice_0> explains the workflow for offloading recorded video data from smart glasses to designated laptops and hard drives.\"\n  ]\n}\n```",
+          "total_tokens": 67847,
+          "request_end": 1789403542.4317,
+          "latency_ms": 51175.154381999164,
+          "client_wall_clock_latency_ms": 51175.154381999164,
+          "api_request_wall_clock_latency_ms": 51175.154381999164
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": 635.6077699965681,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.3825800013146363,
+      "nodes_added": 5,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "current_process"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": 1715.28709300037,
+      "text_embedding_count": 3,
+      "graph_update_ms": 6.70678100141231,
+      "nodes_added": 3,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "current_process"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 76,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 89,
+    "edges_after_clip": 21,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "A person holding the camera gestures toward a desk and shelving unit set up with multiple laptops and storage drives.",
+      "Three people stand by the doorway, listening to <voice_0> speak.",
+      "<voice_0> points to different laptops on the desk and rack while explaining how data from recording glasses is transferred.",
+      "<voice_0> turns between the laptops and the listeners by the door while speaking.",
+      "<voice_0> points towards specific drive slots on the shelf rack to indicate assigned units."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is the camera wearer (Jake), who is giving instructions to the other participants.",
+      "The room serves as a data collection and equipment management station for a multi-person recording study.",
+      "<voice_0> explains the workflow for offloading recorded video data from smart glasses to designated laptops and hard drives."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A person holding the camera gestures toward a desk and shelving unit set up with multiple laptops and storage drives.",
+      "Three people stand by the doorway, listening to <voice_0> speak.",
+      "<voice_0> points to different laptops on the desk and rack while explaining how data from recording glasses is transferred.",
+      "<voice_0> turns between the laptops and the listeners by the door while speaking.",
+      "<voice_0> points towards specific drive slots on the shelf rack to indicate assigned units."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is the camera wearer (Jake), who is giving instructions to the other participants.",
+      "The room serves as a data collection and equipment management station for a multi-person recording study.",
+      "<voice_0> explains the workflow for offloading recorded video data from smart glasses to designated laptops and hard drives."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_9_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 81,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person holding the camera gestures toward a desk and shelving unit set up with multiple laptops and storage drives."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 82,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Three people stand by the doorway, listening to <voice_0> speak."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 83,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> points to different laptops on the desk and rack while explaining how data from recording glasses is transferred."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 84,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> turns between the laptops and the listeners by the door while speaking."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 85,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> points towards specific drive slots on the shelf rack to indicate assigned units."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 86,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> is the camera wearer (Jake), who is giving instructions to the other participants."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 87,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The room serves as a data collection and equipment management station for a multi-person recording study."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 88,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> explains the workflow for offloading recorded video data from smart glasses to designated laptops and hard drives."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 82,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 83,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 84,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 85,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 86,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 0,
+        "target": 88,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_9_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_9_graph.pkl"
+  }
+}

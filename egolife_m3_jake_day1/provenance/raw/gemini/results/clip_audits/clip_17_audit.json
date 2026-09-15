@@ -1,0 +1,502 @@
+{
+  "clip_id": 17,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0017.mp4",
+  "end_to_end_memory_generation_ms": 63738.88237599749,
+  "latency_ms": {
+    "clip_decode": 3957.8354980039876,
+    "deepgram_asr": 964.8864330010838,
+    "mai_transcribe_asr": 3674.650988999929,
+    "asr_total": 4639.540456999384,
+    "audio_segmentation": 9.375593006552663,
+    "speech_embedding_campplus": 406.95099600270623,
+    "facial_detection_recognition_buffalo_l": 3485.930818998895,
+    "face_clustering": 6.330071002594195,
+    "vlm_memory_generation": 44757.11860499723,
+    "text_embedding": 1995.5018960026791,
+    "graph_update_total": 100.33247899991693
+  },
+  "stage_details": {
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 964.8864330010838,
+        "openrouter-mai-transcribe-2": 3674.650988999929
+      },
+      "asr_total_ms": 4639.540456999384,
+      "audio_segmentation_ms": 9.375593006552663,
+      "speech_embedding_ms": 406.95099600270623,
+      "graph_update_ms": 100.05053799977759,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 9,
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 5171.057894993282
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3485.930818998895,
+      "face_clustering_ms": 6.330071002594195,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 224,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3612.5368180000805
+    },
+    "vlm": {
+      "context_preparation_ms": 4242.541963998519,
+      "vlm_ms": 44757.11860499723,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a table covered with a pink checkered tablecloth, assembling electronic keyboard kits using tools and screwdrivers.\",\n  \"The camera wearer walks around the table and sits down on an empty chair near the corner of the table.\",\n  \"A participant in an orange shirt uses a screwdriver to tighten screws on a keyboard casing.\",\n  \"A woman wearing a black jacket works attentively on assembling her device with small tools.\",\n  \"<voice_0> mentions that previously everyone complained about the screwdriver lacking magnetic tips, but today nobody seems to complain.\",\n  \"<voice_175> remarks that everyone seems to be accepting it well today.\",\n  \"<voice_176> asks what they are talking about.\",\n  \"<voice_137> comments that because the screwdriver is a free complimentary tool, one cannot expect too much from it.\",\n  \"<voice_177> explains that the screwdriver has no magnetic hold on the screws.\",\n  \"<voice_123> agrees, pointing out that it makes placing the screws difficult.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is participating in a collaborative DIY assembly session, likely building custom mechanical keyboards.\",\n  \"The participants have done this activity together before, as evidenced by references to their complaints from the previous session.\",\n  \"The participants share a relaxed and friendly dynamic, casually discussing the quirks and limitations of the included assembly tools.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a table covered with a pink checkered tablecloth, assembling electronic keyboard kits using tools and screwdrivers.",
+          "The camera wearer walks around the table and sits down on an empty chair near the corner of the table.",
+          "A participant in an orange shirt uses a screwdriver to tighten screws on a keyboard casing.",
+          "A woman wearing a black jacket works attentively on assembling her device with small tools.",
+          "<voice_0> mentions that previously everyone complained about the screwdriver lacking magnetic tips, but today nobody seems to complain.",
+          "<voice_175> remarks that everyone seems to be accepting it well today.",
+          "<voice_176> asks what they are talking about.",
+          "<voice_137> comments that because the screwdriver is a free complimentary tool, one cannot expect too much from it.",
+          "<voice_177> explains that the screwdriver has no magnetic hold on the screws.",
+          "<voice_123> agrees, pointing out that it makes placing the screws difficult."
+        ],
+        "high_level_conclusions": [
+          "The group is participating in a collaborative DIY assembly session, likely building custom mechanical keyboards.",
+          "The participants have done this activity together before, as evidenced by references to their complaints from the previous session.",
+          "The participants share a relaxed and friendly dynamic, casually discussing the quirks and limitations of the included assembly tools."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 17,
+          "call_id": "583d26be-d6c7-4d99-bc4f-a07fc2a8edfd",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789404056.1749427,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67297,
+          "output_tokens": 2206,
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a table covered with a pink checkered tablecloth, assembling electronic keyboard kits using tools and screwdrivers.\",\n  \"The camera wearer walks around the table and sits down on an empty chair near the corner of the table.\",\n  \"A participant in an orange shirt uses a screwdriver to tighten screws on a keyboard casing.\",\n  \"A woman wearing a black jacket works attentively on assembling her device with small tools.\",\n  \"<voice_0> mentions that previously everyone complained about the screwdriver lacking magnetic tips, but today nobody seems to complain.\",\n  \"<voice_175> remarks that everyone seems to be accepting it well today.\",\n  \"<voice_176> asks what they are talking about.\",\n  \"<voice_137> comments that because the screwdriver is a free complimentary tool, one cannot expect too much from it.\",\n  \"<voice_177> explains that the screwdriver has no magnetic hold on the screws.\",\n  \"<voice_123> agrees, pointing out that it makes placing the screws difficult.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is participating in a collaborative DIY assembly session, likely building custom mechanical keyboards.\",\n  \"The participants have done this activity together before, as evidenced by references to their complaints from the previous session.\",\n  \"The participants share a relaxed and friendly dynamic, casually discussing the quirks and limitations of the included assembly tools.\"\n ]\n}\n```",
+          "total_tokens": 69503,
+          "request_end": 1789404100.9320643,
+          "latency_ms": 44757.11860499723,
+          "client_wall_clock_latency_ms": 44757.11860499723,
+          "api_request_wall_clock_latency_ms": 44757.11860499723
+        }
+      ],
+      "episodic_memory_count": 10,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 10,
+      "text_embedding_ms": 1626.8298150025657,
+      "text_embedding_count": 10,
+      "graph_update_ms": 0.23561299894936383,
+      "nodes_added": 10,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "current_process"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": 368.6720810001134,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.04632800118997693,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "current_process"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 9,
+    "detected_faces": 224,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 10,
+    "semantic_memories": 3,
+    "nodes_after_clip": 192,
+    "edges_after_clip": 46,
+    "nodes_added_by_clip": 19,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table covered with a pink checkered tablecloth, assembling electronic keyboard kits using tools and screwdrivers.",
+      "The camera wearer walks around the table and sits down on an empty chair near the corner of the table.",
+      "A participant in an orange shirt uses a screwdriver to tighten screws on a keyboard casing.",
+      "A woman wearing a black jacket works attentively on assembling her device with small tools.",
+      "<voice_0> mentions that previously everyone complained about the screwdriver lacking magnetic tips, but today nobody seems to complain.",
+      "<voice_175> remarks that everyone seems to be accepting it well today.",
+      "<voice_176> asks what they are talking about.",
+      "<voice_137> comments that because the screwdriver is a free complimentary tool, one cannot expect too much from it.",
+      "<voice_177> explains that the screwdriver has no magnetic hold on the screws.",
+      "<voice_123> agrees, pointing out that it makes placing the screws difficult."
+    ],
+    "high_level_conclusions": [
+      "The group is participating in a collaborative DIY assembly session, likely building custom mechanical keyboards.",
+      "The participants have done this activity together before, as evidenced by references to their complaints from the previous session.",
+      "The participants share a relaxed and friendly dynamic, casually discussing the quirks and limitations of the included assembly tools."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a table covered with a pink checkered tablecloth, assembling electronic keyboard kits using tools and screwdrivers.",
+      "The camera wearer walks around the table and sits down on an empty chair near the corner of the table.",
+      "A participant in an orange shirt uses a screwdriver to tighten screws on a keyboard casing.",
+      "A woman wearing a black jacket works attentively on assembling her device with small tools.",
+      "<voice_0> mentions that previously everyone complained about the screwdriver lacking magnetic tips, but today nobody seems to complain.",
+      "<voice_175> remarks that everyone seems to be accepting it well today.",
+      "<voice_176> asks what they are talking about.",
+      "<voice_137> comments that because the screwdriver is a free complimentary tool, one cannot expect too much from it.",
+      "<voice_177> explains that the screwdriver has no magnetic hold on the screws.",
+      "<voice_123> agrees, pointing out that it makes placing the screws difficult."
+    ],
+    "high_level_conclusions": [
+      "The group is participating in a collaborative DIY assembly session, likely building custom mechanical keyboards.",
+      "The participants have done this activity together before, as evidenced by references to their complaints from the previous session.",
+      "The participants share a relaxed and friendly dynamic, casually discussing the quirks and limitations of the included assembly tools."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_17_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 19,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 173,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 呃，那个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 174,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 应该是啥意思？集成电路还是什么？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 175,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 今天大家好像接受良好。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 176,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 什么事情？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 177,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 就是-就是这个螺丝刀它没有磁吸。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 178,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 磁吸。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 179,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a table covered with a pink checkered tablecloth, assembling electronic keyboard kits using tools and screwdrivers."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 180,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer walks around the table and sits down on an empty chair near the corner of the table."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 181,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A participant in an orange shirt uses a screwdriver to tighten screws on a keyboard casing."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 182,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman wearing a black jacket works attentively on assembling her device with small tools."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 183,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> mentions that previously everyone complained about the screwdriver lacking magnetic tips, but today nobody seems to complain."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 184,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_175> remarks that everyone seems to be accepting it well today."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 185,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_176> asks what they are talking about."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 186,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_137> comments that because the screwdriver is a free complimentary tool, one cannot expect too much from it."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 187,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_177> explains that the screwdriver has no magnetic hold on the screws."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 188,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_123> agrees, pointing out that it makes placing the screws difficult."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 189,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is participating in a collaborative DIY assembly session, likely building custom mechanical keyboards."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 190,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants have done this activity together before, as evidenced by references to their complaints from the previous session."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 191,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants share a relaxed and friendly dynamic, casually discussing the quirks and limitations of the included assembly tools."
+          ],
+          "timestamp": 17
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 183,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 123,
+        "target": 188,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 137,
+        "target": 186,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 175,
+        "target": 184,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 176,
+        "target": 185,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 177,
+        "target": 187,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_17_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_17_graph.pkl"
+  }
+}

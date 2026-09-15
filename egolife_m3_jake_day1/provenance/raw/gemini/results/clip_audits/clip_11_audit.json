@@ -1,0 +1,404 @@
+{
+  "clip_id": 11,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0011.mp4",
+  "end_to_end_memory_generation_ms": 44352.071522996994,
+  "latency_ms": {
+    "clip_decode": 3389.8444709993782,
+    "deepgram_asr": 308.0153100017924,
+    "mai_transcribe_asr": 1167.1420220009168,
+    "asr_total": 1475.1605659985216,
+    "audio_segmentation": 7.479503998183645,
+    "speech_embedding_campplus": 510.2856360026635,
+    "facial_detection_recognition_buffalo_l": 3015.3244620014448,
+    "face_clustering": 2.789689999190159,
+    "vlm_memory_generation": 30306.385222000245,
+    "text_embedding": 1351.8478590049199,
+    "graph_update_total": 26.226964997476898
+  },
+  "stage_details": {
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 308.0153100017924,
+        "openrouter-mai-transcribe-2": 1167.1420220009168
+      },
+      "asr_total_ms": 1475.1605659985216,
+      "audio_segmentation_ms": 7.479503998183645,
+      "speech_embedding_ms": 510.2856360026635,
+      "graph_update_ms": 20.995008999307174,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 5,
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2029.435051001201
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3015.3244620014448,
+      "face_clustering_ms": 2.789689999190159,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 90,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3070.078806995298
+    },
+    "vlm": {
+      "context_preparation_ms": 4197.571862998302,
+      "vlm_ms": 30306.385222000245,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer (<voice_0>) shows and explains the wiring setup for the computers and hard drives in the bedroom.\",\n    \"The camera wearer points towards the power cables and multi-laptop station arranged beside the bed.\",\n    \"A young man in an orange shirt and two young women stand near the doorway listening to the explanation.\",\n    \"A group member asks about the consequences of a sudden power outage.\",\n    \"<voice_0> explains that losing power abruptly would be problematic for the computers.\",\n    \"The young man in the orange shirt walks out of the bedroom into the living room.\",\n    \"The camera wearer follows the group into the open living and dining area where other people are seated at a table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> is the camera wearer, acting as the person explaining the technical and hardware setup.\",\n    \"The group is concerned with equipment maintenance, data integrity, and potential power backup solutions.\",\n    \"The participants are residing together in a shared space, coordinating technical equipment for a joint project or event.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera wearer (<voice_0>) shows and explains the wiring setup for the computers and hard drives in the bedroom.",
+          "The camera wearer points towards the power cables and multi-laptop station arranged beside the bed.",
+          "A young man in an orange shirt and two young women stand near the doorway listening to the explanation.",
+          "A group member asks about the consequences of a sudden power outage.",
+          "<voice_0> explains that losing power abruptly would be problematic for the computers.",
+          "The young man in the orange shirt walks out of the bedroom into the living room.",
+          "The camera wearer follows the group into the open living and dining area where other people are seated at a table."
+        ],
+        "high_level_conclusions": [
+          "<voice_0> is the camera wearer, acting as the person explaining the technical and hardware setup.",
+          "The group is concerned with equipment maintenance, data integrity, and potential power backup solutions.",
+          "The participants are residing together in a shared space, coordinating technical equipment for a joint project or event."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 11,
+          "call_id": "3a905763-4d68-4768-82e9-52a9a2aac997",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789403639.1629333,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67130,
+          "output_tokens": 1347,
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer (<voice_0>) shows and explains the wiring setup for the computers and hard drives in the bedroom.\",\n    \"The camera wearer points towards the power cables and multi-laptop station arranged beside the bed.\",\n    \"A young man in an orange shirt and two young women stand near the doorway listening to the explanation.\",\n    \"A group member asks about the consequences of a sudden power outage.\",\n    \"<voice_0> explains that losing power abruptly would be problematic for the computers.\",\n    \"The young man in the orange shirt walks out of the bedroom into the living room.\",\n    \"The camera wearer follows the group into the open living and dining area where other people are seated at a table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_0> is the camera wearer, acting as the person explaining the technical and hardware setup.\",\n    \"The group is concerned with equipment maintenance, data integrity, and potential power backup solutions.\",\n    \"The participants are residing together in a shared space, coordinating technical equipment for a joint project or event.\"\n  ]\n}\n```",
+          "total_tokens": 68477,
+          "request_end": 1789403669.4693253,
+          "latency_ms": 30306.385222000245,
+          "client_wall_clock_latency_ms": 30306.385222000245,
+          "api_request_wall_clock_latency_ms": 30306.385222000245
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": 1072.1636170055717,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.13800099986838177,
+      "nodes_added": 7,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "current_process"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": 279.68424199934816,
+      "text_embedding_count": 3,
+      "graph_update_ms": 5.093954998301342,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "current_process"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 5,
+    "detected_faces": 90,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 3,
+    "nodes_after_clip": 113,
+    "edges_after_clip": 26,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 3
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer (<voice_0>) shows and explains the wiring setup for the computers and hard drives in the bedroom.",
+      "The camera wearer points towards the power cables and multi-laptop station arranged beside the bed.",
+      "A young man in an orange shirt and two young women stand near the doorway listening to the explanation.",
+      "A group member asks about the consequences of a sudden power outage.",
+      "<voice_0> explains that losing power abruptly would be problematic for the computers.",
+      "The young man in the orange shirt walks out of the bedroom into the living room.",
+      "The camera wearer follows the group into the open living and dining area where other people are seated at a table."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is the camera wearer, acting as the person explaining the technical and hardware setup.",
+      "The group is concerned with equipment maintenance, data integrity, and potential power backup solutions.",
+      "The participants are residing together in a shared space, coordinating technical equipment for a joint project or event."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera wearer (<voice_0>) shows and explains the wiring setup for the computers and hard drives in the bedroom.",
+      "The camera wearer points towards the power cables and multi-laptop station arranged beside the bed.",
+      "A young man in an orange shirt and two young women stand near the doorway listening to the explanation.",
+      "A group member asks about the consequences of a sudden power outage.",
+      "<voice_0> explains that losing power abruptly would be problematic for the computers.",
+      "The young man in the orange shirt walks out of the bedroom into the living room.",
+      "The camera wearer follows the group into the open living and dining area where other people are seated at a table."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is the camera wearer, acting as the person explaining the technical and hardware setup.",
+      "The group is concerned with equipment maintenance, data integrity, and potential power backup solutions.",
+      "The participants are residing together in a shared space, coordinating technical equipment for a joint project or event."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_11_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 3,
+    "nodes": [
+      {
+        "id": 99,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 一个悬着的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 100,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那如果突然停电了会怎么样？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 101,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那没有什么就是USB数据？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 102,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 就是那种备用电。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 103,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer (<voice_0>) shows and explains the wiring setup for the computers and hard drives in the bedroom."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 104,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer points towards the power cables and multi-laptop station arranged beside the bed."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 105,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young man in an orange shirt and two young women stand near the doorway listening to the explanation."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 106,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group member asks about the consequences of a sudden power outage."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 107,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> explains that losing power abruptly would be problematic for the computers."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 108,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The young man in the orange shirt walks out of the bedroom into the living room."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 109,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer follows the group into the open living and dining area where other people are seated at a table."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 110,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> is the camera wearer, acting as the person explaining the technical and hardware setup."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 111,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is concerned with equipment maintenance, data integrity, and potential power backup solutions."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 112,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are residing together in a shared space, coordinating technical equipment for a joint project or event."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 103,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 107,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 110,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_11_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_11_graph.pkl"
+  }
+}

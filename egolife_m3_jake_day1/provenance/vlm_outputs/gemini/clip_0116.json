@@ -1,0 +1,77 @@
+{
+  "clip_id": 116,
+  "source": {
+    "segment_id": 116,
+    "source": "DAY1_A1_JAKE_12040000.mp4",
+    "source_clock": "12040000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43440.0,
+    "absolute_end_seconds": 43470.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0116.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 52347.580755849,
+      "prepared_perf": 52355.712944137,
+      "ordered_start_perf": 52438.667262171,
+      "consumer_wait_ms": 0.0343650026479736,
+      "ready_to_ordered_ms": 82954.31803400425,
+      "preparation_work_ms": 8126.89119100105,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Jake walks toward a green shelf and picks up a black zipped case.",
+      "Jake unzips the case to check its contents.",
+      "Jake walks over to the dining table where a group of people are gathered around a whiteboard.",
+      "<voice_1346> speaks while discussing a plan with the group at the table.",
+      "Jake takes a charging cable out of the case and hands it toward the people seated at the table.",
+      "<voice_0> speaks to the group, offering charging cables so they can charge their devices.",
+      "Jake walks back toward the shelf with the case.",
+      "Jake places the case back onto the shelf, exchanges it for another case, and inspects it."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer (Jake) is <voice_0>, speaking in first person as he hands out charging cables to the group.",
+      "The group at the table is engaged in a meeting or production planning session, using a whiteboard and props."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"Jake walks toward a green shelf and picks up a black zipped case.\",\n  \"Jake unzips the case to check its contents.\",\n  \"Jake walks over to the dining table where a group of people are gathered around a whiteboard.\",\n  \"<voice_1346> speaks while discussing a plan with the group at the table.\",\n  \"Jake takes a charging cable out of the case and hands it toward the people seated at the table.\",\n  \"<voice_0> speaks to the group, offering charging cables so they can charge their devices.\",\n  \"Jake walks back toward the shelf with the case.\",\n  \"Jake places the case back onto the shelf, exchanges it for another case, and inspects it.\"\n ],\n \"high_level_conclusions\": [\n  \"The camera wearer (Jake) is <voice_0>, speaking in first person as he hands out charging cables to the group.\",\n  \"The group at the table is engaged in a meeting or production planning session, using a whiteboard and props.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 116,
+      "call_id": "c36df3fb-31c7-4609-b511-462bdbdbdb48",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789411263.748817,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66734,
+      "output_tokens": 977,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 64715.88767299545
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"Jake walks toward a green shelf and picks up a black zipped case.\",\n  \"Jake unzips the case to check its contents.\",\n  \"Jake walks over to the dining table where a group of people are gathered around a whiteboard.\",\n  \"<voice_1346> speaks while discussing a plan with the group at the table.\",\n  \"Jake takes a charging cable out of the case and hands it toward the people seated at the table.\",\n  \"<voice_0> speaks to the group, offering charging cables so they can charge their devices.\",\n  \"Jake walks back toward the shelf with the case.\",\n  \"Jake places the case back onto the shelf, exchanges it for another case, and inspects it.\"\n ],\n \"high_level_conclusions\": [\n  \"The camera wearer (Jake) is <voice_0>, speaking in first person as he hands out charging cables to the group.\",\n  \"The group at the table is engaged in a meeting or production planning session, using a whiteboard and props.\"\n ]\n}\n```",
+      "total_tokens": 67711,
+      "request_end": 1789411328.4648259,
+      "latency_ms": 64716.006617003586,
+      "client_wall_clock_latency_ms": 64716.006617003586,
+      "api_request_wall_clock_latency_ms": 64716.006617003586
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_116_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

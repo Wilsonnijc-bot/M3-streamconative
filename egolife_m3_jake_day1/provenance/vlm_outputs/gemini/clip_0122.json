@@ -1,0 +1,75 @@
+{
+  "clip_id": 122,
+  "source": {
+    "segment_id": 122,
+    "source": "DAY1_A1_JAKE_12070000.mp4",
+    "source_clock": "12070000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43620.0,
+    "absolute_end_seconds": 43650.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0122.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 52703.494109303,
+      "prepared_perf": 52712.189304366,
+      "ordered_start_perf": 52803.742869988,
+      "consumer_wait_ms": 0.02113899972755462,
+      "ready_to_ordered_ms": 91553.5656219945,
+      "preparation_work_ms": 8689.91720500344,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Jake gathers his laptop and cables from the bed in the bedroom.",
+      "Jake connects a cable adapter to his laptop.",
+      "Jake walks out of the bedroom into the living area.",
+      "Several group members are gathered around the dining table discussing event logistics.",
+      "Jake sits down beside the table holding a clapperboard and his laptop.",
+      "The group discusses arrangements for the food and afternoon tea segments."
+    ],
+    "high_level_conclusions": [
+      "The group is conducting a pre-production or event planning meeting, evidenced by filming equipment, a clapperboard, and schedule discussions.",
+      "Jake acts as a crew member preparing equipment and coordinating with the team."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"Jake gathers his laptop and cables from the bed in the bedroom.\",\n  \"Jake connects a cable adapter to his laptop.\",\n  \"Jake walks out of the bedroom into the living area.\",\n  \"Several group members are gathered around the dining table discussing event logistics.\",\n  \"Jake sits down beside the table holding a clapperboard and his laptop.\",\n  \"The group discusses arrangements for the food and afternoon tea segments.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is conducting a pre-production or event planning meeting, evidenced by filming equipment, a clapperboard, and schedule discussions.\",\n  \"Jake acts as a crew member preparing equipment and coordinating with the team.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 122,
+      "call_id": "b2aa34c2-6603-4103-8461-97287b63b260",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789411629.107947,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66803,
+      "output_tokens": 689,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 59377.50841600064
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"Jake gathers his laptop and cables from the bed in the bedroom.\",\n  \"Jake connects a cable adapter to his laptop.\",\n  \"Jake walks out of the bedroom into the living area.\",\n  \"Several group members are gathered around the dining table discussing event logistics.\",\n  \"Jake sits down beside the table holding a clapperboard and his laptop.\",\n  \"The group discusses arrangements for the food and afternoon tea segments.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is conducting a pre-production or event planning meeting, evidenced by filming equipment, a clapperboard, and schedule discussions.\",\n  \"Jake acts as a crew member preparing equipment and coordinating with the team.\"\n ]\n}\n```",
+      "total_tokens": 67492,
+      "request_end": 1789411688.4855864,
+      "latency_ms": 59377.63637700118,
+      "client_wall_clock_latency_ms": 59377.63637700118,
+      "api_request_wall_clock_latency_ms": 59377.63637700118
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_122_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,445 @@
+{
+  "clip_id": 80,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0080.mp4",
+  "end_to_end_memory_generation_ms": 289829.10222600185,
+  "latency_ms": {
+    "clip_decode": 4484.324519995425,
+    "deepgram_asr": 236.9249210023554,
+    "mai_transcribe_asr": 1188.096903002588,
+    "asr_total": 1189.8441800003638,
+    "audio_segmentation": 9.143020004557911,
+    "speech_embedding_campplus": 1253.0609610039392,
+    "facial_detection_recognition_buffalo_l": 4406.003659998532,
+    "face_clustering": 8.990469999844208,
+    "vlm_memory_generation": 52814.57217500429,
+    "text_embedding": 384.968239995942,
+    "graph_update_total": 443.6955700002727
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 80,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 999,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789408094.2514355,
+          "status": "success",
+          "total_tokens": 196,
+          "request_end": 1789408094.6362622,
+          "latency_ms": 384.82715399732115
+        }
+      ],
+      "total_tokens": 196,
+      "latency_ms": 384.968239995942
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 236.9249210023554,
+        "openrouter-mai-transcribe-2": 1188.096903002588
+      },
+      "asr_total_ms": 1189.8441800003638,
+      "audio_segmentation_ms": 9.143020004557911,
+      "speech_embedding_ms": 1253.0609610039392,
+      "graph_update_ms": 443.5780190033256,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1722.2131160015124
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4406.003659998532,
+      "face_clustering_ms": 8.990469999844208,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 273,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4562.209757001256
+    },
+    "vlm": {
+      "context_preparation_ms": 4140.112177999981,
+      "vlm_ms": 52814.57217500429,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table with a checkered tablecloth in a meeting room.\",\n    \"A woman in a white shirt standing near the whiteboard gestures as she speaks about planting bulbs (<voice_165>).\",\n    \"A young man in an orange t-shirt briefly walks in the background behind the woman in white.\",\n    \"The woman in white leans over to adjust flowers in a vase on the table.\",\n    \"Another person at the table suggests buying bulbs directly if needed (<voice_911>).\",\n    \"A participant briefly replies and confirms the idea (<voice_364>).\",\n    \"The woman sitting in the foreground in black handles small cards and stickers on the table.\",\n    \"A participant mentions almost giving away a strawberry potted plant on the first day (<voice_416>).\",\n    \"The woman in black touches her hair while listening to the group discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a planning or review discussion centered around plants and potted gardening.\",\n    \"The woman standing in the white shirt acts as a leader or speaker sharing recommendations with the seated participants.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people is gathered around a table with a checkered tablecloth in a meeting room.",
+          "A woman in a white shirt standing near the whiteboard gestures as she speaks about planting bulbs (<voice_165>).",
+          "A young man in an orange t-shirt briefly walks in the background behind the woman in white.",
+          "The woman in white leans over to adjust flowers in a vase on the table.",
+          "Another person at the table suggests buying bulbs directly if needed (<voice_911>).",
+          "A participant briefly replies and confirms the idea (<voice_364>).",
+          "The woman sitting in the foreground in black handles small cards and stickers on the table.",
+          "A participant mentions almost giving away a strawberry potted plant on the first day (<voice_416>).",
+          "The woman in black touches her hair while listening to the group discussion."
+        ],
+        "high_level_conclusions": [
+          "The group is engaged in a planning or review discussion centered around plants and potted gardening.",
+          "The woman standing in the white shirt acts as a leader or speaker sharing recommendations with the seated participants."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 80,
+          "call_id": "eefd75fc-0798-484f-90b2-553e09994c1f",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789408041.4359424,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67259,
+          "output_tokens": 1152,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 52814.45688800159
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table with a checkered tablecloth in a meeting room.\",\n    \"A woman in a white shirt standing near the whiteboard gestures as she speaks about planting bulbs (<voice_165>).\",\n    \"A young man in an orange t-shirt briefly walks in the background behind the woman in white.\",\n    \"The woman in white leans over to adjust flowers in a vase on the table.\",\n    \"Another person at the table suggests buying bulbs directly if needed (<voice_911>).\",\n    \"A participant briefly replies and confirms the idea (<voice_364>).\",\n    \"The woman sitting in the foreground in black handles small cards and stickers on the table.\",\n    \"A participant mentions almost giving away a strawberry potted plant on the first day (<voice_416>).\",\n    \"The woman in black touches her hair while listening to the group discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a planning or review discussion centered around plants and potted gardening.\",\n    \"The woman standing in the white shirt acts as a leader or speaker sharing recommendations with the seated participants.\"\n  ]\n}\n```",
+          "total_tokens": 68411,
+          "request_end": 1789408094.2505202,
+          "latency_ms": 52814.57217500429,
+          "client_wall_clock_latency_ms": 52814.57217500429,
+          "api_request_wall_clock_latency_ms": 52814.57217500429
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.10305400064680725,
+      "nodes_added": 9,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.014496996300294995,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 5,
+    "detected_faces": 273,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 2,
+    "nodes_after_clip": 924,
+    "edges_after_clip": 198,
+    "nodes_added_by_clip": 13,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a checkered tablecloth in a meeting room.",
+      "A woman in a white shirt standing near the whiteboard gestures as she speaks about planting bulbs (<voice_165>).",
+      "A young man in an orange t-shirt briefly walks in the background behind the woman in white.",
+      "The woman in white leans over to adjust flowers in a vase on the table.",
+      "Another person at the table suggests buying bulbs directly if needed (<voice_911>).",
+      "A participant briefly replies and confirms the idea (<voice_364>).",
+      "The woman sitting in the foreground in black handles small cards and stickers on the table.",
+      "A participant mentions almost giving away a strawberry potted plant on the first day (<voice_416>).",
+      "The woman in black touches her hair while listening to the group discussion."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a planning or review discussion centered around plants and potted gardening.",
+      "The woman standing in the white shirt acts as a leader or speaker sharing recommendations with the seated participants."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a checkered tablecloth in a meeting room.",
+      "A woman in a white shirt standing near the whiteboard gestures as she speaks about planting bulbs (<voice_165>).",
+      "A young man in an orange t-shirt briefly walks in the background behind the woman in white.",
+      "The woman in white leans over to adjust flowers in a vase on the table.",
+      "Another person at the table suggests buying bulbs directly if needed (<voice_911>).",
+      "A participant briefly replies and confirms the idea (<voice_364>).",
+      "The woman sitting in the foreground in black handles small cards and stickers on the table.",
+      "A participant mentions almost giving away a strawberry potted plant on the first day (<voice_416>).",
+      "The woman in black touches her hair while listening to the group discussion."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a planning or review discussion centered around plants and potted gardening.",
+      "The woman standing in the white shirt acts as a leader or speaker sharing recommendations with the seated participants."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_80_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 13,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 911,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: 好。即 | MAI: 就是有需要的话可以直接买过来。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 912,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我行吧，不知道我。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 913,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people is gathered around a table with a checkered tablecloth in a meeting room."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 914,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a white shirt standing near the whiteboard gestures as she speaks about planting bulbs (<voice_165>)."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 915,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young man in an orange t-shirt briefly walks in the background behind the woman in white."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 916,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in white leans over to adjust flowers in a vase on the table."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 917,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another person at the table suggests buying bulbs directly if needed (<voice_911>)."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 918,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A participant briefly replies and confirms the idea (<voice_364>)."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 919,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman sitting in the foreground in black handles small cards and stickers on the table."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 920,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A participant mentions almost giving away a strawberry potted plant on the first day (<voice_416>)."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 921,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in black touches her hair while listening to the group discussion."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 922,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is engaged in a planning or review discussion centered around plants and potted gardening."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 923,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman standing in the white shirt acts as a leader or speaker sharing recommendations with the seated participants."
+          ],
+          "timestamp": 80
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 165,
+        "target": 914,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 364,
+        "target": 918,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 416,
+        "target": 920,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 911,
+        "target": 917,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_80_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_80_graph.pkl"
+  },
+  "memory_pickle_bytes": 21363149,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 48991.737111899,
+    "prepared_perf": 48999.022211171,
+    "ordered_start_perf": 49216.262218707,
+    "consumer_wait_ms": 0.008105002052616328,
+    "ready_to_ordered_ms": 217240.0075359983,
+    "preparation_work_ms": 7279.773234004097,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 63626.959481000085
+}

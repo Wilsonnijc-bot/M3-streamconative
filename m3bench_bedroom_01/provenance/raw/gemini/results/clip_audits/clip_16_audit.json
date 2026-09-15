@@ -1,0 +1,354 @@
+{
+  "clip_id": 16,
+  "clip_path": "/opt/streammeco/run/m3bench_bedroom_gemini/work/segments/segment_0016.mp4",
+  "end_to_end_memory_generation_ms": 88058.22893200093,
+  "latency_ms": {
+    "clip_decode": 1750.6621009961236,
+    "deepgram_asr": 439.81863000954036,
+    "mai_transcribe_asr": 3053.570496995235,
+    "asr_total": 3054.7792599973036,
+    "audio_segmentation": 2.459253999404609,
+    "speech_embedding_campplus": 327.46504999522585,
+    "facial_detection_recognition_buffalo_l": 871.6899760038359,
+    "face_clustering": 1.0512870067032054,
+    "vlm_memory_generation": 14484.748843999114,
+    "text_embedding": 556.8041640071897,
+    "graph_update_total": 9.023161008371972
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 16,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 789,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789432229.542984,
+          "status": "success",
+          "total_tokens": 163,
+          "request_end": 1789432230.0993488,
+          "latency_ms": 556.3667120004538
+        }
+      ],
+      "total_tokens": 163,
+      "latency_ms": 556.8041640071897
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 439.81863000954036,
+        "openrouter-mai-transcribe-2": 3053.570496995235
+      },
+      "asr_total_ms": 3054.7792599973036,
+      "audio_segmentation_ms": 2.459253999404609,
+      "speech_embedding_ms": 327.46504999522585,
+      "graph_update_ms": 7.803970001987182,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 342.9924359952565
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 871.6899760038359,
+      "face_clustering_ms": 1.0512870067032054,
+      "graph_update_ms": 0.00206301047001034,
+      "frame_count": 50,
+      "detected_face_count": 38,
+      "qualified_face_count": 2,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 893.9691939885961
+    },
+    "vlm": {
+      "context_preparation_ms": 1150.1001520082355,
+      "vlm_ms": 14484.748843999114,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"The camera pans through a residential apartment from the entrance hallway, passing the dining area, into a bedroom.\",\n    \"Two women are seated on a bed covered with a blue patterned quilt.\",\n    \"The woman wearing a beige t-shirt sits with a downcast expression, holding tissues in her hands.\",\n    \"The woman wearing a white long-sleeved top faces her companion and gently holds her arm while offering comfort.\",\n    \"<voice_21> speaks warmly, reassuring the distressed woman that she is ready to listen.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_21> belongs to the woman in the white sweater who is consoling the other woman.\",\n    \"The woman in the beige t-shirt is visibly upset or crying due to an emotional event.\",\n    \"The two women share a close relationship, such as good friends, roommates, or family members, with one providing compassionate emotional support.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera pans through a residential apartment from the entrance hallway, passing the dining area, into a bedroom.",
+          "Two women are seated on a bed covered with a blue patterned quilt.",
+          "The woman wearing a beige t-shirt sits with a downcast expression, holding tissues in her hands.",
+          "The woman wearing a white long-sleeved top faces her companion and gently holds her arm while offering comfort.",
+          "<voice_21> speaks warmly, reassuring the distressed woman that she is ready to listen."
+        ],
+        "high_level_conclusions": [
+          "<voice_21> belongs to the woman in the white sweater who is consoling the other woman.",
+          "The woman in the beige t-shirt is visibly upset or crying due to an emotional event.",
+          "The two women share a close relationship, such as good friends, roommates, or family members, with one providing compassionate emotional support."
+        ]
+      },
+      "media": {
+        "frame_count": 20,
+        "video_duration_seconds": 10.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 16,
+          "call_id": "668b77f9-4a61-417d-9176-c74b843b665b",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789432215.0571218,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 22179,
+          "output_tokens": 736,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 14484.533037990332
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"The camera pans through a residential apartment from the entrance hallway, passing the dining area, into a bedroom.\",\n    \"Two women are seated on a bed covered with a blue patterned quilt.\",\n    \"The woman wearing a beige t-shirt sits with a downcast expression, holding tissues in her hands.\",\n    \"The woman wearing a white long-sleeved top faces her companion and gently holds her arm while offering comfort.\",\n    \"<voice_21> speaks warmly, reassuring the distressed woman that she is ready to listen.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_21> belongs to the woman in the white sweater who is consoling the other woman.\",\n    \"The woman in the beige t-shirt is visibly upset or crying due to an emotional event.\",\n    \"The two women share a close relationship, such as good friends, roommates, or family members, with one providing compassionate emotional support.\"\n  ]\n}\n```",
+          "total_tokens": 22915,
+          "request_end": 1789432229.5418746,
+          "latency_ms": 14484.748843999114,
+          "client_wall_clock_latency_ms": 14484.748843999114,
+          "api_request_wall_clock_latency_ms": 14484.748843999114
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.1108779979404062,
+      "nodes_added": 5,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 1.1062499979743734,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 50,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 38,
+    "qualified_faces": 2,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 155,
+    "edges_after_clip": 38,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera pans through a residential apartment from the entrance hallway, passing the dining area, into a bedroom.",
+      "Two women are seated on a bed covered with a blue patterned quilt.",
+      "The woman wearing a beige t-shirt sits with a downcast expression, holding tissues in her hands.",
+      "The woman wearing a white long-sleeved top faces her companion and gently holds her arm while offering comfort.",
+      "<voice_21> speaks warmly, reassuring the distressed woman that she is ready to listen."
+    ],
+    "high_level_conclusions": [
+      "<voice_21> belongs to the woman in the white sweater who is consoling the other woman.",
+      "The woman in the beige t-shirt is visibly upset or crying due to an emotional event.",
+      "The two women share a close relationship, such as good friends, roommates, or family members, with one providing compassionate emotional support."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera pans through a residential apartment from the entrance hallway, passing the dining area, into a bedroom.",
+      "Two women are seated on a bed covered with a blue patterned quilt.",
+      "The woman wearing a beige t-shirt sits with a downcast expression, holding tissues in her hands.",
+      "The woman wearing a white long-sleeved top faces her companion and gently holds her arm while offering comfort.",
+      "<voice_21> speaks warmly, reassuring the distressed woman that she is ready to listen."
+    ],
+    "high_level_conclusions": [
+      "<voice_21> belongs to the woman in the white sweater who is consoling the other woman.",
+      "The woman in the beige t-shirt is visibly upset or crying due to an emotional event.",
+      "The two women share a close relationship, such as good friends, roommates, or family members, with one providing compassionate emotional support."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_16_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 147,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans through a residential apartment from the entrance hallway, passing the dining area, into a bedroom."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 148,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women are seated on a bed covered with a blue patterned quilt."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 149,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman wearing a beige t-shirt sits with a downcast expression, holding tissues in her hands."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 150,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman wearing a white long-sleeved top faces her companion and gently holds her arm while offering comfort."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 151,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_21> speaks warmly, reassuring the distressed woman that she is ready to listen."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 152,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_21> belongs to the woman in the white sweater who is consoling the other woman."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 153,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman in the beige t-shirt is visibly upset or crying due to an emotional event."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 154,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women share a close relationship, such as good friends, roommates, or family members, with one providing compassionate emotional support."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 21,
+        "target": 151,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 21,
+        "target": 152,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_16_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_16_graph.pkl"
+  },
+  "memory_pickle_bytes": 4033466,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 73328.89534515,
+    "prepared_perf": 73334.71038201,
+    "ordered_start_perf": 73399.262693246,
+    "consumer_wait_ms": 0.006632995791733265,
+    "ready_to_ordered_ms": 64552.31123599515,
+    "preparation_work_ms": 5809.535741995205,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 17431.656861997908
+}

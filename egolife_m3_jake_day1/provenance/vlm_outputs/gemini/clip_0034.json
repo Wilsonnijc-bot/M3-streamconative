@@ -1,0 +1,76 @@
+{
+  "clip_id": 34,
+  "source": {
+    "segment_id": 34,
+    "source": "DAY1_A1_JAKE_11253000.mp4",
+    "source_clock": "11253000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41130.0,
+    "absolute_end_seconds": 41160.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0034.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46228.748292565,
+      "prepared_perf": 46235.341065492,
+      "ordered_start_perf": 46325.192139406,
+      "consumer_wait_ms": 0.013044998922850937,
+      "ready_to_ordered_ms": 89851.07391399652,
+      "preparation_work_ms": 6587.068025000917,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is sitting around a long dining table covered with a pink-and-white checkered tablecloth.",
+      "A person standing near the far end of the table writes Chinese characters on a whiteboard.",
+      "The individuals seated around the table watch the whiteboard closely.",
+      "The group discusses the stroke order and correct technique for writing Chinese characters.",
+      "A voice questions whether the stroke order of the character being written is correct.",
+      "Another voice confirms the strokes being demonstrated on the board.",
+      "A speaker mentions a radical stroke structure while observing the writing on the board."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in an interactive brainstorming, learning, or script discussion session focused on Chinese character writing.",
+      "The attendees are collaboratively observing and correcting the writer's stroke order and character radicals."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people is sitting around a long dining table covered with a pink-and-white checkered tablecloth.\",\n\t\t\"A person standing near the far end of the table writes Chinese characters on a whiteboard.\",\n\t\t\"The individuals seated around the table watch the whiteboard closely.\",\n\t\t\"The group discusses the stroke order and correct technique for writing Chinese characters.\",\n\t\t\"A voice questions whether the stroke order of the character being written is correct.\",\n\t\t\"Another voice confirms the strokes being demonstrated on the board.\",\n\t\t\"A speaker mentions a radical stroke structure while observing the writing on the board.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is engaged in an interactive brainstorming, learning, or script discussion session focused on Chinese character writing.\",\n\t\t\"The attendees are collaboratively observing and correcting the writer's stroke order and character radicals.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 34,
+      "call_id": "0301a2ad-7ec4-4e69-8996-8637ead20f25",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405148.400377,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66719,
+      "output_tokens": 854,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 68008.69543800218
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people is sitting around a long dining table covered with a pink-and-white checkered tablecloth.\",\n\t\t\"A person standing near the far end of the table writes Chinese characters on a whiteboard.\",\n\t\t\"The individuals seated around the table watch the whiteboard closely.\",\n\t\t\"The group discusses the stroke order and correct technique for writing Chinese characters.\",\n\t\t\"A voice questions whether the stroke order of the character being written is correct.\",\n\t\t\"Another voice confirms the strokes being demonstrated on the board.\",\n\t\t\"A speaker mentions a radical stroke structure while observing the writing on the board.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is engaged in an interactive brainstorming, learning, or script discussion session focused on Chinese character writing.\",\n\t\t\"The attendees are collaboratively observing and correcting the writer's stroke order and character radicals.\"\n\t]\n}\n```",
+      "total_tokens": 67573,
+      "request_end": 1789405216.4092164,
+      "latency_ms": 68008.83182600228,
+      "client_wall_clock_latency_ms": 68008.83182600228,
+      "api_request_wall_clock_latency_ms": 68008.83182600228
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_34_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

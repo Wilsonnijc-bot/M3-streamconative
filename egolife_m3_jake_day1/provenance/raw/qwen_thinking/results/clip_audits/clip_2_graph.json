@@ -1,0 +1,368 @@
+{
+  "counts": {
+    "nodes": 22,
+    "edges": 6,
+    "directed_edges_stored": 12,
+    "by_type": {
+      "episodic": 14,
+      "semantic": 6,
+      "voice": 2
+    }
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "type": "voice",
+      "metadata": {
+        "contents": [
+          "MAI: 好，然后一个秒表。",
+          "MAI: 对，戳一下。",
+          "MAI: 来，都戳一下，每人戳一下。传过去戳一下，哎，你能看到对吧？好，戳完了。行，开机，开。那就是今天我们就讨论讨论，早上讨论讨论我们最后一天干点啥呗。然后可能，嗯。"
+        ]
+      },
+      "embedding_count": 3,
+      "embedding_dimensions": [
+        192,
+        192,
+        192
+      ]
+    },
+    {
+      "id": 1,
+      "type": "voice",
+      "metadata": {
+        "contents": [
+          "MAI: 时间戳。"
+        ]
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        192
+      ]
+    },
+    {
+      "id": 2,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera wearer holds a smartphone displaying a white screen while observing a group of people seated around a table."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 3,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "At timestamp 00:04, <voice_0> announces, 'Good, then a stopwatch.'"
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 4,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The group remains seated at the table with various items spread across the surface."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 5,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "At timestamp 00:12, <voice_1> states, 'Time ding.'"
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 6,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "At timestamp 00:13, <voice_0> confirms, 'Yes, ding once.'"
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 7,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera wearer manipulates the smartphone screen, revealing a countdown timer."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 8,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The timer progresses from approximately 23 minutes down to zero."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 9,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera wearer places a hand on a black case resting on the table near the end of the sequence."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 10,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The participants appear to be engaging in a timed activity or challenge facilitated by the smartphone."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 11,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "Speaker MAI (<voice_0>, <voice_1>) is responsible for initiating and signaling the timing mechanism."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 12,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "No facial features are provided to visually identify the speaker MAI among the group members."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 13,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "A group of five individuals sits around a rectangular table covered with a red and white checkered cloth."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 14,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera wearer distributes black carrying cases to the participants seated at the table."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 15,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "Each participant places the contents of the case, which appear to be earplugs, into their ears."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 16,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera wearer confirms that all group members have successfully put on the earplugs."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 17,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera wearer holds up a smartphone displaying a digital timer set to zero."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 18,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The group discusses their plans for the final day of their current activity."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 19,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The group is preparing for a discussion session scheduled for their last day."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 20,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "Participants utilize earplugs to manage auditory environment before the discussion begins."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 21,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The speaker identified as <voice_0> coordinates the distribution of equipment and initiates the session."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 3,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "episodic"
+    },
+    {
+      "source": 0,
+      "target": 6,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "episodic"
+    },
+    {
+      "source": 0,
+      "target": 11,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "semantic"
+    },
+    {
+      "source": 0,
+      "target": 21,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "semantic"
+    },
+    {
+      "source": 1,
+      "target": 5,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "episodic"
+    },
+    {
+      "source": 1,
+      "target": 11,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "semantic"
+    }
+  ]
+}

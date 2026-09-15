@@ -1,0 +1,595 @@
+{
+  "clip_id": 90,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0090.mp4",
+  "end_to_end_memory_generation_ms": 536414.8391149938,
+  "latency_ms": {
+    "clip_decode": 5085.1241890050005,
+    "deepgram_asr": 1213.2176909944974,
+    "mai_transcribe_asr": 1111.8664369860198,
+    "asr_total": 1214.2725260055158,
+    "audio_segmentation": 7.370765000814572,
+    "speech_embedding_campplus": 1584.504061989719,
+    "facial_detection_recognition_buffalo_l": 4016.6500240011374,
+    "face_clustering": 8.395362994633615,
+    "vlm_memory_generation": 156126.45500600047,
+    "text_embedding": 503.1569270067848,
+    "graph_update_total": 771.232342987787
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 90,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 1189,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789429035.8598495,
+          "status": "success",
+          "total_tokens": 263,
+          "request_end": 1789429036.3628883,
+          "latency_ms": 503.0396660004044
+        }
+      ],
+      "total_tokens": 263,
+      "latency_ms": 503.1569270067848
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1213.2176909944974,
+        "openrouter-mai-transcribe-2": 1111.8664369860198
+      },
+      "asr_total_ms": 1214.2725260055158,
+      "audio_segmentation_ms": 7.370765000814572,
+      "speech_embedding_ms": 1584.504061989719,
+      "graph_update_ms": 770.9737160039367,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2379.8909629986156
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4016.6500240011374,
+      "face_clustering_ms": 8.395362994633615,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 323,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4202.815677999752
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1184>",
+        "<voice_443>",
+        "<voice_484>",
+        "<voice_398>",
+        "<voice_1185>",
+        "<voice_1170>",
+        "<voice_1186>"
+      ],
+      "context_preparation_ms": 3728.0794409889495,
+      "vlm_ms": 156126.45500600047,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A first-person perspective view captures a group of four people gathered around a wooden table in a room equipped with a whiteboard and projector screen.\",\n\t\t\"The camera wearer sits in the foreground with their legs visible, while three other individuals occupy chairs around the table.\",\n\t\t\"One person stands near the whiteboard, appearing to write or point at the board while addressing the seated group.\",\n\t\t\"<voice_1184> speaks stating 'Just perform.'\",\n\t\t\"<voice_443> mentions 'Coffee and alcohol.'\",\n\t\t\"<voice_484> asks about the total duration of the entire activity.\",\n\t\t\"<voice_398> responds that it lasts 'an afternoon.'\",\n\t\t\"<voice_1185> confirms the time and suggests providing some food for the participants.\",\n\t\t\"<voice_1170> discusses the existence of market and catering department sections.\",\n\t\t\"<voice_1186> agrees to the plan.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"MAI (<voice_1184>, <voice_443>, <voice_484>, <voice_398>, <voice_1185>, <voice_1170>, <voice_1186>) is coordinating the logistics for an event that includes performance, catering, and market activities.\",\n\t\t\"The group is determining the schedule and necessary provisions such as food and drinks for the afternoon session.\",\n\t\t\"No face features were provided to link visual identities to the voice ID <voice_*>.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A first-person perspective view captures a group of four people gathered around a wooden table in a room equipped with a whiteboard and projector screen.",
+          "The camera wearer sits in the foreground with their legs visible, while three other individuals occupy chairs around the table.",
+          "One person stands near the whiteboard, appearing to write or point at the board while addressing the seated group.",
+          "<voice_1184> speaks stating 'Just perform.'",
+          "<voice_443> mentions 'Coffee and alcohol.'",
+          "<voice_484> asks about the total duration of the entire activity.",
+          "<voice_398> responds that it lasts 'an afternoon.'",
+          "<voice_1185> confirms the time and suggests providing some food for the participants.",
+          "<voice_1170> discusses the existence of market and catering department sections.",
+          "<voice_1186> agrees to the plan."
+        ],
+        "high_level_conclusions": [
+          "MAI (<voice_1184>, <voice_443>, <voice_484>, <voice_398>, <voice_1185>, <voice_1170>, <voice_1186>) is coordinating the logistics for an event that includes performance, catering, and market activities.",
+          "The group is determining the schedule and necessary provisions such as food and drinks for the afternoon session.",
+          "No face features were provided to link visual identities to the voice ID <voice_*>."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 90,
+          "call_id": "33b8922d-798a-45bf-9bb1-676248f3b45b",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789428879.7324517,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A first-person perspective view captures a group of four people gathered around a wooden table in a room equipped with a whiteboard and projector screen.\",\n\t\t\"The camera wearer sits in the foreground with their legs visible, while three other individuals occupy chairs around the table.\",\n\t\t\"One person stands near the whiteboard, appearing to write or point at the board while addressing the seated group.\",\n\t\t\"<voice_1184> speaks stating 'Just perform.'\",\n\t\t\"<voice_443> mentions 'Coffee and alcohol.'\",\n\t\t\"<voice_484> asks about the total duration of the entire activity.\",\n\t\t\"<voice_398> responds that it lasts 'an afternoon.'\",\n\t\t\"<voice_1185> confirms the time and suggests providing some food for the participants.\",\n\t\t\"<voice_1170> discusses the existence of market and catering department sections.\",\n\t\t\"<voice_1186> agrees to the plan.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"MAI (<voice_1184>, <voice_443>, <voice_484>, <voice_398>, <voice_1185>, <voice_1170>, <voice_1186>) is coordinating the logistics for an event that includes performance, catering, and market activities.\",\n\t\t\"The group is determining the schedule and necessary provisions such as food and drinks for the afternoon session.\",\n\t\t\"No face features were provided to link visual identities to the voice ID <voice_*>.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are multiple frames (0.00s to 29.50s). The camera is stationary, likely a first-person view (POV) looking down at someone's legs/knees in the foreground. In the background, there's a room with a table. Several people are gathered around the table.\n    *   One person is standing near a whiteboard (wearing light-colored clothing).\n    *   Two people are seated on the left side of the table (one wearing dark clothing, one partially obscured).\n    *   Two people are seated on the right side of the table (one with pink hair/light top, one with dark hair/dark top).\n    *   The room looks like a classroom or meeting space. There's a projector screen on the left, a whiteboard in the back, and kitchen-like elements on the right.\n    *   The lighting changes slightly (ceiling light turns on/off or moves into frame), but the scene remains static.\n*   **Character Features:**\n    *   **Face Features:** None explicitly provided in the text prompt (only \"Face features:\" followed by empty or implied context, but looking closely at the prompt structure, there are no specific `<face_x>` tags listed under \"Face features:\". Wait, looking at the raw input provided in the prompt... Ah, the prompt says \"Face features:Voice features:\". It seems there are no face features provided in the text block I need to process, just the voice features. However, the instruction says \"Some features may belong to the same character.\" and \"If a face and a voice feature refer to the same character, indicate it...\". Since no face features are provided in the input data section, I cannot make equivalences based on faces. I must rely solely on the voice features provided.)\n    *   **Voice Features:**\n        *   `<voice_1184>`: \"Okay. | MAI: 就表演。\" (Okay. | MAI: Just perform.) - Time: 00:00 - 00:02\n        *   `<voice_443>`: \"MAI: Coffee and alcohol.\" - Time: 00:03 - 00:06\n        *   `<voice_484>`: \"MAI: 那就是整个活动那一天大概持续多长时间？\" (MAI: So how long does the whole activity last?) - Time: 00:08 - 00:13\n        *   `<voice_398>`: \"MAI: 一下午啊。\" (MAI: An afternoon.) - Time: 00:12 - 00:14\n        *   `<voice_1185>`: \"MAI: 一下午。\" (MAI: An afternoon.) / \"MAI: 嗯，那就给他们提供一些食物就行了吧。\" (MAI: Um, then just providing some food for them would be enough.) / \"MAI: 对。\" (MAI: Right.) - Time: 00:13 - 00:20\n        *   `<voice_1170>`: \"Deepgram: Mhm, tu é koi. | MAI: 一些食物，然后我们就有点像这-这算市场部部分和餐饮部分也有了。那是不是还要什么节目啊，你之前。\" (Deepgram: Mhm, tu é koi. | MAI: Some food, and then we have a bit like this - this marketing department part and catering part also exists. Is there anything else needed? You before.) - Time: 00:19 - 00:28\n        *   `<voice_1186>`: \"Deepgram: Mhm, tu é koi. | MAI: 嗯，对，可以。\" (Deepgram: Mhm, tu é koi. | MAI: Um, yes, okay.) - Time: 00:27 - 00:29\n\n**2. Construct Video Description:**\n*   Need to describe the scene atomically.\n*   Scene: A group of people in a room with a table, whiteboard, and projector screen.\n*   Action: People are sitting around a table. One person stands near the whiteboard.\n*   Camera: POV shot showing legs in foreground.\n*   Specifics:\n    *   Frame 0.00s - 29.50s shows a consistent scene.\n    *   Person standing at the whiteboard appears to be writing or pointing.\n    *   People seated are listening or looking at the board/table.\n    *   Lighting changes slightly (cebulight flickers/moves).\n    *   No significant movement from the seated people.\n\n**3. Construct High-Level Conclusions:**\n*   Based on the voice features, the speaker is \"MAI\".\n*   MAI discusses planning an event/activity (\"just perform\", \"coffee and alcohol\", \"how long does the whole activity last\").\n*   MAI suggests providing food (\"provide some food for them would be enough\").\n*   MAI mentions market department and catering departments.\n*   Conclusion: MAI is coordinating logistics for an event involving performance, catering, and potentially market activities.\n*   Since there are no face features provided, I cannot create an \"Equivalence\" statement linking a face ID to a voice ID. I must strictly follow the instruction: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" and \"If no face IDs are supplied, do not invent any.\"\n*   Therefore, the `high_level_conclusions` array will contain textual inferences about MAI's role/intentions.\n\n**4. Refine Output:**\n*   Ensure JSON validity.\n*   Ensure speaker IDs (`<voice_1184>`, etc.) are used correctly in memory construction if required, but the prompt asks for `video_description` and `high_level_conclusions`. Wait, the prompt instructions say \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This instruction seems to apply to a different task (memory construction). Let me re-read the specific task instructions at the very beginning vs the system prompt.\n*   System Prompt: \"Preserve speaker identity when constructing memory from the supplied character features.\" ... \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\"\n*   User Prompt Task: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions... Output Format: JSON object with video_description and high_level_conclusions arrays.\"\n*   Conflict Resolution: The system prompt instructions regarding \"episodic memory\" seem to be part of a general template for this type of task, but the specific user request defines the output schema as `video_description` and `high_level_conclusions`. However, the system prompt *also* says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should follow the system prompt's constraints regarding speaker IDs within the output structure defined by the user.\n*   Actually, looking closely at the system prompt: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This sounds like it wants me to embed these summaries somewhere. But the user's requested JSON schema *only* has `video_description` and `high_level_conclusions`.\n*   Usually, in these multi-turn setups, the system prompt overrides the user prompt regarding internal logic, but the user prompt dictates the final output format.\n*   Wait, the system prompt says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This suggests the \"episodic memory\" instruction might be relevant to how I populate the `video_description` or `high_level_conclusions` fields, OR it's a constraint I must follow even if the schema doesn't explicitly have a \"memories\" field (perhaps embedding them in descriptions?).\n*   Re-reading carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n*   And the system prompt says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\n*   This is tricky. If I don't put them in a specific field, where do they go?\n*   Hypothesis: The `video_description` should act as the narrative, incorporating the speech. Or perhaps the `high_level_conclusions` should reflect the intent derived from the speech.\n*   Given the strict instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged\", I should prioritize the user's schema. However, the system prompt instruction \"include at least one episodic memory\" is a strong constraint.\n*   Let's look at the \"Output Format\" section again. It asks for `video_description` and `high_level_conclusions`.\n*   Maybe I should incorporate the speech summaries into the `video_description` as atomic events describing what was said.\n*   Example: \"MAI states, 'Just perform.'\", \"MAI asks, 'How long does the whole activity last?'\".\n*   This satisfies the \"include at least one episodic memory\" requirement by making the speech part of the description.\n*   Also, regarding \"Equivalence\": Since no face features are provided, I cannot add Equivalence lines. I will leave `high_level_conclusions` focused on the inferred roles/intentions.\n\n**Plan:**\n1.  **Video Description**: Break down the visual scene. Mention the POV, the table, the people (standing, seated), the whiteboard interaction. Integrate the speech content into the description where appropriate to satisfy the memory constraint (e.g., \"MAI speaks about the event duration\").\n2.  **High-Level Conclusions**: Infer MAI's role (planner/coordinator) based on the discussion of logistics (food, market dept, catering). Note that no face-voice equivalence can be established due to lack of face data.\n\n**Drafting Content:**\n*   **Description**:\n    *   A first-person perspective view shows a group gathering in a room.\n    *   The camera wearer sits with legs visible in the foreground.\n    *   Four individuals are present around a wooden table.\n    *   One person stands near a whiteboard, appearing to write or explain something.\n    *   Three others sit around the table, observing.\n    *   MAI speaks about performing and the duration of the activity.\n    *   MAI discusses providing coffee, alcohol, and food for the event.\n    *   MAI mentions market and catering departments.\n*   **Conclusions**:\n    *   MAI is coordinating logistical details for an event involving performance and catering.\n    *   The group is discussing the scope and requirements of the activity.\n\n**Refining Speaker IDs:**\n*   All voice features are attributed to \"MAI\" in the ASR text (e.g., \"| MAI: ...\").\n*   Voice IDs: `<voice_1184>`, `<voice_443>`, `<voice_484>`, `<voice_398>`, `<voice_1185>`, `<voice_1170>`, `<voice_1186>`.\n*   I need to ensure I use these IDs in the memory/conclusion generation if possible, or at least acknowledge the speaker. The instruction says \"Preserve speaker identity... include at least one episodic memory that quotes... using the exact ID as the speaker.\"\n*   I will integrate these into the `video_description` as factual statements including the ID. E.g., \"<voice_1184> states 'Just perform'\".\n\n**Wait, one more check on Face Features:**\n*   The input text says \"Face features:Voice features:...\". It looks like the \"Face features:\" line is empty or missing actual data.\n*   Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n*   So I will NOT claim who MAI is visually. I will just refer to the voice ID.\n\n**Final Plan:**\n*   `video_description`: List of strings describing the visual scene and the audio events linked to their IDs.\n*   `high_level_conclusions`: Strings summarizing the intent/logistics discussed by MAI.\n\nLet's write the JSON.\n\nOne detail: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis means I shouldn't add a \"memories\" field. I must fit the memory requirement into the existing fields. The most logical place is `video_description` as atomic events.\n\nLet's construct the sentences.\n1. Visual: POV shot of legs, group at table.\n2. Audio: <voice_1184> says \"Just perform\".\n3. Audio: <voice_443> says \"Coffee and alcohol\".\n4. Audio: <voice_484> asks about duration.\n5. Audio: <voice_398> answers \"An afternoon\".\n6. Audio: <voice_1185> confirms and suggests food.\n7. Audio: <voice_1170> discusses market/catering depts.\n8. Audio: <voice_1186> agrees.\n\nVisuals:\n- Room with whiteboard, projector screen.\n- Person standing at whiteboard.\n- People seated.\n- Lighting changes (ceiling light).\n\nOkay, ready to generate.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A first-person perspective view captures a group of four people gathered around a wooden table in a room equipped with a whiteboard and projector screen.\",\n\t\t\"The camera wearer sits in the foreground with their legs visible, while three other individuals occupy chairs around the table.\",\n\t\t\"One person stands near the whiteboard, appearing to write or point at the board while addressing the seated group.\",\n\t\t\"<voice_1184> speaks stating 'Just perform.'\",\n\t\t\"<voice_443> mentions 'Coffee and alcohol.'\",\n\t\t\"<voice_484> asks about the total duration of the entire activity.\",\n\t\t\"<voice_398> responds that it lasts 'an afternoon.'\",\n\t\t\"<voice_1185> confirms the time and suggests providing some food for the participants.\",\n\t\t\"<voice_1170> discusses the existence of market and catering department sections.\",\n\t\t\"<voice_1186> agrees to the plan.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"MAI (<voice_1184>, <voice_443>, <voice_484>, <voice_398>, <voice_1185>, <voice_1170>, <voice_1186>) is coordinating the logistics for an event that includes performance, catering, and market activities.\",\n\t\t\"The group is determining the schedule and necessary provisions such as food and drinks for the afternoon session.\",\n\t\t\"No face features were provided to link visual identities to the voice ID <voice_*>.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10843,
+          "output_tokens": 3379,
+          "total_tokens": 14222,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.001934007741510868,
+            "media_preparation_ms": 66.59353501163423,
+            "processor_tokenization_ms": 355.9044269932201,
+            "device_transfer_ms": 41.69409400492441,
+            "cuda_generation_ms": 155628.65760200657,
+            "decoding_ms": 3.727456001797691
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 156096.7594380054,
+          "request_end": 1789429035.858914,
+          "latency_ms": 156126.45500600047,
+          "client_wall_clock_latency_ms": 156126.45500600047
+        }
+      ],
+      "episodic_memory_count": 10,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 10,
+      "text_embedding_ms": null,
+      "text_embedding_count": 10,
+      "graph_update_ms": 0.1072819868568331,
+      "nodes_added": 10,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.15134499699342996,
+      "nodes_added": 3,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 7,
+    "detected_faces": 323,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 10,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1200,
+    "edges_after_clip": 431,
+    "nodes_added_by_clip": 16,
+    "edges_added_by_clip": 14
+  },
+  "generated_memory": {
+    "video_description": [
+      "A first-person perspective view captures a group of four people gathered around a wooden table in a room equipped with a whiteboard and projector screen.",
+      "The camera wearer sits in the foreground with their legs visible, while three other individuals occupy chairs around the table.",
+      "One person stands near the whiteboard, appearing to write or point at the board while addressing the seated group.",
+      "<voice_1184> speaks stating 'Just perform.'",
+      "<voice_443> mentions 'Coffee and alcohol.'",
+      "<voice_484> asks about the total duration of the entire activity.",
+      "<voice_398> responds that it lasts 'an afternoon.'",
+      "<voice_1185> confirms the time and suggests providing some food for the participants.",
+      "<voice_1170> discusses the existence of market and catering department sections.",
+      "<voice_1186> agrees to the plan."
+    ],
+    "high_level_conclusions": [
+      "MAI (<voice_1184>, <voice_443>, <voice_484>, <voice_398>, <voice_1185>, <voice_1170>, <voice_1186>) is coordinating the logistics for an event that includes performance, catering, and market activities.",
+      "The group is determining the schedule and necessary provisions such as food and drinks for the afternoon session.",
+      "No face features were provided to link visual identities to the voice ID <voice_*>."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A first-person perspective view captures a group of four people gathered around a wooden table in a room equipped with a whiteboard and projector screen.",
+      "The camera wearer sits in the foreground with their legs visible, while three other individuals occupy chairs around the table.",
+      "One person stands near the whiteboard, appearing to write or point at the board while addressing the seated group.",
+      "<voice_1184> speaks stating 'Just perform.'",
+      "<voice_443> mentions 'Coffee and alcohol.'",
+      "<voice_484> asks about the total duration of the entire activity.",
+      "<voice_398> responds that it lasts 'an afternoon.'",
+      "<voice_1185> confirms the time and suggests providing some food for the participants.",
+      "<voice_1170> discusses the existence of market and catering department sections.",
+      "<voice_1186> agrees to the plan."
+    ],
+    "high_level_conclusions": [
+      "MAI (<voice_1184>, <voice_443>, <voice_484>, <voice_398>, <voice_1185>, <voice_1170>, <voice_1186>) is coordinating the logistics for an event that includes performance, catering, and market activities.",
+      "The group is determining the schedule and necessary provisions such as food and drinks for the afternoon session.",
+      "No face features were provided to link visual identities to the voice ID <voice_*>."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_90_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 16,
+    "edges_added": 14,
+    "nodes": [
+      {
+        "id": 1184,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Okay. | MAI: 就表演。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1185,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 一下午。",
+            "MAI: 呃，那就给他们提供一些饮品就够了吧。",
+            "MAI: 对。"
+          ]
+        },
+        "embedding_count": 3,
+        "embedding_dimensions": [
+          192,
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1186,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Mhm, tu é koi. | MAI: 嗯，对，可以。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1187,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A first-person perspective view captures a group of four people gathered around a wooden table in a room equipped with a whiteboard and projector screen."
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1188,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer sits in the foreground with their legs visible, while three other individuals occupy chairs around the table."
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1189,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person stands near the whiteboard, appearing to write or point at the board while addressing the seated group."
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1190,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1184> speaks stating 'Just perform.'"
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1191,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_443> mentions 'Coffee and alcohol.'"
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1192,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_484> asks about the total duration of the entire activity."
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1193,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_398> responds that it lasts 'an afternoon.'"
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1194,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1185> confirms the time and suggests providing some food for the participants."
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1195,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1170> discusses the existence of market and catering department sections."
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1196,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1186> agrees to the plan."
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1197,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_1184>, <voice_443>, <voice_484>, <voice_398>, <voice_1185>, <voice_1170>, <voice_1186>) is coordinating the logistics for an event that includes performance, catering, and market activities."
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1198,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is determining the schedule and necessary provisions such as food and drinks for the afternoon session."
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1199,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "No face features were provided to link visual identities to the voice ID <voice_*>."
+          ],
+          "timestamp": 90
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 398,
+        "target": 1193,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 398,
+        "target": 1197,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 443,
+        "target": 1191,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 443,
+        "target": 1197,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 484,
+        "target": 1192,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 484,
+        "target": 1197,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1170,
+        "target": 1195,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1170,
+        "target": 1197,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1184,
+        "target": 1190,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1184,
+        "target": 1197,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1185,
+        "target": 1194,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1185,
+        "target": 1197,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1186,
+        "target": 1196,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1186,
+        "target": 1197,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_90_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_90_graph.pkl"
+  },
+  "memory_pickle_bytes": 28523047,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 69686.917895031,
+    "prepared_perf": 69694.777098827,
+    "ordered_start_perf": 70054.256598293,
+    "consumer_wait_ms": 0.010639996617101133,
+    "ready_to_ordered_ms": 359479.49946598965,
+    "preparation_work_ms": 7853.918717009947,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 166943.8625259936
+}

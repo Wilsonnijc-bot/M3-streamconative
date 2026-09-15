@@ -1,0 +1,56 @@
+{
+  "question_id": "Q07",
+  "candidate_mapping": {
+    "0": "D",
+    "1": "C",
+    "2": "A",
+    "3": "B"
+  },
+  "grades": {
+    "0": {
+      "correct": false,
+      "reason": "Claims insufficient information instead of providing the major."
+    },
+    "1": {
+      "correct": false,
+      "reason": "Claims insufficient information instead of providing the major."
+    },
+    "2": {
+      "correct": true,
+      "reason": "Computer Science is semantically equivalent to Computer / Programming."
+    },
+    "3": {
+      "correct": false,
+      "reason": "States that the memories are insufficient to give a definitive answer rather than identifying her major."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q07",
+    "method": null,
+    "call_id": "89100e97-10f1-4c20-8934-1a475e4851cc",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437138.650469,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 202,
+    "output_tokens": 290,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 3460.941526995157
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"Claims insufficient information instead of providing the major.\"\n  },\n  \"1\": {\n    \"correct\": false,\n    \"reason\": \"Claims insufficient information instead of providing the major.\"\n  },\n  \"2\": {\n    \"correct\": true,\n    \"reason\": \"Computer Science is semantically equivalent to Computer / Programming.\"\n  },\n  \"3\": {\n    \"correct\": false,\n    \"reason\": \"States that the memories are insufficient to give a definitive answer rather than identifying her major.\"\n  }\n}\n```",
+    "total_tokens": 492,
+    "request_end": 1789437142.1114783,
+    "latency_ms": 3461.0080429993104,
+    "client_wall_clock_latency_ms": 3461.0080429993104,
+    "api_request_wall_clock_latency_ms": 3461.0080429993104
+  },
+  "included_in_qa_latency": false
+}

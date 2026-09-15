@@ -1,0 +1,517 @@
+{
+  "clip_id": 28,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0028.mp4",
+  "end_to_end_memory_generation_ms": 528712.4770800001,
+  "latency_ms": {
+    "clip_decode": 3863.6173639970366,
+    "deepgram_asr": 2.6580789999570698,
+    "mai_transcribe_asr": 2.5397459976375103,
+    "asr_total": 3.4736720044747926,
+    "audio_segmentation": 7.996021005965304,
+    "speech_embedding_campplus": 1567.9813679962535,
+    "facial_detection_recognition_buffalo_l": 3780.2394199970877,
+    "face_clustering": 16.742984000302386,
+    "vlm_memory_generation": 166242.50280499837,
+    "text_embedding": 423.4433839956182,
+    "graph_update_total": 243.37882800318766
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 28,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 1059,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789416401.7555535,
+          "status": "success",
+          "total_tokens": 218,
+          "request_end": 1789416402.1786423,
+          "latency_ms": 423.0889769969508
+        }
+      ],
+      "total_tokens": 218,
+      "latency_ms": 423.4433839956182
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.6580789999570698,
+        "openrouter-mai-transcribe-2": 2.5397459976375103
+      },
+      "asr_total_ms": 3.4736720044747926,
+      "audio_segmentation_ms": 7.996021005965304,
+      "speech_embedding_ms": 1567.9813679962535,
+      "graph_update_ms": 234.8230740026338,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1832.453713999712
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3780.2394199970877,
+      "face_clustering_ms": 16.742984000302386,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 290,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3957.1415909958887
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_337>",
+        "<voice_0>",
+        "<voice_250>",
+        "<voice_261>",
+        "<voice_338>",
+        "<voice_339>"
+      ],
+      "context_preparation_ms": 4283.4906990028685,
+      "vlm_ms": 166242.50280499837,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a wooden table covered with a red and white checkered tablecloth.\",\n\t\t\"The camera is positioned from a first-person perspective, showing the legs and hands of the person filming.\",\n\t\t\"People on the table are engaged in conversation and handling various items, including a cardboard box.\",\n\t\t\"One individual wearing a peach-colored shirt holds a black rectangular object.\",\n\t\t\"Hands from the foreground reach towards the box on the table during the interaction.\",\n\t\t\"The group appears to be discussing tasks or plans while sitting in a room with a window and whiteboard in the background.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_337>: MAI states that her work should be considered finished.\",\n\t\t\"<voice_0>: MAI instructs placing items in a box, mentions setting off, and notes that someone missed their chance.\",\n\t\t\"<voice_250>: MAI mentions completing a task and feeling provoked by someone else.\",\n\t\t\"<voice_261>: MAI asks if there are still opportunities remaining.\",\n\t\t\"<voice_338>: MAI confirms that something is likely correct.\",\n\t\t\"<voice_339>: MAI suggests putting money inside a container and packing oneself.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are seated around a wooden table covered with a red and white checkered tablecloth.",
+          "The camera is positioned from a first-person perspective, showing the legs and hands of the person filming.",
+          "People on the table are engaged in conversation and handling various items, including a cardboard box.",
+          "One individual wearing a peach-colored shirt holds a black rectangular object.",
+          "Hands from the foreground reach towards the box on the table during the interaction.",
+          "The group appears to be discussing tasks or plans while sitting in a room with a window and whiteboard in the background."
+        ],
+        "high_level_conclusions": [
+          "<voice_337>: MAI states that her work should be considered finished.",
+          "<voice_0>: MAI instructs placing items in a box, mentions setting off, and notes that someone missed their chance.",
+          "<voice_250>: MAI mentions completing a task and feeling provoked by someone else.",
+          "<voice_261>: MAI asks if there are still opportunities remaining.",
+          "<voice_338>: MAI confirms that something is likely correct.",
+          "<voice_339>: MAI suggests putting money inside a container and packing oneself."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 28,
+          "call_id": "39710a74-f6cf-46f5-a321-7b9797cb220b",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789416235.512138,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a wooden table covered with a red and white checkered tablecloth.\",\n\t\t\"The camera is positioned from a first-person perspective, showing the legs and hands of the person filming.\",\n\t\t\"People on the table are engaged in conversation and handling various items, including a cardboard box.\",\n\t\t\"One individual wearing a peach-colored shirt holds a black rectangular object.\",\n\t\t\"Hands from the foreground reach towards the box on the table during the interaction.\",\n\t\t\"The group appears to be discussing tasks or plans while sitting in a room with a window and whiteboard in the background.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_337>: MAI states that her work should be considered finished.\",\n\t\t\"<voice_0>: MAI instructs placing items in a box, mentions setting off, and notes that someone missed their chance.\",\n\t\t\"<voice_250>: MAI mentions completing a task and feeling provoked by someone else.\",\n\t\t\"<voice_261>: MAI asks if there are still opportunities remaining.\",\n\t\t\"<voice_338>: MAI confirms that something is likely correct.\",\n\t\t\"<voice_339>: MAI suggests putting money inside a container and packing oneself.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are 30 frames showing a group of people sitting around a table with a red-and-white checkered tablecloth. The camera seems to be held by someone sitting opposite them (POV), as hands and legs are visible in the foreground in later frames.\n    *   People involved:\n        *   Person on the left (black top).\n        *   Person next to them (white shirt).\n        *   Person in the middle/right (pinkish top).\n        *   Person further right/back (greenish top).\n        *   Camera wearer (legs/hands visible).\n    *   Action: They seem to be interacting, possibly unpacking or organizing items on the table. There's a box on the table. Hands reach into the box.\n*   **Voice Features:**\n    *   `<voice_337>`: \"Mai: 我完成应该就做好了。\" (00:00 - 00:02) -> Speaker: Mai. Content: About finishing something.\n    *   `<voice_0>`: Multiple segments.\n        *   \"MAI: 对，我放到一起。\" (00:01 - 00:04)\n        *   \"MAI: 对不对，放到这个盒子边缘。\" (00:14 - 00:17)\n        *   \"MAI: 你看。\" (00:16 - 00:18)\n        *   \"MAI: 就出发了。对，这就是最后一步，给你一点机会，但是你还是没有抓住啊。\" (00:17 - 00:25)\n    *   `<voice_250>`: \"MAI: 允许说一句我完成了，然后他挑衅我，我靠。\" (00:03 - 00:09)\n    *   `<voice_261>`: \"MAI: 那你还有机会吗？\" (00:09 - 00:11)\n    *   `<voice_338>`: \"MAI: 应该是吧。\" (00:12 - 00:14)\n    *   `<voice_339>`: \"Deepgram: 你命你命 | MAI: 你可以把钱放在里面，我需要装的话让自己装。\" (00:24 - 00:29)\n\n**2. Construct Video Description:**\n*   Need to describe the scene and actions chronologically.\n*   Scene: Group meeting/discussion around a table.\n*   Actions:\n    *   People are seated.\n    *   Someone (Camera wearer?) reaches towards the table.\n    *   Interaction involves a box on the table.\n    *   Hands are seen manipulating objects or reaching into the box.\n    *   The camera perspective shifts slightly, showing legs and hands of the POV person.\n    *   One person (likely the one in pink/orange shirt) is handling a black object/device.\n    *   Another person (left side) is looking at papers/items.\n    *   Towards the end, hands reach into the box on the table.\n\n**3. Construct High-Level Conclusions:**\n*   Identify speakers based on voice IDs. All voice IDs provided (`<voice_337>`, `<voice_0>`, `<voice_250>`, `<voice_261>`, `<voice_338>`, `<voice_339>`) have the label \"MAI\". This implies there might be multiple speakers labeled MAI, or it's a specific dataset quirk where the speaker name is repeated. However, looking closely at the ASR text:\n    *   `<voice_337>`: \"我完成应该就做好了\" (I finished, it should be done well.)\n    *   `<voice_0>`: \"对，我放到一起... 放到这个盒子边缘... 就出发了... 给你一点机会...\" (Yes, I put them together... put on the edge of this box... we set off... give you a chance...)\n    *   `<voice_250>`: \"允许说一句我完成了，然后他挑衅我，我靠。\" (Allow me to say I finished, then he provoked me, I swear.)\n    *   `<voice_261>`: \"那你还有机会吗？\" (So do you still have a chance?)\n    *   `<voice_338>`: \"应该是吧。\" (Should be so.)\n    *   `<voice_339>`: \"你可以把钱放在里面，我需要装的话让自己装。\" (You can put the money inside, if I need to pack, let myself pack.)\n*   Wait, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   It also says: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   Crucially, I need to check if there are Face IDs. The prompt says \"Face features:\" but the list is empty. So I cannot make equivalences like `Equivalence: <face_x>, <voice_y>`.\n*   I need to create memories for each voice ID.\n*   Memory construction:\n    *   `<voice_337>`: Mai states she believes her work is completed.\n    *   `<voice_0>`: Mai discusses putting things in a box, mentions setting off, and comments on someone missing a chance.\n    *   `<voice_250>`: Mai mentions completing something and being provoked.\n    *   `<voice_261>`: Mai asks about remaining chances.\n    *   `<voice_338>`: Mai confirms something is likely correct.\n    *   `<voice_339>`: Mai suggests putting money inside and packing oneself.\n*   Wait, the instruction says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"Use only IDs supplied in the input\".\n*   Also, \"Do not replace the ID with 'a speaker'...\".\n*   Since there are no face IDs, I cannot link them visually.\n*   I need to ensure the JSON structure matches the requested schema.\n\n**Refining the Plan:**\n1.  **Video Description**: Describe the scene (group around table, checkered cloth), the interaction (handling items, box), and the camera movement (POV showing legs/hands).\n2.  **High-Level Conclusions**:\n    *   Create memory entries for each voice ID found in the input.\n    *   Format: \"Speaker ID: Transcript summary/quote\".\n    *   Wait, the instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". It doesn't explicitly demand a specific format for the memory string other than it being part of the array. But usually, these tasks expect a natural language sentence describing the event involving that speaker.\n    *   Let's look at the \"High-Level Conclusions\" section requirement again. \"Generate high-level reasoning-based conclusions... Use logical inference... If a face and a voice feature refer to the same character, indicate it...\".\n    *   Since there are NO face features, I cannot make equivalences.\n    *   However, the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" seems to apply to the *memory generation* part of the task described in the system prompt (\"Preserve speaker identity when constructing memory...\"). But the user prompt asks for \"Video Description\" and \"High-Level Conclusions\".\n    *   Actually, reading the system prompt carefully: \"Your task consists of two parts: 1. Video Description ... 2. High-Level Conclusions\".\n    *   BUT the system prompt *also* says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This looks like a conflict or a specific instruction for the *output* of the memory extraction process which is implied to be part of the analysis.\n    *   Usually, in these tasks, the \"High-Level Conclusions\" array often contains the memory summaries derived from the voice tracks if the task is about extracting memories. Or perhaps the \"Video Description\" covers the visual, and \"High-Level Conclusions\" covers the audio/inference.\n    *   Let's re-read the specific constraint: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   This instruction is under the \"System Prompt\" block which overrides general behavior. It implies the output should contain these memories. Where? Likely within the `high_level_conclusions` or potentially mixed into `video_description` if it describes the event. Given the schema request `[\"...\", \"...\"]` for both, and the instruction \"include at least one episodic memory\", I will place these memory strings in the `high_level_conclusions` array, as they represent the \"reasoning/conclusion\" about what happened verbally.\n    *   Wait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This refers to the User Prompt's schema.\n    *   Okay, I will construct the `high_level_conclusions` to include the memory summaries for each voice ID as required by the system prompt constraints regarding voice IDs.\n    *   Structure: \"Memory: <voice_id>: <transcript>\". Or just the transcript attributed to the ID.\n    *   Let's try to follow the pattern: \"Speaker <voice_id> says: [Transcript]\".\n    *   Actually, the instruction says \"using the exact ID as the speaker\". So maybe: \"<voice_0>: MAI puts items in a box and mentions giving someone a chance.\"\n    *   Let's draft the memories.\n    *   `<voice_337>`: MAI states she thinks her task is finished.\n    *   `<voice_0>`: MAI instructs placing items in a box, mentions setting off, and notes someone missed a chance.\n    *   `<voice_250>`: MAI mentions finishing up and feeling provoked.\n    *   `<voice_261>`: MAI asks if there are still opportunities left.\n    *   `<voice_338>`: MAI confirms something is likely true.\n    *   `<voice_339>`: MAI suggests putting money inside and packing oneself.\n\n    *   Wait, I need to check if I should merge identical speakers. All voice IDs have \"MAI\" as the speaker name in the ASR field. This is suspicious. It might mean different instances of the same person, or different people named Mai. Given the IDs are unique (<voice_337>, <voice_0>, etc.), I should treat them as distinct entities unless instructed otherwise. The instruction says \"Each feature has a unique ID... Some features may belong to the same character.\" Since I don't have face IDs to confirm, I must rely on the IDs. I will treat them as distinct voice features associated with the speaker \"MAI\" (or just use the ID).\n    *   Actually, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory... using the exact ID as the speaker.\"\n    *   So I will write: \"<voice_0>: MAI places items in a box and comments on a missed opportunity.\"\n    *   And similarly for others.\n\n    *   Wait, one more check on the System Prompt: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n    *   Okay, I will generate the JSON now.\n\n    *   **Video Description**:\n        *   Group of people sitting around a table with a checkered cloth.\n        *   Camera is POV, showing legs/hands.\n        *   People are interacting with items on the table, specifically a box.\n        *   One person handles a black device/object.\n        *   Hands reach into the box.\n    *   **High Level Conclusions**:\n        *   Include the memory summaries for each voice ID.\n\n    *   Wait, I need to make sure I don't hallucinate face IDs. The input \"Face features:\" is empty. So no equivalences.\n\n    *   Let's refine the memory strings to be concise summaries.\n    *   `<voice_337>`: MAI asserts her work is completed.\n    *   `<voice_0>`: MAI directs placing items in a box, mentions departure, and criticizes a missed chance.\n    *   `<voice_250>`: MAI mentions completion and provocation.\n    *   `<voice_261>`: MAI questions remaining opportunities.\n    *   `<voice_338>`: MAI affirms a likelihood.\n    *   `<voice_339>`: MAI suggests storing money and self-packing.\n\n    *   Wait, the instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\n    *   I'll format them as: \"<voice_ID>: [Summary]\"\n\n    *   Wait, checking the instruction again: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n    *   This means I must output exactly the JSON structure provided in the User Prompt.\n    *   The User Prompt schema:\n        ```json\n        {\n            \"video_description\": [\n                \"string\",\n                \"string\"\n            ],\n            \"high_level_conclusions\": [\n                \"string\",\n                \"string\"\n            ]\n        }\n        ```\n    *   Okay, I will populate these.\n\n    *   One detail: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no faces, I won't add this.\n    *   I will add the voice memories to `high_level_conclusions`.\n\n    *   Wait, I need to check if the voice memories count as \"High-Level Conclusions\". The system prompt says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". Then it gives specific instructions about memory construction. It implies the memory construction is part of the overall task output, likely fitting into the `high_level_conclusions` array as reasoned conclusions about the dialogue.\n    *   I will proceed with this assumption.\n\n    *   Let's double check the voice IDs.\n    *   `<voice_337>`\n    *   `<voice_0>`\n    *   `<voice_250>`\n    *   `<voice_261>`\n    *   `<voice_338>`\n    *   `<voice_339>`\n    *   All have non-empty speech.\n\n    *   Drafting the response.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a wooden table covered with a red and white checkered tablecloth.\",\n\t\t\"The camera is positioned from a first-person perspective, showing the legs and hands of the person filming.\",\n\t\t\"People on the table are engaged in conversation and handling various items, including a cardboard box.\",\n\t\t\"One individual wearing a peach-colored shirt holds a black rectangular object.\",\n\t\t\"Hands from the foreground reach towards the box on the table during the interaction.\",\n\t\t\"The group appears to be discussing tasks or plans while sitting in a room with a window and whiteboard in the background.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_337>: MAI states that her work should be considered finished.\",\n\t\t\"<voice_0>: MAI instructs placing items in a box, mentions setting off, and notes that someone missed their chance.\",\n\t\t\"<voice_250>: MAI mentions completing a task and feeling provoked by someone else.\",\n\t\t\"<voice_261>: MAI asks if there are still opportunities remaining.\",\n\t\t\"<voice_338>: MAI confirms that something is likely correct.\",\n\t\t\"<voice_339>: MAI suggests putting money inside a container and packing oneself.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10875,
+          "output_tokens": 3607,
+          "total_tokens": 14482,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.001944004907272756,
+            "media_preparation_ms": 57.43306499789469,
+            "processor_tokenization_ms": 444.8413799982518,
+            "device_transfer_ms": 44.866536001791246,
+            "cuda_generation_ms": 165660.0260539999,
+            "decoding_ms": 3.686324998852797
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 166211.01820100012,
+          "request_end": 1789416401.7546432,
+          "latency_ms": 166242.50280499837,
+          "client_wall_clock_latency_ms": 166242.50280499837
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 6
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.07720500434515998,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 8.478548996208701,
+      "nodes_added": 6,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 6,
+    "detected_faces": 290,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 6,
+    "nodes_after_clip": 352,
+    "edges_after_clip": 130,
+    "nodes_added_by_clip": 15,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a wooden table covered with a red and white checkered tablecloth.",
+      "The camera is positioned from a first-person perspective, showing the legs and hands of the person filming.",
+      "People on the table are engaged in conversation and handling various items, including a cardboard box.",
+      "One individual wearing a peach-colored shirt holds a black rectangular object.",
+      "Hands from the foreground reach towards the box on the table during the interaction.",
+      "The group appears to be discussing tasks or plans while sitting in a room with a window and whiteboard in the background."
+    ],
+    "high_level_conclusions": [
+      "<voice_337>: MAI states that her work should be considered finished.",
+      "<voice_0>: MAI instructs placing items in a box, mentions setting off, and notes that someone missed their chance.",
+      "<voice_250>: MAI mentions completing a task and feeling provoked by someone else.",
+      "<voice_261>: MAI asks if there are still opportunities remaining.",
+      "<voice_338>: MAI confirms that something is likely correct.",
+      "<voice_339>: MAI suggests putting money inside a container and packing oneself."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are seated around a wooden table covered with a red and white checkered tablecloth.",
+      "The camera is positioned from a first-person perspective, showing the legs and hands of the person filming.",
+      "People on the table are engaged in conversation and handling various items, including a cardboard box.",
+      "One individual wearing a peach-colored shirt holds a black rectangular object.",
+      "Hands from the foreground reach towards the box on the table during the interaction.",
+      "The group appears to be discussing tasks or plans while sitting in a room with a window and whiteboard in the background."
+    ],
+    "high_level_conclusions": [
+      "<voice_337>: MAI states that her work should be considered finished.",
+      "<voice_0>: MAI instructs placing items in a box, mentions setting off, and notes that someone missed their chance.",
+      "<voice_250>: MAI mentions completing a task and feeling provoked by someone else.",
+      "<voice_261>: MAI asks if there are still opportunities remaining.",
+      "<voice_338>: MAI confirms that something is likely correct.",
+      "<voice_339>: MAI suggests putting money inside a container and packing oneself."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_28_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 15,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 337,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 拧完应该就做好了。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 338,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 应该是吧。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 339,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: 你仁你也 | MAI: 你可以把钱放在里面，我需要装的话让自己装。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 340,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are seated around a wooden table covered with a red and white checkered tablecloth."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 341,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera is positioned from a first-person perspective, showing the legs and hands of the person filming."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 342,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "People on the table are engaged in conversation and handling various items, including a cardboard box."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 343,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One individual wearing a peach-colored shirt holds a black rectangular object."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 344,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Hands from the foreground reach towards the box on the table during the interaction."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 345,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group appears to be discussing tasks or plans while sitting in a room with a window and whiteboard in the background."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 346,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_337>: MAI states that her work should be considered finished."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 347,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0>: MAI instructs placing items in a box, mentions setting off, and notes that someone missed their chance."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 348,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_250>: MAI mentions completing a task and feeling provoked by someone else."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 349,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_261>: MAI asks if there are still opportunities remaining."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 350,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_338>: MAI confirms that something is likely correct."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 351,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_339>: MAI suggests putting money inside a container and packing oneself."
+          ],
+          "timestamp": 28
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 347,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 250,
+        "target": 348,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 261,
+        "target": 349,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 337,
+        "target": 346,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 338,
+        "target": 350,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 339,
+        "target": 351,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_28_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_28_graph.pkl"
+  },
+  "memory_pickle_bytes": 8400845,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 57060.342853272,
+    "prepared_perf": 57066.226056573,
+    "ordered_start_perf": 57411.671818837,
+    "consumer_wait_ms": 0.009156996384263039,
+    "ready_to_ordered_ms": 345445.7622639966,
+    "preparation_work_ms": 5877.936616001534,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 176750.07472799916
+}

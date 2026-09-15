@@ -1,0 +1,602 @@
+{
+  "clip_id": 119,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0119.mp4",
+  "end_to_end_memory_generation_ms": 611279.065056995,
+  "latency_ms": {
+    "clip_decode": 5535.119804000715,
+    "deepgram_asr": 713.0546210100874,
+    "mai_transcribe_asr": 1078.30122600717,
+    "asr_total": 1079.3839719990501,
+    "audio_segmentation": 9.792488999664783,
+    "speech_embedding_campplus": 1100.2658780053025,
+    "facial_detection_recognition_buffalo_l": 3444.0350490040146,
+    "face_clustering": 2.341373998206109,
+    "vlm_memory_generation": 205411.4375400095,
+    "text_embedding": 628.0966510094004,
+    "graph_update_total": 770.6881370104384
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 119,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 15,
+      "input_chars": 1083,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789440851.0275595,
+          "status": "success",
+          "total_tokens": 250,
+          "request_end": 1789440851.655527,
+          "latency_ms": 627.9681599989999
+        }
+      ],
+      "total_tokens": 250,
+      "latency_ms": 628.0966510094004
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 713.0546210100874,
+        "openrouter-mai-transcribe-2": 1078.30122600717
+      },
+      "asr_total_ms": 1079.3839719990501,
+      "audio_segmentation_ms": 9.792488999664783,
+      "speech_embedding_ms": 1100.2658780053025,
+      "graph_update_ms": 770.5339069943875,
+      "asr_segment_count": 7,
+      "speech_embedding_count": 7,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1899.8670489963843
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3444.0350490040146,
+      "face_clustering_ms": 2.341373998206109,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 77,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3489.0629120054655
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_912>",
+        "<voice_1599>",
+        "<voice_366>",
+        "<voice_1600>",
+        "<voice_1601>",
+        "<voice_1602>",
+        "<voice_1603>"
+      ],
+      "context_preparation_ms": 4206.635544003802,
+      "vlm_ms": 205411.4375400095,
+      "raw_response": "{\n  \"video_description\": [\n    \"First-person view shows hands manipulating cables and devices on a desk next to a bed.\",\n    \"The camera pans to reveal a room where a group of people are gathered around a table.\",\n    \"A woman in white stands near the table while others sit.\",\n    \"<voice_912> asks: 'That shouldn't stop for a short time. Is it longer half an hour?'\",\n    \"<voice_1599> responds: 'Half an hour isn't much.'\",\n    \"<voice_366> states: 'You can break it down, this is their own part, this is guest part.'\",\n    \"<voice_1600> says: 'You-you don't need.'\",\n    \"<voice_1601> asks: 'How many things they bring.'\",\n    \"<voice_1602> asks: 'And whether they are extras or regular cast?'\",\n    \"<voice_1603> replies: 'Yes, that's uncertain.'\",\n    \"The group continues discussing around a table with a whiteboard and clapperboard.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is conducting a meeting related to a film or video production project.\",\n    \"Speaker MAI is coordinating the duration and script roles of the participants.\",\n    \"There is uncertainty regarding whether certain participants are extras or regular cast members.\",\n    \"The environment includes equipment like a projector screen and lighting, suggesting a rehearsal space.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "First-person view shows hands manipulating cables and devices on a desk next to a bed.",
+          "The camera pans to reveal a room where a group of people are gathered around a table.",
+          "A woman in white stands near the table while others sit.",
+          "<voice_912> asks: 'That shouldn't stop for a short time. Is it longer half an hour?'",
+          "<voice_1599> responds: 'Half an hour isn't much.'",
+          "<voice_366> states: 'You can break it down, this is their own part, this is guest part.'",
+          "<voice_1600> says: 'You-you don't need.'",
+          "<voice_1601> asks: 'How many things they bring.'",
+          "<voice_1602> asks: 'And whether they are extras or regular cast?'",
+          "<voice_1603> replies: 'Yes, that's uncertain.'",
+          "The group continues discussing around a table with a whiteboard and clapperboard."
+        ],
+        "high_level_conclusions": [
+          "The group is conducting a meeting related to a film or video production project.",
+          "Speaker MAI is coordinating the duration and script roles of the participants.",
+          "There is uncertainty regarding whether certain participants are extras or regular cast members.",
+          "The environment includes equipment like a projector screen and lighting, suggesting a rehearsal space."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 119,
+          "call_id": "81962ef2-d7ab-4a78-9a4f-145095c54be7",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789440645.6151342,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"First-person view shows hands manipulating cables and devices on a desk next to a bed.\",\n    \"The camera pans to reveal a room where a group of people are gathered around a table.\",\n    \"A woman in white stands near the table while others sit.\",\n    \"<voice_912> asks: 'That shouldn't stop for a short time. Is it longer half an hour?'\",\n    \"<voice_1599> responds: 'Half an hour isn't much.'\",\n    \"<voice_366> states: 'You can break it down, this is their own part, this is guest part.'\",\n    \"<voice_1600> says: 'You-you don't need.'\",\n    \"<voice_1601> asks: 'How many things they bring.'\",\n    \"<voice_1602> asks: 'And whether they are extras or regular cast?'\",\n    \"<voice_1603> replies: 'Yes, that's uncertain.'\",\n    \"The group continues discussing around a table with a whiteboard and clapperboard.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is conducting a meeting related to a film or video production project.\",\n    \"Speaker MAI is coordinating the duration and script roles of the participants.\",\n    \"There is uncertainty regarding whether certain participants are extras or regular cast members.\",\n    \"The environment includes equipment like a projector screen and lighting, suggesting a rehearsal space.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   0.00s - 5.50s: First-person view (POV) of someone sitting at a desk/table with electronics (laptops, cables). The room looks like a bedroom or home office. There's a bed, a yellow chair, and various tech gear.\n    *   6.00s - 10.00s: The camera moves away from the desk area into a larger room. A woman in white clothing is seen standing near a table.\n    *   10.50s - 16.00s: The camera pans around the room. Several people are gathered around a table covered with papers and props. One person is pointing at a whiteboard. Another person with long pink hair is seated.\n    *   16.50s - 22.00s: The group continues to discuss something at the table. The person in white walks around. Someone is writing on the whiteboard.\n    *   22.50s - 29.50s: The camera focuses on the group discussion. Hands appear briefly holding a clapperboard or similar prop. The setting looks like a film set or a planning session for a shoot. There's a projector screen in the background.\n\n*   **Voice Features:**\n    *   `<voice_912>`: \"MAI: That shouldn't stop for a short time. Is it longer half an hour?\" (00:07 - 00:14)\n    *   `<voice_1599>`: \"MAI: Half an hour isn't much.\" (00:13 - 00:15)\n    *   `<voice_366>`: \"MAI: You can break it down, this is their own part, this is guest part.\" (00:15 - 00:22)\n    *   `<voice_1600>`: \"MAI: You-you don't need.\" (00:24 - 00:26)\n    *   `<voice_1601>`: \"MAI: How many east-west they bring.\" (00:25 - 00:27) -> Likely \"east-west\" refers to direction or perhaps a specific term, but contextually seems like \"how many guests/costumes/items\". Wait, looking closer at ASR: \"他带多少东西\" (He brings how many things). The ASR says \"东\" (East) instead of \"的\" (de) or similar? Actually, looking at the raw text: \"他带多少东西\" usually translates to \"How many things he brings\". The ASR provided is \"他带多少东\" then cut off? No, it says \"他带多少东\" then \"西\". It might be a transcription error for \"东西\" (things). Let's assume it means \"How many things they bring\".\n    *   `<voice_1602>`: \"MAI: And whether they are extras or regular cast?\" (00:26 - 00:29)\n    *   `<voice_1603>`: \"MAI: Yes, that's uncertain.\" (00:28 - 00:30)\n\n**2. Construct Video Description:**\n*   Need to describe the sequence of events atomically.\n*   Start with the POV shot of the desk setup.\n*   Transition to the wider room view where a meeting is happening.\n*   Describe the interaction at the table involving the whiteboard and props.\n*   Mention the specific actions like pointing at the board and handling the clapperboard.\n\n**3. Construct High-Level Conclusions:**\n*   Identify the speaker MAI. The voice features consistently attribute speech to \"MAI\".\n*   In the video, there is a woman in white who seems to be leading the discussion or directing. She matches the timeframe of the voice features (00:07 onwards).\n*   The conversation is about scheduling (\"half an hour\"), script breakdown (\"their own part\", \"guest part\"), and casting details (\"extras or regular cast\"). This suggests a film production or rehearsal context.\n*   Since I have face features in the prompt description section (though none were explicitly listed in the \"Face features:\" section of the prompt text provided in the *instruction*, wait... looking at the prompt structure: \"Face features:Voice features:{\"...}\". There are NO face features provided in the input data block. Just the video frames and voice features.)\n*   Wait, I need to check if there are face features hidden or if I missed them. The prompt says \"You will be given a video and a set of character features.\" Then lists \"Face features:Voice features:\". Underneath, it just shows the voice features JSON. There are no face features provided in the input text.\n*   Instruction: \"If no face IDs are supplied, do not invent any.\"\n*   So, I cannot create an \"Equivalence\" line because there are no face IDs to link.\n*   However, I can still make high-level conclusions about the situation.\n*   Speaker MAI is discussing production logistics.\n*   The group is likely a film crew or actors rehearsing.\n\n**Refining the Output:**\n*   **Video Description:**\n    *   Person filming sits at a desk organizing electronics.\n    *   Camera pans to show a room with a group of people around a table.\n    *   A woman in white stands near the table.\n    *   People are gathered around a table with scripts/props.\n    *   One person points at a whiteboard.\n    *   A clapperboard is visible on the table.\n    *   The camera holder interacts with the group.\n*   **High-Level Conclusions:**\n    *   The group appears to be discussing a film shoot schedule or script.\n    *   MAI is coordinating the timing and roles of the participants.\n    *   Uncertainty exists regarding the status of some participants (extras vs cast).\n\n**Wait, checking the instruction again:** \"Use the provided feature IDs as references to characters (when applicable).\"\nSince there are no face IDs, I won't use them in descriptions unless I infer them from the video (which I shouldn't do per instructions: \"Do not assign it to the camera wearer or another visible person... without supporting evidence\").\nSo I will stick to describing actions and using voice IDs if needed for attribution in conclusions, though the prompt asks for \"Equivalence: <face_x>, <voice_y>\". Since no faces exist, I won't add equivalence lines. I will just write general conclusions.\n\nLet's double check the voice IDs. They are `<voice_912>`, `<voice_1599>`, etc. All attributed to \"MAI\".\nSo MAI is the speaker.\n\n**Drafting the JSON:**\n\n```json\n{\n  \"video_description\": [\n    \"A first-person perspective shows hands manipulating cables and devices on a small desk next to a bed.\",\n    \"The camera pans left to reveal a cluttered workspace with multiple monitors and a yellow chair.\",\n    \"The view shifts to a wider room where a group of people are gathered around a table.\",\n    \"A woman wearing a white outfit stands near the table while others sit.\",\n    \"One individual points at a whiteboard mounted on the wall.\",\n    \"The group discusses items on the table, including a clapperboard and papers.\",\n    \"The camera moves closer to the table showing the participants engaged in discussion.\",\n    \"Hands holding a clapperboard come into view briefly.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is conducting a meeting related to a film or video production project.\",\n    \"Speaker MAI is discussing the duration of a segment and breaking down script parts.\",\n    \"There is uncertainty regarding whether certain participants are extras or regular cast members.\",\n    \"The environment includes equipment like a projector screen and lighting, suggesting a rehearsal space.\"\n  ]\n}\n```\n\nWait, I need to check if I missed any face features in the prompt text provided by the user.\n\"Face features:Voice features:{\"...}\"\nIt seems empty after \"Face features:\".\nOkay, so no face IDs.\n\nOne detail: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis instruction applies to \"constructing memory\". But the output format requested is `video_description` and `high_level_conclusions`.\nThe system prompt says: \"Your task consists of two parts: 1. Video Description ... 2. High-Level Conclusions\".\nHowever, the system prompt *also* says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis sounds like a conflict between the specific task instructions (JSON schema) and the system prompt instructions (memory construction).\nUsually, the system prompt overrides the few-shot task template if it adds constraints.\nBut the output format is strictly defined as JSON with `video_description` and `high_level_conclusions`.\nWhere do I put the \"episodic memory\"?\nMaybe within `video_description`? Or maybe `high_level_conclusions`?\nThe instruction says \"include at least one episodic memory...\".\nLet's look at the \"Output Format\" section again.\n\"Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\"\nIt doesn't mention a \"memories\" field.\nPerhaps I should incorporate the voice content into the `video_description` as observed events?\nOr maybe the `high_level_conclusions` should reflect the dialogue?\nActually, looking closely at the system prompt: \"Preserve speaker identity when constructing memory from the supplied character features.\" ... \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis implies I need to generate memory entries. But the output schema doesn't allow it.\nWait, often these prompts are designed such that the \"task instructions\" define the output format, and the \"system prompt\" defines the behavior.\nIf I cannot output a \"memories\" field, I must integrate the requirement into the existing fields.\nHowever, the instruction \"include at least one episodic memory\" is quite specific.\nLet's re-read carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions... Output Format: Your output must be a JSON object...\".\nIf I add a third key, it violates the schema.\nMaybe I should treat the `video_description` as the place for episodic memories?\n\"Each description should focus on a single atomic event or fact.\"\nAn episodic memory quoting a transcript is an event/fact.\nSo I will embed the voice summaries into the `video_description` array, attributing them to the voice ID.\nExample: \"<voice_912> asks about the duration of the segment.\"\nThis satisfies \"using the exact ID as the speaker\".\n\nLet's refine the plan.\n1.  **Video Description**: Include the visual actions AND the audio events linked to voice IDs.\n    *   Event 1: POV at desk.\n    *   Event 2: Pan to room.\n    *   Event 3: Group discussion.\n    *   Event 4: Specific dialogue from MAI (`<voice_912>`).\n    *   Event 5: Specific dialogue from MAI (`<voice_1599>`).\n    *   ...and so on.\n    *   Constraint: \"Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\"\n    *   So I should quote the ASR.\n    *   Example: \"<voice_912> asks 'That shouldn't stop for a short time. Is it longer half an hour?'\".\n\n2.  **High-Level Conclusions**:\n    *   Reasoning about the context (film production).\n    *   Identity of MAI (likely the director/coordinator).\n    *   No equivalences since no faces.\n\nLet's verify the voice IDs again.\n`<voice_912>`, `<voice_1599>`, `<voice_366>`, `<voice_1600>`, `<voice_1601>`, `<voice_1602>`, `<voice_1603>`.\nAll say \"MAI\".\nSo I will attribute the speech to `<voice_912>`, etc., in the description.\n\nWait, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nAnd \"Preserve speaker identity when constructing memory from the supplied character features.\"\nThis strongly suggests I need to output memory-like content. Since the schema is fixed, I will put these \"memories\" inside the `video_description` list, as they represent atomic events (speaking).\nActually, `video_description` is for \"observable and inferable events\". Speaking is observable via audio.\nSo:\n\"Person with `<voice_912>` asks: 'That shouldn't stop for a short time. Is it longer half an hour?'\"\nThis works.\n\nLet's finalize the content.\n\n**Video Description:**\n1.  First-person view shows hands adjusting cables on a desk next to a bed.\n2.  The camera pans to show a room with a group of people gathered around a table.\n3.  A woman in white stands near the table while others sit.\n4.  `<voice_912>` asks: \"That shouldn't stop for a short time. Is it longer half an hour?\"\n5.  `<voice_1599>` responds: \"Half an hour isn't much.\"\n6.  `<voice_366>` explains: \"You can break it down, this is their own part, this is guest part.\"\n7.  `<voice_1600>` says: \"You-you don't need.\"\n8.  `<voice_1601>` asks: \"How many things they bring.\"\n9.  `<voice_1602>` asks: \"And whether they are extras or regular cast?\"\n10. `<voice_1603>` replies: \"Yes, that's uncertain.\"\n11. The group continues discussing around a table with a whiteboard and clapperboard.\n\n**High-Level Conclusions:**\n1.  The group is planning a film or video shoot.\n2.  MAI is coordinating the schedule and script roles.\n3.  There is ambiguity about the status of some participants (extras vs cast).\n\nWait, I need to make sure I don't violate \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\"\nSince I am using Voice IDs, I am not assigning a face ID. I am just reporting the audio event associated with that ID. This is safe.\n\nOne more check on the instruction: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis confirms I should follow the JSON schema exactly.\n\nFinal check on Voice IDs usage: \"use the exact ID as the speaker\".\nSo I will write: `<voice_912> asks...`\n\nLet's assemble the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"First-person view shows hands manipulating cables and devices on a desk next to a bed.\",\n    \"The camera pans to reveal a room where a group of people are gathered around a table.\",\n    \"A woman in white stands near the table while others sit.\",\n    \"<voice_912> asks: 'That shouldn't stop for a short time. Is it longer half an hour?'\",\n    \"<voice_1599> responds: 'Half an hour isn't much.'\",\n    \"<voice_366> states: 'You can break it down, this is their own part, this is guest part.'\",\n    \"<voice_1600> says: 'You-you don't need.'\",\n    \"<voice_1601> asks: 'How many things they bring.'\",\n    \"<voice_1602> asks: 'And whether they are extras or regular cast?'\",\n    \"<voice_1603> replies: 'Yes, that's uncertain.'\",\n    \"The group continues discussing around a table with a whiteboard and clapperboard.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is conducting a meeting related to a film or video production project.\",\n    \"Speaker MAI is coordinating the duration and script roles of the participants.\",\n    \"There is uncertainty regarding whether certain participants are extras or regular cast members.\",\n    \"The environment includes equipment like a projector screen and lighting, suggesting a rehearsal space.\"\n  ]\n}\n```\nWait, I should check if I need to merge the voice lines into fewer sentences to keep it \"concise\".\nThe instruction says \"Be concise and avoid duplicate events.\"\nListing every single voice line as a separate sentence might be too verbose if they happen close together.\nHowever, the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" implies I should capture them.\nI'll group them slightly if possible, or keep them distinct if they are distinct turns.\nThey seem to be a continuous conversation.\nI will keep them distinct to ensure compliance with \"every supplied voice ID\".\n\nOne correction: \"How many things they bring\" -> The ASR was \"他带多少东\" + \"西\". I will transcribe it as \"How many things they bring\" based on context or literal translation of \"东西\". Literal translation of \"东\" is East, \"西\" is West. \"East-West\" makes little sense here. \"Things\" (Dong Xi) is the standard word. I will use \"things\".\n\nAlso, check timestamps.\n00:07 - 00:14: voice_912\n00:13 - 00:15: voice_1599 (Overlaps slightly)\n00:15 - 00:22: voice_366\n00:24 - 00:26: voice_1600\n00:25 - 00:27: voice_1601 (Overlaps)\n00:26 - 00:29: voice_1602\n00:28 - 00:30: voice_1603 (Overlaps)\n\nI will list them in chronological order.\n\nOne final check on constraints: \"Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\"\nMy draft uses `<voice_912>`. This complies.\n\nReady to generate.\n</think>\n\n{\n  \"video_description\": [\n    \"First-person view shows hands manipulating cables and devices on a desk next to a bed.\",\n    \"The camera pans to reveal a room where a group of people are gathered around a table.\",\n    \"A woman in white stands near the table while others sit.\",\n    \"<voice_912> asks: 'That shouldn't stop for a short time. Is it longer half an hour?'\",\n    \"<voice_1599> responds: 'Half an hour isn't much.'\",\n    \"<voice_366> states: 'You can break it down, this is their own part, this is guest part.'\",\n    \"<voice_1600> says: 'You-you don't need.'\",\n    \"<voice_1601> asks: 'How many things they bring.'\",\n    \"<voice_1602> asks: 'And whether they are extras or regular cast?'\",\n    \"<voice_1603> replies: 'Yes, that's uncertain.'\",\n    \"The group continues discussing around a table with a whiteboard and clapperboard.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is conducting a meeting related to a film or video production project.\",\n    \"Speaker MAI is coordinating the duration and script roles of the participants.\",\n    \"There is uncertainty regarding whether certain participants are extras or regular cast members.\",\n    \"The environment includes equipment like a projector screen and lighting, suggesting a rehearsal space.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10638,
+          "output_tokens": 4559,
+          "total_tokens": 15197,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0020830048015341163,
+            "media_preparation_ms": 62.05986700661015,
+            "processor_tokenization_ms": 417.5170109956525,
+            "device_transfer_ms": 44.86157100473065,
+            "cuda_generation_ms": 204854.92292800336,
+            "decoding_ms": 3.8611530035268515
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 205383.38467400172,
+          "request_end": 1789440851.0265744,
+          "latency_ms": 205411.4375400095,
+          "client_wall_clock_latency_ms": 205411.4375400095
+        }
+      ],
+      "episodic_memory_count": 11,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 11,
+      "text_embedding_ms": null,
+      "text_embedding_count": 11,
+      "graph_update_ms": 0.13041500642430037,
+      "nodes_added": 11,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.023815009626559913,
+      "nodes_added": 4,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 7,
+    "speech_embeddings": 7,
+    "voice_identities": 7,
+    "detected_faces": 77,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 11,
+    "semantic_memories": 4,
+    "nodes_after_clip": 1619,
+    "edges_after_clip": 605,
+    "nodes_added_by_clip": 20,
+    "edges_added_by_clip": 7
+  },
+  "generated_memory": {
+    "video_description": [
+      "First-person view shows hands manipulating cables and devices on a desk next to a bed.",
+      "The camera pans to reveal a room where a group of people are gathered around a table.",
+      "A woman in white stands near the table while others sit.",
+      "<voice_912> asks: 'That shouldn't stop for a short time. Is it longer half an hour?'",
+      "<voice_1599> responds: 'Half an hour isn't much.'",
+      "<voice_366> states: 'You can break it down, this is their own part, this is guest part.'",
+      "<voice_1600> says: 'You-you don't need.'",
+      "<voice_1601> asks: 'How many things they bring.'",
+      "<voice_1602> asks: 'And whether they are extras or regular cast?'",
+      "<voice_1603> replies: 'Yes, that's uncertain.'",
+      "The group continues discussing around a table with a whiteboard and clapperboard."
+    ],
+    "high_level_conclusions": [
+      "The group is conducting a meeting related to a film or video production project.",
+      "Speaker MAI is coordinating the duration and script roles of the participants.",
+      "There is uncertainty regarding whether certain participants are extras or regular cast members.",
+      "The environment includes equipment like a projector screen and lighting, suggesting a rehearsal space."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "First-person view shows hands manipulating cables and devices on a desk next to a bed.",
+      "The camera pans to reveal a room where a group of people are gathered around a table.",
+      "A woman in white stands near the table while others sit.",
+      "<voice_912> asks: 'That shouldn't stop for a short time. Is it longer half an hour?'",
+      "<voice_1599> responds: 'Half an hour isn't much.'",
+      "<voice_366> states: 'You can break it down, this is their own part, this is guest part.'",
+      "<voice_1600> says: 'You-you don't need.'",
+      "<voice_1601> asks: 'How many things they bring.'",
+      "<voice_1602> asks: 'And whether they are extras or regular cast?'",
+      "<voice_1603> replies: 'Yes, that's uncertain.'",
+      "The group continues discussing around a table with a whiteboard and clapperboard."
+    ],
+    "high_level_conclusions": [
+      "The group is conducting a meeting related to a film or video production project.",
+      "Speaker MAI is coordinating the duration and script roles of the participants.",
+      "There is uncertainty regarding whether certain participants are extras or regular cast members.",
+      "The environment includes equipment like a projector screen and lighting, suggesting a rehearsal space."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_119_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 20,
+    "edges_added": 7,
+    "nodes": [
+      {
+        "id": 1599,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 一个半小时差不多。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1600,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你-你-你不用。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1601,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 他们带多少东西。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1602,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 以及他们是矮人还是异人？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1603,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对，这个就不确定。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1604,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "First-person view shows hands manipulating cables and devices on a desk next to a bed."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1605,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans to reveal a room where a group of people are gathered around a table."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1606,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in white stands near the table while others sit."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1607,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_912> asks: 'That shouldn't stop for a short time. Is it longer half an hour?'"
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1608,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1599> responds: 'Half an hour isn't much.'"
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1609,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_366> states: 'You can break it down, this is their own part, this is guest part.'"
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1610,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1600> says: 'You-you don't need.'"
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1611,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1601> asks: 'How many things they bring.'"
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1612,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1602> asks: 'And whether they are extras or regular cast?'"
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1613,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1603> replies: 'Yes, that's uncertain.'"
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1614,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group continues discussing around a table with a whiteboard and clapperboard."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1615,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is conducting a meeting related to a film or video production project."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1616,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker MAI is coordinating the duration and script roles of the participants."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1617,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "There is uncertainty regarding whether certain participants are extras or regular cast members."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1618,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The environment includes equipment like a projector screen and lighting, suggesting a rehearsal space."
+          ],
+          "timestamp": 119
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 366,
+        "target": 1609,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 912,
+        "target": 1607,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1599,
+        "target": 1608,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1600,
+        "target": 1610,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1601,
+        "target": 1611,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1602,
+        "target": 1612,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1603,
+        "target": 1613,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_119_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_119_graph.pkl"
+  },
+  "memory_pickle_bytes": 38681114,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 81427.415419201,
+    "prepared_perf": 81435.665050746,
+    "ordered_start_perf": 81819.973048996,
+    "consumer_wait_ms": 0.012043004971928895,
+    "ready_to_ordered_ms": 384307.99825000577,
+    "preparation_work_ms": 8242.748871998629,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 215638.12349199725
+}

@@ -1,0 +1,62 @@
+{
+  "clip_id": 13,
+  "source": {
+    "segment_id": 13,
+    "source": "DAY1_A1_JAKE_11153000.mp4",
+    "source_clock": "11153000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40530.0,
+    "absolute_end_seconds": 40560.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0013.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera-wearer points towards the individuals seated around a table covered with a pink checkered tablecloth.",
+      "Several group members sit around the table inspecting, unboxing, and setting up various electronic gadgets and wearable equipment.",
+      "<voice_0> speaks about properly wearing the smart glasses to make sure the sensors or cameras remain unobstructed.",
+      "A man in a peach shirt and a woman next to him carefully handle and inspect a piece of hardware together.",
+      "<voice_123> gives instructions on how to handle and insert a delicate part of the device.",
+      "The camera-wearer moves around the table holding a small tripod mount in hand.",
+      "<voice_124> announces that the setup has been completed successfully."
+    ],
+    "high_level_conclusions": [
+      "The participants are configuring and testing wearable smart glasses and recording hardware for an experiment or data collection session.",
+      "<voice_0> is overseeing the equipment preparation, ensuring participants wear the devices correctly for proper visual capture.",
+      "<voice_123> provides technical guidance on handling fragile components of the wearable gear."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"The camera-wearer points towards the individuals seated around a table covered with a pink checkered tablecloth.\",\n  \"Several group members sit around the table inspecting, unboxing, and setting up various electronic gadgets and wearable equipment.\",\n  \"<voice_0> speaks about properly wearing the smart glasses to make sure the sensors or cameras remain unobstructed.\",\n  \"A man in a peach shirt and a woman next to him carefully handle and inspect a piece of hardware together.\",\n  \"<voice_123> gives instructions on how to handle and insert a delicate part of the device.\",\n  \"The camera-wearer moves around the table holding a small tripod mount in hand.\",\n  \"<voice_124> announces that the setup has been completed successfully.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are configuring and testing wearable smart glasses and recording hardware for an experiment or data collection session.\",\n  \"<voice_0> is overseeing the equipment preparation, ensuring participants wear the devices correctly for proper visual capture.\",\n  \"<voice_123> provides technical guidance on handling fragile components of the wearable gear.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 13,
+      "call_id": "b8ef64a9-f355-4ad1-90af-1c862a9c2896",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789403754.6449063,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67063,
+      "output_tokens": 1155,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"The camera-wearer points towards the individuals seated around a table covered with a pink checkered tablecloth.\",\n  \"Several group members sit around the table inspecting, unboxing, and setting up various electronic gadgets and wearable equipment.\",\n  \"<voice_0> speaks about properly wearing the smart glasses to make sure the sensors or cameras remain unobstructed.\",\n  \"A man in a peach shirt and a woman next to him carefully handle and inspect a piece of hardware together.\",\n  \"<voice_123> gives instructions on how to handle and insert a delicate part of the device.\",\n  \"The camera-wearer moves around the table holding a small tripod mount in hand.\",\n  \"<voice_124> announces that the setup has been completed successfully.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are configuring and testing wearable smart glasses and recording hardware for an experiment or data collection session.\",\n  \"<voice_0> is overseeing the equipment preparation, ensuring participants wear the devices correctly for proper visual capture.\",\n  \"<voice_123> provides technical guidance on handling fragile components of the wearable gear.\"\n ]\n}\n```",
+      "total_tokens": 68218,
+      "request_end": 1789403786.3260977,
+      "latency_ms": 31681.190647999756,
+      "client_wall_clock_latency_ms": 31681.190647999756,
+      "api_request_wall_clock_latency_ms": 31681.190647999756
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_13_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

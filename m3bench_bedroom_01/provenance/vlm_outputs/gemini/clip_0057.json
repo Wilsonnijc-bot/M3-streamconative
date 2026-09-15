@@ -1,0 +1,75 @@
+{
+  "clip_id": 57,
+  "source": {
+    "segment_id": 57,
+    "source": "bedroom_01_00263000.mp4",
+    "source_clock": "00263000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1590.0,
+    "absolute_end_seconds": 1620.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00263000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 75423.263224565,
+      "prepared_perf": 75428.558462751,
+      "ordered_start_perf": 75615.973251577,
+      "consumer_wait_ms": 0.011101001291535795,
+      "ready_to_ordered_ms": 187414.78882600495,
+      "preparation_work_ms": 5289.974334998988,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit across from each other at a dining table set with food, drinks, and a tablet.",
+      "The woman on the right speaks earnestly while gesturing with her hands.",
+      "The woman on the left rests her chin in her hand and listens to the woman on the right.",
+      "The woman on the left begins speaking to comfort and apologize to the woman on the right.",
+      "The woman on the right rests her chin on her hands and looks down as she listens."
+    ],
+    "high_level_conclusions": [
+      "The woman on the right feels pressured and overlooked regarding her personal goals and dreams.",
+      "The woman on the left acts in a parental or guardian role toward the younger woman named Emma.",
+      "The two are having an open, reconciliatory conversation about familial expectations."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit across from each other at a dining table set with food, drinks, and a tablet.\",\n    \"The woman on the right speaks earnestly while gesturing with her hands.\",\n    \"The woman on the left rests her chin in her hand and listens to the woman on the right.\",\n    \"The woman on the left begins speaking to comfort and apologize to the woman on the right.\",\n    \"The woman on the right rests her chin on her hands and looks down as she listens.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the right feels pressured and overlooked regarding her personal goals and dreams.\",\n    \"The woman on the left acts in a parental or guardian role toward the younger woman named Emma.\",\n    \"The two are having an open, reconciliatory conversation about familial expectations.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 57,
+      "call_id": "9a2df5f0-a73e-4e75-ab1e-076ebe2c1517",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789434439.1842108,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65975,
+      "output_tokens": 968,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 481378.56220100366
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit across from each other at a dining table set with food, drinks, and a tablet.\",\n    \"The woman on the right speaks earnestly while gesturing with her hands.\",\n    \"The woman on the left rests her chin in her hand and listens to the woman on the right.\",\n    \"The woman on the left begins speaking to comfort and apologize to the woman on the right.\",\n    \"The woman on the right rests her chin on her hands and looks down as she listens.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the right feels pressured and overlooked regarding her personal goals and dreams.\",\n    \"The woman on the left acts in a parental or guardian role toward the younger woman named Emma.\",\n    \"The two are having an open, reconciliatory conversation about familial expectations.\"\n  ]\n}\n```",
+      "total_tokens": 66943,
+      "request_end": 1789434920.5628617,
+      "latency_ms": 481378.64795300993,
+      "client_wall_clock_latency_ms": 481378.64795300993,
+      "api_request_wall_clock_latency_ms": 481378.64795300993
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_57_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

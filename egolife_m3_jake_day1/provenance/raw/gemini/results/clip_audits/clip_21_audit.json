@@ -1,0 +1,419 @@
+{
+  "clip_id": 21,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0021.mp4",
+  "end_to_end_memory_generation_ms": 62598.89512399968,
+  "latency_ms": {
+    "clip_decode": 4181.594704001327,
+    "deepgram_asr": 896.073994001199,
+    "mai_transcribe_asr": 1292.7093350008363,
+    "asr_total": 2188.7864140007878,
+    "audio_segmentation": 8.41490399761824,
+    "speech_embedding_campplus": 369.1675470035989,
+    "facial_detection_recognition_buffalo_l": 3566.239844003576,
+    "face_clustering": 5.754557998443488,
+    "vlm_memory_generation": 45529.06569500192,
+    "text_embedding": 2299.6107849976397,
+    "graph_update_total": 134.84845399216283
+  },
+  "stage_details": {
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 896.073994001199,
+        "openrouter-mai-transcribe-2": 1292.7093350008363
+      },
+      "asr_total_ms": 2188.7864140007878,
+      "audio_segmentation_ms": 8.41490399761824,
+      "speech_embedding_ms": 369.1675470035989,
+      "graph_update_ms": 134.51615999656497,
+      "asr_segment_count": 8,
+      "speech_embedding_count": 8,
+      "voice_identity_count": 6,
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2715.670195997518
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3566.239844003576,
+      "face_clustering_ms": 5.754557998443488,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 238,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3700.855399001739
+    },
+    "vlm": {
+      "context_preparation_ms": 4168.8381180065335,
+      "vlm_ms": 45529.06569500192,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of young people sits around a table covered with a pink-and-white checkered tablecloth, handling and assembling small electronic devices and accessories.\",\n  \"<voice_228> jokingly sings or mentions that the Northeast is their hometown.\",\n  \"<voice_229> asks where specifically in the Northeast they are from.\",\n  \"<voice_230> jokingly responds that they are from Daohuaxiang.\",\n  \"<voice_203> comments on Daohua and then clarifies that the location is Changchun.\",\n  \"<voice_219> states Changchun City in Jilin Province and asks the group if they know the city.\",\n  \"<voice_219> further asks the group if they know that Jilin Province also has a Jilin City.\",\n  \"<voice_0> replies that they know that as well.\"\n ],\n \"high_level_conclusions\": [\n  \"The group members share a friendly and relaxed rapport, engaging in casual geographical trivia and banter while setting up their gear.\",\n  \"The participants are engaged in a collaborative preparation task involving electronics or recording equipment before proceeding with their planned activities.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of young people sits around a table covered with a pink-and-white checkered tablecloth, handling and assembling small electronic devices and accessories.",
+          "<voice_228> jokingly sings or mentions that the Northeast is their hometown.",
+          "<voice_229> asks where specifically in the Northeast they are from.",
+          "<voice_230> jokingly responds that they are from Daohuaxiang.",
+          "<voice_203> comments on Daohua and then clarifies that the location is Changchun.",
+          "<voice_219> states Changchun City in Jilin Province and asks the group if they know the city.",
+          "<voice_219> further asks the group if they know that Jilin Province also has a Jilin City.",
+          "<voice_0> replies that they know that as well."
+        ],
+        "high_level_conclusions": [
+          "The group members share a friendly and relaxed rapport, engaging in casual geographical trivia and banter while setting up their gear.",
+          "The participants are engaged in a collaborative preparation task involving electronics or recording equipment before proceeding with their planned activities."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 21,
+          "call_id": "bd2475f9-f815-4e57-bd15-c367eee47a27",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789404336.3828666,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67063,
+          "output_tokens": 1746,
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of young people sits around a table covered with a pink-and-white checkered tablecloth, handling and assembling small electronic devices and accessories.\",\n  \"<voice_228> jokingly sings or mentions that the Northeast is their hometown.\",\n  \"<voice_229> asks where specifically in the Northeast they are from.\",\n  \"<voice_230> jokingly responds that they are from Daohuaxiang.\",\n  \"<voice_203> comments on Daohua and then clarifies that the location is Changchun.\",\n  \"<voice_219> states Changchun City in Jilin Province and asks the group if they know the city.\",\n  \"<voice_219> further asks the group if they know that Jilin Province also has a Jilin City.\",\n  \"<voice_0> replies that they know that as well.\"\n ],\n \"high_level_conclusions\": [\n  \"The group members share a friendly and relaxed rapport, engaging in casual geographical trivia and banter while setting up their gear.\",\n  \"The participants are engaged in a collaborative preparation task involving electronics or recording equipment before proceeding with their planned activities.\"\n ]\n}\n```",
+          "total_tokens": 68809,
+          "request_end": 1789404381.9119322,
+          "latency_ms": 45529.06569500192,
+          "client_wall_clock_latency_ms": 45529.06569500192,
+          "api_request_wall_clock_latency_ms": 45529.06569500192
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": 1541.442043002462,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.2825209958245978,
+      "nodes_added": 8,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "current_process"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": 758.1687419951777,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.04977299977326766,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "current_process"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 8,
+    "speech_embeddings": 8,
+    "voice_identities": 6,
+    "detected_faces": 238,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 2,
+    "nodes_after_clip": 241,
+    "edges_after_clip": 60,
+    "nodes_added_by_clip": 13,
+    "edges_added_by_clip": 7
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of young people sits around a table covered with a pink-and-white checkered tablecloth, handling and assembling small electronic devices and accessories.",
+      "<voice_228> jokingly sings or mentions that the Northeast is their hometown.",
+      "<voice_229> asks where specifically in the Northeast they are from.",
+      "<voice_230> jokingly responds that they are from Daohuaxiang.",
+      "<voice_203> comments on Daohua and then clarifies that the location is Changchun.",
+      "<voice_219> states Changchun City in Jilin Province and asks the group if they know the city.",
+      "<voice_219> further asks the group if they know that Jilin Province also has a Jilin City.",
+      "<voice_0> replies that they know that as well."
+    ],
+    "high_level_conclusions": [
+      "The group members share a friendly and relaxed rapport, engaging in casual geographical trivia and banter while setting up their gear.",
+      "The participants are engaged in a collaborative preparation task involving electronics or recording equipment before proceeding with their planned activities."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of young people sits around a table covered with a pink-and-white checkered tablecloth, handling and assembling small electronic devices and accessories.",
+      "<voice_228> jokingly sings or mentions that the Northeast is their hometown.",
+      "<voice_229> asks where specifically in the Northeast they are from.",
+      "<voice_230> jokingly responds that they are from Daohuaxiang.",
+      "<voice_203> comments on Daohua and then clarifies that the location is Changchun.",
+      "<voice_219> states Changchun City in Jilin Province and asks the group if they know the city.",
+      "<voice_219> further asks the group if they know that Jilin Province also has a Jilin City.",
+      "<voice_0> replies that they know that as well."
+    ],
+    "high_level_conclusions": [
+      "The group members share a friendly and relaxed rapport, engaging in casual geographical trivia and banter while setting up their gear.",
+      "The participants are engaged in a collaborative preparation task involving electronics or recording equipment before proceeding with their planned activities."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_21_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 13,
+    "edges_added": 7,
+    "nodes": [
+      {
+        "id": 228,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 大东北，我的家乡。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 229,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你东北哪儿的呀？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 230,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我是稻花乡。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 231,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of young people sits around a table covered with a pink-and-white checkered tablecloth, handling and assembling small electronic devices and accessories."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 232,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_228> jokingly sings or mentions that the Northeast is their hometown."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 233,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_229> asks where specifically in the Northeast they are from."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 234,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_230> jokingly responds that they are from Daohuaxiang."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 235,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_203> comments on Daohua and then clarifies that the location is Changchun."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 236,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_219> states Changchun City in Jilin Province and asks the group if they know the city."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 237,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_219> further asks the group if they know that Jilin Province also has a Jilin City."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 238,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> replies that they know that as well."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 239,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group members share a friendly and relaxed rapport, engaging in casual geographical trivia and banter while setting up their gear."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 240,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are engaged in a collaborative preparation task involving electronics or recording equipment before proceeding with their planned activities."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 238,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 203,
+        "target": 235,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 219,
+        "target": 236,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 219,
+        "target": 237,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 228,
+        "target": 232,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 229,
+        "target": 233,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 230,
+        "target": 234,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_21_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_21_graph.pkl"
+  }
+}

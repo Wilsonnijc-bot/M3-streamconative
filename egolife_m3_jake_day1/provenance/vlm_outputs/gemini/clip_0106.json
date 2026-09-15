@@ -1,0 +1,82 @@
+{
+  "clip_id": 106,
+  "source": {
+    "segment_id": 106,
+    "source": "DAY1_A1_JAKE_11593000.mp4",
+    "source_clock": "11593000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43170.0,
+    "absolute_end_seconds": 43200.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0106.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51704.622144747,
+      "prepared_perf": 51712.7887274,
+      "ordered_start_perf": 51828.866126692,
+      "consumer_wait_ms": 0.03621799987740815,
+      "ready_to_ordered_ms": 116077.39929200034,
+      "preparation_work_ms": 8160.779495003226,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table with a checkered tablecloth discussing an event plan.",
+      "A man in an orange shirt stands near the window explaining game rules (<voice_430>).",
+      "A woman in a white blouse stands at the table trimming and arranging flowers.",
+      "A woman in a black shirt sits on the left side of the table listening attentively.",
+      "Two women sit on the opposite side of the table facing the group.",
+      "The man in the orange shirt gestures towards the outside while talking (<voice_1223>).",
+      "A clapperboard and craft materials rest on the checkered table.",
+      "A participant suggests a quiz activity centered around Earth Day (<voice_466>, <voice_1224>).",
+      "The man in orange walks across the room behind the table toward the hallway.",
+      "The group debates whether Earth Day falls on April 21st or 22nd (<voice_1225>, <voice_965>, <voice_1226>).",
+      "Someone mentions scheduling the event on Sunday, April 21st (<voice_1071>).",
+      "The group agrees on promoting their products following the games and quiz (<voice_0>, <voice_667>)."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating to organize an interactive promotional event for Earth Day.",
+      "The planned event features gamified engagement, including self-introductions and trivia quizzes to win tokens, followed by product sales.",
+      "The event is specifically scheduled for Sunday, April 21st to align with the weekend of Earth Day."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table with a checkered tablecloth discussing an event plan.\",\n    \"A man in an orange shirt stands near the window explaining game rules (<voice_430>).\",\n    \"A woman in a white blouse stands at the table trimming and arranging flowers.\",\n    \"A woman in a black shirt sits on the left side of the table listening attentively.\",\n    \"Two women sit on the opposite side of the table facing the group.\",\n    \"The man in the orange shirt gestures towards the outside while talking (<voice_1223>).\",\n    \"A clapperboard and craft materials rest on the checkered table.\",\n    \"A participant suggests a quiz activity centered around Earth Day (<voice_466>, <voice_1224>).\",\n    \"The man in orange walks across the room behind the table toward the hallway.\",\n    \"The group debates whether Earth Day falls on April 21st or 22nd (<voice_1225>, <voice_965>, <voice_1226>).\",\n    \"Someone mentions scheduling the event on Sunday, April 21st (<voice_1071>).\",\n    \"The group agrees on promoting their products following the games and quiz (<voice_0>, <voice_667>).\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is collaborating to organize an interactive promotional event for Earth Day.\",\n    \"The planned event features gamified engagement, including self-introductions and trivia quizzes to win tokens, followed by product sales.\",\n    \"The event is specifically scheduled for Sunday, April 21st to align with the weekend of Earth Day.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 106,
+      "call_id": "4d48d44e-9bdd-4bb7-ab8e-e0ab6cb1c80b",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410656.465729,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67634,
+      "output_tokens": 1818,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 43062.42376900627
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table with a checkered tablecloth discussing an event plan.\",\n    \"A man in an orange shirt stands near the window explaining game rules (<voice_430>).\",\n    \"A woman in a white blouse stands at the table trimming and arranging flowers.\",\n    \"A woman in a black shirt sits on the left side of the table listening attentively.\",\n    \"Two women sit on the opposite side of the table facing the group.\",\n    \"The man in the orange shirt gestures towards the outside while talking (<voice_1223>).\",\n    \"A clapperboard and craft materials rest on the checkered table.\",\n    \"A participant suggests a quiz activity centered around Earth Day (<voice_466>, <voice_1224>).\",\n    \"The man in orange walks across the room behind the table toward the hallway.\",\n    \"The group debates whether Earth Day falls on April 21st or 22nd (<voice_1225>, <voice_965>, <voice_1226>).\",\n    \"Someone mentions scheduling the event on Sunday, April 21st (<voice_1071>).\",\n    \"The group agrees on promoting their products following the games and quiz (<voice_0>, <voice_667>).\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is collaborating to organize an interactive promotional event for Earth Day.\",\n    \"The planned event features gamified engagement, including self-introductions and trivia quizzes to win tokens, followed by product sales.\",\n    \"The event is specifically scheduled for Sunday, April 21st to align with the weekend of Earth Day.\"\n  ]\n}\n```",
+      "total_tokens": 69452,
+      "request_end": 1789410699.5282857,
+      "latency_ms": 43062.55420600064,
+      "client_wall_clock_latency_ms": 43062.55420600064,
+      "api_request_wall_clock_latency_ms": 43062.55420600064
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_106_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

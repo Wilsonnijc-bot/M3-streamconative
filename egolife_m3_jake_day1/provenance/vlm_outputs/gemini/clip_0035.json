@@ -1,0 +1,83 @@
+{
+  "clip_id": 35,
+  "source": {
+    "segment_id": 35,
+    "source": "DAY1_A1_JAKE_11260000.mp4",
+    "source_clock": "11260000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41160.0,
+    "absolute_end_seconds": 41190.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0035.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46280.459356586,
+      "prepared_perf": 46288.221604677,
+      "ordered_start_perf": 46404.647636874,
+      "consumer_wait_ms": 0.01593999331817031,
+      "ready_to_ordered_ms": 116426.03219699959,
+      "preparation_work_ms": 7756.818285997724,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a dining table covered with a red checkered tablecloth in a living room.",
+      "A person in an orange shirt stands in the background near a whiteboard.",
+      "<voice_394> announces the start of the first item.",
+      "<voice_0> asks how many people Xiu Shuo is planning to invite.",
+      "<voice_394> replies that they will invite one person first.",
+      "<voice_0> confirms and repeats the answer.",
+      "<voice_229> asks about Lu Ya.",
+      "<voice_395> expresses uncertainty about Lu Ya coming because the location is too far.",
+      "<voice_396> adds that they do not know if Lu Ya can make it over.",
+      "<voice_397> acknowledges the statement.",
+      "<voice_0> asks about their studio.",
+      "<voice_398> mentions inviting someone modestly.",
+      "<voice_0> concludes by agreeing to invite one person first."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a planning meeting around the table to coordinate an upcoming event or shoot.",
+      "The members are discussing their guest list and expressing concerns about distance affecting attendance.",
+      "<voice_0> acts as a meeting facilitator or coordinator tracking each person's invitations."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a dining table covered with a red checkered tablecloth in a living room.\",\n  \"A person in an orange shirt stands in the background near a whiteboard.\",\n  \"<voice_394> announces the start of the first item.\",\n  \"<voice_0> asks how many people Xiu Shuo is planning to invite.\",\n  \"<voice_394> replies that they will invite one person first.\",\n  \"<voice_0> confirms and repeats the answer.\",\n  \"<voice_229> asks about Lu Ya.\",\n  \"<voice_395> expresses uncertainty about Lu Ya coming because the location is too far.\",\n  \"<voice_396> adds that they do not know if Lu Ya can make it over.\",\n  \"<voice_397> acknowledges the statement.\",\n  \"<voice_0> asks about their studio.\",\n  \"<voice_398> mentions inviting someone modestly.\",\n  \"<voice_0> concludes by agreeing to invite one person first.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is holding a planning meeting around the table to coordinate an upcoming event or shoot.\",\n  \"The members are discussing their guest list and expressing concerns about distance affecting attendance.\",\n  \"<voice_0> acts as a meeting facilitator or coordinator tracking each person's invitations.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 35,
+      "call_id": "e74e2b41-0a23-4798-a2e1-1a2861c9d4e3",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405229.340304,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67193,
+      "output_tokens": 612,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 56026.89796499908
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a dining table covered with a red checkered tablecloth in a living room.\",\n  \"A person in an orange shirt stands in the background near a whiteboard.\",\n  \"<voice_394> announces the start of the first item.\",\n  \"<voice_0> asks how many people Xiu Shuo is planning to invite.\",\n  \"<voice_394> replies that they will invite one person first.\",\n  \"<voice_0> confirms and repeats the answer.\",\n  \"<voice_229> asks about Lu Ya.\",\n  \"<voice_395> expresses uncertainty about Lu Ya coming because the location is too far.\",\n  \"<voice_396> adds that they do not know if Lu Ya can make it over.\",\n  \"<voice_397> acknowledges the statement.\",\n  \"<voice_0> asks about their studio.\",\n  \"<voice_398> mentions inviting someone modestly.\",\n  \"<voice_0> concludes by agreeing to invite one person first.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is holding a planning meeting around the table to coordinate an upcoming event or shoot.\",\n  \"The members are discussing their guest list and expressing concerns about distance affecting attendance.\",\n  \"<voice_0> acts as a meeting facilitator or coordinator tracking each person's invitations.\"\n ]\n}\n```",
+      "total_tokens": 67805,
+      "request_end": 1789405285.3673053,
+      "latency_ms": 56026.99886499613,
+      "client_wall_clock_latency_ms": 56026.99886499613,
+      "api_request_wall_clock_latency_ms": 56026.99886499613
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_35_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "clip_id": 37,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0037.mp4",
+  "end_to_end_memory_generation_ms": 198013.42610600113,
+  "latency_ms": {
+    "clip_decode": 4791.748160998395,
+    "deepgram_asr": 998.877164995065,
+    "mai_transcribe_asr": 1051.3230569995358,
+    "asr_total": 1052.3863170019467,
+    "audio_segmentation": 8.496224996633828,
+    "speech_embedding_campplus": 1482.4058320009499,
+    "facial_detection_recognition_buffalo_l": 3595.6804059969727,
+    "face_clustering": 5.336048998287879,
+    "vlm_memory_generation": 34242.10074399889,
+    "text_embedding": 512.3854240009678,
+    "graph_update_total": 363.20105601043906
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 37,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 984,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789405415.2664456,
+          "status": "success",
+          "total_tokens": 197,
+          "request_end": 1789405415.7787008,
+          "latency_ms": 512.2559009978431
+        }
+      ],
+      "total_tokens": 197,
+      "latency_ms": 512.3854240009678
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 998.877164995065,
+        "openrouter-mai-transcribe-2": 1051.3230569995358
+      },
+      "asr_total_ms": 1052.3863170019467,
+      "audio_segmentation_ms": 8.496224996633828,
+      "speech_embedding_ms": 1482.4058320009499,
+      "graph_update_ms": 363.1134200040833,
+      "asr_segment_count": 8,
+      "speech_embedding_count": 8,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1870.6113580046804
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3595.6804059969727,
+      "face_clustering_ms": 5.336048998287879,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 215,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3720.537860004697
+    },
+    "vlm": {
+      "context_preparation_ms": 3929.589452003711,
+      "vlm_ms": 34242.10074399889,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"Jake sits at the end of a long dining table covered with a pink-and-white checkered tablecloth, upon which a clapperboard is placed.\",\n  \"A group of people are gathered around the table, engaged in conversation while facing towards a whiteboard at the far end of the room.\",\n  \"A person in an orange shirt stands near the whiteboard and draws various figures and hairstyles according to suggestions.\",\n  \"At around 00:09, the person seated on the left in a black jacket and black cat-ear headpiece turns their head toward Jake's camera before looking back toward the whiteboard.\",\n  \"The participants around the table comment and laugh about the hair sketches, mentioning wigs and hairstyles.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in a casual creative brainstorming or character design session for their film project, as indicated by the clapperboard labeled 'Morning Ego Life'.\",\n  \"The person at the whiteboard serves as the illustrator, sketching humorous visual representations based on the lively input and banter of the group.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Jake sits at the end of a long dining table covered with a pink-and-white checkered tablecloth, upon which a clapperboard is placed.",
+          "A group of people are gathered around the table, engaged in conversation while facing towards a whiteboard at the far end of the room.",
+          "A person in an orange shirt stands near the whiteboard and draws various figures and hairstyles according to suggestions.",
+          "At around 00:09, the person seated on the left in a black jacket and black cat-ear headpiece turns their head toward Jake's camera before looking back toward the whiteboard.",
+          "The participants around the table comment and laugh about the hair sketches, mentioning wigs and hairstyles."
+        ],
+        "high_level_conclusions": [
+          "The group is engaged in a casual creative brainstorming or character design session for their film project, as indicated by the clapperboard labeled 'Morning Ego Life'.",
+          "The person at the whiteboard serves as the illustrator, sketching humorous visual representations based on the lively input and banter of the group."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 37,
+          "call_id": "fb4bf2cc-434d-4803-8a1e-f0652e54e12a",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789405381.0235105,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66919,
+          "output_tokens": 1176,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 34241.98275300296
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"Jake sits at the end of a long dining table covered with a pink-and-white checkered tablecloth, upon which a clapperboard is placed.\",\n  \"A group of people are gathered around the table, engaged in conversation while facing towards a whiteboard at the far end of the room.\",\n  \"A person in an orange shirt stands near the whiteboard and draws various figures and hairstyles according to suggestions.\",\n  \"At around 00:09, the person seated on the left in a black jacket and black cat-ear headpiece turns their head toward Jake's camera before looking back toward the whiteboard.\",\n  \"The participants around the table comment and laugh about the hair sketches, mentioning wigs and hairstyles.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in a casual creative brainstorming or character design session for their film project, as indicated by the clapperboard labeled 'Morning Ego Life'.\",\n  \"The person at the whiteboard serves as the illustrator, sketching humorous visual representations based on the lively input and banter of the group.\"\n ]\n}\n```",
+          "total_tokens": 68095,
+          "request_end": 1789405415.2656138,
+          "latency_ms": 34242.10074399889,
+          "client_wall_clock_latency_ms": 34242.10074399889,
+          "api_request_wall_clock_latency_ms": 34242.10074399889
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.07483200170099735,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.012804004654753953,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 8,
+    "speech_embeddings": 8,
+    "voice_identities": 6,
+    "detected_faces": 215,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 441,
+    "edges_after_clip": 98,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "Jake sits at the end of a long dining table covered with a pink-and-white checkered tablecloth, upon which a clapperboard is placed.",
+      "A group of people are gathered around the table, engaged in conversation while facing towards a whiteboard at the far end of the room.",
+      "A person in an orange shirt stands near the whiteboard and draws various figures and hairstyles according to suggestions.",
+      "At around 00:09, the person seated on the left in a black jacket and black cat-ear headpiece turns their head toward Jake's camera before looking back toward the whiteboard.",
+      "The participants around the table comment and laugh about the hair sketches, mentioning wigs and hairstyles."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a casual creative brainstorming or character design session for their film project, as indicated by the clapperboard labeled 'Morning Ego Life'.",
+      "The person at the whiteboard serves as the illustrator, sketching humorous visual representations based on the lively input and banter of the group."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Jake sits at the end of a long dining table covered with a pink-and-white checkered tablecloth, upon which a clapperboard is placed.",
+      "A group of people are gathered around the table, engaged in conversation while facing towards a whiteboard at the far end of the room.",
+      "A person in an orange shirt stands near the whiteboard and draws various figures and hairstyles according to suggestions.",
+      "At around 00:09, the person seated on the left in a black jacket and black cat-ear headpiece turns their head toward Jake's camera before looking back toward the whiteboard.",
+      "The participants around the table comment and laugh about the hair sketches, mentioning wigs and hairstyles."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a casual creative brainstorming or character design session for their film project, as indicated by the clapperboard labeled 'Morning Ego Life'.",
+      "The person at the whiteboard serves as the illustrator, sketching humorous visual representations based on the lively input and banter of the group."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_37_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 429,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 这个这个第二它这个充。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 430,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 假发。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 431,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你冲天一下，哎。",
+            "MAI: 嗯。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 432,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Ich will auch wieder mal. | MAI: 你是奥特曼。",
+            "Deepgram: Ich will auch wieder mal. | MAI: 他自己一个男生。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 433,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 爱心头呢。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 434,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake sits at the end of a long dining table covered with a pink-and-white checkered tablecloth, upon which a clapperboard is placed."
+          ],
+          "timestamp": 37
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 435,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around the table, engaged in conversation while facing towards a whiteboard at the far end of the room."
+          ],
+          "timestamp": 37
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 436,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person in an orange shirt stands near the whiteboard and draws various figures and hairstyles according to suggestions."
+          ],
+          "timestamp": 37
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 437,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At around 00:09, the person seated on the left in a black jacket and black cat-ear headpiece turns their head toward Jake's camera before looking back toward the whiteboard."
+          ],
+          "timestamp": 37
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 438,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The participants around the table comment and laugh about the hair sketches, mentioning wigs and hairstyles."
+          ],
+          "timestamp": 37
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 439,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is engaged in a casual creative brainstorming or character design session for their film project, as indicated by the clapperboard labeled 'Morning Ego Life'."
+          ],
+          "timestamp": 37
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 440,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person at the whiteboard serves as the illustrator, sketching humorous visual representations based on the lively input and banter of the group."
+          ],
+          "timestamp": 37
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_37_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_37_graph.pkl"
+  },
+  "memory_pickle_bytes": 9949571,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 46404.647538648,
+    "prepared_perf": 46413.327770702,
+    "ordered_start_perf": 46557.625229349,
+    "consumer_wait_ms": 0.00933800038183108,
+    "ready_to_ordered_ms": 144297.4586470009,
+    "preparation_work_ms": 8674.85418599972,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 44278.13209500164
+}

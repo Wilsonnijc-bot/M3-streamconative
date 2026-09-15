@@ -1,0 +1,210 @@
+# q10 — compressed memory
+
+## Compressed graph
+
+**193 nodes.** nodes: 193, edges: 65, directed_edges_stored: 130
+
+### Observed events
+
+- **Node 1** · segment 1: A young woman wearing a black winter jacket and a black baseball cap walks into a bedroom from the hallway.
+- **Node 2** · segment 1: She sets her brown backpack down on the bed.
+- **Node 3** · segment 1: She takes off her heavy black jacket, revealing a white long-sleeved top.
+- **Node 5** · segment 1: She removes her black baseball cap and hangs it on the coat rack as well.
+- **Node 7** · segment 1: Slings the backpack over her shoulder, she turns and walks out of the bedroom into the living area.
+- **Node 13** · segment 2: A woman stands near a dining table in an apartment holding a smartphone.
+- **Node 14** · segment 2: `voice_10` speaks to a smart robot, asking what has been prepared for afternoon tea.
+- **Node 15** · segment 2: `voice_11` lists available afternoon tea items including coffee, fries, and cakes.
+- **Node 16** · segment 2: `voice_12` responds with an acknowledgment.
+- **Node 17** · segment 2: `voice_10` checks the time and orders a mocha first.
+- **Node 18** · segment 2: The camera pans towards the wall near the entrance, showing hanging keys and an electric kettle.
+- **Node 22** · segment 3: A person wearing black gloves unscrews a bottle of coffee.
+- **Node 23** · segment 3: The person pours the coffee into a white mug on the counter.
+- **Node 24** · segment 3: The person recaps the bottle and picks up the mug.
+- **Node 27** · segment 3: The woman sips the beverage before setting it down and looking at her smartphone.
+- **Node 28** · segment 3: The person filming steps back as the woman continues working.
+- **Node 33** · segment 4: `face_32` sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone.
+- **Node 34** · segment 4: `face_32` speaks aloud, giving instructions to prepare afternoon tea.
+- **Node 35** · segment 4: An off-screen voice acknowledges the request with an agreement.
+- **Node 36** · segment 4: The camera shifts away from `face_32` and pans through the living space toward the kitchen hallway.
+- **Node 37** · segment 4: `face_32` continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake.
+- **Node 38** · segment 4: The camera moves and finishes facing a plain interior wall.
+- **Node 42** · segment 5: The camera moves through a narrow kitchen toward a food preparation surface.
+- **Node 43** · segment 5: A food spread consisting of McDonald's fries, a slice of cake, and bread slices is arranged on the surface.
+- **Node 44** · segment 5: A person wearing black gloves picks up a strawberry and places it atop the slice of cake.
+- **Node 45** · segment 5: The person lifts the red fry box and empties the french fries onto the brown paper tray.
+- **Node 50** · segment 6: A person wearing black gloves opens a ketchup packet and squeezes it onto french fries next to McDonald's packaging.
+- **Node 51** · segment 6: The camera pans from the kitchen area toward a corridor.
+- **Node 52** · segment 6: A woman wearing a white jacket and dark pants walks along the hallway holding a mug and a phone.
+- **Node 53** · segment 6: She enters the dining area and places her mug onto a table covered with papers.
+- **Node 55** · segment 6: She speaks into her phone while examining the cluttered desk and gesturing with her hand.
+- **Node 59** · segment 7: A young woman in a white jacket sits at a table cluttered with papers, stationery, and drinks.
+- **Node 60** · segment 7: She holds and looks at a smartphone attached to a portable charger.
+- **Node 61** · segment 7: A person wearing black gloves examines and moves printed documents scattered across the table.
+- **Node 63** · segment 7: The gloved person uses small paper tools and stencils to adjust the painted surface of the runner.
+- **Node 64** · segment 7: The woman turns toward the back of her chair and searches inside a studded brown backpack.
+- **Node 69** · segment 8: A person tosses a used tissue into a pink trash bin next to the dining table.
+- **Node 71** · segment 8: `voice_21` speaks about getting to work.
+- **Node 72** · segment 8: The woman retrieves a dark laptop from behind her seat and places it onto the table.
+- **Node 73** · segment 8: `voice_67` responds briefly with an acknowledgement.
+- **Node 75** · segment 8: `voice_68` states an intention to finish work.
+- **Node 76** · segment 8: The woman picks up her phone and looks between it and the laptop screen.
+- **Node 80** · segment 9: A young woman sits at a dining table working on a laptop.
+- **Node 81** · segment 9: She adjusts a backpack next to her chair.
+- **Node 83** · segment 9: She holds up the paper in front of her laptop and reads through it.
+- **Node 88** · segment 10: `face_32` sits at a dining table with a laptop, examining a sheet of paper.
+- **Node 89** · segment 10: `face_32` reads through the paper while speaking aloud about course subjects.
+- **Node 90** · segment 10: `face_32` looks up toward the camera to address a robot assistant.
+- **Node 91** · segment 10: `face_32` hands the paper across the table toward the camera holder.
+- **Node 92** · segment 10: A gloved hand reaches out from the first-person perspective to accept the paper from `face_32`.
+- **Node 93** · segment 10: The camera turns away from the table after receiving the document.
+- **Node 99** · segment 11: The gloved person opens the drawer of the nightstand.
+- **Node 101** · segment 11: The gloved person closes the drawer and walks out toward the hallway.
+- **Node 102** · segment 11: In the dining area, a woman sits at a table interacting with her laptop and smartphone.
+- **Node 103** · segment 11: A woman wearing a yellow jacket and a cap enters the apartment through the front door.
+- **Node 104** · segment 11: The woman in the yellow jacket (`voice_96`) greets Emma while holding a banana and phone.
+- **Node 105** · segment 11: A voice (`voice_97`) responds from the dining area as the woman in the yellow jacket walks into the room.
+- **Node 108** · segment 12: A person in a yellow jacket walks past a dining table where a woman is working on a laptop.
+- **Node 109** · segment 12: The woman sitting at the table speaks, gesturing toward the trash cans on the floor.
+- **Node 110** · segment 12: The person in the yellow jacket turns back and drops an item into the small bin.
+- **Node 112** · segment 12: Inside the bedroom, the person sits on the bed while holding a mobile phone.
+- **Node 114** · segment 12: She stands up, takes off her yellow jacket, and throws it onto the bed.
+- **Node 119** · segment 13: A woman rests sideways on a bed while holding a mobile phone.
+- **Node 120** · segment 13: The woman sits up on the edge of the bed.
+- **Node 121** · segment 13: Another woman wearing a white jacket enters the apartment holding a phone.
+- **Node 124** · segment 13: Both women sit side by side on the bed and talk.
+- **Node 129** · segment 14: Two women sit beside each other on a bed with blue bedding.
+- **Node 130** · segment 14: A woman wearing a white cardigan holds a smartphone and talks to her friend.
+- **Node 132** · segment 14: The woman in beige raises her head to look at her companion.
+- **Node 133** · segment 14: The woman in the beige top speaks quietly while looking down.
+- **Node 134** · segment 14: The woman in white looks toward the camera and calls out an instruction to a robot.
+- **Node 139** · segment 15: Two women sit on a bed looking at their phones.
+- **Node 140** · segment 15: A person wearing black gloves picks up a yellow-green jacket from the bed.
+- **Node 141** · segment 15: The person walks over and hangs the jacket on a coat rack by the window.
+- **Node 142** · segment 15: The person walks back to the bed and picks up a grey cap.
+- **Node 147** · segment 16: The camera pans through a residential apartment from the entrance hallway, passing the dining area, into a bedroom.
+- **Node 148** · segment 16: Two women are seated on a bed covered with a blue patterned quilt.
+- **Node 149** · segment 16: The woman wearing a beige t-shirt sits with a downcast expression, holding tissues in her hands.
+- **Node 150** · segment 16: The woman wearing a white long-sleeved top faces her companion and gently holds her arm while offering comfort.
+- **Node 156** · segment 17: Two young women sit next to each other on the edge of a bed in a bedroom.
+- **Node 159** · segment 17: `voice_155` lowers her head into her hand and begins crying in frustration and sadness.
+- **Node 161** · segment 17: `voice_155` keeps her head down, holding a tissue or phone in her lap as she continues to weep.
+- **Node 167** · segment 18: Two women are seated together on a bed inside a bedroom.
+- **Node 169** · segment 18: `voice_21` speaks soothingly to the crying woman, urging her to stop crying and share what happened.
+- **Node 170** · segment 18: The woman in the beige shirt stands up, grabs a tissue from the nightstand, and wipes her face.
+- **Node 171** · segment 18: The woman returns to sit on the bed as the woman in the white top comforts her by patting her back.
+- **Node 172** · segment 18: `voice_166` reassures her and asks why she failed her course.
+- **Node 173** · segment 18: `voice_97` tearfully begins explaining that she ate strawberries before her exam.
+- **Node 181** · segment 19: Two young women sit on the edge of a bed engaged in conversation.
+- **Node 182** · segment 19: The woman in the beige t-shirt (`voice_179`) talks about having an allergic reaction to strawberries.
+- **Node 183** · segment 19: The woman wearing a cream sweater (`voice_10`) questions why she ate strawberries right before an examination.
+- **Node 184** · segment 19: The woman in the beige shirt (`voice_179`) explains that she only had a small amount and did not anticipate the severity of the reaction.
+- **Node 185** · segment 19: The woman in the cream sweater (`voice_180`) remarks on her carelessness as the discussion concludes.
+- **Node 189** · segment 20: Two women sit side by side on a bed covered with a blue blanket.
+- **Node 190** · segment 20: The woman on the right holds hands with the woman on the left and speaks to comfort her.
+- **Node 192** · segment 20: The woman on the left sits with her head down, looking upset and emotional.
+- **Node 193** · segment 20: The woman on the left slowly raises her head and looks toward the woman on the right.
+- **Node 200** · segment 21: Two young women sit side by side on a bed inside a bedroom.
+- **Node 201** · segment 21: The woman on the right in a white sweater holds the hand of the woman on the left in a beige shirt while speaking to her.
+- **Node 202** · segment 21: The woman in the beige shirt nods and tells her companion that she is fine now.
+- **Node 203** · segment 21: The woman in the white sweater rests her hand on the woman in the beige shirt's shoulder while inquiring about the severity of her allergic reaction during an exam.
+- **Node 209** · segment 22: Two women sit beside each other on a bed with a blue bedspread in a bedroom.
+- **Node 210** · segment 22: The woman wearing a beige t-shirt talks with the woman wearing a white top.
+- **Node 211** · segment 22: The woman in the white top asks a question regarding a failed academic course.
+- **Node 219** · segment 23: Two young women sit side by side on a bed in a bedroom.
+- **Node 220** · segment 23: The woman on the right holds hands with the girl on the left to comfort her.
+- **Node 221** · segment 23: `voice_10` asks if the girl was afraid that she and her mother would be angry with her.
+- **Node 222** · segment 23: `voice_179` responds that it was because that subject was her best one.
+- **Node 224** · segment 23: `voice_217` affirms that she did her best.
+- **Node 225** · segment 23: `voice_218` provides a supportive concluding remark.
+- **Node 230** · segment 24: Two young women are sitting together on the edge of a bed inside a bedroom.
+- **Node 233** · segment 24: `voice_10` asks `voice_179` why she does not want to tell her mother about the exam results herself.
+- **Node 234** · segment 24: `voice_179` looks downward, explaining that her mother always stresses heavily over her academic performance.
+- **Node 240** · segment 25: Two young women sit side-by-side on the edge of a bed covered with a blue blanket.
+- **Node 242** · segment 25: The woman in the cream sweater holds the other woman's hands consolingly.
+- **Node 243** · segment 25: The woman in the cream sweater speaks reassuringly, suggesting they consult a robot.
+- **Node 244** · segment 25: She then turns her head forward toward the camera and calls out to activate the robot.
+
+### Semantic memories / model inferences
+
+- **Node 8** · segment 1: The woman is arriving indoors and shedding her outdoor winter layers to get comfortable.
+- **Node 9** · segment 1: `voice_0` belongs to the young woman as she walks through the apartment.
+- **Node 19** · segment 2: `voice_10` is interacting with an AI voice assistant or robotic system.
+- **Node 20** · segment 2: `voice_11` represents the automated smart home assistant providing menu recommendations.
+- **Node 30** · segment 3: The person in black gloves prepared and delivered a drink to support the woman while she studied.
+- **Node 39** · segment 4: Equivalence: `face_32`, `voice_10`
+- **Node 40** · segment 4: `face_32` is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food.
+- **Node 41** · segment 4: `voice_31` belongs to the assistant or robot responding to `face_32`'s command.
+- **Node 48** · segment 5: The person is preparing a food arrangement, likely for a meal review, mukbang, or presentation.
+- **Node 49** · segment 5: The use of black disposable gloves indicates a focus on cleanliness or food preparation aesthetics.
+- **Node 56** · segment 6: The woman is frustrated by the cluttered condition of the desk and suspects someone named Emma caused it.
+- **Node 66** · segment 7: The woman and the gloved individual are sharing a workspace, though the woman is occupied with personal items and her bag.
+- **Node 77** · segment 8: The woman is setting up her workspace at the dining table to complete tasks on her laptop and phone.
+- **Node 78** · segment 8: The interaction involves communication between the woman at the table and the person filming.
+- **Node 84** · segment 9: The woman is examining an academic curriculum or class schedule belonging to Emma.
+- **Node 85** · segment 9: She expresses surprise at the difficulty and volume of courses, specifically highlighting linear algebra.
+- **Node 94** · segment 10: Equivalence: `face_32`, `voice_87`
+- **Node 95** · segment 10: `face_32` is requesting the robot assistant to file a curriculum paper belonging to someone named Emma into a drawer.
+- **Node 106** · segment 11: The individual wearing black gloves secretly plants or hides a document inside the bedroom nightstand drawer.
+- **Node 107** · segment 11: The person in the yellow jacket (`voice_96`) enters the apartment and greets the woman sitting at the dining table, identifying her as Emma.
+- **Node 117** · segment 12: The person wearing the yellow jacket is named Emma, whom the seated woman addresses.
+- **Node 118** · segment 12: Emma complies with the woman's request to throw something into the bin before heading into the bedroom to rest.
+- **Node 125** · segment 13: The woman on the bed is addressed as Emma.
+- **Node 126** · segment 13: The newcomer notices Emma's low mood and asks how she is doing.
+- **Node 127** · segment 13: The two women appear to be friends or roommates living together.
+- **Node 135** · segment 14: The woman in the beige top is Emma, who appears upset or troubled.
+- **Node 136** · segment 14: The woman in white is offering comfort and emotional support to Emma.
+- **Node 145** · segment 15: The camera wearer is tidying up the bedroom by picking up clothing from the bed.
+- **Node 146** · segment 15: `voice_138` belongs to one of the women sitting on the bed.
+- **Node 154** · segment 16: The two women share a close relationship, such as good friends, roommates, or family members, with one providing compassionate emotional support.
+- **Node 163** · segment 17: The two women share a close relationship, likely as close friends or college roommates.
+- **Node 164** · segment 17: `voice_155`, named Emma, is experiencing emotional distress over academic failure despite having put in sustained effort.
+- **Node 165** · segment 17: `voice_21` demonstrates deep empathy, patience, and emotional support to help soothe Emma.
+- **Node 177** · segment 18: The two women share a close, supportive friendship.
+- **Node 178** · segment 18: The upset woman superstition-wise associates eating strawberries with failing her course or exam.
+- **Node 187** · segment 19: The woman in beige is remorseful about eating an allergen before an important exam.
+- **Node 188** · segment 19: The woman in the cream sweater expresses concern mixed with reprimand over her friend's lack of caution.
+- **Node 195** · segment 20: The two women appear to be close friends or roommates.
+- **Node 196** · segment 20: The woman on the left is distressed after failing an exam or course.
+- **Node 197** · segment 20: The woman on the right is providing emotional support, emphasizing that health and well-being are more important than academic scores.
+- **Node 198** · segment 20: `voice_21` and `voice_10` belong to the same person, the woman on the right in the white sweater.
+- **Node 206** · segment 21: The woman in the beige shirt (`voice_199` and `voice_179`) had an allergic reaction while taking an exam and is recounting the experience.
+- **Node 207** · segment 21: Equivalence: `voice_199`, `voice_179`
+- **Node 214** · segment 22: `voice_179`, `voice_155`, and `voice_208` belong to the woman in the beige t-shirt.
+- **Node 215** · segment 22: The woman in the beige shirt is upset and demoralized after failing a course in what she considered her best subject.
+- **Node 216** · segment 22: The woman in the white sweater acts as a comforting, supportive friend or family member.
+- **Node 226** · segment 23: The girl on the left (`voice_179`) feels anxious or guilty about an exam or academic result.
+- **Node 236** · segment 24: `voice_179` is experiencing severe anxiety and fear regarding her mother's reaction to her failing an exam.
+- **Node 237** · segment 24: `voice_179`'s mother places high academic pressure and expectations on her.
+- **Node 238** · segment 24: `voice_10` acts as a supportive and comforting friend, trying to help `voice_179` process her anxiety and gain perspective.
+- **Node 239** · segment 24: The two women share a trusting relationship, as `voice_179` confides her personal struggles and seeks assistance from `voice_10`.
+- **Node 245** · segment 25: The woman in the beige top is anxious about being scolded by someone.
+- **Node 247** · segment 25: They intend to interact with a smart device or robotic assistant for guidance or distraction.
+
+### Voice identities and transcripts
+
+- **Node 0**: MAI: Hmm.
+- **Node 10**: Deepgram: Hello, robot. What have you prepared for me for my afternoon tea? | MAI: Hello, robot. What have you prepared for me for my afternoon tea? Deepgram: Well, it's ten to four now. Please give me a milk at first. Okay. | MAI: Mm, well, it's 10 to 4 now. Please give me a mocha first. Deepgram: Oh, I still need to work for a long time. So how about could you prepare for my afternoon tea now, and you can give it to me several moments later. Okay. | MAI: Oh, I still need to work for a long time. Mm, so hello, robot, could you prepare for my afternoon tea now, and you can give it to me, um, several moments later? Deepgram: And by the way, robot, we need the ketchup on the fried chips and I want a strawberry cake. Okay. | MAI: And by the way, robot, um, we need the ketchup on the fried chips, and, uh, I want a strawberry cake. Deepgram: Well, it's a little dirty and messy. My desk I mean, my book desk. Well, I guess it's Emma again. Emma must definitely use my book desk. Hello, Robert. Please carry my book desk | MAI: Well, it's a little dirty and messy in my desk book, in my book desk. Well, I guess it's Emma again. Emma must definitely, uh, use my book desk. Mm. Hello, Robert, please tidy my book desk. Deepgram: Professional English course and Asian history course. Oh, I know that Emma is good at linear algebra. Okay. But this is Emma's Emma's name. So, hello, robot. Could you please put this curriculum of Emma into her drawer? Okay. | MAI: Professional English course and ancient history course. Oh. Uh, I know that Emma is good at linear algebra. Hmm. Ah, okay. But this is Emma's, Emma's thing. So, hello robot, could you please put this curriculum of Emma into her drawer? Deepgram: Sorry, Emma. Emma, I want wait a minute. Put this into the rat's rubbish can. Okay? | MAI: Sorry, Emma, Emma, Emma, wait a minute. Put it into the red rubbish can. Deepgram: Hi, Emma. What happened? You know, no matter what happens, I will always help you, and I will always it's my pleasure to hear whatever you said. Mhmm. | MAI: Hi, Emma, what happened? You know, no matter what happens, I will always accompany you, and I will always... it's my pleasure to hear whatever you said. Deepgram: It's okay, but first of all, it's a little messy. So hello, robot. Could you tidy the clothes on the bed for me? Okay. | MAI: Uh, it's okay, but first of all, um, it's a little messy. So, hello robot, could you tidy the clothes on the bed for me? Deepgram: know you are allergic to strawberries, but why why do you any taste before your examination? You know, I just ate a little, so I can't imagine that it's so severe | MAI: You know you're allergic to strawberries, but why- why you ate it before your examination? Deepgram: you're a little foolish girl. How could you be so careless? You know? But but for me, what really matters is your health, your body. We just carry your health much more than your score in the test, whether you are failed in the course. | MAI: you know? But, mm, but for me, uh, what really matters is your health, your body. You know, we just, uh, we just, uh, care, care your health much more than your score in the test, whether you are failed in the course, you know. So... Deepgram: I have to say nothing is important compared with your own body, you know, your own health. So so | MAI: I have to say, nothing is important compared with your own body, you know, your own health. So, um... So, Deepgram: So... Okay. You're okay now. So what's the severity of your allergy reaction when you were taking the exam? At the time, I just got | MAI: So, okay, you're okay now. So, what's your severity of your a- allergy reaction when you were taking the exam? Deepgram: And after I rest for a while, they just secure themselves. Okay. That's good. Sir, I wonder which one which course did you fail? Could you tell me? | MAI: Okay, that's good. Uh, so, uh, I wonder which one, which course did you fail? Could you tell me? Deepgram: little honey. I'm like, if you I wonder if you | MAI: if you, um, I wonder if you Deepgram: Were just afraid of me and your mom being mad at you? Yeah. Because that's my best one best subject. | MAI: You were just afraid of me and your mom being mad at you? Deepgram: Oh, sitty girl. How how could how could I and your mom be angry with you because of such such a little thing, you know. You have been working very hard. I know that. Your mom also known that, so we will never be mad at you. | MAI: Oh, silly girl. How, how could, how could, um, I and your mom be angry with you because of such, such a little thing, you know? Ah, you have been working very hard. I know that, and your mom also known that, so we will never be mad at you. Deepgram: And could you please help me to explain with my mom? Okay. But, you know, fitting the exam is not the end of a word. So I wonder why I wonder why you why you just to tell your mom about yourself. | MAI: Okay, um, but you know, um, failing the exam is not the end of the world. So, uh, I wonder why, I wonder why you c- why you just tell your mom by yourself. Deepgram: me. Okay. So let's refresh ourselves just to have some upheaval feel. Alright? So hello, robot. Please give me | MAI: Mm, okay. So, let's refresh ourselves, just to have some opinion here, okay? Hello, robot, please give me
+- **Node 11**: Deepgram: Hello, robot. What have you prepared for me for my afternoon tea? There are coffee, fries, and cake with two types of cake strawberry and banana. Okay. | MAI: There are coffee, fries, and cake with two types of cake, strawberry and banana.
+- **Node 12**: Deepgram: and cake with two types of cake strawberry and banana. Okay. | MAI: Okay.
+- **Node 21**: Deepgram: Okay. Thank you, robot. Oh my god. Let me see. | MAI: Okay, thank you, robot. Oh my God, let me see. Deepgram: So that's, my work now. | MAI: So that's our my work now. Deepgram: And I shaved. Well, what is it? Ah, this is Emma's curriculum. Oh, she has several courses this semester. Oh my god. Leading your Albra. | MAI: Okay, finished. Well, what is it? Ah, this is Emma's curriculum. Oh, she has several courses this semester. Oh my God. Mm. Linear algebra. Deepgram: What happened, Emma? Why are you so saddened today? I'm a little bit upset. Why | MAI: What happened, Emma? Why are you so silent today? I'm a little bit sad. Why? Deepgram: it's my pleasure to hear whatever you said. Mhmm. So tell me what happened. | MAI: Mm-hmm. So tell me what happened. Deepgram: Okay. Just tell me what has happened. I'm always your listener. Okay? Actually, I | MAI: You can just tell me what has happened. I'm always your listener, okay? Deepgram: Which one? Oh, don't don't be so sad. Don't cry, baby. Emma, you know, I know you have been working so hard all the time, and I I just don't know why. Why does this happen to you? | MAI: Uh, uh, which one? Mm. Oh, don't, don't be so sad. Don't cry, baby. Emma, you know, mm, I know you have been working so hard all the time, and mm, I just don't know why. Why does this happen to you? Deepgram: Just tell me why. I'll stop crying. Favorite. | MAI: Just tell me why. Oh, stop crying, baby. Deepgram: Well, you're a little foolish girl. How could you be so careless? You know? But | MAI: Well, mm, you are a little foolish girl. How could you be so careless, Deepgram: my best subject. So little honey. I'm like, if you | MAI: Uh, so, little honey, I'm like,
+- **Node 31**: Deepgram: several moments later. Okay. | MAI: Okay. Deepgram: put this curriculum of Emma into her drawer? Okay. | MAI: Okay.
+- **Node 67**: Deepgram: Okay. | MAI: Okay.
+- **Node 68**: Deepgram: Well, I'm finish my work now. | MAI: Well, I will finish my work now.
+- **Node 79**: Deepgram: Okay.
+- **Node 87**: Deepgram: Thank you. | MAI: Thank you.
+- **Node 96**: Deepgram: hello, Alma. | MAI: Hello, Emma.
+- **Node 97**: Deepgram: I feel so | MAI: I think so. Deepgram: It's okay. It's okay. Just tell me the reason why you feel your pores. I'm so sad because I ate this I ate the stories before my exam, but | MAI: I'm so sad because... I ate the s- I ate the strawberries before my exam, but
+- **Node 128**: Deepgram: I'm afraid to tell you. | MAI: Mm, I'm afraid to tell you that.
+- **Node 138**: Deepgram: Well, it's okay. | MAI: Well, it's okay.
+- **Node 155**: Deepgram: Little felt like suffer more family exam. | MAI: Absolutely failed my sophomore final exam. Deepgram: Oh, I felt that that was my best subject. So | MAI: Oh, I failed the- that was, uh, my best subject.
+- **Node 166**: Deepgram: It's okay. It's okay. Just tell me the reason why you feel your pores. I'm so sad because | MAI: It's okay, it's okay. Just tell me the reason why you fail your course.
+- **Node 179**: Deepgram: I forgot that I have a allergic reaction until the strawberry. You | MAI: I forgot that I, um, have a allergic reaction onto the strawberry. Deepgram: know you are allergic to strawberries, but why why do you any taste before your examination? You know, I just ate a little, so I can't imagine that it's so severe like this. And I make mistake as soon as take them. Okay. | MAI: Uh, you know, I just, uh, ate a little, so I can't imagine that it's so s- severe like this, and I make mistake as soon as I ate them. Deepgram: So... Okay. You're okay now. So what's the severity of your allergy reaction when you were taking the exam? At the time, I just got red... Rash. You know? Mhmm. And... But after | MAI: Mm, at the time I just got red a- rash, you know? Deepgram: Rash. You know? Mhmm. And... But after after the | MAI: And but after, um, after the exam- Deepgram: And after I rest for a while, they just secure themselves. | MAI: them, and uh, after I rest for a while, they just cure themselves. Deepgram: mad at you? Yeah. Because that's my best one best subject. | MAI: Yeah, because that's my best one, best subject. Deepgram: And could you please help me to explain with my mom? Okay. | MAI: And could you please help me to explain with my mom? Deepgram: Actually because my mom that very always very stresses mind for me for my study and if I speak up myself I | MAI: Actually, because, um, my mom that, uh, very always has very stressed mind for me, uh, for my study, and if I speak of myself, I Deepgram: Think he will definitely scroll me. Okay. | MAI: think he will definitely scold me.
+- **Node 180**: Deepgram: Okay. You're so careless. I'm so regret, actually. | MAI: How can you be so careless? Mm. Deepgram: I'm so regret, actually. | MAI: I'm sorry to regret, actually.
+- **Node 199**: Deepgram: But I'm okay. | MAI: I'm okay now.
+- **Node 208**: Deepgram: little honey. I'm like, if you | MAI: Mm.
+- **Node 217**: Deepgram: I know. You have done your best. That's would be great. | MAI: You have done your best.
+- **Node 218**: Deepgram: I know. You have done your best. That's would be great. | MAI: That would be great.
+
+### Face identities
+
+- **Node 32**: {'kind': 'base64_face_image', 'encoded_chars': 3596, 'decoded_bytes': 2697, 'sha256': '87a7600d54676ba60616a59d1d7cb75e6f1fb85bd4563705efb2a718abb8488d'} {'kind': 'base64_face_image', 'encoded_chars': 3560, 'decoded_bytes': 2670, 'sha256': 'b7f82b3e1d2934ab18a21b54797c73d80cfda2fdab98c70857b0f22f27c1f53d'} {'kind': 'base64_face_image', 'encoded_chars': 3700, 'decoded_bytes': 2773, 'sha256': '582efc7adb2406588c2388808ae2ec152491448b64cad1e2d26d0578d58ee437'} {'kind': 'base64_face_image', 'encoded_chars': 4544, 'decoded_bytes': 3407, 'sha256': '3d2617484872736692a71d157dfacd7c241bc80a0c8fcfb6152462fa7198e135'} {'kind': 'base64_face_image', 'encoded_chars': 4256, 'decoded_bytes': 3191, 'sha256': 'd1733ba8a3ec854c760f9b0dd9d48895757a22f169642dd7cac39f565c52db9c'} {'kind': 'base64_face_image', 'encoded_chars': 4000, 'decoded_bytes': 2998, 'sha256': 'eaefc899cf3e5988cb61271779dc5a2550a37d3cb41b0d0fb9445fdbccfc0e99'} {'kind': 'base64_face_image', 'encoded_chars': 3552, 'decoded_bytes': 2664, 'sha256': 'b7d5bb2cd00b5aa35267fb60a12643c8e305496f47346da8229712aa3cbc088a'} {'kind': 'base64_face_image', 'encoded_chars': 5144, 'decoded_bytes': 3858, 'sha256': 'b91291dc2e0268ec06969608fafeb30cee421e3e042f30f5125ce9947ca12131'} {'kind': 'base64_face_image', 'encoded_chars': 4616, 'decoded_bytes': 3461, 'sha256': '0770900801a392242ccade9c01b9ad6bfa0846d06e7abc5c0efc64392f1d5c06'} {'kind': 'base64_face_image', 'encoded_chars': 4664, 'decoded_bytes': 3497, 'sha256': 'c4fb69504df82e532bcf325e5f4e19abdd8e315e6bf5725c744cba995ed9b8b6'}

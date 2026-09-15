@@ -1,0 +1,73 @@
+{
+  "clip_id": 129,
+  "source": {
+    "segment_id": 129,
+    "source": "DAY1_A1_JAKE_12100000.mp4",
+    "source_clock": "12100000",
+    "start_seconds_in_source": 12.080000000001746,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43812.08,
+    "absolute_end_seconds": 43830.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0129.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 53153.63712195,
+      "prepared_perf": 53160.830681971,
+      "ordered_start_perf": 53238.958195326,
+      "consumer_wait_ms": 0.03500699676806107,
+      "ready_to_ordered_ms": 78127.5133550007,
+      "preparation_work_ms": 7188.198349998856,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Several people are gathered around a checkered dining table with flowers, notebooks, and a laptop on it.",
+      "A woman seated on the left holds a bouquet of flowers while talking with others at the table.",
+      "The camera turns toward the kitchen entryway, showing a person in an orange shirt standing near the counter.",
+      "The individuals discuss plans for having a barbecue and coordinating dinner for their guests."
+    ],
+    "high_level_conclusions": [
+      "The group is planning a social gathering or meal schedule, discussing whether to host a barbecue for dinner.",
+      "The speakers are concerned about hospitality logistics, specifically regarding how to feed guests if they stay until evening."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Several people are gathered around a checkered dining table with flowers, notebooks, and a laptop on it.\",\n    \"A woman seated on the left holds a bouquet of flowers while talking with others at the table.\",\n    \"The camera turns toward the kitchen entryway, showing a person in an orange shirt standing near the counter.\",\n    \"The individuals discuss plans for having a barbecue and coordinating dinner for their guests.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is planning a social gathering or meal schedule, discussing whether to host a barbecue for dinner.\",\n    \"The speakers are concerned about hospitality logistics, specifically regarding how to feed guests if they stay until evening.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 129,
+      "call_id": "e1e6c4b5-838b-409e-a773-33404607ce9b",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412061.7473717,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 40439,
+      "output_tokens": 1054,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 39362.788349004404
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Several people are gathered around a checkered dining table with flowers, notebooks, and a laptop on it.\",\n    \"A woman seated on the left holds a bouquet of flowers while talking with others at the table.\",\n    \"The camera turns toward the kitchen entryway, showing a person in an orange shirt standing near the counter.\",\n    \"The individuals discuss plans for having a barbecue and coordinating dinner for their guests.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is planning a social gathering or meal schedule, discussing whether to host a barbecue for dinner.\",\n    \"The speakers are concerned about hospitality logistics, specifically regarding how to feed guests if they stay until evening.\"\n  ]\n}\n```",
+      "total_tokens": 41493,
+      "request_end": 1789412101.1102962,
+      "latency_ms": 39362.919546998455,
+      "client_wall_clock_latency_ms": 39362.919546998455,
+      "api_request_wall_clock_latency_ms": 39362.919546998455
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_129_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

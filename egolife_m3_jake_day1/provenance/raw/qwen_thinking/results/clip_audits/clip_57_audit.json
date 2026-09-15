@@ -1,0 +1,433 @@
+{
+  "clip_id": 57,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0057.mp4",
+  "end_to_end_memory_generation_ms": 582755.6141919994,
+  "latency_ms": {
+    "clip_decode": 4199.104842002271,
+    "deepgram_asr": 2.375910997216124,
+    "mai_transcribe_asr": 2.565507995313965,
+    "asr_total": 3.693220001878217,
+    "audio_segmentation": 6.889937998494133,
+    "speech_embedding_campplus": 405.0184790030471,
+    "facial_detection_recognition_buffalo_l": 3185.287786000117,
+    "face_clustering": 5.172545003006235,
+    "vlm_memory_generation": 165104.7104429963,
+    "text_embedding": 474.71385700191604,
+    "graph_update_total": 198.15946799644735
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 57,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 859,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789422501.6907384,
+          "status": "success",
+          "total_tokens": 163,
+          "request_end": 1789422502.1650686,
+          "latency_ms": 474.3306759992265
+        }
+      ],
+      "total_tokens": 163,
+      "latency_ms": 474.71385700191604
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.375910997216124,
+        "openrouter-mai-transcribe-2": 2.565507995313965
+      },
+      "asr_total_ms": 3.693220001878217,
+      "audio_segmentation_ms": 6.889937998494133,
+      "speech_embedding_ms": 405.0184790030471,
+      "graph_update_ms": 198.04803899751278,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 622.4301100010052
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3185.287786000117,
+      "face_clustering_ms": 5.172545003006235,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 229,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3316.4426009971066
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_724>",
+        "<voice_364>",
+        "<voice_444>"
+      ],
+      "context_preparation_ms": 4185.102208997705,
+      "vlm_ms": 165104.7104429963,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"Three individuals are gathered in a room equipped with a projector screen and lighting equipment.\",\n\t\t\"Two women stand near a dresser while a man in an orange shirt observes the activity.\",\n\t\t\"Speaker <voice_724> explains that cultivation medium is soaked in water to accelerate fermentation.\",\n\t\t\"The camera operator moves toward a door and adjusts the mounting hook.\",\n\t\t\"Speaker <voice_364> suggests putting potatoes on a talent show and asks which ones are theirs.\",\n\t\t\"Speaker <voice_444> replies that there are none of theirs.\",\n\t\t\"The group continues to arrange items on the table and dresser.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The presence of a clapperboard and lighting suggests a film or video production setup.\",\n\t\t\"The dialogue contains technical terms like 'cultivation medium' and 'fermentation', indicating a specific subject matter or prop discussion.\",\n\t\t\"The interaction near the door involves securing the camera equipment.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Three individuals are gathered in a room equipped with a projector screen and lighting equipment.",
+          "Two women stand near a dresser while a man in an orange shirt observes the activity.",
+          "Speaker <voice_724> explains that cultivation medium is soaked in water to accelerate fermentation.",
+          "The camera operator moves toward a door and adjusts the mounting hook.",
+          "Speaker <voice_364> suggests putting potatoes on a talent show and asks which ones are theirs.",
+          "Speaker <voice_444> replies that there are none of theirs.",
+          "The group continues to arrange items on the table and dresser."
+        ],
+        "high_level_conclusions": [
+          "The presence of a clapperboard and lighting suggests a film or video production setup.",
+          "The dialogue contains technical terms like 'cultivation medium' and 'fermentation', indicating a specific subject matter or prop discussion.",
+          "The interaction near the door involves securing the camera equipment."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 57,
+          "call_id": "a41e2c17-343c-452b-9696-f7a4dd6d564c",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789422336.5850952,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"Three individuals are gathered in a room equipped with a projector screen and lighting equipment.\",\n\t\t\"Two women stand near a dresser while a man in an orange shirt observes the activity.\",\n\t\t\"Speaker <voice_724> explains that cultivation medium is soaked in water to accelerate fermentation.\",\n\t\t\"The camera operator moves toward a door and adjusts the mounting hook.\",\n\t\t\"Speaker <voice_364> suggests putting potatoes on a talent show and asks which ones are theirs.\",\n\t\t\"Speaker <voice_444> replies that there are none of theirs.\",\n\t\t\"The group continues to arrange items on the table and dresser.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The presence of a clapperboard and lighting suggests a film or video production setup.\",\n\t\t\"The dialogue contains technical terms like 'cultivation medium' and 'fermentation', indicating a specific subject matter or prop discussion.\",\n\t\t\"The interaction near the door involves securing the camera equipment.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Video Frames:**\n*   **Scene:** It looks like a room being set up for filming or a photoshoot. There's a table with props (flowers, clapperboard), a whiteboard, a projector screen, and some lighting equipment.\n*   **Characters:**\n    *   Person 1 (Male): Wearing an orange/pinkish long-sleeved shirt. He moves around the room, sometimes standing near the camera, sometimes walking away.\n    *   Person 2 (Female): Wearing a white top and dark pants/skirt. She seems to be organizing items on a dresser/cabinet.\n    *   Person 3 (Female): Wearing a blue/green patterned dress. She stands near the table, interacting with the other woman and looking at items.\n    *   Camera Operator/Wearer: The perspective shifts occasionally, showing hands reaching out (e.g., at 08:50, 09:00, 10:00, 25:50, 29:50). This suggests someone is holding the camera or adjusting it.\n*   **Actions:**\n    *   00:00 - 00:05: The group is gathered around a table/dresser area. The woman in the dress is looking into a box. The woman in white is holding something (maybe a prop or tool).\n    *   00:05 - 00:10: The camera pans around. The man in the orange shirt walks towards the door/wall area.\n    *   00:10 - 00:15: The camera focuses on a door handle/hook area. A hand reaches out to touch it.\n    *   00:15 - 00:20: The man in orange returns to the center. The women continue their activity.\n    *   00:20 - 00:30: The group continues talking and arranging things. The woman in the dress is drinking water or holding a cup.\n    *   00:30 - End: The man in orange walks around again. The camera operator adjusts the camera position near the door.\n\n**2. Analyze the Voice Features:**\n*   `<voice_724>`: \"MAI: 培养基，泡到水里面加速发酵的。\" (Cultivation medium, soaked in water to accelerate fermentation.) -> This sounds like technical jargon, possibly related to science or a specific project setup.\n*   `<voice_364>`: \"MAI: 要不，土豆我们上也才艺，你看看哪些是你的。\" (Maybe, potato we also put on talent show, see which ones are yours.) -> \"Talent show\" might be a metaphor or literal. \"Potato\" could be a nickname or a prop name.\n*   `<voice_444>`: \"MAI: 没有我的。\" (Not mine.) -> Response to the previous statement about \"talent/potatoes\".\n\n**3. Synthesize Video Description:**\n*   Start with the initial gathering. Three people are in a room setting up for a shoot.\n*   Mention the man in the orange shirt moving around.\n*   Describe the interaction near the door where the camera is adjusted.\n*   Note the women working at the table/dresser.\n*   Combine these into atomic sentences.\n\n**4. Synthesize High-Level Conclusions:**\n*   The presence of a clapperboard, lights, and a whiteboard suggests a film or video production setup.\n*   The dialogue mentions \"cultivation medium\" and \"fermentation,\" which is unusual for a standard film set unless it's a specific genre (sci-fi, documentary, educational) or a metaphorical discussion. However, looking closely at the context, it might just be casual chatter unrelated to the main action, or perhaps they are discussing props. Wait, \"potato... talent show\" is very strange. Let's look at the visual context again. They are handling boxes and items. Maybe they are preparing props.\n*   The camera operator interacts with the door hook, suggesting they are securing the camera or checking the setup.\n*   The man in orange seems to be coordinating or observing.\n*   The voice features attribute speech to \"MAI\". I need to check if there's a face ID for MAI. The prompt says \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\n*   Looking at the faces:\n    *   Woman in white: Could be MAI?\n    *   Woman in blue dress: Could be MAI?\n    *   Man in orange: Could be MAI?\n    *   Actually, usually \"MAI\" refers to a specific person in these datasets (often the female in white or similar). Without explicit face IDs linked to names in the input, I have to rely on visual identification if possible, but the instruction says \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\"\n    *   Wait, the instruction says \"Use only IDs supplied in the input\". The input doesn't supply face IDs explicitly linked to names like \"MAI\". It just gives voice IDs.\n    *   However, often in these tasks, \"MAI\" corresponds to a specific face ID if available in the metadata not shown here, OR I need to infer based on typical dataset structures (like Charades or similar). But strictly following the prompt: \"If a face and a voice feature refer to the same character, indicate it...\". Since I don't have explicit mapping like \"Face_1 is MAI\", I cannot make an equivalence claim unless I am sure.\n    *   Re-reading the prompt: \"Some features may belong to the same character.\" \"Each feature has a unique ID...\".\n    *   The prompt asks to preserve speaker identity using voice IDs.\n    *   The prompt asks for Equivalence if face and voice match. Since I don't have face IDs labeled with names in the input text provided (only timestamps and images), I cannot definitively link a voice ID to a specific face ID like `<face_1>`. I must assume I don't know who \"MAI\" is visually without external knowledge or if the system expects me to guess based on common patterns (which I shouldn't do).\n    *   Wait, looking at the provided text, there are NO face IDs listed in the \"Face features:\" section! It just says \"Face features:Voice features:\". This implies there are no face features provided in the text block, or they are empty.\n    *   Therefore, I cannot create Equivalence statements because I lack the face IDs. I can only use voice IDs.\n    *   Wait, let me double check the input. \"Face features:Voice features:{\"...}\". It seems the Face features section is empty or missing.\n    *   Okay, so I will focus on describing the actions and using the voice IDs for the speech parts.\n    *   The voice content is quite specific (\"cultivation medium\", \"potato talent show\"). This suggests a specific context, maybe a cooking show or a science experiment disguised as a movie set? Or just random conversation. Given the clapperboard, it's likely a production.\n    *   I will describe the scene generally.\n\n**Drafting Video Description:**\n1.  Three individuals are gathered in a room equipped with filming gear, including a projector screen and lighting.\n2.  A woman in a blue dress and a woman in a white top are standing near a dresser, organizing items from a cardboard box.\n3.  A man wearing an orange shirt stands nearby, observing the activity.\n4.  The camera operator moves around the room, eventually focusing on a door handle and adjusting the camera mount.\n5.  The group continues to converse while handling various objects on the table and dresser.\n\n**Drafting High-Level Conclusions:**\n1.  The presence of a clapperboard and lighting equipment indicates a film or video production is taking place.\n2.  The dialogue regarding \"cultivation medium\" and \"fermentation\" suggests a specific topic of discussion, potentially related to the props or a script element involving scientific themes.\n3.  The interaction near the door suggests preparation for recording or securing the camera setup.\n\n**Refining based on constraints:**\n*   \"Preserve speaker identity when constructing memory... Use the exact ID as the speaker.\" -> I need to make sure I quote the ASR accurately in the memory/conclusion part if required. The prompt asks for \"Video Description\" and \"High-Level Conclusions\". It doesn't explicitly ask for a \"Memory\" section in the final JSON, but the first paragraph of the prompt talks about \"constructing memory\". Ah, the prompt says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions\". It does NOT ask for a Memory section in the output JSON. The first paragraph describes the *process* of how I should think about the data (preserving speaker identity), but the output format is fixed to `video_description` and `high_level_conclusions`.\n*   Wait, the prompt says \"Preserve speaker identity when constructing memory from the supplied character features.\" This is an instruction for *me* (the model) on how to process the info, likely implying I should treat the voice features as ground truth for speech.\n*   The output JSON schema is strict.\n*   I need to ensure I don't hallucinate face IDs. Since none are provided, I won't add Equivalence lines.\n*   I need to make sure the video description covers the atomic events.\n\n**Revised Plan:**\n*   **Video Description:** Break down the timeline.\n    *   Initial state: Group around table/dresser.\n    *   Middle: Camera moves to door, hand touches hook.\n    *   End: Group resumes activity.\n*   **Conclusions:** Inference about the activity (filming prep) and the nature of the conversation (technical terms used casually?).\n\nLet's write the JSON.\n\nOne detail: \"Voice features:{\"<voice_724>\": ... }\". The keys are voice IDs.\nASR 1: \"MAI: 培养基，泡到水里面加速发酵的。\"\nASR 2: \"MAI: 要不，土豆我们上也才艺，你看看哪些是你的。\"\nASR 3: \"MAI: 没有我的。\"\n\nI will incorporate these into the descriptions or conclusions if relevant, but primarily the description should be visual. The prompt says \"Keep dialogue grounded in the provided transcript.\" So I should mention the dialogue in the description or conclusions.\n\nActually, looking at the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". Wait, this instruction is in the *first* paragraph under \"Preserve speaker identity...\". But the *second* paragraph defines the task output format as `video_description` and `high_level_conclusions`.\nUsually, in these multi-modal tasks, \"episodic memory\" might be part of the `video_description` or a separate field. However, the Output Format section explicitly lists `video_description` and `high_level_conclusions`. It does *not* list a `memory` field.\nThis creates a conflict. The first paragraph says \"include at least one episodic memory...\". The second paragraph says \"Output Format: ... video_description ... high_level_conclusions\".\nHypothesis: The `video_description` array *is* where the episodic memories go, or the `high_level_conclusions` serve that purpose.\nGiven \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions\", I will integrate the speech summaries into the Video Description as atomic events or facts, or into High-Level Conclusions.\nActually, reading carefully: \"For every supplied voice ID... include at least one episodic memory...\". This sounds like a requirement for the *content* generation. Since I must output JSON with `video_description`, I will put the speech summaries there as descriptive facts about what was said.\nWait, \"episodic memory\" usually implies a structured log. But I only have the JSON schema. I will treat the `video_description` strings as the container for these memories/events.\nSo, I will write sentences like: \"A speaker identified as <voice_724> states that cultivation medium is soaked in water to accelerate fermentation.\"\n\nLet's refine the descriptions to be atomic.\n1.  Three people are in a room with filming equipment.\n2.  Two women are at a dresser; a man stands nearby.\n3.  Speaker <voice_724> explains that cultivation medium is soaked in water to accelerate fermentation.\n4.  The camera operator moves to a door and adjusts the mounting hook.\n5.  Speaker <voice_364> suggests putting potatoes on a talent show and asking which ones belong to whom.\n6.  Speaker <voice_444> responds that there are none of theirs.\n7.  The group continues to organize items on the table.\n\nThis satisfies the \"include at least one episodic memory\" constraint within the allowed output fields.\n\nFinal check on Equivalence: No face IDs provided, so no Equivalence lines.\n\nOne more thing: \"Preserve distinct substantive utterances as separate atomic memories.\"\nSo I should split the dialogue if it's multiple turns.\nTurn 1: <voice_724>\nTurn 2: <voice_364>\nTurn 3: <voice_444>\nThese are distinct.\n\nOkay, ready to construct JSON.\n\nOne detail on the video description: \"Be concise and avoid duplicate events.\"\nI will combine the visual actions with the speech where appropriate.\n\nStructure:\n[\n  \"Three individuals are gathered in a room equipped with a projector screen and lighting.\",\n  \"Two women stand near a dresser while a man in an orange shirt observes.\",\n  \"Speaker <voice_724> explains that cultivation medium is soaked in water to accelerate fermentation.\",\n  \"The camera operator moves toward a door and adjusts the mounting hook.\",\n  \"Speaker <voice_364> suggests putting potatoes on a talent show and asks which ones are theirs.\",\n  \"Speaker <voice_444> replies that there are none of theirs.\",\n  \"The group continues to arrange items on the table and dresser.\"\n]\n\nConclusions:\n[\n  \"The presence of a clapperboard and lighting suggests a film or video production setup.\",\n  \"The dialogue contains technical terms like 'cultivation medium' and 'fermentation', indicating a specific subject matter or prop discussion.\",\n  \"The interaction near the door involves securing the camera equipment.\"\n]\n\nWait, I should check if I can infer face IDs. The prompt says \"If a face and a voice feature refer to the same character, indicate it...\". Since I don't have face IDs, I can't. I will stick to voice IDs.\n\nOne correction: The prompt says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" I am using <voice_724>, etc., which are in the input. Good.\n\nFinal check on the \"episodic memory\" instruction vs \"video description\". The instruction says \"include at least one episodic memory...\". It doesn't say \"in a separate field\". It says \"Your task consists of two parts: 1. Video Description...\". So I will embed the memory in the Video Description.\n\nLet's finalize the text.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"Three individuals are gathered in a room equipped with a projector screen and lighting equipment.\",\n\t\t\"Two women stand near a dresser while a man in an orange shirt observes the activity.\",\n\t\t\"Speaker <voice_724> explains that cultivation medium is soaked in water to accelerate fermentation.\",\n\t\t\"The camera operator moves toward a door and adjusts the mounting hook.\",\n\t\t\"Speaker <voice_364> suggests putting potatoes on a talent show and asks which ones are theirs.\",\n\t\t\"Speaker <voice_444> replies that there are none of theirs.\",\n\t\t\"The group continues to arrange items on the table and dresser.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The presence of a clapperboard and lighting suggests a film or video production setup.\",\n\t\t\"The dialogue contains technical terms like 'cultivation medium' and 'fermentation', indicating a specific subject matter or prop discussion.\",\n\t\t\"The interaction near the door involves securing the camera equipment.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10272,
+          "output_tokens": 3609,
+          "total_tokens": 13881,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0022050007828511298,
+            "media_preparation_ms": 62.85951199970441,
+            "processor_tokenization_ms": 502.13200799771585,
+            "device_transfer_ms": 42.68603499804158,
+            "cuda_generation_ms": 164463.6495990053,
+            "decoding_ms": 3.937098997994326
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 165075.45593599934,
+          "request_end": 1789422501.689808,
+          "latency_ms": 165104.7104429963,
+          "client_wall_clock_latency_ms": 165104.7104429963
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.0916620047064498,
+      "nodes_added": 7,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.019766994228120893,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 3,
+    "detected_faces": 229,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 3,
+    "nodes_after_clip": 735,
+    "edges_after_clip": 269,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 3
+  },
+  "generated_memory": {
+    "video_description": [
+      "Three individuals are gathered in a room equipped with a projector screen and lighting equipment.",
+      "Two women stand near a dresser while a man in an orange shirt observes the activity.",
+      "Speaker <voice_724> explains that cultivation medium is soaked in water to accelerate fermentation.",
+      "The camera operator moves toward a door and adjusts the mounting hook.",
+      "Speaker <voice_364> suggests putting potatoes on a talent show and asks which ones are theirs.",
+      "Speaker <voice_444> replies that there are none of theirs.",
+      "The group continues to arrange items on the table and dresser."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard and lighting suggests a film or video production setup.",
+      "The dialogue contains technical terms like 'cultivation medium' and 'fermentation', indicating a specific subject matter or prop discussion.",
+      "The interaction near the door involves securing the camera equipment."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Three individuals are gathered in a room equipped with a projector screen and lighting equipment.",
+      "Two women stand near a dresser while a man in an orange shirt observes the activity.",
+      "Speaker <voice_724> explains that cultivation medium is soaked in water to accelerate fermentation.",
+      "The camera operator moves toward a door and adjusts the mounting hook.",
+      "Speaker <voice_364> suggests putting potatoes on a talent show and asks which ones are theirs.",
+      "Speaker <voice_444> replies that there are none of theirs.",
+      "The group continues to arrange items on the table and dresser."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard and lighting suggests a film or video production setup.",
+      "The dialogue contains technical terms like 'cultivation medium' and 'fermentation', indicating a specific subject matter or prop discussion.",
+      "The interaction near the door involves securing the camera equipment."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_57_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 3,
+    "nodes": [
+      {
+        "id": 724,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 营养剂，泡到水里面加速醒发的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 725,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Three individuals are gathered in a room equipped with a projector screen and lighting equipment."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 726,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women stand near a dresser while a man in an orange shirt observes the activity."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 727,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_724> explains that cultivation medium is soaked in water to accelerate fermentation."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 728,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator moves toward a door and adjusts the mounting hook."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 729,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_364> suggests putting potatoes on a talent show and asks which ones are theirs."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 730,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_444> replies that there are none of theirs."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 731,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group continues to arrange items on the table and dresser."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 732,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The presence of a clapperboard and lighting suggests a film or video production setup."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 733,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The dialogue contains technical terms like 'cultivation medium' and 'fermentation', indicating a specific subject matter or prop discussion."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 734,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The interaction near the door involves securing the camera equipment."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 364,
+        "target": 729,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 444,
+        "target": 730,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 724,
+        "target": 727,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_57_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_57_graph.pkl"
+  },
+  "memory_pickle_bytes": 17361863,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 63106.318525577,
+    "prepared_perf": 63112.270278995,
+    "ordered_start_perf": 63514.003535266,
+    "consumer_wait_ms": 0.008014998456928879,
+    "ready_to_ordered_ms": 401733.25627099985,
+    "preparation_work_ms": 5946.451960997365,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 173705.96325599763
+}

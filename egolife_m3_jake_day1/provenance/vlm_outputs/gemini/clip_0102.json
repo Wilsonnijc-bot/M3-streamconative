@@ -1,0 +1,74 @@
+{
+  "clip_id": 102,
+  "source": {
+    "segment_id": 102,
+    "source": "DAY1_A1_JAKE_11573000.mp4",
+    "source_clock": "11573000",
+    "start_seconds_in_source": 6.059999999997672,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43056.06,
+    "absolute_end_seconds": 43080.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0102.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51413.143813982,
+      "prepared_perf": 51425.69290158,
+      "ordered_start_perf": 51510.587447762,
+      "consumer_wait_ms": 0.032141004339791834,
+      "ready_to_ordered_ms": 84894.54618200398,
+      "preparation_work_ms": 12543.858758996066,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table in a room discussing event plans, with flowers, a whiteboard, and a clapperboard nearby.",
+      "A young man in an orange T-shirt stands on the left side of the room, listening and gesturing.",
+      "A woman dressed in black sits at the dining table, attentively participating in the discussion.",
+      "A woman in white stands beside the whiteboard in the background, handling plants and flowers.",
+      "The group discusses rules for an upcoming activity, specifically addressing time control, ways to obtain currency, and an auction process."
+    ],
+    "high_level_conclusions": [
+      "The group is in the pre-production or planning stage of an activity or filming session involving an auction mechanism.",
+      "The speaker is proposing procedural adjustments to keep the event within a manageable timeframe while preserving the core auction concept."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table in a room discussing event plans, with flowers, a whiteboard, and a clapperboard nearby.\",\n\t\t\"A young man in an orange T-shirt stands on the left side of the room, listening and gesturing.\",\n\t\t\"A woman dressed in black sits at the dining table, attentively participating in the discussion.\",\n\t\t\"A woman in white stands beside the whiteboard in the background, handling plants and flowers.\",\n\t\t\"The group discusses rules for an upcoming activity, specifically addressing time control, ways to obtain currency, and an auction process.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is in the pre-production or planning stage of an activity or filming session involving an auction mechanism.\",\n\t\t\"The speaker is proposing procedural adjustments to keep the event within a manageable timeframe while preserving the core auction concept.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 102,
+      "call_id": "daa1dba4-52e2-4ff6-8eb2-2c28f50db1b9",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410333.9348395,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 53818,
+      "output_tokens": 799,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 64745.05964799755
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table in a room discussing event plans, with flowers, a whiteboard, and a clapperboard nearby.\",\n\t\t\"A young man in an orange T-shirt stands on the left side of the room, listening and gesturing.\",\n\t\t\"A woman dressed in black sits at the dining table, attentively participating in the discussion.\",\n\t\t\"A woman in white stands beside the whiteboard in the background, handling plants and flowers.\",\n\t\t\"The group discusses rules for an upcoming activity, specifically addressing time control, ways to obtain currency, and an auction process.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is in the pre-production or planning stage of an activity or filming session involving an auction mechanism.\",\n\t\t\"The speaker is proposing procedural adjustments to keep the event within a manageable timeframe while preserving the core auction concept.\"\n\t]\n}\n```",
+      "total_tokens": 54617,
+      "request_end": 1789410398.6800156,
+      "latency_ms": 64745.16956399748,
+      "client_wall_clock_latency_ms": 64745.16956399748,
+      "api_request_wall_clock_latency_ms": 64745.16956399748
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_102_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

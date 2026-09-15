@@ -1,0 +1,75 @@
+{
+  "clip_id": 101,
+  "source": {
+    "segment_id": 101,
+    "source": "DAY1_A1_JAKE_11573000.mp4",
+    "source_clock": "11573000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 6.059999999997672,
+    "absolute_start_seconds": 43050.0,
+    "absolute_end_seconds": 43056.06,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0101.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51364.583100455,
+      "prepared_perf": 51368.745104972,
+      "ordered_start_perf": 51474.620402322,
+      "consumer_wait_ms": 0.007313996320590377,
+      "ready_to_ordered_ms": 105875.29735000135,
+      "preparation_work_ms": 4156.419979997736,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered in an indoor room with a large table in the center.",
+      "On the table rests a film clapperboard, bottled water, flowers, and other equipment.",
+      "A person wearing an orange T-shirt enters from the left and stands with hands on hips, observing the group.",
+      "A person dressed in dark clothing sits at the table, looking down at a phone.",
+      "In the background, another person stands next to a whiteboard holding flowers.",
+      "<voice_0> speaks, remarking that the schedule or duration might take around an hour to an hour and a half."
+    ],
+    "high_level_conclusions": [
+      "The presence of a clapperboard, studio lighting equipment, and scheduling discussions indicates the group is a film or video production crew coordinating a shoot.",
+      "<voice_0> is discussing time management and estimated duration for the team's upcoming task or shoot."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered in an indoor room with a large table in the center.\",\n    \"On the table rests a film clapperboard, bottled water, flowers, and other equipment.\",\n    \"A person wearing an orange T-shirt enters from the left and stands with hands on hips, observing the group.\",\n    \"A person dressed in dark clothing sits at the table, looking down at a phone.\",\n    \"In the background, another person stands next to a whiteboard holding flowers.\",\n    \"<voice_0> speaks, remarking that the schedule or duration might take around an hour to an hour and a half.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The presence of a clapperboard, studio lighting equipment, and scheduling discussions indicates the group is a film or video production crew coordinating a shoot.\",\n    \"<voice_0> is discussing time management and estimated duration for the team's upcoming task or shoot.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 101,
+      "call_id": "5e6d1462-2a8b-4eec-8c12-f97ac3477ea6",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410291.7769659,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 14964,
+      "output_tokens": 1207,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 29326.298473999486
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered in an indoor room with a large table in the center.\",\n    \"On the table rests a film clapperboard, bottled water, flowers, and other equipment.\",\n    \"A person wearing an orange T-shirt enters from the left and stands with hands on hips, observing the group.\",\n    \"A person dressed in dark clothing sits at the table, looking down at a phone.\",\n    \"In the background, another person stands next to a whiteboard holding flowers.\",\n    \"<voice_0> speaks, remarking that the schedule or duration might take around an hour to an hour and a half.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The presence of a clapperboard, studio lighting equipment, and scheduling discussions indicates the group is a film or video production crew coordinating a shoot.\",\n    \"<voice_0> is discussing time management and estimated duration for the team's upcoming task or shoot.\"\n  ]\n}\n```",
+      "total_tokens": 16171,
+      "request_end": 1789410321.1033907,
+      "latency_ms": 29326.42151699838,
+      "client_wall_clock_latency_ms": 29326.42151699838,
+      "api_request_wall_clock_latency_ms": 29326.42151699838
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_101_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

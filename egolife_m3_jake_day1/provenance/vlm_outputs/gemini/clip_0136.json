@@ -1,0 +1,77 @@
+{
+  "clip_id": 136,
+  "source": {
+    "segment_id": 136,
+    "source": "DAY1_A1_JAKE_12130000.mp4",
+    "source_clock": "12130000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43980.0,
+    "absolute_end_seconds": 44010.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0136.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 53578.397158527,
+      "prepared_perf": 53586.8154189,
+      "ordered_start_perf": 53705.154816939,
+      "consumer_wait_ms": 0.008576003892812878,
+      "ready_to_ordered_ms": 118339.39803900284,
+      "preparation_work_ms": 8412.94898599881,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a dining table covered with a checkered tablecloth, holding a planning meeting.",
+      "At the head of the table, a person in an orange shirt points to and writes notes on a whiteboard.",
+      "<voice_1590> notes that an activity will take about two hours.",
+      "<voice_0> suggests deciding on a fixed end time for the schedule.",
+      "The person by the whiteboard finishes writing and sits down at the table.",
+      "<voice_1591> remarks that running from 2:30 to 8:00 is quite exhausting.",
+      "<voice_1592> agrees in response.",
+      "<voice_1578> proposes wrapping up by 6:30 and allocating the remaining hour and a half for performances, asking if participants can prepare acts such as singing."
+    ],
+    "high_level_conclusions": [
+      "The group is organizing the schedule for an upcoming event or gathering, balancing work sessions with entertainment.",
+      "<voice_1578> takes an active coordinating role in outlining the timeline and curating performance segments."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a dining table covered with a checkered tablecloth, holding a planning meeting.\",\n  \"At the head of the table, a person in an orange shirt points to and writes notes on a whiteboard.\",\n  \"<voice_1590> notes that an activity will take about two hours.\",\n  \"<voice_0> suggests deciding on a fixed end time for the schedule.\",\n  \"The person by the whiteboard finishes writing and sits down at the table.\",\n  \"<voice_1591> remarks that running from 2:30 to 8:00 is quite exhausting.\",\n  \"<voice_1592> agrees in response.\",\n  \"<voice_1578> proposes wrapping up by 6:30 and allocating the remaining hour and a half for performances, asking if participants can prepare acts such as singing.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is organizing the schedule for an upcoming event or gathering, balancing work sessions with entertainment.\",\n  \"<voice_1578> takes an active coordinating role in outlining the timeline and curating performance segments.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 136,
+      "call_id": "b449d2d0-afd1-4ada-8d82-993a7ca889a6",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412531.6144276,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66991,
+      "output_tokens": 1186,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 21137.50020700536
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a dining table covered with a checkered tablecloth, holding a planning meeting.\",\n  \"At the head of the table, a person in an orange shirt points to and writes notes on a whiteboard.\",\n  \"<voice_1590> notes that an activity will take about two hours.\",\n  \"<voice_0> suggests deciding on a fixed end time for the schedule.\",\n  \"The person by the whiteboard finishes writing and sits down at the table.\",\n  \"<voice_1591> remarks that running from 2:30 to 8:00 is quite exhausting.\",\n  \"<voice_1592> agrees in response.\",\n  \"<voice_1578> proposes wrapping up by 6:30 and allocating the remaining hour and a half for performances, asking if participants can prepare acts such as singing.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is organizing the schedule for an upcoming event or gathering, balancing work sessions with entertainment.\",\n  \"<voice_1578> takes an active coordinating role in outlining the timeline and curating performance segments.\"\n ]\n}\n```",
+      "total_tokens": 68177,
+      "request_end": 1789412552.752042,
+      "latency_ms": 21137.611195001227,
+      "client_wall_clock_latency_ms": 21137.611195001227,
+      "api_request_wall_clock_latency_ms": 21137.611195001227
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_136_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

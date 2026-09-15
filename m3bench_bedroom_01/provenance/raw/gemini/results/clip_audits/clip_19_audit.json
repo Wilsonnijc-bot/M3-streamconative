@@ -1,0 +1,398 @@
+{
+  "clip_id": 19,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00083000.mp4",
+  "end_to_end_memory_generation_ms": 161580.44001400413,
+  "latency_ms": {
+    "clip_decode": 3295.438966000802,
+    "deepgram_asr": 938.2564300030936,
+    "mai_transcribe_asr": 989.3526849918999,
+    "asr_total": 990.2922619949095,
+    "audio_segmentation": 6.4509439980611205,
+    "speech_embedding_campplus": 990.0495769979898,
+    "facial_detection_recognition_buffalo_l": 3053.274866004358,
+    "face_clustering": 10.179078002693132,
+    "vlm_memory_generation": 79891.16247399943,
+    "text_embedding": 653.1380239903228,
+    "graph_update_total": 36.21968500374351
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 19,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 771,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789432391.1055312,
+          "status": "success",
+          "total_tokens": 158,
+          "request_end": 1789432391.7584333,
+          "latency_ms": 652.902621004614
+        }
+      ],
+      "total_tokens": 158,
+      "latency_ms": 653.1380239903228
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 938.2564300030936,
+        "openrouter-mai-transcribe-2": 989.3526849918999
+      },
+      "asr_total_ms": 990.2922619949095,
+      "audio_segmentation_ms": 6.4509439980611205,
+      "speech_embedding_ms": 990.0495769979898,
+      "graph_update_ms": 36.08948999317363,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1048.4929259982891
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3053.274866004358,
+      "face_clustering_ms": 10.179078002693132,
+      "graph_update_ms": 0.001844004145823419,
+      "frame_count": 150,
+      "detected_face_count": 253,
+      "qualified_face_count": 3,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3201.0300729889423
+    },
+    "vlm": {
+      "context_preparation_ms": 4753.178990999004,
+      "vlm_ms": 79891.16247399943,
+      "raw_response": "```json\n{\n\t\"video_description\": [\n\t\t\"Two young women sit on the edge of a bed engaged in conversation.\",\n\t\t\"The woman in the beige t-shirt (<voice_179>) talks about having an allergic reaction to strawberries.\",\n\t\t\"The woman wearing a cream sweater (<voice_10>) questions why she ate strawberries right before an examination.\",\n\t\t\"The woman in the beige shirt (<voice_179>) explains that she only had a small amount and did not anticipate the severity of the reaction.\",\n\t\t\"The woman in the cream sweater (<voice_180>) remarks on her carelessness as the discussion concludes.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The two women share a close relationship, likely friends or roommates.\",\n\t\t\"The woman in beige is remorseful about eating an allergen before an important exam.\",\n\t\t\"The woman in the cream sweater expresses concern mixed with reprimand over her friend's lack of caution.\"\n\t]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two young women sit on the edge of a bed engaged in conversation.",
+          "The woman in the beige t-shirt (<voice_179>) talks about having an allergic reaction to strawberries.",
+          "The woman wearing a cream sweater (<voice_10>) questions why she ate strawberries right before an examination.",
+          "The woman in the beige shirt (<voice_179>) explains that she only had a small amount and did not anticipate the severity of the reaction.",
+          "The woman in the cream sweater (<voice_180>) remarks on her carelessness as the discussion concludes."
+        ],
+        "high_level_conclusions": [
+          "The two women share a close relationship, likely friends or roommates.",
+          "The woman in beige is remorseful about eating an allergen before an important exam.",
+          "The woman in the cream sweater expresses concern mixed with reprimand over her friend's lack of caution."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 19,
+          "call_id": "d7ea3fb7-3a09-4c12-94be-ac51b3d428f2",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789432311.2133846,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66043,
+          "output_tokens": 1060,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 79891.0194249911
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n\t\"video_description\": [\n\t\t\"Two young women sit on the edge of a bed engaged in conversation.\",\n\t\t\"The woman in the beige t-shirt (<voice_179>) talks about having an allergic reaction to strawberries.\",\n\t\t\"The woman wearing a cream sweater (<voice_10>) questions why she ate strawberries right before an examination.\",\n\t\t\"The woman in the beige shirt (<voice_179>) explains that she only had a small amount and did not anticipate the severity of the reaction.\",\n\t\t\"The woman in the cream sweater (<voice_180>) remarks on her carelessness as the discussion concludes.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The two women share a close relationship, likely friends or roommates.\",\n\t\t\"The woman in beige is remorseful about eating an allergen before an important exam.\",\n\t\t\"The woman in the cream sweater expresses concern mixed with reprimand over her friend's lack of caution.\"\n\t]\n}\n```",
+          "total_tokens": 67103,
+          "request_end": 1789432391.1045523,
+          "latency_ms": 79891.16247399943,
+          "client_wall_clock_latency_ms": 79891.16247399943,
+          "api_request_wall_clock_latency_ms": 79891.16247399943
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.11050800094380975,
+      "nodes_added": 5,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.017843005480244756,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 3,
+    "detected_faces": 253,
+    "qualified_faces": 3,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 189,
+    "edges_after_clip": 59,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two young women sit on the edge of a bed engaged in conversation.",
+      "The woman in the beige t-shirt (<voice_179>) talks about having an allergic reaction to strawberries.",
+      "The woman wearing a cream sweater (<voice_10>) questions why she ate strawberries right before an examination.",
+      "The woman in the beige shirt (<voice_179>) explains that she only had a small amount and did not anticipate the severity of the reaction.",
+      "The woman in the cream sweater (<voice_180>) remarks on her carelessness as the discussion concludes."
+    ],
+    "high_level_conclusions": [
+      "The two women share a close relationship, likely friends or roommates.",
+      "The woman in beige is remorseful about eating an allergen before an important exam.",
+      "The woman in the cream sweater expresses concern mixed with reprimand over her friend's lack of caution."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two young women sit on the edge of a bed engaged in conversation.",
+      "The woman in the beige t-shirt (<voice_179>) talks about having an allergic reaction to strawberries.",
+      "The woman wearing a cream sweater (<voice_10>) questions why she ate strawberries right before an examination.",
+      "The woman in the beige shirt (<voice_179>) explains that she only had a small amount and did not anticipate the severity of the reaction.",
+      "The woman in the cream sweater (<voice_180>) remarks on her carelessness as the discussion concludes."
+    ],
+    "high_level_conclusions": [
+      "The two women share a close relationship, likely friends or roommates.",
+      "The woman in beige is remorseful about eating an allergen before an important exam.",
+      "The woman in the cream sweater expresses concern mixed with reprimand over her friend's lack of caution."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_19_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 179,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: I forgot that I have a allergic reaction until the strawberry. You | MAI: I forgot that I, um, have a allergic reaction onto the strawberry.",
+            "Deepgram: know you are allergic to strawberries, but why why do you any taste before your examination? You know, I just ate a little, so I can't imagine that it's so severe like this. And I make mistake as soon as take them. Okay. | MAI: Uh, you know, I just, uh, ate a little, so I can't imagine that it's so s- severe like this, and I make mistake as soon as I ate them."
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 180,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Okay. You're so careless. I'm so regret, actually. | MAI: How can you be so careless? Mm.",
+            "Deepgram: I'm so regret, actually. | MAI: I'm sorry to regret, actually."
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 181,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two young women sit on the edge of a bed engaged in conversation."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 182,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the beige t-shirt (<voice_179>) talks about having an allergic reaction to strawberries."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 183,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman wearing a cream sweater (<voice_10>) questions why she ate strawberries right before an examination."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 184,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the beige shirt (<voice_179>) explains that she only had a small amount and did not anticipate the severity of the reaction."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 185,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the cream sweater (<voice_180>) remarks on her carelessness as the discussion concludes."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 186,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women share a close relationship, likely friends or roommates."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 187,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman in beige is remorseful about eating an allergen before an important exam."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 188,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman in the cream sweater expresses concern mixed with reprimand over her friend's lack of caution."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 10,
+        "target": 183,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 179,
+        "target": 182,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 179,
+        "target": 184,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 180,
+        "target": 185,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_19_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_19_graph.pkl"
+  },
+  "memory_pickle_bytes": 4888043,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 73417.036192371,
+    "prepared_perf": 73421.434549418,
+    "ordered_start_perf": 73488.727986779,
+    "consumer_wait_ms": 0.012864009477198124,
+    "ready_to_ordered_ms": 67293.43736100418,
+    "preparation_work_ms": 4393.047409001156,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 89549.6176279994
+}

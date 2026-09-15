@@ -1,0 +1,565 @@
+{
+  "clip_id": 21,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0021.mp4",
+  "end_to_end_memory_generation_ms": 600821.032765998,
+  "latency_ms": {
+    "clip_decode": 3957.895922001626,
+    "deepgram_asr": 2.9931440003565513,
+    "mai_transcribe_asr": 2.2268100001383573,
+    "asr_total": 3.6689140033558942,
+    "audio_segmentation": 8.581458998378366,
+    "speech_embedding_campplus": 1511.7172019963618,
+    "facial_detection_recognition_buffalo_l": 3455.903573994874,
+    "face_clustering": 15.684006997616962,
+    "vlm_memory_generation": 172611.78739299794,
+    "text_embedding": 694.6021499970811,
+    "graph_update_total": 175.53841298649786
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 21,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 1121,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789414681.9815867,
+          "status": "success",
+          "total_tokens": 287,
+          "request_end": 1789414682.6759124,
+          "latency_ms": 694.3260710031609
+        }
+      ],
+      "total_tokens": 287,
+      "latency_ms": 694.6021499970811
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.9931440003565513,
+        "openrouter-mai-transcribe-2": 2.2268100001383573
+      },
+      "asr_total_ms": 3.6689140033558942,
+      "audio_segmentation_ms": 8.581458998378366,
+      "speech_embedding_ms": 1511.7172019963618,
+      "graph_update_ms": 175.3437769948505,
+      "asr_segment_count": 8,
+      "speech_embedding_count": 8,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1715.797149001446
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3455.903573994874,
+      "face_clustering_ms": 15.684006997616962,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 238,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3606.3527619990055
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_260>",
+        "<voice_261>",
+        "<voice_262>",
+        "<voice_250>",
+        "<voice_0>"
+      ],
+      "context_preparation_ms": 4235.919874998217,
+      "vlm_ms": 172611.78739299794,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a wooden table covered with a red and white checkered cloth in a room equipped with a whiteboard and lighting gear.\",\n\t\t\"Various electronic devices, open boxes, and water bottles are arranged on the table surface.\",\n\t\t\"At 00:02, <voice_260> speaks, stating '大东北，我的家乡。'\",\n\t\t\"At 00:07, <voice_261> asks '你东北哪儿的？' regarding the specific region.\",\n\t\t\"At 00:09, <voice_262> identifies themselves as being from '栾花村'.\",\n\t\t\"At 00:16, <voice_250> mentions '吉林省长春市' and asks if others know the city.\",\n\t\t\"At 00:26, <voice_0> responds, saying '这-这也知道。'\",\n\t\t\"The participants continue to handle objects and engage in discussion throughout the clip.\",\n\t\t\"The camera perspective shifts slightly, revealing a window and a projector screen in the background.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Multiple individuals are collaborating around a table, focusing on technical items.\",\n\t\t\"The dialogue primarily revolves around geographical identification, specifically Northeast China and Jilin Province.\",\n\t\t\"<voice_260>, <voice_261>, <voice_262>, <voice_250>, and <voice_0> represent distinct speakers in the conversation.\",\n\t\t\"No facial features were provided to visually correlate with the voice tracks.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are seated around a wooden table covered with a red and white checkered cloth in a room equipped with a whiteboard and lighting gear.",
+          "Various electronic devices, open boxes, and water bottles are arranged on the table surface.",
+          "At 00:02, <voice_260> speaks, stating '大东北，我的家乡。'",
+          "At 00:07, <voice_261> asks '你东北哪儿的？' regarding the specific region.",
+          "At 00:09, <voice_262> identifies themselves as being from '栾花村'.",
+          "At 00:16, <voice_250> mentions '吉林省长春市' and asks if others know the city.",
+          "At 00:26, <voice_0> responds, saying '这-这也知道。'",
+          "The participants continue to handle objects and engage in discussion throughout the clip.",
+          "The camera perspective shifts slightly, revealing a window and a projector screen in the background."
+        ],
+        "high_level_conclusions": [
+          "Multiple individuals are collaborating around a table, focusing on technical items.",
+          "The dialogue primarily revolves around geographical identification, specifically Northeast China and Jilin Province.",
+          "<voice_260>, <voice_261>, <voice_262>, <voice_250>, and <voice_0> represent distinct speakers in the conversation.",
+          "No facial features were provided to visually correlate with the voice tracks."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 21,
+          "call_id": "73c1423f-0429-4676-ae96-67e1def5bca8",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789414509.3686056,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a wooden table covered with a red and white checkered cloth in a room equipped with a whiteboard and lighting gear.\",\n\t\t\"Various electronic devices, open boxes, and water bottles are arranged on the table surface.\",\n\t\t\"At 00:02, <voice_260> speaks, stating '大东北，我的家乡。'\",\n\t\t\"At 00:07, <voice_261> asks '你东北哪儿的？' regarding the specific region.\",\n\t\t\"At 00:09, <voice_262> identifies themselves as being from '栾花村'.\",\n\t\t\"At 00:16, <voice_250> mentions '吉林省长春市' and asks if others know the city.\",\n\t\t\"At 00:26, <voice_0> responds, saying '这-这也知道。'\",\n\t\t\"The participants continue to handle objects and engage in discussion throughout the clip.\",\n\t\t\"The camera perspective shifts slightly, revealing a window and a projector screen in the background.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Multiple individuals are collaborating around a table, focusing on technical items.\",\n\t\t\"The dialogue primarily revolves around geographical identification, specifically Northeast China and Jilin Province.\",\n\t\t\"<voice_260>, <voice_261>, <voice_262>, <voice_250>, and <voice_0> represent distinct speakers in the conversation.\",\n\t\t\"No facial features were provided to visually correlate with the voice tracks.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). They show a group of people sitting around a table covered with a red and white checkered tablecloth. There are boxes, bottles, and electronic devices on the table. The room looks like a studio or a casual meeting space with a whiteboard and lighting equipment visible in some shots. The camera seems to be held by someone sitting at the table (POV shot), showing legs/knees in the foreground.\n*   **Character Features:**\n    *   **Face Features:** None explicitly listed in the prompt text (\"Face features:\"). Wait, looking closely at the prompt structure, there is a section \"Face features:\" but it's empty. Then \"Voice features:\". This means I cannot link specific faces to voices based on visual confirmation in the provided text data. However, the instruction says \"If a face and a voice feature refer to the same character, indicate it...\". Since no face features are provided, I cannot make equivalences.\n    *   **Voice Features:**\n        *   `<voice_260>`: \"MAI: 大东北，我的家乡。\" (Mai: Northeast China, my hometown.) - Time: 00:02-00:06\n        *   `<voice_261>`: \"MAI: 你东北哪儿的？\" (Mai: Which part of Northeast are you from?) ... \"MAI: 嗯，东北栾花的。\" (Mai: Um, Luanhua, Northeast.) ... \"MAI: 没有没有，那个长春。\" (Mai: No no, Changchun.) - Time: 00:07-00:16\n        *   `<voice_262>`: \"MAI: 我是栾花村。\" (Mai: I am from Luanhua Village.) - Time: 00:09-00:12\n        *   `<voice_250>`: \"MAI: 吉林省长春市。大家知道这个城市吗？\" (Mai: Jilin Province, Changchun City. Does everyone know this city?) ... \"MAI: 那大家知道吉林省还有个吉林市吗？\" (Mai: So does everyone know Jilin Province also has Jilin City?) - Time: 00:16-00:27\n        *   `<voice_0>`: \"MAI: 这-这也知道。怎么？你\" (Mai: This-This is also known. How? You...) - Time: 00:26-00:30\n\n**2. Construct Video Description:**\n*   **Scene:** A group of people are gathered around a wooden table with a checkered cloth.\n*   **Activity:** They appear to be working on something, possibly assembling or testing electronics (boxes, wires, devices).\n*   **Camera Movement:** The camera pans slightly, revealing different angles of the room, including a whiteboard, lights, and a window.\n*   **Participants:** Several individuals are seated. One person in a black shirt is prominent on the left. Another in an orange/brown shirt is on the right. Others are in the background.\n*   **Specific Events:**\n    *   People are handling objects on the table.\n    *   The camera view shifts perspective slightly over time.\n    *   At 00:02, voice starts.\n    *   Throughout the clip, the group remains seated and engaged with items on the table.\n\n**3. Construct High-Level Conclusions:**\n*   **Identity Resolution:** The voice features consistently attribute speech to \"MAI\". Since there are no face features provided to link visually, I can only conclude that MAI is one of the participants.\n*   **Dialogue Content:** MAI is discussing their hometown (Northeast China, specifically Changchun/Jilin).\n*   **Inference:** The group is likely discussing geography or personal backgrounds while working on a project.\n*   **Constraint Check:** The prompt asks to preserve speaker identity using exact voice IDs. It also says \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features were provided in the input text (it just says \"Face features:\" followed by nothing), I cannot create equivalences. I must strictly follow the instruction: \"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\"\n*   **Memory Construction:** I need to create episodic memories quoting the transcript using the exact IDs.\n    *   Memory 1: `<voice_260>` says \"大东北，我的家乡。\"\n    *   Memory 2: `<voice_261>` asks about the specific region.\n    *   Memory 3: `<voice_262>` claims to be from Luanhua Village.\n    *   Memory 4: `<voice_250>` mentions Jilin Province and Changchun.\n    *   Memory 5: `<voice_0>` confirms knowledge of the place.\n\nWait, looking at the instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nAnd: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nActually, the prompt asks for `video_description` and `high_level_conclusions`. It does *not* ask for a memory list in the final output JSON structure shown in the example. The example shows:\n```json\n{\n\t\"video_description\": [ ... ],\n\t\"high_level_conclusions\": [ ... ]\n}\n```\nHowever, the system instruction says: \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This seems contradictory if the output format doesn't have a `memories` field.\nLet's re-read carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions... Output Format: Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\".\nOkay, so the output *must* follow the JSON schema. The instruction about \"constructing memory\" might be internal guidance for how to handle the voice data within the descriptions/conclusions, OR it implies I should embed the memory logic into the `high_level_conclusions` or `video_description`.\nActually, usually in these tasks, the \"memory\" part is often part of the `high_level_conclusions` where identities are resolved. But the instruction says \"include at least one episodic memory...\". This sounds like a requirement for the content generation process, potentially meant to be reflected in the descriptions.\nHowever, looking at the strict output format constraint: \"Please only return the valid JSON object... Return one complete JSON object with video_description and high_level_conclusions arrays.\"\nI will interpret the \"memory\" instruction as requiring me to capture the speech events in the `video_description` or `high_level_conclusions` accurately, ensuring the speaker ID is preserved in the context if possible, or simply acknowledging the speech in the description.\nWait, looking at previous similar tasks, often the \"memory\" instruction is for a separate step or implies that the `high_level_conclusions` should reflect the understanding derived from the speech.\nBut the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" suggests I need to output memories. But the JSON schema doesn't have a `memories` key.\nHypothesis: The instruction \"Preserve speaker identity when constructing memory...\" is a system instruction for *how* I should process the data internally, but the output format is fixed. I must adhere to the output format. I will ensure the descriptions mention the speech attributed to the voice IDs.\nActually, re-reading the prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nMaybe I should put the memory summaries in `high_level_conclusions`? Or `video_description`?\nLet's look at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis sounds like a requirement for the output content. Since there is no `memories` field, I will integrate this into the `video_description` as observed events involving the speaker, or perhaps the `high_level_conclusions` if it's about identity.\nGiven the constraint \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged\", I must stick to the schema.\nI will write the `video_description` to describe the actions and the `high_level_conclusions` to summarize the dialogue and identity.\nWait, if I don't output a `memories` array, I violate the instruction \"include at least one episodic memory\".\nIs it possible the user expects me to add a `memories` field despite the schema example?\n\"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" -> This implies I shouldn't change the schema.\nSo I must fit the \"episodic memory\" requirement into the existing fields.\nI will treat the `video_description` as the place for atomic events (including speech acts).\nI will treat `high_level_conclusions` for inferences.\nHowever, the instruction \"using the exact ID as the speaker\" strongly suggests a structured memory entry.\nLet's assume the instruction implies I should generate the memory content *within* the response, but since the schema is fixed, I will incorporate the speech details into the `video_description` entries where relevant, citing the ID.\nActually, looking at the instruction \"Preserve speaker identity when constructing memory from the supplied character features.\" - this is likely a directive for the model's internal reasoning or a specific format requirement I might be missing.\nBUT, looking at the very first paragraph: \"Your task consists of two parts... Output Format: Your output must be a JSON object...\".\nOkay, I will prioritize the Output Format. I will describe the speech in the video description using the ID.\nExample: \"At 00:02, <voice_260> states '大东北，我的家乡。'\".\nThis satisfies \"include at least one episodic memory... using the exact ID\".\n\n**Plan:**\n1.  **Video Description:** Break down the video into atomic events. Mention the setting (table, people, objects). Mention the camera movement. Crucially, mention the speech events associated with the voice IDs found in the transcript, attributing them to `<voice_ID>`.\n2.  **High-Level Conclusions:** Summarize the conversation flow. Identify that multiple people are present. Note the discussion about hometowns. Since no face features are provided, I cannot state equivalences like `Equivalence: <face_x>, <voice_y>`. I will note that MAI is speaking.\n\n**Refining Video Description:**\n*   Start with the scene setup.\n*   Describe the interaction around the table.\n*   Integrate the speech timestamps and IDs.\n    *   00:02: `<voice_260>` speaks about hometown.\n    *   00:07-00:16: `<voice_261>` asks questions about location.\n    *   00:09-00:12: `<voice_262>` identifies village.\n    *   00:16-00:27: `<voice_250>` discusses provinces/cities.\n    *   00:26-00:30: `<voice_0>` responds.\n*   End with the general activity (working on devices).\n\n**Refining High-Level Conclusions:**\n*   Group the speech into a coherent narrative about geography/hometowns.\n*   Acknowledge the presence of multiple speakers (implied by different IDs).\n*   State that MAI is the primary speaker identified by voice features.\n*   Since no face features exist, no equivalence statements can be made.\n\n**Double Check Constraints:**\n*   \"Preserve speaker identity... use the exact ID as the speaker.\" -> Done in descriptions.\n*   \"Do not replace the ID with 'a speaker'...\" -> Done.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> Done.\n*   \"If a face and a voice feature refer to the same character, indicate it...\" -> N/A (no face features).\n\nLet's draft the JSON.\n\n**Video Description Draft:**\n1.  A group of people are seated around a wooden table covered with a red and white checkered cloth in a room with a whiteboard and lighting equipment.\n2.  Various electronic devices, boxes, and bottles are placed on the table.\n3.  At 00:02, <voice_260> begins speaking, stating \"大东北，我的家乡。\" (Northeast China, my hometown.).\n4.  At 00:07, <voice_261> asks \"你东北哪儿的？\" (Which part of Northeast are you from?).\n5.  At 00:09, <voice_262> responds, saying \"我是栾花村。\" (I am from Luanhua Village.).\n6.  At 00:16, <voice_250> mentions \"吉林省长春市。\" (Jilin Province, Changchun City.) and asks if others know the city.\n7.  At 00:26, <voice_0> replies, confirming knowledge of the place.\n8.  Throughout the clip, the individuals continue to interact with the items on the table.\n9.  The camera angle shifts slightly, revealing more of the room's layout including a window and projector screen.\n\n**High-Level Conclusions Draft:**\n1.  Multiple participants are engaged in a collaborative activity involving technical components on the table.\n2.  The conversation focuses on geographical origins, specifically regarding Northeast China and Jilin Province.\n3.  <voice_260>, <voice_261>, <voice_262>, <voice_250>, and <voice_0> are identified as distinct speakers contributing to the dialogue.\n4.  No facial features were provided to visually confirm identities against the voice tracks.\n\nWait, I need to make sure I don't hallucinate face features. The input says \"Face features:\" then nothing. So I must not invent equivalences.\n\nOne detail: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSince I can't add a `memories` field, I will ensure the `video_description` contains these specific quoted memories as atomic events.\n\nFinal check on JSON validity.\nKeys: `video_description`, `high_level_conclusions`.\nValues: Arrays of strings.\n\nLet's assemble.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a wooden table covered with a red and white checkered cloth in a room equipped with a whiteboard and lighting gear.\",\n\t\t\"Various electronic devices, open boxes, and water bottles are arranged on the table surface.\",\n\t\t\"At 00:02, <voice_260> speaks, stating '大东北，我的家乡。'\",\n\t\t\"At 00:07, <voice_261> asks '你东北哪儿的？' regarding the specific region.\",\n\t\t\"At 00:09, <voice_262> identifies themselves as being from '栾花村'.\",\n\t\t\"At 00:16, <voice_250> mentions '吉林省长春市' and asks if others know the city.\",\n\t\t\"At 00:26, <voice_0> responds, saying '这-这也知道。'\",\n\t\t\"The participants continue to handle objects and engage in discussion throughout the clip.\",\n\t\t\"The camera perspective shifts slightly, revealing a window and a projector screen in the background.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Multiple individuals are collaborating around a table, focusing on technical items.\",\n\t\t\"The dialogue primarily revolves around geographical identification, specifically Northeast China and Jilin Province.\",\n\t\t\"<voice_260>, <voice_261>, <voice_262>, <voice_250>, and <voice_0> represent distinct speakers in the conversation.\",\n\t\t\"No facial features were provided to visually correlate with the voice tracks.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10650,
+          "output_tokens": 3685,
+          "total_tokens": 14335,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002052998752333224,
+            "media_preparation_ms": 60.89907899877289,
+            "processor_tokenization_ms": 555.7834740029648,
+            "device_transfer_ms": 43.116241999086924,
+            "cuda_generation_ms": 171915.1729639998,
+            "decoding_ms": 3.8065430053393357
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 172578.94575699902,
+          "request_end": 1789414681.980397,
+          "latency_ms": 172611.78739299794,
+          "client_wall_clock_latency_ms": 172611.78739299794
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.12437499390216544,
+      "nodes_added": 9,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.07026099774520844,
+      "nodes_added": 4,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 8,
+    "speech_embeddings": 8,
+    "voice_identities": 5,
+    "detected_faces": 238,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 4,
+    "nodes_after_clip": 276,
+    "edges_after_clip": 110,
+    "nodes_added_by_clip": 16,
+    "edges_added_by_clip": 10
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a wooden table covered with a red and white checkered cloth in a room equipped with a whiteboard and lighting gear.",
+      "Various electronic devices, open boxes, and water bottles are arranged on the table surface.",
+      "At 00:02, <voice_260> speaks, stating '大东北，我的家乡。'",
+      "At 00:07, <voice_261> asks '你东北哪儿的？' regarding the specific region.",
+      "At 00:09, <voice_262> identifies themselves as being from '栾花村'.",
+      "At 00:16, <voice_250> mentions '吉林省长春市' and asks if others know the city.",
+      "At 00:26, <voice_0> responds, saying '这-这也知道。'",
+      "The participants continue to handle objects and engage in discussion throughout the clip.",
+      "The camera perspective shifts slightly, revealing a window and a projector screen in the background."
+    ],
+    "high_level_conclusions": [
+      "Multiple individuals are collaborating around a table, focusing on technical items.",
+      "The dialogue primarily revolves around geographical identification, specifically Northeast China and Jilin Province.",
+      "<voice_260>, <voice_261>, <voice_262>, <voice_250>, and <voice_0> represent distinct speakers in the conversation.",
+      "No facial features were provided to visually correlate with the voice tracks."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are seated around a wooden table covered with a red and white checkered cloth in a room equipped with a whiteboard and lighting gear.",
+      "Various electronic devices, open boxes, and water bottles are arranged on the table surface.",
+      "At 00:02, <voice_260> speaks, stating '大东北，我的家乡。'",
+      "At 00:07, <voice_261> asks '你东北哪儿的？' regarding the specific region.",
+      "At 00:09, <voice_262> identifies themselves as being from '栾花村'.",
+      "At 00:16, <voice_250> mentions '吉林省长春市' and asks if others know the city.",
+      "At 00:26, <voice_0> responds, saying '这-这也知道。'",
+      "The participants continue to handle objects and engage in discussion throughout the clip.",
+      "The camera perspective shifts slightly, revealing a window and a projector screen in the background."
+    ],
+    "high_level_conclusions": [
+      "Multiple individuals are collaborating around a table, focusing on technical items.",
+      "The dialogue primarily revolves around geographical identification, specifically Northeast China and Jilin Province.",
+      "<voice_260>, <voice_261>, <voice_262>, <voice_250>, and <voice_0> represent distinct speakers in the conversation.",
+      "No facial features were provided to visually correlate with the voice tracks."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_21_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 16,
+    "edges_added": 10,
+    "nodes": [
+      {
+        "id": 260,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 大东北，我的家乡。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 261,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你东北哪儿的呀？",
+            "MAI: 嗯，东北稻花的。",
+            "MAI: 没有没有，那个长春。"
+          ]
+        },
+        "embedding_count": 3,
+        "embedding_dimensions": [
+          192,
+          192,
+          192
+        ]
+      },
+      {
+        "id": 262,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我是稻花乡。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 263,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are seated around a wooden table covered with a red and white checkered cloth in a room equipped with a whiteboard and lighting gear."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 264,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Various electronic devices, open boxes, and water bottles are arranged on the table surface."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 265,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:02, <voice_260> speaks, stating '大东北，我的家乡。'"
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 266,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:07, <voice_261> asks '你东北哪儿的？' regarding the specific region."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 267,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:09, <voice_262> identifies themselves as being from '栾花村'."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 268,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:16, <voice_250> mentions '吉林省长春市' and asks if others know the city."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 269,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:26, <voice_0> responds, saying '这-这也知道。'"
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 270,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The participants continue to handle objects and engage in discussion throughout the clip."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 271,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera perspective shifts slightly, revealing a window and a projector screen in the background."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 272,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Multiple individuals are collaborating around a table, focusing on technical items."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 273,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The dialogue primarily revolves around geographical identification, specifically Northeast China and Jilin Province."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 274,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_260>, <voice_261>, <voice_262>, <voice_250>, and <voice_0> represent distinct speakers in the conversation."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 275,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "No facial features were provided to visually correlate with the voice tracks."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 269,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 274,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 250,
+        "target": 268,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 250,
+        "target": 274,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 260,
+        "target": 265,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 260,
+        "target": 274,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 261,
+        "target": 266,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 261,
+        "target": 274,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 262,
+        "target": 267,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 262,
+        "target": 274,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_21_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_21_graph.pkl"
+  },
+  "memory_pickle_bytes": 6616647,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 55268.718203276,
+    "prepared_perf": 55275.072937008,
+    "ordered_start_perf": 55686.211660605,
+    "consumer_wait_ms": 0.013094999303575605,
+    "ready_to_ordered_ms": 411138.723596996,
+    "preparation_work_ms": 6349.410363000061,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 182867.6872520009
+}

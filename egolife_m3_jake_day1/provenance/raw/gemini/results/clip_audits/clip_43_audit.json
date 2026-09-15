@@ -1,0 +1,361 @@
+{
+  "clip_id": 43,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0043.mp4",
+  "end_to_end_memory_generation_ms": 208514.6142070007,
+  "latency_ms": {
+    "clip_decode": 4098.9650359988445,
+    "deepgram_asr": 1095.2224400025443,
+    "mai_transcribe_asr": 990.2412829978857,
+    "asr_total": 1096.0511399971438,
+    "audio_segmentation": 6.688724999548867,
+    "speech_embedding_campplus": 501.3706749959965,
+    "facial_detection_recognition_buffalo_l": 4046.116142999381,
+    "face_clustering": 9.388112994201947,
+    "vlm_memory_generation": 47945.04342100117,
+    "text_embedding": 562.3768529985682,
+    "graph_update_total": 329.246282002714
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 43,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 600,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789405809.9803958,
+          "status": "success",
+          "total_tokens": 122,
+          "request_end": 1789405810.54255,
+          "latency_ms": 562.1550139985629
+        }
+      ],
+      "total_tokens": 122,
+      "latency_ms": 562.3768529985682
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1095.2224400025443,
+        "openrouter-mai-transcribe-2": 990.2412829978857
+      },
+      "asr_total_ms": 1096.0511399971438,
+      "audio_segmentation_ms": 6.688724999548867,
+      "speech_embedding_ms": 501.3706749959965,
+      "graph_update_ms": 329.1768920025788,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 851.739327001269
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4046.116142999381,
+      "face_clustering_ms": 9.388112994201947,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 319,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4236.068457998044
+    },
+    "vlm": {
+      "context_preparation_ms": 4155.549403003533,
+      "vlm_ms": 47945.04342100117,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a long table with a checkered tablecloth indoors.\",\n    \"A clapperboard labeled 'Egolife' rests in the foreground on the table.\",\n    \"A person stands in the background by a whiteboard, writing notes as the group talks.\",\n    \"The attendees at the table listen, react, and participate in an ongoing discussion.\",\n    \"A woman sitting on the left side of the table smiles and laughs while listening.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is a creative production crew conducting a planning meeting for their video project.\",\n    \"They are brainstorming content, scenes, and interactions involving neighbors for the next day's shoot.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a long table with a checkered tablecloth indoors.",
+          "A clapperboard labeled 'Egolife' rests in the foreground on the table.",
+          "A person stands in the background by a whiteboard, writing notes as the group talks.",
+          "The attendees at the table listen, react, and participate in an ongoing discussion.",
+          "A woman sitting on the left side of the table smiles and laughs while listening."
+        ],
+        "high_level_conclusions": [
+          "The group is a creative production crew conducting a planning meeting for their video project.",
+          "They are brainstorming content, scenes, and interactions involving neighbors for the next day's shoot."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 43,
+          "call_id": "890b6cb8-d7be-4461-acf0-958f3e804909",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789405762.0345733,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66961,
+          "output_tokens": 995,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 47944.93745300133
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a long table with a checkered tablecloth indoors.\",\n    \"A clapperboard labeled 'Egolife' rests in the foreground on the table.\",\n    \"A person stands in the background by a whiteboard, writing notes as the group talks.\",\n    \"The attendees at the table listen, react, and participate in an ongoing discussion.\",\n    \"A woman sitting on the left side of the table smiles and laughs while listening.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is a creative production crew conducting a planning meeting for their video project.\",\n    \"They are brainstorming content, scenes, and interactions involving neighbors for the next day's shoot.\"\n  ]\n}\n```",
+          "total_tokens": 67956,
+          "request_end": 1789405809.9796195,
+          "latency_ms": 47945.04342100117,
+          "client_wall_clock_latency_ms": 47945.04342100117,
+          "api_request_wall_clock_latency_ms": 47945.04342100117
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.05682600021827966,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.012563999916892499,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 6,
+    "detected_faces": 319,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 508,
+    "edges_after_clip": 114,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a long table with a checkered tablecloth indoors.",
+      "A clapperboard labeled 'Egolife' rests in the foreground on the table.",
+      "A person stands in the background by a whiteboard, writing notes as the group talks.",
+      "The attendees at the table listen, react, and participate in an ongoing discussion.",
+      "A woman sitting on the left side of the table smiles and laughs while listening."
+    ],
+    "high_level_conclusions": [
+      "The group is a creative production crew conducting a planning meeting for their video project.",
+      "They are brainstorming content, scenes, and interactions involving neighbors for the next day's shoot."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a long table with a checkered tablecloth indoors.",
+      "A clapperboard labeled 'Egolife' rests in the foreground on the table.",
+      "A person stands in the background by a whiteboard, writing notes as the group talks.",
+      "The attendees at the table listen, react, and participate in an ongoing discussion.",
+      "A woman sitting on the left side of the table smiles and laughs while listening."
+    ],
+    "high_level_conclusions": [
+      "The group is a creative production crew conducting a planning meeting for their video project.",
+      "They are brainstorming content, scenes, and interactions involving neighbors for the next day's shoot."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_43_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 498,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 明天咱们这地儿就被举报了。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 499,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我觉得也是。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 500,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 带上四大，你要是来我就把这单送你，你不来就不送。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 501,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a long table with a checkered tablecloth indoors."
+          ],
+          "timestamp": 43
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 502,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard labeled 'Egolife' rests in the foreground on the table."
+          ],
+          "timestamp": 43
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 503,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person stands in the background by a whiteboard, writing notes as the group talks."
+          ],
+          "timestamp": 43
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 504,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The attendees at the table listen, react, and participate in an ongoing discussion."
+          ],
+          "timestamp": 43
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 505,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman sitting on the left side of the table smiles and laughs while listening."
+          ],
+          "timestamp": 43
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 506,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is a creative production crew conducting a planning meeting for their video project."
+          ],
+          "timestamp": 43
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 507,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "They are brainstorming content, scenes, and interactions involving neighbors for the next day's shoot."
+          ],
+          "timestamp": 43
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_43_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_43_graph.pkl"
+  },
+  "memory_pickle_bytes": 11423776,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 46788.918695086,
+    "prepared_perf": 46796.31815722,
+    "ordered_start_perf": 46938.761117002,
+    "consumer_wait_ms": 0.009407005563843995,
+    "ready_to_ordered_ms": 142442.95978200535,
+    "preparation_work_ms": 7394.182350995834,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 57753.3596209978
+}

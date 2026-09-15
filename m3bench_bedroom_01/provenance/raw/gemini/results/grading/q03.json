@@ -1,0 +1,56 @@
+{
+  "question_id": "Q03",
+  "candidate_mapping": {
+    "0": "A",
+    "1": "D",
+    "2": "C",
+    "3": "B"
+  },
+  "grades": {
+    "0": {
+      "correct": true,
+      "reason": "Correctly conveys that Emma's mother has high expectations/is strict and places heavy importance on her academic performance and grades."
+    },
+    "1": {
+      "correct": false,
+      "reason": "Claims insufficient information instead of providing the answer."
+    },
+    "2": {
+      "correct": false,
+      "reason": "Does not clearly convey strictness toward Emma or the specific emphasis on her grades."
+    },
+    "3": {
+      "correct": false,
+      "reason": "Does not clearly convey strictness toward Emma or the specific emphasis on her grades."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q03",
+    "method": null,
+    "call_id": "02c416cf-8673-481e-b184-80a0617d1616",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437123.7105362,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 203,
+    "output_tokens": 408,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 5916.5792419953505
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": true,\n    \"reason\": \"Correctly conveys that Emma's mother has high expectations/is strict and places heavy importance on her academic performance and grades.\"\n  },\n  \"1\": {\n    \"correct\": false,\n    \"reason\": \"Claims insufficient information instead of providing the answer.\"\n  },\n  \"2\": {\n    \"correct\": false,\n    \"reason\": \"Does not clearly convey strictness toward Emma or the specific emphasis on her grades.\"\n  },\n  \"3\": {\n    \"correct\": false,\n    \"reason\": \"Does not clearly convey strictness toward Emma or the specific emphasis on her grades.\"\n  }\n}\n```",
+    "total_tokens": 611,
+    "request_end": 1789437129.6271849,
+    "latency_ms": 5916.64750900236,
+    "client_wall_clock_latency_ms": 5916.64750900236,
+    "api_request_wall_clock_latency_ms": 5916.64750900236
+  },
+  "included_in_qa_latency": false
+}

@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-09-15T01:40:19.071987+00:00",
+  "reason": "MoviePy read beyond 30ms boundary slice at segment 98",
+  "change": "Reuse existing project sub-second FFmpeg audio decoder, bounded to planned segment duration. Normal-duration decoding unchanged.",
+  "checkpoint_sha256": "ec04da829f3e6617cc21dd68e8320ffa310ef402d1cfd86dfa117c222e57817d",
+  "resume_from_segment": 98,
+  "preserved_skips": [
+    23,
+    39,
+    50
+  ],
+  "generation_prompt_fps_unchanged": true,
+  "files": {
+    "mmagent/utils/video_processing.py": "6e00e195898d7161b1229d66920820fcf78a390311908f3ffe4cb6de8139e0de",
+    "benchmarks/egolife_first10.py": "596c369370fda0f5672f19080b2241f9c87a4b8f09f948064d565f6130029dee"
+  }
+}

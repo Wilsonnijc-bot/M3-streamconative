@@ -1,0 +1,353 @@
+{
+  "clip_id": 69,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0069.mp4",
+  "end_to_end_memory_generation_ms": 516043.3752930039,
+  "latency_ms": {
+    "clip_decode": 4927.783134000492,
+    "deepgram_asr": 1.914551990921609,
+    "mai_transcribe_asr": 1.6204679996008053,
+    "asr_total": 2.858867999748327,
+    "audio_segmentation": 4.264343006070703,
+    "speech_embedding_campplus": 281.9597199995769,
+    "facial_detection_recognition_buffalo_l": 2560.8847300027264,
+    "face_clustering": 0.8492769993608817,
+    "vlm_memory_generation": 145013.20407800085,
+    "text_embedding": 672.8408100025263,
+    "graph_update_total": 66.35075900703669
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 69,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 555,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789424861.7654793,
+          "status": "success",
+          "total_tokens": 110,
+          "request_end": 1789424862.4380755,
+          "latency_ms": 672.596632008208
+        }
+      ],
+      "total_tokens": 110,
+      "latency_ms": 672.8408100025263
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1.914551990921609,
+        "openrouter-mai-transcribe-2": 1.6204679996008053
+      },
+      "asr_total_ms": 2.858867999748327,
+      "audio_segmentation_ms": 4.264343006070703,
+      "speech_embedding_ms": 281.9597199995769,
+      "graph_update_ms": 66.22490400332026,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 358.8761299906764
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2560.8847300027264,
+      "face_clustering_ms": 0.8492769993608817,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 24,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2575.311361986678
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_386>"
+      ],
+      "context_preparation_ms": 4414.5952360122465,
+      "vlm_ms": 145013.20407800085,
+      "raw_response": "{\n  \"video_description\": [\n    \"The camera wearer observes three individuals gathered around a table in a room.\",\n    \"The camera wearer holds a smartphone and interacts with it while looking at the group.\",\n    \"The camera wearer walks out of the room into a corridor and then returns.\",\n    \"The camera wearer sits down and continues to operate the smartphone.\",\n    \"One person at the table arranges flowers or greenery while others work nearby.\"\n  ],\n  \"high_level_conclusions\": [\n    \"Speaker <voice_386> reports that Sunny purchased an item but it has not arrived yet.\",\n    \"The group appears to be preparing for a production given the clapperboard on the table.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera wearer observes three individuals gathered around a table in a room.",
+          "The camera wearer holds a smartphone and interacts with it while looking at the group.",
+          "The camera wearer walks out of the room into a corridor and then returns.",
+          "The camera wearer sits down and continues to operate the smartphone.",
+          "One person at the table arranges flowers or greenery while others work nearby."
+        ],
+        "high_level_conclusions": [
+          "Speaker <voice_386> reports that Sunny purchased an item but it has not arrived yet.",
+          "The group appears to be preparing for a production given the clapperboard on the table."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 69,
+          "call_id": "74411d5d-342d-44fd-91fb-6a0bed0468a3",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789424716.7513058,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"The camera wearer observes three individuals gathered around a table in a room.\",\n    \"The camera wearer holds a smartphone and interacts with it while looking at the group.\",\n    \"The camera wearer walks out of the room into a corridor and then returns.\",\n    \"The camera wearer sits down and continues to operate the smartphone.\",\n    \"One person at the table arranges flowers or greenery while others work nearby.\"\n  ],\n  \"high_level_conclusions\": [\n    \"Speaker <voice_386> reports that Sunny purchased an item but it has not arrived yet.\",\n    \"The group appears to be preparing for a production given the clapperboard on the table.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   The video starts with a first-person perspective (POV) looking around a room.\n    *   There are three people visible initially: a woman in white standing near a table, a blonde woman sitting at the table, and a dark-haired woman sitting next to her.\n    *   The POV person (camera wearer) is holding a smartphone.\n    *   The camera wearer walks out of the main room into a hallway/corridor area briefly (frames 4.00s - 7.50s), then returns to the main room.\n    *   The camera wearer sits down (around frame 13.00s onwards) and continues to look at the phone.\n    *   The group seems to be preparing for something, possibly filming or editing, given the clapperboard on the table.\n    *   The woman in white is handling flowers or greenery.\n    *   The blonde woman is looking at papers or a laptop.\n    *   The dark-haired woman is also seated at the table.\n*   **Voice Features:**\n    *   `<voice_386>` speaks from 00:00 to 00:07.\n    *   ASR text: \"MAI: 喂- 喂阳光明媚买了，但是一定不到。一定不到哈，我看一下。\" (Mai: Hello - hello sunny bought, but definitely won't arrive. Definitely won't arrive ha, let me check.)\n    *   This implies there is a character named MAI who is speaking. Since I don't have explicit face IDs linked to names in the prompt's feature list (only generic `<face_x>` placeholders usually, but here none are explicitly provided in the \"Face features:\" section, wait, let me re-read carefully).\n    *   Ah, the prompt says \"Face features:Voice features:\". It lists `{\"<voice_386>\": ...}`. It doesn't list any face features explicitly like `[{\"id\": \"<face_1>\", ...}]`. Wait, looking closely at the prompt structure provided in the *instruction*, it says \"Each feature is either a face... or a voice...\". But in the specific input data provided at the bottom, under \"Face features:\", it is empty. Under \"Voice features:\", it contains `<voice_386>`.\n    *   Wait, I need to check if there are implicit face IDs. The prompt instructions say \"Use the provided feature IDs as references to characters (when applicable)\".\n    *   Looking at the raw input again:\n        ```\n        Face features:Voice features:{\"<voice_386>\": [{\"start_time\": \"00:00\", \"end_time\": \"00:07\", \"asr\": \"MAI: \\u4f69- \\u4f69\\u9633\\u660e\\u4e70\\u4e86\\uff0c\\u4f46\\u662f\\u4e0d\\u4e00\\u5b9a\\u5230\\u3002\\u4e00\\u5b9a\\u5230\\u54c8\\uff0c\\u6211\\u770b\\u4e00\\u4e0b\\u3002\"}]}\n        ```\n    *   There are NO face features provided in the input block. Just voice features.\n    *   Therefore, I cannot create an \"Equivalence\" statement because I don't have a face ID to link to.\n    *   However, the instruction says: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features are provided, I cannot make this claim. I should probably just omit it or ensure I don't hallucinate a face ID.\n    *   Wait, looking at the instruction again: \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So I need to create a memory entry for `<voice_386>`.\n    *   The instruction also says: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n    *   And: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   Okay, so I will describe the video events. I will include the memory for the voice. I will NOT create an equivalence because there are no face IDs.\n\n**2. Construct Video Description:**\n*   Event 1: Camera wearer looks around a room where three women are gathered around a table. One woman stands, two sit.\n*   Event 2: The camera wearer holds a smartphone and looks at it.\n*   Event 3: The camera wearer walks away from the table into a hallway area while still holding the phone.\n*   Event 4: The camera wearer returns to the room and sits down.\n*   Event 5: The camera wearer remains seated, looking at the phone screen, while the others continue their activities (one arranging flowers/greenery, others working at the table).\n\n**3. Construct High-Level Conclusions:**\n*   Memory for `<voice_386>`: The speaker mentions someone named \"Sunny\" buying something (\"sunshine bought\") but it won't arrive.\n*   Inference: The group might be discussing logistics or deliveries related to the items on the table (flowers?).\n*   Since there are no face IDs, I cannot write \"Equivalence: ...\". I will just write the memory/inference.\n*   Actually, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   So, one of the strings in `high_level_conclusions` (or potentially `video_description`, but the instruction specifically links memory construction to the voice ID part of the task which usually goes into the memory section, but here the output schema is fixed to `video_description` and `high_level_conclusions`).\n*   Wait, the prompt asks for \"Video Description\" and \"High-Level Conclusions\". The instruction about \"memory\" seems to be part of the general system instruction for *this specific task type* (which often involves generating a memory log alongside descriptions). However, the *output format* requested is strictly JSON with `video_description` and `high_level_conclusions`.\n*   Let's re-read the specific constraint: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   Where does this \"episodic memory\" go? Usually, in these tasks, it goes into the `high_level_conclusions` array as a reasoning step or a specific memory tag. Given the schema provided: `{\"video_description\": [...], \"high_level_conclusions\": [...]}`, I should put the memory summary in `high_level_conclusions`.\n*   Also, the instruction says: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   So, I will add a conclusion like: \"Speaker <voice_386> discusses a delivery issue regarding 'Sunny'.\" Or better, quote the ASR.\n*   Let's draft the conclusion: \"Speaker <voice_386> states that 'Sunny' bought something but it won't arrive yet.\"\n\n**Refining the Output:**\n*   **Video Description:**\n    1.  The camera wearer observes three individuals in a room with a table covered in various items, including a clapperboard.\n    2.  The camera wearer holds a smartphone and interacts with it.\n    3.  The camera wearer moves through a doorway into an adjacent space before returning to the original room.\n    4.  The camera wearer sits down and continues to use the smartphone while observing the group.\n    5.  One individual at the table appears to be arranging flowers or greenery.\n*   **High-Level Conclusions:**\n    1.  Speaker <voice_386> mentions that \"Sunny\" purchased an item but it will not arrive immediately.\n    2.  (Optional) The group appears to be preparing for a shoot or event given the clapperboard. -> This is an inference, maybe good for high level. But the instruction emphasizes preserving speaker identity for voice features.\n    3.  Let's stick to the voice memory requirement primarily. \"Speaker <voice_386> reports that a purchase made by Sunny has not arrived yet.\"\n\n**Checking Constraints:**\n*   \"Do not replace the ID with 'a speaker'...\" -> Must use `<voice_386>`.\n*   \"If no face IDs are supplied, do not invent any.\" -> Correct, no equivalence.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> Will follow the JSON structure.\n\n**Final Plan:**\n1.  Create `video_description` array with 4-5 sentences describing the visual flow.\n2.  Create `high_level_conclusions` array containing the memory for `<voice_386>` and perhaps a brief inference about the setting (filming prep).\n3.  Ensure valid JSON.\n\nOne detail: The prompt says \"include at least one episodic memory... using the exact ID as the speaker.\"\nSo: `\"Speaker <voice_386> says: 'MAI: 喂- 喂阳光明媚买了，但是一定不到。一定不到哈，我看一下。'\"`\nOr summarized: `\"Speaker <voice_386> indicates that Sunny bought something but it hasn't arrived yet.\"`\nI will use the quoted version to be faithful to the transcript as per \"quotes or faithfully summarizes\".\n\nLet's assemble the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"The camera wearer looks around a room where three women are gathered around a table cluttered with items.\",\n    \"The camera wearer holds a smartphone and checks the screen while observing the group.\",\n    \"The camera wearer walks out of the room into a hallway and then returns.\",\n    \"The camera wearer sits down and continues to look at the phone while the women work at the table.\",\n    \"One woman stands and handles some greenery or flowers near a whiteboard.\"\n  ],\n  \"high_level_conclusions\": [\n    \"Speaker <voice_386> states that Sunny bought something but it will not arrive yet.\",\n    \"The presence of a clapperboard suggests the group is preparing for a film or photoshoot.\"\n  ]\n}\n```\nWait, I need to check if I should put the memory in `video_description` or `high_level_conclusions`. The instruction says \"For every supplied voice ID... include at least one episodic memory...\". Usually, memories are distinct from descriptions. The schema has `high_level_conclusions`. I will put the memory there.\nAlso, the instruction says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" This supports putting it in `high_level_conclusions`.\n\nOne correction: The prompt says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\nIt doesn't explicitly say *where* in the JSON, but standard practice for this specific prompt template (often used in video understanding benchmarks) puts the memory/conclusion in the `high_level_conclusions` field.\n\nLet's refine the description to be more atomic.\n1. Camera wearer views a room with three people around a table.\n2. Camera wearer holds a phone.\n3. Camera wearer exits and re-enters the room.\n4. Camera wearer sits and uses the phone.\n5. People at the table work on materials.\n\nLet's refine the conclusion.\n1. Speaker <voice_386> mentions a delivery delay regarding an item bought by Sunny.\n\nDouble check the voice ID. It is `<voice_386>`.\nASR: \"MAI: 喂- 喂阳光明媚买了，但是一定不到。一定不到哈，我看一下。\"\nTranslation: \"Mai: Hello - Hello sunny bought, but definitely won't arrive. Definitely won't arrive ha, let me check.\"\nSo the speaker is likely Mai, but the ID is `<voice_386>`. I must use the ID.\n\nFinal check on JSON validity. No trailing commas. Quotes escaped properly.\n\nOne thing: The prompt says \"Return one complete JSON object...\".\nOkay.\n\n```json\n{\n  \"video_description\": [\n    \"The camera wearer observes three individuals gathered around a table in a room.\",\n    \"The camera wearer holds a smartphone and interacts with it while looking at the group.\",\n    \"The camera wearer walks out of the room into a corridor and then returns.\",\n    \"The camera wearer sits down and continues to operate the smartphone.\",\n    \"One person at the table arranges flowers or greenery while others work nearby.\"\n  ],\n  \"high_level_conclusions\": [\n    \"Speaker <voice_386> reports that Sunny purchased an item but it has not arrived yet.\",\n    \"The group appears to be preparing for a production given the clapperboard on the table.\"\n  ]\n}\n```\nThis looks correct and follows all constraints.\n</think>\n\n{\n  \"video_description\": [\n    \"The camera wearer observes three individuals gathered around a table in a room.\",\n    \"The camera wearer holds a smartphone and interacts with it while looking at the group.\",\n    \"The camera wearer walks out of the room into a corridor and then returns.\",\n    \"The camera wearer sits down and continues to operate the smartphone.\",\n    \"One person at the table arranges flowers or greenery while others work nearby.\"\n  ],\n  \"high_level_conclusions\": [\n    \"Speaker <voice_386> reports that Sunny purchased an item but it has not arrived yet.\",\n    \"The group appears to be preparing for a production given the clapperboard on the table.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10120,
+          "output_tokens": 3161,
+          "total_tokens": 13281,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0016330013750120997,
+            "media_preparation_ms": 60.84878000547178,
+            "processor_tokenization_ms": 432.32236000767443,
+            "device_transfer_ms": 39.60826899856329,
+            "cuda_generation_ms": 144444.6529590059,
+            "decoding_ms": 3.4637869975995272
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 144981.06774900225,
+          "request_end": 1789424861.7645192,
+          "latency_ms": 145013.20407800085,
+          "client_wall_clock_latency_ms": 145013.20407800085
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.04961299418937415,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.07624200952704996,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 24,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 912,
+    "edges_after_clip": 324,
+    "nodes_added_by_clip": 7,
+    "edges_added_by_clip": 1
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer observes three individuals gathered around a table in a room.",
+      "The camera wearer holds a smartphone and interacts with it while looking at the group.",
+      "The camera wearer walks out of the room into a corridor and then returns.",
+      "The camera wearer sits down and continues to operate the smartphone.",
+      "One person at the table arranges flowers or greenery while others work nearby."
+    ],
+    "high_level_conclusions": [
+      "Speaker <voice_386> reports that Sunny purchased an item but it has not arrived yet.",
+      "The group appears to be preparing for a production given the clapperboard on the table."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera wearer observes three individuals gathered around a table in a room.",
+      "The camera wearer holds a smartphone and interacts with it while looking at the group.",
+      "The camera wearer walks out of the room into a corridor and then returns.",
+      "The camera wearer sits down and continues to operate the smartphone.",
+      "One person at the table arranges flowers or greenery while others work nearby."
+    ],
+    "high_level_conclusions": [
+      "Speaker <voice_386> reports that Sunny purchased an item but it has not arrived yet.",
+      "The group appears to be preparing for a production given the clapperboard on the table."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_69_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 7,
+    "edges_added": 1,
+    "nodes": [
+      {
+        "id": 905,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer observes three individuals gathered around a table in a room."
+          ],
+          "timestamp": 69
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 906,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer holds a smartphone and interacts with it while looking at the group."
+          ],
+          "timestamp": 69
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 907,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer walks out of the room into a corridor and then returns."
+          ],
+          "timestamp": 69
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 908,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer sits down and continues to operate the smartphone."
+          ],
+          "timestamp": 69
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 909,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person at the table arranges flowers or greenery while others work nearby."
+          ],
+          "timestamp": 69
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 910,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_386> reports that Sunny purchased an item but it has not arrived yet."
+          ],
+          "timestamp": 69
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 911,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be preparing for a production given the clapperboard on the table."
+          ],
+          "timestamp": 69
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 386,
+        "target": 910,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_69_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_69_graph.pkl"
+  },
+  "memory_pickle_bytes": 21635030,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 65533.316114255,
+    "prepared_perf": 65539.833908835,
+    "ordered_start_perf": 65894.552078127,
+    "consumer_wait_ms": 0.008346003596670926,
+    "ready_to_ordered_ms": 354718.1692919985,
+    "preparation_work_ms": 6512.39498200448,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 153036.60764700908
+}

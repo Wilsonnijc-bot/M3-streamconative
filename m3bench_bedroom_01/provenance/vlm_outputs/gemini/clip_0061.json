@@ -1,0 +1,74 @@
+{
+  "clip_id": 61,
+  "source": {
+    "segment_id": 61,
+    "source": "bedroom_01_00283000.mp4",
+    "source_clock": "00283000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1710.0,
+    "absolute_end_seconds": 1740.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00283000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 76150.697493611,
+      "prepared_perf": 76155.850278686,
+      "ordered_start_perf": 76295.802512528,
+      "consumer_wait_ms": 0.0070129899540916085,
+      "ready_to_ordered_ms": 139952.23384199198,
+      "preparation_work_ms": 5147.596270006034,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit across from each other at a dining table with food and drinks.",
+      "The woman on the left rests her chin in her hand while holding a portable screen.",
+      "The woman on the right holds up a smartphone and speaks.",
+      "The woman on the right lowers her smartphone and sets it on the table.",
+      "The woman on the right rests her head on her hand while remaining engaged in conversation."
+    ],
+    "high_level_conclusions": [
+      "The speaker (<voice_10>) is offering positive encouragement and validation regarding the listener's ambitions.",
+      "The two women share a relaxed, supportive friendship in an informal home environment."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit across from each other at a dining table with food and drinks.\",\n    \"The woman on the left rests her chin in her hand while holding a portable screen.\",\n    \"The woman on the right holds up a smartphone and speaks.\",\n    \"The woman on the right lowers her smartphone and sets it on the table.\",\n    \"The woman on the right rests her head on her hand while remaining engaged in conversation.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_10>) is offering positive encouragement and validation regarding the listener's ambitions.\",\n    \"The two women share a relaxed, supportive friendship in an informal home environment.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 61,
+      "call_id": "f30e0a5d-6ec5-442e-8ba5-170e923d1965",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789435119.1797884,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65910,
+      "output_tokens": 1044,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 81917.31439300929
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit across from each other at a dining table with food and drinks.\",\n    \"The woman on the left rests her chin in her hand while holding a portable screen.\",\n    \"The woman on the right holds up a smartphone and speaks.\",\n    \"The woman on the right lowers her smartphone and sets it on the table.\",\n    \"The woman on the right rests her head on her hand while remaining engaged in conversation.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_10>) is offering positive encouragement and validation regarding the listener's ambitions.\",\n    \"The two women share a relaxed, supportive friendship in an informal home environment.\"\n  ]\n}\n```",
+      "total_tokens": 66954,
+      "request_end": 1789435201.0971985,
+      "latency_ms": 81917.40703799587,
+      "client_wall_clock_latency_ms": 81917.40703799587,
+      "api_request_wall_clock_latency_ms": 81917.40703799587
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_61_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

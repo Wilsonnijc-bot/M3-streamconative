@@ -1,0 +1,75 @@
+{
+  "clip_id": 90,
+  "source": {
+    "segment_id": 90,
+    "source": "DAY1_A1_JAKE_11523000.mp4",
+    "source_clock": "11523000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42750.0,
+    "absolute_end_seconds": 42780.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0090.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 50124.321918318,
+      "prepared_perf": 50132.347628805,
+      "ordered_start_perf": 50253.84869038,
+      "consumer_wait_ms": 0.014217002899385989,
+      "ready_to_ordered_ms": 121501.06157499977,
+      "preparation_work_ms": 8020.323826000094,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Several people sit and stand around a table with flowers and drinks, discussing event planning.",
+      "A woman in a white top arranges flowers near a whiteboard at the end of the table.",
+      "A group member asks about the duration of the upcoming event.",
+      "Others confirm the event will take place over one afternoon.",
+      "A participant notes that providing beverages to attendees should suffice.",
+      "A woman with pink hair points toward the whiteboard while discussing market sections and entertainment."
+    ],
+    "high_level_conclusions": [
+      "The participants are collaboratively organizing an afternoon event involving market stalls, drinks, and performances.",
+      "The informal setting and natural dialogue indicate a brainstorming and logistics meeting among teammates."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Several people sit and stand around a table with flowers and drinks, discussing event planning.\",\n    \"A woman in a white top arranges flowers near a whiteboard at the end of the table.\",\n    \"A group member asks about the duration of the upcoming event.\",\n    \"Others confirm the event will take place over one afternoon.\",\n    \"A participant notes that providing beverages to attendees should suffice.\",\n    \"A woman with pink hair points toward the whiteboard while discussing market sections and entertainment.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are collaboratively organizing an afternoon event involving market stalls, drinks, and performances.\",\n    \"The informal setting and natural dialogue indicate a brainstorming and logistics meeting among teammates.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 90,
+      "call_id": "6d2e265b-574d-4520-a051-6c9cf81aa650",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789409078.5044644,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67236,
+      "output_tokens": 1216,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 212618.74664400239
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Several people sit and stand around a table with flowers and drinks, discussing event planning.\",\n    \"A woman in a white top arranges flowers near a whiteboard at the end of the table.\",\n    \"A group member asks about the duration of the upcoming event.\",\n    \"Others confirm the event will take place over one afternoon.\",\n    \"A participant notes that providing beverages to attendees should suffice.\",\n    \"A woman with pink hair points toward the whiteboard while discussing market sections and entertainment.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are collaboratively organizing an afternoon event involving market stalls, drinks, and performances.\",\n    \"The informal setting and natural dialogue indicate a brainstorming and logistics meeting among teammates.\"\n  ]\n}\n```",
+      "total_tokens": 68452,
+      "request_end": 1789409291.1233225,
+      "latency_ms": 212618.8546669946,
+      "client_wall_clock_latency_ms": 212618.8546669946,
+      "api_request_wall_clock_latency_ms": 212618.8546669946
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_90_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

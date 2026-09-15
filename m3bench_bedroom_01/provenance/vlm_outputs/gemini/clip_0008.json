@@ -1,0 +1,77 @@
+{
+  "clip_id": 8,
+  "source": {
+    "segment_id": 8,
+    "source": "bedroom_01_00033000.mp4",
+    "source_clock": "00033000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 210.0,
+    "absolute_end_seconds": 240.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00033000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 72577.747372218,
+      "prepared_perf": 72581.827324802,
+      "ordered_start_perf": 72661.828655011,
+      "consumer_wait_ms": 0.016161007806658745,
+      "ready_to_ordered_ms": 80001.3302090083,
+      "preparation_work_ms": 4074.431539993384,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person tosses a used tissue into a pink trash bin next to the dining table.",
+      "The camera moves back to show a woman seated at the table arranging items inside her bag.",
+      "<voice_21> speaks about getting to work.",
+      "The woman retrieves a dark laptop from behind her seat and places it onto the table.",
+      "<voice_67> responds briefly with an acknowledgement.",
+      "The woman opens the laptop in front of her.",
+      "<voice_68> states an intention to finish work.",
+      "The woman picks up her phone and looks between it and the laptop screen."
+    ],
+    "high_level_conclusions": [
+      "The woman is setting up her workspace at the dining table to complete tasks on her laptop and phone.",
+      "The interaction involves communication between the woman at the table and the person filming."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A person tosses a used tissue into a pink trash bin next to the dining table.\",\n\t\t\"The camera moves back to show a woman seated at the table arranging items inside her bag.\",\n\t\t\"<voice_21> speaks about getting to work.\",\n\t\t\"The woman retrieves a dark laptop from behind her seat and places it onto the table.\",\n\t\t\"<voice_67> responds briefly with an acknowledgement.\",\n\t\t\"The woman opens the laptop in front of her.\",\n\t\t\"<voice_68> states an intention to finish work.\",\n\t\t\"The woman picks up her phone and looks between it and the laptop screen.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The woman is setting up her workspace at the dining table to complete tasks on her laptop and phone.\",\n\t\t\"The interaction involves communication between the woman at the table and the person filming.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 8,
+      "call_id": "5f10113c-c5f5-4743-9da3-f3d649c08d60",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789431484.1032014,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65787,
+      "output_tokens": 1285,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 31073.251731999335
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A person tosses a used tissue into a pink trash bin next to the dining table.\",\n\t\t\"The camera moves back to show a woman seated at the table arranging items inside her bag.\",\n\t\t\"<voice_21> speaks about getting to work.\",\n\t\t\"The woman retrieves a dark laptop from behind her seat and places it onto the table.\",\n\t\t\"<voice_67> responds briefly with an acknowledgement.\",\n\t\t\"The woman opens the laptop in front of her.\",\n\t\t\"<voice_68> states an intention to finish work.\",\n\t\t\"The woman picks up her phone and looks between it and the laptop screen.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The woman is setting up her workspace at the dining table to complete tasks on her laptop and phone.\",\n\t\t\"The interaction involves communication between the woman at the table and the person filming.\"\n\t]\n}\n```",
+      "total_tokens": 67072,
+      "request_end": 1789431515.1765656,
+      "latency_ms": 31073.361098999158,
+      "client_wall_clock_latency_ms": 31073.361098999158,
+      "api_request_wall_clock_latency_ms": 31073.361098999158
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_8_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

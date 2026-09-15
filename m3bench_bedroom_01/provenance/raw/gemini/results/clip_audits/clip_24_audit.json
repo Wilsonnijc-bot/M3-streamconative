@@ -1,0 +1,465 @@
+{
+  "clip_id": 24,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00110000.mp4",
+  "end_to_end_memory_generation_ms": 222002.3822570074,
+  "latency_ms": {
+    "clip_decode": 3669.327247000183,
+    "deepgram_asr": 1241.8462999921758,
+    "mai_transcribe_asr": 3501.686649004114,
+    "asr_total": 3502.9333050042624,
+    "audio_segmentation": 6.740771001204848,
+    "speech_embedding_campplus": 697.2721570055,
+    "facial_detection_recognition_buffalo_l": 3256.3707230001455,
+    "face_clustering": 7.135013001970947,
+    "vlm_memory_generation": 132461.7444579926,
+    "text_embedding": 500.3897700080415,
+    "graph_update_total": 43.658826005412266
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 24,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 1069,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789432693.3905504,
+          "status": "success",
+          "total_tokens": 237,
+          "request_end": 1789432693.8907235,
+          "latency_ms": 500.1739239960443
+        }
+      ],
+      "total_tokens": 237,
+      "latency_ms": 500.3897700080415
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1241.8462999921758,
+        "openrouter-mai-transcribe-2": 3501.686649004114
+      },
+      "asr_total_ms": 3502.9333050042624,
+      "audio_segmentation_ms": 6.740771001204848,
+      "speech_embedding_ms": 697.2721570055,
+      "graph_update_ms": 37.79373099678196,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 756.0362680087565
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3256.3707230001455,
+      "face_clustering_ms": 7.135013001970947,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 248,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3394.9833560036495
+    },
+    "vlm": {
+      "context_preparation_ms": 4809.263547998853,
+      "vlm_ms": 132461.7444579926,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two young women are sitting together on the edge of a bed inside a bedroom.\",\n    \"<voice_179>, wearing a beige short-sleeved t-shirt and dark trousers, asks the other woman to help explain something to her mother.\",\n    \"<voice_10>, wearing a white sweater and black pants, responds by reassuring her that failing an exam is not the end of the world.\",\n    \"<voice_10> asks <voice_179> why she does not want to tell her mother about the exam results herself.\",\n    \"<voice_179> looks downward, explaining that her mother always stresses heavily over her academic performance.\",\n    \"<voice_10> leans slightly forward, listening attentively as <voice_179> shares her worries.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_179> is experiencing severe anxiety and fear regarding her mother's reaction to her failing an exam.\",\n    \"<voice_179>'s mother places high academic pressure and expectations on her.\",\n    \"<voice_10> acts as a supportive and comforting friend, trying to help <voice_179> process her anxiety and gain perspective.\",\n    \"The two women share a trusting relationship, as <voice_179> confides her personal struggles and seeks assistance from <voice_10>.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two young women are sitting together on the edge of a bed inside a bedroom.",
+          "<voice_179>, wearing a beige short-sleeved t-shirt and dark trousers, asks the other woman to help explain something to her mother.",
+          "<voice_10>, wearing a white sweater and black pants, responds by reassuring her that failing an exam is not the end of the world.",
+          "<voice_10> asks <voice_179> why she does not want to tell her mother about the exam results herself.",
+          "<voice_179> looks downward, explaining that her mother always stresses heavily over her academic performance.",
+          "<voice_10> leans slightly forward, listening attentively as <voice_179> shares her worries."
+        ],
+        "high_level_conclusions": [
+          "<voice_179> is experiencing severe anxiety and fear regarding her mother's reaction to her failing an exam.",
+          "<voice_179>'s mother places high academic pressure and expectations on her.",
+          "<voice_10> acts as a supportive and comforting friend, trying to help <voice_179> process her anxiety and gain perspective.",
+          "The two women share a trusting relationship, as <voice_179> confides her personal struggles and seeks assistance from <voice_10>."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 24,
+          "call_id": "8bde41c4-7178-4d8c-934e-b91895be6707",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789432560.9279373,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65917,
+          "output_tokens": 1183,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 132461.65196600487
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two young women are sitting together on the edge of a bed inside a bedroom.\",\n    \"<voice_179>, wearing a beige short-sleeved t-shirt and dark trousers, asks the other woman to help explain something to her mother.\",\n    \"<voice_10>, wearing a white sweater and black pants, responds by reassuring her that failing an exam is not the end of the world.\",\n    \"<voice_10> asks <voice_179> why she does not want to tell her mother about the exam results herself.\",\n    \"<voice_179> looks downward, explaining that her mother always stresses heavily over her academic performance.\",\n    \"<voice_10> leans slightly forward, listening attentively as <voice_179> shares her worries.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_179> is experiencing severe anxiety and fear regarding her mother's reaction to her failing an exam.\",\n    \"<voice_179>'s mother places high academic pressure and expectations on her.\",\n    \"<voice_10> acts as a supportive and comforting friend, trying to help <voice_179> process her anxiety and gain perspective.\",\n    \"The two women share a trusting relationship, as <voice_179> confides her personal struggles and seeks assistance from <voice_10>.\"\n  ]\n}\n```",
+          "total_tokens": 67100,
+          "request_end": 1789432693.3896847,
+          "latency_ms": 132461.7444579926,
+          "client_wall_clock_latency_ms": 132461.7444579926,
+          "api_request_wall_clock_latency_ms": 132461.7444579926
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.10933600424323231,
+      "nodes_added": 6,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 5.755759004387073,
+      "nodes_added": 4,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 2,
+    "detected_faces": 248,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 4,
+    "nodes_after_clip": 240,
+    "edges_after_clip": 93,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 13
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two young women are sitting together on the edge of a bed inside a bedroom.",
+      "<voice_179>, wearing a beige short-sleeved t-shirt and dark trousers, asks the other woman to help explain something to her mother.",
+      "<voice_10>, wearing a white sweater and black pants, responds by reassuring her that failing an exam is not the end of the world.",
+      "<voice_10> asks <voice_179> why she does not want to tell her mother about the exam results herself.",
+      "<voice_179> looks downward, explaining that her mother always stresses heavily over her academic performance.",
+      "<voice_10> leans slightly forward, listening attentively as <voice_179> shares her worries."
+    ],
+    "high_level_conclusions": [
+      "<voice_179> is experiencing severe anxiety and fear regarding her mother's reaction to her failing an exam.",
+      "<voice_179>'s mother places high academic pressure and expectations on her.",
+      "<voice_10> acts as a supportive and comforting friend, trying to help <voice_179> process her anxiety and gain perspective.",
+      "The two women share a trusting relationship, as <voice_179> confides her personal struggles and seeks assistance from <voice_10>."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two young women are sitting together on the edge of a bed inside a bedroom.",
+      "<voice_179>, wearing a beige short-sleeved t-shirt and dark trousers, asks the other woman to help explain something to her mother.",
+      "<voice_10>, wearing a white sweater and black pants, responds by reassuring her that failing an exam is not the end of the world.",
+      "<voice_10> asks <voice_179> why she does not want to tell her mother about the exam results herself.",
+      "<voice_179> looks downward, explaining that her mother always stresses heavily over her academic performance.",
+      "<voice_10> leans slightly forward, listening attentively as <voice_179> shares her worries."
+    ],
+    "high_level_conclusions": [
+      "<voice_179> is experiencing severe anxiety and fear regarding her mother's reaction to her failing an exam.",
+      "<voice_179>'s mother places high academic pressure and expectations on her.",
+      "<voice_10> acts as a supportive and comforting friend, trying to help <voice_179> process her anxiety and gain perspective.",
+      "The two women share a trusting relationship, as <voice_179> confides her personal struggles and seeks assistance from <voice_10>."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_24_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 13,
+    "nodes": [
+      {
+        "id": 230,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two young women are sitting together on the edge of a bed inside a bedroom."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 231,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_179>, wearing a beige short-sleeved t-shirt and dark trousers, asks the other woman to help explain something to her mother."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 232,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_10>, wearing a white sweater and black pants, responds by reassuring her that failing an exam is not the end of the world."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 233,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_10> asks <voice_179> why she does not want to tell her mother about the exam results herself."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 234,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_179> looks downward, explaining that her mother always stresses heavily over her academic performance."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 235,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_10> leans slightly forward, listening attentively as <voice_179> shares her worries."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 236,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_179> is experiencing severe anxiety and fear regarding her mother's reaction to her failing an exam."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 237,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_179>'s mother places high academic pressure and expectations on her."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 238,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_10> acts as a supportive and comforting friend, trying to help <voice_179> process her anxiety and gain perspective."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 239,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women share a trusting relationship, as <voice_179> confides her personal struggles and seeks assistance from <voice_10>."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 10,
+        "target": 232,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 10,
+        "target": 233,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 10,
+        "target": 235,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 10,
+        "target": 238,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 10,
+        "target": 239,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 179,
+        "target": 231,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 179,
+        "target": 233,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 179,
+        "target": 234,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 179,
+        "target": 235,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 179,
+        "target": 236,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 179,
+        "target": 237,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 179,
+        "target": 238,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 179,
+        "target": 239,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_24_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_24_graph.pkl"
+  },
+  "memory_pickle_bytes": 6236821,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 73658.754495494,
+    "prepared_perf": 73666.038314666,
+    "ordered_start_perf": 73738.439180231,
+    "consumer_wait_ms": 0.014809003914706409,
+    "ready_to_ordered_ms": 72400.86556499591,
+    "preparation_work_ms": 7278.404066004441,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 141930.40572099562
+}

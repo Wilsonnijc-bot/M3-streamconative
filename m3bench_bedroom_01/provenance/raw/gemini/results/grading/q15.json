@@ -1,0 +1,56 @@
+{
+  "question_id": "Q15",
+  "candidate_mapping": {
+    "0": "A",
+    "1": "B",
+    "2": "C",
+    "3": "D"
+  },
+  "grades": {
+    "0": {
+      "correct": true,
+      "reason": "Directly matches the reference answer."
+    },
+    "1": {
+      "correct": true,
+      "reason": "Correctly answers 'yes' with additional consistent context."
+    },
+    "2": {
+      "correct": true,
+      "reason": "Correctly answers 'yes' with additional consistent context."
+    },
+    "3": {
+      "correct": false,
+      "reason": "Claims insufficient information instead of confirming 'yes'."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q15",
+    "method": null,
+    "call_id": "ad1b4ea3-99ca-4eb5-b980-653267f622ec",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437166.4585607,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 220,
+    "output_tokens": 273,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 3119.251849988359
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": true,\n    \"reason\": \"Directly matches the reference answer.\"\n  },\n  \"1\": {\n    \"correct\": true,\n    \"reason\": \"Correctly answers 'yes' with additional consistent context.\"\n  },\n  \"2\": {\n    \"correct\": true,\n    \"reason\": \"Correctly answers 'yes' with additional consistent context.\"\n  },\n  \"3\": {\n    \"correct\": false,\n    \"reason\": \"Claims insufficient information instead of confirming 'yes'.\"\n  }\n}\n```",
+    "total_tokens": 493,
+    "request_end": 1789437169.5778751,
+    "latency_ms": 3119.313546005287,
+    "client_wall_clock_latency_ms": 3119.313546005287,
+    "api_request_wall_clock_latency_ms": 3119.313546005287
+  },
+  "included_in_qa_latency": false
+}

@@ -1,0 +1,452 @@
+{
+  "clip_id": 51,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0051.mp4",
+  "end_to_end_memory_generation_ms": 650798.6308949986,
+  "latency_ms": {
+    "clip_decode": 3875.8749029948376,
+    "deepgram_asr": 2.140949000022374,
+    "mai_transcribe_asr": 2.0359820045996457,
+    "asr_total": 3.069076999963727,
+    "audio_segmentation": 7.072428001265507,
+    "speech_embedding_campplus": 972.0936109952163,
+    "facial_detection_recognition_buffalo_l": 3485.197107998829,
+    "face_clustering": 8.852999002556317,
+    "vlm_memory_generation": 134347.993080999,
+    "text_embedding": 604.2267400043784,
+    "graph_update_total": 261.2464119956712
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 51,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 865,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789421453.6029687,
+          "status": "success",
+          "total_tokens": 169,
+          "request_end": 1789421454.20698,
+          "latency_ms": 604.0119140016031
+        }
+      ],
+      "total_tokens": 169,
+      "latency_ms": 604.2267400043784
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.140949000022374,
+        "openrouter-mai-transcribe-2": 2.0359820045996457
+      },
+      "asr_total_ms": 3.069076999963727,
+      "audio_segmentation_ms": 7.072428001265507,
+      "speech_embedding_ms": 972.0936109952163,
+      "graph_update_ms": 259.86962000024505,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1253.4977640025318
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3485.197107998829,
+      "face_clustering_ms": 8.852999002556317,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 344,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3681.4886200008914
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_467>",
+        "<voice_666>",
+        "<voice_667>",
+        "<voice_668>"
+      ],
+      "context_preparation_ms": 3937.0171910049976,
+      "vlm_ms": 134347.993080999,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals are gathered around a table covered with a red and white checkered tablecloth.\",\n\t\t\"One person stands near a whiteboard in the background while others sit around the table.\",\n\t\t\"The person standing appears to be leading a discussion or presenting information on the board.\",\n\t\t\"The camera view shifts away from the group and moves through a hallway containing several cardboard boxes.\",\n\t\t\"The camera operator walks past a washing machine and approaches a stack of packages near the stairs.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_467> describes a process of slowly opening flowers, pressing petals, and creating eco-friendly clear films using Yakima glass for a handmade plant-related project.\",\n\t\t\"<voice_666> mentions making borders as part of the craft.\",\n\t\t\"<voice_667> states that the work can be distributed to everyone and considers it talented.\",\n\t\t\"<voice_668> refers to the flower component of the creation.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of individuals are gathered around a table covered with a red and white checkered tablecloth.",
+          "One person stands near a whiteboard in the background while others sit around the table.",
+          "The person standing appears to be leading a discussion or presenting information on the board.",
+          "The camera view shifts away from the group and moves through a hallway containing several cardboard boxes.",
+          "The camera operator walks past a washing machine and approaches a stack of packages near the stairs."
+        ],
+        "high_level_conclusions": [
+          "<voice_467> describes a process of slowly opening flowers, pressing petals, and creating eco-friendly clear films using Yakima glass for a handmade plant-related project.",
+          "<voice_666> mentions making borders as part of the craft.",
+          "<voice_667> states that the work can be distributed to everyone and considers it talented.",
+          "<voice_668> refers to the flower component of the creation."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 51,
+          "call_id": "ccdbbcfa-de99-4b2d-8a04-6df7ce702f59",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789421319.2535534,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals are gathered around a table covered with a red and white checkered tablecloth.\",\n\t\t\"One person stands near a whiteboard in the background while others sit around the table.\",\n\t\t\"The person standing appears to be leading a discussion or presenting information on the board.\",\n\t\t\"The camera view shifts away from the group and moves through a hallway containing several cardboard boxes.\",\n\t\t\"The camera operator walks past a washing machine and approaches a stack of packages near the stairs.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_467> describes a process of slowly opening flowers, pressing petals, and creating eco-friendly clear films using Yakima glass for a handmade plant-related project.\",\n\t\t\"<voice_666> mentions making borders as part of the craft.\",\n\t\t\"<voice_667> states that the work can be distributed to everyone and considers it talented.\",\n\t\t\"<voice_668> refers to the flower component of the creation.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   0.00s - 25.50s: A group of people are sitting around a table covered with a checkered tablecloth. There's a whiteboard in the background. One person (standing, pink shirt) seems to be writing or pointing at the whiteboard. Another person (seated, black top) is looking at a tablet/laptop. Others are seated around. The camera angle shifts slightly but remains focused on the group.\n    *   26.00s - 29.50s: The camera moves away from the table. It pans around the room, showing a hallway, boxes, a washing machine, and stairs. The camera operator walks towards a doorway/hallway area where boxes are stacked.\n*   **Character Features:**\n    *   **Face Features:** None explicitly provided in the text prompt (only video frames are shown). Wait, looking closely at the prompt structure, there is a section \"Face features:\" and \"Voice features:\". Under \"Face features:\", it says `None` implicitly or just blank? No, looking at the raw text provided: `Face features:` followed by nothing specific, then `Voice features:`. Actually, looking at the very beginning of the prompt, it lists `Face features:` and `Voice features:` headers. But under `Face features:` there is no data. Wait, let me re-read the prompt carefully.\n    *   Ah, I see `Face features:` is listed but empty in the provided text block? No, wait. Let me look at the raw input again.\n    *   Input starts with `You will be given...`. Then `Face features:` is present but empty? No, looking at the end of the prompt: `Face features:Voice features:{...}`. It seems `Face features:` is followed immediately by `Voice features:`. This implies no face features were provided in the input data for this specific task instance, or they are missing.\n    *   However, the instruction says: \"Each feature is either a face ... or a voice ...\". And \"Some features may belong to the same character.\"\n    *   Since no face features are provided in the text input (just the header), I cannot make equivalences like `Equivalence: <face_x>, <voice_y>` unless I infer them from the video visually, but the instructions say \"If no face IDs are supplied, do not invent any.\" So I must rely solely on the provided voice IDs.\n    *   **Voice Features:**\n        *   `<voice_467>`: 00:00 - 00:20. Speaker MAI talks about making flowers slowly, pressing petals, eco-friendly, clear film, buying Yakima glass, embedding, good handmade, related to plants, closed loop.\n        *   `<voice_666>`: 00:21 - 00:23. Speaker MAI talks about making borders.\n        *   `<voice_667>`: 00:22 - 00:25. Speaker MAI talks about distributing to everyone, talented.\n        *   `<voice_668>`: 00:26 - 00:28. Speaker MAI talks about the flower.\n    *   All voice features seem to be attributed to \"MAI\".\n    *   Looking at the video, there is a person standing near the whiteboard (pink shirt) who might be speaking, and others seated. The camera perspective suggests the camera wearer is part of the group or observing. At 26s+, the camera moves away, suggesting the camera wearer gets up.\n    *   The voice ASR mentions \"MAI\". This likely refers to the person speaking. In the video, the person standing at the whiteboard is the most active speaker candidate during the first part. The seated person in black is also visible. Without face IDs, I can't link them definitively, but I know the voice belongs to someone named MAI.\n    *   Wait, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So I need to create memories for `<voice_467>`, `<voice_666>`, `<voice_667>`, `<voice_668>`.\n    *   The instruction also says: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   Since there are no face IDs provided, I cannot create `Equivalence` statements. I must strictly follow \"If no face IDs are supplied, do not invent any.\"\n\n**2. Construct Video Description:**\n*   Need atomic events.\n*   Event 1: Group meeting around a table.\n*   Event 2: Person standing writes on whiteboard.\n*   Event 3: Camera focuses on the group discussion.\n*   Event 4: Camera moves away from the table.\n*   Event 5: Camera explores the room/hallway with boxes.\n\n**3. Construct High-Level Conclusions:**\n*   Need to summarize the intent/content.\n*   Speaker MAI discusses crafting flowers/glass art.\n*   Speaker MAI mentions distribution and talent.\n*   Since no face IDs, no equivalences.\n\n**Refining the Output:**\n*   **Video Description:**\n    *   A group of individuals are gathered around a table with a checkered cloth, engaging in a discussion while one person stands at a whiteboard.\n    *   The person standing appears to be explaining something written on the board.\n    *   Another individual seated at the table interacts with a tablet device.\n    *   The camera view shifts away from the group, moving through a hallway filled with cardboard boxes.\n    *   The camera operator walks past a washing machine and approaches a stack of packages near the stairs.\n*   **High-Level Conclusions:**\n    *   Speaker MAI describes a process involving slow flower opening, petal pressing, and creating eco-friendly clear films.\n    *   Speaker MAI mentions purchasing Yakima glass and embedding items into it for a handmade product related to plants.\n    *   Speaker MAI notes that the finished product involves making borders and distributing them to others, highlighting their talent.\n    *   (No equivalences since no face IDs).\n\n**Wait, checking constraints again:**\n*   \"Preserve speaker identity when constructing memory from the supplied character features.\"\n*   \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   Wait, the output format requested is:\n    ```json\n    {\n        \"video_description\": [...],\n        \"high_level_conclusions\": [...]\n    }\n    ```\n    The instructions say \"include at least one episodic memory...\". Where do these memories go?\n    Looking at the \"High-Level Conclusions\" section in the prompt instructions: \"Generate high-level reasoning-based conclusions that go beyond surface-level observations...\".\n    Usually, \"episodic memory\" implies summarizing the speech. The prompt asks for \"High-Level Conclusions\" but the instruction says \"include at least one episodic memory...\".\n    Let's look at the example/output format provided in the system prompt vs the user prompt.\n    User Prompt says: \"Output Format: ... high_level_conclusions: [ \"...\", \"Equivalence: ...\" ]\".\n    Instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\n    This suggests the \"high_level_conclusions\" array should contain these summaries/inferences.\n    Also, \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    So the high_level_conclusions should contain sentences referencing `<voice_467>`, etc., describing what they said.\n\n    Let's draft the high_level_conclusions:\n    1.  `<voice_467>` discusses making flowers open slowly, pressing petals, creating eco-friendly clear films, buying Yakima glass, and embedding items for a plant-related handmade project.\n    2.  `<voice_666>` mentions making some borders.\n    3.  `<voice_667>` states that one day it can be distributed to everyone and calls it talented work.\n    4.  `<voice_668>` refers to the flower itself.\n\n    Wait, I need to check if I should put these in `high_level_conclusions`. The instruction says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". And \"For every supplied voice ID... include at least one episodic memory...\". This implies the memory goes into the relevant section. Given the structure, `high_level_conclusions` is the place for reasoning and summaries of speech content.\n\n    Also, regarding \"Preserve speaker identity... using the exact ID as the speaker.\" -> I will use `<voice_467>`, etc. in the text.\n\n    Regarding \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" -> Since I don't have face IDs, I won't claim who is speaking visually, just attribute the speech to the voice ID.\n\n    Let's refine the video description to be purely observational.\n    Let's refine the high level conclusions to include the speech summaries as requested (\"include at least one episodic memory\").\n\n    One detail: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n    The schema expects strings in arrays.\n\n    Plan:\n    1.  Create `video_description` with ~4-5 sentences covering the meeting and the walk.\n    2.  Create `high_level_conclusions` with summaries of the speech attributed to the voice IDs.\n\n    Wait, I need to check if there are any face IDs hidden in the text.\n    Text: `Face features:Voice features:{...}`.\n    It looks like `Face features:` is a header, and then `Voice features:` follows immediately. There are no values for Face features. So `None` effectively.\n    So no `Equivalence` lines.\n\n    Let's write the JSON.\n\n    Video Description:\n    - A group of people are seated around a table with a red and white checkered tablecloth in a room with a whiteboard.\n    - One person stands near the whiteboard, appearing to lead a discussion or presentation.\n    - Another participant sits at the table holding a tablet device.\n    - The camera pans away from the group, moving through a hallway cluttered with cardboard boxes.\n    - The camera operator walks past a washing machine and approaches a stack of packages near the stairs.\n\n    High Level Conclusions:\n    - `<voice_467>` explains a creative process involving slowly opening flowers, pressing petals, and creating eco-friendly clear films using Yakima glass for a plant-related handmade item.\n    - `<voice_666>` mentions creating borders as part of the project.\n    - `<voice_667>` indicates the intention to distribute the finished work to everyone and describes the skill involved as talented.\n    - `<voice_668>` comments specifically on the flower aspect of the creation.\n\n    Wait, I should check if I need to combine them or keep them separate. \"Preserve distinct substantive utterances as separate atomic memories.\" -> Separate sentences for different voice IDs or distinct parts of speech.\n    The instruction says \"For every supplied voice ID... include at least one episodic memory\".\n    So I will list one per voice ID.\n\n    Final check on constraints:\n    - \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" -> Used `<voice_467>`, etc.\n    - \"Do not replace the ID with 'a speaker'...\" -> Kept IDs.\n    - \"Keep dialogue grounded in the provided transcript.\" -> Summarized accurately.\n    - \"Output Format: ... valid JSON object\".\n\n    One thing: The prompt says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\n    I will formulate these as conclusions.\n\n    Let's assemble the JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of individuals are gathered around a table covered with a red and white checkered tablecloth.\",\n\t\t\"One person stands near a whiteboard in the background while others sit around the table.\",\n\t\t\"The person standing appears to be leading a discussion or presenting information on the board.\",\n\t\t\"The camera view shifts away from the group and moves through a hallway containing several cardboard boxes.\",\n\t\t\"The camera operator walks past a washing machine and approaches a stack of packages near the stairs.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_467> describes a process of slowly opening flowers, pressing petals, and creating eco-friendly clear films using Yakima glass for a handmade plant-related project.\",\n\t\t\"<voice_666> mentions making borders as part of the craft.\",\n\t\t\"<voice_667> states that the work can be distributed to everyone and considers it talented.\",\n\t\t\"<voice_668> refers to the flower component of the creation.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10825,
+          "output_tokens": 2924,
+          "total_tokens": 13749,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0016539997886866331,
+            "media_preparation_ms": 60.38398800592404,
+            "processor_tokenization_ms": 399.48291999462526,
+            "device_transfer_ms": 41.950160994019825,
+            "cuda_generation_ms": 133810.714432002,
+            "decoding_ms": 3.339383998536505
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 134316.02418299735,
+          "request_end": 1789421453.60155,
+          "latency_ms": 134347.993080999,
+          "client_wall_clock_latency_ms": 134347.993080999
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.060163998568896204,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 1.316627996857278,
+      "nodes_added": 4,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 4,
+    "detected_faces": 344,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 4,
+    "nodes_after_clip": 678,
+    "edges_after_clip": 252,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of individuals are gathered around a table covered with a red and white checkered tablecloth.",
+      "One person stands near a whiteboard in the background while others sit around the table.",
+      "The person standing appears to be leading a discussion or presenting information on the board.",
+      "The camera view shifts away from the group and moves through a hallway containing several cardboard boxes.",
+      "The camera operator walks past a washing machine and approaches a stack of packages near the stairs."
+    ],
+    "high_level_conclusions": [
+      "<voice_467> describes a process of slowly opening flowers, pressing petals, and creating eco-friendly clear films using Yakima glass for a handmade plant-related project.",
+      "<voice_666> mentions making borders as part of the craft.",
+      "<voice_667> states that the work can be distributed to everyone and considers it talented.",
+      "<voice_668> refers to the flower component of the creation."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of individuals are gathered around a table covered with a red and white checkered tablecloth.",
+      "One person stands near a whiteboard in the background while others sit around the table.",
+      "The person standing appears to be leading a discussion or presenting information on the board.",
+      "The camera view shifts away from the group and moves through a hallway containing several cardboard boxes.",
+      "The camera operator walks past a washing machine and approaches a stack of packages near the stairs."
+    ],
+    "high_level_conclusions": [
+      "<voice_467> describes a process of slowly opening flowers, pressing petals, and creating eco-friendly clear films using Yakima glass for a handmade plant-related project.",
+      "<voice_666> mentions making borders as part of the craft.",
+      "<voice_667> states that the work can be distributed to everyone and considers it talented.",
+      "<voice_668> refers to the flower component of the creation."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_51_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 666,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 做了一些周边。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 667,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那一天就可以分发给大家。",
+            "MAI: 上才艺。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 668,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 这花的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 669,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of individuals are gathered around a table covered with a red and white checkered tablecloth."
+          ],
+          "timestamp": 51
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 670,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person stands near a whiteboard in the background while others sit around the table."
+          ],
+          "timestamp": 51
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 671,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person standing appears to be leading a discussion or presenting information on the board."
+          ],
+          "timestamp": 51
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 672,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera view shifts away from the group and moves through a hallway containing several cardboard boxes."
+          ],
+          "timestamp": 51
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 673,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator walks past a washing machine and approaches a stack of packages near the stairs."
+          ],
+          "timestamp": 51
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 674,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_467> describes a process of slowly opening flowers, pressing petals, and creating eco-friendly clear films using Yakima glass for a handmade plant-related project."
+          ],
+          "timestamp": 51
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 675,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_666> mentions making borders as part of the craft."
+          ],
+          "timestamp": 51
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 676,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_667> states that the work can be distributed to everyone and considers it talented."
+          ],
+          "timestamp": 51
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 677,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_668> refers to the flower component of the creation."
+          ],
+          "timestamp": 51
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 467,
+        "target": 674,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 666,
+        "target": 675,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 667,
+        "target": 676,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 668,
+        "target": 677,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_51_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_51_graph.pkl"
+  },
+  "memory_pickle_bytes": 15917671,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 61990.308297244,
+    "prepared_perf": 61996.069109948,
+    "ordered_start_perf": 62496.077605128,
+    "consumer_wait_ms": 0.015798999811522663,
+    "ready_to_ordered_ms": 500008.4951799945,
+    "preparation_work_ms": 5755.484927001817,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 143830.09154799947
+}

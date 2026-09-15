@@ -1,0 +1,59 @@
+{
+  "clip_id": 5,
+  "source": {
+    "segment_id": 5,
+    "source": "DAY1_A1_JAKE_11113000.mp4",
+    "source_clock": "11113000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40290.0,
+    "absolute_end_seconds": 40320.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0005.mp4"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a dining table covered in opened boxes, electronic devices, and cases.",
+      "The camera wearer looks down while holding and untangling black cables.",
+      "The camera wearer steps toward the table where others are examining gadgets.",
+      "The camera wearer handles a black zippered equipment case on the table.",
+      "The camera wearer turns around and walks across the room away from the table.",
+      "The camera wearer carries the black case toward a corner shelf topped with a yellow plush toy."
+    ],
+    "high_level_conclusions": [
+      "The group in the room is collaboratively unboxing, organizing, and preparing technical equipment or recording gear.",
+      "The presence of a checkerboard calibration board and specialized headset cases suggests preparation for an audiovisual or motion capture/VR setup.",
+      "The camera wearer (Jake) is managing cables and equipment cases to support the group's setup."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"high_level_conclusions\": [\n  \"The group in the room is collaboratively unboxing, organizing, and preparing technical equipment or recording gear.\",\n  \"The presence of a checkerboard calibration board and specialized headset cases suggests preparation for an audiovisual or motion capture/VR setup.\",\n  \"The camera wearer (Jake) is managing cables and equipment cases to support the group's setup.\"\n ],\n \"video_description\": [\n  \"A group of people sits around a dining table covered in opened boxes, electronic devices, and cases.\",\n  \"The camera wearer looks down while holding and untangling black cables.\",\n  \"The camera wearer steps toward the table where others are examining gadgets.\",\n  \"The camera wearer handles a black zippered equipment case on the table.\",\n  \"The camera wearer turns around and walks across the room away from the table.\",\n  \"The camera wearer carries the black case toward a corner shelf topped with a yellow plush toy.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 5,
+      "call_id": "591616ee-9655-4480-a5d0-73f7925170f4",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789397922.9106297,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66277,
+      "output_tokens": 476,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"high_level_conclusions\": [\n  \"The group in the room is collaboratively unboxing, organizing, and preparing technical equipment or recording gear.\",\n  \"The presence of a checkerboard calibration board and specialized headset cases suggests preparation for an audiovisual or motion capture/VR setup.\",\n  \"The camera wearer (Jake) is managing cables and equipment cases to support the group's setup.\"\n ],\n \"video_description\": [\n  \"A group of people sits around a dining table covered in opened boxes, electronic devices, and cases.\",\n  \"The camera wearer looks down while holding and untangling black cables.\",\n  \"The camera wearer steps toward the table where others are examining gadgets.\",\n  \"The camera wearer handles a black zippered equipment case on the table.\",\n  \"The camera wearer turns around and walks across the room away from the table.\",\n  \"The camera wearer carries the black case toward a corner shelf topped with a yellow plush toy.\"\n ]\n}\n```",
+      "total_tokens": 66753,
+      "request_end": 1789397981.4284139,
+      "latency_ms": 58517.7685499948,
+      "client_wall_clock_latency_ms": 58517.7685499948,
+      "api_request_wall_clock_latency_ms": 58517.7685499948
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_5_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

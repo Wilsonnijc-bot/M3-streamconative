@@ -1,0 +1,586 @@
+{
+  "clip_id": 67,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0067.mp4",
+  "end_to_end_memory_generation_ms": 416856.66770300304,
+  "latency_ms": {
+    "clip_decode": 4327.3661869970965,
+    "deepgram_asr": 1152.6513209973928,
+    "mai_transcribe_asr": 124880.27442999737,
+    "asr_total": 124881.6008549984,
+    "audio_segmentation": 5.808600995806046,
+    "speech_embedding_campplus": 890.2679809980327,
+    "facial_detection_recognition_buffalo_l": 3712.6459430000978,
+    "face_clustering": 3.7521949998335913,
+    "vlm_memory_generation": 181682.2784360047,
+    "text_embedding": 624.2134429994621,
+    "graph_update_total": 451.21538299281383
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 67,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 15,
+      "input_chars": 1338,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789407305.1491961,
+          "status": "success",
+          "total_tokens": 293,
+          "request_end": 1789407305.773188,
+          "latency_ms": 623.9925179979764
+        }
+      ],
+      "total_tokens": 293,
+      "latency_ms": 624.2134429994621
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1152.6513209973928,
+        "openrouter-mai-transcribe-2": 124880.27442999737
+      },
+      "asr_total_ms": 124881.6008549984,
+      "audio_segmentation_ms": 5.808600995806046,
+      "speech_embedding_ms": 890.2679809980327,
+      "graph_update_ms": 451.07416899554664,
+      "asr_segment_count": 7,
+      "speech_embedding_count": 7,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1359.1735669979244
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3712.6459430000978,
+      "face_clustering_ms": 3.7521949998335913,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 173,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3809.2400940004154
+    },
+    "vlm": {
+      "context_preparation_ms": 3964.71144699899,
+      "vlm_ms": 181682.2784360047,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a red-and-white checkered tablecloth in a room, with a clapperboard resting on the table.\",\n  \"A person with reddish-brown hair stands by a whiteboard at the far end of the room.\",\n  \"A person sitting on the right side of the table points toward the whiteboard.\",\n  \"<voice_755> points out that a name was written backward on the board.\",\n  \"<voice_756> reads out or corrects the characters written on the whiteboard.\",\n  \"<voice_0> remarks that it was almost right.\",\n  \"A man briefly enters the frame in the background near the doorway behind the whiteboard.\",\n  \"<voice_757> jokes about a mutation occurring after chromosome testing, eliciting amusement.\",\n  \"The woman in black sitting on the left side of the table smiles and laughs along with the discussion.\",\n  \"<voice_758> jokingly asks if someone has both of them.\",\n  \"<voice_759> makes a brief comment during the conversation.\",\n  \"<voice_760> cheerfully calls for their prop to be brought out while gesturing with their hand.\",\n  \"The woman in black looks toward the camera with an amused expression.\"\n ],\n \"high_level_conclusions\": [\n  \"The group appears to be a film or video production crew preparing for a scene, indicated by the clapperboard, lighting equipment, and discussion of props and boards.\",\n  \"The atmosphere among the team members is casual, lighthearted, and collaborative as they joke and laugh together during preparation.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people is gathered around a table with a red-and-white checkered tablecloth in a room, with a clapperboard resting on the table.",
+          "A person with reddish-brown hair stands by a whiteboard at the far end of the room.",
+          "A person sitting on the right side of the table points toward the whiteboard.",
+          "<voice_755> points out that a name was written backward on the board.",
+          "<voice_756> reads out or corrects the characters written on the whiteboard.",
+          "<voice_0> remarks that it was almost right.",
+          "A man briefly enters the frame in the background near the doorway behind the whiteboard.",
+          "<voice_757> jokes about a mutation occurring after chromosome testing, eliciting amusement.",
+          "The woman in black sitting on the left side of the table smiles and laughs along with the discussion.",
+          "<voice_758> jokingly asks if someone has both of them.",
+          "<voice_759> makes a brief comment during the conversation.",
+          "<voice_760> cheerfully calls for their prop to be brought out while gesturing with their hand.",
+          "The woman in black looks toward the camera with an amused expression."
+        ],
+        "high_level_conclusions": [
+          "The group appears to be a film or video production crew preparing for a scene, indicated by the clapperboard, lighting equipment, and discussion of props and boards.",
+          "The atmosphere among the team members is casual, lighthearted, and collaborative as they joke and laugh together during preparation."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 67,
+          "call_id": "4200966b-ef3e-4bf7-8a86-fb0c7e6836ef",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789407123.466121,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66896,
+          "output_tokens": 1378,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 181682.16585399932
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table with a red-and-white checkered tablecloth in a room, with a clapperboard resting on the table.\",\n  \"A person with reddish-brown hair stands by a whiteboard at the far end of the room.\",\n  \"A person sitting on the right side of the table points toward the whiteboard.\",\n  \"<voice_755> points out that a name was written backward on the board.\",\n  \"<voice_756> reads out or corrects the characters written on the whiteboard.\",\n  \"<voice_0> remarks that it was almost right.\",\n  \"A man briefly enters the frame in the background near the doorway behind the whiteboard.\",\n  \"<voice_757> jokes about a mutation occurring after chromosome testing, eliciting amusement.\",\n  \"The woman in black sitting on the left side of the table smiles and laughs along with the discussion.\",\n  \"<voice_758> jokingly asks if someone has both of them.\",\n  \"<voice_759> makes a brief comment during the conversation.\",\n  \"<voice_760> cheerfully calls for their prop to be brought out while gesturing with their hand.\",\n  \"The woman in black looks toward the camera with an amused expression.\"\n ],\n \"high_level_conclusions\": [\n  \"The group appears to be a film or video production crew preparing for a scene, indicated by the clapperboard, lighting equipment, and discussion of props and boards.\",\n  \"The atmosphere among the team members is casual, lighthearted, and collaborative as they joke and laugh together during preparation.\"\n ]\n}\n```",
+          "total_tokens": 68274,
+          "request_end": 1789407305.1484058,
+          "latency_ms": 181682.2784360047,
+          "client_wall_clock_latency_ms": 181682.2784360047,
+          "api_request_wall_clock_latency_ms": 181682.2784360047
+        }
+      ],
+      "episodic_memory_count": 13,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 13,
+      "text_embedding_ms": null,
+      "text_embedding_count": 13,
+      "graph_update_ms": 0.12759899982484058,
+      "nodes_added": 13,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.013614997442346066,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 7,
+    "speech_embeddings": 7,
+    "voice_identities": 7,
+    "detected_faces": 173,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 13,
+    "semantic_memories": 2,
+    "nodes_after_clip": 776,
+    "edges_after_clip": 167,
+    "nodes_added_by_clip": 21,
+    "edges_added_by_clip": 7
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a red-and-white checkered tablecloth in a room, with a clapperboard resting on the table.",
+      "A person with reddish-brown hair stands by a whiteboard at the far end of the room.",
+      "A person sitting on the right side of the table points toward the whiteboard.",
+      "<voice_755> points out that a name was written backward on the board.",
+      "<voice_756> reads out or corrects the characters written on the whiteboard.",
+      "<voice_0> remarks that it was almost right.",
+      "A man briefly enters the frame in the background near the doorway behind the whiteboard.",
+      "<voice_757> jokes about a mutation occurring after chromosome testing, eliciting amusement.",
+      "The woman in black sitting on the left side of the table smiles and laughs along with the discussion.",
+      "<voice_758> jokingly asks if someone has both of them.",
+      "<voice_759> makes a brief comment during the conversation.",
+      "<voice_760> cheerfully calls for their prop to be brought out while gesturing with their hand.",
+      "The woman in black looks toward the camera with an amused expression."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be a film or video production crew preparing for a scene, indicated by the clapperboard, lighting equipment, and discussion of props and boards.",
+      "The atmosphere among the team members is casual, lighthearted, and collaborative as they joke and laugh together during preparation."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people is gathered around a table with a red-and-white checkered tablecloth in a room, with a clapperboard resting on the table.",
+      "A person with reddish-brown hair stands by a whiteboard at the far end of the room.",
+      "A person sitting on the right side of the table points toward the whiteboard.",
+      "<voice_755> points out that a name was written backward on the board.",
+      "<voice_756> reads out or corrects the characters written on the whiteboard.",
+      "<voice_0> remarks that it was almost right.",
+      "A man briefly enters the frame in the background near the doorway behind the whiteboard.",
+      "<voice_757> jokes about a mutation occurring after chromosome testing, eliciting amusement.",
+      "The woman in black sitting on the left side of the table smiles and laughs along with the discussion.",
+      "<voice_758> jokingly asks if someone has both of them.",
+      "<voice_759> makes a brief comment during the conversation.",
+      "<voice_760> cheerfully calls for their prop to be brought out while gesturing with their hand.",
+      "The woman in black looks toward the camera with an amused expression."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be a film or video production crew preparing for a scene, indicated by the clapperboard, lighting equipment, and discussion of props and boards.",
+      "The atmosphere among the team members is casual, lighthearted, and collaborative as they joke and laugh together during preparation."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_67_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 21,
+    "edges_added": 7,
+    "nodes": [
+      {
+        "id": 755,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你把他名写反了。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 756,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 爱流万确。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 757,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 完了，今天那个变异了，做完染色体。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 758,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好家伙，这俩你都有是吗？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 759,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 他闪。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 760,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: OK，上我的道具。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 761,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people is gathered around a table with a red-and-white checkered tablecloth in a room, with a clapperboard resting on the table."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 762,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person with reddish-brown hair stands by a whiteboard at the far end of the room."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 763,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person sitting on the right side of the table points toward the whiteboard."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 764,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_755> points out that a name was written backward on the board."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 765,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_756> reads out or corrects the characters written on the whiteboard."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 766,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> remarks that it was almost right."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 767,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A man briefly enters the frame in the background near the doorway behind the whiteboard."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 768,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_757> jokes about a mutation occurring after chromosome testing, eliciting amusement."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 769,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in black sitting on the left side of the table smiles and laughs along with the discussion."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 770,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_758> jokingly asks if someone has both of them."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 771,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_759> makes a brief comment during the conversation."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 772,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_760> cheerfully calls for their prop to be brought out while gesturing with their hand."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 773,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in black looks toward the camera with an amused expression."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 774,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be a film or video production crew preparing for a scene, indicated by the clapperboard, lighting equipment, and discussion of props and boards."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 775,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The atmosphere among the team members is casual, lighthearted, and collaborative as they joke and laugh together during preparation."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 766,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 755,
+        "target": 764,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 756,
+        "target": 765,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 757,
+        "target": 768,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 758,
+        "target": 770,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 759,
+        "target": 771,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 760,
+        "target": 772,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_67_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_67_graph.pkl"
+  },
+  "memory_pickle_bytes": 17674076,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 48075.829204249,
+    "prepared_perf": 48206.710415234,
+    "ordered_start_perf": 48299.757531652,
+    "consumer_wait_ms": 0.009406998287886381,
+    "ready_to_ordered_ms": 93047.11641799804,
+    "preparation_work_ms": 130881.06611300464,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 191441.78816099884
+}

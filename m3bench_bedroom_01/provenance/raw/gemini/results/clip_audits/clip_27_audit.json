@@ -1,0 +1,356 @@
+{
+  "clip_id": 27,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00120000.mp4",
+  "end_to_end_memory_generation_ms": 188675.8327849966,
+  "latency_ms": {
+    "clip_decode": 3545.003279010416,
+    "deepgram_asr": 823.4957230015425,
+    "mai_transcribe_asr": 1222.5272329960717,
+    "asr_total": 1223.8322490011342,
+    "audio_segmentation": 6.317587001831271,
+    "speech_embedding_campplus": 340.7451690000016,
+    "facial_detection_recognition_buffalo_l": 3269.251745994552,
+    "face_clustering": 5.901423006434925,
+    "vlm_memory_generation": 56662.47261299577,
+    "text_embedding": 555.0769440014847,
+    "graph_update_total": 20.993097001337446
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 27,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 769,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789432882.1073956,
+          "status": "success",
+          "total_tokens": 158,
+          "request_end": 1789432882.6622434,
+          "latency_ms": 554.8480819998076
+        }
+      ],
+      "total_tokens": 158,
+      "latency_ms": 555.0769440014847
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 823.4957230015425,
+        "openrouter-mai-transcribe-2": 1222.5272329960717
+      },
+      "asr_total_ms": 1223.8322490011342,
+      "audio_segmentation_ms": 6.317587001831271,
+      "speech_embedding_ms": 340.7451690000016,
+      "graph_update_ms": 20.88922099210322,
+      "asr_segment_count": 2,
+      "speech_embedding_count": 2,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 380.82122699415777
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3269.251745994552,
+      "face_clustering_ms": 5.901423006434925,
+      "graph_update_ms": 0.00291600008495152,
+      "frame_count": 150,
+      "detected_face_count": 207,
+      "qualified_face_count": 3,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3385.9116310050013
+    },
+    "vlm": {
+      "context_preparation_ms": 5699.769123995793,
+      "vlm_ms": 56662.47261299577,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A person carries a food tray containing french fries and a slice of cake into the dining room.\",\n  \"Two young women walk into the room toward the dining table.\",\n  \"The woman in the white jacket sits down at the dining table next to an open laptop while holding her phone.\",\n  \"The woman in the oversized beige T-shirt adjusts her chair and sits opposite her.\",\n  \"The food tray is placed onto the table in front of them.\",\n  \"The woman in the beige T-shirt looks down at her phone on the table.\",\n  \"The woman in the white jacket speaks while holding her phone and gesturing towards the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The two women are gathering at the table to have afternoon tea while using their devices.\",\n  \"The woman in the white jacket addresses the first-person camera operator as a robot, instructing it to clean up the table.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A person carries a food tray containing french fries and a slice of cake into the dining room.",
+          "Two young women walk into the room toward the dining table.",
+          "The woman in the white jacket sits down at the dining table next to an open laptop while holding her phone.",
+          "The woman in the oversized beige T-shirt adjusts her chair and sits opposite her.",
+          "The food tray is placed onto the table in front of them.",
+          "The woman in the beige T-shirt looks down at her phone on the table.",
+          "The woman in the white jacket speaks while holding her phone and gesturing towards the table."
+        ],
+        "high_level_conclusions": [
+          "The two women are gathering at the table to have afternoon tea while using their devices.",
+          "The woman in the white jacket addresses the first-person camera operator as a robot, instructing it to clean up the table."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 27,
+          "call_id": "ae754e72-dfed-4650-93ec-f146a40cdd54",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789432825.4440455,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65797,
+          "output_tokens": 905,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 56662.38344600424
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A person carries a food tray containing french fries and a slice of cake into the dining room.\",\n  \"Two young women walk into the room toward the dining table.\",\n  \"The woman in the white jacket sits down at the dining table next to an open laptop while holding her phone.\",\n  \"The woman in the oversized beige T-shirt adjusts her chair and sits opposite her.\",\n  \"The food tray is placed onto the table in front of them.\",\n  \"The woman in the beige T-shirt looks down at her phone on the table.\",\n  \"The woman in the white jacket speaks while holding her phone and gesturing towards the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The two women are gathering at the table to have afternoon tea while using their devices.\",\n  \"The woman in the white jacket addresses the first-person camera operator as a robot, instructing it to clean up the table.\"\n ]\n}\n```",
+          "total_tokens": 66702,
+          "request_end": 1789432882.1065216,
+          "latency_ms": 56662.47261299577,
+          "client_wall_clock_latency_ms": 56662.47261299577,
+          "api_request_wall_clock_latency_ms": 56662.47261299577
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.08423899998888373,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.016721009160391986,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 2,
+    "speech_embeddings": 2,
+    "voice_identities": 2,
+    "detected_faces": 207,
+    "qualified_faces": 3,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 2,
+    "nodes_after_clip": 269,
+    "edges_after_clip": 103,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A person carries a food tray containing french fries and a slice of cake into the dining room.",
+      "Two young women walk into the room toward the dining table.",
+      "The woman in the white jacket sits down at the dining table next to an open laptop while holding her phone.",
+      "The woman in the oversized beige T-shirt adjusts her chair and sits opposite her.",
+      "The food tray is placed onto the table in front of them.",
+      "The woman in the beige T-shirt looks down at her phone on the table.",
+      "The woman in the white jacket speaks while holding her phone and gesturing towards the table."
+    ],
+    "high_level_conclusions": [
+      "The two women are gathering at the table to have afternoon tea while using their devices.",
+      "The woman in the white jacket addresses the first-person camera operator as a robot, instructing it to clean up the table."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A person carries a food tray containing french fries and a slice of cake into the dining room.",
+      "Two young women walk into the room toward the dining table.",
+      "The woman in the white jacket sits down at the dining table next to an open laptop while holding her phone.",
+      "The woman in the oversized beige T-shirt adjusts her chair and sits opposite her.",
+      "The food tray is placed onto the table in front of them.",
+      "The woman in the beige T-shirt looks down at her phone on the table.",
+      "The woman in the white jacket speaks while holding her phone and gesturing towards the table."
+    ],
+    "high_level_conclusions": [
+      "The two women are gathering at the table to have afternoon tea while using their devices.",
+      "The woman in the white jacket addresses the first-person camera operator as a robot, instructing it to clean up the table."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_27_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 260,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person carries a food tray containing french fries and a slice of cake into the dining room."
+          ],
+          "timestamp": 27
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 261,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two young women walk into the room toward the dining table."
+          ],
+          "timestamp": 27
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 262,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the white jacket sits down at the dining table next to an open laptop while holding her phone."
+          ],
+          "timestamp": 27
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 263,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the oversized beige T-shirt adjusts her chair and sits opposite her."
+          ],
+          "timestamp": 27
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 264,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The food tray is placed onto the table in front of them."
+          ],
+          "timestamp": 27
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 265,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the beige T-shirt looks down at her phone on the table."
+          ],
+          "timestamp": 27
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 266,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the white jacket speaks while holding her phone and gesturing towards the table."
+          ],
+          "timestamp": 27
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 267,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women are gathering at the table to have afternoon tea while using their devices."
+          ],
+          "timestamp": 27
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 268,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman in the white jacket addresses the first-person camera operator as a robot, instructing it to clean up the table."
+          ],
+          "timestamp": 27
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_27_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_27_graph.pkl"
+  },
+  "memory_pickle_bytes": 7026848,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 73880.848498682,
+    "prepared_perf": 73885.734077706,
+    "ordered_start_perf": 74002.375873303,
+    "consumer_wait_ms": 0.008246002835221589,
+    "ready_to_ordered_ms": 116641.79559699551,
+    "preparation_work_ms": 4880.345256999135,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 66686.27160601318
+}

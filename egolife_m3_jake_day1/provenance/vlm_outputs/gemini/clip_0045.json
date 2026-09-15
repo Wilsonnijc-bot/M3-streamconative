@@ -1,0 +1,78 @@
+{
+  "clip_id": 45,
+  "source": {
+    "segment_id": 45,
+    "source": "DAY1_A1_JAKE_11310000.mp4",
+    "source_clock": "11310000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41460.0,
+    "absolute_end_seconds": 41490.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0045.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46938.760973903,
+      "prepared_perf": 46945.240295417,
+      "ordered_start_perf": 47088.138195729,
+      "consumer_wait_ms": 0.011662996257655323,
+      "ready_to_ordered_ms": 142897.90031199664,
+      "preparation_work_ms": 6473.754028003896,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group sits around a long table covered with a checkered tablecloth during a meeting.",
+      "A person in an orange shirt stands at the whiteboard, writing and facilitating the discussion.",
+      "<voice_0> explains the crew size and plans activities based on the number of attendees to host.",
+      "Participants seated around the table listen and observe the whiteboard.",
+      "<voice_521> makes a brief remark during the discussion.",
+      "The camera wearer handles a patterned cap on their lap before standing up.",
+      "The camera wearer walks toward the kitchen area and approaches a trash can.",
+      "<voice_522> comments on recording everyone while moving around the room."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a production planning meeting to coordinate logistics and participant count for an upcoming event or shoot.",
+      "The camera operator is documenting behind-the-scenes footage of the team meeting.",
+      "The person at the whiteboard serves as the meeting facilitator organizing headcount and tasks."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group sits around a long table covered with a checkered tablecloth during a meeting.\",\n    \"A person in an orange shirt stands at the whiteboard, writing and facilitating the discussion.\",\n    \"<voice_0> explains the crew size and plans activities based on the number of attendees to host.\",\n    \"Participants seated around the table listen and observe the whiteboard.\",\n    \"<voice_521> makes a brief remark during the discussion.\",\n    \"The camera wearer handles a patterned cap on their lap before standing up.\",\n    \"The camera wearer walks toward the kitchen area and approaches a trash can.\",\n    \"<voice_522> comments on recording everyone while moving around the room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is holding a production planning meeting to coordinate logistics and participant count for an upcoming event or shoot.\",\n    \"The camera operator is documenting behind-the-scenes footage of the team meeting.\",\n    \"The person at the whiteboard serves as the meeting facilitator organizing headcount and tasks.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 45,
+      "call_id": "0bd19ad2-d67d-489b-ad09-f91ff25a708a",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405910.9524333,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66804,
+      "output_tokens": 1259,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 28683.931630999723
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group sits around a long table covered with a checkered tablecloth during a meeting.\",\n    \"A person in an orange shirt stands at the whiteboard, writing and facilitating the discussion.\",\n    \"<voice_0> explains the crew size and plans activities based on the number of attendees to host.\",\n    \"Participants seated around the table listen and observe the whiteboard.\",\n    \"<voice_521> makes a brief remark during the discussion.\",\n    \"The camera wearer handles a patterned cap on their lap before standing up.\",\n    \"The camera wearer walks toward the kitchen area and approaches a trash can.\",\n    \"<voice_522> comments on recording everyone while moving around the room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is holding a production planning meeting to coordinate logistics and participant count for an upcoming event or shoot.\",\n    \"The camera operator is documenting behind-the-scenes footage of the team meeting.\",\n    \"The person at the whiteboard serves as the meeting facilitator organizing headcount and tasks.\"\n  ]\n}\n```",
+      "total_tokens": 68063,
+      "request_end": 1789405939.6364534,
+      "latency_ms": 28684.016440005507,
+      "client_wall_clock_latency_ms": 28684.016440005507,
+      "api_request_wall_clock_latency_ms": 28684.016440005507
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_45_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

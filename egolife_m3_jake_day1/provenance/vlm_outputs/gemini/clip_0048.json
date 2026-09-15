@@ -1,0 +1,73 @@
+{
+  "clip_id": 48,
+  "source": {
+    "segment_id": 48,
+    "source": "DAY1_A1_JAKE_11323000.mp4",
+    "source_clock": "11323000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41550.0,
+    "absolute_end_seconds": 41580.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0048.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47127.13467412,
+      "prepared_perf": 47134.434806583,
+      "ordered_start_perf": 47206.139579098,
+      "consumer_wait_ms": 0.007073002052493393,
+      "ready_to_ordered_ms": 71704.77251500415,
+      "preparation_work_ms": 7294.516837995616,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a dining table covered with a checkered tablecloth in a meeting room.",
+      "A person stands at the head of the room writing notes on a whiteboard.",
+      "A film slate rests in the foreground on top of the table.",
+      "The seated attendees listen and focus on the presentation at the whiteboard."
+    ],
+    "high_level_conclusions": [
+      "The group is conducting a production or organizational meeting to coordinate personnel and schedule tasks.",
+      "The individual standing by the whiteboard is serving as the leader or coordinator of the planning session."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people sits around a dining table covered with a checkered tablecloth in a meeting room.\",\n\t\t\"A person stands at the head of the room writing notes on a whiteboard.\",\n\t\t\"A film slate rests in the foreground on top of the table.\",\n\t\t\"The seated attendees listen and focus on the presentation at the whiteboard.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is conducting a production or organizational meeting to coordinate personnel and schedule tasks.\",\n\t\t\"The individual standing by the whiteboard is serving as the leader or coordinator of the planning session.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 48,
+      "call_id": "c6ea0f68-b97e-4a87-bbc9-0b42564d27e6",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406028.9675,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66788,
+      "output_tokens": 671,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 74995.36695799907
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people sits around a dining table covered with a checkered tablecloth in a meeting room.\",\n\t\t\"A person stands at the head of the room writing notes on a whiteboard.\",\n\t\t\"A film slate rests in the foreground on top of the table.\",\n\t\t\"The seated attendees listen and focus on the presentation at the whiteboard.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is conducting a production or organizational meeting to coordinate personnel and schedule tasks.\",\n\t\t\"The individual standing by the whiteboard is serving as the leader or coordinator of the planning session.\"\n\t]\n}\n```",
+      "total_tokens": 67459,
+      "request_end": 1789406103.9629538,
+      "latency_ms": 74995.45086499711,
+      "client_wall_clock_latency_ms": 74995.45086499711,
+      "api_request_wall_clock_latency_ms": 74995.45086499711
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_48_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

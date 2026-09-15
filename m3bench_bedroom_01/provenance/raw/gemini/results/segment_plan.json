@@ -1,0 +1,716 @@
+{
+  "source_url": "https://huggingface.co/datasets/ByteDance-Seed/M3-Bench/resolve/main/videos/robot/bedroom_01.mp4",
+  "source_sha256": "714e2d331eb98583a838315e0f50c65892614b51f1969ee870c3f2daf127a532",
+  "source_metadata": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "hevc",
+        "codec_long_name": "H.265 / HEVC (High Efficiency Video Coding)",
+        "profile": "Main",
+        "codec_type": "video",
+        "codec_tag_string": "hvc1",
+        "codec_tag": "0x31637668",
+        "width": 1578,
+        "height": 720,
+        "coded_width": 1584,
+        "coded_height": 720,
+        "closed_captions": 0,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 153,
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "refs": 1,
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/19200",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 41533440,
+        "duration": "2163.200000",
+        "bit_rate": "7201984",
+        "nb_frames": "64896",
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0
+        },
+        "tags": {
+          "creation_time": "2025-05-24T07:59:16.000000Z",
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "vendor_id": "[0][0][0][0]"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "sample_fmt": "fltp",
+        "sample_rate": "44100",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/44100",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 95399936,
+        "duration": "2163.263855",
+        "bit_rate": "129694",
+        "nb_frames": "93164",
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0
+        },
+        "tags": {
+          "creation_time": "2025-05-24T07:59:16.000000Z",
+          "language": "und",
+          "handler_name": "SoundHandler",
+          "vendor_id": "[0][0][0][0]"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "2163.264000",
+      "size": "1984242359",
+      "bit_rate": "7337957",
+      "probe_score": 100,
+      "tags": {
+        "compatible_brands": "qt  ",
+        "major_brand": "qt  ",
+        "minor_version": "0",
+        "creation_time": "2025-05-24T07:59:16.000000Z",
+        "modification_time": "2025-05-24T08:01:51.000000Z",
+        "mp4_data_incomplete": "false",
+        "encoder": "Lavf61.1.100"
+      }
+    }
+  },
+  "duration_seconds": 2163.264,
+  "query_end_seconds": 2163,
+  "segment_count": 73,
+  "plan": [
+    {
+      "segment_id": 1,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 0,
+      "end": 30,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00000000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 2,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 30,
+      "end": 60,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00003000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 3,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 60,
+      "end": 90,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00010000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 4,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 90,
+      "end": 120,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00013000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 5,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 120,
+      "end": 150,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00020000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 6,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 150,
+      "end": 180,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00023000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 7,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 180,
+      "end": 210,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00030000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 8,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 210,
+      "end": 240,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00033000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 9,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 240,
+      "end": 270,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00040000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 10,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 270,
+      "end": 300,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00043000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 11,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 300,
+      "end": 330,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00050000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 12,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 330,
+      "end": 360,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00053000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 13,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 360,
+      "end": 390,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00060000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 14,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 390,
+      "end": 420,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00063000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 15,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 420,
+      "end": 450,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00070000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 16,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 450,
+      "end": 480,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00073000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 17,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 480,
+      "end": 510,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00080000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 18,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 510,
+      "end": 540,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00083000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 19,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 540,
+      "end": 570,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00090000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 20,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 570,
+      "end": 600,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00093000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 21,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 600,
+      "end": 630,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00100000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 22,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 630,
+      "end": 660,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00103000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 23,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 660,
+      "end": 690,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00110000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 24,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 690,
+      "end": 720,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00113000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 25,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 720,
+      "end": 750,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00120000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 26,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 750,
+      "end": 780,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00123000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 27,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 780,
+      "end": 810,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00130000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 28,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 810,
+      "end": 840,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00133000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 29,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 840,
+      "end": 870,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00140000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 30,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 870,
+      "end": 900,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00143000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 31,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 900,
+      "end": 930,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00150000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 32,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 930,
+      "end": 960,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00153000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 33,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 960,
+      "end": 990,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00160000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 34,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 990,
+      "end": 1020,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00163000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 35,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1020,
+      "end": 1050,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00170000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 36,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1050,
+      "end": 1080,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00173000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 37,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1080,
+      "end": 1110,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00180000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 38,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1110,
+      "end": 1140,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00183000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 39,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1140,
+      "end": 1170,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00190000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 40,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1170,
+      "end": 1200,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00193000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 41,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1200,
+      "end": 1230,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00200000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 42,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1230,
+      "end": 1260,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00203000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 43,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1260,
+      "end": 1290,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00210000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 44,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1290,
+      "end": 1320,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00213000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 45,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1320,
+      "end": 1350,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00220000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 46,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1350,
+      "end": 1380,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00223000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 47,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1380,
+      "end": 1410,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00230000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 48,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1410,
+      "end": 1440,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00233000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 49,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1440,
+      "end": 1470,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00240000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 50,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1470,
+      "end": 1500,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00243000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 51,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1500,
+      "end": 1530,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00250000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 52,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1530,
+      "end": 1560,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00253000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 53,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1560,
+      "end": 1590,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00260000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 54,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1590,
+      "end": 1620,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00263000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 55,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1620,
+      "end": 1650,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00270000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 56,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1650,
+      "end": 1680,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00273000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 57,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1680,
+      "end": 1710,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00280000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 58,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1710,
+      "end": 1740,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00283000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 59,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1740,
+      "end": 1770,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00290000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 60,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1770,
+      "end": 1800,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00293000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 61,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1800,
+      "end": 1830,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00300000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 62,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1830,
+      "end": 1860,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00303000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 63,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1860,
+      "end": 1890,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00310000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 64,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1890,
+      "end": 1920,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00313000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 65,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1920,
+      "end": 1950,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00320000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 66,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1950,
+      "end": 1980,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00323000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 67,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 1980,
+      "end": 2010,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00330000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 68,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 2010,
+      "end": 2040,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00333000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 69,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 2040,
+      "end": 2070,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00340000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 70,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 2070,
+      "end": 2100,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00343000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 71,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 2100,
+      "end": 2130,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00350000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 72,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 2130,
+      "end": 2160,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00353000.mp4",
+      "encoded_duration": 30.0
+    },
+    {
+      "segment_id": 73,
+      "source": "/opt/streammeco/data/m3bench_bedroom/bedroom_01.mp4",
+      "start": 2160,
+      "end": 2163.264,
+      "clip": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00360000.mp4",
+      "encoded_duration": 3.264
+    }
+  ],
+  "streaming": "offline chronological replay; ordered state updates, two-segment lookahead; no real-time pacing",
+  "query_policy": "per-question effective timestamps in query_schedule.json",
+  "expected_processing_segments": 76
+}

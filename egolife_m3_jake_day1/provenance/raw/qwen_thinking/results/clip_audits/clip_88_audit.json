@@ -1,0 +1,547 @@
+{
+  "clip_id": 88,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0088.mp4",
+  "end_to_end_memory_generation_ms": 572755.9055250022,
+  "latency_ms": {
+    "clip_decode": 5402.844793003169,
+    "deepgram_asr": 917.7909410063876,
+    "mai_transcribe_asr": 1436.439800003427,
+    "asr_total": 1437.5280480016954,
+    "audio_segmentation": 5.808243993669748,
+    "speech_embedding_campplus": 955.4260889999568,
+    "facial_detection_recognition_buffalo_l": 3746.5219879959477,
+    "face_clustering": 27.290584999718703,
+    "vlm_memory_generation": 165375.8730700065,
+    "text_embedding": 616.0806630068691,
+    "graph_update_total": 498.56875999830663
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 88,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 1213,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789428677.0350742,
+          "status": "success",
+          "total_tokens": 279,
+          "request_end": 1789428677.650987,
+          "latency_ms": 615.9131479944335
+        }
+      ],
+      "total_tokens": 279,
+      "latency_ms": 616.0806630068691
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 917.7909410063876,
+        "openrouter-mai-transcribe-2": 1436.439800003427
+      },
+      "asr_total_ms": 1437.5280480016954,
+      "audio_segmentation_ms": 5.808243993669748,
+      "speech_embedding_ms": 955.4260889999568,
+      "graph_update_ms": 498.4408500022255,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1471.565454005031
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3746.5219879959477,
+      "face_clustering_ms": 27.290584999718703,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 368,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3971.1390800075606
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1153>",
+        "<voice_517>",
+        "<voice_364>",
+        "<voice_1154>",
+        "<voice_1155>",
+        "<voice_1156>"
+      ],
+      "context_preparation_ms": 4030.607902997872,
+      "vlm_ms": 165375.8730700065,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals are gathered around a wooden table covered with a red-and-white checkered cloth.\",\n\t\t\"On the table, there are pink flowers, a clapperboard, papers, and a water bottle.\",\n\t\t\"One person stands behind the table holding a bouquet of flowers while others sit around it.\",\n\t\t\"MAI (<voice_1153>) speaks first, stating, 'He is, he is small currency.'\",\n\t\t\"MAI (<voice_517>) continues the discussion, saying, 'Can make some handmade art pieces, use them, use them for auction.'\",\n\t\t\"MAI (<voice_364>) elaborates on the business arrangement, mentioning, 'Platform side, item-platform side and small shop-small shop owner, platform side, JD.com.'\",\n\t\t\"MAI (<voice_1154>) confirms the intent, declaring, 'This is my product, I want to auction/sell it.'\",\n\t\t\"MAI (<voice_1155>) asks the group, 'Any other ideas?'\",\n\t\t\"Finally, MAI (<voice_1156>) concludes by saying, 'Invite them over on that day, this is what we prepared.'\",\n\t\t\"The group appears to be brainstorming strategies for selling handmade crafts online.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"MAI is the primary organizer planning an auction for handmade art products.\",\n\t\t\"The group is evaluating sales channels, with a specific mention of JD.com as a platform.\",\n\t\t\"Preparations are underway for a scheduled event where customers will be invited.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of individuals are gathered around a wooden table covered with a red-and-white checkered cloth.",
+          "On the table, there are pink flowers, a clapperboard, papers, and a water bottle.",
+          "One person stands behind the table holding a bouquet of flowers while others sit around it.",
+          "MAI (<voice_1153>) speaks first, stating, 'He is, he is small currency.'",
+          "MAI (<voice_517>) continues the discussion, saying, 'Can make some handmade art pieces, use them, use them for auction.'",
+          "MAI (<voice_364>) elaborates on the business arrangement, mentioning, 'Platform side, item-platform side and small shop-small shop owner, platform side, JD.com.'",
+          "MAI (<voice_1154>) confirms the intent, declaring, 'This is my product, I want to auction/sell it.'",
+          "MAI (<voice_1155>) asks the group, 'Any other ideas?'",
+          "Finally, MAI (<voice_1156>) concludes by saying, 'Invite them over on that day, this is what we prepared.'",
+          "The group appears to be brainstorming strategies for selling handmade crafts online."
+        ],
+        "high_level_conclusions": [
+          "MAI is the primary organizer planning an auction for handmade art products.",
+          "The group is evaluating sales channels, with a specific mention of JD.com as a platform.",
+          "Preparations are underway for a scheduled event where customers will be invited."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 88,
+          "call_id": "6a5d1678-cbfa-4e51-9b5f-79ccf82dce2b",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789428511.6580586,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals are gathered around a wooden table covered with a red-and-white checkered cloth.\",\n\t\t\"On the table, there are pink flowers, a clapperboard, papers, and a water bottle.\",\n\t\t\"One person stands behind the table holding a bouquet of flowers while others sit around it.\",\n\t\t\"MAI (<voice_1153>) speaks first, stating, 'He is, he is small currency.'\",\n\t\t\"MAI (<voice_517>) continues the discussion, saying, 'Can make some handmade art pieces, use them, use them for auction.'\",\n\t\t\"MAI (<voice_364>) elaborates on the business arrangement, mentioning, 'Platform side, item-platform side and small shop-small shop owner, platform side, JD.com.'\",\n\t\t\"MAI (<voice_1154>) confirms the intent, declaring, 'This is my product, I want to auction/sell it.'\",\n\t\t\"MAI (<voice_1155>) asks the group, 'Any other ideas?'\",\n\t\t\"Finally, MAI (<voice_1156>) concludes by saying, 'Invite them over on that day, this is what we prepared.'\",\n\t\t\"The group appears to be brainstorming strategies for selling handmade crafts online.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"MAI is the primary organizer planning an auction for handmade art products.\",\n\t\t\"The group is evaluating sales channels, with a specific mention of JD.com as a platform.\",\n\t\t\"Preparations are underway for a scheduled event where customers will be invited.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are 30 frames (0.00s to 29.50s). The scene shows a group of people sitting around a table covered with a checkered cloth. There are flowers, a clapperboard, and some papers on the table. One person stands near a whiteboard holding flowers. Another person sits on the left wearing black. Two others sit on the right. The camera seems stationary but captures a wide view.\n*   **Voice Features:**\n    *   `<voice_1153>`: \"MAI: 他是，他是小货币。\" (He is, he is small currency.) - Time: 00:00 - 00:03\n    *   `<voice_517>`: \"MAI: 会做一些手工艺术品，用来，用来拍卖。\" (Can make some handmade art pieces, use them, use them for auction.) - Time: 00:03 - 00:07\n    *   `<voice_364>`: \"MAI: 对对方，平台方，品-平台方和小店-小店家，平台方，京东。\" (Correct, platform side, item-platform side and small shop-small shop owner, platform side, JD.com.) - Time: 00:06 - 00:13\n    *   `<voice_1154>`: \"MAI: 这是我的商品，我要拍卖的。\" (This is my product, I want to auction/sell it.) - Time: 00:19 - 00:22\n    *   `<voice_1155>`: \"MAI: 还有什么想法吗？\" (Any other ideas?) - Time: 00:23 - 00:25\n    *   `<voice_1156>`: \"MAI: 在那一天邀请他们过来，这是我们准备的。\" (Invite them over on that day, this is what we prepared.) - Time: 00:27 - 00:30\n*   **Speaker Identification:** All voice features are attributed to \"MAI\". In the context of the prompt instructions (\"Preserve speaker identity...\"), I need to use the provided voice IDs (`<voice_1153>`, etc.) to represent MAI. However, looking closely at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This implies I need to create memory entries linking these IDs to the actions/transcripts. Wait, the prompt asks for `video_description` and `high_level_conclusions`. It doesn't explicitly ask for a \"memory\" section in the final JSON output, but the system instruction says \"Preserve speaker identity when constructing memory...\". Let's re-read the specific task instructions vs system instructions.\n    *   System Instruction: \"Preserve speaker identity when constructing memory from the supplied character features... Output Format: ... video_description ... high_level_conclusions\".\n    *   Task Instructions: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   Constraint: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> This seems to conflict with the requested JSON schema which only has `video_description` and `high_level_conclusions`. Usually, in these tasks, the \"episodic memory\" part might be embedded within the `video_description` or `high_level_conclusions` if the schema allows, OR the system instruction overrides the output format regarding internal processing. However, looking at the strict output format requirement: \"Your output must be a JSON object with the following structure...\". I must follow the JSON structure.\n    *   Re-evaluating the constraint: \"include at least one episodic memory...\". This might mean describing the action associated with the voice in the `video_description`. Since the video shows people talking around a table, I can describe the conversation happening.\n    *   Crucially, the instruction says \"Do not replace the ID with 'a speaker'...\". So in the text descriptions, I should reference the speaker by their ID if possible, or ensure the connection is clear. But wait, the instruction also says \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person...\". This means I cannot say \"Person X said <voice_1153>\". I must describe the event generally or attribute the speech to the ID directly if the schema supports it, but the schema just asks for strings.\n    *   Actually, usually in these specific \"character features\" tasks, the goal is to link the audio to the visual context. Since faces are blurred/masked, I can't visually confirm who is MAI. I have to rely on the audio.\n    *   The instruction \"For every supplied voice ID... include at least one episodic memory...\" suggests I should treat the transcript as the core content of the description/conclusion.\n    *   Let's look at the `high_level_conclusions` instruction: \"Use logical inference to identify character intentions, relationships, and identities. If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\n    *   There are NO face features provided in the input data block (only \"Face features:\" header with nothing below it, or rather, the input text provided in the prompt *is* the input). Wait, looking at the raw input provided in the prompt:\n        ```\n        Face features:Voice features:{\"<voice_1153>\": ...}\n        ```\n        There are no actual face bounding boxes or IDs like `<face_1>`. Just the voice features.\n        Therefore, I cannot form an `Equivalence` statement because there are no face IDs to equate.\n        I must describe the video events and incorporate the speech content into the description or conclusions.\n\n**2. Drafting Video Description:**\n*   **Scene:** A room with a table, checkered cloth, flowers, clapperboard. People sitting around.\n*   **Action:** A woman standing holds flowers. Others sit. They seem to be discussing business/auction plans.\n*   **Speech Integration:**\n    *   MAI (<voice_1153>) mentions \"small currency\" (likely referring to currency exchange or a specific term, maybe \"small goods\"? ASR says \"小货币\").\n    *   MAI (<voice_517>) mentions making handmade art for auction.\n    *   MAI (<voice_364>) discusses platform vs shop owner, mentioning JD.com.\n    *   MAI (<voice_1154>) confirms these are her products for sale.\n    *   MAI (<voice_1155>) asks for ideas.\n    *   MAI (<voice_1156>) talks about inviting people on a specific day and preparations.\n*   **Description Construction:** I need to break this down into atomic events.\n    *   Event 1: Group meeting around a table with craft supplies.\n    *   Event 2: Standing woman (holding flowers) speaks about handmade art.\n    *   Event 3: Discussion about platforms and selling.\n    *   Event 4: Confirmation of products for auction.\n    *   Event 5: Planning for future invitations/events.\n\n**3. Drafting High-Level Conclusions:**\n*   **Intentions:** MAI intends to sell handmade art via online platforms (JD.com mentioned).\n*   **Relationships:** Collaborative discussion among team members/partners.\n*   **Identity:** MAI is the primary speaker organizing the auction/sale.\n*   **Constraint Check:** No face IDs provided, so no Equivalence statements.\n\n**Refining the Output:**\n*   The system instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   This is tricky because the output format is fixed JSON. I will embed the summary of the speech into the `video_description` or `high_level_conclusions`. Given \"episodic memory\" sounds like a narrative element, `video_description` fits best as it describes what happened.\n*   However, standard practice for these prompts often expects the `video_description` to be purely visual unless specified otherwise. But the system instruction is explicit about preserving speaker identity in memory construction. I will interpret \"episodic memory\" as a descriptive sentence within the `video_description` array that attributes the speech to the voice ID.\n*   Wait, looking at the instruction again: \"Preserve speaker identity when constructing memory from the supplied character features...\". This looks like a meta-instruction for how I process the data internally or how I format the text.\n*   Let's try to put the speech summaries in the `video_description` as events involving the speaker.\n*   Example: \"MAI (<voice_1153>) states that he/she is dealing with small currency/items.\" (Wait, \"he\" in ASR? \"他\" usually means he. But MAI is likely female name. I should stick to the text or generic terms).\n*   Actually, I should probably just describe the scene and mention the conversation content, ensuring the Voice ID is used if I quote it.\n*   Let's look at the instruction: \"Do not replace the ID with 'a speaker'...\".\n*   Okay, I will construct the `video_description` to reflect the conversation flow using the Voice IDs.\n\n**Plan:**\n1.  **Video Description:**\n    *   Describe the setting (table, flowers, clapperboard).\n    *   Describe the standing figure holding flowers.\n    *   Include the dialogue attributed to `<voice_1153>` regarding \"small currency\".\n    *   Include dialogue attributed to `<voice_517>` regarding handmade art and auction.\n    *   Include dialogue attributed to `<voice_364>` regarding platform and JD.com.\n    *   Include dialogue attributed to `<voice_1154>` confirming products for sale.\n    *   Include dialogue attributed to `<voice_1155>` asking for ideas.\n    *   Include dialogue attributed to `<voice_1156>` regarding invitations and preparation.\n2.  **High-Level Conclusions:**\n    *   MAI is planning an auction for handmade items.\n    *   They are considering platforms like JD.com.\n    *   They are preparing for a specific event date.\n\n**Correction on Speaker Gender:** The ASR uses \"他\" (He). I will use the pronoun from the text or keep it neutral if unsure, but strictly following the text is safer. \"MAI (<voice_1153>) mentions 'He is, He is small currency'\". Or better, summarize: \"MAI (<voice_1153>) identifies the subject as 'small currency'\".\nActually, the instruction says \"quotes or faithfully summarizes... using the exact ID as the speaker\".\nSo: \"MAI (<voice_1153>) says: 'He is, he is small currency.'\"\n\nLet's refine the `video_description` to be concise atomic events.\n1. A group gathers around a table with a checkered cloth, flowers, and a clapperboard.\n2. MAI (<voice_1153>) begins speaking, stating, \"He is, he is small currency.\"\n3. MAI (<voice_517>) continues, explaining, \"Can make some handmade art pieces, use them, use them for auction.\"\n4. MAI (<voice_364>) elaborates on the business model, saying, \"Correct, platform side, item-platform side and small shop-small shop owner, platform side, JD.com.\"\n5. MAI (<voice_1154>) confirms, \"This is my product, I want to auction/sell it.\"\n6. MAI (<voice_1155>) asks, \"Any other ideas?\"\n7. MAI (<voice_1156>) concludes, \"Invite them over on that day, this is what we prepared.\"\n\n**High Level Conclusions:**\n1. MAI is organizing an auction for handmade art products.\n2. The group is discussing potential sales channels, specifically mentioning JD.com.\n3. Preparations are being made for a specific invitation event.\n\n**Final Check on Constraints:**\n*   \"Preserve speaker identity... exact ID as the speaker.\" -> Done in descriptions.\n*   \"Do not replace the ID with 'a speaker'...\" -> Done.\n*   \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". -> No face features provided, so no equivalence lines needed.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema\". -> Will follow.\n*   \"Be concise and avoid duplicate events.\" -> Will merge similar conversational turns if possible, but since they are sequential, keeping them as steps is fine.\n\nOne detail: \"Face features:Voice features:...\" in the input suggests there might be a missing face list, or it's just a label. Since no `<face_x>` exists, I cannot create Equivalence lines. I will omit them.\n\nWait, looking closer at the prompt structure provided in the \"User\" block:\n```\nFace features:Voice features:{\"<voice_1153>\": ...}\n```\nIt literally says \"Face features:\" followed immediately by \"Voice features:\". There are no face IDs listed. So definitely no Equivalence.\n\nLet's assemble the JSON.\n\nOne more thing: The system instruction says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nSince I am outputting `video_description`, I will treat the sentences describing the speech as the \"episodic memories\" of the event.\n\nRevised Plan for `video_description`:\n1. Scene setup.\n2. Speech 1 (<voice_1153>).\n3. Speech 2 (<voice_517>).\n4. Speech 3 (<voice_364>).\n5. Speech 4 (<voice_1154>).\n6. Speech 5 (<voice_1155>).\n7. Speech 6 (<voice_1156>).\n\nThis covers all voice IDs.\n\nOne nuance: \"He is, he is small currency.\" -> \"He\" refers to something previously mentioned or a general statement. I'll quote it directly as per instruction \"quotes or faithfully summarizes\".\n\nLet's write the JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of individuals are gathered around a wooden table covered with a red-and-white checkered cloth.\",\n\t\t\"On the table, there are pink flowers, a clapperboard, papers, and a water bottle.\",\n\t\t\"One person stands behind the table holding a bouquet of flowers while others sit around it.\",\n\t\t\"MAI (<voice_1153>) speaks first, stating, 'He is, he is small currency.'\",\n\t\t\"MAI (<voice_517>) continues the discussion, saying, 'Can make some handmade art pieces, use them, use them for auction.'\",\n\t\t\"MAI (<voice_364>) elaborates on the business arrangement, mentioning, 'Platform side, item-platform side and small shop-small shop owner, platform side, JD.com.'\",\n\t\t\"MAI (<voice_1154>) confirms the intent, declaring, 'This is my product, I want to auction/sell it.'\",\n\t\t\"MAI (<voice_1155>) asks the group, 'Any other ideas?'\",\n\t\t\"Finally, MAI (<voice_1156>) concludes by saying, 'Invite them over on that day, this is what we prepared.'\",\n\t\t\"The group appears to be brainstorming strategies for selling handmade crafts online.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"MAI is the primary organizer planning an auction for handmade art products.\",\n\t\t\"The group is evaluating sales channels, with a specific mention of JD.com as a platform.\",\n\t\t\"Preparations are underway for a scheduled event where customers will be invited.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10622,
+          "output_tokens": 3621,
+          "total_tokens": 14243,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0016830017557367682,
+            "media_preparation_ms": 61.972563999006525,
+            "processor_tokenization_ms": 415.87072898983024,
+            "device_transfer_ms": 40.163997997296974,
+            "cuda_generation_ms": 164821.84610101103,
+            "decoding_ms": 3.7570220010820776
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 165343.79762799654,
+          "request_end": 1789428677.0339346,
+          "latency_ms": 165375.8730700065,
+          "client_wall_clock_latency_ms": 165375.8730700065
+        }
+      ],
+      "episodic_memory_count": 10,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 10,
+      "text_embedding_ms": null,
+      "text_embedding_count": 10,
+      "graph_update_ms": 0.10730099165812135,
+      "nodes_added": 10,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.02060900442302227,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 6,
+    "detected_faces": 368,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 10,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1170,
+    "edges_after_clip": 412,
+    "nodes_added_by_clip": 17,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of individuals are gathered around a wooden table covered with a red-and-white checkered cloth.",
+      "On the table, there are pink flowers, a clapperboard, papers, and a water bottle.",
+      "One person stands behind the table holding a bouquet of flowers while others sit around it.",
+      "MAI (<voice_1153>) speaks first, stating, 'He is, he is small currency.'",
+      "MAI (<voice_517>) continues the discussion, saying, 'Can make some handmade art pieces, use them, use them for auction.'",
+      "MAI (<voice_364>) elaborates on the business arrangement, mentioning, 'Platform side, item-platform side and small shop-small shop owner, platform side, JD.com.'",
+      "MAI (<voice_1154>) confirms the intent, declaring, 'This is my product, I want to auction/sell it.'",
+      "MAI (<voice_1155>) asks the group, 'Any other ideas?'",
+      "Finally, MAI (<voice_1156>) concludes by saying, 'Invite them over on that day, this is what we prepared.'",
+      "The group appears to be brainstorming strategies for selling handmade crafts online."
+    ],
+    "high_level_conclusions": [
+      "MAI is the primary organizer planning an auction for handmade art products.",
+      "The group is evaluating sales channels, with a specific mention of JD.com as a platform.",
+      "Preparations are underway for a scheduled event where customers will be invited."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of individuals are gathered around a wooden table covered with a red-and-white checkered cloth.",
+      "On the table, there are pink flowers, a clapperboard, papers, and a water bottle.",
+      "One person stands behind the table holding a bouquet of flowers while others sit around it.",
+      "MAI (<voice_1153>) speaks first, stating, 'He is, he is small currency.'",
+      "MAI (<voice_517>) continues the discussion, saying, 'Can make some handmade art pieces, use them, use them for auction.'",
+      "MAI (<voice_364>) elaborates on the business arrangement, mentioning, 'Platform side, item-platform side and small shop-small shop owner, platform side, JD.com.'",
+      "MAI (<voice_1154>) confirms the intent, declaring, 'This is my product, I want to auction/sell it.'",
+      "MAI (<voice_1155>) asks the group, 'Any other ideas?'",
+      "Finally, MAI (<voice_1156>) concludes by saying, 'Invite them over on that day, this is what we prepared.'",
+      "The group appears to be brainstorming strategies for selling handmade crafts online."
+    ],
+    "high_level_conclusions": [
+      "MAI is the primary organizer planning an auction for handmade art products.",
+      "The group is evaluating sales channels, with a specific mention of JD.com as a platform.",
+      "Preparations are underway for a scheduled event where customers will be invited."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_88_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 17,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 1153,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 他是，他是小货币。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1154,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 这是我的商品，我要拍卖的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1155,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 还有什么想法吗？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1156,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 在那一天邀请他们过来，这是我们准备的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1157,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of individuals are gathered around a wooden table covered with a red-and-white checkered cloth."
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1158,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "On the table, there are pink flowers, a clapperboard, papers, and a water bottle."
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1159,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person stands behind the table holding a bouquet of flowers while others sit around it."
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1160,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_1153>) speaks first, stating, 'He is, he is small currency.'"
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1161,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_517>) continues the discussion, saying, 'Can make some handmade art pieces, use them, use them for auction.'"
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1162,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_364>) elaborates on the business arrangement, mentioning, 'Platform side, item-platform side and small shop-small shop owner, platform side, JD.com.'"
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1163,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_1154>) confirms the intent, declaring, 'This is my product, I want to auction/sell it.'"
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1164,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_1155>) asks the group, 'Any other ideas?'"
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1165,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Finally, MAI (<voice_1156>) concludes by saying, 'Invite them over on that day, this is what we prepared.'"
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1166,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group appears to be brainstorming strategies for selling handmade crafts online."
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1167,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "MAI is the primary organizer planning an auction for handmade art products."
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1168,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is evaluating sales channels, with a specific mention of JD.com as a platform."
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1169,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Preparations are underway for a scheduled event where customers will be invited."
+          ],
+          "timestamp": 88
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 364,
+        "target": 1162,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 517,
+        "target": 1161,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1153,
+        "target": 1160,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1154,
+        "target": 1163,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1155,
+        "target": 1164,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1156,
+        "target": 1165,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_88_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_88_graph.pkl"
+  },
+  "memory_pickle_bytes": 27803686,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 69291.831519806,
+    "prepared_perf": 69300.157635826,
+    "ordered_start_perf": 69686.917947799,
+    "consumer_wait_ms": 0.007953989552333951,
+    "ready_to_ordered_ms": 386760.31197299017,
+    "preparation_work_ms": 8320.77128700621,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 175468.88938000484
+}

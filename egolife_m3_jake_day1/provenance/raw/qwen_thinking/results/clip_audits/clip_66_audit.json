@@ -1,0 +1,503 @@
+{
+  "clip_id": 66,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0066.mp4",
+  "end_to_end_memory_generation_ms": 599236.8280650044,
+  "latency_ms": {
+    "clip_decode": 4292.071635005414,
+    "deepgram_asr": 2.4331560052814893,
+    "mai_transcribe_asr": 2.749011000560131,
+    "asr_total": 4.4061060034437105,
+    "audio_segmentation": 6.417632001102902,
+    "speech_embedding_campplus": 1293.0853639991255,
+    "facial_detection_recognition_buffalo_l": 3499.115692000487,
+    "face_clustering": 6.233905995031819,
+    "vlm_memory_generation": 184325.3276100004,
+    "text_embedding": 547.7938219992211,
+    "graph_update_total": 368.83109300833894
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 66,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 1172,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789424345.6764967,
+          "status": "success",
+          "total_tokens": 249,
+          "request_end": 1789424346.2239764,
+          "latency_ms": 547.4801419986761
+        }
+      ],
+      "total_tokens": 249,
+      "latency_ms": 547.7938219992211
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.4331560052814893,
+        "openrouter-mai-transcribe-2": 2.749011000560131
+      },
+      "asr_total_ms": 4.4061060034437105,
+      "audio_segmentation_ms": 6.417632001102902,
+      "speech_embedding_ms": 1293.0853639991255,
+      "graph_update_ms": 366.4457450067857,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1681.432428995322
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3499.115692000487,
+      "face_clustering_ms": 6.233905995031819,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 285,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3658.6040339971078
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_841>",
+        "<voice_853>",
+        "<voice_34>",
+        "<voice_797>",
+        "<voice_854>"
+      ],
+      "context_preparation_ms": 3930.764705000911,
+      "vlm_ms": 184325.3276100004,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of four people are gathered around a wooden dining table covered with a red and white checkered tablecloth.\",\n\t\t\"Film lighting equipment, including softboxes, is set up in the background against the wall.\",\n\t\t\"A whiteboard stands behind the group, and a clapperboard lies on the table.\",\n\t\t\"One person sits on the left wearing a black top, another stands in the center wearing white, a third stands on the right with pink hair, and a fourth sits on the far right.\",\n\t\t\"The camera wearer's hand is visible in the foreground in several frames.\",\n\t\t\"The group appears to be engaged in a discussion about a filming project.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_841> explains they are using a script because their time is short and not much time remains.\",\n\t\t\"Speaker <voice_841> further suggests that if they lack a script, they can use ideas from short videos or attempt to shoot a ready-made script.\",\n\t\t\"Speaker <voice_853> considers the option of writing a script if necessary.\",\n\t\t\"Speaker <voice_34> states that the current plan involves a ready-made script.\",\n\t\t\"Speaker <voice_797> introduces two people named Lucia and Lucía.\",\n\t\t\"Speaker <voice_854> concludes by mentioning 'us two,' implying a collaborative effort between two main parties.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of four people are gathered around a wooden dining table covered with a red and white checkered tablecloth.",
+          "Film lighting equipment, including softboxes, is set up in the background against the wall.",
+          "A whiteboard stands behind the group, and a clapperboard lies on the table.",
+          "One person sits on the left wearing a black top, another stands in the center wearing white, a third stands on the right with pink hair, and a fourth sits on the far right.",
+          "The camera wearer's hand is visible in the foreground in several frames.",
+          "The group appears to be engaged in a discussion about a filming project."
+        ],
+        "high_level_conclusions": [
+          "Speaker <voice_841> explains they are using a script because their time is short and not much time remains.",
+          "Speaker <voice_841> further suggests that if they lack a script, they can use ideas from short videos or attempt to shoot a ready-made script.",
+          "Speaker <voice_853> considers the option of writing a script if necessary.",
+          "Speaker <voice_34> states that the current plan involves a ready-made script.",
+          "Speaker <voice_797> introduces two people named Lucia and Lucía.",
+          "Speaker <voice_854> concludes by mentioning 'us two,' implying a collaborative effort between two main parties."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 66,
+          "call_id": "85e3629f-a69e-48ab-8a03-de668132cd50",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789424161.34998,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of four people are gathered around a wooden dining table covered with a red and white checkered tablecloth.\",\n\t\t\"Film lighting equipment, including softboxes, is set up in the background against the wall.\",\n\t\t\"A whiteboard stands behind the group, and a clapperboard lies on the table.\",\n\t\t\"One person sits on the left wearing a black top, another stands in the center wearing white, a third stands on the right with pink hair, and a fourth sits on the far right.\",\n\t\t\"The camera wearer's hand is visible in the foreground in several frames.\",\n\t\t\"The group appears to be engaged in a discussion about a filming project.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_841> explains they are using a script because their time is short and not much time remains.\",\n\t\t\"Speaker <voice_841> further suggests that if they lack a script, they can use ideas from short videos or attempt to shoot a ready-made script.\",\n\t\t\"Speaker <voice_853> considers the option of writing a script if necessary.\",\n\t\t\"Speaker <voice_34> states that the current plan involves a ready-made script.\",\n\t\t\"Speaker <voice_797> introduces two people named Lucia and Lucía.\",\n\t\t\"Speaker <voice_854> concludes by mentioning 'us two,' implying a collaborative effort between two main parties.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The scene is consistent throughout. It shows a group of people around a table in what looks like a home studio or living room setting. There's a whiteboard, lighting equipment (softboxes), and a clapperboard on the table.\n    *   People visible:\n        *   One person sitting on the left (black top).\n        *   One person standing behind the table (white shirt).\n        *   One person standing on the right (pinkish hair/head covering, white shirt).\n        *   One person sitting on the far right (dark hair, light top).\n        *   The camera wearer (visible hands/fingers occasionally in the foreground).\n    *   Actions: They seem to be discussing something related to filming or scripting. The person on the right holds a phone/device later on. The person standing behind the table gestures towards the whiteboard.\n*   **Voice Features:**\n    *   `<voice_841>`: \"MAI: 就拿来的剧本，因为我们的时间比较短。\" (Take the script we got, because our time is short.) -> 00:00 - 00:03\n    *   `<voice_841>`: \"不太来得及。就像如果大家有想到什么，你们以前看到过的短视频之类的，这种也可以。就像一个现成的剧本，我觉得我们可以尝试拍一下。对。\" (Not enough time. Like if everyone thinks of something, like short videos you've seen before, that works too. Like a ready-made script, I think we can try shooting it. Yes.) -> 00:05 - 00:16\n    *   `<voice_853>`: \"所以要如果要去编的话，可能就\" (So if we want to write it, maybe just...) -> 00:02 - 00:06 (This overlaps slightly with the previous speaker, likely the same person or close interaction). Wait, looking at timestamps, `<voice_841>` starts at 00:00 and ends 00:03, then resumes 00:05. `<voice_853>` is 00:02-00:06. This suggests `<voice_841>` and `<voice_853>` might be different speakers or the same person talking over each other. However, the ASR says \"MAI:\" for both. Usually, MAI indicates the speaker name. Let's assume they are the same speaker (MAI) unless there's a clear distinction. Actually, looking closely at the prompt instructions: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". So I need to attribute these to their specific IDs.\n    *   `<voice_34>`: \"这个是目前的想法。\" (This is the current idea.) -> 00:17 - 00:19\n    *   `<voice_797>`: \"这是Lucia，这是露西娅。\" (This is Lucia, this is Lucia.) -> 00:19 - 00:27. Note: The text repeats \"Lucia/Lucia\". Likely introducing someone.\n    *   `<voice_854>`: \"我们两个。\" (Us two.) -> 00:28 - 00:30.\n\n**2. Construct Video Description:**\n*   Need to describe the scene atomically.\n*   Scene: Indoor room, table with checkered cloth, whiteboard, lighting gear.\n*   People: Four visible individuals + camera wearer.\n*   Action: Discussion around the table.\n*   Specifics: Clapperboard present. Lighting setup active.\n*   Sequence:\n    *   Group gathered around a table.\n    *   Person in black sits left.\n    *   Person in white stands center-left.\n    *   Person with pink head covering stands right.\n    *   Person sits far right.\n    *   Camera wearer's hand/finger visible in foreground sometimes.\n    *   Discussion happens about scripts/shooting.\n    *   Person on right holds a device.\n\n**3. Construct High-Level Conclusions:**\n*   Inference: They are planning a shoot.\n*   Identity: The voice features mention names \"Lucia\" and \"露西娅\" (Lucia). No face IDs are explicitly linked to these names in the input features list (only generic `<face_x>` placeholders in the instruction template, but none provided in the actual input data section for faces). Wait, the prompt says \"Each feature is either a face ... or a voice ...\". The input provided *only* lists Voice features. There are NO Face features provided in the input block (\"Face features:Voice features:...\").\n*   Constraint Check: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features were provided in the input, I cannot create equivalences. I must strictly follow the input.\n*   Reasoning: Based on the dialogue (\"script\", \"shoot\", \"short time\"), they are collaborating on a production plan.\n*   Speaker Attribution: All voice snippets have \"MAI:\" prefix. This implies MAI is the speaker for most. `<voice_854>` says \"We two\", implying the speaker is referring to themselves and another person.\n\n**4. Refine Output:**\n*   **Video Description:** Break down into atomic sentences.\n    *   A group of four people gathers around a wooden table covered with a red-and-white checkered tablecloth in a room equipped with film lighting gear.\n    *   A clapperboard rests on the table alongside various props and papers.\n    *   One individual sits on the left side of the table wearing dark clothing.\n    *   Another person stands near the center wearing a white shirt.\n    *   A third person with pink hair stands on the right side of the table.\n    *   A fourth person sits on the far right side.\n    *   The camera wearer's hand occasionally enters the frame in the foreground.\n    *   The group appears to be discussing a project involving a script and filming.\n*   **High-Level Conclusions:**\n    *   The group is planning a short video production due to time constraints.\n    *   The speaker MAI suggests using existing scripts or short video ideas.\n    *   The speaker identifies two specific individuals named Lucia and Lucía (likely the same person or two people with similar names, context suggests introduction).\n    *   The discussion revolves around adapting a script for a quick shoot.\n\n**Wait, checking the Voice Feature IDs again.**\nInput:\n`<voice_841>`: MAI speaks about script/time.\n`<voice_853>`: MAI speaks about writing/editing.\n`<voice_34>`: MAI speaks about current idea.\n`<voice_797>`: MAI introduces Lucia/Lucía.\n`<voice_854>`: MAI says \"Us two\".\n\nSince the prompt asks to preserve speaker identity using exact IDs, I will use these IDs in the memory/conclusion generation if required, but the output format requested is specifically `video_description` and `high_level_conclusions`. The instructions say \"Preserve speaker identity when constructing memory from the supplied character features.\" But the output schema is fixed JSON. The instructions also say \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nActually, looking at the system prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nAnd the constraint: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nWait, the output schema provided in the prompt description (`video_description`, `high_level_conclusions`) does *not* have a field for \"episodic memory\".\nHowever, the system prompt instructions say: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nThis creates a conflict between the specific output schema shown in the \"Output Format\" section and the general instructions in the \"System Prompt\".\nUsually, the System Prompt overrides the few-shot example structure if it adds requirements.\nBUT, the \"Output Format\" section explicitly defines the JSON structure.\nLet's look closely at the System Prompt again.\n\"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nThen \"Output Format: Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\".\nThen \"Please only return the valid JSON object...\".\nThe instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" seems to be part of the general task definition for a different type of task (Memory Construction) often associated with this persona.\nHOWEVER, the prompt *also* says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis implies I should follow the JSON schema provided in the \"Output Format\" section.\nBut where do I put the voice summaries?\nMaybe within `high_level_conclusions`? Or `video_description`?\nThe instruction says \"include at least one episodic memory...\".\nIf I don't include them, I violate the system prompt. If I include them outside the JSON, I violate the output format.\nGiven the strict \"Please only return the valid JSON object\", I must fit the memory into the JSON fields.\n`high_level_conclusions` seems the best place for reasoning/inferences derived from voice.\nOr perhaps `video_description` can contain the spoken words as part of the event description?\n\"Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\"\nOkay, so I should probably quote the dialogue in the descriptions or conclusions.\nLet's try to incorporate the voice content into the `high_level_conclusions` as reasoning/inferences, or `video_description` as observed speech.\nActually, the instruction \"For every supplied voice ID... include at least one episodic memory\" usually implies a specific field. Since there isn't one, I will embed the summary in `high_level_conclusions` as a direct observation of what was said, treating it as a conclusion about the conversation content.\nWait, re-reading: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis sounds like I need to generate a specific type of text.\nIf I put it in `high_level_conclusions`, it fits the \"reasoning-based conclusions\" requirement somewhat, but \"episodic memory\" is specific.\nLet's look at the example output structure again. It doesn't show examples of voice IDs being used inside the strings.\nHowever, I must follow the system prompt instructions regarding voice IDs.\nI will add the voice summaries to the `high_level_conclusions` array, formatted as observations of the dialogue, ensuring the ID is preserved if possible, or just the content if the ID is hard to integrate naturally.\nActually, the instruction says \"using the exact ID as the speaker\".\nExample: \"Speaker <voice_841> states: '...'\".\nI will integrate this into the `high_level_conclusions` to satisfy the constraint while maintaining the JSON structure.\n\nWait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis suggests I shouldn't change the schema.\nBut the system prompt *is* the instruction.\nOkay, I will prioritize the System Prompt's requirement for voice IDs and memory construction, embedding it into the available fields (`high_level_conclusions` seems appropriate for dialogue summaries/reasoning).\n\nLet's refine the plan:\n1.  **Video Description**: Describe the visual scene (people, table, lights, actions). Mention the presence of the clapperboard. Mention the camera wearer's hand.\n2.  **High-Level Conclusions**:\n    *   Summarize the meeting purpose (planning a shoot).\n    *   Include the specific dialogue points attributed to the voice IDs as requested (\"include at least one episodic memory... using the exact ID\").\n    *   Example: \"Speaker <voice_841> mentions taking the script due to short time constraints.\"\n    *   Example: \"Speaker <voice_797> identifies individuals named Lucia and Lucía.\"\n\nLet's check the voice IDs again.\n`<voice_841>`: MAI talks about script/time.\n`<voice_853>`: MAI talks about writing.\n`<voice_34>`: MAI talks about current idea.\n`<voice_797>`: MAI introduces Lucia.\n`<voice_854>`: MAI says \"Us two\".\n\nAll seem to be MAI speaking.\nI will construct the JSON now.\n\nOne detail: \"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\"\nThere are no face IDs provided in the input. So I cannot make equivalences. I will omit the \"Equivalence\" lines since there are no face IDs to link.\n\nFinal check on constraints:\n- \"Preserve speaker identity... using the exact ID as the speaker.\" -> I will use `<voice_X>` in the text.\n- \"Keep dialogue grounded...\".\n- \"Output Format: JSON object\".\n\nLet's draft the content.\nVideo Description:\n- A group of four people are gathered around a wooden dining table covered with a red and white checkered tablecloth.\n- Film lighting equipment, including softboxes, is set up in the background against the wall.\n- A whiteboard stands behind the group, and a clapperboard lies on the table.\n- One person sits on the left wearing a black top, another stands in the center wearing white, a third stands on the right with pink hair, and a fourth sits on the far right.\n- The camera wearer's hand is visible in the foreground in several frames.\n- The group appears to be engaged in a discussion about a filming project.\n\nHigh Level Conclusions:\n- The group is planning a short video shoot, with speaker <voice_841> noting that they are using a script because their time is short.\n- Speaker <voice_841> suggests that if they run out of time, they could use ideas from short videos or a ready-made script.\n- Speaker <voice_34> confirms that the current plan involves a ready-made script.\n- Speaker <voice_797> identifies two individuals named Lucia and Lucía during the discussion.\n- Speaker <voice_854> refers to the group as \"us two,\" indicating a partnership or small team dynamic.\n\nWait, I need to make sure I don't hallucinate face IDs. The input only has voice IDs.\nThe instruction says \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features are in the input, I won't add this line.\n\nOne more thing: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nI need to ensure I cover `<voice_841>`, `<voice_853>`, `<voice_34>`, `<voice_797>`, `<voice_854>`.\nI'll distribute them across the conclusions.\n\nRevised High Level Conclusions:\n- Speaker <voice_841> explains they are using a script because their time is short and not much time remains.\n- Speaker <voice_841> further suggests that if they lack a script, they can use ideas from short videos or attempt to shoot a ready-made script.\n- Speaker <voice_853> adds that if they decide to write something new, they might just... (incomplete thought in transcript, but noted).\n- Speaker <voice_34> states that the current plan involves a ready-made script.\n- Speaker <voice_797> introduces two people named Lucia and Lucía.\n- Speaker <voice_854> concludes by mentioning \"us two,\" implying a collaborative effort between two main parties.\n\nWait, `<voice_853>` transcript is \"所以要如果要去编的话，可能就\". It cuts off. I should summarize faithfully. \"Speaker <voice_853> begins discussing the possibility of writing a script.\"\nActually, better to stick to what is clearly stated.\n\"Speaker <voice_853> considers the option of writing a script if necessary.\"\n\nLet's finalize the JSON structure.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of four people are gathered around a wooden dining table covered with a red and white checkered tablecloth.\",\n\t\t\"Film lighting equipment, including softboxes, is set up in the background against the wall.\",\n\t\t\"A whiteboard stands behind the group, and a clapperboard lies on the table.\",\n\t\t\"One person sits on the left wearing a black top, another stands in the center wearing white, a third stands on the right with pink hair, and a fourth sits on the far right.\",\n\t\t\"The camera wearer's hand is visible in the foreground in several frames.\",\n\t\t\"The group appears to be engaged in a discussion about a filming project.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_841> explains they are using a script because their time is short and not much time remains.\",\n\t\t\"Speaker <voice_841> further suggests that if they lack a script, they can use ideas from short videos or attempt to shoot a ready-made script.\",\n\t\t\"Speaker <voice_853> considers the option of writing a script if necessary.\",\n\t\t\"Speaker <voice_34> states that the current plan involves a ready-made script.\",\n\t\t\"Speaker <voice_797> introduces two people named Lucia and Lucía.\",\n\t\t\"Speaker <voice_854> concludes by mentioning 'us two,' implying a collaborative effort between two main parties.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10755,
+          "output_tokens": 4058,
+          "total_tokens": 14813,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.001643005816731602,
+            "media_preparation_ms": 62.804140005027875,
+            "processor_tokenization_ms": 241.82630800351035,
+            "device_transfer_ms": 43.12524299893994,
+            "cuda_generation_ms": 183942.4953350026,
+            "decoding_ms": 4.1317240029457025
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 184294.7065690023,
+          "request_end": 1789424345.675312,
+          "latency_ms": 184325.3276100004,
+          "client_wall_clock_latency_ms": 184325.3276100004
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 6
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.06516300345538184,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 2.3201849980978295,
+      "nodes_added": 6,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 5,
+    "detected_faces": 285,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 6,
+    "nodes_after_clip": 867,
+    "edges_after_clip": 312,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of four people are gathered around a wooden dining table covered with a red and white checkered tablecloth.",
+      "Film lighting equipment, including softboxes, is set up in the background against the wall.",
+      "A whiteboard stands behind the group, and a clapperboard lies on the table.",
+      "One person sits on the left wearing a black top, another stands in the center wearing white, a third stands on the right with pink hair, and a fourth sits on the far right.",
+      "The camera wearer's hand is visible in the foreground in several frames.",
+      "The group appears to be engaged in a discussion about a filming project."
+    ],
+    "high_level_conclusions": [
+      "Speaker <voice_841> explains they are using a script because their time is short and not much time remains.",
+      "Speaker <voice_841> further suggests that if they lack a script, they can use ideas from short videos or attempt to shoot a ready-made script.",
+      "Speaker <voice_853> considers the option of writing a script if necessary.",
+      "Speaker <voice_34> states that the current plan involves a ready-made script.",
+      "Speaker <voice_797> introduces two people named Lucia and Lucía.",
+      "Speaker <voice_854> concludes by mentioning 'us two,' implying a collaborative effort between two main parties."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of four people are gathered around a wooden dining table covered with a red and white checkered tablecloth.",
+      "Film lighting equipment, including softboxes, is set up in the background against the wall.",
+      "A whiteboard stands behind the group, and a clapperboard lies on the table.",
+      "One person sits on the left wearing a black top, another stands in the center wearing white, a third stands on the right with pink hair, and a fourth sits on the far right.",
+      "The camera wearer's hand is visible in the foreground in several frames.",
+      "The group appears to be engaged in a discussion about a filming project."
+    ],
+    "high_level_conclusions": [
+      "Speaker <voice_841> explains they are using a script because their time is short and not much time remains.",
+      "Speaker <voice_841> further suggests that if they lack a script, they can use ideas from short videos or attempt to shoot a ready-made script.",
+      "Speaker <voice_853> considers the option of writing a script if necessary.",
+      "Speaker <voice_34> states that the current plan involves a ready-made script.",
+      "Speaker <voice_797> introduces two people named Lucia and Lucía.",
+      "Speaker <voice_854> concludes by mentioning 'us two,' implying a collaborative effort between two main parties."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_66_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 853,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 所以如果要现在去编的话，可能就"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 854,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我们两个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 855,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of four people are gathered around a wooden dining table covered with a red and white checkered tablecloth."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 856,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Film lighting equipment, including softboxes, is set up in the background against the wall."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 857,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A whiteboard stands behind the group, and a clapperboard lies on the table."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 858,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person sits on the left wearing a black top, another stands in the center wearing white, a third stands on the right with pink hair, and a fourth sits on the far right."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 859,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer's hand is visible in the foreground in several frames."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 860,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group appears to be engaged in a discussion about a filming project."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 861,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_841> explains they are using a script because their time is short and not much time remains."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 862,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_841> further suggests that if they lack a script, they can use ideas from short videos or attempt to shoot a ready-made script."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 863,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_853> considers the option of writing a script if necessary."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 864,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_34> states that the current plan involves a ready-made script."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 865,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_797> introduces two people named Lucia and Lucía."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 866,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_854> concludes by mentioning 'us two,' implying a collaborative effort between two main parties."
+          ],
+          "timestamp": 66
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 34,
+        "target": 864,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 797,
+        "target": 865,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 841,
+        "target": 861,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 841,
+        "target": 862,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 853,
+        "target": 863,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 854,
+        "target": 866,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_66_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_66_graph.pkl"
+  },
+  "memory_pickle_bytes": 20585699,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 64933.933110481,
+    "prepared_perf": 64939.937941125,
+    "ordered_start_perf": 65337.256302245,
+    "consumer_wait_ms": 0.011992997315246612,
+    "ready_to_ordered_ms": 397318.3611200002,
+    "preparation_work_ms": 5999.580129995593,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 194149.38480199635
+}

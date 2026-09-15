@@ -1,0 +1,74 @@
+{
+  "clip_id": 43,
+  "source": {
+    "segment_id": 43,
+    "source": "DAY1_A1_JAKE_11300000.mp4",
+    "source_clock": "11300000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41400.0,
+    "absolute_end_seconds": 41430.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0043.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46788.918695086,
+      "prepared_perf": 46796.31815722,
+      "ordered_start_perf": 46938.761117002,
+      "consumer_wait_ms": 0.009407005563843995,
+      "ready_to_ordered_ms": 142442.95978200535,
+      "preparation_work_ms": 7394.182350995834,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a long table with a checkered tablecloth indoors.",
+      "A clapperboard labeled 'Egolife' rests in the foreground on the table.",
+      "A person stands in the background by a whiteboard, writing notes as the group talks.",
+      "The attendees at the table listen, react, and participate in an ongoing discussion.",
+      "A woman sitting on the left side of the table smiles and laughs while listening."
+    ],
+    "high_level_conclusions": [
+      "The group is a creative production crew conducting a planning meeting for their video project.",
+      "They are brainstorming content, scenes, and interactions involving neighbors for the next day's shoot."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a long table with a checkered tablecloth indoors.\",\n    \"A clapperboard labeled 'Egolife' rests in the foreground on the table.\",\n    \"A person stands in the background by a whiteboard, writing notes as the group talks.\",\n    \"The attendees at the table listen, react, and participate in an ongoing discussion.\",\n    \"A woman sitting on the left side of the table smiles and laughs while listening.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is a creative production crew conducting a planning meeting for their video project.\",\n    \"They are brainstorming content, scenes, and interactions involving neighbors for the next day's shoot.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 43,
+      "call_id": "890b6cb8-d7be-4461-acf0-958f3e804909",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405762.0345733,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66961,
+      "output_tokens": 995,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 47944.93745300133
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a long table with a checkered tablecloth indoors.\",\n    \"A clapperboard labeled 'Egolife' rests in the foreground on the table.\",\n    \"A person stands in the background by a whiteboard, writing notes as the group talks.\",\n    \"The attendees at the table listen, react, and participate in an ongoing discussion.\",\n    \"A woman sitting on the left side of the table smiles and laughs while listening.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is a creative production crew conducting a planning meeting for their video project.\",\n    \"They are brainstorming content, scenes, and interactions involving neighbors for the next day's shoot.\"\n  ]\n}\n```",
+      "total_tokens": 67956,
+      "request_end": 1789405809.9796195,
+      "latency_ms": 47945.04342100117,
+      "client_wall_clock_latency_ms": 47945.04342100117,
+      "api_request_wall_clock_latency_ms": 47945.04342100117
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_43_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

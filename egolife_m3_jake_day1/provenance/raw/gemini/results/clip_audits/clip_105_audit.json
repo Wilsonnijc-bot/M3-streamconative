@@ -1,0 +1,527 @@
+{
+  "clip_id": 105,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0105.mp4",
+  "end_to_end_memory_generation_ms": 242374.46044199896,
+  "latency_ms": {
+    "clip_decode": 4988.498637001612,
+    "deepgram_asr": 957.8905849994044,
+    "mai_transcribe_asr": 2102.6647870021407,
+    "asr_total": 2104.2454530033865,
+    "audio_segmentation": 11.917994001123589,
+    "speech_embedding_campplus": 2207.5973259998136,
+    "facial_detection_recognition_buffalo_l": 3432.05842700263,
+    "face_clustering": 9.510482996120118,
+    "vlm_memory_generation": 51691.347284002404,
+    "text_embedding": 685.6520740038832,
+    "graph_update_total": 1068.5076000008848
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 105,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 14,
+      "input_chars": 1551,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789410640.934624,
+          "status": "success",
+          "total_tokens": 319,
+          "request_end": 1789410641.6201525,
+          "latency_ms": 685.5290320017957
+        }
+      ],
+      "total_tokens": 319,
+      "latency_ms": 685.6520740038832
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 957.8905849994044,
+        "openrouter-mai-transcribe-2": 2102.6647870021407
+      },
+      "asr_total_ms": 2104.2454530033865,
+      "audio_segmentation_ms": 11.917994001123589,
+      "speech_embedding_ms": 2207.5973259998136,
+      "graph_update_ms": 1068.3661829971243,
+      "asr_segment_count": 11,
+      "speech_embedding_count": 11,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 3307.859100001224
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3432.05842700263,
+      "face_clustering_ms": 9.510482996120118,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 265,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3586.7701809984283
+    },
+    "vlm": {
+      "context_preparation_ms": 4146.284135000315,
+      "vlm_ms": 51691.347284002404,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people gathers around a table covered in a red-and-white checkered tablecloth in a bright room.\",\n  \"At the far end of the table near a whiteboard, a woman in a white blouse trims and arranges floral stems.\",\n  \"A woman wearing dark clothing and glasses on her head sits on the left side of the table.\",\n  \"Two young women sit on the far side of the table, watching the floral arrangement and chatting.\",\n  \"<voice_430> expresses concern that new arrivals might be too shy to share stories in front of everyone.\",\n  \"<voice_1206> proposes that guests receive a small gift or reward simply for introducing themselves.\",\n  \"<voice_441> suggests giving five coins to the first person who introduces themselves and three coins to the second.\",\n  \"A young man in an orange t-shirt enters the frame from the living area on the left and gestures with his raised hand.\",\n  \"<voice_0> suggests hiding items or coins around the house for guests to search for.\",\n  \"<voice_1207> compares the hidden item idea to an Easter egg hunt.\",\n  \"The young man in the orange t-shirt walks over toward the open kitchen area while <voice_1208> and others agree on hiding coins.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is planning and organizing an upcoming social event, workshop, or party, brainstorming icebreaker games for guests.\",\n  \"They are mindful of social dynamics, rejecting high-pressure activities like public storytelling in favor of lower-pressure games such as rewarded self-introductions and a coin treasure hunt.\",\n  \"The venue is functioning as a creative workshop and meeting space, combining floral preparations with event activity coordination.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people gathers around a table covered in a red-and-white checkered tablecloth in a bright room.",
+          "At the far end of the table near a whiteboard, a woman in a white blouse trims and arranges floral stems.",
+          "A woman wearing dark clothing and glasses on her head sits on the left side of the table.",
+          "Two young women sit on the far side of the table, watching the floral arrangement and chatting.",
+          "<voice_430> expresses concern that new arrivals might be too shy to share stories in front of everyone.",
+          "<voice_1206> proposes that guests receive a small gift or reward simply for introducing themselves.",
+          "<voice_441> suggests giving five coins to the first person who introduces themselves and three coins to the second.",
+          "A young man in an orange t-shirt enters the frame from the living area on the left and gestures with his raised hand.",
+          "<voice_0> suggests hiding items or coins around the house for guests to search for.",
+          "<voice_1207> compares the hidden item idea to an Easter egg hunt.",
+          "The young man in the orange t-shirt walks over toward the open kitchen area while <voice_1208> and others agree on hiding coins."
+        ],
+        "high_level_conclusions": [
+          "The group is planning and organizing an upcoming social event, workshop, or party, brainstorming icebreaker games for guests.",
+          "They are mindful of social dynamics, rejecting high-pressure activities like public storytelling in favor of lower-pressure games such as rewarded self-introductions and a coin treasure hunt.",
+          "The venue is functioning as a creative workshop and meeting space, combining floral preparations with event activity coordination."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 105,
+          "call_id": "5323a9cf-6f99-47fc-8613-ec1ffc4e9d97",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789410589.2423518,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67839,
+          "output_tokens": 1784,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 51691.1999179938
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people gathers around a table covered in a red-and-white checkered tablecloth in a bright room.\",\n  \"At the far end of the table near a whiteboard, a woman in a white blouse trims and arranges floral stems.\",\n  \"A woman wearing dark clothing and glasses on her head sits on the left side of the table.\",\n  \"Two young women sit on the far side of the table, watching the floral arrangement and chatting.\",\n  \"<voice_430> expresses concern that new arrivals might be too shy to share stories in front of everyone.\",\n  \"<voice_1206> proposes that guests receive a small gift or reward simply for introducing themselves.\",\n  \"<voice_441> suggests giving five coins to the first person who introduces themselves and three coins to the second.\",\n  \"A young man in an orange t-shirt enters the frame from the living area on the left and gestures with his raised hand.\",\n  \"<voice_0> suggests hiding items or coins around the house for guests to search for.\",\n  \"<voice_1207> compares the hidden item idea to an Easter egg hunt.\",\n  \"The young man in the orange t-shirt walks over toward the open kitchen area while <voice_1208> and others agree on hiding coins.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is planning and organizing an upcoming social event, workshop, or party, brainstorming icebreaker games for guests.\",\n  \"They are mindful of social dynamics, rejecting high-pressure activities like public storytelling in favor of lower-pressure games such as rewarded self-introductions and a coin treasure hunt.\",\n  \"The venue is functioning as a creative workshop and meeting space, combining floral preparations with event activity coordination.\"\n ]\n}\n```",
+          "total_tokens": 69623,
+          "request_end": 1789410640.9337025,
+          "latency_ms": 51691.347284002404,
+          "client_wall_clock_latency_ms": 51691.347284002404,
+          "api_request_wall_clock_latency_ms": 51691.347284002404
+        }
+      ],
+      "episodic_memory_count": 11,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 11,
+      "text_embedding_ms": null,
+      "text_embedding_count": 11,
+      "graph_update_ms": 0.12062700261594728,
+      "nodes_added": 11,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.020790001144632697,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 11,
+    "speech_embeddings": 11,
+    "voice_identities": 7,
+    "detected_faces": 265,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 11,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1223,
+    "edges_after_clip": 240,
+    "nodes_added_by_clip": 17,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people gathers around a table covered in a red-and-white checkered tablecloth in a bright room.",
+      "At the far end of the table near a whiteboard, a woman in a white blouse trims and arranges floral stems.",
+      "A woman wearing dark clothing and glasses on her head sits on the left side of the table.",
+      "Two young women sit on the far side of the table, watching the floral arrangement and chatting.",
+      "<voice_430> expresses concern that new arrivals might be too shy to share stories in front of everyone.",
+      "<voice_1206> proposes that guests receive a small gift or reward simply for introducing themselves.",
+      "<voice_441> suggests giving five coins to the first person who introduces themselves and three coins to the second.",
+      "A young man in an orange t-shirt enters the frame from the living area on the left and gestures with his raised hand.",
+      "<voice_0> suggests hiding items or coins around the house for guests to search for.",
+      "<voice_1207> compares the hidden item idea to an Easter egg hunt.",
+      "The young man in the orange t-shirt walks over toward the open kitchen area while <voice_1208> and others agree on hiding coins."
+    ],
+    "high_level_conclusions": [
+      "The group is planning and organizing an upcoming social event, workshop, or party, brainstorming icebreaker games for guests.",
+      "They are mindful of social dynamics, rejecting high-pressure activities like public storytelling in favor of lower-pressure games such as rewarded self-introductions and a coin treasure hunt.",
+      "The venue is functioning as a creative workshop and meeting space, combining floral preparations with event activity coordination."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people gathers around a table covered in a red-and-white checkered tablecloth in a bright room.",
+      "At the far end of the table near a whiteboard, a woman in a white blouse trims and arranges floral stems.",
+      "A woman wearing dark clothing and glasses on her head sits on the left side of the table.",
+      "Two young women sit on the far side of the table, watching the floral arrangement and chatting.",
+      "<voice_430> expresses concern that new arrivals might be too shy to share stories in front of everyone.",
+      "<voice_1206> proposes that guests receive a small gift or reward simply for introducing themselves.",
+      "<voice_441> suggests giving five coins to the first person who introduces themselves and three coins to the second.",
+      "A young man in an orange t-shirt enters the frame from the living area on the left and gestures with his raised hand.",
+      "<voice_0> suggests hiding items or coins around the house for guests to search for.",
+      "<voice_1207> compares the hidden item idea to an Easter egg hunt.",
+      "The young man in the orange t-shirt walks over toward the open kitchen area while <voice_1208> and others agree on hiding coins."
+    ],
+    "high_level_conclusions": [
+      "The group is planning and organizing an upcoming social event, workshop, or party, brainstorming icebreaker games for guests.",
+      "They are mindful of social dynamics, rejecting high-pressure activities like public storytelling in favor of lower-pressure games such as rewarded self-introductions and a coin treasure hunt.",
+      "The venue is functioning as a creative workshop and meeting space, combining floral preparations with event activity coordination."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_105_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 17,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 1206,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那就自我介绍就可以获得一个礼。",
+            "MAI: 啊，自我介绍可以获得，对。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1207,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: 你、你、你、你、你。你、你、你。你、你、你。你、你。你。你。你。你。 | MAI: 哦，像复活节的那种。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1208,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 藏币。",
+            "MAI: 也行。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1209,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people gathers around a table covered in a red-and-white checkered tablecloth in a bright room."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1210,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At the far end of the table near a whiteboard, a woman in a white blouse trims and arranges floral stems."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1211,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman wearing dark clothing and glasses on her head sits on the left side of the table."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1212,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two young women sit on the far side of the table, watching the floral arrangement and chatting."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1213,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_430> expresses concern that new arrivals might be too shy to share stories in front of everyone."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1214,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1206> proposes that guests receive a small gift or reward simply for introducing themselves."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1215,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_441> suggests giving five coins to the first person who introduces themselves and three coins to the second."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1216,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young man in an orange t-shirt enters the frame from the living area on the left and gestures with his raised hand."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1217,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> suggests hiding items or coins around the house for guests to search for."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1218,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1207> compares the hidden item idea to an Easter egg hunt."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1219,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The young man in the orange t-shirt walks over toward the open kitchen area while <voice_1208> and others agree on hiding coins."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1220,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is planning and organizing an upcoming social event, workshop, or party, brainstorming icebreaker games for guests."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1221,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "They are mindful of social dynamics, rejecting high-pressure activities like public storytelling in favor of lower-pressure games such as rewarded self-introductions and a coin treasure hunt."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1222,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The venue is functioning as a creative workshop and meeting space, combining floral preparations with event activity coordination."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1217,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 430,
+        "target": 1213,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 441,
+        "target": 1215,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1206,
+        "target": 1214,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1207,
+        "target": 1218,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1208,
+        "target": 1219,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_105_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_105_graph.pkl"
+  },
+  "memory_pickle_bytes": 28243589,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 51586.306479198,
+    "prepared_perf": 51594.894636943,
+    "ordered_start_perf": 51762.841762701,
+    "consumer_wait_ms": 0.017883001419249922,
+    "ready_to_ordered_ms": 167947.12575800077,
+    "preparation_work_ms": 8582.726987995557,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 63420.669371997064
+}

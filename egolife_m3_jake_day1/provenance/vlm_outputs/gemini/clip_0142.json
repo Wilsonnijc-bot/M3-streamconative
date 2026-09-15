@@ -1,0 +1,78 @@
+{
+  "clip_id": 142,
+  "source": {
+    "segment_id": 142,
+    "source": "DAY1_A1_JAKE_12160000.mp4",
+    "source_clock": "12160000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 44160.0,
+    "absolute_end_seconds": 44190.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0142.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 53951.721555297,
+      "prepared_perf": 53961.030717318,
+      "ordered_start_perf": 54053.450657996,
+      "consumer_wait_ms": 0.018254999304190278,
+      "ready_to_ordered_ms": 92419.9406780026,
+      "preparation_work_ms": 9303.776829998242,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is sitting around a table covered with a red-and-white checkered tablecloth in an indoor room.",
+      "A woman wearing a black top sits at the left side of the table, holding a rolled-up brown paper cylinder in her hands.",
+      "In the background, a woman wearing a white shirt stands near a whiteboard before walking out of the room.",
+      "A woman with long dark hair sits across the table, leaning her head on her hand while listening to the discussion.",
+      "A woman with dyed blonde hair sits on the right side of the table, eventually getting up and moving away.",
+      "A man dressed in a peach-colored t-shirt walks across the room in the background toward the whiteboard area.",
+      "The camera wearer reaches out to open and use a silver laptop resting on the table.",
+      "The woman in black gestures with the rolled paper while speaking animatedly about dessert recipes."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a casual meeting or brainstorming session, discussing dessert or sweet soup (tong sui / qingbuliang) preparation ideas.",
+      "The woman in the black top is proposing a simplified recipe using coconut milk, fruit, and corn rather than making gelatinous or solid desserts.",
+      "The participants share a relaxed and collaborative relationship, casually offering input on food choices and preparation difficulty."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people is sitting around a table covered with a red-and-white checkered tablecloth in an indoor room.\",\n    \"A woman wearing a black top sits at the left side of the table, holding a rolled-up brown paper cylinder in her hands.\",\n    \"In the background, a woman wearing a white shirt stands near a whiteboard before walking out of the room.\",\n    \"A woman with long dark hair sits across the table, leaning her head on her hand while listening to the discussion.\",\n    \"A woman with dyed blonde hair sits on the right side of the table, eventually getting up and moving away.\",\n    \"A man dressed in a peach-colored t-shirt walks across the room in the background toward the whiteboard area.\",\n    \"The camera wearer reaches out to open and use a silver laptop resting on the table.\",\n    \"The woman in black gestures with the rolled paper while speaking animatedly about dessert recipes.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a casual meeting or brainstorming session, discussing dessert or sweet soup (tong sui / qingbuliang) preparation ideas.\",\n    \"The woman in the black top is proposing a simplified recipe using coconut milk, fruit, and corn rather than making gelatinous or solid desserts.\",\n    \"The participants share a relaxed and collaborative relationship, casually offering input on food choices and preparation difficulty.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 142,
+      "call_id": "d47a5d34-39ee-4fb2-a2e7-351e7d5f5ccb",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412880.4440012,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67442,
+      "output_tokens": 1481,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 31388.7579680013
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people is sitting around a table covered with a red-and-white checkered tablecloth in an indoor room.\",\n    \"A woman wearing a black top sits at the left side of the table, holding a rolled-up brown paper cylinder in her hands.\",\n    \"In the background, a woman wearing a white shirt stands near a whiteboard before walking out of the room.\",\n    \"A woman with long dark hair sits across the table, leaning her head on her hand while listening to the discussion.\",\n    \"A woman with dyed blonde hair sits on the right side of the table, eventually getting up and moving away.\",\n    \"A man dressed in a peach-colored t-shirt walks across the room in the background toward the whiteboard area.\",\n    \"The camera wearer reaches out to open and use a silver laptop resting on the table.\",\n    \"The woman in black gestures with the rolled paper while speaking animatedly about dessert recipes.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a casual meeting or brainstorming session, discussing dessert or sweet soup (tong sui / qingbuliang) preparation ideas.\",\n    \"The woman in the black top is proposing a simplified recipe using coconut milk, fruit, and corn rather than making gelatinous or solid desserts.\",\n    \"The participants share a relaxed and collaborative relationship, casually offering input on food choices and preparation difficulty.\"\n  ]\n}\n```",
+      "total_tokens": 68923,
+      "request_end": 1789412911.8328862,
+      "latency_ms": 31388.881501006836,
+      "client_wall_clock_latency_ms": 31388.881501006836,
+      "api_request_wall_clock_latency_ms": 31388.881501006836
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_142_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

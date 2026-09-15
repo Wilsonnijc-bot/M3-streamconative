@@ -1,0 +1,42 @@
+{
+  "clip": "/opt/streammeco/data/DAY1_A1_JAKE_11094208.mp4",
+  "clip_decode_ms": 2928.4264040006747,
+  "voice": {
+    "cache_hit": false,
+    "asr_provider_ms": {
+      "deepgram-asr": 236.79156999969564,
+      "openrouter-mai-transcribe-2": 1063.4036510000442
+    },
+    "asr_total_ms": 1300.1979159998882,
+    "audio_segmentation_ms": 3.470320999440446,
+    "speech_embedding_ms": 1140.6423260004885,
+    "graph_update_ms": 2.8892000000269036,
+    "asr_segment_count": 3,
+    "speech_embedding_count": 3,
+    "voice_identity_count": 2,
+    "total_ms": 2454.299611999886
+  },
+  "face": {
+    "cache_hit": false,
+    "face_detection_recognition_ms": 9044.036866999704,
+    "face_clustering_ms": 4.185789999610279,
+    "graph_update_ms": null,
+    "frame_count": 89,
+    "detected_face_count": 152,
+    "qualified_face_count": 0,
+    "raw_cluster_count": 0,
+    "face_identity_count": 0,
+    "total_ms": 9128.026757999578
+  },
+  "context_ms": 4033.6389069998404,
+  "shared_preprocess_ms": 18545.20485000012,
+  "gemini_media": {
+    "frame_count": 36,
+    "video_duration_seconds": 17.6
+  },
+  "counts": {
+    "preprocess_frames": 89,
+    "voice_identities": 2,
+    "face_identities": 0
+  }
+}

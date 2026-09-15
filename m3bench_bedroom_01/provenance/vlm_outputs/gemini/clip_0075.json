@@ -1,0 +1,79 @@
+{
+  "clip_id": 75,
+  "source": {
+    "segment_id": 75,
+    "source": "bedroom_01_00353000.mp4",
+    "source_clock": "00353000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 2130.0,
+    "absolute_end_seconds": 2160.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00353000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 76879.755160189,
+      "prepared_perf": 76885.072670081,
+      "ordered_start_perf": 76949.02929481,
+      "consumer_wait_ms": 0.027492002118378878,
+      "ready_to_ordered_ms": 63956.6247289913,
+      "preparation_work_ms": 5312.1112790104235,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two young women sit at a dining table covered with a blue patterned tablecloth, eating snacks and talking.",
+      "The woman seated on the right speaks (<voice_79>), commanding a robot to help clean the bedroom.",
+      "The first-person perspective camera moves from the dining area through a doorway into the bedroom.",
+      "The camera approaches a small side table situated between two wooden armchairs in front of the bed.",
+      "A person or robot wearing black gloves reaches out and takes a tissue from the tissue box on the side table.",
+      "Using the tissue, the gloved hand picks up a small white ceramic cup from the table.",
+      "The camera turns around and carries the cup out of the bedroom back toward the living and dining space.",
+      "The camera moves past the dining table where the two women are seated and approaches the hallway countertop.",
+      "The gloved hand brings the cup near the electric kettle and tea set on the countertop and wipes the surface with the tissue."
+    ],
+    "high_level_conclusions": [
+      "The woman sitting on the right utters <voice_79> to instruct an assistive robot to clean the bedroom.",
+      "The first-person viewpoint represents a domestic service robot executing cleaning tasks according to human voice commands.",
+      "The robot successfully navigates into the bedroom, identifies a used tea cup on the side table, and retrieves it to clean up the room as commanded."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two young women sit at a dining table covered with a blue patterned tablecloth, eating snacks and talking.\",\n    \"The woman seated on the right speaks (<voice_79>), commanding a robot to help clean the bedroom.\",\n    \"The first-person perspective camera moves from the dining area through a doorway into the bedroom.\",\n    \"The camera approaches a small side table situated between two wooden armchairs in front of the bed.\",\n    \"A person or robot wearing black gloves reaches out and takes a tissue from the tissue box on the side table.\",\n    \"Using the tissue, the gloved hand picks up a small white ceramic cup from the table.\",\n    \"The camera turns around and carries the cup out of the bedroom back toward the living and dining space.\",\n    \"The camera moves past the dining table where the two women are seated and approaches the hallway countertop.\",\n    \"The gloved hand brings the cup near the electric kettle and tea set on the countertop and wipes the surface with the tissue.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman sitting on the right utters <voice_79> to instruct an assistive robot to clean the bedroom.\",\n    \"The first-person viewpoint represents a domestic service robot executing cleaning tasks according to human voice commands.\",\n    \"The robot successfully navigates into the bedroom, identifies a used tea cup on the side table, and retrieves it to clean up the room as commanded.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 75,
+      "call_id": "d9e608fa-069a-45f6-97a8-6acfe687739a",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789435771.236452,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65687,
+      "output_tokens": 1465,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 171998.87096999737
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two young women sit at a dining table covered with a blue patterned tablecloth, eating snacks and talking.\",\n    \"The woman seated on the right speaks (<voice_79>), commanding a robot to help clean the bedroom.\",\n    \"The first-person perspective camera moves from the dining area through a doorway into the bedroom.\",\n    \"The camera approaches a small side table situated between two wooden armchairs in front of the bed.\",\n    \"A person or robot wearing black gloves reaches out and takes a tissue from the tissue box on the side table.\",\n    \"Using the tissue, the gloved hand picks up a small white ceramic cup from the table.\",\n    \"The camera turns around and carries the cup out of the bedroom back toward the living and dining space.\",\n    \"The camera moves past the dining table where the two women are seated and approaches the hallway countertop.\",\n    \"The gloved hand brings the cup near the electric kettle and tea set on the countertop and wipes the surface with the tissue.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman sitting on the right utters <voice_79> to instruct an assistive robot to clean the bedroom.\",\n    \"The first-person viewpoint represents a domestic service robot executing cleaning tasks according to human voice commands.\",\n    \"The robot successfully navigates into the bedroom, identifies a used tea cup on the side table, and retrieves it to clean up the room as commanded.\"\n  ]\n}\n```",
+      "total_tokens": 67152,
+      "request_end": 1789435943.23542,
+      "latency_ms": 171998.96500600153,
+      "client_wall_clock_latency_ms": 171998.96500600153,
+      "api_request_wall_clock_latency_ms": 171998.96500600153
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_75_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

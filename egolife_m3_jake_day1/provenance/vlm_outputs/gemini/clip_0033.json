@@ -1,0 +1,73 @@
+{
+  "clip_id": 33,
+  "source": {
+    "segment_id": 33,
+    "source": "DAY1_A1_JAKE_11250000.mp4",
+    "source_clock": "11250000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41100.0,
+    "absolute_end_seconds": 41130.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0033.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46194.315376746,
+      "prepared_perf": 46203.136379754,
+      "ordered_start_perf": 46280.459514123,
+      "consumer_wait_ms": 0.013404998753685504,
+      "ready_to_ordered_ms": 77323.13436899858,
+      "preparation_work_ms": 8814.87367900263,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a checkered table while a young man in an orange T-shirt stands beside them.",
+      "A person positions a film slate clapperboard onto the table in front of the camera.",
+      "The man in the orange T-shirt walks over to the whiteboard at the back of the room.",
+      "The man begins writing on the whiteboard while the group watches and converses."
+    ],
+    "high_level_conclusions": [
+      "The individuals are preparing for or reviewing a game or video shoot session, marked by the use of a clapperboard.",
+      "The conversation concerns deductions or assignments from a game played the previous day."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a checkered table while a young man in an orange T-shirt stands beside them.\",\n  \"A person positions a film slate clapperboard onto the table in front of the camera.\",\n  \"The man in the orange T-shirt walks over to the whiteboard at the back of the room.\",\n  \"The man begins writing on the whiteboard while the group watches and converses.\"\n ],\n \"high_level_conclusions\": [\n  \"The individuals are preparing for or reviewing a game or video shoot session, marked by the use of a clapperboard.\",\n  \"The conversation concerns deductions or assignments from a game played the previous day.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 33,
+      "call_id": "ac2d8fba-da64-43ba-b4e5-d0fa723c23d0",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405104.2219167,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66985,
+      "output_tokens": 928,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 33494.75526400056
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a checkered table while a young man in an orange T-shirt stands beside them.\",\n  \"A person positions a film slate clapperboard onto the table in front of the camera.\",\n  \"The man in the orange T-shirt walks over to the whiteboard at the back of the room.\",\n  \"The man begins writing on the whiteboard while the group watches and converses.\"\n ],\n \"high_level_conclusions\": [\n  \"The individuals are preparing for or reviewing a game or video shoot session, marked by the use of a clapperboard.\",\n  \"The conversation concerns deductions or assignments from a game played the previous day.\"\n ]\n}\n```",
+      "total_tokens": 67913,
+      "request_end": 1789405137.7168694,
+      "latency_ms": 33494.94971099921,
+      "client_wall_clock_latency_ms": 33494.94971099921,
+      "api_request_wall_clock_latency_ms": 33494.94971099921
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_33_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

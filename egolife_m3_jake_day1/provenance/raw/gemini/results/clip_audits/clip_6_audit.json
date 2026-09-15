@@ -1,0 +1,306 @@
+{
+  "clip_id": 6,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0006.mp4",
+  "end_to_end_memory_generation_ms": 55944.841942000494,
+  "latency_ms": {
+    "clip_decode": 3838.8880569982575,
+    "deepgram_asr": 826.8980430002557,
+    "mai_transcribe_asr": 1066.4614339984837,
+    "asr_total": 1893.362602997513,
+    "audio_segmentation": 6.772111002646852,
+    "speech_embedding_campplus": 129.64300499879755,
+    "facial_detection_recognition_buffalo_l": 3457.441583996115,
+    "face_clustering": 3.608680999604985,
+    "vlm_memory_generation": 39697.00297399686,
+    "text_embedding": 2245.3166039995267,
+    "graph_update_total": 5.46511299762642
+  },
+  "stage_details": {
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 826.8980430002557,
+        "openrouter-mai-transcribe-2": 1066.4614339984837
+      },
+      "asr_total_ms": 1893.362602997513,
+      "audio_segmentation_ms": 6.772111002646852,
+      "speech_embedding_ms": 129.64300499879755,
+      "graph_update_ms": 3.5057050044997595,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "total_ms": 2043.2661669983645
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3457.441583996115,
+      "face_clustering_ms": 3.608680999604985,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 165,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3552.1284110000124
+    },
+    "vlm": {
+      "context_preparation_ms": 4563.846133001789,
+      "vlm_ms": 39697.00297399686,
+      "raw_response": "```json\n{\n\t\"video_description\": [\n\t\t\"The camera wearer places an item onto a lower shelf.\",\n\t\t\"The camera wearer walks toward a dining table where a group of people is seated.\",\n\t\t\"The people around the checkered table are unpacking electronics and equipment boxes.\",\n\t\t\"The camera wearer reaches the table and begins unpacking a blue and cardboard box.\",\n\t\t\"<voice_0> instructs the group on how to organize the unpacked items, noting to keep the outer boxes and discard the inner packaging.\",\n\t\t\"The camera wearer removes wrapped accessories and instructional papers from the box to sort through them.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is collaborating to unbox and prepare technical equipment for a shoot or project.\",\n\t\t\"<voice_0> acts as a coordinator, managing the organization and cleanup of the unboxing materials.\"\n\t]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera wearer places an item onto a lower shelf.",
+          "The camera wearer walks toward a dining table where a group of people is seated.",
+          "The people around the checkered table are unpacking electronics and equipment boxes.",
+          "The camera wearer reaches the table and begins unpacking a blue and cardboard box.",
+          "<voice_0> instructs the group on how to organize the unpacked items, noting to keep the outer boxes and discard the inner packaging.",
+          "The camera wearer removes wrapped accessories and instructional papers from the box to sort through them."
+        ],
+        "high_level_conclusions": [
+          "The group is collaborating to unbox and prepare technical equipment for a shoot or project.",
+          "<voice_0> acts as a coordinator, managing the organization and cleanup of the unboxing materials."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 6,
+          "call_id": "4f18a5e7-1bda-4835-b2da-7ae7b24e7bdf",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789397998.5808785,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66591,
+          "output_tokens": 698,
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n\t\"video_description\": [\n\t\t\"The camera wearer places an item onto a lower shelf.\",\n\t\t\"The camera wearer walks toward a dining table where a group of people is seated.\",\n\t\t\"The people around the checkered table are unpacking electronics and equipment boxes.\",\n\t\t\"The camera wearer reaches the table and begins unpacking a blue and cardboard box.\",\n\t\t\"<voice_0> instructs the group on how to organize the unpacked items, noting to keep the outer boxes and discard the inner packaging.\",\n\t\t\"The camera wearer removes wrapped accessories and instructional papers from the box to sort through them.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is collaborating to unbox and prepare technical equipment for a shoot or project.\",\n\t\t\"<voice_0> acts as a coordinator, managing the organization and cleanup of the unboxing materials.\"\n\t]\n}\n```",
+          "total_tokens": 67289,
+          "request_end": 1789398038.2778852,
+          "latency_ms": 39697.00297399686,
+          "client_wall_clock_latency_ms": 39697.00297399686,
+          "api_request_wall_clock_latency_ms": 39697.00297399686
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": 1824.390970999957,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.2742469951044768,
+      "nodes_added": 6,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "current_process"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": 420.92563299956964,
+      "text_embedding_count": 2,
+      "graph_update_ms": 1.6851609980221838,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "current_process"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 165,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 2,
+    "nodes_after_clip": 61,
+    "edges_after_clip": 9,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer places an item onto a lower shelf.",
+      "The camera wearer walks toward a dining table where a group of people is seated.",
+      "The people around the checkered table are unpacking electronics and equipment boxes.",
+      "The camera wearer reaches the table and begins unpacking a blue and cardboard box.",
+      "<voice_0> instructs the group on how to organize the unpacked items, noting to keep the outer boxes and discard the inner packaging.",
+      "The camera wearer removes wrapped accessories and instructional papers from the box to sort through them."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating to unbox and prepare technical equipment for a shoot or project.",
+      "<voice_0> acts as a coordinator, managing the organization and cleanup of the unboxing materials."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera wearer places an item onto a lower shelf.",
+      "The camera wearer walks toward a dining table where a group of people is seated.",
+      "The people around the checkered table are unpacking electronics and equipment boxes.",
+      "The camera wearer reaches the table and begins unpacking a blue and cardboard box.",
+      "<voice_0> instructs the group on how to organize the unpacked items, noting to keep the outer boxes and discard the inner packaging.",
+      "The camera wearer removes wrapped accessories and instructional papers from the box to sort through them."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating to unbox and prepare technical equipment for a shoot or project.",
+      "<voice_0> acts as a coordinator, managing the organization and cleanup of the unboxing materials."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_6_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 53,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer places an item onto a lower shelf."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 54,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer walks toward a dining table where a group of people is seated."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 55,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The people around the checkered table are unpacking electronics and equipment boxes."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 56,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer reaches the table and begins unpacking a blue and cardboard box."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 57,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> instructs the group on how to organize the unpacked items, noting to keep the outer boxes and discard the inner packaging."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 58,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer removes wrapped accessories and instructional papers from the box to sort through them."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 59,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is collaborating to unbox and prepare technical equipment for a shoot or project."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 60,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> acts as a coordinator, managing the organization and cleanup of the unboxing materials."
+          ],
+          "timestamp": 6
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 57,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 60,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_6_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_6_graph.pkl"
+  }
+}

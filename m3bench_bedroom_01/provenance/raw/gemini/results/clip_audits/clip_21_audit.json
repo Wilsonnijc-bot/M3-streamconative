@@ -1,0 +1,388 @@
+{
+  "clip_id": 21,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00093000.mp4",
+  "end_to_end_memory_generation_ms": 169934.38360499567,
+  "latency_ms": {
+    "clip_decode": 3605.6998610001756,
+    "deepgram_asr": 364.118857003632,
+    "mai_transcribe_asr": 968.626318994211,
+    "asr_total": 970.6110219995026,
+    "audio_segmentation": 9.7035560029326,
+    "speech_embedding_campplus": 979.9274929973762,
+    "facial_detection_recognition_buffalo_l": 3079.6277439949336,
+    "face_clustering": 8.643911001854576,
+    "vlm_memory_generation": 21856.883450993337,
+    "text_embedding": 739.417572011007,
+    "graph_update_total": 44.77308000787161
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 21,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 879,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789432471.0530355,
+          "status": "success",
+          "total_tokens": 190,
+          "request_end": 1789432471.7922013,
+          "latency_ms": 739.166320010554
+        }
+      ],
+      "total_tokens": 190,
+      "latency_ms": 739.417572011007
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 364.118857003632,
+        "openrouter-mai-transcribe-2": 968.626318994211
+      },
+      "asr_total_ms": 970.6110219995026,
+      "audio_segmentation_ms": 9.7035560029326,
+      "speech_embedding_ms": 979.9274929973762,
+      "graph_update_ms": 41.16968100424856,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1050.793809001334
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3079.6277439949336,
+      "face_clustering_ms": 8.643911001854576,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 271,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3234.767539994209
+    },
+    "vlm": {
+      "context_preparation_ms": 4692.221503995825,
+      "vlm_ms": 21856.883450993337,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"Two young women sit side by side on a bed inside a bedroom.\",\n  \"The woman on the right in a white sweater holds the hand of the woman on the left in a beige shirt while speaking to her.\",\n  \"The woman in the beige shirt nods and tells her companion that she is fine now.\",\n  \"The woman in the white sweater rests her hand on the woman in the beige shirt's shoulder while inquiring about the severity of her allergic reaction during an exam.\",\n  \"The woman in the beige shirt gestures with her hands as she explains experiencing a red rash during the exam.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman speaking as <voice_10> is acting as a supportive friend or roommate, showing concern for the other's health and prioritizing well-being over academic performance.\",\n  \"The woman in the beige shirt (<voice_199> and <voice_179>) had an allergic reaction while taking an exam and is recounting the experience.\",\n  \"Equivalence: <voice_199>, <voice_179>\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two young women sit side by side on a bed inside a bedroom.",
+          "The woman on the right in a white sweater holds the hand of the woman on the left in a beige shirt while speaking to her.",
+          "The woman in the beige shirt nods and tells her companion that she is fine now.",
+          "The woman in the white sweater rests her hand on the woman in the beige shirt's shoulder while inquiring about the severity of her allergic reaction during an exam.",
+          "The woman in the beige shirt gestures with her hands as she explains experiencing a red rash during the exam."
+        ],
+        "high_level_conclusions": [
+          "The woman speaking as <voice_10> is acting as a supportive friend or roommate, showing concern for the other's health and prioritizing well-being over academic performance.",
+          "The woman in the beige shirt (<voice_199> and <voice_179>) had an allergic reaction while taking an exam and is recounting the experience.",
+          "Equivalence: <voice_199>, <voice_179>"
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 21,
+          "call_id": "192a0c8a-cfe3-4cea-a5e1-3ceaa6083641",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789432449.194962,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66033,
+          "output_tokens": 1049,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 21856.657386000734
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"Two young women sit side by side on a bed inside a bedroom.\",\n  \"The woman on the right in a white sweater holds the hand of the woman on the left in a beige shirt while speaking to her.\",\n  \"The woman in the beige shirt nods and tells her companion that she is fine now.\",\n  \"The woman in the white sweater rests her hand on the woman in the beige shirt's shoulder while inquiring about the severity of her allergic reaction during an exam.\",\n  \"The woman in the beige shirt gestures with her hands as she explains experiencing a red rash during the exam.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman speaking as <voice_10> is acting as a supportive friend or roommate, showing concern for the other's health and prioritizing well-being over academic performance.\",\n  \"The woman in the beige shirt (<voice_199> and <voice_179>) had an allergic reaction while taking an exam and is recounting the experience.\",\n  \"Equivalence: <voice_199>, <voice_179>\"\n ]\n}\n```",
+          "total_tokens": 67082,
+          "request_end": 1789432471.0518548,
+          "latency_ms": 21856.883450993337,
+          "client_wall_clock_latency_ms": 21856.883450993337,
+          "api_request_wall_clock_latency_ms": 21856.883450993337
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.09786500595510006,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 3.5055339976679534,
+      "nodes_added": 3,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 3,
+    "detected_faces": 271,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 208,
+    "edges_after_clip": 66,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two young women sit side by side on a bed inside a bedroom.",
+      "The woman on the right in a white sweater holds the hand of the woman on the left in a beige shirt while speaking to her.",
+      "The woman in the beige shirt nods and tells her companion that she is fine now.",
+      "The woman in the white sweater rests her hand on the woman in the beige shirt's shoulder while inquiring about the severity of her allergic reaction during an exam.",
+      "The woman in the beige shirt gestures with her hands as she explains experiencing a red rash during the exam."
+    ],
+    "high_level_conclusions": [
+      "The woman speaking as <voice_10> is acting as a supportive friend or roommate, showing concern for the other's health and prioritizing well-being over academic performance.",
+      "The woman in the beige shirt (<voice_199> and <voice_179>) had an allergic reaction while taking an exam and is recounting the experience.",
+      "Equivalence: <voice_199>, <voice_179>"
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two young women sit side by side on a bed inside a bedroom.",
+      "The woman on the right in a white sweater holds the hand of the woman on the left in a beige shirt while speaking to her.",
+      "The woman in the beige shirt nods and tells her companion that she is fine now.",
+      "The woman in the white sweater rests her hand on the woman in the beige shirt's shoulder while inquiring about the severity of her allergic reaction during an exam.",
+      "The woman in the beige shirt gestures with her hands as she explains experiencing a red rash during the exam."
+    ],
+    "high_level_conclusions": [
+      "The woman speaking as <voice_10> is acting as a supportive friend or roommate, showing concern for the other's health and prioritizing well-being over academic performance.",
+      "The woman in the beige shirt (<voice_199> and <voice_179>) had an allergic reaction while taking an exam and is recounting the experience.",
+      "Equivalence: <voice_199>, <voice_179>"
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_21_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 199,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: But I'm okay. | MAI: I'm okay now."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 200,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two young women sit side by side on a bed inside a bedroom."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 201,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right in a white sweater holds the hand of the woman on the left in a beige shirt while speaking to her."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 202,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the beige shirt nods and tells her companion that she is fine now."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 203,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the white sweater rests her hand on the woman in the beige shirt's shoulder while inquiring about the severity of her allergic reaction during an exam."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 204,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the beige shirt gestures with her hands as she explains experiencing a red rash during the exam."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 205,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman speaking as <voice_10> is acting as a supportive friend or roommate, showing concern for the other's health and prioritizing well-being over academic performance."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 206,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman in the beige shirt (<voice_199> and <voice_179>) had an allergic reaction while taking an exam and is recounting the experience."
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 207,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Equivalence: <voice_199>, <voice_179>"
+          ],
+          "timestamp": 21
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 10,
+        "target": 205,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 179,
+        "target": 206,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 179,
+        "target": 207,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 199,
+        "target": 206,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 199,
+        "target": 207,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_21_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_21_graph.pkl"
+  },
+  "memory_pickle_bytes": 5402635,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 73488.727915965,
+    "prepared_perf": 73493.426444284,
+    "ordered_start_perf": 73626.718606623,
+    "consumer_wait_ms": 0.024236011086031795,
+    "ready_to_ordered_ms": 133292.16233899933,
+    "preparation_work_ms": 4693.185047013685,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 31580.81181299349
+}

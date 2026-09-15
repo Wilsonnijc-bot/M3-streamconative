@@ -1,0 +1,78 @@
+{
+  "clip_id": 59,
+  "source": {
+    "segment_id": 59,
+    "source": "bedroom_01_00273000.mp4",
+    "source_clock": "00273000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1650.0,
+    "absolute_end_seconds": 1680.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00273000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 75615.973191554,
+      "prepared_perf": 75621.163277786,
+      "ordered_start_perf": 76150.697548223,
+      "consumer_wait_ms": 0.007594004273414612,
+      "ready_to_ordered_ms": 529534.2704369978,
+      "preparation_work_ms": 5184.725211001933,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table with food and drinks.",
+      "The woman on the left rests her chin in her hand while facing the other woman.",
+      "<voice_321> offers encouragement about doing one's best without worrying about past scores.",
+      "<voice_322> acknowledges the encouragement and discusses post-graduation plans.",
+      "<voice_322> expresses an interest in working on programming projects.",
+      "The woman on the left picks up french fries from the tray and eats them.",
+      "The woman on the right rests her chin on her clasped hands while listening.",
+      "The woman on the right reaches forward and picks up her smartphone from the table."
+    ],
+    "high_level_conclusions": [
+      "The two women are close friends or university peers having an informal talk about academic performance and post-graduation life.",
+      "<voice_322> is approaching graduation and considering a career path in computer science or software programming.",
+      "<voice_321> acts as a supportive confidante, providing reassurance regarding academic pressures."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table with food and drinks.\",\n    \"The woman on the left rests her chin in her hand while facing the other woman.\",\n    \"<voice_321> offers encouragement about doing one's best without worrying about past scores.\",\n    \"<voice_322> acknowledges the encouragement and discusses post-graduation plans.\",\n    \"<voice_322> expresses an interest in working on programming projects.\",\n    \"The woman on the left picks up french fries from the tray and eats them.\",\n    \"The woman on the right rests her chin on her clasped hands while listening.\",\n    \"The woman on the right reaches forward and picks up her smartphone from the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women are close friends or university peers having an informal talk about academic performance and post-graduation life.\",\n    \"<voice_322> is approaching graduation and considering a career path in computer science or software programming.\",\n    \"<voice_321> acts as a supportive confidante, providing reassurance regarding academic pressures.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 59,
+      "call_id": "c599fb62-5134-4064-bbe7-94205ca06458",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789434973.4748766,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65883,
+      "output_tokens": 1753,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 65003.307122999104
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table with food and drinks.\",\n    \"The woman on the left rests her chin in her hand while facing the other woman.\",\n    \"<voice_321> offers encouragement about doing one's best without worrying about past scores.\",\n    \"<voice_322> acknowledges the encouragement and discusses post-graduation plans.\",\n    \"<voice_322> expresses an interest in working on programming projects.\",\n    \"The woman on the left picks up french fries from the tray and eats them.\",\n    \"The woman on the right rests her chin on her clasped hands while listening.\",\n    \"The woman on the right reaches forward and picks up her smartphone from the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women are close friends or university peers having an informal talk about academic performance and post-graduation life.\",\n    \"<voice_322> is approaching graduation and considering a career path in computer science or software programming.\",\n    \"<voice_321> acts as a supportive confidante, providing reassurance regarding academic pressures.\"\n  ]\n}\n```",
+      "total_tokens": 67636,
+      "request_end": 1789435038.4782882,
+      "latency_ms": 65003.408294986,
+      "client_wall_clock_latency_ms": 65003.408294986,
+      "api_request_wall_clock_latency_ms": 65003.408294986
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_59_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

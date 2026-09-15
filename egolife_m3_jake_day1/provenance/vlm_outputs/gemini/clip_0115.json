@@ -1,0 +1,76 @@
+{
+  "clip_id": 115,
+  "source": {
+    "segment_id": 115,
+    "source": "DAY1_A1_JAKE_12033000.mp4",
+    "source_clock": "12033000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43410.0,
+    "absolute_end_seconds": 43440.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0115.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 52283.042160991,
+      "prepared_perf": 52290.263641656,
+      "ordered_start_perf": 52398.153511284,
+      "consumer_wait_ms": 0.01832399721024558,
+      "ready_to_ordered_ms": 107889.86962800118,
+      "preparation_work_ms": 7215.962319998653,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer moves across the room toward a group gathered around a dining table.",
+      "A person in an orange t-shirt stands by a whiteboard writing and explaining details.",
+      "A person wearing a white shirt and grey skirt stands at the table handling floral materials.",
+      "Several participants sit around the table engaged in discussion.",
+      "The camera wearer walks past the meeting area and steps into an adjoining bedroom.",
+      "The camera wearer surveys the bedroom, which has a multi-monitor desk setup and equipment on the bed.",
+      "The camera wearer turns around and returns to the main studio room."
+    ],
+    "high_level_conclusions": [
+      "The group around the table is conducting a planning session or meeting regarding an event schedule and Q&A format.",
+      "The camera wearer is moving through the production and living quarters to check on the team and spaces."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"The camera wearer moves across the room toward a group gathered around a dining table.\",\n    \"A person in an orange t-shirt stands by a whiteboard writing and explaining details.\",\n    \"A person wearing a white shirt and grey skirt stands at the table handling floral materials.\",\n    \"Several participants sit around the table engaged in discussion.\",\n    \"The camera wearer walks past the meeting area and steps into an adjoining bedroom.\",\n    \"The camera wearer surveys the bedroom, which has a multi-monitor desk setup and equipment on the bed.\",\n    \"The camera wearer turns around and returns to the main studio room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group around the table is conducting a planning session or meeting regarding an event schedule and Q&A format.\",\n    \"The camera wearer is moving through the production and living quarters to check on the team and spaces.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 115,
+      "call_id": "737767f8-e193-4d51-8e3a-e4662647eb8b",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789411223.8499198,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66934,
+      "output_tokens": 1106,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 27052.736328005267
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer moves across the room toward a group gathered around a dining table.\",\n    \"A person in an orange t-shirt stands by a whiteboard writing and explaining details.\",\n    \"A person wearing a white shirt and grey skirt stands at the table handling floral materials.\",\n    \"Several participants sit around the table engaged in discussion.\",\n    \"The camera wearer walks past the meeting area and steps into an adjoining bedroom.\",\n    \"The camera wearer surveys the bedroom, which has a multi-monitor desk setup and equipment on the bed.\",\n    \"The camera wearer turns around and returns to the main studio room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group around the table is conducting a planning session or meeting regarding an event schedule and Q&A format.\",\n    \"The camera wearer is moving through the production and living quarters to check on the team and spaces.\"\n  ]\n}\n```",
+      "total_tokens": 68040,
+      "request_end": 1789411250.9028249,
+      "latency_ms": 27052.901230003044,
+      "client_wall_clock_latency_ms": 27052.901230003044,
+      "api_request_wall_clock_latency_ms": 27052.901230003044
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_115_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

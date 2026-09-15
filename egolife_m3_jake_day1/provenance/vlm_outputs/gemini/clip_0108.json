@@ -1,0 +1,75 @@
+{
+  "clip_id": 108,
+  "source": {
+    "segment_id": 108,
+    "source": "DAY1_A1_JAKE_12003000.mp4",
+    "source_clock": "12003000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43230.0,
+    "absolute_end_seconds": 43260.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0108.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51828.865928219,
+      "prepared_perf": 51840.071394267,
+      "ordered_start_perf": 51951.238903656,
+      "consumer_wait_ms": 0.008935996447689831,
+      "ready_to_ordered_ms": 111167.50938900077,
+      "preparation_work_ms": 11199.882602995785,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table filled with flowers and production equipment in an indoor room.",
+      "A young man wearing an orange short-sleeved shirt picks up a vase of pink flowers from near the whiteboard.",
+      "The young man in the orange shirt carries the vase forward and hands it over to the camera wearer.",
+      "The camera wearer takes the vase of flowers and walks into the kitchen area.",
+      "The camera wearer places the vase of flowers on the kitchen counter next to the sink.",
+      "The camera wearer turns around and walks back toward the table where the others are chatting."
+    ],
+    "high_level_conclusions": [
+      "The group is preparing or setting up props for a film or video production, as evidenced by the clapperboard, lighting softboxes, and flowers.",
+      "The flower vase was relocated to the kitchen counter to prevent it from obstructing the workspace or scene."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people is gathered around a table filled with flowers and production equipment in an indoor room.\",\n\t\t\"A young man wearing an orange short-sleeved shirt picks up a vase of pink flowers from near the whiteboard.\",\n\t\t\"The young man in the orange shirt carries the vase forward and hands it over to the camera wearer.\",\n\t\t\"The camera wearer takes the vase of flowers and walks into the kitchen area.\",\n\t\t\"The camera wearer places the vase of flowers on the kitchen counter next to the sink.\",\n\t\t\"The camera wearer turns around and walks back toward the table where the others are chatting.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is preparing or setting up props for a film or video production, as evidenced by the clapperboard, lighting softboxes, and flowers.\",\n\t\t\"The flower vase was relocated to the kitchen counter to prevent it from obstructing the workspace or scene.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 108,
+      "call_id": "7ed6df8b-27b3-4e79-b98e-f2ac957bc95f",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410777.122972,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67139,
+      "output_tokens": 969,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 119738.88731500483
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people is gathered around a table filled with flowers and production equipment in an indoor room.\",\n\t\t\"A young man wearing an orange short-sleeved shirt picks up a vase of pink flowers from near the whiteboard.\",\n\t\t\"The young man in the orange shirt carries the vase forward and hands it over to the camera wearer.\",\n\t\t\"The camera wearer takes the vase of flowers and walks into the kitchen area.\",\n\t\t\"The camera wearer places the vase of flowers on the kitchen counter next to the sink.\",\n\t\t\"The camera wearer turns around and walks back toward the table where the others are chatting.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is preparing or setting up props for a film or video production, as evidenced by the clapperboard, lighting softboxes, and flowers.\",\n\t\t\"The flower vase was relocated to the kitchen counter to prevent it from obstructing the workspace or scene.\"\n\t]\n}\n```",
+      "total_tokens": 68108,
+      "request_end": 1789410896.8619585,
+      "latency_ms": 119738.98354599805,
+      "client_wall_clock_latency_ms": 119738.98354599805,
+      "api_request_wall_clock_latency_ms": 119738.98354599805
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_108_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

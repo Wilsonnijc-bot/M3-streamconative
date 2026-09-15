@@ -1,0 +1,444 @@
+{
+  "clip_id": 135,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0135.mp4",
+  "end_to_end_memory_generation_ms": 156990.98632499954,
+  "latency_ms": {
+    "clip_decode": 5547.405652003363,
+    "deepgram_asr": 550.9676759975264,
+    "mai_transcribe_asr": 960.8416549963295,
+    "asr_total": 962.6266850027605,
+    "audio_segmentation": 69.4334239960881,
+    "speech_embedding_campplus": 2353.044695999415,
+    "facial_detection_recognition_buffalo_l": 4914.452369994251,
+    "face_clustering": 28.64164800121216,
+    "vlm_memory_generation": 46146.95611099887,
+    "text_embedding": 579.8586039963993,
+    "graph_update_total": 1560.7864009944024
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 135,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 1367,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789412517.3762832,
+          "status": "success",
+          "total_tokens": 257,
+          "request_end": 1789412517.955956,
+          "latency_ms": 579.6733370007132
+        }
+      ],
+      "total_tokens": 257,
+      "latency_ms": 579.8586039963993
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 550.9676759975264,
+        "openrouter-mai-transcribe-2": 960.8416549963295
+      },
+      "asr_total_ms": 962.6266850027605,
+      "audio_segmentation_ms": 69.4334239960881,
+      "speech_embedding_ms": 2353.044695999415,
+      "graph_update_ms": 1560.6798109947704,
+      "asr_segment_count": 12,
+      "speech_embedding_count": 12,
+      "voice_identity_count": 10,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 4000.177073998202
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4914.452369994251,
+      "face_clustering_ms": 28.64164800121216,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 420,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 5166.529090995027
+    },
+    "vlm": {
+      "context_preparation_ms": 3829.593431997637,
+      "vlm_ms": 46146.95611099887,
+      "raw_response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of young people is seated around a table covered with a red-and-white checkered tablecloth, engaged in an event planning discussion.\",\n\t\t\"A person wearing an orange shirt sits by the whiteboard at the end of the table, gesturing toward the timeline and notes written on it.\",\n\t\t\"A young woman in a black jacket and glasses sits at the left of the table, holding a small stick or snack in her hands while listening and speaking.\",\n\t\t\"Another person sits beside the young woman on the left, partially in view.\",\n\t\t\"Two young women sit along the right side of the table, listening attentively to the discussion.\",\n\t\t\"The group discusses various stages of their event, including bartending throughout the event and serving desserts upon guest arrival.\",\n\t\t\"The person near the whiteboard points to specific items on the board while the group talks about evening performances.\",\n\t\t\"The woman in the black jacket gestures with her hand as she discusses what remains for the evening schedule.\",\n\t\t\"The participants consider timing constraints, noting that the event should not run too late so guests can return home easily.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is holding a collaborative meeting to organize an upcoming party or social event, detailing the program schedule on the whiteboard.\",\n\t\t\"They are coordinating food, beverage services, and performance logistics to ensure a well-paced schedule that accommodates attendees' departure times.\"\n\t]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of young people is seated around a table covered with a red-and-white checkered tablecloth, engaged in an event planning discussion.",
+          "A person wearing an orange shirt sits by the whiteboard at the end of the table, gesturing toward the timeline and notes written on it.",
+          "A young woman in a black jacket and glasses sits at the left of the table, holding a small stick or snack in her hands while listening and speaking.",
+          "Another person sits beside the young woman on the left, partially in view.",
+          "Two young women sit along the right side of the table, listening attentively to the discussion.",
+          "The group discusses various stages of their event, including bartending throughout the event and serving desserts upon guest arrival.",
+          "The person near the whiteboard points to specific items on the board while the group talks about evening performances.",
+          "The woman in the black jacket gestures with her hand as she discusses what remains for the evening schedule.",
+          "The participants consider timing constraints, noting that the event should not run too late so guests can return home easily."
+        ],
+        "high_level_conclusions": [
+          "The group is holding a collaborative meeting to organize an upcoming party or social event, detailing the program schedule on the whiteboard.",
+          "They are coordinating food, beverage services, and performance logistics to ensure a well-paced schedule that accommodates attendees' departure times."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 135,
+          "call_id": "96fd8e15-e182-412b-9a75-0bf346659227",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789412471.2283654,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67266,
+          "output_tokens": 1360,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 46146.83999300178
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of young people is seated around a table covered with a red-and-white checkered tablecloth, engaged in an event planning discussion.\",\n\t\t\"A person wearing an orange shirt sits by the whiteboard at the end of the table, gesturing toward the timeline and notes written on it.\",\n\t\t\"A young woman in a black jacket and glasses sits at the left of the table, holding a small stick or snack in her hands while listening and speaking.\",\n\t\t\"Another person sits beside the young woman on the left, partially in view.\",\n\t\t\"Two young women sit along the right side of the table, listening attentively to the discussion.\",\n\t\t\"The group discusses various stages of their event, including bartending throughout the event and serving desserts upon guest arrival.\",\n\t\t\"The person near the whiteboard points to specific items on the board while the group talks about evening performances.\",\n\t\t\"The woman in the black jacket gestures with her hand as she discusses what remains for the evening schedule.\",\n\t\t\"The participants consider timing constraints, noting that the event should not run too late so guests can return home easily.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is holding a collaborative meeting to organize an upcoming party or social event, detailing the program schedule on the whiteboard.\",\n\t\t\"They are coordinating food, beverage services, and performance logistics to ensure a well-paced schedule that accommodates attendees' departure times.\"\n\t]\n}\n```",
+          "total_tokens": 68626,
+          "request_end": 1789412517.3753252,
+          "latency_ms": 46146.95611099887,
+          "client_wall_clock_latency_ms": 46146.95611099887,
+          "api_request_wall_clock_latency_ms": 46146.95611099887
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.09042999590747058,
+      "nodes_added": 9,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.016160003724507987,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 12,
+    "speech_embeddings": 12,
+    "voice_identities": 10,
+    "detected_faces": 420,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1590,
+    "edges_after_clip": 291,
+    "nodes_added_by_clip": 15,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of young people is seated around a table covered with a red-and-white checkered tablecloth, engaged in an event planning discussion.",
+      "A person wearing an orange shirt sits by the whiteboard at the end of the table, gesturing toward the timeline and notes written on it.",
+      "A young woman in a black jacket and glasses sits at the left of the table, holding a small stick or snack in her hands while listening and speaking.",
+      "Another person sits beside the young woman on the left, partially in view.",
+      "Two young women sit along the right side of the table, listening attentively to the discussion.",
+      "The group discusses various stages of their event, including bartending throughout the event and serving desserts upon guest arrival.",
+      "The person near the whiteboard points to specific items on the board while the group talks about evening performances.",
+      "The woman in the black jacket gestures with her hand as she discusses what remains for the evening schedule.",
+      "The participants consider timing constraints, noting that the event should not run too late so guests can return home easily."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a collaborative meeting to organize an upcoming party or social event, detailing the program schedule on the whiteboard.",
+      "They are coordinating food, beverage services, and performance logistics to ensure a well-paced schedule that accommodates attendees' departure times."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of young people is seated around a table covered with a red-and-white checkered tablecloth, engaged in an event planning discussion.",
+      "A person wearing an orange shirt sits by the whiteboard at the end of the table, gesturing toward the timeline and notes written on it.",
+      "A young woman in a black jacket and glasses sits at the left of the table, holding a small stick or snack in her hands while listening and speaking.",
+      "Another person sits beside the young woman on the left, partially in view.",
+      "Two young women sit along the right side of the table, listening attentively to the discussion.",
+      "The group discusses various stages of their event, including bartending throughout the event and serving desserts upon guest arrival.",
+      "The person near the whiteboard points to specific items on the board while the group talks about evening performances.",
+      "The woman in the black jacket gestures with her hand as she discusses what remains for the evening schedule.",
+      "The participants consider timing constraints, noting that the event should not run too late so guests can return home easily."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a collaborative meeting to organize an upcoming party or social event, detailing the program schedule on the whiteboard.",
+      "They are coordinating food, beverage services, and performance logistics to ensure a well-paced schedule that accommodates attendees' departure times."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_135_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 15,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1575,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: SS | MAI: 甜品",
+            "Deepgram: SS | MAI: 这是他们入场的时候。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1576,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: SS | MAI: SS。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1577,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: SS | MAI: 乘二。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1578,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那晚上就还剩啥，还剩我们的节目。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1579,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of young people is seated around a table covered with a red-and-white checkered tablecloth, engaged in an event planning discussion."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1580,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing an orange shirt sits by the whiteboard at the end of the table, gesturing toward the timeline and notes written on it."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1581,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young woman in a black jacket and glasses sits at the left of the table, holding a small stick or snack in her hands while listening and speaking."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1582,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another person sits beside the young woman on the left, partially in view."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1583,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two young women sit along the right side of the table, listening attentively to the discussion."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1584,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group discusses various stages of their event, including bartending throughout the event and serving desserts upon guest arrival."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1585,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person near the whiteboard points to specific items on the board while the group talks about evening performances."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1586,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the black jacket gestures with her hand as she discusses what remains for the evening schedule."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1587,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The participants consider timing constraints, noting that the event should not run too late so guests can return home easily."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1588,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is holding a collaborative meeting to organize an upcoming party or social event, detailing the program schedule on the whiteboard."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1589,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "They are coordinating food, beverage services, and performance logistics to ensure a well-paced schedule that accommodates attendees' departure times."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_135_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_135_graph.pkl"
+  },
+  "memory_pickle_bytes": 36405511,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 53547.962610757,
+    "prepared_perf": 53556.138369049,
+    "ordered_start_perf": 53642.419658246,
+    "consumer_wait_ms": 0.016159996448550373,
+    "ready_to_ordered_ms": 86281.28919700248,
+    "preparation_work_ms": 8170.203286994365,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 59726.66630800086
+}

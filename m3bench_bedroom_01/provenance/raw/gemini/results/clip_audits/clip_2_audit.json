@@ -1,0 +1,423 @@
+{
+  "clip_id": 2,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00003000.mp4",
+  "end_to_end_memory_generation_ms": 48178.57617700065,
+  "latency_ms": {
+    "clip_decode": 4521.355731005315,
+    "deepgram_asr": 782.7327050035819,
+    "mai_transcribe_asr": 1803.2975449896185,
+    "asr_total": 1804.489474001457,
+    "audio_segmentation": 8.554516010917723,
+    "speech_embedding_campplus": 1257.9349389998242,
+    "facial_detection_recognition_buffalo_l": 4098.12778000196,
+    "face_clustering": 5.468550996738486,
+    "vlm_memory_generation": 29858.572475990513,
+    "text_embedding": 1765.5822730012005,
+    "graph_update_total": 5.411783989984542
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 2,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 588,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789431249.7934628,
+          "status": "success",
+          "total_tokens": 126,
+          "request_end": 1789431251.5588639,
+          "latency_ms": 1765.401575001306
+        }
+      ],
+      "total_tokens": 126,
+      "latency_ms": 1765.5822730012005
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 782.7327050035819,
+        "openrouter-mai-transcribe-2": 1803.2975449896185
+      },
+      "asr_total_ms": 1804.489474001457,
+      "audio_segmentation_ms": 8.554516010917723,
+      "speech_embedding_ms": 1257.9349389998242,
+      "graph_update_ms": 5.126367002958432,
+      "asr_segment_count": 4,
+      "speech_embedding_count": 4,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1284.2517509998288
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4098.12778000196,
+      "face_clustering_ms": 5.468550996738486,
+      "graph_update_ms": 0.0016729900380596519,
+      "frame_count": 150,
+      "detected_face_count": 125,
+      "qualified_face_count": 3,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4171.716671000468
+    },
+    "vlm": {
+      "context_preparation_ms": 4665.030661999481,
+      "vlm_ms": 29858.572475990513,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A woman stands near a dining table in an apartment holding a smartphone.\",\n    \"<voice_10> speaks to a smart robot, asking what has been prepared for afternoon tea.\",\n    \"<voice_11> lists available afternoon tea items including coffee, fries, and cakes.\",\n    \"<voice_12> responds with an acknowledgment.\",\n    \"<voice_10> checks the time and orders a mocha first.\",\n    \"The camera pans towards the wall near the entrance, showing hanging keys and an electric kettle.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> is interacting with an AI voice assistant or robotic system.\",\n    \"<voice_11> represents the automated smart home assistant providing menu recommendations.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A woman stands near a dining table in an apartment holding a smartphone.",
+          "<voice_10> speaks to a smart robot, asking what has been prepared for afternoon tea.",
+          "<voice_11> lists available afternoon tea items including coffee, fries, and cakes.",
+          "<voice_12> responds with an acknowledgment.",
+          "<voice_10> checks the time and orders a mocha first.",
+          "The camera pans towards the wall near the entrance, showing hanging keys and an electric kettle."
+        ],
+        "high_level_conclusions": [
+          "<voice_10> is interacting with an AI voice assistant or robotic system.",
+          "<voice_11> represents the automated smart home assistant providing menu recommendations."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 2,
+          "call_id": "14c9281e-5b9d-4b63-b975-942c8cddbaef",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789431219.9340365,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65921,
+          "output_tokens": 933,
+          "transport": {
+            "client_previously_used": false,
+            "tcp_connect_count": 1,
+            "tls_handshake_count": 1,
+            "http_wall_ms": 29858.44232099771
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A woman stands near a dining table in an apartment holding a smartphone.\",\n    \"<voice_10> speaks to a smart robot, asking what has been prepared for afternoon tea.\",\n    \"<voice_11> lists available afternoon tea items including coffee, fries, and cakes.\",\n    \"<voice_12> responds with an acknowledgment.\",\n    \"<voice_10> checks the time and orders a mocha first.\",\n    \"The camera pans towards the wall near the entrance, showing hanging keys and an electric kettle.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> is interacting with an AI voice assistant or robotic system.\",\n    \"<voice_11> represents the automated smart home assistant providing menu recommendations.\"\n  ]\n}\n```",
+          "total_tokens": 66854,
+          "request_end": 1789431249.7926111,
+          "latency_ms": 29858.572475990513,
+          "client_wall_clock_latency_ms": 29858.572475990513,
+          "api_request_wall_clock_latency_ms": 29858.572475990513
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.24959999427665025,
+      "nodes_added": 6,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.03414400271140039,
+      "nodes_added": 2,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 4,
+    "speech_embeddings": 4,
+    "voice_identities": 3,
+    "detected_faces": 125,
+    "qualified_faces": 3,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 2,
+    "nodes_after_clip": 21,
+    "edges_after_clip": 7,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "A woman stands near a dining table in an apartment holding a smartphone.",
+      "<voice_10> speaks to a smart robot, asking what has been prepared for afternoon tea.",
+      "<voice_11> lists available afternoon tea items including coffee, fries, and cakes.",
+      "<voice_12> responds with an acknowledgment.",
+      "<voice_10> checks the time and orders a mocha first.",
+      "The camera pans towards the wall near the entrance, showing hanging keys and an electric kettle."
+    ],
+    "high_level_conclusions": [
+      "<voice_10> is interacting with an AI voice assistant or robotic system.",
+      "<voice_11> represents the automated smart home assistant providing menu recommendations."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A woman stands near a dining table in an apartment holding a smartphone.",
+      "<voice_10> speaks to a smart robot, asking what has been prepared for afternoon tea.",
+      "<voice_11> lists available afternoon tea items including coffee, fries, and cakes.",
+      "<voice_12> responds with an acknowledgment.",
+      "<voice_10> checks the time and orders a mocha first.",
+      "The camera pans towards the wall near the entrance, showing hanging keys and an electric kettle."
+    ],
+    "high_level_conclusions": [
+      "<voice_10> is interacting with an AI voice assistant or robotic system.",
+      "<voice_11> represents the automated smart home assistant providing menu recommendations."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_2_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 10,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Hello, robot. What have you prepared for me for my afternoon tea? | MAI: Hello, robot. What have you prepared for me for my afternoon tea?",
+            "Deepgram: Well, it's ten to four now. Please give me a milk at first. Okay. | MAI: Mm, well, it's 10 to 4 now. Please give me a mocha first."
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 11,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Hello, robot. What have you prepared for me for my afternoon tea? There are coffee, fries, and cake with two types of cake strawberry and banana. Okay. | MAI: There are coffee, fries, and cake with two types of cake, strawberry and banana."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 12,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: and cake with two types of cake strawberry and banana. Okay. | MAI: Okay."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 13,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman stands near a dining table in an apartment holding a smartphone."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 14,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_10> speaks to a smart robot, asking what has been prepared for afternoon tea."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 15,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_11> lists available afternoon tea items including coffee, fries, and cakes."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 16,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_12> responds with an acknowledgment."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 17,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_10> checks the time and orders a mocha first."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 18,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans towards the wall near the entrance, showing hanging keys and an electric kettle."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 19,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_10> is interacting with an AI voice assistant or robotic system."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 20,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_11> represents the automated smart home assistant providing menu recommendations."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 10,
+        "target": 14,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 10,
+        "target": 17,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 10,
+        "target": 19,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 11,
+        "target": 15,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 11,
+        "target": 20,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 12,
+        "target": 16,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_2_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_2_graph.pkl"
+  },
+  "memory_pickle_bytes": 482465,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 72390.219408761,
+    "prepared_perf": 72396.631943584,
+    "ordered_start_perf": 72396.632065593,
+    "consumer_wait_ms": 6409.153141998104,
+    "ready_to_ordered_ms": 0.12200900528114289,
+    "preparation_work_ms": 6411.997763992986,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 41747.06096800219
+}

@@ -1,0 +1,322 @@
+{
+  "clip_id": 18,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0018.mp4",
+  "end_to_end_memory_generation_ms": 39852.563578002446,
+  "latency_ms": {
+    "clip_decode": 4091.34341400204,
+    "deepgram_asr": 932.5918000031379,
+    "mai_transcribe_asr": 1107.4432039968087,
+    "asr_total": 2040.0387310000951,
+    "audio_segmentation": 8.409654001297895,
+    "speech_embedding_campplus": 323.914747001254,
+    "facial_detection_recognition_buffalo_l": 3496.1015090011642,
+    "face_clustering": 10.737584001617506,
+    "vlm_memory_generation": 23977.461904003576,
+    "text_embedding": 1709.3045369983884,
+    "graph_update_total": 76.56290999875637
+  },
+  "stage_details": {
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 932.5918000031379,
+        "openrouter-mai-transcribe-2": 1107.4432039968087
+      },
+      "asr_total_ms": 2040.0387310000951,
+      "audio_segmentation_ms": 8.409654001297895,
+      "speech_embedding_ms": 323.914747001254,
+      "graph_update_ms": 76.36193199869012,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 6,
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2466.4838440003223
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3496.1015090011642,
+      "face_clustering_ms": 10.737584001617506,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 259,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3646.258773995214
+    },
+    "vlm": {
+      "context_preparation_ms": 3959.4823620063835,
+      "vlm_ms": 23977.461904003576,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a table covered in a red-and-white checkered cloth, working with wearable electronic devices and packaging.\",\n  \"The camera wearer raises their right hand and gestures toward the woman sitting on the left in black clothing.\",\n  \"The woman in black touches her hair and headset straps, adjusting her hair to tuck it away from her face.\",\n  \"The woman continues tucking strands of hair back behind her ears and under the device strap.\",\n  \"Other participants around the table continue assembling, inspecting, and putting on their respective glasses and devices.\"\n ],\n \"high_level_conclusions\": [\n  \"The camera wearer advises the woman in black that her hair is obstructing a camera lens on her wearable device.\",\n  \"The woman adjusts and secures her hair to ensure the recording equipment has a clear field of view.\",\n  \"The participants are configuring head-mounted cameras or smart glasses in preparation for a recorded session.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people sits around a table covered in a red-and-white checkered cloth, working with wearable electronic devices and packaging.",
+          "The camera wearer raises their right hand and gestures toward the woman sitting on the left in black clothing.",
+          "The woman in black touches her hair and headset straps, adjusting her hair to tuck it away from her face.",
+          "The woman continues tucking strands of hair back behind her ears and under the device strap.",
+          "Other participants around the table continue assembling, inspecting, and putting on their respective glasses and devices."
+        ],
+        "high_level_conclusions": [
+          "The camera wearer advises the woman in black that her hair is obstructing a camera lens on her wearable device.",
+          "The woman adjusts and secures her hair to ensure the recording equipment has a clear field of view.",
+          "The participants are configuring head-mounted cameras or smart glasses in preparation for a recorded session."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 18,
+          "call_id": "9da1b0fb-fc73-49b5-a8c8-9ae7cbfa9e41",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789404118.929879,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67065,
+          "output_tokens": 1117,
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a table covered in a red-and-white checkered cloth, working with wearable electronic devices and packaging.\",\n  \"The camera wearer raises their right hand and gestures toward the woman sitting on the left in black clothing.\",\n  \"The woman in black touches her hair and headset straps, adjusting her hair to tuck it away from her face.\",\n  \"The woman continues tucking strands of hair back behind her ears and under the device strap.\",\n  \"Other participants around the table continue assembling, inspecting, and putting on their respective glasses and devices.\"\n ],\n \"high_level_conclusions\": [\n  \"The camera wearer advises the woman in black that her hair is obstructing a camera lens on her wearable device.\",\n  \"The woman adjusts and secures her hair to ensure the recording equipment has a clear field of view.\",\n  \"The participants are configuring head-mounted cameras or smart glasses in preparation for a recorded session.\"\n ]\n}\n```",
+          "total_tokens": 68182,
+          "request_end": 1789404142.907344,
+          "latency_ms": 23977.461904003576,
+          "client_wall_clock_latency_ms": 23977.461904003576,
+          "api_request_wall_clock_latency_ms": 23977.461904003576
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": 1361.1208990041632,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.1100369991036132,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "current_process"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": 348.18363799422514,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.09094100096262991,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "current_process"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 6,
+    "detected_faces": 259,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 202,
+    "edges_after_clip": 46,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a table covered in a red-and-white checkered cloth, working with wearable electronic devices and packaging.",
+      "The camera wearer raises their right hand and gestures toward the woman sitting on the left in black clothing.",
+      "The woman in black touches her hair and headset straps, adjusting her hair to tuck it away from her face.",
+      "The woman continues tucking strands of hair back behind her ears and under the device strap.",
+      "Other participants around the table continue assembling, inspecting, and putting on their respective glasses and devices."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer advises the woman in black that her hair is obstructing a camera lens on her wearable device.",
+      "The woman adjusts and secures her hair to ensure the recording equipment has a clear field of view.",
+      "The participants are configuring head-mounted cameras or smart glasses in preparation for a recorded session."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people sits around a table covered in a red-and-white checkered cloth, working with wearable electronic devices and packaging.",
+      "The camera wearer raises their right hand and gestures toward the woman sitting on the left in black clothing.",
+      "The woman in black touches her hair and headset straps, adjusting her hair to tuck it away from her face.",
+      "The woman continues tucking strands of hair back behind her ears and under the device strap.",
+      "Other participants around the table continue assembling, inspecting, and putting on their respective glasses and devices."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer advises the woman in black that her hair is obstructing a camera lens on her wearable device.",
+      "The woman adjusts and secures her hair to ensure the recording equipment has a clear field of view.",
+      "The participants are configuring head-mounted cameras or smart glasses in preparation for a recorded session."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_18_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 192,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我塞了一。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 193,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯，再塞一道。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 194,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people sits around a table covered in a red-and-white checkered cloth, working with wearable electronic devices and packaging."
+          ],
+          "timestamp": 18
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 195,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer raises their right hand and gestures toward the woman sitting on the left in black clothing."
+          ],
+          "timestamp": 18
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 196,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in black touches her hair and headset straps, adjusting her hair to tuck it away from her face."
+          ],
+          "timestamp": 18
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 197,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman continues tucking strands of hair back behind her ears and under the device strap."
+          ],
+          "timestamp": 18
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 198,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Other participants around the table continue assembling, inspecting, and putting on their respective glasses and devices."
+          ],
+          "timestamp": 18
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 199,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera wearer advises the woman in black that her hair is obstructing a camera lens on her wearable device."
+          ],
+          "timestamp": 18
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 200,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman adjusts and secures her hair to ensure the recording equipment has a clear field of view."
+          ],
+          "timestamp": 18
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 201,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are configuring head-mounted cameras or smart glasses in preparation for a recorded session."
+          ],
+          "timestamp": 18
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_18_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_18_graph.pkl"
+  }
+}

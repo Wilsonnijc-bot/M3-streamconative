@@ -1,0 +1,631 @@
+{
+  "clip_id": 105,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0105.mp4",
+  "end_to_end_memory_generation_ms": 711989.7723070026,
+  "latency_ms": {
+    "clip_decode": 5356.11664300086,
+    "deepgram_asr": 859.3456550006522,
+    "mai_transcribe_asr": 1183.0982169922208,
+    "asr_total": 1184.195956986514,
+    "audio_segmentation": 8.385644003283232,
+    "speech_embedding_campplus": 2219.9489180056844,
+    "facial_detection_recognition_buffalo_l": 3448.7073209893424,
+    "face_clustering": 6.5269120095763355,
+    "vlm_memory_generation": 277936.44755099376,
+    "text_embedding": 1288.892394004506,
+    "graph_update_total": 1032.390738997492
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 105,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 18,
+      "input_chars": 1612,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789438142.1412315,
+          "status": "success",
+          "total_tokens": 365,
+          "request_end": 1789438143.4299443,
+          "latency_ms": 1288.7132769974414
+        }
+      ],
+      "total_tokens": 365,
+      "latency_ms": 1288.892394004506
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 859.3456550006522,
+        "openrouter-mai-transcribe-2": 1183.0982169922208
+      },
+      "asr_total_ms": 1184.195956986514,
+      "audio_segmentation_ms": 8.385644003283232,
+      "speech_embedding_ms": 2219.9489180056844,
+      "graph_update_ms": 1032.2374109964585,
+      "asr_segment_count": 11,
+      "speech_embedding_count": 11,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 3278.71107700048
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3448.7073209893424,
+      "face_clustering_ms": 6.5269120095763355,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 265,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3597.644017994753
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_484>",
+        "<voice_1386>",
+        "<voice_364>",
+        "<voice_500>",
+        "<voice_1049>",
+        "<voice_1387>",
+        "<voice_1388>"
+      ],
+      "context_preparation_ms": 4027.975125994999,
+      "vlm_ms": 277936.44755099376,
+      "raw_response": "{\n  \"video_description\": [\n    \"A group of people are gathered around a table with a checkered cloth in a room.\",\n    \"A man in a white shirt stands near a whiteboard, appearing to lead the discussion.\",\n    \"At 00:00, Speaker <voice_484> suggests that new participants should tell stories in front of the group to build familiarity.\",\n    \"At 00:05, Speaker <voice_1386> explains that self-introduction can earn a gift.\",\n    \"At 00:09, Speaker <voice_364> proposes hiding items inside the house, specifically mentioning coins.\",\n    \"At 00:11, Speaker <voice_500> assigns points or items, giving five to the first person and three to the second.\",\n    \"At 00:15, Speaker <voice_1049> confirms the arrangement.\",\n    \"At 00:21, Speaker <voice_1387> compares the activity to Easter-like traditions.\",\n    \"At 00:27, Speaker <voice_1388> reiterates the plan to hide coins and agrees.\",\n    \"Around 16.50s, a person wearing an orange shirt enters the room from the left.\",\n    \"The person in orange walks across the room, eventually standing near the balcony door.\",\n    \"The camera perspective shifts to show the legs of the person filming at 21.00s.\",\n    \"Towards the end, the person in orange stands still near the window, observing the room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is organizing a social activity that involves ice-breaking through storytelling and gift exchange.\",\n    \"There is a planned element of hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt.\",\n    \"The man in the white shirt appears to be the facilitator or host of the session.\",\n    \"The person in the orange shirt joins the group later, integrating into the ongoing activity.\",\n    \"The conversation indicates a casual, friendly atmosphere despite the structured rules being discussed.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a table with a checkered cloth in a room.",
+          "A man in a white shirt stands near a whiteboard, appearing to lead the discussion.",
+          "At 00:00, Speaker <voice_484> suggests that new participants should tell stories in front of the group to build familiarity.",
+          "At 00:05, Speaker <voice_1386> explains that self-introduction can earn a gift.",
+          "At 00:09, Speaker <voice_364> proposes hiding items inside the house, specifically mentioning coins.",
+          "At 00:11, Speaker <voice_500> assigns points or items, giving five to the first person and three to the second.",
+          "At 00:15, Speaker <voice_1049> confirms the arrangement.",
+          "At 00:21, Speaker <voice_1387> compares the activity to Easter-like traditions.",
+          "At 00:27, Speaker <voice_1388> reiterates the plan to hide coins and agrees.",
+          "Around 16.50s, a person wearing an orange shirt enters the room from the left.",
+          "The person in orange walks across the room, eventually standing near the balcony door.",
+          "The camera perspective shifts to show the legs of the person filming at 21.00s.",
+          "Towards the end, the person in orange stands still near the window, observing the room."
+        ],
+        "high_level_conclusions": [
+          "The group is organizing a social activity that involves ice-breaking through storytelling and gift exchange.",
+          "There is a planned element of hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt.",
+          "The man in the white shirt appears to be the facilitator or host of the session.",
+          "The person in the orange shirt joins the group later, integrating into the ongoing activity.",
+          "The conversation indicates a casual, friendly atmosphere despite the structured rules being discussed."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 105,
+          "call_id": "799b14bb-50ac-485f-996f-fa8fadb04bf8",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789437864.2035265,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"A group of people are gathered around a table with a checkered cloth in a room.\",\n    \"A man in a white shirt stands near a whiteboard, appearing to lead the discussion.\",\n    \"At 00:00, Speaker <voice_484> suggests that new participants should tell stories in front of the group to build familiarity.\",\n    \"At 00:05, Speaker <voice_1386> explains that self-introduction can earn a gift.\",\n    \"At 00:09, Speaker <voice_364> proposes hiding items inside the house, specifically mentioning coins.\",\n    \"At 00:11, Speaker <voice_500> assigns points or items, giving five to the first person and three to the second.\",\n    \"At 00:15, Speaker <voice_1049> confirms the arrangement.\",\n    \"At 00:21, Speaker <voice_1387> compares the activity to Easter-like traditions.\",\n    \"At 00:27, Speaker <voice_1388> reiterates the plan to hide coins and agrees.\",\n    \"Around 16.50s, a person wearing an orange shirt enters the room from the left.\",\n    \"The person in orange walks across the room, eventually standing near the balcony door.\",\n    \"The camera perspective shifts to show the legs of the person filming at 21.00s.\",\n    \"Towards the end, the person in orange stands still near the window, observing the room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is organizing a social activity that involves ice-breaking through storytelling and gift exchange.\",\n    \"There is a planned element of hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt.\",\n    \"The man in the white shirt appears to be the facilitator or host of the session.\",\n    \"The person in the orange shirt joins the group later, integrating into the ongoing activity.\",\n    \"The conversation indicates a casual, friendly atmosphere despite the structured rules being discussed.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be handheld or mounted on someone moving around.\n    *   **Scene:** A room with a table covered in a checkered cloth. There are people sitting around the table and standing.\n    *   **Characters:**\n        *   One man standing near a whiteboard, wearing a white shirt. He seems to be leading or explaining something.\n        *   One woman sitting at the table, wearing black/dark clothes. She is interacting with items on the table.\n        *   Two women sitting further back/right at the table. One has blonde hair, one has dark hair.\n        *   Later in the video (around 16.50s onwards), a person in an orange/pink shirt enters the frame from the left and moves towards the right/back. They seem to be wearing VR headsets or glasses later on.\n        *   The camera wearer (POV) is also present, indicated by hands sometimes visible at the bottom or movement.\n    *   **Action:** It looks like a meeting, workshop, or planning session. There are papers, a clapperboard, and flowers on the table. The man in white is gesturing towards a whiteboard. The person in orange walks around.\n*   **Voice Features:**\n    *   `<voice_484>`: \"MAI: 方式，但是他们一进来可能没那么熟，就要他们在众人面前讲故事。\" (Way, but when they come in they might not know each other well, so we need them to tell stories in front of everyone.)\n    *   `<voice_1386>`: \"MAI: 那就自己介绍就可以获得一个礼。\" (Then introducing yourself can get a gift.) / \"MAI: 嘛，自己介绍可以获得，对。\" (Yeah, introducing yourself can get it, right.)\n    *   `<voice_364>`: \"MAI: 那自己介绍获得，或者\" (So introducing yourself gets it, or...) / \"MAI: 或者我们其实在这个屋子里面可以藏点东西，然后\" (Or we can actually hide some things in this house, then...) / \"Deepgram: ... | MAI: 对对对对。藏点币。\" (... | MAI: Yes yes yes. Hide some coins/money.)\n    *   `<voice_500>`: \"MAI: 第一个给五个，第二个给三。\" (First one gives five, second one gives three.)\n    *   `<voice_1049>`: \"MAI: 可以。\" (Okay.)\n    *   `<voice_1387>`: \"Deepgram: ... | MAI: 哦，像复活节的那种。\" (Oh, like Easter's kind of.)\n    *   `<voice_1388>`: \"MAI: 藏币。\" (Hide coins.) / \"MAI: 也行。\" (That works too.)\n\n**2. Map Voice to Visuals:**\n*   The voice features consistently attribute speech to \"MAI\". This suggests there is a specific speaker labeled MAI.\n*   Looking at the faces, there isn't explicit face ID data provided in the prompt text (\"Face features:\" section is empty in the prompt provided, wait, let me check the prompt again).\n*   Ah, the prompt says \"Face features:Voice features:\". The text after that colon is just the voice features. There are NO face features provided in the input text block I received.\n*   Wait, looking closely at the prompt structure: \"Face features:Voice features:{...}\". It seems the Face features list is missing or empty.\n*   Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n*   Since no face IDs are supplied, I cannot create \"Equivalence\" statements linking a face to a voice ID. I must stick to the voice IDs for speaker identification in the descriptions if needed, but primarily describe the visual actions.\n*   However, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   So I need to create memory entries for each voice ID.\n*   Also, \"Preserve speaker identity when constructing memory from the supplied character features.\" -> Use the voice IDs.\n\n**3. Construct Video Description:**\n*   Need to break down the video into atomic events.\n*   0.00s - 15.00s: Group discussion around a table. Man in white stands by whiteboard. Woman in black sits at table. Two women sit opposite.\n*   16.50s: Person in orange shirt enters from left foreground.\n*   17.00s - 20.00s: Person in orange shirt walks across the room, seemingly observing or participating.\n*   21.00s: Camera view shifts slightly, showing legs of camera wearer.\n*   25.00s: Camera pans to window/kitchen area briefly.\n*   26.00s - 29.50s: Person in orange shirt stands near the window/balcony door, holding something (maybe a phone or controller?).\n\n**4. Construct High-Level Conclusions:**\n*   Since I cannot link faces to voices (no face IDs), I won't use the \"Equivalence\" format unless I find a way to infer it strongly, but the instructions say \"Do not assign it... without supporting evidence.\" and \"If no face IDs are supplied, do not invent any.\"\n*   So `high_level_conclusions` array should contain reasoning about the scene, intentions, etc., but NOT equivalence strings because I don't have face IDs to match against.\n*   Wait, the instruction says: \"Use logical inference to identify character intentions, relationships, and identities. If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\n*   Since I have no face IDs, I cannot produce equivalence strings. I will focus on the reasoning part.\n*   Reasoning: The group seems to be planning a game or activity involving hiding items (\"hide some things\", \"hide coins\"). The man in white appears to be facilitating or instructing. The person in orange seems to be a participant or observer joining the activity.\n\n**5. Drafting the Content:**\n\n*   **Video Description:**\n    *   A group of four individuals are gathered around a wooden table covered with a red-and-white checkered cloth in a room with a whiteboard.\n    *   A man in a white shirt stands near the whiteboard, gesturing while others listen.\n    *   A woman in black clothing sits at the table, handling items including a water bottle and papers.\n    *   Two other women sit on the opposite side of the table.\n    *   At 16.50s, a person wearing an orange t-shirt enters the frame from the left.\n    *   The person in orange walks across the room, passing behind the seated participants.\n    *   The camera perspective shifts to show the lower body of the person filming.\n    *   Towards the end, the person in orange stands near a glass door leading to a balcony.\n\n*   **Episodic Memories (from Voice):**\n    *   `<voice_484>`: \"MAI mentions that new participants might not be familiar yet, suggesting they should tell stories in front of the group.\"\n    *   `<voice_1386>`: \"MAI states that self-introduction can result in receiving a gift.\"\n    *   `<voice_364>`: \"MAI discusses potentially hiding items inside the house, specifically mentioning coins.\"\n    *   `<voice_500>`: \"MAI assigns numbers, stating the first person gets five and the second gets three.\"\n    *   `<voice_1049>`: \"MAI confirms an action with 'okay'.\"\n    *   `<voice_1387>`: \"MAI compares something to Easter-like activities.\"\n    *   `<voice_1388>`: \"MAI reiterates hiding coins and agrees with the plan.\"\n\n*   **High-Level Conclusions:**\n    *   The group is likely organizing a social gathering or game night involving ice-breaking activities like storytelling and gift exchange.\n    *   The plan involves hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt element.\n    *   The man in white appears to be taking charge of the facilitation or rules explanation.\n    *   The person in orange joins the group later, indicating they are becoming part of the activity.\n\n**Refining constraints:**\n*   \"Preserve speaker identity when constructing memory... using the exact ID as the speaker.\"\n*   \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\"\n*   \"Keep the existing video_description/high_level_conclusions JSON schema...\"\n*   \"Output Format: ... valid JSON object...\"\n\nLet's assemble the JSON.\n\nOne detail: The prompt asks for \"episodic memory\". I should phrase these as memories describing the conversation.\nExample: \"Speaker <voice_484> suggests that since new guests might not know each other well, they should tell stories in front of everyone.\"\n\nWait, checking the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis implies the `video_description` or a separate field?\nLooking at the Output Format provided in the prompt:\n```json\n{\n\t\"video_description\": [\n\t\t\"...\",\n\t\t\"...\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"...\"\n\t]\n}\n```\nThere is no separate field for \"memories\". The instruction says \"include at least one episodic memory...\". Usually, this means embedding it into the `video_description`. Or perhaps the `high_level_conclusions`?\nRe-reading: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nAnd \"For every supplied voice ID... include at least one episodic memory...\".\nIt doesn't explicitly say where to put the memory. However, standard practice for these tasks usually integrates the memory into the description or conclusions. Given the constraint \"Preserve speaker identity... using the exact ID\", putting it in `video_description` makes sense as it describes the event (speech). But `video_description` is supposed to be \"observable and inferable events\". Speech is observable via ASR.\nActually, often in these datasets, the \"memory\" is a specific type of entry. Let's look at the instruction again. \"Your output must be a JSON object with the following structure...\". It defines `video_description` and `high_level_conclusions`.\nI will integrate the speech summaries into the `video_description` as atomic events involving the speaker.\nWait, \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\nIf I put it in `video_description`, it fits \"atomic event or fact\".\nHowever, I need to make sure I don't violate \"Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\"\nSo I will write sentences like: \"Speaker <voice_484> says: 'MAI: 方式，但是他们一进来可能没那么熟，就要他们在众人面前讲故事。'\"\nActually, the instruction says \"using the exact ID as the speaker\". So I should reference the ID.\nLet's try to fit the speech into the `video_description` as the primary source of information for the speaker's intent.\n\nWait, looking at previous examples of this task type (if available in training data context, though I don't have access): Usually, the `video_description` captures the visual flow, and the `high_level_conclusions` captures the reasoning. Where do the memories go?\n\"For every supplied voice ID... include at least one episodic memory...\"\nMaybe I should add a third field? No, \"Your output must be a JSON object with the following structure...\". I must follow the structure.\nPerhaps the `video_description` is the place. I will describe the interaction including the speech.\nOr maybe `high_level_conclusions`? \"Generate high-level reasoning-based conclusions...\".\nLet's assume `video_description` is the best place for the \"episodic memory\" of the speech occurring.\nActually, re-reading carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nAnd \"For every supplied voice ID... include at least one episodic memory...\".\nIt doesn't specify *which* part. But logically, a memory of speech belongs to the description of the event.\nHowever, to be safe and clear, I will ensure the speech is captured accurately in the description.\nWait, I see \"Preserve speaker identity when constructing memory from the supplied character features.\"\nOkay, I will construct the `video_description` to include the speech events attributed to the voice IDs.\n\nLet's refine the `video_description` to be purely visual + audio integration.\nFrame 0-15: Group discussion.\nFrame 16+: Person in orange enters.\nAudio: MAI speaks throughout.\n\nLet's draft the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table with a checkered cloth in a room.\",\n    \"A man in a white shirt stands near a whiteboard, appearing to lead the discussion.\",\n    \"Two women sit on one side of the table, and a woman in black sits on the other.\",\n    \"At 00:00, speaker <voice_484> suggests that new participants should tell stories in front of the group to build familiarity.\",\n    \"At 00:05, speaker <voice_1386> explains that self-introduction can earn a gift.\",\n    \"At 00:09, speaker <voice_364> proposes hiding items inside the house, specifically mentioning coins.\",\n    \"At 00:11, speaker <voice_500> assigns points or items, giving five to the first person and three to the second.\",\n    \"At 00:15, speaker <voice_1049> confirms the arrangement.\",\n    \"At 00:21, speaker <voice_1387> compares the activity to Easter-like traditions.\",\n    \"At 00:27, speaker <voice_1388> reiterates the plan to hide coins and agrees.\",\n    \"Around 16.50s, a person wearing an orange shirt enters the room from the left.\",\n    \"The person in orange walks across the room, eventually standing near the balcony door.\",\n    \"The camera perspective shifts to show the legs of the person filming at 21.00s.\",\n    \"Towards the end, the person in orange stands still near the window, observing the room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is organizing a social activity that involves ice-breaking through storytelling and gift exchange.\",\n    \"There is a planned element of hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt.\",\n    \"The man in the white shirt appears to be the facilitator or host of the session.\",\n    \"The person in the orange shirt joins the group later, integrating into the ongoing activity.\",\n    \"The conversation indicates a casual, friendly atmosphere despite the structured rules being discussed.\"\n  ]\n}\n```\n\nWait, I need to check if I should use the Chinese transcript directly or translate. The prompt provides ASR in Unicode (Chinese). I should probably keep the original text or summarize it faithfully. The instruction says \"quotes or faithfully summarizes that speaker's transcript\". I will quote the key parts or summarize faithfully.\nAlso, I need to make sure I don't hallucinate face IDs. I am not using face IDs in the equivalence section because none were provided.\nThe instruction says: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since I have no face features, I cannot do this. I will omit this line from the conclusions.\n\nOne more check on \"episodic memory\". Does it mean a specific field? No, the schema is fixed. I'll embed it in `video_description`.\nWait, \"Preserve speaker identity when constructing memory from the supplied character features.\"\nOkay, I will ensure the voice ID is used in the description.\n\nLet's double check the voice timestamps vs video timestamps.\nVoice starts at 00:00. Video starts at 0.00s. Matches.\nVoice ends at 00:29. Video ends at 29.50s. Matches.\n\nFinal check on constraints:\n- \"Preserve speaker identity... using the exact ID as the speaker.\" -> Done (<voice_484>).\n- \"For every supplied voice ID... include at least one episodic memory...\" -> Done.\n- \"Do not replace the ID with 'a speaker'...\" -> Done.\n- \"Keep dialogue grounded...\" -> Done.\n- \"Output Format: ... valid JSON object...\" -> Done.\n- \"Be concise and avoid duplicate events.\" -> I will merge similar descriptions.\n\nRevised Video Description Plan:\n1. Scene setup (table, people).\n2. Audio events integrated chronologically.\n3. Visual changes (person entering).\n\nRevised High Level Conclusions:\n1. Intentions (game/hiding).\n2. Roles (facilitator).\n3. Relationships (group dynamic).\n\nOne detail: \"Voice features:{\"<voice_484>\": ... }\". The keys are the IDs.\nI will use these keys in the text.\n\nOne thing: \"If no face IDs are supplied, do not invent any.\" -> Confirmed.\n\"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" -> I must follow the schema exactly.\n\nLet's finalize the text.\nI will translate the Chinese ASR to English for the description to make it readable, or keep the Chinese? The prompt is in English, but the ASR is Chinese. Usually, for consistency with the prompt language (English), I should translate or provide the transcript. The instruction says \"quotes or faithfully summarizes that speaker's transcript\". I will summarize in English but keep the ID. Actually, quoting the transcript might be safer for \"faithfully summarizes\". I'll use the English translation for clarity as the prompt is in English, but ensure the meaning is exact. Wait, \"quotes... transcript\". I should probably use the text provided. But the text is Chinese. I will use the Chinese text in quotes to be faithful to the transcript provided.\nActually, looking at the instruction \"Preserve speaker identity... using the exact ID\". It doesn't specify language for the summary. I will write the summary in English for the final output as the system prompt is English, but I will ensure the content matches the ASR.\nWait, better to use the ASR text directly if possible to be \"faithful\". But mixing languages might look odd. I'll summarize the meaning in English.\nActually, \"quotes or faithfully summarizes\". Summarizing in English is fine.\nLet's check the instruction again: \"Do not substitute a plausible scene description for what the speaker actually said.\"\nOkay, I will write: \"Speaker <voice_484> says: 'MAI: 方式，但是他们一进来可能没那么熟，就要他们在众人面前讲故事。'\"\nThis preserves the transcript.\n\nWait, I need to check if I should output the Chinese text. The prompt is in English. I will output the English translation for the summary to maintain consistency with the rest of the response, as long as it is faithful.\nActually, to be safest with \"quotes... transcript\", I will use the Chinese text provided in the ASR field.\nExample: \"Speaker <voice_484> states: 'MAI: 方式，但是他们一进来可能没那么熟，就要他们在众人面前讲故事。'\"\n\nWait, one more thing. \"For every supplied voice ID with nonempty speech, include at least one episodic memory\".\nI have 7 voice IDs. I need to ensure all are covered in the description.\n1. <voice_484>\n2. <voice_1386>\n3. <voice_364>\n4. <voice_500>\n5. <voice_1049>\n6. <voice_1387>\n7. <voice_1388>\n\nI will distribute these across the video description timeline.\n\nOne correction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person...\".\nSo in the description, I will say \"Speaker <voice_484>...\" rather than \"The man in white says...\". This avoids assigning the voice to a specific visual person without evidence.\n\nOkay, ready to generate.\n\n```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table with a checkered cloth in a room.\",\n    \"A man in a white shirt stands near a whiteboard, appearing to lead the discussion.\",\n    \"At 00:00, Speaker <voice_484> suggests that new participants should tell stories in front of the group to build familiarity.\",\n    \"At 00:05, Speaker <voice_1386> explains that self-introduction can earn a gift.\",\n    \"At 00:09, Speaker <voice_364> proposes hiding items inside the house, specifically mentioning coins.\",\n    \"At 00:11, Speaker <voice_500> assigns points or items, giving five to the first person and three to the second.\",\n    \"At 00:15, Speaker <voice_1049> confirms the arrangement.\",\n    \"At 00:21, Speaker <voice_1387> compares the activity to Easter-like traditions.\",\n    \"At 00:27, Speaker <voice_1388> reiterates the plan to hide coins and agrees.\",\n    \"Around 16.50s, a person wearing an orange shirt enters the room from the left.\",\n    \"The person in orange walks across the room, eventually standing near the balcony door.\",\n    \"The camera perspective shifts to show the legs of the person filming at 21.00s.\",\n    \"Towards the end, the person in orange stands still near the window, observing the room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is organizing a social activity that involves ice-breaking through storytelling and gift exchange.\",\n    \"There is a planned element of hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt.\",\n    \"The man in the white shirt appears to be the facilitator or host of the session.\",\n    \"The person in the orange shirt joins the group later, integrating into the ongoing activity.\",\n    \"The conversation indicates a casual, friendly atmosphere despite the structured rules being discussed.\"\n  ]\n}\n```\nWait, I need to check if I should include the Chinese text in quotes. \"quotes or faithfully summarizes\". Summarizing is allowed. I will summarize in English for readability.\nAlso, I need to make sure I don't miss any voice ID.\n<voice_484>, <voice_1386>, <voice_364>, <voice_500>, <voice_1049>, <voice_1387>, <voice_1388>. All 7 are included.\n\nOne detail: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nI am doing this.\n\nOne detail: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nI am keeping the schema.\n\nOne detail: \"Return one complete JSON object... without any additional explanation or formatting.\"\nI will ensure no markdown code blocks around the JSON if strictly required, but usually markdown ```json is acceptable for \"JSON object\". The prompt says \"Please only return the valid JSON object\". I will output raw JSON text to be safe, or wrapped in markdown if the platform expects it. Usually, \"valid JSON object\" implies the content. I will wrap it in ```json for clarity as per standard LLM behavior unless told otherwise, but the instruction says \"without any additional explanation or formatting\". I will output raw text starting with `{`. Wait, \"formatting\" might mean markdown. I'll output raw JSON to be strict.\nActually, most systems parse markdown code blocks. I'll use markdown code block for safety as it's standard for \"return JSON\".\nWait, \"Please only return the valid JSON object, without any additional explanation or formatting.\"\nThis usually means no \"Here is the JSON:\" text. I will output the JSON block.\n\nWait, I noticed the instruction \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\nI am using the IDs from the input (`<voice_484>`, etc.).\n\nOne final check on the `high_level_conclusions`.\n\"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\nSince I have no face features, I will not include this line.\n\nOkay, proceeding.\n</think>\n\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table with a checkered cloth in a room.\",\n    \"A man in a white shirt stands near a whiteboard, appearing to lead the discussion.\",\n    \"At 00:00, Speaker <voice_484> suggests that new participants should tell stories in front of the group to build familiarity.\",\n    \"At 00:05, Speaker <voice_1386> explains that self-introduction can earn a gift.\",\n    \"At 00:09, Speaker <voice_364> proposes hiding items inside the house, specifically mentioning coins.\",\n    \"At 00:11, Speaker <voice_500> assigns points or items, giving five to the first person and three to the second.\",\n    \"At 00:15, Speaker <voice_1049> confirms the arrangement.\",\n    \"At 00:21, Speaker <voice_1387> compares the activity to Easter-like traditions.\",\n    \"At 00:27, Speaker <voice_1388> reiterates the plan to hide coins and agrees.\",\n    \"Around 16.50s, a person wearing an orange shirt enters the room from the left.\",\n    \"The person in orange walks across the room, eventually standing near the balcony door.\",\n    \"The camera perspective shifts to show the legs of the person filming at 21.00s.\",\n    \"Towards the end, the person in orange stands still near the window, observing the room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is organizing a social activity that involves ice-breaking through storytelling and gift exchange.\",\n    \"There is a planned element of hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt.\",\n    \"The man in the white shirt appears to be the facilitator or host of the session.\",\n    \"The person in the orange shirt joins the group later, integrating into the ongoing activity.\",\n    \"The conversation indicates a casual, friendly atmosphere despite the structured rules being discussed.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 11318,
+          "output_tokens": 6143,
+          "total_tokens": 17461,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002083994331769645,
+            "media_preparation_ms": 63.30003899347503,
+            "processor_tokenization_ms": 478.7206759938272,
+            "device_transfer_ms": 43.45838900189847,
+            "cuda_generation_ms": 277316.90318400797,
+            "decoding_ms": 4.531281010713428
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 277907.0809940022,
+          "request_end": 1789438142.139976,
+          "latency_ms": 277936.44755099376,
+          "client_wall_clock_latency_ms": 277936.44755099376
+        }
+      ],
+      "episodic_memory_count": 13,
+      "semantic_memory_count": 5
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 13,
+      "text_embedding_ms": null,
+      "text_embedding_count": 13,
+      "graph_update_ms": 0.12403300206642598,
+      "nodes_added": 13,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.02929499896708876,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 11,
+    "speech_embeddings": 11,
+    "voice_identities": 7,
+    "detected_faces": 265,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 13,
+    "semantic_memories": 5,
+    "nodes_after_clip": 1407,
+    "edges_after_clip": 508,
+    "nodes_added_by_clip": 21,
+    "edges_added_by_clip": 7
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table with a checkered cloth in a room.",
+      "A man in a white shirt stands near a whiteboard, appearing to lead the discussion.",
+      "At 00:00, Speaker <voice_484> suggests that new participants should tell stories in front of the group to build familiarity.",
+      "At 00:05, Speaker <voice_1386> explains that self-introduction can earn a gift.",
+      "At 00:09, Speaker <voice_364> proposes hiding items inside the house, specifically mentioning coins.",
+      "At 00:11, Speaker <voice_500> assigns points or items, giving five to the first person and three to the second.",
+      "At 00:15, Speaker <voice_1049> confirms the arrangement.",
+      "At 00:21, Speaker <voice_1387> compares the activity to Easter-like traditions.",
+      "At 00:27, Speaker <voice_1388> reiterates the plan to hide coins and agrees.",
+      "Around 16.50s, a person wearing an orange shirt enters the room from the left.",
+      "The person in orange walks across the room, eventually standing near the balcony door.",
+      "The camera perspective shifts to show the legs of the person filming at 21.00s.",
+      "Towards the end, the person in orange stands still near the window, observing the room."
+    ],
+    "high_level_conclusions": [
+      "The group is organizing a social activity that involves ice-breaking through storytelling and gift exchange.",
+      "There is a planned element of hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt.",
+      "The man in the white shirt appears to be the facilitator or host of the session.",
+      "The person in the orange shirt joins the group later, integrating into the ongoing activity.",
+      "The conversation indicates a casual, friendly atmosphere despite the structured rules being discussed."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a table with a checkered cloth in a room.",
+      "A man in a white shirt stands near a whiteboard, appearing to lead the discussion.",
+      "At 00:00, Speaker <voice_484> suggests that new participants should tell stories in front of the group to build familiarity.",
+      "At 00:05, Speaker <voice_1386> explains that self-introduction can earn a gift.",
+      "At 00:09, Speaker <voice_364> proposes hiding items inside the house, specifically mentioning coins.",
+      "At 00:11, Speaker <voice_500> assigns points or items, giving five to the first person and three to the second.",
+      "At 00:15, Speaker <voice_1049> confirms the arrangement.",
+      "At 00:21, Speaker <voice_1387> compares the activity to Easter-like traditions.",
+      "At 00:27, Speaker <voice_1388> reiterates the plan to hide coins and agrees.",
+      "Around 16.50s, a person wearing an orange shirt enters the room from the left.",
+      "The person in orange walks across the room, eventually standing near the balcony door.",
+      "The camera perspective shifts to show the legs of the person filming at 21.00s.",
+      "Towards the end, the person in orange stands still near the window, observing the room."
+    ],
+    "high_level_conclusions": [
+      "The group is organizing a social activity that involves ice-breaking through storytelling and gift exchange.",
+      "There is a planned element of hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt.",
+      "The man in the white shirt appears to be the facilitator or host of the session.",
+      "The person in the orange shirt joins the group later, integrating into the ongoing activity.",
+      "The conversation indicates a casual, friendly atmosphere despite the structured rules being discussed."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_105_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 21,
+    "edges_added": 7,
+    "nodes": [
+      {
+        "id": 1386,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那就自我介绍就可以获得一个礼。",
+            "MAI: 啊，自我介绍可以获得，对。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1387,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: 你、你、你、你、你。你、你、你。你、你、你。你、你。你。你。你。你。 | MAI: 哦，像复活节的那种。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1388,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 藏币。",
+            "MAI: 也行。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1389,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a table with a checkered cloth in a room."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1390,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A man in a white shirt stands near a whiteboard, appearing to lead the discussion."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1391,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:00, Speaker <voice_484> suggests that new participants should tell stories in front of the group to build familiarity."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1392,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:05, Speaker <voice_1386> explains that self-introduction can earn a gift."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1393,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:09, Speaker <voice_364> proposes hiding items inside the house, specifically mentioning coins."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1394,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:11, Speaker <voice_500> assigns points or items, giving five to the first person and three to the second."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1395,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:15, Speaker <voice_1049> confirms the arrangement."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1396,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:21, Speaker <voice_1387> compares the activity to Easter-like traditions."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1397,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:27, Speaker <voice_1388> reiterates the plan to hide coins and agrees."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1398,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Around 16.50s, a person wearing an orange shirt enters the room from the left."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1399,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in orange walks across the room, eventually standing near the balcony door."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1400,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera perspective shifts to show the legs of the person filming at 21.00s."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1401,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Towards the end, the person in orange stands still near the window, observing the room."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1402,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is organizing a social activity that involves ice-breaking through storytelling and gift exchange."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1403,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "There is a planned element of hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1404,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The man in the white shirt appears to be the facilitator or host of the session."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1405,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person in the orange shirt joins the group later, integrating into the ongoing activity."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1406,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The conversation indicates a casual, friendly atmosphere despite the structured rules being discussed."
+          ],
+          "timestamp": 105
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 364,
+        "target": 1393,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 484,
+        "target": 1391,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 500,
+        "target": 1394,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1049,
+        "target": 1395,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1386,
+        "target": 1392,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1387,
+        "target": 1396,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1388,
+        "target": 1397,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_105_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_105_graph.pkl"
+  },
+  "memory_pickle_bytes": 33548601,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 78618.419822322,
+    "prepared_perf": 78626.431744396,
+    "ordered_start_perf": 79037.747537955,
+    "consumer_wait_ms": 0.011622003512457013,
+    "ready_to_ordered_ms": 411315.79355899885,
+    "preparation_work_ms": 8006.551216996741,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 290132.7004420018
+}

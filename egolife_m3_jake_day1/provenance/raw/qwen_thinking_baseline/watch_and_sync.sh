@@ -1,0 +1,1 @@
+../../../scripts/runs/qwen_thinking_baseline/watch_and_sync.sh

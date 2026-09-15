@@ -1,0 +1,15 @@
+{
+  "updated_at": "2026-09-15T02:41:30.546566+00:00",
+  "method": "D",
+  "backend": "Mandol",
+  "candidate_pool": 100,
+  "final_results": 20,
+  "selection": "BM25+dense+SPLADE, RRF fusion, up to 100 candidates passed to reranker, top 20 returned (bounded by available evidence)",
+  "applies_to": "upcoming Qwen full-run Method D and its warmup probe",
+  "previous_candidate_pool": 20,
+  "previous_final_results": 2,
+  "existing_method_D_rows": 0,
+  "previous_code_sha256": "984657560e62b5c87b945e037985ef3e29c659fee743ae549ac16c080a5ef7c7",
+  "code_sha256": "417c58047fcd432c4ea4747ebb6edf68b26d875b7844c2359494e7b328512877",
+  "effective_cli_verified": true
+}

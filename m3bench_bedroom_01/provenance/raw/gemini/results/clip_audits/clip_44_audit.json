@@ -1,0 +1,391 @@
+{
+  "clip_id": 44,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00203000.mp4",
+  "end_to_end_memory_generation_ms": 229311.6855469998,
+  "latency_ms": {
+    "clip_decode": 3942.371736993664,
+    "deepgram_asr": 438.2835830037948,
+    "mai_transcribe_asr": 3386.674759007292,
+    "asr_total": 3387.5738229980925,
+    "audio_segmentation": 10.555803004535846,
+    "speech_embedding_campplus": 769.0389460040024,
+    "facial_detection_recognition_buffalo_l": 3338.474475007388,
+    "face_clustering": 7.203257002402097,
+    "vlm_memory_generation": 30168.120014990564,
+    "text_embedding": 646.0826859984081,
+    "graph_update_total": 121.22152801021002
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 44,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 807,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789433702.864315,
+          "status": "success",
+          "total_tokens": 170,
+          "request_end": 1789433703.510268,
+          "latency_ms": 645.9533120068954
+        }
+      ],
+      "total_tokens": 170,
+      "latency_ms": 646.0826859984081
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 438.2835830037948,
+        "openrouter-mai-transcribe-2": 3386.674759007292
+      },
+      "asr_total_ms": 3387.5738229980925,
+      "audio_segmentation_ms": 10.555803004535846,
+      "speech_embedding_ms": 769.0389460040024,
+      "graph_update_ms": 119.074645001092,
+      "asr_segment_count": 8,
+      "speech_embedding_count": 8,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 916.216864992748
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3338.474475007388,
+      "face_clustering_ms": 7.203257002402097,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 317,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3516.727495996747
+    },
+    "vlm": {
+      "context_preparation_ms": 5118.968434995622,
+      "vlm_ms": 30168.120014990564,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and phones.\",\n    \"The woman on the right speaks while resting her hands beneath her chin.\",\n    \"The woman on the left listens attentively with her hand near her mouth.\",\n    \"The conversation continues as both maintain mutual eye contact.\",\n    \"The woman on the left reaches into the food tray and eats a snack while continuing to listen.\",\n    \"The woman on the right continues speaking with occasional hand gestures.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the right is confiding her self-doubts and future aspirations to her friend.\",\n    \"The woman on the left, referred to as Lynn, provides emotional support and comfort.\",\n    \"The two women share a close, supportive friendship.\",\n    \"<voice_322> and <voice_398> correspond to the woman seated on the right.\",\n    \"<voice_310> corresponds to the woman seated on the left.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit opposite each other at a dining table set with food, drinks, and phones.",
+          "The woman on the right speaks while resting her hands beneath her chin.",
+          "The woman on the left listens attentively with her hand near her mouth.",
+          "The conversation continues as both maintain mutual eye contact.",
+          "The woman on the left reaches into the food tray and eats a snack while continuing to listen.",
+          "The woman on the right continues speaking with occasional hand gestures."
+        ],
+        "high_level_conclusions": [
+          "The woman on the right is confiding her self-doubts and future aspirations to her friend.",
+          "The woman on the left, referred to as Lynn, provides emotional support and comfort.",
+          "The two women share a close, supportive friendship.",
+          "<voice_322> and <voice_398> correspond to the woman seated on the right.",
+          "<voice_310> corresponds to the woman seated on the left."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 44,
+          "call_id": "0c26effa-7a89-4397-baf1-326cc8c5cf7f",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789433672.695367,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66257,
+          "output_tokens": 1892,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 30168.003454004065
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and phones.\",\n    \"The woman on the right speaks while resting her hands beneath her chin.\",\n    \"The woman on the left listens attentively with her hand near her mouth.\",\n    \"The conversation continues as both maintain mutual eye contact.\",\n    \"The woman on the left reaches into the food tray and eats a snack while continuing to listen.\",\n    \"The woman on the right continues speaking with occasional hand gestures.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the right is confiding her self-doubts and future aspirations to her friend.\",\n    \"The woman on the left, referred to as Lynn, provides emotional support and comfort.\",\n    \"The two women share a close, supportive friendship.\",\n    \"<voice_322> and <voice_398> correspond to the woman seated on the right.\",\n    \"<voice_310> corresponds to the woman seated on the left.\"\n  ]\n}\n```",
+          "total_tokens": 68149,
+          "request_end": 1789433702.8634944,
+          "latency_ms": 30168.120014990564,
+          "client_wall_clock_latency_ms": 30168.120014990564,
+          "api_request_wall_clock_latency_ms": 30168.120014990564
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 5
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.05973200313746929,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 2.0871510059805587,
+      "nodes_added": 4,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 8,
+    "speech_embeddings": 8,
+    "voice_identities": 5,
+    "detected_faces": 317,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 5,
+    "nodes_after_clip": 435,
+    "edges_after_clip": 135,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and phones.",
+      "The woman on the right speaks while resting her hands beneath her chin.",
+      "The woman on the left listens attentively with her hand near her mouth.",
+      "The conversation continues as both maintain mutual eye contact.",
+      "The woman on the left reaches into the food tray and eats a snack while continuing to listen.",
+      "The woman on the right continues speaking with occasional hand gestures."
+    ],
+    "high_level_conclusions": [
+      "The woman on the right is confiding her self-doubts and future aspirations to her friend.",
+      "The woman on the left, referred to as Lynn, provides emotional support and comfort.",
+      "The two women share a close, supportive friendship.",
+      "<voice_322> and <voice_398> correspond to the woman seated on the right.",
+      "<voice_310> corresponds to the woman seated on the left."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and phones.",
+      "The woman on the right speaks while resting her hands beneath her chin.",
+      "The woman on the left listens attentively with her hand near her mouth.",
+      "The conversation continues as both maintain mutual eye contact.",
+      "The woman on the left reaches into the food tray and eats a snack while continuing to listen.",
+      "The woman on the right continues speaking with occasional hand gestures."
+    ],
+    "high_level_conclusions": [
+      "The woman on the right is confiding her self-doubts and future aspirations to her friend.",
+      "The woman on the left, referred to as Lynn, provides emotional support and comfort.",
+      "The two women share a close, supportive friendship.",
+      "<voice_322> and <voice_398> correspond to the woman seated on the right.",
+      "<voice_310> corresponds to the woman seated on the left."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_44_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 425,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit opposite each other at a dining table set with food, drinks, and phones."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 426,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right speaks while resting her hands beneath her chin."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 427,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left listens attentively with her hand near her mouth."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 428,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The conversation continues as both maintain mutual eye contact."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 429,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left reaches into the food tray and eats a snack while continuing to listen."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 430,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right continues speaking with occasional hand gestures."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 431,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the right is confiding her self-doubts and future aspirations to her friend."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 432,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the left, referred to as Lynn, provides emotional support and comfort."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 433,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women share a close, supportive friendship."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 434,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_322> and <voice_398> correspond to the woman seated on the right."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 322,
+        "target": 434,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 398,
+        "target": 434,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_44_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_44_graph.pkl"
+  },
+  "memory_pickle_bytes": 11439298,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 74661.080429177,
+    "prepared_perf": 74668.523828865,
+    "ordered_start_perf": 74849.093276829,
+    "consumer_wait_ms": 0.007643990102224052,
+    "ready_to_ordered_ms": 180569.4479639933,
+    "preparation_work_ms": 7438.101665000431,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 40370.67978999403
+}

@@ -1,0 +1,76 @@
+{
+  "clip_id": 47,
+  "source": {
+    "segment_id": 47,
+    "source": "bedroom_01_00213000.mp4",
+    "source_clock": "00213000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1290.0,
+    "absolute_end_seconds": 1320.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00213000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 74890.511801658,
+      "prepared_perf": 74895.319144526,
+      "ordered_start_perf": 74944.918067048,
+      "consumer_wait_ms": 0.009597992175258696,
+      "ready_to_ordered_ms": 49598.92252199643,
+      "preparation_work_ms": 4801.997310001752,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food and drinks.",
+      "The woman on the right instructs the woman on the left to be more careful next time.",
+      "The woman on the left reviews her handheld device and promises it will not happen again.",
+      "The woman on the left picks up a strawberry from the cake and eats it.",
+      "The woman on the right rests her chin on her hands and watches the other woman.",
+      "The woman on the right takes a snack from the plate in front of her to eat."
+    ],
+    "high_level_conclusions": [
+      "The woman on the right is identified as Lily based on the conversation.",
+      "The two women appear to be close friends or roommates having a casual discussion over food.",
+      "The woman on the left is acknowledging a minor mistake regarding food preparation or grocery purchasing."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food and drinks.\",\n    \"The woman on the right instructs the woman on the left to be more careful next time.\",\n    \"The woman on the left reviews her handheld device and promises it will not happen again.\",\n    \"The woman on the left picks up a strawberry from the cake and eats it.\",\n    \"The woman on the right rests her chin on her hands and watches the other woman.\",\n    \"The woman on the right takes a snack from the plate in front of her to eat.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the right is identified as Lily based on the conversation.\",\n    \"The two women appear to be close friends or roommates having a casual discussion over food.\",\n    \"The woman on the left is acknowledging a minor mistake regarding food preparation or grocery purchasing.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 47,
+      "call_id": "279fac7f-db61-4ae7-b252-f71602d29ca4",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789433769.0917096,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66241,
+      "output_tokens": 1013,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 104793.34486699372
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food and drinks.\",\n    \"The woman on the right instructs the woman on the left to be more careful next time.\",\n    \"The woman on the left reviews her handheld device and promises it will not happen again.\",\n    \"The woman on the left picks up a strawberry from the cake and eats it.\",\n    \"The woman on the right rests her chin on her hands and watches the other woman.\",\n    \"The woman on the right takes a snack from the plate in front of her to eat.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the right is identified as Lily based on the conversation.\",\n    \"The two women appear to be close friends or roommates having a casual discussion over food.\",\n    \"The woman on the left is acknowledging a minor mistake regarding food preparation or grocery purchasing.\"\n  ]\n}\n```",
+      "total_tokens": 67254,
+      "request_end": 1789433873.8851967,
+      "latency_ms": 104793.4844190022,
+      "client_wall_clock_latency_ms": 104793.4844190022,
+      "api_request_wall_clock_latency_ms": 104793.4844190022
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_47_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

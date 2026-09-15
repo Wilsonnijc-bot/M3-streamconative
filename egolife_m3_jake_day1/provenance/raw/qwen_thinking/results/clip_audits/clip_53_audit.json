@@ -1,0 +1,378 @@
+{
+  "clip_id": 53,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0053.mp4",
+  "end_to_end_memory_generation_ms": 509029.54647900333,
+  "latency_ms": {
+    "clip_decode": 3067.230524000479,
+    "deepgram_asr": 1.515501004178077,
+    "mai_transcribe_asr": 1.631348997761961,
+    "asr_total": 2.6618679985404015,
+    "audio_segmentation": 7.05143999948632,
+    "speech_embedding_campplus": 380.75700600165874,
+    "facial_detection_recognition_buffalo_l": 1956.412426996394,
+    "face_clustering": 1.6537020055693574,
+    "vlm_memory_generation": 166264.69552399794,
+    "text_embedding": 612.7155240028515,
+    "graph_update_total": 101.163721003104
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 53,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 820,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789421817.591715,
+          "status": "success",
+          "total_tokens": 163,
+          "request_end": 1789421818.204213,
+          "latency_ms": 612.4983949994203
+        }
+      ],
+      "total_tokens": 163,
+      "latency_ms": 612.7155240028515
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1.515501004178077,
+        "openrouter-mai-transcribe-2": 1.631348997761961
+      },
+      "asr_total_ms": 2.6618679985404015,
+      "audio_segmentation_ms": 7.05143999948632,
+      "speech_embedding_ms": 380.75700600165874,
+      "graph_update_ms": 99.50688199751312,
+      "asr_segment_count": 2,
+      "speech_embedding_count": 2,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 497.7422700030729
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 1956.412426996394,
+      "face_clustering_ms": 1.6537020055693574,
+      "graph_update_ms": null,
+      "frame_count": 96,
+      "detected_face_count": 61,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 1992.3193299982813
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_483>",
+        "<voice_364>"
+      ],
+      "context_preparation_ms": 2773.340353000094,
+      "vlm_ms": 166264.69552399794,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered in a room equipped with filming gear, including tripods and a projector screen.\",\n\t\t\"A person in a white dress stands near a shelving unit while another individual sits at a table covered with a checkered cloth.\",\n\t\t\"A person wearing a pink shirt stands near a lighting rig and a whiteboard.\",\n\t\t\"The camera moves into an adjacent bedroom, showing a bed with unmade sheets and a desk with multiple computer monitors.\",\n\t\t\"After exiting the bedroom, the person in the pink shirt walks across the main room.\",\n\t\t\"A person in a white outfit walks towards the table where other participants are seated.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"MAI (<voice_483>) inquires whether the current activity involves setting a price or completing the remaining practice.\",\n\t\t\"MAI (<voice_364>) suggests reviewing something first and compliments Xiao You regarding their eyesight.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered in a room equipped with filming gear, including tripods and a projector screen.",
+          "A person in a white dress stands near a shelving unit while another individual sits at a table covered with a checkered cloth.",
+          "A person wearing a pink shirt stands near a lighting rig and a whiteboard.",
+          "The camera moves into an adjacent bedroom, showing a bed with unmade sheets and a desk with multiple computer monitors.",
+          "After exiting the bedroom, the person in the pink shirt walks across the main room.",
+          "A person in a white outfit walks towards the table where other participants are seated."
+        ],
+        "high_level_conclusions": [
+          "MAI (<voice_483>) inquires whether the current activity involves setting a price or completing the remaining practice.",
+          "MAI (<voice_364>) suggests reviewing something first and compliments Xiao You regarding their eyesight."
+        ]
+      },
+      "media": {
+        "frame_count": 39,
+        "video_duration_seconds": 19.15
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 53,
+          "call_id": "3d51ce04-e745-4589-9566-8fcb3251a1ff",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789421651.3260767,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 39,
+            "video_duration_seconds": 19.15
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered in a room equipped with filming gear, including tripods and a projector screen.\",\n\t\t\"A person in a white dress stands near a shelving unit while another individual sits at a table covered with a checkered cloth.\",\n\t\t\"A person wearing a pink shirt stands near a lighting rig and a whiteboard.\",\n\t\t\"The camera moves into an adjacent bedroom, showing a bed with unmade sheets and a desk with multiple computer monitors.\",\n\t\t\"After exiting the bedroom, the person in the pink shirt walks across the main room.\",\n\t\t\"A person in a white outfit walks towards the table where other participants are seated.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"MAI (<voice_483>) inquires whether the current activity involves setting a price or completing the remaining practice.\",\n\t\t\"MAI (<voice_364>) suggests reviewing something first and compliments Xiao You regarding their eyesight.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and character features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are 20 frames showing a sequence of events in a room.\n    *   Frames 0.00s - 3.00s: A group of people are in a room with a projector screen, a table with a checkered cloth, and some equipment (tripods, lights). One person in white is near shelves. Another person in black sits at the table. A person in pink stands near a light.\n    *   Frames 3.50s - 5.50s: The camera moves closer to the person in pink. They seem to be holding something small. Another person with blonde hair is sitting at the table.\n    *   Frames 6.00s - 10.00s: The camera moves into a bedroom. It shows a messy bed, a desk with multiple monitors, and a window.\n    *   Frames 10.50s - 19.00s: The camera moves back out into the main room. People are standing around. The person in pink walks towards the center. A person in white walks towards the camera/table area.\n*   **Character Features:**\n    *   **Face features:** None explicitly listed in the prompt text (\"Face features:Voice features:...\"). Wait, looking closely at the prompt structure, there is a section \"Face features:\" but it seems empty or merged with \"Voice features:\". Let me re-read carefully. Ah, the prompt says \"Face features:Voice features:{...}\". This implies there might be no face features provided, or the text got cut off. However, the instruction says \"If no face IDs are supplied, do not invent any.\" So I will assume no face IDs are available to link to specific people visually, except perhaps inferring from context if needed, but the constraint is strict about not assigning IDs without evidence.\n    *   **Voice features:**\n        *   `<voice_483>`: \"MAI: 是开价吗？还是说要把后面的练完？\" (Is it opening price? Or finish the rest behind?) - Time: 00:01 - 00:05.\n        *   `<voice_364>`: \"MAI: 嗯，先看一下好吧，就是先看一下。眼神好嘛，小优。\" (Um, let's take a look first, just take a look first. Eyesight is good, Xiao You.) - Time: 00:04 - 00:18. Note: The ASR repeats \"take a look first\".\n\n**2. Construct Video Description:**\n*   Need to describe the atomic events chronologically.\n*   Event 1 (0.00s - 3.00s): A group gathers in a room. A person in a white dress stands near shelves. A person in black sits at a table covered with a red-and-white checkered cloth. A person in a pink shirt stands near a lighting setup.\n*   Event 2 (3.50s - 5.50s): The camera focuses on the person in the pink shirt standing near a whiteboard and a softbox light. Another person with long blonde hair sits at the table.\n*   Event 3 (6.00s - 10.00s): The camera moves through a doorway into a bedroom. The room contains a messy bed, a desk with computer monitors, and a window with curtains.\n*   Event 4 (10.50s - 19.00s): The camera returns to the main room. The person in the pink shirt walks across the room. A person in a white outfit walks towards the foreground. Other participants sit or stand around the table.\n\n**3. Construct High-Level Conclusions:**\n*   Need to reason about intentions/identities.\n*   Since there are no face IDs provided in the input text (it looks like `Face features:` was followed immediately by `Voice features:`), I cannot create `Equivalence` statements linking faces to voices unless I infer them strongly, but the instructions say \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" And \"Use only IDs supplied in the input\". Since no face IDs are supplied, I cannot make equivalences.\n*   However, the voice features mention names: \"MAI\" and \"Xiao You\".\n*   Voice `<voice_483>` asks about pricing or finishing practice.\n*   Voice `<voice_364>` suggests taking a look and mentions \"Eyesight is good, Xiao You\".\n*   I can conclude that MAI is asking questions about the project/practice status.\n*   I can conclude that someone named Xiao You is being addressed regarding eyesight.\n*   Wait, the prompt says \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since there are NO face IDs in the input data provided in the prompt text (it just says \"Face features:Voice features:...\"), I cannot generate these equivalences. I must stick to the provided IDs.\n*   Actually, looking at the raw input again: `Face features:Voice features:{...}`. It seems the Face features list is empty or missing. I will proceed assuming no face IDs exist.\n*   I will formulate conclusions based on the dialogue content.\n    *   MAI is discussing the status of a project or practice session.\n    *   MAI addresses someone named Xiao You regarding their vision/eyesight.\n\n**Refining the Output:**\n*   **Video Description:** Break down into atomic sentences.\n    *   At the beginning of the clip, several individuals are present in a room equipped with filming gear, including tripods and a projector screen.\n    *   A person wearing a white dress stands near a shelving unit while another individual sits at a table covered with a checkered tablecloth.\n    *   A person in a pink shirt stands near a lighting rig and a whiteboard.\n    *   The camera then moves into an adjacent bedroom, revealing a bed with unmade sheets and a desk with multiple computer monitors.\n    *   After exiting the bedroom, the person in the pink shirt walks across the main room.\n    *   A person in a white outfit walks towards the table where others are seated.\n*   **High-Level Conclusions:**\n    *   MAI is inquiring whether the current activity involves setting a price or completing further practice sessions.\n    *   MAI suggests reviewing something and compliments someone named Xiao You regarding their eyesight.\n\nLet's double check the constraints.\n- \"Preserve speaker identity when constructing memory... use the exact ID as the speaker.\" -> I need to make sure if I write summaries, I attribute them correctly if I were writing memory, but here I am writing descriptions and conclusions. The prompt asks for \"Video Description\" and \"High-Level Conclusions\".\n- \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\" -> Wait, the prompt instructions at the very top say: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". BUT the specific task instructions at the bottom say: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n- The top instructions seem to be general system instructions for a different task (memory construction), while the bottom instructions define the specific output format for *this* turn (JSON with video_description and high_level_conclusions).\n- However, usually, the system instructions override or guide the behavior. Let's look at the \"Output Format\" section. It asks for `video_description` and `high_level_conclusions`. It does NOT ask for a `memories` array.\n- But the top instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This contradicts the output format which doesn't have a memories field.\n- Let's re-read the top block carefully. \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". Then \"Output Format: ... video_description ... high_level_conclusions\".\n- The top block also says \"Preserve speaker identity when constructing memory...\". This suggests the *content* of the response should reflect this, but the *structure* is defined by the JSON schema.\n- Perhaps the \"episodic memory\" requirement is meant to be integrated into the \"High-Level Conclusions\" or \"Video Description\"?\n- Actually, looking at the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This sounds like a requirement for a specific field. But the JSON schema provided *only* has `video_description` and `high_level_conclusions`.\n- Maybe I should put the summarized speech in the `high_level_conclusions`? Or maybe the `video_description`?\n- Let's look at the instruction again: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should follow the JSON schema strictly.\n- The top instruction about \"episodic memory\" might be a generic instruction that conflicts with the specific JSON schema provided for this turn. Given the explicit JSON schema at the end, I should prioritize that. However, I should try to incorporate the voice information into the descriptions/conclusions as requested by the spirit of the \"Preserve speaker identity\" instruction.\n- Wait, the instruction says \"include at least one episodic memory...\". If I don't have a field for it, where does it go?\n- Maybe the `high_level_conclusions` is the place for reasoning about the speech.\n- Let's look at the example output format again. It just has strings.\n- Okay, I will interpret \"include at least one episodic memory\" as summarizing the speech within the `high_level_conclusions` or ensuring the `video_description` captures the action associated with the speech.\n- Actually, reading the top instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This is a strong constraint. But the output format doesn't allow it.\n- Hypothesis: The prompt template might be slightly mismatched, or I should embed the summary in the `high_level_conclusions` as a factual statement derived from the audio.\n- Let's look at the instruction: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" This supports putting the ID in the conclusions.\n- So, in `high_level_conclusions`, I will state facts about what MAI said, retaining the ID.\n- Example: \"MAI (<voice_483>) asks if they are setting a price or finishing the practice.\"\n- This satisfies \"retain that speaker's exact voice ID\" and \"semantic conclusion\".\n\nPlan:\n1.  **Video Description**: Describe the visual flow. Mention the people and actions.\n2.  **High-Level Conclusions**:\n    *   Include the voice ID `<voice_483>` in a conclusion about the question asked.\n    *   Include the voice ID `<voice_364>` in a conclusion about the suggestion made.\n    *   Check for face IDs. None provided. No Equivalence lines.\n\nLet's refine the descriptions to be atomic.\n- Frame 0-3: Group in room with filming gear. Person in white near shelves. Person in black at table. Person in pink near light.\n- Frame 3.5-5.5: Close up on person in pink and person at table.\n- Frame 6-10: Camera enters bedroom. Messy bed, desk.\n- Frame 10.5-19: Camera exits bedroom. Person in pink walks. Person in white walks.\n\nLet's refine the conclusions.\n- MAI (<voice_483>) inquires about pricing versus completing the remaining practice.\n- MAI (<voice_364>) suggests reviewing something and comments on Xiao You's eyesight.\n\nWait, I need to check if I missed any face IDs.\nInput: `Face features:Voice features:{...}`\nIt looks like `Face features:` is followed immediately by `Voice features:`. There is no content between them. So `Face features` is empty.\nSo no Equivalence lines.\n\nOne detail: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nAnd \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nSince I cannot add a new field, I will treat the `high_level_conclusions` as the place where these \"memories\" (summarized speech) reside, especially since the instruction says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n\nFinal check on JSON validity.\nKeys: `video_description`, `high_level_conclusions`.\nValues: Arrays of strings.\n\nLet's draft the response.\n\nVideo Description:\n- Several individuals are gathered in a room containing filming equipment, including tripods and a projector screen.\n- A person dressed in white stands near a shelf while another individual sits at a table with a checkered cloth.\n- A person in a pink shirt stands near a lighting setup and a whiteboard.\n- The camera moves into a bedroom featuring a bed with unmade sheets and a desk with multiple monitors.\n- The view shifts back to the main room where the person in the pink shirt walks across the space.\n- A person in a white outfit approaches the table where others are seated.\n\nHigh Level Conclusions:\n- MAI (<voice_483>) asks whether the current task involves setting a price or finishing the subsequent practice.\n- MAI (<voice_364>) suggests taking a look first and remarks that Xiao You has good eyesight.\n\nThis covers the requirements.\n- Preserves speaker IDs.\n- Summarizes transcript.\n- No invented face IDs.\n- Valid JSON.\n\nOne small correction: The instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". An \"episodic memory\" usually refers to a specific event. In the context of the JSON output, placing the quote/summary in the `high_level_conclusions` array seems the most appropriate location given the schema constraints, effectively treating the conclusion as a memory of the conversation.\n\nWait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis confirms I must use the provided schema.\nThe instruction \"For every supplied voice ID... include at least one episodic memory...\" is likely a directive for how to populate the fields or a conflicting instruction. Given the schema, I will integrate the \"memory\" (quote/summary) into the `high_level_conclusions` as reasoned conclusions about the interaction.\n\nActually, looking at the instruction \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> This applies to `high_level_conclusions`.\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" -> This might imply I should add a specific type of sentence. I'll ensure the conclusions clearly reference the speech content.\n\nLet's finalize the text.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered in a room equipped with filming gear, including tripods and a projector screen.\",\n\t\t\"A person in a white dress stands near a shelving unit while another individual sits at a table covered with a checkered cloth.\",\n\t\t\"A person wearing a pink shirt stands near a lighting rig and a whiteboard.\",\n\t\t\"The camera moves into an adjacent bedroom, showing a bed with unmade sheets and a desk with multiple computer monitors.\",\n\t\t\"After exiting the bedroom, the person in the pink shirt walks across the main room.\",\n\t\t\"A person in a white outfit walks towards the table where other participants are seated.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"MAI (<voice_483>) inquires whether the current activity involves setting a price or completing the remaining practice.\",\n\t\t\"MAI (<voice_364>) suggests reviewing something first and compliments Xiao You regarding their eyesight.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 6943,
+          "output_tokens": 3561,
+          "total_tokens": 10504,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.001744003384374082,
+            "media_preparation_ms": 38.05902299791342,
+            "processor_tokenization_ms": 223.85733700502897,
+            "device_transfer_ms": 34.27709499374032,
+            "cuda_generation_ms": 165944.43008799863,
+            "decoding_ms": 3.793499003222678
+          },
+          "submitted_image_count": 39,
+          "processed_image_count": 39,
+          "video_frame_count": 39,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 166244.60260100022,
+          "request_end": 1789421817.5907755,
+          "latency_ms": 166264.69552399794,
+          "client_wall_clock_latency_ms": 166264.69552399794
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.05799000064143911,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 1.598849004949443,
+      "nodes_added": 2,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 96,
+    "asr_segments": 2,
+    "speech_embeddings": 2,
+    "voice_identities": 2,
+    "detected_faces": 61,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 2,
+    "nodes_after_clip": 695,
+    "edges_after_clip": 257,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered in a room equipped with filming gear, including tripods and a projector screen.",
+      "A person in a white dress stands near a shelving unit while another individual sits at a table covered with a checkered cloth.",
+      "A person wearing a pink shirt stands near a lighting rig and a whiteboard.",
+      "The camera moves into an adjacent bedroom, showing a bed with unmade sheets and a desk with multiple computer monitors.",
+      "After exiting the bedroom, the person in the pink shirt walks across the main room.",
+      "A person in a white outfit walks towards the table where other participants are seated."
+    ],
+    "high_level_conclusions": [
+      "MAI (<voice_483>) inquires whether the current activity involves setting a price or completing the remaining practice.",
+      "MAI (<voice_364>) suggests reviewing something first and compliments Xiao You regarding their eyesight."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered in a room equipped with filming gear, including tripods and a projector screen.",
+      "A person in a white dress stands near a shelving unit while another individual sits at a table covered with a checkered cloth.",
+      "A person wearing a pink shirt stands near a lighting rig and a whiteboard.",
+      "The camera moves into an adjacent bedroom, showing a bed with unmade sheets and a desk with multiple computer monitors.",
+      "After exiting the bedroom, the person in the pink shirt walks across the main room.",
+      "A person in a white outfit walks towards the table where other participants are seated."
+    ],
+    "high_level_conclusions": [
+      "MAI (<voice_483>) inquires whether the current activity involves setting a price or completing the remaining practice.",
+      "MAI (<voice_364>) suggests reviewing something first and compliments Xiao You regarding their eyesight."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_53_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 687,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered in a room equipped with filming gear, including tripods and a projector screen."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 688,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person in a white dress stands near a shelving unit while another individual sits at a table covered with a checkered cloth."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 689,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing a pink shirt stands near a lighting rig and a whiteboard."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 690,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera moves into an adjacent bedroom, showing a bed with unmade sheets and a desk with multiple computer monitors."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 691,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "After exiting the bedroom, the person in the pink shirt walks across the main room."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 692,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person in a white outfit walks towards the table where other participants are seated."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 693,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_483>) inquires whether the current activity involves setting a price or completing the remaining practice."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 694,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_364>) suggests reviewing something first and compliments Xiao You regarding their eyesight."
+          ],
+          "timestamp": 53
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 364,
+        "target": 694,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 483,
+        "target": 693,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_53_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_53_graph.pkl"
+  },
+  "memory_pickle_bytes": 16372015,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 62496.07738885,
+    "prepared_perf": 62500.232035895,
+    "ordered_start_perf": 62831.628768764,
+    "consumer_wait_ms": 0.015698999050073326,
+    "ready_to_ordered_ms": 331396.7328689978,
+    "preparation_work_ms": 4149.258894998638,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 172144.32178399875
+}

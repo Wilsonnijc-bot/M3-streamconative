@@ -1,0 +1,408 @@
+{
+  "clip_id": 116,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0116.mp4",
+  "end_to_end_memory_generation_ms": 168500.42525800382,
+  "latency_ms": {
+    "clip_decode": 5332.249986000534,
+    "deepgram_asr": 401.92705600202316,
+    "mai_transcribe_asr": 871.2474810017738,
+    "asr_total": 872.1492289987509,
+    "audio_segmentation": 6.531521001306828,
+    "speech_embedding_campplus": 762.8502840016154,
+    "facial_detection_recognition_buffalo_l": 3715.345046002767,
+    "face_clustering": 3.9405819989042357,
+    "vlm_memory_generation": 64716.006617003586,
+    "text_embedding": 611.1781389990938,
+    "graph_update_total": 341.7313269965234
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 116,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 810,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789411328.465573,
+          "status": "success",
+          "total_tokens": 181,
+          "request_end": 1789411329.0765076,
+          "latency_ms": 610.9351519990014
+        }
+      ],
+      "total_tokens": 181,
+      "latency_ms": 611.1781389990938
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 401.92705600202316,
+        "openrouter-mai-transcribe-2": 871.2474810017738
+      },
+      "asr_total_ms": 872.1492289987509,
+      "audio_segmentation_ms": 6.531521001306828,
+      "speech_embedding_ms": 762.8502840016154,
+      "graph_update_ms": 326.3532889977796,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1107.5949279984343
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3715.345046002767,
+      "face_clustering_ms": 3.9405819989042357,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 151,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3802.1652449970134
+    },
+    "vlm": {
+      "context_preparation_ms": 4628.63694299449,
+      "vlm_ms": 64716.006617003586,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"Jake walks toward a green shelf and picks up a black zipped case.\",\n  \"Jake unzips the case to check its contents.\",\n  \"Jake walks over to the dining table where a group of people are gathered around a whiteboard.\",\n  \"<voice_1346> speaks while discussing a plan with the group at the table.\",\n  \"Jake takes a charging cable out of the case and hands it toward the people seated at the table.\",\n  \"<voice_0> speaks to the group, offering charging cables so they can charge their devices.\",\n  \"Jake walks back toward the shelf with the case.\",\n  \"Jake places the case back onto the shelf, exchanges it for another case, and inspects it.\"\n ],\n \"high_level_conclusions\": [\n  \"The camera wearer (Jake) is <voice_0>, speaking in first person as he hands out charging cables to the group.\",\n  \"The group at the table is engaged in a meeting or production planning session, using a whiteboard and props.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Jake walks toward a green shelf and picks up a black zipped case.",
+          "Jake unzips the case to check its contents.",
+          "Jake walks over to the dining table where a group of people are gathered around a whiteboard.",
+          "<voice_1346> speaks while discussing a plan with the group at the table.",
+          "Jake takes a charging cable out of the case and hands it toward the people seated at the table.",
+          "<voice_0> speaks to the group, offering charging cables so they can charge their devices.",
+          "Jake walks back toward the shelf with the case.",
+          "Jake places the case back onto the shelf, exchanges it for another case, and inspects it."
+        ],
+        "high_level_conclusions": [
+          "The camera wearer (Jake) is <voice_0>, speaking in first person as he hands out charging cables to the group.",
+          "The group at the table is engaged in a meeting or production planning session, using a whiteboard and props."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 116,
+          "call_id": "c36df3fb-31c7-4609-b511-462bdbdbdb48",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789411263.748817,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66734,
+          "output_tokens": 977,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 64715.88767299545
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"Jake walks toward a green shelf and picks up a black zipped case.\",\n  \"Jake unzips the case to check its contents.\",\n  \"Jake walks over to the dining table where a group of people are gathered around a whiteboard.\",\n  \"<voice_1346> speaks while discussing a plan with the group at the table.\",\n  \"Jake takes a charging cable out of the case and hands it toward the people seated at the table.\",\n  \"<voice_0> speaks to the group, offering charging cables so they can charge their devices.\",\n  \"Jake walks back toward the shelf with the case.\",\n  \"Jake places the case back onto the shelf, exchanges it for another case, and inspects it.\"\n ],\n \"high_level_conclusions\": [\n  \"The camera wearer (Jake) is <voice_0>, speaking in first person as he hands out charging cables to the group.\",\n  \"The group at the table is engaged in a meeting or production planning session, using a whiteboard and props.\"\n ]\n}\n```",
+          "total_tokens": 67711,
+          "request_end": 1789411328.4648259,
+          "latency_ms": 64716.006617003586,
+          "client_wall_clock_latency_ms": 64716.006617003586,
+          "api_request_wall_clock_latency_ms": 64716.006617003586
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.0911919996724464,
+      "nodes_added": 8,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 15.286845999071375,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 3,
+    "detected_faces": 151,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1357,
+    "edges_after_clip": 265,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 3
+  },
+  "generated_memory": {
+    "video_description": [
+      "Jake walks toward a green shelf and picks up a black zipped case.",
+      "Jake unzips the case to check its contents.",
+      "Jake walks over to the dining table where a group of people are gathered around a whiteboard.",
+      "<voice_1346> speaks while discussing a plan with the group at the table.",
+      "Jake takes a charging cable out of the case and hands it toward the people seated at the table.",
+      "<voice_0> speaks to the group, offering charging cables so they can charge their devices.",
+      "Jake walks back toward the shelf with the case.",
+      "Jake places the case back onto the shelf, exchanges it for another case, and inspects it."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer (Jake) is <voice_0>, speaking in first person as he hands out charging cables to the group.",
+      "The group at the table is engaged in a meeting or production planning session, using a whiteboard and props."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Jake walks toward a green shelf and picks up a black zipped case.",
+      "Jake unzips the case to check its contents.",
+      "Jake walks over to the dining table where a group of people are gathered around a whiteboard.",
+      "<voice_1346> speaks while discussing a plan with the group at the table.",
+      "Jake takes a charging cable out of the case and hands it toward the people seated at the table.",
+      "<voice_0> speaks to the group, offering charging cables so they can charge their devices.",
+      "Jake walks back toward the shelf with the case.",
+      "Jake places the case back onto the shelf, exchanges it for another case, and inspects it."
+    ],
+    "high_level_conclusions": [
+      "The camera wearer (Jake) is <voice_0>, speaking in first person as he hands out charging cables to the group.",
+      "The group at the table is engaged in a meeting or production planning session, using a whiteboard and props."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_116_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 3,
+    "nodes": [
+      {
+        "id": 1346,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 然后就每个人介绍自己做的这个，然后就跟他们说他们可以拿他们的货币来。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1347,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake walks toward a green shelf and picks up a black zipped case."
+          ],
+          "timestamp": 116
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1348,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake unzips the case to check its contents."
+          ],
+          "timestamp": 116
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1349,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake walks over to the dining table where a group of people are gathered around a whiteboard."
+          ],
+          "timestamp": 116
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1350,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1346> speaks while discussing a plan with the group at the table."
+          ],
+          "timestamp": 116
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1351,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake takes a charging cable out of the case and hands it toward the people seated at the table."
+          ],
+          "timestamp": 116
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1352,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> speaks to the group, offering charging cables so they can charge their devices."
+          ],
+          "timestamp": 116
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1353,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake walks back toward the shelf with the case."
+          ],
+          "timestamp": 116
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1354,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Jake places the case back onto the shelf, exchanges it for another case, and inspects it."
+          ],
+          "timestamp": 116
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1355,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera wearer (Jake) is <voice_0>, speaking in first person as he hands out charging cables to the group."
+          ],
+          "timestamp": 116
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1356,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group at the table is engaged in a meeting or production planning session, using a whiteboard and props."
+          ],
+          "timestamp": 116
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1352,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 1355,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1346,
+        "target": 1350,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_116_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_116_graph.pkl"
+  },
+  "memory_pickle_bytes": 31424752,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52347.580755849,
+    "prepared_perf": 52355.712944137,
+    "ordered_start_perf": 52438.667262171,
+    "consumer_wait_ms": 0.0343650026479736,
+    "ready_to_ordered_ms": 82954.31803400425,
+    "preparation_work_ms": 8126.89119100105,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 74883.00403999892
+}

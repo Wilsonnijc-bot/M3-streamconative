@@ -1,0 +1,337 @@
+{
+  "clip_id": 63,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0063.mp4",
+  "end_to_end_memory_generation_ms": 171383.21523799823,
+  "latency_ms": {
+    "clip_decode": 4159.733657994366,
+    "deepgram_asr": 1032.0444500030135,
+    "mai_transcribe_asr": 1107.3475739976857,
+    "asr_total": 1108.337252997444,
+    "audio_segmentation": 6.478515999333467,
+    "speech_embedding_campplus": 188.460880999628,
+    "facial_detection_recognition_buffalo_l": 4347.569436999038,
+    "face_clustering": 11.18111499818042,
+    "vlm_memory_generation": 38101.30961800314,
+    "text_embedding": 393.00548199389596,
+    "graph_update_total": 62.31597899750341
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 63,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 781,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789406842.8622277,
+          "status": "success",
+          "total_tokens": 161,
+          "request_end": 1789406843.2550888,
+          "latency_ms": 392.8617010024027
+        }
+      ],
+      "total_tokens": 161,
+      "latency_ms": 393.00548199389596
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1032.0444500030135,
+        "openrouter-mai-transcribe-2": 1107.3475739976857
+      },
+      "asr_total_ms": 1108.337252997444,
+      "audio_segmentation_ms": 6.478515999333467,
+      "speech_embedding_ms": 188.460880999628,
+      "graph_update_ms": 61.52442099846667,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 271.4707319973968
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4347.569436999038,
+      "face_clustering_ms": 11.18111499818042,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 426,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4597.110638998856
+    },
+    "vlm": {
+      "context_preparation_ms": 3917.032856006699,
+      "vlm_ms": 38101.30961800314,
+      "raw_response": "```json\n{\n \"high_level_conclusions\": [\n  \"<voice_311> is the young woman seated on the right side of the table, gesturing expressively with her hands as she speaks.\",\n  \"The group is engaged in a creative brainstorming or workshop planning session, focusing on low-carbon and recycled craft ideas.\"\n ],\n \"video_description\": [\n  \"A group of young people is gathered around a table covered in a pink-and-white checkered tablecloth.\",\n  \"A woman seated on the right side of the table talks continuously while gesturing with both hands (<voice_311>).\",\n  \"A woman in a white blouse stands at the middle-left of the table, wrapping and arranging flower bouquets and materials.\",\n  \"A woman seated on the left in a dark cardigan quietly listens to the ongoing conversation.\",\n  \"A woman with reddish-orange hair stands near the whiteboard in the background, listening and adjusting her hair.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of young people is gathered around a table covered in a pink-and-white checkered tablecloth.",
+          "A woman seated on the right side of the table talks continuously while gesturing with both hands (<voice_311>).",
+          "A woman in a white blouse stands at the middle-left of the table, wrapping and arranging flower bouquets and materials.",
+          "A woman seated on the left in a dark cardigan quietly listens to the ongoing conversation.",
+          "A woman with reddish-orange hair stands near the whiteboard in the background, listening and adjusting her hair."
+        ],
+        "high_level_conclusions": [
+          "<voice_311> is the young woman seated on the right side of the table, gesturing expressively with her hands as she speaks.",
+          "The group is engaged in a creative brainstorming or workshop planning session, focusing on low-carbon and recycled craft ideas."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 63,
+          "call_id": "0a8ff8c8-8d29-4b37-825f-2d97fb124eda",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789406804.759861,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67350,
+          "output_tokens": 839,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 38101.174304996675
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"high_level_conclusions\": [\n  \"<voice_311> is the young woman seated on the right side of the table, gesturing expressively with her hands as she speaks.\",\n  \"The group is engaged in a creative brainstorming or workshop planning session, focusing on low-carbon and recycled craft ideas.\"\n ],\n \"video_description\": [\n  \"A group of young people is gathered around a table covered in a pink-and-white checkered tablecloth.\",\n  \"A woman seated on the right side of the table talks continuously while gesturing with both hands (<voice_311>).\",\n  \"A woman in a white blouse stands at the middle-left of the table, wrapping and arranging flower bouquets and materials.\",\n  \"A woman seated on the left in a dark cardigan quietly listens to the ongoing conversation.\",\n  \"A woman with reddish-orange hair stands near the whiteboard in the background, listening and adjusting her hair.\"\n ]\n}\n```",
+          "total_tokens": 68189,
+          "request_end": 1789406842.8611732,
+          "latency_ms": 38101.30961800314,
+          "client_wall_clock_latency_ms": 38101.30961800314,
+          "api_request_wall_clock_latency_ms": 38101.30961800314
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.09451799996895716,
+      "nodes_added": 5,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.6970399990677834,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 426,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 718,
+    "edges_after_clip": 156,
+    "nodes_added_by_clip": 7,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of young people is gathered around a table covered in a pink-and-white checkered tablecloth.",
+      "A woman seated on the right side of the table talks continuously while gesturing with both hands (<voice_311>).",
+      "A woman in a white blouse stands at the middle-left of the table, wrapping and arranging flower bouquets and materials.",
+      "A woman seated on the left in a dark cardigan quietly listens to the ongoing conversation.",
+      "A woman with reddish-orange hair stands near the whiteboard in the background, listening and adjusting her hair."
+    ],
+    "high_level_conclusions": [
+      "<voice_311> is the young woman seated on the right side of the table, gesturing expressively with her hands as she speaks.",
+      "The group is engaged in a creative brainstorming or workshop planning session, focusing on low-carbon and recycled craft ideas."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of young people is gathered around a table covered in a pink-and-white checkered tablecloth.",
+      "A woman seated on the right side of the table talks continuously while gesturing with both hands (<voice_311>).",
+      "A woman in a white blouse stands at the middle-left of the table, wrapping and arranging flower bouquets and materials.",
+      "A woman seated on the left in a dark cardigan quietly listens to the ongoing conversation.",
+      "A woman with reddish-orange hair stands near the whiteboard in the background, listening and adjusting her hair."
+    ],
+    "high_level_conclusions": [
+      "<voice_311> is the young woman seated on the right side of the table, gesturing expressively with her hands as she speaks.",
+      "The group is engaged in a creative brainstorming or workshop planning session, focusing on low-carbon and recycled craft ideas."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_63_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 7,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 711,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of young people is gathered around a table covered in a pink-and-white checkered tablecloth."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 712,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman seated on the right side of the table talks continuously while gesturing with both hands (<voice_311>)."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 713,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a white blouse stands at the middle-left of the table, wrapping and arranging flower bouquets and materials."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 714,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman seated on the left in a dark cardigan quietly listens to the ongoing conversation."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 715,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman with reddish-orange hair stands near the whiteboard in the background, listening and adjusting her hair."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 716,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_311> is the young woman seated on the right side of the table, gesturing expressively with her hands as she speaks."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 717,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is engaged in a creative brainstorming or workshop planning session, focusing on low-carbon and recycled craft ideas."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 311,
+        "target": 712,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 311,
+        "target": 716,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_63_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_63_graph.pkl"
+  },
+  "memory_pickle_bytes": 16377710,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 47858.779856371,
+    "prepared_perf": 47866.109051812,
+    "ordered_start_perf": 47981.22713329,
+    "consumer_wait_ms": 0.011791998986154795,
+    "ready_to_ordered_ms": 115118.08147799456,
+    "preparation_work_ms": 7323.711698001716,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 47288.78934000386
+}

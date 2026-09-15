@@ -1,0 +1,75 @@
+{
+  "clip_id": 32,
+  "source": {
+    "segment_id": 32,
+    "source": "DAY1_A1_JAKE_11243000.mp4",
+    "source_clock": "11243000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41070.0,
+    "absolute_end_seconds": 41100.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0032.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46157.722069697,
+      "prepared_perf": 46165.837154906,
+      "ordered_start_perf": 46228.74839076,
+      "consumer_wait_ms": 0.016030004189815372,
+      "ready_to_ordered_ms": 62911.23585400055,
+      "preparation_work_ms": 8109.667388001981,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer Jake turns away from boxes on the floor and walks toward the stairs.",
+      "Jake ascends the wooden staircase to the upper level.",
+      "Jake enters the upstairs room and walks toward a table beneath a projection screen.",
+      "Jake picks up a clapperboard and a marker from the table.",
+      "Jake leaves the upstairs room and descends the staircase holding the clapperboard.",
+      "Jake reaches the ground floor and enters the room where other people are seated around a table."
+    ],
+    "high_level_conclusions": [
+      "Jake went upstairs specifically to retrieve the clapperboard and marker for recording preparations.",
+      "<voice_364> belongs to Jake as he searches for the marker and informs the others downstairs."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"The camera wearer Jake turns away from boxes on the floor and walks toward the stairs.\",\n  \"Jake ascends the wooden staircase to the upper level.\",\n  \"Jake enters the upstairs room and walks toward a table beneath a projection screen.\",\n  \"Jake picks up a clapperboard and a marker from the table.\",\n  \"Jake leaves the upstairs room and descends the staircase holding the clapperboard.\",\n  \"Jake reaches the ground floor and enters the room where other people are seated around a table.\"\n ],\n \"high_level_conclusions\": [\n  \"Jake went upstairs specifically to retrieve the clapperboard and marker for recording preparations.\",\n  \"<voice_364> belongs to Jake as he searches for the marker and informs the others downstairs.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 32,
+      "call_id": "34043aee-e748-4a6a-bcb8-50639a5876fb",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405050.1300123,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66405,
+      "output_tokens": 753,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 42848.86600900063
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"The camera wearer Jake turns away from boxes on the floor and walks toward the stairs.\",\n  \"Jake ascends the wooden staircase to the upper level.\",\n  \"Jake enters the upstairs room and walks toward a table beneath a projection screen.\",\n  \"Jake picks up a clapperboard and a marker from the table.\",\n  \"Jake leaves the upstairs room and descends the staircase holding the clapperboard.\",\n  \"Jake reaches the ground floor and enters the room where other people are seated around a table.\"\n ],\n \"high_level_conclusions\": [\n  \"Jake went upstairs specifically to retrieve the clapperboard and marker for recording preparations.\",\n  \"<voice_364> belongs to Jake as he searches for the marker and informs the others downstairs.\"\n ]\n}\n```",
+      "total_tokens": 67158,
+      "request_end": 1789405092.9790332,
+      "latency_ms": 42849.01843700209,
+      "client_wall_clock_latency_ms": 42849.01843700209,
+      "api_request_wall_clock_latency_ms": 42849.01843700209
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_32_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

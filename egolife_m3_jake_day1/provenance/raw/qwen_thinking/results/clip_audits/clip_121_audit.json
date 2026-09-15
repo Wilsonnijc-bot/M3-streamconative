@@ -1,0 +1,427 @@
+{
+  "clip_id": 121,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0121.mp4",
+  "end_to_end_memory_generation_ms": 576747.1310199908,
+  "latency_ms": {
+    "clip_decode": 5933.4236059949035,
+    "deepgram_asr": 237.8331999934744,
+    "mai_transcribe_asr": 1048.057994004921,
+    "asr_total": 1049.9433490040246,
+    "audio_segmentation": 6.189783001900651,
+    "speech_embedding_campplus": 788.4880689962301,
+    "facial_detection_recognition_buffalo_l": 2940.7319579913747,
+    "face_clustering": 1.2715209886664525,
+    "vlm_memory_generation": 164893.8328880031,
+    "text_embedding": 504.11388400243595,
+    "graph_update_total": 570.3603449946968
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 121,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 1215,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789441209.1572313,
+          "status": "success",
+          "total_tokens": 220,
+          "request_end": 1789441209.6611953,
+          "latency_ms": 503.9643710042583
+        }
+      ],
+      "total_tokens": 220,
+      "latency_ms": 504.11388400243595
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 237.8331999934744,
+        "openrouter-mai-transcribe-2": 1048.057994004921
+      },
+      "asr_total_ms": 1049.9433490040246,
+      "audio_segmentation_ms": 6.189783001900651,
+      "speech_embedding_ms": 788.4880689962301,
+      "graph_update_ms": 570.0691289966926,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1378.2917799981078
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2940.7319579913747,
+      "face_clustering_ms": 1.2715209886664525,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 41,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2965.2540840033907
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1642>",
+        "<voice_1643>"
+      ],
+      "context_preparation_ms": 4109.068500998546,
+      "vlm_ms": 164893.8328880031,
+      "raw_response": "{\n  \"video_description\": [\n    \"The camera begins in a kitchen area, capturing a view of an outdoor patio with a white umbrella and seating furniture through a large window.\",\n    \"The perspective shifts to show a tiled wall featuring a dark vase with flowers before returning to the kitchen counter.\",\n    \"The camera moves into an adjacent living room where several people are gathered around a table.\",\n    \"A woman with long blonde hair sits in the foreground while others engage in activities at the table, with a projector screen visible in the background.\",\n    \"The viewpoint transitions through a doorway into a bedroom containing an unmade bed and a desk with multiple computer monitors.\",\n    \"The camera operator reaches down and picks up a laptop from the bed.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group in the living room is participating in a structured activity or game, as <voice_1642> describes the dynamic as similar to a merchant relationship involving handmade customization.\",\n    \"According to <voice_1643>, the activity utilizes a specific currency and permits participants to converse freely among themselves if they are enjoying the game.\",\n    \"The technical setup in the room, including multiple screens and a projector, supports the discussion about customization and digital elements mentioned in the audio.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera begins in a kitchen area, capturing a view of an outdoor patio with a white umbrella and seating furniture through a large window.",
+          "The perspective shifts to show a tiled wall featuring a dark vase with flowers before returning to the kitchen counter.",
+          "The camera moves into an adjacent living room where several people are gathered around a table.",
+          "A woman with long blonde hair sits in the foreground while others engage in activities at the table, with a projector screen visible in the background.",
+          "The viewpoint transitions through a doorway into a bedroom containing an unmade bed and a desk with multiple computer monitors.",
+          "The camera operator reaches down and picks up a laptop from the bed."
+        ],
+        "high_level_conclusions": [
+          "The group in the living room is participating in a structured activity or game, as <voice_1642> describes the dynamic as similar to a merchant relationship involving handmade customization.",
+          "According to <voice_1643>, the activity utilizes a specific currency and permits participants to converse freely among themselves if they are enjoying the game.",
+          "The technical setup in the room, including multiple screens and a projector, supports the discussion about customization and digital elements mentioned in the audio."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 121,
+          "call_id": "6ebfa42c-08de-43cf-853d-b6bb3d451f1f",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789441044.2621999,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"The camera begins in a kitchen area, capturing a view of an outdoor patio with a white umbrella and seating furniture through a large window.\",\n    \"The perspective shifts to show a tiled wall featuring a dark vase with flowers before returning to the kitchen counter.\",\n    \"The camera moves into an adjacent living room where several people are gathered around a table.\",\n    \"A woman with long blonde hair sits in the foreground while others engage in activities at the table, with a projector screen visible in the background.\",\n    \"The viewpoint transitions through a doorway into a bedroom containing an unmade bed and a desk with multiple computer monitors.\",\n    \"The camera operator reaches down and picks up a laptop from the bed.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group in the living room is participating in a structured activity or game, as <voice_1642> describes the dynamic as similar to a merchant relationship involving handmade customization.\",\n    \"According to <voice_1643>, the activity utilizes a specific currency and permits participants to converse freely among themselves if they are enjoying the game.\",\n    \"The technical setup in the room, including multiple screens and a projector, supports the discussion about customization and digital elements mentioned in the audio.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   0.00s - 7.00s: The camera is inside a kitchen area, looking out a window. There's a counter, a sink, and outside there's a patio with tables/chairs under a white umbrella. The camera moves slightly.\n    *   7.50s - 11.00s: The camera pans left, showing a tiled wall with a vase of flowers. It seems to be moving towards a door.\n    *   11.50s - 14.00s: The camera turns back towards the kitchen counter/sink area.\n    *   14.50s - 16.50s: The camera moves into a larger room (living/dining area). There's a red fridge, a table with people sitting around it.\n    *   17.00s - 21.00s: The view shows several people gathered around a table. One person (woman with blonde hair) is in the foreground. Another woman (white shirt) is standing near the table. A third person (black top) is seated. There's a projector screen in the background.\n    *   21.50s - 22.50s: The camera moves through a doorway into a bedroom.\n    *   23.00s - 29.50s: Inside the bedroom. There's a messy bed with clothes/electronics on it. A desk with multiple monitors is visible. The camera person picks up a laptop.\n\n*   **Voice Features:**\n    *   `<voice_1642>`: \"MAI: 一个，什么形状？一个小集合也行，就是可以让他们先。\" (MAI: One, what shape? A small collection is fine too, just let them go first.) / \"MAI: 对。\" (MAI: Yes.) / \"MAI: 就像如果对方整体的这个手工定制感，就好比我们是一个商家一样。\" (MAI: Like if the overall handmade customization feeling of the other party is good, it's like we are a merchant.)\n    *   `<voice_1643>`: \"MAI: 只不过使用的是这个货币。\" (MAI: Just that this currency is used.) / \"MAI: 然后如果大家玩得比较高兴的话，就后面让他们在自己之间交谈。\" (MAI: And if everyone plays quite happily, then later let them talk amongst themselves.)\n\n**2. Construct Video Description:**\n*   Need to break down the video into atomic events.\n*   Event 1: Camera starts in a kitchen, looking out a window at a patio.\n*   Event 2: Camera pans left to show a tiled wall with a flower vase.\n*   Event 3: Camera moves past the kitchen counter towards a living area.\n*   Event 4: View reveals a group of people gathered around a table in a living room.\n*   Event 5: Camera moves through a doorway into a bedroom.\n*   Event 6: Inside the bedroom, the camera focuses on a messy bed and a desk with computer equipment.\n*   Event 7: The camera operator picks up a laptop from the bed.\n\n**3. Construct High-Level Conclusions:**\n*   Need to link voice to visual context where possible, but primarily rely on the provided IDs.\n*   The prompt asks to preserve speaker identity using exact IDs.\n*   Since I don't have explicit face IDs linked to voices in the input (only voice IDs), I can't make \"Equivalence\" statements unless I infer from the video description that someone matching the voice is present. However, the instruction says \"If a face and a voice feature refer to the same character, indicate it...\". Without explicit face IDs provided in the input text (only video frames), I cannot definitively state equivalences like `Equivalence: <face_1>, <voice_2>` unless I assume the camera wearer is one of them or if faces are clearly identifiable and matched. Wait, looking closely at the prompt instructions: \"Each feature is either a face ... or a voice ...\". The input provided *only* lists Voice features. There are no Face features listed in the \"Face features:\" section (it's empty). Therefore, I cannot create Equivalence statements because there are no face IDs to equate.\n*   I need to check if I can infer anything about the speaker MAI. The voice sounds like a conversation about a game or activity (\"small collection\", \"merchant\", \"currency\", \"play happily\"). This suggests a social gathering or a specific activity setup.\n*   The video shows a gathering.\n*   Conclusion 1: The video depicts a sequence of movement from a kitchen area to a communal gathering space and finally to a private bedroom.\n*   Conclusion 2: The audio indicates a discussion about rules or mechanics of an activity involving \"handmade customization\" and \"currency,\" suggesting a structured game or simulation is taking place among the group seen in the living room.\n*   Conclusion 3: The presence of multiple computers and a projector screen in the living room supports the idea of a collaborative or gaming session.\n\n**Refining the Output:**\n*   Ensure JSON validity.\n*   Ensure no extra text.\n*   Check constraints: \"Do not replace the ID with 'a speaker'...\". \"Use only IDs supplied in the input\".\n*   Since there are no face features, I won't add Equivalence lines.\n*   I need to make sure the video description covers the flow accurately.\n\n**Drafting Video Description:**\n1.  The camera captures a kitchen interior with a view of an outdoor patio featuring a white umbrella and seating area.\n2.  The perspective shifts to show a tiled wall adorned with a vase of flowers before turning back towards the kitchen counter.\n3.  The camera moves into an adjacent living room where several individuals are seated around a table.\n4.  A woman with long blonde hair sits in the foreground while others engage in activities at the table.\n5.  The viewpoint transitions through a doorway into a bedroom containing a bed and a desk with multiple monitors.\n6.  The camera operator reaches out and picks up a laptop from the unmade bed.\n\n**Drafting High-Level Conclusions:**\n1.  The group gathering in the living room appears to be participating in a structured activity or game, as indicated by the discussion about \"customization\" and \"currency.\"\n2.  The transition from the communal space to the bedroom suggests a shift in focus or preparation for a different part of the session.\n3.  The setup with multiple screens and projectors implies a digital component to the interaction described in the audio.\n\nLet's double check the voice content translation.\n\"MAI: 一个，什么形状？一个小集合也行，就是可以让他们先。\" -> \"One, what shape? A small collection is also fine, just let them go first.\"\n\"MAI: 就像如果对方整体的这个手工定制感，就好比我们是一个商家一样。\" -> \"Like if the other party's overall handmade customization feel is good, it's like we are a merchant.\"\n\"MAI: 只不过使用的是这个货币。\" -> \"Just that this currency is used.\"\n\"MAI: 然后如果大家玩得比较高兴的话，就后面让他们在自己之间交谈。\" -> \"And if everyone plays quite happily, then later let them talk amongst themselves.\"\n\nThis confirms the \"game/activity\" hypothesis.\n\nFinal check on constraints:\n- \"Preserve speaker identity when constructing memory from the supplied character features.\" -> Done, use `<voice_1642>` and `<voice_1643>`.\n- \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\" -> Wait, the prompt asks for `video_description` and `high_level_conclusions`. It doesn't explicitly ask for a \"memory\" section in the final JSON output structure provided in the \"Output Format\" section. The Output Format only asks for `video_description` and `high_level_conclusions`.\n- However, the system instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This seems to conflict with the specific Output Format requested at the end (\"Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\").\n- Usually, system instructions override general prompts regarding content generation, but the Output Format is strict. Let's look at the instruction again: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should follow the Output Format strictly.\n- BUT, the instruction \"For every supplied voice ID... include at least one episodic memory...\" is a specific constraint on *how* to handle the voice data within the task.\n- Looking at the \"Output Format\" section again: It defines the JSON keys. It does not define a key for \"episodic memory\".\n- Perhaps the \"episodic memory\" should be embedded within the `video_description` or `high_level_conclusions`? Or maybe the instruction implies I should treat the descriptions as memories?\n- Re-reading the system instruction carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". Then \"Output Format...\".\n- The instruction \"For every supplied voice ID... include at least one episodic memory...\" might be a directive for the *content* of the description/conclusions, or it might be a leftover instruction from a different template. Given the strict JSON schema requirement, I will integrate the voice information into the `high_level_conclusions` as reasoning/inference, or ensure the `video_description` reflects the context where these voices would occur (though the video is silent in terms of ASR timestamps matching the visual action perfectly, the timestamps suggest the audio happens during the gathering phase).\n- Actually, looking at the timestamps: Audio is 00:00 to 00:20. Visuals show kitchen (0-7s), living room (14-21s). So the audio likely corresponds to the living room scene.\n- I will incorporate the voice content into the `high_level_conclusions` to satisfy the \"reasoning-based conclusions\" requirement and the instruction to use the voice IDs.\n- Wait, the instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". If I put this in `high_level_conclusions`, does it count? The instruction says \"Keep the existing video_description/high_level_conclusions JSON schema...\".\n- I will interpret \"episodic memory\" as a statement within the `high_level_conclusions` array describing the spoken content, as that fits the \"reasoning\" slot better than the visual description slot. Or I can add a note. But standard practice for these tasks is to fit everything into the defined schema.\n- Let's try to fit the voice summary into `high_level_conclusions` as an observation of the conversation happening.\n- Actually, re-reading: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This sounds like a specific requirement for the *output*. Since the output schema doesn't have a \"memories\" field, I must embed this information. The most logical place is `high_level_conclusions` where I describe the conversation.\n- However, usually, \"episodic memory\" implies a specific format. But since I can't change the schema, I will write the conclusion to reflect the speech.\n- Wait, I see \"Preserve speaker identity when constructing memory from the supplied character features.\" This is a system instruction.\n- Okay, I will ensure the voice IDs are referenced in the conclusions.\n\nLet's refine the plan.\nVideo Description: Focus on visual actions.\nHigh Level Conclusions: Focus on inference + voice integration.\n\nWait, looking at the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nIf I don't have a specific field for \"memory\", I might need to append it to the conclusions or descriptions.\nActually, often in these tasks, the \"High-Level Conclusions\" are meant to capture the semantic meaning, including dialogue summaries.\nI will formulate the conclusions to summarize the dialogue using the voice IDs.\n\nExample Conclusion: `<voice_1642>` discusses the nature of the activity, comparing it to a merchant relationship and mentioning \"handmade customization\".\nExample Conclusion: `<voice_1643>` mentions the use of specific currency and conditions for participants to converse freely.\n\nLet's finalize the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"The camera initially focuses on a kitchen area with a large window overlooking an outdoor patio with a white umbrella.\",\n    \"The view pans left to reveal a tiled wall decorated with a vase of flowers.\",\n    \"The camera moves from the kitchen into a living room where a group of people are gathered around a table.\",\n    \"A woman with blonde hair is seated in the foreground while others interact at the table.\",\n    \"The camera passes through a doorway into a bedroom containing a messy bed and a desk with multiple computer monitors.\",\n    \"The camera operator picks up a laptop from the bed.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group in the living room appears to be engaged in a structured activity or game, as discussed by <voice_1642> who compares the experience to being a merchant dealing in handmade items.\",\n    \"According to <voice_1643>, the activity involves a specific currency and allows participants to converse amongst themselves if they enjoy playing.\",\n    \"The presence of multiple screens and projectors in the living room aligns with the technical nature of the discussion regarding customization and currency mentioned in the audio.\"\n  ]\n}\n```\nWait, I need to check if I need to quote the transcript exactly. \"quotes or faithfully summarizes\". Summarizing is safer for JSON length and coherence.\nAlso, I need to make sure I don't hallucinate face IDs. I am not using any face IDs in the conclusions, which is correct since none were provided.\n\nOne detail: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nI am doing this by referencing `<voice_1642>` and `<voice_1643>`.\n\nOne more check on the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nSince I cannot add a new field, I will treat the `high_level_conclusions` as the place where this \"memory\" resides, effectively summarizing the speech as a conclusion drawn from the audio.\n\nWait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis implies I shouldn't change the schema.\nOkay, I'm confident in embedding the voice info in the conclusions.\n\nOne correction: The prompt says \"Return one complete JSON object...\".\nI will ensure valid JSON.\n\nRevised Plan:\n1. Video Description: List the visual events chronologically.\n2. High Level Conclusions: Include inferences about the gathering and specifically mention the content of the voices `<voice_1642>` and `<voice_1643>` as they relate to the activity shown.\n\nLet's write the response.\n</think>\n\n{\n  \"video_description\": [\n    \"The camera begins in a kitchen area, capturing a view of an outdoor patio with a white umbrella and seating furniture through a large window.\",\n    \"The perspective shifts to show a tiled wall featuring a dark vase with flowers before returning to the kitchen counter.\",\n    \"The camera moves into an adjacent living room where several people are gathered around a table.\",\n    \"A woman with long blonde hair sits in the foreground while others engage in activities at the table, with a projector screen visible in the background.\",\n    \"The viewpoint transitions through a doorway into a bedroom containing an unmade bed and a desk with multiple computer monitors.\",\n    \"The camera operator reaches down and picks up a laptop from the bed.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group in the living room is participating in a structured activity or game, as <voice_1642> describes the dynamic as similar to a merchant relationship involving handmade customization.\",\n    \"According to <voice_1643>, the activity utilizes a specific currency and permits participants to converse freely among themselves if they are enjoying the game.\",\n    \"The technical setup in the room, including multiple screens and a projector, supports the discussion about customization and digital elements mentioned in the audio.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10584,
+          "output_tokens": 3657,
+          "total_tokens": 14241,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002174987457692623,
+            "media_preparation_ms": 60.2568570029689,
+            "processor_tokenization_ms": 315.82199400872923,
+            "device_transfer_ms": 48.42328799713869,
+            "cuda_generation_ms": 164437.6430130069,
+            "decoding_ms": 3.5554389905883
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 164865.86991799413,
+          "request_end": 1789441209.1560357,
+          "latency_ms": 164893.8328880031,
+          "client_wall_clock_latency_ms": 164893.8328880031
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.07237499812617898,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.21884099987801164,
+      "nodes_added": 3,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 2,
+    "detected_faces": 41,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1653,
+    "edges_after_clip": 617,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera begins in a kitchen area, capturing a view of an outdoor patio with a white umbrella and seating furniture through a large window.",
+      "The perspective shifts to show a tiled wall featuring a dark vase with flowers before returning to the kitchen counter.",
+      "The camera moves into an adjacent living room where several people are gathered around a table.",
+      "A woman with long blonde hair sits in the foreground while others engage in activities at the table, with a projector screen visible in the background.",
+      "The viewpoint transitions through a doorway into a bedroom containing an unmade bed and a desk with multiple computer monitors.",
+      "The camera operator reaches down and picks up a laptop from the bed."
+    ],
+    "high_level_conclusions": [
+      "The group in the living room is participating in a structured activity or game, as <voice_1642> describes the dynamic as similar to a merchant relationship involving handmade customization.",
+      "According to <voice_1643>, the activity utilizes a specific currency and permits participants to converse freely among themselves if they are enjoying the game.",
+      "The technical setup in the room, including multiple screens and a projector, supports the discussion about customization and digital elements mentioned in the audio."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera begins in a kitchen area, capturing a view of an outdoor patio with a white umbrella and seating furniture through a large window.",
+      "The perspective shifts to show a tiled wall featuring a dark vase with flowers before returning to the kitchen counter.",
+      "The camera moves into an adjacent living room where several people are gathered around a table.",
+      "A woman with long blonde hair sits in the foreground while others engage in activities at the table, with a projector screen visible in the background.",
+      "The viewpoint transitions through a doorway into a bedroom containing an unmade bed and a desk with multiple computer monitors.",
+      "The camera operator reaches down and picks up a laptop from the bed."
+    ],
+    "high_level_conclusions": [
+      "The group in the living room is participating in a structured activity or game, as <voice_1642> describes the dynamic as similar to a merchant relationship involving handmade customization.",
+      "According to <voice_1643>, the activity utilizes a specific currency and permits participants to converse freely among themselves if they are enjoying the game.",
+      "The technical setup in the room, including multiple screens and a projector, supports the discussion about customization and digital elements mentioned in the audio."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_121_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 1642,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 一个，怎么形容？一个小市集也行，就是可以让他们先。",
+            "MAI: 对。",
+            "MAI: 就如果对咱们整体的这个手工制定感，就好比我们是一个商家一样。"
+          ]
+        },
+        "embedding_count": 3,
+        "embedding_dimensions": [
+          192,
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1643,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 只不过使用的是这个货币。",
+            "MAI: 然后如果大家玩得比较高兴的话，就后面让他们在自己之间交谈。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1644,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera begins in a kitchen area, capturing a view of an outdoor patio with a white umbrella and seating furniture through a large window."
+          ],
+          "timestamp": 121
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1645,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The perspective shifts to show a tiled wall featuring a dark vase with flowers before returning to the kitchen counter."
+          ],
+          "timestamp": 121
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1646,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera moves into an adjacent living room where several people are gathered around a table."
+          ],
+          "timestamp": 121
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1647,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman with long blonde hair sits in the foreground while others engage in activities at the table, with a projector screen visible in the background."
+          ],
+          "timestamp": 121
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1648,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The viewpoint transitions through a doorway into a bedroom containing an unmade bed and a desk with multiple computer monitors."
+          ],
+          "timestamp": 121
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1649,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator reaches down and picks up a laptop from the bed."
+          ],
+          "timestamp": 121
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1650,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group in the living room is participating in a structured activity or game, as <voice_1642> describes the dynamic as similar to a merchant relationship involving handmade customization."
+          ],
+          "timestamp": 121
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1651,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "According to <voice_1643>, the activity utilizes a specific currency and permits participants to converse freely among themselves if they are enjoying the game."
+          ],
+          "timestamp": 121
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1652,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The technical setup in the room, including multiple screens and a projector, supports the discussion about customization and digital elements mentioned in the audio."
+          ],
+          "timestamp": 121
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 1642,
+        "target": 1650,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1643,
+        "target": 1651,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_121_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_121_graph.pkl"
+  },
+  "memory_pickle_bytes": 39430329,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 81819.972904184,
+    "prepared_perf": 81828.649259768,
+    "ordered_start_perf": 82219.698938438,
+    "consumer_wait_ms": 0.01047999830916524,
+    "ready_to_ordered_ms": 391049.67866999505,
+    "preparation_work_ms": 8671.104517998174,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 173853.19130599964
+}

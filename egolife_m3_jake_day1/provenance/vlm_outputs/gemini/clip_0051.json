@@ -1,0 +1,78 @@
+{
+  "clip_id": 51,
+  "source": {
+    "segment_id": 51,
+    "source": "DAY1_A1_JAKE_11340000.mp4",
+    "source_clock": "11340000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41640.0,
+    "absolute_end_seconds": 41670.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0051.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47291.41676817,
+      "prepared_perf": 47301.15658579,
+      "ordered_start_perf": 47383.583791341,
+      "consumer_wait_ms": 0.011351003195159137,
+      "ready_to_ordered_ms": 82427.20555100095,
+      "preparation_work_ms": 9731.38535599719,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a checkered table engaged in a meeting.",
+      "A young man in an orange shirt stands by a whiteboard and writes down notes from the discussion.",
+      "A woman with blonde hair gestures with her hands as she speaks to the group.",
+      "A woman in a black top seated on the left listens attentively and occasionally gestures while following the conversation.",
+      "The camera wearer sits at the end of the table observing the meeting.",
+      "The camera wearer stands up from the table and walks away from the meeting room.",
+      "The camera wearer enters an adjacent hallway filled with delivery boxes and household items.",
+      "The camera wearer approaches a wooden bench holding cardboard packages and reaches out toward a long open box."
+    ],
+    "high_level_conclusions": [
+      "The team is holding a brainstorming session to plan creative activities and merchandise involving pressed flower crafts.",
+      "Speaker <voice_416> suggests turning carefully nurtured flowers into eco-friendly pressed flower postcards and acrylic crafts as keepsakes.",
+      "The camera wearer steps away from the meeting to fetch materials or check packages stored in the hallway."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a checkered table engaged in a meeting.\",\n\t\t\"A young man in an orange shirt stands by a whiteboard and writes down notes from the discussion.\",\n\t\t\"A woman with blonde hair gestures with her hands as she speaks to the group.\",\n\t\t\"A woman in a black top seated on the left listens attentively and occasionally gestures while following the conversation.\",\n\t\t\"The camera wearer sits at the end of the table observing the meeting.\",\n\t\t\"The camera wearer stands up from the table and walks away from the meeting room.\",\n\t\t\"The camera wearer enters an adjacent hallway filled with delivery boxes and household items.\",\n\t\t\"The camera wearer approaches a wooden bench holding cardboard packages and reaches out toward a long open box.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The team is holding a brainstorming session to plan creative activities and merchandise involving pressed flower crafts.\",\n\t\t\"Speaker <voice_416> suggests turning carefully nurtured flowers into eco-friendly pressed flower postcards and acrylic crafts as keepsakes.\",\n\t\t\"The camera wearer steps away from the meeting to fetch materials or check packages stored in the hallway.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 51,
+      "call_id": "b4c008eb-4186-4915-9b90-977f2343e9eb",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406206.7736502,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67294,
+      "output_tokens": 1260,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 52918.42315100075
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a checkered table engaged in a meeting.\",\n\t\t\"A young man in an orange shirt stands by a whiteboard and writes down notes from the discussion.\",\n\t\t\"A woman with blonde hair gestures with her hands as she speaks to the group.\",\n\t\t\"A woman in a black top seated on the left listens attentively and occasionally gestures while following the conversation.\",\n\t\t\"The camera wearer sits at the end of the table observing the meeting.\",\n\t\t\"The camera wearer stands up from the table and walks away from the meeting room.\",\n\t\t\"The camera wearer enters an adjacent hallway filled with delivery boxes and household items.\",\n\t\t\"The camera wearer approaches a wooden bench holding cardboard packages and reaches out toward a long open box.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The team is holding a brainstorming session to plan creative activities and merchandise involving pressed flower crafts.\",\n\t\t\"Speaker <voice_416> suggests turning carefully nurtured flowers into eco-friendly pressed flower postcards and acrylic crafts as keepsakes.\",\n\t\t\"The camera wearer steps away from the meeting to fetch materials or check packages stored in the hallway.\"\n\t]\n}\n```",
+      "total_tokens": 68554,
+      "request_end": 1789406259.692171,
+      "latency_ms": 52918.51857100119,
+      "client_wall_clock_latency_ms": 52918.51857100119,
+      "api_request_wall_clock_latency_ms": 52918.51857100119
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_51_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

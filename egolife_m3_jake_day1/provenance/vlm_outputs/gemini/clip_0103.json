@@ -1,0 +1,77 @@
+{
+  "clip_id": 103,
+  "source": {
+    "segment_id": 103,
+    "source": "DAY1_A1_JAKE_11580000.mp4",
+    "source_clock": "11580000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43080.0,
+    "absolute_end_seconds": 43110.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0103.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51474.62034885,
+      "prepared_perf": 51481.413332342,
+      "ordered_start_perf": 51586.306593001,
+      "consumer_wait_ms": 0.009176997991744429,
+      "ready_to_ordered_ms": 104893.26065899513,
+      "preparation_work_ms": 6786.694357004308,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Several people are gathered in a room around a table discussing plans, with a clapperboard on the table and a whiteboard in the background.",
+      "A young man in an orange shirt gestures and speaks before walking across the room.",
+      "<voice_332> discusses the time allocation for an auction process.",
+      "A woman in white stands near the whiteboard handling flowers while others listen.",
+      "<voice_466> suggests distributing tokens and playing a dice game.",
+      "<voice_0> agrees with the idea of including games.",
+      "The person wearing the camera picks up a smartphone and checks the screen.",
+      "<voice_1184> speaks as the group continues their conversation."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a planning session or production meeting, coordinating activities and game rules for an upcoming event.",
+      "The discussion involves time management and interactive engagement strategies like dice games and an auction."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Several people are gathered in a room around a table discussing plans, with a clapperboard on the table and a whiteboard in the background.\",\n    \"A young man in an orange shirt gestures and speaks before walking across the room.\",\n    \"<voice_332> discusses the time allocation for an auction process.\",\n    \"A woman in white stands near the whiteboard handling flowers while others listen.\",\n    \"<voice_466> suggests distributing tokens and playing a dice game.\",\n    \"<voice_0> agrees with the idea of including games.\",\n    \"The person wearing the camera picks up a smartphone and checks the screen.\",\n    \"<voice_1184> speaks as the group continues their conversation.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a planning session or production meeting, coordinating activities and game rules for an upcoming event.\",\n    \"The discussion involves time management and interactive engagement strategies like dice games and an auction.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 103,
+      "call_id": "3d5fedbf-bfb9-4d3d-b16e-12b2910005e7",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410411.1972127,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66949,
+      "output_tokens": 1022,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 105782.11993199511
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Several people are gathered in a room around a table discussing plans, with a clapperboard on the table and a whiteboard in the background.\",\n    \"A young man in an orange shirt gestures and speaks before walking across the room.\",\n    \"<voice_332> discusses the time allocation for an auction process.\",\n    \"A woman in white stands near the whiteboard handling flowers while others listen.\",\n    \"<voice_466> suggests distributing tokens and playing a dice game.\",\n    \"<voice_0> agrees with the idea of including games.\",\n    \"The person wearing the camera picks up a smartphone and checks the screen.\",\n    \"<voice_1184> speaks as the group continues their conversation.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a planning session or production meeting, coordinating activities and game rules for an upcoming event.\",\n    \"The discussion involves time management and interactive engagement strategies like dice games and an auction.\"\n  ]\n}\n```",
+      "total_tokens": 67971,
+      "request_end": 1789410516.9794304,
+      "latency_ms": 105782.21518200007,
+      "client_wall_clock_latency_ms": 105782.21518200007,
+      "api_request_wall_clock_latency_ms": 105782.21518200007
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_103_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

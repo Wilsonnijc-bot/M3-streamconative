@@ -1,0 +1,75 @@
+{
+  "clip_id": 97,
+  "source": {
+    "segment_id": 97,
+    "source": "DAY1_A1_JAKE_11560000.mp4",
+    "source_clock": "11560000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42960.0,
+    "absolute_end_seconds": 42990.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0097.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 50841.111790461,
+      "prepared_perf": 50849.075246277,
+      "ordered_start_perf": 50948.221507301,
+      "consumer_wait_ms": 0.009549003152642399,
+      "ready_to_ordered_ms": 99146.2610239978,
+      "preparation_work_ms": 7958.182974005467,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Several people are gathered in a living room around a dining table, which has a clapperboard and script notes on it.",
+      "A woman in a white shirt stands by a whiteboard near flowers, while a woman in black sits at the table.",
+      "A young man wearing an orange t-shirt enters the frame from the left and gestures while talking to the group.",
+      "The camera wearer gestures toward the group with their right hand while participating in the discussion.",
+      "The woman seated in black speaks and interacts with the others regarding dancing in the performance.",
+      "The man in orange continues walking around the room while contributing ideas to the ongoing script and rehearsal discussion."
+    ],
+    "high_level_conclusions": [
+      "The group is actively planning and delegating roles for a video shoot or stage performance, specifically debating who should participate in a dance segment.",
+      "The man in the orange shirt and the camera wearer are suggesting participants, while the seated woman in black clarifies whether she is expected to dance solo."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Several people are gathered in a living room around a dining table, which has a clapperboard and script notes on it.\",\n    \"A woman in a white shirt stands by a whiteboard near flowers, while a woman in black sits at the table.\",\n    \"A young man wearing an orange t-shirt enters the frame from the left and gestures while talking to the group.\",\n    \"The camera wearer gestures toward the group with their right hand while participating in the discussion.\",\n    \"The woman seated in black speaks and interacts with the others regarding dancing in the performance.\",\n    \"The man in orange continues walking around the room while contributing ideas to the ongoing script and rehearsal discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is actively planning and delegating roles for a video shoot or stage performance, specifically debating who should participate in a dance segment.\",\n    \"The man in the orange shirt and the camera wearer are suggesting participants, while the seated woman in black clarifies whether she is expected to dance solo.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 97,
+      "call_id": "404c03f6-225a-4913-9c53-6a633a79b9c4",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789409772.6084924,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66935,
+      "output_tokens": 972,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 66535.19673300616
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Several people are gathered in a living room around a dining table, which has a clapperboard and script notes on it.\",\n    \"A woman in a white shirt stands by a whiteboard near flowers, while a woman in black sits at the table.\",\n    \"A young man wearing an orange t-shirt enters the frame from the left and gestures while talking to the group.\",\n    \"The camera wearer gestures toward the group with their right hand while participating in the discussion.\",\n    \"The woman seated in black speaks and interacts with the others regarding dancing in the performance.\",\n    \"The man in orange continues walking around the room while contributing ideas to the ongoing script and rehearsal discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is actively planning and delegating roles for a video shoot or stage performance, specifically debating who should participate in a dance segment.\",\n    \"The man in the orange shirt and the camera wearer are suggesting participants, while the seated woman in black clarifies whether she is expected to dance solo.\"\n  ]\n}\n```",
+      "total_tokens": 67907,
+      "request_end": 1789409839.1437917,
+      "latency_ms": 66535.29676100152,
+      "client_wall_clock_latency_ms": 66535.29676100152,
+      "api_request_wall_clock_latency_ms": 66535.29676100152
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_97_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

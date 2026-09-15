@@ -1,0 +1,75 @@
+{
+  "clip_id": 33,
+  "source": {
+    "segment_id": 33,
+    "source": "bedroom_01_00150000.mp4",
+    "source_clock": "00150000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 900.0,
+    "absolute_end_seconds": 930.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00150000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 74185.996821009,
+      "prepared_perf": 74190.647380546,
+      "ordered_start_perf": 74263.016073951,
+      "consumer_wait_ms": 0.025258006644435227,
+      "ready_to_ordered_ms": 72368.69340500562,
+      "preparation_work_ms": 4645.237503995304,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table covered with a blue patterned cloth.",
+      "The woman on the left holds a phone in one hand and gestures with the other while talking about her work.",
+      "The woman on the right rests her chin on her hands and listens attentively.",
+      "On the table between them are snacks, a cake slice, a mug, papers, and bottles.",
+      "Near the end of the clip, the woman on the left reaches down to pick up a snack from the food container while the woman on the right begins responding."
+    ],
+    "high_level_conclusions": [
+      "The two women are having a thoughtful discussion about creative work and personal fulfillment.",
+      "The woman on the left expresses a deep appreciation for the creative process and pride in completing her design work.",
+      "The woman on the right acts as an attentive listener, offering supportive acknowledgments before asking a follow-up question."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table covered with a blue patterned cloth.\",\n    \"The woman on the left holds a phone in one hand and gestures with the other while talking about her work.\",\n    \"The woman on the right rests her chin on her hands and listens attentively.\",\n    \"On the table between them are snacks, a cake slice, a mug, papers, and bottles.\",\n    \"Near the end of the clip, the woman on the left reaches down to pick up a snack from the food container while the woman on the right begins responding.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women are having a thoughtful discussion about creative work and personal fulfillment.\",\n    \"The woman on the left expresses a deep appreciation for the creative process and pride in completing her design work.\",\n    \"The woman on the right acts as an attentive listener, offering supportive acknowledgments before asking a follow-up question.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 33,
+      "call_id": "2a6e2abb-820a-44da-a202-1a3203984444",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789433086.5609019,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66062,
+      "output_tokens": 968,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 28869.717985988245
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table covered with a blue patterned cloth.\",\n    \"The woman on the left holds a phone in one hand and gestures with the other while talking about her work.\",\n    \"The woman on the right rests her chin on her hands and listens attentively.\",\n    \"On the table between them are snacks, a cake slice, a mug, papers, and bottles.\",\n    \"Near the end of the clip, the woman on the left reaches down to pick up a snack from the food container while the woman on the right begins responding.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women are having a thoughtful discussion about creative work and personal fulfillment.\",\n    \"The woman on the left expresses a deep appreciation for the creative process and pride in completing her design work.\",\n    \"The woman on the right acts as an attentive listener, offering supportive acknowledgments before asking a follow-up question.\"\n  ]\n}\n```",
+      "total_tokens": 67030,
+      "request_end": 1789433115.430778,
+      "latency_ms": 28869.86813900876,
+      "client_wall_clock_latency_ms": 28869.86813900876,
+      "api_request_wall_clock_latency_ms": 28869.86813900876
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_33_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

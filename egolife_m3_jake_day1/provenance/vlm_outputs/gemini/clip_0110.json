@@ -1,0 +1,77 @@
+{
+  "clip_id": 110,
+  "source": {
+    "segment_id": 110,
+    "source": "DAY1_A1_JAKE_12013000.mp4",
+    "source_clock": "12013000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43290.0,
+    "absolute_end_seconds": 43320.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0110.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51951.23884247,
+      "prepared_perf": 51960.156739924,
+      "ordered_start_perf": 52141.955359299,
+      "consumer_wait_ms": 0.012402997526805848,
+      "ready_to_ordered_ms": 181798.61937499663,
+      "preparation_work_ms": 8912.566895000055,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a dining table inside a room, with a clapperboard, flowers, and notebooks on the table.",
+      "In the background, a young man in an orange shirt stands next to a whiteboard, writing on it and erasing parts of it.",
+      "A woman in a white top stands beside the young man near the whiteboard, looking at the board and conversing with him.",
+      "A woman with pink hair enters the frame from the right and sits down on a wooden chair at the table.",
+      "A woman wearing glasses and dark clothing sits on the left side of the table, listening to the discussion and resting her chin in her hand.",
+      "Another woman sits at the far side of the table, observing the discussion at the whiteboard.",
+      "The young man at the whiteboard gestures and explains the timeline and schedule to the team."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be a film or video production team holding a pre-production or production meeting to coordinate their schedule and timeline.",
+      "The young man in the orange shirt is leading the planning discussion and organizing the schedule on the whiteboard.",
+      "<voice_330> and <voice_0> belong to the same speaker who questions the phrasing written on the whiteboard."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a dining table inside a room, with a clapperboard, flowers, and notebooks on the table.\",\n  \"In the background, a young man in an orange shirt stands next to a whiteboard, writing on it and erasing parts of it.\",\n  \"A woman in a white top stands beside the young man near the whiteboard, looking at the board and conversing with him.\",\n  \"A woman with pink hair enters the frame from the right and sits down on a wooden chair at the table.\",\n  \"A woman wearing glasses and dark clothing sits on the left side of the table, listening to the discussion and resting her chin in her hand.\",\n  \"Another woman sits at the far side of the table, observing the discussion at the whiteboard.\",\n  \"The young man at the whiteboard gestures and explains the timeline and schedule to the team.\"\n ],\n \"high_level_conclusions\": [\n  \"The group appears to be a film or video production team holding a pre-production or production meeting to coordinate their schedule and timeline.\",\n  \"The young man in the orange shirt is leading the planning discussion and organizing the schedule on the whiteboard.\",\n  \"<voice_330> and <voice_0> belong to the same speaker who questions the phrasing written on the whiteboard.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 110,
+      "call_id": "f2af3c8f-1d23-49f3-ac96-46093d2969bd",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410967.761217,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66776,
+      "output_tokens": 1604,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 43713.9137799968
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a dining table inside a room, with a clapperboard, flowers, and notebooks on the table.\",\n  \"In the background, a young man in an orange shirt stands next to a whiteboard, writing on it and erasing parts of it.\",\n  \"A woman in a white top stands beside the young man near the whiteboard, looking at the board and conversing with him.\",\n  \"A woman with pink hair enters the frame from the right and sits down on a wooden chair at the table.\",\n  \"A woman wearing glasses and dark clothing sits on the left side of the table, listening to the discussion and resting her chin in her hand.\",\n  \"Another woman sits at the far side of the table, observing the discussion at the whiteboard.\",\n  \"The young man at the whiteboard gestures and explains the timeline and schedule to the team.\"\n ],\n \"high_level_conclusions\": [\n  \"The group appears to be a film or video production team holding a pre-production or production meeting to coordinate their schedule and timeline.\",\n  \"The young man in the orange shirt is leading the planning discussion and organizing the schedule on the whiteboard.\",\n  \"<voice_330> and <voice_0> belong to the same speaker who questions the phrasing written on the whiteboard.\"\n ]\n}\n```",
+      "total_tokens": 68380,
+      "request_end": 1789411011.4752626,
+      "latency_ms": 43714.042984000116,
+      "client_wall_clock_latency_ms": 43714.042984000116,
+      "api_request_wall_clock_latency_ms": 43714.042984000116
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_110_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

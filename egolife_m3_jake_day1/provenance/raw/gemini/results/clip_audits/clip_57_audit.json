@@ -1,0 +1,459 @@
+{
+  "clip_id": 57,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0057.mp4",
+  "end_to_end_memory_generation_ms": 133393.4576169995,
+  "latency_ms": {
+    "clip_decode": 4033.7363029975677,
+    "deepgram_asr": 925.5290200017043,
+    "mai_transcribe_asr": 1012.3520459965221,
+    "asr_total": 1013.7969130009878,
+    "audio_segmentation": 5.843463004566729,
+    "speech_embedding_campplus": 622.1278849989176,
+    "facial_detection_recognition_buffalo_l": 3714.690996996069,
+    "face_clustering": 5.826564003655221,
+    "vlm_memory_generation": 36684.770858002594,
+    "text_embedding": 465.8602530034841,
+    "graph_update_total": 179.9366740087862
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 57,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 1091,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789406524.8515737,
+          "status": "success",
+          "total_tokens": 243,
+          "request_end": 1789406525.3173192,
+          "latency_ms": 465.74599699670216
+        }
+      ],
+      "total_tokens": 243,
+      "latency_ms": 465.8602530034841
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 925.5290200017043,
+        "openrouter-mai-transcribe-2": 1012.3520459965221
+      },
+      "asr_total_ms": 1013.7969130009878,
+      "audio_segmentation_ms": 5.843463004566729,
+      "speech_embedding_ms": 622.1278849989176,
+      "graph_update_ms": 170.52797300129896,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 810.3502489975654
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3714.690996996069,
+      "face_clustering_ms": 5.826564003655221,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 229,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3848.696322995238
+    },
+    "vlm": {
+      "context_preparation_ms": 4142.68448400253,
+      "vlm_ms": 36684.770858002594,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"Several people are gathered around a dining table covered with a pink and white checkered tablecloth, preparing and arranging flowers.\",\n  \"A woman in a green floral dress and a woman in a white top are unpacking and assembling flower bouquets.\",\n  \"A woman in black clothing sits at the table, observing the flower preparation.\",\n  \"The camera wearer walks toward the entrance door, checks the door frame, and turns back toward the main room.\",\n  \"<voice_642> explains that the nutrient solution is dissolved in water to accelerate the blooming process.\",\n  \"A young man in an orange T-shirt stands by the table observing the group.\",\n  \"<voice_0> suggests to Tasha that they also showcase their talents and asks her to see which items belong to her.\",\n  \"<voice_643> responds, stating that none of the items belong to her.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is preparing flowers and bouquets, possibly as props or gifts for a video shoot, as indicated by the clapperboard resting on the table.\",\n  \"<voice_0> is addressing a group member named Tasha (塔莎).\",\n  \"<voice_643> is Tasha, responding directly to <voice_0>'s inquiry about which flowers or items belong to her.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Several people are gathered around a dining table covered with a pink and white checkered tablecloth, preparing and arranging flowers.",
+          "A woman in a green floral dress and a woman in a white top are unpacking and assembling flower bouquets.",
+          "A woman in black clothing sits at the table, observing the flower preparation.",
+          "The camera wearer walks toward the entrance door, checks the door frame, and turns back toward the main room.",
+          "<voice_642> explains that the nutrient solution is dissolved in water to accelerate the blooming process.",
+          "A young man in an orange T-shirt stands by the table observing the group.",
+          "<voice_0> suggests to Tasha that they also showcase their talents and asks her to see which items belong to her.",
+          "<voice_643> responds, stating that none of the items belong to her."
+        ],
+        "high_level_conclusions": [
+          "The group is preparing flowers and bouquets, possibly as props or gifts for a video shoot, as indicated by the clapperboard resting on the table.",
+          "<voice_0> is addressing a group member named Tasha (塔莎).",
+          "<voice_643> is Tasha, responding directly to <voice_0>'s inquiry about which flowers or items belong to her."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 57,
+          "call_id": "80014629-a487-44e0-95b4-6303e823f3ee",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789406488.1659427,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66634,
+          "output_tokens": 1512,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 36684.65475799894
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"Several people are gathered around a dining table covered with a pink and white checkered tablecloth, preparing and arranging flowers.\",\n  \"A woman in a green floral dress and a woman in a white top are unpacking and assembling flower bouquets.\",\n  \"A woman in black clothing sits at the table, observing the flower preparation.\",\n  \"The camera wearer walks toward the entrance door, checks the door frame, and turns back toward the main room.\",\n  \"<voice_642> explains that the nutrient solution is dissolved in water to accelerate the blooming process.\",\n  \"A young man in an orange T-shirt stands by the table observing the group.\",\n  \"<voice_0> suggests to Tasha that they also showcase their talents and asks her to see which items belong to her.\",\n  \"<voice_643> responds, stating that none of the items belong to her.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is preparing flowers and bouquets, possibly as props or gifts for a video shoot, as indicated by the clapperboard resting on the table.\",\n  \"<voice_0> is addressing a group member named Tasha (塔莎).\",\n  \"<voice_643> is Tasha, responding directly to <voice_0>'s inquiry about which flowers or items belong to her.\"\n ]\n}\n```",
+          "total_tokens": 68146,
+          "request_end": 1789406524.8507168,
+          "latency_ms": 36684.770858002594,
+          "client_wall_clock_latency_ms": 36684.770858002594,
+          "api_request_wall_clock_latency_ms": 36684.770858002594
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.10395500430604443,
+      "nodes_added": 8,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 9.304746003181208,
+      "nodes_added": 3,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 3,
+    "detected_faces": 229,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 3,
+    "nodes_after_clip": 655,
+    "edges_after_clip": 137,
+    "nodes_added_by_clip": 13,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "Several people are gathered around a dining table covered with a pink and white checkered tablecloth, preparing and arranging flowers.",
+      "A woman in a green floral dress and a woman in a white top are unpacking and assembling flower bouquets.",
+      "A woman in black clothing sits at the table, observing the flower preparation.",
+      "The camera wearer walks toward the entrance door, checks the door frame, and turns back toward the main room.",
+      "<voice_642> explains that the nutrient solution is dissolved in water to accelerate the blooming process.",
+      "A young man in an orange T-shirt stands by the table observing the group.",
+      "<voice_0> suggests to Tasha that they also showcase their talents and asks her to see which items belong to her.",
+      "<voice_643> responds, stating that none of the items belong to her."
+    ],
+    "high_level_conclusions": [
+      "The group is preparing flowers and bouquets, possibly as props or gifts for a video shoot, as indicated by the clapperboard resting on the table.",
+      "<voice_0> is addressing a group member named Tasha (塔莎).",
+      "<voice_643> is Tasha, responding directly to <voice_0>'s inquiry about which flowers or items belong to her."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Several people are gathered around a dining table covered with a pink and white checkered tablecloth, preparing and arranging flowers.",
+      "A woman in a green floral dress and a woman in a white top are unpacking and assembling flower bouquets.",
+      "A woman in black clothing sits at the table, observing the flower preparation.",
+      "The camera wearer walks toward the entrance door, checks the door frame, and turns back toward the main room.",
+      "<voice_642> explains that the nutrient solution is dissolved in water to accelerate the blooming process.",
+      "A young man in an orange T-shirt stands by the table observing the group.",
+      "<voice_0> suggests to Tasha that they also showcase their talents and asks her to see which items belong to her.",
+      "<voice_643> responds, stating that none of the items belong to her."
+    ],
+    "high_level_conclusions": [
+      "The group is preparing flowers and bouquets, possibly as props or gifts for a video shoot, as indicated by the clapperboard resting on the table.",
+      "<voice_0> is addressing a group member named Tasha (塔莎).",
+      "<voice_643> is Tasha, responding directly to <voice_0>'s inquiry about which flowers or items belong to her."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_57_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 13,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 642,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 营养剂，泡到水里面加速醒发的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 643,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 没有我的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 644,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Several people are gathered around a dining table covered with a pink and white checkered tablecloth, preparing and arranging flowers."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 645,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a green floral dress and a woman in a white top are unpacking and assembling flower bouquets."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 646,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in black clothing sits at the table, observing the flower preparation."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 647,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer walks toward the entrance door, checks the door frame, and turns back toward the main room."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 648,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_642> explains that the nutrient solution is dissolved in water to accelerate the blooming process."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 649,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young man in an orange T-shirt stands by the table observing the group."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 650,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> suggests to Tasha that they also showcase their talents and asks her to see which items belong to her."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 651,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_643> responds, stating that none of the items belong to her."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 652,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is preparing flowers and bouquets, possibly as props or gifts for a video shoot, as indicated by the clapperboard resting on the table."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 653,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> is addressing a group member named Tasha (塔莎)."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 654,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_643> is Tasha, responding directly to <voice_0>'s inquiry about which flowers or items belong to her."
+          ],
+          "timestamp": 57
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 650,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 653,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 0,
+        "target": 654,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 642,
+        "target": 648,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 643,
+        "target": 651,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 643,
+        "target": 654,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_57_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_57_graph.pkl"
+  },
+  "memory_pickle_bytes": 14913453,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 47578.834701797,
+    "prepared_perf": 47585.611688419,
+    "ordered_start_perf": 47665.062963087,
+    "consumer_wait_ms": 0.012333999620750546,
+    "ready_to_ordered_ms": 79451.27466800477,
+    "preparation_work_ms": 6771.713089998229,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 45964.00022300077
+}

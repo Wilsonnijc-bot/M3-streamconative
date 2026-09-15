@@ -1,0 +1,368 @@
+{
+  "counts": {
+    "nodes": 24,
+    "edges": 2,
+    "directed_edges_stored": 4,
+    "by_type": {
+      "episodic": 14,
+      "semantic": 8,
+      "voice": 2
+    }
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "type": "voice",
+      "metadata": {
+        "contents": [
+          "MAI: 好，然后一个秒表。",
+          "MAI: 对，戳一下。",
+          "MAI: 来，都戳一下，每人戳一下。传过去戳一下，哎，你能看到对吧？好，戳完了。行，开机，开。那就是今天我们就讨论讨论，早上讨论讨论我们最后一天干点啥呗。然后可能，嗯。"
+        ]
+      },
+      "embedding_count": 3,
+      "embedding_dimensions": [
+        192,
+        192,
+        192
+      ]
+    },
+    {
+      "id": 1,
+      "type": "voice",
+      "metadata": {
+        "contents": [
+          "MAI: 时间戳。"
+        ]
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        192
+      ]
+    },
+    {
+      "id": 2,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "A first-person view shows a hand holding a smartphone displaying a timer application."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 3,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The person holding the phone stands in front of a group of five people sitting around a table."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 4,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The group members are wearing VR headsets and appear to be engaged in an activity."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 5,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "At 00:04, the person holding the phone begins speaking while looking at the screen."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 6,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The person holding the phone interacts with the smartphone interface, scrolling through options."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 7,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "At 00:12, the person initiates the timer function on the smartphone."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 8,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The timer on the phone counts down from 00:02:30 to 00:00:00."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 9,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "Once the timer reaches zero, the person places their hands on the table near the participants."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 10,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "Equivalence: <face_0>, <voice_0>"
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 11,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "Equivalence: <face_1>, <voice_1>"
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 12,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The group of people is participating in a virtual reality session or game."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 13,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The person filming is acting as a moderator or facilitator for the session."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 14,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The use of a countdown timer suggests a timed challenge or specific duration for the VR activity."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 15,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "A group of five people are seated around a table covered with a checkered cloth."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 16,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The person filming extends their hand towards the others, gesturing for them to put on VR headsets."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 17,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "Participants begin putting on black VR headsets over their eyes."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 18,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "After everyone puts on the headset, the camera operator picks up a smartphone."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 19,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera operator holds the phone up, displaying a timer application."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 20,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The timer on the phone screen counts upwards from zero."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 21,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The speaker identified as MAI is the person sitting at the head of the table wearing a white shirt."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 22,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The group activity involves preparing for a session using virtual reality equipment."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 23,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The use of a timer suggests the upcoming activity is time-bound or requires precise timing."
+        ],
+        "timestamp": 2
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 10,
+      "weight": 3.0,
+      "source_type": "voice",
+      "target_type": "semantic"
+    },
+    {
+      "source": 1,
+      "target": 11,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "semantic"
+    }
+  ]
+}

@@ -1,0 +1,4921 @@
+{
+  "version": "3.0_safetensors",
+  "config": {
+    "embedding_dim": 1024,
+    "faiss_index_type": "IDMap,Flat",
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "supported_modalities": [
+      "text"
+    ],
+    "image_model": null,
+    "text_model": "Qwen/Qwen3-Embedding-0.6B"
+  },
+  "memory_spaces": {
+    "hierarchical_memory": {
+      "name": "hierarchical_memory",
+      "unit_uids": [],
+      "child_space_names": [
+        "hierarchical_memory:L1_Summary",
+        "hierarchical_memory:L2_Insight",
+        "hierarchical_memory:L0_Observation"
+      ],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L0_Observation": {
+      "name": "hierarchical_memory:L0_Observation",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L1_Summary": {
+      "name": "hierarchical_memory:L1_Summary",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L2_Insight": {
+      "name": "hierarchical_memory:L2_Insight",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation": {
+      "name": "entity_relation",
+      "unit_uids": [],
+      "child_space_names": [
+        "entity_relation:entities",
+        "entity_relation:relations",
+        "entity_relation:mentions"
+      ],
+      "faiss_index_type": null
+    },
+    "entity_relation:entities": {
+      "name": "entity_relation:entities",
+      "unit_uids": [
+        "m3:bedroom-01-q01:entity:character_6",
+        "m3:bedroom-01-q01:entity:character_5",
+        "m3:bedroom-01-q01:entity:character_10",
+        "m3:bedroom-01-q01:entity:character_8",
+        "m3:bedroom-01-q01:entity:character_7",
+        "m3:bedroom-01-q01:entity:character_4",
+        "m3:bedroom-01-q01:entity:character_3",
+        "m3:bedroom-01-q01:entity:character_2",
+        "m3:bedroom-01-q01:entity:character_1",
+        "m3:bedroom-01-q01:entity:character_11",
+        "m3:bedroom-01-q01:entity:character_0",
+        "m3:bedroom-01-q01:entity:character_12",
+        "m3:bedroom-01-q01:entity:character_9"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation:mentions": {
+      "name": "entity_relation:mentions",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation:relations": {
+      "name": "entity_relation:relations",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "episodic_memory": {
+      "name": "episodic_memory",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:6:episodic:55",
+        "m3:bedroom-01-q01:clip:14:episodic:134",
+        "m3:bedroom-01-q01:clip:8:episodic:71",
+        "m3:bedroom-01-q01:clip:14:episodic:130",
+        "m3:bedroom-01-q01:clip:10:episodic:89",
+        "m3:bedroom-01-q01:clip:5:episodic:45",
+        "m3:bedroom-01-q01:clip:9:episodic:83",
+        "m3:bedroom-01-q01:clip:2:episodic:17",
+        "m3:bedroom-01-q01:clip:4:episodic:37",
+        "m3:bedroom-01-q01:clip:3:episodic:24",
+        "m3:bedroom-01-q01:clip:11:episodic:99",
+        "m3:bedroom-01-q01:clip:4:episodic:36",
+        "m3:bedroom-01-q01:clip:3:episodic:27",
+        "m3:bedroom-01-q01:clip:5:episodic:43",
+        "m3:bedroom-01-q01:clip:8:episodic:74",
+        "m3:bedroom-01-q01:clip:6:episodic:50",
+        "m3:bedroom-01-q01:clip:11:episodic:100",
+        "m3:bedroom-01-q01:clip:7:episodic:63",
+        "m3:bedroom-01-q01:clip:10:episodic:88",
+        "m3:bedroom-01-q01:clip:1:episodic:7",
+        "m3:bedroom-01-q01:clip:8:episodic:76",
+        "m3:bedroom-01-q01:clip:12:episodic:112",
+        "m3:bedroom-01-q01:clip:10:episodic:93",
+        "m3:bedroom-01-q01:clip:1:episodic:5",
+        "m3:bedroom-01-q01:clip:7:episodic:61",
+        "m3:bedroom-01-q01:clip:12:episodic:108",
+        "m3:bedroom-01-q01:clip:3:episodic:26",
+        "m3:bedroom-01-q01:clip:4:episodic:38",
+        "m3:bedroom-01-q01:clip:1:episodic:6",
+        "m3:bedroom-01-q01:clip:15:episodic:143",
+        "m3:bedroom-01-q01:clip:11:episodic:101",
+        "m3:bedroom-01-q01:clip:13:episodic:121",
+        "m3:bedroom-01-q01:clip:13:episodic:120",
+        "m3:bedroom-01-q01:clip:8:episodic:73",
+        "m3:bedroom-01-q01:clip:14:episodic:132",
+        "m3:bedroom-01-q01:clip:10:episodic:92",
+        "m3:bedroom-01-q01:clip:5:episodic:42",
+        "m3:bedroom-01-q01:clip:3:episodic:22",
+        "m3:bedroom-01-q01:clip:1:episodic:1",
+        "m3:bedroom-01-q01:clip:6:episodic:51",
+        "m3:bedroom-01-q01:clip:8:episodic:69",
+        "m3:bedroom-01-q01:clip:11:episodic:105",
+        "m3:bedroom-01-q01:clip:10:episodic:91",
+        "m3:bedroom-01-q01:clip:7:episodic:59",
+        "m3:bedroom-01-q01:clip:3:episodic:25",
+        "m3:bedroom-01-q01:clip:2:episodic:16",
+        "m3:bedroom-01-q01:clip:7:episodic:62",
+        "m3:bedroom-01-q01:clip:11:episodic:102",
+        "m3:bedroom-01-q01:clip:5:episodic:46",
+        "m3:bedroom-01-q01:clip:2:episodic:18",
+        "m3:bedroom-01-q01:clip:8:episodic:70",
+        "m3:bedroom-01-q01:clip:5:episodic:47",
+        "m3:bedroom-01-q01:clip:12:episodic:113",
+        "m3:bedroom-01-q01:clip:5:episodic:44",
+        "m3:bedroom-01-q01:clip:14:episodic:131",
+        "m3:bedroom-01-q01:clip:8:episodic:72",
+        "m3:bedroom-01-q01:clip:11:episodic:103",
+        "m3:bedroom-01-q01:clip:15:episodic:144",
+        "m3:bedroom-01-q01:clip:12:episodic:114",
+        "m3:bedroom-01-q01:clip:4:episodic:33",
+        "m3:bedroom-01-q01:clip:8:episodic:75",
+        "m3:bedroom-01-q01:clip:7:episodic:64",
+        "m3:bedroom-01-q01:clip:10:episodic:90",
+        "m3:bedroom-01-q01:clip:1:episodic:3",
+        "m3:bedroom-01-q01:clip:3:episodic:23",
+        "m3:bedroom-01-q01:clip:2:episodic:14",
+        "m3:bedroom-01-q01:clip:11:episodic:104",
+        "m3:bedroom-01-q01:clip:2:episodic:15",
+        "m3:bedroom-01-q01:clip:13:episodic:122",
+        "m3:bedroom-01-q01:clip:6:episodic:52",
+        "m3:bedroom-01-q01:clip:9:episodic:82",
+        "m3:bedroom-01-q01:clip:13:episodic:119",
+        "m3:bedroom-01-q01:clip:4:episodic:35",
+        "m3:bedroom-01-q01:clip:1:episodic:4",
+        "m3:bedroom-01-q01:clip:13:episodic:124",
+        "m3:bedroom-01-q01:clip:12:episodic:115",
+        "m3:bedroom-01-q01:clip:11:episodic:98",
+        "m3:bedroom-01-q01:clip:15:episodic:141",
+        "m3:bedroom-01-q01:clip:4:episodic:34",
+        "m3:bedroom-01-q01:clip:6:episodic:53",
+        "m3:bedroom-01-q01:clip:15:episodic:139",
+        "m3:bedroom-01-q01:clip:14:episodic:129",
+        "m3:bedroom-01-q01:clip:15:episodic:142",
+        "m3:bedroom-01-q01:clip:7:episodic:60",
+        "m3:bedroom-01-q01:clip:9:episodic:80",
+        "m3:bedroom-01-q01:clip:12:episodic:109",
+        "m3:bedroom-01-q01:clip:13:episodic:123",
+        "m3:bedroom-01-q01:clip:12:episodic:110",
+        "m3:bedroom-01-q01:clip:9:episodic:81",
+        "m3:bedroom-01-q01:clip:3:episodic:28",
+        "m3:bedroom-01-q01:clip:6:episodic:54",
+        "m3:bedroom-01-q01:clip:15:episodic:140",
+        "m3:bedroom-01-q01:clip:1:episodic:2",
+        "m3:bedroom-01-q01:clip:14:episodic:133",
+        "m3:bedroom-01-q01:clip:12:episodic:111",
+        "m3:bedroom-01-q01:clip:2:episodic:13"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01": {
+      "name": "m3:video:bedroom-01-q01",
+      "unit_uids": [],
+      "child_space_names": [
+        "m3:video:bedroom-01-q01:block:0",
+        "m3:video:bedroom-01-q01:block:1",
+        "m3:video:bedroom-01-q01:block:2",
+        "m3:video:bedroom-01-q01:block:3"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:type:semantic": {
+      "name": "m3:type:semantic",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:3:semantic:30",
+        "m3:bedroom-01-q01:clip:3:semantic:29",
+        "m3:bedroom-01-q01:clip:4:semantic:41",
+        "m3:bedroom-01-q01:clip:15:semantic:145",
+        "m3:bedroom-01-q01:clip:11:semantic:106",
+        "m3:bedroom-01-q01:clip:9:semantic:85",
+        "m3:bedroom-01-q01:clip:12:semantic:116",
+        "m3:bedroom-01-q01:clip:14:semantic:136",
+        "m3:bedroom-01-q01:clip:5:semantic:48",
+        "m3:bedroom-01-q01:clip:12:semantic:118",
+        "m3:bedroom-01-q01:clip:14:semantic:137",
+        "m3:bedroom-01-q01:clip:10:semantic:95",
+        "m3:bedroom-01-q01:clip:4:semantic:40",
+        "m3:bedroom-01-q01:clip:11:semantic:107",
+        "m3:bedroom-01-q01:clip:8:semantic:77",
+        "m3:bedroom-01-q01:clip:13:semantic:125",
+        "m3:bedroom-01-q01:clip:7:semantic:65",
+        "m3:bedroom-01-q01:clip:6:semantic:58",
+        "m3:bedroom-01-q01:clip:9:semantic:84",
+        "m3:bedroom-01-q01:clip:12:semantic:117",
+        "m3:bedroom-01-q01:clip:6:semantic:56",
+        "m3:bedroom-01-q01:clip:5:semantic:49",
+        "m3:bedroom-01-q01:clip:14:semantic:135",
+        "m3:bedroom-01-q01:clip:1:semantic:8",
+        "m3:bedroom-01-q01:clip:9:semantic:86",
+        "m3:bedroom-01-q01:clip:2:semantic:20",
+        "m3:bedroom-01-q01:clip:15:semantic:146",
+        "m3:bedroom-01-q01:clip:8:semantic:78",
+        "m3:bedroom-01-q01:clip:13:semantic:126",
+        "m3:bedroom-01-q01:clip:1:semantic:9",
+        "m3:bedroom-01-q01:clip:2:semantic:19",
+        "m3:bedroom-01-q01:clip:13:semantic:127",
+        "m3:bedroom-01-q01:clip:7:semantic:66",
+        "m3:bedroom-01-q01:clip:6:semantic:57"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:block:0": {
+      "name": "m3:video:bedroom-01-q01:block:0",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:3:semantic:30",
+        "m3:bedroom-01-q01:clip:3:semantic:29",
+        "m3:bedroom-01-q01:clip:4:semantic:41",
+        "m3:bedroom-01-q01:clip:3:episodic:26",
+        "m3:bedroom-01-q01:clip:4:episodic:38",
+        "m3:bedroom-01-q01:clip:4:episodic:35",
+        "m3:bedroom-01-q01:clip:2:episodic:18",
+        "m3:bedroom-01-q01:clip:2:episodic:17",
+        "m3:bedroom-01-q01:clip:1:episodic:4",
+        "m3:bedroom-01-q01:clip:4:episodic:37",
+        "m3:bedroom-01-q01:clip:3:episodic:24",
+        "m3:bedroom-01-q01:clip:1:episodic:6",
+        "m3:bedroom-01-q01:clip:4:episodic:34",
+        "m3:bedroom-01-q01:clip:2:episodic:13",
+        "m3:bedroom-01-q01:clip:4:episodic:36",
+        "m3:bedroom-01-q01:clip:3:episodic:27",
+        "m3:bedroom-01-q01:clip:4:semantic:40",
+        "m3:bedroom-01-q01:clip:4:episodic:33",
+        "m3:bedroom-01-q01:clip:1:semantic:8",
+        "m3:bedroom-01-q01:clip:1:episodic:7",
+        "m3:bedroom-01-q01:clip:2:semantic:20",
+        "m3:bedroom-01-q01:clip:3:episodic:22",
+        "m3:bedroom-01-q01:clip:1:episodic:1",
+        "m3:bedroom-01-q01:clip:1:semantic:9",
+        "m3:bedroom-01-q01:clip:1:episodic:3",
+        "m3:bedroom-01-q01:clip:2:semantic:19",
+        "m3:bedroom-01-q01:clip:3:episodic:28",
+        "m3:bedroom-01-q01:clip:1:episodic:2",
+        "m3:bedroom-01-q01:clip:3:episodic:23",
+        "m3:bedroom-01-q01:clip:2:episodic:14",
+        "m3:bedroom-01-q01:clip:3:episodic:25",
+        "m3:bedroom-01-q01:clip:2:episodic:16",
+        "m3:bedroom-01-q01:clip:2:episodic:15",
+        "m3:bedroom-01-q01:clip:1:episodic:5"
+      ],
+      "child_space_names": [
+        "m3:video:bedroom-01-q01:clip:4",
+        "m3:video:bedroom-01-q01:clip:3",
+        "m3:video:bedroom-01-q01:clip:1",
+        "m3:video:bedroom-01-q01:clip:2"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:block:1": {
+      "name": "m3:video:bedroom-01-q01:block:1",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:9:episodic:82",
+        "m3:bedroom-01-q01:clip:6:episodic:55",
+        "m3:bedroom-01-q01:clip:7:episodic:61",
+        "m3:bedroom-01-q01:clip:8:episodic:71",
+        "m3:bedroom-01-q01:clip:5:episodic:45",
+        "m3:bedroom-01-q01:clip:8:episodic:70",
+        "m3:bedroom-01-q01:clip:5:episodic:47",
+        "m3:bedroom-01-q01:clip:9:episodic:83",
+        "m3:bedroom-01-q01:clip:5:episodic:44",
+        "m3:bedroom-01-q01:clip:9:semantic:85",
+        "m3:bedroom-01-q01:clip:8:episodic:72",
+        "m3:bedroom-01-q01:clip:5:semantic:48",
+        "m3:bedroom-01-q01:clip:6:episodic:53",
+        "m3:bedroom-01-q01:clip:5:episodic:46",
+        "m3:bedroom-01-q01:clip:5:episodic:43",
+        "m3:bedroom-01-q01:clip:8:episodic:73",
+        "m3:bedroom-01-q01:clip:8:semantic:77",
+        "m3:bedroom-01-q01:clip:6:semantic:58",
+        "m3:bedroom-01-q01:clip:7:episodic:60",
+        "m3:bedroom-01-q01:clip:7:semantic:65",
+        "m3:bedroom-01-q01:clip:8:episodic:74",
+        "m3:bedroom-01-q01:clip:6:semantic:56",
+        "m3:bedroom-01-q01:clip:8:episodic:75",
+        "m3:bedroom-01-q01:clip:9:episodic:80",
+        "m3:bedroom-01-q01:clip:6:episodic:50",
+        "m3:bedroom-01-q01:clip:5:semantic:49",
+        "m3:bedroom-01-q01:clip:7:episodic:64",
+        "m3:bedroom-01-q01:clip:9:semantic:84",
+        "m3:bedroom-01-q01:clip:9:semantic:86",
+        "m3:bedroom-01-q01:clip:7:episodic:63",
+        "m3:bedroom-01-q01:clip:9:episodic:81",
+        "m3:bedroom-01-q01:clip:5:episodic:42",
+        "m3:bedroom-01-q01:clip:8:semantic:78",
+        "m3:bedroom-01-q01:clip:6:episodic:51",
+        "m3:bedroom-01-q01:clip:8:episodic:69",
+        "m3:bedroom-01-q01:clip:6:episodic:54",
+        "m3:bedroom-01-q01:clip:7:episodic:59",
+        "m3:bedroom-01-q01:clip:7:semantic:66",
+        "m3:bedroom-01-q01:clip:6:semantic:57",
+        "m3:bedroom-01-q01:clip:7:episodic:62",
+        "m3:bedroom-01-q01:clip:8:episodic:76",
+        "m3:bedroom-01-q01:clip:6:episodic:52"
+      ],
+      "child_space_names": [
+        "m3:video:bedroom-01-q01:clip:5",
+        "m3:video:bedroom-01-q01:clip:7",
+        "m3:video:bedroom-01-q01:clip:9",
+        "m3:video:bedroom-01-q01:clip:8",
+        "m3:video:bedroom-01-q01:clip:6"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:block:2": {
+      "name": "m3:video:bedroom-01-q01:block:2",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:14:episodic:134",
+        "m3:bedroom-01-q01:clip:13:episodic:119",
+        "m3:bedroom-01-q01:clip:12:episodic:108",
+        "m3:bedroom-01-q01:clip:14:episodic:130",
+        "m3:bedroom-01-q01:clip:10:episodic:89",
+        "m3:bedroom-01-q01:clip:12:episodic:113",
+        "m3:bedroom-01-q01:clip:11:semantic:106",
+        "m3:bedroom-01-q01:clip:14:episodic:131",
+        "m3:bedroom-01-q01:clip:12:semantic:116",
+        "m3:bedroom-01-q01:clip:14:semantic:136",
+        "m3:bedroom-01-q01:clip:13:episodic:124",
+        "m3:bedroom-01-q01:clip:12:episodic:115",
+        "m3:bedroom-01-q01:clip:11:episodic:98",
+        "m3:bedroom-01-q01:clip:11:episodic:99",
+        "m3:bedroom-01-q01:clip:12:semantic:118",
+        "m3:bedroom-01-q01:clip:14:episodic:129",
+        "m3:bedroom-01-q01:clip:14:semantic:137",
+        "m3:bedroom-01-q01:clip:10:semantic:95",
+        "m3:bedroom-01-q01:clip:11:episodic:101",
+        "m3:bedroom-01-q01:clip:11:episodic:103",
+        "m3:bedroom-01-q01:clip:13:episodic:121",
+        "m3:bedroom-01-q01:clip:12:episodic:114",
+        "m3:bedroom-01-q01:clip:11:semantic:107",
+        "m3:bedroom-01-q01:clip:13:episodic:120",
+        "m3:bedroom-01-q01:clip:13:semantic:125",
+        "m3:bedroom-01-q01:clip:12:semantic:117",
+        "m3:bedroom-01-q01:clip:14:episodic:132",
+        "m3:bedroom-01-q01:clip:11:episodic:100",
+        "m3:bedroom-01-q01:clip:12:episodic:109",
+        "m3:bedroom-01-q01:clip:14:semantic:135",
+        "m3:bedroom-01-q01:clip:10:episodic:88",
+        "m3:bedroom-01-q01:clip:13:episodic:123",
+        "m3:bedroom-01-q01:clip:12:episodic:110",
+        "m3:bedroom-01-q01:clip:10:episodic:92",
+        "m3:bedroom-01-q01:clip:13:episodic:122",
+        "m3:bedroom-01-q01:clip:10:episodic:90",
+        "m3:bedroom-01-q01:clip:13:semantic:126",
+        "m3:bedroom-01-q01:clip:11:episodic:105",
+        "m3:bedroom-01-q01:clip:10:episodic:91",
+        "m3:bedroom-01-q01:clip:13:semantic:127",
+        "m3:bedroom-01-q01:clip:11:episodic:104",
+        "m3:bedroom-01-q01:clip:14:episodic:133",
+        "m3:bedroom-01-q01:clip:11:episodic:102",
+        "m3:bedroom-01-q01:clip:12:episodic:112",
+        "m3:bedroom-01-q01:clip:12:episodic:111",
+        "m3:bedroom-01-q01:clip:10:episodic:93"
+      ],
+      "child_space_names": [
+        "m3:video:bedroom-01-q01:clip:10",
+        "m3:video:bedroom-01-q01:clip:13",
+        "m3:video:bedroom-01-q01:clip:11",
+        "m3:video:bedroom-01-q01:clip:14",
+        "m3:video:bedroom-01-q01:clip:12"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:block:3": {
+      "name": "m3:video:bedroom-01-q01:block:3",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:15:episodic:141",
+        "m3:bedroom-01-q01:clip:15:episodic:143",
+        "m3:bedroom-01-q01:clip:15:episodic:140",
+        "m3:bedroom-01-q01:clip:15:episodic:139",
+        "m3:bedroom-01-q01:clip:15:episodic:142",
+        "m3:bedroom-01-q01:clip:15:semantic:146",
+        "m3:bedroom-01-q01:clip:15:episodic:144",
+        "m3:bedroom-01-q01:clip:15:semantic:145"
+      ],
+      "child_space_names": [
+        "m3:video:bedroom-01-q01:clip:15"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:1": {
+      "name": "m3:video:bedroom-01-q01:clip:1",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:1:episodic:6",
+        "m3:bedroom-01-q01:clip:1:episodic:2",
+        "m3:bedroom-01-q01:clip:1:semantic:8",
+        "m3:bedroom-01-q01:clip:1:episodic:7",
+        "m3:bedroom-01-q01:clip:1:episodic:4",
+        "m3:bedroom-01-q01:clip:1:episodic:1",
+        "m3:bedroom-01-q01:clip:1:episodic:5",
+        "m3:bedroom-01-q01:clip:1:semantic:9",
+        "m3:bedroom-01-q01:clip:1:episodic:3"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:2": {
+      "name": "m3:video:bedroom-01-q01:clip:2",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:2:semantic:19",
+        "m3:bedroom-01-q01:clip:2:semantic:20",
+        "m3:bedroom-01-q01:clip:2:episodic:14",
+        "m3:bedroom-01-q01:clip:2:episodic:18",
+        "m3:bedroom-01-q01:clip:2:episodic:16",
+        "m3:bedroom-01-q01:clip:2:episodic:17",
+        "m3:bedroom-01-q01:clip:2:episodic:15",
+        "m3:bedroom-01-q01:clip:2:episodic:13"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:3": {
+      "name": "m3:video:bedroom-01-q01:clip:3",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:3:semantic:30",
+        "m3:bedroom-01-q01:clip:3:episodic:28",
+        "m3:bedroom-01-q01:clip:3:semantic:29",
+        "m3:bedroom-01-q01:clip:3:episodic:23",
+        "m3:bedroom-01-q01:clip:3:episodic:26",
+        "m3:bedroom-01-q01:clip:3:episodic:27",
+        "m3:bedroom-01-q01:clip:3:episodic:25",
+        "m3:bedroom-01-q01:clip:3:episodic:22",
+        "m3:bedroom-01-q01:clip:3:episodic:24"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:4": {
+      "name": "m3:video:bedroom-01-q01:clip:4",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:4:episodic:34",
+        "m3:bedroom-01-q01:clip:4:semantic:41",
+        "m3:bedroom-01-q01:clip:4:episodic:36",
+        "m3:bedroom-01-q01:clip:4:episodic:38",
+        "m3:bedroom-01-q01:clip:4:episodic:35",
+        "m3:bedroom-01-q01:clip:4:semantic:40",
+        "m3:bedroom-01-q01:clip:4:episodic:37",
+        "m3:bedroom-01-q01:clip:4:episodic:33"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:5": {
+      "name": "m3:video:bedroom-01-q01:clip:5",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:5:semantic:49",
+        "m3:bedroom-01-q01:clip:5:semantic:48",
+        "m3:bedroom-01-q01:clip:5:episodic:43",
+        "m3:bedroom-01-q01:clip:5:episodic:45",
+        "m3:bedroom-01-q01:clip:5:episodic:47",
+        "m3:bedroom-01-q01:clip:5:episodic:42",
+        "m3:bedroom-01-q01:clip:5:episodic:44",
+        "m3:bedroom-01-q01:clip:5:episodic:46"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:6": {
+      "name": "m3:video:bedroom-01-q01:clip:6",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:6:episodic:50",
+        "m3:bedroom-01-q01:clip:6:episodic:54",
+        "m3:bedroom-01-q01:clip:6:episodic:55",
+        "m3:bedroom-01-q01:clip:6:episodic:53",
+        "m3:bedroom-01-q01:clip:6:semantic:57",
+        "m3:bedroom-01-q01:clip:6:episodic:51",
+        "m3:bedroom-01-q01:clip:6:semantic:58",
+        "m3:bedroom-01-q01:clip:6:episodic:52",
+        "m3:bedroom-01-q01:clip:6:semantic:56"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:7": {
+      "name": "m3:video:bedroom-01-q01:clip:7",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:7:episodic:64",
+        "m3:bedroom-01-q01:clip:7:episodic:59",
+        "m3:bedroom-01-q01:clip:7:episodic:61",
+        "m3:bedroom-01-q01:clip:7:episodic:63",
+        "m3:bedroom-01-q01:clip:7:semantic:66",
+        "m3:bedroom-01-q01:clip:7:episodic:62",
+        "m3:bedroom-01-q01:clip:7:semantic:65",
+        "m3:bedroom-01-q01:clip:7:episodic:60"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:8": {
+      "name": "m3:video:bedroom-01-q01:clip:8",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:8:episodic:71",
+        "m3:bedroom-01-q01:clip:8:episodic:74",
+        "m3:bedroom-01-q01:clip:8:semantic:77",
+        "m3:bedroom-01-q01:clip:8:episodic:70",
+        "m3:bedroom-01-q01:clip:8:episodic:76",
+        "m3:bedroom-01-q01:clip:8:semantic:78",
+        "m3:bedroom-01-q01:clip:8:episodic:73",
+        "m3:bedroom-01-q01:clip:8:episodic:69",
+        "m3:bedroom-01-q01:clip:8:episodic:75",
+        "m3:bedroom-01-q01:clip:8:episodic:72"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:9": {
+      "name": "m3:video:bedroom-01-q01:clip:9",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:9:episodic:82",
+        "m3:bedroom-01-q01:clip:9:semantic:86",
+        "m3:bedroom-01-q01:clip:9:episodic:83",
+        "m3:bedroom-01-q01:clip:9:episodic:81",
+        "m3:bedroom-01-q01:clip:9:semantic:85",
+        "m3:bedroom-01-q01:clip:9:semantic:84",
+        "m3:bedroom-01-q01:clip:9:episodic:80"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:10": {
+      "name": "m3:video:bedroom-01-q01:clip:10",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:10:episodic:91",
+        "m3:bedroom-01-q01:clip:10:episodic:88",
+        "m3:bedroom-01-q01:clip:10:episodic:89",
+        "m3:bedroom-01-q01:clip:10:episodic:93",
+        "m3:bedroom-01-q01:clip:10:semantic:95",
+        "m3:bedroom-01-q01:clip:10:episodic:92",
+        "m3:bedroom-01-q01:clip:10:episodic:90"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:11": {
+      "name": "m3:video:bedroom-01-q01:clip:11",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:11:episodic:105",
+        "m3:bedroom-01-q01:clip:11:episodic:100",
+        "m3:bedroom-01-q01:clip:11:episodic:98",
+        "m3:bedroom-01-q01:clip:11:episodic:99",
+        "m3:bedroom-01-q01:clip:11:episodic:104",
+        "m3:bedroom-01-q01:clip:11:episodic:101",
+        "m3:bedroom-01-q01:clip:11:episodic:102",
+        "m3:bedroom-01-q01:clip:11:episodic:103",
+        "m3:bedroom-01-q01:clip:11:semantic:107",
+        "m3:bedroom-01-q01:clip:11:semantic:106"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:12": {
+      "name": "m3:video:bedroom-01-q01:clip:12",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:12:episodic:115",
+        "m3:bedroom-01-q01:clip:12:episodic:109",
+        "m3:bedroom-01-q01:clip:12:episodic:108",
+        "m3:bedroom-01-q01:clip:12:semantic:118",
+        "m3:bedroom-01-q01:clip:12:episodic:110",
+        "m3:bedroom-01-q01:clip:12:episodic:112",
+        "m3:bedroom-01-q01:clip:12:episodic:114",
+        "m3:bedroom-01-q01:clip:12:episodic:113",
+        "m3:bedroom-01-q01:clip:12:episodic:111",
+        "m3:bedroom-01-q01:clip:12:semantic:117",
+        "m3:bedroom-01-q01:clip:12:semantic:116"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:13": {
+      "name": "m3:video:bedroom-01-q01:clip:13",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:13:episodic:124",
+        "m3:bedroom-01-q01:clip:13:episodic:119",
+        "m3:bedroom-01-q01:clip:13:semantic:127",
+        "m3:bedroom-01-q01:clip:13:episodic:123",
+        "m3:bedroom-01-q01:clip:13:episodic:121",
+        "m3:bedroom-01-q01:clip:13:episodic:120",
+        "m3:bedroom-01-q01:clip:13:semantic:125",
+        "m3:bedroom-01-q01:clip:13:episodic:122",
+        "m3:bedroom-01-q01:clip:13:semantic:126"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:14": {
+      "name": "m3:video:bedroom-01-q01:clip:14",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:14:episodic:134",
+        "m3:bedroom-01-q01:clip:14:semantic:135",
+        "m3:bedroom-01-q01:clip:14:episodic:130",
+        "m3:bedroom-01-q01:clip:14:episodic:129",
+        "m3:bedroom-01-q01:clip:14:semantic:137",
+        "m3:bedroom-01-q01:clip:14:semantic:136",
+        "m3:bedroom-01-q01:clip:14:episodic:133",
+        "m3:bedroom-01-q01:clip:14:episodic:131",
+        "m3:bedroom-01-q01:clip:14:episodic:132"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:bedroom-01-q01:clip:15": {
+      "name": "m3:video:bedroom-01-q01:clip:15",
+      "unit_uids": [
+        "m3:bedroom-01-q01:clip:15:episodic:141",
+        "m3:bedroom-01-q01:clip:15:episodic:143",
+        "m3:bedroom-01-q01:clip:15:episodic:140",
+        "m3:bedroom-01-q01:clip:15:episodic:139",
+        "m3:bedroom-01-q01:clip:15:episodic:142",
+        "m3:bedroom-01-q01:clip:15:semantic:146",
+        "m3:bedroom-01-q01:clip:15:episodic:144",
+        "m3:bedroom-01-q01:clip:15:semantic:145"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    }
+  },
+  "memory_units_meta": {
+    "m3:bedroom-01-q01:entity:character_0": {
+      "uid": "m3:bedroom-01-q01:entity:character_0",
+      "raw_data": {
+        "text_content": "M3 person character_0 in video bedroom-01-q01",
+        "entity_id": "character_0",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [
+          32
+        ],
+        "voice_node_ids": [
+          10,
+          87
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_1": {
+      "uid": "m3:bedroom-01-q01:entity:character_1",
+      "raw_data": {
+        "text_content": "M3 person character_1 in video bedroom-01-q01",
+        "entity_id": "character_1",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          0
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_2": {
+      "uid": "m3:bedroom-01-q01:entity:character_2",
+      "raw_data": {
+        "text_content": "M3 person character_2 in video bedroom-01-q01",
+        "entity_id": "character_2",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          11
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_3": {
+      "uid": "m3:bedroom-01-q01:entity:character_3",
+      "raw_data": {
+        "text_content": "M3 person character_3 in video bedroom-01-q01",
+        "entity_id": "character_3",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          12
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_4": {
+      "uid": "m3:bedroom-01-q01:entity:character_4",
+      "raw_data": {
+        "text_content": "M3 person character_4 in video bedroom-01-q01",
+        "entity_id": "character_4",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          21
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_5": {
+      "uid": "m3:bedroom-01-q01:entity:character_5",
+      "raw_data": {
+        "text_content": "M3 person character_5 in video bedroom-01-q01",
+        "entity_id": "character_5",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          31
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_6": {
+      "uid": "m3:bedroom-01-q01:entity:character_6",
+      "raw_data": {
+        "text_content": "M3 person character_6 in video bedroom-01-q01",
+        "entity_id": "character_6",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          67
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_7": {
+      "uid": "m3:bedroom-01-q01:entity:character_7",
+      "raw_data": {
+        "text_content": "M3 person character_7 in video bedroom-01-q01",
+        "entity_id": "character_7",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          68
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_8": {
+      "uid": "m3:bedroom-01-q01:entity:character_8",
+      "raw_data": {
+        "text_content": "M3 person character_8 in video bedroom-01-q01",
+        "entity_id": "character_8",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          79
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_9": {
+      "uid": "m3:bedroom-01-q01:entity:character_9",
+      "raw_data": {
+        "text_content": "M3 person character_9 in video bedroom-01-q01",
+        "entity_id": "character_9",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          96
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_10": {
+      "uid": "m3:bedroom-01-q01:entity:character_10",
+      "raw_data": {
+        "text_content": "M3 person character_10 in video bedroom-01-q01",
+        "entity_id": "character_10",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          97
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_11": {
+      "uid": "m3:bedroom-01-q01:entity:character_11",
+      "raw_data": {
+        "text_content": "M3 person character_11 in video bedroom-01-q01",
+        "entity_id": "character_11",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          128
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:entity:character_12": {
+      "uid": "m3:bedroom-01-q01:entity:character_12",
+      "raw_data": {
+        "text_content": "M3 person character_12 in video bedroom-01-q01",
+        "entity_id": "character_12",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          138
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:bedroom-01-q01:clip:1:episodic:1": {
+      "uid": "m3:bedroom-01-q01:clip:1:episodic:1",
+      "raw_data": {
+        "text_content": "A young woman wearing a black winter jacket and a black baseball cap walks into a bedroom from the hallway."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "1",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "1",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:1:episodic:2": {
+      "uid": "m3:bedroom-01-q01:clip:1:episodic:2",
+      "raw_data": {
+        "text_content": "She sets her brown backpack down on the bed."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "2",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "2",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:1:episodic:3": {
+      "uid": "m3:bedroom-01-q01:clip:1:episodic:3",
+      "raw_data": {
+        "text_content": "She takes off her heavy black jacket, revealing a white long-sleeved top."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "3",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "3",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:1:episodic:4": {
+      "uid": "m3:bedroom-01-q01:clip:1:episodic:4",
+      "raw_data": {
+        "text_content": "She hangs the black jacket onto the coat rack near the window."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "4",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "4",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:1:episodic:5": {
+      "uid": "m3:bedroom-01-q01:clip:1:episodic:5",
+      "raw_data": {
+        "text_content": "She removes her black baseball cap and hangs it on the coat rack as well."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "5",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "5",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:1:episodic:6": {
+      "uid": "m3:bedroom-01-q01:clip:1:episodic:6",
+      "raw_data": {
+        "text_content": "She turns around, adjusts her hair, and picks up her backpack and phone from the bed."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "6",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "6",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:1:episodic:7": {
+      "uid": "m3:bedroom-01-q01:clip:1:episodic:7",
+      "raw_data": {
+        "text_content": "Slings the backpack over her shoulder, she turns and walks out of the bedroom into the living area."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "7",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "7",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:1:semantic:8": {
+      "uid": "m3:bedroom-01-q01:clip:1:semantic:8",
+      "raw_data": {
+        "text_content": "The woman is arriving indoors and shedding her outdoor winter layers to get comfortable."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "8",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "8",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:1:semantic:9": {
+      "uid": "m3:bedroom-01-q01:clip:1:semantic:9",
+      "raw_data": {
+        "text_content": "<voice_0> belongs to the young woman as she walks through the apartment."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "9",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_1"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "9",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 30.0,
+          "end_time_seconds": 60.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:2:episodic:13": {
+      "uid": "m3:bedroom-01-q01:clip:2:episodic:13",
+      "raw_data": {
+        "text_content": "A woman stands near a dining table in an apartment holding a smartphone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "13",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "13",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:2:episodic:14": {
+      "uid": "m3:bedroom-01-q01:clip:2:episodic:14",
+      "raw_data": {
+        "text_content": "<voice_10> speaks to a smart robot, asking what has been prepared for afternoon tea."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "14",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "14",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:2:episodic:15": {
+      "uid": "m3:bedroom-01-q01:clip:2:episodic:15",
+      "raw_data": {
+        "text_content": "<voice_11> lists available afternoon tea items including coffee, fries, and cakes."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "15",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_2"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "15",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:2:episodic:16": {
+      "uid": "m3:bedroom-01-q01:clip:2:episodic:16",
+      "raw_data": {
+        "text_content": "<voice_12> responds with an acknowledgment."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "16",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_3"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "16",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:2:episodic:17": {
+      "uid": "m3:bedroom-01-q01:clip:2:episodic:17",
+      "raw_data": {
+        "text_content": "<voice_10> checks the time and orders a mocha first."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "17",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "17",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:2:episodic:18": {
+      "uid": "m3:bedroom-01-q01:clip:2:episodic:18",
+      "raw_data": {
+        "text_content": "The camera pans towards the wall near the entrance, showing hanging keys and an electric kettle."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "18",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "18",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:2:semantic:19": {
+      "uid": "m3:bedroom-01-q01:clip:2:semantic:19",
+      "raw_data": {
+        "text_content": "<voice_10> is interacting with an AI voice assistant or robotic system."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "19",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "19",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:2:semantic:20": {
+      "uid": "m3:bedroom-01-q01:clip:2:semantic:20",
+      "raw_data": {
+        "text_content": "<voice_11> represents the automated smart home assistant providing menu recommendations."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "20",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 2,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_2"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "20",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 60.0,
+          "end_time_seconds": 90.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:3:episodic:22": {
+      "uid": "m3:bedroom-01-q01:clip:3:episodic:22",
+      "raw_data": {
+        "text_content": "A person wearing black gloves unscrews a bottle of coffee."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "22",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "22",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:3:episodic:23": {
+      "uid": "m3:bedroom-01-q01:clip:3:episodic:23",
+      "raw_data": {
+        "text_content": "The person pours the coffee into a white mug on the counter."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "23",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "23",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:3:episodic:24": {
+      "uid": "m3:bedroom-01-q01:clip:3:episodic:24",
+      "raw_data": {
+        "text_content": "The person recaps the bottle and picks up the mug."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "24",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "24",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:3:episodic:25": {
+      "uid": "m3:bedroom-01-q01:clip:3:episodic:25",
+      "raw_data": {
+        "text_content": "The person carries the mug across the room toward a woman seated at a dining table."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "25",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "25",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:3:episodic:26": {
+      "uid": "m3:bedroom-01-q01:clip:3:episodic:26",
+      "raw_data": {
+        "text_content": "The woman takes the coffee mug and speaks."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "26",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "26",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:3:episodic:27": {
+      "uid": "m3:bedroom-01-q01:clip:3:episodic:27",
+      "raw_data": {
+        "text_content": "The woman sips the beverage before setting it down and looking at her smartphone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "27",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "27",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:3:episodic:28": {
+      "uid": "m3:bedroom-01-q01:clip:3:episodic:28",
+      "raw_data": {
+        "text_content": "The person filming steps back as the woman continues working."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "28",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "28",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:3:semantic:29": {
+      "uid": "m3:bedroom-01-q01:clip:3:semantic:29",
+      "raw_data": {
+        "text_content": "The woman speaking is <voice_21>, who humorously addresses the person serving her as a robot."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "29",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_4"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "29",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:3:semantic:30": {
+      "uid": "m3:bedroom-01-q01:clip:3:semantic:30",
+      "raw_data": {
+        "text_content": "The person in black gloves prepared and delivered a drink to support the woman while she studied."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "30",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 3,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "30",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 90.0,
+          "end_time_seconds": 120.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:4:episodic:33": {
+      "uid": "m3:bedroom-01-q01:clip:4:episodic:33",
+      "raw_data": {
+        "text_content": "<face_32> sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "33",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 4,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "33",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 120.0,
+          "end_time_seconds": 150.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:4:episodic:34": {
+      "uid": "m3:bedroom-01-q01:clip:4:episodic:34",
+      "raw_data": {
+        "text_content": "<face_32> speaks aloud, giving instructions to prepare afternoon tea."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "34",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 4,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "34",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 120.0,
+          "end_time_seconds": 150.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:4:episodic:35": {
+      "uid": "m3:bedroom-01-q01:clip:4:episodic:35",
+      "raw_data": {
+        "text_content": "An off-screen voice acknowledges the request with an agreement."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "35",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 4,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "35",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 120.0,
+          "end_time_seconds": 150.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:4:episodic:36": {
+      "uid": "m3:bedroom-01-q01:clip:4:episodic:36",
+      "raw_data": {
+        "text_content": "The camera shifts away from <face_32> and pans through the living space toward the kitchen hallway."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "36",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 4,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "36",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 120.0,
+          "end_time_seconds": 150.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:4:episodic:37": {
+      "uid": "m3:bedroom-01-q01:clip:4:episodic:37",
+      "raw_data": {
+        "text_content": "<face_32> continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "37",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 4,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "37",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 120.0,
+          "end_time_seconds": 150.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:4:episodic:38": {
+      "uid": "m3:bedroom-01-q01:clip:4:episodic:38",
+      "raw_data": {
+        "text_content": "The camera moves and finishes facing a plain interior wall."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "38",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 4,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "38",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 120.0,
+          "end_time_seconds": 150.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:4:semantic:40": {
+      "uid": "m3:bedroom-01-q01:clip:4:semantic:40",
+      "raw_data": {
+        "text_content": "<face_32> is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "40",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 4,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "40",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 120.0,
+          "end_time_seconds": 150.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:4:semantic:41": {
+      "uid": "m3:bedroom-01-q01:clip:4:semantic:41",
+      "raw_data": {
+        "text_content": "<voice_31> belongs to the assistant or robot responding to <face_32>'s command."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "41",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 4,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0",
+          "character_5"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "41",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 120.0,
+          "end_time_seconds": 150.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:5:episodic:42": {
+      "uid": "m3:bedroom-01-q01:clip:5:episodic:42",
+      "raw_data": {
+        "text_content": "The camera moves through a narrow kitchen toward a food preparation surface."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "42",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 5,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "42",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 150.0,
+          "end_time_seconds": 180.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:5:episodic:43": {
+      "uid": "m3:bedroom-01-q01:clip:5:episodic:43",
+      "raw_data": {
+        "text_content": "A food spread consisting of McDonald's fries, a slice of cake, and bread slices is arranged on the surface."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "43",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 5,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "43",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 150.0,
+          "end_time_seconds": 180.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:5:episodic:44": {
+      "uid": "m3:bedroom-01-q01:clip:5:episodic:44",
+      "raw_data": {
+        "text_content": "A person wearing black gloves picks up a strawberry and places it atop the slice of cake."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "44",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 5,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "44",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 150.0,
+          "end_time_seconds": 180.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:5:episodic:45": {
+      "uid": "m3:bedroom-01-q01:clip:5:episodic:45",
+      "raw_data": {
+        "text_content": "The person lifts the red fry box and empties the french fries onto the brown paper tray."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "45",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 5,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "45",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 150.0,
+          "end_time_seconds": 180.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:5:episodic:46": {
+      "uid": "m3:bedroom-01-q01:clip:5:episodic:46",
+      "raw_data": {
+        "text_content": "The person places the empty fry container to the side."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "46",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 5,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "46",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 150.0,
+          "end_time_seconds": 180.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:5:episodic:47": {
+      "uid": "m3:bedroom-01-q01:clip:5:episodic:47",
+      "raw_data": {
+        "text_content": "The person picks up a McDonald's ketchup packet and tears it open."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "47",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 5,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "47",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 150.0,
+          "end_time_seconds": 180.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:5:semantic:48": {
+      "uid": "m3:bedroom-01-q01:clip:5:semantic:48",
+      "raw_data": {
+        "text_content": "The person is preparing a food arrangement, likely for a meal review, mukbang, or presentation."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "48",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 5,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "48",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 150.0,
+          "end_time_seconds": 180.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:5:semantic:49": {
+      "uid": "m3:bedroom-01-q01:clip:5:semantic:49",
+      "raw_data": {
+        "text_content": "The use of black disposable gloves indicates a focus on cleanliness or food preparation aesthetics."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "49",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 5,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "49",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 150.0,
+          "end_time_seconds": 180.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:6:episodic:50": {
+      "uid": "m3:bedroom-01-q01:clip:6:episodic:50",
+      "raw_data": {
+        "text_content": "A person wearing black gloves opens a ketchup packet and squeezes it onto french fries next to McDonald's packaging."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "50",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 6,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "50",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 180.0,
+          "end_time_seconds": 210.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:6:episodic:51": {
+      "uid": "m3:bedroom-01-q01:clip:6:episodic:51",
+      "raw_data": {
+        "text_content": "The camera pans from the kitchen area toward a corridor."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "51",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 6,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "51",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 180.0,
+          "end_time_seconds": 210.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:6:episodic:52": {
+      "uid": "m3:bedroom-01-q01:clip:6:episodic:52",
+      "raw_data": {
+        "text_content": "A woman wearing a white jacket and dark pants walks along the hallway holding a mug and a phone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "52",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 6,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "52",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 180.0,
+          "end_time_seconds": 210.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:6:episodic:53": {
+      "uid": "m3:bedroom-01-q01:clip:6:episodic:53",
+      "raw_data": {
+        "text_content": "She enters the dining area and places her mug onto a table covered with papers."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "53",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 6,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "53",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 180.0,
+          "end_time_seconds": 210.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:6:episodic:54": {
+      "uid": "m3:bedroom-01-q01:clip:6:episodic:54",
+      "raw_data": {
+        "text_content": "She sits down at the table and looks down at the paperwork while holding her phone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "54",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 6,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "54",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 180.0,
+          "end_time_seconds": 210.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:6:episodic:55": {
+      "uid": "m3:bedroom-01-q01:clip:6:episodic:55",
+      "raw_data": {
+        "text_content": "She speaks into her phone while examining the cluttered desk and gesturing with her hand."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "55",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 6,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "55",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 180.0,
+          "end_time_seconds": 210.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:6:semantic:56": {
+      "uid": "m3:bedroom-01-q01:clip:6:semantic:56",
+      "raw_data": {
+        "text_content": "The woman is frustrated by the cluttered condition of the desk and suspects someone named Emma caused it."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "56",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 6,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "56",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 180.0,
+          "end_time_seconds": 210.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:6:semantic:57": {
+      "uid": "m3:bedroom-01-q01:clip:6:semantic:57",
+      "raw_data": {
+        "text_content": "She is using her phone to leave a voice message or instruct someone named Robert to clean up the desk."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "57",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 6,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "57",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 180.0,
+          "end_time_seconds": 210.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:6:semantic:58": {
+      "uid": "m3:bedroom-01-q01:clip:6:semantic:58",
+      "raw_data": {
+        "text_content": "The voice <voice_10> belongs to the woman in the white jacket sitting at the table."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "58",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 6,
+        "block_id": 1,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "58",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 180.0,
+          "end_time_seconds": 210.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:7:episodic:59": {
+      "uid": "m3:bedroom-01-q01:clip:7:episodic:59",
+      "raw_data": {
+        "text_content": "A young woman in a white jacket sits at a table cluttered with papers, stationery, and drinks."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "59",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 7,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "59",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 210.0,
+          "end_time_seconds": 240.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:7:episodic:60": {
+      "uid": "m3:bedroom-01-q01:clip:7:episodic:60",
+      "raw_data": {
+        "text_content": "She holds and looks at a smartphone attached to a portable charger."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "60",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 7,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "60",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 210.0,
+          "end_time_seconds": 240.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:7:episodic:61": {
+      "uid": "m3:bedroom-01-q01:clip:7:episodic:61",
+      "raw_data": {
+        "text_content": "A person wearing black gloves examines and moves printed documents scattered across the table."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "61",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 7,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "61",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 210.0,
+          "end_time_seconds": 240.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:7:episodic:62": {
+      "uid": "m3:bedroom-01-q01:clip:7:episodic:62",
+      "raw_data": {
+        "text_content": "The gloved person inspects a painted table runner decorated with fish artwork."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "62",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 7,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "62",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 210.0,
+          "end_time_seconds": 240.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:7:episodic:63": {
+      "uid": "m3:bedroom-01-q01:clip:7:episodic:63",
+      "raw_data": {
+        "text_content": "The gloved person uses small paper tools and stencils to adjust the painted surface of the runner."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "63",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 7,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "63",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 210.0,
+          "end_time_seconds": 240.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:7:episodic:64": {
+      "uid": "m3:bedroom-01-q01:clip:7:episodic:64",
+      "raw_data": {
+        "text_content": "The woman turns toward the back of her chair and searches inside a studded brown backpack."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "64",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 7,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "64",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 210.0,
+          "end_time_seconds": 240.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:7:semantic:65": {
+      "uid": "m3:bedroom-01-q01:clip:7:semantic:65",
+      "raw_data": {
+        "text_content": "The person in black gloves is engaged in a precise artistic craft or examination task requiring protection for the materials."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "65",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 7,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "65",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 210.0,
+          "end_time_seconds": 240.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:7:semantic:66": {
+      "uid": "m3:bedroom-01-q01:clip:7:semantic:66",
+      "raw_data": {
+        "text_content": "The woman and the gloved individual are sharing a workspace, though the woman is occupied with personal items and her bag."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "66",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 7,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "66",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 210.0,
+          "end_time_seconds": 240.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:8:episodic:69": {
+      "uid": "m3:bedroom-01-q01:clip:8:episodic:69",
+      "raw_data": {
+        "text_content": "A person tosses a used tissue into a pink trash bin next to the dining table."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "69",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 8,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "69",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 240.0,
+          "end_time_seconds": 270.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:8:episodic:70": {
+      "uid": "m3:bedroom-01-q01:clip:8:episodic:70",
+      "raw_data": {
+        "text_content": "The camera moves back to show a woman seated at the table arranging items inside her bag."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "70",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 8,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "70",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 240.0,
+          "end_time_seconds": 270.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:8:episodic:71": {
+      "uid": "m3:bedroom-01-q01:clip:8:episodic:71",
+      "raw_data": {
+        "text_content": "<voice_21> speaks about getting to work."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "71",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 8,
+        "block_id": 1,
+        "canonical_entity_ids": [
+          "character_4"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "71",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 240.0,
+          "end_time_seconds": 270.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:8:episodic:72": {
+      "uid": "m3:bedroom-01-q01:clip:8:episodic:72",
+      "raw_data": {
+        "text_content": "The woman retrieves a dark laptop from behind her seat and places it onto the table."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "72",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 8,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "72",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 240.0,
+          "end_time_seconds": 270.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:8:episodic:73": {
+      "uid": "m3:bedroom-01-q01:clip:8:episodic:73",
+      "raw_data": {
+        "text_content": "<voice_67> responds briefly with an acknowledgement."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "73",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 8,
+        "block_id": 1,
+        "canonical_entity_ids": [
+          "character_6"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "73",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 240.0,
+          "end_time_seconds": 270.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:8:episodic:74": {
+      "uid": "m3:bedroom-01-q01:clip:8:episodic:74",
+      "raw_data": {
+        "text_content": "The woman opens the laptop in front of her."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "74",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 8,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "74",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 240.0,
+          "end_time_seconds": 270.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:8:episodic:75": {
+      "uid": "m3:bedroom-01-q01:clip:8:episodic:75",
+      "raw_data": {
+        "text_content": "<voice_68> states an intention to finish work."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "75",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 8,
+        "block_id": 1,
+        "canonical_entity_ids": [
+          "character_7"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "75",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 240.0,
+          "end_time_seconds": 270.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:8:episodic:76": {
+      "uid": "m3:bedroom-01-q01:clip:8:episodic:76",
+      "raw_data": {
+        "text_content": "The woman picks up her phone and looks between it and the laptop screen."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "76",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 8,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "76",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 240.0,
+          "end_time_seconds": 270.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:8:semantic:77": {
+      "uid": "m3:bedroom-01-q01:clip:8:semantic:77",
+      "raw_data": {
+        "text_content": "The woman is setting up her workspace at the dining table to complete tasks on her laptop and phone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "77",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 8,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "77",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 240.0,
+          "end_time_seconds": 270.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:8:semantic:78": {
+      "uid": "m3:bedroom-01-q01:clip:8:semantic:78",
+      "raw_data": {
+        "text_content": "The interaction involves communication between the woman at the table and the person filming."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "78",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 8,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "78",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 240.0,
+          "end_time_seconds": 270.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:9:episodic:80": {
+      "uid": "m3:bedroom-01-q01:clip:9:episodic:80",
+      "raw_data": {
+        "text_content": "A young woman sits at a dining table working on a laptop."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "80",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 9,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "80",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 270.0,
+          "end_time_seconds": 300.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:9:episodic:81": {
+      "uid": "m3:bedroom-01-q01:clip:9:episodic:81",
+      "raw_data": {
+        "text_content": "She adjusts a backpack next to her chair."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "81",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 9,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "81",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 270.0,
+          "end_time_seconds": 300.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:9:episodic:82": {
+      "uid": "m3:bedroom-01-q01:clip:9:episodic:82",
+      "raw_data": {
+        "text_content": "She reaches across the table to pick up a sheet of paper from a stack."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "82",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 9,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "82",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 270.0,
+          "end_time_seconds": 300.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:9:episodic:83": {
+      "uid": "m3:bedroom-01-q01:clip:9:episodic:83",
+      "raw_data": {
+        "text_content": "She holds up the paper in front of her laptop and reads through it."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "83",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 9,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "83",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 270.0,
+          "end_time_seconds": 300.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:9:semantic:84": {
+      "uid": "m3:bedroom-01-q01:clip:9:semantic:84",
+      "raw_data": {
+        "text_content": "The woman is examining an academic curriculum or class schedule belonging to Emma."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "84",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 9,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "84",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 270.0,
+          "end_time_seconds": 300.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:9:semantic:85": {
+      "uid": "m3:bedroom-01-q01:clip:9:semantic:85",
+      "raw_data": {
+        "text_content": "She expresses surprise at the difficulty and volume of courses, specifically highlighting linear algebra."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "85",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 9,
+        "block_id": 1,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "85",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 270.0,
+          "end_time_seconds": 300.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:9:semantic:86": {
+      "uid": "m3:bedroom-01-q01:clip:9:semantic:86",
+      "raw_data": {
+        "text_content": "The speech in <voice_21> belongs to the woman sitting at the table."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "86",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 9,
+        "block_id": 1,
+        "canonical_entity_ids": [
+          "character_4"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "86",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 270.0,
+          "end_time_seconds": 300.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:10:episodic:88": {
+      "uid": "m3:bedroom-01-q01:clip:10:episodic:88",
+      "raw_data": {
+        "text_content": "<face_32> sits at a dining table with a laptop, examining a sheet of paper."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "88",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 10,
+        "block_id": 2,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "88",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 300.0,
+          "end_time_seconds": 330.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:10:episodic:89": {
+      "uid": "m3:bedroom-01-q01:clip:10:episodic:89",
+      "raw_data": {
+        "text_content": "<face_32> reads through the paper while speaking aloud about course subjects."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "89",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 10,
+        "block_id": 2,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "89",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 300.0,
+          "end_time_seconds": 330.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:10:episodic:90": {
+      "uid": "m3:bedroom-01-q01:clip:10:episodic:90",
+      "raw_data": {
+        "text_content": "<face_32> looks up toward the camera to address a robot assistant."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "90",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 10,
+        "block_id": 2,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "90",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 300.0,
+          "end_time_seconds": 330.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:10:episodic:91": {
+      "uid": "m3:bedroom-01-q01:clip:10:episodic:91",
+      "raw_data": {
+        "text_content": "<face_32> hands the paper across the table toward the camera holder."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "91",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 10,
+        "block_id": 2,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "91",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 300.0,
+          "end_time_seconds": 330.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:10:episodic:92": {
+      "uid": "m3:bedroom-01-q01:clip:10:episodic:92",
+      "raw_data": {
+        "text_content": "A gloved hand reaches out from the first-person perspective to accept the paper from <face_32>."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "92",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 10,
+        "block_id": 2,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "92",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 300.0,
+          "end_time_seconds": 330.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:10:episodic:93": {
+      "uid": "m3:bedroom-01-q01:clip:10:episodic:93",
+      "raw_data": {
+        "text_content": "The camera turns away from the table after receiving the document."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "93",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 10,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "93",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 300.0,
+          "end_time_seconds": 330.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:10:semantic:95": {
+      "uid": "m3:bedroom-01-q01:clip:10:semantic:95",
+      "raw_data": {
+        "text_content": "<face_32> is requesting the robot assistant to file a curriculum paper belonging to someone named Emma into a drawer."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "95",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 10,
+        "block_id": 2,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "95",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 300.0,
+          "end_time_seconds": 330.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:11:episodic:100": {
+      "uid": "m3:bedroom-01-q01:clip:11:episodic:100",
+      "raw_data": {
+        "text_content": "The gloved person places a sheet of paper inside the drawer."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "100",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 11,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "100",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 330.0,
+          "end_time_seconds": 360.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:11:episodic:101": {
+      "uid": "m3:bedroom-01-q01:clip:11:episodic:101",
+      "raw_data": {
+        "text_content": "The gloved person closes the drawer and walks out toward the hallway."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "101",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 11,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "101",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 330.0,
+          "end_time_seconds": 360.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:11:episodic:102": {
+      "uid": "m3:bedroom-01-q01:clip:11:episodic:102",
+      "raw_data": {
+        "text_content": "In the dining area, a woman sits at a table interacting with her laptop and smartphone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "102",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 11,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "102",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 330.0,
+          "end_time_seconds": 360.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:11:episodic:103": {
+      "uid": "m3:bedroom-01-q01:clip:11:episodic:103",
+      "raw_data": {
+        "text_content": "A woman wearing a yellow jacket and a cap enters the apartment through the front door."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "103",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 11,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "103",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 330.0,
+          "end_time_seconds": 360.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:11:episodic:104": {
+      "uid": "m3:bedroom-01-q01:clip:11:episodic:104",
+      "raw_data": {
+        "text_content": "The woman in the yellow jacket (<voice_96>) greets Emma while holding a banana and phone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "104",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 11,
+        "block_id": 2,
+        "canonical_entity_ids": [
+          "character_9"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "104",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 330.0,
+          "end_time_seconds": 360.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:11:episodic:105": {
+      "uid": "m3:bedroom-01-q01:clip:11:episodic:105",
+      "raw_data": {
+        "text_content": "A voice (<voice_97>) responds from the dining area as the woman in the yellow jacket walks into the room."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "105",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 11,
+        "block_id": 2,
+        "canonical_entity_ids": [
+          "character_10"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "105",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 330.0,
+          "end_time_seconds": 360.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:11:episodic:98": {
+      "uid": "m3:bedroom-01-q01:clip:11:episodic:98",
+      "raw_data": {
+        "text_content": "A person wearing black gloves approaches a small nightstand next to the wall."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "98",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 11,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "98",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 330.0,
+          "end_time_seconds": 360.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:11:episodic:99": {
+      "uid": "m3:bedroom-01-q01:clip:11:episodic:99",
+      "raw_data": {
+        "text_content": "The gloved person opens the drawer of the nightstand."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "99",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 11,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "99",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 330.0,
+          "end_time_seconds": 360.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:11:semantic:106": {
+      "uid": "m3:bedroom-01-q01:clip:11:semantic:106",
+      "raw_data": {
+        "text_content": "The individual wearing black gloves secretly plants or hides a document inside the bedroom nightstand drawer."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "106",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 11,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "106",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 330.0,
+          "end_time_seconds": 360.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:11:semantic:107": {
+      "uid": "m3:bedroom-01-q01:clip:11:semantic:107",
+      "raw_data": {
+        "text_content": "The person in the yellow jacket (<voice_96>) enters the apartment and greets the woman sitting at the dining table, identifying her as Emma."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "107",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 11,
+        "block_id": 2,
+        "canonical_entity_ids": [
+          "character_9"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "107",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 330.0,
+          "end_time_seconds": 360.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:episodic:108": {
+      "uid": "m3:bedroom-01-q01:clip:12:episodic:108",
+      "raw_data": {
+        "text_content": "A person in a yellow jacket walks past a dining table where a woman is working on a laptop."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "108",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "108",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:episodic:109": {
+      "uid": "m3:bedroom-01-q01:clip:12:episodic:109",
+      "raw_data": {
+        "text_content": "The woman sitting at the table speaks, gesturing toward the trash cans on the floor."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "109",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "109",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:episodic:110": {
+      "uid": "m3:bedroom-01-q01:clip:12:episodic:110",
+      "raw_data": {
+        "text_content": "The person in the yellow jacket turns back and drops an item into the small bin."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "110",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "110",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:episodic:111": {
+      "uid": "m3:bedroom-01-q01:clip:12:episodic:111",
+      "raw_data": {
+        "text_content": "The person in the yellow jacket then walks through the corridor into a bedroom."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "111",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "111",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:episodic:112": {
+      "uid": "m3:bedroom-01-q01:clip:12:episodic:112",
+      "raw_data": {
+        "text_content": "Inside the bedroom, the person sits on the bed while holding a mobile phone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "112",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "112",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:episodic:113": {
+      "uid": "m3:bedroom-01-q01:clip:12:episodic:113",
+      "raw_data": {
+        "text_content": "She removes her grey cap and tosses it onto the bed."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "113",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "113",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:episodic:114": {
+      "uid": "m3:bedroom-01-q01:clip:12:episodic:114",
+      "raw_data": {
+        "text_content": "She stands up, takes off her yellow jacket, and throws it onto the bed."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "114",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "114",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:episodic:115": {
+      "uid": "m3:bedroom-01-q01:clip:12:episodic:115",
+      "raw_data": {
+        "text_content": "She lies down on her side on the bed, looking at her phone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "115",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "115",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:semantic:116": {
+      "uid": "m3:bedroom-01-q01:clip:12:semantic:116",
+      "raw_data": {
+        "text_content": "The woman seated at the table is the speaker of <voice_10>."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "116",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "116",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:semantic:117": {
+      "uid": "m3:bedroom-01-q01:clip:12:semantic:117",
+      "raw_data": {
+        "text_content": "The person wearing the yellow jacket is named Emma, whom the seated woman addresses."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "117",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "117",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:12:semantic:118": {
+      "uid": "m3:bedroom-01-q01:clip:12:semantic:118",
+      "raw_data": {
+        "text_content": "Emma complies with the woman's request to throw something into the bin before heading into the bedroom to rest."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "118",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 12,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "118",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 360.0,
+          "end_time_seconds": 390.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:13:episodic:119": {
+      "uid": "m3:bedroom-01-q01:clip:13:episodic:119",
+      "raw_data": {
+        "text_content": "A woman rests sideways on a bed while holding a mobile phone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "119",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 13,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "119",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 390.0,
+          "end_time_seconds": 420.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:13:episodic:120": {
+      "uid": "m3:bedroom-01-q01:clip:13:episodic:120",
+      "raw_data": {
+        "text_content": "The woman sits up on the edge of the bed."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "120",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 13,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "120",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 390.0,
+          "end_time_seconds": 420.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:13:episodic:121": {
+      "uid": "m3:bedroom-01-q01:clip:13:episodic:121",
+      "raw_data": {
+        "text_content": "Another woman wearing a white jacket enters the apartment holding a phone."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "121",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 13,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "121",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 390.0,
+          "end_time_seconds": 420.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:13:episodic:122": {
+      "uid": "m3:bedroom-01-q01:clip:13:episodic:122",
+      "raw_data": {
+        "text_content": "The woman in white walks into the bedroom."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "122",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 13,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "122",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 390.0,
+          "end_time_seconds": 420.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:13:episodic:123": {
+      "uid": "m3:bedroom-01-q01:clip:13:episodic:123",
+      "raw_data": {
+        "text_content": "She sits down beside the first woman on the bed."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "123",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 13,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "123",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 390.0,
+          "end_time_seconds": 420.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:13:episodic:124": {
+      "uid": "m3:bedroom-01-q01:clip:13:episodic:124",
+      "raw_data": {
+        "text_content": "Both women sit side by side on the bed and talk."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "124",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 13,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "124",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 390.0,
+          "end_time_seconds": 420.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:13:semantic:125": {
+      "uid": "m3:bedroom-01-q01:clip:13:semantic:125",
+      "raw_data": {
+        "text_content": "The woman on the bed is addressed as Emma."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "125",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 13,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "125",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 390.0,
+          "end_time_seconds": 420.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:13:semantic:126": {
+      "uid": "m3:bedroom-01-q01:clip:13:semantic:126",
+      "raw_data": {
+        "text_content": "The newcomer notices Emma's low mood and asks how she is doing."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "126",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 13,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "126",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 390.0,
+          "end_time_seconds": 420.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:13:semantic:127": {
+      "uid": "m3:bedroom-01-q01:clip:13:semantic:127",
+      "raw_data": {
+        "text_content": "The two women appear to be friends or roommates living together."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "127",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 13,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "127",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 390.0,
+          "end_time_seconds": 420.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:14:episodic:129": {
+      "uid": "m3:bedroom-01-q01:clip:14:episodic:129",
+      "raw_data": {
+        "text_content": "Two women sit beside each other on a bed with blue bedding."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "129",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 14,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "129",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 420.0,
+          "end_time_seconds": 450.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:14:episodic:130": {
+      "uid": "m3:bedroom-01-q01:clip:14:episodic:130",
+      "raw_data": {
+        "text_content": "A woman wearing a white cardigan holds a smartphone and talks to her friend."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "130",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 14,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "130",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 420.0,
+          "end_time_seconds": 450.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:14:episodic:131": {
+      "uid": "m3:bedroom-01-q01:clip:14:episodic:131",
+      "raw_data": {
+        "text_content": "The woman wearing a beige top sits looking down at her hands."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "131",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 14,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "131",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 420.0,
+          "end_time_seconds": 450.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:14:episodic:132": {
+      "uid": "m3:bedroom-01-q01:clip:14:episodic:132",
+      "raw_data": {
+        "text_content": "The woman in beige raises her head to look at her companion."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "132",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 14,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "132",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 420.0,
+          "end_time_seconds": 450.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:14:episodic:133": {
+      "uid": "m3:bedroom-01-q01:clip:14:episodic:133",
+      "raw_data": {
+        "text_content": "The woman in the beige top speaks quietly while looking down."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "133",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 14,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "133",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 420.0,
+          "end_time_seconds": 450.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:14:episodic:134": {
+      "uid": "m3:bedroom-01-q01:clip:14:episodic:134",
+      "raw_data": {
+        "text_content": "The woman in white looks toward the camera and calls out an instruction to a robot."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "134",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 14,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "134",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 420.0,
+          "end_time_seconds": 450.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:14:semantic:135": {
+      "uid": "m3:bedroom-01-q01:clip:14:semantic:135",
+      "raw_data": {
+        "text_content": "The woman in the beige top is Emma, who appears upset or troubled."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "135",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 14,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "135",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 420.0,
+          "end_time_seconds": 450.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:14:semantic:136": {
+      "uid": "m3:bedroom-01-q01:clip:14:semantic:136",
+      "raw_data": {
+        "text_content": "The woman in white is offering comfort and emotional support to Emma."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "136",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 14,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "136",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 420.0,
+          "end_time_seconds": 450.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:14:semantic:137": {
+      "uid": "m3:bedroom-01-q01:clip:14:semantic:137",
+      "raw_data": {
+        "text_content": "The woman in white attempts to give a voice command to a smart home device or robot."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "137",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 14,
+        "block_id": 2,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "137",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 420.0,
+          "end_time_seconds": 450.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:15:episodic:139": {
+      "uid": "m3:bedroom-01-q01:clip:15:episodic:139",
+      "raw_data": {
+        "text_content": "Two women sit on a bed looking at their phones."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "139",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 15,
+        "block_id": 3,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "139",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 450.0,
+          "end_time_seconds": 480.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:15:episodic:140": {
+      "uid": "m3:bedroom-01-q01:clip:15:episodic:140",
+      "raw_data": {
+        "text_content": "A person wearing black gloves picks up a yellow-green jacket from the bed."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "140",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 15,
+        "block_id": 3,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "140",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 450.0,
+          "end_time_seconds": 480.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:15:episodic:141": {
+      "uid": "m3:bedroom-01-q01:clip:15:episodic:141",
+      "raw_data": {
+        "text_content": "The person walks over and hangs the jacket on a coat rack by the window."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "141",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 15,
+        "block_id": 3,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "141",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 450.0,
+          "end_time_seconds": 480.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:15:episodic:142": {
+      "uid": "m3:bedroom-01-q01:clip:15:episodic:142",
+      "raw_data": {
+        "text_content": "The person walks back to the bed and picks up a grey cap."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "142",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 15,
+        "block_id": 3,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "142",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 450.0,
+          "end_time_seconds": 480.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:15:episodic:143": {
+      "uid": "m3:bedroom-01-q01:clip:15:episodic:143",
+      "raw_data": {
+        "text_content": "<voice_138> speaks in the room."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "143",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 15,
+        "block_id": 3,
+        "canonical_entity_ids": [
+          "character_12"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "143",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 450.0,
+          "end_time_seconds": 480.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:15:episodic:144": {
+      "uid": "m3:bedroom-01-q01:clip:15:episodic:144",
+      "raw_data": {
+        "text_content": "The person hangs the cap on the coat rack."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "144",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 15,
+        "block_id": 3,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "144",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 450.0,
+          "end_time_seconds": 480.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:15:semantic:145": {
+      "uid": "m3:bedroom-01-q01:clip:15:semantic:145",
+      "raw_data": {
+        "text_content": "The camera wearer is tidying up the bedroom by picking up clothing from the bed."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "145",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 15,
+        "block_id": 3,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "145",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 450.0,
+          "end_time_seconds": 480.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:bedroom-01-q01:clip:15:semantic:146": {
+      "uid": "m3:bedroom-01-q01:clip:15:semantic:146",
+      "raw_data": {
+        "text_content": "<voice_138> belongs to one of the women sitting on the bed."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "146",
+        "video_id": "bedroom-01-q01",
+        "clip_id": 15,
+        "block_id": 3,
+        "canonical_entity_ids": [
+          "character_12"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "146",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 450.0,
+          "end_time_seconds": 480.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    }
+  },
+  "internal_state": {
+    "_next_int_id": 143,
+    "_uid_to_int_id": {
+      "m3:bedroom-01-q01:entity:character_0": 0,
+      "m3:bedroom-01-q01:entity:character_1": 1,
+      "m3:bedroom-01-q01:entity:character_2": 2,
+      "m3:bedroom-01-q01:entity:character_3": 3,
+      "m3:bedroom-01-q01:entity:character_4": 4,
+      "m3:bedroom-01-q01:entity:character_5": 5,
+      "m3:bedroom-01-q01:entity:character_6": 6,
+      "m3:bedroom-01-q01:entity:character_7": 7,
+      "m3:bedroom-01-q01:entity:character_8": 8,
+      "m3:bedroom-01-q01:entity:character_9": 9,
+      "m3:bedroom-01-q01:entity:character_10": 10,
+      "m3:bedroom-01-q01:entity:character_11": 11,
+      "m3:bedroom-01-q01:entity:character_12": 12,
+      "m3:bedroom-01-q01:clip:1:episodic:1": 13,
+      "m3:bedroom-01-q01:clip:1:episodic:2": 14,
+      "m3:bedroom-01-q01:clip:1:episodic:3": 15,
+      "m3:bedroom-01-q01:clip:1:episodic:4": 16,
+      "m3:bedroom-01-q01:clip:1:episodic:5": 17,
+      "m3:bedroom-01-q01:clip:1:episodic:6": 18,
+      "m3:bedroom-01-q01:clip:1:episodic:7": 19,
+      "m3:bedroom-01-q01:clip:1:semantic:8": 20,
+      "m3:bedroom-01-q01:clip:1:semantic:9": 21,
+      "m3:bedroom-01-q01:clip:2:episodic:13": 22,
+      "m3:bedroom-01-q01:clip:2:episodic:14": 23,
+      "m3:bedroom-01-q01:clip:2:episodic:15": 24,
+      "m3:bedroom-01-q01:clip:2:episodic:16": 25,
+      "m3:bedroom-01-q01:clip:2:episodic:17": 26,
+      "m3:bedroom-01-q01:clip:2:episodic:18": 27,
+      "m3:bedroom-01-q01:clip:2:semantic:19": 28,
+      "m3:bedroom-01-q01:clip:2:semantic:20": 29,
+      "m3:bedroom-01-q01:clip:3:episodic:22": 30,
+      "m3:bedroom-01-q01:clip:3:episodic:23": 31,
+      "m3:bedroom-01-q01:clip:3:episodic:24": 32,
+      "m3:bedroom-01-q01:clip:3:episodic:25": 33,
+      "m3:bedroom-01-q01:clip:3:episodic:26": 34,
+      "m3:bedroom-01-q01:clip:3:episodic:27": 35,
+      "m3:bedroom-01-q01:clip:3:episodic:28": 36,
+      "m3:bedroom-01-q01:clip:3:semantic:29": 37,
+      "m3:bedroom-01-q01:clip:3:semantic:30": 38,
+      "m3:bedroom-01-q01:clip:4:episodic:33": 39,
+      "m3:bedroom-01-q01:clip:4:episodic:34": 40,
+      "m3:bedroom-01-q01:clip:4:episodic:35": 41,
+      "m3:bedroom-01-q01:clip:4:episodic:36": 42,
+      "m3:bedroom-01-q01:clip:4:episodic:37": 43,
+      "m3:bedroom-01-q01:clip:4:episodic:38": 44,
+      "m3:bedroom-01-q01:clip:4:semantic:40": 45,
+      "m3:bedroom-01-q01:clip:4:semantic:41": 46,
+      "m3:bedroom-01-q01:clip:5:episodic:42": 47,
+      "m3:bedroom-01-q01:clip:5:episodic:43": 48,
+      "m3:bedroom-01-q01:clip:5:episodic:44": 49,
+      "m3:bedroom-01-q01:clip:5:episodic:45": 50,
+      "m3:bedroom-01-q01:clip:5:episodic:46": 51,
+      "m3:bedroom-01-q01:clip:5:episodic:47": 52,
+      "m3:bedroom-01-q01:clip:5:semantic:48": 53,
+      "m3:bedroom-01-q01:clip:5:semantic:49": 54,
+      "m3:bedroom-01-q01:clip:6:episodic:50": 55,
+      "m3:bedroom-01-q01:clip:6:episodic:51": 56,
+      "m3:bedroom-01-q01:clip:6:episodic:52": 57,
+      "m3:bedroom-01-q01:clip:6:episodic:53": 58,
+      "m3:bedroom-01-q01:clip:6:episodic:54": 59,
+      "m3:bedroom-01-q01:clip:6:episodic:55": 60,
+      "m3:bedroom-01-q01:clip:6:semantic:56": 61,
+      "m3:bedroom-01-q01:clip:6:semantic:57": 62,
+      "m3:bedroom-01-q01:clip:6:semantic:58": 63,
+      "m3:bedroom-01-q01:clip:7:episodic:59": 64,
+      "m3:bedroom-01-q01:clip:7:episodic:60": 65,
+      "m3:bedroom-01-q01:clip:7:episodic:61": 66,
+      "m3:bedroom-01-q01:clip:7:episodic:62": 67,
+      "m3:bedroom-01-q01:clip:7:episodic:63": 68,
+      "m3:bedroom-01-q01:clip:7:episodic:64": 69,
+      "m3:bedroom-01-q01:clip:7:semantic:65": 70,
+      "m3:bedroom-01-q01:clip:7:semantic:66": 71,
+      "m3:bedroom-01-q01:clip:8:episodic:69": 72,
+      "m3:bedroom-01-q01:clip:8:episodic:70": 73,
+      "m3:bedroom-01-q01:clip:8:episodic:71": 74,
+      "m3:bedroom-01-q01:clip:8:episodic:72": 75,
+      "m3:bedroom-01-q01:clip:8:episodic:73": 76,
+      "m3:bedroom-01-q01:clip:8:episodic:74": 77,
+      "m3:bedroom-01-q01:clip:8:episodic:75": 78,
+      "m3:bedroom-01-q01:clip:8:episodic:76": 79,
+      "m3:bedroom-01-q01:clip:8:semantic:77": 80,
+      "m3:bedroom-01-q01:clip:8:semantic:78": 81,
+      "m3:bedroom-01-q01:clip:9:episodic:80": 82,
+      "m3:bedroom-01-q01:clip:9:episodic:81": 83,
+      "m3:bedroom-01-q01:clip:9:episodic:82": 84,
+      "m3:bedroom-01-q01:clip:9:episodic:83": 85,
+      "m3:bedroom-01-q01:clip:9:semantic:84": 86,
+      "m3:bedroom-01-q01:clip:9:semantic:85": 87,
+      "m3:bedroom-01-q01:clip:9:semantic:86": 88,
+      "m3:bedroom-01-q01:clip:10:episodic:88": 89,
+      "m3:bedroom-01-q01:clip:10:episodic:89": 90,
+      "m3:bedroom-01-q01:clip:10:episodic:90": 91,
+      "m3:bedroom-01-q01:clip:10:episodic:91": 92,
+      "m3:bedroom-01-q01:clip:10:episodic:92": 93,
+      "m3:bedroom-01-q01:clip:10:episodic:93": 94,
+      "m3:bedroom-01-q01:clip:10:semantic:95": 95,
+      "m3:bedroom-01-q01:clip:11:episodic:100": 96,
+      "m3:bedroom-01-q01:clip:11:episodic:101": 97,
+      "m3:bedroom-01-q01:clip:11:episodic:102": 98,
+      "m3:bedroom-01-q01:clip:11:episodic:103": 99,
+      "m3:bedroom-01-q01:clip:11:episodic:104": 100,
+      "m3:bedroom-01-q01:clip:11:episodic:105": 101,
+      "m3:bedroom-01-q01:clip:11:episodic:98": 102,
+      "m3:bedroom-01-q01:clip:11:episodic:99": 103,
+      "m3:bedroom-01-q01:clip:11:semantic:106": 104,
+      "m3:bedroom-01-q01:clip:11:semantic:107": 105,
+      "m3:bedroom-01-q01:clip:12:episodic:108": 106,
+      "m3:bedroom-01-q01:clip:12:episodic:109": 107,
+      "m3:bedroom-01-q01:clip:12:episodic:110": 108,
+      "m3:bedroom-01-q01:clip:12:episodic:111": 109,
+      "m3:bedroom-01-q01:clip:12:episodic:112": 110,
+      "m3:bedroom-01-q01:clip:12:episodic:113": 111,
+      "m3:bedroom-01-q01:clip:12:episodic:114": 112,
+      "m3:bedroom-01-q01:clip:12:episodic:115": 113,
+      "m3:bedroom-01-q01:clip:12:semantic:116": 114,
+      "m3:bedroom-01-q01:clip:12:semantic:117": 115,
+      "m3:bedroom-01-q01:clip:12:semantic:118": 116,
+      "m3:bedroom-01-q01:clip:13:episodic:119": 117,
+      "m3:bedroom-01-q01:clip:13:episodic:120": 118,
+      "m3:bedroom-01-q01:clip:13:episodic:121": 119,
+      "m3:bedroom-01-q01:clip:13:episodic:122": 120,
+      "m3:bedroom-01-q01:clip:13:episodic:123": 121,
+      "m3:bedroom-01-q01:clip:13:episodic:124": 122,
+      "m3:bedroom-01-q01:clip:13:semantic:125": 123,
+      "m3:bedroom-01-q01:clip:13:semantic:126": 124,
+      "m3:bedroom-01-q01:clip:13:semantic:127": 125,
+      "m3:bedroom-01-q01:clip:14:episodic:129": 126,
+      "m3:bedroom-01-q01:clip:14:episodic:130": 127,
+      "m3:bedroom-01-q01:clip:14:episodic:131": 128,
+      "m3:bedroom-01-q01:clip:14:episodic:132": 129,
+      "m3:bedroom-01-q01:clip:14:episodic:133": 130,
+      "m3:bedroom-01-q01:clip:14:episodic:134": 131,
+      "m3:bedroom-01-q01:clip:14:semantic:135": 132,
+      "m3:bedroom-01-q01:clip:14:semantic:136": 133,
+      "m3:bedroom-01-q01:clip:14:semantic:137": 134,
+      "m3:bedroom-01-q01:clip:15:episodic:139": 135,
+      "m3:bedroom-01-q01:clip:15:episodic:140": 136,
+      "m3:bedroom-01-q01:clip:15:episodic:141": 137,
+      "m3:bedroom-01-q01:clip:15:episodic:142": 138,
+      "m3:bedroom-01-q01:clip:15:episodic:143": 139,
+      "m3:bedroom-01-q01:clip:15:episodic:144": 140,
+      "m3:bedroom-01-q01:clip:15:semantic:145": 141,
+      "m3:bedroom-01-q01:clip:15:semantic:146": 142
+    },
+    "_modified_units": [
+      "m3:bedroom-01-q01:clip:6:episodic:55",
+      "m3:bedroom-01-q01:clip:14:episodic:134",
+      "m3:bedroom-01-q01:clip:8:episodic:71",
+      "m3:bedroom-01-q01:clip:14:episodic:130",
+      "m3:bedroom-01-q01:clip:10:episodic:89",
+      "m3:bedroom-01-q01:clip:5:episodic:45",
+      "m3:bedroom-01-q01:clip:9:episodic:83",
+      "m3:bedroom-01-q01:clip:2:episodic:17",
+      "m3:bedroom-01-q01:clip:4:episodic:37",
+      "m3:bedroom-01-q01:clip:3:episodic:24",
+      "m3:bedroom-01-q01:clip:11:episodic:99",
+      "m3:bedroom-01-q01:clip:4:episodic:36",
+      "m3:bedroom-01-q01:clip:3:episodic:27",
+      "m3:bedroom-01-q01:clip:5:episodic:43",
+      "m3:bedroom-01-q01:clip:10:semantic:95",
+      "m3:bedroom-01-q01:clip:6:semantic:58",
+      "m3:bedroom-01-q01:clip:7:semantic:65",
+      "m3:bedroom-01-q01:clip:12:semantic:117",
+      "m3:bedroom-01-q01:clip:8:episodic:74",
+      "m3:bedroom-01-q01:clip:6:semantic:56",
+      "m3:bedroom-01-q01:clip:6:episodic:50",
+      "m3:bedroom-01-q01:clip:11:episodic:100",
+      "m3:bedroom-01-q01:entity:character_10",
+      "m3:bedroom-01-q01:clip:14:semantic:135",
+      "m3:bedroom-01-q01:clip:1:semantic:8",
+      "m3:bedroom-01-q01:clip:9:semantic:86",
+      "m3:bedroom-01-q01:clip:7:episodic:63",
+      "m3:bedroom-01-q01:clip:10:episodic:88",
+      "m3:bedroom-01-q01:clip:1:episodic:7",
+      "m3:bedroom-01-q01:clip:8:semantic:78",
+      "m3:bedroom-01-q01:entity:character_1",
+      "m3:bedroom-01-q01:clip:8:episodic:76",
+      "m3:bedroom-01-q01:entity:character_0",
+      "m3:bedroom-01-q01:clip:12:episodic:112",
+      "m3:bedroom-01-q01:clip:10:episodic:93",
+      "m3:bedroom-01-q01:clip:1:episodic:5",
+      "m3:bedroom-01-q01:clip:3:semantic:30",
+      "m3:bedroom-01-q01:clip:3:semantic:29",
+      "m3:bedroom-01-q01:clip:7:episodic:61",
+      "m3:bedroom-01-q01:clip:12:episodic:108",
+      "m3:bedroom-01-q01:clip:3:episodic:26",
+      "m3:bedroom-01-q01:clip:4:episodic:38",
+      "m3:bedroom-01-q01:clip:15:semantic:145",
+      "m3:bedroom-01-q01:clip:11:semantic:106",
+      "m3:bedroom-01-q01:clip:9:semantic:85",
+      "m3:bedroom-01-q01:clip:1:episodic:6",
+      "m3:bedroom-01-q01:clip:15:episodic:143",
+      "m3:bedroom-01-q01:clip:11:episodic:101",
+      "m3:bedroom-01-q01:clip:13:episodic:121",
+      "m3:bedroom-01-q01:clip:13:episodic:120",
+      "m3:bedroom-01-q01:clip:8:episodic:73",
+      "m3:bedroom-01-q01:clip:8:semantic:77",
+      "m3:bedroom-01-q01:clip:9:semantic:84",
+      "m3:bedroom-01-q01:clip:14:episodic:132",
+      "m3:bedroom-01-q01:clip:5:semantic:49",
+      "m3:bedroom-01-q01:entity:character_7",
+      "m3:bedroom-01-q01:clip:15:semantic:146",
+      "m3:bedroom-01-q01:clip:10:episodic:92",
+      "m3:bedroom-01-q01:clip:5:episodic:42",
+      "m3:bedroom-01-q01:clip:1:episodic:1",
+      "m3:bedroom-01-q01:clip:3:episodic:22",
+      "m3:bedroom-01-q01:clip:6:episodic:51",
+      "m3:bedroom-01-q01:clip:8:episodic:69",
+      "m3:bedroom-01-q01:clip:1:semantic:9",
+      "m3:bedroom-01-q01:clip:2:semantic:19",
+      "m3:bedroom-01-q01:clip:11:episodic:105",
+      "m3:bedroom-01-q01:clip:10:episodic:91",
+      "m3:bedroom-01-q01:clip:7:episodic:59",
+      "m3:bedroom-01-q01:clip:3:episodic:25",
+      "m3:bedroom-01-q01:clip:2:episodic:16",
+      "m3:bedroom-01-q01:clip:7:episodic:62",
+      "m3:bedroom-01-q01:clip:11:episodic:102",
+      "m3:bedroom-01-q01:clip:5:episodic:46",
+      "m3:bedroom-01-q01:clip:4:semantic:41",
+      "m3:bedroom-01-q01:entity:character_11",
+      "m3:bedroom-01-q01:clip:2:episodic:18",
+      "m3:bedroom-01-q01:clip:8:episodic:70",
+      "m3:bedroom-01-q01:clip:5:episodic:47",
+      "m3:bedroom-01-q01:clip:12:episodic:113",
+      "m3:bedroom-01-q01:clip:5:episodic:44",
+      "m3:bedroom-01-q01:clip:14:episodic:131",
+      "m3:bedroom-01-q01:clip:8:episodic:72",
+      "m3:bedroom-01-q01:clip:14:semantic:136",
+      "m3:bedroom-01-q01:clip:12:semantic:118",
+      "m3:bedroom-01-q01:entity:character_2",
+      "m3:bedroom-01-q01:clip:11:episodic:103",
+      "m3:bedroom-01-q01:clip:15:episodic:144",
+      "m3:bedroom-01-q01:clip:12:episodic:114",
+      "m3:bedroom-01-q01:clip:4:episodic:33",
+      "m3:bedroom-01-q01:clip:13:semantic:125",
+      "m3:bedroom-01-q01:entity:character_9",
+      "m3:bedroom-01-q01:clip:8:episodic:75",
+      "m3:bedroom-01-q01:entity:character_6",
+      "m3:bedroom-01-q01:clip:7:episodic:64",
+      "m3:bedroom-01-q01:clip:2:semantic:20",
+      "m3:bedroom-01-q01:clip:10:episodic:90",
+      "m3:bedroom-01-q01:clip:1:episodic:3",
+      "m3:bedroom-01-q01:entity:character_8",
+      "m3:bedroom-01-q01:clip:3:episodic:23",
+      "m3:bedroom-01-q01:clip:2:episodic:14",
+      "m3:bedroom-01-q01:clip:7:semantic:66",
+      "m3:bedroom-01-q01:clip:11:episodic:104",
+      "m3:bedroom-01-q01:clip:2:episodic:15",
+      "m3:bedroom-01-q01:clip:13:episodic:122",
+      "m3:bedroom-01-q01:clip:6:episodic:52",
+      "m3:bedroom-01-q01:clip:9:episodic:82",
+      "m3:bedroom-01-q01:clip:13:episodic:119",
+      "m3:bedroom-01-q01:entity:character_4",
+      "m3:bedroom-01-q01:clip:4:episodic:35",
+      "m3:bedroom-01-q01:clip:1:episodic:4",
+      "m3:bedroom-01-q01:clip:12:semantic:116",
+      "m3:bedroom-01-q01:clip:13:episodic:124",
+      "m3:bedroom-01-q01:clip:12:episodic:115",
+      "m3:bedroom-01-q01:clip:11:episodic:98",
+      "m3:bedroom-01-q01:clip:15:episodic:141",
+      "m3:bedroom-01-q01:clip:4:episodic:34",
+      "m3:bedroom-01-q01:clip:5:semantic:48",
+      "m3:bedroom-01-q01:clip:6:episodic:53",
+      "m3:bedroom-01-q01:clip:15:episodic:139",
+      "m3:bedroom-01-q01:clip:14:episodic:129",
+      "m3:bedroom-01-q01:clip:15:episodic:142",
+      "m3:bedroom-01-q01:clip:14:semantic:137",
+      "m3:bedroom-01-q01:clip:4:semantic:40",
+      "m3:bedroom-01-q01:clip:11:semantic:107",
+      "m3:bedroom-01-q01:entity:character_12",
+      "m3:bedroom-01-q01:clip:7:episodic:60",
+      "m3:bedroom-01-q01:clip:9:episodic:80",
+      "m3:bedroom-01-q01:clip:12:episodic:109",
+      "m3:bedroom-01-q01:clip:13:episodic:123",
+      "m3:bedroom-01-q01:clip:12:episodic:110",
+      "m3:bedroom-01-q01:clip:9:episodic:81",
+      "m3:bedroom-01-q01:clip:13:semantic:126",
+      "m3:bedroom-01-q01:clip:3:episodic:28",
+      "m3:bedroom-01-q01:clip:6:episodic:54",
+      "m3:bedroom-01-q01:entity:character_5",
+      "m3:bedroom-01-q01:clip:15:episodic:140",
+      "m3:bedroom-01-q01:clip:1:episodic:2",
+      "m3:bedroom-01-q01:clip:13:semantic:127",
+      "m3:bedroom-01-q01:entity:character_3",
+      "m3:bedroom-01-q01:clip:6:semantic:57",
+      "m3:bedroom-01-q01:clip:14:episodic:133",
+      "m3:bedroom-01-q01:clip:12:episodic:111",
+      "m3:bedroom-01-q01:clip:2:episodic:13"
+    ],
+    "_deleted_units": [],
+    "_access_counts": {
+      "m3:bedroom-01-q01:entity:character_0": 1,
+      "m3:bedroom-01-q01:entity:character_1": 1,
+      "m3:bedroom-01-q01:entity:character_2": 1,
+      "m3:bedroom-01-q01:entity:character_3": 1,
+      "m3:bedroom-01-q01:entity:character_4": 1,
+      "m3:bedroom-01-q01:entity:character_5": 1,
+      "m3:bedroom-01-q01:entity:character_6": 1,
+      "m3:bedroom-01-q01:entity:character_7": 1,
+      "m3:bedroom-01-q01:entity:character_8": 1,
+      "m3:bedroom-01-q01:entity:character_9": 1,
+      "m3:bedroom-01-q01:entity:character_10": 1,
+      "m3:bedroom-01-q01:entity:character_11": 1,
+      "m3:bedroom-01-q01:entity:character_12": 1,
+      "m3:bedroom-01-q01:clip:1:episodic:1": 1,
+      "m3:bedroom-01-q01:clip:1:episodic:2": 1,
+      "m3:bedroom-01-q01:clip:1:episodic:3": 1,
+      "m3:bedroom-01-q01:clip:1:episodic:4": 1,
+      "m3:bedroom-01-q01:clip:1:episodic:5": 1,
+      "m3:bedroom-01-q01:clip:1:episodic:6": 1,
+      "m3:bedroom-01-q01:clip:1:episodic:7": 1,
+      "m3:bedroom-01-q01:clip:1:semantic:8": 1,
+      "m3:bedroom-01-q01:clip:1:semantic:9": 1,
+      "m3:bedroom-01-q01:clip:2:episodic:13": 1,
+      "m3:bedroom-01-q01:clip:2:episodic:14": 1,
+      "m3:bedroom-01-q01:clip:2:episodic:15": 1,
+      "m3:bedroom-01-q01:clip:2:episodic:16": 1,
+      "m3:bedroom-01-q01:clip:2:episodic:17": 1,
+      "m3:bedroom-01-q01:clip:2:episodic:18": 1,
+      "m3:bedroom-01-q01:clip:2:semantic:19": 1,
+      "m3:bedroom-01-q01:clip:2:semantic:20": 1,
+      "m3:bedroom-01-q01:clip:3:episodic:22": 1,
+      "m3:bedroom-01-q01:clip:3:episodic:23": 1,
+      "m3:bedroom-01-q01:clip:3:episodic:24": 1,
+      "m3:bedroom-01-q01:clip:3:episodic:25": 1,
+      "m3:bedroom-01-q01:clip:3:episodic:26": 1,
+      "m3:bedroom-01-q01:clip:3:episodic:27": 1,
+      "m3:bedroom-01-q01:clip:3:episodic:28": 1,
+      "m3:bedroom-01-q01:clip:3:semantic:29": 1,
+      "m3:bedroom-01-q01:clip:3:semantic:30": 1,
+      "m3:bedroom-01-q01:clip:4:episodic:33": 1,
+      "m3:bedroom-01-q01:clip:4:episodic:34": 1,
+      "m3:bedroom-01-q01:clip:4:episodic:35": 1,
+      "m3:bedroom-01-q01:clip:4:episodic:36": 1,
+      "m3:bedroom-01-q01:clip:4:episodic:37": 1,
+      "m3:bedroom-01-q01:clip:4:episodic:38": 1,
+      "m3:bedroom-01-q01:clip:4:semantic:40": 1,
+      "m3:bedroom-01-q01:clip:4:semantic:41": 1,
+      "m3:bedroom-01-q01:clip:5:episodic:42": 1,
+      "m3:bedroom-01-q01:clip:5:episodic:43": 1,
+      "m3:bedroom-01-q01:clip:5:episodic:44": 1,
+      "m3:bedroom-01-q01:clip:5:episodic:45": 1,
+      "m3:bedroom-01-q01:clip:5:episodic:46": 1,
+      "m3:bedroom-01-q01:clip:5:episodic:47": 1,
+      "m3:bedroom-01-q01:clip:5:semantic:48": 1,
+      "m3:bedroom-01-q01:clip:5:semantic:49": 1,
+      "m3:bedroom-01-q01:clip:6:episodic:50": 1,
+      "m3:bedroom-01-q01:clip:6:episodic:51": 1,
+      "m3:bedroom-01-q01:clip:6:episodic:52": 1,
+      "m3:bedroom-01-q01:clip:6:episodic:53": 1,
+      "m3:bedroom-01-q01:clip:6:episodic:54": 1,
+      "m3:bedroom-01-q01:clip:6:episodic:55": 1,
+      "m3:bedroom-01-q01:clip:6:semantic:56": 1,
+      "m3:bedroom-01-q01:clip:6:semantic:57": 1,
+      "m3:bedroom-01-q01:clip:6:semantic:58": 1,
+      "m3:bedroom-01-q01:clip:7:episodic:59": 1,
+      "m3:bedroom-01-q01:clip:7:episodic:60": 1,
+      "m3:bedroom-01-q01:clip:7:episodic:61": 1,
+      "m3:bedroom-01-q01:clip:7:episodic:62": 1,
+      "m3:bedroom-01-q01:clip:7:episodic:63": 1,
+      "m3:bedroom-01-q01:clip:7:episodic:64": 1,
+      "m3:bedroom-01-q01:clip:7:semantic:65": 1,
+      "m3:bedroom-01-q01:clip:7:semantic:66": 1,
+      "m3:bedroom-01-q01:clip:8:episodic:69": 1,
+      "m3:bedroom-01-q01:clip:8:episodic:70": 1,
+      "m3:bedroom-01-q01:clip:8:episodic:71": 1,
+      "m3:bedroom-01-q01:clip:8:episodic:72": 1,
+      "m3:bedroom-01-q01:clip:8:episodic:73": 1,
+      "m3:bedroom-01-q01:clip:8:episodic:74": 1,
+      "m3:bedroom-01-q01:clip:8:episodic:75": 1,
+      "m3:bedroom-01-q01:clip:8:episodic:76": 1,
+      "m3:bedroom-01-q01:clip:8:semantic:77": 1,
+      "m3:bedroom-01-q01:clip:8:semantic:78": 1,
+      "m3:bedroom-01-q01:clip:9:episodic:80": 1,
+      "m3:bedroom-01-q01:clip:9:episodic:81": 1,
+      "m3:bedroom-01-q01:clip:9:episodic:82": 1,
+      "m3:bedroom-01-q01:clip:9:episodic:83": 1,
+      "m3:bedroom-01-q01:clip:9:semantic:84": 1,
+      "m3:bedroom-01-q01:clip:9:semantic:85": 1,
+      "m3:bedroom-01-q01:clip:9:semantic:86": 1,
+      "m3:bedroom-01-q01:clip:10:episodic:88": 1,
+      "m3:bedroom-01-q01:clip:10:episodic:89": 1,
+      "m3:bedroom-01-q01:clip:10:episodic:90": 1,
+      "m3:bedroom-01-q01:clip:10:episodic:91": 1,
+      "m3:bedroom-01-q01:clip:10:episodic:92": 1,
+      "m3:bedroom-01-q01:clip:10:episodic:93": 1,
+      "m3:bedroom-01-q01:clip:10:semantic:95": 1,
+      "m3:bedroom-01-q01:clip:11:episodic:100": 1,
+      "m3:bedroom-01-q01:clip:11:episodic:101": 1,
+      "m3:bedroom-01-q01:clip:11:episodic:102": 1,
+      "m3:bedroom-01-q01:clip:11:episodic:103": 1,
+      "m3:bedroom-01-q01:clip:11:episodic:104": 1,
+      "m3:bedroom-01-q01:clip:11:episodic:105": 1,
+      "m3:bedroom-01-q01:clip:11:episodic:98": 1,
+      "m3:bedroom-01-q01:clip:11:episodic:99": 1,
+      "m3:bedroom-01-q01:clip:11:semantic:106": 1,
+      "m3:bedroom-01-q01:clip:11:semantic:107": 1,
+      "m3:bedroom-01-q01:clip:12:episodic:108": 1,
+      "m3:bedroom-01-q01:clip:12:episodic:109": 1,
+      "m3:bedroom-01-q01:clip:12:episodic:110": 1,
+      "m3:bedroom-01-q01:clip:12:episodic:111": 1,
+      "m3:bedroom-01-q01:clip:12:episodic:112": 1,
+      "m3:bedroom-01-q01:clip:12:episodic:113": 1,
+      "m3:bedroom-01-q01:clip:12:episodic:114": 1,
+      "m3:bedroom-01-q01:clip:12:episodic:115": 1,
+      "m3:bedroom-01-q01:clip:12:semantic:116": 1,
+      "m3:bedroom-01-q01:clip:12:semantic:117": 1,
+      "m3:bedroom-01-q01:clip:12:semantic:118": 1,
+      "m3:bedroom-01-q01:clip:13:episodic:119": 1,
+      "m3:bedroom-01-q01:clip:13:episodic:120": 1,
+      "m3:bedroom-01-q01:clip:13:episodic:121": 1,
+      "m3:bedroom-01-q01:clip:13:episodic:122": 1,
+      "m3:bedroom-01-q01:clip:13:episodic:123": 1,
+      "m3:bedroom-01-q01:clip:13:episodic:124": 1,
+      "m3:bedroom-01-q01:clip:13:semantic:125": 1,
+      "m3:bedroom-01-q01:clip:13:semantic:126": 1,
+      "m3:bedroom-01-q01:clip:13:semantic:127": 1,
+      "m3:bedroom-01-q01:clip:14:episodic:129": 1,
+      "m3:bedroom-01-q01:clip:14:episodic:130": 1,
+      "m3:bedroom-01-q01:clip:14:episodic:131": 1,
+      "m3:bedroom-01-q01:clip:14:episodic:132": 1,
+      "m3:bedroom-01-q01:clip:14:episodic:133": 1,
+      "m3:bedroom-01-q01:clip:14:episodic:134": 1,
+      "m3:bedroom-01-q01:clip:14:semantic:135": 1,
+      "m3:bedroom-01-q01:clip:14:semantic:136": 1,
+      "m3:bedroom-01-q01:clip:14:semantic:137": 1,
+      "m3:bedroom-01-q01:clip:15:episodic:139": 1,
+      "m3:bedroom-01-q01:clip:15:episodic:140": 1,
+      "m3:bedroom-01-q01:clip:15:episodic:141": 1,
+      "m3:bedroom-01-q01:clip:15:episodic:142": 1,
+      "m3:bedroom-01-q01:clip:15:episodic:143": 1,
+      "m3:bedroom-01-q01:clip:15:episodic:144": 1,
+      "m3:bedroom-01-q01:clip:15:semantic:145": 1,
+      "m3:bedroom-01-q01:clip:15:semantic:146": 1
+    }
+  },
+  "retrieval": {
+    "indices_saved": {},
+    "frozen_matrices_saved": {}
+  },
+  "high_level_memory_build": {}
+}

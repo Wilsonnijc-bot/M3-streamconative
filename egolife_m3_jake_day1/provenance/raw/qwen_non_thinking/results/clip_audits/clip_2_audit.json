@@ -1,0 +1,374 @@
+{
+  "clip_id": 2,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2/work/segments/segment_0002.mp4",
+  "end_to_end_memory_generation_ms": 65315.397723003116,
+  "latency_ms": {
+    "clip_decode": 5392.123577999882,
+    "deepgram_asr": 9463.069272998837,
+    "mai_transcribe_asr": 2476.8303710006876,
+    "asr_total": 9463.995493999391,
+    "audio_segmentation": 8.670709998114035,
+    "speech_embedding_campplus": 137.0540819989401,
+    "facial_detection_recognition_buffalo_l": 3566.179348999867,
+    "face_clustering": 6.521368995890953,
+    "vlm_memory_generation": 16363.133245002246,
+    "text_embedding": 460.01833099580836,
+    "graph_update_total": 2.4666069948580116
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 2,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 753,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789407021.7534215,
+          "status": "success",
+          "total_tokens": 153,
+          "request_end": 1789407022.2133157,
+          "latency_ms": 459.89469600317534
+        }
+      ],
+      "total_tokens": 153,
+      "latency_ms": 460.01833099580836
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 9463.069272998837,
+        "openrouter-mai-transcribe-2": 2476.8303710006876
+      },
+      "asr_total_ms": 9463.995493999391,
+      "audio_segmentation_ms": 8.670709998114035,
+      "speech_embedding_ms": 137.0540819989401,
+      "graph_update_ms": 1.7160159986815415,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 162.95236899895826
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3566.179348999867,
+      "face_clustering_ms": 6.521368995890953,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 212,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3786.2837749999017
+    },
+    "vlm": {
+      "context_preparation_ms": 5713.05334099452,
+      "vlm_ms": 16363.133245002246,
+      "raw_response": "```json\n{\n    \"video_description\": [\n        \"A group of five people are seated around a table covered with a checkered cloth.\",\n        \"The person filming extends their hand towards the others, gesturing for them to put on VR headsets.\",\n        \"Participants begin putting on black VR headsets over their eyes.\",\n        \"After everyone puts on the headset, the camera operator picks up a smartphone.\",\n        \"The camera operator holds the phone up, displaying a timer application.\",\n        \"The timer on the phone screen counts upwards from zero.\"\n    ],\n    \"high_level_conclusions\": [\n        \"Equivalence: <face_0>, <voice_0>\",\n        \"The speaker identified as MAI is the person sitting at the head of the table wearing a white shirt.\",\n        \"The group activity involves preparing for a session using virtual reality equipment.\",\n        \"The use of a timer suggests the upcoming activity is time-bound or requires precise timing.\"\n    ]\n}\n```\n",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of five people are seated around a table covered with a checkered cloth.",
+          "The person filming extends their hand towards the others, gesturing for them to put on VR headsets.",
+          "Participants begin putting on black VR headsets over their eyes.",
+          "After everyone puts on the headset, the camera operator picks up a smartphone.",
+          "The camera operator holds the phone up, displaying a timer application.",
+          "The timer on the phone screen counts upwards from zero."
+        ],
+        "high_level_conclusions": [
+          "Equivalence: <face_0>, <voice_0>",
+          "The speaker identified as MAI is the person sitting at the head of the table wearing a white shirt.",
+          "The group activity involves preparing for a session using virtual reality equipment.",
+          "The use of a timer suggests the upcoming activity is time-bound or requires precise timing."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 2,
+          "call_id": "4e40c831-9caf-4e40-80c7-d2be91a0e4a6",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789407005.3890061,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "```json\n{\n    \"video_description\": [\n        \"A group of five people are seated around a table covered with a checkered cloth.\",\n        \"The person filming extends their hand towards the others, gesturing for them to put on VR headsets.\",\n        \"Participants begin putting on black VR headsets over their eyes.\",\n        \"After everyone puts on the headset, the camera operator picks up a smartphone.\",\n        \"The camera operator holds the phone up, displaying a timer application.\",\n        \"The timer on the phone screen counts upwards from zero.\"\n    ],\n    \"high_level_conclusions\": [\n        \"Equivalence: <face_0>, <voice_0>\",\n        \"The speaker identified as MAI is the person sitting at the head of the table wearing a white shirt.\",\n        \"The group activity involves preparing for a session using virtual reality equipment.\",\n        \"The use of a timer suggests the upcoming activity is time-bound or requires precise timing.\"\n    ]\n}\n```\n",
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10088,
+          "output_tokens": 216,
+          "total_tokens": 10304,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 8192,
+            "do_sample": false,
+            "repetition_penalty": 1.08
+          },
+          "timings": {
+            "queue_wait_ms": 0.0017130005289800465,
+            "media_preparation_ms": 82.79083800152875,
+            "processor_tokenization_ms": 2567.301517003216,
+            "device_transfer_ms": 41.90506300074048,
+            "cuda_generation_ms": 13635.176130999753,
+            "decoding_ms": 0.761381998017896
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 16328.2113499954,
+          "request_end": 1789407021.752143,
+          "latency_ms": 16363.133245002246,
+          "client_wall_clock_latency_ms": 16363.133245002246
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.09653199958847836,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.6540589965879917,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 212,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 4,
+    "nodes_after_clip": 24,
+    "edges_after_clip": 2,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of five people are seated around a table covered with a checkered cloth.",
+      "The person filming extends their hand towards the others, gesturing for them to put on VR headsets.",
+      "Participants begin putting on black VR headsets over their eyes.",
+      "After everyone puts on the headset, the camera operator picks up a smartphone.",
+      "The camera operator holds the phone up, displaying a timer application.",
+      "The timer on the phone screen counts upwards from zero."
+    ],
+    "high_level_conclusions": [
+      "Equivalence: <face_0>, <voice_0>",
+      "The speaker identified as MAI is the person sitting at the head of the table wearing a white shirt.",
+      "The group activity involves preparing for a session using virtual reality equipment.",
+      "The use of a timer suggests the upcoming activity is time-bound or requires precise timing."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of five people are seated around a table covered with a checkered cloth.",
+      "The person filming extends their hand towards the others, gesturing for them to put on VR headsets.",
+      "Participants begin putting on black VR headsets over their eyes.",
+      "After everyone puts on the headset, the camera operator picks up a smartphone.",
+      "The camera operator holds the phone up, displaying a timer application.",
+      "The timer on the phone screen counts upwards from zero."
+    ],
+    "high_level_conclusions": [
+      "Equivalence: <face_0>, <voice_0>",
+      "The speaker identified as MAI is the person sitting at the head of the table wearing a white shirt.",
+      "The group activity involves preparing for a session using virtual reality equipment.",
+      "The use of a timer suggests the upcoming activity is time-bound or requires precise timing."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2/results/clip_audits/clip_2_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 15,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of five people are seated around a table covered with a checkered cloth."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 16,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person filming extends their hand towards the others, gesturing for them to put on VR headsets."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 17,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Participants begin putting on black VR headsets over their eyes."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 18,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "After everyone puts on the headset, the camera operator picks up a smartphone."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 19,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator holds the phone up, displaying a timer application."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 20,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The timer on the phone screen counts upwards from zero."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 21,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The speaker identified as MAI is the person sitting at the head of the table wearing a white shirt."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 22,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group activity involves preparing for a session using virtual reality equipment."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 23,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The use of a timer suggests the upcoming activity is time-bound or requires precise timing."
+          ],
+          "timestamp": 2
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2/results/clip_audits/clip_2_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2/results/clip_audits/clip_2_graph.pkl"
+  },
+  "memory_pickle_bytes": 619100,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 48143.737541536,
+    "prepared_perf": 48160.760757773,
+    "ordered_start_perf": 48182.53732893,
+    "consumer_wait_ms": 0.01832399721024558,
+    "ready_to_ordered_ms": 21776.571156995487,
+    "preparation_work_ms": 17022.109568002634,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 26489.297551001073
+}

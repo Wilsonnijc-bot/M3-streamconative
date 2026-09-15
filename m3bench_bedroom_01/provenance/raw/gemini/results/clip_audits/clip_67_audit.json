@@ -1,0 +1,344 @@
+{
+  "clip_id": 67,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00313000.mp4",
+  "end_to_end_memory_generation_ms": 153038.13192699454,
+  "latency_ms": {
+    "clip_decode": 3926.669866006705,
+    "deepgram_asr": 926.3795950100757,
+    "mai_transcribe_asr": 1259.3446300015785,
+    "asr_total": 1260.5646069860086,
+    "audio_segmentation": 6.453976995544508,
+    "speech_embedding_campplus": 860.9688079886837,
+    "facial_detection_recognition_buffalo_l": 3256.2636530055897,
+    "face_clustering": 6.909243995323777,
+    "vlm_memory_generation": 28353.5680519999,
+    "text_embedding": 774.9788560031448,
+    "graph_update_total": 114.35995498322882
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 67,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 761,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789435515.4029753,
+          "status": "success",
+          "total_tokens": 152,
+          "request_end": 1789435516.1777995,
+          "latency_ms": 774.8245859984308
+        }
+      ],
+      "total_tokens": 152,
+      "latency_ms": 774.9788560031448
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 926.3795950100757,
+        "openrouter-mai-transcribe-2": 1259.3446300015785
+      },
+      "asr_total_ms": 1260.5646069860086,
+      "audio_segmentation_ms": 6.453976995544508,
+      "speech_embedding_ms": 860.9688079886837,
+      "graph_update_ms": 108.7695369933499,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 990.4409970040433
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3256.2636530055897,
+      "face_clustering_ms": 6.909243995323777,
+      "graph_update_ms": 0.0020029983716085553,
+      "frame_count": 150,
+      "detected_face_count": 259,
+      "qualified_face_count": 2,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3406.0173949983437
+    },
+    "vlm": {
+      "context_preparation_ms": 5071.1503850034205,
+      "vlm_ms": 28353.5680519999,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table filled with food and drinks.\",\n    \"The woman on the left holds a smartphone with one hand while resting her head against the other.\",\n    \"The woman on the right clasps her hands beneath her chin, looking across the table and speaking via <voice_322>.\",\n    \"The woman on the right reflects on a quote from The Old Man and the Sea and discusses programming and creativity via <voice_322>.\",\n    \"The woman on the left listens while adjusting her hair and touching her face.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_322>) views the companion as a mentor or experienced peer, seeking advice on managing work, programming, and creative pursuits.\",\n    \"The two share a close, comfortable relationship, engaging in a relaxed and intellectual conversation over a casual meal.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit opposite each other at a dining table filled with food and drinks.",
+          "The woman on the left holds a smartphone with one hand while resting her head against the other.",
+          "The woman on the right clasps her hands beneath her chin, looking across the table and speaking via <voice_322>.",
+          "The woman on the right reflects on a quote from The Old Man and the Sea and discusses programming and creativity via <voice_322>.",
+          "The woman on the left listens while adjusting her hair and touching her face."
+        ],
+        "high_level_conclusions": [
+          "The speaker (<voice_322>) views the companion as a mentor or experienced peer, seeking advice on managing work, programming, and creative pursuits.",
+          "The two share a close, comfortable relationship, engaging in a relaxed and intellectual conversation over a casual meal."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 67,
+          "call_id": "69803b99-6e5a-4f58-8240-b684912fde1b",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789435487.048638,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66030,
+          "output_tokens": 1281,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 28353.484676001244
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table filled with food and drinks.\",\n    \"The woman on the left holds a smartphone with one hand while resting her head against the other.\",\n    \"The woman on the right clasps her hands beneath her chin, looking across the table and speaking via <voice_322>.\",\n    \"The woman on the right reflects on a quote from The Old Man and the Sea and discusses programming and creativity via <voice_322>.\",\n    \"The woman on the left listens while adjusting her hair and touching her face.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_322>) views the companion as a mentor or experienced peer, seeking advice on managing work, programming, and creative pursuits.\",\n    \"The two share a close, comfortable relationship, engaging in a relaxed and intellectual conversation over a casual meal.\"\n  ]\n}\n```",
+          "total_tokens": 67311,
+          "request_end": 1789435515.4022088,
+          "latency_ms": 28353.5680519999,
+          "client_wall_clock_latency_ms": 28353.5680519999,
+          "api_request_wall_clock_latency_ms": 28353.5680519999
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.06559299072250724,
+      "nodes_added": 5,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 5.5228220007847995,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 1,
+    "detected_faces": 259,
+    "qualified_faces": 2,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 649,
+    "edges_after_clip": 206,
+    "nodes_added_by_clip": 7,
+    "edges_added_by_clip": 3
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table filled with food and drinks.",
+      "The woman on the left holds a smartphone with one hand while resting her head against the other.",
+      "The woman on the right clasps her hands beneath her chin, looking across the table and speaking via <voice_322>.",
+      "The woman on the right reflects on a quote from The Old Man and the Sea and discusses programming and creativity via <voice_322>.",
+      "The woman on the left listens while adjusting her hair and touching her face."
+    ],
+    "high_level_conclusions": [
+      "The speaker (<voice_322>) views the companion as a mentor or experienced peer, seeking advice on managing work, programming, and creative pursuits.",
+      "The two share a close, comfortable relationship, engaging in a relaxed and intellectual conversation over a casual meal."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table filled with food and drinks.",
+      "The woman on the left holds a smartphone with one hand while resting her head against the other.",
+      "The woman on the right clasps her hands beneath her chin, looking across the table and speaking via <voice_322>.",
+      "The woman on the right reflects on a quote from The Old Man and the Sea and discusses programming and creativity via <voice_322>.",
+      "The woman on the left listens while adjusting her hair and touching her face."
+    ],
+    "high_level_conclusions": [
+      "The speaker (<voice_322>) views the companion as a mentor or experienced peer, seeking advice on managing work, programming, and creative pursuits.",
+      "The two share a close, comfortable relationship, engaging in a relaxed and intellectual conversation over a casual meal."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_67_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 7,
+    "edges_added": 3,
+    "nodes": [
+      {
+        "id": 642,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit opposite each other at a dining table filled with food and drinks."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 643,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left holds a smartphone with one hand while resting her head against the other."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 644,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right clasps her hands beneath her chin, looking across the table and speaking via <voice_322>."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 645,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right reflects on a quote from The Old Man and the Sea and discusses programming and creativity via <voice_322>."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 646,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left listens while adjusting her hair and touching her face."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 647,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The speaker (<voice_322>) views the companion as a mentor or experienced peer, seeking advice on managing work, programming, and creative pursuits."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 648,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two share a close, comfortable relationship, engaging in a relaxed and intellectual conversation over a casual meal."
+          ],
+          "timestamp": 67
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 322,
+        "target": 644,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 322,
+        "target": 645,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 322,
+        "target": 647,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_67_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_67_graph.pkl"
+  },
+  "memory_pickle_bytes": 17062672,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 76550.03876638,
+    "prepared_perf": 76555.358636428,
+    "ordered_start_perf": 76663.368432242,
+    "consumer_wait_ms": 0.009758994565345347,
+    "ready_to_ordered_ms": 108009.79581399588,
+    "preparation_work_ms": 5314.3336979992455,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 38603.932209996856
+}

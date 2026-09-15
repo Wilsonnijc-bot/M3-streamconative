@@ -1,0 +1,73 @@
+{
+  "clip_id": 128,
+  "source": {
+    "segment_id": 128,
+    "source": "DAY1_A1_JAKE_12100000.mp4",
+    "source_clock": "12100000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 12.080000000001746,
+    "absolute_start_seconds": 43800.0,
+    "absolute_end_seconds": 43812.08,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0128.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 53028.643049804,
+      "prepared_perf": 53035.254389225,
+      "ordered_start_perf": 53197.514135669,
+      "consumer_wait_ms": 0.01618100213818252,
+      "ready_to_ordered_ms": 162259.74644399685,
+      "preparation_work_ms": 6606.0603040023125,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A woman in a black shirt sits at a table and shows her phone screen toward the camera.",
+      "A blonde woman arrives and sits at the right side of the table.",
+      "The woman in the black shirt lowers her phone and gestures with both hands while speaking.",
+      "The other women at the table listen to her conversation."
+    ],
+    "high_level_conclusions": [
+      "The woman in black is sharing a personal anecdote about dining with a teacher and taking home leftovers.",
+      "The people gathered around the table are engaged in a casual, friendly conversation."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A woman in a black shirt sits at a table and shows her phone screen toward the camera.\",\n  \"A blonde woman arrives and sits at the right side of the table.\",\n  \"The woman in the black shirt lowers her phone and gestures with both hands while speaking.\",\n  \"The other women at the table listen to her conversation.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman in black is sharing a personal anecdote about dining with a teacher and taking home leftovers.\",\n  \"The people gathered around the table are engaged in a casual, friendly conversation.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 128,
+      "call_id": "94d6ccc4-845a-4d91-9b44-b3b2f66d2346",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412018.6032312,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 28230,
+      "output_tokens": 740,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 29961.39807900181
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A woman in a black shirt sits at a table and shows her phone screen toward the camera.\",\n  \"A blonde woman arrives and sits at the right side of the table.\",\n  \"The woman in the black shirt lowers her phone and gestures with both hands while speaking.\",\n  \"The other women at the table listen to her conversation.\"\n ],\n \"high_level_conclusions\": [\n  \"The woman in black is sharing a personal anecdote about dining with a teacher and taking home leftovers.\",\n  \"The people gathered around the table are engaged in a casual, friendly conversation.\"\n ]\n}\n```",
+      "total_tokens": 28970,
+      "request_end": 1789412048.5647306,
+      "latency_ms": 29961.49482000328,
+      "client_wall_clock_latency_ms": 29961.49482000328,
+      "api_request_wall_clock_latency_ms": 29961.49482000328
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_128_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

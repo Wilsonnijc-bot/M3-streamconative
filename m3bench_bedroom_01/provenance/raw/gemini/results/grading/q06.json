@@ -1,0 +1,56 @@
+{
+  "question_id": "Q06",
+  "candidate_mapping": {
+    "0": "D",
+    "1": "B",
+    "2": "A",
+    "3": "C"
+  },
+  "grades": {
+    "0": {
+      "correct": false,
+      "reason": "The answer incorrectly claims the information is insufficient."
+    },
+    "1": {
+      "correct": false,
+      "reason": "The answer incorrectly claims the information is insufficient."
+    },
+    "2": {
+      "correct": true,
+      "reason": "The answer accurately identifies that Lily likes mocha."
+    },
+    "3": {
+      "correct": true,
+      "reason": "The answer accurately identifies that Lily likes mocha."
+    }
+  },
+  "call": {
+    "phase": "grading",
+    "question_id": "Q06",
+    "method": null,
+    "call_id": "0354b124-0a5f-4b23-b25f-9ff5837f4ffa",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789437135.2742472,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 188,
+    "output_tokens": 240,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 3375.370613997802
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"The answer incorrectly claims the information is insufficient.\"\n  },\n  \"1\": {\n    \"correct\": false,\n    \"reason\": \"The answer incorrectly claims the information is insufficient.\"\n  },\n  \"2\": {\n    \"correct\": true,\n    \"reason\": \"The answer accurately identifies that Lily likes mocha.\"\n  },\n  \"3\": {\n    \"correct\": true,\n    \"reason\": \"The answer accurately identifies that Lily likes mocha.\"\n  }\n}\n```",
+    "total_tokens": 428,
+    "request_end": 1789437138.6496797,
+    "latency_ms": 3375.4312969977036,
+    "client_wall_clock_latency_ms": 3375.4312969977036,
+    "api_request_wall_clock_latency_ms": 3375.4312969977036
+  },
+  "included_in_qa_latency": false
+}

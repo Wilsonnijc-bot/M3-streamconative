@@ -1,0 +1,74 @@
+{
+  "clip_id": 51,
+  "source": {
+    "segment_id": 51,
+    "source": "bedroom_01_00233000.mp4",
+    "source_clock": "00233000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1410.0,
+    "absolute_end_seconds": 1440.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00233000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 75152.328447665,
+      "prepared_perf": 75157.503105158,
+      "ordered_start_perf": 75261.882983123,
+      "consumer_wait_ms": 0.013844997738488019,
+      "ready_to_ordered_ms": 104379.8779649951,
+      "preparation_work_ms": 5169.406925997464,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit across from each other at a dining table set with food, drinks, and their smartphones.",
+      "The woman on the left speaks briefly before listening to her companion.",
+      "The woman on the right, speaking as <voice_322>, talks at length while holding and referencing her smartphone.",
+      "The woman on the left rests her chin in her hand, attentively listening while looking toward her device.",
+      "The woman on the right gestures with her hands as she discusses balancing academics and leisure time."
+    ],
+    "high_level_conclusions": [
+      "The two women are friends or students sharing a meal while discussing academic pressures and personal balance.",
+      "<voice_322> reflects on personal growth, acknowledging the need to prioritize friendships and leisure alongside exam preparation."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit across from each other at a dining table set with food, drinks, and their smartphones.\",\n    \"The woman on the left speaks briefly before listening to her companion.\",\n    \"The woman on the right, speaking as <voice_322>, talks at length while holding and referencing her smartphone.\",\n    \"The woman on the left rests her chin in her hand, attentively listening while looking toward her device.\",\n    \"The woman on the right gestures with her hands as she discusses balancing academics and leisure time.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women are friends or students sharing a meal while discussing academic pressures and personal balance.\",\n    \"<voice_322> reflects on personal growth, acknowledging the need to prioritize friendships and leisure alongside exam preparation.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 51,
+      "call_id": "ccce987f-f1fa-42af-9625-955b3f882b92",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789434084.5449598,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65860,
+      "output_tokens": 823,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 25650.352120006573
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit across from each other at a dining table set with food, drinks, and their smartphones.\",\n    \"The woman on the left speaks briefly before listening to her companion.\",\n    \"The woman on the right, speaking as <voice_322>, talks at length while holding and referencing her smartphone.\",\n    \"The woman on the left rests her chin in her hand, attentively listening while looking toward her device.\",\n    \"The woman on the right gestures with her hands as she discusses balancing academics and leisure time.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women are friends or students sharing a meal while discussing academic pressures and personal balance.\",\n    \"<voice_322> reflects on personal growth, acknowledging the need to prioritize friendships and leisure alongside exam preparation.\"\n  ]\n}\n```",
+      "total_tokens": 66683,
+      "request_end": 1789434110.195398,
+      "latency_ms": 25650.435796997044,
+      "client_wall_clock_latency_ms": 25650.435796997044,
+      "api_request_wall_clock_latency_ms": 25650.435796997044
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_51_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "clip_id": 44,
+  "source": {
+    "segment_id": 44,
+    "source": "bedroom_01_00203000.mp4",
+    "source_clock": "00203000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1230.0,
+    "absolute_end_seconds": 1260.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00203000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 74661.080429177,
+      "prepared_perf": 74668.523828865,
+      "ordered_start_perf": 74849.093276829,
+      "consumer_wait_ms": 0.007643990102224052,
+      "ready_to_ordered_ms": 180569.4479639933,
+      "preparation_work_ms": 7438.101665000431,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and phones.",
+      "The woman on the right speaks while resting her hands beneath her chin.",
+      "The woman on the left listens attentively with her hand near her mouth.",
+      "The conversation continues as both maintain mutual eye contact.",
+      "The woman on the left reaches into the food tray and eats a snack while continuing to listen.",
+      "The woman on the right continues speaking with occasional hand gestures."
+    ],
+    "high_level_conclusions": [
+      "The woman on the right is confiding her self-doubts and future aspirations to her friend.",
+      "The woman on the left, referred to as Lynn, provides emotional support and comfort.",
+      "The two women share a close, supportive friendship.",
+      "<voice_322> and <voice_398> correspond to the woman seated on the right.",
+      "<voice_310> corresponds to the woman seated on the left."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and phones.\",\n    \"The woman on the right speaks while resting her hands beneath her chin.\",\n    \"The woman on the left listens attentively with her hand near her mouth.\",\n    \"The conversation continues as both maintain mutual eye contact.\",\n    \"The woman on the left reaches into the food tray and eats a snack while continuing to listen.\",\n    \"The woman on the right continues speaking with occasional hand gestures.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the right is confiding her self-doubts and future aspirations to her friend.\",\n    \"The woman on the left, referred to as Lynn, provides emotional support and comfort.\",\n    \"The two women share a close, supportive friendship.\",\n    \"<voice_322> and <voice_398> correspond to the woman seated on the right.\",\n    \"<voice_310> corresponds to the woman seated on the left.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 44,
+      "call_id": "0c26effa-7a89-4397-baf1-326cc8c5cf7f",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789433672.695367,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66257,
+      "output_tokens": 1892,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 30168.003454004065
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and phones.\",\n    \"The woman on the right speaks while resting her hands beneath her chin.\",\n    \"The woman on the left listens attentively with her hand near her mouth.\",\n    \"The conversation continues as both maintain mutual eye contact.\",\n    \"The woman on the left reaches into the food tray and eats a snack while continuing to listen.\",\n    \"The woman on the right continues speaking with occasional hand gestures.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the right is confiding her self-doubts and future aspirations to her friend.\",\n    \"The woman on the left, referred to as Lynn, provides emotional support and comfort.\",\n    \"The two women share a close, supportive friendship.\",\n    \"<voice_322> and <voice_398> correspond to the woman seated on the right.\",\n    \"<voice_310> corresponds to the woman seated on the left.\"\n  ]\n}\n```",
+      "total_tokens": 68149,
+      "request_end": 1789433702.8634944,
+      "latency_ms": 30168.120014990564,
+      "client_wall_clock_latency_ms": 30168.120014990564,
+      "api_request_wall_clock_latency_ms": 30168.120014990564
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_44_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

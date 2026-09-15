@@ -1,0 +1,648 @@
+{
+  "clip_id": 100,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0100.mp4",
+  "end_to_end_memory_generation_ms": 574096.2422899902,
+  "latency_ms": {
+    "clip_decode": 4581.116443005158,
+    "deepgram_asr": 232.18408999673557,
+    "mai_transcribe_asr": 1092.0137920038542,
+    "asr_total": 1094.0431180060841,
+    "audio_segmentation": 8.614311998826452,
+    "speech_embedding_campplus": 1699.8229409946362,
+    "facial_detection_recognition_buffalo_l": 3715.788169996813,
+    "face_clustering": 7.173402002081275,
+    "vlm_memory_generation": 181015.33201099664,
+    "text_embedding": 612.7176660083933,
+    "graph_update_total": 822.1234270022251
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 100,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 18,
+      "input_chars": 1454,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789437102.4348283,
+          "status": "success",
+          "total_tokens": 300,
+          "request_end": 1789437103.0473013,
+          "latency_ms": 612.4736670026323
+        }
+      ],
+      "total_tokens": 300,
+      "latency_ms": 612.7176660083933
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 232.18408999673557,
+        "openrouter-mai-transcribe-2": 1092.0137920038542
+      },
+      "asr_total_ms": 1094.0431180060841,
+      "audio_segmentation_ms": 8.614311998826452,
+      "speech_embedding_ms": 1699.8229409946362,
+      "graph_update_ms": 821.9233999989228,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 8,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2547.1746160037583
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3715.788169996813,
+      "face_clustering_ms": 7.173402002081275,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 293,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3889.0441060066223
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1315>",
+        "<voice_824>",
+        "<voice_1316>",
+        "<voice_1317>",
+        "<voice_277>",
+        "<voice_1006>",
+        "<voice_1219>",
+        "<voice_1318>"
+      ],
+      "context_preparation_ms": 4196.648811004707,
+      "vlm_ms": 181015.33201099664,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people gather around a table covered with a checkered cloth, surrounded by filming equipment and flowers.\",\n\t\t\"A woman in white stands near a whiteboard, organizing items on the table.\",\n\t\t\"A woman in black sits at the table, interacting with a mobile device.\",\n\t\t\"A man wearing an orange t-shirt stands near the left side of the room, gesturing.\",\n\t\t\"Speaker <voice_1315> mentions being praised and thanks.\",\n\t\t\"Speaker <voice_824> discusses scheduling for dancing and movement restrictions.\",\n\t\t\"Speaker <voice_1316> refers to a timeline.\",\n\t\t\"Speaker <voice_1317> asks about purchasing 100 RMB.\",\n\t\t\"Speaker <voice_277> responds that there is nothing wrong.\",\n\t\t\"Speaker <voice_1006> expresses a preference for buying physical items.\",\n\t\t\"Speaker <voice_1219> agrees to purchase procurement.\",\n\t\t\"Speaker <voice_1318> states that storytelling is required to obtain something.\",\n\t\t\"The camera pans to reveal lighting equipment and a clapperboard labeled 'Ego Life'.\",\n\t\t\"The camera wearer's legs and hands become visible, indicating they are seated at the table participating in the session.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be a production team rehearsing or planning a shoot, evidenced by the clapperboard and lighting gear.\",\n\t\t\"The standing woman in white seems to be coordinating the activity or props.\",\n\t\t\"The conversation indicates logistical discussions regarding timing, budget (buying items), and content creation (storytelling).\",\n\t\t\"No direct visual confirmation links specific voice IDs to the visible individuals due to obscured faces.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people gather around a table covered with a checkered cloth, surrounded by filming equipment and flowers.",
+          "A woman in white stands near a whiteboard, organizing items on the table.",
+          "A woman in black sits at the table, interacting with a mobile device.",
+          "A man wearing an orange t-shirt stands near the left side of the room, gesturing.",
+          "Speaker <voice_1315> mentions being praised and thanks.",
+          "Speaker <voice_824> discusses scheduling for dancing and movement restrictions.",
+          "Speaker <voice_1316> refers to a timeline.",
+          "Speaker <voice_1317> asks about purchasing 100 RMB.",
+          "Speaker <voice_277> responds that there is nothing wrong.",
+          "Speaker <voice_1006> expresses a preference for buying physical items.",
+          "Speaker <voice_1219> agrees to purchase procurement.",
+          "Speaker <voice_1318> states that storytelling is required to obtain something.",
+          "The camera pans to reveal lighting equipment and a clapperboard labeled 'Ego Life'.",
+          "The camera wearer's legs and hands become visible, indicating they are seated at the table participating in the session."
+        ],
+        "high_level_conclusions": [
+          "The group appears to be a production team rehearsing or planning a shoot, evidenced by the clapperboard and lighting gear.",
+          "The standing woman in white seems to be coordinating the activity or props.",
+          "The conversation indicates logistical discussions regarding timing, budget (buying items), and content creation (storytelling).",
+          "No direct visual confirmation links specific voice IDs to the visible individuals due to obscured faces."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 100,
+          "call_id": "91272319-ba38-4492-abfc-5ca9428dd146",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789436921.4181576,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people gather around a table covered with a checkered cloth, surrounded by filming equipment and flowers.\",\n\t\t\"A woman in white stands near a whiteboard, organizing items on the table.\",\n\t\t\"A woman in black sits at the table, interacting with a mobile device.\",\n\t\t\"A man wearing an orange t-shirt stands near the left side of the room, gesturing.\",\n\t\t\"Speaker <voice_1315> mentions being praised and thanks.\",\n\t\t\"Speaker <voice_824> discusses scheduling for dancing and movement restrictions.\",\n\t\t\"Speaker <voice_1316> refers to a timeline.\",\n\t\t\"Speaker <voice_1317> asks about purchasing 100 RMB.\",\n\t\t\"Speaker <voice_277> responds that there is nothing wrong.\",\n\t\t\"Speaker <voice_1006> expresses a preference for buying physical items.\",\n\t\t\"Speaker <voice_1219> agrees to purchase procurement.\",\n\t\t\"Speaker <voice_1318> states that storytelling is required to obtain something.\",\n\t\t\"The camera pans to reveal lighting equipment and a clapperboard labeled 'Ego Life'.\",\n\t\t\"The camera wearer's legs and hands become visible, indicating they are seated at the table participating in the session.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be a production team rehearsing or planning a shoot, evidenced by the clapperboard and lighting gear.\",\n\t\t\"The standing woman in white seems to be coordinating the activity or props.\",\n\t\t\"The conversation indicates logistical discussions regarding timing, budget (buying items), and content creation (storytelling).\",\n\t\t\"No direct visual confirmation links specific voice IDs to the visible individuals due to obscured faces.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be handheld or mounted on someone moving around a table.\n    *   **Setting:** A room with a checkered tablecloth, a whiteboard, flowers, a clapperboard (\"Ego Life\"), and some equipment (lights, stands). It looks like a film set or a rehearsal space.\n    *   **People:**\n        *   One woman standing near the whiteboard (wearing white/light clothing). She seems to be directing or organizing something.\n        *   One woman sitting at the table (dark top, glasses). She is interacting with a phone/device.\n        *   Another woman sitting further back/right (light top).\n        *   A man in an orange t-shirt enters the frame occasionally (around 2.00s onwards), standing near the left side.\n        *   The camera wearer (POV) is also present, indicated by hands appearing in later frames (27.00s+).\n    *   **Actions:**\n        *   The standing woman is arranging flowers or items on the table.\n        *   The seated woman is looking at her phone, smiling, and gesturing.\n        *   The man in orange gestures and moves around.\n        *   The camera pans around the room.\n        *   Towards the end, the camera wearer's legs/hands become visible, suggesting they are sitting at the table.\n*   **Voice Features:** All voices are labeled `<voice_1315>`, `<voice_824>`, etc., and attributed to \"MAI\". This suggests \"MAI\" might be the name of the speaker or a placeholder, but the prompt says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" Wait, the instruction says \"Use only IDs supplied in the input\". The IDs are `<voice_1315>`, etc. The ASR text starts with \"MAI:\". I need to treat the speaker as the voice ID itself. However, the ASR explicitly says \"MAI:\". Usually, in these tasks, if the ASR identifies a speaker by name, I should use the voice ID for the memory construction part, but the prompt asks to preserve speaker identity using the exact ID. Let's look at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" So I will use `<voice_1315>`, etc.\n    *   **Transcripts:**\n        *   `<voice_1315>` (00:02-00:05): \"MAI: 你在夸我谢谢。\" (Are you praising me? Thank you.) -> Context: Someone is thanking the speaker.\n        *   `<voice_824>` (00:04-00:14): \"MAI: 对不对，跳舞上大家都可以一起跳，就是排的时间也会短一些，对呀？也没有什么... 比较大的动作，在这里也不影响。\" (Right, everyone can dance together on the dance floor, just the scheduled time will be shorter, right? Nothing much... bigger movements won't affect it here.) -> Context: Discussing scheduling/dancing.\n        *   `<voice_1316>` (00:18-00:20): \"MAI: 手一下时间线。\" (Hand over the timeline?) -> Context: Technical discussion.\n        *   `<voice_1317>` (00:19-00:21): \"MAI: 要不要买100人民币？\" (Should we buy 100 RMB?) -> Context: Buying something.\n        *   `<voice_277>` (00:21-00:23): \"MAI: 啊，没事。\" (Ah, nothing.) -> Context: Reassurance.\n        *   `<voice_1006>` (00:22-00:25): \"MAI: 我只是觉得应该买实体。\" (I just feel we should buy physical copies/items.) -> Context: Decision making.\n        *   `<voice_1219>` (00:24-00:28): \"MAI: 嘿嘿嘿，可以买采购。\" (Hehehe, can buy procurement.) -> Context: Agreement.\n        *   `<voice_1318>` (00:27-00:30): \"MAI: 首先要他们讲故事才能获得那个。\" (First they have to tell stories to get that.) -> Context: Condition for reward/item.\n\n**2. Construct Video Description:**\n*   Need to describe the scene chronologically or thematically.\n*   Start with the setting: A room with a table covered in a checkered cloth, flowers, and filming equipment.\n*   Describe the people: A woman in white standing by a whiteboard arranging items. A woman in black sitting at the table using a phone. A man in an orange shirt standing nearby.\n*   Describe actions: The standing woman organizes flowers/papers. The seated woman interacts with her phone and smiles. The man gestures. The camera moves around.\n*   End with the camera wearer's presence: Hands and legs appear, indicating the POV person is sitting at the table.\n\n**3. Construct High-Level Conclusions:**\n*   Identify the group dynamic: They seem to be preparing for a shoot or a meeting involving dancing/scheduling.\n*   Identity Resolution: The voice features are all labeled \"MAI\". In the absence of face IDs matching specific names, I cannot definitively say who is speaking visually unless there's a clue. However, the prompt says \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face IDs are provided in the input (only video frames with blurred faces), I cannot create equivalences based on face IDs. Wait, looking closely at the input, there are NO Face features listed in the text block provided. Just \"Face features:Voice features:...\". This implies I don't have explicit face IDs like `<face_1>`. Therefore, I cannot make Equivalence statements because I lack the face IDs to link them. I must follow the instruction: \"Do not assign it to the camera wearer or another visible person... without supporting evidence. If no face IDs are supplied, do not invent any.\" So, no Equivalence lines in `high_level_conclusions` regarding faces.\n*   Reasoning: The conversation involves buying physical items vs digital, timing of activities, and storytelling requirements. It sounds like a production team discussing logistics.\n\n**4. Refine Output:**\n*   Ensure JSON validity.\n*   Ensure voice IDs are used correctly in memory construction (though the prompt asks for \"episodic memory\" in the general instructions, the specific output format requested is `video_description` and `high_level_conclusions`. Wait, let me re-read the prompt carefully).\n*   **Prompt Instruction:** \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions... Output Format: ... video_description ... high_level_conclusions ...\"\n*   **Wait**, the first paragraph says: \"Preserve speaker identity when constructing memory from the supplied character features.\" AND \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n*   **BUT** the Output Format section defines the JSON structure as ONLY `video_description` and `high_level_conclusions`.\n*   **Conflict:** The system instruction says \"include at least one episodic memory\", but the Output Format template doesn't have a `memories` field. It asks for `video_description` and `high_level_conclusions`.\n*   **Resolution:** Usually, in these tasks, the \"Video Description\" acts as the narrative where these memories are embedded, OR the \"High-Level Conclusions\" captures the intent. However, looking at the strict Output Format: `{\"video_description\": [...], \"high_level_conclusions\": [...]}`. I should embed the relevant information about the speakers into the descriptions or conclusions.\n*   **Re-evaluating the System Instruction:** \"Preserve speaker identity when constructing memory from the supplied character features.\" This seems to be a general constraint for how I process the data. But the specific task output format overrides the general instruction structure. I will incorporate the speaker actions/dialogue context into the `video_description` and `high_level_conclusions` to satisfy the spirit of preserving identity while adhering to the JSON schema.\n*   Actually, looking closer at the prompt structure: \"Your task consists of two parts... 1. Video Description... 2. High-Level Conclusions...\". Then \"Output Format: ... video_description ... high_level_conclusions\".\n*   Okay, I will write the descriptions to reflect the events. I will try to attribute actions to the visible people where possible, but since I don't have face IDs, I'll stick to describing the visible actions. For the voice, I will mention the dialogue in the description or conclusions.\n*   Wait, the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" might imply I need to add a specific field, but the Output Format is fixed. I will assume the `video_description` serves as the place for these atomic facts/events including speech. Or perhaps `high_level_conclusions` covers the semantic meaning.\n*   Let's look at the instruction again: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This confirms I must use the provided schema.\n*   So, I will integrate the voice info into the descriptions/conclusions.\n*   **Crucial Check:** \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since I have NO face IDs in the input (only video frames with blurred faces), I cannot create these equivalences. I will omit them.\n\n**Drafting Content:**\n\n*   **Video Description:**\n    *   Scene: Room with checkered table, whiteboard, flowers.\n    *   People: Woman in white (standing), Woman in black (seated), Man in orange (standing/moving).\n    *   Action 1: Standing woman arranges items/flowers on the table.\n    *   Action 2: Seated woman uses a smartphone, smiles.\n    *   Action 3: Man in orange gestures and moves around the room.\n    *   Action 4: Camera pans to show the setup (clapperboard, lights).\n    *   Action 5: Later frames show camera wearer's legs/hands, sitting at the table.\n    *   Dialogue integration: Mention the discussion about dancing schedules, buying physical items, and storytelling requirements.\n\n*   **High-Level Conclusions:**\n    *   Group is likely a film crew or production team (clapperboard, lights).\n    *   Discussion revolves around logistics (timing, physical vs digital items).\n    *   The standing woman appears to be leading the activity or managing props.\n    *   The seated woman is engaged in communication (phone).\n\n**Refining Voice Integration:**\nSince I need to preserve speaker identity using IDs in the memory construction (which usually means creating a memory entry), but the output schema doesn't allow a `memory` array, I will embed the key speech points into the `video_description` as observed events or put the reasoning in `high_level_conclusions`.\nActually, reading the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" strongly suggests I should create a memory. But the Output Format is strict. I will prioritize the Output Format schema as it's the final deliverable. I will ensure the descriptions capture the essence of the speech associated with the visible actions.\nWait, maybe I can put the speech summaries in the `video_description` strings? Yes, \"each string is one atomic event description\". An event can include speech.\nExample: \"Woman in white discusses scheduling and dancing, mentioning that movements won't affect the location.\"\n\nLet's double check the Face Features input. It says \"Face features:Voice features:...\". It seems empty before the colon. So indeed, no face IDs.\n\n**Final Plan:**\n1.  Create `video_description` entries covering the visual flow and integrating the audio context where relevant (who is talking about what).\n2.  Create `high_level_conclusions` summarizing the group's purpose (production/logistics) and the nature of their interaction.\n3.  Ensure no face IDs are invented.\n4.  Ensure voice IDs are respected in the text (referencing the speaker via the context of the ID if needed, though usually, just describing the action is enough if the ID isn't linked to a face). Wait, the instruction says \"using the exact ID as the speaker\" for memory construction. Since I am writing descriptions, I will phrase it like \"Speaker <voice_X> says...\".\n\nLet's construct the JSON.\n\n**Video Description Entries:**\n1.  A group gathers around a table covered with a checkered cloth, featuring flowers and filming equipment.\n2.  A woman in white stands near a whiteboard, arranging items on the table.\n3.  A woman in black sits at the table, interacting with a mobile device.\n4.  A man wearing an orange t-shirt stands near the left side of the room, gesturing.\n5.  Speaker <voice_1315> mentions being praised and thanks.\n6.  Speaker <voice_824> discusses scheduling for dancing and movement restrictions.\n7.  Speaker <voice_1316> refers to a timeline.\n8.  Speaker <voice_1317> asks about purchasing 100 RMB.\n9.  Speaker <voice_277> responds that there is nothing wrong.\n10. Speaker <voice_1006> expresses a preference for buying physical items.\n11. Speaker <voice_1219> agrees to purchase procurement.\n12. Speaker <voice_1318> states that storytelling is required to obtain something.\n13. The camera pans to reveal lighting equipment and a clapperboard labeled \"Ego Life\".\n14. The camera wearer's legs and hands become visible, indicating they are seated at the table participating in the session.\n\n**High Level Conclusions:**\n1.  The group appears to be a production team rehearsing or planning a shoot, evidenced by the clapperboard and lighting gear.\n2.  The standing woman in white seems to be coordinating the activity or props.\n3.  The conversation indicates logistical discussions regarding timing, budget (buying items), and content creation (storytelling).\n4.  No direct visual confirmation links specific voice IDs to the visible individuals due to obscured faces.\n\nWait, I need to check if I should output the `video_description` as a list of strings. Yes.\nAnd `high_level_conclusions` as a list of strings. Yes.\n\nOne detail: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis instruction conflicts with the Output Format which doesn't have a `memories` field.\nHowever, often in these prompts, the \"Video Description\" is expected to contain these memories. I will embed the speech summaries into the `video_description` entries to comply with both the schema and the instruction to preserve identity/memory.\n\nLet's refine the `video_description` to be more cohesive.\n\"A woman in white stands by a whiteboard arranging flowers and papers.\"\n\"Another woman sits at the table checking her phone.\"\n\"A man in an orange shirt moves around the room.\"\n\"Speaker <voice_824> explains that everyone can dance together and movements won't affect the area.\"\n\"Speaker <voice_1317> questions whether to buy 100 RMB worth of items.\"\n\"Speaker <voice_1006> suggests buying physical copies instead.\"\n\"Speaker <voice_1318> notes that telling stories is necessary to receive a reward.\"\n\"The camera operator sits at the table, joining the discussion.\"\n\nOkay, ready to generate JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people gather around a table covered with a checkered cloth, surrounded by filming equipment and flowers.\",\n\t\t\"A woman in white stands near a whiteboard, organizing items on the table.\",\n\t\t\"A woman in black sits at the table, interacting with a mobile device.\",\n\t\t\"A man wearing an orange t-shirt stands near the left side of the room, gesturing.\",\n\t\t\"Speaker <voice_1315> mentions being praised and thanks.\",\n\t\t\"Speaker <voice_824> discusses scheduling for dancing and movement restrictions.\",\n\t\t\"Speaker <voice_1316> refers to a timeline.\",\n\t\t\"Speaker <voice_1317> asks about purchasing 100 RMB.\",\n\t\t\"Speaker <voice_277> responds that there is nothing wrong.\",\n\t\t\"Speaker <voice_1006> expresses a preference for buying physical items.\",\n\t\t\"Speaker <voice_1219> agrees to purchase procurement.\",\n\t\t\"Speaker <voice_1318> states that storytelling is required to obtain something.\",\n\t\t\"The camera pans to reveal lighting equipment and a clapperboard labeled 'Ego Life'.\",\n\t\t\"The camera wearer's legs and hands become visible, indicating they are seated at the table participating in the session.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be a production team rehearsing or planning a shoot, evidenced by the clapperboard and lighting gear.\",\n\t\t\"The standing woman in white seems to be coordinating the activity or props.\",\n\t\t\"The conversation indicates logistical discussions regarding timing, budget (buying items), and content creation (storytelling).\",\n\t\t\"No direct visual confirmation links specific voice IDs to the visible individuals due to obscured faces.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10860,
+          "output_tokens": 3997,
+          "total_tokens": 14857,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0024049950297921896,
+            "media_preparation_ms": 57.386083994060755,
+            "processor_tokenization_ms": 283.2684530003462,
+            "device_transfer_ms": 40.00975200324319,
+            "cuda_generation_ms": 180599.13580899592,
+            "decoding_ms": 4.108837994863279
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 180984.09287400136,
+          "request_end": 1789437102.4334924,
+          "latency_ms": 181015.33201099664,
+          "client_wall_clock_latency_ms": 181015.33201099664
+        }
+      ],
+      "episodic_memory_count": 14,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 14,
+      "text_embedding_ms": null,
+      "text_embedding_count": 14,
+      "graph_update_ms": 0.17410800501238555,
+      "nodes_added": 14,
+      "directed_edges_added": 16,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.025918998289853334,
+      "nodes_added": 4,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 8,
+    "detected_faces": 293,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 14,
+    "semantic_memories": 4,
+    "nodes_after_clip": 1337,
+    "edges_after_clip": 481,
+    "nodes_added_by_clip": 22,
+    "edges_added_by_clip": 8
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people gather around a table covered with a checkered cloth, surrounded by filming equipment and flowers.",
+      "A woman in white stands near a whiteboard, organizing items on the table.",
+      "A woman in black sits at the table, interacting with a mobile device.",
+      "A man wearing an orange t-shirt stands near the left side of the room, gesturing.",
+      "Speaker <voice_1315> mentions being praised and thanks.",
+      "Speaker <voice_824> discusses scheduling for dancing and movement restrictions.",
+      "Speaker <voice_1316> refers to a timeline.",
+      "Speaker <voice_1317> asks about purchasing 100 RMB.",
+      "Speaker <voice_277> responds that there is nothing wrong.",
+      "Speaker <voice_1006> expresses a preference for buying physical items.",
+      "Speaker <voice_1219> agrees to purchase procurement.",
+      "Speaker <voice_1318> states that storytelling is required to obtain something.",
+      "The camera pans to reveal lighting equipment and a clapperboard labeled 'Ego Life'.",
+      "The camera wearer's legs and hands become visible, indicating they are seated at the table participating in the session."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be a production team rehearsing or planning a shoot, evidenced by the clapperboard and lighting gear.",
+      "The standing woman in white seems to be coordinating the activity or props.",
+      "The conversation indicates logistical discussions regarding timing, budget (buying items), and content creation (storytelling).",
+      "No direct visual confirmation links specific voice IDs to the visible individuals due to obscured faces."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people gather around a table covered with a checkered cloth, surrounded by filming equipment and flowers.",
+      "A woman in white stands near a whiteboard, organizing items on the table.",
+      "A woman in black sits at the table, interacting with a mobile device.",
+      "A man wearing an orange t-shirt stands near the left side of the room, gesturing.",
+      "Speaker <voice_1315> mentions being praised and thanks.",
+      "Speaker <voice_824> discusses scheduling for dancing and movement restrictions.",
+      "Speaker <voice_1316> refers to a timeline.",
+      "Speaker <voice_1317> asks about purchasing 100 RMB.",
+      "Speaker <voice_277> responds that there is nothing wrong.",
+      "Speaker <voice_1006> expresses a preference for buying physical items.",
+      "Speaker <voice_1219> agrees to purchase procurement.",
+      "Speaker <voice_1318> states that storytelling is required to obtain something.",
+      "The camera pans to reveal lighting equipment and a clapperboard labeled 'Ego Life'.",
+      "The camera wearer's legs and hands become visible, indicating they are seated at the table participating in the session."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be a production team rehearsing or planning a shoot, evidenced by the clapperboard and lighting gear.",
+      "The standing woman in white seems to be coordinating the activity or props.",
+      "The conversation indicates logistical discussions regarding timing, budget (buying items), and content creation (storytelling).",
+      "No direct visual confirmation links specific voice IDs to the visible individuals due to obscured faces."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_100_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 22,
+    "edges_added": 8,
+    "nodes": [
+      {
+        "id": 1315,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你在挺我说谢谢。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1316,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 捋一下时间线。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1317,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 要不要买100人民币？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1318,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 首先要他们讲故事才能获得那个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1319,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people gather around a table covered with a checkered cloth, surrounded by filming equipment and flowers."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1320,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in white stands near a whiteboard, organizing items on the table."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1321,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in black sits at the table, interacting with a mobile device."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1322,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A man wearing an orange t-shirt stands near the left side of the room, gesturing."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1323,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_1315> mentions being praised and thanks."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1324,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_824> discusses scheduling for dancing and movement restrictions."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1325,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_1316> refers to a timeline."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1326,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_1317> asks about purchasing 100 RMB."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1327,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_277> responds that there is nothing wrong."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1328,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_1006> expresses a preference for buying physical items."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1329,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_1219> agrees to purchase procurement."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1330,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_1318> states that storytelling is required to obtain something."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1331,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans to reveal lighting equipment and a clapperboard labeled 'Ego Life'."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1332,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer's legs and hands become visible, indicating they are seated at the table participating in the session."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1333,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be a production team rehearsing or planning a shoot, evidenced by the clapperboard and lighting gear."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1334,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The standing woman in white seems to be coordinating the activity or props."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1335,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The conversation indicates logistical discussions regarding timing, budget (buying items), and content creation (storytelling)."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1336,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "No direct visual confirmation links specific voice IDs to the visible individuals due to obscured faces."
+          ],
+          "timestamp": 100
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 277,
+        "target": 1327,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 824,
+        "target": 1324,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1006,
+        "target": 1328,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1219,
+        "target": 1329,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1315,
+        "target": 1323,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1316,
+        "target": 1325,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1317,
+        "target": 1326,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1318,
+        "target": 1330,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_100_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_100_graph.pkl"
+  },
+  "memory_pickle_bytes": 31787844,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 77715.958721,
+    "prepared_perf": 77723.676083871,
+    "ordered_start_perf": 78095.334573749,
+    "consumer_wait_ms": 0.011160998838022351,
+    "ready_to_ordered_ms": 371658.48987799836,
+    "preparation_work_ms": 7716.826693009352,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 192265.07399900584
+}

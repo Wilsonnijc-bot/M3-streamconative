@@ -1,0 +1,614 @@
+{
+  "clip_id": 30,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0030.mp4",
+  "end_to_end_memory_generation_ms": 98696.03792099952,
+  "latency_ms": {
+    "clip_decode": 6886.70133100095,
+    "deepgram_asr": 546.6524079965893,
+    "mai_transcribe_asr": 1766.4589620035258,
+    "asr_total": 1768.5247179979342,
+    "audio_segmentation": 7.319538002775516,
+    "speech_embedding_campplus": 1854.7681230047601,
+    "facial_detection_recognition_buffalo_l": 3686.810407998564,
+    "face_clustering": 10.85657200019341,
+    "vlm_memory_generation": 25117.475247003313,
+    "text_embedding": 549.0249499998754,
+    "graph_update_total": 296.73243700381136
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 30,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 17,
+      "input_chars": 1373,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789405006.7834654,
+          "status": "success",
+          "total_tokens": 298,
+          "request_end": 1789405007.3321543,
+          "latency_ms": 548.6898689996451
+        }
+      ],
+      "total_tokens": 298,
+      "latency_ms": 549.0249499998754
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 546.6524079965893,
+        "openrouter-mai-transcribe-2": 1766.4589620035258
+      },
+      "asr_total_ms": 1768.5247179979342,
+      "audio_segmentation_ms": 7.319538002775516,
+      "speech_embedding_ms": 1854.7681230047601,
+      "graph_update_ms": 283.38365600211546,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2166.1123049998423
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3686.810407998564,
+      "face_clustering_ms": 10.85657200019341,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 207,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3818.3123389972025
+    },
+    "vlm": {
+      "context_preparation_ms": 4278.84322200407,
+      "vlm_ms": 25117.475247003313,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people sit around a table covered with a red checkered tablecloth, discussing upcoming plans.\",\n  \"<voice_330> suggests scheduling the event for Sunday afternoon.\",\n  \"<voice_331> asks who should be invited to the gathering.\",\n  \"<voice_0> inquires about the number of guests expected.\",\n  \"<voice_332> suggests writing the details down on the whiteboard.\",\n  \"<voice_0> agrees with using the whiteboard.\",\n  \"<voice_333> volunteers to write on the board, commenting on having good handwriting.\",\n  \"<voice_0> suggests assembling a stand as well and gets up from the table.\",\n  \"The young man in the orange shirt stands up from his chair by the table.\",\n  \"<voice_334> asks what kind of stand needs to be assembled.\",\n  \"<voice_0> explains the stand's function while walking into an adjacent bedroom holding a white box.\",\n  \"The camera wearer sets items down onto the bed in the bedroom.\",\n  \"The camera wearer leaves the bedroom and walks through the living room toward the hallway by the front door.\",\n  \"The camera wearer reaches toward and picks up a tall cardboard package leaning against the wall in the corner of the hallway.\"\n ],\n \"high_level_conclusions\": [\n  \"<voice_0> is the camera wearer, Jake, who is actively participating in organizing the event.\",\n  \"The group is collaborating on planning a meeting or gathering and using the whiteboard to organize thoughts.\",\n  \"The packaged stand that <voice_0> goes to retrieve is an easel or support rack intended for the whiteboard.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people sit around a table covered with a red checkered tablecloth, discussing upcoming plans.",
+          "<voice_330> suggests scheduling the event for Sunday afternoon.",
+          "<voice_331> asks who should be invited to the gathering.",
+          "<voice_0> inquires about the number of guests expected.",
+          "<voice_332> suggests writing the details down on the whiteboard.",
+          "<voice_0> agrees with using the whiteboard.",
+          "<voice_333> volunteers to write on the board, commenting on having good handwriting.",
+          "<voice_0> suggests assembling a stand as well and gets up from the table.",
+          "The young man in the orange shirt stands up from his chair by the table.",
+          "<voice_334> asks what kind of stand needs to be assembled.",
+          "<voice_0> explains the stand's function while walking into an adjacent bedroom holding a white box.",
+          "The camera wearer sets items down onto the bed in the bedroom.",
+          "The camera wearer leaves the bedroom and walks through the living room toward the hallway by the front door.",
+          "The camera wearer reaches toward and picks up a tall cardboard package leaning against the wall in the corner of the hallway."
+        ],
+        "high_level_conclusions": [
+          "<voice_0> is the camera wearer, Jake, who is actively participating in organizing the event.",
+          "The group is collaborating on planning a meeting or gathering and using the whiteboard to organize thoughts.",
+          "The packaged stand that <voice_0> goes to retrieve is an easel or support rack intended for the whiteboard."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 30,
+          "call_id": "b05fb20e-ebb7-4a9a-817d-715209cd4aef",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789404981.6646657,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67215,
+          "output_tokens": 1656,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 25117.342867000843
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people sit around a table covered with a red checkered tablecloth, discussing upcoming plans.\",\n  \"<voice_330> suggests scheduling the event for Sunday afternoon.\",\n  \"<voice_331> asks who should be invited to the gathering.\",\n  \"<voice_0> inquires about the number of guests expected.\",\n  \"<voice_332> suggests writing the details down on the whiteboard.\",\n  \"<voice_0> agrees with using the whiteboard.\",\n  \"<voice_333> volunteers to write on the board, commenting on having good handwriting.\",\n  \"<voice_0> suggests assembling a stand as well and gets up from the table.\",\n  \"The young man in the orange shirt stands up from his chair by the table.\",\n  \"<voice_334> asks what kind of stand needs to be assembled.\",\n  \"<voice_0> explains the stand's function while walking into an adjacent bedroom holding a white box.\",\n  \"The camera wearer sets items down onto the bed in the bedroom.\",\n  \"The camera wearer leaves the bedroom and walks through the living room toward the hallway by the front door.\",\n  \"The camera wearer reaches toward and picks up a tall cardboard package leaning against the wall in the corner of the hallway.\"\n ],\n \"high_level_conclusions\": [\n  \"<voice_0> is the camera wearer, Jake, who is actively participating in organizing the event.\",\n  \"The group is collaborating on planning a meeting or gathering and using the whiteboard to organize thoughts.\",\n  \"The packaged stand that <voice_0> goes to retrieve is an easel or support rack intended for the whiteboard.\"\n ]\n}\n```",
+          "total_tokens": 68871,
+          "request_end": 1789405006.7821436,
+          "latency_ms": 25117.475247003313,
+          "client_wall_clock_latency_ms": 25117.475247003313,
+          "api_request_wall_clock_latency_ms": 25117.475247003313
+        }
+      ],
+      "episodic_memory_count": 14,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 14,
+      "text_embedding_ms": null,
+      "text_embedding_count": 14,
+      "graph_update_ms": 0.20787100220331922,
+      "nodes_added": 14,
+      "directed_edges_added": 18,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 13.140909999492578,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 6,
+    "detected_faces": 207,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 14,
+    "semantic_memories": 3,
+    "nodes_after_clip": 351,
+    "edges_after_clip": 81,
+    "nodes_added_by_clip": 21,
+    "edges_added_by_clip": 10
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people sit around a table covered with a red checkered tablecloth, discussing upcoming plans.",
+      "<voice_330> suggests scheduling the event for Sunday afternoon.",
+      "<voice_331> asks who should be invited to the gathering.",
+      "<voice_0> inquires about the number of guests expected.",
+      "<voice_332> suggests writing the details down on the whiteboard.",
+      "<voice_0> agrees with using the whiteboard.",
+      "<voice_333> volunteers to write on the board, commenting on having good handwriting.",
+      "<voice_0> suggests assembling a stand as well and gets up from the table.",
+      "The young man in the orange shirt stands up from his chair by the table.",
+      "<voice_334> asks what kind of stand needs to be assembled.",
+      "<voice_0> explains the stand's function while walking into an adjacent bedroom holding a white box.",
+      "The camera wearer sets items down onto the bed in the bedroom.",
+      "The camera wearer leaves the bedroom and walks through the living room toward the hallway by the front door.",
+      "The camera wearer reaches toward and picks up a tall cardboard package leaning against the wall in the corner of the hallway."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is the camera wearer, Jake, who is actively participating in organizing the event.",
+      "The group is collaborating on planning a meeting or gathering and using the whiteboard to organize thoughts.",
+      "The packaged stand that <voice_0> goes to retrieve is an easel or support rack intended for the whiteboard."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people sit around a table covered with a red checkered tablecloth, discussing upcoming plans.",
+      "<voice_330> suggests scheduling the event for Sunday afternoon.",
+      "<voice_331> asks who should be invited to the gathering.",
+      "<voice_0> inquires about the number of guests expected.",
+      "<voice_332> suggests writing the details down on the whiteboard.",
+      "<voice_0> agrees with using the whiteboard.",
+      "<voice_333> volunteers to write on the board, commenting on having good handwriting.",
+      "<voice_0> suggests assembling a stand as well and gets up from the table.",
+      "The young man in the orange shirt stands up from his chair by the table.",
+      "<voice_334> asks what kind of stand needs to be assembled.",
+      "<voice_0> explains the stand's function while walking into an adjacent bedroom holding a white box.",
+      "The camera wearer sets items down onto the bed in the bedroom.",
+      "The camera wearer leaves the bedroom and walks through the living room toward the hallway by the front door.",
+      "The camera wearer reaches toward and picks up a tall cardboard package leaning against the wall in the corner of the hallway."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is the camera wearer, Jake, who is actively participating in organizing the event.",
+      "The group is collaborating on planning a meeting or gathering and using the whiteboard to organize thoughts.",
+      "The packaged stand that <voice_0> goes to retrieve is an easel or support rack intended for the whiteboard."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_30_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 21,
+    "edges_added": 10,
+    "nodes": [
+      {
+        "id": 330,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 日，周日下午吧。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 331,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 邀请什么人？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 332,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 黑板写一写。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 333,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 来，我来，我字非常好看。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 334,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 什么架子？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 335,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people sit around a table covered with a red checkered tablecloth, discussing upcoming plans."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 336,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_330> suggests scheduling the event for Sunday afternoon."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 337,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_331> asks who should be invited to the gathering."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 338,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> inquires about the number of guests expected."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 339,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_332> suggests writing the details down on the whiteboard."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 340,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> agrees with using the whiteboard."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 341,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_333> volunteers to write on the board, commenting on having good handwriting."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 342,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> suggests assembling a stand as well and gets up from the table."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 343,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The young man in the orange shirt stands up from his chair by the table."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 344,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_334> asks what kind of stand needs to be assembled."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 345,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> explains the stand's function while walking into an adjacent bedroom holding a white box."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 346,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer sets items down onto the bed in the bedroom."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 347,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer leaves the bedroom and walks through the living room toward the hallway by the front door."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 348,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer reaches toward and picks up a tall cardboard package leaning against the wall in the corner of the hallway."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 349,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is collaborating on planning a meeting or gathering and using the whiteboard to organize thoughts."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 350,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The packaged stand that <voice_0> goes to retrieve is an easel or support rack intended for the whiteboard."
+          ],
+          "timestamp": 30
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 338,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 340,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 342,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 345,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 350,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 330,
+        "target": 336,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 331,
+        "target": 337,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 332,
+        "target": 339,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 333,
+        "target": 341,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 334,
+        "target": 344,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_30_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_30_graph.pkl"
+  },
+  "memory_pickle_bytes": 8096622,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 46095.522892874,
+    "prepared_perf": 46106.895481761,
+    "ordered_start_perf": 46157.722161489,
+    "consumer_wait_ms": 0.011080999684054404,
+    "ready_to_ordered_ms": 50826.67972800118,
+    "preparation_work_ms": 11372.15344899596,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 35946.51776999672
+}

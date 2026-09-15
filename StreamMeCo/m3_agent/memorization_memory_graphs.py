@@ -23,7 +23,10 @@ from mmagent.videograph import VideoGraph
 from mmagent.utils.video_processing import process_video_clip
 from mmagent.face_processing import process_faces
 from mmagent.voice_processing import process_voices
-from mmagent.memory_processing_qwen import process_memories, generate_memories
+if os.environ.get("EGOLIFE_GEMINI_ONLY") == "1":
+    from mmagent.memory_processing_gemini import process_memories, generate_memories
+else:
+    from mmagent.memory_processing_qwen import process_memories, generate_memories
 from mmagent.clip_audit import graph_delta, graph_identity, graph_view, write_json
 
 logger = logging.getLogger(__name__)
@@ -59,6 +62,7 @@ def process_segment(
         save_path=os.path.join(save_path, f"clip_{clip_id}_voices.json"),
         preprocessing=[],
         metrics=voice_metrics,
+        prepared_asr=sample.get("prepared_asr"),
     )
 
     face_metrics = {}
@@ -106,6 +110,11 @@ def process_segment(
         else:
             override_applied[key] = False
 
+    from mmagent.utils.chat_api import get_embeddings_batch
+    batch_metrics = {"segment_id":clip_id}
+    all_texts = effective_memory['video_description'] + effective_memory['high_level_conclusions']
+    all_vectors, _ = get_embeddings_batch('text-embedding-3-large', all_texts, metrics=batch_metrics)
+    split = len(effective_memory['video_description'])
     episodic_metrics = {}
     semantic_metrics = {}
     process_memories(
@@ -114,6 +123,7 @@ def process_segment(
         clip_id,
         type="episodic",
         metrics=episodic_metrics,
+        precomputed_embeddings=all_vectors[:split],
     )
     process_memories(
         video_graph,
@@ -121,6 +131,7 @@ def process_segment(
         clip_id,
         type="semantic",
         metrics=semantic_metrics,
+        precomputed_embeddings=all_vectors[split:],
     )
 
     total_ms = (time.perf_counter() - total_started) * 1000
@@ -134,10 +145,10 @@ def process_segment(
         pickle.dump(video_graph, handle)
     os.replace(temp_pickle, graph_pickle_path)
 
-    text_embedding_ms = (
-        episodic_metrics.get("text_embedding_ms", 0.0)
-        + semantic_metrics.get("text_embedding_ms", 0.0)
-    )
+    text_embedding_ms = batch_metrics['latency_ms']
+    for subtype in (episodic_metrics, semantic_metrics):
+        subtype['text_embedding_ms'] = None
+        subtype['embedding_timing_scope'] = 'shared_clip_batch'
     graph_update_ms = sum(
         value or 0.0
         for value in (
@@ -165,6 +176,7 @@ def process_segment(
             "graph_update_total": graph_update_ms,
         },
         "stage_details": {
+            "text_embedding_batch": batch_metrics,
             "voice": voice_metrics,
             "face": face_metrics,
             "vlm": vlm_metrics,

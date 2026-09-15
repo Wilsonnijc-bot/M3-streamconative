@@ -1,0 +1,60 @@
+{
+  "clip_id": 15,
+  "source": {
+    "segment_id": 15,
+    "source": "DAY1_A1_JAKE_11163000.mp4",
+    "source_clock": "11163000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40590.0,
+    "absolute_end_seconds": 40620.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0015.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Several people sit around a table covered with a pink-and-white checkered cloth, working on unpacking and assembling equipment.",
+      "A woman in black seated on the left works on a piece of hardware while asking a question.",
+      "The camera wearer walks across the room, picks up a small tripod standing on the floor, and moves it.",
+      "The camera wearer adjusts a decorative dog/bear-shaped stool near the wall before stepping back toward the table.",
+      "The individuals at the table discuss component placement, plate removal, and the number of screws required for assembly."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating on assembling technical or recording equipment.",
+      "<voice_123> takes on a guiding role, instructing the group on the assembly procedure and confirming screw counts.",
+      "<voice_151> and <voice_152> are actively assembling components and seeking verification on the instructions."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Several people sit around a table covered with a pink-and-white checkered cloth, working on unpacking and assembling equipment.\",\n    \"A woman in black seated on the left works on a piece of hardware while asking a question.\",\n    \"The camera wearer walks across the room, picks up a small tripod standing on the floor, and moves it.\",\n    \"The camera wearer adjusts a decorative dog/bear-shaped stool near the wall before stepping back toward the table.\",\n    \"The individuals at the table discuss component placement, plate removal, and the number of screws required for assembly.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is collaborating on assembling technical or recording equipment.\",\n    \"<voice_123> takes on a guiding role, instructing the group on the assembly procedure and confirming screw counts.\",\n    \"<voice_151> and <voice_152> are actively assembling components and seeking verification on the instructions.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 15,
+      "call_id": "80d53704-b1b9-4ba8-a17b-bb8ba476d435",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789403893.421993,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67159,
+      "output_tokens": 1151,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Several people sit around a table covered with a pink-and-white checkered cloth, working on unpacking and assembling equipment.\",\n    \"A woman in black seated on the left works on a piece of hardware while asking a question.\",\n    \"The camera wearer walks across the room, picks up a small tripod standing on the floor, and moves it.\",\n    \"The camera wearer adjusts a decorative dog/bear-shaped stool near the wall before stepping back toward the table.\",\n    \"The individuals at the table discuss component placement, plate removal, and the number of screws required for assembly.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is collaborating on assembling technical or recording equipment.\",\n    \"<voice_123> takes on a guiding role, instructing the group on the assembly procedure and confirming screw counts.\",\n    \"<voice_151> and <voice_152> are actively assembling components and seeking verification on the instructions.\"\n  ]\n}\n```",
+      "total_tokens": 68310,
+      "request_end": 1789403956.8334036,
+      "latency_ms": 63411.40803099552,
+      "client_wall_clock_latency_ms": 63411.40803099552,
+      "api_request_wall_clock_latency_ms": 63411.40803099552
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_15_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

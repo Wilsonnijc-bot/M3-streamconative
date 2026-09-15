@@ -1,0 +1,74 @@
+{
+  "clip_id": 70,
+  "source": {
+    "segment_id": 70,
+    "source": "bedroom_01_00330000.mp4",
+    "source_clock": "00330000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1980.0,
+    "absolute_end_seconds": 2010.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00330000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 76703.212069256,
+      "prepared_perf": 76708.690258057,
+      "ordered_start_perf": 76775.706075042,
+      "consumer_wait_ms": 0.01932600571308285,
+      "ready_to_ordered_ms": 67015.81698500377,
+      "preparation_work_ms": 5472.83828300715,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table covered with a blue plaid tablecloth.",
+      "A meal consisting of fries, a sandwich, drinks, and a mug sits on the table between them.",
+      "The woman on the left holds a digital device while speaking.",
+      "The woman on the right rests her chin on her hands and listens quietly.",
+      "The woman on the left raises her hand and gestures to emphasize her points."
+    ],
+    "high_level_conclusions": [
+      "The speaker corresponds to <voice_10>, sharing personal reflections on design principles and creative freedom.",
+      "The two individuals appear to be close friends or colleagues engaged in a casual, supportive discussion."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table covered with a blue plaid tablecloth.\",\n    \"A meal consisting of fries, a sandwich, drinks, and a mug sits on the table between them.\",\n    \"The woman on the left holds a digital device while speaking.\",\n    \"The woman on the right rests her chin on her hands and listens quietly.\",\n    \"The woman on the left raises her hand and gestures to emphasize her points.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker corresponds to <voice_10>, sharing personal reflections on design principles and creative freedom.\",\n    \"The two individuals appear to be close friends or colleagues engaged in a casual, supportive discussion.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 70,
+      "call_id": "bd74ec91-833d-45aa-b385-8cc628da8420",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789435599.1970172,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65852,
+      "output_tokens": 816,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 26664.008060004562
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table covered with a blue plaid tablecloth.\",\n    \"A meal consisting of fries, a sandwich, drinks, and a mug sits on the table between them.\",\n    \"The woman on the left holds a digital device while speaking.\",\n    \"The woman on the right rests her chin on her hands and listens quietly.\",\n    \"The woman on the left raises her hand and gestures to emphasize her points.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker corresponds to <voice_10>, sharing personal reflections on design principles and creative freedom.\",\n    \"The two individuals appear to be close friends or colleagues engaged in a casual, supportive discussion.\"\n  ]\n}\n```",
+      "total_tokens": 66668,
+      "request_end": 1789435625.8611403,
+      "latency_ms": 26664.120500005083,
+      "client_wall_clock_latency_ms": 26664.120500005083,
+      "api_request_wall_clock_latency_ms": 26664.120500005083
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_70_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

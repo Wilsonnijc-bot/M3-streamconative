@@ -1,0 +1,62 @@
+{
+  "clip_id": 19,
+  "source": {
+    "segment_id": 19,
+    "source": "DAY1_A1_JAKE_11183000.mp4",
+    "source_clock": "11183000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40710.0,
+    "absolute_end_seconds": 40740.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0019.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sit around a table covered in a red checkered cloth, working on small electronic devices and packaging.",
+      "<voice_202> asks if they can play some background music.",
+      "<voice_203> tells them to go ahead and play some music.",
+      "<voice_202> asks what genre of music everyone usually likes to listen to.",
+      "<voice_204> responds that they listen to David Tao.",
+      "<voice_0> comments on David Tao's music style.",
+      "<voice_205> mentions R&B music in agreement.",
+      "<voice_174> mentions that they follow Western music and listen to a wide variety."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a shared activity at the table while having a casual conversation to lighten the atmosphere.",
+      "The conversation reflects diverse musical tastes among the group, ranging from R&B to Western pop music."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"high_level_conclusions\": [\n  \"The participants are engaged in a shared activity at the table while having a casual conversation to lighten the atmosphere.\",\n  \"The conversation reflects diverse musical tastes among the group, ranging from R&B to Western pop music.\"\n ],\n \"video_description\": [\n  \"A group of people sit around a table covered in a red checkered cloth, working on small electronic devices and packaging.\",\n  \"<voice_202> asks if they can play some background music.\",\n  \"<voice_203> tells them to go ahead and play some music.\",\n  \"<voice_202> asks what genre of music everyone usually likes to listen to.\",\n  \"<voice_204> responds that they listen to David Tao.\",\n  \"<voice_0> comments on David Tao's music style.\",\n  \"<voice_205> mentions R&B music in agreement.\",\n  \"<voice_174> mentions that they follow Western music and listen to a wide variety.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 19,
+      "call_id": "f5f32880-7392-4db6-90b9-43cebdf05bce",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404163.8748472,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66945,
+      "output_tokens": 856,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"high_level_conclusions\": [\n  \"The participants are engaged in a shared activity at the table while having a casual conversation to lighten the atmosphere.\",\n  \"The conversation reflects diverse musical tastes among the group, ranging from R&B to Western pop music.\"\n ],\n \"video_description\": [\n  \"A group of people sit around a table covered in a red checkered cloth, working on small electronic devices and packaging.\",\n  \"<voice_202> asks if they can play some background music.\",\n  \"<voice_203> tells them to go ahead and play some music.\",\n  \"<voice_202> asks what genre of music everyone usually likes to listen to.\",\n  \"<voice_204> responds that they listen to David Tao.\",\n  \"<voice_0> comments on David Tao's music style.\",\n  \"<voice_205> mentions R&B music in agreement.\",\n  \"<voice_174> mentions that they follow Western music and listen to a wide variety.\"\n ]\n}\n```",
+      "total_tokens": 67801,
+      "request_end": 1789404274.2314084,
+      "latency_ms": 110356.5582539959,
+      "client_wall_clock_latency_ms": 110356.5582539959,
+      "api_request_wall_clock_latency_ms": 110356.5582539959
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_19_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

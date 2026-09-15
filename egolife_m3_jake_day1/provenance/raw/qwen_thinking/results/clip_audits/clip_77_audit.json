@@ -1,0 +1,395 @@
+{
+  "clip_id": 77,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0077.mp4",
+  "end_to_end_memory_generation_ms": 632485.3386040049,
+  "latency_ms": {
+    "clip_decode": 4729.553127996041,
+    "deepgram_asr": 2.400476994807832,
+    "mai_transcribe_asr": 2.3658610007259995,
+    "asr_total": 3.047111997148022,
+    "audio_segmentation": 6.422162987291813,
+    "speech_embedding_campplus": 650.5253049981548,
+    "facial_detection_recognition_buffalo_l": 3660.5263269884745,
+    "face_clustering": 8.394522999878973,
+    "vlm_memory_generation": 184469.351784006,
+    "text_embedding": 581.1843709961977,
+    "graph_update_total": 203.03387999592815
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 77,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 998,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789426322.6817408,
+          "status": "success",
+          "total_tokens": 201,
+          "request_end": 1789426323.2626808,
+          "latency_ms": 580.9404920000816
+        }
+      ],
+      "total_tokens": 201,
+      "latency_ms": 581.1843709961977
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.400476994807832,
+        "openrouter-mai-transcribe-2": 2.3658610007259995
+      },
+      "asr_total_ms": 3.047111997148022,
+      "audio_segmentation_ms": 6.422162987291813,
+      "speech_embedding_ms": 650.5253049981548,
+      "graph_update_ms": 202.93523400323465,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 873.708033002913
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3660.5263269884745,
+      "face_clustering_ms": 8.394522999878973,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 329,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3846.9839280005544
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_398>",
+        "<voice_186>"
+      ],
+      "context_preparation_ms": 3988.4759339911398,
+      "vlm_ms": 184469.351784006,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"At the start of the clip, three individuals are seated around a table covered with a red and white checkered cloth, with a clapperboard and scattered papers visible.\",\n\t\t\"<voice_398> remarks 'Hmm, quite good.' shortly after the recording begins.\",\n\t\t\"A person wearing an orange top walks through the background behind the seated group.\",\n\t\t\"Hands enter the foreground, partially obscuring the view of the table as the camera adjusts.\",\n\t\t\"At 00:09, a person in a white shirt stands up and moves toward the center of the room near a whiteboard.\",\n\t\t\"<voice_186> begins speaking about buying a puzzle, describing it as having a round base image with various animals inside.\",\n\t\t\"The person in the white shirt continues to gesture and explain while the others seated at the table listen attentively.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be engaged in a collaborative session or meeting, evidenced by the clapperboard and focused discussion.\",\n\t\t\"A conversation regarding a puzzle is occurring, indicating a potential activity or project review is taking place.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "At the start of the clip, three individuals are seated around a table covered with a red and white checkered cloth, with a clapperboard and scattered papers visible.",
+          "<voice_398> remarks 'Hmm, quite good.' shortly after the recording begins.",
+          "A person wearing an orange top walks through the background behind the seated group.",
+          "Hands enter the foreground, partially obscuring the view of the table as the camera adjusts.",
+          "At 00:09, a person in a white shirt stands up and moves toward the center of the room near a whiteboard.",
+          "<voice_186> begins speaking about buying a puzzle, describing it as having a round base image with various animals inside.",
+          "The person in the white shirt continues to gesture and explain while the others seated at the table listen attentively."
+        ],
+        "high_level_conclusions": [
+          "The group appears to be engaged in a collaborative session or meeting, evidenced by the clapperboard and focused discussion.",
+          "A conversation regarding a puzzle is occurring, indicating a potential activity or project review is taking place."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 77,
+          "call_id": "dc03b09f-8de7-4821-a3f3-4da80faf95d5",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789426138.2112298,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"At the start of the clip, three individuals are seated around a table covered with a red and white checkered cloth, with a clapperboard and scattered papers visible.\",\n\t\t\"<voice_398> remarks 'Hmm, quite good.' shortly after the recording begins.\",\n\t\t\"A person wearing an orange top walks through the background behind the seated group.\",\n\t\t\"Hands enter the foreground, partially obscuring the view of the table as the camera adjusts.\",\n\t\t\"At 00:09, a person in a white shirt stands up and moves toward the center of the room near a whiteboard.\",\n\t\t\"<voice_186> begins speaking about buying a puzzle, describing it as having a round base image with various animals inside.\",\n\t\t\"The person in the white shirt continues to gesture and explain while the others seated at the table listen attentively.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be engaged in a collaborative session or meeting, evidenced by the clapperboard and focused discussion.\",\n\t\t\"A conversation regarding a puzzle is occurring, indicating a potential activity or project review is taking place.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s).\n    *   The setting appears to be a room with a table covered in a checkered tablecloth.\n    *   There are people sitting around the table.\n    *   One person is standing near a whiteboard.\n    *   There's a clapperboard on the table labeled \"EgoLife\".\n    *   Faces are blurred out in most frames.\n    *   At 0.00s - 4.50s, there are three people clearly visible around the table. One on the left (dark hair, glasses), one in the middle/back (blonde/light hair), one on the right (dark hair).\n    *   From 5.00s onwards, a fourth person enters the frame from the left background (wearing pink/orange). Then later (around 9.00s), a fifth person (white shirt) stands up and moves towards the center/whiteboard area.\n    *   The camera seems handheld or mounted on someone moving slightly.\n    *   Hands appear in the foreground starting around 6.00s, suggesting the camera operator is interacting or just holding the device.\n    *   The person in the white shirt stands and talks/gestures near the whiteboard.\n    *   The person on the left sits and looks at a phone/device.\n    *   The person on the right sits and listens.\n*   **Voice Features:**\n    *   `<voice_398>`: \"Deepgram: て 金 箱。 | MAI: 嗯，挺好的。\" (Time: 00:00 - 00:03). This corresponds to the very beginning. The ASR is garbled (\"て 金 箱\"), but \"MAI\" says \"嗯，挺好的\" (Hmm, quite good). This likely refers to the person on the left or the general atmosphere. Given the context of \"EgoLife\" and a meeting, it might be feedback.\n    *   `<voice_186>`: \"MAI: 哟，买了一个拼图。是一个，嗯，大底图是一个圆的，然后它那个里面是这种的，就是各种动物的那种。\" (Time: 00:09 - 00:26). Then continues: \"MAI: 然后你看你能不能，就是一个比较难的一个拼图，然后有很多\" (Time: 00:25 - 00:30).\n    *   Wait, the timestamps for `<voice_186>` start at 00:09. In the video frames, at 00:09, the person in the white shirt is standing. The person on the left is looking down. The person on the right is listening.\n    *   The voice mentions \"buying a puzzle\" (买了一个拼图). Looking at the table, there are papers/cards scattered. Maybe the \"puzzle\" refers to something being discussed or shown.\n    *   The voice ID is `<voice_186>`. The speaker is identified as \"MAI\" in the ASR text. I need to link this voice ID to a face if possible, but the prompt says \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" However, usually, in these tasks, if a voice ID is provided with specific content, I should try to associate it if the visual cues match. But here, faces are blurred. The instruction says \"Preserve speaker identity when constructing memory... use the exact ID as the speaker.\" It also says \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person...\". So I should probably just quote the transcript using the ID.\n    *   Wait, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So I need to create memory entries like: `<voice_186> says \"Buy a puzzle...\"`.\n\n**2. Construct Video Description:**\n*   Need to break down the video into atomic events.\n*   0.00s - 4.50s: Three people sit around a table with a checkered cloth. A clapperboard is visible.\n*   5.00s: A person in orange/pink walks into the background.\n*   6.00s - 8.50s: Hands appear in the foreground, possibly gesturing or adjusting the camera.\n*   9.00s: A person in a white shirt enters the scene from the left background and stands near the whiteboard.\n*   9.00s - 29.50s: The person in white stands and talks/gestures. Others listen. The person on the left uses a phone.\n*   The environment looks like a casual office or home studio setup.\n\n**3. Construct High-Level Conclusions:**\n*   The group seems to be discussing a project or activity involving a puzzle (based on the voice).\n*   The presence of a clapperboard suggests filming or production work.\n*   The person in white seems to be leading the discussion or explaining something related to the whiteboard.\n*   No explicit equivalence between face and voice can be made due to blurring and lack of specific linking info in the prompt (though the ASR says \"MAI\"). I should follow the instruction: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since I don't have face IDs explicitly linked to names in the input (only blurred faces), I cannot confidently make an equivalence claim unless I assume the person speaking is one of the visible ones. However, the instruction says \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" Since faces are blurred, I can't support evidence. I will omit equivalence claims to be safe, or perhaps note the voice content implies a discussion about a puzzle. Actually, looking closely at the prompt requirements: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" And \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   Wait, the prompt asks for \"High-Level Conclusions\" which are \"reasoning-based conclusions that go beyond surface-level observations.\"\n*   Conclusion: The group is gathered around a table, likely planning or reviewing something, indicated by the clapperboard and scattered materials.\n*   Conclusion: A discussion about a puzzle is taking place, as indicated by the voice mentioning buying a puzzle.\n\n**4. Refine Memory Construction:**\n*   I need to create episodic memories for the voice IDs.\n*   `<voice_398>`: \"MAI says 'Hmm, quite good.'\"\n*   `<voice_186>`: \"MAI says 'Oh, bought a puzzle. It's a big base image that is round, inside it has various animals...'\".\n\n**5. Final Check against Constraints:**\n*   JSON format.\n*   No extra text.\n*   Preserve speaker IDs (`<voice_398>`, `<voice_186>`).\n*   Do not invent face IDs.\n*   Concise descriptions.\n\nLet's draft the JSON.\n\n**Video Description:**\n1.  Three individuals are seated around a table covered with a red and white checkered tablecloth, surrounded by papers and a clapperboard.\n2.  A person wearing an orange top walks through the background behind the seated group.\n3.  Hands enter the foreground, partially obscuring the view of the table.\n4.  A person in a white shirt stands up and moves toward the center of the room near a whiteboard.\n5.  The person in the white shirt gestures while speaking to the others seated at the table.\n6.  The individual on the left holds a mobile device.\n\n**High-Level Conclusions:**\n1.  The group appears to be engaged in a collaborative session or meeting, evidenced by the clapperboard and focused attention.\n2.  A discussion regarding a puzzle is occurring, as mentioned in the audio transcript.\n\nWait, I need to make sure I include the voice memories in the `video_description`?\nRe-reading the prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nAnd earlier: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis instruction about \"episodic memory\" seems to apply to the overall output structure, but where does it fit?\nLooking at the Output Format:\n```json\n{\n\t\"video_description\": [ ... ],\n\t\"high_level_conclusions\": [ ... ]\n}\n```\nIt doesn't explicitly list a \"memories\" field. However, the instruction says \"include at least one episodic memory...\". Usually, in these tasks, the `video_description` acts as the narrative log. Or perhaps I should add a third array? No, the Output Format is strict.\n\"Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\".\nSo I must integrate the memory requirement into `video_description` or `high_level_conclusions`.\nGiven \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\", this sounds like it belongs in the description of events (what happened).\nSo I will add sentences to `video_description` that reference the voice IDs.\nExample: `<voice_398> remarks \"Hmm, quite good.\"`\nExample: `<voice_186> discusses a puzzle, stating \"Oh, bought a puzzle...\".`\n\nLet's refine the plan.\n`video_description`:\n- Describe the scene.\n- Integrate the voice events as part of the timeline.\n- Mention the visual actions corresponding to the time of speech if possible.\n\n`high_level_conclusions`:\n- Reasoning about the activity.\n- Identity resolution (if possible, but I'll stick to voice IDs).\n\nWait, checking the instruction again: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis implies the output *should* contain these memories. Since the schema only allows `video_description` and `high_level_conclusions`, I will put them in `video_description` as factual statements about what was heard/said during the clip.\n\nLet's assemble the JSON.\n\n**Video Description Draft:**\n- At 00:00, three people are seated around a table with a checkered cloth, a clapperboard, and scattered papers.\n- `<voice_398>` comments \"Hmm, quite good.\" shortly after the start.\n- Around 00:05, a person in an orange shirt walks past in the background.\n- Hands appear in the foreground, gesturing or adjusting the camera.\n- At 00:09, a person in a white shirt stands up and approaches the whiteboard.\n- `<voice_186>` begins speaking about buying a puzzle, describing it as having a round base image with various animals inside.\n- The person in the white shirt continues to gesture and explain while seated members listen.\n- The person on the left is seen holding a phone.\n\n**High-Level Conclusions Draft:**\n- The group is participating in a creative or planning session, indicated by the clapperboard and discussion about a puzzle.\n- The conversation involves evaluating something (\"quite good\") and then discussing a new purchase (puzzle).\n\nOne detail: \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\"\nSince I am quoting the transcript directly using the ID, I am not assigning a face ID. I am just reporting the speech event. This satisfies the constraint.\n\nFinal check on JSON validity.\nEnsure no trailing commas.\nEnsure proper escaping of quotes if necessary (ASR has Chinese characters).\n\nASR Text:\n\"<voice_398>: Deepgram: て 金 箱。 | MAI: 嗯，挺好的。\" -> I will summarize this as `<voice_398>` says \"Hmm, quite good.\"\n\"<voice_186>: MAI: 哟，买了一个拼图。...\" -> I will summarize this as `<voice_186>` mentions buying a puzzle with a round base image featuring animals.\n\nWait, the instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\nSo I should write: `<voice_186> states \"Oh, bought a puzzle. It is a large base image that is round, and inside it contains various kinds of animals.\"\"`\n\nOkay, ready to generate.\n\nOne more thing: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThe schema provided in the prompt is:\n```json\n{\n\t\"video_description\": [\n\t\t\"...\",\n\t\t\"...\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"...\",\n\t\t\"Equivalence: <face_1>, <voice_2>\"\n\t]\n}\n```\nI will follow this exactly.\n\nOne detail on the voice ID usage: \"use the exact ID as the speaker.\"\nSo instead of \"Person X says\", I will use \"<voice_186> says\".\n\nLet's finalize the content.\nFrame 0-4: Scene setup.\nFrame 5: Person in orange.\nFrame 6-8: Hands.\nFrame 9+: Person in white stands.\nVoice 398 is early (00:00-00:03).\nVoice 186 starts at 00:09. This aligns perfectly with the person in white standing up and talking.\n\nStructure:\n1. Scene description.\n2. Event with voice 398.\n3. Background movement.\n4. Foreground hands.\n5. Event with voice 186 (person in white standing).\n6. Ongoing interaction.\n\nConclusions:\n1. Meeting/Planning session.\n2. Discussion about a puzzle.\n\nNo equivalence needed since no face IDs are provided in the input features section (only \"Face features:\" header but no actual data like `<face_1>`). Wait, the input says \"Face features:Voice features:\". It seems empty or merged. There are no `<face_x>` IDs provided in the text block. So I cannot make equivalences.\n\nDouble check: \"Face features:Voice features:{\"<voice_398>\": ...\". It looks like the Face features section is empty or missing data. I will proceed without face IDs.\n\nOne constraint: \"Preserve distinct substantive utterances as separate atomic memories.\"\nThere are two distinct blocks for `<voice_186>`.\nBlock 1: 00:09 - 00:26.\nBlock 2: 00:25 - 00:30.\nI should probably combine them into one summary memory or keep them separate if they are distinct enough. The prompt says \"distinct substantive utterances as separate atomic memories\". They overlap significantly (00:25-00:26 vs 00:25-00:30). It's better to summarize the whole speech event as one memory entry to avoid fragmentation unless they are completely different topics. Here it's continuous speech about the puzzle. I will treat it as one memory event associated with the time range. Or I can split if I want to be precise. Let's look at the instruction: \"Preserve distinct substantive utterances as separate atomic memories.\"\nUtterance 1: \"Oh, bought a puzzle. It's a big base image that is round, and inside it contains various kinds of animals.\"\nUtterance 2: \"Then you see if you can, it's a relatively difficult puzzle, and then there are many...\"\nThese are sequential parts of the same thought process. I will combine them into one coherent memory description for clarity, or split if I feel they are distinct facts. I'll combine them for flow as it's one continuous monologue. Actually, to be safe on \"atomic memories\", I'll describe the main point.\nActually, looking at the instruction \"For every supplied voice ID... include at least one episodic memory\". So one per ID is sufficient minimum. I will provide one comprehensive memory per ID.\n\nWait, I need to check if I should output the ASR text verbatim or summarized. \"quotes or faithfully summarizes\". Summarizing is safer for length constraints and readability.\n\nFinal Plan:\nJSON with `video_description` array containing ~5-6 sentences covering visual and auditory events.\nJSON with `high_level_conclusions` array containing ~2 sentences about the nature of the gathering.\n\nOne detail: \"Return one complete JSON object... Be concise and avoid duplicate events.\"\n\nLet's write it.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"At the start of the clip, three individuals are seated around a table covered with a red and white checkered cloth, with a clapperboard and scattered papers visible.\",\n\t\t\"<voice_398> remarks 'Hmm, quite good.' shortly after the recording begins.\",\n\t\t\"A person wearing an orange top walks through the background behind the seated group.\",\n\t\t\"Hands enter the foreground, partially obscuring the view of the table as the camera adjusts.\",\n\t\t\"At 00:09, a person in a white shirt stands up and moves toward the center of the room near a whiteboard.\",\n\t\t\"<voice_186> begins speaking about buying a puzzle, describing it as having a round base image with various animals inside.\",\n\t\t\"The person in the white shirt continues to gesture and explain while the others seated at the table listen attentively.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be engaged in a collaborative session or meeting, evidenced by the clapperboard and focused discussion.\",\n\t\t\"A conversation regarding a puzzle is occurring, indicating a potential activity or project review is taking place.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10455,
+          "output_tokens": 4036,
+          "total_tokens": 14491,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0015830009942874312,
+            "media_preparation_ms": 62.49489499896299,
+            "processor_tokenization_ms": 248.29202199180145,
+            "device_transfer_ms": 44.18375200475566,
+            "cuda_generation_ms": 184080.4031669977,
+            "decoding_ms": 4.131333000259474
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 184439.678884999,
+          "request_end": 1789426322.680584,
+          "latency_ms": 184469.351784006,
+          "client_wall_clock_latency_ms": 184469.351784006
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.08345699461642653,
+      "nodes_added": 7,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.015188998077064753,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 2,
+    "detected_faces": 329,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1006,
+    "edges_after_clip": 347,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "At the start of the clip, three individuals are seated around a table covered with a red and white checkered cloth, with a clapperboard and scattered papers visible.",
+      "<voice_398> remarks 'Hmm, quite good.' shortly after the recording begins.",
+      "A person wearing an orange top walks through the background behind the seated group.",
+      "Hands enter the foreground, partially obscuring the view of the table as the camera adjusts.",
+      "At 00:09, a person in a white shirt stands up and moves toward the center of the room near a whiteboard.",
+      "<voice_186> begins speaking about buying a puzzle, describing it as having a round base image with various animals inside.",
+      "The person in the white shirt continues to gesture and explain while the others seated at the table listen attentively."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be engaged in a collaborative session or meeting, evidenced by the clapperboard and focused discussion.",
+      "A conversation regarding a puzzle is occurring, indicating a potential activity or project review is taking place."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "At the start of the clip, three individuals are seated around a table covered with a red and white checkered cloth, with a clapperboard and scattered papers visible.",
+      "<voice_398> remarks 'Hmm, quite good.' shortly after the recording begins.",
+      "A person wearing an orange top walks through the background behind the seated group.",
+      "Hands enter the foreground, partially obscuring the view of the table as the camera adjusts.",
+      "At 00:09, a person in a white shirt stands up and moves toward the center of the room near a whiteboard.",
+      "<voice_186> begins speaking about buying a puzzle, describing it as having a round base image with various animals inside.",
+      "The person in the white shirt continues to gesture and explain while the others seated at the table listen attentively."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be engaged in a collaborative session or meeting, evidenced by the clapperboard and focused discussion.",
+      "A conversation regarding a puzzle is occurring, indicating a potential activity or project review is taking place."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_77_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 997,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At the start of the clip, three individuals are seated around a table covered with a red and white checkered cloth, with a clapperboard and scattered papers visible."
+          ],
+          "timestamp": 77
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 998,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_398> remarks 'Hmm, quite good.' shortly after the recording begins."
+          ],
+          "timestamp": 77
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 999,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing an orange top walks through the background behind the seated group."
+          ],
+          "timestamp": 77
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1000,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Hands enter the foreground, partially obscuring the view of the table as the camera adjusts."
+          ],
+          "timestamp": 77
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1001,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:09, a person in a white shirt stands up and moves toward the center of the room near a whiteboard."
+          ],
+          "timestamp": 77
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1002,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_186> begins speaking about buying a puzzle, describing it as having a round base image with various animals inside."
+          ],
+          "timestamp": 77
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1003,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the white shirt continues to gesture and explain while the others seated at the table listen attentively."
+          ],
+          "timestamp": 77
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1004,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be engaged in a collaborative session or meeting, evidenced by the clapperboard and focused discussion."
+          ],
+          "timestamp": 77
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1005,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "A conversation regarding a puzzle is occurring, indicating a potential activity or project review is taking place."
+          ],
+          "timestamp": 77
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 186,
+        "target": 1002,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 398,
+        "target": 998,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_77_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_77_graph.pkl"
+  },
+  "memory_pickle_bytes": 23928556,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 66877.70350691,
+    "prepared_perf": 66884.000204725,
+    "ordered_start_perf": 67314.44694596,
+    "consumer_wait_ms": 0.00743399141356349,
+    "ready_to_ordered_ms": 430446.74123499135,
+    "preparation_work_ms": 6289.924080003402,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 193762.85023000673
+}

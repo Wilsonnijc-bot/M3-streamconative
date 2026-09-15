@@ -1,0 +1,77 @@
+{
+  "clip_id": 140,
+  "source": {
+    "segment_id": 140,
+    "source": "DAY1_A1_JAKE_12150000.mp4",
+    "source_clock": "12150000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 44100.0,
+    "absolute_end_seconds": 44130.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0140.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 53803.685700742,
+      "prepared_perf": 53814.914105905,
+      "ordered_start_perf": 53951.721635948,
+      "consumer_wait_ms": 0.01692200021352619,
+      "ready_to_ordered_ms": 136807.53004299913,
+      "preparation_work_ms": 11223.042490004445,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a dining table covered with a red-and-white checkered tablecloth.",
+      "A woman in a black shirt on the left side of the table smiles and speaks while resting her hands on the table.",
+      "A young man in an orange T-shirt and grey pants stands near the kitchen entryway, stretching and placing his hands behind his head.",
+      "The young man in the orange T-shirt gestures and points up toward the ceiling while participating in the discussion.",
+      "A woman with long pink hair sits at the table, looking towards the young man and the others.",
+      "A woman dressed in a white shirt enters from the hallway, walks over to the table near a whiteboard, and arranges items on the table.",
+      "The woman in the black top rests her chin on her hands as the group continues their conversation."
+    ],
+    "high_level_conclusions": [
+      "The individuals are roommates or colleagues staying together in a shared residence, casually conversing about hearing alarms between the first and second floors.",
+      "The young man gestures upwards to explain that his room is directly aligned vertically with another room above or below.",
+      "The group transitions from sharing personal anecdotes about alarms to discussing upcoming plans and food arrangements."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a dining table covered with a red-and-white checkered tablecloth.\",\n    \"A woman in a black shirt on the left side of the table smiles and speaks while resting her hands on the table.\",\n    \"A young man in an orange T-shirt and grey pants stands near the kitchen entryway, stretching and placing his hands behind his head.\",\n    \"The young man in the orange T-shirt gestures and points up toward the ceiling while participating in the discussion.\",\n    \"A woman with long pink hair sits at the table, looking towards the young man and the others.\",\n    \"A woman dressed in a white shirt enters from the hallway, walks over to the table near a whiteboard, and arranges items on the table.\",\n    \"The woman in the black top rests her chin on her hands as the group continues their conversation.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals are roommates or colleagues staying together in a shared residence, casually conversing about hearing alarms between the first and second floors.\",\n    \"The young man gestures upwards to explain that his room is directly aligned vertically with another room above or below.\",\n    \"The group transitions from sharing personal anecdotes about alarms to discussing upcoming plans and food arrangements.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 140,
+      "call_id": "4644af49-08d4-4354-9c5a-a134bd835ab9",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412779.4280498,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67307,
+      "output_tokens": 2145,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 44192.974591001985
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a dining table covered with a red-and-white checkered tablecloth.\",\n    \"A woman in a black shirt on the left side of the table smiles and speaks while resting her hands on the table.\",\n    \"A young man in an orange T-shirt and grey pants stands near the kitchen entryway, stretching and placing his hands behind his head.\",\n    \"The young man in the orange T-shirt gestures and points up toward the ceiling while participating in the discussion.\",\n    \"A woman with long pink hair sits at the table, looking towards the young man and the others.\",\n    \"A woman dressed in a white shirt enters from the hallway, walks over to the table near a whiteboard, and arranges items on the table.\",\n    \"The woman in the black top rests her chin on her hands as the group continues their conversation.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The individuals are roommates or colleagues staying together in a shared residence, casually conversing about hearing alarms between the first and second floors.\",\n    \"The young man gestures upwards to explain that his room is directly aligned vertically with another room above or below.\",\n    \"The group transitions from sharing personal anecdotes about alarms to discussing upcoming plans and food arrangements.\"\n  ]\n}\n```",
+      "total_tokens": 69452,
+      "request_end": 1789412823.6211364,
+      "latency_ms": 44193.08323599398,
+      "client_wall_clock_latency_ms": 44193.08323599398,
+      "api_request_wall_clock_latency_ms": 44193.08323599398
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_140_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

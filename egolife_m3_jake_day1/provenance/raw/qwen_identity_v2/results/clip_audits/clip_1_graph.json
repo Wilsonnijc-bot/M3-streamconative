@@ -1,0 +1,233 @@
+{
+  "counts": {
+    "nodes": 13,
+    "edges": 5,
+    "directed_edges_stored": 10,
+    "by_type": {
+      "episodic": 8,
+      "semantic": 3,
+      "voice": 2
+    }
+  },
+  "nodes": [
+    {
+      "id": 0,
+      "type": "voice",
+      "metadata": {
+        "contents": [
+          "MAI: 好，然后一个秒表。",
+          "MAI: 对，戳一下。"
+        ]
+      },
+      "embedding_count": 2,
+      "embedding_dimensions": [
+        192,
+        192
+      ]
+    },
+    {
+      "id": 1,
+      "type": "voice",
+      "metadata": {
+        "contents": [
+          "MAI: 时间戳。"
+        ]
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        192
+      ]
+    },
+    {
+      "id": 2,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera wearer holds a smartphone displaying a white screen while observing a group of people seated around a table."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 3,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "At timestamp 00:04, <voice_0> announces, 'Good, then a stopwatch.'"
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 4,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The group remains seated at the table with various items spread across the surface."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 5,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "At timestamp 00:12, <voice_1> states, 'Time ding.'"
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 6,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "At timestamp 00:13, <voice_0> confirms, 'Yes, ding once.'"
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 7,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera wearer manipulates the smartphone screen, revealing a countdown timer."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 8,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The timer progresses from approximately 23 minutes down to zero."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 9,
+      "type": "episodic",
+      "metadata": {
+        "contents": [
+          "The camera wearer places a hand on a black case resting on the table near the end of the sequence."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 10,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "The participants appear to be engaging in a timed activity or challenge facilitated by the smartphone."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 11,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "Speaker MAI (<voice_0>, <voice_1>) is responsible for initiating and signaling the timing mechanism."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    },
+    {
+      "id": 12,
+      "type": "semantic",
+      "metadata": {
+        "contents": [
+          "No facial features are provided to visually identify the speaker MAI among the group members."
+        ],
+        "timestamp": 1
+      },
+      "embedding_count": 1,
+      "embedding_dimensions": [
+        3072
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 3,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "episodic"
+    },
+    {
+      "source": 0,
+      "target": 6,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "episodic"
+    },
+    {
+      "source": 0,
+      "target": 11,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "semantic"
+    },
+    {
+      "source": 1,
+      "target": 5,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "episodic"
+    },
+    {
+      "source": 1,
+      "target": 11,
+      "weight": 1.0,
+      "source_type": "voice",
+      "target_type": "semantic"
+    }
+  ]
+}

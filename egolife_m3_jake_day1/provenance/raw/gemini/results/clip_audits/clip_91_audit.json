@@ -1,0 +1,409 @@
+{
+  "clip_id": 91,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0091.mp4",
+  "end_to_end_memory_generation_ms": 361363.11593400023,
+  "latency_ms": {
+    "clip_decode": 4410.77025100094,
+    "deepgram_asr": 899.5754020070308,
+    "mai_transcribe_asr": 987.2987730050227,
+    "asr_total": 988.2344249999733,
+    "audio_segmentation": 7.265473002917133,
+    "speech_embedding_campplus": 535.8328740039724,
+    "facial_detection_recognition_buffalo_l": 3907.719670998631,
+    "face_clustering": 10.94127199758077,
+    "vlm_memory_generation": 48819.91401100095,
+    "text_embedding": 449.52174199715955,
+    "graph_update_total": 268.53921500151046
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 91,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 1159,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789409351.844327,
+          "status": "success",
+          "total_tokens": 234,
+          "request_end": 1789409352.293498,
+          "latency_ms": 449.1715039985138
+        }
+      ],
+      "total_tokens": 234,
+      "latency_ms": 449.52174199715955
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 899.5754020070308,
+        "openrouter-mai-transcribe-2": 987.2987730050227
+      },
+      "asr_total_ms": 988.2344249999733,
+      "audio_segmentation_ms": 7.265473002917133,
+      "speech_embedding_ms": 535.8328740039724,
+      "graph_update_ms": 267.588736001926,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 826.5985580001143
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3907.719670998631,
+      "face_clustering_ms": 10.94127199758077,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 422,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4143.967944000906
+    },
+    "vlm": {
+      "context_preparation_ms": 3944.953345002432,
+      "vlm_ms": 48819.91401100095,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table inside a room, with flowers, a clapperboard, and papers laid out on the table.\",\n    \"A woman standing near the whiteboard in the background trims and arranges lily stems and green leaves.\",\n    \"A woman seated on the left side of the table examines dark bouquet wrapping paper and flowers.\",\n    \"A person wearing an orange shirt walks into the room through the doorway in the background.\",\n    \"Two women sit on the right side of the table, watching the floral preparations and listening to the discussion.\",\n    \"<voice_0> discusses whether lunch should be provided on the final day and asks how many people will attend.\",\n    \"<voice_1029> suggests that they do not need to provide lunch, proposing instead to offer some desserts or afternoon tea.\",\n    \"<voice_0> agrees with the afternoon tea idea and suggests scheduling the event timeline from the afternoon until the evening.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are coordinating an event or video production schedule, handling both timeline planning and floral prop arrangements.\",\n    \"<voice_0> and <voice_1029> reach a consensus on catering logistics, opting for an afternoon tea format rather than a full meal to simplify arrangements.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people is gathered around a table inside a room, with flowers, a clapperboard, and papers laid out on the table.",
+          "A woman standing near the whiteboard in the background trims and arranges lily stems and green leaves.",
+          "A woman seated on the left side of the table examines dark bouquet wrapping paper and flowers.",
+          "A person wearing an orange shirt walks into the room through the doorway in the background.",
+          "Two women sit on the right side of the table, watching the floral preparations and listening to the discussion.",
+          "<voice_0> discusses whether lunch should be provided on the final day and asks how many people will attend.",
+          "<voice_1029> suggests that they do not need to provide lunch, proposing instead to offer some desserts or afternoon tea.",
+          "<voice_0> agrees with the afternoon tea idea and suggests scheduling the event timeline from the afternoon until the evening."
+        ],
+        "high_level_conclusions": [
+          "The participants are coordinating an event or video production schedule, handling both timeline planning and floral prop arrangements.",
+          "<voice_0> and <voice_1029> reach a consensus on catering logistics, opting for an afternoon tea format rather than a full meal to simplify arrangements."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 91,
+          "call_id": "e9d22d93-7ff9-421e-80c5-cd2f8df15881",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789409303.0232394,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67116,
+          "output_tokens": 1385,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 48819.77330699738
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table inside a room, with flowers, a clapperboard, and papers laid out on the table.\",\n    \"A woman standing near the whiteboard in the background trims and arranges lily stems and green leaves.\",\n    \"A woman seated on the left side of the table examines dark bouquet wrapping paper and flowers.\",\n    \"A person wearing an orange shirt walks into the room through the doorway in the background.\",\n    \"Two women sit on the right side of the table, watching the floral preparations and listening to the discussion.\",\n    \"<voice_0> discusses whether lunch should be provided on the final day and asks how many people will attend.\",\n    \"<voice_1029> suggests that they do not need to provide lunch, proposing instead to offer some desserts or afternoon tea.\",\n    \"<voice_0> agrees with the afternoon tea idea and suggests scheduling the event timeline from the afternoon until the evening.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are coordinating an event or video production schedule, handling both timeline planning and floral prop arrangements.\",\n    \"<voice_0> and <voice_1029> reach a consensus on catering logistics, opting for an afternoon tea format rather than a full meal to simplify arrangements.\"\n  ]\n}\n```",
+          "total_tokens": 68501,
+          "request_end": 1789409351.8431563,
+          "latency_ms": 48819.91401100095,
+          "client_wall_clock_latency_ms": 48819.91401100095,
+          "api_request_wall_clock_latency_ms": 48819.91401100095
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.5136969994055107,
+      "nodes_added": 8,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.43678200017893687,
+      "nodes_added": 2,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 2,
+    "detected_faces": 422,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1059,
+    "edges_after_clip": 213,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table inside a room, with flowers, a clapperboard, and papers laid out on the table.",
+      "A woman standing near the whiteboard in the background trims and arranges lily stems and green leaves.",
+      "A woman seated on the left side of the table examines dark bouquet wrapping paper and flowers.",
+      "A person wearing an orange shirt walks into the room through the doorway in the background.",
+      "Two women sit on the right side of the table, watching the floral preparations and listening to the discussion.",
+      "<voice_0> discusses whether lunch should be provided on the final day and asks how many people will attend.",
+      "<voice_1029> suggests that they do not need to provide lunch, proposing instead to offer some desserts or afternoon tea.",
+      "<voice_0> agrees with the afternoon tea idea and suggests scheduling the event timeline from the afternoon until the evening."
+    ],
+    "high_level_conclusions": [
+      "The participants are coordinating an event or video production schedule, handling both timeline planning and floral prop arrangements.",
+      "<voice_0> and <voice_1029> reach a consensus on catering logistics, opting for an afternoon tea format rather than a full meal to simplify arrangements."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people is gathered around a table inside a room, with flowers, a clapperboard, and papers laid out on the table.",
+      "A woman standing near the whiteboard in the background trims and arranges lily stems and green leaves.",
+      "A woman seated on the left side of the table examines dark bouquet wrapping paper and flowers.",
+      "A person wearing an orange shirt walks into the room through the doorway in the background.",
+      "Two women sit on the right side of the table, watching the floral preparations and listening to the discussion.",
+      "<voice_0> discusses whether lunch should be provided on the final day and asks how many people will attend.",
+      "<voice_1029> suggests that they do not need to provide lunch, proposing instead to offer some desserts or afternoon tea.",
+      "<voice_0> agrees with the afternoon tea idea and suggests scheduling the event timeline from the afternoon until the evening."
+    ],
+    "high_level_conclusions": [
+      "The participants are coordinating an event or video production schedule, handling both timeline planning and floral prop arrangements.",
+      "<voice_0> and <voice_1029> reach a consensus on catering logistics, opting for an afternoon tea format rather than a full meal to simplify arrangements."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_91_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 1049,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people is gathered around a table inside a room, with flowers, a clapperboard, and papers laid out on the table."
+          ],
+          "timestamp": 91
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1050,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman standing near the whiteboard in the background trims and arranges lily stems and green leaves."
+          ],
+          "timestamp": 91
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1051,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman seated on the left side of the table examines dark bouquet wrapping paper and flowers."
+          ],
+          "timestamp": 91
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1052,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing an orange shirt walks into the room through the doorway in the background."
+          ],
+          "timestamp": 91
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1053,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit on the right side of the table, watching the floral preparations and listening to the discussion."
+          ],
+          "timestamp": 91
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1054,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> discusses whether lunch should be provided on the final day and asks how many people will attend."
+          ],
+          "timestamp": 91
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1055,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1029> suggests that they do not need to provide lunch, proposing instead to offer some desserts or afternoon tea."
+          ],
+          "timestamp": 91
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1056,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> agrees with the afternoon tea idea and suggests scheduling the event timeline from the afternoon until the evening."
+          ],
+          "timestamp": 91
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1057,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are coordinating an event or video production schedule, handling both timeline planning and floral prop arrangements."
+          ],
+          "timestamp": 91
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1058,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> and <voice_1029> reach a consensus on catering logistics, opting for an afternoon tea format rather than a full meal to simplify arrangements."
+          ],
+          "timestamp": 91
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 1054,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 1056,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 1058,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1029,
+        "target": 1055,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1029,
+        "target": 1058,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_91_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_91_graph.pkl"
+  },
+  "memory_pickle_bytes": 24383012,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 50177.865145828,
+    "prepared_perf": 50184.875452615,
+    "ordered_start_perf": 50479.134594687,
+    "consumer_wait_ms": 0.014026998542249203,
+    "ready_to_ordered_ms": 294259.1420719982,
+    "preparation_work_ms": 7005.003915000998,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 58190.790581997135
+}

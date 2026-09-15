@@ -1,0 +1,59 @@
+{
+  "clip_id": 24,
+  "source": {
+    "segment_id": 24,
+    "source": "DAY1_A1_JAKE_11210000.mp4",
+    "source_clock": "11210000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 2.1699999999982538,
+    "absolute_start_seconds": 40860.0,
+    "absolute_end_seconds": 40862.17,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0024.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a dining table covered with a checkered cloth in a brightly lit room.",
+      "Various open boxes, packaging materials, and electronic devices are scattered across the table.",
+      "A person holding the camera walks toward the table, extending their arm forward to gesture toward the center.",
+      "A woman in a white top seated near a whiteboard picks up and inspects a small electronic device.",
+      "Other participants around the table focus on unpacking and examining items in front of them."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a collaborative workshop or preparation session involving the setup and unboxing of equipment.",
+      "The person recording is actively approaching to interact with the group or examine the items on the table."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people are seated around a dining table covered with a checkered cloth in a brightly lit room.\",\n    \"Various open boxes, packaging materials, and electronic devices are scattered across the table.\",\n    \"A person holding the camera walks toward the table, extending their arm forward to gesture toward the center.\",\n    \"A woman in a white top seated near a whiteboard picks up and inspects a small electronic device.\",\n    \"Other participants around the table focus on unpacking and examining items in front of them.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative workshop or preparation session involving the setup and unboxing of equipment.\",\n    \"The person recording is actively approaching to interact with the group or examine the items on the table.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 24,
+      "call_id": "134b4ea5-2b61-4ed0-9cc9-bf77118b1f2e",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404539.2885041,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 5847,
+      "output_tokens": 627,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are seated around a dining table covered with a checkered cloth in a brightly lit room.\",\n    \"Various open boxes, packaging materials, and electronic devices are scattered across the table.\",\n    \"A person holding the camera walks toward the table, extending their arm forward to gesture toward the center.\",\n    \"A woman in a white top seated near a whiteboard picks up and inspects a small electronic device.\",\n    \"Other participants around the table focus on unpacking and examining items in front of them.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative workshop or preparation session involving the setup and unboxing of equipment.\",\n    \"The person recording is actively approaching to interact with the group or examine the items on the table.\"\n  ]\n}\n```",
+      "total_tokens": 6474,
+      "request_end": 1789404552.8332295,
+      "latency_ms": 13544.724455001415,
+      "client_wall_clock_latency_ms": 13544.724455001415,
+      "api_request_wall_clock_latency_ms": 13544.724455001415
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_24_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

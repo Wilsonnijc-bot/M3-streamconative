@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "The response fails to mention that Emma's health was what really mattered, which is the key detail in the reference."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q12",
+    "method": "D",
+    "call_id": "63b54034-6ac8-4da3-a2c9-b5769c46865e",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789440002.5261402,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 159,
+    "output_tokens": 154,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 11554.288447005092
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": false,\n    \"reason\": \"The response fails to mention that Emma's health was what really mattered, which is the key detail in the reference.\"\n  }\n}\n```",
+    "total_tokens": 313,
+    "request_end": 1789440014.080499,
+    "latency_ms": 11554.357324988814,
+    "client_wall_clock_latency_ms": 11554.357324988814,
+    "api_request_wall_clock_latency_ms": 11554.357324988814
+  },
+  "included_in_qa_latency": false
+}

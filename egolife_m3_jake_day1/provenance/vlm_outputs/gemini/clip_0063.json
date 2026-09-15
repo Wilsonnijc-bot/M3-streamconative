@@ -1,0 +1,74 @@
+{
+  "clip_id": 63,
+  "source": {
+    "segment_id": 63,
+    "source": "DAY1_A1_JAKE_11393000.mp4",
+    "source_clock": "11393000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41970.0,
+    "absolute_end_seconds": 42000.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0063.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47858.779856371,
+      "prepared_perf": 47866.109051812,
+      "ordered_start_perf": 47981.22713329,
+      "consumer_wait_ms": 0.011791998986154795,
+      "ready_to_ordered_ms": 115118.08147799456,
+      "preparation_work_ms": 7323.711698001716,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of young people is gathered around a table covered in a pink-and-white checkered tablecloth.",
+      "A woman seated on the right side of the table talks continuously while gesturing with both hands (<voice_311>).",
+      "A woman in a white blouse stands at the middle-left of the table, wrapping and arranging flower bouquets and materials.",
+      "A woman seated on the left in a dark cardigan quietly listens to the ongoing conversation.",
+      "A woman with reddish-orange hair stands near the whiteboard in the background, listening and adjusting her hair."
+    ],
+    "high_level_conclusions": [
+      "<voice_311> is the young woman seated on the right side of the table, gesturing expressively with her hands as she speaks.",
+      "The group is engaged in a creative brainstorming or workshop planning session, focusing on low-carbon and recycled craft ideas."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"high_level_conclusions\": [\n  \"<voice_311> is the young woman seated on the right side of the table, gesturing expressively with her hands as she speaks.\",\n  \"The group is engaged in a creative brainstorming or workshop planning session, focusing on low-carbon and recycled craft ideas.\"\n ],\n \"video_description\": [\n  \"A group of young people is gathered around a table covered in a pink-and-white checkered tablecloth.\",\n  \"A woman seated on the right side of the table talks continuously while gesturing with both hands (<voice_311>).\",\n  \"A woman in a white blouse stands at the middle-left of the table, wrapping and arranging flower bouquets and materials.\",\n  \"A woman seated on the left in a dark cardigan quietly listens to the ongoing conversation.\",\n  \"A woman with reddish-orange hair stands near the whiteboard in the background, listening and adjusting her hair.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 63,
+      "call_id": "0a8ff8c8-8d29-4b37-825f-2d97fb124eda",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406804.759861,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67350,
+      "output_tokens": 839,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 38101.174304996675
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"high_level_conclusions\": [\n  \"<voice_311> is the young woman seated on the right side of the table, gesturing expressively with her hands as she speaks.\",\n  \"The group is engaged in a creative brainstorming or workshop planning session, focusing on low-carbon and recycled craft ideas.\"\n ],\n \"video_description\": [\n  \"A group of young people is gathered around a table covered in a pink-and-white checkered tablecloth.\",\n  \"A woman seated on the right side of the table talks continuously while gesturing with both hands (<voice_311>).\",\n  \"A woman in a white blouse stands at the middle-left of the table, wrapping and arranging flower bouquets and materials.\",\n  \"A woman seated on the left in a dark cardigan quietly listens to the ongoing conversation.\",\n  \"A woman with reddish-orange hair stands near the whiteboard in the background, listening and adjusting her hair.\"\n ]\n}\n```",
+      "total_tokens": 68189,
+      "request_end": 1789406842.8611732,
+      "latency_ms": 38101.30961800314,
+      "client_wall_clock_latency_ms": 38101.30961800314,
+      "api_request_wall_clock_latency_ms": 38101.30961800314
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_63_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

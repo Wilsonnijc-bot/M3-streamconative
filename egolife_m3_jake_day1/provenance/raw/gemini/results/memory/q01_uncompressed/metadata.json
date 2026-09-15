@@ -1,0 +1,311 @@
+{
+  "question": {
+    "id": "1",
+    "query_time": {
+      "date": "DAY1",
+      "time": "11210217"
+    },
+    "question": "Who used the screwdriver first?",
+    "choices": {
+      "A": "Tasha",
+      "B": "Alice",
+      "C": "Shure",
+      "D": "Lucia"
+    }
+  },
+  "query_time_seconds": 40862.17,
+  "graph": {
+    "nodes": 271,
+    "edges": 61,
+    "episodic_nodes": 153,
+    "semantic_nodes": 66,
+    "face_nodes": 0,
+    "voice_nodes": 52,
+    "node_type_counts": {
+      "episodic": 153,
+      "semantic": 66,
+      "voice": 52
+    }
+  },
+  "native_graph": "graph.pkl",
+  "readable_graph": "graph.json",
+  "pickle_bytes": 6275134,
+  "last_segment_id": 24,
+  "source_segments": [
+    {
+      "segment_id": 1,
+      "source": "DAY1_A1_JAKE_11094208.mp4",
+      "source_clock": "11094208",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 17.62999999999738,
+      "absolute_start_seconds": 40182.08,
+      "absolute_end_seconds": 40199.71,
+      "actual_media": "/opt/streammeco/data/egolife_day1/DAY1_A1_JAKE_11094208.mp4"
+    },
+    {
+      "segment_id": 2,
+      "source": "DAY1_A1_JAKE_11100000.mp4",
+      "source_clock": "11100000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40200.0,
+      "absolute_end_seconds": 40230.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0002.mp4"
+    },
+    {
+      "segment_id": 3,
+      "source": "DAY1_A1_JAKE_11103000.mp4",
+      "source_clock": "11103000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40230.0,
+      "absolute_end_seconds": 40260.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0003.mp4"
+    },
+    {
+      "segment_id": 4,
+      "source": "DAY1_A1_JAKE_11110000.mp4",
+      "source_clock": "11110000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40260.0,
+      "absolute_end_seconds": 40290.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0004.mp4"
+    },
+    {
+      "segment_id": 5,
+      "source": "DAY1_A1_JAKE_11113000.mp4",
+      "source_clock": "11113000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40290.0,
+      "absolute_end_seconds": 40320.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0005.mp4"
+    },
+    {
+      "segment_id": 6,
+      "source": "DAY1_A1_JAKE_11120000.mp4",
+      "source_clock": "11120000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40320.0,
+      "absolute_end_seconds": 40350.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0006.mp4"
+    },
+    {
+      "segment_id": 7,
+      "source": "DAY1_A1_JAKE_11123000.mp4",
+      "source_clock": "11123000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40350.0,
+      "absolute_end_seconds": 40380.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0007.mp4"
+    },
+    {
+      "segment_id": 8,
+      "source": "DAY1_A1_JAKE_11130000.mp4",
+      "source_clock": "11130000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40380.0,
+      "absolute_end_seconds": 40410.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0008.mp4"
+    },
+    {
+      "segment_id": 9,
+      "source": "DAY1_A1_JAKE_11133000.mp4",
+      "source_clock": "11133000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40410.0,
+      "absolute_end_seconds": 40440.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0009.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 10,
+      "source": "DAY1_A1_JAKE_11140000.mp4",
+      "source_clock": "11140000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40440.0,
+      "absolute_end_seconds": 40470.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0010.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 11,
+      "source": "DAY1_A1_JAKE_11143000.mp4",
+      "source_clock": "11143000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40470.0,
+      "absolute_end_seconds": 40500.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0011.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 12,
+      "source": "DAY1_A1_JAKE_11150000.mp4",
+      "source_clock": "11150000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40500.0,
+      "absolute_end_seconds": 40530.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0012.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 13,
+      "source": "DAY1_A1_JAKE_11153000.mp4",
+      "source_clock": "11153000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40530.0,
+      "absolute_end_seconds": 40560.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0013.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 14,
+      "source": "DAY1_A1_JAKE_11160000.mp4",
+      "source_clock": "11160000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40560.0,
+      "absolute_end_seconds": 40590.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0014.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 15,
+      "source": "DAY1_A1_JAKE_11163000.mp4",
+      "source_clock": "11163000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40590.0,
+      "absolute_end_seconds": 40620.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0015.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 16,
+      "source": "DAY1_A1_JAKE_11170000.mp4",
+      "source_clock": "11170000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40620.0,
+      "absolute_end_seconds": 40650.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0016.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 17,
+      "source": "DAY1_A1_JAKE_11173000.mp4",
+      "source_clock": "11173000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40650.0,
+      "absolute_end_seconds": 40680.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0017.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 18,
+      "source": "DAY1_A1_JAKE_11180000.mp4",
+      "source_clock": "11180000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40680.0,
+      "absolute_end_seconds": 40710.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0018.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 19,
+      "source": "DAY1_A1_JAKE_11183000.mp4",
+      "source_clock": "11183000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40710.0,
+      "absolute_end_seconds": 40740.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0019.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 20,
+      "source": "DAY1_A1_JAKE_11190000.mp4",
+      "source_clock": "11190000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40740.0,
+      "absolute_end_seconds": 40770.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0020.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 21,
+      "source": "DAY1_A1_JAKE_11193000.mp4",
+      "source_clock": "11193000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40770.0,
+      "absolute_end_seconds": 40800.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0021.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 22,
+      "source": "DAY1_A1_JAKE_11200000.mp4",
+      "source_clock": "11200000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40800.0,
+      "absolute_end_seconds": 40830.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0022.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 23,
+      "source": "DAY1_A1_JAKE_11203000.mp4",
+      "source_clock": "11203000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40830.0,
+      "absolute_end_seconds": 40860.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0023.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    },
+    {
+      "segment_id": 24,
+      "source": "DAY1_A1_JAKE_11210000.mp4",
+      "source_clock": "11210000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 2.1699999999982538,
+      "absolute_start_seconds": 40860.0,
+      "absolute_end_seconds": 40862.17,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0024.mp4",
+      "asr_failures": [],
+      "status": "committed"
+    }
+  ],
+  "future_leakage": false,
+  "asr_degraded_segments": [],
+  "skipped_segments": []
+}

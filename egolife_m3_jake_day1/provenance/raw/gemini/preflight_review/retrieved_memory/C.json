@@ -1,0 +1,340 @@
+[
+  {
+    "query_text": "Who used the screwdriver first?",
+    "query_preparation_ms": 0.1001089985948056,
+    "embedding_ms": 589.761745002761,
+    "embedding_calls": 1,
+    "vector_search_ms": 4.240547001245432,
+    "streammeco_tmr_scoring_ms": 0.024094995751511306,
+    "candidate_node_ids": [
+      26,
+      5,
+      8,
+      9,
+      16,
+      18,
+      15,
+      6,
+      3,
+      12,
+      24,
+      2,
+      29,
+      28,
+      7,
+      23,
+      19,
+      17,
+      25,
+      20
+    ],
+    "candidate_node_scores": {
+      "26": 0.20062378150024268,
+      "5": 0.18956061864163853,
+      "8": 0.17323269579271,
+      "9": 0.16382130433990266,
+      "16": 0.15665130334147337,
+      "18": 0.14387611951228932,
+      "15": 0.1427352793965405,
+      "6": 0.14088504065908147,
+      "3": 0.1354129967773857,
+      "12": 0.12483230530413467,
+      "24": 0.11376487528763549,
+      "2": 0.11257902169614771,
+      "29": 0.10931197087980224,
+      "28": 0.10890000795112216,
+      "7": 0.10888248477343465,
+      "23": 0.10730590636944493,
+      "19": 0.062422526846628044,
+      "17": 0.05302308372233996,
+      "25": 0.0472320253531532,
+      "20": 0.007082368625834737
+    },
+    "clip_scores": {
+      "3": 0.20062378150024268,
+      "1": 0.18956061864163853,
+      "2": 0.15665130334147337
+    },
+    "graph_node_selection_ms": 0.17426800332032144,
+    "reranking_ms": 0.0,
+    "returned_node_ids": [
+      5,
+      8,
+      9,
+      6,
+      3,
+      2,
+      7,
+      16,
+      18,
+      15,
+      12,
+      19,
+      17,
+      20,
+      26,
+      24,
+      29,
+      28,
+      23,
+      25
+    ],
+    "returned_node_scores": {
+      "26": 0.20062378150024268,
+      "24": 0.11376487528763549,
+      "29": 0.10931197087980224,
+      "28": 0.10890000795112216,
+      "23": 0.10730590636944493,
+      "25": 0.0472320253531532,
+      "5": 0.18956061864163853,
+      "8": 0.17323269579271,
+      "9": 0.16382130433990266,
+      "6": 0.14088504065908147,
+      "3": 0.1354129967773857,
+      "2": 0.11257902169614771,
+      "7": 0.10888248477343465,
+      "16": 0.15665130334147337,
+      "18": 0.14387611951228932,
+      "15": 0.1427352793965405,
+      "12": 0.12483230530413467,
+      "19": 0.062422526846628044,
+      "17": 0.05302308372233996,
+      "20": 0.007082368625834737
+    },
+    "retrieval_round_total_ms": 594.5916419950663,
+    "embedding": {
+      "call_count": 1,
+      "each_call_ms": [
+        588.8561109968578
+      ],
+      "total_ms": 588.8561109968578,
+      "model": "openai/text-embedding-3-large",
+      "provider": "OpenRouter",
+      "calls": [
+        {
+          "index": 0,
+          "latency_ms": 588.8561109968578,
+          "input_chars": 31,
+          "tokens": 7,
+          "dimension": 3072,
+          "provider": "OpenRouter",
+          "model": "openai/text-embedding-3-large"
+        }
+      ]
+    },
+    "retrieval": {
+      "dense_ms": 4.240547001245432,
+      "sparse_ms": 0.0,
+      "StreamMeCo/TMR_ms": 0.19836299907183275,
+      "Mandol_search_ms": 0.0,
+      "graph_traversal_ms": 0.0,
+      "rerank_ms": 0.0,
+      "other_ms": 0.1001089985948056,
+      "TOTAL_RETRIEVAL_MS": 594.5916419950663
+    },
+    "evidence": [
+      {
+        "rank": 1,
+        "node_id": 5,
+        "node_type": "episodic",
+        "timestamp": 1,
+        "score": 0.18956061864163853,
+        "contents": [
+          "The person holding the phone navigates through the home screen to locate and open the clock or stopwatch app."
+        ]
+      },
+      {
+        "rank": 2,
+        "node_id": 8,
+        "node_type": "episodic",
+        "timestamp": 1,
+        "score": 0.17323269579271,
+        "contents": [
+          "The person holding the smartphone opens the stopwatch, resets the timer, and starts it."
+        ]
+      },
+      {
+        "rank": 3,
+        "node_id": 9,
+        "node_type": "semantic",
+        "timestamp": 1,
+        "score": 0.16382130433990266,
+        "contents": [
+          "The group is preparing to calibrate or synchronize recording equipment by using a smartphone stopwatch as a visible visual time reference."
+        ]
+      },
+      {
+        "rank": 4,
+        "node_id": 6,
+        "node_type": "episodic",
+        "timestamp": 1,
+        "score": 0.14088504065908147,
+        "contents": [
+          "<voice_1> mentions a timestamp."
+        ]
+      },
+      {
+        "rank": 5,
+        "node_id": 3,
+        "node_type": "episodic",
+        "timestamp": 1,
+        "score": 0.1354129967773857,
+        "contents": [
+          "Multiple people are gathered around the table, which is covered with a checkered tablecloth and holding various equipment cases and devices."
+        ]
+      },
+      {
+        "rank": 6,
+        "node_id": 2,
+        "node_type": "episodic",
+        "timestamp": 1,
+        "score": 0.11257902169614771,
+        "contents": [
+          "A first-person perspective shows a person holding a smartphone while standing in front of a table where several individuals are seated."
+        ]
+      },
+      {
+        "rank": 7,
+        "node_id": 7,
+        "node_type": "episodic",
+        "timestamp": 1,
+        "score": 0.10888248477343465,
+        "contents": [
+          "<voice_0> confirms to tap or record the timestamp."
+        ]
+      },
+      {
+        "rank": 8,
+        "node_id": 16,
+        "node_type": "episodic",
+        "timestamp": 2,
+        "score": 0.15665130334147337,
+        "contents": [
+          "The camera wearer picks up a mounting stick on the table."
+        ]
+      },
+      {
+        "rank": 9,
+        "node_id": 18,
+        "node_type": "semantic",
+        "timestamp": 2,
+        "score": 0.14387611951228932,
+        "contents": [
+          "Tapping the smartphone screen in turn serves to synchronize timestamps across individual wearable recording devices."
+        ]
+      },
+      {
+        "rank": 10,
+        "node_id": 15,
+        "node_type": "episodic",
+        "timestamp": 2,
+        "score": 0.1427352793965405,
+        "contents": [
+          "The camera wearer takes the phone back, stops the timer, and sets it down."
+        ]
+      },
+      {
+        "rank": 11,
+        "node_id": 12,
+        "node_type": "episodic",
+        "timestamp": 2,
+        "score": 0.12483230530413467,
+        "contents": [
+          "The camera wearer holds out a smartphone to the people seated around the table."
+        ]
+      },
+      {
+        "rank": 12,
+        "node_id": 19,
+        "node_type": "semantic",
+        "timestamp": 2,
+        "score": 0.062422526846628044,
+        "contents": [
+          "<voice_0> functions as the leader or coordinator organizing the group's agenda."
+        ]
+      },
+      {
+        "rank": 13,
+        "node_id": 17,
+        "node_type": "episodic",
+        "timestamp": 2,
+        "score": 0.05302308372233996,
+        "contents": [
+          "<voice_0> directs everyone to tap the phone screen and proposes discussing their plans for the final day."
+        ]
+      },
+      {
+        "rank": 14,
+        "node_id": 20,
+        "node_type": "semantic",
+        "timestamp": 2,
+        "score": 0.007082368625834737,
+        "contents": [
+          "The group is conducting an introductory coordination meeting before proceeding with their planned activities."
+        ]
+      },
+      {
+        "rank": 15,
+        "node_id": 26,
+        "node_type": "episodic",
+        "timestamp": 3,
+        "score": 0.20062378150024268,
+        "contents": [
+          "The camera holder manipulates a handheld selfie stick or mini tripod."
+        ]
+      },
+      {
+        "rank": 16,
+        "node_id": 24,
+        "node_type": "episodic",
+        "timestamp": 3,
+        "score": 0.11376487528763549,
+        "contents": [
+          "A woman in a black top reaches out to touch and inspect a white and blue box."
+        ]
+      },
+      {
+        "rank": 17,
+        "node_id": 29,
+        "node_type": "semantic",
+        "timestamp": 3,
+        "score": 0.10931197087980224,
+        "contents": [
+          "<voice_0> is spoken by the camera holder/presenter."
+        ]
+      },
+      {
+        "rank": 18,
+        "node_id": 28,
+        "node_type": "semantic",
+        "timestamp": 3,
+        "score": 0.10890000795112216,
+        "contents": [
+          "The group is preparing for a collaborative technical session involving VR equipment and storage devices."
+        ]
+      },
+      {
+        "rank": 19,
+        "node_id": 23,
+        "node_type": "episodic",
+        "timestamp": 3,
+        "score": 0.10730590636944493,
+        "contents": [
+          "The camera holder points to boxes and equipment on the table while speaking to the group."
+        ]
+      },
+      {
+        "rank": 20,
+        "node_id": 25,
+        "node_type": "episodic",
+        "timestamp": 3,
+        "score": 0.0472320253531532,
+        "contents": [
+          "Other group members listen attentively while observing the items on the table."
+        ]
+      }
+    ],
+    "query_construction_ms": 0.0002799934009090066,
+    "query_generation_ms": 0.0
+  }
+]

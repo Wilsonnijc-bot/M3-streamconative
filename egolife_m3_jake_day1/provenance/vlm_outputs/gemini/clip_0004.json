@@ -1,0 +1,60 @@
+{
+  "clip_id": 4,
+  "source": {
+    "segment_id": 4,
+    "source": "DAY1_A1_JAKE_11110000.mp4",
+    "source_clock": "11110000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40260.0,
+    "absolute_end_seconds": 40290.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0004.mp4"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a checkered table in a room, unboxing and inspecting electronic devices from blue-and-white boxes and black zippered cases.",
+      "The woman in black seated on the left carefully handles and inspects a black device taken from a box.",
+      "The man wearing an orange t-shirt and glasses opens a product box and examines the components inside.",
+      "The other women seated at the far end of the table unpack items and discuss the setup.",
+      "A participant asks if there are only four units, and another responds clarifying that someone is a mentor.",
+      "The camera wearer handles a black case on the table.",
+      "The camera wearer turns away from the table and walks into the adjoining hallway and kitchen area, looking back toward the group."
+    ],
+    "high_level_conclusions": [
+      "The people gathered are participating in a workshop, technical project, or orientation where specialized equipment is being distributed and prepared.",
+      "The dialogue indicates a structured learning or project environment involving a mentor or tutor, explaining why fewer standard participant units were required.",
+      "The camera wearer is actively assisting in organizing, cleaning up, or transporting the equipment cases away from the main table."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people sits around a checkered table in a room, unboxing and inspecting electronic devices from blue-and-white boxes and black zippered cases.\",\n\t\t\"The woman in black seated on the left carefully handles and inspects a black device taken from a box.\",\n\t\t\"The man wearing an orange t-shirt and glasses opens a product box and examines the components inside.\",\n\t\t\"The other women seated at the far end of the table unpack items and discuss the setup.\",\n\t\t\"A participant asks if there are only four units, and another responds clarifying that someone is a mentor.\",\n\t\t\"The camera wearer handles a black case on the table.\",\n\t\t\"The camera wearer turns away from the table and walks into the adjoining hallway and kitchen area, looking back toward the group.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The people gathered are participating in a workshop, technical project, or orientation where specialized equipment is being distributed and prepared.\",\n\t\t\"The dialogue indicates a structured learning or project environment involving a mentor or tutor, explaining why fewer standard participant units were required.\",\n\t\t\"The camera wearer is actively assisting in organizing, cleaning up, or transporting the equipment cases away from the main table.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 4,
+      "call_id": "71f31a49-9852-457c-86af-d68ed474a526",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789397880.1400847,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66801,
+      "output_tokens": 1531,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people sits around a checkered table in a room, unboxing and inspecting electronic devices from blue-and-white boxes and black zippered cases.\",\n\t\t\"The woman in black seated on the left carefully handles and inspects a black device taken from a box.\",\n\t\t\"The man wearing an orange t-shirt and glasses opens a product box and examines the components inside.\",\n\t\t\"The other women seated at the far end of the table unpack items and discuss the setup.\",\n\t\t\"A participant asks if there are only four units, and another responds clarifying that someone is a mentor.\",\n\t\t\"The camera wearer handles a black case on the table.\",\n\t\t\"The camera wearer turns away from the table and walks into the adjoining hallway and kitchen area, looking back toward the group.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The people gathered are participating in a workshop, technical project, or orientation where specialized equipment is being distributed and prepared.\",\n\t\t\"The dialogue indicates a structured learning or project environment involving a mentor or tutor, explaining why fewer standard participant units were required.\",\n\t\t\"The camera wearer is actively assisting in organizing, cleaning up, or transporting the equipment cases away from the main table.\"\n\t]\n}\n```",
+      "total_tokens": 68332,
+      "request_end": 1789397905.8395894,
+      "latency_ms": 25699.499448004644,
+      "client_wall_clock_latency_ms": 25699.499448004644,
+      "api_request_wall_clock_latency_ms": 25699.499448004644
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_4_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

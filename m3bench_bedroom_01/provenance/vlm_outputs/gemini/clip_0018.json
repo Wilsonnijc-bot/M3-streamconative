@@ -1,0 +1,79 @@
+{
+  "clip_id": 18,
+  "source": {
+    "segment_id": 18,
+    "source": "bedroom_01_00080000.mp4",
+    "source_clock": "00080000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 480.0,
+    "absolute_end_seconds": 510.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00080000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73399.262648531,
+      "prepared_perf": 73403.550137074,
+      "ordered_start_perf": 73440.738334923,
+      "consumer_wait_ms": 0.015428988263010979,
+      "ready_to_ordered_ms": 37188.19784899824,
+      "preparation_work_ms": 4282.22695599834,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two women are seated together on a bed inside a bedroom.",
+      "The woman in the beige t-shirt is crying while holding a phone.",
+      "<voice_21> speaks soothingly to the crying woman, urging her to stop crying and share what happened.",
+      "The woman in the beige shirt stands up, grabs a tissue from the nightstand, and wipes her face.",
+      "The woman returns to sit on the bed as the woman in the white top comforts her by patting her back.",
+      "<voice_166> reassures her and asks why she failed her course.",
+      "<voice_97> tearfully begins explaining that she ate strawberries before her exam.",
+      "The woman in the beige shirt leans over to place the used tissue back onto the nightstand."
+    ],
+    "high_level_conclusions": [
+      "<voice_21> and <voice_166> belong to the woman in the white sweater who is comforting her friend.",
+      "<voice_97> belongs to the woman in the beige shirt who is distressed about her exam performance.",
+      "The two women share a close, supportive friendship.",
+      "The upset woman superstition-wise associates eating strawberries with failing her course or exam."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two women are seated together on a bed inside a bedroom.\",\n    \"The woman in the beige t-shirt is crying while holding a phone.\",\n    \"<voice_21> speaks soothingly to the crying woman, urging her to stop crying and share what happened.\",\n    \"The woman in the beige shirt stands up, grabs a tissue from the nightstand, and wipes her face.\",\n    \"The woman returns to sit on the bed as the woman in the white top comforts her by patting her back.\",\n    \"<voice_166> reassures her and asks why she failed her course.\",\n    \"<voice_97> tearfully begins explaining that she ate strawberries before her exam.\",\n    \"The woman in the beige shirt leans over to place the used tissue back onto the nightstand.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_21> and <voice_166> belong to the woman in the white sweater who is comforting her friend.\",\n    \"<voice_97> belongs to the woman in the beige shirt who is distressed about her exam performance.\",\n    \"The two women share a close, supportive friendship.\",\n    \"The upset woman superstition-wise associates eating strawberries with failing her course or exam.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 18,
+      "call_id": "d188ccff-2efa-4c80-bb09-c7a0b715bfa4",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432262.73323,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65881,
+      "output_tokens": 1258,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 38441.19766999211
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two women are seated together on a bed inside a bedroom.\",\n    \"The woman in the beige t-shirt is crying while holding a phone.\",\n    \"<voice_21> speaks soothingly to the crying woman, urging her to stop crying and share what happened.\",\n    \"The woman in the beige shirt stands up, grabs a tissue from the nightstand, and wipes her face.\",\n    \"The woman returns to sit on the bed as the woman in the white top comforts her by patting her back.\",\n    \"<voice_166> reassures her and asks why she failed her course.\",\n    \"<voice_97> tearfully begins explaining that she ate strawberries before her exam.\",\n    \"The woman in the beige shirt leans over to place the used tissue back onto the nightstand.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_21> and <voice_166> belong to the woman in the white sweater who is comforting her friend.\",\n    \"<voice_97> belongs to the woman in the beige shirt who is distressed about her exam performance.\",\n    \"The two women share a close, supportive friendship.\",\n    \"The upset woman superstition-wise associates eating strawberries with failing her course or exam.\"\n  ]\n}\n```",
+      "total_tokens": 67139,
+      "request_end": 1789432301.17459,
+      "latency_ms": 38441.35368200659,
+      "client_wall_clock_latency_ms": 38441.35368200659,
+      "api_request_wall_clock_latency_ms": 38441.35368200659
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_18_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

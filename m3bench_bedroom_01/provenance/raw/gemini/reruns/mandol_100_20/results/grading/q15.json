@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": true,
+    "reason": "The candidate correctly answers 'Yes' in alignment with the reference."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q15",
+    "method": "D",
+    "call_id": "7b2eb8b3-a5b5-4d8a-a9b8-bbc797a76d34",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789440022.0597944,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 148,
+    "output_tokens": 112,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 21236.0048010014
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\"0\": {\"correct\": true, \"reason\": \"The candidate correctly answers 'Yes' in alignment with the reference.\"}}\n```",
+    "total_tokens": 260,
+    "request_end": 1789440043.2958949,
+    "latency_ms": 21236.098248991766,
+    "client_wall_clock_latency_ms": 21236.098248991766,
+    "api_request_wall_clock_latency_ms": 21236.098248991766
+  },
+  "included_in_qa_latency": false
+}

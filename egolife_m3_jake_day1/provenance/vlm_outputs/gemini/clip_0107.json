@@ -1,0 +1,77 @@
+{
+  "clip_id": 107,
+  "source": {
+    "segment_id": 107,
+    "source": "DAY1_A1_JAKE_12000000.mp4",
+    "source_clock": "12000000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43200.0,
+    "absolute_end_seconds": 43230.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0107.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 51762.841495649,
+      "prepared_perf": 51771.965105219,
+      "ordered_start_perf": 51887.327513511,
+      "consumer_wait_ms": 0.007634000212419778,
+      "ready_to_ordered_ms": 115362.4082919996,
+      "preparation_work_ms": 9117.99227099982,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of young people is gathered around a table covered with a red-and-white checkered tablecloth in an indoor room.",
+      "In the foreground on the table rests a clapperboard with production information.",
+      "A woman sitting on the left in black rests her chin in her hands while participating in the conversation.",
+      "A woman in a white top stands at the table arranging flowers and talking to a person standing near the whiteboard.",
+      "Two women sit on the right side of the table facing across toward the others.",
+      "The group discusses playing music outdoors and inquires about speakers.",
+      "A conversation occurs about the bottles on the table, clarifying whether a drink is alcohol or water.",
+      "The woman in white moves flower stems across the table."
+    ],
+    "high_level_conclusions": [
+      "The individuals are preparing for an event or outdoor activity while setting up a video or film shoot.",
+      "The group shares a comfortable, informal dynamic as they coordinate equipment, props, and personal items."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of young people is gathered around a table covered with a red-and-white checkered tablecloth in an indoor room.\",\n  \"In the foreground on the table rests a clapperboard with production information.\",\n  \"A woman sitting on the left in black rests her chin in her hands while participating in the conversation.\",\n  \"A woman in a white top stands at the table arranging flowers and talking to a person standing near the whiteboard.\",\n  \"Two women sit on the right side of the table facing across toward the others.\",\n  \"The group discusses playing music outdoors and inquires about speakers.\",\n  \"A conversation occurs about the bottles on the table, clarifying whether a drink is alcohol or water.\",\n  \"The woman in white moves flower stems across the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The individuals are preparing for an event or outdoor activity while setting up a video or film shoot.\",\n  \"The group shares a comfortable, informal dynamic as they coordinate equipment, props, and personal items.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 107,
+      "call_id": "2e6fbe30-90b7-4a3b-895c-9b9516619888",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789410714.0119333,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67265,
+      "output_tokens": 1107,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 49448.010822998185
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of young people is gathered around a table covered with a red-and-white checkered tablecloth in an indoor room.\",\n  \"In the foreground on the table rests a clapperboard with production information.\",\n  \"A woman sitting on the left in black rests her chin in her hands while participating in the conversation.\",\n  \"A woman in a white top stands at the table arranging flowers and talking to a person standing near the whiteboard.\",\n  \"Two women sit on the right side of the table facing across toward the others.\",\n  \"The group discusses playing music outdoors and inquires about speakers.\",\n  \"A conversation occurs about the bottles on the table, clarifying whether a drink is alcohol or water.\",\n  \"The woman in white moves flower stems across the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The individuals are preparing for an event or outdoor activity while setting up a video or film shoot.\",\n  \"The group shares a comfortable, informal dynamic as they coordinate equipment, props, and personal items.\"\n ]\n}\n```",
+      "total_tokens": 68372,
+      "request_end": 1789410763.4600558,
+      "latency_ms": 49448.119738997775,
+      "client_wall_clock_latency_ms": 49448.119738997775,
+      "api_request_wall_clock_latency_ms": 49448.119738997775
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_107_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

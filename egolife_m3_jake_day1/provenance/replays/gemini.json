@@ -1,0 +1,49 @@
+{
+  "origin_seconds": 40182.08,
+  "selection": "latest completed segment at or before source-clock cutoff",
+  "source_metadata": "provenance/raw/gemini/results/memory/q10_uncompressed/metadata.json",
+  "checkpoints": [
+    {
+      "minutes": 20,
+      "cutoff_seconds": 41382.08,
+      "checkpoint_end_seconds": 41370.0,
+      "segment_id": 41,
+      "source_graph": "provenance/raw/gemini/results/clip_audits/clip_41_graph.json",
+      "source_sha256": "42485b79e5ca11ae83c95934aae39e6c474902f9fa93552a7c8434c7e17835be",
+      "markdown": "results/gemini/replays/memories_20min.md",
+      "node_counts": {
+        "voice": 106,
+        "episodic": 276,
+        "semantic": 107
+      }
+    },
+    {
+      "minutes": 40,
+      "cutoff_seconds": 42582.08,
+      "checkpoint_end_seconds": 42570.0,
+      "segment_id": 83,
+      "source_graph": "provenance/raw/gemini/results/clip_audits/clip_83_graph.json",
+      "source_sha256": "6d9207026ab363095c3f063a6b7263e83a9832602ff6c4db3d4d63e8157d7494",
+      "markdown": "results/gemini/replays/memories_40min.md",
+      "node_counts": {
+        "voice": 190,
+        "episodic": 562,
+        "semantic": 212
+      }
+    },
+    {
+      "minutes": 60,
+      "cutoff_seconds": 43782.08,
+      "checkpoint_end_seconds": 43770.0,
+      "segment_id": 126,
+      "source_graph": "provenance/raw/gemini/results/clip_audits/clip_126_graph.json",
+      "source_sha256": "3a9b5f5679c220a0f979128d92a90eb1e0d248e12942d5f07932d0dea562059f",
+      "markdown": "results/gemini/replays/memories_60min.md",
+      "node_counts": {
+        "voice": 297,
+        "episodic": 876,
+        "semantic": 315
+      }
+    }
+  ]
+}

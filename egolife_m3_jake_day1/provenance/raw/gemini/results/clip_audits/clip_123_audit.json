@@ -1,0 +1,476 @@
+{
+  "clip_id": 123,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0123.mp4",
+  "end_to_end_memory_generation_ms": 168686.32801399508,
+  "latency_ms": {
+    "clip_decode": 5353.588131001743,
+    "deepgram_asr": 887.5521410009242,
+    "mai_transcribe_asr": 916.0409059986705,
+    "asr_total": 917.2566160050337,
+    "audio_segmentation": 12.482299003750086,
+    "speech_embedding_campplus": 1489.648863003822,
+    "facial_detection_recognition_buffalo_l": 3475.299891004397,
+    "face_clustering": 2.173471999412868,
+    "vlm_memory_generation": 32011.753033999412,
+    "text_embedding": 491.0293470020406,
+    "graph_update_total": 829.4889219978359
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 123,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 1305,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789411733.8511188,
+          "status": "success",
+          "total_tokens": 251,
+          "request_end": 1789411734.3419952,
+          "latency_ms": 490.8769600006053
+        }
+      ],
+      "total_tokens": 251,
+      "latency_ms": 491.0293470020406
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 887.5521410009242,
+        "openrouter-mai-transcribe-2": 916.0409059986705
+      },
+      "asr_total_ms": 917.2566160050337,
+      "audio_segmentation_ms": 12.482299003750086,
+      "speech_embedding_ms": 1489.648863003822,
+      "graph_update_ms": 829.3497490012669,
+      "asr_segment_count": 7,
+      "speech_embedding_count": 7,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2347.326459996111
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3475.299891004397,
+      "face_clustering_ms": 2.173471999412868,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 42,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3500.812168000266
+    },
+    "vlm": {
+      "context_preparation_ms": 4054.529140004888,
+      "vlm_ms": 32011.753033999412,
+      "raw_response": "```json\n{\n \"high_level_conclusions\": [\n  \"The people gathered in the room are planning and preparing for a video or film production, discussing scene blocking, bartender placement, and lighting equipment.\",\n  \"The group considers using the kitchen window counter as a bar station connecting the interior space with the outdoor patio.\",\n  \"The camera wearer serves as part of the production crew, having handled the clapperboard and subsequently setting up a laptop at the table for work.\"\n ],\n \"video_description\": [\n  \"The camera wearer places a clapperboard onto a low wooden table next to a checkerboard panel.\",\n  \"The camera wearer turns around and walks toward the living and kitchen area where several individuals are gathered.\",\n  \"The camera wearer points towards the open kitchen counter and the large window.\",\n  \"A person in an orange T-shirt walks over to the kitchen counter and looks out through the large window.\",\n  \"A woman in a white top and long skirt walks into the kitchen area and attends to items by the counter.\",\n  \"The camera wearer approaches the dining table covered with a pink checkered tablecloth.\",\n  \"The camera wearer places a laptop on the table and opens the screen.\",\n  \"A woman seated at the table in black clothing looks at her phone.\",\n  \"A woman in a blue patterned dress gestures toward the whiteboard while speaking to the others.\",\n  \"A woman with pink hair sits at the dining table facing the others.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera wearer places a clapperboard onto a low wooden table next to a checkerboard panel.",
+          "The camera wearer turns around and walks toward the living and kitchen area where several individuals are gathered.",
+          "The camera wearer points towards the open kitchen counter and the large window.",
+          "A person in an orange T-shirt walks over to the kitchen counter and looks out through the large window.",
+          "A woman in a white top and long skirt walks into the kitchen area and attends to items by the counter.",
+          "The camera wearer approaches the dining table covered with a pink checkered tablecloth.",
+          "The camera wearer places a laptop on the table and opens the screen.",
+          "A woman seated at the table in black clothing looks at her phone.",
+          "A woman in a blue patterned dress gestures toward the whiteboard while speaking to the others.",
+          "A woman with pink hair sits at the dining table facing the others."
+        ],
+        "high_level_conclusions": [
+          "The people gathered in the room are planning and preparing for a video or film production, discussing scene blocking, bartender placement, and lighting equipment.",
+          "The group considers using the kitchen window counter as a bar station connecting the interior space with the outdoor patio.",
+          "The camera wearer serves as part of the production crew, having handled the clapperboard and subsequently setting up a laptop at the table for work."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 123,
+          "call_id": "cf9b660c-5136-4cea-bd16-9a049ea83945",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789411701.83782,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67046,
+          "output_tokens": 1531,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 32011.555682001926
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"high_level_conclusions\": [\n  \"The people gathered in the room are planning and preparing for a video or film production, discussing scene blocking, bartender placement, and lighting equipment.\",\n  \"The group considers using the kitchen window counter as a bar station connecting the interior space with the outdoor patio.\",\n  \"The camera wearer serves as part of the production crew, having handled the clapperboard and subsequently setting up a laptop at the table for work.\"\n ],\n \"video_description\": [\n  \"The camera wearer places a clapperboard onto a low wooden table next to a checkerboard panel.\",\n  \"The camera wearer turns around and walks toward the living and kitchen area where several individuals are gathered.\",\n  \"The camera wearer points towards the open kitchen counter and the large window.\",\n  \"A person in an orange T-shirt walks over to the kitchen counter and looks out through the large window.\",\n  \"A woman in a white top and long skirt walks into the kitchen area and attends to items by the counter.\",\n  \"The camera wearer approaches the dining table covered with a pink checkered tablecloth.\",\n  \"The camera wearer places a laptop on the table and opens the screen.\",\n  \"A woman seated at the table in black clothing looks at her phone.\",\n  \"A woman in a blue patterned dress gestures toward the whiteboard while speaking to the others.\",\n  \"A woman with pink hair sits at the dining table facing the others.\"\n ]\n}\n```",
+          "total_tokens": 68577,
+          "request_end": 1789411733.8495803,
+          "latency_ms": 32011.753033999412,
+          "client_wall_clock_latency_ms": 32011.753033999412,
+          "api_request_wall_clock_latency_ms": 32011.753033999412
+        }
+      ],
+      "episodic_memory_count": 10,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 10,
+      "text_embedding_ms": null,
+      "text_embedding_count": 10,
+      "graph_update_ms": 0.10860499605769292,
+      "nodes_added": 10,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.03056800051126629,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 7,
+    "speech_embeddings": 7,
+    "voice_identities": 7,
+    "detected_faces": 42,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 10,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1447,
+    "edges_after_clip": 271,
+    "nodes_added_by_clip": 17,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer places a clapperboard onto a low wooden table next to a checkerboard panel.",
+      "The camera wearer turns around and walks toward the living and kitchen area where several individuals are gathered.",
+      "The camera wearer points towards the open kitchen counter and the large window.",
+      "A person in an orange T-shirt walks over to the kitchen counter and looks out through the large window.",
+      "A woman in a white top and long skirt walks into the kitchen area and attends to items by the counter.",
+      "The camera wearer approaches the dining table covered with a pink checkered tablecloth.",
+      "The camera wearer places a laptop on the table and opens the screen.",
+      "A woman seated at the table in black clothing looks at her phone.",
+      "A woman in a blue patterned dress gestures toward the whiteboard while speaking to the others.",
+      "A woman with pink hair sits at the dining table facing the others."
+    ],
+    "high_level_conclusions": [
+      "The people gathered in the room are planning and preparing for a video or film production, discussing scene blocking, bartender placement, and lighting equipment.",
+      "The group considers using the kitchen window counter as a bar station connecting the interior space with the outdoor patio.",
+      "The camera wearer serves as part of the production crew, having handled the clapperboard and subsequently setting up a laptop at the table for work."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera wearer places a clapperboard onto a low wooden table next to a checkerboard panel.",
+      "The camera wearer turns around and walks toward the living and kitchen area where several individuals are gathered.",
+      "The camera wearer points towards the open kitchen counter and the large window.",
+      "A person in an orange T-shirt walks over to the kitchen counter and looks out through the large window.",
+      "A woman in a white top and long skirt walks into the kitchen area and attends to items by the counter.",
+      "The camera wearer approaches the dining table covered with a pink checkered tablecloth.",
+      "The camera wearer places a laptop on the table and opens the screen.",
+      "A woman seated at the table in black clothing looks at her phone.",
+      "A woman in a blue patterned dress gestures toward the whiteboard while speaking to the others.",
+      "A woman with pink hair sits at the dining table facing the others."
+    ],
+    "high_level_conclusions": [
+      "The people gathered in the room are planning and preparing for a video or film production, discussing scene blocking, bartender placement, and lighting equipment.",
+      "The group considers using the kitchen window counter as a bar station connecting the interior space with the outdoor patio.",
+      "The camera wearer serves as part of the production crew, having handled the clapperboard and subsequently setting up a laptop at the table for work."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_123_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 17,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1430,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 在外面的玻璃就可以调酒室内。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1431,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 来-来一点打光。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1432,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1433,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对，我们还有这个影棚灯。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1434,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer places a clapperboard onto a low wooden table next to a checkerboard panel."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1435,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer turns around and walks toward the living and kitchen area where several individuals are gathered."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1436,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer points towards the open kitchen counter and the large window."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1437,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person in an orange T-shirt walks over to the kitchen counter and looks out through the large window."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1438,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a white top and long skirt walks into the kitchen area and attends to items by the counter."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1439,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer approaches the dining table covered with a pink checkered tablecloth."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1440,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer places a laptop on the table and opens the screen."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1441,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman seated at the table in black clothing looks at her phone."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1442,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a blue patterned dress gestures toward the whiteboard while speaking to the others."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1443,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman with pink hair sits at the dining table facing the others."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1444,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The people gathered in the room are planning and preparing for a video or film production, discussing scene blocking, bartender placement, and lighting equipment."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1445,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group considers using the kitchen window counter as a bar station connecting the interior space with the outdoor patio."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1446,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera wearer serves as part of the production crew, having handled the clapperboard and subsequently setting up a laptop at the table for work."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_123_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_123_graph.pkl"
+  },
+  "memory_pickle_bytes": 33355892,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52752.686484331,
+    "prepared_perf": 52760.696676793,
+    "ordered_start_perf": 52876.204810029,
+    "consumer_wait_ms": 0.018243998056277633,
+    "ready_to_ordered_ms": 115508.13323599868,
+    "preparation_work_ms": 8004.837130996748,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 42414.45887599548
+}

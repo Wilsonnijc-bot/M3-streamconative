@@ -1,0 +1,373 @@
+{
+  "clip_id": 71,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0071.mp4",
+  "end_to_end_memory_generation_ms": 123288.36804499588,
+  "latency_ms": {
+    "clip_decode": 3104.3814810036565,
+    "deepgram_asr": 746.6172799977357,
+    "mai_transcribe_asr": 561.918875995616,
+    "asr_total": 747.2562619950622,
+    "audio_segmentation": 4.407208994962275,
+    "speech_embedding_campplus": null,
+    "facial_detection_recognition_buffalo_l": 2772.07424199878,
+    "face_clustering": 1.377900996885728,
+    "vlm_memory_generation": 28381.331157994282,
+    "text_embedding": 552.7626109978883,
+    "graph_update_total": 0.0945270003285259
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 71,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 1110,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789407482.5610168,
+          "status": "success",
+          "total_tokens": 215,
+          "request_end": 1789407483.113517,
+          "latency_ms": 552.500609002891
+        }
+      ],
+      "total_tokens": 215,
+      "latency_ms": 552.7626109978883
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 746.6172799977357,
+        "openrouter-mai-transcribe-2": 561.918875995616
+      },
+      "asr_total_ms": 747.2562619950622,
+      "audio_segmentation_ms": 4.407208994962275,
+      "speech_embedding_ms": null,
+      "graph_update_ms": null,
+      "asr_segment_count": 0,
+      "speech_embedding_count": 0,
+      "voice_identity_count": 0,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 8.54516099934699
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2772.07424199878,
+      "face_clustering_ms": 1.377900996885728,
+      "graph_update_ms": null,
+      "frame_count": 110,
+      "detected_face_count": 45,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2799.405712998123
+    },
+    "vlm": {
+      "context_preparation_ms": 3448.533460999897,
+      "vlm_ms": 28381.331157994282,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"The camera wearer sits near a dining table, holding a smartphone with both hands and browsing through an application.\",\n  \"On the checkered tablecloth, a film clapperboard, a water bottle, papers, and various props and equipment are laid out.\",\n  \"In the background, a person stands behind the table handling plants and flower stems.\",\n  \"Another person sits at the right side of the table, touching items placed there.\",\n  \"A woman wearing a dark top and cardigan approaches the table while carrying a yellow bag.\",\n  \"A man wearing an orange shirt walks across the room in the background.\",\n  \"The woman in the dark cardigan stands beside the table, examining the contents of her bag and holding an item.\",\n  \"The camera wearer continues to tap and scroll through content on their phone screen.\"\n ],\n \"high_level_conclusions\": [\n  \"The scene depicts a film or video production crew preparing on set, as evidenced by the clapperboard labeled with production details, camera accessories, and staff preparing props.\",\n  \"The camera wearer is taking a break or waiting between production activities, remaining engrossed in their mobile phone while others manage equipment and props around the room.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera wearer sits near a dining table, holding a smartphone with both hands and browsing through an application.",
+          "On the checkered tablecloth, a film clapperboard, a water bottle, papers, and various props and equipment are laid out.",
+          "In the background, a person stands behind the table handling plants and flower stems.",
+          "Another person sits at the right side of the table, touching items placed there.",
+          "A woman wearing a dark top and cardigan approaches the table while carrying a yellow bag.",
+          "A man wearing an orange shirt walks across the room in the background.",
+          "The woman in the dark cardigan stands beside the table, examining the contents of her bag and holding an item.",
+          "The camera wearer continues to tap and scroll through content on their phone screen."
+        ],
+        "high_level_conclusions": [
+          "The scene depicts a film or video production crew preparing on set, as evidenced by the clapperboard labeled with production details, camera accessories, and staff preparing props.",
+          "The camera wearer is taking a break or waiting between production activities, remaining engrossed in their mobile phone while others manage equipment and props around the room."
+        ]
+      },
+      "media": {
+        "frame_count": 44,
+        "video_duration_seconds": 22.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 71,
+          "call_id": "56eefbbc-1d36-4ad3-8ea3-f67250e95ee8",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789407454.1784792,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 48693,
+          "output_tokens": 907,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 28381.160296994494
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"The camera wearer sits near a dining table, holding a smartphone with both hands and browsing through an application.\",\n  \"On the checkered tablecloth, a film clapperboard, a water bottle, papers, and various props and equipment are laid out.\",\n  \"In the background, a person stands behind the table handling plants and flower stems.\",\n  \"Another person sits at the right side of the table, touching items placed there.\",\n  \"A woman wearing a dark top and cardigan approaches the table while carrying a yellow bag.\",\n  \"A man wearing an orange shirt walks across the room in the background.\",\n  \"The woman in the dark cardigan stands beside the table, examining the contents of her bag and holding an item.\",\n  \"The camera wearer continues to tap and scroll through content on their phone screen.\"\n ],\n \"high_level_conclusions\": [\n  \"The scene depicts a film or video production crew preparing on set, as evidenced by the clapperboard labeled with production details, camera accessories, and staff preparing props.\",\n  \"The camera wearer is taking a break or waiting between production activities, remaining engrossed in their mobile phone while others manage equipment and props around the room.\"\n ]\n}\n```",
+          "total_tokens": 49600,
+          "request_end": 1789407482.559813,
+          "latency_ms": 28381.331157994282,
+          "client_wall_clock_latency_ms": 28381.331157994282,
+          "api_request_wall_clock_latency_ms": 28381.331157994282
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.07951899897307158,
+      "nodes_added": 8,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.015008001355454326,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 110,
+    "asr_segments": 0,
+    "speech_embeddings": 0,
+    "voice_identities": 0,
+    "detected_faces": 45,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 2,
+    "nodes_after_clip": 818,
+    "edges_after_clip": 179,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer sits near a dining table, holding a smartphone with both hands and browsing through an application.",
+      "On the checkered tablecloth, a film clapperboard, a water bottle, papers, and various props and equipment are laid out.",
+      "In the background, a person stands behind the table handling plants and flower stems.",
+      "Another person sits at the right side of the table, touching items placed there.",
+      "A woman wearing a dark top and cardigan approaches the table while carrying a yellow bag.",
+      "A man wearing an orange shirt walks across the room in the background.",
+      "The woman in the dark cardigan stands beside the table, examining the contents of her bag and holding an item.",
+      "The camera wearer continues to tap and scroll through content on their phone screen."
+    ],
+    "high_level_conclusions": [
+      "The scene depicts a film or video production crew preparing on set, as evidenced by the clapperboard labeled with production details, camera accessories, and staff preparing props.",
+      "The camera wearer is taking a break or waiting between production activities, remaining engrossed in their mobile phone while others manage equipment and props around the room."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera wearer sits near a dining table, holding a smartphone with both hands and browsing through an application.",
+      "On the checkered tablecloth, a film clapperboard, a water bottle, papers, and various props and equipment are laid out.",
+      "In the background, a person stands behind the table handling plants and flower stems.",
+      "Another person sits at the right side of the table, touching items placed there.",
+      "A woman wearing a dark top and cardigan approaches the table while carrying a yellow bag.",
+      "A man wearing an orange shirt walks across the room in the background.",
+      "The woman in the dark cardigan stands beside the table, examining the contents of her bag and holding an item.",
+      "The camera wearer continues to tap and scroll through content on their phone screen."
+    ],
+    "high_level_conclusions": [
+      "The scene depicts a film or video production crew preparing on set, as evidenced by the clapperboard labeled with production details, camera accessories, and staff preparing props.",
+      "The camera wearer is taking a break or waiting between production activities, remaining engrossed in their mobile phone while others manage equipment and props around the room."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_71_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 808,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer sits near a dining table, holding a smartphone with both hands and browsing through an application."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 809,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "On the checkered tablecloth, a film clapperboard, a water bottle, papers, and various props and equipment are laid out."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 810,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "In the background, a person stands behind the table handling plants and flower stems."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 811,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another person sits at the right side of the table, touching items placed there."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 812,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman wearing a dark top and cardigan approaches the table while carrying a yellow bag."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 813,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A man wearing an orange shirt walks across the room in the background."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 814,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the dark cardigan stands beside the table, examining the contents of her bag and holding an item."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 815,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer continues to tap and scroll through content on their phone screen."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 816,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The scene depicts a film or video production crew preparing on set, as evidenced by the clapperboard labeled with production details, camera accessories, and staff preparing props."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 817,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera wearer is taking a break or waiting between production activities, remaining engrossed in their mobile phone while others manage equipment and props around the room."
+          ],
+          "timestamp": 71
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_71_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_71_graph.pkl"
+  },
+  "memory_pickle_bytes": 18744193,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 48546.749036893,
+    "prepared_perf": 48551.978741727,
+    "ordered_start_perf": 48633.311741021,
+    "consumer_wait_ms": 0.008386006811633706,
+    "ready_to_ordered_ms": 81332.99929400528,
+    "preparation_work_ms": 5222.751148001407,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 35192.68893700064
+}

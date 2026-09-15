@@ -1,0 +1,77 @@
+{
+  "clip_id": 24,
+  "source": {
+    "segment_id": 24,
+    "source": "bedroom_01_00110000.mp4",
+    "source_clock": "00110000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 660.0,
+    "absolute_end_seconds": 690.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00110000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73658.754495494,
+      "prepared_perf": 73666.038314666,
+      "ordered_start_perf": 73738.439180231,
+      "consumer_wait_ms": 0.014809003914706409,
+      "ready_to_ordered_ms": 72400.86556499591,
+      "preparation_work_ms": 7278.404066004441,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two young women are sitting together on the edge of a bed inside a bedroom.",
+      "<voice_179>, wearing a beige short-sleeved t-shirt and dark trousers, asks the other woman to help explain something to her mother.",
+      "<voice_10>, wearing a white sweater and black pants, responds by reassuring her that failing an exam is not the end of the world.",
+      "<voice_10> asks <voice_179> why she does not want to tell her mother about the exam results herself.",
+      "<voice_179> looks downward, explaining that her mother always stresses heavily over her academic performance.",
+      "<voice_10> leans slightly forward, listening attentively as <voice_179> shares her worries."
+    ],
+    "high_level_conclusions": [
+      "<voice_179> is experiencing severe anxiety and fear regarding her mother's reaction to her failing an exam.",
+      "<voice_179>'s mother places high academic pressure and expectations on her.",
+      "<voice_10> acts as a supportive and comforting friend, trying to help <voice_179> process her anxiety and gain perspective.",
+      "The two women share a trusting relationship, as <voice_179> confides her personal struggles and seeks assistance from <voice_10>."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two young women are sitting together on the edge of a bed inside a bedroom.\",\n    \"<voice_179>, wearing a beige short-sleeved t-shirt and dark trousers, asks the other woman to help explain something to her mother.\",\n    \"<voice_10>, wearing a white sweater and black pants, responds by reassuring her that failing an exam is not the end of the world.\",\n    \"<voice_10> asks <voice_179> why she does not want to tell her mother about the exam results herself.\",\n    \"<voice_179> looks downward, explaining that her mother always stresses heavily over her academic performance.\",\n    \"<voice_10> leans slightly forward, listening attentively as <voice_179> shares her worries.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_179> is experiencing severe anxiety and fear regarding her mother's reaction to her failing an exam.\",\n    \"<voice_179>'s mother places high academic pressure and expectations on her.\",\n    \"<voice_10> acts as a supportive and comforting friend, trying to help <voice_179> process her anxiety and gain perspective.\",\n    \"The two women share a trusting relationship, as <voice_179> confides her personal struggles and seeks assistance from <voice_10>.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 24,
+      "call_id": "8bde41c4-7178-4d8c-934e-b91895be6707",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432560.9279373,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65917,
+      "output_tokens": 1183,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 132461.65196600487
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two young women are sitting together on the edge of a bed inside a bedroom.\",\n    \"<voice_179>, wearing a beige short-sleeved t-shirt and dark trousers, asks the other woman to help explain something to her mother.\",\n    \"<voice_10>, wearing a white sweater and black pants, responds by reassuring her that failing an exam is not the end of the world.\",\n    \"<voice_10> asks <voice_179> why she does not want to tell her mother about the exam results herself.\",\n    \"<voice_179> looks downward, explaining that her mother always stresses heavily over her academic performance.\",\n    \"<voice_10> leans slightly forward, listening attentively as <voice_179> shares her worries.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_179> is experiencing severe anxiety and fear regarding her mother's reaction to her failing an exam.\",\n    \"<voice_179>'s mother places high academic pressure and expectations on her.\",\n    \"<voice_10> acts as a supportive and comforting friend, trying to help <voice_179> process her anxiety and gain perspective.\",\n    \"The two women share a trusting relationship, as <voice_179> confides her personal struggles and seeks assistance from <voice_10>.\"\n  ]\n}\n```",
+      "total_tokens": 67100,
+      "request_end": 1789432693.3896847,
+      "latency_ms": 132461.7444579926,
+      "client_wall_clock_latency_ms": 132461.7444579926,
+      "api_request_wall_clock_latency_ms": 132461.7444579926
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_24_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

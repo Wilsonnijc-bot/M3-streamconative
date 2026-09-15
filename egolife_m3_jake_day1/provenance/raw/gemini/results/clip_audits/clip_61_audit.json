@@ -1,0 +1,395 @@
+{
+  "clip_id": 61,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0061.mp4",
+  "end_to_end_memory_generation_ms": 182522.90539500245,
+  "latency_ms": {
+    "clip_decode": 4341.899026003375,
+    "deepgram_asr": 770.3802489995724,
+    "mai_transcribe_asr": 1041.5247109995107,
+    "asr_total": 1042.6878580037737,
+    "audio_segmentation": 11.051335000956897,
+    "speech_embedding_campplus": 871.1578360016574,
+    "facial_detection_recognition_buffalo_l": 4043.991176004056,
+    "face_clustering": 12.81999799539335,
+    "vlm_memory_generation": 63825.363729003584,
+    "text_embedding": 521.0630430010497,
+    "graph_update_total": 359.73720499896444
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 61,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 817,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789406746.4374936,
+          "status": "success",
+          "total_tokens": 158,
+          "request_end": 1789406746.958261,
+          "latency_ms": 520.7681090032565
+        }
+      ],
+      "total_tokens": 158,
+      "latency_ms": 521.0630430010497
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 770.3802489995724,
+        "openrouter-mai-transcribe-2": 1041.5247109995107
+      },
+      "asr_total_ms": 1042.6878580037737,
+      "audio_segmentation_ms": 11.051335000956897,
+      "speech_embedding_ms": 871.1578360016574,
+      "graph_update_ms": 359.61363300157245,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1258.6907199947746
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4043.991176004056,
+      "face_clustering_ms": 12.81999799539335,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 338,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4241.262535004353
+    },
+    "vlm": {
+      "context_preparation_ms": 4036.2148670028546,
+      "vlm_ms": 63825.363729003584,
+      "raw_response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people is gathered around a table covered with a red-and-white checkered tablecloth.\",\n\t\t\"On the table, several props, including a clapperboard, flowers, and containers, are laid out.\",\n\t\t\"Three women stand at the far end of the table arranging items and discussing the setup.\",\n\t\t\"A woman in dark clothing sits on the left side of the table, listening and observing.\",\n\t\t\"A young man in an orange t-shirt walks through the room from the left background.\",\n\t\t\"The person recording sits at the table, occasionally shifting their position.\",\n\t\t\"The group continues discussing the shoot and reviewing upcoming tasks.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The individuals form a video production crew preparing props and coordinating logistics for an upcoming film shoot.\",\n\t\t\"The presence of lighting stands, a clapperboard, and a whiteboard indicates an active set preparation environment.\"\n\t]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people is gathered around a table covered with a red-and-white checkered tablecloth.",
+          "On the table, several props, including a clapperboard, flowers, and containers, are laid out.",
+          "Three women stand at the far end of the table arranging items and discussing the setup.",
+          "A woman in dark clothing sits on the left side of the table, listening and observing.",
+          "A young man in an orange t-shirt walks through the room from the left background.",
+          "The person recording sits at the table, occasionally shifting their position.",
+          "The group continues discussing the shoot and reviewing upcoming tasks."
+        ],
+        "high_level_conclusions": [
+          "The individuals form a video production crew preparing props and coordinating logistics for an upcoming film shoot.",
+          "The presence of lighting stands, a clapperboard, and a whiteboard indicates an active set preparation environment."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 61,
+          "call_id": "25a149ae-9d8c-45a9-acda-c79a009e862f",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789406682.6113048,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67024,
+          "output_tokens": 1098,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 63825.232411996694
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A group of people is gathered around a table covered with a red-and-white checkered tablecloth.\",\n\t\t\"On the table, several props, including a clapperboard, flowers, and containers, are laid out.\",\n\t\t\"Three women stand at the far end of the table arranging items and discussing the setup.\",\n\t\t\"A woman in dark clothing sits on the left side of the table, listening and observing.\",\n\t\t\"A young man in an orange t-shirt walks through the room from the left background.\",\n\t\t\"The person recording sits at the table, occasionally shifting their position.\",\n\t\t\"The group continues discussing the shoot and reviewing upcoming tasks.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The individuals form a video production crew preparing props and coordinating logistics for an upcoming film shoot.\",\n\t\t\"The presence of lighting stands, a clapperboard, and a whiteboard indicates an active set preparation environment.\"\n\t]\n}\n```",
+          "total_tokens": 68122,
+          "request_end": 1789406746.436673,
+          "latency_ms": 63825.363729003584,
+          "client_wall_clock_latency_ms": 63825.363729003584,
+          "api_request_wall_clock_latency_ms": 63825.363729003584
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.1096459964173846,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.013926000974606723,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 6,
+    "detected_faces": 338,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 2,
+    "nodes_after_clip": 699,
+    "edges_after_clip": 151,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table covered with a red-and-white checkered tablecloth.",
+      "On the table, several props, including a clapperboard, flowers, and containers, are laid out.",
+      "Three women stand at the far end of the table arranging items and discussing the setup.",
+      "A woman in dark clothing sits on the left side of the table, listening and observing.",
+      "A young man in an orange t-shirt walks through the room from the left background.",
+      "The person recording sits at the table, occasionally shifting their position.",
+      "The group continues discussing the shoot and reviewing upcoming tasks."
+    ],
+    "high_level_conclusions": [
+      "The individuals form a video production crew preparing props and coordinating logistics for an upcoming film shoot.",
+      "The presence of lighting stands, a clapperboard, and a whiteboard indicates an active set preparation environment."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people is gathered around a table covered with a red-and-white checkered tablecloth.",
+      "On the table, several props, including a clapperboard, flowers, and containers, are laid out.",
+      "Three women stand at the far end of the table arranging items and discussing the setup.",
+      "A woman in dark clothing sits on the left side of the table, listening and observing.",
+      "A young man in an orange t-shirt walks through the room from the left background.",
+      "The person recording sits at the table, occasionally shifting their position.",
+      "The group continues discussing the shoot and reviewing upcoming tasks."
+    ],
+    "high_level_conclusions": [
+      "The individuals form a video production crew preparing props and coordinating logistics for an upcoming film shoot.",
+      "The presence of lighting stands, a clapperboard, and a whiteboard indicates an active set preparation environment."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_61_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 687,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 要不先给他醒了吧。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 688,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯，可以啊。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 689,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 今天我是今天。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 690,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people is gathered around a table covered with a red-and-white checkered tablecloth."
+          ],
+          "timestamp": 61
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 691,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "On the table, several props, including a clapperboard, flowers, and containers, are laid out."
+          ],
+          "timestamp": 61
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 692,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Three women stand at the far end of the table arranging items and discussing the setup."
+          ],
+          "timestamp": 61
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 693,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in dark clothing sits on the left side of the table, listening and observing."
+          ],
+          "timestamp": 61
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 694,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young man in an orange t-shirt walks through the room from the left background."
+          ],
+          "timestamp": 61
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 695,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person recording sits at the table, occasionally shifting their position."
+          ],
+          "timestamp": 61
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 696,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group continues discussing the shoot and reviewing upcoming tasks."
+          ],
+          "timestamp": 61
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 697,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The individuals form a video production crew preparing props and coordinating logistics for an upcoming film shoot."
+          ],
+          "timestamp": 61
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 698,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The presence of lighting stands, a clapperboard, and a whiteboard indicates an active set preparation environment."
+          ],
+          "timestamp": 61
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_61_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_61_graph.pkl"
+  },
+  "memory_pickle_bytes": 15892926,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 47751.396983126,
+    "prepared_perf": 47759.111273535,
+    "ordered_start_perf": 47858.779946239,
+    "consumer_wait_ms": 0.01696200342848897,
+    "ready_to_ordered_ms": 99668.67270399962,
+    "preparation_work_ms": 7708.875491000072,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 73886.4100330029
+}

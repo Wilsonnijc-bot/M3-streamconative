@@ -1,0 +1,72 @@
+{
+  "clip_id": 76,
+  "source": {
+    "segment_id": 76,
+    "source": "bedroom_01_00360000.mp4",
+    "source_clock": "00360000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 3.0,
+    "absolute_start_seconds": 2160.0,
+    "absolute_end_seconds": 2163.0,
+    "actual_media": "/opt/streammeco/run/m3bench_bedroom_gemini/work/segments/segment_0076.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 76914.504932753,
+      "prepared_perf": 76916.624627524,
+      "ordered_start_perf": 77130.841188709,
+      "consumer_wait_ms": 0.018284001271240413,
+      "ready_to_ordered_ms": 214216.56118500687,
+      "preparation_work_ms": 2114.351832002285,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A person wearing black gloves stands by a marble counter containing an electric kettle and tea sets.",
+      "The person turns away from the counter and moves across the tiled floor toward two waste bins.",
+      "The person drops used trash into a pink waste bin on the floor."
+    ],
+    "high_level_conclusions": [
+      "The person is performing cleaning or housekeeping duties in a living space or hotel room.",
+      "The use of black protective gloves indicates attention to hygiene or sanitation protocols during cleaning."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A person wearing black gloves stands by a marble counter containing an electric kettle and tea sets.\",\n  \"The person turns away from the counter and moves across the tiled floor toward two waste bins.\",\n  \"The person drops used trash into a pink waste bin on the floor.\"\n ],\n \"high_level_conclusions\": [\n  \"The person is performing cleaning or housekeeping duties in a living space or hotel room.\",\n  \"The use of black protective gloves indicates attention to hygiene or sanitation protocols during cleaning.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 76,
+      "call_id": "27b3d9d3-b5d6-4252-8dcf-31aa66acde03",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789435945.5696259,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 6879,
+      "output_tokens": 361,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 8325.91911200143
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A person wearing black gloves stands by a marble counter containing an electric kettle and tea sets.\",\n  \"The person turns away from the counter and moves across the tiled floor toward two waste bins.\",\n  \"The person drops used trash into a pink waste bin on the floor.\"\n ],\n \"high_level_conclusions\": [\n  \"The person is performing cleaning or housekeeping duties in a living space or hotel room.\",\n  \"The use of black protective gloves indicates attention to hygiene or sanitation protocols during cleaning.\"\n ]\n}\n```",
+      "total_tokens": 7240,
+      "request_end": 1789435953.895636,
+      "latency_ms": 8326.007187002688,
+      "client_wall_clock_latency_ms": 8326.007187002688,
+      "api_request_wall_clock_latency_ms": 8326.007187002688
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_76_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

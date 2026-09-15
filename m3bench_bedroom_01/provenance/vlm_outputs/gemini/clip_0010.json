@@ -1,0 +1,76 @@
+{
+  "clip_id": 10,
+  "source": {
+    "segment_id": 10,
+    "source": "bedroom_01_00043000.mp4",
+    "source_clock": "00043000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 270.0,
+    "absolute_end_seconds": 300.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00043000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 72661.828547089,
+      "prepared_perf": 72668.613664686,
+      "ordered_start_perf": 72751.795405972,
+      "consumer_wait_ms": 0.009137002052739263,
+      "ready_to_ordered_ms": 83181.74128601095,
+      "preparation_work_ms": 6779.727688001003,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "<face_32> sits at a dining table with a laptop, examining a sheet of paper.",
+      "<face_32> reads through the paper while speaking aloud about course subjects.",
+      "<face_32> looks up toward the camera to address a robot assistant.",
+      "<face_32> hands the paper across the table toward the camera holder.",
+      "A gloved hand reaches out from the first-person perspective to accept the paper from <face_32>.",
+      "The camera turns away from the table after receiving the document."
+    ],
+    "high_level_conclusions": [
+      "Equivalence: <face_32>, <voice_10>",
+      "Equivalence: <face_32>, <voice_87>",
+      "<face_32> is requesting the robot assistant to file a curriculum paper belonging to someone named Emma into a drawer."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"<face_32> sits at a dining table with a laptop, examining a sheet of paper.\",\n  \"<face_32> reads through the paper while speaking aloud about course subjects.\",\n  \"<face_32> looks up toward the camera to address a robot assistant.\",\n  \"<face_32> hands the paper across the table toward the camera holder.\",\n  \"A gloved hand reaches out from the first-person perspective to accept the paper from <face_32>.\",\n  \"The camera turns away from the table after receiving the document.\"\n ],\n \"high_level_conclusions\": [\n  \"Equivalence: <face_32>, <voice_10>\",\n  \"Equivalence: <face_32>, <voice_87>\",\n  \"<face_32> is requesting the robot assistant to file a curriculum paper belonging to someone named Emma into a drawer.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 10,
+      "call_id": "b6a211f0-4708-4a64-8d6e-f736decc9c20",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789431573.7878659,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66972,
+      "output_tokens": 457,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 18313.660697007435
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"<face_32> sits at a dining table with a laptop, examining a sheet of paper.\",\n  \"<face_32> reads through the paper while speaking aloud about course subjects.\",\n  \"<face_32> looks up toward the camera to address a robot assistant.\",\n  \"<face_32> hands the paper across the table toward the camera holder.\",\n  \"A gloved hand reaches out from the first-person perspective to accept the paper from <face_32>.\",\n  \"The camera turns away from the table after receiving the document.\"\n ],\n \"high_level_conclusions\": [\n  \"Equivalence: <face_32>, <voice_10>\",\n  \"Equivalence: <face_32>, <voice_87>\",\n  \"<face_32> is requesting the robot assistant to file a curriculum paper belonging to someone named Emma into a drawer.\"\n ]\n}\n```",
+      "total_tokens": 67429,
+      "request_end": 1789431592.101623,
+      "latency_ms": 18313.753962996998,
+      "client_wall_clock_latency_ms": 18313.753962996998,
+      "api_request_wall_clock_latency_ms": 18313.753962996998
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_10_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

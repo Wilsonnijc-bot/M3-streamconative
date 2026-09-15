@@ -1,0 +1,486 @@
+{
+  "clip_id": 4,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00013000.mp4",
+  "end_to_end_memory_generation_ms": 160056.91558700346,
+  "latency_ms": {
+    "clip_decode": 4290.728250009124,
+    "deepgram_asr": 940.4632859950652,
+    "mai_transcribe_asr": 1593.5397010034649,
+    "asr_total": 1595.9428939968348,
+    "audio_segmentation": 8.95012500404846,
+    "speech_embedding_campplus": 394.1899240016937,
+    "facial_detection_recognition_buffalo_l": 2598.439102002885,
+    "face_clustering": 6.89793900528457,
+    "vlm_memory_generation": 17265.021163999336,
+    "text_embedding": 507.32268499268685,
+    "graph_update_total": 10.030816003563814
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 4,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 734,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789431362.927598,
+          "status": "success",
+          "total_tokens": 167,
+          "request_end": 1789431363.434729,
+          "latency_ms": 507.13186799839605
+        }
+      ],
+      "total_tokens": 167,
+      "latency_ms": 507.32268499268685
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 940.4632859950652,
+        "openrouter-mai-transcribe-2": 1593.5397010034649
+      },
+      "asr_total_ms": 1595.9428939968348,
+      "audio_segmentation_ms": 8.95012500404846,
+      "speech_embedding_ms": 394.1899240016937,
+      "graph_update_ms": 8.432151997112669,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 430.3835139871808
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2598.439102002885,
+      "face_clustering_ms": 6.89793900528457,
+      "graph_update_ms": 0.9098390000872314,
+      "frame_count": 150,
+      "detected_face_count": 113,
+      "qualified_face_count": 9,
+      "raw_cluster_count": 2,
+      "face_identity_count": 1,
+      "total_ms": 2670.9220009943238
+    },
+    "vlm": {
+      "context_preparation_ms": 5333.259056991665,
+      "vlm_ms": 17265.021163999336,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"<face_32> sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone.\",\n  \"<face_32> speaks aloud, giving instructions to prepare afternoon tea.\",\n  \"An off-screen voice acknowledges the request with an agreement.\",\n  \"The camera shifts away from <face_32> and pans through the living space toward the kitchen hallway.\",\n  \"<face_32> continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake.\",\n  \"The camera moves and finishes facing a plain interior wall.\"\n ],\n \"high_level_conclusions\": [\n  \"Equivalence: <face_32>, <voice_10>\",\n  \"<face_32> is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food.\",\n  \"<voice_31> belongs to the assistant or robot responding to <face_32>'s command.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "<face_32> sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone.",
+          "<face_32> speaks aloud, giving instructions to prepare afternoon tea.",
+          "An off-screen voice acknowledges the request with an agreement.",
+          "The camera shifts away from <face_32> and pans through the living space toward the kitchen hallway.",
+          "<face_32> continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake.",
+          "The camera moves and finishes facing a plain interior wall."
+        ],
+        "high_level_conclusions": [
+          "Equivalence: <face_32>, <voice_10>",
+          "<face_32> is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food.",
+          "<voice_31> belongs to the assistant or robot responding to <face_32>'s command."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 4,
+          "call_id": "9095959f-90c2-4efd-a35e-44d07f666c03",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789431345.6616733,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66963,
+          "output_tokens": 599,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 17264.910045996658
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"<face_32> sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone.\",\n  \"<face_32> speaks aloud, giving instructions to prepare afternoon tea.\",\n  \"An off-screen voice acknowledges the request with an agreement.\",\n  \"The camera shifts away from <face_32> and pans through the living space toward the kitchen hallway.\",\n  \"<face_32> continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake.\",\n  \"The camera moves and finishes facing a plain interior wall.\"\n ],\n \"high_level_conclusions\": [\n  \"Equivalence: <face_32>, <voice_10>\",\n  \"<face_32> is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food.\",\n  \"<voice_31> belongs to the assistant or robot responding to <face_32>'s command.\"\n ]\n}\n```",
+          "total_tokens": 67562,
+          "request_end": 1789431362.9266973,
+          "latency_ms": 17265.021163999336,
+          "client_wall_clock_latency_ms": 17265.021163999336,
+          "api_request_wall_clock_latency_ms": 17265.021163999336
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.09051000233739614,
+      "nodes_added": 6,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.5983150040265173,
+      "nodes_added": 3,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 2,
+    "detected_faces": 113,
+    "qualified_faces": 9,
+    "face_identities": 1,
+    "episodic_memories": 6,
+    "semantic_memories": 3,
+    "nodes_after_clip": 42,
+    "edges_after_clip": 17,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 9
+  },
+  "generated_memory": {
+    "video_description": [
+      "<face_32> sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone.",
+      "<face_32> speaks aloud, giving instructions to prepare afternoon tea.",
+      "An off-screen voice acknowledges the request with an agreement.",
+      "The camera shifts away from <face_32> and pans through the living space toward the kitchen hallway.",
+      "<face_32> continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake.",
+      "The camera moves and finishes facing a plain interior wall."
+    ],
+    "high_level_conclusions": [
+      "Equivalence: <face_32>, <voice_10>",
+      "<face_32> is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food.",
+      "<voice_31> belongs to the assistant or robot responding to <face_32>'s command."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "<face_32> sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone.",
+      "<face_32> speaks aloud, giving instructions to prepare afternoon tea.",
+      "An off-screen voice acknowledges the request with an agreement.",
+      "The camera shifts away from <face_32> and pans through the living space toward the kitchen hallway.",
+      "<face_32> continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake.",
+      "The camera moves and finishes facing a plain interior wall."
+    ],
+    "high_level_conclusions": [
+      "Equivalence: <face_32>, <voice_10>",
+      "<face_32> is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food.",
+      "<voice_31> belongs to the assistant or robot responding to <face_32>'s command."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_4_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 9,
+    "nodes": [
+      {
+        "id": 31,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: several moments later. Okay. | MAI: Okay."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 32,
+        "type": "img",
+        "metadata": {
+          "contents": [
+            {
+              "kind": "base64_face_image",
+              "encoded_chars": 3596,
+              "decoded_bytes": 2697,
+              "sha256": "87a7600d54676ba60616a59d1d7cb75e6f1fb85bd4563705efb2a718abb8488d"
+            },
+            {
+              "kind": "base64_face_image",
+              "encoded_chars": 3560,
+              "decoded_bytes": 2670,
+              "sha256": "b7f82b3e1d2934ab18a21b54797c73d80cfda2fdab98c70857b0f22f27c1f53d"
+            },
+            {
+              "kind": "base64_face_image",
+              "encoded_chars": 3700,
+              "decoded_bytes": 2773,
+              "sha256": "582efc7adb2406588c2388808ae2ec152491448b64cad1e2d26d0578d58ee437"
+            },
+            {
+              "kind": "base64_face_image",
+              "encoded_chars": 4544,
+              "decoded_bytes": 3407,
+              "sha256": "3d2617484872736692a71d157dfacd7c241bc80a0c8fcfb6152462fa7198e135"
+            },
+            {
+              "kind": "base64_face_image",
+              "encoded_chars": 4256,
+              "decoded_bytes": 3191,
+              "sha256": "d1733ba8a3ec854c760f9b0dd9d48895757a22f169642dd7cac39f565c52db9c"
+            },
+            {
+              "kind": "base64_face_image",
+              "encoded_chars": 4000,
+              "decoded_bytes": 2998,
+              "sha256": "eaefc899cf3e5988cb61271779dc5a2550a37d3cb41b0d0fb9445fdbccfc0e99"
+            }
+          ]
+        },
+        "embedding_count": 6,
+        "embedding_dimensions": [
+          512,
+          512,
+          512,
+          512,
+          512,
+          512
+        ]
+      },
+      {
+        "id": 33,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<face_32> sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 34,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<face_32> speaks aloud, giving instructions to prepare afternoon tea."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 35,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "An off-screen voice acknowledges the request with an agreement."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 36,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera shifts away from <face_32> and pans through the living space toward the kitchen hallway."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 37,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<face_32> continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 38,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera moves and finishes facing a plain interior wall."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 39,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Equivalence: <face_32>, <voice_10>"
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 40,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<face_32> is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 41,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_31> belongs to the assistant or robot responding to <face_32>'s command."
+          ],
+          "timestamp": 4
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 10,
+        "target": 39,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 31,
+        "target": 41,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 32,
+        "target": 33,
+        "weight": 1.0,
+        "source_type": "img",
+        "target_type": "episodic"
+      },
+      {
+        "source": 32,
+        "target": 34,
+        "weight": 1.0,
+        "source_type": "img",
+        "target_type": "episodic"
+      },
+      {
+        "source": 32,
+        "target": 36,
+        "weight": 1.0,
+        "source_type": "img",
+        "target_type": "episodic"
+      },
+      {
+        "source": 32,
+        "target": 37,
+        "weight": 1.0,
+        "source_type": "img",
+        "target_type": "episodic"
+      },
+      {
+        "source": 32,
+        "target": 39,
+        "weight": 1.0,
+        "source_type": "img",
+        "target_type": "semantic"
+      },
+      {
+        "source": 32,
+        "target": 40,
+        "weight": 1.0,
+        "source_type": "img",
+        "target_type": "semantic"
+      },
+      {
+        "source": 32,
+        "target": 41,
+        "weight": 1.0,
+        "source_type": "img",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_4_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_4_graph.pkl"
+  },
+  "memory_pickle_bytes": 1042062,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 72390.220849115,
+    "prepared_perf": 72396.19018535,
+    "ordered_start_perf": 72524.013766949,
+    "consumer_wait_ms": 0.00901700695976615,
+    "ready_to_ordered_ms": 127823.58159900468,
+    "preparation_work_ms": 5967.345857003238,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 26209.13088899397
+}

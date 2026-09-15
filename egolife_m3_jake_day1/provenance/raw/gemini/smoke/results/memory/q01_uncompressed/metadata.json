@@ -1,0 +1,67 @@
+{
+  "question": {
+    "id": "1",
+    "query_time": {
+      "date": "DAY1",
+      "time": "11210217"
+    },
+    "question": "Who used the screwdriver first?",
+    "choices": {
+      "A": "Tasha",
+      "B": "Alice",
+      "C": "Shure",
+      "D": "Lucia"
+    }
+  },
+  "query_time_seconds": 40862.17,
+  "graph": {
+    "nodes": 30,
+    "edges": 7,
+    "episodic_nodes": 18,
+    "semantic_nodes": 9,
+    "face_nodes": 0,
+    "voice_nodes": 3,
+    "node_type_counts": {
+      "episodic": 18,
+      "semantic": 9,
+      "voice": 3
+    }
+  },
+  "native_graph": "graph.pkl",
+  "readable_graph": "graph.json",
+  "pickle_bytes": 764291,
+  "last_segment_id": 3,
+  "source_segments": [
+    {
+      "segment_id": 1,
+      "source": "DAY1_A1_JAKE_11094208.mp4",
+      "source_clock": "11094208",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 17.62999999999738,
+      "absolute_start_seconds": 40182.08,
+      "absolute_end_seconds": 40199.71,
+      "actual_media": "/opt/streammeco/data/egolife_day1/DAY1_A1_JAKE_11094208.mp4"
+    },
+    {
+      "segment_id": 2,
+      "source": "DAY1_A1_JAKE_11100000.mp4",
+      "source_clock": "11100000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40200.0,
+      "absolute_end_seconds": 40230.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0002.mp4"
+    },
+    {
+      "segment_id": 3,
+      "source": "DAY1_A1_JAKE_11103000.mp4",
+      "source_clock": "11103000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40230.0,
+      "absolute_end_seconds": 40260.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0003.mp4"
+    }
+  ],
+  "future_leakage": false
+}

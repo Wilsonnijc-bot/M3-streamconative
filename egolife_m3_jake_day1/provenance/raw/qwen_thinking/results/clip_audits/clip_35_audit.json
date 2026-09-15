@@ -1,0 +1,667 @@
+{
+  "clip_id": 35,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0035.mp4",
+  "end_to_end_memory_generation_ms": 539246.6094720003,
+  "latency_ms": {
+    "clip_decode": 3802.0811670066905,
+    "deepgram_asr": 1.744774002872873,
+    "mai_transcribe_asr": 2.0452600001590326,
+    "asr_total": 2.927811998233665,
+    "audio_segmentation": 12.595553002029192,
+    "speech_embedding_campplus": 1590.8995029967627,
+    "facial_detection_recognition_buffalo_l": 3413.3752589987125,
+    "face_clustering": 7.658382004592568,
+    "vlm_memory_generation": 152710.58340500167,
+    "text_embedding": 881.8889279937139,
+    "graph_update_total": 350.5480969979544
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 35,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 17,
+      "input_chars": 1462,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789417661.4065394,
+          "status": "success",
+          "total_tokens": 329,
+          "request_end": 1789417662.2882547,
+          "latency_ms": 881.7155919969082
+        }
+      ],
+      "total_tokens": 329,
+      "latency_ms": 881.8889279937139
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1.744774002872873,
+        "openrouter-mai-transcribe-2": 2.0452600001590326
+      },
+      "asr_total_ms": 2.927811998233665,
+      "audio_segmentation_ms": 12.595553002029192,
+      "speech_embedding_ms": 1590.8995029967627,
+      "graph_update_ms": 350.38154399808263,
+      "asr_segment_count": 11,
+      "speech_embedding_count": 11,
+      "voice_identity_count": 9,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1969.5913840041612
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3413.3752589987125,
+      "face_clustering_ms": 7.658382004592568,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 277,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3573.276190996694
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_443>",
+        "<voice_0>",
+        "<voice_430>",
+        "<voice_444>",
+        "<voice_445>",
+        "<voice_446>",
+        "<voice_447>",
+        "<voice_261>",
+        "<voice_448>"
+      ],
+      "context_preparation_ms": 3930.303440996795,
+      "vlm_ms": 152710.58340500167,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals gather around a long table covered with a red-and-white checkered cloth in a room equipped with a projector screen and whiteboard.\",\n\t\t\"A clapperboard rests on the table, indicating a film set or rehearsal environment.\",\n\t\t\"The camera is positioned from a first-person perspective, showing the hands of the operator resting on the table.\",\n\t\t\"<voice_443> announces, 'OK. First position.' while standing near the whiteboard.\",\n\t\t\"<voice_0> asks, 'Kiyomi, you invited several people, right?' during the discussion.\",\n\t\t\"<voice_430> instructs, 'Kiyomi first invite one,' and later confirms, 'Okay, Kiyomi invite one.'\",\n\t\t\"<voice_444> calls out, 'Lara?' to address a specific participant.\",\n\t\t\"<voice_445> explains uncertainty, stating, 'I'm not too sure because they are too far away.'\",\n\t\t\"<voice_446> responds, 'I don't know if I can come.'\",\n\t\t\"<voice_447> acknowledges with, 'Okay.'\",\n\t\t\"<voice_261> inquires, 'So where is your workplace?' regarding the potential attendee.\",\n\t\t\"<voice_448> reiterates, 'Let's invite one, Kiyomi.'\",\n\t\t\"The participants continue to converse and gesture around the table throughout the sequence.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be coordinating casting or scheduling for a production, indicated by the clapperboard and discussion of 'positions'.\",\n\t\t\"There is a specific focus on inviting an individual named Kiyomi to participate.\",\n\t\t\"Attendance uncertainty is raised due to geographical distance from the workplace.\",\n\t\t\"No facial features were provided to visually confirm the identities of the speakers.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of individuals gather around a long table covered with a red-and-white checkered cloth in a room equipped with a projector screen and whiteboard.",
+          "A clapperboard rests on the table, indicating a film set or rehearsal environment.",
+          "The camera is positioned from a first-person perspective, showing the hands of the operator resting on the table.",
+          "<voice_443> announces, 'OK. First position.' while standing near the whiteboard.",
+          "<voice_0> asks, 'Kiyomi, you invited several people, right?' during the discussion.",
+          "<voice_430> instructs, 'Kiyomi first invite one,' and later confirms, 'Okay, Kiyomi invite one.'",
+          "<voice_444> calls out, 'Lara?' to address a specific participant.",
+          "<voice_445> explains uncertainty, stating, 'I'm not too sure because they are too far away.'",
+          "<voice_446> responds, 'I don't know if I can come.'",
+          "<voice_447> acknowledges with, 'Okay.'",
+          "<voice_261> inquires, 'So where is your workplace?' regarding the potential attendee.",
+          "<voice_448> reiterates, 'Let's invite one, Kiyomi.'",
+          "The participants continue to converse and gesture around the table throughout the sequence."
+        ],
+        "high_level_conclusions": [
+          "The group appears to be coordinating casting or scheduling for a production, indicated by the clapperboard and discussion of 'positions'.",
+          "There is a specific focus on inviting an individual named Kiyomi to participate.",
+          "Attendance uncertainty is raised due to geographical distance from the workplace.",
+          "No facial features were provided to visually confirm the identities of the speakers."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 35,
+          "call_id": "466cd01f-3015-46c4-ba0b-b85341d131ed",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789417508.695046,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals gather around a long table covered with a red-and-white checkered cloth in a room equipped with a projector screen and whiteboard.\",\n\t\t\"A clapperboard rests on the table, indicating a film set or rehearsal environment.\",\n\t\t\"The camera is positioned from a first-person perspective, showing the hands of the operator resting on the table.\",\n\t\t\"<voice_443> announces, 'OK. First position.' while standing near the whiteboard.\",\n\t\t\"<voice_0> asks, 'Kiyomi, you invited several people, right?' during the discussion.\",\n\t\t\"<voice_430> instructs, 'Kiyomi first invite one,' and later confirms, 'Okay, Kiyomi invite one.'\",\n\t\t\"<voice_444> calls out, 'Lara?' to address a specific participant.\",\n\t\t\"<voice_445> explains uncertainty, stating, 'I'm not too sure because they are too far away.'\",\n\t\t\"<voice_446> responds, 'I don't know if I can come.'\",\n\t\t\"<voice_447> acknowledges with, 'Okay.'\",\n\t\t\"<voice_261> inquires, 'So where is your workplace?' regarding the potential attendee.\",\n\t\t\"<voice_448> reiterates, 'Let's invite one, Kiyomi.'\",\n\t\t\"The participants continue to converse and gesture around the table throughout the sequence.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be coordinating casting or scheduling for a production, indicated by the clapperboard and discussion of 'positions'.\",\n\t\t\"There is a specific focus on inviting an individual named Kiyomi to participate.\",\n\t\t\"Attendance uncertainty is raised due to geographical distance from the workplace.\",\n\t\t\"No facial features were provided to visually confirm the identities of the speakers.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The scene shows a group of people sitting around a table covered with a red-and-white checkered tablecloth. There's a clapperboard on the table. One person stands near a whiteboard/projector screen area. Another person seems to be filming or holding the camera (POV perspective). The setting looks like a casual meeting or rehearsal space.\n*   **Voice Features:**\n    *   `<voice_443>`: \"OK. First position.\" (00:01 - 00:05), \"Let's invite one first, okay.\" (00:09 - 00:13)\n    *   `<voice_0>`: \"Kiyomi, you invited several people, right?\" (00:07 - 00:09)\n    *   `<voice_430>`: \"Kiyomi first invite one.\" (00:12 - 00:14), \"Okay, Kiyomi invite one.\" (00:26 - 00:29)\n    *   `<voice_444>`: \"Lara?\" (00:14 - 00:16)\n    *   `<voice_445>`: \"I'm not too sure because they are too far away.\" (00:16 - 00:19)\n    *   `<voice_446>`: \"I don't know if I can come.\" (00:19 - 00:21)\n    *   `<voice_447>`: \"Okay.\" (00:20 - 00:22)\n    *   `<voice_261>`: \"So where is your workplace?\" (00:21 - 00:23)\n    *   `<voice_448>`: \"Let's invite one, Kiyomi.\" (00:25 - 00:27)\n\n**2. Construct Video Description:**\n*   The video shows a group of people gathered around a table with a clapperboard, suggesting a film set or rehearsal.\n*   There is a person standing near a whiteboard/screen.\n*   The camera is held by someone sitting at the table (POV).\n*   People are interacting, seemingly discussing casting or positions (\"First position\").\n*   Specific actions: Someone asks about inviting people. Someone mentions uncertainty due to distance. Someone asks about a workplace.\n*   Since there are no specific face IDs provided in the prompt's \"Face features\" section (it says \"Face features:\" but then immediately jumps to \"Voice features:\" with empty content before the voice data starts, wait, looking closely at the prompt structure... Ah, the prompt text says \"Face features:Voice features:\" followed by the JSON. It implies there might be face features missing or none provided explicitly in the text block, just the voice ones. Wait, let me re-read carefully.\n    *   \"Face features:Voice features:{\"<voice_443>\": ...}\"\n    *   Actually, looking at the raw text provided: \"Face features:Voice features:{\"<voice_443>\": ...\". It seems the Face features part is empty or merged. I need to check if there are face IDs.\n    *   Scanning the text again... \"Face features:Voice features:{\"<voice_443>\": ...\". There are no face IDs listed like `<face_1>`.\n    *   Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   So I must use voice IDs for the descriptions/conclusions regarding speech, but I cannot link them to specific faces unless I see face IDs. Since no face IDs are provided in the input text (only voice IDs), I will describe the visual scene generally and reference the voice IDs for the audio content.\n    *   Wait, the instruction says \"Use the provided feature IDs as references to characters (when applicable)\". If no face IDs are provided, I can't reference faces. I will focus on the voice IDs for the audio parts.\n    *   Visuals: Group around table, clapperboard, whiteboard, projector screen. One person standing. Camera POV.\n    *   Events: Discussion about casting/inviting people. Questions about location/distance.\n\n**3. Construct High-Level Conclusions:**\n*   The conversation revolves around organizing something, likely a film shoot given the clapperboard and \"position\" terminology.\n*   `<voice_443>` initiates with \"First position\".\n*   `<voice_0>` asks about invitations.\n*   `<voice_430>` instructs to invite someone named \"Kiyomi\".\n*   `<voice_444>` calls out \"Lara?\".\n*   `<voice_445>` expresses uncertainty about coming due to distance.\n*   `<voice_261>` asks about workplace.\n*   This suggests a casting call or scheduling discussion among crew members.\n*   No face IDs are available to make equivalences.\n\n**4. Refine Output:**\n*   **Video Description:** Needs to be atomic events.\n    *   A group of people sit around a table with a red-and-white checkered cloth and a clapperboard.\n    *   One person stands near a whiteboard while others converse.\n    *   The camera operator sits at the table, observing the group.\n    *   Audio indicates a discussion about casting or positioning (\"First position\").\n    *   One participant asks about inviting others.\n    *   Another participant questions the feasibility of someone coming due to distance.\n    *   A question is asked regarding a workplace location.\n*   **High-Level Conclusions:**\n    *   The group appears to be coordinating roles or schedules for a production.\n    *   There is a discussion about inviting a specific individual named Kiyomi.\n    *   Uncertainty exists regarding attendance due to distance.\n    *   No face IDs were provided to confirm identities visually.\n\n**Wait, checking the prompt again.**\n\"Face features:Voice features:{\"<voice_443>\": ...}\"\nIt looks like the Face features section is effectively empty or the text got merged. I will assume no face IDs are present.\nInstruction: \"If no face IDs are supplied, do not invent any.\"\nSo I won't create \"Equivalence\" lines.\n\n**Drafting the JSON:**\n*   `video_description`: List of strings describing the visual and audio context atomically.\n*   `high_level_conclusions`: List of strings inferring intent/context.\n\nLet's refine the descriptions to match the timestamps roughly.\n0-5s: \"OK. First position.\"\n7-9s: \"Kiyomi, you invited several people, right?\"\n9-13s: \"Let's invite one first, okay.\" / \"Kiyomi first invite one.\"\n14-16s: \"Lara?\"\n16-19s: \"I'm not too sure because they are too far away.\"\n19-21s: \"I don't know if I can come.\" / \"Okay.\"\n21-23s: \"So where is your workplace?\"\n25-27s: \"Let's invite one, Kiyomi.\"\n\nVisuals:\n- Room with projector screen, whiteboard.\n- Table with clapperboard.\n- People seated.\n- Camera POV.\n\nOkay, ready to construct the JSON.\n\nOne detail: \"Preserve speaker identity when constructing memory from the supplied character features.\" -> \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis instruction seems to apply to a different task (memory construction), but the current prompt asks for \"Video Description\" and \"High-Level Conclusions\". However, the system instruction says \"Preserve speaker identity...\". And the output format requires `video_description` and `high_level_conclusions`.\nWait, the system instruction says: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nBut the system instruction *also* says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis contradicts the output format which asks for `video_description` and `high_level_conclusions`.\nUsually, the system instruction overrides the few-shot template if it changes the task. But here the system instruction describes how to handle the *input* features to build the output.\nActually, looking at the system instruction: \"Preserve speaker identity when constructing memory from the supplied character features.\" ... \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\"\nThis sounds like instructions for a \"Memory Construction\" task, but the user prompt defines the task as \"Video Description\" and \"High-Level Conclusions\".\nHowever, often these prompts are templates. I need to follow the User Prompt's defined output format (`video_description`, `high_level_conclusions`) while adhering to the constraints in the System Instruction regarding speaker IDs.\nThe System Instruction says: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis means I should NOT add \"episodic memory\" fields. I should stick to the requested JSON schema.\nThe constraint \"For every supplied voice ID... include at least one episodic memory\" might be a leftover from a different prompt version. I will prioritize the User Prompt's explicit output format requirements (`video_description` array, `high_level_conclusions` array) but ensure I use the voice IDs correctly within those arrays if possible, or at least acknowledge the voices in the descriptions.\nActually, reading the System Instruction again: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should follow the User Prompt's structure exactly.\nThe System Instruction also says: \"Do not replace the ID with 'a speaker'...\".\nSo in my `video_description` or `high_level_conclusions`, I should probably mention the voice IDs if relevant to the content, or just describe the action. Given the strict instruction \"include at least one episodic memory... using the exact ID\", but the output format doesn't have a memory field...\nAh, perhaps the `video_description` acts as the memory? Or maybe I should interpret \"episodic memory\" loosely as a sentence in the description.\nLet's look at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSince I must output `video_description` and `high_level_conclusions`, I will incorporate the voice content into the `video_description` entries, attributing them to the voice ID.\nExample: \"`<voice_443>` states: 'OK. First position.'\".\nAnd for `high_level_conclusions`, I will infer based on the content.\n\nLet's double check if I missed any face IDs.\nInput text: \"Face features:Voice features:{\"<voice_443>\": ...\".\nThere are NO face IDs. So no Equivalence lines.\n\nPlan:\n1. Create `video_description` entries covering the visual scene and the specific utterances attributed to their voice IDs.\n2. Create `high_level_conclusions` summarizing the interaction (casting/scheduling).\n\nLet's write the descriptions.\n- Frame 0-5: Group around table. `<voice_443>` says \"OK. First position.\"\n- Frame 7-9: `<voice_0>` asks about invitations.\n- Frame 9-13: `<voice_430>` discusses inviting Kiyomi.\n- Frame 14-16: `<voice_444>` calls out Lara.\n- Frame 16-19: `<voice_445>` mentions distance issues.\n- Frame 19-21: `<voice_446>` expresses uncertainty about coming.\n- Frame 21-23: `<voice_261>` asks about workplace.\n- Frame 25-27: `<voice_448>` repeats invitation request.\n\nVisuals: Clapperboard, checkered table, whiteboard, projector.\n\nConclusions:\n- Group is coordinating roles.\n- Discussing attendance/casting.\n- Distance is a barrier.\n\nFinal check on constraints:\n- \"Preserve speaker identity... using the exact ID as the speaker.\" -> I will use `<voice_X>` in the text.\n- \"Do not assign it to the camera wearer... without supporting evidence.\" -> I won't say who is speaking visually, just attribute the quote to the ID.\n- \"Keep the existing video_description/high_level_conclusions JSON schema\".\n\nOkay, proceeding.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of individuals gather around a long table covered with a red-and-white checkered cloth in a room equipped with a projector screen and whiteboard.\",\n\t\t\"A clapperboard rests on the table, indicating a film set or rehearsal environment.\",\n\t\t\"The camera is positioned from a first-person perspective, showing the hands of the operator resting on the table.\",\n\t\t\"<voice_443> announces, 'OK. First position.' while standing near the whiteboard.\",\n\t\t\"<voice_0> asks, 'Kiyomi, you invited several people, right?' during the discussion.\",\n\t\t\"<voice_430> instructs, 'Kiyomi first invite one,' and later confirms, 'Okay, Kiyomi invite one.'\",\n\t\t\"<voice_444> calls out, 'Lara?' to address a specific participant.\",\n\t\t\"<voice_445> explains uncertainty, stating, 'I'm not too sure because they are too far away.'\",\n\t\t\"<voice_446> responds, 'I don't know if I can come.'\",\n\t\t\"<voice_447> acknowledges with, 'Okay.'\",\n\t\t\"<voice_261> inquires, 'So where is your workplace?' regarding the potential attendee.\",\n\t\t\"<voice_448> reiterates, 'Let's invite one, Kiyomi.'\",\n\t\t\"The participants continue to converse and gesture around the table throughout the sequence.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be coordinating casting or scheduling for a production, indicated by the clapperboard and discussion of 'positions'.\",\n\t\t\"There is a specific focus on inviting an individual named Kiyomi to participate.\",\n\t\t\"Attendance uncertainty is raised due to geographical distance from the workplace.\",\n\t\t\"No facial features were provided to visually confirm the identities of the speakers.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10799,
+          "output_tokens": 3323,
+          "total_tokens": 14122,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0015820041880942881,
+            "media_preparation_ms": 61.29099099780433,
+            "processor_tokenization_ms": 550.097020000976,
+            "device_transfer_ms": 41.02989200328011,
+            "cuda_generation_ms": 152024.34129799803,
+            "decoding_ms": 3.6227980017429218
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 152680.5599740037,
+          "request_end": 1789417661.405632,
+          "latency_ms": 152710.58340500167,
+          "client_wall_clock_latency_ms": 152710.58340500167
+        }
+      ],
+      "episodic_memory_count": 13,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 13,
+      "text_embedding_ms": null,
+      "text_embedding_count": 13,
+      "graph_update_ms": 0.14406099944608286,
+      "nodes_added": 13,
+      "directed_edges_added": 18,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.0224920004257001,
+      "nodes_added": 4,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 11,
+    "speech_embeddings": 11,
+    "voice_identities": 9,
+    "detected_faces": 277,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 13,
+    "semantic_memories": 4,
+    "nodes_after_clip": 466,
+    "edges_after_clip": 166,
+    "nodes_added_by_clip": 23,
+    "edges_added_by_clip": 9
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of individuals gather around a long table covered with a red-and-white checkered cloth in a room equipped with a projector screen and whiteboard.",
+      "A clapperboard rests on the table, indicating a film set or rehearsal environment.",
+      "The camera is positioned from a first-person perspective, showing the hands of the operator resting on the table.",
+      "<voice_443> announces, 'OK. First position.' while standing near the whiteboard.",
+      "<voice_0> asks, 'Kiyomi, you invited several people, right?' during the discussion.",
+      "<voice_430> instructs, 'Kiyomi first invite one,' and later confirms, 'Okay, Kiyomi invite one.'",
+      "<voice_444> calls out, 'Lara?' to address a specific participant.",
+      "<voice_445> explains uncertainty, stating, 'I'm not too sure because they are too far away.'",
+      "<voice_446> responds, 'I don't know if I can come.'",
+      "<voice_447> acknowledges with, 'Okay.'",
+      "<voice_261> inquires, 'So where is your workplace?' regarding the potential attendee.",
+      "<voice_448> reiterates, 'Let's invite one, Kiyomi.'",
+      "The participants continue to converse and gesture around the table throughout the sequence."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be coordinating casting or scheduling for a production, indicated by the clapperboard and discussion of 'positions'.",
+      "There is a specific focus on inviting an individual named Kiyomi to participate.",
+      "Attendance uncertainty is raised due to geographical distance from the workplace.",
+      "No facial features were provided to visually confirm the identities of the speakers."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of individuals gather around a long table covered with a red-and-white checkered cloth in a room equipped with a projector screen and whiteboard.",
+      "A clapperboard rests on the table, indicating a film set or rehearsal environment.",
+      "The camera is positioned from a first-person perspective, showing the hands of the operator resting on the table.",
+      "<voice_443> announces, 'OK. First position.' while standing near the whiteboard.",
+      "<voice_0> asks, 'Kiyomi, you invited several people, right?' during the discussion.",
+      "<voice_430> instructs, 'Kiyomi first invite one,' and later confirms, 'Okay, Kiyomi invite one.'",
+      "<voice_444> calls out, 'Lara?' to address a specific participant.",
+      "<voice_445> explains uncertainty, stating, 'I'm not too sure because they are too far away.'",
+      "<voice_446> responds, 'I don't know if I can come.'",
+      "<voice_447> acknowledges with, 'Okay.'",
+      "<voice_261> inquires, 'So where is your workplace?' regarding the potential attendee.",
+      "<voice_448> reiterates, 'Let's invite one, Kiyomi.'",
+      "The participants continue to converse and gesture around the table throughout the sequence."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be coordinating casting or scheduling for a production, indicated by the clapperboard and discussion of 'positions'.",
+      "There is a specific focus on inviting an individual named Kiyomi to participate.",
+      "Attendance uncertainty is raised due to geographical distance from the workplace.",
+      "No facial features were provided to visually confirm the identities of the speakers."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_35_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 23,
+    "edges_added": 9,
+    "nodes": [
+      {
+        "id": 443,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: OK。第一位。",
+            "MAI: 我浅浅邀一个吧，先。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 444,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 卢亚呢？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 445,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我不太确定，因为咱们这太远了。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 446,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我不知道过不过来。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 447,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 448,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我浅浅邀请一个吧。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 449,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of individuals gather around a long table covered with a red-and-white checkered cloth in a room equipped with a projector screen and whiteboard."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 450,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard rests on the table, indicating a film set or rehearsal environment."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 451,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera is positioned from a first-person perspective, showing the hands of the operator resting on the table."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 452,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_443> announces, 'OK. First position.' while standing near the whiteboard."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 453,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> asks, 'Kiyomi, you invited several people, right?' during the discussion."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 454,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_430> instructs, 'Kiyomi first invite one,' and later confirms, 'Okay, Kiyomi invite one.'"
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 455,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_444> calls out, 'Lara?' to address a specific participant."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 456,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_445> explains uncertainty, stating, 'I'm not too sure because they are too far away.'"
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 457,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_446> responds, 'I don't know if I can come.'"
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 458,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_447> acknowledges with, 'Okay.'"
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 459,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_261> inquires, 'So where is your workplace?' regarding the potential attendee."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 460,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_448> reiterates, 'Let's invite one, Kiyomi.'"
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 461,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The participants continue to converse and gesture around the table throughout the sequence."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 462,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be coordinating casting or scheduling for a production, indicated by the clapperboard and discussion of 'positions'."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 463,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "There is a specific focus on inviting an individual named Kiyomi to participate."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 464,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Attendance uncertainty is raised due to geographical distance from the workplace."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 465,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "No facial features were provided to visually confirm the identities of the speakers."
+          ],
+          "timestamp": 35
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 453,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 261,
+        "target": 459,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 430,
+        "target": 454,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 443,
+        "target": 452,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 444,
+        "target": 455,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 445,
+        "target": 456,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 446,
+        "target": 457,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 447,
+        "target": 458,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 448,
+        "target": 460,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_35_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_35_graph.pkl"
+  },
+  "memory_pickle_bytes": 10973910,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 58309.935924413,
+    "prepared_perf": 58315.989834002,
+    "ordered_start_perf": 58685.303977148,
+    "consumer_wait_ms": 0.010630006727296859,
+    "ready_to_ordered_ms": 369314.1431460026,
+    "preparation_work_ms": 6048.677883001801,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 163068.39402699552
+}

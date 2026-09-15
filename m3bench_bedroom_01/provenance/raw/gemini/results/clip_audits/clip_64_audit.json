@@ -1,0 +1,412 @@
+{
+  "clip_id": 64,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00300000.mp4",
+  "end_to_end_memory_generation_ms": 160873.22475400288,
+  "latency_ms": {
+    "clip_decode": 4250.8617989951745,
+    "deepgram_asr": 1106.3797139941016,
+    "mai_transcribe_asr": 1000.3287870058557,
+    "asr_total": 1107.4227159988368,
+    "audio_segmentation": 6.711954003549181,
+    "speech_embedding_campplus": 601.5185330034001,
+    "facial_detection_recognition_buffalo_l": 3504.690756992204,
+    "face_clustering": 24.5605149975745,
+    "vlm_memory_generation": 38803.083645994775,
+    "text_embedding": 655.1854660065146,
+    "graph_update_total": 62.82363701029681
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 64,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 820,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789435362.356385,
+          "status": "success",
+          "total_tokens": 179,
+          "request_end": 1789435363.0114021,
+          "latency_ms": 655.0178120087367
+        }
+      ],
+      "total_tokens": 179,
+      "latency_ms": 655.1854660065146
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1106.3797139941016,
+        "openrouter-mai-transcribe-2": 1000.3287870058557
+      },
+      "asr_total_ms": 1107.4227159988368,
+      "audio_segmentation_ms": 6.711954003549181,
+      "speech_embedding_ms": 601.5185330034001,
+      "graph_update_ms": 62.467048002872616,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 685.4790999932447
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3504.690756992204,
+      "face_clustering_ms": 24.5605149975745,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 339,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3713.3880149922334
+    },
+    "vlm": {
+      "context_preparation_ms": 5064.6851640049135,
+      "vlm_ms": 38803.083645994775,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table filled with food, drinks, and a tablet.\",\n    \"The woman on the left rests her chin on her hand while speaking and glancing at a tablet.\",\n    \"The woman on the right rests her arms and chin on the table, listening quietly.\",\n    \"<voice_10> speaks about self-improvement, continuous learning, and pushing personal limits.\",\n    \"<voice_615> softly responds with an acknowledgement.\",\n    \"<voice_607> continues speaking, praising the listener for working hard and offering encouragement.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> and <voice_607> belong to the woman seated on the left, offering comfort and motivation.\",\n    \"<voice_615> belongs to the woman on the right, who appears exhausted or disheartened.\",\n    \"The two women share a supportive, close friendship where one actively reassures and uplifts the other during a difficult or tiring time.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit opposite each other at a dining table filled with food, drinks, and a tablet.",
+          "The woman on the left rests her chin on her hand while speaking and glancing at a tablet.",
+          "The woman on the right rests her arms and chin on the table, listening quietly.",
+          "<voice_10> speaks about self-improvement, continuous learning, and pushing personal limits.",
+          "<voice_615> softly responds with an acknowledgement.",
+          "<voice_607> continues speaking, praising the listener for working hard and offering encouragement."
+        ],
+        "high_level_conclusions": [
+          "<voice_10> and <voice_607> belong to the woman seated on the left, offering comfort and motivation.",
+          "<voice_615> belongs to the woman on the right, who appears exhausted or disheartened.",
+          "The two women share a supportive, close friendship where one actively reassures and uplifts the other during a difficult or tiring time."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 64,
+          "call_id": "78771cf5-0bcf-49f1-b077-a407a9d12a22",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789435323.552297,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65888,
+          "output_tokens": 1408,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 38802.92672100768
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table filled with food, drinks, and a tablet.\",\n    \"The woman on the left rests her chin on her hand while speaking and glancing at a tablet.\",\n    \"The woman on the right rests her arms and chin on the table, listening quietly.\",\n    \"<voice_10> speaks about self-improvement, continuous learning, and pushing personal limits.\",\n    \"<voice_615> softly responds with an acknowledgement.\",\n    \"<voice_607> continues speaking, praising the listener for working hard and offering encouragement.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> and <voice_607> belong to the woman seated on the left, offering comfort and motivation.\",\n    \"<voice_615> belongs to the woman on the right, who appears exhausted or disheartened.\",\n    \"The two women share a supportive, close friendship where one actively reassures and uplifts the other during a difficult or tiring time.\"\n  ]\n}\n```",
+          "total_tokens": 67296,
+          "request_end": 1789435362.3553839,
+          "latency_ms": 38803.083645994775,
+          "client_wall_clock_latency_ms": 38803.083645994775,
+          "api_request_wall_clock_latency_ms": 38803.083645994775
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.07504000677727163,
+      "nodes_added": 6,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.281549000646919,
+      "nodes_added": 3,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 3,
+    "detected_faces": 339,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 3,
+    "nodes_after_clip": 625,
+    "edges_after_clip": 201,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table filled with food, drinks, and a tablet.",
+      "The woman on the left rests her chin on her hand while speaking and glancing at a tablet.",
+      "The woman on the right rests her arms and chin on the table, listening quietly.",
+      "<voice_10> speaks about self-improvement, continuous learning, and pushing personal limits.",
+      "<voice_615> softly responds with an acknowledgement.",
+      "<voice_607> continues speaking, praising the listener for working hard and offering encouragement."
+    ],
+    "high_level_conclusions": [
+      "<voice_10> and <voice_607> belong to the woman seated on the left, offering comfort and motivation.",
+      "<voice_615> belongs to the woman on the right, who appears exhausted or disheartened.",
+      "The two women share a supportive, close friendship where one actively reassures and uplifts the other during a difficult or tiring time."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table filled with food, drinks, and a tablet.",
+      "The woman on the left rests her chin on her hand while speaking and glancing at a tablet.",
+      "The woman on the right rests her arms and chin on the table, listening quietly.",
+      "<voice_10> speaks about self-improvement, continuous learning, and pushing personal limits.",
+      "<voice_615> softly responds with an acknowledgement.",
+      "<voice_607> continues speaking, praising the listener for working hard and offering encouragement."
+    ],
+    "high_level_conclusions": [
+      "<voice_10> and <voice_607> belong to the woman seated on the left, offering comfort and motivation.",
+      "<voice_615> belongs to the woman on the right, who appears exhausted or disheartened.",
+      "The two women share a supportive, close friendship where one actively reassures and uplifts the other during a difficult or tiring time."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_64_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 615,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: by ourselves. So, | MAI: I know."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 616,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit opposite each other at a dining table filled with food, drinks, and a tablet."
+          ],
+          "timestamp": 64
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 617,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left rests her chin on her hand while speaking and glancing at a tablet."
+          ],
+          "timestamp": 64
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 618,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right rests her arms and chin on the table, listening quietly."
+          ],
+          "timestamp": 64
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 619,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_10> speaks about self-improvement, continuous learning, and pushing personal limits."
+          ],
+          "timestamp": 64
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 620,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_615> softly responds with an acknowledgement."
+          ],
+          "timestamp": 64
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 621,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_607> continues speaking, praising the listener for working hard and offering encouragement."
+          ],
+          "timestamp": 64
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 622,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_10> and <voice_607> belong to the woman seated on the left, offering comfort and motivation."
+          ],
+          "timestamp": 64
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 623,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_615> belongs to the woman on the right, who appears exhausted or disheartened."
+          ],
+          "timestamp": 64
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 624,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women share a supportive, close friendship where one actively reassures and uplifts the other during a difficult or tiring time."
+          ],
+          "timestamp": 64
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 10,
+        "target": 619,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 10,
+        "target": 622,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 607,
+        "target": 621,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 607,
+        "target": 622,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 615,
+        "target": 620,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 615,
+        "target": 623,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_64_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_64_graph.pkl"
+  },
+  "memory_pickle_bytes": 16416852,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 76389.031837198,
+    "prepared_perf": 76394.537825576,
+    "ordered_start_perf": 76499.884387099,
+    "consumer_wait_ms": 0.009016992407850921,
+    "ready_to_ordered_ms": 105346.5615229943,
+    "preparation_work_ms": 5500.731273001293,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 48924.86476400518
+}

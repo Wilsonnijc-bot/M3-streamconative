@@ -1,0 +1,11 @@
+{
+  "source_run": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2",
+  "adopted_committed_segments": [
+    1,
+    2
+  ],
+  "source_checkpoint_sha256": "8c928aec2a08f69fc629f0e97669f8b4908b19d70047c592cdd915df50871803",
+  "reasoning": "same Qwen identity prompt v2, thinking on, 2 FPS, same decoding; no baseline/Gemini memories",
+  "known_limitations": "Identity prompt test had incomplete episodic attribution in segment 2 and ASR provider-label confusion; user authorized full run with this prompt. These are retained quality findings, not overridden outputs.",
+  "latency": "Prefix retains original measured timings; restarted server warmup excluded; concurrent GPU contention remains possible."
+}

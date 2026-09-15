@@ -1,0 +1,75 @@
+{
+  "clip_id": 125,
+  "source": {
+    "segment_id": 125,
+    "source": "DAY1_A1_JAKE_12083000.mp4",
+    "source_clock": "12083000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43710.0,
+    "absolute_end_seconds": 43740.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0125.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 52876.204621534,
+      "prepared_perf": 52885.10891207,
+      "ordered_start_perf": 52979.742049771,
+      "consumer_wait_ms": 0.015527999494224787,
+      "ready_to_ordered_ms": 94633.13770099921,
+      "preparation_work_ms": 8898.704930994427,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is seated around a table covered with a checkered tablecloth, holding an active discussion.",
+      "The woman with reddish hair on the right gestures toward the whiteboard while discussing the event timeline and dessert presentation.",
+      "A woman in a white top stands near the back doorway, listening and participating in the conversation.",
+      "The woman in black seated on the left holds her phone and actively converses with the group.",
+      "The group discusses logistics regarding dessert preparations, sample distribution, and setting up a display table for the afternoon event."
+    ],
+    "high_level_conclusions": [
+      "The group is coordinating and finalizing the schedule and operational details for an upcoming afternoon presentation or event.",
+      "The reddish-haired woman appears to be leading or clarifying the agenda, explaining the timing and role of the dessert segment.",
+      "The conversation reflects a collaborative planning session where team members align on tasks such as setup, sampling, and presentation order."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is seated around a table covered with a checkered tablecloth, holding an active discussion.\",\n  \"The woman with reddish hair on the right gestures toward the whiteboard while discussing the event timeline and dessert presentation.\",\n  \"A woman in a white top stands near the back doorway, listening and participating in the conversation.\",\n  \"The woman in black seated on the left holds her phone and actively converses with the group.\",\n  \"The group discusses logistics regarding dessert preparations, sample distribution, and setting up a display table for the afternoon event.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is coordinating and finalizing the schedule and operational details for an upcoming afternoon presentation or event.\",\n  \"The reddish-haired woman appears to be leading or clarifying the agenda, explaining the timing and role of the dessert segment.\",\n  \"The conversation reflects a collaborative planning session where team members align on tasks such as setup, sampling, and presentation order.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 125,
+      "call_id": "24294e39-f2f0-4e56-a590-dc5fda967f14",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789411808.5574195,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67592,
+      "output_tokens": 643,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 32433.642725001846
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is seated around a table covered with a checkered tablecloth, holding an active discussion.\",\n  \"The woman with reddish hair on the right gestures toward the whiteboard while discussing the event timeline and dessert presentation.\",\n  \"A woman in a white top stands near the back doorway, listening and participating in the conversation.\",\n  \"The woman in black seated on the left holds her phone and actively converses with the group.\",\n  \"The group discusses logistics regarding dessert preparations, sample distribution, and setting up a display table for the afternoon event.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is coordinating and finalizing the schedule and operational details for an upcoming afternoon presentation or event.\",\n  \"The reddish-haired woman appears to be leading or clarifying the agenda, explaining the timing and role of the dessert segment.\",\n  \"The conversation reflects a collaborative planning session where team members align on tasks such as setup, sampling, and presentation order.\"\n ]\n}\n```",
+      "total_tokens": 68235,
+      "request_end": 1789411840.9911847,
+      "latency_ms": 32433.758623003087,
+      "client_wall_clock_latency_ms": 32433.758623003087,
+      "api_request_wall_clock_latency_ms": 32433.758623003087
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_125_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

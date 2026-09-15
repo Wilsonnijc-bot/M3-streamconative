@@ -1,0 +1,47 @@
+{
+  "policy": "query-time snapshots; actual evaluation may run later against immutable earlier snapshots",
+  "requested_seconds": {
+    "Q01": 440.0,
+    "Q02": 2163.0,
+    "Q03": 2163.0,
+    "Q04": 2163.0,
+    "Q05": 2163.0,
+    "Q06": 2163.0,
+    "Q07": 2163.0,
+    "Q08": 440.0,
+    "Q09": 102.0,
+    "Q10": 705.0,
+    "Q11": 1265.0,
+    "Q12": 2163.0,
+    "Q13": 2163.0,
+    "Q14": 2163.0,
+    "Q15": 2163.0
+  },
+  "effective_seconds": {
+    "Q01": 440.0,
+    "Q02": 2163.0,
+    "Q03": 2163.0,
+    "Q04": 2163.0,
+    "Q05": 2163.0,
+    "Q06": 2163.0,
+    "Q07": 2163.0,
+    "Q08": 440.0,
+    "Q09": 90.0,
+    "Q10": 705.0,
+    "Q11": 1265.0,
+    "Q12": 2163.0,
+    "Q13": 2163.0,
+    "Q14": 2163.0,
+    "Q15": 2163.0
+  },
+  "reused_committed_segments": 12,
+  "recovered_snapshot": "Q09 from clip 3",
+  "expected_processing_segments": 76,
+  "source_clips": 73,
+  "cut_boundaries_seconds": [
+    440,
+    705,
+    1265,
+    2163
+  ]
+}

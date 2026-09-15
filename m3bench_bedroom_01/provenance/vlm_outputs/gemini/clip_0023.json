@@ -1,0 +1,78 @@
+{
+  "clip_id": 23,
+  "source": {
+    "segment_id": 23,
+    "source": "bedroom_01_00103000.mp4",
+    "source_clock": "00103000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 630.0,
+    "absolute_end_seconds": 660.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00103000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73626.71836582,
+      "prepared_perf": 73632.030346704,
+      "ordered_start_perf": 73701.927831023,
+      "consumer_wait_ms": 0.011081006960012019,
+      "ready_to_ordered_ms": 69897.48431899352,
+      "preparation_work_ms": 5306.363637006143,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two young women sit side by side on a bed in a bedroom.",
+      "The woman on the right holds hands with the girl on the left to comfort her.",
+      "<voice_10> asks if the girl was afraid that she and her mother would be angry with her.",
+      "<voice_179> responds that it was because that subject was her best one.",
+      "<voice_10> warmly reassures her, saying they recognize how hard she has worked.",
+      "<voice_217> affirms that she did her best.",
+      "<voice_218> provides a supportive concluding remark."
+    ],
+    "high_level_conclusions": [
+      "The girl on the left (<voice_179>) feels anxious or guilty about an exam or academic result.",
+      "The woman on the right (<voice_10>, <voice_217>) acts as a supportive family member comforting her.",
+      "<voice_10> and <voice_217> are spoken by the woman on the right wearing the cream top.",
+      "<voice_179> is spoken by the girl on the left in the beige t-shirt."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two young women sit side by side on a bed in a bedroom.\",\n    \"The woman on the right holds hands with the girl on the left to comfort her.\",\n    \"<voice_10> asks if the girl was afraid that she and her mother would be angry with her.\",\n    \"<voice_179> responds that it was because that subject was her best one.\",\n    \"<voice_10> warmly reassures her, saying they recognize how hard she has worked.\",\n    \"<voice_217> affirms that she did her best.\",\n    \"<voice_218> provides a supportive concluding remark.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The girl on the left (<voice_179>) feels anxious or guilty about an exam or academic result.\",\n    \"The woman on the right (<voice_10>, <voice_217>) acts as a supportive family member comforting her.\",\n    \"<voice_10> and <voice_217> are spoken by the woman on the right wearing the cream top.\",\n    \"<voice_179> is spoken by the girl on the left in the beige t-shirt.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 23,
+      "call_id": "bc5c7781-a421-4388-81b8-5fe81c18aef2",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432524.6313753,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66059,
+      "output_tokens": 1959,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 26313.772164998227
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two young women sit side by side on a bed in a bedroom.\",\n    \"The woman on the right holds hands with the girl on the left to comfort her.\",\n    \"<voice_10> asks if the girl was afraid that she and her mother would be angry with her.\",\n    \"<voice_179> responds that it was because that subject was her best one.\",\n    \"<voice_10> warmly reassures her, saying they recognize how hard she has worked.\",\n    \"<voice_217> affirms that she did her best.\",\n    \"<voice_218> provides a supportive concluding remark.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The girl on the left (<voice_179>) feels anxious or guilty about an exam or academic result.\",\n    \"The woman on the right (<voice_10>, <voice_217>) acts as a supportive family member comforting her.\",\n    \"<voice_10> and <voice_217> are spoken by the woman on the right wearing the cream top.\",\n    \"<voice_179> is spoken by the girl on the left in the beige t-shirt.\"\n  ]\n}\n```",
+      "total_tokens": 68018,
+      "request_end": 1789432550.9452436,
+      "latency_ms": 26313.866190990666,
+      "client_wall_clock_latency_ms": 26313.866190990666,
+      "api_request_wall_clock_latency_ms": 26313.866190990666
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_23_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

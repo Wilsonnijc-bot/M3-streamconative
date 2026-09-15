@@ -1,0 +1,75 @@
+{
+  "clip_id": 66,
+  "source": {
+    "segment_id": 66,
+    "source": "bedroom_01_00310000.mp4",
+    "source_clock": "00310000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 1860.0,
+    "absolute_end_seconds": 1890.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00310000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 76499.884323479,
+      "prepared_perf": 76505.702870473,
+      "ordered_start_perf": 76583.562481656,
+      "consumer_wait_ms": 0.008315008017234504,
+      "ready_to_ordered_ms": 77859.61118299747,
+      "preparation_work_ms": 5813.163152008201,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two young women sit opposite each other at a dining table set with food and drinks.",
+      "The woman on the left rests her chin on her hand while holding a phone.",
+      "The woman on the right initially rests her head down on her folded arms.",
+      "The woman on the right raises her head and props her chin on her hands.",
+      "The two women look toward each other and engage in conversation."
+    ],
+    "high_level_conclusions": [
+      "The two women appear to be friends or roommates having a casual conversation over a meal.",
+      "The woman on the right seems weary or contemplative before joining the discussion.",
+      "The speaker is reflecting positively on personal challenges fostering self-growth."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"Two young women sit opposite each other at a dining table set with food and drinks.\",\n    \"The woman on the left rests her chin on her hand while holding a phone.\",\n    \"The woman on the right initially rests her head down on her folded arms.\",\n    \"The woman on the right raises her head and props her chin on her hands.\",\n    \"The two women look toward each other and engage in conversation.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women appear to be friends or roommates having a casual conversation over a meal.\",\n    \"The woman on the right seems weary or contemplative before joining the discussion.\",\n    \"The speaker is reflecting positively on personal challenges fostering self-growth.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 66,
+      "call_id": "3dfda919-b1dc-4d50-ae81-4740d0d35aa9",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789435407.3540823,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65908,
+      "output_tokens": 1517,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 68471.90696500184
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"Two young women sit opposite each other at a dining table set with food and drinks.\",\n    \"The woman on the left rests her chin on her hand while holding a phone.\",\n    \"The woman on the right initially rests her head down on her folded arms.\",\n    \"The woman on the right raises her head and props her chin on her hands.\",\n    \"The two women look toward each other and engage in conversation.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women appear to be friends or roommates having a casual conversation over a meal.\",\n    \"The woman on the right seems weary or contemplative before joining the discussion.\",\n    \"The speaker is reflecting positively on personal challenges fostering self-growth.\"\n  ]\n}\n```",
+      "total_tokens": 67425,
+      "request_end": 1789435475.8260777,
+      "latency_ms": 68471.99260599155,
+      "client_wall_clock_latency_ms": 68471.99260599155,
+      "api_request_wall_clock_latency_ms": 68471.99260599155
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_66_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

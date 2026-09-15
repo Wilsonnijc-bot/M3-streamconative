@@ -1,0 +1,393 @@
+{
+  "clip_id": 139,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0139.mp4",
+  "end_to_end_memory_generation_ms": 210949.37019700592,
+  "latency_ms": {
+    "clip_decode": 7617.54260899761,
+    "deepgram_asr": 373.17898699984653,
+    "mai_transcribe_asr": 1026.8021240044618,
+    "asr_total": 1028.0881239959854,
+    "audio_segmentation": 6.993502000113949,
+    "speech_embedding_campplus": 2056.8939260047046,
+    "facial_detection_recognition_buffalo_l": 4468.660696998995,
+    "face_clustering": 499.6787510026479,
+    "vlm_memory_generation": 86643.66988399706,
+    "text_embedding": 528.3544499980053,
+    "graph_update_total": 1463.4566409949912
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 139,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 748,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789412763.9928408,
+          "status": "success",
+          "total_tokens": 134,
+          "request_end": 1789412764.5209439,
+          "latency_ms": 528.1037390013807
+        }
+      ],
+      "total_tokens": 134,
+      "latency_ms": 528.3544499980053
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 373.17898699984653,
+        "openrouter-mai-transcribe-2": 1026.8021240044618
+      },
+      "asr_total_ms": 1028.0881239959854,
+      "audio_segmentation_ms": 6.993502000113949,
+      "speech_embedding_ms": 2056.8939260047046,
+      "graph_update_ms": 1463.3843829942634,
+      "asr_segment_count": 10,
+      "speech_embedding_count": 10,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 3544.158704004076
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4468.660696998995,
+      "face_clustering_ms": 499.6787510026479,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 288,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 5120.919634005986
+    },
+    "vlm": {
+      "context_preparation_ms": 4022.9836509970482,
+      "vlm_ms": 86643.66988399706,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a checkered table engaged in a discussion.\",\n  \"A woman seated on the left gestures with her hands while discussing a presentation schedule and dessert tasting.\",\n  \"In the background, a person standing near a whiteboard holds up a bunch of green herbs to show the group.\",\n  \"The participants continue conversing about the event timeline, preparation starting in the morning, and allocating two people to help.\",\n  \"A member humorously questions whether they can wake up early enough, prompting laughter and lighthearted responses.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is actively planning an upcoming event or workshop involving presentations and dessert preparation.\",\n  \"They are finalizing the schedule and coordinating morning setup logistics requiring teamwork.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a checkered table engaged in a discussion.",
+          "A woman seated on the left gestures with her hands while discussing a presentation schedule and dessert tasting.",
+          "In the background, a person standing near a whiteboard holds up a bunch of green herbs to show the group.",
+          "The participants continue conversing about the event timeline, preparation starting in the morning, and allocating two people to help.",
+          "A member humorously questions whether they can wake up early enough, prompting laughter and lighthearted responses."
+        ],
+        "high_level_conclusions": [
+          "The group is actively planning an upcoming event or workshop involving presentations and dessert preparation.",
+          "They are finalizing the schedule and coordinating morning setup logistics requiring teamwork."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 139,
+          "call_id": "6b040209-7a07-4c4e-8aaa-b8f8c1ec4794",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789412677.3483279,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67299,
+          "output_tokens": 1136,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 86643.58046499547
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a checkered table engaged in a discussion.\",\n  \"A woman seated on the left gestures with her hands while discussing a presentation schedule and dessert tasting.\",\n  \"In the background, a person standing near a whiteboard holds up a bunch of green herbs to show the group.\",\n  \"The participants continue conversing about the event timeline, preparation starting in the morning, and allocating two people to help.\",\n  \"A member humorously questions whether they can wake up early enough, prompting laughter and lighthearted responses.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is actively planning an upcoming event or workshop involving presentations and dessert preparation.\",\n  \"They are finalizing the schedule and coordinating morning setup logistics requiring teamwork.\"\n ]\n}\n```",
+          "total_tokens": 68435,
+          "request_end": 1789412763.9920025,
+          "latency_ms": 86643.66988399706,
+          "client_wall_clock_latency_ms": 86643.66988399706,
+          "api_request_wall_clock_latency_ms": 86643.66988399706
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.05742899520555511,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.0148290055221878,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 10,
+    "speech_embeddings": 10,
+    "voice_identities": 7,
+    "detected_faces": 288,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1641,
+    "edges_after_clip": 307,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a checkered table engaged in a discussion.",
+      "A woman seated on the left gestures with her hands while discussing a presentation schedule and dessert tasting.",
+      "In the background, a person standing near a whiteboard holds up a bunch of green herbs to show the group.",
+      "The participants continue conversing about the event timeline, preparation starting in the morning, and allocating two people to help.",
+      "A member humorously questions whether they can wake up early enough, prompting laughter and lighthearted responses."
+    ],
+    "high_level_conclusions": [
+      "The group is actively planning an upcoming event or workshop involving presentations and dessert preparation.",
+      "They are finalizing the schedule and coordinating morning setup logistics requiring teamwork."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a checkered table engaged in a discussion.",
+      "A woman seated on the left gestures with her hands while discussing a presentation schedule and dessert tasting.",
+      "In the background, a person standing near a whiteboard holds up a bunch of green herbs to show the group.",
+      "The participants continue conversing about the event timeline, preparation starting in the morning, and allocating two people to help.",
+      "A member humorously questions whether they can wake up early enough, prompting laughter and lighthearted responses."
+    ],
+    "high_level_conclusions": [
+      "The group is actively planning an upcoming event or workshop involving presentations and dessert preparation.",
+      "They are finalizing the schedule and coordinating morning setup logistics requiring teamwork."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_139_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1629,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 就可以尝你的甜品。",
+            "MAI: 4点20？",
+            "MAI: 对，就是你压轴。",
+            "MAI: 你介绍你的种子片和你的甜品。我们介绍我们自己做的种。"
+          ]
+        },
+        "embedding_count": 4,
+        "embedding_dimensions": [
+          192,
+          192,
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1630,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯嗯。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1631,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 配两个人。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1632,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 真的起得来吗？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1633,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 可以的，我今天只是失误。到时候死。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1634,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a checkered table engaged in a discussion."
+          ],
+          "timestamp": 139
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1635,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman seated on the left gestures with her hands while discussing a presentation schedule and dessert tasting."
+          ],
+          "timestamp": 139
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1636,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "In the background, a person standing near a whiteboard holds up a bunch of green herbs to show the group."
+          ],
+          "timestamp": 139
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1637,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The participants continue conversing about the event timeline, preparation starting in the morning, and allocating two people to help."
+          ],
+          "timestamp": 139
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1638,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A member humorously questions whether they can wake up early enough, prompting laughter and lighthearted responses."
+          ],
+          "timestamp": 139
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1639,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is actively planning an upcoming event or workshop involving presentations and dessert preparation."
+          ],
+          "timestamp": 139
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1640,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "They are finalizing the schedule and coordinating morning setup logistics requiring teamwork."
+          ],
+          "timestamp": 139
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_139_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_139_graph.pkl"
+  },
+  "memory_pickle_bytes": 37516079,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 53740.557868631,
+    "prepared_perf": 53751.266079318,
+    "ordered_start_perf": 53848.701324285,
+    "consumer_wait_ms": 0.01073999737855047,
+    "ready_to_ordered_ms": 97435.24496700411,
+    "preparation_work_ms": 10703.004026996496,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 99863.18486499658
+}

@@ -1,0 +1,63 @@
+{
+  "clip_id": 14,
+  "source": {
+    "segment_id": 14,
+    "source": "DAY1_A1_JAKE_11160000.mp4",
+    "source_clock": "11160000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40560.0,
+    "absolute_end_seconds": 40590.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0014.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table with a pink-and-white checkered tablecloth, working with various electronic components and packaging.",
+      "A woman in a black shirt sits on the left side of the table, assembling a handheld electronic accessory.",
+      "The person recording the video approaches the table wearing a blue shirt.",
+      "A man wearing an orange t-shirt and glasses sits on the right side of the table, holding a black electronic device.",
+      "The man in the orange shirt interacts with the camera wearer, examining and handling the black casing.",
+      "A woman in a green-patterned dress reaches across the table towards a small package containing components.",
+      "The man in the orange shirt places an item onto the table while listening to instructions."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating on unpacking and assembling computer or filming hardware, such as hard drives and equipment mounts.",
+      "<voice_123> provides step-by-step guidance on how to insert and align a component into the casing.",
+      "<voice_137> asks about the location of the screws needed for assembly, which another person identifies on the table.",
+      "<voice_139> confirms understanding the assembly process and feels confident it is easy to complete."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a table with a pink-and-white checkered tablecloth, working with various electronic components and packaging.\",\n  \"A woman in a black shirt sits on the left side of the table, assembling a handheld electronic accessory.\",\n  \"The person recording the video approaches the table wearing a blue shirt.\",\n  \"A man wearing an orange t-shirt and glasses sits on the right side of the table, holding a black electronic device.\",\n  \"The man in the orange shirt interacts with the camera wearer, examining and handling the black casing.\",\n  \"A woman in a green-patterned dress reaches across the table towards a small package containing components.\",\n  \"The man in the orange shirt places an item onto the table while listening to instructions.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is collaborating on unpacking and assembling computer or filming hardware, such as hard drives and equipment mounts.\",\n  \"<voice_123> provides step-by-step guidance on how to insert and align a component into the casing.\",\n  \"<voice_137> asks about the location of the screws needed for assembly, which another person identifies on the table.\",\n  \"<voice_139> confirms understanding the assembly process and feels confident it is easy to complete.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 14,
+      "call_id": "53d69e76-a723-4d6a-b9a5-ce8ea22cd8f3",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789403803.9217124,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67207,
+      "output_tokens": 1325,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a table with a pink-and-white checkered tablecloth, working with various electronic components and packaging.\",\n  \"A woman in a black shirt sits on the left side of the table, assembling a handheld electronic accessory.\",\n  \"The person recording the video approaches the table wearing a blue shirt.\",\n  \"A man wearing an orange t-shirt and glasses sits on the right side of the table, holding a black electronic device.\",\n  \"The man in the orange shirt interacts with the camera wearer, examining and handling the black casing.\",\n  \"A woman in a green-patterned dress reaches across the table towards a small package containing components.\",\n  \"The man in the orange shirt places an item onto the table while listening to instructions.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is collaborating on unpacking and assembling computer or filming hardware, such as hard drives and equipment mounts.\",\n  \"<voice_123> provides step-by-step guidance on how to insert and align a component into the casing.\",\n  \"<voice_137> asks about the location of the screws needed for assembly, which another person identifies on the table.\",\n  \"<voice_139> confirms understanding the assembly process and feels confident it is easy to complete.\"\n ]\n}\n```",
+      "total_tokens": 68532,
+      "request_end": 1789403874.3768694,
+      "latency_ms": 70455.15454400447,
+      "client_wall_clock_latency_ms": 70455.15454400447,
+      "api_request_wall_clock_latency_ms": 70455.15454400447
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_14_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

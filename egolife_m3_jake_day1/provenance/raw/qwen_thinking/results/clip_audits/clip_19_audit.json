@@ -1,0 +1,496 @@
+{
+  "clip_id": 19,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0019.mp4",
+  "end_to_end_memory_generation_ms": 637093.0104889994,
+  "latency_ms": {
+    "clip_decode": 3675.6467319937656,
+    "deepgram_asr": 115.57137800264172,
+    "mai_transcribe_asr": 78.13495799928205,
+    "asr_total": 116.18102599459235,
+    "audio_segmentation": 5.8187800023006275,
+    "speech_embedding_campplus": 1554.6960389983724,
+    "facial_detection_recognition_buffalo_l": 3416.571463996661,
+    "face_clustering": 13.135891000274569,
+    "vlm_memory_generation": 200081.4388189974,
+    "text_embedding": 497.49864900513785,
+    "graph_update_total": 141.90930399490753
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 19,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 835,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789414291.5587115,
+          "status": "success",
+          "total_tokens": 168,
+          "request_end": 1789414292.0559788,
+          "latency_ms": 497.267472994281
+        }
+      ],
+      "total_tokens": 168,
+      "latency_ms": 497.49864900513785
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 115.57137800264172,
+        "openrouter-mai-transcribe-2": 78.13495799928205
+      },
+      "asr_total_ms": 116.18102599459235,
+      "audio_segmentation_ms": 5.8187800023006275,
+      "speech_embedding_ms": 1554.6960389983724,
+      "graph_update_ms": 141.79536799929338,
+      "asr_segment_count": 8,
+      "speech_embedding_count": 8,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1719.9033659999259
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3416.571463996661,
+      "face_clustering_ms": 13.135891000274569,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 242,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3565.3992560037295
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_233>",
+        "<voice_0>",
+        "<voice_234>",
+        "<voice_235>",
+        "<voice_200>"
+      ],
+      "context_preparation_ms": 3941.876687000331,
+      "vlm_ms": 200081.4388189974,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals are seated around a wooden table covered with a red and white checkered tablecloth.\",\n\t\t\"The room contains a whiteboard, a projector screen, and a window letting in daylight.\",\n\t\t\"One person on the right holds a black handheld device.\",\n\t\t\"<voice_233> asks if background music can be added to the session.\",\n\t\t\"<voice_0> responds by suggesting to play a bit of music.\",\n\t\t\"<voice_234> mentions that they listen to rock music.\",\n\t\t\"<voice_235> indicates a preference for R&B music.\",\n\t\t\"<voice_200> explains their music taste is influenced by being mixed in Western circles.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are discussing the inclusion of background music for an upcoming activity.\",\n\t\t\"Different members express varied musical preferences, specifically citing Rock and R&B genres.\",\n\t\t\"One participant attributes their eclectic listening habits to exposure in Western music circles.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of individuals are seated around a wooden table covered with a red and white checkered tablecloth.",
+          "The room contains a whiteboard, a projector screen, and a window letting in daylight.",
+          "One person on the right holds a black handheld device.",
+          "<voice_233> asks if background music can be added to the session.",
+          "<voice_0> responds by suggesting to play a bit of music.",
+          "<voice_234> mentions that they listen to rock music.",
+          "<voice_235> indicates a preference for R&B music.",
+          "<voice_200> explains their music taste is influenced by being mixed in Western circles."
+        ],
+        "high_level_conclusions": [
+          "The participants are discussing the inclusion of background music for an upcoming activity.",
+          "Different members express varied musical preferences, specifically citing Rock and R&B genres.",
+          "One participant attributes their eclectic listening habits to exposure in Western music circles."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 19,
+          "call_id": "556e66e5-7ac9-41ba-a3de-dbacfa7696a8",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789414091.4759839,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals are seated around a wooden table covered with a red and white checkered tablecloth.\",\n\t\t\"The room contains a whiteboard, a projector screen, and a window letting in daylight.\",\n\t\t\"One person on the right holds a black handheld device.\",\n\t\t\"<voice_233> asks if background music can be added to the session.\",\n\t\t\"<voice_0> responds by suggesting to play a bit of music.\",\n\t\t\"<voice_234> mentions that they listen to rock music.\",\n\t\t\"<voice_235> indicates a preference for R&B music.\",\n\t\t\"<voice_200> explains their music taste is influenced by being mixed in Western circles.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are discussing the inclusion of background music for an upcoming activity.\",\n\t\t\"Different members express varied musical preferences, specifically citing Rock and R&B genres.\",\n\t\t\"One participant attributes their eclectic listening habits to exposure in Western music circles.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The scene shows a group of people sitting around a table covered with a red and white checkered tablecloth. They seem to be in a classroom or meeting room setting. There's a whiteboard, a projector screen, and a window. The faces are blurred out in most frames. One person on the right is wearing a pinkish/orange shirt and holding a black device (looks like a camera or phone). Another person on the left is wearing dark clothing.\n*   **Voice Features:**\n    *   `<voice_233>`: \"MAI: 那是不是可以有一点BGM？\" (Is it okay if there's a bit of BGM?) - 00:02-00:07\n    *   `<voice_233>`: \"MAI: 平时听什么类型的音乐？\" (What type of music do you usually listen to?) - 00:15-00:18\n    *   `<voice_0>`: \"MAI: 那你放一点。\" (Then you play a little.) - 00:07-00:09\n    *   `<voice_0>`: \"MAI: 摇滚类型的音乐。\" (Rock type of music.) - 00:21-00:23\n    *   `<voice_234>`: \"MAI: 我-我听摇滚。\" (I-I listen to rock.) - 00:18-00:20\n    *   `<voice_235>`: \"MAI: 嗯，R&B。\" (Hmm, R&B.) - 00:22-00:24\n    *   `<voice_235>`: \"MAI: R&B。\" (R&B.) - 00:23-00:25\n    *   `<voice_200>`: \"MAI: 我是混欧美圈的，所以就乱听。\" (I'm mixed in the Western/American circle, so I just listen randomly.) - 00:26-00:29\n\n**2. Map Voice IDs to Speakers:**\n*   The prompt says: \"Preserve speaker identity when constructing memory... Voice features map exact IDs such as <voice_0> to timestamped transcripts.\"\n*   However, looking closely at the ASR text, everyone is labeled \"MAI:\". This suggests \"MAI\" might be a label used in the transcription system rather than the actual name, or perhaps the speaker is named Mai. But wait, the instruction says \"Use only IDs supplied in the input\".\n*   Let's look at the conversation flow.\n    *   Speaker A (<voice_233>) asks about BGM.\n    *   Speaker B (<voice_0>) responds (\"Then you play a little\").\n    *   Speaker C (<voice_234>) says \"I listen to rock\".\n    *   Speaker D (<voice_235>) says \"R&B\".\n    *   Speaker E (<voice_200>) explains their taste.\n*   Wait, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   So I need to create memories for `<voice_233>`, `<voice_0>`, `<voice_234>`, `<voice_235>`, `<voice_200>`.\n*   The instruction also says: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\" Since faces are blurred and no specific face IDs are provided in the `Face features` section (it's empty), I cannot link voice IDs to specific visible people visually. I must use the voice IDs directly.\n\n**3. Construct Video Description:**\n*   Need to describe the visual events.\n*   People are sitting around a table.\n*   They are interacting/discussing.\n*   One person holds a device.\n*   The camera pans slightly or zooms? It looks mostly static but the perspective shifts slightly due to movement or lens distortion changes. Actually, looking at the timestamps, the camera seems relatively stable but the framing changes slightly.\n*   Key actions: Sitting, talking, holding devices.\n*   I need to break this down into atomic events.\n    *   Group of people sit around a table.\n    *   Person on right holds a black device.\n    *   Person on left interacts with items on table.\n    *   Conversation happens (implied by audio).\n\n**4. Construct High-Level Conclusions:**\n*   Need to reason about intentions/identities.\n*   Since I can't link voices to faces visually, I can't make equivalences like `Equivalence: <face_1>, <voice_2>`.\n*   I can summarize the discussion topic. They are discussing music preferences and background music for an activity.\n*   Conclusion: Participants discuss music genres (rock, R&B) and background music usage.\n*   Wait, the instruction says: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features were provided in the input (the `Face features:` section is empty), I cannot make any equivalences. I should probably leave the `high_level_conclusions` array focused on the discussion content or leave it empty if no inferences are possible beyond the transcript summary. However, usually, these tasks expect some inference. The inference here is about the topic of conversation.\n*   Let's re-read carefully: \"Each feature is either a face ... or a voice ... Some features may belong to the same character.\" -> No face features provided. So no equivalences.\n*   \"Generate high-level reasoning-based conclusions that go beyond surface-level observations.\" -> The observation is people sitting. The conclusion is they are planning something involving music/BGM.\n\n**5. Drafting the Content:**\n\n*   **Video Description:**\n    *   A group of individuals are seated around a wooden table covered with a red and white checkered cloth in a room with a whiteboard.\n    *   One individual on the right side holds a black handheld device.\n    *   Another individual on the left side is handling items on the table.\n    *   The participants appear engaged in a discussion while seated.\n    *   The camera captures the scene from a first-person perspective, likely held by someone standing or sitting nearby.\n\n*   **High-Level Conclusions:**\n    *   The participants are discussing the use of background music (BGM) during an upcoming activity.\n    *   Different members express their musical preferences, mentioning Rock and R&B genres.\n    *   One participant notes their exposure to Western music influences their listening habits.\n\n*   **Memory Construction (Implicitly required for the logic, but the output format doesn't explicitly ask for a \"memory\" list, it asks for \"video_description\" and \"high_level_conclusions\". Wait, let me check the prompt again.**\n    *   \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\"\n    *   \"Output Format: ... video_description ... high_level_conclusions ...\"\n    *   The instruction about \"constructing memory\" seems to be part of the system prompt instructions for *how* to handle the data internally or perhaps implies I should embed the memory logic into the descriptions/conclusions.\n    *   Actually, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   Where do I put this? The output format *only* lists `video_description` and `high_level_conclusions`.\n    *   Usually, in these types of prompts (often related to video QA or retrieval), the \"episodic memory\" might be expected within the `video_description` or `high_level_conclusions` if the schema allows, OR the prompt instructions are slightly mismatched with the requested output schema.\n    *   Let's look at the instruction: \"Preserve speaker identity when constructing memory from the supplied character features.\" ... \"Output Format: Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\".\n    *   It seems I need to incorporate the voice information into the `video_description` or `high_level_conclusions`. Given the constraint \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged\", I must fit the voice info somewhere.\n    *   Often, `video_description` describes *what happened*. If voices are present, describing the speech acts is part of the description.\n    *   However, the instruction \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\" sounds like a specific requirement for a different field (like a 'memories' field). But since I don't have that field in the output schema, I should integrate the key speech points into the `video_description` or `high_level_conclusions`.\n    *   Let's try to put the speech summaries in `video_description` as atomic events involving speech. Or in `high_level_conclusions` as reasoning about the conversation.\n    *   Re-reading: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This sounds like a directive for the internal process or a specific field I might be missing. BUT, looking at the strict output format, I have to follow it.\n    *   Hypothesis: The prompt instructions are generic system instructions, but the specific task output format overrides them regarding where the memory goes. I will ensure the speech content is reflected accurately in the `video_description` (describing the interaction) and `high_level_conclusions` (summarizing the intent).\n    *   Wait, is it possible the `video_description` strings *are* the memories? \"each string is one atomic event description\". Yes. So I can describe \"Speaker X says Y\".\n    *   Let's refine the plan.\n    *   `video_description`: Describe the visual scene + the speech events attributed to the voice IDs (since I can't link to faces).\n    *   `high_level_conclusions`: Summarize the discussion topic.\n\n    *   Wait, I need to check if I can link voice to face. \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" No face IDs provided. So I cannot say \"Person A (voice_0)\". I must say \"A speaker (voice_0)\" or just quote the speech in the context of the group.\n    *   Actually, the instruction says \"using the exact ID as the speaker\". So I should write things like \"voice_0 states...\" or similar if I want to be safe, but standard video description usually avoids meta-tags unless necessary.\n    *   Let's look at the instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   This is tricky. If I don't have a 'memories' field, where does this go?\n    *   Maybe I should add a note in `high_level_conclusions`? Or maybe the `video_description` should contain sentences like \"voice_233 asks about BGM\".\n    *   Let's assume the `video_description` needs to capture the dialogue events.\n    *   Example: \"voice_233 inquires about adding background music.\"\n    *   Example: \"voice_0 suggests playing some music.\"\n    *   This satisfies the \"include... memory... using exact ID\" requirement within the available fields.\n\n    *   Wait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I shouldn't change the schema.\n    *   Okay, I will construct the `video_description` to include the speech events linked to the voice IDs.\n    *   And `high_level_conclusions` to synthesize the meaning.\n\n    *   Wait, one more thing. \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features, no equivalences.\n\n    *   Let's draft the JSON.\n\n    *   **Video Description:**\n        1.  A group of people are seated around a table with a checkered tablecloth in a room containing a whiteboard and projector screen.\n        2.  An individual on the right holds a black electronic device.\n        3.  An individual on the left handles objects on the table.\n        4.  voice_233 asks if background music (BGM) can be added.\n        5.  voice_0 responds suggesting to play a bit of music.\n        6.  voice_234 mentions listening to rock music.\n        7.  voice_235 indicates a preference for R&B music.\n        8.  voice_200 explains their music taste is influenced by mixing Western circles.\n\n    *   **High-Level Conclusions:**\n        1.  The group is discussing the inclusion of background music for an event or session.\n        2.  Participants share diverse musical preferences ranging from Rock to R&B.\n        3.  One participant attributes their eclectic taste to exposure in Western music circles.\n\n    *   Refining the \"Memory\" constraint: \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   My draft above includes the ID in the description. That should work.\n\n    *   Wait, checking the instruction \"Preserve speaker identity when constructing memory...\".\n    *   Okay, I will proceed.\n\n    *   One detail: \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I must quote or summarize faithfully.\n    *   \"Keep dialogue grounded in the provided transcript.\"\n\n    *   Final check on Face/Voice Equivalence: None available.\n\n    *   Structure:\n        ```json\n        {\n          \"video_description\": [\n            \"...\",\n            \"...\"\n          ],\n          \"high_level_conclusions\": [\n            \"...\"\n          ]\n        }\n        ```\n\n    *   Let's ensure the voice IDs are used correctly.\n    *   voice_233: \"Is it okay if there's a bit of BGM?\" / \"What type of music do you usually listen to?\"\n    *   voice_0: \"Then you play a little.\" / \"Rock type of music.\"\n    *   voice_234: \"I-I listen to rock.\"\n    *   voice_235: \"Hmm, R&B.\" / \"R&B.\"\n    *   voice_200: \"I'm mixed in the Western/American circle, so I just listen randomly.\"\n\n    *   I'll combine these into the description.\n\n    *   Wait, is \"MAI:\" part of the transcript? Yes. Should I include it? \"quotes or faithfully summarizes\". Including \"MAI:\" might be literal. Better to summarize the content but keep the ID. \"voice_233 asks MAI: Is it okay if there's a bit of BGM?\". Or just \"voice_233 asks about BGM\". The instruction says \"using the exact ID as the speaker\". It doesn't strictly say I must include the ASR text verbatim, but \"quotes or faithfully summarizes\". I will summarize the content to keep it natural but attribute it to the ID.\n\n    *   Wait, I need to check if I should output *only* the JSON. \"Please only return the valid JSON object, without any additional explanation or formatting.\"\n\n    *   Okay, ready to write.\n\n    *   Wait, one constraint: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n    *   This means I shouldn't add new keys. Just `video_description` and `high_level_conclusions`.\n\n    *   One more check: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n    *   Since I am putting this into `video_description`, I will ensure every voice ID appears at least once in the `video_description` array.\n\n    *   Plan:\n        1.  Scene setup.\n        2.  voice_233 action.\n        3.  voice_0 action.\n        4.  voice_234 action.\n        5.  voice_235 action.\n        6.  voice_200 action.\n        7.  Visual details (device, table).\n\n    *   Wait, the instruction says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"Voice features map exact IDs... These IDs already identify the speakers; they remain usable even when no face features are supplied\".\n    *   So I will use `<voice_233>`, etc., in the text.\n\n    *   Let's finalize the text.\n    *   \"A group of people sit around a table with a checkered cloth.\"\n    *   \"<voice_233> asks if background music can be included.\"\n    *   \"<voice_0> suggests playing a bit of music.\"\n    *   \"<voice_234> mentions listening to rock music.\"\n    *   \"<voice_235> specifies a preference for R&B.\"\n    *   \"<voice_200> explains their taste comes from mixing Western circles.\"\n    *   \"One person holds a black device.\"\n\n    *   High level conclusions:\n    *   \"Participants discuss the feasibility of using background music.\"\n    *   \"Musical preferences vary among the group, including Rock and R&B.\"\n    *   \"One member cites Western music influence on their eclectic taste.\"\n\n    *   Looks good.\n\n    *   Wait, I need to make sure I don't hallucinate face IDs. The input `Face features:` is empty. So I won't mention any face IDs.\n\n    *   Double check: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features, I won't use this format.\n\n    *   Final check on constraints: \"Be concise and avoid duplicate events.\"\n\n    *   Okay, generating JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of individuals are seated around a wooden table covered with a red and white checkered tablecloth.\",\n\t\t\"The room contains a whiteboard, a projector screen, and a window letting in daylight.\",\n\t\t\"One person on the right holds a black handheld device.\",\n\t\t\"<voice_233> asks if background music can be added to the session.\",\n\t\t\"<voice_0> responds by suggesting to play a bit of music.\",\n\t\t\"<voice_234> mentions that they listen to rock music.\",\n\t\t\"<voice_235> indicates a preference for R&B music.\",\n\t\t\"<voice_200> explains their music taste is influenced by being mixed in Western circles.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are discussing the inclusion of background music for an upcoming activity.\",\n\t\t\"Different members express varied musical preferences, specifically citing Rock and R&B genres.\",\n\t\t\"One participant attributes their eclectic listening habits to exposure in Western music circles.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10552,
+          "output_tokens": 4356,
+          "total_tokens": 14908,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0019130020518787205,
+            "media_preparation_ms": 59.89728200074751,
+            "processor_tokenization_ms": 286.6806300007738,
+            "device_transfer_ms": 45.74827400210779,
+            "cuda_generation_ms": 199653.4174480039,
+            "decoding_ms": 4.257331995177083
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 200050.1618490016,
+          "request_end": 1789414291.5574253,
+          "latency_ms": 200081.4388189974,
+          "client_wall_clock_latency_ms": 200081.4388189974
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.09640200005378574,
+      "nodes_added": 8,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.017533995560370386,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 8,
+    "speech_embeddings": 8,
+    "voice_identities": 5,
+    "detected_faces": 242,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 3,
+    "nodes_after_clip": 247,
+    "edges_after_clip": 94,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of individuals are seated around a wooden table covered with a red and white checkered tablecloth.",
+      "The room contains a whiteboard, a projector screen, and a window letting in daylight.",
+      "One person on the right holds a black handheld device.",
+      "<voice_233> asks if background music can be added to the session.",
+      "<voice_0> responds by suggesting to play a bit of music.",
+      "<voice_234> mentions that they listen to rock music.",
+      "<voice_235> indicates a preference for R&B music.",
+      "<voice_200> explains their music taste is influenced by being mixed in Western circles."
+    ],
+    "high_level_conclusions": [
+      "The participants are discussing the inclusion of background music for an upcoming activity.",
+      "Different members express varied musical preferences, specifically citing Rock and R&B genres.",
+      "One participant attributes their eclectic listening habits to exposure in Western music circles."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of individuals are seated around a wooden table covered with a red and white checkered tablecloth.",
+      "The room contains a whiteboard, a projector screen, and a window letting in daylight.",
+      "One person on the right holds a black handheld device.",
+      "<voice_233> asks if background music can be added to the session.",
+      "<voice_0> responds by suggesting to play a bit of music.",
+      "<voice_234> mentions that they listen to rock music.",
+      "<voice_235> indicates a preference for R&B music.",
+      "<voice_200> explains their music taste is influenced by being mixed in Western circles."
+    ],
+    "high_level_conclusions": [
+      "The participants are discussing the inclusion of background music for an upcoming activity.",
+      "Different members express varied musical preferences, specifically citing Rock and R&B genres.",
+      "One participant attributes their eclectic listening habits to exposure in Western music circles."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_19_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 233,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那是不是可以有一点BGM？",
+            "MAI: 那平时爱听什么类型的音乐？"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 234,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我-我听陶哲。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 235,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯，R&B。",
+            "MAI: R&B。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 236,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of individuals are seated around a wooden table covered with a red and white checkered tablecloth."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 237,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The room contains a whiteboard, a projector screen, and a window letting in daylight."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 238,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person on the right holds a black handheld device."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 239,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_233> asks if background music can be added to the session."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 240,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> responds by suggesting to play a bit of music."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 241,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_234> mentions that they listen to rock music."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 242,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_235> indicates a preference for R&B music."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 243,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_200> explains their music taste is influenced by being mixed in Western circles."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 244,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are discussing the inclusion of background music for an upcoming activity."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 245,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Different members express varied musical preferences, specifically citing Rock and R&B genres."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 246,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "One participant attributes their eclectic listening habits to exposure in Western music circles."
+          ],
+          "timestamp": 19
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 240,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 200,
+        "target": 243,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 233,
+        "target": 239,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 234,
+        "target": 241,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 235,
+        "target": 242,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_19_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_19_graph.pkl"
+  },
+  "memory_pickle_bytes": 5982673,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 54841.821311153,
+    "prepared_perf": 54848.180811851,
+    "ordered_start_perf": 55268.718268108,
+    "consumer_wait_ms": 0.010588999430183321,
+    "ready_to_ordered_ms": 420537.4562569996,
+    "preparation_work_ms": 6354.261389002204,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 209810.13918600365
+}

@@ -1,0 +1,481 @@
+{
+  "clip_id": 109,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0109.mp4",
+  "end_to_end_memory_generation_ms": 659385.2047300024,
+  "latency_ms": {
+    "clip_decode": 6009.242318003089,
+    "deepgram_asr": 227.18664699641522,
+    "mai_transcribe_asr": 1761.245294008404,
+    "asr_total": 1762.7692030073376,
+    "audio_segmentation": 12.499132004450075,
+    "speech_embedding_campplus": 1356.9911500089802,
+    "facial_detection_recognition_buffalo_l": 3995.7766470033675,
+    "face_clustering": 8.351787997526117,
+    "vlm_memory_generation": 195870.71051400562,
+    "text_embedding": 455.60332101013046,
+    "graph_update_total": 732.864834018983
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 109,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 1052,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789439054.6336474,
+          "status": "success",
+          "total_tokens": 201,
+          "request_end": 1789439055.0891035,
+          "latency_ms": 455.45651600696146
+        }
+      ],
+      "total_tokens": 201,
+      "latency_ms": 455.60332101013046
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 227.18664699641522,
+        "openrouter-mai-transcribe-2": 1761.245294008404
+      },
+      "asr_total_ms": 1762.7692030073376,
+      "audio_segmentation_ms": 12.499132004450075,
+      "speech_embedding_ms": 1356.9911500089802,
+      "graph_update_ms": 722.9170720092952,
+      "asr_segment_count": 7,
+      "speech_embedding_count": 7,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2108.856790000573
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3995.7766470033675,
+      "face_clustering_ms": 8.351787997526117,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 331,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4179.278602008708
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_468>",
+        "<voice_1467>",
+        "<voice_112>",
+        "<voice_364>",
+        "<voice_1468>"
+      ],
+      "context_preparation_ms": 4231.572315999074,
+      "vlm_ms": 195870.71051400562,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table in a room with a whiteboard, engaged in a collaborative session.\",\n\t\t\"One person stands near the whiteboard while others sit around the table with papers and a clapperboard.\",\n\t\t\"A person wearing an orange shirt stands near the window holding a mobile device.\",\n\t\t\"The person in the orange shirt moves around the room and eventually joins the group at the table.\",\n\t\t\"Another individual enters the room from the right side, adding to the group discussion.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_468> observes that the handwriting on the documents is aesthetically pleasing.\",\n\t\t\"<voice_1467> questions whether an English version of the text should be created for international distribution.\",\n\t\t\"<voice_112> suggests stopping corrections and simply acknowledging the quality of the handwriting.\",\n\t\t\"<voice_364> directs the group to begin writing the timeline and proceeds to suggest modifications.\",\n\t\t\"<voice_1468> proposes changing certain aspects of the current plan.\",\n\t\t\"The participants appear to be coordinating a project that involves bilingual content creation and script refinement.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a table in a room with a whiteboard, engaged in a collaborative session.",
+          "One person stands near the whiteboard while others sit around the table with papers and a clapperboard.",
+          "A person wearing an orange shirt stands near the window holding a mobile device.",
+          "The person in the orange shirt moves around the room and eventually joins the group at the table.",
+          "Another individual enters the room from the right side, adding to the group discussion."
+        ],
+        "high_level_conclusions": [
+          "<voice_468> observes that the handwriting on the documents is aesthetically pleasing.",
+          "<voice_1467> questions whether an English version of the text should be created for international distribution.",
+          "<voice_112> suggests stopping corrections and simply acknowledging the quality of the handwriting.",
+          "<voice_364> directs the group to begin writing the timeline and proceeds to suggest modifications.",
+          "<voice_1468> proposes changing certain aspects of the current plan.",
+          "The participants appear to be coordinating a project that involves bilingual content creation and script refinement."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 109,
+          "call_id": "6cf40d74-25cb-4423-91c6-7f07a341bc11",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789438858.7614384,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table in a room with a whiteboard, engaged in a collaborative session.\",\n\t\t\"One person stands near the whiteboard while others sit around the table with papers and a clapperboard.\",\n\t\t\"A person wearing an orange shirt stands near the window holding a mobile device.\",\n\t\t\"The person in the orange shirt moves around the room and eventually joins the group at the table.\",\n\t\t\"Another individual enters the room from the right side, adding to the group discussion.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_468> observes that the handwriting on the documents is aesthetically pleasing.\",\n\t\t\"<voice_1467> questions whether an English version of the text should be created for international distribution.\",\n\t\t\"<voice_112> suggests stopping corrections and simply acknowledging the quality of the handwriting.\",\n\t\t\"<voice_364> directs the group to begin writing the timeline and proceeds to suggest modifications.\",\n\t\t\"<voice_1468> proposes changing certain aspects of the current plan.\",\n\t\t\"The participants appear to be coordinating a project that involves bilingual content creation and script refinement.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be held by someone sitting at a table (POV shot).\n    *   **Setting:** A room with a table covered in papers, flowers, and props. There's a whiteboard in the background. It looks like a script reading or rehearsal session.\n    *   **Characters:**\n        *   Person standing near the whiteboard (white shirt, red hair/bun). Let's call them the \"White Shirt Person\".\n        *   Person sitting at the table (black top, glasses). Let's call them the \"Black Top Person\".\n        *   Two people sitting further back/right (one pinkish top, one dark top).\n        *   One person standing/moving around later (orange/pink shirt). This person appears prominently in frames 10.50s onwards.\n        *   Another person enters later (white shirt, blonde hair) around 28.50s.\n    *   **Action:** They seem to be discussing something related to writing or scripts. There's a clapperboard on the table.\n*   **Voice Features:**\n    *   `<voice_468>`: \"MAI: 安哥。这字写得太好看了，真。\" (Ange. This handwriting is too beautiful, really.) - Time: 00:00 - 00:06.\n    *   `<voice_1467>`: \"MAI: 喏，我们还要写个英文版吗？\" (Here, should we write an English version?) & \"MAI: 我们应该 internationally. 你看我那个英文就明显跟这个。\" (We should be international. Look at my English, it's clearly different from this.) - Time: 00:10 - 00:20.\n    *   `<voice_112>`: \"MAI: 不用不用不用，就说明字写得好。\" (No need no need no need, just say the handwriting is good.) - Time: 00:12 - 00:16.\n    *   `<voice_364>`: \"MAI: 那好，下面开始写英文吧。\" (Okay then, let's start writing English below.) & \"MAI: 时间线，来。\" (Timeline, come on.) - Time: 00:19 - 00:23.\n    *   `<voice_1468>`: \"MAI: 来，变换一下。\" (Come on, change it up.) - Time: 00:23 - 00:25.\n    *   **Speaker Identification:** All voice features have the label \"MAI\". I need to associate this voice with a specific face if possible, but the prompt says \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" However, usually in these tasks, if there's a clear speaker labeled MAI, I should try to link it if the context implies it. Looking at the frames, the person sitting at the table (Black Top Person) seems to be the main participant interacting with the whiteboard person. Wait, looking closely at the frames, the person sitting at the table (Black Top Person) is often looking down or at the table. The person standing (White Shirt) is pointing at the board.\n    *   Actually, looking at the voice content (\"This handwriting is too beautiful\"), it sounds like someone commenting on the text on the paper/table. The Black Top Person is holding a pen/paper.\n    *   However, the instruction says: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\"\n    *   But wait, the instruction also says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   And: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   So I must use `<voice_468>`, `<voice_1467>`, etc., in the memory/conclusion sections.\n    *   Regarding Face/Voice Equivalence: The prompt asks for \"Equivalence: <face_x>, <voice_y>\". Since I don't have explicit face IDs linked to names in the input (only generic descriptions like \"Person in black top\"), I cannot definitively claim equivalence unless the system provides face IDs mapped to names. The input says \"Each feature is either a face... or a voice... Each feature has a unique ID\". I see \"Face features:\" section is empty in the prompt text provided? Ah, looking at the raw prompt, under \"Face features:\", it's blank. Under \"Voice features:\", it lists the ASR data.\n    *   Wait, I need to check if there are face IDs hidden in the text. \"Face features:Voice features:{\"...\". It seems the Face features list is missing or empty in the provided text block.\n    *   Re-reading the prompt: \"You will be given a video and a set of character features.\" Then \"Face features:Voice features:...\". It looks like the Face features section might be empty or I missed it. Let me look closer. \"Face features:Voice features:{\"...\". Yes, it seems the Face features are empty or not provided in the text snippet.\n    *   Constraint: \"If no face IDs are supplied, do not invent any.\"\n    *   Therefore, I cannot create \"Equivalence\" lines because there are no face IDs to equate with the voice IDs. I can only mention the voice IDs in the conclusions regarding their statements.\n    *   Wait, looking at the very beginning of the prompt text provided by the user: \"Face features:Voice features:{\"...\". It seems the Face features part is literally empty before the colon. Or maybe it's merged. Let's assume no face IDs are available.\n    *   So, I will focus on describing the actions and using the voice IDs in the conclusions/memory parts.\n\n**2. Constructing Video Description:**\n*   **0.00s - 10.00s:** Group meeting around a table. Whiteboard in background. Person in white shirt stands by board. Person in black top sits at table. Others seated.\n*   **10.50s - 15.00s:** Person in orange/pink shirt moves into view, standing near the window/doorway.\n*   **15.50s - 20.00s:** Person in orange shirt holds a phone/device. Someone else's arm reaches out (camera wearer?).\n*   **20.50s - 25.00s:** Person in orange shirt walks towards the window/balcony area.\n*   **25.00s - 29.50s:** Person in orange shirt returns to group. Another person (blonde, white shirt) enters from the right side around 28.50s.\n*   **General:** Script reading/rehearsal setting. Clapperboard on table. Papers with text.\n\n**3. Constructing High-Level Conclusions:**\n*   Need to incorporate the voice transcripts.\n*   `<voice_468>` comments on handwriting quality.\n*   `<voice_1467>` discusses creating an English version/international aspect.\n*   `<voice_112>` agrees to stop correcting and focus on the handwriting praise.\n*   `<voice_364>` decides to start writing the timeline/English version.\n*   `<voice_1468>` suggests changing something.\n*   Conclusion: The group is collaborating on a script or document, debating its language version and presentation style.\n\n**4. Formatting:**\n*   JSON structure required.\n*   `video_description`: Array of strings.\n*   `high_level_conclusions`: Array of strings.\n*   No extra text.\n\n**Refining Video Description:**\n*   Frame 0-10: A group of people are gathered around a table in a room with a whiteboard. One person stands near the whiteboard while others sit.\n*   Frame 10-15: A person wearing an orange shirt stands near the entrance/window area.\n*   Frame 15-20: The person in the orange shirt interacts with a device, possibly a phone.\n*   Frame 20-25: The person in the orange shirt moves around the room.\n*   Frame 25-29: More people join the gathering, including someone entering from the right.\n\n**Refining High Level Conclusions:**\n*   The participants discuss the visual quality of the written text on the table.\n*   There is a discussion about translating or adapting the content into an English version for an international audience.\n*   The group decides to proceed with writing the timeline and making changes to the script.\n\n**Wait, checking constraints again:**\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis instruction seems to apply to the \"Memory\" generation part of a larger task (often associated with video-to-memory tasks), but here the output schema is `video_description` and `high_level_conclusions`.\nHowever, the prompt says: \"Your task consists of two parts: 1. Video Description ... 2. High-Level Conclusions\".\nAnd the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This contradicts the output schema provided in the \"Output Format\" section which only asks for `video_description` and `high_level_conclusions`.\nUsually, in these specific prompts, the \"episodic memory\" requirement is meant to be integrated into the `high_level_conclusions` or `video_description` if the schema allows, OR the prompt instructions are slightly mismatched with the schema.\nLooking at the instruction: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nAnd \"Output Format: Your output must be a JSON object with the following structure: { \"video_description\": [...], \"high_level_conclusions\": [...] }\".\nThere is no \"memory\" field in the requested JSON.\nSo I must interpret \"include at least one episodic memory\" as integrating the voice content into the `high_level_conclusions` or `video_description` as factual statements about what happened/said. Given `high_level_conclusions` is for \"reasoning-based conclusions\", putting direct quotes there might fit better as \"observations of speech\".\nActually, re-reading: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nSince I cannot add a \"memory\" field, I will embed these summaries into the `high_level_conclusions` as observed facts or reasoning derived from the speech.\nWait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis implies I should follow the schema strictly.\nSo where do the voice memories go?\nMaybe the `video_description` should contain the events including speech?\nOr `high_level_conclusions`?\nLet's look at the instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nIf I put this in `high_level_conclusions`, it acts as a summary of the conversation.\nExample: \"<voice_468> praises the handwriting quality.\"\nBut the instruction says \"include at least one episodic memory\". An episodic memory usually describes an event.\nI will integrate the speech content into the `high_level_conclusions` as specific observations of the interaction.\nActually, looking at similar tasks, sometimes the `video_description` captures the action, and `high_level_conclusions` captures the intent/inference.\nI will ensure the voice IDs are used in the `high_level_conclusions` to describe the conversation flow.\n\nLet's draft the JSON.\n\n**Video Description:**\n1. A group of individuals are gathered around a table in a room featuring a whiteboard, appearing to engage in a collaborative work session.\n2. A person in a white shirt stands near the whiteboard while others sit around the table with papers and a clapperboard.\n3. A person wearing an orange shirt enters the frame and stands near the doorway, observing the group.\n4. The person in the orange shirt holds a mobile device and gestures while standing by the window.\n5. Another individual enters the room from the right side, joining the group at the table.\n\n**High Level Conclusions:**\n1. <voice_468> comments positively on the aesthetic quality of the handwriting displayed on the table.\n2. <voice_1467> questions whether an English version of the document should be created for international purposes.\n3. <voice_112> suggests focusing solely on praising the handwriting rather than correcting it.\n4. <voice_364> initiates the process of writing the timeline and makes a suggestion to change certain elements.\n5. The group appears to be refining a script or project plan involving both Chinese and English components.\n\nWait, I need to make sure I don't hallucinate face IDs. The prompt says \"If no face IDs are supplied, do not invent any.\" I have no face IDs. So I won't use \"Equivalence\".\nI will use the voice IDs directly in the conclusions.\n\nOne detail: \"Preserve speaker identity when constructing memory...\". Since I am not generating a separate memory field, I will treat the `high_level_conclusions` as the place where these identities and their statements are recorded as facts.\n\nLet's refine the descriptions to be more atomic.\n\n**Revised Plan:**\n**Video Description:**\n- People are sitting around a table with a clapperboard and papers, seemingly rehearsing or planning.\n- A person in a white shirt stands by a whiteboard, pointing at it.\n- A person in an orange shirt stands near the window, holding a phone.\n- Another person enters the room later.\n- The camera wearer is seated at the table.\n\n**High Level Conclusions:**\n- <voice_468> remarks that the handwriting on the documents is visually appealing.\n- <voice_1467> proposes creating an English version of the text for international use.\n- <voice_112> advises against over-correcting and instead acknowledges the good handwriting.\n- <voice_364> directs the group to begin writing the timeline and suggests modifications.\n- The participants are coordinating a project that involves bilingual content creation.\n\nDouble Check Constraints:\n- \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" -> I used <voice_468>, etc. Correct.\n- \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" -> I am not assigning faces to voices explicitly (no Equivalence lines since no face IDs). I am just citing the voice ID.\n- \"Keep dialogue grounded in the provided transcript.\" -> I quoted/summarized the ASR.\n\nFinal check on JSON validity.\nEnsure no trailing commas.\nEnsure proper escaping if needed (none expected in simple text).\n\nOne thing: The prompt says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\nSince I can't output a \"memory\" key, I will append these as sentences in the `high_level_conclusions` array, effectively treating them as the \"memory\" of the event within the allowed schema fields. Or perhaps I should put them in `video_description`?\n\"Video Description: Generate a detailed and cohesive description... cover all observable and inferable events.\"\nSpeech is an event.\n\"High-Level Conclusions: Generate high-level reasoning-based conclusions...\".\nConclusions are usually about intent/identity.\nI think putting the specific speech content in `high_level_conclusions` fits best as \"conclusions drawn from the audio\".\nActually, the instruction \"include at least one episodic memory\" sounds like it belongs in a specific field. But the Output Format is fixed. I will prioritize the Output Format schema as the final constraint (\"Your output must be a JSON object with the following structure\"). I will embed the voice info in `high_level_conclusions` as factual statements about the conversation.\n\nWait, looking at the instruction \"Preserve speaker identity when constructing memory from the supplied character features.\"\nThis might imply I should construct a memory *if* I were doing a memory task. But I am doing a Video Description + High Level Conclusions task.\nI will assume the instruction means \"Include information about the speaker's identity and speech in your output\".\nI will add entries in `high_level_conclusions` that state what the voice said, using the ID.\n\nLet's finalize the content.\nVoice 468: \"Ange. This handwriting is too beautiful, really.\" -> <voice_468> notes the beauty of the handwriting.\nVoice 1467: \"Should we write an English version?\" / \"We should be international.\" -> <voice_1467> discusses the need for an English version.\nVoice 112: \"No need no need no need, just say the handwriting is good.\" -> <voice_112> agrees to stop correcting and praise the handwriting.\nVoice 364: \"Okay then, let's start writing English below.\" / \"Timeline, come on.\" -> <voice_364> instructs starting the timeline and English writing.\nVoice 1468: \"Come on, change it up.\" -> <voice_1468> suggests making changes.\n\nI will combine these into the conclusions.\n\nOne more check: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\nSince I have NO face features (the section was empty), I cannot create Equivalence lines. I will omit them.\n\nFinal check on JSON syntax.\nKeys: \"video_description\", \"high_level_conclusions\".\nValues: Arrays of strings.\n\nReady to write.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are gathered around a table in a room with a whiteboard, engaged in a collaborative session.\",\n\t\t\"One person stands near the whiteboard while others sit around the table with papers and a clapperboard.\",\n\t\t\"A person wearing an orange shirt stands near the window holding a mobile device.\",\n\t\t\"The person in the orange shirt moves around the room and eventually joins the group at the table.\",\n\t\t\"Another individual enters the room from the right side, adding to the group discussion.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_468> observes that the handwriting on the documents is aesthetically pleasing.\",\n\t\t\"<voice_1467> questions whether an English version of the text should be created for international distribution.\",\n\t\t\"<voice_112> suggests stopping corrections and simply acknowledging the quality of the handwriting.\",\n\t\t\"<voice_364> directs the group to begin writing the timeline and proceeds to suggest modifications.\",\n\t\t\"<voice_1468> proposes changing certain aspects of the current plan.\",\n\t\t\"The participants appear to be coordinating a project that involves bilingual content creation and script refinement.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10631,
+          "output_tokens": 4288,
+          "total_tokens": 14919,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002064000000245869,
+            "media_preparation_ms": 64.79321500228252,
+            "processor_tokenization_ms": 373.0254730035085,
+            "device_transfer_ms": 50.54660499445163,
+            "cuda_generation_ms": 195349.27943500225,
+            "decoding_ms": 2.6814349985215813
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 195840.51314399403,
+          "request_end": 1789439054.6321633,
+          "latency_ms": 195870.71051400562,
+          "client_wall_clock_latency_ms": 195870.71051400562
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 6
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.07403000199701637,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 9.873732007690705,
+      "nodes_added": 6,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 7,
+    "speech_embeddings": 7,
+    "voice_identities": 5,
+    "detected_faces": 331,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 6,
+    "nodes_after_clip": 1480,
+    "edges_after_clip": 542,
+    "nodes_added_by_clip": 13,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table in a room with a whiteboard, engaged in a collaborative session.",
+      "One person stands near the whiteboard while others sit around the table with papers and a clapperboard.",
+      "A person wearing an orange shirt stands near the window holding a mobile device.",
+      "The person in the orange shirt moves around the room and eventually joins the group at the table.",
+      "Another individual enters the room from the right side, adding to the group discussion."
+    ],
+    "high_level_conclusions": [
+      "<voice_468> observes that the handwriting on the documents is aesthetically pleasing.",
+      "<voice_1467> questions whether an English version of the text should be created for international distribution.",
+      "<voice_112> suggests stopping corrections and simply acknowledging the quality of the handwriting.",
+      "<voice_364> directs the group to begin writing the timeline and proceeds to suggest modifications.",
+      "<voice_1468> proposes changing certain aspects of the current plan.",
+      "The participants appear to be coordinating a project that involves bilingual content creation and script refinement."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a table in a room with a whiteboard, engaged in a collaborative session.",
+      "One person stands near the whiteboard while others sit around the table with papers and a clapperboard.",
+      "A person wearing an orange shirt stands near the window holding a mobile device.",
+      "The person in the orange shirt moves around the room and eventually joins the group at the table.",
+      "Another individual enters the room from the right side, adding to the group discussion."
+    ],
+    "high_level_conclusions": [
+      "<voice_468> observes that the handwriting on the documents is aesthetically pleasing.",
+      "<voice_1467> questions whether an English version of the text should be created for international distribution.",
+      "<voice_112> suggests stopping corrections and simply acknowledging the quality of the handwriting.",
+      "<voice_364> directs the group to begin writing the timeline and proceeds to suggest modifications.",
+      "<voice_1468> proposes changing certain aspects of the current plan.",
+      "The participants appear to be coordinating a project that involves bilingual content creation and script refinement."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_109_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 13,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 1467,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 哦，我们还要写个英文版吗？",
+            "MAI: 我们应该 internationally。你看我那个英文就明显跟这个。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1468,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 来，咱换一下。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1469,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a table in a room with a whiteboard, engaged in a collaborative session."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1470,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person stands near the whiteboard while others sit around the table with papers and a clapperboard."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1471,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing an orange shirt stands near the window holding a mobile device."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1472,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the orange shirt moves around the room and eventually joins the group at the table."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1473,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another individual enters the room from the right side, adding to the group discussion."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1474,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_468> observes that the handwriting on the documents is aesthetically pleasing."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1475,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1467> questions whether an English version of the text should be created for international distribution."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1476,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_112> suggests stopping corrections and simply acknowledging the quality of the handwriting."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1477,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_364> directs the group to begin writing the timeline and proceeds to suggest modifications."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1478,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1468> proposes changing certain aspects of the current plan."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1479,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants appear to be coordinating a project that involves bilingual content creation and script refinement."
+          ],
+          "timestamp": 109
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 112,
+        "target": 1476,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 364,
+        "target": 1477,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 468,
+        "target": 1474,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1467,
+        "target": 1475,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1468,
+        "target": 1478,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_109_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_109_graph.pkl"
+  },
+  "memory_pickle_bytes": 35304703,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 79582.761941537,
+    "prepared_perf": 79592.204292998,
+    "ordered_start_perf": 80032.400241015,
+    "consumer_wait_ms": 0.016591991879977286,
+    "ready_to_ordered_ms": 440195.9480170044,
+    "preparation_work_ms": 9435.982654991676,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 206867.39995601238
+}

@@ -1,0 +1,405 @@
+{
+  "clip_id": 3,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0003.mp4",
+  "end_to_end_memory_generation_ms": 157472.83019300085,
+  "latency_ms": {
+    "clip_decode": 7870.548930004588,
+    "deepgram_asr": 2.734301997406874,
+    "mai_transcribe_asr": 2.7844470023410395,
+    "asr_total": 4.06794500304386,
+    "audio_segmentation": 9.178385000268463,
+    "speech_embedding_campplus": 1545.584414001496,
+    "facial_detection_recognition_buffalo_l": 5369.478706001246,
+    "face_clustering": 10.27794699621154,
+    "vlm_memory_generation": 132726.76014399622,
+    "text_embedding": 905.3511489983066,
+    "graph_update_total": 6.32674199732719
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 3,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 882,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789411047.430658,
+          "status": "success",
+          "total_tokens": 167,
+          "request_end": 1789411048.335805,
+          "latency_ms": 905.1472430001013
+        }
+      ],
+      "total_tokens": 167,
+      "latency_ms": 905.3511489983066
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.734301997406874,
+        "openrouter-mai-transcribe-2": 2.7844470023410395
+      },
+      "asr_total_ms": 4.06794500304386,
+      "audio_segmentation_ms": 9.178385000268463,
+      "speech_embedding_ms": 1545.584414001496,
+      "graph_update_ms": 4.812298000615556,
+      "asr_segment_count": 3,
+      "speech_embedding_count": 3,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1575.5749769959948
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 5369.478706001246,
+      "face_clustering_ms": 10.27794699621154,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 320,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 5687.346257996978
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_0>",
+        "<voice_22>"
+      ],
+      "context_preparation_ms": 5498.761287002708,
+      "vlm_ms": 132726.76014399622,
+      "raw_response": "{\n  \"video_description\": [\n    \"A group of people sits around a table covered with a checkered cloth, examining various items including black cases and papers.\",\n    \"<voice_0> mentions finding four USB drives, referring to them as hard disks, and notes that the previous discussion had stalled, proposing a backup solution.\",\n    \"The camera wearer holds a small object and gestures while interacting with the group members seated around the table.\",\n    \"<voice_22> instructs the group to first look and open something up to see inside.\",\n    \"Participants continue to handle papers and devices on the table while the discussion proceeds.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a collaborative session focused on reviewing equipment or data storage options.\",\n    \"<voice_0> proposes a backup strategy involving multiple USB drives or hard disks after noting the discussion had stalled.\",\n    \"<voice_22> directs immediate physical inspection of an item during the discussion.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people sits around a table covered with a checkered cloth, examining various items including black cases and papers.",
+          "<voice_0> mentions finding four USB drives, referring to them as hard disks, and notes that the previous discussion had stalled, proposing a backup solution.",
+          "The camera wearer holds a small object and gestures while interacting with the group members seated around the table.",
+          "<voice_22> instructs the group to first look and open something up to see inside.",
+          "Participants continue to handle papers and devices on the table while the discussion proceeds."
+        ],
+        "high_level_conclusions": [
+          "The group is engaged in a collaborative session focused on reviewing equipment or data storage options.",
+          "<voice_0> proposes a backup strategy involving multiple USB drives or hard disks after noting the discussion had stalled.",
+          "<voice_22> directs immediate physical inspection of an item during the discussion."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 3,
+          "call_id": "3ca6dd71-f859-4dc3-9944-2348e0d7bc40",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789410914.702705,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"A group of people sits around a table covered with a checkered cloth, examining various items including black cases and papers.\",\n    \"<voice_0> mentions finding four USB drives, referring to them as hard disks, and notes that the previous discussion had stalled, proposing a backup solution.\",\n    \"The camera wearer holds a small object and gestures while interacting with the group members seated around the table.\",\n    \"<voice_22> instructs the group to first look and open something up to see inside.\",\n    \"Participants continue to handle papers and devices on the table while the discussion proceeds.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a collaborative session focused on reviewing equipment or data storage options.\",\n    \"<voice_0> proposes a backup strategy involving multiple USB drives or hard disks after noting the discussion had stalled.\",\n    \"<voice_22> directs immediate physical inspection of an item during the discussion.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera is held by someone (likely the camera wearer) sitting around a table covered with a checkered cloth. There are several people seated around the table.\n    *   Person 1 (Left): Wearing black top, dark hair.\n    *   Person 2 (Top Center): Wearing white shirt.\n    *   Person 3 (Right Top): Blonde/light hair, wearing white top.\n    *   Person 4 (Right Bottom): Dark hair, glasses, pinkish top.\n    *   Camera Wearer: Visible hands/arms, wearing blue sleeve.\n    *   Objects on table: Black cases, papers, boxes, a USB drive mentioned in ASR.\n    *   Action: People are talking, looking at items, handling objects. The camera wearer points at things, handles a small object (looks like a USB or similar item), and interacts with the group.\n*   **Voice Features:**\n    *   `<voice_0>`: Speaks from 00:00 to 00:25, then again briefly at 00:28. ASR text mentions \"MAI\", \"four\", \"USB\", \"hard disk\", \"backup\", \"stuck\". This suggests a discussion about equipment, specifically a USB drive or hard disk acting as a backup. The speaker seems to be explaining something technical or logistical.\n    *   `<voice_22>`: Speaks from 00:26 to 00:28. ASR text says \"First look, open and see.\" This is a directive to examine an object.\n*   **Character Features:** None explicitly provided in the prompt text (\"Face features:Voice features:\" section is empty or just contains the voice data). Wait, looking closely at the prompt structure: \"Face features:Voice features:{...}\". It seems there are no specific face IDs provided in the input text block I need to process, unlike previous examples where face IDs might be listed separately. However, the instruction says \"Use the provided feature IDs as references to characters (when applicable)\". Since no face IDs are provided in the input text, I cannot create equivalences like `Equivalence: <face_x>, <voice_y>`. I must rely solely on the voice IDs provided (`<voice_0>`, `<voice_22>`).\n*   **Constraint Checklist & Confidence Score:**\n    1. Preserve speaker identity? Yes.\n    2. Map exact IDs? Yes (<voice_0>, <voice_22>).\n    3. Include episodic memory per voice ID? Yes.\n    4. No face IDs? Correct, none provided.\n    5. Valid JSON? Yes.\n    6. Concise? Yes.\n\n**2. Construct Video Description:**\n*   The scene is a meeting or collaborative session around a table.\n*   Multiple individuals are present.\n*   The camera wearer is interacting with items on the table.\n*   Specific actions: Pointing, holding a small object (USB?), discussing.\n*   Time progression: Continuous interaction throughout the clip.\n\n**3. Construct High-Level Conclusions:**\n*   Since there are no face IDs, I cannot make equivalences.\n*   I can infer intent from the voice. `<voice_0>` discusses a backup strategy involving a USB/hard disk. `<voice_22>` instructs to inspect an item.\n*   Conclusion: The group is reviewing equipment or files, specifically focusing on a USB drive or hard disk backup solution.\n\n**4. Drafting the Content:**\n\n*   *Video Description:*\n    *   Group of people sitting around a table with a checkered cloth.\n    *   They are examining various items including black cases and documents.\n    *   The camera wearer holds a small object and gestures towards the others.\n    *   One person (wearing black) listens attentively. Another (white shirt) looks at papers.\n    *   The camera wearer manipulates a small device, possibly a USB drive.\n    *   Discussion continues regarding the items on the table.\n\n*   *High-Level Conclusions:*\n    *   The group is engaged in a technical discussion regarding data storage or equipment setup.\n    *   Speaker `<voice_0>` proposes a backup strategy involving a USB drive or hard disk.\n    *   Speaker `<voice_22>` directs attention to opening and inspecting a specific item.\n\n**5. Refining based on constraints:**\n*   \"Preserve speaker identity when constructing memory from the supplied character features.\" -> I need to quote or summarize the ASR using the IDs.\n*   \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   So, I need to add entries to `video_description` or perhaps `high_level_conclusions`? The prompt asks for \"Video Description\" and \"High-Level Conclusions\". Usually, episodic memories go into the description or a separate list, but the schema provided is just `video_description` array and `high_level_conclusions` array. The instruction says \"include at least one episodic memory...\". I will integrate these summaries into the `video_description` as atomic events describing the conversation. Or better, since the instruction says \"construct memory from the supplied character features\", maybe I should treat the summary of speech as part of the description of the event. Let's look at the instruction again: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". And \"For every supplied voice ID... include at least one episodic memory...\". I will put the summarized speech into the `video_description` array as descriptive sentences about what happened/said.\n\nWait, looking at the instruction: \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis implies the output should contain these memories. Where? In the `video_description` array makes sense as it describes the video content including speech.\n\nLet's refine the `video_description`:\n- Frame 0-25: `<voice_0>` speaks about having four USB drives, calling them hard disks, noting the discussion was stuck, proposing a backup.\n- Frame 26-28: `<voice_22>` says \"First look, open and see.\"\n- General action: People sitting around a table, handling items.\n\nLet's refine `high_level_conclusions`:\n- The group is collaborating on a project involving hardware/data.\n- `<voice_0>` identifies a potential backup solution.\n- `<voice_22>` initiates physical inspection of an item.\n\nSince there are no face IDs, no `Equivalence` lines.\n\n**Final Plan:**\n1.  Create `video_description` array with atomic events covering the visual scene and the specific speech attributed to `<voice_0>` and `<voice_22>`.\n2.  Create `high_level_conclusions` array with inferences about the activity and intent.\n\n*Self-Correction on Memory Construction:* The instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". I should ensure the text reflects the ASR accurately but concisely within the description context.\n\nASR `<voice_0>`: \"MAI: Just here there are still four this USB, maybe this-this-this what is this called? This hard disk. Oh, earlier I felt everyone mainly discussed, and when discussing time joking nothing, if everyone got stuck, got stuck, can give this one install one install. Right, just a backup. Oh, so now just stuck.\"\nASR `<voice_22>`: \"MAI: First look, open and see.\"\n\nI will summarize these into the description.\n\nOne detail: \"Do not replace the ID with 'a speaker'...\". I must use `<voice_0>` etc.\n\nLet's write the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"A group of people sit around a table covered with a checkered cloth, examining various items.\",\n    \"<voice_0> states that there are four USB drives available, referring to them as hard disks, and notes that the previous discussion seemed stuck, suggesting a backup solution.\",\n    \"The camera wearer holds a small object and gestures while interacting with the group members.\",\n    \"<voice_22> instructs the group to first look and open something up to see inside.\",\n    \"Participants continue to handle papers and black cases on the table.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a collaborative session focused on reviewing equipment or data storage options.\",\n    \"<voice_0> proposes a backup strategy involving multiple USB drives or hard disks.\",\n    \"<voice_22> directs immediate physical inspection of an item during the discussion.\"\n  ]\n}\n```\nWait, I need to check if I missed any face IDs. The prompt says \"Face features:Voice features:{...}\". It looks like the Face features section is empty. So no face IDs.\nAlso, check constraint: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThe schema requires `video_description` and `high_level_conclusions` arrays.\nThe instruction says \"Return one complete JSON object\".\n\nOne more check on the voice ID usage. \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" The input supplies `<voice_0>` and `<voice_22>`. I used those.\n\nOne more check on \"episodic memory\". \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". I included summaries of their speech in the description. That fits.\n\nOne more check on \"Preserve distinct substantive utterances as separate atomic memories.\"\nThere are two distinct speakers with different timestamps. I have separated them in the description.\n\nOkay, ready to generate.\n\nWait, looking at the ASR for `<voice_0>`, it starts with \"MAI:\". This might be a name or channel identifier. I should probably keep it or just attribute it to the voice ID. The instruction says \"using the exact ID as the speaker\". So I will say `<voice_0> states...`.\n\nLet's double check the ASR content for accuracy in summary.\n\"just here there are still four this USB... hard disk... earlier I felt everyone mainly discussed... joking nothing... if everyone got stuck... give this one install... just a backup... now just stuck.\"\nSummary: `<voice_0>` mentions finding four USB drives, comparing them to hard disks, and noting the discussion had stalled, proposing a backup installation.\n\nASR for `<voice_22>`: \"First look, open and see.\"\nSummary: `<voice_22>` tells the group to open and inspect an item.\n\nLooks good.\n\nOne final check on constraints: \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I am summarizing the speech, not substituting the scene. \"Keep dialogue grounded in the provided transcript.\" -> Yes.\n\nOkay, proceeding.\n</think>\n\n{\n  \"video_description\": [\n    \"A group of people sits around a table covered with a checkered cloth, examining various items including black cases and papers.\",\n    \"<voice_0> mentions finding four USB drives, referring to them as hard disks, and notes that the previous discussion had stalled, proposing a backup solution.\",\n    \"The camera wearer holds a small object and gestures while interacting with the group members seated around the table.\",\n    \"<voice_22> instructs the group to first look and open something up to see inside.\",\n    \"Participants continue to handle papers and devices on the table while the discussion proceeds.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in a collaborative session focused on reviewing equipment or data storage options.\",\n    \"<voice_0> proposes a backup strategy involving multiple USB drives or hard disks after noting the discussion had stalled.\",\n    \"<voice_22> directs immediate physical inspection of an item during the discussion.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10591,
+          "output_tokens": 2679,
+          "total_tokens": 13270,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.004739995347335935,
+            "media_preparation_ms": 71.79020500188926,
+            "processor_tokenization_ms": 746.2687620063662,
+            "device_transfer_ms": 43.46976899978472,
+            "cuda_generation_ms": 131819.4743080021,
+            "decoding_ms": 9.320336997916456
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 132690.6573699962,
+          "request_end": 1789411047.4294708,
+          "latency_ms": 132726.76014399622,
+          "client_wall_clock_latency_ms": 132726.76014399622
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.3279779994045384,
+      "nodes_added": 5,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 1.1864659973070957,
+      "nodes_added": 3,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 3,
+    "speech_embeddings": 3,
+    "voice_identities": 2,
+    "detected_faces": 320,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 31,
+    "edges_after_clip": 10,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a table covered with a checkered cloth, examining various items including black cases and papers.",
+      "<voice_0> mentions finding four USB drives, referring to them as hard disks, and notes that the previous discussion had stalled, proposing a backup solution.",
+      "The camera wearer holds a small object and gestures while interacting with the group members seated around the table.",
+      "<voice_22> instructs the group to first look and open something up to see inside.",
+      "Participants continue to handle papers and devices on the table while the discussion proceeds."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a collaborative session focused on reviewing equipment or data storage options.",
+      "<voice_0> proposes a backup strategy involving multiple USB drives or hard disks after noting the discussion had stalled.",
+      "<voice_22> directs immediate physical inspection of an item during the discussion."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people sits around a table covered with a checkered cloth, examining various items including black cases and papers.",
+      "<voice_0> mentions finding four USB drives, referring to them as hard disks, and notes that the previous discussion had stalled, proposing a backup solution.",
+      "The camera wearer holds a small object and gestures while interacting with the group members seated around the table.",
+      "<voice_22> instructs the group to first look and open something up to see inside.",
+      "Participants continue to handle papers and devices on the table while the discussion proceeds."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in a collaborative session focused on reviewing equipment or data storage options.",
+      "<voice_0> proposes a backup strategy involving multiple USB drives or hard disks after noting the discussion had stalled.",
+      "<voice_22> directs immediate physical inspection of an item during the discussion."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_3_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 22,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 先看，拆开看。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 23,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people sits around a table covered with a checkered cloth, examining various items including black cases and papers."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 24,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> mentions finding four USB drives, referring to them as hard disks, and notes that the previous discussion had stalled, proposing a backup solution."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 25,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer holds a small object and gestures while interacting with the group members seated around the table."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 26,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_22> instructs the group to first look and open something up to see inside."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 27,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Participants continue to handle papers and devices on the table while the discussion proceeds."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 28,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is engaged in a collaborative session focused on reviewing equipment or data storage options."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 29,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_0> proposes a backup strategy involving multiple USB drives or hard disks after noting the discussion had stalled."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 30,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_22> directs immediate physical inspection of an item during the discussion."
+          ],
+          "timestamp": 3
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 24,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 29,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 22,
+        "target": 26,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 22,
+        "target": 30,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_3_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_3_graph.pkl"
+  },
+  "memory_pickle_bytes": 792183,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52077.705107623,
+    "prepared_perf": 52088.732880779,
+    "ordered_start_perf": 52088.733026755,
+    "consumer_wait_ms": 11024.665931996424,
+    "ready_to_ordered_ms": 0.14597599511034787,
+    "preparation_work_ms": 11027.326876006555,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 146399.09165399877
+}

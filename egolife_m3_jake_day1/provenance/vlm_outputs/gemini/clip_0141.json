@@ -1,0 +1,78 @@
+{
+  "clip_id": 141,
+  "source": {
+    "segment_id": 141,
+    "source": "DAY1_A1_JAKE_12153000.mp4",
+    "source_clock": "12153000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 44130.0,
+    "absolute_end_seconds": 44160.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0141.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 53848.701251317,
+      "prepared_perf": 53858.245072508,
+      "ordered_start_perf": 54011.806878954,
+      "consumer_wait_ms": 0.017271995602641255,
+      "ready_to_ordered_ms": 153561.80644599954,
+      "preparation_work_ms": 9538.556872001209,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are sitting and standing around a table with a red-and-white checkered tablecloth.",
+      "On the left, a woman in a black jacket sits at the table holding and adjusting a rolled brown object.",
+      "A woman in a white long-sleeved shirt stands near the whiteboard in the background, organizing and moving items on the table.",
+      "<voice_0> asks whether preparations should be done on the same day or the day before.",
+      "<voice_500> explains that items requiring refrigeration, such as tiramisu, should be made the day before.",
+      "<voice_1478> suggests making something like qingbuliang by buying coconut milk.",
+      "<voice_1654> and <voice_1655> join in discussing the preparation details.",
+      "<voice_500> agrees that ingredients can be prepped the day before and mentions making desserts using gelatin sheets and coconut milk."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in planning and brainstorming food or dessert offerings for an event, stall, or activity.",
+      "They are weighing the convenience and feasibility of desserts that can be pre-made and refrigerated versus assembled on the day.",
+      "The atmosphere is collaborative and casual as they evaluate practical recipes and ingredient requirements."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people are sitting and standing around a table with a red-and-white checkered tablecloth.\",\n  \"On the left, a woman in a black jacket sits at the table holding and adjusting a rolled brown object.\",\n  \"A woman in a white long-sleeved shirt stands near the whiteboard in the background, organizing and moving items on the table.\",\n  \"<voice_0> asks whether preparations should be done on the same day or the day before.\",\n  \"<voice_500> explains that items requiring refrigeration, such as tiramisu, should be made the day before.\",\n  \"<voice_1478> suggests making something like qingbuliang by buying coconut milk.\",\n  \"<voice_1654> and <voice_1655> join in discussing the preparation details.\",\n  \"<voice_500> agrees that ingredients can be prepped the day before and mentions making desserts using gelatin sheets and coconut milk.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in planning and brainstorming food or dessert offerings for an event, stall, or activity.\",\n  \"They are weighing the convenience and feasibility of desserts that can be pre-made and refrigerated versus assembled on the day.\",\n  \"The atmosphere is collaborative and casual as they evaluate practical recipes and ingredient requirements.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 141,
+      "call_id": "394a3a5b-9b93-4033-92d1-bcc2ebeee73e",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412838.8059657,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67375,
+      "output_tokens": 1661,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 26737.942471998394
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people are sitting and standing around a table with a red-and-white checkered tablecloth.\",\n  \"On the left, a woman in a black jacket sits at the table holding and adjusting a rolled brown object.\",\n  \"A woman in a white long-sleeved shirt stands near the whiteboard in the background, organizing and moving items on the table.\",\n  \"<voice_0> asks whether preparations should be done on the same day or the day before.\",\n  \"<voice_500> explains that items requiring refrigeration, such as tiramisu, should be made the day before.\",\n  \"<voice_1478> suggests making something like qingbuliang by buying coconut milk.\",\n  \"<voice_1654> and <voice_1655> join in discussing the preparation details.\",\n  \"<voice_500> agrees that ingredients can be prepped the day before and mentions making desserts using gelatin sheets and coconut milk.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is engaged in planning and brainstorming food or dessert offerings for an event, stall, or activity.\",\n  \"They are weighing the convenience and feasibility of desserts that can be pre-made and refrigerated versus assembled on the day.\",\n  \"The atmosphere is collaborative and casual as they evaluate practical recipes and ingredient requirements.\"\n ]\n}\n```",
+      "total_tokens": 69036,
+      "request_end": 1789412865.544076,
+      "latency_ms": 26738.09964799875,
+      "client_wall_clock_latency_ms": 26738.09964799875,
+      "api_request_wall_clock_latency_ms": 26738.09964799875
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_141_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

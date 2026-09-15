@@ -1,0 +1,535 @@
+{
+  "clip_id": 58,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0058.mp4",
+  "end_to_end_memory_generation_ms": 572055.9074750054,
+  "latency_ms": {
+    "clip_decode": 3796.4836899991496,
+    "deepgram_asr": 3.1613999963155948,
+    "mai_transcribe_asr": 2.52712700603297,
+    "asr_total": 3.818547003902495,
+    "audio_segmentation": 7.0154929999262094,
+    "speech_embedding_campplus": 541.1723780052853,
+    "facial_detection_recognition_buffalo_l": 3694.1454250045354,
+    "face_clustering": 5.448223993880674,
+    "vlm_memory_generation": 186990.1584420004,
+    "text_embedding": 719.6795089985244,
+    "graph_update_total": 290.6121100022574
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 58,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 14,
+      "input_chars": 1221,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789422699.524895,
+          "status": "success",
+          "total_tokens": 260,
+          "request_end": 1789422700.2443402,
+          "latency_ms": 719.4456700017327
+        }
+      ],
+      "total_tokens": 260,
+      "latency_ms": 719.6795089985244
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 3.1613999963155948,
+        "openrouter-mai-transcribe-2": 2.52712700603297
+      },
+      "asr_total_ms": 3.818547003902495,
+      "audio_segmentation_ms": 7.0154929999262094,
+      "speech_embedding_ms": 541.1723780052853,
+      "graph_update_ms": 288.7359779997496,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 852.0953320039553
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3694.1454250045354,
+      "face_clustering_ms": 5.448223993880674,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 194,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3806.4279129976057
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_364>",
+        "<voice_735>",
+        "<voice_736>",
+        "<voice_737>"
+      ],
+      "context_preparation_ms": 4155.546622001566,
+      "vlm_ms": 186990.1584420004,
+      "raw_response": "{\n  \"video_description\": [\n    \"The camera wearer walks through a hallway lined with cardboard boxes placed on a bench.\",\n    \"They proceed down the stairs and enter a room containing a table with filming equipment, including a clapperboard and lighting stands.\",\n    \"Several individuals are gathered in the room; one person wears an orange shirt and moves around the space.\",\n    \"At 00:00, a voice asks Zhe whether they purchased an item, noting that external deliveries seem to belong to Yu Xuan.\",\n    \"At 00:11, a response states that the item has not been bought yet.\",\n    \"Around 00:20, a discussion arises regarding bringing capital to join the group.\",\n    \"At 00:22, confirmation is given that the idea is indeed correct.\",\n    \"Later in the clip, the camera wearer's legs are visible in the foreground as they stand among the group.\",\n    \"Faces of the participants become blurred in the later frames of the video.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_364> inquires about the purchase status of an item and identifies Yu Xuan as the recipient of external deliveries.\",\n    \"<voice_735> confirms that the item has not been purchased yet.\",\n    \"<voice_736> suggests bringing financial resources to join the group.\",\n    \"<voice_737> affirms the suggestion to bring capital.\",\n    \"The group appears to be coordinating logistics and funding for a project or production.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera wearer walks through a hallway lined with cardboard boxes placed on a bench.",
+          "They proceed down the stairs and enter a room containing a table with filming equipment, including a clapperboard and lighting stands.",
+          "Several individuals are gathered in the room; one person wears an orange shirt and moves around the space.",
+          "At 00:00, a voice asks Zhe whether they purchased an item, noting that external deliveries seem to belong to Yu Xuan.",
+          "At 00:11, a response states that the item has not been bought yet.",
+          "Around 00:20, a discussion arises regarding bringing capital to join the group.",
+          "At 00:22, confirmation is given that the idea is indeed correct.",
+          "Later in the clip, the camera wearer's legs are visible in the foreground as they stand among the group.",
+          "Faces of the participants become blurred in the later frames of the video."
+        ],
+        "high_level_conclusions": [
+          "<voice_364> inquires about the purchase status of an item and identifies Yu Xuan as the recipient of external deliveries.",
+          "<voice_735> confirms that the item has not been purchased yet.",
+          "<voice_736> suggests bringing financial resources to join the group.",
+          "<voice_737> affirms the suggestion to bring capital.",
+          "The group appears to be coordinating logistics and funding for a project or production."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 58,
+          "call_id": "e69de189-0c8a-4911-9ac3-778193e830f1",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789422512.5338254,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"The camera wearer walks through a hallway lined with cardboard boxes placed on a bench.\",\n    \"They proceed down the stairs and enter a room containing a table with filming equipment, including a clapperboard and lighting stands.\",\n    \"Several individuals are gathered in the room; one person wears an orange shirt and moves around the space.\",\n    \"At 00:00, a voice asks Zhe whether they purchased an item, noting that external deliveries seem to belong to Yu Xuan.\",\n    \"At 00:11, a response states that the item has not been bought yet.\",\n    \"Around 00:20, a discussion arises regarding bringing capital to join the group.\",\n    \"At 00:22, confirmation is given that the idea is indeed correct.\",\n    \"Later in the clip, the camera wearer's legs are visible in the foreground as they stand among the group.\",\n    \"Faces of the participants become blurred in the later frames of the video.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_364> inquires about the purchase status of an item and identifies Yu Xuan as the recipient of external deliveries.\",\n    \"<voice_735> confirms that the item has not been purchased yet.\",\n    \"<voice_736> suggests bringing financial resources to join the group.\",\n    \"<voice_737> affirms the suggestion to bring capital.\",\n    \"The group appears to be coordinating logistics and funding for a project or production.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   0.00s - 3.50s: First-person view (POV) walking through a hallway/staircase area towards a room. There are boxes on a bench. The camera wearer is wearing blue pants/shirt.\n    *   4.00s - 4.50s: Entering a room where people are gathered. It looks like a filming setup (clapperboard, lights, whiteboard).\n    *   5.00s - 14.00s: Inside the room. Several people are present. One person in an orange shirt is standing/moving around. Others are sitting or standing near a table with props (flowers, clapperboard).\n    *   15.00s - 16.00s: Camera turns away, looking into a kitchen/bathroom area briefly.\n    *   16.50s - 29.50s: Back to the main room. People are interacting around the table. One woman in a white top is organizing things. Another woman in a teal dress is standing. A man in an orange shirt walks around. The camera wearer (blue shirt/pants) is visible in some frames (e.g., 23.00s, 23.50s), suggesting they are part of the group or filming. Wait, looking closely at 23.00s, the camera wearer's legs (blue pants) are visible at the bottom. This implies the camera wearer is standing there too.\n*   **Voice Features:**\n    *   `<voice_364>`: \"Mai: 喆，你没有买这个。外面的快递就只有于旋的是吗？还有别人买快递的吗？\" (Zhe, you didn't buy this. The outside delivery is just Yu Xuan's, right? Are there others buying deliveries?) -> Timestamps 00:00-00:11.\n    *   `<voice_735>`: \"Mai: 还没呢。\" (Not yet.) -> Timestamps 00:11-00:13.\n    *   `<voice_736>`: \"Deepgram: ¿Quieres? | Mai: 带资进组，你看。\" (Deepgram: Do you want? | Mai: Bring capital to join the group, look.) -> Timestamps 00:20-00:23.\n    *   `<voice_737>`: \"Deepgram: ¿Quieres? | Mai: 确实。\" (Deepgram: Do you want? | Mai: Indeed.) -> Timestamps 00:22-00:24.\n\n**2. Map Voices to Visuals:**\n*   The timestamps align with the video progression.\n*   00:00-00:11: Camera is moving through the house. Someone speaks about \"Zhe\" and \"Yu Xuan\".\n*   00:11-00:13: Response \"Not yet.\"\n*   00:20-00:24: Discussion about joining a group (\"bring capital\").\n*   Who is speaking? The prompt says \"Preserve speaker identity... use the exact ID as the speaker.\" I need to associate these voices with the visible people if possible, but the prompt also says \"A voice ID does not establish which visible person is speaking... Do not assign it to the camera wearer or another visible person... without supporting evidence.\"\n*   However, usually in these tasks, if there's a clear speaker, I should try to link them if the visual context supports it (e.g., lip movement, proximity). But strict adherence to the instruction \"Do not assign it to the camera wearer or another visible person... without supporting evidence\" suggests caution.\n*   Looking at the frames, faces are often blurred or obscured (e.g., 14.00s onwards, faces are pixelated/blurred).\n*   Wait, the instruction says \"If no face IDs are supplied, do not invent any.\" There are NO face IDs supplied in the `Face features` section (it's empty).\n*   Therefore, I cannot create `Equivalence` statements linking specific face IDs to voice IDs because no face IDs exist.\n*   I must use the voice IDs (`<voice_364>`, etc.) directly in the text.\n*   I need to describe the actions corresponding to the speech.\n    *   00:00-00:11: Someone asks Zhe about buying something/delivery.\n    *   00:11-00:13: Someone replies \"Not yet.\"\n    *   00:20-00:24: Someone talks about bringing money/capital to join a group.\n\n**3. Construct Video Description:**\n*   Start with the POV walk (0.00s - 3.50s).\n*   Enter the room (4.00s - 4.50s).\n*   Describe the gathering (5.00s - 14.00s). Mention the filming equipment (clapperboard, lights).\n*   Mention the interaction starting around 00:00 (voice starts immediately).\n*   Describe the specific conversation points based on ASR.\n*   Note the camera wearer's presence (legs visible later).\n*   Note the face blurring in later frames.\n\n**4. Construct High-Level Conclusions:**\n*   Since there are no face IDs, I cannot make equivalences like `Equivalence: <face_1>, <voice_2>`.\n*   I can make general conclusions about the activity (filming a short film/video, discussing logistics).\n*   I can mention the relationship between the speakers (asking about purchases, discussing funding/joining a group).\n*   Constraint Check: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" I have `<voice_364>`, `<voice_735>`, `<voice_736>`, `<voice_737>`.\n*   Constraint Check: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   Memory 1: `<voice_364>` asks Zhe about buying items/deliveries.\n    *   Memory 2: `<voice_735>` replies \"Not yet.\"\n    *   Memory 3: `<voice_736>` discusses bringing capital to join the group.\n    *   Memory 4: `<voice_737>` confirms \"Indeed.\"\n\n**5. Refine Output:**\n*   Ensure JSON validity.\n*   Ensure no extra text.\n*   Ensure voice IDs are used correctly in the memories.\n*   Ensure no face IDs are invented since none were provided.\n\n**Drafting Video Description:**\n*   The camera wearer walks down a hallway past boxes on a bench towards a living area.\n*   They enter a room where several people are gathered around a table with filming equipment, including a clapperboard and lights.\n*   A person in an orange shirt moves around the room while others stand or sit near the table.\n*   At 00:00, a voice asks someone named Zhe if they bought something, mentioning deliveries.\n*   Later, at 00:11, a response indicates the item hasn't been bought yet.\n*   Around 00:20, a discussion occurs about bringing capital to join a group.\n*   The camera wearer's legs are visible in the foreground during the latter part of the clip.\n*   Faces of the participants appear blurred in the later frames.\n\n**Drafting High-Level Conclusions:**\n*   `<voice_364>` inquires about the purchase status of an item and mentions courier deliveries.\n*   `<voice_735>` responds that the item has not been purchased yet.\n*   `<voice_736>` proposes bringing financial resources to join the group.\n*   `<voice_737>` confirms the proposal.\n*   The group appears to be preparing for a production or meeting involving logistics and funding.\n\n**Final Review against Constraints:**\n*   \"Preserve speaker identity... use the exact ID as the speaker.\" -> Done.\n*   \"Do not replace the ID with 'a speaker'...\" -> Done.\n*   \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> Done.\n*   \"A voice ID does not establish which visible person is speaking... Do not assign it to the camera wearer... without supporting evidence.\" -> I won't explicitly say \"The person in orange is <voice_364>\". I will attribute the speech to the ID itself.\n*   \"If no face IDs are supplied, do not invent any.\" -> Correct, no Equivalence lines needed.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> Will follow the structure.\n\nLet's refine the descriptions to be more precise with the timestamps and content.\nVoice 364 (00:00-00:11): Asks Zhe about buying something, mentions external delivery being Yu Xuan's.\nVoice 735 (00:11-00:13): Says \"Not yet.\"\nVoice 736 (00:20-00:23): Mentions \"Bring capital to join the group\".\nVoice 737 (00:22-00:24): Says \"Indeed.\"\n\nWait, Voice 736 and 737 overlap slightly in time (20-23 vs 22-24). I should treat them as sequential or overlapping utterances.\nAlso, check if I need to mention the camera wearer. The prompt says \"Do not assign it to the camera wearer... without supporting evidence.\" In the video description, I can mention the camera wearer's perspective/actions (walking, entering) but shouldn't claim a voice belongs to them unless obvious. The voice starts at 00:00 while the camera is still in the hallway. So the speaker is likely someone else in the room or the camera wearer talking to themselves/others. Given the context of \"Zhe\" and \"Yu Xuan\", it's likely a conversation happening inside or just entered. I will describe the audio as occurring during the walk/entry.\n\nActually, looking at the timestamps:\n00:00 - 00:11: Camera is walking. Audio starts here.\n00:11 - 00:13: Audio continues.\n00:20 - 00:24: Audio continues.\nThis implies the conversation happens while the camera is moving or shortly after entering.\nI will describe the visual flow first, then integrate the audio events.\n\nOne detail: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSo I need to ensure `<voice_364>`, `<voice_735>`, `<voice_736>`, `<voice_737>` all appear in the text.\n\nLet's write the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"The camera wearer walks through a hallway lined with cardboard boxes placed on a bench.\",\n    \"They proceed down the stairs and enter a room containing a table with filming equipment, including a clapperboard and lighting stands.\",\n    \"Several individuals are gathered in the room; one person wears an orange shirt and moves around the space.\",\n    \"At 00:00, a voice asks Zhe whether they purchased an item, noting that external deliveries seem to belong to Yu Xuan.\",\n    \"At 00:11, a response states that the item has not been bought yet.\",\n    \"Around 00:20, a discussion arises regarding bringing capital to join the group.\",\n    \"At 00:22, confirmation is given that the idea is indeed correct.\",\n    \"Later in the clip, the camera wearer's legs are visible in the foreground as they stand among the group.\",\n    \"Faces of the participants become blurred in the later frames of the video.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_364> inquires about the purchase status of an item and identifies Yu Xuan as the recipient of external deliveries.\",\n    \"<voice_735> confirms that the item has not been purchased yet.\",\n    \"<voice_736> suggests bringing financial resources to join the group.\",\n    \"<voice_737> affirms the suggestion to bring capital.\",\n    \"The group appears to be coordinating logistics and funding for a project or production.\"\n  ]\n}\n```\nDouble check constraints:\n- \"Preserve speaker identity... use the exact ID as the speaker.\" -> Used `<voice_364>`, etc.\n- \"For every supplied voice ID... include at least one episodic memory...\" -> Included all 4.\n- \"Do not replace the ID with 'a speaker'...\" -> Done.\n- \"If no face IDs are supplied, do not invent any.\" -> No Equivalence lines added.\n- \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> Matches.\n- \"Be concise and avoid duplicate events.\" -> Looks good.\n\nOne small adjustment: The prompt says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" I am using the IDs from the input (`<voice_364>`, etc.).\nThe prompt also says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" I did this in high_level_conclusions.\n\nWait, looking at the voice data again:\n`\"<voice_364>\": [...]`\n`\"<voice_735>\": [...]`\n`\"<voice_736>\": [...]`\n`\"<voice_737>\": [...]`\nThese are the IDs. I will use them exactly.\n\nOne detail on the video description: \"At 00:00, a voice asks...\" - This attributes the voice to the event. It doesn't explicitly name a person visually, which is safer given the blur and lack of face IDs.\n\"At 00:11, a response states...\" - Same.\n\"At 00:20, a discussion arises...\" - Same.\n\nLooks solid.\n\nOne final check on the `high_level_conclusions`:\n\"Use logical inference to identify character intentions, relationships, and identities.\"\nSince I don't know who is who visually, I can infer relationships from the dialogue (inquiry, confirmation, proposal).\nI will ensure the conclusions reflect the dialogue content linked to the IDs.\n\nRevised High Level Conclusions:\n- `<voice_364>` questions Zhe about purchasing an item and notes Yu Xuan received external deliveries.\n- `<voice_735>` replies that the item has not been acquired yet.\n- `<voice_736>` proposes contributing funds to join the group.\n- `<voice_737>` validates the proposal.\n- The participants are engaged in planning a collaborative effort involving resource allocation.\n\nThis seems appropriate.\n\nOne constraint: \"Return one complete JSON object... without any additional explanation or formatting.\"\nOkay.\n\nOne more check: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nMy draft includes summaries.\n`<voice_364>`: \"asks Zhe whether they purchased an item...\" (Summarizes \"MAI: 喆，你没有买这个...\")\n`<voice_735>`: \"confirms that the item has not been bought yet.\" (Summarizes \"MAI: 还没呢。\")\n`<voice_736>`: \"suggests bringing financial resources to join the group.\" (Summarizes \"Mai: 带资进组，你看。\")\n`<voice_737>`: \"affirms the suggestion to bring capital.\" (Summarizes \"Mai: 确实。\")\n\nThis meets the requirement.\n\nFinal check on Face Features: The input says `Face features:` followed by nothing (or empty block). So no face IDs. My plan holds.\n\nOne minor thing: \"Deepgram\" appears in the ASR for some entries. I should probably ignore the \"Deepgram:\" prefix in my summary and focus on the human speech (\"MAI: ...\").\n`<voice_364>`: \"MAI: ...\"\n`<voice_735>`: \"MAI: ...\"\n`<voice_736>`: \"Deepgram: ... | MAI: ...\" -> The human speech is \"Mai: 带资进组，你看。\"\n`<voice_737>`: \"Deepgram: ... | MAI: ...\" -> The human speech is \"Mai: 确实。\"\nI will summarize the human speech parts.\n\nReady to generate JSON.\n</think>\n\n{\n  \"video_description\": [\n    \"The camera wearer walks through a hallway lined with cardboard boxes placed on a bench.\",\n    \"They proceed down the stairs and enter a room containing a table with filming equipment, including a clapperboard and lighting stands.\",\n    \"Several individuals are gathered in the room; one person wears an orange shirt and moves around the space.\",\n    \"At 00:00, a voice asks Zhe whether they purchased an item, noting that external deliveries seem to belong to Yu Xuan.\",\n    \"At 00:11, a response states that the item has not been bought yet.\",\n    \"Around 00:20, a discussion arises regarding bringing capital to join the group.\",\n    \"At 00:22, confirmation is given that the idea is indeed correct.\",\n    \"Later in the clip, the camera wearer's legs are visible in the foreground as they stand among the group.\",\n    \"Faces of the participants become blurred in the later frames of the video.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_364> inquires about the purchase status of an item and identifies Yu Xuan as the recipient of external deliveries.\",\n    \"<voice_735> confirms that the item has not been purchased yet.\",\n    \"<voice_736> suggests bringing financial resources to join the group.\",\n    \"<voice_737> affirms the suggestion to bring capital.\",\n    \"The group appears to be coordinating logistics and funding for a project or production.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10488,
+          "output_tokens": 4118,
+          "total_tokens": 14606,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.001963002432603389,
+            "media_preparation_ms": 58.73457100096857,
+            "processor_tokenization_ms": 585.7480409977143,
+            "device_transfer_ms": 37.192527001025155,
+            "cuda_generation_ms": 186275.90351599792,
+            "decoding_ms": 3.710613993462175
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 186961.45547200285,
+          "request_end": 1789422699.523986,
+          "latency_ms": 186990.1584420004,
+          "client_wall_clock_latency_ms": 186990.1584420004
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 5
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.09018000127980486,
+      "nodes_added": 9,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 1.7859520012279972,
+      "nodes_added": 5,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 4,
+    "detected_faces": 194,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 5,
+    "nodes_after_clip": 752,
+    "edges_after_clip": 273,
+    "nodes_added_by_clip": 17,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer walks through a hallway lined with cardboard boxes placed on a bench.",
+      "They proceed down the stairs and enter a room containing a table with filming equipment, including a clapperboard and lighting stands.",
+      "Several individuals are gathered in the room; one person wears an orange shirt and moves around the space.",
+      "At 00:00, a voice asks Zhe whether they purchased an item, noting that external deliveries seem to belong to Yu Xuan.",
+      "At 00:11, a response states that the item has not been bought yet.",
+      "Around 00:20, a discussion arises regarding bringing capital to join the group.",
+      "At 00:22, confirmation is given that the idea is indeed correct.",
+      "Later in the clip, the camera wearer's legs are visible in the foreground as they stand among the group.",
+      "Faces of the participants become blurred in the later frames of the video."
+    ],
+    "high_level_conclusions": [
+      "<voice_364> inquires about the purchase status of an item and identifies Yu Xuan as the recipient of external deliveries.",
+      "<voice_735> confirms that the item has not been purchased yet.",
+      "<voice_736> suggests bringing financial resources to join the group.",
+      "<voice_737> affirms the suggestion to bring capital.",
+      "The group appears to be coordinating logistics and funding for a project or production."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera wearer walks through a hallway lined with cardboard boxes placed on a bench.",
+      "They proceed down the stairs and enter a room containing a table with filming equipment, including a clapperboard and lighting stands.",
+      "Several individuals are gathered in the room; one person wears an orange shirt and moves around the space.",
+      "At 00:00, a voice asks Zhe whether they purchased an item, noting that external deliveries seem to belong to Yu Xuan.",
+      "At 00:11, a response states that the item has not been bought yet.",
+      "Around 00:20, a discussion arises regarding bringing capital to join the group.",
+      "At 00:22, confirmation is given that the idea is indeed correct.",
+      "Later in the clip, the camera wearer's legs are visible in the foreground as they stand among the group.",
+      "Faces of the participants become blurred in the later frames of the video."
+    ],
+    "high_level_conclusions": [
+      "<voice_364> inquires about the purchase status of an item and identifies Yu Xuan as the recipient of external deliveries.",
+      "<voice_735> confirms that the item has not been purchased yet.",
+      "<voice_736> suggests bringing financial resources to join the group.",
+      "<voice_737> affirms the suggestion to bring capital.",
+      "The group appears to be coordinating logistics and funding for a project or production."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_58_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 17,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 735,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 还没呢。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 736,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: ¿Quieres? | MAI: 带资进组，你看。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 737,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: ¿Quieres? | MAI: 确实。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 738,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer walks through a hallway lined with cardboard boxes placed on a bench."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 739,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "They proceed down the stairs and enter a room containing a table with filming equipment, including a clapperboard and lighting stands."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 740,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Several individuals are gathered in the room; one person wears an orange shirt and moves around the space."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 741,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:00, a voice asks Zhe whether they purchased an item, noting that external deliveries seem to belong to Yu Xuan."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 742,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:11, a response states that the item has not been bought yet."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 743,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Around 00:20, a discussion arises regarding bringing capital to join the group."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 744,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:22, confirmation is given that the idea is indeed correct."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 745,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Later in the clip, the camera wearer's legs are visible in the foreground as they stand among the group."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 746,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Faces of the participants become blurred in the later frames of the video."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 747,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_364> inquires about the purchase status of an item and identifies Yu Xuan as the recipient of external deliveries."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 748,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_735> confirms that the item has not been purchased yet."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 749,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_736> suggests bringing financial resources to join the group."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 750,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_737> affirms the suggestion to bring capital."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 751,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be coordinating logistics and funding for a project or production."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 364,
+        "target": 747,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 735,
+        "target": 748,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 736,
+        "target": 749,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 737,
+        "target": 750,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_58_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_58_graph.pkl"
+  },
+  "memory_pickle_bytes": 17760390,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 63315.126236647,
+    "prepared_perf": 63321.097047652,
+    "ordered_start_perf": 63689.202597737,
+    "consumer_wait_ms": 0.011602001904975623,
+    "ready_to_ordered_ms": 368105.55008499796,
+    "preparation_work_ms": 5965.525347004586,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 196530.7010760007
+}

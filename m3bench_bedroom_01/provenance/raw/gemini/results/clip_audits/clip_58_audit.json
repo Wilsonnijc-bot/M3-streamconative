@@ -1,0 +1,363 @@
+{
+  "clip_id": 58,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00270000.mp4",
+  "end_to_end_memory_generation_ms": 697171.6662120016,
+  "latency_ms": {
+    "clip_decode": 3928.6651669972343,
+    "deepgram_asr": 242.63922500540502,
+    "mai_transcribe_asr": 1116.6607289924286,
+    "asr_total": 1117.7287489990704,
+    "audio_segmentation": 6.698548997519538,
+    "speech_embedding_campplus": 903.1313529994804,
+    "facial_detection_recognition_buffalo_l": 3304.6025880030356,
+    "face_clustering": 20.85944000282325,
+    "vlm_memory_generation": 29860.65584899916,
+    "text_embedding": 1776.2909330049297,
+    "graph_update_total": 80.31120801751968
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 58,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 927,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789434961.8995779,
+          "status": "success",
+          "total_tokens": 185,
+          "request_end": 1789434963.6756446,
+          "latency_ms": 1776.0672709991923
+        }
+      ],
+      "total_tokens": 185,
+      "latency_ms": 1776.2909330049297
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 242.63922500540502,
+        "openrouter-mai-transcribe-2": 1116.6607289924286
+      },
+      "asr_total_ms": 1117.7287489990704,
+      "audio_segmentation_ms": 6.698548997519538,
+      "speech_embedding_ms": 903.1313529994804,
+      "graph_update_ms": 78.4784980060067,
+      "asr_segment_count": 4,
+      "speech_embedding_count": 4,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1002.2878500021761
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3304.6025880030356,
+      "face_clustering_ms": 20.85944000282325,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 300,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3489.896718005184
+    },
+    "vlm": {
+      "context_preparation_ms": 5248.916491007549,
+      "vlm_ms": 29860.65584899916,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and documents.\",\n    \"The woman on the left rests her chin in her hand and speaks continuously to the other woman.\",\n    \"The woman on the right initially rests her chin in her hand while listening.\",\n    \"The woman on the right picks up her mobile phone from the table, checks the screen, and later sets it back down.\",\n    \"The woman on the right folds her arms and continues listening attentively to the woman on the left.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> and <voice_321> belong to the woman seated on the left, representing continuous speech from the same person.\",\n    \"<voice_562> corresponds to the brief verbal acknowledgment from the woman on the right.\",\n    \"The woman on the left acts in a supportive parental or mentoring capacity, reassuring the other woman about academic expectations and exam stress.\",\n    \"The setting indicates an informal, supportive personal discussion between close acquaintances or relatives.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit opposite each other at a dining table set with food, drinks, and documents.",
+          "The woman on the left rests her chin in her hand and speaks continuously to the other woman.",
+          "The woman on the right initially rests her chin in her hand while listening.",
+          "The woman on the right picks up her mobile phone from the table, checks the screen, and later sets it back down.",
+          "The woman on the right folds her arms and continues listening attentively to the woman on the left."
+        ],
+        "high_level_conclusions": [
+          "<voice_10> and <voice_321> belong to the woman seated on the left, representing continuous speech from the same person.",
+          "<voice_562> corresponds to the brief verbal acknowledgment from the woman on the right.",
+          "The woman on the left acts in a supportive parental or mentoring capacity, reassuring the other woman about academic expectations and exam stress.",
+          "The setting indicates an informal, supportive personal discussion between close acquaintances or relatives."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 58,
+          "call_id": "66f8f7d7-0d2e-4683-bc13-9216181e4b04",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789434932.038114,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65960,
+          "output_tokens": 2044,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 29860.52831800771
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and documents.\",\n    \"The woman on the left rests her chin in her hand and speaks continuously to the other woman.\",\n    \"The woman on the right initially rests her chin in her hand while listening.\",\n    \"The woman on the right picks up her mobile phone from the table, checks the screen, and later sets it back down.\",\n    \"The woman on the right folds her arms and continues listening attentively to the woman on the left.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_10> and <voice_321> belong to the woman seated on the left, representing continuous speech from the same person.\",\n    \"<voice_562> corresponds to the brief verbal acknowledgment from the woman on the right.\",\n    \"The woman on the left acts in a supportive parental or mentoring capacity, reassuring the other woman about academic expectations and exam stress.\",\n    \"The setting indicates an informal, supportive personal discussion between close acquaintances or relatives.\"\n  ]\n}\n```",
+          "total_tokens": 68004,
+          "request_end": 1789434961.898749,
+          "latency_ms": 29860.65584899916,
+          "client_wall_clock_latency_ms": 29860.65584899916,
+          "api_request_wall_clock_latency_ms": 29860.65584899916
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.04673800140153617,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 1.7859720101114362,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 4,
+    "speech_embeddings": 4,
+    "voice_identities": 3,
+    "detected_faces": 300,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 4,
+    "nodes_after_clip": 571,
+    "edges_after_clip": 181,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 1
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and documents.",
+      "The woman on the left rests her chin in her hand and speaks continuously to the other woman.",
+      "The woman on the right initially rests her chin in her hand while listening.",
+      "The woman on the right picks up her mobile phone from the table, checks the screen, and later sets it back down.",
+      "The woman on the right folds her arms and continues listening attentively to the woman on the left."
+    ],
+    "high_level_conclusions": [
+      "<voice_10> and <voice_321> belong to the woman seated on the left, representing continuous speech from the same person.",
+      "<voice_562> corresponds to the brief verbal acknowledgment from the woman on the right.",
+      "The woman on the left acts in a supportive parental or mentoring capacity, reassuring the other woman about academic expectations and exam stress.",
+      "The setting indicates an informal, supportive personal discussion between close acquaintances or relatives."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and documents.",
+      "The woman on the left rests her chin in her hand and speaks continuously to the other woman.",
+      "The woman on the right initially rests her chin in her hand while listening.",
+      "The woman on the right picks up her mobile phone from the table, checks the screen, and later sets it back down.",
+      "The woman on the right folds her arms and continues listening attentively to the woman on the left."
+    ],
+    "high_level_conclusions": [
+      "<voice_10> and <voice_321> belong to the woman seated on the left, representing continuous speech from the same person.",
+      "<voice_562> corresponds to the brief verbal acknowledgment from the woman on the right.",
+      "The woman on the left acts in a supportive parental or mentoring capacity, reassuring the other woman about academic expectations and exam stress.",
+      "The setting indicates an informal, supportive personal discussion between close acquaintances or relatives."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_58_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 1,
+    "nodes": [
+      {
+        "id": 562,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: in any examination, whether big examination or some little tests. | MAI: Mhm."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 563,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit opposite each other at a dining table set with food, drinks, and documents."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 564,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left rests her chin in her hand and speaks continuously to the other woman."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 565,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right initially rests her chin in her hand while listening."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 566,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right picks up her mobile phone from the table, checks the screen, and later sets it back down."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 567,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right folds her arms and continues listening attentively to the woman on the left."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 568,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_562> corresponds to the brief verbal acknowledgment from the woman on the right."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 569,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the left acts in a supportive parental or mentoring capacity, reassuring the other woman about academic expectations and exam stress."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 570,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The setting indicates an informal, supportive personal discussion between close acquaintances or relatives."
+          ],
+          "timestamp": 58
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 562,
+        "target": 568,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_58_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_58_graph.pkl"
+  },
+  "memory_pickle_bytes": 14980836,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 75453.396745981,
+    "prepared_perf": 75458.582654941,
+    "ordered_start_perf": 76108.162853997,
+    "consumer_wait_ms": 0.006460992153733969,
+    "ready_to_ordered_ms": 649580.1990559994,
+    "preparation_work_ms": 5180.549722004798,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 41382.24056499894
+}

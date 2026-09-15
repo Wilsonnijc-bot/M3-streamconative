@@ -1,0 +1,75 @@
+{
+  "clip_id": 54,
+  "source": {
+    "segment_id": 54,
+    "source": "DAY1_A1_JAKE_11350000.mp4",
+    "source_clock": "11350000",
+    "start_seconds_in_source": 19.110000000000582,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41719.11,
+    "absolute_end_seconds": 41730.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0054.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 47447.13087688,
+      "prepared_perf": 47450.990395856,
+      "ordered_start_perf": 47533.179961948,
+      "consumer_wait_ms": 0.01840400364017114,
+      "ready_to_ordered_ms": 82189.56609199813,
+      "preparation_work_ms": 3854.233322002983,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Several people gather around a table covered with a pink checkered tablecloth.",
+      "A film clapperboard lies on the foreground edge of the table.",
+      "A woman in a white top and a woman in a green dress open a long cardboard box placed on the table.",
+      "The woman in the green dress removes a wrapped bouquet from the box.",
+      "A woman dressed in black sits at the table watching them unpack.",
+      "A man wearing an orange t-shirt stands in the background watching the activity."
+    ],
+    "high_level_conclusions": [
+      "The room is being used as a film or video production set, evidenced by the clapperboard and studio lighting.",
+      "The team is unpacking and inspecting props or set pieces for an upcoming shoot."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"Several people gather around a table covered with a pink checkered tablecloth.\",\n  \"A film clapperboard lies on the foreground edge of the table.\",\n  \"A woman in a white top and a woman in a green dress open a long cardboard box placed on the table.\",\n  \"The woman in the green dress removes a wrapped bouquet from the box.\",\n  \"A woman dressed in black sits at the table watching them unpack.\",\n  \"A man wearing an orange t-shirt stands in the background watching the activity.\"\n ],\n \"high_level_conclusions\": [\n  \"The room is being used as a film or video production set, evidenced by the clapperboard and studio lighting.\",\n  \"The team is unpacking and inspecting props or set pieces for an upcoming shoot.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 54,
+      "call_id": "16242605-34a6-4af6-929a-89b6029e7d9d",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789406350.3991497,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 24515,
+      "output_tokens": 557,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 41011.70579400059
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"Several people gather around a table covered with a pink checkered tablecloth.\",\n  \"A film clapperboard lies on the foreground edge of the table.\",\n  \"A woman in a white top and a woman in a green dress open a long cardboard box placed on the table.\",\n  \"The woman in the green dress removes a wrapped bouquet from the box.\",\n  \"A woman dressed in black sits at the table watching them unpack.\",\n  \"A man wearing an orange t-shirt stands in the background watching the activity.\"\n ],\n \"high_level_conclusions\": [\n  \"The room is being used as a film or video production set, evidenced by the clapperboard and studio lighting.\",\n  \"The team is unpacking and inspecting props or set pieces for an upcoming shoot.\"\n ]\n}\n```",
+      "total_tokens": 25072,
+      "request_end": 1789406391.411005,
+      "latency_ms": 41011.84515500063,
+      "client_wall_clock_latency_ms": 41011.84515500063,
+      "api_request_wall_clock_latency_ms": 41011.84515500063
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_54_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

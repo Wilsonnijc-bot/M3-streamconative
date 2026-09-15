@@ -1,0 +1,395 @@
+{
+  "clip_id": 130,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0130.mp4",
+  "end_to_end_memory_generation_ms": 249298.3194920016,
+  "latency_ms": {
+    "clip_decode": 5762.169667999842,
+    "deepgram_asr": 286.16511300060665,
+    "mai_transcribe_asr": 1128.9439109968953,
+    "asr_total": 1130.3470109996852,
+    "audio_segmentation": 10.834353997779544,
+    "speech_embedding_campplus": 2648.285142997338,
+    "facial_detection_recognition_buffalo_l": 3926.839136001945,
+    "face_clustering": 6.160616998386104,
+    "vlm_memory_generation": 139272.45290600695,
+    "text_embedding": 564.0709060025983,
+    "graph_update_total": 1966.7285850082408
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 130,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 832,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789412259.2282434,
+          "status": "success",
+          "total_tokens": 161,
+          "request_end": 1789412259.792081,
+          "latency_ms": 563.8382390025072
+        }
+      ],
+      "total_tokens": 161,
+      "latency_ms": 564.0709060025983
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 286.16511300060665,
+        "openrouter-mai-transcribe-2": 1128.9439109968953
+      },
+      "asr_total_ms": 1130.3470109996852,
+      "audio_segmentation_ms": 10.834353997779544,
+      "speech_embedding_ms": 2648.285142997338,
+      "graph_update_ms": 1966.5858959997422,
+      "asr_segment_count": 13,
+      "speech_embedding_count": 13,
+      "voice_identity_count": 11,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 4648.374641998089
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3926.839136001945,
+      "face_clustering_ms": 6.160616998386104,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 224,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4056.862084995373
+    },
+    "vlm": {
+      "context_preparation_ms": 5723.97461500077,
+      "vlm_ms": 139272.45290600695,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group sits around a checkered table inside a room discussing food plans.\",\n  \"A woman on the left wearing black inspects small pink flowers in her hands.\",\n  \"A woman with pink hair and another woman seated beside the table participate in the conversation.\",\n  \"A young man wearing an orange shirt stands in the adjoining kitchen area, gesturing while speaking.\",\n  \"The camera wearer sits at the end of the table with a laptop open in front of them.\",\n  \"The man in the orange shirt moves around the kitchen while chatting with the group.\",\n  \"The group discusses ordering large pizzas instead of doing barbecue for about twenty people.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is organizing a gathering for around twenty people and deciding on food logistics.\",\n  \"They conclude that preparing barbecue or full meals for twenty people is too laborious, opting instead for pizza delivery around 5:00 PM.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group sits around a checkered table inside a room discussing food plans.",
+          "A woman on the left wearing black inspects small pink flowers in her hands.",
+          "A woman with pink hair and another woman seated beside the table participate in the conversation.",
+          "A young man wearing an orange shirt stands in the adjoining kitchen area, gesturing while speaking.",
+          "The camera wearer sits at the end of the table with a laptop open in front of them.",
+          "The man in the orange shirt moves around the kitchen while chatting with the group.",
+          "The group discusses ordering large pizzas instead of doing barbecue for about twenty people."
+        ],
+        "high_level_conclusions": [
+          "The group is organizing a gathering for around twenty people and deciding on food logistics.",
+          "They conclude that preparing barbecue or full meals for twenty people is too laborious, opting instead for pizza delivery around 5:00 PM."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 130,
+          "call_id": "a9b67346-0cff-4671-8c69-656050ddc438",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789412119.954326,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67704,
+          "output_tokens": 1091,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 139272.26369999698
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group sits around a checkered table inside a room discussing food plans.\",\n  \"A woman on the left wearing black inspects small pink flowers in her hands.\",\n  \"A woman with pink hair and another woman seated beside the table participate in the conversation.\",\n  \"A young man wearing an orange shirt stands in the adjoining kitchen area, gesturing while speaking.\",\n  \"The camera wearer sits at the end of the table with a laptop open in front of them.\",\n  \"The man in the orange shirt moves around the kitchen while chatting with the group.\",\n  \"The group discusses ordering large pizzas instead of doing barbecue for about twenty people.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is organizing a gathering for around twenty people and deciding on food logistics.\",\n  \"They conclude that preparing barbecue or full meals for twenty people is too laborious, opting instead for pizza delivery around 5:00 PM.\"\n ]\n}\n```",
+          "total_tokens": 68795,
+          "request_end": 1789412259.2267888,
+          "latency_ms": 139272.45290600695,
+          "client_wall_clock_latency_ms": 139272.45290600695,
+          "api_request_wall_clock_latency_ms": 139272.45290600695
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.10972600284731016,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.03296300565125421,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 13,
+    "speech_embeddings": 13,
+    "voice_identities": 11,
+    "detected_faces": 224,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1537,
+    "edges_after_clip": 290,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group sits around a checkered table inside a room discussing food plans.",
+      "A woman on the left wearing black inspects small pink flowers in her hands.",
+      "A woman with pink hair and another woman seated beside the table participate in the conversation.",
+      "A young man wearing an orange shirt stands in the adjoining kitchen area, gesturing while speaking.",
+      "The camera wearer sits at the end of the table with a laptop open in front of them.",
+      "The man in the orange shirt moves around the kitchen while chatting with the group.",
+      "The group discusses ordering large pizzas instead of doing barbecue for about twenty people."
+    ],
+    "high_level_conclusions": [
+      "The group is organizing a gathering for around twenty people and deciding on food logistics.",
+      "They conclude that preparing barbecue or full meals for twenty people is too laborious, opting instead for pizza delivery around 5:00 PM."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group sits around a checkered table inside a room discussing food plans.",
+      "A woman on the left wearing black inspects small pink flowers in her hands.",
+      "A woman with pink hair and another woman seated beside the table participate in the conversation.",
+      "A young man wearing an orange shirt stands in the adjoining kitchen area, gesturing while speaking.",
+      "The camera wearer sits at the end of the table with a laptop open in front of them.",
+      "The man in the orange shirt moves around the kitchen while chatting with the group.",
+      "The group discusses ordering large pizzas instead of doing barbecue for about twenty people."
+    ],
+    "high_level_conclusions": [
+      "The group is organizing a gathering for around twenty people and deciding on food logistics.",
+      "They conclude that preparing barbecue or full meals for twenty people is too laborious, opting instead for pizza delivery around 5:00 PM."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_130_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1525,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 烧烤的人有点累哦，因为有二十个人左右。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1526,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1527,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 不是说要吃得非常饱。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1528,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group sits around a checkered table inside a room discussing food plans."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1529,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman on the left wearing black inspects small pink flowers in her hands."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1530,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman with pink hair and another woman seated beside the table participate in the conversation."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1531,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A young man wearing an orange shirt stands in the adjoining kitchen area, gesturing while speaking."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1532,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer sits at the end of the table with a laptop open in front of them."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1533,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The man in the orange shirt moves around the kitchen while chatting with the group."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1534,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group discusses ordering large pizzas instead of doing barbecue for about twenty people."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1535,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is organizing a gathering for around twenty people and deciding on food logistics."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1536,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "They conclude that preparing barbecue or full meals for twenty people is too laborious, opting instead for pizza delivery around 5:00 PM."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_130_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_130_graph.pkl"
+  },
+  "memory_pickle_bytes": 35191248,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 53197.513976269,
+    "prepared_perf": 53206.107253464,
+    "ordered_start_perf": 53289.651222107,
+    "consumer_wait_ms": 0.024706001568119973,
+    "ready_to_ordered_ms": 83543.96864300361,
+    "preparation_work_ms": 8587.808491996839,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 154269.5140670039
+}

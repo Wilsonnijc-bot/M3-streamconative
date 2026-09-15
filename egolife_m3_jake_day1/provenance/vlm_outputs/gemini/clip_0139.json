@@ -1,0 +1,74 @@
+{
+  "clip_id": 139,
+  "source": {
+    "segment_id": 139,
+    "source": "DAY1_A1_JAKE_12143000.mp4",
+    "source_clock": "12143000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 44070.0,
+    "absolute_end_seconds": 44100.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0139.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 53740.557868631,
+      "prepared_perf": 53751.266079318,
+      "ordered_start_perf": 53848.701324285,
+      "consumer_wait_ms": 0.01073999737855047,
+      "ready_to_ordered_ms": 97435.24496700411,
+      "preparation_work_ms": 10703.004026996496,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a checkered table engaged in a discussion.",
+      "A woman seated on the left gestures with her hands while discussing a presentation schedule and dessert tasting.",
+      "In the background, a person standing near a whiteboard holds up a bunch of green herbs to show the group.",
+      "The participants continue conversing about the event timeline, preparation starting in the morning, and allocating two people to help.",
+      "A member humorously questions whether they can wake up early enough, prompting laughter and lighthearted responses."
+    ],
+    "high_level_conclusions": [
+      "The group is actively planning an upcoming event or workshop involving presentations and dessert preparation.",
+      "They are finalizing the schedule and coordinating morning setup logistics requiring teamwork."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a checkered table engaged in a discussion.\",\n  \"A woman seated on the left gestures with her hands while discussing a presentation schedule and dessert tasting.\",\n  \"In the background, a person standing near a whiteboard holds up a bunch of green herbs to show the group.\",\n  \"The participants continue conversing about the event timeline, preparation starting in the morning, and allocating two people to help.\",\n  \"A member humorously questions whether they can wake up early enough, prompting laughter and lighthearted responses.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is actively planning an upcoming event or workshop involving presentations and dessert preparation.\",\n  \"They are finalizing the schedule and coordinating morning setup logistics requiring teamwork.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 139,
+      "call_id": "6b040209-7a07-4c4e-8aaa-b8f8c1ec4794",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412677.3483279,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67299,
+      "output_tokens": 1136,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 86643.58046499547
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a checkered table engaged in a discussion.\",\n  \"A woman seated on the left gestures with her hands while discussing a presentation schedule and dessert tasting.\",\n  \"In the background, a person standing near a whiteboard holds up a bunch of green herbs to show the group.\",\n  \"The participants continue conversing about the event timeline, preparation starting in the morning, and allocating two people to help.\",\n  \"A member humorously questions whether they can wake up early enough, prompting laughter and lighthearted responses.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is actively planning an upcoming event or workshop involving presentations and dessert preparation.\",\n  \"They are finalizing the schedule and coordinating morning setup logistics requiring teamwork.\"\n ]\n}\n```",
+      "total_tokens": 68435,
+      "request_end": 1789412763.9920025,
+      "latency_ms": 86643.66988399706,
+      "client_wall_clock_latency_ms": 86643.66988399706,
+      "api_request_wall_clock_latency_ms": 86643.66988399706
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_139_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

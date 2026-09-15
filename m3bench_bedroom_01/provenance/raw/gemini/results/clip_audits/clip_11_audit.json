@@ -1,0 +1,421 @@
+{
+  "clip_id": 11,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00050000.mp4",
+  "end_to_end_memory_generation_ms": 140157.9783019988,
+  "latency_ms": {
+    "clip_decode": 3149.2173059959896,
+    "deepgram_asr": 1890.6138950114837,
+    "mai_transcribe_asr": 808.8891240040539,
+    "asr_total": 1891.205125997658,
+    "audio_segmentation": 3.836083007627167,
+    "speech_embedding_campplus": 349.0318239928456,
+    "facial_detection_recognition_buffalo_l": 2488.47204100457,
+    "face_clustering": 4.247113989549689,
+    "vlm_memory_generation": 55113.01262398774,
+    "text_embedding": 391.60148400696926,
+    "graph_update_total": 9.48281899036374
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 11,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 875,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789431655.5144334,
+          "status": "success",
+          "total_tokens": 182,
+          "request_end": 1789431655.9058867,
+          "latency_ms": 391.4539380057249
+        }
+      ],
+      "total_tokens": 182,
+      "latency_ms": 391.60148400696926
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1890.6138950114837,
+        "openrouter-mai-transcribe-2": 808.8891240040539
+      },
+      "asr_total_ms": 1891.205125997658,
+      "audio_segmentation_ms": 3.836083007627167,
+      "speech_embedding_ms": 349.0318239928456,
+      "graph_update_ms": 9.379693001392297,
+      "asr_segment_count": 2,
+      "speech_embedding_count": 2,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 369.6772339899326
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2488.47204100457,
+      "face_clustering_ms": 4.247113989549689,
+      "graph_update_ms": 0.0019750004867091775,
+      "frame_count": 150,
+      "detected_face_count": 68,
+      "qualified_face_count": 1,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2531.7137300007744
+    },
+    "vlm": {
+      "context_preparation_ms": 4621.9494020042475,
+      "vlm_ms": 55113.01262398774,
+      "raw_response": "```json\n{\n \"high_level_conclusions\": [\n  \"The individual wearing black gloves secretly plants or hides a document inside the bedroom nightstand drawer.\",\n  \"The person in the yellow jacket (<voice_96>) enters the apartment and greets the woman sitting at the dining table, identifying her as Emma.\"\n ],\n \"video_description\": [\n  \"A person wearing black gloves approaches a small nightstand next to the wall.\",\n  \"The gloved person opens the drawer of the nightstand.\",\n  \"The gloved person places a sheet of paper inside the drawer.\",\n  \"The gloved person closes the drawer and walks out toward the hallway.\",\n  \"In the dining area, a woman sits at a table interacting with her laptop and smartphone.\",\n  \"A woman wearing a yellow jacket and a cap enters the apartment through the front door.\",\n  \"The woman in the yellow jacket (<voice_96>) greets Emma while holding a banana and phone.\",\n  \"A voice (<voice_97>) responds from the dining area as the woman in the yellow jacket walks into the room.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A person wearing black gloves approaches a small nightstand next to the wall.",
+          "The gloved person opens the drawer of the nightstand.",
+          "The gloved person places a sheet of paper inside the drawer.",
+          "The gloved person closes the drawer and walks out toward the hallway.",
+          "In the dining area, a woman sits at a table interacting with her laptop and smartphone.",
+          "A woman wearing a yellow jacket and a cap enters the apartment through the front door.",
+          "The woman in the yellow jacket (<voice_96>) greets Emma while holding a banana and phone.",
+          "A voice (<voice_97>) responds from the dining area as the woman in the yellow jacket walks into the room."
+        ],
+        "high_level_conclusions": [
+          "The individual wearing black gloves secretly plants or hides a document inside the bedroom nightstand drawer.",
+          "The person in the yellow jacket (<voice_96>) enters the apartment and greets the woman sitting at the dining table, identifying her as Emma."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 11,
+          "call_id": "cd087a9f-1115-42fe-959a-f689ec1a1a6a",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789431600.4006588,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65718,
+          "output_tokens": 964,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 55112.91644300218
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"high_level_conclusions\": [\n  \"The individual wearing black gloves secretly plants or hides a document inside the bedroom nightstand drawer.\",\n  \"The person in the yellow jacket (<voice_96>) enters the apartment and greets the woman sitting at the dining table, identifying her as Emma.\"\n ],\n \"video_description\": [\n  \"A person wearing black gloves approaches a small nightstand next to the wall.\",\n  \"The gloved person opens the drawer of the nightstand.\",\n  \"The gloved person places a sheet of paper inside the drawer.\",\n  \"The gloved person closes the drawer and walks out toward the hallway.\",\n  \"In the dining area, a woman sits at a table interacting with her laptop and smartphone.\",\n  \"A woman wearing a yellow jacket and a cap enters the apartment through the front door.\",\n  \"The woman in the yellow jacket (<voice_96>) greets Emma while holding a banana and phone.\",\n  \"A voice (<voice_97>) responds from the dining area as the woman in the yellow jacket walks into the room.\"\n ]\n}\n```",
+          "total_tokens": 66682,
+          "request_end": 1789431655.5136745,
+          "latency_ms": 55113.01262398774,
+          "client_wall_clock_latency_ms": 55113.01262398774,
+          "api_request_wall_clock_latency_ms": 55113.01262398774
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.07212698983494192,
+      "nodes_added": 8,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.029023998649790883,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 2,
+    "speech_embeddings": 2,
+    "voice_identities": 2,
+    "detected_faces": 68,
+    "qualified_faces": 1,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 2,
+    "nodes_after_clip": 108,
+    "edges_after_clip": 33,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 3
+  },
+  "generated_memory": {
+    "video_description": [
+      "A person wearing black gloves approaches a small nightstand next to the wall.",
+      "The gloved person opens the drawer of the nightstand.",
+      "The gloved person places a sheet of paper inside the drawer.",
+      "The gloved person closes the drawer and walks out toward the hallway.",
+      "In the dining area, a woman sits at a table interacting with her laptop and smartphone.",
+      "A woman wearing a yellow jacket and a cap enters the apartment through the front door.",
+      "The woman in the yellow jacket (<voice_96>) greets Emma while holding a banana and phone.",
+      "A voice (<voice_97>) responds from the dining area as the woman in the yellow jacket walks into the room."
+    ],
+    "high_level_conclusions": [
+      "The individual wearing black gloves secretly plants or hides a document inside the bedroom nightstand drawer.",
+      "The person in the yellow jacket (<voice_96>) enters the apartment and greets the woman sitting at the dining table, identifying her as Emma."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A person wearing black gloves approaches a small nightstand next to the wall.",
+      "The gloved person opens the drawer of the nightstand.",
+      "The gloved person places a sheet of paper inside the drawer.",
+      "The gloved person closes the drawer and walks out toward the hallway.",
+      "In the dining area, a woman sits at a table interacting with her laptop and smartphone.",
+      "A woman wearing a yellow jacket and a cap enters the apartment through the front door.",
+      "The woman in the yellow jacket (<voice_96>) greets Emma while holding a banana and phone.",
+      "A voice (<voice_97>) responds from the dining area as the woman in the yellow jacket walks into the room."
+    ],
+    "high_level_conclusions": [
+      "The individual wearing black gloves secretly plants or hides a document inside the bedroom nightstand drawer.",
+      "The person in the yellow jacket (<voice_96>) enters the apartment and greets the woman sitting at the dining table, identifying her as Emma."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_11_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 3,
+    "nodes": [
+      {
+        "id": 96,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: hello, Alma. | MAI: Hello, Emma."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 97,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: I feel so | MAI: I think so."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 98,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing black gloves approaches a small nightstand next to the wall."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 99,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The gloved person opens the drawer of the nightstand."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 100,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The gloved person places a sheet of paper inside the drawer."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 101,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The gloved person closes the drawer and walks out toward the hallway."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 102,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "In the dining area, a woman sits at a table interacting with her laptop and smartphone."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 103,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman wearing a yellow jacket and a cap enters the apartment through the front door."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 104,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman in the yellow jacket (<voice_96>) greets Emma while holding a banana and phone."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 105,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A voice (<voice_97>) responds from the dining area as the woman in the yellow jacket walks into the room."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 106,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The individual wearing black gloves secretly plants or hides a document inside the bedroom nightstand drawer."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 107,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person in the yellow jacket (<voice_96>) enters the apartment and greets the woman sitting at the dining table, identifying her as Emma."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 96,
+        "target": 104,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 96,
+        "target": 107,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 97,
+        "target": 105,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_11_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_11_graph.pkl"
+  },
+  "memory_pickle_bytes": 2767456,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 72702.598686568,
+    "prepared_perf": 72707.746196893,
+    "ordered_start_perf": 72779.562140944,
+    "consumer_wait_ms": 0.012002012226730585,
+    "ready_to_ordered_ms": 71815.94405100623,
+    "preparation_work_ms": 5142.106986997533,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 63029.41289699811
+}

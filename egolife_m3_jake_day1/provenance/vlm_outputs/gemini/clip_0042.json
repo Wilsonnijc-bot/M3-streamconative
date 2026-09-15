@@ -1,0 +1,75 @@
+{
+  "clip_id": 42,
+  "source": {
+    "segment_id": 42,
+    "source": "DAY1_A1_JAKE_11293000.mp4",
+    "source_clock": "11293000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41370.0,
+    "absolute_end_seconds": 41400.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0042.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46720.579664931,
+      "prepared_perf": 46727.973663288,
+      "ordered_start_perf": 46855.659558685,
+      "consumer_wait_ms": 0.008736999006941915,
+      "ready_to_ordered_ms": 127685.89539700042,
+      "preparation_work_ms": 7388.206369003456,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table covered with a red and white checkered tablecloth.",
+      "A clapperboard marked with production details sits on the table facing the camera.",
+      "A person stands in the background near a whiteboard while the others remain seated around the table.",
+      "The seated group members converse and gesture while discussing participant recruitment methods.",
+      "The camera wearer sits at the foot of the table, with their hands occasionally visible."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a team meeting or production discussion regarding methods to recruit attendees or participants.",
+      "The clapperboard on the table indicates the gathering is part of a film, documentary, or video production setup.",
+      "<voice_0>, <voice_330>, <voice_466>, and <voice_489> actively brainstorm and evaluate different outreach methods, including social media platforms like Xiaohongshu and in-person recruitment."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"high_level_conclusions\": [\n  \"The participants are engaged in a team meeting or production discussion regarding methods to recruit attendees or participants.\",\n  \"The clapperboard on the table indicates the gathering is part of a film, documentary, or video production setup.\",\n  \"<voice_0>, <voice_330>, <voice_466>, and <voice_489> actively brainstorm and evaluate different outreach methods, including social media platforms like Xiaohongshu and in-person recruitment.\"\n ],\n \"video_description\": [\n  \"A group of people are gathered around a table covered with a red and white checkered tablecloth.\",\n  \"A clapperboard marked with production details sits on the table facing the camera.\",\n  \"A person stands in the background near a whiteboard while the others remain seated around the table.\",\n  \"The seated group members converse and gesture while discussing participant recruitment methods.\",\n  \"The camera wearer sits at the foot of the table, with their hands occasionally visible.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 42,
+      "call_id": "036d6ee4-bd4a-4d33-8484-5b4be61c8bb7",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405678.9628737,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67622,
+      "output_tokens": 1050,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 72210.20277899515
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"high_level_conclusions\": [\n  \"The participants are engaged in a team meeting or production discussion regarding methods to recruit attendees or participants.\",\n  \"The clapperboard on the table indicates the gathering is part of a film, documentary, or video production setup.\",\n  \"<voice_0>, <voice_330>, <voice_466>, and <voice_489> actively brainstorm and evaluate different outreach methods, including social media platforms like Xiaohongshu and in-person recruitment.\"\n ],\n \"video_description\": [\n  \"A group of people are gathered around a table covered with a red and white checkered tablecloth.\",\n  \"A clapperboard marked with production details sits on the table facing the camera.\",\n  \"A person stands in the background near a whiteboard while the others remain seated around the table.\",\n  \"The seated group members converse and gesture while discussing participant recruitment methods.\",\n  \"The camera wearer sits at the foot of the table, with their hands occasionally visible.\"\n ]\n}\n```",
+      "total_tokens": 68672,
+      "request_end": 1789405751.1731935,
+      "latency_ms": 72210.31423800014,
+      "client_wall_clock_latency_ms": 72210.31423800014,
+      "api_request_wall_clock_latency_ms": 72210.31423800014
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_42_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

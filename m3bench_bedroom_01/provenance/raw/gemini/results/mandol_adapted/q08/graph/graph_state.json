@@ -1,0 +1,997 @@
+{
+  "version": "3.0_rocksdb",
+  "saved_time": "2026-09-15T01:47:53.437436",
+  "management": {
+    "_nodes_access_counts": {
+      "m3:bedroom-01-q08:entity:character_0": 1,
+      "m3:bedroom-01-q08:entity:character_1": 1,
+      "m3:bedroom-01-q08:entity:character_2": 1,
+      "m3:bedroom-01-q08:entity:character_3": 1,
+      "m3:bedroom-01-q08:entity:character_4": 1,
+      "m3:bedroom-01-q08:entity:character_5": 1,
+      "m3:bedroom-01-q08:entity:character_6": 1,
+      "m3:bedroom-01-q08:entity:character_7": 1,
+      "m3:bedroom-01-q08:entity:character_8": 1,
+      "m3:bedroom-01-q08:entity:character_9": 1,
+      "m3:bedroom-01-q08:entity:character_10": 1,
+      "m3:bedroom-01-q08:entity:character_11": 1,
+      "m3:bedroom-01-q08:entity:character_12": 1,
+      "m3:bedroom-01-q08:clip:1:episodic:1": 1,
+      "m3:bedroom-01-q08:clip:1:episodic:2": 1,
+      "m3:bedroom-01-q08:clip:1:episodic:3": 1,
+      "m3:bedroom-01-q08:clip:1:episodic:4": 1,
+      "m3:bedroom-01-q08:clip:1:episodic:5": 1,
+      "m3:bedroom-01-q08:clip:1:episodic:6": 1,
+      "m3:bedroom-01-q08:clip:1:episodic:7": 1,
+      "m3:bedroom-01-q08:clip:1:semantic:8": 1,
+      "m3:bedroom-01-q08:clip:1:semantic:9": 1,
+      "m3:bedroom-01-q08:clip:2:episodic:13": 1,
+      "m3:bedroom-01-q08:clip:2:episodic:14": 1,
+      "m3:bedroom-01-q08:clip:2:episodic:15": 1,
+      "m3:bedroom-01-q08:clip:2:episodic:16": 1,
+      "m3:bedroom-01-q08:clip:2:episodic:17": 1,
+      "m3:bedroom-01-q08:clip:2:episodic:18": 1,
+      "m3:bedroom-01-q08:clip:2:semantic:19": 1,
+      "m3:bedroom-01-q08:clip:2:semantic:20": 1,
+      "m3:bedroom-01-q08:clip:3:episodic:22": 1,
+      "m3:bedroom-01-q08:clip:3:episodic:23": 1,
+      "m3:bedroom-01-q08:clip:3:episodic:24": 1,
+      "m3:bedroom-01-q08:clip:3:episodic:25": 1,
+      "m3:bedroom-01-q08:clip:3:episodic:26": 1,
+      "m3:bedroom-01-q08:clip:3:episodic:27": 1,
+      "m3:bedroom-01-q08:clip:3:episodic:28": 1,
+      "m3:bedroom-01-q08:clip:3:semantic:29": 1,
+      "m3:bedroom-01-q08:clip:3:semantic:30": 1,
+      "m3:bedroom-01-q08:clip:4:episodic:33": 1,
+      "m3:bedroom-01-q08:clip:4:episodic:34": 1,
+      "m3:bedroom-01-q08:clip:4:episodic:35": 1,
+      "m3:bedroom-01-q08:clip:4:episodic:36": 1,
+      "m3:bedroom-01-q08:clip:4:episodic:37": 1,
+      "m3:bedroom-01-q08:clip:4:episodic:38": 1,
+      "m3:bedroom-01-q08:clip:4:semantic:40": 1,
+      "m3:bedroom-01-q08:clip:4:semantic:41": 1,
+      "m3:bedroom-01-q08:clip:5:episodic:42": 1,
+      "m3:bedroom-01-q08:clip:5:episodic:43": 1,
+      "m3:bedroom-01-q08:clip:5:episodic:44": 1,
+      "m3:bedroom-01-q08:clip:5:episodic:45": 1,
+      "m3:bedroom-01-q08:clip:5:episodic:46": 1,
+      "m3:bedroom-01-q08:clip:5:episodic:47": 1,
+      "m3:bedroom-01-q08:clip:5:semantic:48": 1,
+      "m3:bedroom-01-q08:clip:5:semantic:49": 1,
+      "m3:bedroom-01-q08:clip:6:episodic:50": 1,
+      "m3:bedroom-01-q08:clip:6:episodic:51": 1,
+      "m3:bedroom-01-q08:clip:6:episodic:52": 1,
+      "m3:bedroom-01-q08:clip:6:episodic:53": 1,
+      "m3:bedroom-01-q08:clip:6:episodic:54": 1,
+      "m3:bedroom-01-q08:clip:6:episodic:55": 1,
+      "m3:bedroom-01-q08:clip:6:semantic:56": 1,
+      "m3:bedroom-01-q08:clip:6:semantic:57": 1,
+      "m3:bedroom-01-q08:clip:6:semantic:58": 1,
+      "m3:bedroom-01-q08:clip:7:episodic:59": 1,
+      "m3:bedroom-01-q08:clip:7:episodic:60": 1,
+      "m3:bedroom-01-q08:clip:7:episodic:61": 1,
+      "m3:bedroom-01-q08:clip:7:episodic:62": 1,
+      "m3:bedroom-01-q08:clip:7:episodic:63": 1,
+      "m3:bedroom-01-q08:clip:7:episodic:64": 1,
+      "m3:bedroom-01-q08:clip:7:semantic:65": 1,
+      "m3:bedroom-01-q08:clip:7:semantic:66": 1,
+      "m3:bedroom-01-q08:clip:8:episodic:69": 1,
+      "m3:bedroom-01-q08:clip:8:episodic:70": 1,
+      "m3:bedroom-01-q08:clip:8:episodic:71": 1,
+      "m3:bedroom-01-q08:clip:8:episodic:72": 1,
+      "m3:bedroom-01-q08:clip:8:episodic:73": 1,
+      "m3:bedroom-01-q08:clip:8:episodic:74": 1,
+      "m3:bedroom-01-q08:clip:8:episodic:75": 1,
+      "m3:bedroom-01-q08:clip:8:episodic:76": 1,
+      "m3:bedroom-01-q08:clip:8:semantic:77": 1,
+      "m3:bedroom-01-q08:clip:8:semantic:78": 1,
+      "m3:bedroom-01-q08:clip:9:episodic:80": 1,
+      "m3:bedroom-01-q08:clip:9:episodic:81": 1,
+      "m3:bedroom-01-q08:clip:9:episodic:82": 1,
+      "m3:bedroom-01-q08:clip:9:episodic:83": 1,
+      "m3:bedroom-01-q08:clip:9:semantic:84": 1,
+      "m3:bedroom-01-q08:clip:9:semantic:85": 1,
+      "m3:bedroom-01-q08:clip:9:semantic:86": 1,
+      "m3:bedroom-01-q08:clip:10:episodic:88": 1,
+      "m3:bedroom-01-q08:clip:10:episodic:89": 1,
+      "m3:bedroom-01-q08:clip:10:episodic:90": 1,
+      "m3:bedroom-01-q08:clip:10:episodic:91": 1,
+      "m3:bedroom-01-q08:clip:10:episodic:92": 1,
+      "m3:bedroom-01-q08:clip:10:episodic:93": 1,
+      "m3:bedroom-01-q08:clip:10:semantic:95": 1,
+      "m3:bedroom-01-q08:clip:11:episodic:100": 1,
+      "m3:bedroom-01-q08:clip:11:episodic:101": 1,
+      "m3:bedroom-01-q08:clip:11:episodic:102": 1,
+      "m3:bedroom-01-q08:clip:11:episodic:103": 1,
+      "m3:bedroom-01-q08:clip:11:episodic:104": 1,
+      "m3:bedroom-01-q08:clip:11:episodic:105": 1,
+      "m3:bedroom-01-q08:clip:11:episodic:98": 1,
+      "m3:bedroom-01-q08:clip:11:episodic:99": 1,
+      "m3:bedroom-01-q08:clip:11:semantic:106": 1,
+      "m3:bedroom-01-q08:clip:11:semantic:107": 1,
+      "m3:bedroom-01-q08:clip:12:episodic:108": 1,
+      "m3:bedroom-01-q08:clip:12:episodic:109": 1,
+      "m3:bedroom-01-q08:clip:12:episodic:110": 1,
+      "m3:bedroom-01-q08:clip:12:episodic:111": 1,
+      "m3:bedroom-01-q08:clip:12:episodic:112": 1,
+      "m3:bedroom-01-q08:clip:12:episodic:113": 1,
+      "m3:bedroom-01-q08:clip:12:episodic:114": 1,
+      "m3:bedroom-01-q08:clip:12:episodic:115": 1,
+      "m3:bedroom-01-q08:clip:12:semantic:116": 1,
+      "m3:bedroom-01-q08:clip:12:semantic:117": 1,
+      "m3:bedroom-01-q08:clip:12:semantic:118": 1,
+      "m3:bedroom-01-q08:clip:13:episodic:119": 1,
+      "m3:bedroom-01-q08:clip:13:episodic:120": 1,
+      "m3:bedroom-01-q08:clip:13:episodic:121": 1,
+      "m3:bedroom-01-q08:clip:13:episodic:122": 1,
+      "m3:bedroom-01-q08:clip:13:episodic:123": 1,
+      "m3:bedroom-01-q08:clip:13:episodic:124": 1,
+      "m3:bedroom-01-q08:clip:13:semantic:125": 1,
+      "m3:bedroom-01-q08:clip:13:semantic:126": 1,
+      "m3:bedroom-01-q08:clip:13:semantic:127": 1,
+      "m3:bedroom-01-q08:clip:14:episodic:129": 1,
+      "m3:bedroom-01-q08:clip:14:episodic:130": 1,
+      "m3:bedroom-01-q08:clip:14:episodic:131": 1,
+      "m3:bedroom-01-q08:clip:14:episodic:132": 1,
+      "m3:bedroom-01-q08:clip:14:episodic:133": 1,
+      "m3:bedroom-01-q08:clip:14:episodic:134": 1,
+      "m3:bedroom-01-q08:clip:14:semantic:135": 1,
+      "m3:bedroom-01-q08:clip:14:semantic:136": 1,
+      "m3:bedroom-01-q08:clip:14:semantic:137": 1,
+      "m3:bedroom-01-q08:clip:15:episodic:139": 1,
+      "m3:bedroom-01-q08:clip:15:episodic:140": 1,
+      "m3:bedroom-01-q08:clip:15:episodic:141": 1,
+      "m3:bedroom-01-q08:clip:15:episodic:142": 1,
+      "m3:bedroom-01-q08:clip:15:episodic:143": 1,
+      "m3:bedroom-01-q08:clip:15:episodic:144": 1,
+      "m3:bedroom-01-q08:clip:15:semantic:145": 1,
+      "m3:bedroom-01-q08:clip:15:semantic:146": 1
+    },
+    "_nodes_last_accessed": {
+      "m3:bedroom-01-q08:entity:character_0": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_1": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_2": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_3": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_4": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_5": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_6": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_7": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_8": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_9": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_10": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_11": 1789436868.174732,
+      "m3:bedroom-01-q08:entity:character_12": 1789436868.174732,
+      "m3:bedroom-01-q08:clip:1:episodic:1": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:1:episodic:2": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:1:episodic:3": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:1:episodic:4": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:1:episodic:5": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:1:episodic:6": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:1:episodic:7": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:1:semantic:8": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:1:semantic:9": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:2:episodic:13": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:2:episodic:14": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:2:episodic:15": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:2:episodic:16": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:2:episodic:17": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:2:episodic:18": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:2:semantic:19": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:2:semantic:20": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:3:episodic:22": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:3:episodic:23": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:3:episodic:24": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:3:episodic:25": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:3:episodic:26": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:3:episodic:27": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:3:episodic:28": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:3:semantic:29": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:3:semantic:30": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:4:episodic:33": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:4:episodic:34": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:4:episodic:35": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:4:episodic:36": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:4:episodic:37": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:4:episodic:38": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:4:semantic:40": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:4:semantic:41": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:5:episodic:42": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:5:episodic:43": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:5:episodic:44": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:5:episodic:45": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:5:episodic:46": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:5:episodic:47": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:5:semantic:48": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:5:semantic:49": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:6:episodic:50": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:6:episodic:51": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:6:episodic:52": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:6:episodic:53": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:6:episodic:54": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:6:episodic:55": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:6:semantic:56": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:6:semantic:57": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:6:semantic:58": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:7:episodic:59": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:7:episodic:60": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:7:episodic:61": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:7:episodic:62": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:7:episodic:63": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:7:episodic:64": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:7:semantic:65": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:7:semantic:66": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:8:episodic:69": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:8:episodic:70": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:8:episodic:71": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:8:episodic:72": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:8:episodic:73": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:8:episodic:74": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:8:episodic:75": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:8:episodic:76": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:8:semantic:77": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:8:semantic:78": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:9:episodic:80": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:9:episodic:81": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:9:episodic:82": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:9:episodic:83": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:9:semantic:84": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:9:semantic:85": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:9:semantic:86": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:10:episodic:88": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:10:episodic:89": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:10:episodic:90": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:10:episodic:91": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:10:episodic:92": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:10:episodic:93": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:10:semantic:95": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:11:episodic:100": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:11:episodic:101": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:11:episodic:102": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:11:episodic:103": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:11:episodic:104": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:11:episodic:105": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:11:episodic:98": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:11:episodic:99": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:11:semantic:106": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:11:semantic:107": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:episodic:108": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:episodic:109": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:episodic:110": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:episodic:111": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:episodic:112": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:episodic:113": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:episodic:114": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:episodic:115": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:semantic:116": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:semantic:117": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:12:semantic:118": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:13:episodic:119": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:13:episodic:120": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:13:episodic:121": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:13:episodic:122": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:13:episodic:123": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:13:episodic:124": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:13:semantic:125": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:13:semantic:126": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:13:semantic:127": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:14:episodic:129": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:14:episodic:130": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:14:episodic:131": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:14:episodic:132": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:14:episodic:133": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:14:episodic:134": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:14:semantic:135": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:14:semantic:136": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:14:semantic:137": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:15:episodic:139": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:15:episodic:140": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:15:episodic:141": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:15:episodic:142": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:15:episodic:143": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:15:episodic:144": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:15:semantic:145": 1789436873.231301,
+      "m3:bedroom-01-q08:clip:15:semantic:146": 1789436873.231301
+    },
+    "_nodes_dirty_flag": [
+      "m3:bedroom-01-q08:clip:7:episodic:59",
+      "m3:bedroom-01-q08:clip:13:episodic:121",
+      "m3:bedroom-01-q08:clip:1:episodic:3",
+      "m3:bedroom-01-q08:clip:2:episodic:13",
+      "m3:bedroom-01-q08:clip:6:episodic:54",
+      "m3:bedroom-01-q08:clip:12:episodic:108",
+      "m3:bedroom-01-q08:clip:5:episodic:45",
+      "m3:bedroom-01-q08:clip:3:episodic:24",
+      "m3:bedroom-01-q08:entity:character_4",
+      "m3:bedroom-01-q08:clip:2:episodic:14",
+      "m3:bedroom-01-q08:clip:12:episodic:112",
+      "m3:bedroom-01-q08:clip:6:episodic:53",
+      "m3:bedroom-01-q08:clip:7:episodic:61",
+      "m3:bedroom-01-q08:clip:9:semantic:85",
+      "m3:bedroom-01-q08:clip:2:episodic:18",
+      "m3:bedroom-01-q08:clip:7:episodic:64",
+      "m3:bedroom-01-q08:clip:14:semantic:135",
+      "m3:bedroom-01-q08:clip:5:semantic:48",
+      "m3:bedroom-01-q08:clip:11:episodic:104",
+      "m3:bedroom-01-q08:entity:character_0",
+      "m3:bedroom-01-q08:clip:12:episodic:115",
+      "m3:bedroom-01-q08:entity:character_8",
+      "m3:bedroom-01-q08:clip:14:episodic:134",
+      "m3:bedroom-01-q08:clip:11:episodic:98",
+      "m3:bedroom-01-q08:clip:5:episodic:42",
+      "m3:bedroom-01-q08:clip:3:episodic:27",
+      "m3:bedroom-01-q08:clip:8:episodic:76",
+      "m3:bedroom-01-q08:clip:8:semantic:78",
+      "m3:bedroom-01-q08:clip:12:episodic:110",
+      "m3:bedroom-01-q08:clip:3:episodic:28",
+      "m3:bedroom-01-q08:clip:5:episodic:43",
+      "m3:bedroom-01-q08:clip:12:semantic:118",
+      "m3:bedroom-01-q08:clip:12:semantic:117",
+      "m3:bedroom-01-q08:clip:14:episodic:133",
+      "m3:bedroom-01-q08:clip:15:episodic:139",
+      "m3:bedroom-01-q08:clip:12:episodic:111",
+      "m3:bedroom-01-q08:entity:character_12",
+      "m3:bedroom-01-q08:clip:7:episodic:63",
+      "m3:bedroom-01-q08:clip:4:episodic:36",
+      "m3:bedroom-01-q08:clip:8:episodic:70",
+      "m3:bedroom-01-q08:entity:character_11",
+      "m3:bedroom-01-q08:clip:1:episodic:6",
+      "m3:bedroom-01-q08:clip:7:episodic:60",
+      "m3:bedroom-01-q08:clip:12:episodic:109",
+      "m3:bedroom-01-q08:clip:15:semantic:145",
+      "m3:bedroom-01-q08:clip:8:episodic:75",
+      "m3:bedroom-01-q08:clip:1:episodic:7",
+      "m3:bedroom-01-q08:entity:character_3",
+      "m3:bedroom-01-q08:clip:10:episodic:93",
+      "m3:bedroom-01-q08:clip:9:episodic:83",
+      "m3:bedroom-01-q08:clip:1:semantic:9",
+      "m3:bedroom-01-q08:clip:15:episodic:140",
+      "m3:bedroom-01-q08:clip:10:episodic:90",
+      "m3:bedroom-01-q08:clip:9:episodic:82",
+      "m3:bedroom-01-q08:entity:character_10",
+      "m3:bedroom-01-q08:clip:3:semantic:30",
+      "m3:bedroom-01-q08:clip:11:semantic:106",
+      "m3:bedroom-01-q08:clip:2:episodic:17",
+      "m3:bedroom-01-q08:clip:4:episodic:37",
+      "m3:bedroom-01-q08:clip:11:episodic:102",
+      "m3:bedroom-01-q08:clip:7:semantic:66",
+      "m3:bedroom-01-q08:clip:3:episodic:22",
+      "m3:bedroom-01-q08:clip:14:semantic:137",
+      "m3:bedroom-01-q08:clip:1:episodic:2",
+      "m3:bedroom-01-q08:clip:4:episodic:35",
+      "m3:bedroom-01-q08:clip:6:semantic:58",
+      "m3:bedroom-01-q08:clip:13:episodic:123",
+      "m3:bedroom-01-q08:clip:5:semantic:49",
+      "m3:bedroom-01-q08:clip:6:episodic:55",
+      "m3:bedroom-01-q08:clip:10:episodic:89",
+      "m3:bedroom-01-q08:clip:11:episodic:103",
+      "m3:bedroom-01-q08:clip:12:episodic:114",
+      "m3:bedroom-01-q08:clip:8:episodic:73",
+      "m3:bedroom-01-q08:clip:14:semantic:136",
+      "m3:bedroom-01-q08:clip:15:episodic:142",
+      "m3:bedroom-01-q08:clip:7:episodic:62",
+      "m3:bedroom-01-q08:clip:3:episodic:25",
+      "m3:bedroom-01-q08:clip:4:semantic:41",
+      "m3:bedroom-01-q08:clip:8:episodic:74",
+      "m3:bedroom-01-q08:clip:11:episodic:99",
+      "m3:bedroom-01-q08:clip:10:episodic:88",
+      "m3:bedroom-01-q08:clip:15:episodic:141",
+      "m3:bedroom-01-q08:clip:8:semantic:77",
+      "m3:bedroom-01-q08:clip:9:episodic:81",
+      "m3:bedroom-01-q08:clip:6:episodic:51",
+      "m3:bedroom-01-q08:clip:1:episodic:1",
+      "m3:bedroom-01-q08:clip:11:semantic:107",
+      "m3:bedroom-01-q08:clip:3:episodic:26",
+      "m3:bedroom-01-q08:clip:14:episodic:131",
+      "m3:bedroom-01-q08:clip:4:episodic:33",
+      "m3:bedroom-01-q08:clip:15:episodic:144",
+      "m3:bedroom-01-q08:clip:5:episodic:47",
+      "m3:bedroom-01-q08:clip:1:semantic:8",
+      "m3:bedroom-01-q08:clip:9:semantic:84",
+      "m3:bedroom-01-q08:clip:14:episodic:129",
+      "m3:bedroom-01-q08:clip:11:episodic:105",
+      "m3:bedroom-01-q08:clip:2:episodic:15",
+      "m3:bedroom-01-q08:clip:8:episodic:72",
+      "m3:bedroom-01-q08:entity:character_2",
+      "m3:bedroom-01-q08:clip:9:semantic:86",
+      "m3:bedroom-01-q08:clip:6:episodic:50",
+      "m3:bedroom-01-q08:clip:12:semantic:116",
+      "m3:bedroom-01-q08:clip:4:episodic:38",
+      "m3:bedroom-01-q08:clip:10:episodic:91",
+      "m3:bedroom-01-q08:clip:13:semantic:125",
+      "m3:bedroom-01-q08:entity:character_9",
+      "m3:bedroom-01-q08:clip:5:episodic:44",
+      "m3:bedroom-01-q08:clip:15:semantic:146",
+      "m3:bedroom-01-q08:entity:character_6",
+      "m3:bedroom-01-q08:clip:2:semantic:20",
+      "m3:bedroom-01-q08:clip:4:episodic:34",
+      "m3:bedroom-01-q08:clip:7:semantic:65",
+      "m3:bedroom-01-q08:clip:14:episodic:130",
+      "m3:bedroom-01-q08:clip:3:semantic:29",
+      "m3:bedroom-01-q08:clip:13:episodic:124",
+      "m3:bedroom-01-q08:clip:13:episodic:119",
+      "m3:bedroom-01-q08:entity:character_7",
+      "m3:bedroom-01-q08:clip:6:semantic:56",
+      "m3:bedroom-01-q08:entity:character_1",
+      "m3:bedroom-01-q08:clip:4:semantic:40",
+      "m3:bedroom-01-q08:clip:8:episodic:69",
+      "m3:bedroom-01-q08:clip:8:episodic:71",
+      "m3:bedroom-01-q08:clip:12:episodic:113",
+      "m3:bedroom-01-q08:clip:6:episodic:52",
+      "m3:bedroom-01-q08:clip:1:episodic:5",
+      "m3:bedroom-01-q08:clip:2:episodic:16",
+      "m3:bedroom-01-q08:clip:14:episodic:132",
+      "m3:bedroom-01-q08:clip:5:episodic:46",
+      "m3:bedroom-01-q08:clip:3:episodic:23",
+      "m3:bedroom-01-q08:clip:6:semantic:57",
+      "m3:bedroom-01-q08:clip:15:episodic:143",
+      "m3:bedroom-01-q08:clip:13:episodic:122",
+      "m3:bedroom-01-q08:clip:9:episodic:80",
+      "m3:bedroom-01-q08:clip:10:episodic:92",
+      "m3:bedroom-01-q08:clip:13:semantic:127",
+      "m3:bedroom-01-q08:clip:13:semantic:126",
+      "m3:bedroom-01-q08:clip:2:semantic:19",
+      "m3:bedroom-01-q08:clip:11:episodic:101",
+      "m3:bedroom-01-q08:clip:13:episodic:120",
+      "m3:bedroom-01-q08:clip:10:semantic:95",
+      "m3:bedroom-01-q08:clip:11:episodic:100",
+      "m3:bedroom-01-q08:entity:character_5",
+      "m3:bedroom-01-q08:clip:1:episodic:4"
+    ],
+    "_modified_units": [
+      "m3:bedroom-01-q08:clip:7:episodic:59",
+      "m3:bedroom-01-q08:clip:13:episodic:121",
+      "m3:bedroom-01-q08:clip:1:episodic:3",
+      "m3:bedroom-01-q08:clip:2:episodic:13",
+      "m3:bedroom-01-q08:clip:6:episodic:54",
+      "m3:bedroom-01-q08:clip:12:episodic:108",
+      "m3:bedroom-01-q08:clip:5:episodic:45",
+      "m3:bedroom-01-q08:clip:3:episodic:24",
+      "m3:bedroom-01-q08:entity:character_4",
+      "m3:bedroom-01-q08:clip:2:episodic:14",
+      "m3:bedroom-01-q08:clip:12:episodic:112",
+      "m3:bedroom-01-q08:clip:6:episodic:53",
+      "m3:bedroom-01-q08:clip:7:episodic:61",
+      "m3:bedroom-01-q08:clip:9:semantic:85",
+      "m3:bedroom-01-q08:clip:2:episodic:18",
+      "m3:bedroom-01-q08:clip:7:episodic:64",
+      "m3:bedroom-01-q08:clip:14:semantic:135",
+      "m3:bedroom-01-q08:clip:5:semantic:48",
+      "m3:bedroom-01-q08:clip:11:episodic:104",
+      "m3:bedroom-01-q08:entity:character_0",
+      "m3:bedroom-01-q08:clip:12:episodic:115",
+      "m3:bedroom-01-q08:entity:character_8",
+      "m3:bedroom-01-q08:clip:14:episodic:134",
+      "m3:bedroom-01-q08:clip:11:episodic:98",
+      "m3:bedroom-01-q08:clip:5:episodic:42",
+      "m3:bedroom-01-q08:clip:3:episodic:27",
+      "m3:bedroom-01-q08:clip:8:episodic:76",
+      "m3:bedroom-01-q08:clip:8:semantic:78",
+      "m3:bedroom-01-q08:clip:12:episodic:110",
+      "m3:bedroom-01-q08:clip:3:episodic:28",
+      "m3:bedroom-01-q08:clip:5:episodic:43",
+      "m3:bedroom-01-q08:clip:12:semantic:118",
+      "m3:bedroom-01-q08:clip:12:semantic:117",
+      "m3:bedroom-01-q08:clip:14:episodic:133",
+      "m3:bedroom-01-q08:clip:15:episodic:139",
+      "m3:bedroom-01-q08:clip:12:episodic:111",
+      "m3:bedroom-01-q08:entity:character_12",
+      "m3:bedroom-01-q08:clip:7:episodic:63",
+      "m3:bedroom-01-q08:clip:4:episodic:36",
+      "m3:bedroom-01-q08:clip:8:episodic:70",
+      "m3:bedroom-01-q08:entity:character_11",
+      "m3:bedroom-01-q08:clip:1:episodic:6",
+      "m3:bedroom-01-q08:clip:7:episodic:60",
+      "m3:bedroom-01-q08:clip:12:episodic:109",
+      "m3:bedroom-01-q08:clip:15:semantic:145",
+      "m3:bedroom-01-q08:clip:8:episodic:75",
+      "m3:bedroom-01-q08:clip:1:episodic:7",
+      "m3:bedroom-01-q08:entity:character_3",
+      "m3:bedroom-01-q08:clip:10:episodic:93",
+      "m3:bedroom-01-q08:clip:9:episodic:83",
+      "m3:bedroom-01-q08:clip:1:semantic:9",
+      "m3:bedroom-01-q08:clip:15:episodic:140",
+      "m3:bedroom-01-q08:clip:10:episodic:90",
+      "m3:bedroom-01-q08:clip:9:episodic:82",
+      "m3:bedroom-01-q08:entity:character_10",
+      "m3:bedroom-01-q08:clip:3:semantic:30",
+      "m3:bedroom-01-q08:clip:11:semantic:106",
+      "m3:bedroom-01-q08:clip:2:episodic:17",
+      "m3:bedroom-01-q08:clip:4:episodic:37",
+      "m3:bedroom-01-q08:clip:11:episodic:102",
+      "m3:bedroom-01-q08:clip:7:semantic:66",
+      "m3:bedroom-01-q08:clip:3:episodic:22",
+      "m3:bedroom-01-q08:clip:14:semantic:137",
+      "m3:bedroom-01-q08:clip:1:episodic:2",
+      "m3:bedroom-01-q08:clip:4:episodic:35",
+      "m3:bedroom-01-q08:clip:6:semantic:58",
+      "m3:bedroom-01-q08:clip:13:episodic:123",
+      "m3:bedroom-01-q08:clip:5:semantic:49",
+      "m3:bedroom-01-q08:clip:6:episodic:55",
+      "m3:bedroom-01-q08:clip:10:episodic:89",
+      "m3:bedroom-01-q08:clip:11:episodic:103",
+      "m3:bedroom-01-q08:clip:12:episodic:114",
+      "m3:bedroom-01-q08:clip:8:episodic:73",
+      "m3:bedroom-01-q08:clip:14:semantic:136",
+      "m3:bedroom-01-q08:clip:15:episodic:142",
+      "m3:bedroom-01-q08:clip:7:episodic:62",
+      "m3:bedroom-01-q08:clip:3:episodic:25",
+      "m3:bedroom-01-q08:clip:4:semantic:41",
+      "m3:bedroom-01-q08:clip:8:episodic:74",
+      "m3:bedroom-01-q08:clip:11:episodic:99",
+      "m3:bedroom-01-q08:clip:10:episodic:88",
+      "m3:bedroom-01-q08:clip:15:episodic:141",
+      "m3:bedroom-01-q08:clip:8:semantic:77",
+      "m3:bedroom-01-q08:clip:9:episodic:81",
+      "m3:bedroom-01-q08:clip:6:episodic:51",
+      "m3:bedroom-01-q08:clip:1:episodic:1",
+      "m3:bedroom-01-q08:clip:11:semantic:107",
+      "m3:bedroom-01-q08:clip:3:episodic:26",
+      "m3:bedroom-01-q08:clip:14:episodic:131",
+      "m3:bedroom-01-q08:clip:4:episodic:33",
+      "m3:bedroom-01-q08:clip:15:episodic:144",
+      "m3:bedroom-01-q08:clip:5:episodic:47",
+      "m3:bedroom-01-q08:clip:1:semantic:8",
+      "m3:bedroom-01-q08:clip:9:semantic:84",
+      "m3:bedroom-01-q08:clip:14:episodic:129",
+      "m3:bedroom-01-q08:clip:11:episodic:105",
+      "m3:bedroom-01-q08:clip:2:episodic:15",
+      "m3:bedroom-01-q08:clip:8:episodic:72",
+      "m3:bedroom-01-q08:entity:character_2",
+      "m3:bedroom-01-q08:clip:9:semantic:86",
+      "m3:bedroom-01-q08:clip:6:episodic:50",
+      "m3:bedroom-01-q08:clip:12:semantic:116",
+      "m3:bedroom-01-q08:clip:4:episodic:38",
+      "m3:bedroom-01-q08:clip:10:episodic:91",
+      "m3:bedroom-01-q08:clip:13:semantic:125",
+      "m3:bedroom-01-q08:entity:character_9",
+      "m3:bedroom-01-q08:clip:5:episodic:44",
+      "m3:bedroom-01-q08:clip:15:semantic:146",
+      "m3:bedroom-01-q08:entity:character_6",
+      "m3:bedroom-01-q08:clip:2:semantic:20",
+      "m3:bedroom-01-q08:clip:4:episodic:34",
+      "m3:bedroom-01-q08:clip:7:semantic:65",
+      "m3:bedroom-01-q08:clip:14:episodic:130",
+      "m3:bedroom-01-q08:clip:3:semantic:29",
+      "m3:bedroom-01-q08:clip:13:episodic:124",
+      "m3:bedroom-01-q08:clip:13:episodic:119",
+      "m3:bedroom-01-q08:entity:character_7",
+      "m3:bedroom-01-q08:clip:6:semantic:56",
+      "m3:bedroom-01-q08:entity:character_1",
+      "m3:bedroom-01-q08:clip:4:semantic:40",
+      "m3:bedroom-01-q08:clip:8:episodic:69",
+      "m3:bedroom-01-q08:clip:8:episodic:71",
+      "m3:bedroom-01-q08:clip:12:episodic:113",
+      "m3:bedroom-01-q08:clip:6:episodic:52",
+      "m3:bedroom-01-q08:clip:1:episodic:5",
+      "m3:bedroom-01-q08:clip:2:episodic:16",
+      "m3:bedroom-01-q08:clip:14:episodic:132",
+      "m3:bedroom-01-q08:clip:5:episodic:46",
+      "m3:bedroom-01-q08:clip:3:episodic:23",
+      "m3:bedroom-01-q08:clip:6:semantic:57",
+      "m3:bedroom-01-q08:clip:15:episodic:143",
+      "m3:bedroom-01-q08:clip:13:episodic:122",
+      "m3:bedroom-01-q08:clip:9:episodic:80",
+      "m3:bedroom-01-q08:clip:10:episodic:92",
+      "m3:bedroom-01-q08:clip:13:semantic:127",
+      "m3:bedroom-01-q08:clip:13:semantic:126",
+      "m3:bedroom-01-q08:clip:2:semantic:19",
+      "m3:bedroom-01-q08:clip:11:episodic:101",
+      "m3:bedroom-01-q08:clip:13:episodic:120",
+      "m3:bedroom-01-q08:clip:10:semantic:95",
+      "m3:bedroom-01-q08:clip:11:episodic:100",
+      "m3:bedroom-01-q08:entity:character_5",
+      "m3:bedroom-01-q08:clip:1:episodic:4"
+    ],
+    "_deleted_units": [],
+    "_modified_relationships": [
+      [
+        "m3:bedroom-01-q08:clip:2:episodic:15",
+        "m3:bedroom-01-q08:entity:character_2",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:10:episodic:92",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:2:semantic:19",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:2:episodic:17",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:11:semantic:107",
+        "m3:bedroom-01-q08:entity:character_9",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:2:semantic:20",
+        "m3:bedroom-01-q08:entity:character_2",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:11:episodic:104",
+        "m3:bedroom-01-q08:entity:character_9",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:10:episodic:90",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:3:semantic:29",
+        "m3:bedroom-01-q08:entity:character_4",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:15:episodic:143",
+        "m3:bedroom-01-q08:entity:character_12",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:8:episodic:75",
+        "m3:bedroom-01-q08:entity:character_7",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:10:episodic:88",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:4:episodic:34",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:4:semantic:40",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:15:semantic:146",
+        "m3:bedroom-01-q08:entity:character_12",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:8:episodic:71",
+        "m3:bedroom-01-q08:entity:character_4",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:9:semantic:86",
+        "m3:bedroom-01-q08:entity:character_4",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:2:episodic:14",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:4:episodic:37",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:4:semantic:41",
+        "m3:bedroom-01-q08:entity:character_5",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:6:semantic:58",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:8:episodic:73",
+        "m3:bedroom-01-q08:entity:character_6",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:10:semantic:95",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:12:semantic:116",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:11:episodic:105",
+        "m3:bedroom-01-q08:entity:character_10",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:4:episodic:36",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:10:episodic:91",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:1:semantic:9",
+        "m3:bedroom-01-q08:entity:character_1",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:4:semantic:41",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:10:episodic:89",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:4:episodic:33",
+        "m3:bedroom-01-q08:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:bedroom-01-q08:clip:2:episodic:16",
+        "m3:bedroom-01-q08:entity:character_3",
+        "mentions_entity"
+      ]
+    ],
+    "_deleted_relationships": []
+  },
+  "relationship_cache_meta": {
+    "m3:bedroom-01-q08:clip:1:semantic:9|m3:bedroom-01-q08:entity:character_1|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.231736
+    },
+    "m3:bedroom-01-q08:clip:2:episodic:14|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.231789
+    },
+    "m3:bedroom-01-q08:clip:2:episodic:15|m3:bedroom-01-q08:entity:character_2|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.231819
+    },
+    "m3:bedroom-01-q08:clip:2:episodic:16|m3:bedroom-01-q08:entity:character_3|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.231845
+    },
+    "m3:bedroom-01-q08:clip:2:episodic:17|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.231868
+    },
+    "m3:bedroom-01-q08:clip:2:semantic:19|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.231894
+    },
+    "m3:bedroom-01-q08:clip:2:semantic:20|m3:bedroom-01-q08:entity:character_2|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.231916
+    },
+    "m3:bedroom-01-q08:clip:3:semantic:29|m3:bedroom-01-q08:entity:character_4|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.231942
+    },
+    "m3:bedroom-01-q08:clip:4:episodic:33|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.231965
+    },
+    "m3:bedroom-01-q08:clip:4:episodic:34|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.231986
+    },
+    "m3:bedroom-01-q08:clip:4:episodic:36|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232008
+    },
+    "m3:bedroom-01-q08:clip:4:episodic:37|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.23203
+    },
+    "m3:bedroom-01-q08:clip:4:semantic:40|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232053
+    },
+    "m3:bedroom-01-q08:clip:4:semantic:41|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232075
+    },
+    "m3:bedroom-01-q08:clip:4:semantic:41|m3:bedroom-01-q08:entity:character_5|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232096
+    },
+    "m3:bedroom-01-q08:clip:6:semantic:58|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232123
+    },
+    "m3:bedroom-01-q08:clip:8:episodic:71|m3:bedroom-01-q08:entity:character_4|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232149
+    },
+    "m3:bedroom-01-q08:clip:8:episodic:73|m3:bedroom-01-q08:entity:character_6|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232172
+    },
+    "m3:bedroom-01-q08:clip:8:episodic:75|m3:bedroom-01-q08:entity:character_7|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232194
+    },
+    "m3:bedroom-01-q08:clip:9:semantic:86|m3:bedroom-01-q08:entity:character_4|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.23222
+    },
+    "m3:bedroom-01-q08:clip:10:episodic:88|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232243
+    },
+    "m3:bedroom-01-q08:clip:10:episodic:89|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232266
+    },
+    "m3:bedroom-01-q08:clip:10:episodic:90|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232289
+    },
+    "m3:bedroom-01-q08:clip:10:episodic:91|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232312
+    },
+    "m3:bedroom-01-q08:clip:10:episodic:92|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232334
+    },
+    "m3:bedroom-01-q08:clip:10:semantic:95|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232357
+    },
+    "m3:bedroom-01-q08:clip:11:episodic:104|m3:bedroom-01-q08:entity:character_9|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232381
+    },
+    "m3:bedroom-01-q08:clip:11:episodic:105|m3:bedroom-01-q08:entity:character_10|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.23241
+    },
+    "m3:bedroom-01-q08:clip:11:semantic:107|m3:bedroom-01-q08:entity:character_9|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232434
+    },
+    "m3:bedroom-01-q08:clip:12:semantic:116|m3:bedroom-01-q08:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.23246
+    },
+    "m3:bedroom-01-q08:clip:15:episodic:143|m3:bedroom-01-q08:entity:character_12|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232489
+    },
+    "m3:bedroom-01-q08:clip:15:semantic:146|m3:bedroom-01-q08:entity:character_12|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789436873.232513
+    }
+  },
+  "retriever_indices_saved": {
+    "bm25": true,
+    "splade": true
+  },
+  "retrieval": {
+    "indices_saved": {
+      "bm25": true,
+      "splade": true
+    },
+    "frozen_matrices_saved": {}
+  },
+  "l2_storage": {
+    "enabled": false,
+    "backend": null,
+    "rocksdb_relative_path": null,
+    "rocksdb_path": null,
+    "max_capacity": null,
+    "high_watermark": null,
+    "low_watermark": null
+  },
+  "high_level_memory_build": {}
+}

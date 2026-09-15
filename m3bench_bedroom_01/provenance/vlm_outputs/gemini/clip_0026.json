@@ -1,0 +1,78 @@
+{
+  "clip_id": 26,
+  "source": {
+    "segment_id": 26,
+    "source": "bedroom_01_00113000.mp4",
+    "source_clock": "00113000",
+    "start_seconds_in_source": 15.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 705.0,
+    "absolute_end_seconds": 720.0,
+    "actual_media": "/opt/streammeco/run/m3bench_bedroom_gemini/work/segments/segment_0026.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73738.439118284,
+      "prepared_perf": 73742.170457781,
+      "ordered_start_perf": 73917.402943057,
+      "consumer_wait_ms": 0.011651995009742677,
+      "ready_to_ordered_ms": 175232.48527599208,
+      "preparation_work_ms": 3725.977359004901,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "Two young women sit side by side on a bed in a bedroom.",
+      "<voice_248> speaks from the bed requesting afternoon tea.",
+      "<voice_31>, holding the camera, replies and exits the bedroom.",
+      "<voice_31> walks down the hallway past shelving units and enters the kitchen.",
+      "<voice_31> approaches a food preparation area with plates, fries, and a slice of cake.",
+      "Wearing black gloves, <voice_31> picks up the food tray containing french fries and cake.",
+      "<voice_31> turns around and walks back toward the hallway to serve the tea."
+    ],
+    "high_level_conclusions": [
+      "<voice_31> is the camera operator acting from a first-person perspective.",
+      "<voice_248> is the woman in the white jacket sitting on the bed.",
+      "<voice_31> is retrieving afternoon snacks to serve to <voice_248>.",
+      "The individuals share a close and friendly relationship, likely as friends or roommates."
+    ]
+  },
+  "selected_final_text": "```json\n{\n\t\"video_description\": [\n\t\t\"Two young women sit side by side on a bed in a bedroom.\",\n\t\t\"<voice_248> speaks from the bed requesting afternoon tea.\",\n\t\t\"<voice_31>, holding the camera, replies and exits the bedroom.\",\n\t\t\"<voice_31> walks down the hallway past shelving units and enters the kitchen.\",\n\t\t\"<voice_31> approaches a food preparation area with plates, fries, and a slice of cake.\",\n\t\t\"Wearing black gloves, <voice_31> picks up the food tray containing french fries and cake.\",\n\t\t\"<voice_31> turns around and walks back toward the hallway to serve the tea.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_31> is the camera operator acting from a first-person perspective.\",\n\t\t\"<voice_248> is the woman in the white jacket sitting on the bed.\",\n\t\t\"<voice_31> is retrieving afternoon snacks to serve to <voice_248>.\",\n\t\t\"The individuals share a close and friendly relationship, likely as friends or roommates.\"\n\t]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 26,
+      "call_id": "44730693-0f36-41f7-8642-c2d30c7c3b68",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432734.2280183,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 33083,
+      "output_tokens": 1208,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 80467.69719501026
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n\t\"video_description\": [\n\t\t\"Two young women sit side by side on a bed in a bedroom.\",\n\t\t\"<voice_248> speaks from the bed requesting afternoon tea.\",\n\t\t\"<voice_31>, holding the camera, replies and exits the bedroom.\",\n\t\t\"<voice_31> walks down the hallway past shelving units and enters the kitchen.\",\n\t\t\"<voice_31> approaches a food preparation area with plates, fries, and a slice of cake.\",\n\t\t\"Wearing black gloves, <voice_31> picks up the food tray containing french fries and cake.\",\n\t\t\"<voice_31> turns around and walks back toward the hallway to serve the tea.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_31> is the camera operator acting from a first-person perspective.\",\n\t\t\"<voice_248> is the woman in the white jacket sitting on the bed.\",\n\t\t\"<voice_31> is retrieving afternoon snacks to serve to <voice_248>.\",\n\t\t\"The individuals share a close and friendly relationship, likely as friends or roommates.\"\n\t]\n}\n```",
+      "total_tokens": 34291,
+      "request_end": 1789432814.6958518,
+      "latency_ms": 80467.83031600353,
+      "client_wall_clock_latency_ms": 80467.83031600353,
+      "api_request_wall_clock_latency_ms": 80467.83031600353
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_26_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

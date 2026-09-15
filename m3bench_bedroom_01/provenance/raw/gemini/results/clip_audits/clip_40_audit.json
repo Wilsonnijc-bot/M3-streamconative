@@ -1,0 +1,352 @@
+{
+  "clip_id": 40,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00183000.mp4",
+  "end_to_end_memory_generation_ms": 140547.3786270013,
+  "latency_ms": {
+    "clip_decode": 3838.3251369959908,
+    "deepgram_asr": 903.7286439997843,
+    "mai_transcribe_asr": 1032.3937369976193,
+    "asr_total": 1033.639626999502,
+    "audio_segmentation": 8.678965998115018,
+    "speech_embedding_campplus": 1121.5916299988749,
+    "facial_detection_recognition_buffalo_l": 3394.716797003639,
+    "face_clustering": 9.938811010215431,
+    "vlm_memory_generation": 27004.42478900368,
+    "text_embedding": 534.3918800062966,
+    "graph_update_total": 71.50393699703272
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 40,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 661,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789433437.9291224,
+          "status": "success",
+          "total_tokens": 132,
+          "request_end": 1789433438.4633296,
+          "latency_ms": 534.2075029911939
+        }
+      ],
+      "total_tokens": 132,
+      "latency_ms": 534.3918800062966
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 903.7286439997843,
+        "openrouter-mai-transcribe-2": 1032.3937369976193
+      },
+      "asr_total_ms": 1033.639626999502,
+      "audio_segmentation_ms": 8.678965998115018,
+      "speech_embedding_ms": 1121.5916299988749,
+      "graph_update_ms": 71.42859599844087,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1225.575671007391
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3394.716797003639,
+      "face_clustering_ms": 9.938811010215431,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 356,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3599.0809179929784
+    },
+    "vlm": {
+      "context_preparation_ms": 5324.338150006952,
+      "vlm_ms": 27004.42478900368,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"Two women sit across from each other at a dining table set with food, drinks, and a phone.\",\n  \"The woman on the right speaks while gesturing with her hands.\",\n  \"The woman on the left eats french fries while holding and looking at a smartphone.\",\n  \"The woman on the right stops speaking and rests her chin on her arms on the table.\",\n  \"The woman on the left speaks to the woman on the right while looking across the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The two women are friends having an intimate, supportive conversation at home.\",\n  \"The woman on the right is sharing personal struggles regarding stress and self-imposed pressure.\",\n  \"The woman on the left provides comfort and personal perspective to support her friend.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit across from each other at a dining table set with food, drinks, and a phone.",
+          "The woman on the right speaks while gesturing with her hands.",
+          "The woman on the left eats french fries while holding and looking at a smartphone.",
+          "The woman on the right stops speaking and rests her chin on her arms on the table.",
+          "The woman on the left speaks to the woman on the right while looking across the table."
+        ],
+        "high_level_conclusions": [
+          "The two women are friends having an intimate, supportive conversation at home.",
+          "The woman on the right is sharing personal struggles regarding stress and self-imposed pressure.",
+          "The woman on the left provides comfort and personal perspective to support her friend."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 40,
+          "call_id": "1daed50f-77ca-4299-bf65-06b9565056ae",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789433410.9237826,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65980,
+          "output_tokens": 1177,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 27004.324099005316
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"Two women sit across from each other at a dining table set with food, drinks, and a phone.\",\n  \"The woman on the right speaks while gesturing with her hands.\",\n  \"The woman on the left eats french fries while holding and looking at a smartphone.\",\n  \"The woman on the right stops speaking and rests her chin on her arms on the table.\",\n  \"The woman on the left speaks to the woman on the right while looking across the table.\"\n ],\n \"high_level_conclusions\": [\n  \"The two women are friends having an intimate, supportive conversation at home.\",\n  \"The woman on the right is sharing personal struggles regarding stress and self-imposed pressure.\",\n  \"The woman on the left provides comfort and personal perspective to support her friend.\"\n ]\n}\n```",
+          "total_tokens": 67157,
+          "request_end": 1789433437.9282103,
+          "latency_ms": 27004.42478900368,
+          "client_wall_clock_latency_ms": 27004.42478900368,
+          "api_request_wall_clock_latency_ms": 27004.42478900368
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.058891004300676286,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.016449994291178882,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 3,
+    "detected_faces": 356,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 398,
+    "edges_after_clip": 133,
+    "nodes_added_by_clip": 9,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit across from each other at a dining table set with food, drinks, and a phone.",
+      "The woman on the right speaks while gesturing with her hands.",
+      "The woman on the left eats french fries while holding and looking at a smartphone.",
+      "The woman on the right stops speaking and rests her chin on her arms on the table.",
+      "The woman on the left speaks to the woman on the right while looking across the table."
+    ],
+    "high_level_conclusions": [
+      "The two women are friends having an intimate, supportive conversation at home.",
+      "The woman on the right is sharing personal struggles regarding stress and self-imposed pressure.",
+      "The woman on the left provides comfort and personal perspective to support her friend."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit across from each other at a dining table set with food, drinks, and a phone.",
+      "The woman on the right speaks while gesturing with her hands.",
+      "The woman on the left eats french fries while holding and looking at a smartphone.",
+      "The woman on the right stops speaking and rests her chin on her arms on the table.",
+      "The woman on the left speaks to the woman on the right while looking across the table."
+    ],
+    "high_level_conclusions": [
+      "The two women are friends having an intimate, supportive conversation at home.",
+      "The woman on the right is sharing personal struggles regarding stress and self-imposed pressure.",
+      "The woman on the left provides comfort and personal perspective to support her friend."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_40_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 9,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 389,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: I'll give myself too much pressure and learn to relax rest during | MAI: Mm."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 390,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit across from each other at a dining table set with food, drinks, and a phone."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 391,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right speaks while gesturing with her hands."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 392,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left eats french fries while holding and looking at a smartphone."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 393,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right stops speaking and rests her chin on her arms on the table."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 394,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left speaks to the woman on the right while looking across the table."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 395,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women are friends having an intimate, supportive conversation at home."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 396,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the right is sharing personal struggles regarding stress and self-imposed pressure."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 397,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The woman on the left provides comfort and personal perspective to support her friend."
+          ],
+          "timestamp": 40
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_40_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_40_graph.pkl"
+  },
+  "memory_pickle_bytes": 10426831,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 74484.792203109,
+    "prepared_perf": 74489.830690227,
+    "ordered_start_perf": 74586.961284493,
+    "consumer_wait_ms": 0.009077994036488235,
+    "ready_to_ordered_ms": 97130.59426599648,
+    "preparation_work_ms": 5033.16943399841,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 37690.73064000986
+}

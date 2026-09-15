@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "The candidate states that the information is insufficient instead of providing the major (Computer / Programming)."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q07",
+    "method": "D",
+    "call_id": "3e7f3585-4841-4e8f-81db-6b45acbe657f",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439985.6615674,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 139,
+    "output_tokens": 110,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 2840.1083999924595
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n \"0\": {\n  \"correct\": false,\n  \"reason\": \"The candidate states that the information is insufficient instead of providing the major (Computer / Programming).\"\n }\n}\n```",
+    "total_tokens": 249,
+    "request_end": 1789439988.501738,
+    "latency_ms": 2840.1691740000388,
+    "client_wall_clock_latency_ms": 2840.1691740000388,
+    "api_request_wall_clock_latency_ms": 2840.1691740000388
+  },
+  "included_in_qa_latency": false
+}

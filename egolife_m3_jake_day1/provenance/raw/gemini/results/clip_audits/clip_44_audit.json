@@ -1,0 +1,442 @@
+{
+  "clip_id": 44,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0044.mp4",
+  "end_to_end_memory_generation_ms": 232366.3326140013,
+  "latency_ms": {
+    "clip_decode": 3763.9297939967946,
+    "deepgram_asr": 526.9144549965858,
+    "mai_transcribe_asr": 959.1530689940555,
+    "asr_total": 960.1343750036904,
+    "audio_segmentation": 10.172518996114377,
+    "speech_embedding_campplus": 737.7470319988788,
+    "facial_detection_recognition_buffalo_l": 3631.7856930036214,
+    "face_clustering": 7.282901999133173,
+    "vlm_memory_generation": 80052.45475700212,
+    "text_embedding": 661.1570919994847,
+    "graph_update_total": 256.53307299216976
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 44,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 798,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789405900.4655945,
+          "status": "success",
+          "total_tokens": 174,
+          "request_end": 1789405901.1265986,
+          "latency_ms": 661.0045230045216
+        }
+      ],
+      "total_tokens": 174,
+      "latency_ms": 661.1570919994847
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 526.9144549965858,
+        "openrouter-mai-transcribe-2": 959.1530689940555
+      },
+      "asr_total_ms": 960.1343750036904,
+      "audio_segmentation_ms": 10.172518996114377,
+      "speech_embedding_ms": 737.7470319988788,
+      "graph_update_ms": 256.36787199618993,
+      "asr_segment_count": 5,
+      "speech_embedding_count": 5,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1017.3514819980483
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3631.7856930036214,
+      "face_clustering_ms": 7.282901999133173,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 278,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3791.374894004548
+    },
+    "vlm": {
+      "context_preparation_ms": 4074.0182230001665,
+      "vlm_ms": 80052.45475700212,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer sits at the head of a long table, adjusting a patterned cap on their lap.\",\n    \"A group of people gathers around the table covered in a pink checkered tablecloth with a clapperboard on it.\",\n    \"<voice_417> comments on Qi Baishi's work.\",\n    \"<voice_508> remarks that it gives off a retro feeling.\",\n    \"<voice_431> discusses the plan being written on the whiteboard.\",\n    \"<voice_509> makes a humorous observation about question marks and feeling like celebrities.\",\n    \"<voice_417> mentions 'The riddle' and asks what else is left on the agenda.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is holding a production or brainstorming meeting for an upcoming video project, referencing creative references and plans.\",\n    \"<voice_431> is leading the discussion and outlining steps on the whiteboard.\",\n    \"The atmosphere among the collaborators is casual and collaborative.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera wearer sits at the head of a long table, adjusting a patterned cap on their lap.",
+          "A group of people gathers around the table covered in a pink checkered tablecloth with a clapperboard on it.",
+          "<voice_417> comments on Qi Baishi's work.",
+          "<voice_508> remarks that it gives off a retro feeling.",
+          "<voice_431> discusses the plan being written on the whiteboard.",
+          "<voice_509> makes a humorous observation about question marks and feeling like celebrities.",
+          "<voice_417> mentions 'The riddle' and asks what else is left on the agenda."
+        ],
+        "high_level_conclusions": [
+          "The group is holding a production or brainstorming meeting for an upcoming video project, referencing creative references and plans.",
+          "<voice_431> is leading the discussion and outlining steps on the whiteboard.",
+          "The atmosphere among the collaborators is casual and collaborative."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 44,
+          "call_id": "d5262aed-7c31-47d6-b1c0-4977875f7a5e",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789405820.4122312,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66772,
+          "output_tokens": 1194,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 80052.25328599772
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer sits at the head of a long table, adjusting a patterned cap on their lap.\",\n    \"A group of people gathers around the table covered in a pink checkered tablecloth with a clapperboard on it.\",\n    \"<voice_417> comments on Qi Baishi's work.\",\n    \"<voice_508> remarks that it gives off a retro feeling.\",\n    \"<voice_431> discusses the plan being written on the whiteboard.\",\n    \"<voice_509> makes a humorous observation about question marks and feeling like celebrities.\",\n    \"<voice_417> mentions 'The riddle' and asks what else is left on the agenda.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is holding a production or brainstorming meeting for an upcoming video project, referencing creative references and plans.\",\n    \"<voice_431> is leading the discussion and outlining steps on the whiteboard.\",\n    \"The atmosphere among the collaborators is casual and collaborative.\"\n  ]\n}\n```",
+          "total_tokens": 67966,
+          "request_end": 1789405900.464694,
+          "latency_ms": 80052.45475700212,
+          "client_wall_clock_latency_ms": 80052.45475700212,
+          "api_request_wall_clock_latency_ms": 80052.45475700212
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.11065800208598375,
+      "nodes_added": 7,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.05454299389384687,
+      "nodes_added": 3,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 5,
+    "speech_embeddings": 5,
+    "voice_identities": 4,
+    "detected_faces": 278,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 3,
+    "nodes_after_clip": 520,
+    "edges_after_clip": 120,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer sits at the head of a long table, adjusting a patterned cap on their lap.",
+      "A group of people gathers around the table covered in a pink checkered tablecloth with a clapperboard on it.",
+      "<voice_417> comments on Qi Baishi's work.",
+      "<voice_508> remarks that it gives off a retro feeling.",
+      "<voice_431> discusses the plan being written on the whiteboard.",
+      "<voice_509> makes a humorous observation about question marks and feeling like celebrities.",
+      "<voice_417> mentions 'The riddle' and asks what else is left on the agenda."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a production or brainstorming meeting for an upcoming video project, referencing creative references and plans.",
+      "<voice_431> is leading the discussion and outlining steps on the whiteboard.",
+      "The atmosphere among the collaborators is casual and collaborative."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera wearer sits at the head of a long table, adjusting a patterned cap on their lap.",
+      "A group of people gathers around the table covered in a pink checkered tablecloth with a clapperboard on it.",
+      "<voice_417> comments on Qi Baishi's work.",
+      "<voice_508> remarks that it gives off a retro feeling.",
+      "<voice_431> discusses the plan being written on the whiteboard.",
+      "<voice_509> makes a humorous observation about question marks and feeling like celebrities.",
+      "<voice_417> mentions 'The riddle' and asks what else is left on the agenda."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a production or brainstorming meeting for an upcoming video project, referencing creative references and plans.",
+      "<voice_431> is leading the discussion and outlining steps on the whiteboard.",
+      "The atmosphere among the collaborators is casual and collaborative."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_44_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 508,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 有种复古的感觉。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 509,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 好多问号啊，我们好像名人。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 510,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer sits at the head of a long table, adjusting a patterned cap on their lap."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 511,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people gathers around the table covered in a pink checkered tablecloth with a clapperboard on it."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 512,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_417> comments on Qi Baishi's work."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 513,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_508> remarks that it gives off a retro feeling."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 514,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_431> discusses the plan being written on the whiteboard."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 515,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_509> makes a humorous observation about question marks and feeling like celebrities."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 516,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_417> mentions 'The riddle' and asks what else is left on the agenda."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 517,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is holding a production or brainstorming meeting for an upcoming video project, referencing creative references and plans."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 518,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_431> is leading the discussion and outlining steps on the whiteboard."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 519,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The atmosphere among the collaborators is casual and collaborative."
+          ],
+          "timestamp": 44
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 417,
+        "target": 512,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 417,
+        "target": 516,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 431,
+        "target": 514,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 431,
+        "target": 518,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 508,
+        "target": 513,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 509,
+        "target": 515,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_44_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_44_graph.pkl"
+  },
+  "memory_pickle_bytes": 11710990,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 46855.659493822,
+    "prepared_perf": 46862.185033487,
+    "ordered_start_perf": 46997.549705963,
+    "consumer_wait_ms": 0.01260400313185528,
+    "ready_to_ordered_ms": 135364.67247599649,
+    "preparation_work_ms": 6520.146849004959,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 89599.7870430001
+}

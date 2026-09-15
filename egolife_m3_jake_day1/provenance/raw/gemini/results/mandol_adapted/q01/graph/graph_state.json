@@ -1,0 +1,1857 @@
+{
+  "version": "3.0_rocksdb",
+  "saved_time": "2026-09-14T19:39:26.764725",
+  "management": {
+    "_nodes_access_counts": {
+      "m3:jake-day1-q01:entity:character_0": 1,
+      "m3:jake-day1-q01:entity:character_1": 1,
+      "m3:jake-day1-q01:entity:character_2": 1,
+      "m3:jake-day1-q01:entity:character_3": 1,
+      "m3:jake-day1-q01:entity:character_4": 1,
+      "m3:jake-day1-q01:entity:character_5": 1,
+      "m3:jake-day1-q01:entity:character_6": 1,
+      "m3:jake-day1-q01:entity:character_7": 1,
+      "m3:jake-day1-q01:entity:character_8": 1,
+      "m3:jake-day1-q01:entity:character_9": 1,
+      "m3:jake-day1-q01:entity:character_10": 1,
+      "m3:jake-day1-q01:entity:character_11": 1,
+      "m3:jake-day1-q01:entity:character_12": 1,
+      "m3:jake-day1-q01:entity:character_13": 1,
+      "m3:jake-day1-q01:entity:character_14": 1,
+      "m3:jake-day1-q01:entity:character_15": 1,
+      "m3:jake-day1-q01:entity:character_16": 1,
+      "m3:jake-day1-q01:entity:character_17": 1,
+      "m3:jake-day1-q01:entity:character_18": 1,
+      "m3:jake-day1-q01:entity:character_19": 1,
+      "m3:jake-day1-q01:entity:character_20": 1,
+      "m3:jake-day1-q01:entity:character_21": 1,
+      "m3:jake-day1-q01:entity:character_22": 1,
+      "m3:jake-day1-q01:entity:character_23": 1,
+      "m3:jake-day1-q01:entity:character_24": 1,
+      "m3:jake-day1-q01:entity:character_25": 1,
+      "m3:jake-day1-q01:entity:character_26": 1,
+      "m3:jake-day1-q01:entity:character_27": 1,
+      "m3:jake-day1-q01:entity:character_28": 1,
+      "m3:jake-day1-q01:entity:character_29": 1,
+      "m3:jake-day1-q01:entity:character_30": 1,
+      "m3:jake-day1-q01:entity:character_31": 1,
+      "m3:jake-day1-q01:entity:character_32": 1,
+      "m3:jake-day1-q01:entity:character_33": 1,
+      "m3:jake-day1-q01:entity:character_34": 1,
+      "m3:jake-day1-q01:entity:character_35": 1,
+      "m3:jake-day1-q01:entity:character_36": 1,
+      "m3:jake-day1-q01:entity:character_37": 1,
+      "m3:jake-day1-q01:entity:character_38": 1,
+      "m3:jake-day1-q01:entity:character_39": 1,
+      "m3:jake-day1-q01:entity:character_40": 1,
+      "m3:jake-day1-q01:entity:character_41": 1,
+      "m3:jake-day1-q01:entity:character_42": 1,
+      "m3:jake-day1-q01:entity:character_43": 1,
+      "m3:jake-day1-q01:entity:character_44": 1,
+      "m3:jake-day1-q01:entity:character_45": 1,
+      "m3:jake-day1-q01:entity:character_46": 1,
+      "m3:jake-day1-q01:entity:character_47": 1,
+      "m3:jake-day1-q01:entity:character_48": 1,
+      "m3:jake-day1-q01:entity:character_49": 1,
+      "m3:jake-day1-q01:entity:character_50": 1,
+      "m3:jake-day1-q01:entity:character_51": 1,
+      "m3:jake-day1-q01:clip:1:episodic:2": 1,
+      "m3:jake-day1-q01:clip:1:episodic:3": 1,
+      "m3:jake-day1-q01:clip:1:episodic:4": 1,
+      "m3:jake-day1-q01:clip:1:episodic:5": 1,
+      "m3:jake-day1-q01:clip:1:episodic:6": 1,
+      "m3:jake-day1-q01:clip:1:episodic:7": 1,
+      "m3:jake-day1-q01:clip:1:episodic:8": 1,
+      "m3:jake-day1-q01:clip:1:semantic:10": 1,
+      "m3:jake-day1-q01:clip:1:semantic:11": 1,
+      "m3:jake-day1-q01:clip:1:semantic:9": 1,
+      "m3:jake-day1-q01:clip:2:episodic:12": 1,
+      "m3:jake-day1-q01:clip:2:episodic:13": 1,
+      "m3:jake-day1-q01:clip:2:episodic:14": 1,
+      "m3:jake-day1-q01:clip:2:episodic:15": 1,
+      "m3:jake-day1-q01:clip:2:episodic:16": 1,
+      "m3:jake-day1-q01:clip:2:episodic:17": 1,
+      "m3:jake-day1-q01:clip:2:semantic:18": 1,
+      "m3:jake-day1-q01:clip:2:semantic:19": 1,
+      "m3:jake-day1-q01:clip:2:semantic:20": 1,
+      "m3:jake-day1-q01:clip:3:episodic:22": 1,
+      "m3:jake-day1-q01:clip:3:episodic:23": 1,
+      "m3:jake-day1-q01:clip:3:episodic:24": 1,
+      "m3:jake-day1-q01:clip:3:episodic:25": 1,
+      "m3:jake-day1-q01:clip:3:episodic:26": 1,
+      "m3:jake-day1-q01:clip:3:semantic:27": 1,
+      "m3:jake-day1-q01:clip:3:semantic:28": 1,
+      "m3:jake-day1-q01:clip:3:semantic:29": 1,
+      "m3:jake-day1-q01:clip:4:episodic:34": 1,
+      "m3:jake-day1-q01:clip:4:episodic:35": 1,
+      "m3:jake-day1-q01:clip:4:episodic:36": 1,
+      "m3:jake-day1-q01:clip:4:episodic:37": 1,
+      "m3:jake-day1-q01:clip:4:episodic:38": 1,
+      "m3:jake-day1-q01:clip:4:episodic:39": 1,
+      "m3:jake-day1-q01:clip:4:episodic:40": 1,
+      "m3:jake-day1-q01:clip:4:semantic:41": 1,
+      "m3:jake-day1-q01:clip:4:semantic:42": 1,
+      "m3:jake-day1-q01:clip:4:semantic:43": 1,
+      "m3:jake-day1-q01:clip:5:episodic:44": 1,
+      "m3:jake-day1-q01:clip:5:episodic:45": 1,
+      "m3:jake-day1-q01:clip:5:episodic:46": 1,
+      "m3:jake-day1-q01:clip:5:episodic:47": 1,
+      "m3:jake-day1-q01:clip:5:episodic:48": 1,
+      "m3:jake-day1-q01:clip:5:episodic:49": 1,
+      "m3:jake-day1-q01:clip:5:semantic:50": 1,
+      "m3:jake-day1-q01:clip:5:semantic:51": 1,
+      "m3:jake-day1-q01:clip:5:semantic:52": 1,
+      "m3:jake-day1-q01:clip:6:episodic:53": 1,
+      "m3:jake-day1-q01:clip:6:episodic:54": 1,
+      "m3:jake-day1-q01:clip:6:episodic:55": 1,
+      "m3:jake-day1-q01:clip:6:episodic:56": 1,
+      "m3:jake-day1-q01:clip:6:episodic:57": 1,
+      "m3:jake-day1-q01:clip:6:episodic:58": 1,
+      "m3:jake-day1-q01:clip:6:semantic:59": 1,
+      "m3:jake-day1-q01:clip:6:semantic:60": 1,
+      "m3:jake-day1-q01:clip:7:episodic:61": 1,
+      "m3:jake-day1-q01:clip:7:episodic:62": 1,
+      "m3:jake-day1-q01:clip:7:episodic:63": 1,
+      "m3:jake-day1-q01:clip:7:episodic:64": 1,
+      "m3:jake-day1-q01:clip:7:episodic:65": 1,
+      "m3:jake-day1-q01:clip:7:episodic:66": 1,
+      "m3:jake-day1-q01:clip:7:semantic:67": 1,
+      "m3:jake-day1-q01:clip:7:semantic:68": 1,
+      "m3:jake-day1-q01:clip:8:episodic:69": 1,
+      "m3:jake-day1-q01:clip:8:episodic:70": 1,
+      "m3:jake-day1-q01:clip:8:episodic:71": 1,
+      "m3:jake-day1-q01:clip:8:episodic:72": 1,
+      "m3:jake-day1-q01:clip:8:episodic:73": 1,
+      "m3:jake-day1-q01:clip:8:episodic:74": 1,
+      "m3:jake-day1-q01:clip:8:episodic:75": 1,
+      "m3:jake-day1-q01:clip:8:episodic:76": 1,
+      "m3:jake-day1-q01:clip:8:episodic:77": 1,
+      "m3:jake-day1-q01:clip:8:semantic:78": 1,
+      "m3:jake-day1-q01:clip:8:semantic:79": 1,
+      "m3:jake-day1-q01:clip:8:semantic:80": 1,
+      "m3:jake-day1-q01:clip:9:episodic:81": 1,
+      "m3:jake-day1-q01:clip:9:episodic:82": 1,
+      "m3:jake-day1-q01:clip:9:episodic:83": 1,
+      "m3:jake-day1-q01:clip:9:episodic:84": 1,
+      "m3:jake-day1-q01:clip:9:episodic:85": 1,
+      "m3:jake-day1-q01:clip:9:semantic:86": 1,
+      "m3:jake-day1-q01:clip:9:semantic:87": 1,
+      "m3:jake-day1-q01:clip:9:semantic:88": 1,
+      "m3:jake-day1-q01:clip:10:episodic:89": 1,
+      "m3:jake-day1-q01:clip:10:episodic:90": 1,
+      "m3:jake-day1-q01:clip:10:episodic:91": 1,
+      "m3:jake-day1-q01:clip:10:episodic:92": 1,
+      "m3:jake-day1-q01:clip:10:episodic:93": 1,
+      "m3:jake-day1-q01:clip:10:episodic:94": 1,
+      "m3:jake-day1-q01:clip:10:episodic:95": 1,
+      "m3:jake-day1-q01:clip:10:semantic:96": 1,
+      "m3:jake-day1-q01:clip:10:semantic:97": 1,
+      "m3:jake-day1-q01:clip:10:semantic:98": 1,
+      "m3:jake-day1-q01:clip:11:episodic:103": 1,
+      "m3:jake-day1-q01:clip:11:episodic:104": 1,
+      "m3:jake-day1-q01:clip:11:episodic:105": 1,
+      "m3:jake-day1-q01:clip:11:episodic:106": 1,
+      "m3:jake-day1-q01:clip:11:episodic:107": 1,
+      "m3:jake-day1-q01:clip:11:episodic:108": 1,
+      "m3:jake-day1-q01:clip:11:episodic:109": 1,
+      "m3:jake-day1-q01:clip:11:semantic:110": 1,
+      "m3:jake-day1-q01:clip:11:semantic:111": 1,
+      "m3:jake-day1-q01:clip:11:semantic:112": 1,
+      "m3:jake-day1-q01:clip:12:episodic:114": 1,
+      "m3:jake-day1-q01:clip:12:episodic:115": 1,
+      "m3:jake-day1-q01:clip:12:episodic:116": 1,
+      "m3:jake-day1-q01:clip:12:episodic:117": 1,
+      "m3:jake-day1-q01:clip:12:episodic:118": 1,
+      "m3:jake-day1-q01:clip:12:episodic:119": 1,
+      "m3:jake-day1-q01:clip:12:semantic:120": 1,
+      "m3:jake-day1-q01:clip:12:semantic:121": 1,
+      "m3:jake-day1-q01:clip:12:semantic:122": 1,
+      "m3:jake-day1-q01:clip:13:episodic:125": 1,
+      "m3:jake-day1-q01:clip:13:episodic:126": 1,
+      "m3:jake-day1-q01:clip:13:episodic:127": 1,
+      "m3:jake-day1-q01:clip:13:episodic:128": 1,
+      "m3:jake-day1-q01:clip:13:episodic:129": 1,
+      "m3:jake-day1-q01:clip:13:episodic:130": 1,
+      "m3:jake-day1-q01:clip:13:episodic:131": 1,
+      "m3:jake-day1-q01:clip:13:semantic:132": 1,
+      "m3:jake-day1-q01:clip:13:semantic:133": 1,
+      "m3:jake-day1-q01:clip:13:semantic:134": 1,
+      "m3:jake-day1-q01:clip:14:episodic:140": 1,
+      "m3:jake-day1-q01:clip:14:episodic:141": 1,
+      "m3:jake-day1-q01:clip:14:episodic:142": 1,
+      "m3:jake-day1-q01:clip:14:episodic:143": 1,
+      "m3:jake-day1-q01:clip:14:episodic:144": 1,
+      "m3:jake-day1-q01:clip:14:episodic:145": 1,
+      "m3:jake-day1-q01:clip:14:episodic:146": 1,
+      "m3:jake-day1-q01:clip:14:semantic:147": 1,
+      "m3:jake-day1-q01:clip:14:semantic:148": 1,
+      "m3:jake-day1-q01:clip:14:semantic:149": 1,
+      "m3:jake-day1-q01:clip:14:semantic:150": 1,
+      "m3:jake-day1-q01:clip:15:episodic:154": 1,
+      "m3:jake-day1-q01:clip:15:episodic:155": 1,
+      "m3:jake-day1-q01:clip:15:episodic:156": 1,
+      "m3:jake-day1-q01:clip:15:episodic:157": 1,
+      "m3:jake-day1-q01:clip:15:episodic:158": 1,
+      "m3:jake-day1-q01:clip:15:semantic:159": 1,
+      "m3:jake-day1-q01:clip:15:semantic:160": 1,
+      "m3:jake-day1-q01:clip:15:semantic:161": 1,
+      "m3:jake-day1-q01:clip:16:episodic:166": 1,
+      "m3:jake-day1-q01:clip:16:episodic:167": 1,
+      "m3:jake-day1-q01:clip:16:episodic:168": 1,
+      "m3:jake-day1-q01:clip:16:episodic:169": 1,
+      "m3:jake-day1-q01:clip:16:episodic:170": 1,
+      "m3:jake-day1-q01:clip:16:semantic:171": 1,
+      "m3:jake-day1-q01:clip:16:semantic:172": 1,
+      "m3:jake-day1-q01:clip:17:episodic:179": 1,
+      "m3:jake-day1-q01:clip:17:episodic:180": 1,
+      "m3:jake-day1-q01:clip:17:episodic:181": 1,
+      "m3:jake-day1-q01:clip:17:episodic:182": 1,
+      "m3:jake-day1-q01:clip:17:episodic:183": 1,
+      "m3:jake-day1-q01:clip:17:episodic:184": 1,
+      "m3:jake-day1-q01:clip:17:episodic:185": 1,
+      "m3:jake-day1-q01:clip:17:episodic:186": 1,
+      "m3:jake-day1-q01:clip:17:episodic:187": 1,
+      "m3:jake-day1-q01:clip:17:episodic:188": 1,
+      "m3:jake-day1-q01:clip:17:semantic:189": 1,
+      "m3:jake-day1-q01:clip:17:semantic:190": 1,
+      "m3:jake-day1-q01:clip:17:semantic:191": 1,
+      "m3:jake-day1-q01:clip:18:episodic:194": 1,
+      "m3:jake-day1-q01:clip:18:episodic:195": 1,
+      "m3:jake-day1-q01:clip:18:episodic:196": 1,
+      "m3:jake-day1-q01:clip:18:episodic:197": 1,
+      "m3:jake-day1-q01:clip:18:episodic:198": 1,
+      "m3:jake-day1-q01:clip:18:semantic:199": 1,
+      "m3:jake-day1-q01:clip:18:semantic:200": 1,
+      "m3:jake-day1-q01:clip:18:semantic:201": 1,
+      "m3:jake-day1-q01:clip:19:episodic:206": 1,
+      "m3:jake-day1-q01:clip:19:episodic:207": 1,
+      "m3:jake-day1-q01:clip:19:episodic:208": 1,
+      "m3:jake-day1-q01:clip:19:episodic:209": 1,
+      "m3:jake-day1-q01:clip:19:episodic:210": 1,
+      "m3:jake-day1-q01:clip:19:episodic:211": 1,
+      "m3:jake-day1-q01:clip:19:episodic:212": 1,
+      "m3:jake-day1-q01:clip:19:episodic:213": 1,
+      "m3:jake-day1-q01:clip:19:semantic:214": 1,
+      "m3:jake-day1-q01:clip:19:semantic:215": 1,
+      "m3:jake-day1-q01:clip:20:episodic:220": 1,
+      "m3:jake-day1-q01:clip:20:episodic:221": 1,
+      "m3:jake-day1-q01:clip:20:episodic:222": 1,
+      "m3:jake-day1-q01:clip:20:episodic:223": 1,
+      "m3:jake-day1-q01:clip:20:episodic:224": 1,
+      "m3:jake-day1-q01:clip:20:semantic:225": 1,
+      "m3:jake-day1-q01:clip:20:semantic:226": 1,
+      "m3:jake-day1-q01:clip:20:semantic:227": 1,
+      "m3:jake-day1-q01:clip:21:episodic:231": 1,
+      "m3:jake-day1-q01:clip:21:episodic:232": 1,
+      "m3:jake-day1-q01:clip:21:episodic:233": 1,
+      "m3:jake-day1-q01:clip:21:episodic:234": 1,
+      "m3:jake-day1-q01:clip:21:episodic:235": 1,
+      "m3:jake-day1-q01:clip:21:episodic:236": 1,
+      "m3:jake-day1-q01:clip:21:episodic:237": 1,
+      "m3:jake-day1-q01:clip:21:episodic:238": 1,
+      "m3:jake-day1-q01:clip:21:semantic:239": 1,
+      "m3:jake-day1-q01:clip:21:semantic:240": 1,
+      "m3:jake-day1-q01:clip:22:episodic:243": 1,
+      "m3:jake-day1-q01:clip:22:episodic:244": 1,
+      "m3:jake-day1-q01:clip:22:episodic:245": 1,
+      "m3:jake-day1-q01:clip:22:episodic:246": 1,
+      "m3:jake-day1-q01:clip:22:episodic:247": 1,
+      "m3:jake-day1-q01:clip:22:semantic:248": 1,
+      "m3:jake-day1-q01:clip:22:semantic:249": 1,
+      "m3:jake-day1-q01:clip:23:episodic:255": 1,
+      "m3:jake-day1-q01:clip:23:episodic:256": 1,
+      "m3:jake-day1-q01:clip:23:episodic:257": 1,
+      "m3:jake-day1-q01:clip:23:episodic:258": 1,
+      "m3:jake-day1-q01:clip:23:episodic:259": 1,
+      "m3:jake-day1-q01:clip:23:episodic:260": 1,
+      "m3:jake-day1-q01:clip:23:semantic:261": 1,
+      "m3:jake-day1-q01:clip:23:semantic:262": 1,
+      "m3:jake-day1-q01:clip:23:semantic:263": 1,
+      "m3:jake-day1-q01:clip:24:episodic:264": 1,
+      "m3:jake-day1-q01:clip:24:episodic:265": 1,
+      "m3:jake-day1-q01:clip:24:episodic:266": 1,
+      "m3:jake-day1-q01:clip:24:episodic:267": 1,
+      "m3:jake-day1-q01:clip:24:episodic:268": 1,
+      "m3:jake-day1-q01:clip:24:semantic:269": 1,
+      "m3:jake-day1-q01:clip:24:semantic:270": 1
+    },
+    "_nodes_last_accessed": {
+      "m3:jake-day1-q01:entity:character_0": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_1": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_2": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_3": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_4": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_5": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_6": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_7": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_8": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_9": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_10": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_11": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_12": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_13": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_14": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_15": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_16": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_17": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_18": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_19": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_20": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_21": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_22": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_23": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_24": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_25": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_26": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_27": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_28": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_29": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_30": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_31": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_32": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_33": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_34": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_35": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_36": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_37": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_38": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_39": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_40": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_41": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_42": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_43": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_44": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_45": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_46": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_47": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_48": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_49": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_50": 1789414756.702363,
+      "m3:jake-day1-q01:entity:character_51": 1789414756.702363,
+      "m3:jake-day1-q01:clip:1:episodic:2": 1789414764.488518,
+      "m3:jake-day1-q01:clip:1:episodic:3": 1789414764.488518,
+      "m3:jake-day1-q01:clip:1:episodic:4": 1789414764.488518,
+      "m3:jake-day1-q01:clip:1:episodic:5": 1789414764.488518,
+      "m3:jake-day1-q01:clip:1:episodic:6": 1789414764.488518,
+      "m3:jake-day1-q01:clip:1:episodic:7": 1789414764.488518,
+      "m3:jake-day1-q01:clip:1:episodic:8": 1789414764.488518,
+      "m3:jake-day1-q01:clip:1:semantic:10": 1789414764.488518,
+      "m3:jake-day1-q01:clip:1:semantic:11": 1789414764.488518,
+      "m3:jake-day1-q01:clip:1:semantic:9": 1789414764.488518,
+      "m3:jake-day1-q01:clip:2:episodic:12": 1789414764.488518,
+      "m3:jake-day1-q01:clip:2:episodic:13": 1789414764.488518,
+      "m3:jake-day1-q01:clip:2:episodic:14": 1789414764.488518,
+      "m3:jake-day1-q01:clip:2:episodic:15": 1789414764.488518,
+      "m3:jake-day1-q01:clip:2:episodic:16": 1789414764.488518,
+      "m3:jake-day1-q01:clip:2:episodic:17": 1789414764.488518,
+      "m3:jake-day1-q01:clip:2:semantic:18": 1789414764.488518,
+      "m3:jake-day1-q01:clip:2:semantic:19": 1789414764.488518,
+      "m3:jake-day1-q01:clip:2:semantic:20": 1789414764.488518,
+      "m3:jake-day1-q01:clip:3:episodic:22": 1789414764.488518,
+      "m3:jake-day1-q01:clip:3:episodic:23": 1789414764.488518,
+      "m3:jake-day1-q01:clip:3:episodic:24": 1789414764.488518,
+      "m3:jake-day1-q01:clip:3:episodic:25": 1789414764.488518,
+      "m3:jake-day1-q01:clip:3:episodic:26": 1789414764.488518,
+      "m3:jake-day1-q01:clip:3:semantic:27": 1789414764.488518,
+      "m3:jake-day1-q01:clip:3:semantic:28": 1789414764.488518,
+      "m3:jake-day1-q01:clip:3:semantic:29": 1789414764.488518,
+      "m3:jake-day1-q01:clip:4:episodic:34": 1789414764.488518,
+      "m3:jake-day1-q01:clip:4:episodic:35": 1789414764.488518,
+      "m3:jake-day1-q01:clip:4:episodic:36": 1789414764.488518,
+      "m3:jake-day1-q01:clip:4:episodic:37": 1789414764.488518,
+      "m3:jake-day1-q01:clip:4:episodic:38": 1789414764.488518,
+      "m3:jake-day1-q01:clip:4:episodic:39": 1789414764.488518,
+      "m3:jake-day1-q01:clip:4:episodic:40": 1789414764.488518,
+      "m3:jake-day1-q01:clip:4:semantic:41": 1789414764.488518,
+      "m3:jake-day1-q01:clip:4:semantic:42": 1789414764.488518,
+      "m3:jake-day1-q01:clip:4:semantic:43": 1789414764.488518,
+      "m3:jake-day1-q01:clip:5:episodic:44": 1789414764.488518,
+      "m3:jake-day1-q01:clip:5:episodic:45": 1789414764.488518,
+      "m3:jake-day1-q01:clip:5:episodic:46": 1789414764.488518,
+      "m3:jake-day1-q01:clip:5:episodic:47": 1789414764.488518,
+      "m3:jake-day1-q01:clip:5:episodic:48": 1789414764.488518,
+      "m3:jake-day1-q01:clip:5:episodic:49": 1789414764.488518,
+      "m3:jake-day1-q01:clip:5:semantic:50": 1789414764.488518,
+      "m3:jake-day1-q01:clip:5:semantic:51": 1789414764.488518,
+      "m3:jake-day1-q01:clip:5:semantic:52": 1789414764.488518,
+      "m3:jake-day1-q01:clip:6:episodic:53": 1789414764.488518,
+      "m3:jake-day1-q01:clip:6:episodic:54": 1789414764.488518,
+      "m3:jake-day1-q01:clip:6:episodic:55": 1789414764.488518,
+      "m3:jake-day1-q01:clip:6:episodic:56": 1789414764.488518,
+      "m3:jake-day1-q01:clip:6:episodic:57": 1789414764.488518,
+      "m3:jake-day1-q01:clip:6:episodic:58": 1789414764.488518,
+      "m3:jake-day1-q01:clip:6:semantic:59": 1789414764.488518,
+      "m3:jake-day1-q01:clip:6:semantic:60": 1789414764.488518,
+      "m3:jake-day1-q01:clip:7:episodic:61": 1789414764.488518,
+      "m3:jake-day1-q01:clip:7:episodic:62": 1789414764.488518,
+      "m3:jake-day1-q01:clip:7:episodic:63": 1789414764.488518,
+      "m3:jake-day1-q01:clip:7:episodic:64": 1789414764.488518,
+      "m3:jake-day1-q01:clip:7:episodic:65": 1789414764.488518,
+      "m3:jake-day1-q01:clip:7:episodic:66": 1789414764.488518,
+      "m3:jake-day1-q01:clip:7:semantic:67": 1789414764.488518,
+      "m3:jake-day1-q01:clip:7:semantic:68": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:episodic:69": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:episodic:70": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:episodic:71": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:episodic:72": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:episodic:73": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:episodic:74": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:episodic:75": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:episodic:76": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:episodic:77": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:semantic:78": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:semantic:79": 1789414764.488518,
+      "m3:jake-day1-q01:clip:8:semantic:80": 1789414764.488518,
+      "m3:jake-day1-q01:clip:9:episodic:81": 1789414764.488518,
+      "m3:jake-day1-q01:clip:9:episodic:82": 1789414764.488518,
+      "m3:jake-day1-q01:clip:9:episodic:83": 1789414764.488518,
+      "m3:jake-day1-q01:clip:9:episodic:84": 1789414764.488518,
+      "m3:jake-day1-q01:clip:9:episodic:85": 1789414764.488518,
+      "m3:jake-day1-q01:clip:9:semantic:86": 1789414764.488518,
+      "m3:jake-day1-q01:clip:9:semantic:87": 1789414764.488518,
+      "m3:jake-day1-q01:clip:9:semantic:88": 1789414764.488518,
+      "m3:jake-day1-q01:clip:10:episodic:89": 1789414764.488518,
+      "m3:jake-day1-q01:clip:10:episodic:90": 1789414764.488518,
+      "m3:jake-day1-q01:clip:10:episodic:91": 1789414764.488518,
+      "m3:jake-day1-q01:clip:10:episodic:92": 1789414764.488518,
+      "m3:jake-day1-q01:clip:10:episodic:93": 1789414764.488518,
+      "m3:jake-day1-q01:clip:10:episodic:94": 1789414764.488518,
+      "m3:jake-day1-q01:clip:10:episodic:95": 1789414764.488518,
+      "m3:jake-day1-q01:clip:10:semantic:96": 1789414764.488518,
+      "m3:jake-day1-q01:clip:10:semantic:97": 1789414764.488518,
+      "m3:jake-day1-q01:clip:10:semantic:98": 1789414764.488518,
+      "m3:jake-day1-q01:clip:11:episodic:103": 1789414764.488518,
+      "m3:jake-day1-q01:clip:11:episodic:104": 1789414764.488518,
+      "m3:jake-day1-q01:clip:11:episodic:105": 1789414764.488518,
+      "m3:jake-day1-q01:clip:11:episodic:106": 1789414764.488518,
+      "m3:jake-day1-q01:clip:11:episodic:107": 1789414764.488518,
+      "m3:jake-day1-q01:clip:11:episodic:108": 1789414764.488518,
+      "m3:jake-day1-q01:clip:11:episodic:109": 1789414764.488518,
+      "m3:jake-day1-q01:clip:11:semantic:110": 1789414764.488518,
+      "m3:jake-day1-q01:clip:11:semantic:111": 1789414764.488518,
+      "m3:jake-day1-q01:clip:11:semantic:112": 1789414764.488518,
+      "m3:jake-day1-q01:clip:12:episodic:114": 1789414764.488518,
+      "m3:jake-day1-q01:clip:12:episodic:115": 1789414764.488518,
+      "m3:jake-day1-q01:clip:12:episodic:116": 1789414764.488518,
+      "m3:jake-day1-q01:clip:12:episodic:117": 1789414764.488518,
+      "m3:jake-day1-q01:clip:12:episodic:118": 1789414764.488518,
+      "m3:jake-day1-q01:clip:12:episodic:119": 1789414764.488518,
+      "m3:jake-day1-q01:clip:12:semantic:120": 1789414764.488518,
+      "m3:jake-day1-q01:clip:12:semantic:121": 1789414764.488518,
+      "m3:jake-day1-q01:clip:12:semantic:122": 1789414764.488518,
+      "m3:jake-day1-q01:clip:13:episodic:125": 1789414764.488518,
+      "m3:jake-day1-q01:clip:13:episodic:126": 1789414764.488518,
+      "m3:jake-day1-q01:clip:13:episodic:127": 1789414764.488518,
+      "m3:jake-day1-q01:clip:13:episodic:128": 1789414764.488518,
+      "m3:jake-day1-q01:clip:13:episodic:129": 1789414764.488518,
+      "m3:jake-day1-q01:clip:13:episodic:130": 1789414764.488518,
+      "m3:jake-day1-q01:clip:13:episodic:131": 1789414764.488518,
+      "m3:jake-day1-q01:clip:13:semantic:132": 1789414764.488518,
+      "m3:jake-day1-q01:clip:13:semantic:133": 1789414764.488518,
+      "m3:jake-day1-q01:clip:13:semantic:134": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:episodic:140": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:episodic:141": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:episodic:142": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:episodic:143": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:episodic:144": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:episodic:145": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:episodic:146": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:semantic:147": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:semantic:148": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:semantic:149": 1789414764.488518,
+      "m3:jake-day1-q01:clip:14:semantic:150": 1789414764.488518,
+      "m3:jake-day1-q01:clip:15:episodic:154": 1789414764.488518,
+      "m3:jake-day1-q01:clip:15:episodic:155": 1789414764.488518,
+      "m3:jake-day1-q01:clip:15:episodic:156": 1789414764.488518,
+      "m3:jake-day1-q01:clip:15:episodic:157": 1789414764.488518,
+      "m3:jake-day1-q01:clip:15:episodic:158": 1789414764.488518,
+      "m3:jake-day1-q01:clip:15:semantic:159": 1789414764.488518,
+      "m3:jake-day1-q01:clip:15:semantic:160": 1789414764.488518,
+      "m3:jake-day1-q01:clip:15:semantic:161": 1789414764.488518,
+      "m3:jake-day1-q01:clip:16:episodic:166": 1789414764.488518,
+      "m3:jake-day1-q01:clip:16:episodic:167": 1789414764.488518,
+      "m3:jake-day1-q01:clip:16:episodic:168": 1789414764.488518,
+      "m3:jake-day1-q01:clip:16:episodic:169": 1789414764.488518,
+      "m3:jake-day1-q01:clip:16:episodic:170": 1789414764.488518,
+      "m3:jake-day1-q01:clip:16:semantic:171": 1789414764.488518,
+      "m3:jake-day1-q01:clip:16:semantic:172": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:episodic:179": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:episodic:180": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:episodic:181": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:episodic:182": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:episodic:183": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:episodic:184": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:episodic:185": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:episodic:186": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:episodic:187": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:episodic:188": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:semantic:189": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:semantic:190": 1789414764.488518,
+      "m3:jake-day1-q01:clip:17:semantic:191": 1789414764.488518,
+      "m3:jake-day1-q01:clip:18:episodic:194": 1789414764.488518,
+      "m3:jake-day1-q01:clip:18:episodic:195": 1789414764.488518,
+      "m3:jake-day1-q01:clip:18:episodic:196": 1789414764.488518,
+      "m3:jake-day1-q01:clip:18:episodic:197": 1789414764.488518,
+      "m3:jake-day1-q01:clip:18:episodic:198": 1789414764.488518,
+      "m3:jake-day1-q01:clip:18:semantic:199": 1789414764.488518,
+      "m3:jake-day1-q01:clip:18:semantic:200": 1789414764.488518,
+      "m3:jake-day1-q01:clip:18:semantic:201": 1789414764.488518,
+      "m3:jake-day1-q01:clip:19:episodic:206": 1789414764.488518,
+      "m3:jake-day1-q01:clip:19:episodic:207": 1789414764.488518,
+      "m3:jake-day1-q01:clip:19:episodic:208": 1789414764.488518,
+      "m3:jake-day1-q01:clip:19:episodic:209": 1789414764.488518,
+      "m3:jake-day1-q01:clip:19:episodic:210": 1789414764.488518,
+      "m3:jake-day1-q01:clip:19:episodic:211": 1789414764.488518,
+      "m3:jake-day1-q01:clip:19:episodic:212": 1789414764.488518,
+      "m3:jake-day1-q01:clip:19:episodic:213": 1789414764.488518,
+      "m3:jake-day1-q01:clip:19:semantic:214": 1789414764.488518,
+      "m3:jake-day1-q01:clip:19:semantic:215": 1789414764.488518,
+      "m3:jake-day1-q01:clip:20:episodic:220": 1789414764.488518,
+      "m3:jake-day1-q01:clip:20:episodic:221": 1789414764.488518,
+      "m3:jake-day1-q01:clip:20:episodic:222": 1789414764.488518,
+      "m3:jake-day1-q01:clip:20:episodic:223": 1789414764.488518,
+      "m3:jake-day1-q01:clip:20:episodic:224": 1789414764.488518,
+      "m3:jake-day1-q01:clip:20:semantic:225": 1789414764.488518,
+      "m3:jake-day1-q01:clip:20:semantic:226": 1789414764.488518,
+      "m3:jake-day1-q01:clip:20:semantic:227": 1789414764.488518,
+      "m3:jake-day1-q01:clip:21:episodic:231": 1789414764.488518,
+      "m3:jake-day1-q01:clip:21:episodic:232": 1789414764.488518,
+      "m3:jake-day1-q01:clip:21:episodic:233": 1789414764.488518,
+      "m3:jake-day1-q01:clip:21:episodic:234": 1789414764.488518,
+      "m3:jake-day1-q01:clip:21:episodic:235": 1789414764.488518,
+      "m3:jake-day1-q01:clip:21:episodic:236": 1789414764.488518,
+      "m3:jake-day1-q01:clip:21:episodic:237": 1789414764.488518,
+      "m3:jake-day1-q01:clip:21:episodic:238": 1789414764.488518,
+      "m3:jake-day1-q01:clip:21:semantic:239": 1789414764.488518,
+      "m3:jake-day1-q01:clip:21:semantic:240": 1789414764.488518,
+      "m3:jake-day1-q01:clip:22:episodic:243": 1789414764.488518,
+      "m3:jake-day1-q01:clip:22:episodic:244": 1789414764.488518,
+      "m3:jake-day1-q01:clip:22:episodic:245": 1789414764.488518,
+      "m3:jake-day1-q01:clip:22:episodic:246": 1789414764.488518,
+      "m3:jake-day1-q01:clip:22:episodic:247": 1789414764.488518,
+      "m3:jake-day1-q01:clip:22:semantic:248": 1789414764.488518,
+      "m3:jake-day1-q01:clip:22:semantic:249": 1789414764.488518,
+      "m3:jake-day1-q01:clip:23:episodic:255": 1789414764.488518,
+      "m3:jake-day1-q01:clip:23:episodic:256": 1789414764.488518,
+      "m3:jake-day1-q01:clip:23:episodic:257": 1789414764.488518,
+      "m3:jake-day1-q01:clip:23:episodic:258": 1789414764.488518,
+      "m3:jake-day1-q01:clip:23:episodic:259": 1789414764.488518,
+      "m3:jake-day1-q01:clip:23:episodic:260": 1789414764.488518,
+      "m3:jake-day1-q01:clip:23:semantic:261": 1789414764.488518,
+      "m3:jake-day1-q01:clip:23:semantic:262": 1789414764.488518,
+      "m3:jake-day1-q01:clip:23:semantic:263": 1789414764.488518,
+      "m3:jake-day1-q01:clip:24:episodic:264": 1789414764.488518,
+      "m3:jake-day1-q01:clip:24:episodic:265": 1789414764.488518,
+      "m3:jake-day1-q01:clip:24:episodic:266": 1789414764.488518,
+      "m3:jake-day1-q01:clip:24:episodic:267": 1789414764.488518,
+      "m3:jake-day1-q01:clip:24:episodic:268": 1789414764.488518,
+      "m3:jake-day1-q01:clip:24:semantic:269": 1789414764.488518,
+      "m3:jake-day1-q01:clip:24:semantic:270": 1789414764.488518
+    },
+    "_nodes_dirty_flag": [
+      "m3:jake-day1-q01:clip:3:semantic:28",
+      "m3:jake-day1-q01:entity:character_39",
+      "m3:jake-day1-q01:entity:character_3",
+      "m3:jake-day1-q01:clip:9:semantic:88",
+      "m3:jake-day1-q01:clip:10:episodic:93",
+      "m3:jake-day1-q01:clip:3:episodic:22",
+      "m3:jake-day1-q01:clip:6:semantic:59",
+      "m3:jake-day1-q01:clip:14:episodic:144",
+      "m3:jake-day1-q01:clip:15:episodic:157",
+      "m3:jake-day1-q01:clip:10:episodic:90",
+      "m3:jake-day1-q01:clip:2:episodic:17",
+      "m3:jake-day1-q01:clip:14:semantic:149",
+      "m3:jake-day1-q01:clip:9:episodic:84",
+      "m3:jake-day1-q01:clip:1:episodic:7",
+      "m3:jake-day1-q01:entity:character_8",
+      "m3:jake-day1-q01:clip:8:episodic:74",
+      "m3:jake-day1-q01:clip:12:episodic:116",
+      "m3:jake-day1-q01:clip:12:semantic:120",
+      "m3:jake-day1-q01:clip:2:episodic:13",
+      "m3:jake-day1-q01:clip:17:episodic:185",
+      "m3:jake-day1-q01:clip:19:episodic:206",
+      "m3:jake-day1-q01:clip:5:episodic:49",
+      "m3:jake-day1-q01:clip:10:episodic:91",
+      "m3:jake-day1-q01:clip:14:episodic:140",
+      "m3:jake-day1-q01:clip:19:episodic:207",
+      "m3:jake-day1-q01:clip:20:semantic:225",
+      "m3:jake-day1-q01:clip:11:semantic:110",
+      "m3:jake-day1-q01:clip:18:episodic:198",
+      "m3:jake-day1-q01:entity:character_42",
+      "m3:jake-day1-q01:clip:9:episodic:82",
+      "m3:jake-day1-q01:clip:21:semantic:239",
+      "m3:jake-day1-q01:clip:12:episodic:119",
+      "m3:jake-day1-q01:clip:7:episodic:62",
+      "m3:jake-day1-q01:clip:15:episodic:158",
+      "m3:jake-day1-q01:clip:23:episodic:256",
+      "m3:jake-day1-q01:clip:15:semantic:161",
+      "m3:jake-day1-q01:clip:9:episodic:85",
+      "m3:jake-day1-q01:entity:character_16",
+      "m3:jake-day1-q01:clip:16:episodic:168",
+      "m3:jake-day1-q01:clip:2:episodic:12",
+      "m3:jake-day1-q01:clip:24:semantic:269",
+      "m3:jake-day1-q01:clip:19:semantic:214",
+      "m3:jake-day1-q01:entity:character_4",
+      "m3:jake-day1-q01:clip:5:episodic:47",
+      "m3:jake-day1-q01:clip:16:semantic:171",
+      "m3:jake-day1-q01:clip:14:episodic:145",
+      "m3:jake-day1-q01:entity:character_46",
+      "m3:jake-day1-q01:entity:character_27",
+      "m3:jake-day1-q01:clip:17:episodic:183",
+      "m3:jake-day1-q01:clip:11:episodic:106",
+      "m3:jake-day1-q01:clip:17:episodic:181",
+      "m3:jake-day1-q01:clip:11:episodic:109",
+      "m3:jake-day1-q01:clip:8:semantic:79",
+      "m3:jake-day1-q01:clip:10:semantic:98",
+      "m3:jake-day1-q01:clip:17:episodic:187",
+      "m3:jake-day1-q01:clip:23:episodic:259",
+      "m3:jake-day1-q01:clip:22:episodic:243",
+      "m3:jake-day1-q01:entity:character_20",
+      "m3:jake-day1-q01:entity:character_28",
+      "m3:jake-day1-q01:entity:character_45",
+      "m3:jake-day1-q01:clip:13:episodic:127",
+      "m3:jake-day1-q01:entity:character_37",
+      "m3:jake-day1-q01:clip:17:episodic:180",
+      "m3:jake-day1-q01:clip:24:episodic:265",
+      "m3:jake-day1-q01:clip:11:semantic:111",
+      "m3:jake-day1-q01:clip:18:episodic:194",
+      "m3:jake-day1-q01:clip:24:episodic:268",
+      "m3:jake-day1-q01:clip:14:episodic:146",
+      "m3:jake-day1-q01:clip:15:episodic:154",
+      "m3:jake-day1-q01:clip:6:episodic:58",
+      "m3:jake-day1-q01:clip:18:episodic:195",
+      "m3:jake-day1-q01:entity:character_24",
+      "m3:jake-day1-q01:entity:character_22",
+      "m3:jake-day1-q01:clip:2:episodic:15",
+      "m3:jake-day1-q01:clip:12:episodic:117",
+      "m3:jake-day1-q01:clip:17:semantic:189",
+      "m3:jake-day1-q01:clip:1:episodic:5",
+      "m3:jake-day1-q01:clip:21:episodic:235",
+      "m3:jake-day1-q01:clip:16:episodic:170",
+      "m3:jake-day1-q01:clip:17:semantic:190",
+      "m3:jake-day1-q01:clip:13:episodic:125",
+      "m3:jake-day1-q01:clip:13:episodic:129",
+      "m3:jake-day1-q01:clip:5:episodic:44",
+      "m3:jake-day1-q01:clip:22:episodic:245",
+      "m3:jake-day1-q01:clip:19:episodic:210",
+      "m3:jake-day1-q01:entity:character_25",
+      "m3:jake-day1-q01:entity:character_18",
+      "m3:jake-day1-q01:entity:character_38",
+      "m3:jake-day1-q01:clip:4:episodic:37",
+      "m3:jake-day1-q01:clip:8:semantic:80",
+      "m3:jake-day1-q01:clip:10:semantic:96",
+      "m3:jake-day1-q01:clip:17:episodic:188",
+      "m3:jake-day1-q01:clip:17:semantic:191",
+      "m3:jake-day1-q01:clip:22:episodic:244",
+      "m3:jake-day1-q01:clip:23:semantic:263",
+      "m3:jake-day1-q01:clip:22:episodic:246",
+      "m3:jake-day1-q01:clip:8:episodic:70",
+      "m3:jake-day1-q01:clip:20:semantic:226",
+      "m3:jake-day1-q01:clip:1:episodic:4",
+      "m3:jake-day1-q01:clip:3:semantic:27",
+      "m3:jake-day1-q01:entity:character_6",
+      "m3:jake-day1-q01:entity:character_51",
+      "m3:jake-day1-q01:entity:character_17",
+      "m3:jake-day1-q01:clip:4:semantic:41",
+      "m3:jake-day1-q01:clip:9:semantic:87",
+      "m3:jake-day1-q01:entity:character_40",
+      "m3:jake-day1-q01:clip:7:episodic:61",
+      "m3:jake-day1-q01:clip:16:episodic:169",
+      "m3:jake-day1-q01:clip:19:semantic:215",
+      "m3:jake-day1-q01:entity:character_14",
+      "m3:jake-day1-q01:clip:21:episodic:236",
+      "m3:jake-day1-q01:clip:7:episodic:64",
+      "m3:jake-day1-q01:clip:1:semantic:10",
+      "m3:jake-day1-q01:entity:character_1",
+      "m3:jake-day1-q01:clip:22:episodic:247",
+      "m3:jake-day1-q01:clip:21:episodic:238",
+      "m3:jake-day1-q01:clip:6:episodic:57",
+      "m3:jake-day1-q01:clip:13:semantic:132",
+      "m3:jake-day1-q01:entity:character_21",
+      "m3:jake-day1-q01:clip:1:semantic:11",
+      "m3:jake-day1-q01:clip:7:episodic:65",
+      "m3:jake-day1-q01:entity:character_13",
+      "m3:jake-day1-q01:entity:character_26",
+      "m3:jake-day1-q01:clip:8:episodic:73",
+      "m3:jake-day1-q01:clip:11:episodic:105",
+      "m3:jake-day1-q01:clip:12:episodic:114",
+      "m3:jake-day1-q01:clip:13:semantic:133",
+      "m3:jake-day1-q01:clip:12:semantic:121",
+      "m3:jake-day1-q01:entity:character_35",
+      "m3:jake-day1-q01:clip:8:episodic:69",
+      "m3:jake-day1-q01:clip:19:episodic:212",
+      "m3:jake-day1-q01:clip:23:episodic:255",
+      "m3:jake-day1-q01:clip:10:episodic:94",
+      "m3:jake-day1-q01:clip:13:semantic:134",
+      "m3:jake-day1-q01:clip:10:episodic:89",
+      "m3:jake-day1-q01:clip:6:semantic:60",
+      "m3:jake-day1-q01:clip:4:semantic:42",
+      "m3:jake-day1-q01:entity:character_47",
+      "m3:jake-day1-q01:entity:character_12",
+      "m3:jake-day1-q01:clip:5:semantic:51",
+      "m3:jake-day1-q01:entity:character_43",
+      "m3:jake-day1-q01:clip:10:episodic:92",
+      "m3:jake-day1-q01:clip:15:episodic:155",
+      "m3:jake-day1-q01:entity:character_10",
+      "m3:jake-day1-q01:clip:24:episodic:264",
+      "m3:jake-day1-q01:entity:character_36",
+      "m3:jake-day1-q01:clip:19:episodic:211",
+      "m3:jake-day1-q01:clip:23:episodic:257",
+      "m3:jake-day1-q01:clip:18:semantic:199",
+      "m3:jake-day1-q01:clip:8:semantic:78",
+      "m3:jake-day1-q01:clip:11:semantic:112",
+      "m3:jake-day1-q01:clip:23:episodic:260",
+      "m3:jake-day1-q01:entity:character_15",
+      "m3:jake-day1-q01:clip:19:episodic:213",
+      "m3:jake-day1-q01:entity:character_9",
+      "m3:jake-day1-q01:clip:21:episodic:237",
+      "m3:jake-day1-q01:clip:14:episodic:141",
+      "m3:jake-day1-q01:clip:1:episodic:2",
+      "m3:jake-day1-q01:clip:5:semantic:50",
+      "m3:jake-day1-q01:clip:20:semantic:227",
+      "m3:jake-day1-q01:clip:9:episodic:81",
+      "m3:jake-day1-q01:clip:4:episodic:38",
+      "m3:jake-day1-q01:clip:13:episodic:130",
+      "m3:jake-day1-q01:clip:17:episodic:184",
+      "m3:jake-day1-q01:clip:20:episodic:223",
+      "m3:jake-day1-q01:clip:21:episodic:231",
+      "m3:jake-day1-q01:clip:11:episodic:108",
+      "m3:jake-day1-q01:clip:12:episodic:115",
+      "m3:jake-day1-q01:clip:1:episodic:6",
+      "m3:jake-day1-q01:clip:24:episodic:267",
+      "m3:jake-day1-q01:clip:2:semantic:20",
+      "m3:jake-day1-q01:clip:20:episodic:224",
+      "m3:jake-day1-q01:clip:21:episodic:232",
+      "m3:jake-day1-q01:entity:character_29",
+      "m3:jake-day1-q01:clip:17:episodic:179",
+      "m3:jake-day1-q01:clip:22:semantic:248",
+      "m3:jake-day1-q01:entity:character_44",
+      "m3:jake-day1-q01:clip:20:episodic:222",
+      "m3:jake-day1-q01:clip:7:semantic:67",
+      "m3:jake-day1-q01:clip:2:semantic:18",
+      "m3:jake-day1-q01:clip:14:episodic:142",
+      "m3:jake-day1-q01:clip:8:episodic:71",
+      "m3:jake-day1-q01:clip:17:episodic:182",
+      "m3:jake-day1-q01:clip:15:semantic:160",
+      "m3:jake-day1-q01:clip:6:episodic:53",
+      "m3:jake-day1-q01:clip:15:episodic:156",
+      "m3:jake-day1-q01:clip:5:episodic:45",
+      "m3:jake-day1-q01:clip:3:episodic:23",
+      "m3:jake-day1-q01:entity:character_32",
+      "m3:jake-day1-q01:entity:character_31",
+      "m3:jake-day1-q01:clip:16:semantic:172",
+      "m3:jake-day1-q01:clip:18:episodic:197",
+      "m3:jake-day1-q01:clip:19:episodic:208",
+      "m3:jake-day1-q01:clip:24:episodic:266",
+      "m3:jake-day1-q01:entity:character_33",
+      "m3:jake-day1-q01:clip:21:episodic:233",
+      "m3:jake-day1-q01:clip:11:episodic:104",
+      "m3:jake-day1-q01:clip:7:semantic:68",
+      "m3:jake-day1-q01:clip:22:semantic:249",
+      "m3:jake-day1-q01:clip:23:semantic:262",
+      "m3:jake-day1-q01:clip:1:episodic:3",
+      "m3:jake-day1-q01:clip:21:semantic:240",
+      "m3:jake-day1-q01:clip:7:episodic:66",
+      "m3:jake-day1-q01:clip:2:semantic:19",
+      "m3:jake-day1-q01:clip:13:episodic:131",
+      "m3:jake-day1-q01:entity:character_11",
+      "m3:jake-day1-q01:entity:character_2",
+      "m3:jake-day1-q01:clip:2:episodic:16",
+      "m3:jake-day1-q01:clip:4:episodic:39",
+      "m3:jake-day1-q01:clip:24:semantic:270",
+      "m3:jake-day1-q01:clip:12:semantic:122",
+      "m3:jake-day1-q01:clip:10:episodic:95",
+      "m3:jake-day1-q01:clip:23:semantic:261",
+      "m3:jake-day1-q01:clip:9:semantic:86",
+      "m3:jake-day1-q01:clip:1:semantic:9",
+      "m3:jake-day1-q01:clip:11:episodic:107",
+      "m3:jake-day1-q01:clip:17:episodic:186",
+      "m3:jake-day1-q01:clip:4:episodic:36",
+      "m3:jake-day1-q01:clip:4:episodic:35",
+      "m3:jake-day1-q01:clip:4:semantic:43",
+      "m3:jake-day1-q01:clip:6:episodic:56",
+      "m3:jake-day1-q01:clip:13:episodic:126",
+      "m3:jake-day1-q01:clip:16:episodic:166",
+      "m3:jake-day1-q01:clip:3:semantic:29",
+      "m3:jake-day1-q01:clip:9:episodic:83",
+      "m3:jake-day1-q01:clip:7:episodic:63",
+      "m3:jake-day1-q01:clip:4:episodic:40",
+      "m3:jake-day1-q01:clip:8:episodic:72",
+      "m3:jake-day1-q01:clip:20:episodic:220",
+      "m3:jake-day1-q01:clip:13:episodic:128",
+      "m3:jake-day1-q01:clip:6:episodic:55",
+      "m3:jake-day1-q01:clip:5:semantic:52",
+      "m3:jake-day1-q01:entity:character_0",
+      "m3:jake-day1-q01:clip:8:episodic:77",
+      "m3:jake-day1-q01:clip:15:semantic:159",
+      "m3:jake-day1-q01:clip:5:episodic:48",
+      "m3:jake-day1-q01:clip:14:semantic:150",
+      "m3:jake-day1-q01:entity:character_23",
+      "m3:jake-day1-q01:entity:character_34",
+      "m3:jake-day1-q01:clip:14:semantic:147",
+      "m3:jake-day1-q01:clip:10:semantic:97",
+      "m3:jake-day1-q01:clip:4:episodic:34",
+      "m3:jake-day1-q01:entity:character_5",
+      "m3:jake-day1-q01:entity:character_30",
+      "m3:jake-day1-q01:clip:12:episodic:118",
+      "m3:jake-day1-q01:clip:2:episodic:14",
+      "m3:jake-day1-q01:clip:14:semantic:148",
+      "m3:jake-day1-q01:clip:3:episodic:25",
+      "m3:jake-day1-q01:clip:3:episodic:24",
+      "m3:jake-day1-q01:entity:character_49",
+      "m3:jake-day1-q01:clip:8:episodic:75",
+      "m3:jake-day1-q01:clip:11:episodic:103",
+      "m3:jake-day1-q01:entity:character_41",
+      "m3:jake-day1-q01:clip:18:episodic:196",
+      "m3:jake-day1-q01:entity:character_50",
+      "m3:jake-day1-q01:clip:19:episodic:209",
+      "m3:jake-day1-q01:clip:20:episodic:221",
+      "m3:jake-day1-q01:clip:6:episodic:54",
+      "m3:jake-day1-q01:clip:5:episodic:46",
+      "m3:jake-day1-q01:clip:3:episodic:26",
+      "m3:jake-day1-q01:clip:16:episodic:167",
+      "m3:jake-day1-q01:clip:18:semantic:201",
+      "m3:jake-day1-q01:clip:23:episodic:258",
+      "m3:jake-day1-q01:clip:21:episodic:234",
+      "m3:jake-day1-q01:clip:1:episodic:8",
+      "m3:jake-day1-q01:clip:14:episodic:143",
+      "m3:jake-day1-q01:clip:18:semantic:200",
+      "m3:jake-day1-q01:entity:character_19",
+      "m3:jake-day1-q01:entity:character_7",
+      "m3:jake-day1-q01:entity:character_48",
+      "m3:jake-day1-q01:clip:8:episodic:76"
+    ],
+    "_modified_units": [
+      "m3:jake-day1-q01:clip:3:semantic:28",
+      "m3:jake-day1-q01:entity:character_39",
+      "m3:jake-day1-q01:entity:character_3",
+      "m3:jake-day1-q01:clip:9:semantic:88",
+      "m3:jake-day1-q01:clip:10:episodic:93",
+      "m3:jake-day1-q01:clip:3:episodic:22",
+      "m3:jake-day1-q01:clip:6:semantic:59",
+      "m3:jake-day1-q01:clip:14:episodic:144",
+      "m3:jake-day1-q01:clip:15:episodic:157",
+      "m3:jake-day1-q01:clip:10:episodic:90",
+      "m3:jake-day1-q01:clip:2:episodic:17",
+      "m3:jake-day1-q01:clip:14:semantic:149",
+      "m3:jake-day1-q01:clip:9:episodic:84",
+      "m3:jake-day1-q01:clip:1:episodic:7",
+      "m3:jake-day1-q01:entity:character_8",
+      "m3:jake-day1-q01:clip:8:episodic:74",
+      "m3:jake-day1-q01:clip:12:episodic:116",
+      "m3:jake-day1-q01:clip:12:semantic:120",
+      "m3:jake-day1-q01:clip:2:episodic:13",
+      "m3:jake-day1-q01:clip:17:episodic:185",
+      "m3:jake-day1-q01:clip:19:episodic:206",
+      "m3:jake-day1-q01:clip:5:episodic:49",
+      "m3:jake-day1-q01:clip:10:episodic:91",
+      "m3:jake-day1-q01:clip:14:episodic:140",
+      "m3:jake-day1-q01:clip:19:episodic:207",
+      "m3:jake-day1-q01:clip:20:semantic:225",
+      "m3:jake-day1-q01:clip:11:semantic:110",
+      "m3:jake-day1-q01:clip:18:episodic:198",
+      "m3:jake-day1-q01:entity:character_42",
+      "m3:jake-day1-q01:clip:9:episodic:82",
+      "m3:jake-day1-q01:clip:21:semantic:239",
+      "m3:jake-day1-q01:clip:12:episodic:119",
+      "m3:jake-day1-q01:clip:7:episodic:62",
+      "m3:jake-day1-q01:clip:15:episodic:158",
+      "m3:jake-day1-q01:clip:23:episodic:256",
+      "m3:jake-day1-q01:clip:15:semantic:161",
+      "m3:jake-day1-q01:clip:9:episodic:85",
+      "m3:jake-day1-q01:entity:character_16",
+      "m3:jake-day1-q01:clip:16:episodic:168",
+      "m3:jake-day1-q01:clip:2:episodic:12",
+      "m3:jake-day1-q01:clip:24:semantic:269",
+      "m3:jake-day1-q01:clip:19:semantic:214",
+      "m3:jake-day1-q01:entity:character_4",
+      "m3:jake-day1-q01:clip:5:episodic:47",
+      "m3:jake-day1-q01:clip:16:semantic:171",
+      "m3:jake-day1-q01:clip:14:episodic:145",
+      "m3:jake-day1-q01:entity:character_46",
+      "m3:jake-day1-q01:entity:character_27",
+      "m3:jake-day1-q01:clip:17:episodic:183",
+      "m3:jake-day1-q01:clip:11:episodic:106",
+      "m3:jake-day1-q01:clip:17:episodic:181",
+      "m3:jake-day1-q01:clip:11:episodic:109",
+      "m3:jake-day1-q01:clip:8:semantic:79",
+      "m3:jake-day1-q01:clip:10:semantic:98",
+      "m3:jake-day1-q01:clip:17:episodic:187",
+      "m3:jake-day1-q01:clip:23:episodic:259",
+      "m3:jake-day1-q01:clip:22:episodic:243",
+      "m3:jake-day1-q01:entity:character_20",
+      "m3:jake-day1-q01:entity:character_28",
+      "m3:jake-day1-q01:entity:character_45",
+      "m3:jake-day1-q01:clip:13:episodic:127",
+      "m3:jake-day1-q01:entity:character_37",
+      "m3:jake-day1-q01:clip:17:episodic:180",
+      "m3:jake-day1-q01:clip:24:episodic:265",
+      "m3:jake-day1-q01:clip:11:semantic:111",
+      "m3:jake-day1-q01:clip:18:episodic:194",
+      "m3:jake-day1-q01:clip:24:episodic:268",
+      "m3:jake-day1-q01:clip:14:episodic:146",
+      "m3:jake-day1-q01:clip:15:episodic:154",
+      "m3:jake-day1-q01:clip:6:episodic:58",
+      "m3:jake-day1-q01:clip:18:episodic:195",
+      "m3:jake-day1-q01:entity:character_24",
+      "m3:jake-day1-q01:entity:character_22",
+      "m3:jake-day1-q01:clip:2:episodic:15",
+      "m3:jake-day1-q01:clip:12:episodic:117",
+      "m3:jake-day1-q01:clip:17:semantic:189",
+      "m3:jake-day1-q01:clip:1:episodic:5",
+      "m3:jake-day1-q01:clip:21:episodic:235",
+      "m3:jake-day1-q01:clip:16:episodic:170",
+      "m3:jake-day1-q01:clip:17:semantic:190",
+      "m3:jake-day1-q01:clip:13:episodic:125",
+      "m3:jake-day1-q01:clip:13:episodic:129",
+      "m3:jake-day1-q01:clip:5:episodic:44",
+      "m3:jake-day1-q01:clip:22:episodic:245",
+      "m3:jake-day1-q01:clip:19:episodic:210",
+      "m3:jake-day1-q01:entity:character_25",
+      "m3:jake-day1-q01:entity:character_18",
+      "m3:jake-day1-q01:entity:character_38",
+      "m3:jake-day1-q01:clip:4:episodic:37",
+      "m3:jake-day1-q01:clip:8:semantic:80",
+      "m3:jake-day1-q01:clip:10:semantic:96",
+      "m3:jake-day1-q01:clip:17:episodic:188",
+      "m3:jake-day1-q01:clip:17:semantic:191",
+      "m3:jake-day1-q01:clip:22:episodic:244",
+      "m3:jake-day1-q01:clip:23:semantic:263",
+      "m3:jake-day1-q01:clip:22:episodic:246",
+      "m3:jake-day1-q01:clip:8:episodic:70",
+      "m3:jake-day1-q01:clip:20:semantic:226",
+      "m3:jake-day1-q01:clip:1:episodic:4",
+      "m3:jake-day1-q01:clip:3:semantic:27",
+      "m3:jake-day1-q01:entity:character_6",
+      "m3:jake-day1-q01:entity:character_51",
+      "m3:jake-day1-q01:entity:character_17",
+      "m3:jake-day1-q01:clip:4:semantic:41",
+      "m3:jake-day1-q01:clip:9:semantic:87",
+      "m3:jake-day1-q01:entity:character_40",
+      "m3:jake-day1-q01:clip:7:episodic:61",
+      "m3:jake-day1-q01:clip:16:episodic:169",
+      "m3:jake-day1-q01:clip:19:semantic:215",
+      "m3:jake-day1-q01:entity:character_14",
+      "m3:jake-day1-q01:clip:21:episodic:236",
+      "m3:jake-day1-q01:clip:7:episodic:64",
+      "m3:jake-day1-q01:clip:1:semantic:10",
+      "m3:jake-day1-q01:entity:character_1",
+      "m3:jake-day1-q01:clip:22:episodic:247",
+      "m3:jake-day1-q01:clip:21:episodic:238",
+      "m3:jake-day1-q01:clip:6:episodic:57",
+      "m3:jake-day1-q01:clip:13:semantic:132",
+      "m3:jake-day1-q01:entity:character_21",
+      "m3:jake-day1-q01:clip:1:semantic:11",
+      "m3:jake-day1-q01:clip:7:episodic:65",
+      "m3:jake-day1-q01:entity:character_13",
+      "m3:jake-day1-q01:entity:character_26",
+      "m3:jake-day1-q01:clip:8:episodic:73",
+      "m3:jake-day1-q01:clip:11:episodic:105",
+      "m3:jake-day1-q01:clip:12:episodic:114",
+      "m3:jake-day1-q01:clip:13:semantic:133",
+      "m3:jake-day1-q01:clip:12:semantic:121",
+      "m3:jake-day1-q01:entity:character_35",
+      "m3:jake-day1-q01:clip:8:episodic:69",
+      "m3:jake-day1-q01:clip:19:episodic:212",
+      "m3:jake-day1-q01:clip:23:episodic:255",
+      "m3:jake-day1-q01:clip:10:episodic:94",
+      "m3:jake-day1-q01:clip:13:semantic:134",
+      "m3:jake-day1-q01:clip:10:episodic:89",
+      "m3:jake-day1-q01:clip:6:semantic:60",
+      "m3:jake-day1-q01:clip:4:semantic:42",
+      "m3:jake-day1-q01:entity:character_47",
+      "m3:jake-day1-q01:entity:character_12",
+      "m3:jake-day1-q01:clip:5:semantic:51",
+      "m3:jake-day1-q01:entity:character_43",
+      "m3:jake-day1-q01:clip:10:episodic:92",
+      "m3:jake-day1-q01:clip:15:episodic:155",
+      "m3:jake-day1-q01:entity:character_10",
+      "m3:jake-day1-q01:clip:24:episodic:264",
+      "m3:jake-day1-q01:entity:character_36",
+      "m3:jake-day1-q01:clip:19:episodic:211",
+      "m3:jake-day1-q01:clip:23:episodic:257",
+      "m3:jake-day1-q01:clip:18:semantic:199",
+      "m3:jake-day1-q01:clip:8:semantic:78",
+      "m3:jake-day1-q01:clip:11:semantic:112",
+      "m3:jake-day1-q01:clip:23:episodic:260",
+      "m3:jake-day1-q01:entity:character_15",
+      "m3:jake-day1-q01:clip:19:episodic:213",
+      "m3:jake-day1-q01:entity:character_9",
+      "m3:jake-day1-q01:clip:21:episodic:237",
+      "m3:jake-day1-q01:clip:14:episodic:141",
+      "m3:jake-day1-q01:clip:1:episodic:2",
+      "m3:jake-day1-q01:clip:5:semantic:50",
+      "m3:jake-day1-q01:clip:20:semantic:227",
+      "m3:jake-day1-q01:clip:9:episodic:81",
+      "m3:jake-day1-q01:clip:4:episodic:38",
+      "m3:jake-day1-q01:clip:13:episodic:130",
+      "m3:jake-day1-q01:clip:17:episodic:184",
+      "m3:jake-day1-q01:clip:20:episodic:223",
+      "m3:jake-day1-q01:clip:21:episodic:231",
+      "m3:jake-day1-q01:clip:11:episodic:108",
+      "m3:jake-day1-q01:clip:12:episodic:115",
+      "m3:jake-day1-q01:clip:1:episodic:6",
+      "m3:jake-day1-q01:clip:24:episodic:267",
+      "m3:jake-day1-q01:clip:2:semantic:20",
+      "m3:jake-day1-q01:clip:20:episodic:224",
+      "m3:jake-day1-q01:clip:21:episodic:232",
+      "m3:jake-day1-q01:entity:character_29",
+      "m3:jake-day1-q01:clip:17:episodic:179",
+      "m3:jake-day1-q01:clip:22:semantic:248",
+      "m3:jake-day1-q01:entity:character_44",
+      "m3:jake-day1-q01:clip:20:episodic:222",
+      "m3:jake-day1-q01:clip:7:semantic:67",
+      "m3:jake-day1-q01:clip:2:semantic:18",
+      "m3:jake-day1-q01:clip:14:episodic:142",
+      "m3:jake-day1-q01:clip:8:episodic:71",
+      "m3:jake-day1-q01:clip:17:episodic:182",
+      "m3:jake-day1-q01:clip:15:semantic:160",
+      "m3:jake-day1-q01:clip:6:episodic:53",
+      "m3:jake-day1-q01:clip:15:episodic:156",
+      "m3:jake-day1-q01:clip:5:episodic:45",
+      "m3:jake-day1-q01:clip:3:episodic:23",
+      "m3:jake-day1-q01:entity:character_32",
+      "m3:jake-day1-q01:entity:character_31",
+      "m3:jake-day1-q01:clip:16:semantic:172",
+      "m3:jake-day1-q01:clip:18:episodic:197",
+      "m3:jake-day1-q01:clip:19:episodic:208",
+      "m3:jake-day1-q01:clip:24:episodic:266",
+      "m3:jake-day1-q01:entity:character_33",
+      "m3:jake-day1-q01:clip:21:episodic:233",
+      "m3:jake-day1-q01:clip:11:episodic:104",
+      "m3:jake-day1-q01:clip:7:semantic:68",
+      "m3:jake-day1-q01:clip:22:semantic:249",
+      "m3:jake-day1-q01:clip:23:semantic:262",
+      "m3:jake-day1-q01:clip:1:episodic:3",
+      "m3:jake-day1-q01:clip:21:semantic:240",
+      "m3:jake-day1-q01:clip:7:episodic:66",
+      "m3:jake-day1-q01:clip:2:semantic:19",
+      "m3:jake-day1-q01:clip:13:episodic:131",
+      "m3:jake-day1-q01:entity:character_11",
+      "m3:jake-day1-q01:entity:character_2",
+      "m3:jake-day1-q01:clip:2:episodic:16",
+      "m3:jake-day1-q01:clip:4:episodic:39",
+      "m3:jake-day1-q01:clip:24:semantic:270",
+      "m3:jake-day1-q01:clip:12:semantic:122",
+      "m3:jake-day1-q01:clip:10:episodic:95",
+      "m3:jake-day1-q01:clip:23:semantic:261",
+      "m3:jake-day1-q01:clip:9:semantic:86",
+      "m3:jake-day1-q01:clip:1:semantic:9",
+      "m3:jake-day1-q01:clip:11:episodic:107",
+      "m3:jake-day1-q01:clip:17:episodic:186",
+      "m3:jake-day1-q01:clip:4:episodic:36",
+      "m3:jake-day1-q01:clip:4:episodic:35",
+      "m3:jake-day1-q01:clip:4:semantic:43",
+      "m3:jake-day1-q01:clip:6:episodic:56",
+      "m3:jake-day1-q01:clip:13:episodic:126",
+      "m3:jake-day1-q01:clip:16:episodic:166",
+      "m3:jake-day1-q01:clip:3:semantic:29",
+      "m3:jake-day1-q01:clip:9:episodic:83",
+      "m3:jake-day1-q01:clip:7:episodic:63",
+      "m3:jake-day1-q01:clip:4:episodic:40",
+      "m3:jake-day1-q01:clip:8:episodic:72",
+      "m3:jake-day1-q01:clip:20:episodic:220",
+      "m3:jake-day1-q01:clip:13:episodic:128",
+      "m3:jake-day1-q01:clip:6:episodic:55",
+      "m3:jake-day1-q01:clip:5:semantic:52",
+      "m3:jake-day1-q01:entity:character_0",
+      "m3:jake-day1-q01:clip:8:episodic:77",
+      "m3:jake-day1-q01:clip:15:semantic:159",
+      "m3:jake-day1-q01:clip:5:episodic:48",
+      "m3:jake-day1-q01:clip:14:semantic:150",
+      "m3:jake-day1-q01:entity:character_23",
+      "m3:jake-day1-q01:entity:character_34",
+      "m3:jake-day1-q01:clip:14:semantic:147",
+      "m3:jake-day1-q01:clip:10:semantic:97",
+      "m3:jake-day1-q01:clip:4:episodic:34",
+      "m3:jake-day1-q01:entity:character_5",
+      "m3:jake-day1-q01:entity:character_30",
+      "m3:jake-day1-q01:clip:12:episodic:118",
+      "m3:jake-day1-q01:clip:2:episodic:14",
+      "m3:jake-day1-q01:clip:14:semantic:148",
+      "m3:jake-day1-q01:clip:3:episodic:25",
+      "m3:jake-day1-q01:clip:3:episodic:24",
+      "m3:jake-day1-q01:entity:character_49",
+      "m3:jake-day1-q01:clip:8:episodic:75",
+      "m3:jake-day1-q01:clip:11:episodic:103",
+      "m3:jake-day1-q01:entity:character_41",
+      "m3:jake-day1-q01:clip:18:episodic:196",
+      "m3:jake-day1-q01:entity:character_50",
+      "m3:jake-day1-q01:clip:19:episodic:209",
+      "m3:jake-day1-q01:clip:20:episodic:221",
+      "m3:jake-day1-q01:clip:6:episodic:54",
+      "m3:jake-day1-q01:clip:5:episodic:46",
+      "m3:jake-day1-q01:clip:3:episodic:26",
+      "m3:jake-day1-q01:clip:16:episodic:167",
+      "m3:jake-day1-q01:clip:18:semantic:201",
+      "m3:jake-day1-q01:clip:23:episodic:258",
+      "m3:jake-day1-q01:clip:21:episodic:234",
+      "m3:jake-day1-q01:clip:1:episodic:8",
+      "m3:jake-day1-q01:clip:14:episodic:143",
+      "m3:jake-day1-q01:clip:18:semantic:200",
+      "m3:jake-day1-q01:entity:character_19",
+      "m3:jake-day1-q01:entity:character_7",
+      "m3:jake-day1-q01:entity:character_48",
+      "m3:jake-day1-q01:clip:8:episodic:76"
+    ],
+    "_deleted_units": [],
+    "_modified_relationships": [
+      [
+        "m3:jake-day1-q01:clip:9:episodic:85",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:14:semantic:149",
+        "m3:jake-day1-q01:entity:character_16",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:6:episodic:57",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:13:episodic:131",
+        "m3:jake-day1-q01:entity:character_13",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:19:episodic:210",
+        "m3:jake-day1-q01:entity:character_36",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:19:episodic:211",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:17:episodic:188",
+        "m3:jake-day1-q01:entity:character_12",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:9:episodic:84",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:21:episodic:234",
+        "m3:jake-day1-q01:entity:character_44",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:21:episodic:235",
+        "m3:jake-day1-q01:entity:character_35",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:21:episodic:236",
+        "m3:jake-day1-q01:entity:character_41",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:11:episodic:103",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:13:semantic:134",
+        "m3:jake-day1-q01:entity:character_12",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:1:episodic:6",
+        "m3:jake-day1-q01:entity:character_1",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:14:semantic:150",
+        "m3:jake-day1-q01:entity:character_18",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:12:semantic:122",
+        "m3:jake-day1-q01:entity:character_11",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:23:semantic:262",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:19:episodic:212",
+        "m3:jake-day1-q01:entity:character_37",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:13:episodic:129",
+        "m3:jake-day1-q01:entity:character_12",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:8:episodic:70",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:12:semantic:121",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:17:episodic:183",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:21:episodic:232",
+        "m3:jake-day1-q01:entity:character_42",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:15:semantic:161",
+        "m3:jake-day1-q01:entity:character_20",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:17:episodic:184",
+        "m3:jake-day1-q01:entity:character_28",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:8:semantic:78",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:9:semantic:86",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:13:episodic:127",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:2:semantic:19",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:15:semantic:160",
+        "m3:jake-day1-q01:entity:character_12",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:21:episodic:238",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:9:semantic:88",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:1:episodic:4",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:3:semantic:29",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:9:episodic:82",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:6:semantic:60",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:11:semantic:110",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:12:semantic:122",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:17:episodic:185",
+        "m3:jake-day1-q01:entity:character_29",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:19:episodic:213",
+        "m3:jake-day1-q01:entity:character_27",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:19:episodic:208",
+        "m3:jake-day1-q01:entity:character_35",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:14:semantic:148",
+        "m3:jake-day1-q01:entity:character_12",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:7:episodic:66",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:19:episodic:209",
+        "m3:jake-day1-q01:entity:character_34",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:19:episodic:207",
+        "m3:jake-day1-q01:entity:character_34",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:10:episodic:90",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:2:episodic:17",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:1:episodic:7",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:8:episodic:76",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:15:semantic:161",
+        "m3:jake-day1-q01:entity:character_19",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:7:semantic:67",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:9:episodic:83",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:1:semantic:10",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:17:episodic:186",
+        "m3:jake-day1-q01:entity:character_16",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:11:episodic:107",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:17:episodic:187",
+        "m3:jake-day1-q01:entity:character_30",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:21:episodic:233",
+        "m3:jake-day1-q01:entity:character_43",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:10:semantic:96",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:8:episodic:75",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:13:semantic:133",
+        "m3:jake-day1-q01:entity:character_0",
+        "mentions_entity"
+      ],
+      [
+        "m3:jake-day1-q01:clip:21:episodic:237",
+        "m3:jake-day1-q01:entity:character_41",
+        "mentions_entity"
+      ]
+    ],
+    "_deleted_relationships": []
+  },
+  "relationship_cache_meta": {
+    "m3:jake-day1-q01:clip:1:episodic:4|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489255
+    },
+    "m3:jake-day1-q01:clip:1:episodic:6|m3:jake-day1-q01:entity:character_1|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.4893
+    },
+    "m3:jake-day1-q01:clip:1:episodic:7|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489332
+    },
+    "m3:jake-day1-q01:clip:1:semantic:10|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489358
+    },
+    "m3:jake-day1-q01:clip:2:episodic:17|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489387
+    },
+    "m3:jake-day1-q01:clip:2:semantic:19|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489413
+    },
+    "m3:jake-day1-q01:clip:3:semantic:29|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.48944
+    },
+    "m3:jake-day1-q01:clip:6:episodic:57|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489469
+    },
+    "m3:jake-day1-q01:clip:6:semantic:60|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489493
+    },
+    "m3:jake-day1-q01:clip:7:episodic:66|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489517
+    },
+    "m3:jake-day1-q01:clip:7:semantic:67|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.48954
+    },
+    "m3:jake-day1-q01:clip:8:episodic:70|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489563
+    },
+    "m3:jake-day1-q01:clip:8:episodic:75|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489587
+    },
+    "m3:jake-day1-q01:clip:8:episodic:76|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.48961
+    },
+    "m3:jake-day1-q01:clip:8:semantic:78|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489634
+    },
+    "m3:jake-day1-q01:clip:9:episodic:82|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489657
+    },
+    "m3:jake-day1-q01:clip:9:episodic:83|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489681
+    },
+    "m3:jake-day1-q01:clip:9:episodic:84|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489704
+    },
+    "m3:jake-day1-q01:clip:9:episodic:85|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489726
+    },
+    "m3:jake-day1-q01:clip:9:semantic:86|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489852
+    },
+    "m3:jake-day1-q01:clip:9:semantic:88|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489896
+    },
+    "m3:jake-day1-q01:clip:10:episodic:90|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489925
+    },
+    "m3:jake-day1-q01:clip:10:semantic:96|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489951
+    },
+    "m3:jake-day1-q01:clip:11:episodic:103|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.489976
+    },
+    "m3:jake-day1-q01:clip:11:episodic:107|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.49
+    },
+    "m3:jake-day1-q01:clip:11:semantic:110|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490023
+    },
+    "m3:jake-day1-q01:clip:12:semantic:121|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490047
+    },
+    "m3:jake-day1-q01:clip:12:semantic:122|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490069
+    },
+    "m3:jake-day1-q01:clip:12:semantic:122|m3:jake-day1-q01:entity:character_11|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490104
+    },
+    "m3:jake-day1-q01:clip:13:episodic:127|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490129
+    },
+    "m3:jake-day1-q01:clip:13:episodic:129|m3:jake-day1-q01:entity:character_12|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490151
+    },
+    "m3:jake-day1-q01:clip:13:episodic:131|m3:jake-day1-q01:entity:character_13|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490173
+    },
+    "m3:jake-day1-q01:clip:13:semantic:133|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490196
+    },
+    "m3:jake-day1-q01:clip:13:semantic:134|m3:jake-day1-q01:entity:character_12|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490218
+    },
+    "m3:jake-day1-q01:clip:14:semantic:148|m3:jake-day1-q01:entity:character_12|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490243
+    },
+    "m3:jake-day1-q01:clip:14:semantic:149|m3:jake-day1-q01:entity:character_16|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490266
+    },
+    "m3:jake-day1-q01:clip:14:semantic:150|m3:jake-day1-q01:entity:character_18|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490288
+    },
+    "m3:jake-day1-q01:clip:15:semantic:160|m3:jake-day1-q01:entity:character_12|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490311
+    },
+    "m3:jake-day1-q01:clip:15:semantic:161|m3:jake-day1-q01:entity:character_19|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490333
+    },
+    "m3:jake-day1-q01:clip:15:semantic:161|m3:jake-day1-q01:entity:character_20|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490353
+    },
+    "m3:jake-day1-q01:clip:17:episodic:183|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490377
+    },
+    "m3:jake-day1-q01:clip:17:episodic:184|m3:jake-day1-q01:entity:character_28|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490399
+    },
+    "m3:jake-day1-q01:clip:17:episodic:185|m3:jake-day1-q01:entity:character_29|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490422
+    },
+    "m3:jake-day1-q01:clip:17:episodic:186|m3:jake-day1-q01:entity:character_16|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490445
+    },
+    "m3:jake-day1-q01:clip:17:episodic:187|m3:jake-day1-q01:entity:character_30|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490469
+    },
+    "m3:jake-day1-q01:clip:17:episodic:188|m3:jake-day1-q01:entity:character_12|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490491
+    },
+    "m3:jake-day1-q01:clip:19:episodic:207|m3:jake-day1-q01:entity:character_34|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490516
+    },
+    "m3:jake-day1-q01:clip:19:episodic:208|m3:jake-day1-q01:entity:character_35|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490537
+    },
+    "m3:jake-day1-q01:clip:19:episodic:209|m3:jake-day1-q01:entity:character_34|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490558
+    },
+    "m3:jake-day1-q01:clip:19:episodic:210|m3:jake-day1-q01:entity:character_36|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490578
+    },
+    "m3:jake-day1-q01:clip:19:episodic:211|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490599
+    },
+    "m3:jake-day1-q01:clip:19:episodic:212|m3:jake-day1-q01:entity:character_37|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.49062
+    },
+    "m3:jake-day1-q01:clip:19:episodic:213|m3:jake-day1-q01:entity:character_27|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490641
+    },
+    "m3:jake-day1-q01:clip:21:episodic:232|m3:jake-day1-q01:entity:character_42|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490665
+    },
+    "m3:jake-day1-q01:clip:21:episodic:233|m3:jake-day1-q01:entity:character_43|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490686
+    },
+    "m3:jake-day1-q01:clip:21:episodic:234|m3:jake-day1-q01:entity:character_44|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490707
+    },
+    "m3:jake-day1-q01:clip:21:episodic:235|m3:jake-day1-q01:entity:character_35|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490728
+    },
+    "m3:jake-day1-q01:clip:21:episodic:236|m3:jake-day1-q01:entity:character_41|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490749
+    },
+    "m3:jake-day1-q01:clip:21:episodic:237|m3:jake-day1-q01:entity:character_41|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490791
+    },
+    "m3:jake-day1-q01:clip:21:episodic:238|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.490814
+    },
+    "m3:jake-day1-q01:clip:23:semantic:262|m3:jake-day1-q01:entity:character_0|mentions_entity": {
+      "props": {
+        "evidence_source": "m3"
+      },
+      "acc": 1,
+      "last": 1789414764.49084
+    }
+  },
+  "retriever_indices_saved": {
+    "bm25": true,
+    "splade": true
+  },
+  "retrieval": {
+    "indices_saved": {
+      "bm25": true,
+      "splade": true
+    },
+    "frozen_matrices_saved": {}
+  },
+  "l2_storage": {
+    "enabled": false,
+    "backend": null,
+    "rocksdb_relative_path": null,
+    "rocksdb_path": null,
+    "max_capacity": null,
+    "high_watermark": null,
+    "low_watermark": null
+  },
+  "high_level_memory_build": {}
+}

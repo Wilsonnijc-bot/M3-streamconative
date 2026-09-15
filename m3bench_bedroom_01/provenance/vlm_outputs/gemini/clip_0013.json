@@ -1,0 +1,102 @@
+{
+  "clip_id": 13,
+  "source": {
+    "segment_id": 13,
+    "source": "bedroom_01_00060000.mp4",
+    "source_clock": "00060000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 360.0,
+    "absolute_end_seconds": 390.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00060000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 73295.322264739,
+      "prepared_perf": 73299.741333693,
+      "ordered_start_perf": 73299.741418744,
+      "consumer_wait_ms": 4416.160573993693,
+      "ready_to_ordered_ms": 0.0850509968586266,
+      "preparation_work_ms": 4418.574082999839,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A woman rests sideways on a bed while holding a mobile phone.",
+      "The woman sits up on the edge of the bed.",
+      "Another woman wearing a white jacket enters the apartment holding a phone.",
+      "The woman in white walks into the bedroom.",
+      "She sits down beside the first woman on the bed.",
+      "Both women sit side by side on the bed and talk."
+    ],
+    "high_level_conclusions": [
+      "The woman on the bed is addressed as Emma.",
+      "The newcomer notices Emma's low mood and asks how she is doing.",
+      "The two women appear to be friends or roommates living together."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A woman rests sideways on a bed while holding a mobile phone.\",\n    \"The woman sits up on the edge of the bed.\",\n    \"Another woman wearing a white jacket enters the apartment holding a phone.\",\n    \"The woman in white walks into the bedroom.\",\n    \"She sits down beside the first woman on the bed.\",\n    \"Both women sit side by side on the bed and talk.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the bed is addressed as Emma.\",\n    \"The newcomer notices Emma's low mood and asks how she is doing.\",\n    \"The two women appear to be friends or roommates living together.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 13,
+      "call_id": "e6a4175b-375d-4c3e-bec7-477e68eed16a",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789431721.5488107,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 118142.51243999752
+      },
+      "request_end": 1789431839.6913705,
+      "latency_ms": 118142.55576398864,
+      "client_wall_clock_latency_ms": 118142.55576398864,
+      "api_request_wall_clock_latency_ms": 118142.55576398864,
+      "error": "Interrupted intentionally for user query-timestamp change; segment not committed."
+    },
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 13,
+      "call_id": "f281ed7a-1224-4bbc-b82e-0ac41fa7a386",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789432118.3837872,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 65703,
+      "output_tokens": 1188,
+      "transport": {
+        "client_previously_used": false,
+        "tcp_connect_count": 1,
+        "tls_handshake_count": 1,
+        "http_wall_ms": 22952.79491900874
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A woman rests sideways on a bed while holding a mobile phone.\",\n    \"The woman sits up on the edge of the bed.\",\n    \"Another woman wearing a white jacket enters the apartment holding a phone.\",\n    \"The woman in white walks into the bedroom.\",\n    \"She sits down beside the first woman on the bed.\",\n    \"Both women sit side by side on the bed and talk.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The woman on the bed is addressed as Emma.\",\n    \"The newcomer notices Emma's low mood and asks how she is doing.\",\n    \"The two women appear to be friends or roommates living together.\"\n  ]\n}\n```",
+      "total_tokens": 66891,
+      "request_end": 1789432141.336691,
+      "latency_ms": 22952.899125011754,
+      "client_wall_clock_latency_ms": 22952.899125011754,
+      "api_request_wall_clock_latency_ms": 22952.899125011754
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_13_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

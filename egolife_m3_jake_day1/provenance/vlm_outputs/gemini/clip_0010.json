@@ -1,0 +1,62 @@
+{
+  "clip_id": 10,
+  "source": {
+    "segment_id": 10,
+    "source": "DAY1_A1_JAKE_11140000.mp4",
+    "source_clock": "11140000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40440.0,
+    "absolute_end_seconds": 40470.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0010.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer stands inside a bedroom looking toward three people listening by the doorway.",
+      "<voice_0> speaks while explaining the data offloading equipment.",
+      "The camera wearer turns toward a multi-tier shelf holding laptops and stacked drive enclosures.",
+      "The camera wearer reaches out and gestures toward the uppermost laptop on the shelf.",
+      "The camera wearer points directly at the hard drive units stacked in the rack.",
+      "The camera wearer turns back toward the doorway, continuing to explain the setup with hand gestures.",
+      "The three individuals remain by the doorway listening to the explanation."
+    ],
+    "high_level_conclusions": [
+      "<voice_0> is instructing the listeners on the data offloading and backup workflow for their recording gear.",
+      "The hard drive enclosure setup on the shelf is configured to simulate a host PC environment to facilitate automated data storage.",
+      "The individuals standing near the doorway are participants or crew members being briefed on post-recording equipment handling."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"high_level_conclusions\": [\n  \"<voice_0> is instructing the listeners on the data offloading and backup workflow for their recording gear.\",\n  \"The hard drive enclosure setup on the shelf is configured to simulate a host PC environment to facilitate automated data storage.\",\n  \"The individuals standing near the doorway are participants or crew members being briefed on post-recording equipment handling.\"\n ],\n \"video_description\": [\n  \"The camera wearer stands inside a bedroom looking toward three people listening by the doorway.\",\n  \"<voice_0> speaks while explaining the data offloading equipment.\",\n  \"The camera wearer turns toward a multi-tier shelf holding laptops and stacked drive enclosures.\",\n  \"The camera wearer reaches out and gestures toward the uppermost laptop on the shelf.\",\n  \"The camera wearer points directly at the hard drive units stacked in the rack.\",\n  \"The camera wearer turns back toward the doorway, continuing to explain the setup with hand gestures.\",\n  \"The three individuals remain by the doorway listening to the explanation.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 10,
+      "call_id": "b44b7288-2418-41f5-93de-dc0410b009fc",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789403562.6186073,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67185,
+      "output_tokens": 825,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"high_level_conclusions\": [\n  \"<voice_0> is instructing the listeners on the data offloading and backup workflow for their recording gear.\",\n  \"The hard drive enclosure setup on the shelf is configured to simulate a host PC environment to facilitate automated data storage.\",\n  \"The individuals standing near the doorway are participants or crew members being briefed on post-recording equipment handling.\"\n ],\n \"video_description\": [\n  \"The camera wearer stands inside a bedroom looking toward three people listening by the doorway.\",\n  \"<voice_0> speaks while explaining the data offloading equipment.\",\n  \"The camera wearer turns toward a multi-tier shelf holding laptops and stacked drive enclosures.\",\n  \"The camera wearer reaches out and gestures toward the uppermost laptop on the shelf.\",\n  \"The camera wearer points directly at the hard drive units stacked in the rack.\",\n  \"The camera wearer turns back toward the doorway, continuing to explain the setup with hand gestures.\",\n  \"The three individuals remain by the doorway listening to the explanation.\"\n ]\n}\n```",
+      "total_tokens": 68010,
+      "request_end": 1789403624.143084,
+      "latency_ms": 61524.47515499807,
+      "client_wall_clock_latency_ms": 61524.47515499807,
+      "api_request_wall_clock_latency_ms": 61524.47515499807
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_10_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

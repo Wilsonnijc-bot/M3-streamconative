@@ -1,0 +1,539 @@
+{
+  "clip_id": 11,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0011.mp4",
+  "end_to_end_memory_generation_ms": 664775.6456569987,
+  "latency_ms": {
+    "clip_decode": 3641.403221001383,
+    "deepgram_asr": 2.447597995342221,
+    "mai_transcribe_asr": 2.3115299991331995,
+    "asr_total": 3.1686440051998943,
+    "audio_segmentation": 6.296501996985171,
+    "speech_embedding_campplus": 786.0958410019521,
+    "facial_detection_recognition_buffalo_l": 3016.3633030024357,
+    "face_clustering": 2.2573499954887666,
+    "vlm_memory_generation": 219478.11266200006,
+    "text_embedding": 572.6710029994138,
+    "graph_update_total": 27.3819200010621
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 11,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 1082,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789412547.5054338,
+          "status": "success",
+          "total_tokens": 211,
+          "request_end": 1789412548.0777695,
+          "latency_ms": 572.3361829950591
+        }
+      ],
+      "total_tokens": 211,
+      "latency_ms": 572.6710029994138
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.447597995342221,
+        "openrouter-mai-transcribe-2": 2.3115299991331995
+      },
+      "asr_total_ms": 3.1686440051998943,
+      "audio_segmentation_ms": 6.296501996985171,
+      "speech_embedding_ms": 786.0958410019521,
+      "graph_update_ms": 26.88742900500074,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 836.4282969996566
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3016.3633030024357,
+      "face_clustering_ms": 2.2573499954887666,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 90,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3070.581623003818
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_0>",
+        "<voice_95>",
+        "<voice_96>",
+        "<voice_97>",
+        "<voice_98>"
+      ],
+      "context_preparation_ms": 4223.164522001753,
+      "vlm_ms": 219478.11266200006,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"The camera is positioned in a bedroom featuring an unmade bed and a desk cluttered with electronic equipment.\",\n\t\t\"Two individuals stand near the doorway, one wearing a pinkish-orange shirt.\",\n\t\t\"<voice_0> confirms that hard drives need to know they are working and comments on the interesting layout of the wiring.\",\n\t\t\"The camera pans across the desk revealing multiple laptop screens and complex cabling.\",\n\t\t\"<voice_95> refers to something wrapped.\",\n\t\t\"<voice_96> asks hypothetically what would happen if power suddenly stopped.\",\n\t\t\"A hand reaches out to adjust or inspect the cables on the desk.\",\n\t\t\"<voice_97> speculates that the issue might relate to USB data.\",\n\t\t\"<voice_98> clarifies that it involves backup power.\",\n\t\t\"The camera moves out of the bedroom into a larger living space where several people are gathered around a table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be setting up or troubleshooting a technical installation involving hard drives and power systems.\",\n\t\t\"Concerns are raised regarding system stability during power failures and data integrity.\",\n\t\t\"The discussion revolves around ensuring reliable backup solutions for the equipment.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera is positioned in a bedroom featuring an unmade bed and a desk cluttered with electronic equipment.",
+          "Two individuals stand near the doorway, one wearing a pinkish-orange shirt.",
+          "<voice_0> confirms that hard drives need to know they are working and comments on the interesting layout of the wiring.",
+          "The camera pans across the desk revealing multiple laptop screens and complex cabling.",
+          "<voice_95> refers to something wrapped.",
+          "<voice_96> asks hypothetically what would happen if power suddenly stopped.",
+          "A hand reaches out to adjust or inspect the cables on the desk.",
+          "<voice_97> speculates that the issue might relate to USB data.",
+          "<voice_98> clarifies that it involves backup power.",
+          "The camera moves out of the bedroom into a larger living space where several people are gathered around a table."
+        ],
+        "high_level_conclusions": [
+          "The group appears to be setting up or troubleshooting a technical installation involving hard drives and power systems.",
+          "Concerns are raised regarding system stability during power failures and data integrity.",
+          "The discussion revolves around ensuring reliable backup solutions for the equipment."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 11,
+          "call_id": "5be6cc72-3889-4cb3-9008-3443deb22334",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789412328.0261347,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"The camera is positioned in a bedroom featuring an unmade bed and a desk cluttered with electronic equipment.\",\n\t\t\"Two individuals stand near the doorway, one wearing a pinkish-orange shirt.\",\n\t\t\"<voice_0> confirms that hard drives need to know they are working and comments on the interesting layout of the wiring.\",\n\t\t\"The camera pans across the desk revealing multiple laptop screens and complex cabling.\",\n\t\t\"<voice_95> refers to something wrapped.\",\n\t\t\"<voice_96> asks hypothetically what would happen if power suddenly stopped.\",\n\t\t\"A hand reaches out to adjust or inspect the cables on the desk.\",\n\t\t\"<voice_97> speculates that the issue might relate to USB data.\",\n\t\t\"<voice_98> clarifies that it involves backup power.\",\n\t\t\"The camera moves out of the bedroom into a larger living space where several people are gathered around a table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be setting up or troubleshooting a technical installation involving hard drives and power systems.\",\n\t\t\"Concerns are raised regarding system stability during power failures and data integrity.\",\n\t\t\"The discussion revolves around ensuring reliable backup solutions for the equipment.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   0.00s - 12.50s: The camera is inside a bedroom. There's a messy bed, a desk with multiple laptops/electronics, and a window. Two people are standing near the door. One person (let's call them Person A) is wearing a pinkish/orange long-sleeved shirt and grey pants. Another person (Person B) is partially visible behind Person A, wearing white. The camera wearer (CW) seems to be interacting with equipment on the desk.\n    *   13.00s - 16.00s: The camera pans around the room, showing the desk setup more clearly. It looks like a tech setup with many screens and cables.\n    *   16.50s - 22.50s: The camera focuses back on the desk area where the CW is handling cables/equipment. Person A is still standing near the door.\n    *   23.00s onwards: The camera moves out of the bedroom into a larger living/dining area. Person A walks through the doorway. Other people are visible sitting at a table and standing near a window.\n*   **Voice Features:**\n    *   `<voice_0>`: MAI speaks about hard drives knowing they need work, wiring, and making a sample. This happens between 00:00 and 00:11.\n    *   `<voice_95>`: MAI says \"one wrapped.\" (00:11-00:13).\n    *   `<voice_96>`: MAI asks \"what if it suddenly stopped?\" (00:13-00:16).\n    *   `<voice_97>`: MAI mentions USB data (00:22-00:27).\n    *   `<voice_98>`: MAI mentions backup power (00:28-00:30).\n    *   All voice features are attributed to `<voice_0>` or similar IDs starting with MAI. Wait, looking closely at the provided JSON structure in the prompt:\n        *   `\"<voice_0>`: ... MAI ...\"`\n        *   `\"<voice_95>`: ... MAI ...\"`\n        *   `\"<voice_96>`: ... MAI ...\"`\n        *   `\"<voice_97>`: ... MAI ...\"`\n        *   `\"<voice_98>`: ... MAI ...\"`\n    *   Actually, the prompt text says: `Voice features:{\"<voice_0>\": [...], \"<voice_95>\": [...], ...}`. But the ASR content consistently starts with \"MAI:\". This implies the speaker is named MAI. I need to use the voice IDs provided in the JSON keys (`<voice_0>`, `<voice_95>`, etc.) as the speaker identifiers in the memory/conclusion generation, but the prompt instruction says \"Use only IDs supplied in the input\". However, the instruction also says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n    *   Wait, the instruction says: \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\n    *   The input provides specific voice IDs: `<voice_0>`, `<voice_95>`, `<voice_96>`, `<voice_97>`, `<voice_98>`.\n    *   The ASR text identifies the speaker as \"MAI\". So MAI corresponds to these voice IDs.\n    *   There are no face features provided in the input block (\"Face features:\" is empty or missing in the prompt text provided to me? Ah, looking at the raw prompt, there is a line \"Face features:Voice features:\". It seems Face features might be empty or not explicitly listed with IDs like `<face_x>`. Let me re-read carefully.\n    *   \"Face features:Voice features:{\"...}\" -> It looks like the Face features section is empty or merged. There are no `<face_x>` IDs provided in the text.\n    *   Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   Since no face IDs are supplied, I cannot create equivalences like `Equivalence: <face_1>, <voice_2>`. I must stick to the voice IDs for the memory/conclusion part regarding speech.\n    *   However, the `high_level_conclusions` section usually allows for identity resolution if possible. Without face IDs, I can't link faces to voices definitively unless I infer from context (which I shouldn't do per instructions \"without supporting evidence\").\n    *   Wait, the instruction says: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face IDs are provided, I cannot generate this line.\n    *   The instruction also says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So I need to create memories for `<voice_0>`, `<voice_95>`, `<voice_96>`, `<voice_97>`, `<voice_98>`.\n    *   Wait, the prompt asks for \"Video Description\" and \"High-Level Conclusions\". It doesn't explicitly ask for \"Memory\" in the output JSON structure provided in the \"Output Format\" section.\n    *   Output Format:\n        ```json\n        {\n            \"video_description\": [ \"...\", ... ],\n            \"high_level_conclusions\": [ \"...\", \"Equivalence: ...\" ]\n        }\n        ```\n    *   The instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" seems to be a general instruction for the task, but the specific output format requested is Video Description and High-Level Conclusions. Usually, in these tasks, the \"Video Description\" acts as the narrative/memory construction. Or perhaps the \"High-Level Conclusions\" should contain the memory summaries?\n    *   Re-reading the system prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   Then: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   This instruction conflicts slightly with the standard \"Video Description\" being just a summary. However, often \"Video Description\" in these contexts is meant to capture the events including speech.\n    *   Let's look at the instruction again: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n    *   Okay, I will incorporate the speech summaries into the `video_description` or `high_level_conclusions`. Given the constraint \"include at least one episodic memory... using the exact ID as the speaker\", I should probably put these in the `video_description` as specific event descriptions involving the speaker, or ensure the `high_level_conclusions` captures the intent.\n    *   Actually, usually, the \"Video Description\" is the main place for atomic events. I will describe the actions and include the speech attributed to the voice ID in those descriptions.\n    *   Wait, the instruction says \"include at least one episodic memory... using the exact ID as the speaker\". This sounds like a specific requirement for the output content. Since the output format is fixed JSON, I will embed these memory-like statements within the `video_description` array items or `high_level_conclusions`.\n    *   Let's check the instruction: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I follow the schema.\n    *   The instruction \"For every supplied voice ID... include at least one episodic memory...\" likely means I should write sentences in the description that reflect the speech.\n    *   Let's draft the `video_description`:\n        *   Frame 0-12: Camera in bedroom. Person in orange shirt (<voice_0> speaker?) talks about hard drives and wiring.\n        *   Frame 13-16: Camera pans desk.\n        *   Frame 16-22: Person handles cables.\n        *   Frame 23+: Move to living room.\n    *   I need to make sure I use the voice IDs `<voice_0>`, `<voice_95>`, etc., in the text if I quote them.\n    *   Example: `<voice_0> says: \"Hard drive knows you need work...\"`\n    *   Wait, the instruction says \"using the exact ID as the speaker\". So instead of saying \"MAI says\", I should say `<voice_0> says`.\n    *   Also, \"Do not replace the ID with 'a speaker'...\".\n    *   So in the description: `<voice_0> discusses hard drives needing work and wiring samples.`\n    *   And later: `<voice_96> asks what would happen if it suddenly stopped.`\n    *   And: `<voice_97> mentions USB data.`\n    *   And: `<voice_98> mentions backup power.`\n\n    *   Wait, I need to check if there are face IDs. The input text says \"Face features:Voice features:...\". It seems the Face features part is empty. So I cannot create Equivalences.\n    *   I will focus on describing the visual events and integrating the voice IDs into the descriptions where speech occurs.\n\n    *   **Plan:**\n        1.  Create `video_description` entries covering the sequence: Bedroom setup, interaction with electronics, moving to living room. Integrate the speech lines attributed to the specific voice IDs.\n        2.  Create `high_level_conclusions`. Since no face IDs exist, I won't add Equivalences. I will summarize the intent discussed (tech setup, reliability, backup power).\n\n    *   **Refining Voice Integration:**\n        *   The prompt asks to \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n        *   I will add specific sentences in the `video_description` for the speech parts.\n        *   Speech 1 (`<voice_0>`): \"MAI: 对对，让硬盘知道自己要工作了，对。嗯，然后这个线啊，这个线，我们，我们布线还挺有意思的，就长成这个样子。\" -> `<voice_0> confirms hard drives need to know they are working and comments on interesting wiring layout.`\n        *   Speech 2 (`<voice_95>`): \"MAI: 一个包裹的。\" -> `<voice_95> refers to something wrapped.`\n        *   Speech 3 (`<voice_96>`): \"MAI: 那如果突然停电了会怎么样？\" -> `<voice_96> questions what would happen if power suddenly stops.`\n        *   Speech 4 (`<voice_97>`): \"MAI: 那没有什么就是USB数据？\" -> `<voice_97> suggests it might be USB data.`\n        *   Speech 5 (`<voice_98>`): \"MAI: 就是那种备用电。\" -> `<voice_98> clarifies it is backup power.`\n\n    *   **Visual Events:**\n        *   0-12s: Bedroom view. Messy bed. Desk with laptops. Two people standing by door (one in orange/pink shirt, one in white).\n        *   13-16s: Pan to desk. Multiple monitors/screens. Cables.\n        *   16-22s: Hand reaches for cables/equipment on desk.\n        *   23s+: Exit bedroom into living area. People sitting at table.\n\n    *   **Constructing JSON:**\n        *   Ensure valid JSON.\n        *   Ensure no markdown outside the JSON block.\n        *   Ensure voice IDs are used exactly as `<voice_0>`, etc.\n\n    *   **Wait, one detail:** The prompt says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n    *   Does this mean I need to output a specific field called \"memory\"? No, the output format is fixed to `video_description` and `high_level_conclusions`. So I must embed this information there.\n    *   I will add a sentence in `video_description` for each voice segment to satisfy the \"episodic memory\" requirement within the allowed fields.\n\n    *   **Checking Face IDs again:** The input text has \"Face features:Voice features:\". It looks like the Face features list is empty. I will proceed assuming no face IDs.\n\n    *   **Drafting Content:**\n        *   `video_description`:\n            1.  The camera is positioned in a bedroom with an unmade bed and a desk cluttered with electronic equipment.\n            2.  Two individuals stand near the doorway; one wears a pinkish-orange shirt while the other is partially obscured.\n            3.  `<voice_0>` states that hard drives need to know they are working and comments on the interesting layout of the wiring.\n            4.  The camera pans across the desk revealing multiple laptop screens and complex cabling.\n            5.  `<voice_95>` mentions something wrapped.\n            6.  `<voice_96>` asks hypothetically what would happen if power suddenly stopped.\n            7.  A hand reaches out to adjust or inspect the cables on the desk.\n            8.  `<voice_97>` speculates that the issue might relate to USB data.\n            9.  `<voice_98>` clarifies that it involves backup power.\n            10. The camera moves out of the bedroom into a larger living space where several people are gathered around a table.\n\n        *   `high_level_conclusions`:\n            1.  The group appears to be setting up or troubleshooting a technical installation involving hard drives and power systems.\n            2.  Concerns are raised regarding system stability during power failures.\n            3.  The discussion revolves around data integrity (USB data) and backup solutions.\n\n    *   **Review against constraints:**\n        *   \"Use only IDs supplied in the input\". Used `<voice_0>`, `<voice_95>`, etc. Correct.\n        *   \"Do not replace the ID with 'a speaker'\". Correct.\n        *   \"If no face IDs are supplied, do not invent any\". Correct.\n        *   \"Keep the existing video_description/high_level_conclusions JSON schema\". Correct.\n        *   \"Be concise and avoid duplicate events\". I will merge some points.\n\n    *   **Final Polish:**\n        *   Make sure the speech attribution is clear.\n        *   Ensure the flow is chronological.\n\n    *   **One correction:** The prompt says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". I will ensure each voice ID gets a mention in the description.\n\n    *   **JSON Structure Check:**\n        ```json\n        {\n          \"video_description\": [\n            \"String 1\",\n            \"String 2\"\n          ],\n          \"high_level_conclusions\": [\n            \"String 1\"\n          ]\n        }\n        ```\n    *   I will combine the visual and audio events into coherent sentences.\n\n    *   **Wait, checking the voice IDs again.**\n        *   `<voice_0>`: 00:00 - 00:11\n        *   `<voice_95>`: 00:11 - 00:13\n        *   `<voice_96>`: 00:13 - 00:16\n        *   `<voice_97>`: 00:22 - 00:27\n        *   `<voice_98>`: 00:28 - 00:30\n    *   I have 5 voice IDs. I need to mention all of them.\n\n    *   **Revised Plan for Video Description:**\n        1.  Camera shows a bedroom with a messy bed and a desk filled with electronics.\n        2.  Two people stand by the door; one wears a pink shirt.\n        3.  `<voice_0>` explains that hard drives need to know they are working and notes the interesting wiring layout.\n        4.  The camera pans to show multiple screens and cables on the desk.\n        5.  `<voice_95>` refers to something wrapped.\n        6.  `<voice_96> asks what would happen if power suddenly stopped.\n        7.  A hand interacts with the equipment on the desk.\n        8.  `<voice_97> suggests the concern might be related to USB data.\n        9.  `<voice_98> clarifies that it pertains to backup power.\n        10. The camera moves into the adjacent living area where others are seated.\n\n    *   **Revised Plan for High Level Conclusions:**\n        1.  The participants are discussing the reliability of their technical setup, specifically regarding power failure scenarios.\n        2.  They consider potential issues with data storage and backup mechanisms.\n        3.  The environment suggests a collaborative workspace focused on hardware configuration.\n\n    *   **Final check on \"Episodic Memory\"**: The instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". My drafted sentences summarize the transcript. That fits.\n\n    *   **Final check on \"Speaker Identity\"**: I am using `<voice_X>`. This satisfies \"using the exact ID as the speaker\".\n\n    *   **Final check on \"No Face IDs\"**: I am not creating Equivalences.\n\n    *   **Final check on JSON validity**: Escape quotes if necessary. The ASR contains Chinese characters. I should keep them or translate? The instruction says \"quotes or faithfully summarizes\". Keeping the original text might be safer for \"faithfully summarizes\" or quoting. But since I'm summarizing in English for the description, I'll summarize the meaning but attribute the ID. Wait, \"quotes or faithfully summarizes\". I can summarize. \"MAI\" is the name in ASR, but I must use the ID. So `<voice_0> says hard drives need to know they are working...\".\n\n    *   Wait, the instruction says \"Do not substitute a plausible scene description for what the speaker actually said.\" This applies to the description generally. But for the memory part, I can summarize.\n    *   I will write the descriptions in English as the rest of the prompt is in English, but the ASR is Chinese. I will translate the meaning for the description to maintain coherence, as is standard for these tasks unless specified otherwise. The prompt asks to \"Generate a detailed and cohesive description...\".\n    *   Actually, looking at the instruction \"Preserve speaker identity... using the exact ID as the speaker.\"\n    *   Okay, I will write the descriptions in English.\n\n    *   One more thing: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n    *   The instruction \"For every supplied voice ID... include at least one episodic memory...\" is a task instruction I must follow.\n    *   Okay, ready to generate.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"The camera is positioned in a bedroom featuring an unmade bed and a desk cluttered with electronic equipment.\",\n\t\t\"Two individuals stand near the doorway, one wearing a pinkish-orange shirt.\",\n\t\t\"<voice_0> confirms that hard drives need to know they are working and comments on the interesting layout of the wiring.\",\n\t\t\"The camera pans across the desk revealing multiple laptop screens and complex cabling.\",\n\t\t\"<voice_95> refers to something wrapped.\",\n\t\t\"<voice_96> asks hypothetically what would happen if power suddenly stopped.\",\n\t\t\"A hand reaches out to adjust or inspect the cables on the desk.\",\n\t\t\"<voice_97> speculates that the issue might relate to USB data.\",\n\t\t\"<voice_98> clarifies that it involves backup power.\",\n\t\t\"The camera moves out of the bedroom into a larger living space where several people are gathered around a table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be setting up or troubleshooting a technical installation involving hard drives and power systems.\",\n\t\t\"Concerns are raised regarding system stability during power failures and data integrity.\",\n\t\t\"The discussion revolves around ensuring reliable backup solutions for the equipment.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10694,
+          "output_tokens": 4644,
+          "total_tokens": 15338,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0017029960872605443,
+            "media_preparation_ms": 52.15611900348449,
+            "processor_tokenization_ms": 419.33055300614797,
+            "device_transfer_ms": 47.85903099400457,
+            "cuda_generation_ms": 218927.0940869974,
+            "decoding_ms": 5.320213000231888
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 219451.96425700124,
+          "request_end": 1789412547.5042496,
+          "latency_ms": 219478.11266200006,
+          "client_wall_clock_latency_ms": 219478.11266200006
+        }
+      ],
+      "episodic_memory_count": 10,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 10,
+      "text_embedding_ms": null,
+      "text_embedding_count": 10,
+      "graph_update_ms": 0.47005499800434336,
+      "nodes_added": 10,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.02443599805701524,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 5,
+    "detected_faces": 90,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 10,
+    "semantic_memories": 3,
+    "nodes_after_clip": 112,
+    "edges_after_clip": 36,
+    "nodes_added_by_clip": 17,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera is positioned in a bedroom featuring an unmade bed and a desk cluttered with electronic equipment.",
+      "Two individuals stand near the doorway, one wearing a pinkish-orange shirt.",
+      "<voice_0> confirms that hard drives need to know they are working and comments on the interesting layout of the wiring.",
+      "The camera pans across the desk revealing multiple laptop screens and complex cabling.",
+      "<voice_95> refers to something wrapped.",
+      "<voice_96> asks hypothetically what would happen if power suddenly stopped.",
+      "A hand reaches out to adjust or inspect the cables on the desk.",
+      "<voice_97> speculates that the issue might relate to USB data.",
+      "<voice_98> clarifies that it involves backup power.",
+      "The camera moves out of the bedroom into a larger living space where several people are gathered around a table."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be setting up or troubleshooting a technical installation involving hard drives and power systems.",
+      "Concerns are raised regarding system stability during power failures and data integrity.",
+      "The discussion revolves around ensuring reliable backup solutions for the equipment."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera is positioned in a bedroom featuring an unmade bed and a desk cluttered with electronic equipment.",
+      "Two individuals stand near the doorway, one wearing a pinkish-orange shirt.",
+      "<voice_0> confirms that hard drives need to know they are working and comments on the interesting layout of the wiring.",
+      "The camera pans across the desk revealing multiple laptop screens and complex cabling.",
+      "<voice_95> refers to something wrapped.",
+      "<voice_96> asks hypothetically what would happen if power suddenly stopped.",
+      "A hand reaches out to adjust or inspect the cables on the desk.",
+      "<voice_97> speculates that the issue might relate to USB data.",
+      "<voice_98> clarifies that it involves backup power.",
+      "The camera moves out of the bedroom into a larger living space where several people are gathered around a table."
+    ],
+    "high_level_conclusions": [
+      "The group appears to be setting up or troubleshooting a technical installation involving hard drives and power systems.",
+      "Concerns are raised regarding system stability during power failures and data integrity.",
+      "The discussion revolves around ensuring reliable backup solutions for the equipment."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_11_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 17,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 95,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 一个悬着的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 96,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那如果突然停电了会怎么样？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 97,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那没有什么就是USB数据？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 98,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 就是那种备用电。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 99,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera is positioned in a bedroom featuring an unmade bed and a desk cluttered with electronic equipment."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 100,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two individuals stand near the doorway, one wearing a pinkish-orange shirt."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 101,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_0> confirms that hard drives need to know they are working and comments on the interesting layout of the wiring."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 102,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans across the desk revealing multiple laptop screens and complex cabling."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 103,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_95> refers to something wrapped."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 104,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_96> asks hypothetically what would happen if power suddenly stopped."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 105,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A hand reaches out to adjust or inspect the cables on the desk."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 106,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_97> speculates that the issue might relate to USB data."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 107,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_98> clarifies that it involves backup power."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 108,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera moves out of the bedroom into a larger living space where several people are gathered around a table."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 109,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be setting up or troubleshooting a technical installation involving hard drives and power systems."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 110,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Concerns are raised regarding system stability during power failures and data integrity."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 111,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The discussion revolves around ensuring reliable backup solutions for the equipment."
+          ],
+          "timestamp": 11
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 101,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 95,
+        "target": 103,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 96,
+        "target": 104,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 97,
+        "target": 106,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 98,
+        "target": 107,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_11_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_11_graph.pkl"
+  },
+  "memory_pickle_bytes": 2859798,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 53070.152038191,
+    "prepared_perf": 53075.480225683,
+    "ordered_start_perf": 53506.571742644,
+    "consumer_wait_ms": 0.01160100509878248,
+    "ready_to_ordered_ms": 431091.5169610016,
+    "preparation_work_ms": 5322.917953002616,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 228184.17300199508
+}

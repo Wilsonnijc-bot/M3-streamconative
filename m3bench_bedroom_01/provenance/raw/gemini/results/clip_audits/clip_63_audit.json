@@ -1,0 +1,337 @@
+{
+  "clip_id": 63,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00293000.mp4",
+  "end_to_end_memory_generation_ms": 203952.07226200728,
+  "latency_ms": {
+    "clip_decode": 4324.92742400791,
+    "deepgram_asr": 976.9943940045778,
+    "mai_transcribe_asr": 1207.9204010078683,
+    "asr_total": 1209.1164419980487,
+    "audio_segmentation": 6.8334390089148656,
+    "speech_embedding_campplus": 867.0449419878423,
+    "facial_detection_recognition_buffalo_l": 3382.7391099912347,
+    "face_clustering": 11.204428999917582,
+    "vlm_memory_generation": 24763.52276300895,
+    "text_embedding": 472.19588499865495,
+    "graph_update_total": 80.83487498515751
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 63,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 666,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789435312.3810322,
+          "status": "success",
+          "total_tokens": 128,
+          "request_end": 1789435312.8530967,
+          "latency_ms": 472.064888002933
+        }
+      ],
+      "total_tokens": 128,
+      "latency_ms": 472.19588499865495
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 976.9943940045778,
+        "openrouter-mai-transcribe-2": 1207.9204010078683
+      },
+      "asr_total_ms": 1209.1164419980487,
+      "audio_segmentation_ms": 6.8334390089148656,
+      "speech_embedding_ms": 867.0449419878423,
+      "graph_update_ms": 80.77811799012125,
+      "asr_segment_count": 4,
+      "speech_embedding_count": 4,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 971.8606229871511
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3382.7391099912347,
+      "face_clustering_ms": 11.204428999917582,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 320,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3568.163375995937
+    },
+    "vlm": {
+      "context_preparation_ms": 4977.014937001513,
+      "vlm_ms": 24763.52276300895,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table covered with a blue patterned tablecloth.\",\n    \"A plate of food, snacks, a mug, beverage bottles, and a phone rest on the table between them.\",\n    \"The woman on the left rests her chin on her hand while holding a smartphone and speaking.\",\n    \"The woman on the right rests her arms on the table and looks downward while listening attentively.\",\n    \"Both individuals remain seated in a relaxed indoor environment throughout the discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women appear to be close friends or roommates having a casual conversation at home.\",\n    \"They are discussing potential innovations or products, with one humorously requesting access to future creations.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit opposite each other at a dining table covered with a blue patterned tablecloth.",
+          "A plate of food, snacks, a mug, beverage bottles, and a phone rest on the table between them.",
+          "The woman on the left rests her chin on her hand while holding a smartphone and speaking.",
+          "The woman on the right rests her arms on the table and looks downward while listening attentively.",
+          "Both individuals remain seated in a relaxed indoor environment throughout the discussion."
+        ],
+        "high_level_conclusions": [
+          "The two women appear to be close friends or roommates having a casual conversation at home.",
+          "They are discussing potential innovations or products, with one humorously requesting access to future creations."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 63,
+          "call_id": "de630515-de08-4bfa-b65b-9f2bcf03d618",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789435287.6167388,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 65944,
+          "output_tokens": 1164,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 24763.415210996754
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table covered with a blue patterned tablecloth.\",\n    \"A plate of food, snacks, a mug, beverage bottles, and a phone rest on the table between them.\",\n    \"The woman on the left rests her chin on her hand while holding a smartphone and speaking.\",\n    \"The woman on the right rests her arms on the table and looks downward while listening attentively.\",\n    \"Both individuals remain seated in a relaxed indoor environment throughout the discussion.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The two women appear to be close friends or roommates having a casual conversation at home.\",\n    \"They are discussing potential innovations or products, with one humorously requesting access to future creations.\"\n  ]\n}\n```",
+          "total_tokens": 67108,
+          "request_end": 1789435312.3802636,
+          "latency_ms": 24763.52276300895,
+          "client_wall_clock_latency_ms": 24763.52276300895,
+          "api_request_wall_clock_latency_ms": 24763.52276300895
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.04341200110502541,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.013344993931241333,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 4,
+    "speech_embeddings": 4,
+    "voice_identities": 2,
+    "detected_faces": 320,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 615,
+    "edges_after_clip": 195,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table covered with a blue patterned tablecloth.",
+      "A plate of food, snacks, a mug, beverage bottles, and a phone rest on the table between them.",
+      "The woman on the left rests her chin on her hand while holding a smartphone and speaking.",
+      "The woman on the right rests her arms on the table and looks downward while listening attentively.",
+      "Both individuals remain seated in a relaxed indoor environment throughout the discussion."
+    ],
+    "high_level_conclusions": [
+      "The two women appear to be close friends or roommates having a casual conversation at home.",
+      "They are discussing potential innovations or products, with one humorously requesting access to future creations."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table covered with a blue patterned tablecloth.",
+      "A plate of food, snacks, a mug, beverage bottles, and a phone rest on the table between them.",
+      "The woman on the left rests her chin on her hand while holding a smartphone and speaking.",
+      "The woman on the right rests her arms on the table and looks downward while listening attentively.",
+      "Both individuals remain seated in a relaxed indoor environment throughout the discussion."
+    ],
+    "high_level_conclusions": [
+      "The two women appear to be close friends or roommates having a casual conversation at home.",
+      "They are discussing potential innovations or products, with one humorously requesting access to future creations."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_63_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 607,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: please Remember me just to | MAI: Mhm.",
+            "Deepgram: please Remember me just to give me some free version to use it. Okay. And also, | MAI: um, just to give me some free version to use it, okay?"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 608,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit opposite each other at a dining table covered with a blue patterned tablecloth."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 609,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A plate of food, snacks, a mug, beverage bottles, and a phone rest on the table between them."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 610,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left rests her chin on her hand while holding a smartphone and speaking."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 611,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right rests her arms on the table and looks downward while listening attentively."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 612,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Both individuals remain seated in a relaxed indoor environment throughout the discussion."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 613,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women appear to be close friends or roommates having a casual conversation at home."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 614,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "They are discussing potential innovations or products, with one humorously requesting access to future creations."
+          ],
+          "timestamp": 63
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_63_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_63_graph.pkl"
+  },
+  "memory_pickle_bytes": 16162187,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 76295.802463987,
+    "prepared_perf": 76301.452782833,
+    "ordered_start_perf": 76463.94139722,
+    "consumer_wait_ms": 0.009798997780308127,
+    "ready_to_ordered_ms": 162488.61438699532,
+    "preparation_work_ms": 5644.993563997559,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 34758.458399999654
+}

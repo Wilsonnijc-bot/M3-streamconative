@@ -1,0 +1,443 @@
+{
+  "clip_id": 52,
+  "clip_path": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00240000.mp4",
+  "end_to_end_memory_generation_ms": 157886.53851400886,
+  "latency_ms": {
+    "clip_decode": 3771.022875997005,
+    "deepgram_asr": 234.84916701272596,
+    "mai_transcribe_asr": 1282.231557997875,
+    "asr_total": 1283.2056829938665,
+    "audio_segmentation": 7.211214993731119,
+    "speech_embedding_campplus": 1152.8940770076588,
+    "facial_detection_recognition_buffalo_l": 3107.9451099940343,
+    "face_clustering": 6.548428995301947,
+    "vlm_memory_generation": 36248.178115987685,
+    "text_embedding": 426.0921910026809,
+    "graph_update_total": 103.57685000053607
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 52,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 10,
+      "input_chars": 701,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789434157.4263093,
+          "status": "success",
+          "total_tokens": 156,
+          "request_end": 1789434157.852253,
+          "latency_ms": 425.9442019974813
+        }
+      ],
+      "total_tokens": 156,
+      "latency_ms": 426.0921910026809
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 234.84916701272596,
+        "openrouter-mai-transcribe-2": 1282.231557997875
+      },
+      "asr_total_ms": 1283.2056829938665,
+      "audio_segmentation_ms": 7.211214993731119,
+      "speech_embedding_ms": 1152.8940770076588,
+      "graph_update_ms": 103.21860598924104,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1278.89101501205
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3107.9451099940343,
+      "face_clustering_ms": 6.548428995301947,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 297,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3276.288873006706
+    },
+    "vlm": {
+      "context_preparation_ms": 4837.987970997347,
+      "vlm_ms": 36248.178115987685,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and phones.\",\n    \"<voice_322> speaks while holding up her phone and gesturing.\",\n    \"The woman on the right lowers her phone to the table.\",\n    \"<voice_10> begins discussing personal perspectives on evaluating people.\",\n    \"<voice_495> softly interjects in agreement.\",\n    \"<voice_321> continues explaining why exam scores should not define a person.\",\n    \"The woman on the left gestures with her hand while speaking.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_322> and <voice_495> correspond to the woman on the right.\",\n    \"<voice_10> and <voice_321> correspond to the woman on the left.\",\n    \"The two women are friends or peers having a casual philosophical discussion about societal expectations and personal worth.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Two women sit opposite each other at a dining table set with food, drinks, and phones.",
+          "<voice_322> speaks while holding up her phone and gesturing.",
+          "The woman on the right lowers her phone to the table.",
+          "<voice_10> begins discussing personal perspectives on evaluating people.",
+          "<voice_495> softly interjects in agreement.",
+          "<voice_321> continues explaining why exam scores should not define a person.",
+          "The woman on the left gestures with her hand while speaking."
+        ],
+        "high_level_conclusions": [
+          "<voice_322> and <voice_495> correspond to the woman on the right.",
+          "<voice_10> and <voice_321> correspond to the woman on the left.",
+          "The two women are friends or peers having a casual philosophical discussion about societal expectations and personal worth."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 52,
+          "call_id": "bf5950f3-269b-436b-a9f1-bdc066a9e378",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789434121.1773381,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66093,
+          "output_tokens": 1775,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 36248.03856300423
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Two women sit opposite each other at a dining table set with food, drinks, and phones.\",\n    \"<voice_322> speaks while holding up her phone and gesturing.\",\n    \"The woman on the right lowers her phone to the table.\",\n    \"<voice_10> begins discussing personal perspectives on evaluating people.\",\n    \"<voice_495> softly interjects in agreement.\",\n    \"<voice_321> continues explaining why exam scores should not define a person.\",\n    \"The woman on the left gestures with her hand while speaking.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_322> and <voice_495> correspond to the woman on the right.\",\n    \"<voice_10> and <voice_321> correspond to the woman on the left.\",\n    \"The two women are friends or peers having a casual philosophical discussion about societal expectations and personal worth.\"\n  ]\n}\n```",
+          "total_tokens": 67868,
+          "request_end": 1789434157.425519,
+          "latency_ms": 36248.178115987685,
+          "client_wall_clock_latency_ms": 36248.178115987685,
+          "api_request_wall_clock_latency_ms": 36248.178115987685
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.08857699867803603,
+      "nodes_added": 7,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.269667012616992,
+      "nodes_added": 3,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 4,
+    "detected_faces": 297,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 3,
+    "nodes_after_clip": 506,
+    "edges_after_clip": 153,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 8
+  },
+  "generated_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and phones.",
+      "<voice_322> speaks while holding up her phone and gesturing.",
+      "The woman on the right lowers her phone to the table.",
+      "<voice_10> begins discussing personal perspectives on evaluating people.",
+      "<voice_495> softly interjects in agreement.",
+      "<voice_321> continues explaining why exam scores should not define a person.",
+      "The woman on the left gestures with her hand while speaking."
+    ],
+    "high_level_conclusions": [
+      "<voice_322> and <voice_495> correspond to the woman on the right.",
+      "<voice_10> and <voice_321> correspond to the woman on the left.",
+      "The two women are friends or peers having a casual philosophical discussion about societal expectations and personal worth."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Two women sit opposite each other at a dining table set with food, drinks, and phones.",
+      "<voice_322> speaks while holding up her phone and gesturing.",
+      "The woman on the right lowers her phone to the table.",
+      "<voice_10> begins discussing personal perspectives on evaluating people.",
+      "<voice_495> softly interjects in agreement.",
+      "<voice_321> continues explaining why exam scores should not define a person.",
+      "The woman on the left gestures with her hand while speaking."
+    ],
+    "high_level_conclusions": [
+      "<voice_322> and <voice_495> correspond to the woman on the right.",
+      "<voice_10> and <voice_321> correspond to the woman on the left.",
+      "The two women are friends or peers having a casual philosophical discussion about societal expectations and personal worth."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_52_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 8,
+    "nodes": [
+      {
+        "id": 495,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Well, sometimes I feel that we cannot definite a person just according to his or her | MAI: Mhm."
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 496,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit opposite each other at a dining table set with food, drinks, and phones."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 497,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_322> speaks while holding up her phone and gesturing."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 498,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the right lowers her phone to the table."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 499,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_10> begins discussing personal perspectives on evaluating people."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 500,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_495> softly interjects in agreement."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 501,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_321> continues explaining why exam scores should not define a person."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 502,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The woman on the left gestures with her hand while speaking."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 503,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_322> and <voice_495> correspond to the woman on the right."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 504,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_10> and <voice_321> correspond to the woman on the left."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 505,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The two women are friends or peers having a casual philosophical discussion about societal expectations and personal worth."
+          ],
+          "timestamp": 52
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 10,
+        "target": 499,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 10,
+        "target": 504,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 321,
+        "target": 501,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 321,
+        "target": 504,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 322,
+        "target": 497,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 322,
+        "target": 503,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 495,
+        "target": 500,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 495,
+        "target": 503,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_52_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/m3bench_bedroom_gemini/results/clip_audits/clip_52_graph.pkl"
+  },
+  "memory_pickle_bytes": 13310898,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 75186.860183534,
+    "prepared_perf": 75192.020974278,
+    "ordered_start_perf": 75297.758836586,
+    "consumer_wait_ms": 0.008385002729482949,
+    "ready_to_ordered_ms": 105737.86230800033,
+    "preparation_work_ms": 5155.449797995971,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 46070.18929500191
+}

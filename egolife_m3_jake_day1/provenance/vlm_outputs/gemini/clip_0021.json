@@ -1,0 +1,62 @@
+{
+  "clip_id": 21,
+  "source": {
+    "segment_id": 21,
+    "source": "DAY1_A1_JAKE_11193000.mp4",
+    "source_clock": "11193000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40770.0,
+    "absolute_end_seconds": 40800.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0021.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of young people sits around a table covered with a pink-and-white checkered tablecloth, handling and assembling small electronic devices and accessories.",
+      "<voice_228> jokingly sings or mentions that the Northeast is their hometown.",
+      "<voice_229> asks where specifically in the Northeast they are from.",
+      "<voice_230> jokingly responds that they are from Daohuaxiang.",
+      "<voice_203> comments on Daohua and then clarifies that the location is Changchun.",
+      "<voice_219> states Changchun City in Jilin Province and asks the group if they know the city.",
+      "<voice_219> further asks the group if they know that Jilin Province also has a Jilin City.",
+      "<voice_0> replies that they know that as well."
+    ],
+    "high_level_conclusions": [
+      "The group members share a friendly and relaxed rapport, engaging in casual geographical trivia and banter while setting up their gear.",
+      "The participants are engaged in a collaborative preparation task involving electronics or recording equipment before proceeding with their planned activities."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of young people sits around a table covered with a pink-and-white checkered tablecloth, handling and assembling small electronic devices and accessories.\",\n  \"<voice_228> jokingly sings or mentions that the Northeast is their hometown.\",\n  \"<voice_229> asks where specifically in the Northeast they are from.\",\n  \"<voice_230> jokingly responds that they are from Daohuaxiang.\",\n  \"<voice_203> comments on Daohua and then clarifies that the location is Changchun.\",\n  \"<voice_219> states Changchun City in Jilin Province and asks the group if they know the city.\",\n  \"<voice_219> further asks the group if they know that Jilin Province also has a Jilin City.\",\n  \"<voice_0> replies that they know that as well.\"\n ],\n \"high_level_conclusions\": [\n  \"The group members share a friendly and relaxed rapport, engaging in casual geographical trivia and banter while setting up their gear.\",\n  \"The participants are engaged in a collaborative preparation task involving electronics or recording equipment before proceeding with their planned activities.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 21,
+      "call_id": "bd2475f9-f815-4e57-bd15-c367eee47a27",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404336.3828666,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67063,
+      "output_tokens": 1746,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of young people sits around a table covered with a pink-and-white checkered tablecloth, handling and assembling small electronic devices and accessories.\",\n  \"<voice_228> jokingly sings or mentions that the Northeast is their hometown.\",\n  \"<voice_229> asks where specifically in the Northeast they are from.\",\n  \"<voice_230> jokingly responds that they are from Daohuaxiang.\",\n  \"<voice_203> comments on Daohua and then clarifies that the location is Changchun.\",\n  \"<voice_219> states Changchun City in Jilin Province and asks the group if they know the city.\",\n  \"<voice_219> further asks the group if they know that Jilin Province also has a Jilin City.\",\n  \"<voice_0> replies that they know that as well.\"\n ],\n \"high_level_conclusions\": [\n  \"The group members share a friendly and relaxed rapport, engaging in casual geographical trivia and banter while setting up their gear.\",\n  \"The participants are engaged in a collaborative preparation task involving electronics or recording equipment before proceeding with their planned activities.\"\n ]\n}\n```",
+      "total_tokens": 68809,
+      "request_end": 1789404381.9119322,
+      "latency_ms": 45529.06569500192,
+      "client_wall_clock_latency_ms": 45529.06569500192,
+      "api_request_wall_clock_latency_ms": 45529.06569500192
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_21_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

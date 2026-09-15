@@ -1,0 +1,65 @@
+{
+  "clip_id": 17,
+  "source": {
+    "segment_id": 17,
+    "source": "DAY1_A1_JAKE_11173000.mp4",
+    "source_clock": "11173000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40650.0,
+    "absolute_end_seconds": 40680.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0017.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table covered with a pink checkered tablecloth, assembling electronic keyboard kits using tools and screwdrivers.",
+      "The camera wearer walks around the table and sits down on an empty chair near the corner of the table.",
+      "A participant in an orange shirt uses a screwdriver to tighten screws on a keyboard casing.",
+      "A woman wearing a black jacket works attentively on assembling her device with small tools.",
+      "<voice_0> mentions that previously everyone complained about the screwdriver lacking magnetic tips, but today nobody seems to complain.",
+      "<voice_175> remarks that everyone seems to be accepting it well today.",
+      "<voice_176> asks what they are talking about.",
+      "<voice_137> comments that because the screwdriver is a free complimentary tool, one cannot expect too much from it.",
+      "<voice_177> explains that the screwdriver has no magnetic hold on the screws.",
+      "<voice_123> agrees, pointing out that it makes placing the screws difficult."
+    ],
+    "high_level_conclusions": [
+      "The group is participating in a collaborative DIY assembly session, likely building custom mechanical keyboards.",
+      "The participants have done this activity together before, as evidenced by references to their complaints from the previous session.",
+      "The participants share a relaxed and friendly dynamic, casually discussing the quirks and limitations of the included assembly tools."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a table covered with a pink checkered tablecloth, assembling electronic keyboard kits using tools and screwdrivers.\",\n  \"The camera wearer walks around the table and sits down on an empty chair near the corner of the table.\",\n  \"A participant in an orange shirt uses a screwdriver to tighten screws on a keyboard casing.\",\n  \"A woman wearing a black jacket works attentively on assembling her device with small tools.\",\n  \"<voice_0> mentions that previously everyone complained about the screwdriver lacking magnetic tips, but today nobody seems to complain.\",\n  \"<voice_175> remarks that everyone seems to be accepting it well today.\",\n  \"<voice_176> asks what they are talking about.\",\n  \"<voice_137> comments that because the screwdriver is a free complimentary tool, one cannot expect too much from it.\",\n  \"<voice_177> explains that the screwdriver has no magnetic hold on the screws.\",\n  \"<voice_123> agrees, pointing out that it makes placing the screws difficult.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is participating in a collaborative DIY assembly session, likely building custom mechanical keyboards.\",\n  \"The participants have done this activity together before, as evidenced by references to their complaints from the previous session.\",\n  \"The participants share a relaxed and friendly dynamic, casually discussing the quirks and limitations of the included assembly tools.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 17,
+      "call_id": "583d26be-d6c7-4d99-bc4f-a07fc2a8edfd",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404056.1749427,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67297,
+      "output_tokens": 2206,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a table covered with a pink checkered tablecloth, assembling electronic keyboard kits using tools and screwdrivers.\",\n  \"The camera wearer walks around the table and sits down on an empty chair near the corner of the table.\",\n  \"A participant in an orange shirt uses a screwdriver to tighten screws on a keyboard casing.\",\n  \"A woman wearing a black jacket works attentively on assembling her device with small tools.\",\n  \"<voice_0> mentions that previously everyone complained about the screwdriver lacking magnetic tips, but today nobody seems to complain.\",\n  \"<voice_175> remarks that everyone seems to be accepting it well today.\",\n  \"<voice_176> asks what they are talking about.\",\n  \"<voice_137> comments that because the screwdriver is a free complimentary tool, one cannot expect too much from it.\",\n  \"<voice_177> explains that the screwdriver has no magnetic hold on the screws.\",\n  \"<voice_123> agrees, pointing out that it makes placing the screws difficult.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is participating in a collaborative DIY assembly session, likely building custom mechanical keyboards.\",\n  \"The participants have done this activity together before, as evidenced by references to their complaints from the previous session.\",\n  \"The participants share a relaxed and friendly dynamic, casually discussing the quirks and limitations of the included assembly tools.\"\n ]\n}\n```",
+      "total_tokens": 69503,
+      "request_end": 1789404100.9320643,
+      "latency_ms": 44757.11860499723,
+      "client_wall_clock_latency_ms": 44757.11860499723,
+      "api_request_wall_clock_latency_ms": 44757.11860499723
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_17_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

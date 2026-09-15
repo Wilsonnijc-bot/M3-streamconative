@@ -1,0 +1,65 @@
+[
+  {
+    "segment_id": 1,
+    "source": "DAY1_A1_JAKE_11094208.mp4",
+    "source_clock": "11094208",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 17.62999999999738,
+    "absolute_start_seconds": 40182.08,
+    "absolute_end_seconds": 40199.71,
+    "actual_media": "/opt/streammeco/data/egolife_day1/DAY1_A1_JAKE_11094208.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48399.339150797,
+      "prepared_perf": 48403.408234123,
+      "ordered_start_perf": 48403.408336144,
+      "consumer_wait_ms": 4066.754375002347,
+      "ready_to_ordered_ms": 0.10202099656453356,
+      "preparation_work_ms": 4068.681190001371,
+      "lookahead_segments": 2
+    }
+  },
+  {
+    "segment_id": 2,
+    "source": "DAY1_A1_JAKE_11100000.mp4",
+    "source_clock": "11100000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40200.0,
+    "absolute_end_seconds": 40230.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking/work/segments/segment_0002.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48399.339670926,
+      "prepared_perf": 48407.900821476,
+      "ordered_start_perf": 48647.37961321,
+      "consumer_wait_ms": 0.015219004126265645,
+      "ready_to_ordered_ms": 239478.79173399997,
+      "preparation_work_ms": 8559.999406003044,
+      "lookahead_segments": 2
+    }
+  },
+  {
+    "segment_id": 3,
+    "source": "DAY1_A1_JAKE_11103000.mp4",
+    "source_clock": "11103000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40230.0,
+    "absolute_end_seconds": 40260.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking/work/segments/segment_0003.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48399.340963557,
+      "prepared_perf": 48409.336962573,
+      "ordered_start_perf": 48782.439333676,
+      "consumer_wait_ms": 0.023012995370663702,
+      "ready_to_ordered_ms": 373102.3711029993,
+      "preparation_work_ms": 9995.601368995267,
+      "lookahead_segments": 2
+    }
+  }
+]

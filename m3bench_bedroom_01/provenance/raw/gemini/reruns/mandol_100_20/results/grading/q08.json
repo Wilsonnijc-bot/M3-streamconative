@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": false,
+    "reason": "The candidate fails to answer the question, claiming insufficient information instead of identifying the shorter coat rack."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q08",
+    "method": "D",
+    "call_id": "46e8fa32-e5a7-45ec-b682-562339b0eca8",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439988.5024655,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 167,
+    "output_tokens": 126,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 3357.008519000374
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\"0\": {\"correct\": false, \"reason\": \"The candidate fails to answer the question, claiming insufficient information instead of identifying the shorter coat rack.\"}}\n```",
+    "total_tokens": 293,
+    "request_end": 1789439991.859531,
+    "latency_ms": 3357.064122988959,
+    "client_wall_clock_latency_ms": 3357.064122988959,
+    "api_request_wall_clock_latency_ms": 3357.064122988959
+  },
+  "included_in_qa_latency": false
+}

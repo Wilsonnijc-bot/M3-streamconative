@@ -1,0 +1,394 @@
+{
+  "clip_id": 70,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0070.mp4",
+  "end_to_end_memory_generation_ms": 139198.0966389965,
+  "latency_ms": {
+    "clip_decode": 2221.7416639978183,
+    "deepgram_asr": 735.5997630002094,
+    "mai_transcribe_asr": 1080.4070249942015,
+    "asr_total": 1081.177073996514,
+    "audio_segmentation": 1.8008980041486211,
+    "speech_embedding_campplus": 374.4991779967677,
+    "facial_detection_recognition_buffalo_l": 955.1903269966715,
+    "face_clustering": 0.0596309982938692,
+    "vlm_memory_generation": 14699.57709499431,
+    "text_embedding": 416.6983489994891,
+    "graph_update_total": 143.399827000394
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 70,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 654,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789407444.6889362,
+          "status": "success",
+          "total_tokens": 138,
+          "request_end": 1789407445.1055162,
+          "latency_ms": 416.58062799979234
+        }
+      ],
+      "total_tokens": 138,
+      "latency_ms": 416.6983489994891
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 735.5997630002094,
+        "openrouter-mai-transcribe-2": 1080.4070249942015
+      },
+      "asr_total_ms": 1081.177073996514,
+      "audio_segmentation_ms": 1.8008980041486211,
+      "speech_embedding_ms": 374.4991779967677,
+      "graph_update_ms": 143.2531829996151,
+      "asr_segment_count": 2,
+      "speech_embedding_count": 2,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 523.0473180054105
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 955.1903269966715,
+      "face_clustering_ms": 0.0596309982938692,
+      "graph_update_ms": null,
+      "frame_count": 41,
+      "detected_face_count": 0,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 956.2697669971385
+    },
+    "vlm": {
+      "context_preparation_ms": 1054.2742519974126,
+      "vlm_ms": 14699.57709499431,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A person records from a first-person perspective while holding and looking at a smartphone.\",\n    \"A table covered with a pink-and-white checkered tablecloth is situated in front of the person, holding a film clapperboard, flowers, and drinks.\",\n    \"In the background, a person in white stands near the table arranging flowers.\",\n    \"Another person is seated to the right side of the table.\",\n    \"<voice_798> observes that the content shows the three of them.\",\n    \"<voice_799> confirms in agreement.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The person holding the phone is browsing photos or social media involving the individuals present.\",\n    \"<voice_798> and <voice_799> are looking at or discussing the photos displayed on the device.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A person records from a first-person perspective while holding and looking at a smartphone.",
+          "A table covered with a pink-and-white checkered tablecloth is situated in front of the person, holding a film clapperboard, flowers, and drinks.",
+          "In the background, a person in white stands near the table arranging flowers.",
+          "Another person is seated to the right side of the table.",
+          "<voice_798> observes that the content shows the three of them.",
+          "<voice_799> confirms in agreement."
+        ],
+        "high_level_conclusions": [
+          "The person holding the phone is browsing photos or social media involving the individuals present.",
+          "<voice_798> and <voice_799> are looking at or discussing the photos displayed on the device."
+        ]
+      },
+      "media": {
+        "frame_count": 17,
+        "video_duration_seconds": 8.05
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 70,
+          "call_id": "3feb4e2f-a70a-42f9-99ef-d9042b60ff1b",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789407429.9885783,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 19219,
+          "output_tokens": 636,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 14699.467710001045
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A person records from a first-person perspective while holding and looking at a smartphone.\",\n    \"A table covered with a pink-and-white checkered tablecloth is situated in front of the person, holding a film clapperboard, flowers, and drinks.\",\n    \"In the background, a person in white stands near the table arranging flowers.\",\n    \"Another person is seated to the right side of the table.\",\n    \"<voice_798> observes that the content shows the three of them.\",\n    \"<voice_799> confirms in agreement.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The person holding the phone is browsing photos or social media involving the individuals present.\",\n    \"<voice_798> and <voice_799> are looking at or discussing the photos displayed on the device.\"\n  ]\n}\n```",
+          "total_tokens": 19855,
+          "request_end": 1789407444.6881592,
+          "latency_ms": 14699.57709499431,
+          "client_wall_clock_latency_ms": 14699.57709499431,
+          "api_request_wall_clock_latency_ms": 14699.57709499431
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.09345499711344019,
+      "nodes_added": 6,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.05318900366546586,
+      "nodes_added": 2,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 41,
+    "asr_segments": 2,
+    "speech_embeddings": 2,
+    "voice_identities": 2,
+    "detected_faces": 0,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 2,
+    "nodes_after_clip": 808,
+    "edges_after_clip": 179,
+    "nodes_added_by_clip": 10,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "A person records from a first-person perspective while holding and looking at a smartphone.",
+      "A table covered with a pink-and-white checkered tablecloth is situated in front of the person, holding a film clapperboard, flowers, and drinks.",
+      "In the background, a person in white stands near the table arranging flowers.",
+      "Another person is seated to the right side of the table.",
+      "<voice_798> observes that the content shows the three of them.",
+      "<voice_799> confirms in agreement."
+    ],
+    "high_level_conclusions": [
+      "The person holding the phone is browsing photos or social media involving the individuals present.",
+      "<voice_798> and <voice_799> are looking at or discussing the photos displayed on the device."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A person records from a first-person perspective while holding and looking at a smartphone.",
+      "A table covered with a pink-and-white checkered tablecloth is situated in front of the person, holding a film clapperboard, flowers, and drinks.",
+      "In the background, a person in white stands near the table arranging flowers.",
+      "Another person is seated to the right side of the table.",
+      "<voice_798> observes that the content shows the three of them.",
+      "<voice_799> confirms in agreement."
+    ],
+    "high_level_conclusions": [
+      "The person holding the phone is browsing photos or social media involving the individuals present.",
+      "<voice_798> and <voice_799> are looking at or discussing the photos displayed on the device."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_70_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 10,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 798,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Твой. | MAI: 这都是我们三个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 799,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Твой. | MAI: 对。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 800,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person records from a first-person perspective while holding and looking at a smartphone."
+          ],
+          "timestamp": 70
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 801,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A table covered with a pink-and-white checkered tablecloth is situated in front of the person, holding a film clapperboard, flowers, and drinks."
+          ],
+          "timestamp": 70
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 802,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "In the background, a person in white stands near the table arranging flowers."
+          ],
+          "timestamp": 70
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 803,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another person is seated to the right side of the table."
+          ],
+          "timestamp": 70
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 804,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_798> observes that the content shows the three of them."
+          ],
+          "timestamp": 70
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 805,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_799> confirms in agreement."
+          ],
+          "timestamp": 70
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 806,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person holding the phone is browsing photos or social media involving the individuals present."
+          ],
+          "timestamp": 70
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 807,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_798> and <voice_799> are looking at or discussing the photos displayed on the device."
+          ],
+          "timestamp": 70
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 798,
+        "target": 804,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 798,
+        "target": 807,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 799,
+        "target": 805,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 799,
+        "target": 807,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_70_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_70_graph.pkl"
+  },
+  "memory_pickle_bytes": 18465831,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 48492.81647787,
+    "prepared_perf": 48496.813695581,
+    "ordered_start_perf": 48612.911462623,
+    "consumer_wait_ms": 0.010668998584151268,
+    "ready_to_ordered_ms": 116097.7670420034,
+    "preparation_work_ms": 3991.825239994796,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 17651.265101005265
+}

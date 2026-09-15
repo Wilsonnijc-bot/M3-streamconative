@@ -1,0 +1,79 @@
+{
+  "clip_id": 79,
+  "source": {
+    "segment_id": 79,
+    "source": "DAY1_A1_JAKE_11470000.mp4",
+    "source_clock": "11470000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42420.0,
+    "absolute_end_seconds": 42450.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0079.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48934.972505793,
+      "prepared_perf": 48942.584825581,
+      "ordered_start_perf": 49123.420330127,
+      "consumer_wait_ms": 0.008576003892812878,
+      "ready_to_ordered_ms": 180835.5045460048,
+      "preparation_work_ms": 7606.921102997148,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table covered with a pink checkered tablecloth, on which a clapperboard, flowers, and various items are placed.",
+      "A woman in a black long-sleeve shirt sits on the left side of the table, looking toward the front.",
+      "A woman wearing a white blouse stands at the head of the table near a whiteboard, holding an item and presenting to the group.",
+      "<voice_383> suggests including something into the plan, commenting that it would be quite good.",
+      "<voice_165> speaks, suggesting offering participants a narcissus bulb as a small prize, explaining that it is very easy to grow even for beginners.",
+      "<voice_165> continues elaborating on how narcissus flowers bloom beautifully and release a fresh, pleasant fragrance.",
+      "The woman in black rests her chin in her hands while attentively listening to <voice_165>.",
+      "Two women seated across the table on the right listen quietly to the presentation.",
+      "The woman in black shifts her position and occasionally touches items on the table in front of her."
+    ],
+    "high_level_conclusions": [
+      "The gathering is a collaborative project or production planning meeting, indicated by the clapperboard, flowers, and whiteboard.",
+      "<voice_165> is presenting a creative proposal regarding participant rewards, providing thoughtful and relatable reasoning to persuade the group.",
+      "The attendees are focused and receptive to the ideas being discussed during the meeting."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table covered with a pink checkered tablecloth, on which a clapperboard, flowers, and various items are placed.\",\n  \"A woman in a black long-sleeve shirt sits on the left side of the table, looking toward the front.\",\n  \"A woman wearing a white blouse stands at the head of the table near a whiteboard, holding an item and presenting to the group.\",\n  \"<voice_383> suggests including something into the plan, commenting that it would be quite good.\",\n  \"<voice_165> speaks, suggesting offering participants a narcissus bulb as a small prize, explaining that it is very easy to grow even for beginners.\",\n  \"<voice_165> continues elaborating on how narcissus flowers bloom beautifully and release a fresh, pleasant fragrance.\",\n  \"The woman in black rests her chin in her hands while attentively listening to <voice_165>.\",\n  \"Two women seated across the table on the right listen quietly to the presentation.\",\n  \"The woman in black shifts her position and occasionally touches items on the table in front of her.\"\n ],\n \"high_level_conclusions\": [\n  \"The gathering is a collaborative project or production planning meeting, indicated by the clapperboard, flowers, and whiteboard.\",\n  \"<voice_165> is presenting a creative proposal regarding participant rewards, providing thoughtful and relatable reasoning to persuade the group.\",\n  \"The attendees are focused and receptive to the ideas being discussed during the meeting.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 79,
+      "call_id": "164bf447-0b76-4c51-9b1f-e98df36de718",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407947.5266354,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67010,
+      "output_tokens": 1586,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 81075.51314999728
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people is gathered around a table covered with a pink checkered tablecloth, on which a clapperboard, flowers, and various items are placed.\",\n  \"A woman in a black long-sleeve shirt sits on the left side of the table, looking toward the front.\",\n  \"A woman wearing a white blouse stands at the head of the table near a whiteboard, holding an item and presenting to the group.\",\n  \"<voice_383> suggests including something into the plan, commenting that it would be quite good.\",\n  \"<voice_165> speaks, suggesting offering participants a narcissus bulb as a small prize, explaining that it is very easy to grow even for beginners.\",\n  \"<voice_165> continues elaborating on how narcissus flowers bloom beautifully and release a fresh, pleasant fragrance.\",\n  \"The woman in black rests her chin in her hands while attentively listening to <voice_165>.\",\n  \"Two women seated across the table on the right listen quietly to the presentation.\",\n  \"The woman in black shifts her position and occasionally touches items on the table in front of her.\"\n ],\n \"high_level_conclusions\": [\n  \"The gathering is a collaborative project or production planning meeting, indicated by the clapperboard, flowers, and whiteboard.\",\n  \"<voice_165> is presenting a creative proposal regarding participant rewards, providing thoughtful and relatable reasoning to persuade the group.\",\n  \"The attendees are focused and receptive to the ideas being discussed during the meeting.\"\n ]\n}\n```",
+      "total_tokens": 68596,
+      "request_end": 1789408028.6022456,
+      "latency_ms": 81075.60699700116,
+      "client_wall_clock_latency_ms": 81075.60699700116,
+      "api_request_wall_clock_latency_ms": 81075.60699700116
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_79_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

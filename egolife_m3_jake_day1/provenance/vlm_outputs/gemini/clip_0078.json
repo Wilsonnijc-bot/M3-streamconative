@@ -1,0 +1,78 @@
+{
+  "clip_id": 78,
+  "source": {
+    "segment_id": 78,
+    "source": "DAY1_A1_JAKE_11463000.mp4",
+    "source_clock": "11463000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42390.0,
+    "absolute_end_seconds": 42420.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0078.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48886.201754712,
+      "prepared_perf": 48894.267043405,
+      "ordered_start_perf": 48991.737169316,
+      "consumer_wait_ms": 0.007893999281805009,
+      "ready_to_ordered_ms": 97470.12591100065,
+      "preparation_work_ms": 8059.883498004638,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table with a red-and-white checkered tablecloth.",
+      "A woman wearing a white blouse stands near the whiteboard at the head of the table, talking and gesturing with small items in her hands.",
+      "The standing woman explains a concept involving animal puzzles and harmonious living on Earth.",
+      "On the left, a woman wearing glasses is on a phone call before putting her phone down on the table.",
+      "Two women sit on the right side of the table, observing the discussion.",
+      "A person wearing an orange shirt briefly appears in the doorway behind the standing woman.",
+      "The camera wearer briefly raises their right hand over the table.",
+      "A speaker mentions hair, prompting the standing woman to reach up and adjust her hair."
+    ],
+    "high_level_conclusions": [
+      "The gathering appears to be a creative production or concept discussion meeting, indicated by the clapperboard, whiteboard notes, and presentation materials.",
+      "The standing woman (<voice_165>) is pitching or explaining a game or design concept to the team.",
+      "<voice_113> alerts the standing woman that her hair is out of place, leading her to touch and fix it."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a table with a red-and-white checkered tablecloth.\",\n  \"A woman wearing a white blouse stands near the whiteboard at the head of the table, talking and gesturing with small items in her hands.\",\n  \"The standing woman explains a concept involving animal puzzles and harmonious living on Earth.\",\n  \"On the left, a woman wearing glasses is on a phone call before putting her phone down on the table.\",\n  \"Two women sit on the right side of the table, observing the discussion.\",\n  \"A person wearing an orange shirt briefly appears in the doorway behind the standing woman.\",\n  \"The camera wearer briefly raises their right hand over the table.\",\n  \"A speaker mentions hair, prompting the standing woman to reach up and adjust her hair.\"\n ],\n \"high_level_conclusions\": [\n  \"The gathering appears to be a creative production or concept discussion meeting, indicated by the clapperboard, whiteboard notes, and presentation materials.\",\n  \"The standing woman (<voice_165>) is pitching or explaining a game or design concept to the team.\",\n  \"<voice_113> alerts the standing woman that her hair is out of place, leading her to touch and fix it.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 78,
+      "call_id": "d8319a04-781d-4625-ab10-386fe0c2b565",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407815.6356208,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67199,
+      "output_tokens": 1395,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 120075.99881799979
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a table with a red-and-white checkered tablecloth.\",\n  \"A woman wearing a white blouse stands near the whiteboard at the head of the table, talking and gesturing with small items in her hands.\",\n  \"The standing woman explains a concept involving animal puzzles and harmonious living on Earth.\",\n  \"On the left, a woman wearing glasses is on a phone call before putting her phone down on the table.\",\n  \"Two women sit on the right side of the table, observing the discussion.\",\n  \"A person wearing an orange shirt briefly appears in the doorway behind the standing woman.\",\n  \"The camera wearer briefly raises their right hand over the table.\",\n  \"A speaker mentions hair, prompting the standing woman to reach up and adjust her hair.\"\n ],\n \"high_level_conclusions\": [\n  \"The gathering appears to be a creative production or concept discussion meeting, indicated by the clapperboard, whiteboard notes, and presentation materials.\",\n  \"The standing woman (<voice_165>) is pitching or explaining a game or design concept to the team.\",\n  \"<voice_113> alerts the standing woman that her hair is out of place, leading her to touch and fix it.\"\n ]\n}\n```",
+      "total_tokens": 68594,
+      "request_end": 1789407935.7117147,
+      "latency_ms": 120076.09080199472,
+      "client_wall_clock_latency_ms": 120076.09080199472,
+      "api_request_wall_clock_latency_ms": 120076.09080199472
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_78_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "clip_id": 75,
+  "source": {
+    "segment_id": 75,
+    "source": "DAY1_A1_JAKE_11450000.mp4",
+    "source_clock": "11450000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42300.0,
+    "absolute_end_seconds": 42330.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0075.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 48705.21133762,
+      "prepared_perf": 48712.914606012,
+      "ordered_start_perf": 48805.92941727,
+      "consumer_wait_ms": 0.010640003893058747,
+      "ready_to_ordered_ms": 93014.81125800638,
+      "preparation_work_ms": 7697.95196299674,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people gathers around a dining table decorated with flowers, cards, and a film clapperboard.",
+      "A woman seated on the left holds cards and explains plant sprouting times and Earth-themed cards.",
+      "A woman standing in the background trims and prepares flower arrangements.",
+      "The woman on the left lays several Earth-themed stickers and cards onto the table.",
+      "A woman across the table claps and responds to the presentation.",
+      "The person holding the camera displays a card drawn with a heart or peach shape in their hands."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in an artistic, promotional, or film production project, as shown by the 'Egolife' slate clapperboard and handmade cards.",
+      "The speaker (<voice_500>) designed original plant/Earth-themed educational or commemorative cards for the project.",
+      "The other participants actively listen, encourage, and praise the speaker's original craftwork."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people gathers around a dining table decorated with flowers, cards, and a film clapperboard.\",\n    \"A woman seated on the left holds cards and explains plant sprouting times and Earth-themed cards.\",\n    \"A woman standing in the background trims and prepares flower arrangements.\",\n    \"The woman on the left lays several Earth-themed stickers and cards onto the table.\",\n    \"A woman across the table claps and responds to the presentation.\",\n    \"The person holding the camera displays a card drawn with a heart or peach shape in their hands.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in an artistic, promotional, or film production project, as shown by the 'Egolife' slate clapperboard and handmade cards.\",\n    \"The speaker (<voice_500>) designed original plant/Earth-themed educational or commemorative cards for the project.\",\n    \"The other participants actively listen, encourage, and praise the speaker's original craftwork.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 75,
+      "call_id": "471b44c3-a76f-4a54-821c-9cc00550f816",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789407631.011203,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66869,
+      "output_tokens": 976,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 67559.45394500304
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people gathers around a dining table decorated with flowers, cards, and a film clapperboard.\",\n    \"A woman seated on the left holds cards and explains plant sprouting times and Earth-themed cards.\",\n    \"A woman standing in the background trims and prepares flower arrangements.\",\n    \"The woman on the left lays several Earth-themed stickers and cards onto the table.\",\n    \"A woman across the table claps and responds to the presentation.\",\n    \"The person holding the camera displays a card drawn with a heart or peach shape in their hands.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in an artistic, promotional, or film production project, as shown by the 'Egolife' slate clapperboard and handmade cards.\",\n    \"The speaker (<voice_500>) designed original plant/Earth-themed educational or commemorative cards for the project.\",\n    \"The other participants actively listen, encourage, and praise the speaker's original craftwork.\"\n  ]\n}\n```",
+      "total_tokens": 67845,
+      "request_end": 1789407698.5708003,
+      "latency_ms": 67559.58577200363,
+      "client_wall_clock_latency_ms": 67559.58577200363,
+      "api_request_wall_clock_latency_ms": 67559.58577200363
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_75_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "clip_id": 9,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0009.mp4",
+  "end_to_end_memory_generation_ms": 608237.8809400033,
+  "latency_ms": {
+    "clip_decode": 4058.332315995358,
+    "deepgram_asr": 2.331528994545806,
+    "mai_transcribe_asr": 2.2833879993413575,
+    "asr_total": 4.0224539989139885,
+    "audio_segmentation": 6.200984003953636,
+    "speech_embedding_campplus": 176.48085599648766,
+    "facial_detection_recognition_buffalo_l": 2845.473100001982,
+    "face_clustering": 2.2087270044721663,
+    "vlm_memory_generation": 216208.81282699702,
+    "text_embedding": 322.55250200250885,
+    "graph_update_total": 17.592001997400075
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 9,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 7,
+      "input_chars": 801,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789412107.0719204,
+          "status": "success",
+          "total_tokens": 159,
+          "request_end": 1789412107.39421,
+          "latency_ms": 322.290508003789
+        }
+      ],
+      "total_tokens": 159,
+      "latency_ms": 322.55250200250885
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.331528994545806,
+        "openrouter-mai-transcribe-2": 2.2833879993413575
+      },
+      "asr_total_ms": 4.0224539989139885,
+      "audio_segmentation_ms": 6.200984003953636,
+      "speech_embedding_ms": 176.48085599648766,
+      "graph_update_ms": 4.0180739961215295,
+      "asr_segment_count": 1,
+      "speech_embedding_count": 1,
+      "voice_identity_count": 1,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 204.40897899970878
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2845.473100001982,
+      "face_clustering_ms": 2.2087270044721663,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 76,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2889.5463130029384
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_0>"
+      ],
+      "context_preparation_ms": 4319.61296100053,
+      "vlm_ms": 216208.81282699702,
+      "raw_response": "{\n  \"video_description\": [\n    \"The video shows a first-person perspective inside a bedroom with a messy bed and a desk filled with computer equipment.\",\n    \"A man in a pink shirt and a woman stand near the doorway, observing the camera operator.\",\n    \"The camera operator interacts with the computer monitors on a rack, touching the screens and gesturing towards them.\",\n    \"The speaker (<voice_0>) explains the configuration, stating there are six computers corresponding to eye-cams and a hard drive for recording data every three hours.\",\n    \"The camera alternates between the desk setup and the two people standing by the door.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_0>) is providing technical instructions regarding a multi-computer setup and a specific data recording schedule.\",\n    \"The equipment is organized with labels such as L1 and L2, and the data is stored on a hard drive.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The video shows a first-person perspective inside a bedroom with a messy bed and a desk filled with computer equipment.",
+          "A man in a pink shirt and a woman stand near the doorway, observing the camera operator.",
+          "The camera operator interacts with the computer monitors on a rack, touching the screens and gesturing towards them.",
+          "The speaker (<voice_0>) explains the configuration, stating there are six computers corresponding to eye-cams and a hard drive for recording data every three hours.",
+          "The camera alternates between the desk setup and the two people standing by the door."
+        ],
+        "high_level_conclusions": [
+          "The speaker (<voice_0>) is providing technical instructions regarding a multi-computer setup and a specific data recording schedule.",
+          "The equipment is organized with labels such as L1 and L2, and the data is stored on a hard drive."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 9,
+          "call_id": "6f5e5e5b-75f8-4f7c-b97c-f4ae3c8a26ac",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789411890.8620992,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"The video shows a first-person perspective inside a bedroom with a messy bed and a desk filled with computer equipment.\",\n    \"A man in a pink shirt and a woman stand near the doorway, observing the camera operator.\",\n    \"The camera operator interacts with the computer monitors on a rack, touching the screens and gesturing towards them.\",\n    \"The speaker (<voice_0>) explains the configuration, stating there are six computers corresponding to eye-cams and a hard drive for recording data every three hours.\",\n    \"The camera alternates between the desk setup and the two people standing by the door.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_0>) is providing technical instructions regarding a multi-computer setup and a specific data recording schedule.\",\n    \"The equipment is organized with labels such as L1 and L2, and the data is stored on a hard drive.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are 30 frames (0.00s to 29.50s). The camera seems to be held by someone (POV).\n    *   The room looks like a bedroom or a dorm room. It has a bed with messy white sheets, a desk with multiple laptops/computers, a window with curtains, and an air conditioner.\n    *   There are people visible in some frames. Specifically, around 0.00s - 1.00s, there's a woman standing near the door/wall. Later, around 4.50s onwards, a man in a pinkish shirt and the woman are standing together near the doorway. They seem to be observing the person filming.\n    *   The person filming interacts with the computers on the desk. They point at screens, touch them, and move around the desk area.\n    *   The camera pans back and forth between the desk setup and the people standing by the door.\n*   **Voice Features:**\n    *   `<voice_0>`: Contains a long transcript from 00:00 to 00:30. The ASR text is garbled but clearly spoken Chinese.\n        *   \"Oh, ... 9台10台，但是就是这边6台电脑...\" (Oh, 9 machines 10 machines, but just these 6 computers here...)\n        *   \"...每对一台电脑对应你的一个眼一摄像头。\" (...each computer corresponds to your eye-cam.)\n        *   \"...这个每台电脑，我... 你们每次，嗯，录完结，每隔3个小时...\" (This computer, I... you guys every time, uh, after recording finishes, every 3 hours...)\n        *   \"...然后就会在这个硬盘里边。\" (...then it will be in this hard drive.)\n        *   \"...这个硬盘就是你一会要装的硬盘。\" (...this hard drive is the one you'll install later.)\n        *   \"...比方说这个，这个L1，这个L2...\" (For example this, this L1, this L2...)\n        *   \"...你们名字都写在这了。你们的数据都在这了。\" (...your names are written here. Your data is all here.)\n    *   This indicates the person filming is explaining the computer setup to the others (likely the man and woman seen). He mentions specific computers (L1, L2), hard drives, and recording schedules.\n\n**2. Construct Video Description:**\n*   Need to break down the actions into atomic events.\n*   Frame 0.00 - 1.00: Camera shows a messy bed and a woman standing near the wall/door.\n*   Frame 1.50 - 2.00: Person filming moves a yellow chair slightly and reaches towards the desk.\n*   Frame 2.00 - 3.50: Person filming interacts with the laptop/computer setup on the desk, touching the screen and pointing.\n*   Frame 4.50 - 7.00: Camera pans to show a man in a pink shirt and the woman standing together by the door. They are watching the filmer.\n*   Frame 7.50 - 8.50: Filmer points at the top monitor/screen on the rack.\n*   Frame 9.00 - 12.50: Filmer moves around the room, showing the desk and bed again.\n*   Frame 13.00 - 14.50: Filmer touches the top screen again.\n*   Frame 15.00 - 17.00: Camera pans around the room, showing the ceiling light and AC unit.\n*   Frame 17.50 - 20.00: Camera focuses back on the man and woman by the door.\n*   Frame 20.50 - 23.50: Filmer interacts with the computer rack again, touching screens.\n*   Frame 24.00 - 29.50: Camera alternates between the desk setup and the two people standing by the door.\n\n**3. Construct High-Level Conclusions:**\n*   The person filming is explaining a technical setup involving multiple computers (6 mentioned, maybe up to 10 total contextually) and a hard drive.\n*   The presence of the man and woman suggests they are the users or subjects being explained to.\n*   The mention of \"eye-cam\" and recording schedules implies a surveillance or data collection project.\n*   Since there are no explicit face IDs provided in the prompt's \"Face features\" section (it says \"Voice features: {...}\" and \"Face features:\" is empty/null in the prompt structure provided in the thought block, wait, looking closely at the prompt provided: \"Face features:Voice features:{...}\". Actually, the prompt text says \"Face features:Voice features:{...}\" but doesn't list any face IDs explicitly like `<face_0>`. Wait, let me re-read the prompt carefully.\n    *   \"Face features:Voice features:{...}\" -> It seems the input provided in the prompt *only* lists voice features under that header, or perhaps the face features are missing/implied?\n    *   Looking at the instruction: \"Each feature is either a face... or a voice...\".\n    *   In the provided text: \"Face features:Voice features:{...}\". There are no face IDs listed like `<face_0>`.\n    *   However, the instruction says: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\n    *   Since no face IDs were supplied in the input text (\"Face features:\" line is effectively empty or merged), I cannot create equivalences unless I infer them. But the instruction says \"Use only IDs supplied in the input\". If no face IDs are supplied, I cannot make equivalences.\n    *   Wait, looking at the raw input provided in the prompt block:\n        ```\n        Face features:Voice features:{\"<voice_0>\": [{\"start_time\": \"00:00\", \"end_time\": \"00:30\", \"asr\": \"Deepgram: Oh, | MAI: \\u55ef\\uff0c9\\u53f010\\u53f0\\uff0c\\u4f46\\u662f\\u5c31\\u662f\\u8fd9\\u8fb96\\u53f0\\u7535\\u8111\\uff0c\\u6bcf\\u4e00\\u4e2a\\u7535\\u8111\\u90fd\\u5bf9\\u5e94\\u7740\\u4f60\\u4eec\\u7684\\u4e00\\u4e2a\\u773c-\\u4e00\\u53f0\\u773c\\u955c\\u3002...\"}]}\n        ```\n    *   It seems the \"Face features\" part is empty. So I cannot claim equivalence. I must stick to the voice ID `<voice_0>`.\n    *   The speaker is the person filming (POV). The transcript explains the setup to the others.\n    *   Conclusion: The person filming (<voice_0>) is explaining a multi-computer setup involving hard drives and recording schedules to the individuals present in the room (man and woman).\n\n**Refining the Output:**\n*   **Video Description:** Needs to be a list of strings describing atomic events.\n    *   \"A person films a messy bedroom with a bed and a desk containing multiple computers.\"\n    *   \"Two individuals, a man in a pink shirt and a woman, stand near the doorway observing the camera operator.\"\n    *   \"The camera operator gestures towards the computer monitors on a rack.\"\n    *   \"The camera operator touches and interacts with the screens on the computer setup.\"\n    *   \"The view switches between the desk equipment and the two observers.\"\n*   **High-Level Conclusions:**\n    *   \"The speaker (<voice_0>) is explaining a technical setup involving six computers and a hard drive to the people in the room.\"\n    *   \"The setup involves recording data every three hours onto a hard drive labeled L1/L2.\"\n    *   \"Since no face IDs were provided, no equivalences can be stated.\" (Wait, I shouldn't add meta-commentary about missing IDs if possible, just state what can be concluded).\n    *   Actually, usually in these tasks, if face features aren't provided, I just don't write equivalences.\n    *   Let's check the constraint: \"If a face and a voice feature refer to the same character, indicate it...\". Since no face features are in the input, I won't write this.\n\n**Drafting the JSON:**\n```json\n{\n  \"video_description\": [\n    \"The video shows a first-person perspective inside a bedroom with an unmade bed and a desk cluttered with electronics.\",\n    \"A man wearing a pink shirt and a woman stand near the doorway, observing the person filming.\",\n    \"The camera operator points at and touches the screens of multiple computers arranged on a rack.\",\n    \"The camera pans back and forth between the computer setup and the two people standing by the door.\",\n    \"The operator continues to interact with the computer hardware while the observers watch.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_0>) is explaining a complex computer setup involving multiple units and a hard drive to the individuals present.\",\n    \"The discussion covers recording schedules and data storage locations within the room's equipment.\"\n  ]\n}\n```\nWait, I need to check if I missed any face IDs. The prompt says \"Face features:Voice features:...\". It looks like the text for Face features is missing or empty. I will proceed assuming no face IDs are available to link.\n\nOne detail: The prompt asks to \"Preserve speaker identity when constructing memory...\". And \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\nWait, the prompt instructions say: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nBUT the system prompt instructions say: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nThere is a conflict between the \"System Prompt\" (which talks about memory construction and voice IDs in descriptions/conclusions) and the \"User Prompt\" (which defines the task as Video Description + High Level Conclusions).\nUsually, the System Prompt overrides regarding the *format*, but the User Prompt defines the *specific fields*.\nHowever, the System Prompt says: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nSo I must follow the User Prompt's schema (`video_description`, `high_level_conclusions`).\nBut the System Prompt also says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nWhere does this \"episodic memory\" go?\nLooking at the User Prompt's schema:\n```json\n{\n\t\"video_description\": [\n\t\t\"...\",\n\t\t\"...\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"...\",\n\t\t\"Equivalence: <face_1>, <voice_2>\"\n\t]\n}\n```\nIt doesn't have a \"memory\" field.\nHowever, the System Prompt says: \"Preserve speaker identity when constructing memory from the supplied character features...\".\nAnd \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis implies I should incorporate the voice ID usage into the existing fields.\nSpecifically, the System Prompt says: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\nSo in `high_level_conclusions`, I should use `<voice_0>`.\nAlso, the System Prompt says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nSince there is no \"memory\" field in the requested JSON schema, I might need to put this summary into the `video_description` or `high_level_conclusions`.\nGiven the instruction \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\", and the schema only has `video_description` and `high_level_conclusions`, putting it in `video_description` makes sense as an atomic event of the conversation happening. Or perhaps the `high_level_conclusions` is where the semantic conclusion goes.\nLet's look at the instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nIf I put the quote in `video_description`, it describes the action of speaking.\nExample: \"The speaker (<voice_0>) states: 'Oh, 9 machines 10 machines...'\".\nThis fits `video_description` as an atomic event.\nAnd for `high_level_conclusions`, I use the voice ID as per \"retain that speaker's exact voice ID\".\n\nLet's refine the plan.\n1.  **Video Description**: Describe the visual actions. Include the speech event as an atomic description since the schema requires covering \"observable and inferable events\" and the system prompt demands summarizing the transcript.\n    *   Event: Speaker (<voice_0>) explains the computer setup.\n2.  **High-Level Conclusions**: Infer the intent. Mention the speaker ID.\n    *   Conclusion: The speaker (<voice_0>) is instructing the group about the recording schedule.\n\nWait, looking at the System Prompt again: \"Preserve speaker identity when constructing memory from the supplied character features...\".\nAnd \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis means I should NOT add a new field called \"memory\". I must integrate the requirement into the existing fields.\nThe requirement \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\" likely refers to the content of the `video_description` or `high_level_conclusions`. Given `video_description` is for \"atomic event or fact\", describing the speech act fits well.\n\nLet's draft the response.\n\n**Video Description:**\n1.  The camera captures a bedroom scene featuring a messy bed and a desk with multiple computer monitors.\n2.  Two people, a man in a pink shirt and a woman, stand near the doorway observing the camera operator.\n3.  The camera operator interacts with the computer equipment, touching screens and pointing at the setup.\n4.  The speaker (<voice_0>) explains the configuration, mentioning nine or ten machines and a hard drive used for recording data every three hours.\n5.  The camera alternates between the desk setup and the observers listening to the explanation.\n\n**High-Level Conclusions:**\n1.  The speaker (<voice_0>) is providing instructions regarding a multi-computer setup and data recording protocol to the individuals in the room.\n2.  The setup involves specific labeling (L1, L2) and scheduled recording intervals.\n\nWait, I need to check if I should put the transcript quote in `video_description`.\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\nYes, I will summarize the transcript in the `video_description` as an event.\n\nOne more check on Face IDs. The input says \"Face features:Voice features:...\". It seems empty. So no Equivalence lines.\n\nFinal check on constraints:\n- \"Do not replace the ID with 'a speaker'...\" -> Must use `<voice_0>`.\n- \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> Yes.\n- \"Be concise and avoid duplicate events.\" -> Yes.\n\nLet's assemble the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"The video displays a first-person view of a bedroom with an unmade bed and a desk holding several computer monitors.\",\n    \"A man in a pink shirt and a woman stand near the doorway, watching the person filming.\",\n    \"The camera operator manipulates the computer equipment on the desk, touching the screens and adjusting the setup.\",\n    \"The speaker (<voice_0>) explains the arrangement, stating there are nine or ten machines with six computers currently visible, linked to eye-cams.\",\n    \"The speaker details a recording schedule where data is saved to a hard drive every three hours.\",\n    \"The camera pans back and forth between the technical setup and the two observers.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_0>) is instructing the group on a specific computer network configuration involving hard drives and scheduled recordings.\",\n    \"The individuals present appear to be recipients of the technical explanation regarding the L1 and L2 labels on the equipment.\"\n  ]\n}\n```\nWait, I need to make sure I don't hallucinate face IDs. The prompt input has \"Face features:Voice features:{...}\". It's possible the face features are just missing from the text provided in the prompt block. I will assume no face IDs exist.\n\nOne correction: The transcript is in Chinese. I should probably keep the summary in English as the rest of the output is English, or translate the meaning accurately. The prompt instructions are in English. I will summarize the meaning.\nTranscript snippet: \"9台10台... 6台电脑... 眼一摄像头... 每隔3个小时... 硬盘... L1... L2\".\nSummary: Explains 6 computers, eye-cam correspondence, 3-hour recording interval, hard drive storage, L1/L2 labels.\n\nRevised Video Description Item 4: \"The speaker (<voice_0>) explains the setup, noting six computers correspond to eye-cams and data is recorded to a hard drive every three hours.\"\n\nRevised Video Description Item 5: \"The speaker mentions specific labels L1 and L2 associated with the data storage.\"\n\nActually, combining them might be better for conciseness.\n\"The speaker (<voice_0>) outlines the setup, identifying six computers linked to eye-cams and a hard drive for storing data every three hours.\"\n\nLet's finalize the JSON structure.\n\n```json\n{\n  \"video_description\": [\n    \"The video shows a first-person perspective inside a bedroom with a messy bed and a desk filled with computer equipment.\",\n    \"A man in a pink shirt and a woman stand near the doorway, observing the camera operator.\",\n    \"The camera operator interacts with the computer monitors on a rack, touching the screens and gesturing towards them.\",\n    \"The speaker (<voice_0>) explains the configuration, stating there are six computers corresponding to eye-cams and a hard drive for recording data every three hours.\",\n    \"The camera alternates between the desk setup and the two people standing by the door.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_0>) is providing technical instructions regarding a multi-computer setup and a specific data recording schedule.\",\n    \"The equipment is organized with labels such as L1 and L2, and the data is stored on a hard drive.\"\n  ]\n}\n```\nThis looks solid. It respects the voice ID, summarizes the transcript, describes the visual events, and follows the JSON schema.\n\nOne final check on the System Prompt instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\nMy item 4 in video_description summarizes the transcript. This satisfies the condition.\n\"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" -> Used in high_level_conclusions.\n\"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\" -> No face IDs, so no equivalence.\n\nReady to generate.\n</think>\n\n{\n  \"video_description\": [\n    \"The video shows a first-person perspective inside a bedroom with a messy bed and a desk filled with computer equipment.\",\n    \"A man in a pink shirt and a woman stand near the doorway, observing the camera operator.\",\n    \"The camera operator interacts with the computer monitors on a rack, touching the screens and gesturing towards them.\",\n    \"The speaker (<voice_0>) explains the configuration, stating there are six computers corresponding to eye-cams and a hard drive for recording data every three hours.\",\n    \"The camera alternates between the desk setup and the two people standing by the door.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker (<voice_0>) is providing technical instructions regarding a multi-computer setup and a specific data recording schedule.\",\n    \"The equipment is organized with labels such as L1 and L2, and the data is stored on a hard drive.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10695,
+          "output_tokens": 4622,
+          "total_tokens": 15317,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002134001988451928,
+            "media_preparation_ms": 50.5999070010148,
+            "processor_tokenization_ms": 270.4754910009797,
+            "device_transfer_ms": 62.47668599826284,
+            "cuda_generation_ms": 215789.87772999972,
+            "decoding_ms": 6.887563999043778
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 216180.51365800056,
+          "request_end": 1789412107.0709145,
+          "latency_ms": 216208.81282699702,
+          "client_wall_clock_latency_ms": 216208.81282699702
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.10412499977974221,
+      "nodes_added": 5,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 13.469803001498803,
+      "nodes_added": 2,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 1,
+    "speech_embeddings": 1,
+    "voice_identities": 1,
+    "detected_faces": 76,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 87,
+    "edges_after_clip": 28,
+    "nodes_added_by_clip": 7,
+    "edges_added_by_clip": 2
+  },
+  "generated_memory": {
+    "video_description": [
+      "The video shows a first-person perspective inside a bedroom with a messy bed and a desk filled with computer equipment.",
+      "A man in a pink shirt and a woman stand near the doorway, observing the camera operator.",
+      "The camera operator interacts with the computer monitors on a rack, touching the screens and gesturing towards them.",
+      "The speaker (<voice_0>) explains the configuration, stating there are six computers corresponding to eye-cams and a hard drive for recording data every three hours.",
+      "The camera alternates between the desk setup and the two people standing by the door."
+    ],
+    "high_level_conclusions": [
+      "The speaker (<voice_0>) is providing technical instructions regarding a multi-computer setup and a specific data recording schedule.",
+      "The equipment is organized with labels such as L1 and L2, and the data is stored on a hard drive."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The video shows a first-person perspective inside a bedroom with a messy bed and a desk filled with computer equipment.",
+      "A man in a pink shirt and a woman stand near the doorway, observing the camera operator.",
+      "The camera operator interacts with the computer monitors on a rack, touching the screens and gesturing towards them.",
+      "The speaker (<voice_0>) explains the configuration, stating there are six computers corresponding to eye-cams and a hard drive for recording data every three hours.",
+      "The camera alternates between the desk setup and the two people standing by the door."
+    ],
+    "high_level_conclusions": [
+      "The speaker (<voice_0>) is providing technical instructions regarding a multi-computer setup and a specific data recording schedule.",
+      "The equipment is organized with labels such as L1 and L2, and the data is stored on a hard drive."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_9_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 7,
+    "edges_added": 2,
+    "nodes": [
+      {
+        "id": 80,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The video shows a first-person perspective inside a bedroom with a messy bed and a desk filled with computer equipment."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 81,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A man in a pink shirt and a woman stand near the doorway, observing the camera operator."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 82,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator interacts with the computer monitors on a rack, touching the screens and gesturing towards them."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 83,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The speaker (<voice_0>) explains the configuration, stating there are six computers corresponding to eye-cams and a hard drive for recording data every three hours."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 84,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera alternates between the desk setup and the two people standing by the door."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 85,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The speaker (<voice_0>) is providing technical instructions regarding a multi-computer setup and a specific data recording schedule."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 86,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The equipment is organized with labels such as L1 and L2, and the data is stored on a hard drive."
+          ],
+          "timestamp": 9
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 83,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 85,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_9_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_9_graph.pkl"
+  },
+  "memory_pickle_bytes": 2262705,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52686.032246847,
+    "prepared_perf": 52691.619952369,
+    "ordered_start_perf": 53070.152086562,
+    "consumer_wait_ms": 0.007544993422925472,
+    "ready_to_ordered_ms": 378532.1341929957,
+    "preparation_work_ms": 5580.343970003014,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 223960.14591700077
+}

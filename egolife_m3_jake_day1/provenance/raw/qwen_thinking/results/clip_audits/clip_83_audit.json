@@ -1,0 +1,827 @@
+{
+  "clip_id": 83,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0083.mp4",
+  "end_to_end_memory_generation_ms": 689946.9013319904,
+  "latency_ms": {
+    "clip_decode": 5215.230891000829,
+    "deepgram_asr": 3.301913005998358,
+    "mai_transcribe_asr": 2.7556749992072582,
+    "asr_total": 3.7446060014190152,
+    "audio_segmentation": 7.40500699612312,
+    "speech_embedding_campplus": 2461.4268139994238,
+    "facial_detection_recognition_buffalo_l": 3802.8926989936735,
+    "face_clustering": 7.477363993530162,
+    "vlm_memory_generation": 324886.5401810035,
+    "text_embedding": 924.692390995915,
+    "graph_update_total": 948.028939019423
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 83,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 21,
+      "input_chars": 1517,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789427653.5014634,
+          "status": "success",
+          "total_tokens": 439,
+          "request_end": 1789427654.4259331,
+          "latency_ms": 924.4711250066757
+        }
+      ],
+      "total_tokens": 439,
+      "latency_ms": 924.692390995915
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 3.301913005998358,
+        "openrouter-mai-transcribe-2": 2.7556749992072582
+      },
+      "asr_total_ms": 3.7446060014190152,
+      "audio_segmentation_ms": 7.40500699612312,
+      "speech_embedding_ms": 2461.4268139994238,
+      "graph_update_ms": 947.7415580040542,
+      "asr_segment_count": 13,
+      "speech_embedding_count": 13,
+      "voice_identity_count": 10,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 3433.240463011316
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3802.8926989936735,
+      "face_clustering_ms": 7.477363993530162,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 270,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3957.3157080012606
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_973>",
+        "<voice_870>",
+        "<voice_1071>",
+        "<voice_364>",
+        "<voice_1072>",
+        "<voice_1073>",
+        "<voice_1074>",
+        "<voice_1075>",
+        "<voice_1076>",
+        "<voice_366>"
+      ],
+      "context_preparation_ms": 4138.301872997545,
+      "vlm_ms": 324886.5401810035,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A woman in a black top sits at a table covered with a checkered cloth while another woman in white stands behind the table arranging flowers.\",\n\t\t\"A clapperboard and papers rest on the table in front of the seated woman.\",\n\t\t\"At 00:03, <voice_973> asks 'Should this be this one?'\",\n\t\t\"At 00:07, <voice_870> mentions 'Other cities.'\",\n\t\t\"At 00:09, <voice_973> asks 'So you just made me hold this one?'\",\n\t\t\"At 00:10, <voice_1071> states 'Then they opened a business back then.'\",\n\t\t\"At 00:13, <voice_364> responds 'Yeah, I got too much.'\",\n\t\t\"At 00:16, <voice_1072> says 'One by one.'\",\n\t\t\"At 00:17, <voice_1073> asks 'Is this one piece?'\",\n\t\t\"At 00:18, <voice_1074> says 'Then.'\",\n\t\t\"At 00:20, <voice_1075> asks 'Did I explain the card is one piece?'\",\n\t\t\"At 00:22, <voice_1076> remarks 'Huh, they don't know.'\",\n\t\t\"At 00:24, <voice_973> remarks 'Huh, don't know? Lu wan lu si.'\",\n\t\t\"At 00:28, <voice_366> says 'Buy everyone's anything.'\",\n\t\t\"The standing woman turns to a whiteboard and begins writing.\",\n\t\t\"The seated woman holds up a card with a red heart symbol.\",\n\t\t\"The camera wearer makes hand gestures near the clapperboard.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are engaged in a discussion regarding props and scripts, indicated by the clapperboard and card handling.\",\n\t\t\"MAI (<voice_973>, <voice_870>, <voice_1071>, <voice_364>, <voice_1072>, <voice_1073>, <voice_1074>, <voice_1075>, <voice_1076>, <voice_366>) is the primary speaker providing instructions or questions.\",\n\t\t\"The standing woman is preparing materials, including flowers and writing on a whiteboard.\",\n\t\t\"Visual identification of individuals is obscured due to face blurring.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A woman in a black top sits at a table covered with a checkered cloth while another woman in white stands behind the table arranging flowers.",
+          "A clapperboard and papers rest on the table in front of the seated woman.",
+          "At 00:03, <voice_973> asks 'Should this be this one?'",
+          "At 00:07, <voice_870> mentions 'Other cities.'",
+          "At 00:09, <voice_973> asks 'So you just made me hold this one?'",
+          "At 00:10, <voice_1071> states 'Then they opened a business back then.'",
+          "At 00:13, <voice_364> responds 'Yeah, I got too much.'",
+          "At 00:16, <voice_1072> says 'One by one.'",
+          "At 00:17, <voice_1073> asks 'Is this one piece?'",
+          "At 00:18, <voice_1074> says 'Then.'",
+          "At 00:20, <voice_1075> asks 'Did I explain the card is one piece?'",
+          "At 00:22, <voice_1076> remarks 'Huh, they don't know.'",
+          "At 00:24, <voice_973> remarks 'Huh, don't know? Lu wan lu si.'",
+          "At 00:28, <voice_366> says 'Buy everyone's anything.'",
+          "The standing woman turns to a whiteboard and begins writing.",
+          "The seated woman holds up a card with a red heart symbol.",
+          "The camera wearer makes hand gestures near the clapperboard."
+        ],
+        "high_level_conclusions": [
+          "The participants are engaged in a discussion regarding props and scripts, indicated by the clapperboard and card handling.",
+          "MAI (<voice_973>, <voice_870>, <voice_1071>, <voice_364>, <voice_1072>, <voice_1073>, <voice_1074>, <voice_1075>, <voice_1076>, <voice_366>) is the primary speaker providing instructions or questions.",
+          "The standing woman is preparing materials, including flowers and writing on a whiteboard.",
+          "Visual identification of individuals is obscured due to face blurring."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 83,
+          "call_id": "5c97eb8f-c22e-45b4-aa0b-b2d0d3a0126a",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789427328.613183,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A woman in a black top sits at a table covered with a checkered cloth while another woman in white stands behind the table arranging flowers.\",\n\t\t\"A clapperboard and papers rest on the table in front of the seated woman.\",\n\t\t\"At 00:03, <voice_973> asks 'Should this be this one?'\",\n\t\t\"At 00:07, <voice_870> mentions 'Other cities.'\",\n\t\t\"At 00:09, <voice_973> asks 'So you just made me hold this one?'\",\n\t\t\"At 00:10, <voice_1071> states 'Then they opened a business back then.'\",\n\t\t\"At 00:13, <voice_364> responds 'Yeah, I got too much.'\",\n\t\t\"At 00:16, <voice_1072> says 'One by one.'\",\n\t\t\"At 00:17, <voice_1073> asks 'Is this one piece?'\",\n\t\t\"At 00:18, <voice_1074> says 'Then.'\",\n\t\t\"At 00:20, <voice_1075> asks 'Did I explain the card is one piece?'\",\n\t\t\"At 00:22, <voice_1076> remarks 'Huh, they don't know.'\",\n\t\t\"At 00:24, <voice_973> remarks 'Huh, don't know? Lu wan lu si.'\",\n\t\t\"At 00:28, <voice_366> says 'Buy everyone's anything.'\",\n\t\t\"The standing woman turns to a whiteboard and begins writing.\",\n\t\t\"The seated woman holds up a card with a red heart symbol.\",\n\t\t\"The camera wearer makes hand gestures near the clapperboard.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are engaged in a discussion regarding props and scripts, indicated by the clapperboard and card handling.\",\n\t\t\"MAI (<voice_973>, <voice_870>, <voice_1071>, <voice_364>, <voice_1072>, <voice_1073>, <voice_1074>, <voice_1075>, <voice_1076>, <voice_366>) is the primary speaker providing instructions or questions.\",\n\t\t\"The standing woman is preparing materials, including flowers and writing on a whiteboard.\",\n\t\t\"Visual identification of individuals is obscured due to face blurring.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be held by someone sitting at a table.\n    *   There's a woman in a black top sitting at the table (let's call her Woman A). She is wearing glasses later on.\n    *   There's a woman standing behind the table, wearing white/light clothing (Woman B). She appears to be arranging flowers or working on something on the table.\n    *   There's a clapperboard on the table.\n    *   There's a checkered board on the wall.\n    *   The camera wearer (POV) is interacting with the clapperboard and sometimes holding a card with a red heart.\n    *   The faces are blurred out in most frames, but Woman A is clearly visible sitting down. Woman B is standing.\n*   **Voice Features:** All voices are labeled `<voice_973>`, `<voice_870>`, etc., and all ASR text starts with \"MAI:\". This suggests all these voice tracks belong to the same speaker named MAI. Wait, looking closely at the prompt instructions: \"Each feature has a unique ID... Some features may belong to the same character.\" However, the instruction also says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" And \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   Crucially, I need to check if there are multiple speakers. The ASR text consistently starts with \"MAI:\". This implies a single speaker named MAI is providing all these lines. Or perhaps the system has tagged them all under different IDs but they are the same person? The prompt says \"Some features may belong to the same character.\" But usually, in these tasks, if IDs are distinct like `<voice_973>` and `<voice_870>`, they might be treated as distinct entities unless explicitly linked. However, the ASR content is identical in style (\"MAI: ...\"). Let's look at the timestamps. They overlap slightly or follow sequentially.\n    *   Actually, looking at the ASR, it looks like a continuous conversation where the speaker is referred to as MAI. It's highly likely these are all the same person speaking. But the instruction says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech...\". This implies I should treat each ID as a potential speaker entity. However, since they all say \"MAI:\", it's safer to assume they are the same person, but I must use the specific IDs provided in the memory construction part.\n    *   Wait, the prompt asks for \"Video Description\" and \"High-Level Conclusions\". It doesn't explicitly ask for \"Memory\" in the final output JSON structure provided in the \"Output Format\" section. The Output Format only asks for `video_description` and `high_level_conclusions`.\n    *   Re-reading the first paragraph: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   The instruction block at the very beginning talks about \"constructing memory from the supplied character features\" and \"Voice features map exact IDs...\". This seems to be a system instruction for *how* to process the data internally or how to handle the IDs if I were generating memory. But the actual output format requested is just `video_description` and `high_level_conclusions`.\n    *   Wait, looking closer at the prompt structure: \"You will be given a video and a set of character features... Your task consists of two parts... Output Format: ... video_description ... high_level_conclusions\".\n    *   The initial instructions about \"Preserve speaker identity... construct memory...\" seem to be constraints on how I should interpret the voice data relative to the video description/conclusions, specifically regarding the IDs.\n    *   Specifically: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> This contradicts the Output Format which doesn't have a \"memory\" field.\n    *   Ah, I see. The prompt provided *two* sets of instructions. One at the very top (\"Preserve speaker identity...\") and one describing the task (\"You will be given a video...\"). The top one seems to be a system instruction overriding or guiding the behavior. But the bottom one defines the specific output schema.\n    *   Usually, in these scenarios, the \"Output Format\" section dictates the JSON structure. The top instructions might be context for *what* to put inside the descriptions/conclusions if they relate to speaker identity.\n    *   However, the top instruction says \"include at least one episodic memory\". The Output Format does *not* have a memory field. This is a conflict.\n    *   Let's look at the \"Output Format\" again. It asks for `video_description` and `high_level_conclusions`.\n    *   Maybe the \"episodic memory\" instruction applies to the `video_description`? No, it says \"include at least one episodic memory\".\n    *   Let's re-read carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   Okay, I will prioritize the explicit Output Format JSON schema. I will incorporate the speaker information into the descriptions and conclusions where appropriate, using the IDs provided. Since all voices say \"MAI:\", I will treat them as the same speaker MAI, but I need to reference the IDs if possible or just describe the action.\n    *   Wait, the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" might be a leftover from a different template. Given the strict JSON output requirement, I should focus on making the JSON valid. I will embed the relevant info in the `video_description` and `high_level_conclusions`.\n    *   Actually, looking at the instruction \"Preserve speaker identity when constructing memory from the supplied character features... Voice features map exact IDs... These IDs already identify the speakers; they remain usable even when no face features are supplied...\". This suggests I should use the IDs in my text generation if I am referencing the speaker.\n    *   But wait, the Output Format says: `\"high_level_conclusions\": [ \"...\", \"Equivalence: <face_1>, <voice_2>\" ]`. This confirms I should use voice IDs in the conclusions.\n    *   So, I will use the voice IDs in the `high_level_conclusions` to link the audio to the visual context (even though faces are blurred, I can infer who is speaking based on position or just state the voice ID).\n    *   Since all voices are \"MAI\", I can conclude that MAI is the primary speaker.\n    *   I need to check if there are face IDs. The input says \"Face features:\" but it's empty in the provided text! \"Face features:Voice features:...\". There are no face IDs provided.\n    *   Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   So I cannot write \"Equivalence: <face_x>, <voice_y>\". I must omit equivalence statements because no face IDs are supplied.\n    *   I must still use the voice IDs in the descriptions/conclusions to preserve identity as per the top instruction (\"retain that speaker's exact voice ID\").\n    *   So, in `video_description`, I will mention actions involving the speaker(s) using their voice IDs if possible, or just describe the visual actions. In `high_level_conclusions`, I will note the presence of the speaker MAI using the voice IDs.\n\n**2. Drafting Video Description:**\n*   Scene: A room with a table covered in a checkered cloth.\n*   People:\n    *   Person 1 (Woman A): Sitting at the table, wearing dark clothes, glasses appear later.\n    *   Person 2 (Woman B): Standing behind the table, wearing white, arranging flowers/greenery.\n    *   Camera Wearer (POV): Holding a clapperboard, interacting with cards.\n*   Action Sequence:\n    *   0.00 - 11.00: Woman A sits. Woman B stands arranging flowers. Clapperboard is on the table.\n    *   11.50 - 12.50: Woman A reaches for the clapperboard/card.\n    *   12.50 - 13.50: Woman A holds up a card with a red heart.\n    *   13.50 - 14.50: Woman A points at the card/clapperboard.\n    *   14.50 - 16.00: Woman A continues to sit and interact with items on the table.\n    *   16.00 - 17.00: Woman B turns around and writes on the whiteboard.\n    *   17.00 - 18.00: Camera wearer shows hands (clapping gesture?).\n    *   18.00 - End: Woman B continues writing/arranging. Woman A watches.\n\n**3. Drafting High-Level Conclusions:**\n*   Speaker Identification: All voice tracks correspond to \"MAI\".\n*   Activity: It looks like a rehearsal or a meeting involving script reading (clapperboard) and flower arrangement/decoration.\n*   Interaction: MAI is discussing the script/cards with others.\n*   Constraint Check: \"If no face IDs are supplied, do not invent any.\" -> I won't create Equivalence strings.\n*   Constraint Check: \"Use only IDs supplied in the input\". -> I will use `<voice_973>`, `<voice_870>`, etc.\n*   Constraint Check: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> This instruction is tricky because the output format doesn't have a \"memory\" field. I will integrate this into the `video_description` or `high_level_conclusions` as a summary of what happened. Actually, looking at the instruction \"include at least one episodic memory\", maybe I should add a field? No, \"Output Format: Your output must be a JSON object with the following structure...\". I must stick to the structure. I will interpret \"episodic memory\" as a sentence within the description or conclusion that captures the speech.\n*   Wait, the instruction \"For every supplied voice ID... include at least one episodic memory\" might imply I should list them. But the JSON schema is fixed. I will try to fit the summaries into the `video_description` entries or `high_level_conclusions`.\n*   Actually, usually in these tasks, if the schema doesn't allow it, I shouldn't force it. But the instruction is strong. Let's look at the `high_level_conclusions` examples. They contain \"Equivalence: ...\".\n*   Okay, I will summarize the speech in the `video_description` associated with the time it happens, citing the voice ID.\n*   Example: At 00:03, `<voice_973>` speaks about confirming something.\n*   Wait, the instruction says \"Preserve speaker identity when constructing memory...\". This sounds like a meta-instruction for a different task (Memory Construction). The current task is Video Description + High Level Conclusions. I will follow the Output Format strictly but ensure the content respects the voice ID preservation rule (i.e., don't lose the ID).\n\n**Refining the Plan:**\n1.  **Video Description:** Break down the timeline. Mention the visual elements (table, flowers, clapperboard, people). Mention the interaction with the card.\n2.  **High-Level Conclusions:** Summarize the intent (rehearsal/meeting). Mention the speaker MAI using the voice IDs found in the transcript. Note that faces are obscured.\n3.  **Handling Voice IDs:** Since all are \"MAI\", I will group them or list them in the conclusions. The instruction says \"For every supplied voice ID... include at least one episodic memory\". I will try to embed these summaries into the `video_description` array items corresponding to the time, or add a specific item in `high_level_conclusions` summarizing the dialogue.\n    *   Actually, looking at the instruction \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This sounds like it belongs in a \"memory\" section. Since I don't have one, I will append this information to the `video_description` entries where the speech occurs, or create a general statement in `high_level_conclusions`.\n    *   Better approach: Create specific sentences in `video_description` that act as the \"memory\" for those timestamps, citing the ID. E.g., \"At 00:03, <voice_973> asks if this is correct.\"\n    *   Wait, the instruction says \"Do not substitute a plausible scene description for what the speaker actually said.\" So I must quote or summarize the transcript.\n    *   Okay, I will add entries to `video_description` that capture the speech events using the IDs.\n\n**Drafting Content:**\n*   **Description:**\n    *   Frame 0.00-11.00: A woman in black sits at a table while another woman in white arranges flowers. A clapperboard rests on the table.\n    *   Frame 11.50-12.50: The seated woman interacts with the clapperboard and picks up a card.\n    *   Frame 12.50-13.50: The seated woman holds up a card featuring a red heart symbol.\n    *   Frame 13.50-14.50: The seated woman points towards the card and the clapperboard.\n    *   Frame 16.00-17.00: The standing woman turns to a whiteboard and begins writing.\n    *   Frame 17.00-18.00: The camera wearer makes hand gestures, possibly clapping.\n    *   Speech Integration:\n        *   00:03-00:07: `<voice_973>` asks \"Should this be this one?\"\n        *   00:09-00:11: `<voice_973>` asks \"So you just made me hold this one?\"\n        *   00:10-00:14: `<voice_1071>` mentions \"Then they opened a business back then.\"\n        *   00:13-00:15: `<voice_364>` says \"Yeah, I got too much.\"\n        *   00:16-00:18: `<voice_1072>` says \"One by one.\"\n        *   00:17-00:19: `<voice_1073>` asks \"Is this one piece?\"\n        *   00:20-00:22: `<voice_1075>` asks \"Did I explain the card is one piece?\"\n        *   00:24-00:28: `<voice_973>` says \"Huh, don't know? Naked dead.\" (Wait, \"Naked dead\"? The ASR says \"露完露死\" which might be \"Lu wan lu si\" -> \"Exposed completely exposed dead\"? Or maybe \"Luo wan lu si\"? It's likely \"Luo wan lu si\" meaning \"Exposure is over\" or similar slang, but I must transcribe faithfully. \"露完露死\" -> \"lu wan lu si\". I will quote it.)\n        *   00:28-00:30: `<voice_366>` says \"Buy everyone's anything.\"\n\n*   **Conclusions:**\n    *   The group appears to be rehearsing or planning something involving props (card, clapperboard) and flowers.\n    *   MAI (identified via `<voice_973>`, `<voice_870>`, etc.) is actively directing or questioning the details of the setup.\n    *   The standing woman is preparing materials (flowers, whiteboard).\n    *   Faces are blurred, preventing visual identification.\n\n**Final Check on Constraints:**\n*   \"Preserve speaker identity... using the exact ID as the speaker.\" -> Done in descriptions.\n*   \"Do not replace the ID with 'a speaker'...\" -> Done.\n*   \"If no face IDs are supplied, do not invent any.\" -> Correct, no Equivalence lines.\n*   \"Keep dialogue grounded in the provided transcript.\" -> Will quote/summarize accurately.\n*   \"Output Format: JSON object\".\n\nLet's refine the `video_description` to be atomic events. I'll combine visual and auditory events where they align.\nActually, the instruction \"For every supplied voice ID... include at least one episodic memory\" suggests I should make sure the speech is captured. I will add specific lines to the `video_description` array for the speech parts.\n\nWait, looking at the instruction \"Your output must be a JSON object with the following structure...\".\nI need to make sure I don't add extra fields.\nI will structure the `video_description` to cover the visual flow and intersperse the speech summaries as atomic facts.\n\nOne detail: \"A voice ID does not establish which visible person is speaking.\" I should be careful not to say \"Woman A spoke\". I will say \"A participant identified as MAI (<voice_ID>) spoke...\". Or simply cite the ID in the context of the event.\nActually, since I can't confirm who spoke visually, I will attribute the speech to the ID directly in the text. e.g., \"At 00:03, <voice_973> asks...\"\n\nLet's assemble the JSON.\n\n**Video Description Items:**\n1.  A woman in a black top sits at a table covered with a checkered cloth, while another woman in white stands behind the table arranging flowers.\n2.  A clapperboard and various papers rest on the table in front of the seated woman.\n3.  At 00:03, <voice_973> asks \"Should this be this one?\".\n4.  At 00:09, <voice_973> asks \"So you just made me hold this one?\".\n5.  At 00:10, <voice_1071> states \"Then they opened a business back then.\"\n6.  At 00:13, <voice_364> responds \"Yeah, I got too much.\"\n7.  At 00:16, <voice_1072> says \"One by one.\"\n8.  At 00:17, <voice_1073> asks \"Is this one piece?\".\n9.  At 00:20, <voice_1075> asks \"Did I explain the card is one piece?\".\n10. At 00:24, <voice_973> remarks \"Huh, don't know? Naked dead.\"\n11. At 00:28, <voice_366> says \"Buy everyone's anything.\"\n12. The standing woman turns to a whiteboard and begins writing.\n13. The seated woman holds up a card with a red heart symbol.\n14. The camera wearer makes hand gestures near the clapperboard.\n\n**High-Level Conclusions:**\n1.  The participants are engaged in a discussion regarding props and scripts, indicated by the clapperboard and card handling.\n2.  MAI (<voice_973>, <voice_870>, <voice_1071>, <voice_364>, <voice_1072>, <voice_1073>, <voice_1074>, <voice_1075>, <voice_1076>, <voice_366>) is the primary speaker providing instructions or questions.\n3.  The standing woman is preparing materials, including flowers and writing on a whiteboard.\n4.  Visual identification of individuals is obscured due to face blurring.\n\nWait, I need to check the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSince I am putting these into `video_description`, that counts as including the memory in the output structure provided.\nAlso, I need to make sure I don't miss any IDs.\nIDs used: 973, 870, 1071, 364, 1072, 1073, 1074, 1075, 1076, 366.\nI have included most in the draft above. I missed 870, 1074, 1076.\nI will add them to the description.\n00:07: <voice_870> says \"Other cities.\"\n00:18: <voice_1074> says \"Then.\"\n00:22: <voice_1076> says \"Huh, they don't know.\"\n\nOkay, I will integrate these.\n\nOne more thing: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nThis instruction is quite specific about \"memory\". Since I don't have a memory field, I will assume the `video_description` serves this purpose for the output format given.\n\nLet's finalize the JSON content.\n\n```json\n{\n  \"video_description\": [\n    \"A woman in a black top sits at a table covered with a checkered cloth while another woman in white stands behind the table arranging flowers.\",\n    \"A clapperboard and papers rest on the table in front of the seated woman.\",\n    \"At 00:03, <voice_973> asks 'Should this be this one?'\",\n    \"At 00:07, <voice_870> mentions 'Other cities.'\",\n    \"At 00:09, <voice_973> asks 'So you just made me hold this one?'\",\n    \"At 00:10, <voice_1071> states 'Then they opened a business back then.'\",\n    \"At 00:13, <voice_364> responds 'Yeah, I got too much.'\",\n    \"At 00:16, <voice_1072> says 'One by one.'\",\n    \"At 00:17, <voice_1073> asks 'Is this one piece?'\",\n    \"At 00:18, <voice_1074> says 'Then.'\",\n    \"At 00:20, <voice_1075> asks 'Did I explain the card is one piece?'\",\n    \"At 00:22, <voice_1076> remarks 'Huh, they don't know.'\",\n    \"At 00:24, <voice_973> remarks 'Huh, don't know? Naked dead.'\",\n    \"At 00:28, <voice_366> says 'Buy everyone's anything.'\",\n    \"The standing woman turns to a whiteboard and begins writing.\",\n    \"The seated woman holds up a card with a red heart symbol.\",\n    \"The camera wearer makes hand gestures near the clapperboard.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a discussion regarding props and scripts, indicated by the clapperboard and card handling.\",\n    \"MAI (<voice_973>, <voice_870>, <voice_1071>, <voice_364>, <voice_1072>, <voice_1073>, <voice_1074>, <voice_1075>, <voice_1076>, <voice_366>) is the primary speaker providing instructions or questions.\",\n    \"The standing woman is preparing materials, including flowers and writing on a whiteboard.\",\n    \"Visual identification of individuals is obscured due to face blurring.\"\n  ]\n}\n```\nWait, I need to check the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nMy draft includes this in `video_description`.\nHowever, I should check if I need to put them in `high_level_conclusions` instead? \"include at least one episodic memory\". An episodic memory is usually a narrative event. Putting it in `video_description` fits better as it describes the event.\nBut wait, the instruction says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" This supports putting it in conclusions too.\nI will keep them in `video_description` as atomic events to satisfy the \"episodic memory\" requirement (describing the event of speaking).\nAlso, I need to ensure I don't violate \"Do not substitute a plausible scene description for what the speaker actually said.\" My descriptions quote the ASR directly.\n\nOne correction: \"Naked dead\" is a literal translation of \"露完露死\". I should probably keep it faithful to the ASR provided in the prompt. The prompt ASR is: \"MAI: \\u54e6\\uff0c\\u4e0d\\u77e5\\u9053\\u5417\\uff1f\\u9732\\u5b8c\\u9732\\u6b7b\\u3002\". Decoded: \"MAI: Huh, don't know? Lu wan lu si.\" I will use the decoded text. \"Lu wan lu si\" is likely \"Exposed completely exposed dead\" or similar. I will use the Chinese characters if possible or the phonetic approximation. The prompt provides ASR in unicode. I should probably output the text as provided or translated. The instruction says \"quotes or faithfully summarizes\". I will quote the ASR text provided in the prompt (decoded).\nASR: \"MAI: \\u54e6\\uff0c\\u4e0d\\u77e5\\u9053\\u5417\\uff1f\\u9732\\u5b8c\\u9732\\u6b7b\\u3002\" -> \"MAI: 呵，不知道吗？露完露死。\"\nI will use the readable text.\n\nWait, I need to check if I should merge the voice IDs into the conclusions. \"For every supplied voice ID... include at least one episodic memory\". This implies I need to list them. I have done so in the description.\nIn the conclusions, I summarized them as \"MAI (<voice_...>)\". This satisfies \"retain that speaker's exact voice ID\".\n\nOne detail: \"If no face IDs are supplied, do not invent any.\" -> I did not invent any.\n\"Use only IDs supplied in the input; do not copy example IDs from instructions.\" -> I used the IDs from the input.\n\nFinal check on JSON validity.\nKeys: \"video_description\", \"high_level_conclusions\".\nValues: Arrays of strings.\nNo trailing commas.\nQuotes escaped properly.\n\nOne small adjustment: The instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". I have done this for each ID in the video_description.\nI will ensure the order of IDs matches the input roughly or just covers all.\nInput IDs: 973, 870, 1071, 364, 1072, 1073, 1074, 1075, 1076, 366.\nMy list covers all.\n\nOne more check: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nThis instruction is at the very top. It seems to override the standard task description. It says \"Your task consists of two parts...\". This is contradictory.\nUsually, the top block is the system prompt defining the persona/rules, and the middle block is the specific task instance.\nThe system prompt says \"Preserve speaker identity...\".\nThe task instance says \"Your task consists of two parts...\".\nI will follow the Task Instance's Output Format but adhere to the System Prompt's rules about IDs.\nThe System Prompt says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\nSince I don't have a \"memory\" field, I will treat the `video_description` entries containing the speech as the \"episodic memories\".\n\nWait, I should check if I can put the memory in `high_level_conclusions`.\n\"High-Level Conclusions: Generate high-level reasoning-based conclusions that go beyond surface-level observations.\"\nAn episodic memory of speech is more of a description than a conclusion.\nSo `video_description` is the right place.\n\nOkay, ready to generate.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A woman in a black top sits at a table covered with a checkered cloth while another woman in white stands behind the table arranging flowers.\",\n\t\t\"A clapperboard and papers rest on the table in front of the seated woman.\",\n\t\t\"At 00:03, <voice_973> asks 'Should this be this one?'\",\n\t\t\"At 00:07, <voice_870> mentions 'Other cities.'\",\n\t\t\"At 00:09, <voice_973> asks 'So you just made me hold this one?'\",\n\t\t\"At 00:10, <voice_1071> states 'Then they opened a business back then.'\",\n\t\t\"At 00:13, <voice_364> responds 'Yeah, I got too much.'\",\n\t\t\"At 00:16, <voice_1072> says 'One by one.'\",\n\t\t\"At 00:17, <voice_1073> asks 'Is this one piece?'\",\n\t\t\"At 00:18, <voice_1074> says 'Then.'\",\n\t\t\"At 00:20, <voice_1075> asks 'Did I explain the card is one piece?'\",\n\t\t\"At 00:22, <voice_1076> remarks 'Huh, they don't know.'\",\n\t\t\"At 00:24, <voice_973> remarks 'Huh, don't know? Lu wan lu si.'\",\n\t\t\"At 00:28, <voice_366> says 'Buy everyone's anything.'\",\n\t\t\"The standing woman turns to a whiteboard and begins writing.\",\n\t\t\"The seated woman holds up a card with a red heart symbol.\",\n\t\t\"The camera wearer makes hand gestures near the clapperboard.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are engaged in a discussion regarding props and scripts, indicated by the clapperboard and card handling.\",\n\t\t\"MAI (<voice_973>, <voice_870>, <voice_1071>, <voice_364>, <voice_1072>, <voice_1073>, <voice_1074>, <voice_1075>, <voice_1076>, <voice_366>) is the primary speaker providing instructions or questions.\",\n\t\t\"The standing woman is preparing materials, including flowers and writing on a whiteboard.\",\n\t\t\"Visual identification of individuals is obscured due to face blurring.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 11019,
+          "output_tokens": 7110,
+          "total_tokens": 18129,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.001944004907272756,
+            "media_preparation_ms": 51.748621990554966,
+            "processor_tokenization_ms": 317.05294099811,
+            "device_transfer_ms": 41.136210013064556,
+            "cuda_generation_ms": 324440.4620520072,
+            "decoding_ms": 4.838412991375662
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 324855.43532000156,
+          "request_end": 1789427653.4997258,
+          "latency_ms": 324886.5401810035,
+          "client_wall_clock_latency_ms": 324886.5401810035
+        }
+      ],
+      "episodic_memory_count": 17,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 17,
+      "text_embedding_ms": null,
+      "text_embedding_count": 17,
+      "graph_update_ms": 0.15767601144034415,
+      "nodes_added": 17,
+      "directed_edges_added": 24,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.12970500392839313,
+      "nodes_added": 4,
+      "directed_edges_added": 20,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 13,
+    "speech_embeddings": 13,
+    "voice_identities": 10,
+    "detected_faces": 270,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 17,
+    "semantic_memories": 4,
+    "nodes_after_clip": 1098,
+    "edges_after_clip": 390,
+    "nodes_added_by_clip": 27,
+    "edges_added_by_clip": 22
+  },
+  "generated_memory": {
+    "video_description": [
+      "A woman in a black top sits at a table covered with a checkered cloth while another woman in white stands behind the table arranging flowers.",
+      "A clapperboard and papers rest on the table in front of the seated woman.",
+      "At 00:03, <voice_973> asks 'Should this be this one?'",
+      "At 00:07, <voice_870> mentions 'Other cities.'",
+      "At 00:09, <voice_973> asks 'So you just made me hold this one?'",
+      "At 00:10, <voice_1071> states 'Then they opened a business back then.'",
+      "At 00:13, <voice_364> responds 'Yeah, I got too much.'",
+      "At 00:16, <voice_1072> says 'One by one.'",
+      "At 00:17, <voice_1073> asks 'Is this one piece?'",
+      "At 00:18, <voice_1074> says 'Then.'",
+      "At 00:20, <voice_1075> asks 'Did I explain the card is one piece?'",
+      "At 00:22, <voice_1076> remarks 'Huh, they don't know.'",
+      "At 00:24, <voice_973> remarks 'Huh, don't know? Lu wan lu si.'",
+      "At 00:28, <voice_366> says 'Buy everyone's anything.'",
+      "The standing woman turns to a whiteboard and begins writing.",
+      "The seated woman holds up a card with a red heart symbol.",
+      "The camera wearer makes hand gestures near the clapperboard."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a discussion regarding props and scripts, indicated by the clapperboard and card handling.",
+      "MAI (<voice_973>, <voice_870>, <voice_1071>, <voice_364>, <voice_1072>, <voice_1073>, <voice_1074>, <voice_1075>, <voice_1076>, <voice_366>) is the primary speaker providing instructions or questions.",
+      "The standing woman is preparing materials, including flowers and writing on a whiteboard.",
+      "Visual identification of individuals is obscured due to face blurring."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A woman in a black top sits at a table covered with a checkered cloth while another woman in white stands behind the table arranging flowers.",
+      "A clapperboard and papers rest on the table in front of the seated woman.",
+      "At 00:03, <voice_973> asks 'Should this be this one?'",
+      "At 00:07, <voice_870> mentions 'Other cities.'",
+      "At 00:09, <voice_973> asks 'So you just made me hold this one?'",
+      "At 00:10, <voice_1071> states 'Then they opened a business back then.'",
+      "At 00:13, <voice_364> responds 'Yeah, I got too much.'",
+      "At 00:16, <voice_1072> says 'One by one.'",
+      "At 00:17, <voice_1073> asks 'Is this one piece?'",
+      "At 00:18, <voice_1074> says 'Then.'",
+      "At 00:20, <voice_1075> asks 'Did I explain the card is one piece?'",
+      "At 00:22, <voice_1076> remarks 'Huh, they don't know.'",
+      "At 00:24, <voice_973> remarks 'Huh, don't know? Lu wan lu si.'",
+      "At 00:28, <voice_366> says 'Buy everyone's anything.'",
+      "The standing woman turns to a whiteboard and begins writing.",
+      "The seated woman holds up a card with a red heart symbol.",
+      "The camera wearer makes hand gestures near the clapperboard."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a discussion regarding props and scripts, indicated by the clapperboard and card handling.",
+      "MAI (<voice_973>, <voice_870>, <voice_1071>, <voice_364>, <voice_1072>, <voice_1073>, <voice_1074>, <voice_1075>, <voice_1076>, <voice_366>) is the primary speaker providing instructions or questions.",
+      "The standing woman is preparing materials, including flowers and writing on a whiteboard.",
+      "Visual identification of individuals is obscured due to face blurring."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_83_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 27,
+    "edges_added": 22,
+    "nodes": [
+      {
+        "id": 1071,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 然后他们当年大榕树开业的时候搞了一个。",
+            "MAI: 拍卖。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1072,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 一个一个一个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1073,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 这就一份吗？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1074,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 然后"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1075,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我说明信片就一份吗？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1076,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 哦，他们不知道。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1077,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a black top sits at a table covered with a checkered cloth while another woman in white stands behind the table arranging flowers."
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1078,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard and papers rest on the table in front of the seated woman."
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1079,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:03, <voice_973> asks 'Should this be this one?'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1080,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:07, <voice_870> mentions 'Other cities.'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1081,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:09, <voice_973> asks 'So you just made me hold this one?'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1082,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:10, <voice_1071> states 'Then they opened a business back then.'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1083,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:13, <voice_364> responds 'Yeah, I got too much.'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1084,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:16, <voice_1072> says 'One by one.'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1085,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:17, <voice_1073> asks 'Is this one piece?'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1086,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:18, <voice_1074> says 'Then.'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1087,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:20, <voice_1075> asks 'Did I explain the card is one piece?'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1088,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:22, <voice_1076> remarks 'Huh, they don't know.'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1089,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:24, <voice_973> remarks 'Huh, don't know? Lu wan lu si.'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1090,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:28, <voice_366> says 'Buy everyone's anything.'"
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1091,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The standing woman turns to a whiteboard and begins writing."
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1092,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The seated woman holds up a card with a red heart symbol."
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1093,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer makes hand gestures near the clapperboard."
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1094,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are engaged in a discussion regarding props and scripts, indicated by the clapperboard and card handling."
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1095,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_973>, <voice_870>, <voice_1071>, <voice_364>, <voice_1072>, <voice_1073>, <voice_1074>, <voice_1075>, <voice_1076>, <voice_366>) is the primary speaker providing instructions or questions."
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1096,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The standing woman is preparing materials, including flowers and writing on a whiteboard."
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1097,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Visual identification of individuals is obscured due to face blurring."
+          ],
+          "timestamp": 83
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 364,
+        "target": 1083,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 364,
+        "target": 1095,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 366,
+        "target": 1090,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 366,
+        "target": 1095,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 870,
+        "target": 1080,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 870,
+        "target": 1095,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 973,
+        "target": 1079,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 973,
+        "target": 1081,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 973,
+        "target": 1089,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 973,
+        "target": 1095,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1071,
+        "target": 1082,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1071,
+        "target": 1095,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1072,
+        "target": 1084,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1072,
+        "target": 1095,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1073,
+        "target": 1085,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1073,
+        "target": 1095,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1074,
+        "target": 1086,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1074,
+        "target": 1095,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1075,
+        "target": 1087,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1075,
+        "target": 1095,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1076,
+        "target": 1088,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1076,
+        "target": 1095,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_83_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_83_graph.pkl"
+  },
+  "memory_pickle_bytes": 26136906,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 68151.427420802,
+    "prepared_perf": 68158.054033591,
+    "ordered_start_perf": 68502.060489663,
+    "consumer_wait_ms": 0.010920994100160897,
+    "ready_to_ordered_ms": 344006.4560719911,
+    "preparation_work_ms": 6621.317495999392,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 337343.7021810096
+}

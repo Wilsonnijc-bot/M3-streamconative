@@ -1,0 +1,451 @@
+{
+  "clip_id": 65,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0065.mp4",
+  "end_to_end_memory_generation_ms": 555297.0967389992,
+  "latency_ms": {
+    "clip_decode": 4561.571133999678,
+    "deepgram_asr": 2.1659819976775907,
+    "mai_transcribe_asr": 2.4184779977076687,
+    "asr_total": 3.7429669973789714,
+    "audio_segmentation": 8.045902999583632,
+    "speech_embedding_campplus": 1007.9358969960595,
+    "facial_detection_recognition_buffalo_l": 3133.7747310026316,
+    "face_clustering": 6.505496996396687,
+    "vlm_memory_generation": 201908.68834799767,
+    "text_embedding": 526.0419289988931,
+    "graph_update_total": 367.0870800051489
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 65,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 1125,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789424149.6618705,
+          "status": "success",
+          "total_tokens": 222,
+          "request_end": 1789424150.1877148,
+          "latency_ms": 525.8448679960566
+        }
+      ],
+      "total_tokens": 222,
+      "latency_ms": 526.0419289988931
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.1659819976775907,
+        "openrouter-mai-transcribe-2": 2.4184779977076687
+      },
+      "asr_total_ms": 3.7429669973789714,
+      "audio_segmentation_ms": 8.045902999583632,
+      "speech_embedding_ms": 1007.9358969960595,
+      "graph_update_ms": 363.51921900495654,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 2,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1398.3223690011073
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3133.7747310026316,
+      "face_clustering_ms": 6.505496996396687,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 237,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3267.4709060011082
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_339>",
+        "<voice_841>"
+      ],
+      "context_preparation_ms": 4150.87185199809,
+      "vlm_ms": 201908.68834799767,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people gathers around a wooden table covered with a checkered cloth in a room equipped with lighting equipment.\",\n\t\t\"A clapperboard rests on the table alongside a water bottle and other miscellaneous items.\",\n\t\t\"A man stands near a whiteboard, gesturing as he addresses the seated participants.\",\n\t\t\"Two women sit at the table, observing the discussion.\",\n\t\t\"The camera pans to the right, revealing a kitchen area with a large window and a view of an exterior building.\",\n\t\t\"The camera returns to the group as the man continues to speak and point at the whiteboard.\",\n\t\t\"The perspective shifts to a first-person view, showing hands resting on a patterned bag on the floor.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are collaborating on a creative project involving film or drama, evidenced by the clapperboard and whiteboard.\",\n\t\t\"<voice_339> proposes using paper boxes for a theme, citing their environmental friendliness and suitability for the project.\",\n\t\t\"<voice_339> suggests organizing a short play or drama, recalling previous filming activities with a friend.\",\n\t\t\"<voice_841> acknowledges purchasing materials but states that a completed script for a short drama is not yet available.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people gathers around a wooden table covered with a checkered cloth in a room equipped with lighting equipment.",
+          "A clapperboard rests on the table alongside a water bottle and other miscellaneous items.",
+          "A man stands near a whiteboard, gesturing as he addresses the seated participants.",
+          "Two women sit at the table, observing the discussion.",
+          "The camera pans to the right, revealing a kitchen area with a large window and a view of an exterior building.",
+          "The camera returns to the group as the man continues to speak and point at the whiteboard.",
+          "The perspective shifts to a first-person view, showing hands resting on a patterned bag on the floor."
+        ],
+        "high_level_conclusions": [
+          "The participants are collaborating on a creative project involving film or drama, evidenced by the clapperboard and whiteboard.",
+          "<voice_339> proposes using paper boxes for a theme, citing their environmental friendliness and suitability for the project.",
+          "<voice_339> suggests organizing a short play or drama, recalling previous filming activities with a friend.",
+          "<voice_841> acknowledges purchasing materials but states that a completed script for a short drama is not yet available."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 65,
+          "call_id": "1d2d2b1e-45d0-484b-90e1-636c992db3cf",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789423947.7519517,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people gathers around a wooden table covered with a checkered cloth in a room equipped with lighting equipment.\",\n\t\t\"A clapperboard rests on the table alongside a water bottle and other miscellaneous items.\",\n\t\t\"A man stands near a whiteboard, gesturing as he addresses the seated participants.\",\n\t\t\"Two women sit at the table, observing the discussion.\",\n\t\t\"The camera pans to the right, revealing a kitchen area with a large window and a view of an exterior building.\",\n\t\t\"The camera returns to the group as the man continues to speak and point at the whiteboard.\",\n\t\t\"The perspective shifts to a first-person view, showing hands resting on a patterned bag on the floor.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are collaborating on a creative project involving film or drama, evidenced by the clapperboard and whiteboard.\",\n\t\t\"<voice_339> proposes using paper boxes for a theme, citing their environmental friendliness and suitability for the project.\",\n\t\t\"<voice_339> suggests organizing a short play or drama, recalling previous filming activities with a friend.\",\n\t\t\"<voice_841> acknowledges purchasing materials but states that a completed script for a short drama is not yet available.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**Input Analysis:**\n*   **Video Frames:**\n    *   The video shows a group of people gathered around a table in what looks like a living room or studio space.\n    *   There is a clapperboard on the table, suggesting filming or rehearsal.\n    *   One person (let's call them Person A, standing near the whiteboard) seems to be leading or explaining something.\n    *   Another person (Person B, sitting) is listening.\n    *   Two women (Person C and Person D) are also present, one standing near the window/kitchen area, one sitting.\n    *   The camera moves around, showing different angles of the room, including a kitchen area and a hallway.\n    *   At the end, the camera seems to be held by someone sitting at the table (POV shot).\n    *   Faces are blurred in most frames, but there are distinct individuals.\n    *   There is a projector screen and lighting equipment visible, indicating a film set or rehearsal space.\n*   **Voice Features:**\n    *   `<voice_339>`: Spoken by \"MAI\". Content discusses ideas for a project involving paper boxes, environmental themes, and making a short movie/drama. Mentions filming with a friend named Xiao You.\n    *   `<voice_841>`: Also spoken by \"MAI\". Confirms buying something (\"Bought it\"). Discusses difficulty in planning a short drama script right now.\n    *   Note: The ASR text contains Chinese characters. I need to translate or summarize these accurately while preserving the speaker ID.\n    *   Speaker ID: MAI corresponds to `<voice_339>` and `<voice_841>`. Wait, looking closely at the prompt instructions: \"For every supplied voice ID with nonempty speech, include at least one episodic memory... using the exact ID as the speaker.\"\n    *   The voice features list `<voice_339>` and `<voice_841>`. Both seem to be attributed to \"MAI\" in the ASR text (`MAI: ...`). This implies MAI is the speaker for both IDs. However, usually, voice IDs correspond to specific audio tracks. The instruction says \"Use only IDs supplied in the input\". So I must use `<voice_339>` and `<voice_841>`.\n    *   Wait, the instruction says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   The prompt asks to preserve speaker identity. The ASR explicitly labels the speaker as \"MAI\". But the IDs are `<voice_339>` and `<voice_841>`. I should probably treat the speaker as the entity associated with these IDs. Since the ASR says \"MAI:\", I can infer MAI is the name, but the instruction emphasizes using the *exact ID*. Let's look at the instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So, instead of saying \"MAI said...\", I should say \"<voice_339> said...\" or similar, ensuring the ID is used as the identifier.\n    *   Actually, looking at the instruction: \"Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\"\n    *   So in the memory/conclusion, I should reference `<voice_339>` and `<voice_841>`.\n\n**Task Breakdown:**\n1.  **Video Description:**\n    *   Describe the scene: Group discussion around a table with a clapperboard.\n    *   Mention the setting: Room with kitchen access, lighting equipment, projector screen.\n    *   Describe actions: People talking, looking at a whiteboard, camera movement exploring the room.\n    *   Identify entities using IDs where possible (though faces are blurred, I can't link IDs to faces definitively without explicit mapping, so I'll describe the visual action and mention the voice speakers if relevant to the action).\n    *   Since I don't have explicit Face IDs mapped to names in the input (only voice IDs), I will describe the visual elements generally but ensure the voice descriptions use the correct IDs.\n    *   Wait, the prompt says \"Each feature is either a face... or a voice...\". The input provided *only* lists \"Voice features:\". It does *not* provide \"Face features:\" in the text block, although the header says \"Face features:Voice features:\". The actual content under \"Face features:\" is empty.\n    *   Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   Okay, so I cannot link `<voice_339>` to a specific person visually. I just know a voice exists.\n    *   Video description needs to be atomic events.\n    *   High-level conclusions need to reason about intentions/identities. Since I can't confirm who is who visually, I can conclude about the activity (planning a film/project).\n\n2.  **High-Level Conclusions:**\n    *   Reasoning: They are discussing a creative project (short film/drama).\n    *   Intent: Planning, brainstorming.\n    *   Identity: The speaker `<voice_339>` and `<voice_841>` are the same person (MAI) based on the ASR prefix, but technically they are separate voice IDs. I should note the conversation flow.\n    *   Constraint: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face IDs are provided, I cannot create Equivalence statements. I will skip this part or leave it empty if strictly required, but the schema allows empty arrays/lists. Wait, the instruction says \"Generate high-level reasoning-based conclusions... If a face and a voice feature refer to the same character...\". Since no face features are supplied, I won't add Equivalence lines.\n\n**Drafting Video Description:**\n*   Frame 0-6: Group gathered around a table with a clapperboard. A man stands near a whiteboard. Two women are seated/standing nearby. Lighting equipment is visible.\n*   Frame 7-12: Camera pans to show a kitchen area and hallway.\n*   Frame 13-29: Camera returns to the group. The man gestures towards the whiteboard. The camera zooms in on the table items (clapperboard, flowers, papers).\n*   Voice integration: I need to make sure the description reflects the conversation happening.\n*   Atomic events:\n    *   A group of people gather around a wooden table covered with a checkered cloth in a room equipped with film production gear.\n    *   A clapperboard rests on the table alongside various props and documents.\n    *   A man stands near a whiteboard, appearing to lead a discussion or presentation.\n    *   Two women sit at the table, observing the interaction.\n    *   The camera operator moves through the room, revealing a kitchen area adjacent to the main gathering space.\n    *   The view shifts back to the group as the man continues to speak and gesture.\n    *   The camera focuses on the hands resting on a patterned bag on the floor.\n\n**Drafting High-Level Conclusions:**\n*   The group appears to be brainstorming ideas for a film or drama project, indicated by the clapperboard and whiteboard.\n*   The speaker `<voice_339>` suggests using paper boxes for a theme related to the environment.\n*   The speaker `<voice_841>` mentions difficulties in scripting a short drama currently.\n*   Since no face IDs are provided, I cannot state equivalences.\n\n**Refining Voice Memory/Conclusions:**\n*   Instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   This applies to the `high_level_conclusions`? Or `video_description`?\n*   Looking at the Output Format: `video_description` is a list of strings. `high_level_conclusions` is a list of strings.\n*   The instruction says: \"For every supplied voice ID... include at least one episodic memory...\". Usually, \"episodic memory\" implies a summary of what happened/said. Given the JSON structure, this likely belongs in `high_level_conclusions` or potentially mixed into `video_description` if it describes an event. However, standard practice for these tasks often puts the \"memory\" (summary of speech/action) in the conclusions or description.\n*   Re-reading: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions... Generate high-level reasoning-based conclusions...\".\n*   The instruction \"For every supplied voice ID... include at least one episodic memory...\" seems to apply to the overall output generation process regarding how to handle the voice data.\n*   Let's look at the example/output format again. It doesn't explicitly say where the memory goes, but `high_level_conclusions` is for \"reasoning-based conclusions\". `video_description` is for \"observable and inferable events\".\n*   Summarizing speech is better suited for `high_level_conclusions` as it interprets the meaning.\n*   However, the instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\n*   I will put the summaries in `high_level_conclusions` as they represent the \"conclusions\" drawn from the audio.\n*   Wait, the instruction says \"Preserve speaker identity when constructing memory...\".\n*   Okay, I will construct sentences in `high_level_conclusions` that summarize the speech using the IDs.\n\n**Revised Plan:**\n*   **Video Description:** Focus on visual actions. Mention the group, the table, the clapperboard, the camera movement, the room layout. Do not attribute speech to specific visual people since face IDs are missing.\n*   **High-Level Conclusions:**\n    *   Summarize `<voice_339>`'s statement about paper boxes and environmental themes.\n    *   Summarize `<voice_841>`'s statement about buying something and the difficulty of writing scripts.\n    *   Infer the context: Film production planning/rehearsal.\n\n**Specific Constraints Check:**\n*   \"Do not replace the ID with 'a speaker'...\" -> Must use `<voice_339>`, `<voice_841>`.\n*   \"If no face IDs are supplied, do not invent any.\" -> Correct.\n*   \"Keep dialogue grounded in the provided transcript.\" -> Use the ASR text.\n\n**ASR Translation/Summary:**\n*   `<voice_339>`: \"Yes, that makes sense. I think it would be nice to arrive here in time. Definitely there will be many paper boxes, if we say it directly uses the words, it's quite environmentally friendly, very suitable for this planet's theme. Finally there is another idea, but implementing this idea is relatively difficult. I originally thought everyone could simply arrange a short play or something like that. Yes, because before I had a friend said we filmed some movies.\"\n*   `<voice_841>`: \"Bought it. But if we want to arrange a short drama, it is I am currently still haven't thought of a finished us currently.\" (Translation is rough, sticking closer to original text for accuracy). Original: \"买了。但是如果要排一个小短剧的话，就是我现在暂时还没有想到一个成品我们目前。\" -> \"Bought it. But if we want to stage a short drama, I currently haven't thought of a finished product for us yet.\"\n\n**Final Polish of JSON:**\n*   Ensure valid JSON syntax.\n*   Ensure no markdown outside the JSON block.\n*   Ensure speaker IDs are used correctly.\n\nOne detail: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". I will ensure this is reflected in the conclusions.\n\nLet's write the descriptions.\nVideo Description:\n1. A group of people are gathered around a wooden table covered with a red and white checkered tablecloth in a room.\n2. A clapperboard sits prominently on the table along with a water bottle and other small items.\n3. A man stands near a whiteboard, gesturing as if explaining a concept to the others.\n4. Two women are seated at the table, listening attentively to the discussion.\n5. The camera pans away from the group to reveal a kitchen area with a large window overlooking a building.\n6. The camera then returns to the group, focusing on the man continuing his explanation.\n7. The camera angle shifts to a first-person perspective, showing hands resting on a patterned bag on the floor.\n\nHigh Level Conclusions:\n1. The group is engaged in a collaborative session, likely planning a film or theater production given the presence of a clapperboard and whiteboard.\n2. <voice_339> suggests utilizing paper boxes for a project theme, noting its environmental suitability and ease of direct usage.\n3. <voice_339> proposes organizing a short play or drama, referencing past experiences of filming with a friend.\n4. <voice_841> confirms acquiring necessary items but expresses uncertainty about finalizing a script for a short drama at this moment.\n\nWait, I need to check if I should merge the voice summaries into the video description or keep them separate. The instruction says \"For every supplied voice ID... include at least one episodic memory...\". It doesn't specify which array. However, `high_level_conclusions` is defined as \"reasoning-based conclusions... Go beyond surface-level observations.\" Summarizing speech is borderline. `video_description` is \"observable and inferable events.\" Speech is an event.\nHowever, usually, in these tasks, the \"memory\" refers to the content generated in the response.\nLet's look at the instruction again: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nAnd \"For every supplied voice ID... include at least one episodic memory...\".\nI will place the summaries in `high_level_conclusions` as they interpret the content. Or I can put them in `video_description` as \"Speaker X says Y\".\nActually, looking at the instruction \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID... include at least one episodic memory...\".\nI will integrate the speech summaries into the `high_level_conclusions` to ensure they are captured as conclusions/inferences derived from the audio.\nWait, \"episodic memory\" sounds like a record of an event. \"Speaker X said Y\" is an event.\nLet's try to fit it into `high_level_conclusions` as it captures the *meaning* (intentions, etc.).\nActually, I'll put the speech summaries in `high_level_conclusions` because they explain the *content* of the meeting which is a higher level than just \"people talking\".\nBut wait, `video_description` should cover \"all observable and inferable events\". Speaking is an event.\nOkay, I will prioritize `high_level_conclusions` for the specific speech content summaries to satisfy the \"memory\" requirement clearly within the reasoning section.\nActually, re-reading: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nI will add these as strings in the `high_level_conclusions` array.\n\nWait, I need to check the `Equivalence` constraint. \"If a face and a voice feature refer to the same character, indicate it...\". No face features provided. So no Equivalence lines.\n\nOne more check on the IDs: `<voice_339>` and `<voice_841>`.\nI must use these exact strings.\n\nLet's finalize the JSON content.\n\nVideo Description:\n- Group gathered around table with clapperboard.\n- Man standing by whiteboard.\n- Women seated.\n- Camera pans to kitchen/hallway.\n- Camera returns to group.\n- POV shot of hands/bag.\n\nHigh Level Conclusions:\n- Context: Film production planning.\n- <voice_339> suggests paper boxes for environmental theme.\n- <voice_339> suggests short play/drama.\n- <voice_841> mentions buying items but lack of script ready.\n\nI will combine these into coherent sentences.\n\nOne detail: \"Do not substitute a plausible scene description for what the speaker actually said.\"\nSo in `video_description`, I shouldn't say \"They discussed paper boxes\". I should say \"People are gathered...\".\nIn `high_level_conclusions`, I can summarize the speech content as it's reasoning about the conversation.\nWait, \"Keep dialogue grounded in the provided transcript.\"\nOkay, I will ensure the summaries reflect the transcript.\n\nLet's refine the `high_level_conclusions` to be distinct atomic conclusions.\n1. The participants are collaborating on a creative project involving film or drama, evidenced by the clapperboard and whiteboard.\n2. <voice_339> proposes using paper boxes for a theme, citing their environmental friendliness and suitability for the project.\n3. <voice_339> suggests organizing a short play or drama, recalling previous filming activities with a friend.\n4. <voice_841> acknowledges purchasing materials but states that a completed script for a short drama is not yet available.\n\nThis covers the requirements.\n\nOne last check on the `video_description`: \"each string is one atomic event description\".\n1. A group of people gathers around a wooden table covered with a checkered cloth in a room equipped with lighting equipment.\n2. A clapperboard rests on the table alongside a water bottle and other miscellaneous items.\n3. A man stands near a whiteboard, gesturing as he addresses the seated participants.\n4. Two women sit at the table, observing the discussion.\n5. The camera pans to the right, revealing a kitchen area with a large window and a view of an exterior building.\n6. The camera returns to the group as the man continues to speak and point at the whiteboard.\n7. The perspective shifts to a first-person view, showing hands resting on a patterned bag on the floor.\n\nThis looks good.\n\nOne detail on the voice IDs: The prompt says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\nInput IDs: `<voice_339>`, `<voice_841>`.\nI will use these.\n\nFinal check on JSON validity. Quotes escaped properly. No trailing commas.\n\nOne thing: \"Preserve speaker identity when constructing memory...\".\nI will ensure the speaker ID is prominent in the conclusion sentences.\n\nReady to generate.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people gathers around a wooden table covered with a checkered cloth in a room equipped with lighting equipment.\",\n\t\t\"A clapperboard rests on the table alongside a water bottle and other miscellaneous items.\",\n\t\t\"A man stands near a whiteboard, gesturing as he addresses the seated participants.\",\n\t\t\"Two women sit at the table, observing the discussion.\",\n\t\t\"The camera pans to the right, revealing a kitchen area with a large window and a view of an exterior building.\",\n\t\t\"The camera returns to the group as the man continues to speak and point at the whiteboard.\",\n\t\t\"The perspective shifts to a first-person view, showing hands resting on a patterned bag on the floor.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are collaborating on a creative project involving film or drama, evidenced by the clapperboard and whiteboard.\",\n\t\t\"<voice_339> proposes using paper boxes for a theme, citing their environmental friendliness and suitability for the project.\",\n\t\t\"<voice_339> suggests organizing a short play or drama, recalling previous filming activities with a friend.\",\n\t\t\"<voice_841> acknowledges purchasing materials but states that a completed script for a short drama is not yet available.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10976,
+          "output_tokens": 4443,
+          "total_tokens": 15419,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0015429977793246508,
+            "media_preparation_ms": 58.95311399945058,
+            "processor_tokenization_ms": 270.99627899588086,
+            "device_transfer_ms": 38.906729001610074,
+            "cuda_generation_ms": 201504.79633599753,
+            "decoding_ms": 4.520361995673738
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 201878.3580390009,
+          "request_end": 1789424149.6606429,
+          "latency_ms": 201908.68834799767,
+          "client_wall_clock_latency_ms": 201908.68834799767
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.059470999985933304,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 3.5083900002064183,
+      "nodes_added": 4,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 2,
+    "detected_faces": 237,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 4,
+    "nodes_after_clip": 853,
+    "edges_after_clip": 306,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 3
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people gathers around a wooden table covered with a checkered cloth in a room equipped with lighting equipment.",
+      "A clapperboard rests on the table alongside a water bottle and other miscellaneous items.",
+      "A man stands near a whiteboard, gesturing as he addresses the seated participants.",
+      "Two women sit at the table, observing the discussion.",
+      "The camera pans to the right, revealing a kitchen area with a large window and a view of an exterior building.",
+      "The camera returns to the group as the man continues to speak and point at the whiteboard.",
+      "The perspective shifts to a first-person view, showing hands resting on a patterned bag on the floor."
+    ],
+    "high_level_conclusions": [
+      "The participants are collaborating on a creative project involving film or drama, evidenced by the clapperboard and whiteboard.",
+      "<voice_339> proposes using paper boxes for a theme, citing their environmental friendliness and suitability for the project.",
+      "<voice_339> suggests organizing a short play or drama, recalling previous filming activities with a friend.",
+      "<voice_841> acknowledges purchasing materials but states that a completed script for a short drama is not yet available."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people gathers around a wooden table covered with a checkered cloth in a room equipped with lighting equipment.",
+      "A clapperboard rests on the table alongside a water bottle and other miscellaneous items.",
+      "A man stands near a whiteboard, gesturing as he addresses the seated participants.",
+      "Two women sit at the table, observing the discussion.",
+      "The camera pans to the right, revealing a kitchen area with a large window and a view of an exterior building.",
+      "The camera returns to the group as the man continues to speak and point at the whiteboard.",
+      "The perspective shifts to a first-person view, showing hands resting on a patterned bag on the floor."
+    ],
+    "high_level_conclusions": [
+      "The participants are collaborating on a creative project involving film or drama, evidenced by the clapperboard and whiteboard.",
+      "<voice_339> proposes using paper boxes for a theme, citing their environmental friendliness and suitability for the project.",
+      "<voice_339> suggests organizing a short play or drama, recalling previous filming activities with a friend.",
+      "<voice_841> acknowledges purchasing materials but states that a completed script for a short drama is not yet available."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_65_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 3,
+    "nodes": [
+      {
+        "id": 841,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 买了。",
+            "MAI: 但是如果要排一个小短剧的话，就是我现在暂时还没有想到一个现成我们目前。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 842,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people gathers around a wooden table covered with a checkered cloth in a room equipped with lighting equipment."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 843,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard rests on the table alongside a water bottle and other miscellaneous items."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 844,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A man stands near a whiteboard, gesturing as he addresses the seated participants."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 845,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two women sit at the table, observing the discussion."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 846,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans to the right, revealing a kitchen area with a large window and a view of an exterior building."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 847,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera returns to the group as the man continues to speak and point at the whiteboard."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 848,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The perspective shifts to a first-person view, showing hands resting on a patterned bag on the floor."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 849,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are collaborating on a creative project involving film or drama, evidenced by the clapperboard and whiteboard."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 850,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_339> proposes using paper boxes for a theme, citing their environmental friendliness and suitability for the project."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 851,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_339> suggests organizing a short play or drama, recalling previous filming activities with a friend."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 852,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_841> acknowledges purchasing materials but states that a completed script for a short drama is not yet available."
+          ],
+          "timestamp": 65
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 339,
+        "target": 850,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 339,
+        "target": 851,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 841,
+        "target": 852,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_65_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_65_graph.pkl"
+  },
+  "memory_pickle_bytes": 20240789,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 64781.814280991,
+    "prepared_perf": 64788.125347306,
+    "ordered_start_perf": 65124.068874126,
+    "consumer_wait_ms": 0.014336001186165959,
+    "ready_to_ordered_ms": 335943.5268200032,
+    "preparation_work_ms": 6305.7974289986305,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 211258.06517899764
+}

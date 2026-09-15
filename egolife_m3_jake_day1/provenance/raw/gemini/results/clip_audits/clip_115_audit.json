@@ -1,0 +1,395 @@
+{
+  "clip_id": 115,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0115.mp4",
+  "end_to_end_memory_generation_ms": 155443.31028799934,
+  "latency_ms": {
+    "clip_decode": 4605.313271000341,
+    "deepgram_asr": 910.9735809979611,
+    "mai_transcribe_asr": 1053.9234320021933,
+    "asr_total": 1055.276851002418,
+    "audio_segmentation": 5.8998010063078254,
+    "speech_embedding_campplus": 1301.5905459978967,
+    "facial_detection_recognition_buffalo_l": 3949.5748879999155,
+    "face_clustering": 3.4709370011114515,
+    "vlm_memory_generation": 27052.901230003044,
+    "text_embedding": 590.3781279994291,
+    "graph_update_total": 642.020262996084
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 115,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 9,
+      "input_chars": 793,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789411250.903717,
+          "status": "success",
+          "total_tokens": 148,
+          "request_end": 1789411251.493882,
+          "latency_ms": 590.1651670064894
+        }
+      ],
+      "total_tokens": 148,
+      "latency_ms": 590.3781279994291
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 910.9735809979611,
+        "openrouter-mai-transcribe-2": 1053.9234320021933
+      },
+      "asr_total_ms": 1055.276851002418,
+      "audio_segmentation_ms": 5.8998010063078254,
+      "speech_embedding_ms": 1301.5905459978967,
+      "graph_update_ms": 641.927428994677,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1961.0288410040084
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3949.5748879999155,
+      "face_clustering_ms": 3.4709370011114515,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 150,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4042.5003839991405
+    },
+    "vlm": {
+      "context_preparation_ms": 4145.102233000216,
+      "vlm_ms": 27052.901230003044,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer moves across the room toward a group gathered around a dining table.\",\n    \"A person in an orange t-shirt stands by a whiteboard writing and explaining details.\",\n    \"A person wearing a white shirt and grey skirt stands at the table handling floral materials.\",\n    \"Several participants sit around the table engaged in discussion.\",\n    \"The camera wearer walks past the meeting area and steps into an adjoining bedroom.\",\n    \"The camera wearer surveys the bedroom, which has a multi-monitor desk setup and equipment on the bed.\",\n    \"The camera wearer turns around and returns to the main studio room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group around the table is conducting a planning session or meeting regarding an event schedule and Q&A format.\",\n    \"The camera wearer is moving through the production and living quarters to check on the team and spaces.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera wearer moves across the room toward a group gathered around a dining table.",
+          "A person in an orange t-shirt stands by a whiteboard writing and explaining details.",
+          "A person wearing a white shirt and grey skirt stands at the table handling floral materials.",
+          "Several participants sit around the table engaged in discussion.",
+          "The camera wearer walks past the meeting area and steps into an adjoining bedroom.",
+          "The camera wearer surveys the bedroom, which has a multi-monitor desk setup and equipment on the bed.",
+          "The camera wearer turns around and returns to the main studio room."
+        ],
+        "high_level_conclusions": [
+          "The group around the table is conducting a planning session or meeting regarding an event schedule and Q&A format.",
+          "The camera wearer is moving through the production and living quarters to check on the team and spaces."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 115,
+          "call_id": "737767f8-e193-4d51-8e3a-e4662647eb8b",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789411223.8499198,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 66934,
+          "output_tokens": 1106,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 27052.736328005267
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer moves across the room toward a group gathered around a dining table.\",\n    \"A person in an orange t-shirt stands by a whiteboard writing and explaining details.\",\n    \"A person wearing a white shirt and grey skirt stands at the table handling floral materials.\",\n    \"Several participants sit around the table engaged in discussion.\",\n    \"The camera wearer walks past the meeting area and steps into an adjoining bedroom.\",\n    \"The camera wearer surveys the bedroom, which has a multi-monitor desk setup and equipment on the bed.\",\n    \"The camera wearer turns around and returns to the main studio room.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group around the table is conducting a planning session or meeting regarding an event schedule and Q&A format.\",\n    \"The camera wearer is moving through the production and living quarters to check on the team and spaces.\"\n  ]\n}\n```",
+          "total_tokens": 68040,
+          "request_end": 1789411250.9028249,
+          "latency_ms": 27052.901230003044,
+          "client_wall_clock_latency_ms": 27052.901230003044,
+          "api_request_wall_clock_latency_ms": 27052.901230003044
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.07763600297039375,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": null,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.015197998436633497,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 6,
+    "detected_faces": 150,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 2,
+    "nodes_after_clip": 1346,
+    "edges_after_clip": 262,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer moves across the room toward a group gathered around a dining table.",
+      "A person in an orange t-shirt stands by a whiteboard writing and explaining details.",
+      "A person wearing a white shirt and grey skirt stands at the table handling floral materials.",
+      "Several participants sit around the table engaged in discussion.",
+      "The camera wearer walks past the meeting area and steps into an adjoining bedroom.",
+      "The camera wearer surveys the bedroom, which has a multi-monitor desk setup and equipment on the bed.",
+      "The camera wearer turns around and returns to the main studio room."
+    ],
+    "high_level_conclusions": [
+      "The group around the table is conducting a planning session or meeting regarding an event schedule and Q&A format.",
+      "The camera wearer is moving through the production and living quarters to check on the team and spaces."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera wearer moves across the room toward a group gathered around a dining table.",
+      "A person in an orange t-shirt stands by a whiteboard writing and explaining details.",
+      "A person wearing a white shirt and grey skirt stands at the table handling floral materials.",
+      "Several participants sit around the table engaged in discussion.",
+      "The camera wearer walks past the meeting area and steps into an adjoining bedroom.",
+      "The camera wearer surveys the bedroom, which has a multi-monitor desk setup and equipment on the bed.",
+      "The camera wearer turns around and returns to the main studio room."
+    ],
+    "high_level_conclusions": [
+      "The group around the table is conducting a planning session or meeting regarding an event schedule and Q&A format.",
+      "The camera wearer is moving through the production and living quarters to check on the team and spaces."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_115_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 1334,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 是一人还是二人，你知道吗？万一。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1335,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: 말요 你저다나 | MAI: QA。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1336,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: 말요 | MAI: 妙啊。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1337,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer moves across the room toward a group gathered around a dining table."
+          ],
+          "timestamp": 115
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1338,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person in an orange t-shirt stands by a whiteboard writing and explaining details."
+          ],
+          "timestamp": 115
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1339,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing a white shirt and grey skirt stands at the table handling floral materials."
+          ],
+          "timestamp": 115
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1340,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Several participants sit around the table engaged in discussion."
+          ],
+          "timestamp": 115
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1341,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer walks past the meeting area and steps into an adjoining bedroom."
+          ],
+          "timestamp": 115
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1342,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer surveys the bedroom, which has a multi-monitor desk setup and equipment on the bed."
+          ],
+          "timestamp": 115
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1343,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer turns around and returns to the main studio room."
+          ],
+          "timestamp": 115
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1344,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group around the table is conducting a planning session or meeting regarding an event schedule and Q&A format."
+          ],
+          "timestamp": 115
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1345,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera wearer is moving through the production and living quarters to check on the team and spaces."
+          ],
+          "timestamp": 115
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_115_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_115_graph.pkl"
+  },
+  "memory_pickle_bytes": 31142871,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 52283.042160991,
+    "prepared_perf": 52290.263641656,
+    "ordered_start_perf": 52398.153511284,
+    "consumer_wait_ms": 0.01832399721024558,
+    "ready_to_ordered_ms": 107889.86962800118,
+    "preparation_work_ms": 7215.962319998653,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 37794.26518100081
+}

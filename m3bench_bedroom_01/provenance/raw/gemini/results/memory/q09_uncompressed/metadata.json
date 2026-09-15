@@ -1,0 +1,100 @@
+{
+  "question": {
+    "id": "Q09",
+    "query_time": {
+      "date": "VIDEO",
+      "time": 90.0
+    },
+    "question": "When does Lily need afternoon tea originally?"
+  },
+  "query_time_seconds": 90.0,
+  "graph": {
+    "nodes": 31,
+    "edges": 8,
+    "episodic_nodes": 20,
+    "semantic_nodes": 6,
+    "face_nodes": 0,
+    "voice_nodes": 5,
+    "node_type_counts": {
+      "episodic": 20,
+      "semantic": 6,
+      "voice": 5
+    }
+  },
+  "native_graph": "graph.pkl",
+  "readable_graph": "graph.json",
+  "pickle_bytes": 734654,
+  "last_segment_id": 3,
+  "source_segments": [
+    {
+      "segment_id": 1,
+      "source": "bedroom_01_00000000.mp4",
+      "source_clock": "00000000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 0.0,
+      "absolute_end_seconds": 30.0,
+      "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00000000.mp4",
+      "asr_failures": [],
+      "status": "committed",
+      "pipeline_timing": {
+        "admitted_perf": 72240.857773872,
+        "prepared_perf": 72244.610844795,
+        "ordered_start_perf": 72244.610988815,
+        "consumer_wait_ms": 3752.4684189993422,
+        "ready_to_ordered_ms": 0.14401999942492694,
+        "preparation_work_ms": 3752.5805899931584,
+        "lookahead_segments": 2
+      }
+    },
+    {
+      "segment_id": 2,
+      "source": "bedroom_01_00003000.mp4",
+      "source_clock": "00003000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 30.0,
+      "absolute_end_seconds": 60.0,
+      "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00003000.mp4",
+      "asr_failures": [],
+      "status": "committed",
+      "pipeline_timing": {
+        "admitted_perf": 72390.219408761,
+        "prepared_perf": 72396.631943584,
+        "ordered_start_perf": 72396.632065593,
+        "consumer_wait_ms": 6409.153141998104,
+        "ready_to_ordered_ms": 0.12200900528114289,
+        "preparation_work_ms": 6411.997763992986,
+        "lookahead_segments": 2
+      }
+    },
+    {
+      "segment_id": 3,
+      "source": "bedroom_01_00010000.mp4",
+      "source_clock": "00010000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 60.0,
+      "absolute_end_seconds": 90.0,
+      "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00010000.mp4",
+      "asr_failures": [],
+      "status": "committed",
+      "pipeline_timing": {
+        "admitted_perf": 72390.220123323,
+        "prepared_perf": 72395.753229898,
+        "ordered_start_perf": 72438.4647818,
+        "consumer_wait_ms": 0.007583992555737495,
+        "ready_to_ordered_ms": 42711.55190200079,
+        "preparation_work_ms": 5532.738093999797,
+        "lookahead_segments": 2
+      }
+    }
+  ],
+  "future_leakage": false,
+  "asr_degraded_segments": [],
+  "skipped_segments": [],
+  "requested_query_seconds": 102,
+  "effective_query_seconds": 90,
+  "approximation_reason": "Reuse saved 01:30 prefix, 12 seconds before requested 01:42; no future memory.",
+  "recovered_from_clip_audit_sha256": "1cd392533564dbdd364399f81aeef12cfe3fb7d05967daa9821afa877eebdb2a"
+}

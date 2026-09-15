@@ -1,0 +1,520 @@
+{
+  "clip_id": 13,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0013.mp4",
+  "end_to_end_memory_generation_ms": 625863.6721989969,
+  "latency_ms": {
+    "clip_decode": 3622.7927549989545,
+    "deepgram_asr": 2.4644379955134355,
+    "mai_transcribe_asr": 2.2957719993428327,
+    "asr_total": 3.238564997445792,
+    "audio_segmentation": 6.67190199601464,
+    "speech_embedding_campplus": 1197.7528450006503,
+    "facial_detection_recognition_buffalo_l": 3094.9519439964206,
+    "face_clustering": 4.751690001285169,
+    "vlm_memory_generation": 134053.69885200344,
+    "text_embedding": 539.8188499966636,
+    "graph_update_total": 54.93677399499575
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 13,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 1128,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789412945.0401566,
+          "status": "success",
+          "total_tokens": 216,
+          "request_end": 1789412945.5797489,
+          "latency_ms": 539.5927049976308
+        }
+      ],
+      "total_tokens": 216,
+      "latency_ms": 539.8188499966636
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.4644379955134355,
+        "openrouter-mai-transcribe-2": 2.2957719993428327
+      },
+      "asr_total_ms": 3.238564997445792,
+      "audio_segmentation_ms": 6.67190199601464,
+      "speech_embedding_ms": 1197.7528450006503,
+      "graph_update_ms": 49.25175799871795,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1272.4060809996445
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3094.9519439964206,
+      "face_clustering_ms": 4.751690001285169,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 142,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3177.8192059937282
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_0>",
+        "<voice_129>",
+        "<voice_130>"
+      ],
+      "context_preparation_ms": 4220.609998003056,
+      "vlm_ms": 134053.69885200344,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table covered with a red and white checkered cloth.\",\n\t\t\"The camera pans around the room, showing a whiteboard and a doorway in the background.\",\n\t\t\"Hands appear in the foreground pointing towards the seated individuals.\",\n\t\t\"Speaker `<voice_0>` adjusts glasses and remarks that they do not obstruct vision.\",\n\t\t\"Individuals are seen handling papers and electronic devices on the table.\",\n\t\t\"Speaker `<voice_129>` discusses a location and mentions cleaning, referencing a classmate's comment.\",\n\t\t\"The camera focuses on different participants engaging in conversation and work.\",\n\t\t\"Speaker `<voice_130>` confirms that the matter is settled or fixed.\",\n\t\t\"The camera continues to move around the room, capturing the ongoing interaction.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker `<voice_0>` is concerned with ensuring proper wear of glasses and verifying visibility.\",\n\t\t\"Speaker `<voice_129>` appears to be planning a physical task involving pushing or moving objects in a specific area.\",\n\t\t\"Speaker `<voice_130>` indicates agreement or confirmation that a previous issue has been resolved.\",\n\t\t\"The group is collaborating in a casual indoor setting, possibly a home office or living room.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are seated around a table covered with a red and white checkered cloth.",
+          "The camera pans around the room, showing a whiteboard and a doorway in the background.",
+          "Hands appear in the foreground pointing towards the seated individuals.",
+          "Speaker `<voice_0>` adjusts glasses and remarks that they do not obstruct vision.",
+          "Individuals are seen handling papers and electronic devices on the table.",
+          "Speaker `<voice_129>` discusses a location and mentions cleaning, referencing a classmate's comment.",
+          "The camera focuses on different participants engaging in conversation and work.",
+          "Speaker `<voice_130>` confirms that the matter is settled or fixed.",
+          "The camera continues to move around the room, capturing the ongoing interaction."
+        ],
+        "high_level_conclusions": [
+          "Speaker `<voice_0>` is concerned with ensuring proper wear of glasses and verifying visibility.",
+          "Speaker `<voice_129>` appears to be planning a physical task involving pushing or moving objects in a specific area.",
+          "Speaker `<voice_130>` indicates agreement or confirmation that a previous issue has been resolved.",
+          "The group is collaborating in a casual indoor setting, possibly a home office or living room."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 13,
+          "call_id": "948186f6-1e41-4f45-8205-77b5ff022b24",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789412810.9856126,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table covered with a red and white checkered cloth.\",\n\t\t\"The camera pans around the room, showing a whiteboard and a doorway in the background.\",\n\t\t\"Hands appear in the foreground pointing towards the seated individuals.\",\n\t\t\"Speaker `<voice_0>` adjusts glasses and remarks that they do not obstruct vision.\",\n\t\t\"Individuals are seen handling papers and electronic devices on the table.\",\n\t\t\"Speaker `<voice_129>` discusses a location and mentions cleaning, referencing a classmate's comment.\",\n\t\t\"The camera focuses on different participants engaging in conversation and work.\",\n\t\t\"Speaker `<voice_130>` confirms that the matter is settled or fixed.\",\n\t\t\"The camera continues to move around the room, capturing the ongoing interaction.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker `<voice_0>` is concerned with ensuring proper wear of glasses and verifying visibility.\",\n\t\t\"Speaker `<voice_129>` appears to be planning a physical task involving pushing or moving objects in a specific area.\",\n\t\t\"Speaker `<voice_130>` indicates agreement or confirmation that a previous issue has been resolved.\",\n\t\t\"The group is collaborating in a casual indoor setting, possibly a home office or living room.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** A sequence of 30 frames showing a group of people sitting around a table covered with a checkered cloth. There are various items on the table (boxes, phones, papers). The camera moves around the room, sometimes focusing on specific people, sometimes showing the whole group. There's a whiteboard in the background. One person seems to be filming (POV), indicated by hands appearing in some frames.\n*   **Character Features:**\n    *   **Face Features:** None explicitly provided in the prompt text (only \"Face features:\" followed by empty or implied context, but looking closely at the prompt structure, there is no actual list of face IDs like `<face_1>` provided in the text block, just \"Face features:\"). Wait, looking at the raw prompt, under \"Face features:\", it says \"Voice features:\". It seems the Face features section might be empty or I need to look closer. Ah, the prompt says \"Face features:Voice features:\". This implies there are no face features provided in the text input, or they are missing. However, the instruction says \"Each feature is either a face... or a voice...\". Since no face IDs are listed in the input data block, I cannot make equivalences based on faces. I must rely solely on voice IDs.\n    *   **Voice Features:**\n        *   `<voice_0>`: MAI speaks about wearing glasses (\"戴好\") and the mask/glasses not obstructing vision (\"这个眼镜，喏，也不能妨碍\").\n        *   `<voice_129>`: MAI talks about a location (\"这个地方\"), pushing something (\"推\"), cleaning (\"好像要清洁\"), mentioning a classmate (\"那个同学\").\n        *   `<voice_130>`: MAI says \"没事，拍定\" (Nothing, done/fixed).\n\n**2. Construct Video Description:**\n*   The video shows a group meeting or discussion around a table.\n*   People are seated.\n*   The camera pans around the room.\n*   Hands appear occasionally, suggesting someone is filming or gesturing.\n*   Specific actions: Someone points (frames 0-3), camera moves towards a whiteboard (frame 3-8), then back to the table.\n*   People are interacting, looking at devices or papers on the table.\n*   The setting looks like a home office or living room converted for work/meeting.\n\n**3. Construct High-Level Conclusions:**\n*   Since there are no face features provided to link to voices, I cannot create \"Equivalence\" statements like `Equivalence: <face_x>, <voice_y>`.\n*   I can infer intent from the voice content if linked to the visual context, but the instruction says \"If a face and a voice feature refer to the same character, indicate it...\". Without face features, I can't confirm this.\n*   However, the voice content identifies a speaker as \"MAI\".\n*   The instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> Wait, this instruction is from the system prompt regarding *memory construction*. The user prompt asks for `video_description` and `high_level_conclusions`.\n*   Let's re-read the specific task instructions for *this* turn: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n*   The system prompt instructions about \"Preserve speaker identity when constructing memory...\" seem to apply to how I handle the voice IDs within the descriptions/conclusions if I were generating memory. But here I am generating a standard video analysis JSON.\n*   Wait, the system prompt says: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This suggests I should follow the schema provided in the user prompt.\n*   The user prompt asks for `video_description` (atomic events) and `high_level_conclusions` (reasoning/inference).\n*   Crucially, the system prompt says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This sounds like a constraint for the *output* content. Does `video_description` count as episodic memory? Or does `high_level_conclusions`? Usually, these tasks want the video description to narrate the action including who said what.\n*   Let's look at the instruction again: \"Preserve speaker identity when constructing memory from the supplied character features.\" ... \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   This implies I should incorporate the voice content into the description or conclusions using the ID.\n*   Also: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   So, in `high_level_conclusions`, I should mention MAI (`<voice_0>`, `<voice_129>`, `<voice_130>`).\n*   In `video_description`, I should describe the actions.\n*   Since there are no face features, I cannot make equivalences.\n*   I need to make sure I don't hallucinate face IDs.\n\n**Refining the Plan:**\n*   **Video Description:** Break down the visual flow.\n    *   Group sitting at a table.\n    *   Camera movement (panning, tilting).\n    *   Hands visible (filming/gesturing).\n    *   Interaction with objects on table.\n*   **High-Level Conclusions:**\n    *   Identify the speaker MAI based on voice IDs.\n    *   Summarize her comments about the equipment/mask/glasses and the location/cleaning.\n    *   Since I can't verify face equivalence, I won't add `Equivalence:` lines unless I'm sure. The prompt says \"If a face and a voice feature refer to the same character, indicate it...\". Since no face features are provided, I skip this.\n    *   I will ensure the voice IDs are used in the conclusions to attribute the speech.\n\n**Drafting Content:**\n*   *Description:*\n    *   A group of individuals are seated around a table covered with a red and white checkered cloth.\n    *   The camera pans across the room, revealing a whiteboard and a doorway leading to another room.\n    *   Hands appear in the foreground, pointing towards the group members.\n    *   Individuals are engaged in activities involving papers and electronic devices on the table.\n    *   The camera focuses on different participants, capturing their interactions.\n*   *Conclusions:*\n    *   Speaker `<voice_0>` discusses wearing glasses and notes that they do not obstruct vision.\n    *   Speaker `<voice_129>` mentions a location suitable for pushing something clean, referencing a classmate's comment about weakness.\n    *   Speaker `<voice_130>` confirms that everything is fixed or settled (\"拍定\").\n\n**Wait, checking constraints:**\n*   \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I must quote or summarize accurately.\n*   \"Use only IDs supplied in the input\".\n*   \"Keep the existing video_description/high_level_conclusions JSON schema\".\n\nLet's assemble the JSON.\n\nOne detail: The system prompt says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis instruction seems to override the standard \"video description\" format slightly, asking for \"episodic memory\". However, the user prompt defines the output schema as `video_description` and `high_level_conclusions`. I should integrate the voice info into these fields appropriately. Usually, `video_description` describes *what happened*, so including the speech acts fits there. `high_level_conclusions` describes *intent/reasoning*.\nActually, looking at the system prompt's instruction \"include at least one episodic memory... using the exact ID as the speaker\", this likely means I should write sentences like \"Speaker `<voice_0>` says...\" within the description or conclusions. Given the schema, putting it in `video_description` as an event (speech act) makes sense. Or perhaps `high_level_conclusions` where I analyze the statement.\nLet's put the speech attribution in `video_description` as observed events, and use the ID in `high_level_conclusions` for the semantic meaning.\n\nRevised Plan:\n*   `video_description`: Describe the visual scene + the speech events attributed to IDs.\n*   `high_level_conclusions`: Reasoning about the situation + attributing the semantic content to IDs.\n\nWait, looking at the instruction \"Preserve speaker identity when constructing memory...\". This is a system instruction for *me* (the model) to follow when processing the input. The user prompt asks for a specific JSON format. I will combine them.\n\nLet's check the voice content again.\n`<voice_0>`: \"戴好。这个眼镜，喏，也不能妨碍，应该都没有妨碍吧？你现在没有妨碍，确实。\" (Put it on well. These glasses, yes, shouldn't hinder, right? You aren't hindering now, indeed.)\n`<voice_129>`: \"这个地方是这儿，最好这样往这里推，看怎么样。好像要清洁，那天那个同学跟我说这个挺弱的。\" (This place is here, best push like this, see how it goes. Seems like cleaning, that classmate told me this is quite weak.)\n`<voice_130>`: \"没事，拍定。\" (Nothing, done/fixed.)\n\nOkay, I will construct the response.\n\nOne critical check: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\nSince there are NO face features in the input (the line \"Face features:\" is empty/missing before \"Voice features:\"), I cannot create equivalences. I will omit this key/value pair or just not include it. The schema allows strings in the array. I'll stick to strings describing conclusions.\n\nFinal check on JSON validity. No trailing commas. Double quotes.\n\nStructure:\n```json\n{\n  \"video_description\": [\n    \"...\",\n    \"...\"\n  ],\n  \"high_level_conclusions\": [\n    \"...\",\n    \"...\"\n  ]\n}\n```\n\nI will ensure the voice IDs are preserved exactly.\n\nOne more thing: \"Preserve speaker identity when constructing memory from the supplied character features.\" ... \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis implies I should treat the speech as part of the description/memory. I will add entries in `video_description` that capture the speech events.\n\nExample: \"Speaker `<voice_0>` states: '戴好。这个眼镜，喏，也不能妨碍...' while adjusting glasses.\"\nThis satisfies the requirement to use the ID and preserve the transcript.\n\nLet's finalize the descriptions.\nFrame 0-3: Pointing finger visible.\nFrame 4-10: Wide shot of table, people working.\nFrame 11-20: Camera moves, close ups on people.\nFrame 21-30: General view of the group.\n\nOkay, ready to write.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table covered with a red and white checkered cloth.\",\n\t\t\"The camera pans around the room, showing a whiteboard and a doorway in the background.\",\n\t\t\"Hands appear in the foreground pointing towards the seated individuals.\",\n\t\t\"Speaker `<voice_0>` adjusts glasses and remarks that they do not obstruct vision.\",\n\t\t\"Individuals are seen handling papers and electronic devices on the table.\",\n\t\t\"Speaker `<voice_129>` discusses a location and mentions cleaning, referencing a classmate's comment.\",\n\t\t\"The camera focuses on different participants engaging in conversation and work.\",\n\t\t\"Speaker `<voice_130>` confirms that the matter is settled or fixed.\",\n\t\t\"The camera continues to move around the room, capturing the ongoing interaction.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker `<voice_0>` is concerned with ensuring proper wear of glasses and verifying visibility.\",\n\t\t\"Speaker `<voice_129>` appears to be planning a physical task involving pushing or moving objects in a specific area.\",\n\t\t\"Speaker `<voice_130>` indicates agreement or confirmation that a previous issue has been resolved.\",\n\t\t\"The group is collaborating in a casual indoor setting, possibly a home office or living room.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10639,
+          "output_tokens": 2826,
+          "total_tokens": 13465,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002082997525576502,
+            "media_preparation_ms": 60.554764000698924,
+            "processor_tokenization_ms": 439.25436599965906,
+            "device_transfer_ms": 44.950837997021154,
+            "cuda_generation_ms": 133475.765272,
+            "decoding_ms": 3.827972999715712
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 134024.52520500083,
+          "request_end": 1789412945.0393136,
+          "latency_ms": 134053.69885200344,
+          "client_wall_clock_latency_ms": 134053.69885200344
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.10577899956842884,
+      "nodes_added": 9,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 5.579236996709369,
+      "nodes_added": 4,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 3,
+    "detected_faces": 142,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 4,
+    "nodes_after_clip": 144,
+    "edges_after_clip": 48,
+    "nodes_added_by_clip": 15,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a table covered with a red and white checkered cloth.",
+      "The camera pans around the room, showing a whiteboard and a doorway in the background.",
+      "Hands appear in the foreground pointing towards the seated individuals.",
+      "Speaker `<voice_0>` adjusts glasses and remarks that they do not obstruct vision.",
+      "Individuals are seen handling papers and electronic devices on the table.",
+      "Speaker `<voice_129>` discusses a location and mentions cleaning, referencing a classmate's comment.",
+      "The camera focuses on different participants engaging in conversation and work.",
+      "Speaker `<voice_130>` confirms that the matter is settled or fixed.",
+      "The camera continues to move around the room, capturing the ongoing interaction."
+    ],
+    "high_level_conclusions": [
+      "Speaker `<voice_0>` is concerned with ensuring proper wear of glasses and verifying visibility.",
+      "Speaker `<voice_129>` appears to be planning a physical task involving pushing or moving objects in a specific area.",
+      "Speaker `<voice_130>` indicates agreement or confirmation that a previous issue has been resolved.",
+      "The group is collaborating in a casual indoor setting, possibly a home office or living room."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are seated around a table covered with a red and white checkered cloth.",
+      "The camera pans around the room, showing a whiteboard and a doorway in the background.",
+      "Hands appear in the foreground pointing towards the seated individuals.",
+      "Speaker `<voice_0>` adjusts glasses and remarks that they do not obstruct vision.",
+      "Individuals are seen handling papers and electronic devices on the table.",
+      "Speaker `<voice_129>` discusses a location and mentions cleaning, referencing a classmate's comment.",
+      "The camera focuses on different participants engaging in conversation and work.",
+      "Speaker `<voice_130>` confirms that the matter is settled or fixed.",
+      "The camera continues to move around the room, capturing the ongoing interaction."
+    ],
+    "high_level_conclusions": [
+      "Speaker `<voice_0>` is concerned with ensuring proper wear of glasses and verifying visibility.",
+      "Speaker `<voice_129>` appears to be planning a physical task involving pushing or moving objects in a specific area.",
+      "Speaker `<voice_130>` indicates agreement or confirmation that a previous issue has been resolved.",
+      "The group is collaborating in a casual indoor setting, possibly a home office or living room."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_13_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 15,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 129,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 这个地方是这儿，最好这样往里推，看怎么样。好像要清洁，那天那个同学跟我说这个挺脆弱的。",
+            "MAI: 就是这不是有一个口吗？"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 130,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 没事，搞定。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 131,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are seated around a table covered with a red and white checkered cloth."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 132,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans around the room, showing a whiteboard and a doorway in the background."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 133,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Hands appear in the foreground pointing towards the seated individuals."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 134,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker `<voice_0>` adjusts glasses and remarks that they do not obstruct vision."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 135,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Individuals are seen handling papers and electronic devices on the table."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 136,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker `<voice_129>` discusses a location and mentions cleaning, referencing a classmate's comment."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 137,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera focuses on different participants engaging in conversation and work."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 138,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker `<voice_130>` confirms that the matter is settled or fixed."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 139,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera continues to move around the room, capturing the ongoing interaction."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 140,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker `<voice_0>` is concerned with ensuring proper wear of glasses and verifying visibility."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 141,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker `<voice_129>` appears to be planning a physical task involving pushing or moving objects in a specific area."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 142,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker `<voice_130>` indicates agreement or confirmation that a previous issue has been resolved."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 143,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is collaborating in a casual indoor setting, possibly a home office or living room."
+          ],
+          "timestamp": 13
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 0,
+        "target": 134,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 0,
+        "target": 140,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 129,
+        "target": 136,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 129,
+        "target": 141,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 130,
+        "target": 138,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 130,
+        "target": 142,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_13_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_13_graph.pkl"
+  },
+  "memory_pickle_bytes": 3681408,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 53506.571664067,
+    "prepared_perf": 53512.046769539,
+    "ordered_start_perf": 53988.936793318,
+    "consumer_wait_ms": 0.019816994608845562,
+    "ready_to_ordered_ms": 476890.02377899305,
+    "preparation_work_ms": 5469.731948003755,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 143271.72494700062
+}

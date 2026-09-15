@@ -1,0 +1,512 @@
+{
+  "clip_id": 102,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0102.mp4",
+  "end_to_end_memory_generation_ms": 522899.27032700507,
+  "latency_ms": {
+    "clip_decode": 4892.063796010916,
+    "deepgram_asr": 729.675385999144,
+    "mai_transcribe_asr": 849.7772190021351,
+    "asr_total": 851.1971589905443,
+    "audio_segmentation": 8.270776001154445,
+    "speech_embedding_campplus": 947.3902079917025,
+    "facial_detection_recognition_buffalo_l": 3158.4872669918695,
+    "face_clustering": 9.374461995321326,
+    "vlm_memory_generation": 176861.6350759985,
+    "text_embedding": 461.5400650072843,
+    "graph_update_total": 375.2486419980414
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 102,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 15,
+      "input_chars": 1277,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789437430.7496476,
+          "status": "success",
+          "total_tokens": 240,
+          "request_end": 1789437431.2109582,
+          "latency_ms": 461.3114449894056
+        }
+      ],
+      "total_tokens": 240,
+      "latency_ms": 461.5400650072843
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 729.675385999144,
+        "openrouter-mai-transcribe-2": 849.7772190021351
+      },
+      "asr_total_ms": 851.1971589905443,
+      "audio_segmentation_ms": 8.270776001154445,
+      "speech_embedding_ms": 947.3902079917025,
+      "graph_update_ms": 372.8235989983659,
+      "asr_segment_count": 4,
+      "speech_embedding_count": 4,
+      "voice_identity_count": 3,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1342.541544989217
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3158.4872669918695,
+      "face_clustering_ms": 9.374461995321326,
+      "graph_update_ms": null,
+      "frame_count": 120,
+      "detected_face_count": 298,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3336.6639480082085
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_364>",
+        "<voice_261>",
+        "<voice_366>"
+      ],
+      "context_preparation_ms": 3061.9450390076963,
+      "vlm_ms": 176861.6350759985,
+      "raw_response": "{\n  \"video_description\": [\n    \"A group of people are gathered around a table in a room with a whiteboard in the background.\",\n    \"An individual wearing an orange shirt stands on the left side of the frame.\",\n    \"Another individual sits at the table wearing dark clothing.\",\n    \"A third individual stands behind the table wearing white.\",\n    \"A fourth individual sits at the table on the right side.\",\n    \"The camera perspective is from a person reclining, with legs visible in the foreground.\",\n    \"Individual <voice_364> begins speaking, referencing a previous activity from the day before.\",\n    \"Individual <voice_261> adds that the session has been going on for two hours.\",\n    \"Individual <voice_366> proposes telling a short story about an auction process where everyone gets five minutes.\",\n    \"The speaker elaborates on controlling time and alternative ways to obtain currency if time control is difficult.\",\n    \"The speaker concludes that the core of the activity is the auction process itself.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker <voice_366> defines the primary objective of the gathering as an auction process.\",\n    \"Time management is a critical component, with a target of five minutes per participant.\",\n    \"The speaker addresses potential issues with time control and suggests alternative methods for acquisition.\",\n    \"The discussion revolves around the mechanics of the auction and how proceeds are obtained.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a table in a room with a whiteboard in the background.",
+          "An individual wearing an orange shirt stands on the left side of the frame.",
+          "Another individual sits at the table wearing dark clothing.",
+          "A third individual stands behind the table wearing white.",
+          "A fourth individual sits at the table on the right side.",
+          "The camera perspective is from a person reclining, with legs visible in the foreground.",
+          "Individual <voice_364> begins speaking, referencing a previous activity from the day before.",
+          "Individual <voice_261> adds that the session has been going on for two hours.",
+          "Individual <voice_366> proposes telling a short story about an auction process where everyone gets five minutes.",
+          "The speaker elaborates on controlling time and alternative ways to obtain currency if time control is difficult.",
+          "The speaker concludes that the core of the activity is the auction process itself."
+        ],
+        "high_level_conclusions": [
+          "The speaker <voice_366> defines the primary objective of the gathering as an auction process.",
+          "Time management is a critical component, with a target of five minutes per participant.",
+          "The speaker addresses potential issues with time control and suggests alternative methods for acquisition.",
+          "The discussion revolves around the mechanics of the auction and how proceeds are obtained."
+        ]
+      },
+      "media": {
+        "frame_count": 48,
+        "video_duration_seconds": 23.95
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 102,
+          "call_id": "f694e280-ef51-4c6f-be2c-791e155ce36f",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789437253.8869069,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 48,
+            "video_duration_seconds": 23.95
+          },
+          "response": "{\n  \"video_description\": [\n    \"A group of people are gathered around a table in a room with a whiteboard in the background.\",\n    \"An individual wearing an orange shirt stands on the left side of the frame.\",\n    \"Another individual sits at the table wearing dark clothing.\",\n    \"A third individual stands behind the table wearing white.\",\n    \"A fourth individual sits at the table on the right side.\",\n    \"The camera perspective is from a person reclining, with legs visible in the foreground.\",\n    \"Individual <voice_364> begins speaking, referencing a previous activity from the day before.\",\n    \"Individual <voice_261> adds that the session has been going on for two hours.\",\n    \"Individual <voice_366> proposes telling a short story about an auction process where everyone gets five minutes.\",\n    \"The speaker elaborates on controlling time and alternative ways to obtain currency if time control is difficult.\",\n    \"The speaker concludes that the core of the activity is the auction process itself.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker <voice_366> defines the primary objective of the gathering as an auction process.\",\n    \"Time management is a critical component, with a target of five minutes per participant.\",\n    \"The speaker addresses potential issues with time control and suggests alternative methods for acquisition.\",\n    \"The discussion revolves around the mechanics of the auction and how proceeds are obtained.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are 24 frames showing a group of people in a room.\n    *   There's a person standing in an orange shirt (let's call him Person A).\n    *   There's a person sitting at a table wearing black (Person B).\n    *   There's a person standing behind the table wearing white (Person C).\n    *   There's a person sitting at the table wearing white/light blue (Person D).\n    *   The camera seems to be held by someone lying down or reclining (legs visible in foreground).\n    *   The setting looks like a casual meeting or discussion around a table.\n*   **Voice Features:**\n    *   `<voice_364>`: \"MAI: 就就你们昨天的那个活动也-\" (00:00 - 00:04)\n    *   `<voice_261>`: \"MAI: 也两个小时了。\" (00:03 - 00:05)\n    *   `<voice_366>`: \"MAI: 讲一个小故事，一个...每个人五分钟那种大概。或者时间这这么控制不好的话，就以其他形式获得货币。但是这个活动的核心是那个拍卖过程。但是这个货怎么获得，可以更进一步商演。\" (00:05 - 00:08, 00:11 - 00:23)\n    *   Note: All voice features have the label \"MAI\". This suggests the speaker is named MAI. I need to check if there are face features linked to this voice. The prompt says \"Some features may belong to the same character.\" but looking at the provided text, there are NO face features listed in the \"Face features:\" section (it's empty). Wait, let me re-read the prompt carefully.\n    *   Ah, the prompt says \"Face features:Voice features:\". It seems the Face features section is empty or missing in the provided text block. Let me look closer at the raw input.\n    *   Raw input: `Face features:Voice features:{...}`. It looks like the Face features part is just empty or merged. Actually, looking at the structure, it seems `Face features:` is followed immediately by `Voice features:`. There are no specific face IDs like `<face_1>`.\n    *   However, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   And: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   Since there are no face IDs provided, I cannot create equivalences like `Equivalence: <face_x>, <voice_y>`. I must strictly follow the rule: \"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   So, I will use the voice IDs (`<voice_364>`, `<voice_261>`, `<voice_366>`) in the descriptions and conclusions where appropriate, specifically for the speaker identified as MAI.\n\n**2. Construct Video Description:**\n*   I need to break down the video into atomic events.\n*   **0.00s - 4.00s:** A group is gathered around a table. One person in an orange shirt stands near the left. Another person sits at the table.\n*   **4.50s - 13.00s:** The person in the orange shirt moves slightly, adjusts their position. The person in black sits at the table.\n*   **13.50s - 18.00s:** The person in the orange shirt gestures with their hand while talking.\n*   **18.50s - 24.00s:** The person in the orange shirt continues to stand and talk, gesturing towards the whiteboard/table area. The others listen.\n*   **General:** The camera is stationary, likely handheld by someone reclining. The lighting changes slightly (ceiling light turns on/off or camera exposure adjusts).\n*   **Specific Events:**\n    *   Group gathering around a table with papers/items.\n    *   Person in orange shirt stands and speaks/gestures.\n    *   Person in black sits at the table.\n    *   Person in white stands behind the table.\n    *   Person in white/blue sits at the table.\n\n**3. Construct High-Level Conclusions:**\n*   Based on the voice transcript, the speaker (MAI) is discussing an activity/event involving auctions (\"拍卖过程\") and time management (\"每个人五分钟\").\n*   The speaker mentions controlling time poorly and alternative ways to get money.\n*   The core of the activity is the auction process.\n*   Since there are no face IDs, I cannot link faces to voices. I will formulate conclusions based on the voice content and the visible actions.\n*   Conclusion 1: The speaker (identified by `<voice_364>`, `<voice_261>`, `<voice_366>`) is explaining the rules or purpose of an upcoming activity involving auctions.\n*   Conclusion 2: The speaker emphasizes the importance of time control within the activity (specifically mentioning 5 minutes per person).\n*   Conclusion 3: The group appears to be preparing for or discussing a structured event, possibly related to monetization or performance (\"商演\").\n\n**4. Refine Output:**\n*   Ensure JSON format.\n*   Ensure no extra text.\n*   Check constraints: \"Preserve speaker identity when constructing memory... Voice features map exact IDs... include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> Wait, the instruction says \"include at least one episodic memory\". But the output format requested is `video_description` and `high_level_conclusions`. The instruction about \"episodic memory\" seems to come from a different template (likely a retrieval-augmented generation task). However, the prompt explicitly asks for `video_description` and `high_level_conclusions`.\n*   Re-reading the system instruction: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n*   The instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" seems to conflict with the requested JSON schema which doesn't have an \"episodic_memory\" field.\n*   Usually, in these tasks, the \"Video Description\" acts as the narrative. I should incorporate the voice content into the description or conclusions.\n*   Let's look at the instruction again: \"Preserve speaker identity when constructing memory from the supplied character features.\" ... \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   This instruction might imply I should add a field or embed it. But the Output Format section is strict: `\"video_description\": [...], \"high_level_conclusions\": [...]`.\n*   If I strictly follow the Output Format, I can't add a new field. I must integrate the requirement into the existing fields.\n*   Perhaps the \"Video Description\" should contain the \"episodic memory\" style sentences? Or maybe the \"High-Level Conclusions\"?\n*   Let's interpret \"episodic memory\" as a descriptive sentence in the video description that captures the speech event.\n*   Actually, looking closely at the prompt structure, it seems like a standard video captioning + reasoning task. The instruction about \"episodic memory\" might be a remnant of a different prompt type (like a knowledge base construction). Given the explicit JSON schema at the end, I should prioritize the JSON schema.\n*   However, the instruction \"For every supplied voice ID... include at least one episodic memory...\" is a strong constraint. If I don't include it, I violate the system instruction.\n*   How to reconcile? Maybe the `video_description` strings *are* the episodic memories? No, `video_description` is defined as \"atomic event description\".\n*   Let's look at the instruction: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should follow the schema.\n*   Okay, I will write the video description to reflect the visual events. I will write the high-level conclusions to reflect the semantic meaning of the speech attributed to the voice IDs.\n*   Wait, the instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This sounds like it belongs in a specific field. Since there isn't one, I will try to embed this information into the `high_level_conclusions` or ensure the `video_description` captures the speech act.\n*   Actually, often in these prompts, the \"Video Description\" is the main body. I will describe the scene and mention the speech.\n*   Let's check the constraint: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\n*   Okay, I will use `<voice_364>`, `<voice_261>`, `<voice_366>`.\n*   Since there are no face IDs, I won't make equivalences.\n*   I will draft the response now.\n\n**Drafting Video Description:**\n1.  A group of four individuals are gathered around a wooden table in a room with a whiteboard in the background.\n2.  One individual wearing an orange t-shirt stands on the left side of the frame, facing the group.\n3.  Another individual wearing a black top sits at the head of the table.\n4.  A third individual in white stands behind the table, appearing to facilitate or observe.\n5.  A fourth individual sits on the right side of the table.\n6.  The camera perspective is from a person reclining, with legs visible in the foreground.\n7.  The individual in the orange shirt gestures with their hands while speaking.\n8.  The lighting in the room shifts, indicating a change in overhead lighting or camera exposure.\n\n**Drafting High-Level Conclusions:**\n1.  Speaker `<voice_364>` initiates a discussion regarding a previous activity.\n2.  Speaker `<voice_261>` comments on the duration of the session being over two hours.\n3.  Speaker `<voice_366>` explains the core mechanics of the current activity, which involves an auction process and time limits (five minutes per person).\n4.  The speaker discusses strategies for obtaining funds if time control is difficult during the event.\n5.  The group appears engaged in planning or debriefing a structured event involving monetary exchange.\n\n**Refining based on \"Episodic Memory\" instruction:**\nSince I cannot add a field, I will ensure the descriptions capture the speech content accurately as requested (\"quotes or faithfully summarizes... using the exact ID\"). I'll put the speech summaries in the `high_level_conclusions` as they are reasoning/inference based, or weave them into the description. The instruction says \"For every supplied voice ID... include at least one episodic memory\". I will treat the `high_level_conclusions` as the place for this semantic processing.\nActually, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This suggests I shouldn't change the schema. The instruction about \"episodic memory\" might be interpreted as \"make sure the content reflects the memory/speech\".\nLet's try to fit the speech summary into the `video_description` as an event description (e.g., \"Speaker <voice_364> says...\").\nWait, \"Video Description... Generate a detailed and cohesive description... cover all observable and inferable events.\"\nOkay, I will combine visual observation with the audio event.\n\n**Final Plan:**\n*   **Video Description:** List atomic events including the visual setup and the specific speech events attributed to the voice IDs.\n*   **High-Level Conclusions:** Summarize the intent and content of the speech using the voice IDs.\n\n**Constraint Checklist & Confidence Score:**\n1. Preserve speaker identity? Yes (use IDs).\n2. Voice features map exact IDs? Yes.\n3. Include episodic memory quoting transcript? Yes (in descriptions/conclusions).\n4. Use exact ID as speaker? Yes.\n5. No face IDs supplied? Yes (none provided), so no equivalences.\n6. Valid JSON? Yes.\n7. Concise? Yes.\n\nOne detail: \"If no face IDs are supplied, do not invent any.\" -> Correct.\n\"Use only IDs supplied in the input\" -> `<voice_364>`, `<voice_261>`, `<voice_366>`.\n\nLet's assemble the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table in a room with a whiteboard.\",\n    \"An individual wearing an orange shirt stands on the left side of the room.\",\n    \"Another individual sits at the table wearing dark clothing.\",\n    \"A third individual stands behind the table wearing white.\",\n    \"A fourth individual sits at the table on the right side.\",\n    \"The camera is positioned low, showing the legs of the person holding it.\",\n    \"Individual <voice_364> begins speaking about a previous activity.\",\n    \"Individual <voice_261> mentions the session has lasted for two hours.\",\n    \"Individual <voice_366> describes the core activity as an auction process with five-minute time limits per person.\",\n    \"The speaker discusses methods for obtaining funds if time control is poor during the event.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker <voice_366> identifies the central theme of the gathering as an auction process.\",\n    \"There is a concern regarding time management, specifically aiming for five minutes per participant.\",\n    \"Alternative strategies for monetization are discussed if the auction timing fails.\",\n    \"The group is engaged in a structured discussion about event logistics and financial outcomes.\"\n  ]\n}\n```\nWait, I need to make sure I quote or summarize faithfully.\nTranscript: \"MAI: 就就你们昨天的那个活动也-\" -> \"Speaker <voice_364> refers to yesterday's activity.\"\nTranscript: \"MAI: 也两个小时了。\" -> \"Speaker <voice_261> notes the duration was two hours.\"\nTranscript: \"MAI: 讲一个小故事... 每个人五分钟... 拍卖过程... 这个货怎么获得...\" -> \"Speaker <voice_366> outlines a story about an auction process with 5-minute limits and discusses acquiring goods/money.\"\n\nI will refine the descriptions to be more precise.\n\nRevised Video Description:\n1. A group of people are seated or standing around a table in a room containing a whiteboard.\n2. An individual in an orange shirt stands on the left, while others sit or stand around the table.\n3. Individual <voice_364> starts speaking, referencing a previous activity from the day before.\n4. Individual <voice_261> adds that the session has been going on for two hours.\n5. Individual <voice_366> proposes telling a short story about an auction process where everyone gets five minutes.\n6. The speaker elaborates on controlling time and alternative ways to obtain currency if time control is difficult.\n7. The speaker concludes that the core of the activity is the auction process itself.\n\nRevised High Level Conclusions:\n1. The speaker <voice_366> defines the primary objective of the gathering as an auction process.\n2. Time management is a critical component, with a target of five minutes per participant.\n3. The speaker addresses potential issues with time control and suggests alternative methods for acquisition.\n4. The discussion revolves around the mechanics of the auction and how proceeds are obtained.\n\nThis looks solid. I will ensure the JSON is valid.\n</think>\n\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table in a room with a whiteboard in the background.\",\n    \"An individual wearing an orange shirt stands on the left side of the frame.\",\n    \"Another individual sits at the table wearing dark clothing.\",\n    \"A third individual stands behind the table wearing white.\",\n    \"A fourth individual sits at the table on the right side.\",\n    \"The camera perspective is from a person reclining, with legs visible in the foreground.\",\n    \"Individual <voice_364> begins speaking, referencing a previous activity from the day before.\",\n    \"Individual <voice_261> adds that the session has been going on for two hours.\",\n    \"Individual <voice_366> proposes telling a short story about an auction process where everyone gets five minutes.\",\n    \"The speaker elaborates on controlling time and alternative ways to obtain currency if time control is difficult.\",\n    \"The speaker concludes that the core of the activity is the auction process itself.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The speaker <voice_366> defines the primary objective of the gathering as an auction process.\",\n    \"Time management is a critical component, with a target of five minutes per participant.\",\n    \"The speaker addresses potential issues with time control and suggests alternative methods for acquisition.\",\n    \"The discussion revolves around the mechanics of the auction and how proceeds are obtained.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 8715,
+          "output_tokens": 3845,
+          "total_tokens": 12560,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002644999767653644,
+            "media_preparation_ms": 38.03340799640864,
+            "processor_tokenization_ms": 387.2453069925541,
+            "device_transfer_ms": 41.048960003536195,
+            "cuda_generation_ms": 176368.50326099375,
+            "decoding_ms": 3.4809930075425655
+          },
+          "submitted_image_count": 48,
+          "processed_image_count": 48,
+          "video_frame_count": 48,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 176838.60725699924,
+          "request_end": 1789437430.7485447,
+          "latency_ms": 176861.6350759985,
+          "client_wall_clock_latency_ms": 176861.6350759985
+        }
+      ],
+      "episodic_memory_count": 11,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 11,
+      "text_embedding_ms": null,
+      "text_embedding_count": 11,
+      "graph_update_ms": 0.1549320004414767,
+      "nodes_added": 11,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 2.2701109992340207,
+      "nodes_added": 4,
+      "directed_edges_added": 2,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 120,
+    "asr_segments": 4,
+    "speech_embeddings": 4,
+    "voice_identities": 3,
+    "detected_faces": 298,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 11,
+    "semantic_memories": 4,
+    "nodes_after_clip": 1357,
+    "edges_after_clip": 487,
+    "nodes_added_by_clip": 15,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table in a room with a whiteboard in the background.",
+      "An individual wearing an orange shirt stands on the left side of the frame.",
+      "Another individual sits at the table wearing dark clothing.",
+      "A third individual stands behind the table wearing white.",
+      "A fourth individual sits at the table on the right side.",
+      "The camera perspective is from a person reclining, with legs visible in the foreground.",
+      "Individual <voice_364> begins speaking, referencing a previous activity from the day before.",
+      "Individual <voice_261> adds that the session has been going on for two hours.",
+      "Individual <voice_366> proposes telling a short story about an auction process where everyone gets five minutes.",
+      "The speaker elaborates on controlling time and alternative ways to obtain currency if time control is difficult.",
+      "The speaker concludes that the core of the activity is the auction process itself."
+    ],
+    "high_level_conclusions": [
+      "The speaker <voice_366> defines the primary objective of the gathering as an auction process.",
+      "Time management is a critical component, with a target of five minutes per participant.",
+      "The speaker addresses potential issues with time control and suggests alternative methods for acquisition.",
+      "The discussion revolves around the mechanics of the auction and how proceeds are obtained."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a table in a room with a whiteboard in the background.",
+      "An individual wearing an orange shirt stands on the left side of the frame.",
+      "Another individual sits at the table wearing dark clothing.",
+      "A third individual stands behind the table wearing white.",
+      "A fourth individual sits at the table on the right side.",
+      "The camera perspective is from a person reclining, with legs visible in the foreground.",
+      "Individual <voice_364> begins speaking, referencing a previous activity from the day before.",
+      "Individual <voice_261> adds that the session has been going on for two hours.",
+      "Individual <voice_366> proposes telling a short story about an auction process where everyone gets five minutes.",
+      "The speaker elaborates on controlling time and alternative ways to obtain currency if time control is difficult.",
+      "The speaker concludes that the core of the activity is the auction process itself."
+    ],
+    "high_level_conclusions": [
+      "The speaker <voice_366> defines the primary objective of the gathering as an auction process.",
+      "Time management is a critical component, with a target of five minutes per participant.",
+      "The speaker addresses potential issues with time control and suggests alternative methods for acquisition.",
+      "The discussion revolves around the mechanics of the auction and how proceeds are obtained."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_102_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 15,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 1342,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a table in a room with a whiteboard in the background."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1343,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "An individual wearing an orange shirt stands on the left side of the frame."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1344,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another individual sits at the table wearing dark clothing."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1345,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A third individual stands behind the table wearing white."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1346,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A fourth individual sits at the table on the right side."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1347,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera perspective is from a person reclining, with legs visible in the foreground."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1348,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Individual <voice_364> begins speaking, referencing a previous activity from the day before."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1349,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Individual <voice_261> adds that the session has been going on for two hours."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1350,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Individual <voice_366> proposes telling a short story about an auction process where everyone gets five minutes."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1351,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The speaker elaborates on controlling time and alternative ways to obtain currency if time control is difficult."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1352,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The speaker concludes that the core of the activity is the auction process itself."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1353,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The speaker <voice_366> defines the primary objective of the gathering as an auction process."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1354,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Time management is a critical component, with a target of five minutes per participant."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1355,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The speaker addresses potential issues with time control and suggests alternative methods for acquisition."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1356,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The discussion revolves around the mechanics of the auction and how proceeds are obtained."
+          ],
+          "timestamp": 102
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 261,
+        "target": 1349,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 364,
+        "target": 1348,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 366,
+        "target": 1350,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 366,
+        "target": 1353,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_102_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_102_graph.pkl"
+  },
+  "memory_pickle_bytes": 32350160,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 78095.334467279,
+    "prepared_perf": 78102.723409651,
+    "ordered_start_perf": 78430.652607356,
+    "consumer_wait_ms": 0.008716000593267381,
+    "ready_to_ordered_ms": 327929.19770500157,
+    "preparation_work_ms": 7383.612135992735,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 185072.14587699855
+}

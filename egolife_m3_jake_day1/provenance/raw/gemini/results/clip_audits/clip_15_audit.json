@@ -1,0 +1,357 @@
+{
+  "clip_id": 15,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0015.mp4",
+  "end_to_end_memory_generation_ms": 80872.79358999513,
+  "latency_ms": {
+    "clip_decode": 4024.760599997535,
+    "deepgram_asr": 433.07117900258163,
+    "mai_transcribe_asr": 1169.9710799948662,
+    "asr_total": 1603.044684001361,
+    "audio_segmentation": 8.817873000225518,
+    "speech_embedding_campplus": 369.99932499747956,
+    "facial_detection_recognition_buffalo_l": 3899.110464997648,
+    "face_clustering": 3.4085950028384104,
+    "vlm_memory_generation": 63411.40803099552,
+    "text_embedding": 3072.8584349999437,
+    "graph_update_total": 49.11525199713651
+  },
+  "stage_details": {
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 433.07117900258163,
+        "openrouter-mai-transcribe-2": 1169.9710799948662
+      },
+      "asr_total_ms": 1603.044684001361,
+      "audio_segmentation_ms": 8.817873000225518,
+      "speech_embedding_ms": 369.99932499747956,
+      "graph_update_ms": 47.60408800211735,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 4,
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2045.0285150000127
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3899.110464997648,
+      "face_clustering_ms": 3.4085950028384104,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 133,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3973.9646809975966
+    },
+    "vlm": {
+      "context_preparation_ms": 4341.629050999472,
+      "vlm_ms": 63411.40803099552,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"Several people sit around a table covered with a pink-and-white checkered cloth, working on unpacking and assembling equipment.\",\n    \"A woman in black seated on the left works on a piece of hardware while asking a question.\",\n    \"The camera wearer walks across the room, picks up a small tripod standing on the floor, and moves it.\",\n    \"The camera wearer adjusts a decorative dog/bear-shaped stool near the wall before stepping back toward the table.\",\n    \"The individuals at the table discuss component placement, plate removal, and the number of screws required for assembly.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is collaborating on assembling technical or recording equipment.\",\n    \"<voice_123> takes on a guiding role, instructing the group on the assembly procedure and confirming screw counts.\",\n    \"<voice_151> and <voice_152> are actively assembling components and seeking verification on the instructions.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Several people sit around a table covered with a pink-and-white checkered cloth, working on unpacking and assembling equipment.",
+          "A woman in black seated on the left works on a piece of hardware while asking a question.",
+          "The camera wearer walks across the room, picks up a small tripod standing on the floor, and moves it.",
+          "The camera wearer adjusts a decorative dog/bear-shaped stool near the wall before stepping back toward the table.",
+          "The individuals at the table discuss component placement, plate removal, and the number of screws required for assembly."
+        ],
+        "high_level_conclusions": [
+          "The group is collaborating on assembling technical or recording equipment.",
+          "<voice_123> takes on a guiding role, instructing the group on the assembly procedure and confirming screw counts.",
+          "<voice_151> and <voice_152> are actively assembling components and seeking verification on the instructions."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 15,
+          "call_id": "80d53704-b1b9-4ba8-a17b-bb8ba476d435",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789403893.421993,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67159,
+          "output_tokens": 1151,
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"Several people sit around a table covered with a pink-and-white checkered cloth, working on unpacking and assembling equipment.\",\n    \"A woman in black seated on the left works on a piece of hardware while asking a question.\",\n    \"The camera wearer walks across the room, picks up a small tripod standing on the floor, and moves it.\",\n    \"The camera wearer adjusts a decorative dog/bear-shaped stool near the wall before stepping back toward the table.\",\n    \"The individuals at the table discuss component placement, plate removal, and the number of screws required for assembly.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is collaborating on assembling technical or recording equipment.\",\n    \"<voice_123> takes on a guiding role, instructing the group on the assembly procedure and confirming screw counts.\",\n    \"<voice_151> and <voice_152> are actively assembling components and seeking verification on the instructions.\"\n  ]\n}\n```",
+          "total_tokens": 68310,
+          "request_end": 1789403956.8334036,
+          "latency_ms": 63411.40803099552,
+          "client_wall_clock_latency_ms": 63411.40803099552,
+          "api_request_wall_clock_latency_ms": 63411.40803099552
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": 2733.0005100011476,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.10936499893432483,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "current_process"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": 339.8579249987961,
+      "text_embedding_count": 3,
+      "graph_update_ms": 1.4017989960848354,
+      "nodes_added": 3,
+      "directed_edges_added": 6,
+      "text_embedding_execution": "current_process"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 4,
+    "detected_faces": 133,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 162,
+    "edges_after_clip": 40,
+    "nodes_added_by_clip": 11,
+    "edges_added_by_clip": 3
+  },
+  "generated_memory": {
+    "video_description": [
+      "Several people sit around a table covered with a pink-and-white checkered cloth, working on unpacking and assembling equipment.",
+      "A woman in black seated on the left works on a piece of hardware while asking a question.",
+      "The camera wearer walks across the room, picks up a small tripod standing on the floor, and moves it.",
+      "The camera wearer adjusts a decorative dog/bear-shaped stool near the wall before stepping back toward the table.",
+      "The individuals at the table discuss component placement, plate removal, and the number of screws required for assembly."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating on assembling technical or recording equipment.",
+      "<voice_123> takes on a guiding role, instructing the group on the assembly procedure and confirming screw counts.",
+      "<voice_151> and <voice_152> are actively assembling components and seeking verification on the instructions."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Several people sit around a table covered with a pink-and-white checkered cloth, working on unpacking and assembling equipment.",
+      "A woman in black seated on the left works on a piece of hardware while asking a question.",
+      "The camera wearer walks across the room, picks up a small tripod standing on the floor, and moves it.",
+      "The camera wearer adjusts a decorative dog/bear-shaped stool near the wall before stepping back toward the table.",
+      "The individuals at the table discuss component placement, plate removal, and the number of screws required for assembly."
+    ],
+    "high_level_conclusions": [
+      "The group is collaborating on assembling technical or recording equipment.",
+      "<voice_123> takes on a guiding role, instructing the group on the assembly procedure and confirming screw counts.",
+      "<voice_151> and <voice_152> are actively assembling components and seeking verification on the instructions."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_15_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 11,
+    "edges_added": 3,
+    "nodes": [
+      {
+        "id": 151,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 然后就把它装进去啊？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 152,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 是不是要拧四个螺丝？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 153,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 呃，八个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 154,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Several people sit around a table covered with a pink-and-white checkered cloth, working on unpacking and assembling equipment."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 155,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in black seated on the left works on a piece of hardware while asking a question."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 156,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer walks across the room, picks up a small tripod standing on the floor, and moves it."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 157,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer adjusts a decorative dog/bear-shaped stool near the wall before stepping back toward the table."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 158,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The individuals at the table discuss component placement, plate removal, and the number of screws required for assembly."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 159,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is collaborating on assembling technical or recording equipment."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 160,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_123> takes on a guiding role, instructing the group on the assembly procedure and confirming screw counts."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 161,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_151> and <voice_152> are actively assembling components and seeking verification on the instructions."
+          ],
+          "timestamp": 15
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 123,
+        "target": 160,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 151,
+        "target": 161,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 152,
+        "target": 161,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_15_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_15_graph.pkl"
+  }
+}

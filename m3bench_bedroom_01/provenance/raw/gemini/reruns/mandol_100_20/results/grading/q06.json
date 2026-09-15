@@ -1,0 +1,35 @@
+{
+  "grade": {
+    "correct": true,
+    "reason": "Matches the reference answer of mocha coffee."
+  },
+  "call": {
+    "phase": "separate_semantic_grading",
+    "question_id": "Q06",
+    "method": "D",
+    "call_id": "f8286c78-d8a6-4e72-b582-a09f906f61be",
+    "purpose": "separate_semantic_grading",
+    "model": "gemini-3.8-flash",
+    "provider": "302.ai",
+    "request_start": 1789439982.5085897,
+    "ttft_ms": null,
+    "first_response": null,
+    "input_tokens": 143,
+    "output_tokens": 96,
+    "transport": {
+      "client_previously_used": true,
+      "tcp_connect_count": 0,
+      "tls_handshake_count": 0,
+      "http_wall_ms": 3152.2449670010246
+    },
+    "returned_model": "gemini-3.8-flash",
+    "finish_reason": "stop",
+    "response": "```json\n{\n  \"0\": {\n    \"correct\": true,\n    \"reason\": \"Matches the reference answer of mocha coffee.\"\n  }\n}\n```",
+    "total_tokens": 239,
+    "request_end": 1789439985.6608932,
+    "latency_ms": 3152.302057002089,
+    "client_wall_clock_latency_ms": 3152.302057002089,
+    "api_request_wall_clock_latency_ms": 3152.302057002089
+  },
+  "included_in_qa_latency": false
+}

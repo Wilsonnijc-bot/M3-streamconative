@@ -1,0 +1,74 @@
+{
+  "clip_id": 89,
+  "source": {
+    "segment_id": 89,
+    "source": "DAY1_A1_JAKE_11520000.mp4",
+    "source_clock": "11520000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42720.0,
+    "absolute_end_seconds": 42750.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0089.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 49969.214292441,
+      "prepared_perf": 49976.784254884,
+      "ordered_start_perf": 50177.865215941,
+      "consumer_wait_ms": 0.011764001101255417,
+      "ready_to_ordered_ms": 201080.9610569995,
+      "preparation_work_ms": 7564.6598280000035,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a table in a room discussing hospitality arrangements.",
+      "Flowers, a clapperboard, and drinks rest on the checkered table.",
+      "In the background, an individual handles greenery and floral arrangements near a whiteboard.",
+      "A woman in a black top sits at the near side of the table listening to the discussion.",
+      "Two participants sit across the table, contributing to ideas about serving drinks and coffee to guests."
+    ],
+    "high_level_conclusions": [
+      "The group is actively brainstorming hospitality and beverage plans for an event or shoot.",
+      "The combination of a clapperboard and floral materials suggests production planning or workshop preparation."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a table in a room discussing hospitality arrangements.\",\n    \"Flowers, a clapperboard, and drinks rest on the checkered table.\",\n    \"In the background, an individual handles greenery and floral arrangements near a whiteboard.\",\n    \"A woman in a black top sits at the near side of the table listening to the discussion.\",\n    \"Two participants sit across the table, contributing to ideas about serving drinks and coffee to guests.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is actively brainstorming hospitality and beverage plans for an event or shoot.\",\n    \"The combination of a clapperboard and floral materials suggests production planning or workshop preparation.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 89,
+      "call_id": "db18d536-cf2d-4da2-9cc0-a8742c877386",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789409001.83554,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67148,
+      "output_tokens": 767,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 64380.17764400138
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people sits around a table in a room discussing hospitality arrangements.\",\n    \"Flowers, a clapperboard, and drinks rest on the checkered table.\",\n    \"In the background, an individual handles greenery and floral arrangements near a whiteboard.\",\n    \"A woman in a black top sits at the near side of the table listening to the discussion.\",\n    \"Two participants sit across the table, contributing to ideas about serving drinks and coffee to guests.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is actively brainstorming hospitality and beverage plans for an event or shoot.\",\n    \"The combination of a clapperboard and floral materials suggests production planning or workshop preparation.\"\n  ]\n}\n```",
+      "total_tokens": 67915,
+      "request_end": 1789409066.215859,
+      "latency_ms": 64380.31666499592,
+      "client_wall_clock_latency_ms": 64380.31666499592,
+      "api_request_wall_clock_latency_ms": 64380.31666499592
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_89_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "clip_id": 138,
+  "source": {
+    "segment_id": 138,
+    "source": "DAY1_A1_JAKE_12140000.mp4",
+    "source_clock": "12140000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 44040.0,
+    "absolute_end_seconds": 44070.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0138.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 53705.154756946,
+      "prepared_perf": 53714.682309,
+      "ordered_start_perf": 53803.685752059,
+      "consumer_wait_ms": 0.007053000445012003,
+      "ready_to_ordered_ms": 89003.44305899489,
+      "preparation_work_ms": 9522.212654002942,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a checkered table in a room, conducting a planning meeting.",
+      "A whiteboard with notes and a schedule outline is visible in the background.",
+      "A woman sitting on the left side in a light-colored top stands up and walks away from the table.",
+      "A person seated on the right side extends their arm and points toward the whiteboard while discussing the activity stages and schedule.",
+      "A woman wearing glasses and a black top on the left side speaks and gestures with both hands as she explains the timeline for introducing products."
+    ],
+    "high_level_conclusions": [
+      "The participants are coordinating the detailed schedule and flow for an upcoming event or workshop, including activity stages, coin rewards, meal breaks, and product presentations.",
+      "The attendees are considering media coverage or recording logistics, deciding to pause recording during meal breaks like eating pizza.",
+      "The woman in black seated on the left takes an active role in structuring the agenda, specifically organizing when their product introduction should take place."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a checkered table in a room, conducting a planning meeting.\",\n  \"A whiteboard with notes and a schedule outline is visible in the background.\",\n  \"A woman sitting on the left side in a light-colored top stands up and walks away from the table.\",\n  \"A person seated on the right side extends their arm and points toward the whiteboard while discussing the activity stages and schedule.\",\n  \"A woman wearing glasses and a black top on the left side speaks and gestures with both hands as she explains the timeline for introducing products.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are coordinating the detailed schedule and flow for an upcoming event or workshop, including activity stages, coin rewards, meal breaks, and product presentations.\",\n  \"The attendees are considering media coverage or recording logistics, deciding to pause recording during meal breaks like eating pizza.\",\n  \"The woman in black seated on the left takes an active role in structuring the agenda, specifically organizing when their product introduction should take place.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 138,
+      "call_id": "c1d9c25b-fa5d-4938-acba-ce980c48ffe9",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789412633.7903666,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67709,
+      "output_tokens": 1554,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 27105.845813995984
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people are gathered around a checkered table in a room, conducting a planning meeting.\",\n  \"A whiteboard with notes and a schedule outline is visible in the background.\",\n  \"A woman sitting on the left side in a light-colored top stands up and walks away from the table.\",\n  \"A person seated on the right side extends their arm and points toward the whiteboard while discussing the activity stages and schedule.\",\n  \"A woman wearing glasses and a black top on the left side speaks and gestures with both hands as she explains the timeline for introducing products.\"\n ],\n \"high_level_conclusions\": [\n  \"The participants are coordinating the detailed schedule and flow for an upcoming event or workshop, including activity stages, coin rewards, meal breaks, and product presentations.\",\n  \"The attendees are considering media coverage or recording logistics, deciding to pause recording during meal breaks like eating pizza.\",\n  \"The woman in black seated on the left takes an active role in structuring the agenda, specifically organizing when their product introduction should take place.\"\n ]\n}\n```",
+      "total_tokens": 69263,
+      "request_end": 1789412660.8963282,
+      "latency_ms": 27105.959278000228,
+      "client_wall_clock_latency_ms": 27105.959278000228,
+      "api_request_wall_clock_latency_ms": 27105.959278000228
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_138_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

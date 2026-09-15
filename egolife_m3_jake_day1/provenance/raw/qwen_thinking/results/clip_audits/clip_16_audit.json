@@ -1,0 +1,524 @@
+{
+  "clip_id": 16,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0016.mp4",
+  "end_to_end_memory_generation_ms": 709210.4710249987,
+  "latency_ms": {
+    "clip_decode": 3797.1287300024414,
+    "deepgram_asr": 2.489874001184944,
+    "mai_transcribe_asr": 2.4678639965713955,
+    "asr_total": 3.4128620027331635,
+    "audio_segmentation": 12.990306000574492,
+    "speech_embedding_campplus": 1689.1375100021833,
+    "facial_detection_recognition_buffalo_l": 4314.096517999133,
+    "face_clustering": 6.243970005016308,
+    "vlm_memory_generation": 174732.5748919975,
+    "text_embedding": 588.4775649974472,
+    "graph_update_total": 112.85138100356562
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 16,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 1091,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789413654.2869334,
+          "status": "success",
+          "total_tokens": 207,
+          "request_end": 1789413654.8751576,
+          "latency_ms": 588.224517996423
+        }
+      ],
+      "total_tokens": 207,
+      "latency_ms": 588.4775649974472
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 2.489874001184944,
+        "openrouter-mai-transcribe-2": 2.4678639965713955
+      },
+      "asr_total_ms": 3.4128620027331635,
+      "audio_segmentation_ms": 12.990306000574492,
+      "speech_embedding_ms": 1689.1375100021833,
+      "graph_update_ms": 111.6542789968662,
+      "asr_segment_count": 9,
+      "speech_embedding_count": 9,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1833.3070470034727
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4314.096517999133,
+      "face_clustering_ms": 6.243970005016308,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 279,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4474.712497001747
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_129>",
+        "<voice_183>",
+        "<voice_184>",
+        "<voice_185>",
+        "<voice_186>"
+      ],
+      "context_preparation_ms": 4171.321292997163,
+      "vlm_ms": 174732.5748919975,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals sits around a rectangular table covered with a red-and-white checkered cloth.\",\n\t\t\"The participants are gathered around open cardboard boxes containing small black electronic devices or components.\",\n\t\t\"People pass items across the table and manipulate the objects with their hands.\",\n\t\t\"The camera operator moves around the table, shifting perspectives from front-facing to side and rear views.\",\n\t\t\"A person in a brown shirt is seen handling a device on the right side of the table.\",\n\t\t\"Another participant in a white shirt is visible near the back of the table.\",\n\t\t\"The group appears to be collaborating on assembling or testing the devices together.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_129> discusses the assembly of a large strap component, noting there are eight items in total.\",\n\t\t\"Speaker <voice_183> confirms completion of attaching one strap component.\",\n\t\t\"Speaker <voice_184> directs attention to a specific item on the table.\",\n\t\t\"Speaker <voice_185> distinguishes between a larger and smaller strap component during the assembly process.\",\n\t\t\"Speaker <voice_186> verifies the correct insertion method for a component into the device.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of individuals sits around a rectangular table covered with a red-and-white checkered cloth.",
+          "The participants are gathered around open cardboard boxes containing small black electronic devices or components.",
+          "People pass items across the table and manipulate the objects with their hands.",
+          "The camera operator moves around the table, shifting perspectives from front-facing to side and rear views.",
+          "A person in a brown shirt is seen handling a device on the right side of the table.",
+          "Another participant in a white shirt is visible near the back of the table.",
+          "The group appears to be collaborating on assembling or testing the devices together."
+        ],
+        "high_level_conclusions": [
+          "Speaker <voice_129> discusses the assembly of a large strap component, noting there are eight items in total.",
+          "Speaker <voice_183> confirms completion of attaching one strap component.",
+          "Speaker <voice_184> directs attention to a specific item on the table.",
+          "Speaker <voice_185> distinguishes between a larger and smaller strap component during the assembly process.",
+          "Speaker <voice_186> verifies the correct insertion method for a component into the device."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 16,
+          "call_id": "deb0dfb8-4bec-46be-8c2e-92a66c6a7841",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789413479.5532978,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of individuals sits around a rectangular table covered with a red-and-white checkered cloth.\",\n\t\t\"The participants are gathered around open cardboard boxes containing small black electronic devices or components.\",\n\t\t\"People pass items across the table and manipulate the objects with their hands.\",\n\t\t\"The camera operator moves around the table, shifting perspectives from front-facing to side and rear views.\",\n\t\t\"A person in a brown shirt is seen handling a device on the right side of the table.\",\n\t\t\"Another participant in a white shirt is visible near the back of the table.\",\n\t\t\"The group appears to be collaborating on assembling or testing the devices together.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_129> discusses the assembly of a large strap component, noting there are eight items in total.\",\n\t\t\"Speaker <voice_183> confirms completion of attaching one strap component.\",\n\t\t\"Speaker <voice_184> directs attention to a specific item on the table.\",\n\t\t\"Speaker <voice_185> distinguishes between a larger and smaller strap component during the assembly process.\",\n\t\t\"Speaker <voice_186> verifies the correct insertion method for a component into the device.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be handheld or mounted on someone moving around a table.\n    *   **Scene:** A room with a wooden table covered in a red-and-white checkered tablecloth. Several people are sitting around the table.\n    *   **People:**\n        *   Person 1 (Left): Dark hair, black top, glasses.\n        *   Person 2 (Center-Back): White shirt, short hair.\n        *   Person 3 (Center-Right): Pink hair/head covering, white top.\n        *   Person 4 (Right): Brown/orange t-shirt, dark hair.\n        *   Camera Operator/Cameraperson: Visible legs/feet in some frames (bottom center), later moves around.\n    *   **Action:** They seem to be assembling or examining small objects (maybe VR headsets or similar tech) from boxes on the table. They pass items around. At the end, the camera moves significantly, showing different angles.\n*   **Voice Features:**\n    *   `<voice_129>`: Speaker MAI. Discusses \"straw hole\" (likely a translation artifact for a specific part of a device, maybe a strap or connector), mentions \"big straw\". Mentions counting 8 items.\n    *   `<voice_183>`: Speaker MAI. Says \"Here.\" and \"I have finished putting up one straw.\"\n    *   `<voice_184>`: Speaker MAI. Says \"Look at this.\"\n    *   `<voice_185>`: Speaker MAI. Says \"Yes, little straw.\"\n    *   `<voice_186>`: Speaker MAI. Asks if inserting it inside works.\n    *   **Note:** All voice features are attributed to `<voice_129>`, `<voice_183>`, etc., but the ASR text consistently starts with \"MAI:\". This suggests MAI is the speaker for these voice tracks. However, the prompt instructions say \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" It also says \"For every supplied voice ID with nonempty speech, include at least one episodic memory... using the exact ID as the speaker.\"\n    *   Wait, looking closely at the voice data:\n        *   `<voice_129>`: \"MAI: ...\"\n        *   `<voice_183>`: \"MAI: ...\"\n        *   `<voice_184>`: \"MAI: ...\"\n        *   `<voice_185>`: \"MAI: ...\"\n        *   `<voice_186>`: \"MAI: ...\"\n    *   It seems like there might be multiple speakers labeled with different IDs, but the ASR prefix is always \"MAI\". Or perhaps MAI is the name of the speaker associated with these IDs. I need to treat the IDs as the speaker identifiers.\n    *   Actually, usually in these tasks, the IDs correspond to specific people. Here, the IDs are `<voice_129>`, `<voice_183>`, etc. The instruction says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So I need to create memories for `<voice_129>`, `<voice_183>`, `<voice_184>`, `<voice_185>`, `<voice_186>`.\n    *   Since there are no face features provided in the input (the prompt says \"Each feature is either a face ... or a voice ...\", but the input section under \"Face features:\" is empty and \"Voice features:\" contains the data), I cannot make equivalences between faces and voices because no face IDs were supplied. I must strictly follow \"If no face IDs are supplied, do not invent any.\"\n\n**2. Construct Video Description:**\n*   **Event 1 (0.00s - 20.00s):** People sit around a table with boxes. They handle small black objects.\n*   **Event 2 (20.00s - 25.00s):** The person in the brown shirt (right) holds an object. The camera pans/moves.\n*   **Event 3 (25.00s - 29.50s):** The camera moves around the table, showing different angles of the group working on the items.\n*   **Specific Actions:** Passing items, looking at phones/devices, assembling something.\n*   **Constraint:** \"Each description should focus on a single atomic event or fact.\" \"Be concise and avoid duplicate events.\"\n\n**Drafting Video Description:**\n*   Multiple individuals sit around a rectangular table covered with a checkered cloth, handling small electronic devices or components from open boxes.\n*   A person wearing a brown shirt sits on the right side of the table, manipulating a black object while others observe.\n*   The camera operator moves around the table, shifting perspective from facing the group to viewing them from behind and the side.\n*   Participants exchange items and appear to be assembling or testing the devices together.\n*   One individual in a white shirt stands briefly near the back wall before returning to the table area. (Wait, looking at frames 26-29, the person in white shirt is standing/sitting further back). Let's re-examine frames 26-29.\n    *   Frame 26: Person in white shirt is visible on the left side now? No, looks like the person who was on the left (black top) moved or the camera rotated. Actually, in frame 26, there is a person in a white shirt sitting at the far end/left. The person in black top is on the left edge.\n    *   Let's stick to the main action: Group collaboration around a table.\n\n**Drafting High-Level Conclusions:**\n*   Since there are no face IDs, I cannot state equivalences like `Equivalence: <face_1>, <voice_2>`.\n*   I can infer intent: They are collaborating on a project involving these small devices.\n*   Instruction: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features are supplied, I cannot generate this line. I should just leave the array with general inferences if possible, or just empty if none apply. But the instruction says \"Generate high-level reasoning-based conclusions...\". I can write about their activity.\n*   Wait, the instruction says \"Use logical inference to identify character intentions, relationships, and identities.\" Without face IDs, I can't identify identities visually. I can infer they are working together.\n*   Also, regarding voice IDs: The prompt says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" This applies to the *conclusions*. E.g., \"Speaker <voice_129> confirms the assembly count.\"\n*   However, the specific format requested for equivalence is strict. If I don't have face IDs, I won't use that format. I will use standard strings for conclusions.\n\n**Refining Video Description:**\n1.  A group of people gathers around a table with a checkered tablecloth to assemble small black devices from cardboard boxes.\n2.  Individuals pass components across the table, focusing intently on the assembly process.\n3.  The camera moves dynamically around the participants, capturing close-ups of hands working on the devices.\n4.  Towards the end, the camera angle shifts to show the group from behind and the side, revealing more of the room layout including a whiteboard and kitchenette area.\n\n**Refining High-Level Conclusions:**\n1.  The participants are engaged in a collaborative technical task, likely assembling or debugging the devices on the table.\n2.  Speaker <voice_129> indicates they are counting eight specific items related to the assembly (\"big straw\").\n3.  Speaker <voice_186> questions the insertion method of a component into the device.\n4.  Speaker <voice_185> identifies a smaller component as a \"little straw,\" suggesting a distinction between parts sizes.\n\n**Checking Constraints:**\n*   \"Preserve speaker identity... using the exact ID as the speaker.\" -> Done in conclusions.\n*   \"Do not replace the ID with 'a speaker'...\" -> Done.\n*   \"If no face IDs are supplied, do not invent any.\" -> Correct, no Equivalence lines.\n*   \"Keep dialogue grounded in the provided transcript.\" -> Used ASR text.\n*   \"Output Format: JSON object\".\n\n**Final Polish of JSON:**\nMake sure the JSON is valid. Escape quotes if necessary.\n\nOne detail: The prompt asks to \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\" in the *memory* construction part, but the output format requested is `video_description` and `high_level_conclusions`.\nWait, looking at the system prompt vs user prompt.\nSystem Prompt: \"Preserve speaker identity when constructing memory from the supplied character features.\" ... \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\"\nUser Prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions... Output Format: ... video_description ... high_level_conclusions\".\nThere is a slight conflict. The System Prompt talks about \"constructing memory\" and \"episodic memory\". The User Prompt defines the output schema as `video_description` and `high_level_conclusions`. Usually, the User Prompt overrides the System Prompt regarding the final output structure. However, the System Prompt instructions often act as constraints on how to fill those fields.\nLet's look at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This sounds like it belongs in a `memories` field, but the User Prompt *only* asks for `video_description` and `high_level_conclusions`.\nActually, reading the System Prompt again: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should follow the User Prompt's schema (`video_description`, `high_level_conclusions`) but adhere to the logic in the System Prompt.\nWhere do the \"episodic memories\" go? The User Prompt doesn't ask for a `memories` field. It asks for `video_description` and `high_level_conclusions`.\nPerhaps the \"episodic memory\" requirement is meant to be integrated into the `video_description` or `high_level_conclusions`?\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nIf I put the quote in `video_description`, it describes the event. If I put it in `high_level_conclusions`, it summarizes the meaning.\nGiven the constraint \"Keep the existing video_description/high_level_conclusions JSON schema\", I must output exactly those keys.\nI will integrate the voice summaries into the `high_level_conclusions` as factual statements about what happened (since descriptions are usually visual, and conclusions can include audio context if available). Or I can add them to `video_description` as spoken actions.\nHowever, the System Prompt says \"include at least one episodic memory...\". It doesn't explicitly say where. But since the output schema is fixed, I will ensure the content reflects the voice data within the allowed fields.\nActually, looking at previous examples of this task type (often from a dataset like ActivityNet or similar), sometimes the \"memory\" is implicit in the description.\nBut wait, the System Prompt says \"Preserve speaker identity when constructing memory...\". And \"For every supplied voice ID... include at least one episodic memory...\".\nIf I don't have a `memories` key, I might violate the System Prompt. But the User Prompt says \"Keep the existing video_description/high_level_conclusions JSON schema...\".\nThis is a common conflict. I will prioritize the User Prompt's explicit output schema but ensure the content satisfies the System Prompt's requirements for voice handling (i.e., mentioning the speaker ID and their words in the text).\nActually, I'll put the voice quotes in the `high_level_conclusions` as they represent specific semantic conclusions derived from the audio. Or I can add them to `video_description` as \"Speaker X says Y\".\nLet's try to fit the \"episodic memory\" requirement into the `video_description` as a narrative element describing the audio event, or `high_level_conclusions` as a summary. Given \"High-Level Conclusions\" are for \"reasoning-based conclusions\", putting direct quotes there fits well as evidence.\nHowever, `video_description` is for \"observable and inferable events\". Speaking is an event.\nLet's look at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nI will incorporate these into the `high_level_conclusions` to ensure they are captured as \"conclusions\" about the interaction, or `video_description` if it describes the action of speaking.\nActually, the safest bet to satisfy \"include at least one episodic memory\" without adding a new key is to embed the memory content into the existing keys. I will add specific sentences in `high_level_conclusions` that summarize the speaker's statement using their ID.\n\nRevised Plan:\n1.  **Video Description**: Focus on visual actions (sitting, passing items, camera movement). Mention the presence of the speakers generally if needed, but focus on visuals.\n2.  **High-Level Conclusions**: Include the voice summaries here as they represent the \"semantic conclusion\" or \"identity resolution\" aspect mentioned in the system prompt (\"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"). Even though there are no face IDs, I can still conclude about the speaker's actions/words.\n\nWait, I need to check if I can add a `memories` field. \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should NOT change the schema. So no `memories` key. I must fit the requirements into the existing keys.\nI will add the voice quotes to `high_level_conclusions` as they are \"reasoning-based conclusions\" about the conversation flow.\n\nLet's refine the Voice Data mapping:\n*   `<voice_129>`: \"MAI: 也有一个带孔的，你要把那个也上上。就是那个是大带的带子。\" (Also has a hole, you need to put that on too. That is the big strap.)\n*   `<voice_183>`: \"MAI: 这里。我已经上-上完一个带子。\" (Here. I have finished putting up one strap.)\n*   `<voice_184>`: \"MAI: 你看这。\" (Look at this.)\n*   `<voice_185>`: \"MAI: 对，小带子。\" (Yes, little strap.)\n*   `<voice_186>`: \"MAI: 喏，里面是把它插进去就行了吧？就那个。\" (Here, just insert it inside, okay? Just that one.)\n\nI will construct the JSON now.\n\nOne more check: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features are provided, I will not include this format.\n\nFinal check on constraints:\n- \"Preserve speaker identity... using the exact ID as the speaker.\" -> I will use `<voice_129>`, etc.\n- \"Do not replace the ID with 'a speaker'...\" -> OK.\n- \"Keep dialogue grounded...\" -> OK.\n\nLet's write the response.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of individuals sits around a rectangular table covered with a red-and-white checkered cloth.\",\n\t\t\"The participants are gathered around open cardboard boxes containing small black electronic devices or components.\",\n\t\t\"People pass items across the table and manipulate the objects with their hands.\",\n\t\t\"The camera operator moves around the table, shifting perspectives from front-facing to side and rear views.\",\n\t\t\"A person in a brown shirt is seen handling a device on the right side of the table.\",\n\t\t\"Another participant in a white shirt is visible near the back of the table.\",\n\t\t\"The group appears to be collaborating on assembling or testing the devices together.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_129> discusses the assembly of a large strap component, noting there are eight items in total.\",\n\t\t\"Speaker <voice_183> confirms completion of attaching one strap component.\",\n\t\t\"Speaker <voice_184> directs attention to a specific item on the table.\",\n\t\t\"Speaker <voice_185> distinguishes between a larger and smaller strap component during the assembly process.\",\n\t\t\"Speaker <voice_186> verifies the correct insertion method for a component into the device.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10948,
+          "output_tokens": 3797,
+          "total_tokens": 14745,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0019130020518787205,
+            "media_preparation_ms": 58.27774700446753,
+            "processor_tokenization_ms": 577.1554199964157,
+            "device_transfer_ms": 39.01505799876759,
+            "cuda_generation_ms": 174023.55252399866,
+            "decoding_ms": 4.04703599633649
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 174702.21547999972,
+          "request_end": 1789413654.285875,
+          "latency_ms": 174732.5748919975,
+          "client_wall_clock_latency_ms": 174732.5748919975
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 5
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.06730500172125176,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 1.1297970049781725,
+      "nodes_added": 5,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 9,
+    "speech_embeddings": 9,
+    "voice_identities": 5,
+    "detected_faces": 279,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 5,
+    "nodes_after_clip": 199,
+    "edges_after_clip": 74,
+    "nodes_added_by_clip": 16,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of individuals sits around a rectangular table covered with a red-and-white checkered cloth.",
+      "The participants are gathered around open cardboard boxes containing small black electronic devices or components.",
+      "People pass items across the table and manipulate the objects with their hands.",
+      "The camera operator moves around the table, shifting perspectives from front-facing to side and rear views.",
+      "A person in a brown shirt is seen handling a device on the right side of the table.",
+      "Another participant in a white shirt is visible near the back of the table.",
+      "The group appears to be collaborating on assembling or testing the devices together."
+    ],
+    "high_level_conclusions": [
+      "Speaker <voice_129> discusses the assembly of a large strap component, noting there are eight items in total.",
+      "Speaker <voice_183> confirms completion of attaching one strap component.",
+      "Speaker <voice_184> directs attention to a specific item on the table.",
+      "Speaker <voice_185> distinguishes between a larger and smaller strap component during the assembly process.",
+      "Speaker <voice_186> verifies the correct insertion method for a component into the device."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of individuals sits around a rectangular table covered with a red-and-white checkered cloth.",
+      "The participants are gathered around open cardboard boxes containing small black electronic devices or components.",
+      "People pass items across the table and manipulate the objects with their hands.",
+      "The camera operator moves around the table, shifting perspectives from front-facing to side and rear views.",
+      "A person in a brown shirt is seen handling a device on the right side of the table.",
+      "Another participant in a white shirt is visible near the back of the table.",
+      "The group appears to be collaborating on assembling or testing the devices together."
+    ],
+    "high_level_conclusions": [
+      "Speaker <voice_129> discusses the assembly of a large strap component, noting there are eight items in total.",
+      "Speaker <voice_183> confirms completion of attaching one strap component.",
+      "Speaker <voice_184> directs attention to a specific item on the table.",
+      "Speaker <voice_185> distinguishes between a larger and smaller strap component during the assembly process.",
+      "Speaker <voice_186> verifies the correct insertion method for a component into the device."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_16_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 16,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 183,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 这里。",
+            "MAI: 我已经上-上完一个螺丝。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 184,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你看这。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 185,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对，小螺丝。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 186,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 哦，里面是把它插进去就行了吧？就那个。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 187,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of individuals sits around a rectangular table covered with a red-and-white checkered cloth."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 188,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The participants are gathered around open cardboard boxes containing small black electronic devices or components."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 189,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "People pass items across the table and manipulate the objects with their hands."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 190,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera operator moves around the table, shifting perspectives from front-facing to side and rear views."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 191,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person in a brown shirt is seen handling a device on the right side of the table."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 192,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another participant in a white shirt is visible near the back of the table."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 193,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group appears to be collaborating on assembling or testing the devices together."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 194,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_129> discusses the assembly of a large strap component, noting there are eight items in total."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 195,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_183> confirms completion of attaching one strap component."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 196,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_184> directs attention to a specific item on the table."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 197,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_185> distinguishes between a larger and smaller strap component during the assembly process."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 198,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_186> verifies the correct insertion method for a component into the device."
+          ],
+          "timestamp": 16
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 129,
+        "target": 194,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 183,
+        "target": 195,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 184,
+        "target": 196,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 185,
+        "target": 197,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 186,
+        "target": 198,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_16_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_16_graph.pkl"
+  },
+  "memory_pickle_bytes": 4919310,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 54132.520209844,
+    "prepared_perf": 54138.723415149,
+    "ordered_start_perf": 54655.593308471,
+    "consumer_wait_ms": 0.01086099655367434,
+    "ready_to_ordered_ms": 516869.8933220003,
+    "preparation_work_ms": 6197.902948995761,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 185804.5496019986
+}

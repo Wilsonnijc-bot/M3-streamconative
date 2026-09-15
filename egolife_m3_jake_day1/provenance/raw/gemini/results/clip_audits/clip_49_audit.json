@@ -1,0 +1,339 @@
+{
+  "clip_id": 49,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0049.mp4",
+  "end_to_end_memory_generation_ms": 165474.9354440064,
+  "latency_ms": {
+    "clip_decode": 4207.575696003914,
+    "deepgram_asr": 1090.3063250007108,
+    "mai_transcribe_asr": 1420.1344229950337,
+    "asr_total": 1421.144854000886,
+    "audio_segmentation": 9.917969000525773,
+    "speech_embedding_campplus": 1128.0258970000432,
+    "facial_detection_recognition_buffalo_l": 3665.8918489993084,
+    "face_clustering": 6.11948300502263,
+    "vlm_memory_generation": 20945.813574995555,
+    "text_embedding": 441.5119309996953,
+    "graph_update_total": 358.8698509920505
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 49,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 877,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789406135.7545831,
+          "status": "success",
+          "total_tokens": 163,
+          "request_end": 1789406136.1959376,
+          "latency_ms": 441.35516599635594
+        }
+      ],
+      "total_tokens": 163,
+      "latency_ms": 441.5119309996953
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1090.3063250007108,
+        "openrouter-mai-transcribe-2": 1420.1344229950337
+      },
+      "asr_total_ms": 1421.144854000886,
+      "audio_segmentation_ms": 9.917969000525773,
+      "speech_embedding_ms": 1128.0258970000432,
+      "graph_update_ms": 358.7971149972873,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1516.3997700001346
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3665.8918489993084,
+      "face_clustering_ms": 6.11948300502263,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 227,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3795.6467359981616
+    },
+    "vlm": {
+      "context_preparation_ms": 3957.0234489947325,
+      "vlm_ms": 20945.813574995555,
+      "raw_response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a checkered dining table in a room during a meeting.\",\n  \"A person in an orange shirt stands near a whiteboard in the background, writing points on it.\",\n  \"Participants around the table, including an individual in a black long-sleeve shirt on the left and others on the right, engage in a group discussion.\",\n  \"A clapperboard and various personal items, such as phones and water bottles, rest on the table.\",\n  \"The camera wearer leans forward and adjusts position closer to the table while listening to the discussion.\"\n ],\n \"high_level_conclusions\": [\n  \"The individuals are holding a collaborative planning or production meeting to discuss project agendas and survey feedback.\",\n  \"The person standing at the whiteboard serves as the facilitator leading the discussion and documenting key ideas.\",\n  \"The participants are deliberating over prioritizing complex agenda topics, specifically regarding event activities.\"\n ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people sits around a checkered dining table in a room during a meeting.",
+          "A person in an orange shirt stands near a whiteboard in the background, writing points on it.",
+          "Participants around the table, including an individual in a black long-sleeve shirt on the left and others on the right, engage in a group discussion.",
+          "A clapperboard and various personal items, such as phones and water bottles, rest on the table.",
+          "The camera wearer leans forward and adjusts position closer to the table while listening to the discussion."
+        ],
+        "high_level_conclusions": [
+          "The individuals are holding a collaborative planning or production meeting to discuss project agendas and survey feedback.",
+          "The person standing at the whiteboard serves as the facilitator leading the discussion and documenting key ideas.",
+          "The participants are deliberating over prioritizing complex agenda topics, specifically regarding event activities."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 49,
+          "call_id": "bbcf299d-d1d2-4a48-a83a-32c746dda6e3",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789406114.807995,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 67071,
+          "output_tokens": 1063,
+          "transport": {
+            "client_previously_used": true,
+            "tcp_connect_count": 0,
+            "tls_handshake_count": 0,
+            "http_wall_ms": 20945.690202999685
+          },
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a checkered dining table in a room during a meeting.\",\n  \"A person in an orange shirt stands near a whiteboard in the background, writing points on it.\",\n  \"Participants around the table, including an individual in a black long-sleeve shirt on the left and others on the right, engage in a group discussion.\",\n  \"A clapperboard and various personal items, such as phones and water bottles, rest on the table.\",\n  \"The camera wearer leans forward and adjusts position closer to the table while listening to the discussion.\"\n ],\n \"high_level_conclusions\": [\n  \"The individuals are holding a collaborative planning or production meeting to discuss project agendas and survey feedback.\",\n  \"The person standing at the whiteboard serves as the facilitator leading the discussion and documenting key ideas.\",\n  \"The participants are deliberating over prioritizing complex agenda topics, specifically regarding event activities.\"\n ]\n}\n```",
+          "total_tokens": 68134,
+          "request_end": 1789406135.7538114,
+          "latency_ms": 20945.813574995555,
+          "client_wall_clock_latency_ms": 20945.813574995555,
+          "api_request_wall_clock_latency_ms": 20945.813574995555
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.055302996770478785,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.017432997992727906,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 5,
+    "detected_faces": 227,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 572,
+    "edges_after_clip": 123,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a checkered dining table in a room during a meeting.",
+      "A person in an orange shirt stands near a whiteboard in the background, writing points on it.",
+      "Participants around the table, including an individual in a black long-sleeve shirt on the left and others on the right, engage in a group discussion.",
+      "A clapperboard and various personal items, such as phones and water bottles, rest on the table.",
+      "The camera wearer leans forward and adjusts position closer to the table while listening to the discussion."
+    ],
+    "high_level_conclusions": [
+      "The individuals are holding a collaborative planning or production meeting to discuss project agendas and survey feedback.",
+      "The person standing at the whiteboard serves as the facilitator leading the discussion and documenting key ideas.",
+      "The participants are deliberating over prioritizing complex agenda topics, specifically regarding event activities."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people sits around a checkered dining table in a room during a meeting.",
+      "A person in an orange shirt stands near a whiteboard in the background, writing points on it.",
+      "Participants around the table, including an individual in a black long-sleeve shirt on the left and others on the right, engage in a group discussion.",
+      "A clapperboard and various personal items, such as phones and water bottles, rest on the table.",
+      "The camera wearer leans forward and adjusts position closer to the table while listening to the discussion."
+    ],
+    "high_level_conclusions": [
+      "The individuals are holding a collaborative planning or production meeting to discuss project agendas and survey feedback.",
+      "The person standing at the whiteboard serves as the facilitator leading the discussion and documenting key ideas.",
+      "The participants are deliberating over prioritizing complex agenda topics, specifically regarding event activities."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_49_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 564,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people sits around a checkered dining table in a room during a meeting."
+          ],
+          "timestamp": 49
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 565,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person in an orange shirt stands near a whiteboard in the background, writing points on it."
+          ],
+          "timestamp": 49
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 566,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Participants around the table, including an individual in a black long-sleeve shirt on the left and others on the right, engage in a group discussion."
+          ],
+          "timestamp": 49
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 567,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard and various personal items, such as phones and water bottles, rest on the table."
+          ],
+          "timestamp": 49
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 568,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer leans forward and adjusts position closer to the table while listening to the discussion."
+          ],
+          "timestamp": 49
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 569,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The individuals are holding a collaborative planning or production meeting to discuss project agendas and survey feedback."
+          ],
+          "timestamp": 49
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 570,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person standing at the whiteboard serves as the facilitator leading the discussion and documenting key ideas."
+          ],
+          "timestamp": 49
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 571,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are deliberating over prioritizing complex agenda topics, specifically regarding event activities."
+          ],
+          "timestamp": 49
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_49_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_49_graph.pkl"
+  },
+  "memory_pickle_bytes": 12843364,
+  "reasoning_model": "gemini-3.8-flash",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 47157.614375089,
+    "prepared_perf": 47165.850266174,
+    "ordered_start_perf": 47291.416824265,
+    "consumer_wait_ms": 0.008755996532272547,
+    "ready_to_ordered_ms": 125566.55809099902,
+    "preparation_work_ms": 8230.528554995544,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 30658.98600299988
+}

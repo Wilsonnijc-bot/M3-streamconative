@@ -1,0 +1,34 @@
+[
+  {
+    "test": "embedding",
+    "model": "qwen/qwen3-embedding-0.6b",
+    "http_status": 404,
+    "request_start": 1789439387.8417268,
+    "request_end": 1789439387.902802,
+    "latency_ms": 61.07425699883606,
+    "passed": false,
+    "response": {
+      "error": {
+        "message": "No endpoints found for qwen/qwen3-embedding-0.6b.",
+        "code": 404
+      },
+      "user_id": "user_3JHrXWxN5NBeeHq7Jor8XWkFE7m"
+    }
+  },
+  {
+    "test": "rerank",
+    "model": "qwen/qwen3-reranker-0.6b",
+    "http_status": 404,
+    "request_start": 1789439387.9028852,
+    "request_end": 1789439387.9417396,
+    "latency_ms": 38.85438499855809,
+    "passed": false,
+    "response": {
+      "error": {
+        "message": "No endpoints found for qwen/qwen3-reranker-0.6b.",
+        "code": 404
+      },
+      "user_id": "user_3JHrXWxN5NBeeHq7Jor8XWkFE7m"
+    }
+  }
+]

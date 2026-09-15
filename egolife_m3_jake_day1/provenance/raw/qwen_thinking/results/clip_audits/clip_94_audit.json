@@ -1,0 +1,610 @@
+{
+  "clip_id": 94,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0094.mp4",
+  "end_to_end_memory_generation_ms": 691797.4624979979,
+  "latency_ms": {
+    "clip_decode": 5683.662978000939,
+    "deepgram_asr": 1240.3256059915293,
+    "mai_transcribe_asr": 1239.6505659999093,
+    "asr_total": 1240.9784729970852,
+    "audio_segmentation": 6.146604006062262,
+    "speech_embedding_campplus": 1323.9898699976038,
+    "facial_detection_recognition_buffalo_l": 3940.1524209970376,
+    "face_clustering": 9.972482002922334,
+    "vlm_memory_generation": 260866.33232400345,
+    "text_embedding": 577.0065529941348,
+    "graph_update_total": 696.4254709891975
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 94,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 15,
+      "input_chars": 1167,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789429933.2464628,
+          "status": "success",
+          "total_tokens": 252,
+          "request_end": 1789429933.823297,
+          "latency_ms": 576.8346889963141
+        }
+      ],
+      "total_tokens": 252,
+      "latency_ms": 577.0065529941348
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 1240.3256059915293,
+        "openrouter-mai-transcribe-2": 1239.6505659999093
+      },
+      "asr_total_ms": 1240.9784729970852,
+      "audio_segmentation_ms": 6.146604006062262,
+      "speech_embedding_ms": 1323.9898699976038,
+      "graph_update_ms": 696.2805289949756,
+      "asr_segment_count": 8,
+      "speech_embedding_count": 8,
+      "voice_identity_count": 8,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2042.5141470041126
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3940.1524209970376,
+      "face_clustering_ms": 9.972482002922334,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 349,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4149.728024000069
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1234>",
+        "<voice_339>",
+        "<voice_1235>",
+        "<voice_277>",
+        "<voice_1236>",
+        "<voice_1237>",
+        "<voice_1238>",
+        "<voice_1170>"
+      ],
+      "context_preparation_ms": 4150.7758570078295,
+      "vlm_ms": 260866.33232400345,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard.\",\n\t\t\"<voice_1234> mentions taking something out and letting it rest before cutting.\",\n\t\t\"<voice_339> discusses soft meat and chewing, indicating a discussion about food preparation.\",\n\t\t\"<voice_1235> confirms understanding and readiness.\",\n\t\t\"<voice_277> asks if they can grill the item.\",\n\t\t\"<voice_1236> mentions buying alcohol and mixing drinks.\",\n\t\t\"<voice_1237> adds that ice cubes should be added.\",\n\t\t\"<voice_1238> reiterates the topic of ice cubes.\",\n\t\t\"<voice_1170> recalls borrowing a block from a coffee shop previously.\",\n\t\t\"The person in the white shirt holds a script and interacts with a whiteboard while the person in the peach shirt moves around the room.\",\n\t\t\"The camera pans to show a kitchen area with a window overlooking a building.\",\n\t\t\"The group resumes gathering around the table, continuing the script reading.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is conducting a rehearsal or workshop session involving a script and props.\",\n\t\t\"The dialogue suggests they are discussing a scene involving food and drink preparation.\",\n\t\t\"The person in the white shirt appears to be leading the discussion or directing the scene.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard.",
+          "<voice_1234> mentions taking something out and letting it rest before cutting.",
+          "<voice_339> discusses soft meat and chewing, indicating a discussion about food preparation.",
+          "<voice_1235> confirms understanding and readiness.",
+          "<voice_277> asks if they can grill the item.",
+          "<voice_1236> mentions buying alcohol and mixing drinks.",
+          "<voice_1237> adds that ice cubes should be added.",
+          "<voice_1238> reiterates the topic of ice cubes.",
+          "<voice_1170> recalls borrowing a block from a coffee shop previously.",
+          "The person in the white shirt holds a script and interacts with a whiteboard while the person in the peach shirt moves around the room.",
+          "The camera pans to show a kitchen area with a window overlooking a building.",
+          "The group resumes gathering around the table, continuing the script reading."
+        ],
+        "high_level_conclusions": [
+          "The group is conducting a rehearsal or workshop session involving a script and props.",
+          "The dialogue suggests they are discussing a scene involving food and drink preparation.",
+          "The person in the white shirt appears to be leading the discussion or directing the scene."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 94,
+          "call_id": "0d046343-e71a-49dd-b015-ff2b934a56a6",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789429672.3790555,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard.\",\n\t\t\"<voice_1234> mentions taking something out and letting it rest before cutting.\",\n\t\t\"<voice_339> discusses soft meat and chewing, indicating a discussion about food preparation.\",\n\t\t\"<voice_1235> confirms understanding and readiness.\",\n\t\t\"<voice_277> asks if they can grill the item.\",\n\t\t\"<voice_1236> mentions buying alcohol and mixing drinks.\",\n\t\t\"<voice_1237> adds that ice cubes should be added.\",\n\t\t\"<voice_1238> reiterates the topic of ice cubes.\",\n\t\t\"<voice_1170> recalls borrowing a block from a coffee shop previously.\",\n\t\t\"The person in the white shirt holds a script and interacts with a whiteboard while the person in the peach shirt moves around the room.\",\n\t\t\"The camera pans to show a kitchen area with a window overlooking a building.\",\n\t\t\"The group resumes gathering around the table, continuing the script reading.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is conducting a rehearsal or workshop session involving a script and props.\",\n\t\t\"The dialogue suggests they are discussing a scene involving food and drink preparation.\",\n\t\t\"The person in the white shirt appears to be leading the discussion or directing the scene.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are 30 frames showing a group of people in a room.\n    *   **Characters:**\n        *   Person 1: Wearing a peach/orange t-shirt (\"YOUNG CALIFORNIA\"). Initially standing on the left, then moves around.\n        *   Person 2: Wearing a white shirt/blouse. Standing near a whiteboard/table, holding something (looks like a script or book), later writing or pointing at the whiteboard.\n        *   Person 3: Sitting at the table, wearing dark clothing.\n        *   Person 4: Sitting at the table, blonde hair, light top.\n        *   Person 5: Sitting at the table, dark hair, light top.\n        *   Camera wearer: Seems to be sitting at the table initially, then the camera pans to show the kitchen area. Wait, looking closely at the frames, the camera seems to be held by someone sitting at the table (Person 3's perspective? Or just a general POV?). Actually, looking at the clapperboard in the foreground in many frames, the camera is likely held by someone sitting opposite the main group or just recording them. In frames 20-22, the camera pans to the kitchen window.\n    *   **Actions:**\n        *   Frames 0-1: Person 1 (peach shirt) stands on the left. Person 2 (white shirt) stands near the table. Person 3 sits.\n        *   Frames 2-19: The group is gathered around a table with a checkered tablecloth. There's a clapperboard on the table. Person 2 is holding a script/book. Person 3 is seated. Two others are seated further right.\n        *   Frames 10-12: Person 1 moves towards the center/left again.\n        *   Frames 13-19: Person 2 is interacting with the whiteboard/script. Person 1 walks behind Person 2.\n        *   Frames 20-22: Camera pans to the kitchen area through a doorway/window.\n        *   Frames 23-end: Back to the group at the table. Person 2 is reading from the script.\n*   **Voice Features:** All voices are labeled `<voice_1234>`, `<voice_339>`, etc., but the ASR text starts with \"MAI:\". This suggests the speaker might be named Mai or the label is generic. The prompt says \"Use only IDs supplied in the input\". I need to associate these voice IDs with the visual characters if possible, but the prompt explicitly warns: \"A voice ID does not establish which visible person is speaking... Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\"\n    *   However, there is a specific instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   Also: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   Since I don't have explicit face-to-voice mapping in the input data (no `<face_x>` linked to `<voice_y>` in the provided text), I must treat the voice IDs as independent entities unless I can infer a strong link. Looking at the timestamps:\n        *   00:00 - 00:02: `<voice_1234>`\n        *   00:03 - 00:07: `<voice_339>`\n        *   00:06 - 00:11: `<voice_1235>`\n        *   00:10 - 00:12: `<voice_277>`\n        *   00:16 - 00:20: `<voice_1236>`\n        *   00:19 - 00:22: `<voice_1237>`\n        *   00:21 - 00:24: `<voice_1238>`\n        *   00:24 - 00:30: `<voice_1170>`\n    *   The ASR text consistently starts with \"MAI:\", suggesting the speaker is likely the woman in the white shirt (often the director/producer role in such setups) or the woman in black (acting?). Given the context of a script and whiteboard, the person standing and directing (white shirt) is a strong candidate for the speaker, but I cannot confirm visually without face recognition data linking them. I will use the voice IDs as requested for the memory construction.\n    *   Wait, the instruction says: \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   It also says: \"Do not replace the ID with 'a speaker'...\".\n    *   So I need to create memory entries for each voice ID.\n    *   Regarding Face/Voice Equivalence: The prompt asks for \"Equivalence: <face_x>, <voice_y>\" in high_level_conclusions *if* a face and voice feature refer to the same character. Since I don't have explicit face IDs in the input list (only video frames with blurred faces), I cannot construct an equivalence statement confidently without hallucinating. The input provides \"Face features:\" but it's empty in the provided text block! Ah, looking at the raw input: \"Face features:Voice features:...\". The \"Face features:\" section is empty. Therefore, I cannot make any Equivalence statements because I lack face IDs. I must follow the rule: \"If no face IDs are supplied, do not invent any.\"\n\n**2. Construct Video Description:**\n*   Need atomic events.\n*   Frame 0-1: A person in a peach t-shirt stands on the left side of the room while others sit or stand near a table.\n*   Frame 2-19: A group of four people gather around a wooden table covered with a red-and-white checkered cloth. A clapperboard rests on the table. One person in a white shirt stands near a whiteboard, holding a script or book. Another person in dark clothing sits at the head of the table. Two others sit to the right.\n*   Frame 10-12: The person in the peach t-shirt moves closer to the center of the room, gesturing slightly.\n*   Frame 13-19: The person in the white shirt interacts with the whiteboard and the script, while the person in the peach shirt walks behind them.\n*   Frame 20-22: The camera pans away from the group to show a kitchen area with a large window overlooking a building outside.\n*   Frame 23-30: The view returns to the group at the table, where the person in the white shirt continues to read from the script.\n\n**3. Construct High-Level Conclusions:**\n*   Since there are no face IDs, I cannot state equivalences.\n*   I can infer intent based on actions.\n*   The presence of a clapperboard, script, whiteboard, and multiple people suggests a film production rehearsal or a creative workshop.\n*   The person in the white shirt appears to be leading the discussion or directing.\n*   The person in the peach shirt seems to be participating or waiting their turn.\n*   I need to check if I can make any conclusions about the speakers. The prompt says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" Since I don't know who speaks, I can't really make a conclusion *about* a specific speaker's identity other than noting they are discussing the script.\n*   However, usually, in these tasks, if I can't link face and voice, I just leave the equivalence array empty or just put general conclusions. The instruction says \"If a face and a voice feature refer to the same character, indicate it...\". Since I have no face IDs, I cannot indicate this. I will focus on the activity.\n*   Wait, I need to check if I missed any face IDs in the input. \"Face features:Voice features:...\" -> The text after \"Face features:\" is immediately followed by \"Voice features:\". So yes, no face IDs.\n*   So `high_level_conclusions` will contain general inferences about the scene (rehearsal/workshop) rather than specific identity resolutions.\n*   Actually, looking at the instruction: \"Generate high-level reasoning-based conclusions that go beyond surface-level observations. Use logical inference to identify character intentions, relationships, and identities.\"\n*   Without face IDs, I can't identify identities visually. I can infer roles.\n*   Let's draft the conclusions:\n    *   The group is engaged in a collaborative session involving scripts and planning, indicated by the clapperboard and whiteboard.\n    *   The individual in the white shirt appears to be facilitating the session, referencing materials and the whiteboard.\n    *   The camera movement suggests a shift in attention from the participants to the environment (kitchen).\n\n**4. Refine Memory Construction:**\n*   I need to ensure every voice ID gets a memory entry.\n*   `<voice_1234>`: \"MAI: 拿出来稍微放一会儿的好切。\" -> Speaker discusses cutting something out and letting it rest.\n*   `<voice_339>`: \"MAI: 如果是软的肉，我不是会太会切，就已经嚼好了。\" -> Speaker talks about soft meat and chewing.\n*   `<voice_1235>`: \"MAI: 明白。行。\" -> Speaker confirms understanding.\n*   `<voice_277>`: \"MAI: 行，可以烤是吗？\" -> Speaker asks if they can grill/bake.\n*   `<voice_1236>`: \"MAI: 其实调酒好像就是买，买一点那种。\" -> Speaker mentions buying alcohol/mixing drinks.\n*   `<voice_1237>`: \"MAI: 对，然后撒一点冰块。\" -> Speaker mentions adding ice cubes.\n*   `<voice_1238>`: \"MAI: 对。冰块的话。\" -> Speaker reiterates about ice cubes.\n*   `<voice_1170>`: \"MAI: 哎，我像前面我们昨晚这个咖啡屋，借了一块就可以买冰喝。\" -> Speaker recalls borrowing a block from a coffee shop earlier.\n\nWait, the ASR text looks like a conversation about food/drink (cutting meat, grilling, mixing drinks, ice, coffee shop). But the visual shows a script and whiteboard. This implies the conversation might be about the plot of the movie being filmed (e.g., characters ordering food/drinks in the scene).\n*   Visual: Rehearsal/Script reading.\n*   Audio: Dialogue about cooking/drinking.\n*   Conclusion: They are rehearsing a scene involving food preparation or ordering.\n\n**5. Finalizing JSON Structure:**\n*   `video_description`: List of strings describing the visual flow.\n*   `high_level_conclusions`: List of strings. Since no face IDs exist, I won't add Equivalence lines. I will add inferences about the scene nature.\n\nLet's double check the constraints.\n- \"Preserve speaker identity when constructing memory from the supplied character features.\" -> I will use the voice IDs in the memory descriptions.\n- \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> I need to make sure I don't miss any voice ID.\n- \"Do not replace the ID with 'a speaker'...\" -> OK.\n- \"If no face IDs are supplied, do not invent any.\" -> OK.\n\nOne detail: The prompt asks for \"episodic memory\". I should phrase them as memories.\nExample: \"Memory: <voice_1234> says '...'\". Or just include the quote within the memory context. The instruction says \"include at least one episodic memory that quotes...\". I'll format it clearly.\n\nWait, looking at the instruction \"Output Format\":\n```json\n{\n\t\"video_description\": [\n\t\t\"...\",\n\t\t\"...\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"...\",\n\t\t\"Equivalence: <face_1>, <voice_2>\"\n\t]\n}\n```\nIt doesn't explicitly say how to embed the memory in the JSON structure provided in the example. The example shows `video_description` and `high_level_conclusions`. Where do the memories go?\nRe-reading the first paragraph: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nBut the second paragraph says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\nThis implies the memory generation is part of the overall output, but the JSON schema provided only has `video_description` and `high_level_conclusions`.\nUsually, in these tasks, the \"Video Description\" acts as the narrative where memories are embedded, OR there is a hidden field.\nHowever, looking at the strict instruction: \"Output Format: Your output must be a JSON object with the following structure...\".\nAnd the instruction \"Preserve speaker identity when constructing memory from the supplied character features.\"\nPerhaps the \"Video Description\" should incorporate the memories?\n\"Generate a detailed and cohesive description of the current video clip... Use the provided feature IDs as references to characters (when applicable).\"\n\"For every supplied voice ID... include at least one episodic memory...\".\nThis suggests the memory content should be part of the output. Since the JSON schema is fixed, I should probably append the memory information to the `video_description` or `high_level_conclusions`.\nGiven \"Video Description\" covers \"observable and inferable events\", and memories are about speech, integrating them into the description makes sense chronologically.\nOr, perhaps the `high_level_conclusions` is where the reasoning goes, and the memories are implicit? No, \"include at least one episodic memory\".\nLet's look at similar tasks. Often, the \"Video Description\" is the place for the transcript integration if the schema allows.\nActually, re-reading carefully: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". Then \"Output Format...\".\nIf I strictly follow the Output Format, I only have those two keys.\nSo I must put the memories inside one of these arrays.\nSince memories are about what was said, putting them in `video_description` as specific events (e.g., \"Speaker <voice_X> states...\") fits best as part of the event log.\nHowever, the instruction says \"include at least one episodic memory...\".\nLet's try to integrate the speech into the `video_description` as specific events attributed to the voice ID.\nExample: \"At 00:00, <voice_1234> speaks about cutting something out.\"\nThis satisfies \"include at least one episodic memory... using the exact ID\".\n\nWait, there is a risk. If I put everything in `video_description`, does it count as \"High-Level Conclusions\"?\nThe instruction says \"Generate high-level reasoning-based conclusions...\".\nMaybe I should put the *reasoning* in `high_level_conclusions` and the *memories* in `video_description`.\nYes, that aligns with the definitions.\nVideo Description = Events + Speech (Memories).\nHigh Level Conclusions = Inference about intent/identity.\n\nLet's refine the plan.\n1.  **Video Description**: Chronological account of visuals + integrated speech memories using Voice IDs.\n2.  **High Level Conclusions**: Inferences about the activity (script rehearsal) and potential scene content (food/drink discussion). No Equivalence since no face IDs.\n\nWait, checking the instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis sounds like a requirement for the *content* of the response, not necessarily a separate field. Since I only have `video_description` and `high_level_conclusions`, I will embed the memories in `video_description`.\n\nLet's draft the `video_description` entries.\n- Start with the visual setup.\n- Integrate the speech as it happens.\n- End with the visual pan back.\n\nDrafting entries:\n1.  At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard.\n2.  <voice_1234> speaks, mentioning taking something out and letting it rest before cutting.\n3.  <voice_339> discusses soft meat and chewing, indicating a discussion about food preparation.\n4.  <voice_1235> confirms understanding and readiness.\n5.  <voice_277> asks if they can grill the item.\n6.  <voice_1236> mentions buying alcohol and mixing drinks.\n7.  <voice_1237> adds that ice cubes should be added.\n8.  <voice_1238> reiterates the topic of ice cubes.\n9.  <voice_1170> recalls borrowing a block from a coffee shop previously.\n10. The person in the white shirt holds a script and interacts with a whiteboard.\n11. The person in the peach shirt moves around the room during the discussion.\n12. The camera pans to show a kitchen area with a window overlooking a building.\n13. The group resumes gathering around the table, continuing the script reading.\n\nThis covers the visual and the audio requirements.\n\nNow for `high_level_conclusions`.\n- The group is conducting a rehearsal or workshop session involving a script and props (clapperboard).\n- The dialogue suggests they are discussing a scene involving food and drink preparation.\n- The person in the white shirt appears to be leading the discussion or directing the scene.\n- No face-to-voice equivalence can be established due to missing face IDs.\n\nWait, I need to check if I should output the memories as separate items in `video_description` or merge them. \"include at least one episodic memory\". Merging into the description as an event is safer for coherence.\nAlso, the instruction says \"Preserve speaker identity when constructing memory...\".\nOkay, I will write the description sentences to include the voice ID and the quote/summary.\n\nOne constraint: \"Be concise and avoid duplicate events.\"\nI will combine visual and audio events where appropriate.\n\nFinal check on Face IDs: The input text has \"Face features:Voice features:...\". The line between them is empty. So no face IDs. Correct.\n\nOne more thing: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" I am using `<voice_1234>`, etc. which are in the input.\n\nLet's assemble the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard.\",\n    \"<voice_1234> mentions taking something out and letting it rest before cutting.\",\n    \"<voice_339> discusses soft meat and chewing, indicating a discussion about food preparation.\",\n    \"<voice_1235> confirms understanding and readiness.\",\n    \"<voice_277> asks if they can grill the item.\",\n    \"<voice_1236> mentions buying alcohol and mixing drinks.\",\n    \"<voice_1237> adds that ice cubes should be added.\",\n    \"<voice_1238> reiterates the topic of ice cubes.\",\n    \"<voice_1170> recalls borrowing a block from a coffee shop previously.\",\n    \"The person in the white shirt holds a script and interacts with a whiteboard while the person in the peach shirt moves around the room.\",\n    \"The camera pans to show a kitchen area with a window overlooking a building.\",\n    \"The group resumes gathering around the table, continuing the script reading.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is conducting a rehearsal or workshop session involving a script and props.\",\n    \"The dialogue suggests they are discussing a scene involving food and drink preparation.\",\n    \"The person in the white shirt appears to be leading the discussion or directing the scene.\",\n    \"No face-to-voice equivalence can be established due to missing face IDs.\"\n  ]\n}\n```\nWait, I should check if \"No face-to-voice equivalence...\" counts as a valid conclusion. It's a negative finding. Better to omit it if it's just stating absence of info, but the instruction says \"If a face and a voice feature refer to the same character, indicate it...\". Since they don't, I don't *have* to indicate it. I can just focus on positive inferences.\n\"The group is conducting a rehearsal...\" is good.\n\"The dialogue suggests...\" is good.\n\"The person in the white shirt appears to be leading...\" is good.\n\nI will remove the negative conclusion about face IDs to keep it focused on positive inference, as per \"identify character intentions, relationships, and identities\". Stating \"we don't know\" isn't identifying.\n\nWait, I need to make sure I don't violate \"Do not substitute a plausible scene description for what the speaker actually said.\"\nMy description includes the actual quotes/summaries attributed to the voice IDs. That complies.\n\nOne detail: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nI am doing this by using the Voice IDs.\n\nOne more check: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\nI have included all 8 voice IDs in the description.\n\nFinal check on JSON validity.\nKeys: `video_description`, `high_level_conclusions`.\nValues: Arrays of strings.\nNo extra fields.\n\nOne small adjustment: Ensure the memory entries are distinct enough or grouped logically. The prompt says \"Preserve distinct substantive utterances as separate atomic memories.\"\nSo I should probably keep them somewhat separate or clearly marked. My draft separates them by sentence. That works.\n\nLet's refine the descriptions to be more fluid.\n\"At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard. <voice_1234> mentions taking something out and letting it rest before cutting.\"\nThis combines visual and audio.\nThen continue with the next speaker.\n\"<voice_339> discusses soft meat and chewing, indicating a discussion about food preparation.\"\n\"... <voice_1235> confirms understanding and readiness.\"\n\"... <voice_277> asks if they can grill the item.\"\n\"... <voice_1236> mentions buying alcohol and mixing drinks.\"\n\"... <voice_1237> adds that ice cubes should be added.\"\n\"... <voice_1238> reiterates the topic of ice cubes.\"\n\"... <voice_1170> recalls borrowing a block from a coffee shop previously.\"\n\"The person in the white shirt holds a script and interacts with a whiteboard while the person in the peach shirt moves around the room.\"\n\"The camera pans to show a kitchen area with a window overlooking a building.\"\n\"The group resumes gathering around the table, continuing the script reading.\"\n\nThis looks solid.\n\nOne final check on constraints: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nI am adhering to the schema.\n\nOne detail: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\nInput IDs: `<voice_1234>`, `<voice_339>`, `<voice_1235>`, `<voice_277>`, `<voice_1236>`, `<voice_1237>`, `<voice_1238>`, `<voice_1170>`.\nI used exactly these.\n\nReady to generate.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard.\",\n\t\t\"<voice_1234> mentions taking something out and letting it rest before cutting.\",\n\t\t\"<voice_339> discusses soft meat and chewing, indicating a discussion about food preparation.\",\n\t\t\"<voice_1235> confirms understanding and readiness.\",\n\t\t\"<voice_277> asks if they can grill the item.\",\n\t\t\"<voice_1236> mentions buying alcohol and mixing drinks.\",\n\t\t\"<voice_1237> adds that ice cubes should be added.\",\n\t\t\"<voice_1238> reiterates the topic of ice cubes.\",\n\t\t\"<voice_1170> recalls borrowing a block from a coffee shop previously.\",\n\t\t\"The person in the white shirt holds a script and interacts with a whiteboard while the person in the peach shirt moves around the room.\",\n\t\t\"The camera pans to show a kitchen area with a window overlooking a building.\",\n\t\t\"The group resumes gathering around the table, continuing the script reading.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is conducting a rehearsal or workshop session involving a script and props.\",\n\t\t\"The dialogue suggests they are discussing a scene involving food and drink preparation.\",\n\t\t\"The person in the white shirt appears to be leading the discussion or directing the scene.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10793,
+          "output_tokens": 5707,
+          "total_tokens": 16500,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0018230057321488857,
+            "media_preparation_ms": 63.817746995482594,
+            "processor_tokenization_ms": 524.570492998464,
+            "device_transfer_ms": 43.78198100312147,
+            "cuda_generation_ms": 260198.76738099265,
+            "decoding_ms": 5.298360003507696
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 260836.46583399968,
+          "request_end": 1789429933.2453923,
+          "latency_ms": 260866.33232400345,
+          "client_wall_clock_latency_ms": 260866.33232400345
+        }
+      ],
+      "episodic_memory_count": 12,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 12,
+      "text_embedding_ms": null,
+      "text_embedding_count": 12,
+      "graph_update_ms": 0.1271579967578873,
+      "nodes_added": 12,
+      "directed_edges_added": 16,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.017783997463993728,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 8,
+    "speech_embeddings": 8,
+    "voice_identities": 8,
+    "detected_faces": 349,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 12,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1254,
+    "edges_after_clip": 450,
+    "nodes_added_by_clip": 20,
+    "edges_added_by_clip": 8
+  },
+  "generated_memory": {
+    "video_description": [
+      "At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard.",
+      "<voice_1234> mentions taking something out and letting it rest before cutting.",
+      "<voice_339> discusses soft meat and chewing, indicating a discussion about food preparation.",
+      "<voice_1235> confirms understanding and readiness.",
+      "<voice_277> asks if they can grill the item.",
+      "<voice_1236> mentions buying alcohol and mixing drinks.",
+      "<voice_1237> adds that ice cubes should be added.",
+      "<voice_1238> reiterates the topic of ice cubes.",
+      "<voice_1170> recalls borrowing a block from a coffee shop previously.",
+      "The person in the white shirt holds a script and interacts with a whiteboard while the person in the peach shirt moves around the room.",
+      "The camera pans to show a kitchen area with a window overlooking a building.",
+      "The group resumes gathering around the table, continuing the script reading."
+    ],
+    "high_level_conclusions": [
+      "The group is conducting a rehearsal or workshop session involving a script and props.",
+      "The dialogue suggests they are discussing a scene involving food and drink preparation.",
+      "The person in the white shirt appears to be leading the discussion or directing the scene."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard.",
+      "<voice_1234> mentions taking something out and letting it rest before cutting.",
+      "<voice_339> discusses soft meat and chewing, indicating a discussion about food preparation.",
+      "<voice_1235> confirms understanding and readiness.",
+      "<voice_277> asks if they can grill the item.",
+      "<voice_1236> mentions buying alcohol and mixing drinks.",
+      "<voice_1237> adds that ice cubes should be added.",
+      "<voice_1238> reiterates the topic of ice cubes.",
+      "<voice_1170> recalls borrowing a block from a coffee shop previously.",
+      "The person in the white shirt holds a script and interacts with a whiteboard while the person in the peach shirt moves around the room.",
+      "The camera pans to show a kitchen area with a window overlooking a building.",
+      "The group resumes gathering around the table, continuing the script reading."
+    ],
+    "high_level_conclusions": [
+      "The group is conducting a rehearsal or workshop session involving a script and props.",
+      "The dialogue suggests they are discussing a scene involving food and drink preparation.",
+      "The person in the white shirt appears to be leading the discussion or directing the scene."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_94_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 20,
+    "edges_added": 8,
+    "nodes": [
+      {
+        "id": 1234,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 拿出来稍微放一会的时候好切。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1235,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 明白。行。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1236,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 其实调酒好像就是买，买一点那种。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1237,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对，然后搞一点冰块。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1238,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对。冰块的话。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1239,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1240,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1234> mentions taking something out and letting it rest before cutting."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1241,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_339> discusses soft meat and chewing, indicating a discussion about food preparation."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1242,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1235> confirms understanding and readiness."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1243,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_277> asks if they can grill the item."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1244,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1236> mentions buying alcohol and mixing drinks."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1245,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1237> adds that ice cubes should be added."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1246,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1238> reiterates the topic of ice cubes."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1247,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1170> recalls borrowing a block from a coffee shop previously."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1248,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the white shirt holds a script and interacts with a whiteboard while the person in the peach shirt moves around the room."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1249,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans to show a kitchen area with a window overlooking a building."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1250,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group resumes gathering around the table, continuing the script reading."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1251,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is conducting a rehearsal or workshop session involving a script and props."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1252,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The dialogue suggests they are discussing a scene involving food and drink preparation."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1253,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person in the white shirt appears to be leading the discussion or directing the scene."
+          ],
+          "timestamp": 94
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 277,
+        "target": 1243,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 339,
+        "target": 1241,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1170,
+        "target": 1247,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1234,
+        "target": 1240,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1235,
+        "target": 1242,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1236,
+        "target": 1244,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1237,
+        "target": 1245,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1238,
+        "target": 1246,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_94_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_94_graph.pkl"
+  },
+  "memory_pickle_bytes": 29783796,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 70429.011193814,
+    "prepared_perf": 70437.801273722,
+    "ordered_start_perf": 70846.494104987,
+    "consumer_wait_ms": 0.008856994099915028,
+    "ready_to_ordered_ms": 408692.83126499795,
+    "preparation_work_ms": 8784.771274993545,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 271791.21692001354
+}

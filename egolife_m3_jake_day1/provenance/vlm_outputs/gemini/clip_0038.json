@@ -1,0 +1,76 @@
+{
+  "clip_id": 38,
+  "source": {
+    "segment_id": 38,
+    "source": "DAY1_A1_JAKE_11273000.mp4",
+    "source_clock": "11273000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41250.0,
+    "absolute_end_seconds": 41280.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0038.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46473.226553563,
+      "prepared_perf": 46479.772346291,
+      "ordered_start_perf": 46602.767128299,
+      "consumer_wait_ms": 0.009609000699128956,
+      "ready_to_ordered_ms": 122994.78200799786,
+      "preparation_work_ms": 6540.480964999006,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people sits around a long table covered with a pink checkered tablecloth facing a whiteboard.",
+      "A person standing by the whiteboard writes on the board with a marker while interacting with the group.",
+      "Participants around the table watch the whiteboard and engage in discussion.",
+      "<voice_177> states that they could ask a female acquaintance to join, but notes uncertainty due to the long distance.",
+      "The camera wearer points toward the whiteboard, and <voice_0> suggests writing something underneath each person."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a production or planning meeting, as indicated by the clapperboard on the table and notes on the whiteboard.",
+      "The person standing at the whiteboard acts as the facilitator and scribe for the group.",
+      "The camera wearer (<voice_0>) actively participates in organizing the layout and content on the board.",
+      "The group is discussing recruiting or coordinating participants for an upcoming project or event."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a long table covered with a pink checkered tablecloth facing a whiteboard.\",\n  \"A person standing by the whiteboard writes on the board with a marker while interacting with the group.\",\n  \"Participants around the table watch the whiteboard and engage in discussion.\",\n  \"<voice_177> states that they could ask a female acquaintance to join, but notes uncertainty due to the long distance.\",\n  \"The camera wearer points toward the whiteboard, and <voice_0> suggests writing something underneath each person.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is holding a production or planning meeting, as indicated by the clapperboard on the table and notes on the whiteboard.\",\n  \"The person standing at the whiteboard acts as the facilitator and scribe for the group.\",\n  \"The camera wearer (<voice_0>) actively participates in organizing the layout and content on the board.\",\n  \"The group is discussing recruiting or coordinating participants for an upcoming project or event.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 38,
+      "call_id": "4461c40b-0154-4af7-b976-664d2b71cee8",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405425.4839199,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66856,
+      "output_tokens": 1304,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 64928.288240000256
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"A group of people sits around a long table covered with a pink checkered tablecloth facing a whiteboard.\",\n  \"A person standing by the whiteboard writes on the board with a marker while interacting with the group.\",\n  \"Participants around the table watch the whiteboard and engage in discussion.\",\n  \"<voice_177> states that they could ask a female acquaintance to join, but notes uncertainty due to the long distance.\",\n  \"The camera wearer points toward the whiteboard, and <voice_0> suggests writing something underneath each person.\"\n ],\n \"high_level_conclusions\": [\n  \"The group is holding a production or planning meeting, as indicated by the clapperboard on the table and notes on the whiteboard.\",\n  \"The person standing at the whiteboard acts as the facilitator and scribe for the group.\",\n  \"The camera wearer (<voice_0>) actively participates in organizing the layout and content on the board.\",\n  \"The group is discussing recruiting or coordinating participants for an upcoming project or event.\"\n ]\n}\n```",
+      "total_tokens": 68160,
+      "request_end": 1789405490.4123423,
+      "latency_ms": 64928.4169120001,
+      "client_wall_clock_latency_ms": 64928.4169120001,
+      "api_request_wall_clock_latency_ms": 64928.4169120001
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_38_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

@@ -1,0 +1,9445 @@
+# Gemini — first ten questions — memories
+
+Updated: 2026-09-15T03:12:56+00:00. Status: **Complete: 40 verified QA predictions**.
+
+Nodes and their connections. Inferences are model-generated, not verified facts.
+
+[Query-time character mappings](snapshots/q10.md) · [Exporter usage](../../../StreamMeCo/mmagent/videograph_markdown.md).
+
+## Query-time character_mappings
+
+From saved query snapshot **q10** ([original graph](<../../cache/graphs/gemini/results/memory/q10_uncompressed/graph.pkl>)). These are the mappings used for retrieval, shown separately from the construction checkpoint.
+
+**353 characters**: 353 single-feature mappings; 0 mappings join multiple features.
+
+<details><summary>Show full dictionary (353 entries)</summary>
+
+```json
+{
+  "character_0": ["voice_0"],
+  "character_1": ["voice_1"],
+  "character_2": ["voice_21"],
+  "character_3": ["voice_30"],
+  "character_4": ["voice_31"],
+  "character_5": ["voice_32"],
+  "character_6": ["voice_33"],
+  "character_7": ["voice_99"],
+  "character_8": ["voice_100"],
+  "character_9": ["voice_101"],
+  "character_10": ["voice_102"],
+  "character_11": ["voice_113"],
+  "character_12": ["voice_123"],
+  "character_13": ["voice_124"],
+  "character_14": ["voice_135"],
+  "character_15": ["voice_136"],
+  "character_16": ["voice_137"],
+  "character_17": ["voice_138"],
+  "character_18": ["voice_139"],
+  "character_19": ["voice_151"],
+  "character_20": ["voice_152"],
+  "character_21": ["voice_153"],
+  "character_22": ["voice_162"],
+  "character_23": ["voice_163"],
+  "character_24": ["voice_164"],
+  "character_25": ["voice_165"],
+  "character_26": ["voice_173"],
+  "character_27": ["voice_174"],
+  "character_28": ["voice_175"],
+  "character_29": ["voice_176"],
+  "character_30": ["voice_177"],
+  "character_31": ["voice_178"],
+  "character_32": ["voice_192"],
+  "character_33": ["voice_193"],
+  "character_34": ["voice_202"],
+  "character_35": ["voice_203"],
+  "character_36": ["voice_204"],
+  "character_37": ["voice_205"],
+  "character_38": ["voice_216"],
+  "character_39": ["voice_217"],
+  "character_40": ["voice_218"],
+  "character_41": ["voice_219"],
+  "character_42": ["voice_228"],
+  "character_43": ["voice_229"],
+  "character_44": ["voice_230"],
+  "character_45": ["voice_241"],
+  "character_46": ["voice_242"],
+  "character_47": ["voice_250"],
+  "character_48": ["voice_251"],
+  "character_49": ["voice_252"],
+  "character_50": ["voice_253"],
+  "character_51": ["voice_254"],
+  "character_52": ["voice_271"],
+  "character_53": ["voice_272"],
+  "character_54": ["voice_273"],
+  "character_55": ["voice_288"],
+  "character_56": ["voice_289"],
+  "character_57": ["voice_290"],
+  "character_58": ["voice_298"],
+  "character_59": ["voice_299"],
+  "character_60": ["voice_309"],
+  "character_61": ["voice_310"],
+  "character_62": ["voice_311"],
+  "character_63": ["voice_330"],
+  "character_64": ["voice_331"],
+  "character_65": ["voice_332"],
+  "character_66": ["voice_333"],
+  "character_67": ["voice_334"],
+  "character_68": ["voice_351"],
+  "character_69": ["voice_352"],
+  "character_70": ["voice_353"],
+  "character_71": ["voice_354"],
+  "character_72": ["voice_355"],
+  "character_73": ["voice_364"],
+  "character_74": ["voice_373"],
+  "character_75": ["voice_374"],
+  "character_76": ["voice_375"],
+  "character_77": ["voice_376"],
+  "character_78": ["voice_383"],
+  "character_79": ["voice_384"],
+  "character_80": ["voice_394"],
+  "character_81": ["voice_395"],
+  "character_82": ["voice_396"],
+  "character_83": ["voice_397"],
+  "character_84": ["voice_398"],
+  "character_85": ["voice_415"],
+  "character_86": ["voice_416"],
+  "character_87": ["voice_417"],
+  "character_88": ["voice_418"],
+  "character_89": ["voice_429"],
+  "character_90": ["voice_430"],
+  "character_91": ["voice_431"],
+  "character_92": ["voice_432"],
+  "character_93": ["voice_433"],
+  "character_94": ["voice_441"],
+  "character_95": ["voice_442"],
+  "character_96": ["voice_443"],
+  "character_97": ["voice_453"],
+  "character_98": ["voice_454"],
+  "character_99": ["voice_455"],
+  "character_100": ["voice_465"],
+  "character_101": ["voice_466"],
+  "character_102": ["voice_467"],
+  "character_103": ["voice_468"],
+  "character_104": ["voice_469"],
+  "character_105": ["voice_476"],
+  "character_106": ["voice_489"],
+  "character_107": ["voice_498"],
+  "character_108": ["voice_499"],
+  "character_109": ["voice_500"],
+  "character_110": ["voice_508"],
+  "character_111": ["voice_509"],
+  "character_112": ["voice_520"],
+  "character_113": ["voice_521"],
+  "character_114": ["voice_522"],
+  "character_115": ["voice_534"],
+  "character_116": ["voice_535"],
+  "character_117": ["voice_543"],
+  "character_118": ["voice_544"],
+  "character_119": ["voice_545"],
+  "character_120": ["voice_546"],
+  "character_121": ["voice_547"],
+  "character_122": ["voice_555"],
+  "character_123": ["voice_556"],
+  "character_124": ["voice_557"],
+  "character_125": ["voice_581"],
+  "character_126": ["voice_582"],
+  "character_127": ["voice_583"],
+  "character_128": ["voice_595"],
+  "character_129": ["voice_622"],
+  "character_130": ["voice_623"],
+  "character_131": ["voice_634"],
+  "character_132": ["voice_635"],
+  "character_133": ["voice_642"],
+  "character_134": ["voice_643"],
+  "character_135": ["voice_655"],
+  "character_136": ["voice_656"],
+  "character_137": ["voice_657"],
+  "character_138": ["voice_667"],
+  "character_139": ["voice_668"],
+  "character_140": ["voice_677"],
+  "character_141": ["voice_678"],
+  "character_142": ["voice_687"],
+  "character_143": ["voice_688"],
+  "character_144": ["voice_689"],
+  "character_145": ["voice_699"],
+  "character_146": ["voice_700"],
+  "character_147": ["voice_718"],
+  "character_148": ["voice_719"],
+  "character_149": ["voice_720"],
+  "character_150": ["voice_721"],
+  "character_151": ["voice_732"],
+  "character_152": ["voice_742"],
+  "character_153": ["voice_743"],
+  "character_154": ["voice_755"],
+  "character_155": ["voice_756"],
+  "character_156": ["voice_757"],
+  "character_157": ["voice_758"],
+  "character_158": ["voice_759"],
+  "character_159": ["voice_760"],
+  "character_160": ["voice_776"],
+  "character_161": ["voice_777"],
+  "character_162": ["voice_798"],
+  "character_163": ["voice_799"],
+  "character_164": ["voice_818"],
+  "character_165": ["voice_825"],
+  "character_166": ["voice_852"],
+  "character_167": ["voice_853"],
+  "character_168": ["voice_863"],
+  "character_169": ["voice_864"],
+  "character_170": ["voice_865"],
+  "character_171": ["voice_866"],
+  "character_172": ["voice_867"],
+  "character_173": ["voice_868"],
+  "character_174": ["voice_869"],
+  "character_175": ["voice_887"],
+  "character_176": ["voice_911"],
+  "character_177": ["voice_912"],
+  "character_178": ["voice_924"],
+  "character_179": ["voice_925"],
+  "character_180": ["voice_926"],
+  "character_181": ["voice_927"],
+  "character_182": ["voice_928"],
+  "character_183": ["voice_929"],
+  "character_184": ["voice_948"],
+  "character_185": ["voice_949"],
+  "character_186": ["voice_950"],
+  "character_187": ["voice_951"],
+  "character_188": ["voice_952"],
+  "character_189": ["voice_953"],
+  "character_190": ["voice_964"],
+  "character_191": ["voice_965"],
+  "character_192": ["voice_979"],
+  "character_193": ["voice_980"],
+  "character_194": ["voice_993"],
+  "character_195": ["voice_1002"],
+  "character_196": ["voice_1003"],
+  "character_197": ["voice_1004"],
+  "character_198": ["voice_1005"],
+  "character_199": ["voice_1006"],
+  "character_200": ["voice_1014"],
+  "character_201": ["voice_1015"],
+  "character_202": ["voice_1016"],
+  "character_203": ["voice_1017"],
+  "character_204": ["voice_1029"],
+  "character_205": ["voice_1030"],
+  "character_206": ["voice_1038"],
+  "character_207": ["voice_1039"],
+  "character_208": ["voice_1040"],
+  "character_209": ["voice_1059"],
+  "character_210": ["voice_1060"],
+  "character_211": ["voice_1070"],
+  "character_212": ["voice_1071"],
+  "character_213": ["voice_1072"],
+  "character_214": ["voice_1082"],
+  "character_215": ["voice_1083"],
+  "character_216": ["voice_1084"],
+  "character_217": ["voice_1085"],
+  "character_218": ["voice_1086"],
+  "character_219": ["voice_1098"],
+  "character_220": ["voice_1099"],
+  "character_221": ["voice_1100"],
+  "character_222": ["voice_1101"],
+  "character_223": ["voice_1102"],
+  "character_224": ["voice_1103"],
+  "character_225": ["voice_1114"],
+  "character_226": ["voice_1139"],
+  "character_227": ["voice_1140"],
+  "character_228": ["voice_1155"],
+  "character_229": ["voice_1156"],
+  "character_230": ["voice_1157"],
+  "character_231": ["voice_1158"],
+  "character_232": ["voice_1184"],
+  "character_233": ["voice_1195"],
+  "character_234": ["voice_1196"],
+  "character_235": ["voice_1197"],
+  "character_236": ["voice_1206"],
+  "character_237": ["voice_1207"],
+  "character_238": ["voice_1208"],
+  "character_239": ["voice_1223"],
+  "character_240": ["voice_1224"],
+  "character_241": ["voice_1225"],
+  "character_242": ["voice_1226"],
+  "character_243": ["voice_1242"],
+  "character_244": ["voice_1243"],
+  "character_245": ["voice_1244"],
+  "character_246": ["voice_1245"],
+  "character_247": ["voice_1256"],
+  "character_248": ["voice_1257"],
+  "character_249": ["voice_1266"],
+  "character_250": ["voice_1267"],
+  "character_251": ["voice_1278"],
+  "character_252": ["voice_1279"],
+  "character_253": ["voice_1290"],
+  "character_254": ["voice_1291"],
+  "character_255": ["voice_1317"],
+  "character_256": ["voice_1318"],
+  "character_257": ["voice_1319"],
+  "character_258": ["voice_1334"],
+  "character_259": ["voice_1335"],
+  "character_260": ["voice_1336"],
+  "character_261": ["voice_1346"],
+  "character_262": ["voice_1357"],
+  "character_263": ["voice_1358"],
+  "character_264": ["voice_1369"],
+  "character_265": ["voice_1370"],
+  "character_266": ["voice_1381"],
+  "character_267": ["voice_1382"],
+  "character_268": ["voice_1383"],
+  "character_269": ["voice_1384"],
+  "character_270": ["voice_1385"],
+  "character_271": ["voice_1395"],
+  "character_272": ["voice_1396"],
+  "character_273": ["voice_1397"],
+  "character_274": ["voice_1398"],
+  "character_275": ["voice_1399"],
+  "character_276": ["voice_1400"],
+  "character_277": ["voice_1409"],
+  "character_278": ["voice_1410"],
+  "character_279": ["voice_1420"],
+  "character_280": ["voice_1421"],
+  "character_281": ["voice_1430"],
+  "character_282": ["voice_1431"],
+  "character_283": ["voice_1432"],
+  "character_284": ["voice_1433"],
+  "character_285": ["voice_1447"],
+  "character_286": ["voice_1448"],
+  "character_287": ["voice_1449"],
+  "character_288": ["voice_1464"],
+  "character_289": ["voice_1465"],
+  "character_290": ["voice_1466"],
+  "character_291": ["voice_1467"],
+  "character_292": ["voice_1468"],
+  "character_293": ["voice_1477"],
+  "character_294": ["voice_1478"],
+  "character_295": ["voice_1479"],
+  "character_296": ["voice_1480"],
+  "character_297": ["voice_1488"],
+  "character_298": ["voice_1489"],
+  "character_299": ["voice_1490"],
+  "character_300": ["voice_1491"],
+  "character_301": ["voice_1492"],
+  "character_302": ["voice_1493"],
+  "character_303": ["voice_1494"],
+  "character_304": ["voice_1495"],
+  "character_305": ["voice_1496"],
+  "character_306": ["voice_1497"],
+  "character_307": ["voice_1510"],
+  "character_308": ["voice_1511"],
+  "character_309": ["voice_1518"],
+  "character_310": ["voice_1525"],
+  "character_311": ["voice_1526"],
+  "character_312": ["voice_1527"],
+  "character_313": ["voice_1552"],
+  "character_314": ["voice_1553"],
+  "character_315": ["voice_1554"],
+  "character_316": ["voice_1563"],
+  "character_317": ["voice_1564"],
+  "character_318": ["voice_1565"],
+  "character_319": ["voice_1566"],
+  "character_320": ["voice_1575"],
+  "character_321": ["voice_1576"],
+  "character_322": ["voice_1577"],
+  "character_323": ["voice_1578"],
+  "character_324": ["voice_1590"],
+  "character_325": ["voice_1591"],
+  "character_326": ["voice_1592"],
+  "character_327": ["voice_1603"],
+  "character_328": ["voice_1604"],
+  "character_329": ["voice_1605"],
+  "character_330": ["voice_1619"],
+  "character_331": ["voice_1620"],
+  "character_332": ["voice_1629"],
+  "character_333": ["voice_1630"],
+  "character_334": ["voice_1631"],
+  "character_335": ["voice_1632"],
+  "character_336": ["voice_1633"],
+  "character_337": ["voice_1641"],
+  "character_338": ["voice_1642"],
+  "character_339": ["voice_1643"],
+  "character_340": ["voice_1654"],
+  "character_341": ["voice_1655"],
+  "character_342": ["voice_1656"],
+  "character_343": ["voice_1668"],
+  "character_344": ["voice_1669"],
+  "character_345": ["voice_1681"],
+  "character_346": ["voice_1682"],
+  "character_347": ["voice_1683"],
+  "character_348": ["voice_1684"],
+  "character_349": ["voice_1685"],
+  "character_350": ["voice_1699"],
+  "character_351": ["voice_1700"],
+  "character_352": ["voice_1701"]
+}
+```
+
+</details>
+
+## Latest committed memory — segment 144
+
+**1,713 nodes · 319 links** — 1,003 events, 357 inferences, 353 voices, 0 faces.
+
+Links appear beside each node. ↔ means a shared connection; arrows show one-way connections. Unmarked weights are 1. Nodes without links are unconnected.
+
+### Character mappings
+
+Not stored in this construction checkpoint.
+
+### Events
+
+<a id="latest-committed-memory-segment-144-node-2"></a>
+
+- **2** · clip 1: A first-person perspective shows a person holding a smartphone while standing in front of a table where several individuals are seated.
+
+<a id="latest-committed-memory-segment-144-node-3"></a>
+
+- **3** · clip 1: Multiple people are gathered around the table, which is covered with a checkered tablecloth and holding various equipment cases and devices.
+
+<a id="latest-committed-memory-segment-144-node-4"></a>
+
+- **4** · clip 1: &lt;voice_0&gt; speaks, suggesting to bring up a stopwatch.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-5"></a>
+
+- **5** · clip 1: The person holding the phone navigates through the home screen to locate and open the clock or stopwatch app.
+
+<a id="latest-committed-memory-segment-144-node-6"></a>
+
+- **6** · clip 1: &lt;voice_1&gt; mentions a timestamp.  **Links:** ↔ [1](#latest-committed-memory-segment-144-node-1)
+
+<a id="latest-committed-memory-segment-144-node-7"></a>
+
+- **7** · clip 1: &lt;voice_0&gt; confirms to tap or record the timestamp.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-8"></a>
+
+- **8** · clip 1: The person holding the smartphone opens the stopwatch, resets the timer, and starts it.
+
+<a id="latest-committed-memory-segment-144-node-12"></a>
+
+- **12** · clip 2: The camera wearer holds out a smartphone to the people seated around the table.
+
+<a id="latest-committed-memory-segment-144-node-13"></a>
+
+- **13** · clip 2: The participants reach out and take turns tapping the smartphone screen.
+
+<a id="latest-committed-memory-segment-144-node-14"></a>
+
+- **14** · clip 2: The woman in black seated on the left takes the smartphone, taps the screen, and returns it.
+
+<a id="latest-committed-memory-segment-144-node-15"></a>
+
+- **15** · clip 2: The camera wearer takes the phone back, stops the timer, and sets it down.
+
+<a id="latest-committed-memory-segment-144-node-16"></a>
+
+- **16** · clip 2: The camera wearer picks up a mounting stick on the table.
+
+<a id="latest-committed-memory-segment-144-node-17"></a>
+
+- **17** · clip 2: &lt;voice_0&gt; directs everyone to tap the phone screen and proposes discussing their plans for the final day.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-22"></a>
+
+- **22** · clip 3: A group of people sits around a table covered with electronic equipment, cases, and packages.
+
+<a id="latest-committed-memory-segment-144-node-23"></a>
+
+- **23** · clip 3: The camera holder points to boxes and equipment on the table while speaking to the group.
+
+<a id="latest-committed-memory-segment-144-node-24"></a>
+
+- **24** · clip 3: A woman in a black top reaches out to touch and inspect a white and blue box.
+
+<a id="latest-committed-memory-segment-144-node-25"></a>
+
+- **25** · clip 3: Other group members listen attentively while observing the items on the table.
+
+<a id="latest-committed-memory-segment-144-node-26"></a>
+
+- **26** · clip 3: The camera holder manipulates a handheld selfie stick or mini tripod.
+
+<a id="latest-committed-memory-segment-144-node-34"></a>
+
+- **34** · clip 4: A group of people sits around a checkered table in a room, unboxing and inspecting electronic devices from blue-and-white boxes and black zippered cases.
+
+<a id="latest-committed-memory-segment-144-node-35"></a>
+
+- **35** · clip 4: The woman in black seated on the left carefully handles and inspects a black device taken from a box.
+
+<a id="latest-committed-memory-segment-144-node-36"></a>
+
+- **36** · clip 4: The man wearing an orange t-shirt and glasses opens a product box and examines the components inside.
+
+<a id="latest-committed-memory-segment-144-node-37"></a>
+
+- **37** · clip 4: The other women seated at the far end of the table unpack items and discuss the setup.
+
+<a id="latest-committed-memory-segment-144-node-38"></a>
+
+- **38** · clip 4: A participant asks if there are only four units, and another responds clarifying that someone is a mentor.
+
+<a id="latest-committed-memory-segment-144-node-39"></a>
+
+- **39** · clip 4: The camera wearer handles a black case on the table.
+
+<a id="latest-committed-memory-segment-144-node-40"></a>
+
+- **40** · clip 4: The camera wearer turns away from the table and walks into the adjoining hallway and kitchen area, looking back toward the group.
+
+<a id="latest-committed-memory-segment-144-node-44"></a>
+
+- **44** · clip 5: A group of people sits around a dining table covered in opened boxes, electronic devices, and cases.
+
+<a id="latest-committed-memory-segment-144-node-45"></a>
+
+- **45** · clip 5: The camera wearer looks down while holding and untangling black cables.
+
+<a id="latest-committed-memory-segment-144-node-46"></a>
+
+- **46** · clip 5: The camera wearer steps toward the table where others are examining gadgets.
+
+<a id="latest-committed-memory-segment-144-node-47"></a>
+
+- **47** · clip 5: The camera wearer handles a black zippered equipment case on the table.
+
+<a id="latest-committed-memory-segment-144-node-48"></a>
+
+- **48** · clip 5: The camera wearer turns around and walks across the room away from the table.
+
+<a id="latest-committed-memory-segment-144-node-49"></a>
+
+- **49** · clip 5: The camera wearer carries the black case toward a corner shelf topped with a yellow plush toy.
+
+<a id="latest-committed-memory-segment-144-node-53"></a>
+
+- **53** · clip 6: The camera wearer places an item onto a lower shelf.
+
+<a id="latest-committed-memory-segment-144-node-54"></a>
+
+- **54** · clip 6: The camera wearer walks toward a dining table where a group of people is seated.
+
+<a id="latest-committed-memory-segment-144-node-55"></a>
+
+- **55** · clip 6: The people around the checkered table are unpacking electronics and equipment boxes.
+
+<a id="latest-committed-memory-segment-144-node-56"></a>
+
+- **56** · clip 6: The camera wearer reaches the table and begins unpacking a blue and cardboard box.
+
+<a id="latest-committed-memory-segment-144-node-57"></a>
+
+- **57** · clip 6: &lt;voice_0&gt; instructs the group on how to organize the unpacked items, noting to keep the outer boxes and discard the inner packaging.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-58"></a>
+
+- **58** · clip 6: The camera wearer removes wrapped accessories and instructional papers from the box to sort through them.
+
+<a id="latest-committed-memory-segment-144-node-61"></a>
+
+- **61** · clip 7: A group of people sits around a checkered table unboxing electronic equipment.
+
+<a id="latest-committed-memory-segment-144-node-62"></a>
+
+- **62** · clip 7: The camera wearer takes packaging materials from the table and collects a box piece from a woman across the table.
+
+<a id="latest-committed-memory-segment-144-node-63"></a>
+
+- **63** · clip 7: The camera wearer walks over to cardboard disposal boxes on the floor and deposits packaging materials inside.
+
+<a id="latest-committed-memory-segment-144-node-64"></a>
+
+- **64** · clip 7: The camera wearer walks back toward the table.
+
+<a id="latest-committed-memory-segment-144-node-65"></a>
+
+- **65** · clip 7: The camera wearer picks up a small tripod from the floor.
+
+<a id="latest-committed-memory-segment-144-node-66"></a>
+
+- **66** · clip 7: The camera wearer speaks to the group (&lt;voice_0&gt;) while adjusting the tripod and gesturing toward the board.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-69"></a>
+
+- **69** · clip 8: The camera wearer stands near a dining table where several people are seated.
+
+<a id="latest-committed-memory-segment-144-node-70"></a>
+
+- **70** · clip 8: &lt;voice_0&gt; speaks to the group, gesturing toward the adjacent bedroom.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-71"></a>
+
+- **71** · clip 8: A man in an orange t-shirt stands up from the table.
+
+<a id="latest-committed-memory-segment-144-node-72"></a>
+
+- **72** · clip 8: The camera wearer adjusts a light reflector stand placed near the doorway.
+
+<a id="latest-committed-memory-segment-144-node-73"></a>
+
+- **73** · clip 8: The camera wearer walks into the adjoining bedroom.
+
+<a id="latest-committed-memory-segment-144-node-74"></a>
+
+- **74** · clip 8: The man in orange and a woman follow the camera wearer and stand near the doorway.
+
+<a id="latest-committed-memory-segment-144-node-75"></a>
+
+- **75** · clip 8: &lt;voice_0&gt; points towards the desk equipped with multiple laptops and electronic gear.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-76"></a>
+
+- **76** · clip 8: &lt;voice_0&gt; counts and explains the computer setup on the desk to the people standing by the door.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-77"></a>
+
+- **77** · clip 8: The man in the orange shirt leans against the doorframe, listening attentively.
+
+<a id="latest-committed-memory-segment-144-node-81"></a>
+
+- **81** · clip 9: A person holding the camera gestures toward a desk and shelving unit set up with multiple laptops and storage drives.
+
+<a id="latest-committed-memory-segment-144-node-82"></a>
+
+- **82** · clip 9: Three people stand by the doorway, listening to &lt;voice_0&gt; speak.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-83"></a>
+
+- **83** · clip 9: &lt;voice_0&gt; points to different laptops on the desk and rack while explaining how data from recording glasses is transferred.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-84"></a>
+
+- **84** · clip 9: &lt;voice_0&gt; turns between the laptops and the listeners by the door while speaking.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-85"></a>
+
+- **85** · clip 9: &lt;voice_0&gt; points towards specific drive slots on the shelf rack to indicate assigned units.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-89"></a>
+
+- **89** · clip 10: The camera wearer stands inside a bedroom looking toward three people listening by the doorway.
+
+<a id="latest-committed-memory-segment-144-node-90"></a>
+
+- **90** · clip 10: &lt;voice_0&gt; speaks while explaining the data offloading equipment.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-91"></a>
+
+- **91** · clip 10: The camera wearer turns toward a multi-tier shelf holding laptops and stacked drive enclosures.
+
+<a id="latest-committed-memory-segment-144-node-92"></a>
+
+- **92** · clip 10: The camera wearer reaches out and gestures toward the uppermost laptop on the shelf.
+
+<a id="latest-committed-memory-segment-144-node-93"></a>
+
+- **93** · clip 10: The camera wearer points directly at the hard drive units stacked in the rack.
+
+<a id="latest-committed-memory-segment-144-node-94"></a>
+
+- **94** · clip 10: The camera wearer turns back toward the doorway, continuing to explain the setup with hand gestures.
+
+<a id="latest-committed-memory-segment-144-node-95"></a>
+
+- **95** · clip 10: The three individuals remain by the doorway listening to the explanation.
+
+<a id="latest-committed-memory-segment-144-node-103"></a>
+
+- **103** · clip 11: The camera wearer (&lt;voice_0&gt;) shows and explains the wiring setup for the computers and hard drives in the bedroom.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-104"></a>
+
+- **104** · clip 11: The camera wearer points towards the power cables and multi-laptop station arranged beside the bed.
+
+<a id="latest-committed-memory-segment-144-node-105"></a>
+
+- **105** · clip 11: A young man in an orange shirt and two young women stand near the doorway listening to the explanation.
+
+<a id="latest-committed-memory-segment-144-node-106"></a>
+
+- **106** · clip 11: A group member asks about the consequences of a sudden power outage.
+
+<a id="latest-committed-memory-segment-144-node-107"></a>
+
+- **107** · clip 11: &lt;voice_0&gt; explains that losing power abruptly would be problematic for the computers.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-108"></a>
+
+- **108** · clip 11: The young man in the orange shirt walks out of the bedroom into the living room.
+
+<a id="latest-committed-memory-segment-144-node-109"></a>
+
+- **109** · clip 11: The camera wearer follows the group into the open living and dining area where other people are seated at a table.
+
+<a id="latest-committed-memory-segment-144-node-114"></a>
+
+- **114** · clip 12: A man in an orange t-shirt examines items placed on the dining table.
+
+<a id="latest-committed-memory-segment-144-node-115"></a>
+
+- **115** · clip 12: A woman with pink hair walks from near the kitchen counter toward the dining table.
+
+<a id="latest-committed-memory-segment-144-node-116"></a>
+
+- **116** · clip 12: The man in the orange shirt pulls up a chair and sits at the dining table.
+
+<a id="latest-committed-memory-segment-144-node-117"></a>
+
+- **117** · clip 12: Multiple individuals sit around the checkered table, inspecting and unpacking equipment from boxes.
+
+<a id="latest-committed-memory-segment-144-node-118"></a>
+
+- **118** · clip 12: The camera holder moves around the table while holding a selfie stick with a mounted device.
+
+<a id="latest-committed-memory-segment-144-node-119"></a>
+
+- **119** · clip 12: The group members interact and talk while handling equipment at the table.
+
+<a id="latest-committed-memory-segment-144-node-125"></a>
+
+- **125** · clip 13: The camera-wearer points towards the individuals seated around a table covered with a pink checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-126"></a>
+
+- **126** · clip 13: Several group members sit around the table inspecting, unboxing, and setting up various electronic gadgets and wearable equipment.
+
+<a id="latest-committed-memory-segment-144-node-127"></a>
+
+- **127** · clip 13: &lt;voice_0&gt; speaks about properly wearing the smart glasses to make sure the sensors or cameras remain unobstructed.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-128"></a>
+
+- **128** · clip 13: A man in a peach shirt and a woman next to him carefully handle and inspect a piece of hardware together.
+
+<a id="latest-committed-memory-segment-144-node-129"></a>
+
+- **129** · clip 13: &lt;voice_123&gt; gives instructions on how to handle and insert a delicate part of the device.  **Links:** ↔ [123](#latest-committed-memory-segment-144-node-123)
+
+<a id="latest-committed-memory-segment-144-node-130"></a>
+
+- **130** · clip 13: The camera-wearer moves around the table holding a small tripod mount in hand.
+
+<a id="latest-committed-memory-segment-144-node-131"></a>
+
+- **131** · clip 13: &lt;voice_124&gt; announces that the setup has been completed successfully.  **Links:** ↔ [124](#latest-committed-memory-segment-144-node-124)
+
+<a id="latest-committed-memory-segment-144-node-140"></a>
+
+- **140** · clip 14: A group of people are gathered around a table with a pink-and-white checkered tablecloth, working with various electronic components and packaging.
+
+<a id="latest-committed-memory-segment-144-node-141"></a>
+
+- **141** · clip 14: A woman in a black shirt sits on the left side of the table, assembling a handheld electronic accessory.
+
+<a id="latest-committed-memory-segment-144-node-142"></a>
+
+- **142** · clip 14: The person recording the video approaches the table wearing a blue shirt.
+
+<a id="latest-committed-memory-segment-144-node-143"></a>
+
+- **143** · clip 14: A man wearing an orange t-shirt and glasses sits on the right side of the table, holding a black electronic device.
+
+<a id="latest-committed-memory-segment-144-node-144"></a>
+
+- **144** · clip 14: The man in the orange shirt interacts with the camera wearer, examining and handling the black casing.
+
+<a id="latest-committed-memory-segment-144-node-145"></a>
+
+- **145** · clip 14: A woman in a green-patterned dress reaches across the table towards a small package containing components.
+
+<a id="latest-committed-memory-segment-144-node-146"></a>
+
+- **146** · clip 14: The man in the orange shirt places an item onto the table while listening to instructions.
+
+<a id="latest-committed-memory-segment-144-node-154"></a>
+
+- **154** · clip 15: Several people sit around a table covered with a pink-and-white checkered cloth, working on unpacking and assembling equipment.
+
+<a id="latest-committed-memory-segment-144-node-155"></a>
+
+- **155** · clip 15: A woman in black seated on the left works on a piece of hardware while asking a question.
+
+<a id="latest-committed-memory-segment-144-node-156"></a>
+
+- **156** · clip 15: The camera wearer walks across the room, picks up a small tripod standing on the floor, and moves it.
+
+<a id="latest-committed-memory-segment-144-node-157"></a>
+
+- **157** · clip 15: The camera wearer adjusts a decorative dog/bear-shaped stool near the wall before stepping back toward the table.
+
+<a id="latest-committed-memory-segment-144-node-158"></a>
+
+- **158** · clip 15: The individuals at the table discuss component placement, plate removal, and the number of screws required for assembly.
+
+<a id="latest-committed-memory-segment-144-node-166"></a>
+
+- **166** · clip 16: A group of people is seated around a table covered with a red-and-white checkered tablecloth, assembling electronic components.
+
+<a id="latest-committed-memory-segment-144-node-167"></a>
+
+- **167** · clip 16: One participant gives instructions regarding screw holes and distinguishing between large and small screws.
+
+<a id="latest-committed-memory-segment-144-node-168"></a>
+
+- **168** · clip 16: A person reaches across the table to show a black component to another participant.
+
+<a id="latest-committed-memory-segment-144-node-169"></a>
+
+- **169** · clip 16: Participants continue assembling their individual components while discussing the assembly steps.
+
+<a id="latest-committed-memory-segment-144-node-170"></a>
+
+- **170** · clip 16: The camera shifts position and perspective, looking down onto the table from above as work continues.
+
+<a id="latest-committed-memory-segment-144-node-179"></a>
+
+- **179** · clip 17: A group of people are gathered around a table covered with a pink checkered tablecloth, assembling electronic keyboard kits using tools and screwdrivers.
+
+<a id="latest-committed-memory-segment-144-node-180"></a>
+
+- **180** · clip 17: The camera wearer walks around the table and sits down on an empty chair near the corner of the table.
+
+<a id="latest-committed-memory-segment-144-node-181"></a>
+
+- **181** · clip 17: A participant in an orange shirt uses a screwdriver to tighten screws on a keyboard casing.
+
+<a id="latest-committed-memory-segment-144-node-182"></a>
+
+- **182** · clip 17: A woman wearing a black jacket works attentively on assembling her device with small tools.
+
+<a id="latest-committed-memory-segment-144-node-183"></a>
+
+- **183** · clip 17: &lt;voice_0&gt; mentions that previously everyone complained about the screwdriver lacking magnetic tips, but today nobody seems to complain.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-184"></a>
+
+- **184** · clip 17: &lt;voice_175&gt; remarks that everyone seems to be accepting it well today.  **Links:** ↔ [175](#latest-committed-memory-segment-144-node-175)
+
+<a id="latest-committed-memory-segment-144-node-185"></a>
+
+- **185** · clip 17: &lt;voice_176&gt; asks what they are talking about.  **Links:** ↔ [176](#latest-committed-memory-segment-144-node-176)
+
+<a id="latest-committed-memory-segment-144-node-186"></a>
+
+- **186** · clip 17: &lt;voice_137&gt; comments that because the screwdriver is a free complimentary tool, one cannot expect too much from it.  **Links:** ↔ [137](#latest-committed-memory-segment-144-node-137)
+
+<a id="latest-committed-memory-segment-144-node-187"></a>
+
+- **187** · clip 17: &lt;voice_177&gt; explains that the screwdriver has no magnetic hold on the screws.  **Links:** ↔ [177](#latest-committed-memory-segment-144-node-177)
+
+<a id="latest-committed-memory-segment-144-node-188"></a>
+
+- **188** · clip 17: &lt;voice_123&gt; agrees, pointing out that it makes placing the screws difficult.  **Links:** ↔ [123](#latest-committed-memory-segment-144-node-123)
+
+<a id="latest-committed-memory-segment-144-node-194"></a>
+
+- **194** · clip 18: A group of people sits around a table covered in a red-and-white checkered cloth, working with wearable electronic devices and packaging.
+
+<a id="latest-committed-memory-segment-144-node-195"></a>
+
+- **195** · clip 18: The camera wearer raises their right hand and gestures toward the woman sitting on the left in black clothing.
+
+<a id="latest-committed-memory-segment-144-node-196"></a>
+
+- **196** · clip 18: The woman in black touches her hair and headset straps, adjusting her hair to tuck it away from her face.
+
+<a id="latest-committed-memory-segment-144-node-197"></a>
+
+- **197** · clip 18: The woman continues tucking strands of hair back behind her ears and under the device strap.
+
+<a id="latest-committed-memory-segment-144-node-198"></a>
+
+- **198** · clip 18: Other participants around the table continue assembling, inspecting, and putting on their respective glasses and devices.
+
+<a id="latest-committed-memory-segment-144-node-206"></a>
+
+- **206** · clip 19: A group of people sit around a table covered in a red checkered cloth, working on small electronic devices and packaging.
+
+<a id="latest-committed-memory-segment-144-node-207"></a>
+
+- **207** · clip 19: &lt;voice_202&gt; asks if they can play some background music.  **Links:** ↔ [202](#latest-committed-memory-segment-144-node-202)
+
+<a id="latest-committed-memory-segment-144-node-208"></a>
+
+- **208** · clip 19: &lt;voice_203&gt; tells them to go ahead and play some music.  **Links:** ↔ [203](#latest-committed-memory-segment-144-node-203)
+
+<a id="latest-committed-memory-segment-144-node-209"></a>
+
+- **209** · clip 19: &lt;voice_202&gt; asks what genre of music everyone usually likes to listen to.  **Links:** ↔ [202](#latest-committed-memory-segment-144-node-202)
+
+<a id="latest-committed-memory-segment-144-node-210"></a>
+
+- **210** · clip 19: &lt;voice_204&gt; responds that they listen to David Tao.  **Links:** ↔ [204](#latest-committed-memory-segment-144-node-204)
+
+<a id="latest-committed-memory-segment-144-node-211"></a>
+
+- **211** · clip 19: &lt;voice_0&gt; comments on David Tao's music style.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-212"></a>
+
+- **212** · clip 19: &lt;voice_205&gt; mentions R&amp;B music in agreement.  **Links:** ↔ [205](#latest-committed-memory-segment-144-node-205)
+
+<a id="latest-committed-memory-segment-144-node-213"></a>
+
+- **213** · clip 19: &lt;voice_174&gt; mentions that they follow Western music and listen to a wide variety.  **Links:** ↔ [174](#latest-committed-memory-segment-144-node-174)
+
+<a id="latest-committed-memory-segment-144-node-220"></a>
+
+- **220** · clip 20: A group of people sits around a checkered table covered with equipment boxes and electronic gear.
+
+<a id="latest-committed-memory-segment-144-node-221"></a>
+
+- **221** · clip 20: A person wearing an orange shirt examines and adjusts a black handheld device.
+
+<a id="latest-committed-memory-segment-144-node-222"></a>
+
+- **222** · clip 20: A person in black on the left handles and inspects a small electronic device.
+
+<a id="latest-committed-memory-segment-144-node-223"></a>
+
+- **223** · clip 20: The individuals converse with each other while handling the devices on the table.
+
+<a id="latest-committed-memory-segment-144-node-224"></a>
+
+- **224** · clip 20: The camera wearer sits at the end of the table observing the group.
+
+<a id="latest-committed-memory-segment-144-node-231"></a>
+
+- **231** · clip 21: A group of young people sits around a table covered with a pink-and-white checkered tablecloth, handling and assembling small electronic devices and accessories.
+
+<a id="latest-committed-memory-segment-144-node-232"></a>
+
+- **232** · clip 21: &lt;voice_228&gt; jokingly sings or mentions that the Northeast is their hometown.  **Links:** ↔ [228](#latest-committed-memory-segment-144-node-228)
+
+<a id="latest-committed-memory-segment-144-node-233"></a>
+
+- **233** · clip 21: &lt;voice_229&gt; asks where specifically in the Northeast they are from.  **Links:** ↔ [229](#latest-committed-memory-segment-144-node-229)
+
+<a id="latest-committed-memory-segment-144-node-234"></a>
+
+- **234** · clip 21: &lt;voice_230&gt; jokingly responds that they are from Daohuaxiang.  **Links:** ↔ [230](#latest-committed-memory-segment-144-node-230)
+
+<a id="latest-committed-memory-segment-144-node-235"></a>
+
+- **235** · clip 21: &lt;voice_203&gt; comments on Daohua and then clarifies that the location is Changchun.  **Links:** ↔ [203](#latest-committed-memory-segment-144-node-203)
+
+<a id="latest-committed-memory-segment-144-node-236"></a>
+
+- **236** · clip 21: &lt;voice_219&gt; states Changchun City in Jilin Province and asks the group if they know the city.  **Links:** ↔ [219](#latest-committed-memory-segment-144-node-219)
+
+<a id="latest-committed-memory-segment-144-node-237"></a>
+
+- **237** · clip 21: &lt;voice_219&gt; further asks the group if they know that Jilin Province also has a Jilin City.  **Links:** ↔ [219](#latest-committed-memory-segment-144-node-219)
+
+<a id="latest-committed-memory-segment-144-node-238"></a>
+
+- **238** · clip 21: &lt;voice_0&gt; replies that they know that as well.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-243"></a>
+
+- **243** · clip 22: A group of young people sit around a table covered with a pink checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-244"></a>
+
+- **244** · clip 22: A young man in an orange t-shirt examines and handles a small electronic device at the table.
+
+<a id="latest-committed-memory-segment-144-node-245"></a>
+
+- **245** · clip 22: A woman in a black shirt adjusts and works on a device on the other side of the table.
+
+<a id="latest-committed-memory-segment-144-node-246"></a>
+
+- **246** · clip 22: Several other individuals sit nearby, handling items and chatting.
+
+<a id="latest-committed-memory-segment-144-node-247"></a>
+
+- **247** · clip 22: The camera shifts viewpoint while the group continues testing and handling equipment.
+
+<a id="latest-committed-memory-segment-144-node-255"></a>
+
+- **255** · clip 23: Jake points out the screws on both sides of a small black component to the woman sitting in black clothing.
+
+<a id="latest-committed-memory-segment-144-node-256"></a>
+
+- **256** · clip 23: The participants sit around a table covered with a pink checkered tablecloth, assembling and inspecting wearable devices and accessories.
+
+<a id="latest-committed-memory-segment-144-node-257"></a>
+
+- **257** · clip 23: Jake moves past the table and assists the person wearing an orange shirt with fitting a component into the device.
+
+<a id="latest-committed-memory-segment-144-node-258"></a>
+
+- **258** · clip 23: The person in the orange shirt holds the device while Jake demonstrates how to position it properly.
+
+<a id="latest-committed-memory-segment-144-node-259"></a>
+
+- **259** · clip 23: Jake steps back away from the table into the center of the room.
+
+<a id="latest-committed-memory-segment-144-node-260"></a>
+
+- **260** · clip 23: Jake claps his hands together to mark synchronization in front of the camera.
+
+<a id="latest-committed-memory-segment-144-node-264"></a>
+
+- **264** · clip 24: A group of people are seated around a dining table covered with a checkered cloth in a brightly lit room.
+
+<a id="latest-committed-memory-segment-144-node-265"></a>
+
+- **265** · clip 24: Various open boxes, packaging materials, and electronic devices are scattered across the table.
+
+<a id="latest-committed-memory-segment-144-node-266"></a>
+
+- **266** · clip 24: A person holding the camera walks toward the table, extending their arm forward to gesture toward the center.
+
+<a id="latest-committed-memory-segment-144-node-267"></a>
+
+- **267** · clip 24: A woman in a white top seated near a whiteboard picks up and inspects a small electronic device.
+
+<a id="latest-committed-memory-segment-144-node-268"></a>
+
+- **268** · clip 24: Other participants around the table focus on unpacking and examining items in front of them.
+
+<a id="latest-committed-memory-segment-144-node-274"></a>
+
+- **274** · clip 25: A group of people are gathered around a table with a red-and-white checkered tablecloth, working on electronic hardware and packaging.
+
+<a id="latest-committed-memory-segment-144-node-275"></a>
+
+- **275** · clip 25: The camera wearer reaches over the table to handle a blue rectangular box for an external enclosure.
+
+<a id="latest-committed-memory-segment-144-node-276"></a>
+
+- **276** · clip 25: The person sitting to the left in a white shirt holds a black external hard drive enclosure and interacts with the camera wearer.
+
+<a id="latest-committed-memory-segment-144-node-277"></a>
+
+- **277** · clip 25: The camera wearer places the black enclosure and cables inside the blue packaging box.
+
+<a id="latest-committed-memory-segment-144-node-278"></a>
+
+- **278** · clip 25: The person sitting to the right in black clothing examines a pair of smart glasses.
+
+<a id="latest-committed-memory-segment-144-node-279"></a>
+
+- **279** · clip 25: The individuals across the table work on unpacking or assembling their own electronic equipment.
+
+<a id="latest-committed-memory-segment-144-node-280"></a>
+
+- **280** · clip 25: &lt;voice_271&gt; jokes that the hands-on assembly task is akin to working in a manufacturing factory.  **Links:** ↔ [271](#latest-committed-memory-segment-144-node-271)
+
+<a id="latest-committed-memory-segment-144-node-281"></a>
+
+- **281** · clip 25: &lt;voice_272&gt; responds that their previous university coursework involving wiring and soldering boards was essentially like working in a factory.  **Links:** ↔ [272](#latest-committed-memory-segment-144-node-272)
+
+<a id="latest-committed-memory-segment-144-node-282"></a>
+
+- **282** · clip 25: &lt;voice_229&gt; asks `&lt;voice_272&gt;` with surprise if they had actually worked in a factory before.  **Links:** ↔ [229](#latest-committed-memory-segment-144-node-229) · ↔ [272](#latest-committed-memory-segment-144-node-272)
+
+<a id="latest-committed-memory-segment-144-node-283"></a>
+
+- **283** · clip 25: &lt;voice_0&gt; asks whether `&lt;voice_272&gt;`'s university experience was related to the Internet of Things (IoT).  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [272](#latest-committed-memory-segment-144-node-272)
+
+<a id="latest-committed-memory-segment-144-node-284"></a>
+
+- **284** · clip 25: &lt;voice_273&gt; clarifies that the work involved soldering circuit boards.  **Links:** ↔ [273](#latest-committed-memory-segment-144-node-273)
+
+<a id="latest-committed-memory-segment-144-node-291"></a>
+
+- **291** · clip 26: A group of people sits around a checkered table assembling and organizing electronic devices and packaging boxes.
+
+<a id="latest-committed-memory-segment-144-node-292"></a>
+
+- **292** · clip 26: The camera wearer holds a blue and white external drive enclosure box while standing near the table.
+
+<a id="latest-committed-memory-segment-144-node-293"></a>
+
+- **293** · clip 26: The people at the table joke about operating like an assembly line with different technician tiers.
+
+<a id="latest-committed-memory-segment-144-node-294"></a>
+
+- **294** · clip 26: The camera wearer walks from the dining area into an adjoining bedroom where more equipment and packaging boxes are placed on the bed.
+
+<a id="latest-committed-memory-segment-144-node-295"></a>
+
+- **295** · clip 26: The camera wearer sets the box down on the bed and turns back toward the main room.
+
+<a id="latest-committed-memory-segment-144-node-300"></a>
+
+- **300** · clip 27: Several people sit around a table covered in a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-301"></a>
+
+- **301** · clip 27: A man wearing an orange t-shirt tries to fit a hard drive into an enclosure.
+
+<a id="latest-committed-memory-segment-144-node-302"></a>
+
+- **302** · clip 27: &lt;voice_0&gt; tells the man in orange that he has inserted it the wrong way and points out the screws on the side.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-303"></a>
+
+- **303** · clip 27: Hands reach into the frame from the foreground to gesture at the hard drive.
+
+<a id="latest-committed-memory-segment-144-node-304"></a>
+
+- **304** · clip 27: The man in orange continues manipulating the hard drive enclosure.
+
+<a id="latest-committed-memory-segment-144-node-305"></a>
+
+- **305** · clip 27: &lt;voice_299&gt; insists on trying to install the drive himself.  **Links:** ↔ [299](#latest-committed-memory-segment-144-node-299)
+
+<a id="latest-committed-memory-segment-144-node-306"></a>
+
+- **306** · clip 27: &lt;voice_229&gt; jokes that it is a hard drive championship as the man continues working on the device.  **Links:** ↔ [229](#latest-committed-memory-segment-144-node-229)
+
+<a id="latest-committed-memory-segment-144-node-312"></a>
+
+- **312** · clip 28: Several individuals sit around a dining table covered with a pink checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-313"></a>
+
+- **313** · clip 28: A young man in an orange t-shirt sits on the right holding and inspecting a black rectangular device.
+
+<a id="latest-committed-memory-segment-144-node-314"></a>
+
+- **314** · clip 28: A cardboard box and various small items rest in the middle of the table.
+
+<a id="latest-committed-memory-segment-144-node-315"></a>
+
+- **315** · clip 28: People at the table engage in conversation while assembling or handling equipment.
+
+<a id="latest-committed-memory-segment-144-node-316"></a>
+
+- **316** · clip 28: The camera wearer gestures toward the small cardboard box on the table.
+
+<a id="latest-committed-memory-segment-144-node-317"></a>
+
+- **317** · clip 28: A person seated across reaches over and places a black component into the box on the table.
+
+<a id="latest-committed-memory-segment-144-node-321"></a>
+
+- **321** · clip 29: A group of people sits around a dining table covered with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-322"></a>
+
+- **322** · clip 29: The camera wearer and the young man in the brown shirt on the right finish packing items into a blue and white product box.
+
+<a id="latest-committed-memory-segment-144-node-323"></a>
+
+- **323** · clip 29: The camera wearer closes the box and aligns it with a second box on the table.
+
+<a id="latest-committed-memory-segment-144-node-324"></a>
+
+- **324** · clip 29: The young man in the brown shirt finishes packing his items and leans back.
+
+<a id="latest-committed-memory-segment-144-node-325"></a>
+
+- **325** · clip 29: Across the table, a young woman in a patterned top holds and inspects another blue box.
+
+<a id="latest-committed-memory-segment-144-node-326"></a>
+
+- **326** · clip 29: The camera wearer stacks two blue-and-white boxes together and places them on their lap.
+
+<a id="latest-committed-memory-segment-144-node-327"></a>
+
+- **327** · clip 29: The group around the table engages in conversation following the completion of the packing task.
+
+<a id="latest-committed-memory-segment-144-node-335"></a>
+
+- **335** · clip 30: A group of people sit around a table covered with a red checkered tablecloth, discussing upcoming plans.
+
+<a id="latest-committed-memory-segment-144-node-336"></a>
+
+- **336** · clip 30: &lt;voice_330&gt; suggests scheduling the event for Sunday afternoon.  **Links:** ↔ [330](#latest-committed-memory-segment-144-node-330)
+
+<a id="latest-committed-memory-segment-144-node-337"></a>
+
+- **337** · clip 30: &lt;voice_331&gt; asks who should be invited to the gathering.  **Links:** ↔ [331](#latest-committed-memory-segment-144-node-331)
+
+<a id="latest-committed-memory-segment-144-node-338"></a>
+
+- **338** · clip 30: &lt;voice_0&gt; inquires about the number of guests expected.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-339"></a>
+
+- **339** · clip 30: &lt;voice_332&gt; suggests writing the details down on the whiteboard.  **Links:** ↔ [332](#latest-committed-memory-segment-144-node-332)
+
+<a id="latest-committed-memory-segment-144-node-340"></a>
+
+- **340** · clip 30: &lt;voice_0&gt; agrees with using the whiteboard.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-341"></a>
+
+- **341** · clip 30: &lt;voice_333&gt; volunteers to write on the board, commenting on having good handwriting.  **Links:** ↔ [333](#latest-committed-memory-segment-144-node-333)
+
+<a id="latest-committed-memory-segment-144-node-342"></a>
+
+- **342** · clip 30: &lt;voice_0&gt; suggests assembling a stand as well and gets up from the table.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-343"></a>
+
+- **343** · clip 30: The young man in the orange shirt stands up from his chair by the table.
+
+<a id="latest-committed-memory-segment-144-node-344"></a>
+
+- **344** · clip 30: &lt;voice_334&gt; asks what kind of stand needs to be assembled.  **Links:** ↔ [334](#latest-committed-memory-segment-144-node-334)
+
+<a id="latest-committed-memory-segment-144-node-345"></a>
+
+- **345** · clip 30: &lt;voice_0&gt; explains the stand's function while walking into an adjacent bedroom holding a white box.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-346"></a>
+
+- **346** · clip 30: The camera wearer sets items down onto the bed in the bedroom.
+
+<a id="latest-committed-memory-segment-144-node-347"></a>
+
+- **347** · clip 30: The camera wearer leaves the bedroom and walks through the living room toward the hallway by the front door.
+
+<a id="latest-committed-memory-segment-144-node-348"></a>
+
+- **348** · clip 30: The camera wearer reaches toward and picks up a tall cardboard package leaning against the wall in the corner of the hallway.
+
+<a id="latest-committed-memory-segment-144-node-356"></a>
+
+- **356** · clip 31: Jake carries a long cardboard package through the hallway toward the living area.
+
+<a id="latest-committed-memory-segment-144-node-357"></a>
+
+- **357** · clip 31: In the living area, several people are gathered around a dining table while a man in an orange t-shirt stands nearby.
+
+<a id="latest-committed-memory-segment-144-node-358"></a>
+
+- **358** · clip 31: Jake continues walking through the living area holding the cardboard package.
+
+<a id="latest-committed-memory-segment-144-node-359"></a>
+
+- **359** · clip 31: Jake enters a bedroom containing messy beds, laptops, and various equipment.
+
+<a id="latest-committed-memory-segment-144-node-360"></a>
+
+- **360** · clip 31: Jake puts down the package and turns around to walk back toward the living room.
+
+<a id="latest-committed-memory-segment-144-node-361"></a>
+
+- **361** · clip 31: The people gathered around the dining table continue talking amongst themselves.
+
+<a id="latest-committed-memory-segment-144-node-365"></a>
+
+- **365** · clip 32: The camera wearer Jake turns away from boxes on the floor and walks toward the stairs.
+
+<a id="latest-committed-memory-segment-144-node-366"></a>
+
+- **366** · clip 32: Jake ascends the wooden staircase to the upper level.
+
+<a id="latest-committed-memory-segment-144-node-367"></a>
+
+- **367** · clip 32: Jake enters the upstairs room and walks toward a table beneath a projection screen.
+
+<a id="latest-committed-memory-segment-144-node-368"></a>
+
+- **368** · clip 32: Jake picks up a clapperboard and a marker from the table.
+
+<a id="latest-committed-memory-segment-144-node-369"></a>
+
+- **369** · clip 32: Jake leaves the upstairs room and descends the staircase holding the clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-370"></a>
+
+- **370** · clip 32: Jake reaches the ground floor and enters the room where other people are seated around a table.
+
+<a id="latest-committed-memory-segment-144-node-377"></a>
+
+- **377** · clip 33: A group of people sits around a checkered table while a young man in an orange T-shirt stands beside them.
+
+<a id="latest-committed-memory-segment-144-node-378"></a>
+
+- **378** · clip 33: A person positions a film slate clapperboard onto the table in front of the camera.
+
+<a id="latest-committed-memory-segment-144-node-379"></a>
+
+- **379** · clip 33: The man in the orange T-shirt walks over to the whiteboard at the back of the room.
+
+<a id="latest-committed-memory-segment-144-node-380"></a>
+
+- **380** · clip 33: The man begins writing on the whiteboard while the group watches and converses.
+
+<a id="latest-committed-memory-segment-144-node-385"></a>
+
+- **385** · clip 34: A group of people is sitting around a long dining table covered with a pink-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-386"></a>
+
+- **386** · clip 34: A person standing near the far end of the table writes Chinese characters on a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-387"></a>
+
+- **387** · clip 34: The individuals seated around the table watch the whiteboard closely.
+
+<a id="latest-committed-memory-segment-144-node-388"></a>
+
+- **388** · clip 34: The group discusses the stroke order and correct technique for writing Chinese characters.
+
+<a id="latest-committed-memory-segment-144-node-389"></a>
+
+- **389** · clip 34: A voice questions whether the stroke order of the character being written is correct.
+
+<a id="latest-committed-memory-segment-144-node-390"></a>
+
+- **390** · clip 34: Another voice confirms the strokes being demonstrated on the board.
+
+<a id="latest-committed-memory-segment-144-node-391"></a>
+
+- **391** · clip 34: A speaker mentions a radical stroke structure while observing the writing on the board.
+
+<a id="latest-committed-memory-segment-144-node-399"></a>
+
+- **399** · clip 35: A group of people is gathered around a dining table covered with a red checkered tablecloth in a living room.
+
+<a id="latest-committed-memory-segment-144-node-400"></a>
+
+- **400** · clip 35: A person in an orange shirt stands in the background near a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-401"></a>
+
+- **401** · clip 35: &lt;voice_394&gt; announces the start of the first item.  **Links:** ↔ [394](#latest-committed-memory-segment-144-node-394)
+
+<a id="latest-committed-memory-segment-144-node-402"></a>
+
+- **402** · clip 35: &lt;voice_0&gt; asks how many people Xiu Shuo is planning to invite.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-403"></a>
+
+- **403** · clip 35: &lt;voice_394&gt; replies that they will invite one person first.  **Links:** ↔ [394](#latest-committed-memory-segment-144-node-394)
+
+<a id="latest-committed-memory-segment-144-node-404"></a>
+
+- **404** · clip 35: &lt;voice_0&gt; confirms and repeats the answer.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-405"></a>
+
+- **405** · clip 35: &lt;voice_229&gt; asks about Lu Ya.  **Links:** ↔ [229](#latest-committed-memory-segment-144-node-229)
+
+<a id="latest-committed-memory-segment-144-node-406"></a>
+
+- **406** · clip 35: &lt;voice_395&gt; expresses uncertainty about Lu Ya coming because the location is too far.  **Links:** ↔ [395](#latest-committed-memory-segment-144-node-395)
+
+<a id="latest-committed-memory-segment-144-node-407"></a>
+
+- **407** · clip 35: &lt;voice_396&gt; adds that they do not know if Lu Ya can make it over.  **Links:** ↔ [396](#latest-committed-memory-segment-144-node-396)
+
+<a id="latest-committed-memory-segment-144-node-408"></a>
+
+- **408** · clip 35: &lt;voice_397&gt; acknowledges the statement.  **Links:** ↔ [397](#latest-committed-memory-segment-144-node-397)
+
+<a id="latest-committed-memory-segment-144-node-409"></a>
+
+- **409** · clip 35: &lt;voice_0&gt; asks about their studio.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-410"></a>
+
+- **410** · clip 35: &lt;voice_398&gt; mentions inviting someone modestly.  **Links:** ↔ [398](#latest-committed-memory-segment-144-node-398)
+
+<a id="latest-committed-memory-segment-144-node-411"></a>
+
+- **411** · clip 35: &lt;voice_0&gt; concludes by agreeing to invite one person first.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-419"></a>
+
+- **419** · clip 36: A group of people sits around a long table with a checkered tablecloth in a meeting room.
+
+<a id="latest-committed-memory-segment-144-node-420"></a>
+
+- **420** · clip 36: A person stands at the far end of the table writing and drawing on a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-421"></a>
+
+- **421** · clip 36: &lt;voice_0&gt; suggests keeping the drawing simple and notes that small balls might suffice.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-422"></a>
+
+- **422** · clip 36: The camera-wearer raises an arm and points toward the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-423"></a>
+
+- **423** · clip 36: &lt;voice_416&gt; suggests drawing a dragon and remarks on the order of male and female participants.  **Links:** ↔ [416](#latest-committed-memory-segment-144-node-416)
+
+<a id="latest-committed-memory-segment-144-node-424"></a>
+
+- **424** · clip 36: &lt;voice_417&gt; and &lt;voice_418&gt; discuss inviting female participants.  **Links:** ↔ [417](#latest-committed-memory-segment-144-node-417) · ↔ [418](#latest-committed-memory-segment-144-node-418)
+
+<a id="latest-committed-memory-segment-144-node-425"></a>
+
+- **425** · clip 36: The person at the whiteboard continues writing as the discussion proceeds.
+
+<a id="latest-committed-memory-segment-144-node-434"></a>
+
+- **434** · clip 37: Jake sits at the end of a long dining table covered with a pink-and-white checkered tablecloth, upon which a clapperboard is placed.
+
+<a id="latest-committed-memory-segment-144-node-435"></a>
+
+- **435** · clip 37: A group of people are gathered around the table, engaged in conversation while facing towards a whiteboard at the far end of the room.
+
+<a id="latest-committed-memory-segment-144-node-436"></a>
+
+- **436** · clip 37: A person in an orange shirt stands near the whiteboard and draws various figures and hairstyles according to suggestions.
+
+<a id="latest-committed-memory-segment-144-node-437"></a>
+
+- **437** · clip 37: At around 00:09, the person seated on the left in a black jacket and black cat-ear headpiece turns their head toward Jake's camera before looking back toward the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-438"></a>
+
+- **438** · clip 37: The participants around the table comment and laugh about the hair sketches, mentioning wigs and hairstyles.
+
+<a id="latest-committed-memory-segment-144-node-444"></a>
+
+- **444** · clip 38: A group of people sits around a long table covered with a pink checkered tablecloth facing a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-445"></a>
+
+- **445** · clip 38: A person standing by the whiteboard writes on the board with a marker while interacting with the group.
+
+<a id="latest-committed-memory-segment-144-node-446"></a>
+
+- **446** · clip 38: Participants around the table watch the whiteboard and engage in discussion.
+
+<a id="latest-committed-memory-segment-144-node-447"></a>
+
+- **447** · clip 38: &lt;voice_177&gt; states that they could ask a female acquaintance to join, but notes uncertainty due to the long distance.  **Links:** ↔ [177](#latest-committed-memory-segment-144-node-177)
+
+<a id="latest-committed-memory-segment-144-node-448"></a>
+
+- **448** · clip 38: The camera wearer points toward the whiteboard, and &lt;voice_0&gt; suggests writing something underneath each person.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-456"></a>
+
+- **456** · clip 39: A group of people sits around a checkered dining table while a person in an orange shirt stands by a whiteboard writing.
+
+<a id="latest-committed-memory-segment-144-node-457"></a>
+
+- **457** · clip 39: &lt;voice_0&gt; gives verbal instructions on writing code names or labels on the whiteboard.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-458"></a>
+
+- **458** · clip 39: An arm reaches out from the foreground pointing toward the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-459"></a>
+
+- **459** · clip 39: The person at the whiteboard continues writing as instructed.
+
+<a id="latest-committed-memory-segment-144-node-460"></a>
+
+- **460** · clip 39: &lt;voice_453&gt; asks whose item or drawing is being referenced.  **Links:** ↔ [453](#latest-committed-memory-segment-144-node-453)
+
+<a id="latest-committed-memory-segment-144-node-461"></a>
+
+- **461** · clip 39: &lt;voice_454&gt; identifies one of the items as belonging to Tasha.  **Links:** ↔ [454](#latest-committed-memory-segment-144-node-454)
+
+<a id="latest-committed-memory-segment-144-node-462"></a>
+
+- **462** · clip 39: &lt;voice_455&gt; identifies another item as belonging to Yuxuan.  **Links:** ↔ [455](#latest-committed-memory-segment-144-node-455)
+
+<a id="latest-committed-memory-segment-144-node-470"></a>
+
+- **470** · clip 40: A group of people sits around a table covered in a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-471"></a>
+
+- **471** · clip 40: A person in an orange shirt stands near a whiteboard at the end of the room, writing and leading a discussion.
+
+<a id="latest-committed-memory-segment-144-node-472"></a>
+
+- **472** · clip 40: A film clapperboard rests on the table in the foreground.
+
+<a id="latest-committed-memory-segment-144-node-473"></a>
+
+- **473** · clip 40: The participants discuss inviting people, names, and attendee information while the facilitator notes details on the board.
+
+<a id="latest-committed-memory-segment-144-node-477"></a>
+
+- **477** · clip 41: A group of people sits around a long table covered with a pink checkered tablecloth in an indoor room.
+
+<a id="latest-committed-memory-segment-144-node-478"></a>
+
+- **478** · clip 41: A clapperboard rests on the table in the foreground.
+
+<a id="latest-committed-memory-segment-144-node-479"></a>
+
+- **479** · clip 41: A person wearing a peach-colored shirt stands by a whiteboard at the end of the table, writing notes.
+
+<a id="latest-committed-memory-segment-144-node-480"></a>
+
+- **480** · clip 41: &lt;voice_476&gt; speaks between 00:03 and 00:16 about sending a star mark.  **Links:** ↔ [476](#latest-committed-memory-segment-144-node-476)
+
+<a id="latest-committed-memory-segment-144-node-481"></a>
+
+- **481** · clip 41: The person at the whiteboard finishes writing and turns toward the seated participants.
+
+<a id="latest-committed-memory-segment-144-node-482"></a>
+
+- **482** · clip 41: &lt;voice_417&gt; speaks from 00:16 to 00:23, counting and mentioning six guests.  **Links:** ↔ [417](#latest-committed-memory-segment-144-node-417)
+
+<a id="latest-committed-memory-segment-144-node-483"></a>
+
+- **483** · clip 41: &lt;voice_0&gt; chimes in from 00:23 to 00:27, correcting or clarifying that there are four to six guests.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-484"></a>
+
+- **484** · clip 41: &lt;voice_383&gt; confirms from 00:26 to 00:30 that it is four to six guests.  **Links:** ↔ [383](#latest-committed-memory-segment-144-node-383)
+
+<a id="latest-committed-memory-segment-144-node-485"></a>
+
+- **485** · clip 41: The participants seated around the table listen attentively to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-490"></a>
+
+- **490** · clip 42: A group of people are gathered around a table covered with a red and white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-491"></a>
+
+- **491** · clip 42: A clapperboard marked with production details sits on the table facing the camera.
+
+<a id="latest-committed-memory-segment-144-node-492"></a>
+
+- **492** · clip 42: A person stands in the background near a whiteboard while the others remain seated around the table.
+
+<a id="latest-committed-memory-segment-144-node-493"></a>
+
+- **493** · clip 42: The seated group members converse and gesture while discussing participant recruitment methods.
+
+<a id="latest-committed-memory-segment-144-node-494"></a>
+
+- **494** · clip 42: The camera wearer sits at the foot of the table, with their hands occasionally visible.
+
+<a id="latest-committed-memory-segment-144-node-501"></a>
+
+- **501** · clip 43: A group of people are gathered around a long table with a checkered tablecloth indoors.
+
+<a id="latest-committed-memory-segment-144-node-502"></a>
+
+- **502** · clip 43: A clapperboard labeled 'Egolife' rests in the foreground on the table.
+
+<a id="latest-committed-memory-segment-144-node-503"></a>
+
+- **503** · clip 43: A person stands in the background by a whiteboard, writing notes as the group talks.
+
+<a id="latest-committed-memory-segment-144-node-504"></a>
+
+- **504** · clip 43: The attendees at the table listen, react, and participate in an ongoing discussion.
+
+<a id="latest-committed-memory-segment-144-node-505"></a>
+
+- **505** · clip 43: A woman sitting on the left side of the table smiles and laughs while listening.
+
+<a id="latest-committed-memory-segment-144-node-510"></a>
+
+- **510** · clip 44: The camera wearer sits at the head of a long table, adjusting a patterned cap on their lap.
+
+<a id="latest-committed-memory-segment-144-node-511"></a>
+
+- **511** · clip 44: A group of people gathers around the table covered in a pink checkered tablecloth with a clapperboard on it.
+
+<a id="latest-committed-memory-segment-144-node-512"></a>
+
+- **512** · clip 44: &lt;voice_417&gt; comments on Qi Baishi's work.  **Links:** ↔ [417](#latest-committed-memory-segment-144-node-417)
+
+<a id="latest-committed-memory-segment-144-node-513"></a>
+
+- **513** · clip 44: &lt;voice_508&gt; remarks that it gives off a retro feeling.  **Links:** ↔ [508](#latest-committed-memory-segment-144-node-508)
+
+<a id="latest-committed-memory-segment-144-node-514"></a>
+
+- **514** · clip 44: &lt;voice_431&gt; discusses the plan being written on the whiteboard.  **Links:** ↔ [431](#latest-committed-memory-segment-144-node-431)
+
+<a id="latest-committed-memory-segment-144-node-515"></a>
+
+- **515** · clip 44: &lt;voice_509&gt; makes a humorous observation about question marks and feeling like celebrities.  **Links:** ↔ [509](#latest-committed-memory-segment-144-node-509)
+
+<a id="latest-committed-memory-segment-144-node-516"></a>
+
+- **516** · clip 44: &lt;voice_417&gt; mentions 'The riddle' and asks what else is left on the agenda.  **Links:** ↔ [417](#latest-committed-memory-segment-144-node-417)
+
+<a id="latest-committed-memory-segment-144-node-523"></a>
+
+- **523** · clip 45: A group sits around a long table covered with a checkered tablecloth during a meeting.
+
+<a id="latest-committed-memory-segment-144-node-524"></a>
+
+- **524** · clip 45: A person in an orange shirt stands at the whiteboard, writing and facilitating the discussion.
+
+<a id="latest-committed-memory-segment-144-node-525"></a>
+
+- **525** · clip 45: &lt;voice_0&gt; explains the crew size and plans activities based on the number of attendees to host.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-526"></a>
+
+- **526** · clip 45: Participants seated around the table listen and observe the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-527"></a>
+
+- **527** · clip 45: &lt;voice_521&gt; makes a brief remark during the discussion.  **Links:** ↔ [521](#latest-committed-memory-segment-144-node-521)
+
+<a id="latest-committed-memory-segment-144-node-528"></a>
+
+- **528** · clip 45: The camera wearer handles a patterned cap on their lap before standing up.
+
+<a id="latest-committed-memory-segment-144-node-529"></a>
+
+- **529** · clip 45: The camera wearer walks toward the kitchen area and approaches a trash can.
+
+<a id="latest-committed-memory-segment-144-node-530"></a>
+
+- **530** · clip 45: &lt;voice_522&gt; comments on recording everyone while moving around the room.  **Links:** ↔ [522](#latest-committed-memory-segment-144-node-522)
+
+<a id="latest-committed-memory-segment-144-node-536"></a>
+
+- **536** · clip 46: The camera moves around the living area toward a dining table where several people are gathered.
+
+<a id="latest-committed-memory-segment-144-node-537"></a>
+
+- **537** · clip 46: A person standing by the whiteboard wipes markings off and writes new information.
+
+<a id="latest-committed-memory-segment-144-node-538"></a>
+
+- **538** · clip 46: A person at the whiteboard counts and discusses numbers related to the schedule.
+
+<a id="latest-committed-memory-segment-144-node-539"></a>
+
+- **539** · clip 46: A clapperboard rests on the checkered tablecloth in the foreground.
+
+<a id="latest-committed-memory-segment-144-node-540"></a>
+
+- **540** · clip 46: The group members sit around the table watching the board and engaging in discussion.
+
+<a id="latest-committed-memory-segment-144-node-548"></a>
+
+- **548** · clip 47: A group of people sits around a long table with a checkered tablecloth during a discussion.
+
+<a id="latest-committed-memory-segment-144-node-549"></a>
+
+- **549** · clip 47: A person wearing an orange shirt stands at the head of the room and writes on a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-550"></a>
+
+- **550** · clip 47: The camera person's hand reaches into frame toward the table before withdrawing.
+
+<a id="latest-committed-memory-segment-144-node-551"></a>
+
+- **551** · clip 47: Members of the group turn to look toward the whiteboard as they talk.
+
+<a id="latest-committed-memory-segment-144-node-552"></a>
+
+- **552** · clip 47: The group continues discussing numerical estimates and potential scenarios.
+
+<a id="latest-committed-memory-segment-144-node-558"></a>
+
+- **558** · clip 48: A group of people sits around a dining table covered with a checkered tablecloth in a meeting room.
+
+<a id="latest-committed-memory-segment-144-node-559"></a>
+
+- **559** · clip 48: A person stands at the head of the room writing notes on a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-560"></a>
+
+- **560** · clip 48: A film slate rests in the foreground on top of the table.
+
+<a id="latest-committed-memory-segment-144-node-561"></a>
+
+- **561** · clip 48: The seated attendees listen and focus on the presentation at the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-564"></a>
+
+- **564** · clip 49: A group of people sits around a checkered dining table in a room during a meeting.
+
+<a id="latest-committed-memory-segment-144-node-565"></a>
+
+- **565** · clip 49: A person in an orange shirt stands near a whiteboard in the background, writing points on it.
+
+<a id="latest-committed-memory-segment-144-node-566"></a>
+
+- **566** · clip 49: Participants around the table, including an individual in a black long-sleeve shirt on the left and others on the right, engage in a group discussion.
+
+<a id="latest-committed-memory-segment-144-node-567"></a>
+
+- **567** · clip 49: A clapperboard and various personal items, such as phones and water bottles, rest on the table.
+
+<a id="latest-committed-memory-segment-144-node-568"></a>
+
+- **568** · clip 49: The camera wearer leans forward and adjusts position closer to the table while listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-572"></a>
+
+- **572** · clip 50: A group of people is seated around a table covered with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-573"></a>
+
+- **573** · clip 50: A person in an orange t-shirt stands near a whiteboard at the far end of the room.
+
+<a id="latest-committed-memory-segment-144-node-574"></a>
+
+- **574** · clip 50: A woman in a black cardigan sits on the left side of the table, listening attentively.
+
+<a id="latest-committed-memory-segment-144-node-575"></a>
+
+- **575** · clip 50: The camera briefly tilts down toward the table where a film clapperboard is placed.
+
+<a id="latest-committed-memory-segment-144-node-576"></a>
+
+- **576** · clip 50: A blonde woman wearing glasses on the right side of the table gestures with her hands while speaking to the group.
+
+<a id="latest-committed-memory-segment-144-node-577"></a>
+
+- **577** · clip 50: The camera wearer rests their hands on the table while listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-584"></a>
+
+- **584** · clip 51: A group of people are seated around a checkered table engaged in a meeting.
+
+<a id="latest-committed-memory-segment-144-node-585"></a>
+
+- **585** · clip 51: A young man in an orange shirt stands by a whiteboard and writes down notes from the discussion.
+
+<a id="latest-committed-memory-segment-144-node-586"></a>
+
+- **586** · clip 51: A woman with blonde hair gestures with her hands as she speaks to the group.
+
+<a id="latest-committed-memory-segment-144-node-587"></a>
+
+- **587** · clip 51: A woman in a black top seated on the left listens attentively and occasionally gestures while following the conversation.
+
+<a id="latest-committed-memory-segment-144-node-588"></a>
+
+- **588** · clip 51: The camera wearer sits at the end of the table observing the meeting.
+
+<a id="latest-committed-memory-segment-144-node-589"></a>
+
+- **589** · clip 51: The camera wearer stands up from the table and walks away from the meeting room.
+
+<a id="latest-committed-memory-segment-144-node-590"></a>
+
+- **590** · clip 51: The camera wearer enters an adjacent hallway filled with delivery boxes and household items.
+
+<a id="latest-committed-memory-segment-144-node-591"></a>
+
+- **591** · clip 51: The camera wearer approaches a wooden bench holding cardboard packages and reaches out toward a long open box.
+
+<a id="latest-committed-memory-segment-144-node-596"></a>
+
+- **596** · clip 52: A person carries a long cardboard box of flowers from the hallway into the room.
+
+<a id="latest-committed-memory-segment-144-node-597"></a>
+
+- **597** · clip 52: Several people are gathered around a dining table covered with a pink-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-598"></a>
+
+- **598** · clip 52: &lt;voice_430&gt; discusses the idea of buying flowers rather than trying to grow plants during a short shooting period.  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430)
+
+<a id="latest-committed-memory-segment-144-node-599"></a>
+
+- **599** · clip 52: The person carrying the box places it on the center of the table in front of the group.
+
+<a id="latest-committed-memory-segment-144-node-600"></a>
+
+- **600** · clip 52: &lt;voice_595&gt; explains that the flowers were shipped from Yunnan and mentions having ordered peonies.  **Links:** ↔ [595](#latest-committed-memory-segment-144-node-595)
+
+<a id="latest-committed-memory-segment-144-node-601"></a>
+
+- **601** · clip 52: A woman with light reddish-blonde hair helps open the cardboard box on the table.
+
+<a id="latest-committed-memory-segment-144-node-602"></a>
+
+- **602** · clip 52: The woman unpacks the protective paper wrap to check the flowers inside.
+
+<a id="latest-committed-memory-segment-144-node-603"></a>
+
+- **603** · clip 52: A woman wearing a white shirt stands up from the table and walks toward the back of the room.
+
+<a id="latest-committed-memory-segment-144-node-606"></a>
+
+- **606** · clip 53: A group of people are gathered in the living room around a table and whiteboard, discussing their rehearsal or shoot setup.
+
+<a id="latest-committed-memory-segment-144-node-607"></a>
+
+- **607** · clip 53: &lt;voice_429&gt; asks whether they should start the scene or finish practicing the subsequent parts.  **Links:** ↔ [429](#latest-committed-memory-segment-144-node-429)
+
+<a id="latest-committed-memory-segment-144-node-608"></a>
+
+- **608** · clip 53: The camera wearer turns and walks into the adjacent bedroom, showing a computer workstation and bed.
+
+<a id="latest-committed-memory-segment-144-node-609"></a>
+
+- **609** · clip 53: &lt;voice_0&gt; responds, suggesting they show it first and commenting positively on someone's performance.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-610"></a>
+
+- **610** · clip 53: The camera wearer turns around inside the bedroom and walks back out into the living room.
+
+<a id="latest-committed-memory-segment-144-node-611"></a>
+
+- **611** · clip 53: A young man in an orange t-shirt walks across the living room as a woman in a white dress approaches the table.
+
+<a id="latest-committed-memory-segment-144-node-614"></a>
+
+- **614** · clip 54: Several people gather around a table covered with a pink checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-615"></a>
+
+- **615** · clip 54: A film clapperboard lies on the foreground edge of the table.
+
+<a id="latest-committed-memory-segment-144-node-616"></a>
+
+- **616** · clip 54: A woman in a white top and a woman in a green dress open a long cardboard box placed on the table.
+
+<a id="latest-committed-memory-segment-144-node-617"></a>
+
+- **617** · clip 54: The woman in the green dress removes a wrapped bouquet from the box.
+
+<a id="latest-committed-memory-segment-144-node-618"></a>
+
+- **618** · clip 54: A woman dressed in black sits at the table watching them unpack.
+
+<a id="latest-committed-memory-segment-144-node-619"></a>
+
+- **619** · clip 54: A man wearing an orange t-shirt stands in the background watching the activity.
+
+<a id="latest-committed-memory-segment-144-node-624"></a>
+
+- **624** · clip 55: A group of people gathers around a dining table covered with a pink checkered tablecloth in an apartment.
+
+<a id="latest-committed-memory-segment-144-node-625"></a>
+
+- **625** · clip 55: A woman in a white top unboxes flowers and supplies from a cardboard box on the table.
+
+<a id="latest-committed-memory-segment-144-node-626"></a>
+
+- **626** · clip 55: A woman sitting in a black shirt and a woman standing in a patterned dress observe and help with the flower unpacking.
+
+<a id="latest-committed-memory-segment-144-node-627"></a>
+
+- **627** · clip 55: A young man in an orange shirt stands in the background watching before walking around the room.
+
+<a id="latest-committed-memory-segment-144-node-628"></a>
+
+- **628** · clip 55: The camera wearer places an animal-patterned stool onto the floor.
+
+<a id="latest-committed-memory-segment-144-node-629"></a>
+
+- **629** · clip 55: The camera wearer takes out a smartphone and operates it.
+
+<a id="latest-committed-memory-segment-144-node-630"></a>
+
+- **630** · clip 55: The camera wearer walks toward the hallway next to a red refrigerator and closes the door.
+
+<a id="latest-committed-memory-segment-144-node-636"></a>
+
+- **636** · clip 56: A person uses both hands to adjust and secure a small action camera mounted on a door frame.
+
+<a id="latest-committed-memory-segment-144-node-637"></a>
+
+- **637** · clip 56: The person takes their hands off the mounted camera after finishing the adjustment.
+
+<a id="latest-committed-memory-segment-144-node-638"></a>
+
+- **638** · clip 56: The person turns around from the doorway toward the open living area.
+
+<a id="latest-committed-memory-segment-144-node-639"></a>
+
+- **639** · clip 56: A group of people is gathered around a table in the room, handling crafting materials and flowers.
+
+<a id="latest-committed-memory-segment-144-node-644"></a>
+
+- **644** · clip 57: Several people are gathered around a dining table covered with a pink and white checkered tablecloth, preparing and arranging flowers.
+
+<a id="latest-committed-memory-segment-144-node-645"></a>
+
+- **645** · clip 57: A woman in a green floral dress and a woman in a white top are unpacking and assembling flower bouquets.
+
+<a id="latest-committed-memory-segment-144-node-646"></a>
+
+- **646** · clip 57: A woman in black clothing sits at the table, observing the flower preparation.
+
+<a id="latest-committed-memory-segment-144-node-647"></a>
+
+- **647** · clip 57: The camera wearer walks toward the entrance door, checks the door frame, and turns back toward the main room.
+
+<a id="latest-committed-memory-segment-144-node-648"></a>
+
+- **648** · clip 57: &lt;voice_642&gt; explains that the nutrient solution is dissolved in water to accelerate the blooming process.  **Links:** ↔ [642](#latest-committed-memory-segment-144-node-642)
+
+<a id="latest-committed-memory-segment-144-node-649"></a>
+
+- **649** · clip 57: A young man in an orange T-shirt stands by the table observing the group.
+
+<a id="latest-committed-memory-segment-144-node-650"></a>
+
+- **650** · clip 57: &lt;voice_0&gt; suggests to Tasha that they also showcase their talents and asks her to see which items belong to her.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-651"></a>
+
+- **651** · clip 57: &lt;voice_643&gt; responds, stating that none of the items belong to her.  **Links:** ↔ [643](#latest-committed-memory-segment-144-node-643)
+
+<a id="latest-committed-memory-segment-144-node-658"></a>
+
+- **658** · clip 58: &lt;voice_0&gt; walks through the hallway past stacked delivery boxes towards the common room while speaking.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-659"></a>
+
+- **659** · clip 58: &lt;voice_0&gt; enters the room where several crew members are gathered around a dining table covered with film props, flowers, and a clapperboard.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-660"></a>
+
+- **660** · clip 58: A man in an orange t-shirt stands near the table and turns to look at &lt;voice_0&gt;.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-661"></a>
+
+- **661** · clip 58: A woman standing behind the table examines items from a box.
+
+<a id="latest-committed-memory-segment-144-node-662"></a>
+
+- **662** · clip 58: The man in the orange t-shirt walks past &lt;voice_0&gt; toward the whiteboard and projection screen area.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-663"></a>
+
+- **663** · clip 58: &lt;voice_0&gt; approaches the table, observing the seated and standing crew members.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-664"></a>
+
+- **664** · clip 58: The crew members at the table converse and inspect props.
+
+<a id="latest-committed-memory-segment-144-node-669"></a>
+
+- **669** · clip 59: A group gathers around a table containing flowers, notebooks, and a clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-670"></a>
+
+- **670** · clip 59: &lt;voice_0&gt; gestures with his hands above the table while asking about the planned format.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-671"></a>
+
+- **671** · clip 59: &lt;voice_667&gt; explains the plan to distribute flowers into individual vases and let them bloom.  **Links:** ↔ [667](#latest-committed-memory-segment-144-node-667)
+
+<a id="latest-committed-memory-segment-144-node-672"></a>
+
+- **672** · clip 59: &lt;voice_668&gt; responds with a brief verbal acknowledgement.  **Links:** ↔ [668](#latest-committed-memory-segment-144-node-668)
+
+<a id="latest-committed-memory-segment-144-node-673"></a>
+
+- **673** · clip 59: &lt;voice_667&gt; demonstrates how flowers are cut and pressed flat using hand gestures.  **Links:** ↔ [667](#latest-committed-memory-segment-144-node-667)
+
+<a id="latest-committed-memory-segment-144-node-679"></a>
+
+- **679** · clip 60: Four women stand and sit around a table covered with a checkered tablecloth, discussing craft and activity plans.
+
+<a id="latest-committed-memory-segment-144-node-680"></a>
+
+- **680** · clip 60: On the table are flowers, paper materials, and a film clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-681"></a>
+
+- **681** · clip 60: A woman with reddish-orange hair in a white T-shirt talks actively, gesturing with her hands.
+
+<a id="latest-committed-memory-segment-144-node-682"></a>
+
+- **682** · clip 60: The other women at the table listen attentively, occasionally nodding and chiming in.
+
+<a id="latest-committed-memory-segment-144-node-683"></a>
+
+- **683** · clip 60: A young man in an orange T-shirt enters the room from the left and stops to observe the discussion.
+
+<a id="latest-committed-memory-segment-144-node-690"></a>
+
+- **690** · clip 61: A group of people is gathered around a table covered with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-691"></a>
+
+- **691** · clip 61: On the table, several props, including a clapperboard, flowers, and containers, are laid out.
+
+<a id="latest-committed-memory-segment-144-node-692"></a>
+
+- **692** · clip 61: Three women stand at the far end of the table arranging items and discussing the setup.
+
+<a id="latest-committed-memory-segment-144-node-693"></a>
+
+- **693** · clip 61: A woman in dark clothing sits on the left side of the table, listening and observing.
+
+<a id="latest-committed-memory-segment-144-node-694"></a>
+
+- **694** · clip 61: A young man in an orange t-shirt walks through the room from the left background.
+
+<a id="latest-committed-memory-segment-144-node-695"></a>
+
+- **695** · clip 61: The person recording sits at the table, occasionally shifting their position.
+
+<a id="latest-committed-memory-segment-144-node-696"></a>
+
+- **696** · clip 61: The group continues discussing the shoot and reviewing upcoming tasks.
+
+<a id="latest-committed-memory-segment-144-node-701"></a>
+
+- **701** · clip 62: A group of people is gathered around a dining table covered in a pink checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-702"></a>
+
+- **702** · clip 62: A person calls out the next speaker to present.
+
+<a id="latest-committed-memory-segment-144-node-703"></a>
+
+- **703** · clip 62: A woman seated on the right side of the table begins sharing her proposal.
+
+<a id="latest-committed-memory-segment-144-node-704"></a>
+
+- **704** · clip 62: A woman standing in the center in a white blouse trims and organizes flowers and materials on the table.
+
+<a id="latest-committed-memory-segment-144-node-705"></a>
+
+- **705** · clip 62: A woman with dyed light hair stands beside her, inspecting and arranging plant stems.
+
+<a id="latest-committed-memory-segment-144-node-706"></a>
+
+- **706** · clip 62: A woman sitting on the left in dark clothing listens to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-707"></a>
+
+- **707** · clip 62: The woman seated on the right gestures with her hands while elaborating on her DIY jellyfish lamp concept for Earth Day.
+
+<a id="latest-committed-memory-segment-144-node-711"></a>
+
+- **711** · clip 63: A group of young people is gathered around a table covered in a pink-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-712"></a>
+
+- **712** · clip 63: A woman seated on the right side of the table talks continuously while gesturing with both hands (&lt;voice_311&gt;).  **Links:** ↔ [311](#latest-committed-memory-segment-144-node-311)
+
+<a id="latest-committed-memory-segment-144-node-713"></a>
+
+- **713** · clip 63: A woman in a white blouse stands at the middle-left of the table, wrapping and arranging flower bouquets and materials.
+
+<a id="latest-committed-memory-segment-144-node-714"></a>
+
+- **714** · clip 63: A woman seated on the left in a dark cardigan quietly listens to the ongoing conversation.
+
+<a id="latest-committed-memory-segment-144-node-715"></a>
+
+- **715** · clip 63: A woman with reddish-orange hair stands near the whiteboard in the background, listening and adjusting her hair.
+
+<a id="latest-committed-memory-segment-144-node-722"></a>
+
+- **722** · clip 64: Several people are gathered around a table covered with a red-and-white checkered tablecloth in a room.
+
+<a id="latest-committed-memory-segment-144-node-723"></a>
+
+- **723** · clip 64: A woman seated on the right wearing a patterned blue dress gestures actively while speaking to the group.
+
+<a id="latest-committed-memory-segment-144-node-724"></a>
+
+- **724** · clip 64: A woman wearing a white blouse stands at the head of the table, handling flowers and wrapping materials.
+
+<a id="latest-committed-memory-segment-144-node-725"></a>
+
+- **725** · clip 64: A woman dressed in black sits on the left side of the table, listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-726"></a>
+
+- **726** · clip 64: A woman with dyed pink hair stands near a whiteboard in the background, observing the others.
+
+<a id="latest-committed-memory-segment-144-node-727"></a>
+
+- **727** · clip 64: A young man enters the background near the doorway behind the standing woman.
+
+<a id="latest-committed-memory-segment-144-node-728"></a>
+
+- **728** · clip 64: A clapperboard and camera accessories rest on the table in front of the first-person viewer.
+
+<a id="latest-committed-memory-segment-144-node-733"></a>
+
+- **733** · clip 65: A group of people is gathered around a table with a checkered tablecloth, holding a creative meeting in a room.
+
+<a id="latest-committed-memory-segment-144-node-734"></a>
+
+- **734** · clip 65: A clapperboard marked with project details and 'Egolife' lies on the table alongside notes, props, and a flower bouquet.
+
+<a id="latest-committed-memory-segment-144-node-735"></a>
+
+- **735** · clip 65: &lt;voice_311&gt; discusses utilizing leftover cardboard boxes for eco-friendliness to match an Earth theme, before suggesting the idea of performing a short skit.  **Links:** ↔ [311](#latest-committed-memory-segment-144-node-311)
+
+<a id="latest-committed-memory-segment-144-node-736"></a>
+
+- **736** · clip 65: The camera wearer briefly turns away from the table, looking towards the open kitchen, bright exterior window, and hallway.
+
+<a id="latest-committed-memory-segment-144-node-737"></a>
+
+- **737** · clip 65: The camera wearer turns back to face the group around the meeting table.
+
+<a id="latest-committed-memory-segment-144-node-738"></a>
+
+- **738** · clip 65: &lt;voice_732&gt; continues explaining the idea of staging a short skit, noting that there is currently no ready-made script available.  **Links:** ↔ [732](#latest-committed-memory-segment-144-node-732)
+
+<a id="latest-committed-memory-segment-144-node-739"></a>
+
+- **739** · clip 65: The participants around the table attentively listen to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-744"></a>
+
+- **744** · clip 66: A group of people is gathered around a table with a checkered tablecloth, conducting a production meeting.
+
+<a id="latest-committed-memory-segment-144-node-745"></a>
+
+- **745** · clip 66: A clapperboard and various props rest on the table in front of the participants.
+
+<a id="latest-committed-memory-segment-144-node-746"></a>
+
+- **746** · clip 66: A woman sitting on the right side of the table speaks and gestures while discussing script ideas.
+
+<a id="latest-committed-memory-segment-144-node-747"></a>
+
+- **747** · clip 66: Another participant contributes to the discussion regarding time limitations for writing a script.
+
+<a id="latest-committed-memory-segment-144-node-748"></a>
+
+- **748** · clip 66: Two people stand in the background near a whiteboard with notes written on it.
+
+<a id="latest-committed-memory-segment-144-node-749"></a>
+
+- **749** · clip 66: The woman sitting on the right concludes her explanation about utilizing an existing script.
+
+<a id="latest-committed-memory-segment-144-node-750"></a>
+
+- **750** · clip 66: A woman with pink hair checks her phone and mentions Lucia to the group.
+
+<a id="latest-committed-memory-segment-144-node-751"></a>
+
+- **751** · clip 66: The group continues discussing casting and roles for the shoot.
+
+<a id="latest-committed-memory-segment-144-node-761"></a>
+
+- **761** · clip 67: A group of people is gathered around a table with a red-and-white checkered tablecloth in a room, with a clapperboard resting on the table.
+
+<a id="latest-committed-memory-segment-144-node-762"></a>
+
+- **762** · clip 67: A person with reddish-brown hair stands by a whiteboard at the far end of the room.
+
+<a id="latest-committed-memory-segment-144-node-763"></a>
+
+- **763** · clip 67: A person sitting on the right side of the table points toward the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-764"></a>
+
+- **764** · clip 67: &lt;voice_755&gt; points out that a name was written backward on the board.  **Links:** ↔ [755](#latest-committed-memory-segment-144-node-755)
+
+<a id="latest-committed-memory-segment-144-node-765"></a>
+
+- **765** · clip 67: &lt;voice_756&gt; reads out or corrects the characters written on the whiteboard.  **Links:** ↔ [756](#latest-committed-memory-segment-144-node-756)
+
+<a id="latest-committed-memory-segment-144-node-766"></a>
+
+- **766** · clip 67: &lt;voice_0&gt; remarks that it was almost right.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-767"></a>
+
+- **767** · clip 67: A man briefly enters the frame in the background near the doorway behind the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-768"></a>
+
+- **768** · clip 67: &lt;voice_757&gt; jokes about a mutation occurring after chromosome testing, eliciting amusement.  **Links:** ↔ [757](#latest-committed-memory-segment-144-node-757)
+
+<a id="latest-committed-memory-segment-144-node-769"></a>
+
+- **769** · clip 67: The woman in black sitting on the left side of the table smiles and laughs along with the discussion.
+
+<a id="latest-committed-memory-segment-144-node-770"></a>
+
+- **770** · clip 67: &lt;voice_758&gt; jokingly asks if someone has both of them.  **Links:** ↔ [758](#latest-committed-memory-segment-144-node-758)
+
+<a id="latest-committed-memory-segment-144-node-771"></a>
+
+- **771** · clip 67: &lt;voice_759&gt; makes a brief comment during the conversation.  **Links:** ↔ [759](#latest-committed-memory-segment-144-node-759)
+
+<a id="latest-committed-memory-segment-144-node-772"></a>
+
+- **772** · clip 67: &lt;voice_760&gt; cheerfully calls for their prop to be brought out while gesturing with their hand.  **Links:** ↔ [760](#latest-committed-memory-segment-144-node-760)
+
+<a id="latest-committed-memory-segment-144-node-773"></a>
+
+- **773** · clip 67: The woman in black looks toward the camera with an amused expression.
+
+<a id="latest-committed-memory-segment-144-node-778"></a>
+
+- **778** · clip 68: A person calls for props and background music (&lt;voice_0&gt;).  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-779"></a>
+
+- **779** · clip 68: The camera wearer walks from the living area into an adjacent bedroom.
+
+<a id="latest-committed-memory-segment-144-node-780"></a>
+
+- **780** · clip 68: The camera wearer moves a chair aside and opens a suitcase placed against the wall.
+
+<a id="latest-committed-memory-segment-144-node-781"></a>
+
+- **781** · clip 68: The camera wearer rummages through the suitcase to retrieve prop items, including cards.
+
+<a id="latest-committed-memory-segment-144-node-782"></a>
+
+- **782** · clip 68: A person asks why the props are stored in the suitcase (&lt;voice_776&gt;).  **Links:** ↔ [776](#latest-committed-memory-segment-144-node-776)
+
+<a id="latest-committed-memory-segment-144-node-783"></a>
+
+- **783** · clip 68: A response is briefly offered (&lt;voice_352&gt;).  **Links:** ↔ [352](#latest-committed-memory-segment-144-node-352)
+
+<a id="latest-committed-memory-segment-144-node-784"></a>
+
+- **784** · clip 68: The camera wearer walks back into the living area holding the retrieved cards.
+
+<a id="latest-committed-memory-segment-144-node-785"></a>
+
+- **785** · clip 68: The camera wearer hands a card with a drawn heart to a woman seated at the table.
+
+<a id="latest-committed-memory-segment-144-node-786"></a>
+
+- **786** · clip 68: The woman seated at the table takes the card and comments that it is unopened and requests a petri dish (&lt;voice_500&gt;).  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
+
+<a id="latest-committed-memory-segment-144-node-787"></a>
+
+- **787** · clip 68: A person confirms the petri dish prop (&lt;voice_777&gt;).  **Links:** ↔ [777](#latest-committed-memory-segment-144-node-777)
+
+<a id="latest-committed-memory-segment-144-node-791"></a>
+
+- **791** · clip 69: The camera wearer stands near a dining table where multiple people are gathered.
+
+<a id="latest-committed-memory-segment-144-node-792"></a>
+
+- **792** · clip 69: The camera wearer takes out and unlocks a smartphone.
+
+<a id="latest-committed-memory-segment-144-node-793"></a>
+
+- **793** · clip 69: &lt;voice_352&gt; mentions that an item was purchased but might not arrive, adding that they will check.  **Links:** ↔ [352](#latest-committed-memory-segment-144-node-352)
+
+<a id="latest-committed-memory-segment-144-node-794"></a>
+
+- **794** · clip 69: The camera wearer sits down on a chair in front of the table while looking at the phone.
+
+<a id="latest-committed-memory-segment-144-node-795"></a>
+
+- **795** · clip 69: The camera wearer opens apps and browses content on the phone screen.
+
+<a id="latest-committed-memory-segment-144-node-800"></a>
+
+- **800** · clip 70: A person records from a first-person perspective while holding and looking at a smartphone.
+
+<a id="latest-committed-memory-segment-144-node-801"></a>
+
+- **801** · clip 70: A table covered with a pink-and-white checkered tablecloth is situated in front of the person, holding a film clapperboard, flowers, and drinks.
+
+<a id="latest-committed-memory-segment-144-node-802"></a>
+
+- **802** · clip 70: In the background, a person in white stands near the table arranging flowers.
+
+<a id="latest-committed-memory-segment-144-node-803"></a>
+
+- **803** · clip 70: Another person is seated to the right side of the table.
+
+<a id="latest-committed-memory-segment-144-node-804"></a>
+
+- **804** · clip 70: &lt;voice_798&gt; observes that the content shows the three of them.  **Links:** ↔ [798](#latest-committed-memory-segment-144-node-798)
+
+<a id="latest-committed-memory-segment-144-node-805"></a>
+
+- **805** · clip 70: &lt;voice_799&gt; confirms in agreement.  **Links:** ↔ [799](#latest-committed-memory-segment-144-node-799)
+
+<a id="latest-committed-memory-segment-144-node-808"></a>
+
+- **808** · clip 71: The camera wearer sits near a dining table, holding a smartphone with both hands and browsing through an application.
+
+<a id="latest-committed-memory-segment-144-node-809"></a>
+
+- **809** · clip 71: On the checkered tablecloth, a film clapperboard, a water bottle, papers, and various props and equipment are laid out.
+
+<a id="latest-committed-memory-segment-144-node-810"></a>
+
+- **810** · clip 71: In the background, a person stands behind the table handling plants and flower stems.
+
+<a id="latest-committed-memory-segment-144-node-811"></a>
+
+- **811** · clip 71: Another person sits at the right side of the table, touching items placed there.
+
+<a id="latest-committed-memory-segment-144-node-812"></a>
+
+- **812** · clip 71: A woman wearing a dark top and cardigan approaches the table while carrying a yellow bag.
+
+<a id="latest-committed-memory-segment-144-node-813"></a>
+
+- **813** · clip 71: A man wearing an orange shirt walks across the room in the background.
+
+<a id="latest-committed-memory-segment-144-node-814"></a>
+
+- **814** · clip 71: The woman in the dark cardigan stands beside the table, examining the contents of her bag and holding an item.
+
+<a id="latest-committed-memory-segment-144-node-815"></a>
+
+- **815** · clip 71: The camera wearer continues to tap and scroll through content on their phone screen.
+
+<a id="latest-committed-memory-segment-144-node-819"></a>
+
+- **819** · clip 72: The camera wearer sits before a table and browses through their smartphone.
+
+<a id="latest-committed-memory-segment-144-node-820"></a>
+
+- **820** · clip 72: Several people are gathered around a table with a film clapperboard and flowers.
+
+<a id="latest-committed-memory-segment-144-node-821"></a>
+
+- **821** · clip 72: A woman sitting across the table speaks while inspecting items.
+
+<a id="latest-committed-memory-segment-144-node-822"></a>
+
+- **822** · clip 72: The camera wearer switches to a messaging application on their phone and begins typing a message.
+
+<a id="latest-committed-memory-segment-144-node-826"></a>
+
+- **826** · clip 73: From a first-person perspective, Jake sits at a table and types on his smartphone.
+
+<a id="latest-committed-memory-segment-144-node-827"></a>
+
+- **827** · clip 73: Several people are gathered around the table decorated with flowers, stationery, and a clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-828"></a>
+
+- **828** · clip 73: In the background, a woman in a white shirt arranges green foliage and flowers.
+
+<a id="latest-committed-memory-segment-144-node-829"></a>
+
+- **829** · clip 73: Two women are seated on the opposite side of the table engaged in conversation.
+
+<a id="latest-committed-memory-segment-144-node-830"></a>
+
+- **830** · clip 73: Jake stops typing and sets his phone down on the table.
+
+<a id="latest-committed-memory-segment-144-node-831"></a>
+
+- **831** · clip 73: A woman wearing glasses and dark clothing stands beside Jake, holding a tote bag.
+
+<a id="latest-committed-memory-segment-144-node-832"></a>
+
+- **832** · clip 73: At 00:16, &lt;voice_825&gt; utters an exclamation.  **Links:** ↔ [825](#latest-committed-memory-segment-144-node-825)
+
+<a id="latest-committed-memory-segment-144-node-833"></a>
+
+- **833** · clip 73: The woman in dark clothing takes out a pink card illustrated with a peach-heart pattern and hands it to Jake.
+
+<a id="latest-committed-memory-segment-144-node-834"></a>
+
+- **834** · clip 73: Jake accepts the pink card from her hands.
+
+<a id="latest-committed-memory-segment-144-node-835"></a>
+
+- **835** · clip 73: At 00:27, &lt;voice_0&gt; comments playfully that she feels disliked or dismissed.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-836"></a>
+
+- **836** · clip 73: The woman looks at Jake and smiles after handing over the card.
+
+<a id="latest-committed-memory-segment-144-node-840"></a>
+
+- **840** · clip 74: A group of people is gathered around a table with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-841"></a>
+
+- **841** · clip 74: A young woman in a black cardigan sits at the table holding a small yellow fabric pouch.
+
+<a id="latest-committed-memory-segment-144-node-842"></a>
+
+- **842** · clip 74: A person asks whether they should unpack the item, speaking &lt;voice_0&gt;.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-843"></a>
+
+- **843** · clip 74: The woman in black puts down the pouch and reaches across the table to pick up several paper cards.
+
+<a id="latest-committed-memory-segment-144-node-844"></a>
+
+- **844** · clip 74: A speaker explains that the cards are handmade seed paper crafted from discarded coffee grounds and paper pulp embedded with sunflower seeds, speaking &lt;voice_500&gt;.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
+
+<a id="latest-committed-memory-segment-144-node-845"></a>
+
+- **845** · clip 74: A woman in a white shirt stands in the background near a whiteboard, trimming plants and flowers.
+
+<a id="latest-committed-memory-segment-144-node-846"></a>
+
+- **846** · clip 74: The woman in black holds the seed paper cards in her hands and examines them attentively.
+
+<a id="latest-committed-memory-segment-144-node-847"></a>
+
+- **847** · clip 74: Other companions seated across the table listen to the explanation and observe.
+
+<a id="latest-committed-memory-segment-144-node-848"></a>
+
+- **848** · clip 74: One of the seated women claps her hands as the discussion continues.
+
+<a id="latest-committed-memory-segment-144-node-854"></a>
+
+- **854** · clip 75: A group of people gathers around a dining table decorated with flowers, cards, and a film clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-855"></a>
+
+- **855** · clip 75: A woman seated on the left holds cards and explains plant sprouting times and Earth-themed cards.
+
+<a id="latest-committed-memory-segment-144-node-856"></a>
+
+- **856** · clip 75: A woman standing in the background trims and prepares flower arrangements.
+
+<a id="latest-committed-memory-segment-144-node-857"></a>
+
+- **857** · clip 75: The woman on the left lays several Earth-themed stickers and cards onto the table.
+
+<a id="latest-committed-memory-segment-144-node-858"></a>
+
+- **858** · clip 75: A woman across the table claps and responds to the presentation.
+
+<a id="latest-committed-memory-segment-144-node-859"></a>
+
+- **859** · clip 75: The person holding the camera displays a card drawn with a heart or peach shape in their hands.
+
+<a id="latest-committed-memory-segment-144-node-870"></a>
+
+- **870** · clip 76: A group of people sits and stands around a dining table decorated with flowers, cards, and a clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-871"></a>
+
+- **871** · clip 76: The person recording holds a paper card with a pink heart drawing in front of the camera.
+
+<a id="latest-committed-memory-segment-144-node-872"></a>
+
+- **872** · clip 76: A woman in a black top sitting at the left side of the table examines and points at design materials on the table.
+
+<a id="latest-committed-memory-segment-144-node-873"></a>
+
+- **873** · clip 76: A man wearing an orange t-shirt walks past behind the woman in black.
+
+<a id="latest-committed-memory-segment-144-node-874"></a>
+
+- **874** · clip 76: A woman wearing white stands by a whiteboard in the background arranging flowers.
+
+<a id="latest-committed-memory-segment-144-node-875"></a>
+
+- **875** · clip 76: The woman in black discusses seed paper and design ideas with the other women seated across the table.
+
+<a id="latest-committed-memory-segment-144-node-876"></a>
+
+- **876** · clip 76: Two women seated opposite each other listen and comment on the design and eco-friendly features.
+
+<a id="latest-committed-memory-segment-144-node-879"></a>
+
+- **879** · clip 77: Several people are gathered around a table with a checkered tablecloth covered with flowers, drinks, and a clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-880"></a>
+
+- **880** · clip 77: A character speaks cheerfully off-camera at the beginning of the clip.
+
+<a id="latest-committed-memory-segment-144-node-881"></a>
+
+- **881** · clip 77: A woman wearing a white shirt walks up near the whiteboard at the end of the table.
+
+<a id="latest-committed-memory-segment-144-node-882"></a>
+
+- **882** · clip 77: The woman in the white shirt shows a puzzle box and describes its circular base and animal shapes to the group.
+
+<a id="latest-committed-memory-segment-144-node-883"></a>
+
+- **883** · clip 77: The woman seated on the left in dark clothing picks up her smartphone and places it by her ear.
+
+<a id="latest-committed-memory-segment-144-node-884"></a>
+
+- **884** · clip 77: The other individuals seated around the table observe and listen to the discussion about the puzzle.
+
+<a id="latest-committed-memory-segment-144-node-888"></a>
+
+- **888** · clip 78: A group of people are gathered around a table with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-889"></a>
+
+- **889** · clip 78: A woman wearing a white blouse stands near the whiteboard at the head of the table, talking and gesturing with small items in her hands.
+
+<a id="latest-committed-memory-segment-144-node-890"></a>
+
+- **890** · clip 78: The standing woman explains a concept involving animal puzzles and harmonious living on Earth.
+
+<a id="latest-committed-memory-segment-144-node-891"></a>
+
+- **891** · clip 78: On the left, a woman wearing glasses is on a phone call before putting her phone down on the table.
+
+<a id="latest-committed-memory-segment-144-node-892"></a>
+
+- **892** · clip 78: Two women sit on the right side of the table, observing the discussion.
+
+<a id="latest-committed-memory-segment-144-node-893"></a>
+
+- **893** · clip 78: A person wearing an orange shirt briefly appears in the doorway behind the standing woman.
+
+<a id="latest-committed-memory-segment-144-node-894"></a>
+
+- **894** · clip 78: The camera wearer briefly raises their right hand over the table.
+
+<a id="latest-committed-memory-segment-144-node-895"></a>
+
+- **895** · clip 78: A speaker mentions hair, prompting the standing woman to reach up and adjust her hair.
+
+<a id="latest-committed-memory-segment-144-node-899"></a>
+
+- **899** · clip 79: A group of people is gathered around a table covered with a pink checkered tablecloth, on which a clapperboard, flowers, and various items are placed.
+
+<a id="latest-committed-memory-segment-144-node-900"></a>
+
+- **900** · clip 79: A woman in a black long-sleeve shirt sits on the left side of the table, looking toward the front.
+
+<a id="latest-committed-memory-segment-144-node-901"></a>
+
+- **901** · clip 79: A woman wearing a white blouse stands at the head of the table near a whiteboard, holding an item and presenting to the group.
+
+<a id="latest-committed-memory-segment-144-node-902"></a>
+
+- **902** · clip 79: &lt;voice_383&gt; suggests including something into the plan, commenting that it would be quite good.  **Links:** ↔ [383](#latest-committed-memory-segment-144-node-383)
+
+<a id="latest-committed-memory-segment-144-node-903"></a>
+
+- **903** · clip 79: &lt;voice_165&gt; speaks, suggesting offering participants a narcissus bulb as a small prize, explaining that it is very easy to grow even for beginners.  **Links:** ↔ [165](#latest-committed-memory-segment-144-node-165)
+
+<a id="latest-committed-memory-segment-144-node-904"></a>
+
+- **904** · clip 79: &lt;voice_165&gt; continues elaborating on how narcissus flowers bloom beautifully and release a fresh, pleasant fragrance.  **Links:** ↔ [165](#latest-committed-memory-segment-144-node-165)
+
+<a id="latest-committed-memory-segment-144-node-905"></a>
+
+- **905** · clip 79: The woman in black rests her chin in her hands while attentively listening to &lt;voice_165&gt;.  **Links:** ↔ [165](#latest-committed-memory-segment-144-node-165)
+
+<a id="latest-committed-memory-segment-144-node-906"></a>
+
+- **906** · clip 79: Two women seated across the table on the right listen quietly to the presentation.
+
+<a id="latest-committed-memory-segment-144-node-907"></a>
+
+- **907** · clip 79: The woman in black shifts her position and occasionally touches items on the table in front of her.
+
+<a id="latest-committed-memory-segment-144-node-913"></a>
+
+- **913** · clip 80: A group of people is gathered around a table with a checkered tablecloth in a meeting room.
+
+<a id="latest-committed-memory-segment-144-node-914"></a>
+
+- **914** · clip 80: A woman in a white shirt standing near the whiteboard gestures as she speaks about planting bulbs (&lt;voice_165&gt;).  **Links:** ↔ [165](#latest-committed-memory-segment-144-node-165)
+
+<a id="latest-committed-memory-segment-144-node-915"></a>
+
+- **915** · clip 80: A young man in an orange t-shirt briefly walks in the background behind the woman in white.
+
+<a id="latest-committed-memory-segment-144-node-916"></a>
+
+- **916** · clip 80: The woman in white leans over to adjust flowers in a vase on the table.
+
+<a id="latest-committed-memory-segment-144-node-917"></a>
+
+- **917** · clip 80: Another person at the table suggests buying bulbs directly if needed (&lt;voice_911&gt;).  **Links:** ↔ [911](#latest-committed-memory-segment-144-node-911)
+
+<a id="latest-committed-memory-segment-144-node-918"></a>
+
+- **918** · clip 80: A participant briefly replies and confirms the idea (&lt;voice_364&gt;).  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
+
+<a id="latest-committed-memory-segment-144-node-919"></a>
+
+- **919** · clip 80: The woman sitting in the foreground in black handles small cards and stickers on the table.
+
+<a id="latest-committed-memory-segment-144-node-920"></a>
+
+- **920** · clip 80: A participant mentions almost giving away a strawberry potted plant on the first day (&lt;voice_416&gt;).  **Links:** ↔ [416](#latest-committed-memory-segment-144-node-416)
+
+<a id="latest-committed-memory-segment-144-node-921"></a>
+
+- **921** · clip 80: The woman in black touches her hair while listening to the group discussion.
+
+<a id="latest-committed-memory-segment-144-node-930"></a>
+
+- **930** · clip 81: A group of people are gathered around a table covered with a checkered tablecloth, flowers, cards, and a film clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-931"></a>
+
+- **931** · clip 81: A woman wearing a white outfit stands at the head of the table near a whiteboard, arranging flowers.
+
+<a id="latest-committed-memory-segment-144-node-932"></a>
+
+- **932** · clip 81: A woman in a black top sits at the left foreground of the table, resting her chin on her hand and listening to the conversation.
+
+<a id="latest-committed-memory-segment-144-node-933"></a>
+
+- **933** · clip 81: Two young women sit across the table on the right side, chatting and watching the flower arrangement.
+
+<a id="latest-committed-memory-segment-144-node-934"></a>
+
+- **934** · clip 81: A person in an orange shirt stands and moves around in the background near the doorway.
+
+<a id="latest-committed-memory-segment-144-node-935"></a>
+
+- **935** · clip 81: The camera wearer rests their hands on their lap while observing the room and listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-938"></a>
+
+- **938** · clip 82: Several people are gathered around a table decorated with flowers, stationery, and a clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-939"></a>
+
+- **939** · clip 82: A woman dressed in white stands in the background arranging flowers near a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-940"></a>
+
+- **940** · clip 82: A woman in dark clothing sits on the left side of the table, gesturing and listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-941"></a>
+
+- **941** · clip 82: &lt;voice_467&gt; pitches an idea regarding a second-hand auction and references lively community spots like bistros and cafes.  **Links:** ↔ [467](#latest-committed-memory-segment-144-node-467)
+
+<a id="latest-committed-memory-segment-144-node-942"></a>
+
+- **942** · clip 82: &lt;voice_868&gt; briefly responds with 'OK' in acknowledgment.  **Links:** ↔ [868](#latest-committed-memory-segment-144-node-868)
+
+<a id="latest-committed-memory-segment-144-node-943"></a>
+
+- **943** · clip 82: The camera wearer sits opposite the woman in dark clothing, observing the interaction.
+
+<a id="latest-committed-memory-segment-144-node-944"></a>
+
+- **944** · clip 82: Toward the end of the clip, the woman in dark clothing looks toward the camera wearer and smiles.
+
+<a id="latest-committed-memory-segment-144-node-954"></a>
+
+- **954** · clip 83: A group of people is gathered around a table covered in a checkered tablecloth in an indoor room.
+
+<a id="latest-committed-memory-segment-144-node-955"></a>
+
+- **955** · clip 83: A woman seated on the left wearing a black cardigan talks while looking at the camera person.
+
+<a id="latest-committed-memory-segment-144-node-956"></a>
+
+- **956** · clip 83: A woman in a white top arranges flowers near a whiteboard in the background.
+
+<a id="latest-committed-memory-segment-144-node-957"></a>
+
+- **957** · clip 83: The seated woman reaches forward to pick up and inspect a postcard with a heart drawing from the clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-958"></a>
+
+- **958** · clip 83: The camera wearer gestures toward the card while communicating with the woman.
+
+<a id="latest-committed-memory-segment-144-node-959"></a>
+
+- **959** · clip 83: The seated woman continues conversing with the camera wearer about the cards on the table.
+
+<a id="latest-committed-memory-segment-144-node-960"></a>
+
+- **960** · clip 83: Other individuals sit along the right side of the table chatting among themselves.
+
+<a id="latest-committed-memory-segment-144-node-966"></a>
+
+- **966** · clip 84: A group gathers around a dining table where a woman in white trims and arranges flowers.
+
+<a id="latest-committed-memory-segment-144-node-967"></a>
+
+- **967** · clip 84: A man in an orange shirt walks from near the whiteboard into an adjacent bedroom.
+
+<a id="latest-committed-memory-segment-144-node-968"></a>
+
+- **968** · clip 84: The camera wearer follows the man into the bedroom.
+
+<a id="latest-committed-memory-segment-144-node-969"></a>
+
+- **969** · clip 84: Inside the bedroom, a desk setup features multiple laptops and monitoring equipment.
+
+<a id="latest-committed-memory-segment-144-node-970"></a>
+
+- **970** · clip 84: The camera wearer examines small cards with red heart illustrations resting on a yellow stool.
+
+<a id="latest-committed-memory-segment-144-node-971"></a>
+
+- **971** · clip 84: The camera wearer places one of the cards onto the desk near the computer equipment.
+
+<a id="latest-committed-memory-segment-144-node-972"></a>
+
+- **972** · clip 84: The camera wearer leaves the bedroom and returns to the dining room.
+
+<a id="latest-committed-memory-segment-144-node-973"></a>
+
+- **973** · clip 84: The camera wearer sits down at the dining table with the group.
+
+<a id="latest-committed-memory-segment-144-node-974"></a>
+
+- **974** · clip 84: The woman in black seated at the table smiles and speaks while reacting to the ongoing discussion.
+
+<a id="latest-committed-memory-segment-144-node-975"></a>
+
+- **975** · clip 84: The speaker explains the rules for an activity involving presentations and an auction.
+
+<a id="latest-committed-memory-segment-144-node-981"></a>
+
+- **981** · clip 85: A group of people is gathered around a table with a pink-and-white checkered tablecloth in a room, with production equipment and a whiteboard visible in the background.
+
+<a id="latest-committed-memory-segment-144-node-982"></a>
+
+- **982** · clip 85: On the table lie pink carnations, green plants, a clapperboard labeled 'Egolife', water bottles, and stationery.
+
+<a id="latest-committed-memory-segment-144-node-983"></a>
+
+- **983** · clip 85: At the end of the table, a person stands near the whiteboard holding green stems and arranging floral items.
+
+<a id="latest-committed-memory-segment-144-node-984"></a>
+
+- **984** · clip 85: &lt;voice_332&gt; explains a game or activity mechanism where participants will each share a story or incident to be evaluated by the group.  **Links:** ↔ [332](#latest-committed-memory-segment-144-node-332)
+
+<a id="latest-committed-memory-segment-144-node-985"></a>
+
+- **985** · clip 85: &lt;voice_330&gt; chimes in to ask whether the story's rating determines how many coins are rewarded.  **Links:** ↔ [330](#latest-committed-memory-segment-144-node-330)
+
+<a id="latest-committed-memory-segment-144-node-986"></a>
+
+- **986** · clip 85: &lt;voice_332&gt; confirms that coins will be awarded based on the evaluation of the stories.  **Links:** ↔ [332](#latest-committed-memory-segment-144-node-332)
+
+<a id="latest-committed-memory-segment-144-node-987"></a>
+
+- **987** · clip 85: The woman seated on the left in a black outfit turns back toward the speaker and makes a humorous comparison (&lt;voice_979&gt;) about trading stories for items.  **Links:** ↔ [979](#latest-committed-memory-segment-144-node-979)
+
+<a id="latest-committed-memory-segment-144-node-988"></a>
+
+- **988** · clip 85: &lt;voice_980&gt; acknowledges the remark with a brief response.  **Links:** ↔ [980](#latest-committed-memory-segment-144-node-980)
+
+<a id="latest-committed-memory-segment-144-node-989"></a>
+
+- **989** · clip 85: &lt;voice_332&gt; continues explaining that the earned coins will then be used in an auction to bid on secondhand or unused items brought by the guests.  **Links:** ↔ [332](#latest-committed-memory-segment-144-node-332)
+
+<a id="latest-committed-memory-segment-144-node-994"></a>
+
+- **994** · clip 86: A group of people sits around a dining table covered with a checkered tablecloth, engaged in a discussion.
+
+<a id="latest-committed-memory-segment-144-node-995"></a>
+
+- **995** · clip 86: Flowers, a clapperboard, drinks, and personal accessories rest on the table.
+
+<a id="latest-committed-memory-segment-144-node-996"></a>
+
+- **996** · clip 86: A woman stands near a whiteboard in the background, arranging cut flowers and greenery.
+
+<a id="latest-committed-memory-segment-144-node-997"></a>
+
+- **997** · clip 86: A person enters the room from an adjacent doorway in the background.
+
+<a id="latest-committed-memory-segment-144-node-998"></a>
+
+- **998** · clip 86: A woman seated on the left side of the table listens to the group discussion and puts on glasses.
+
+<a id="latest-committed-memory-segment-144-node-999"></a>
+
+- **999** · clip 86: Two women seated on the right side of the table listen attentively, with one touching her hair.
+
+<a id="latest-committed-memory-segment-144-node-1007"></a>
+
+- **1007** · clip 87: A group of people is gathered around a table decorated with flowers and stationery in a workshop room.
+
+<a id="latest-committed-memory-segment-144-node-1008"></a>
+
+- **1008** · clip 87: A woman standing in front of a whiteboard inspects and trims plant stems.
+
+<a id="latest-committed-memory-segment-144-node-1009"></a>
+
+- **1009** · clip 87: The woman seated on the left rests her arms on the table and participates in the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1010"></a>
+
+- **1010** · clip 87: Two women sitting on the right side of the table listen and gesture while taking part in the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1011"></a>
+
+- **1011** · clip 87: The participants discuss the auction rules and economic circulation mechanism for their session.
+
+<a id="latest-committed-memory-segment-144-node-1018"></a>
+
+- **1018** · clip 88: A group of people is gathered around a table covered with a red-and-white checkered tablecloth in a room.
+
+<a id="latest-committed-memory-segment-144-node-1019"></a>
+
+- **1019** · clip 88: On the table lie various flowers, wrapping materials, a clapperboard, and a phone.
+
+<a id="latest-committed-memory-segment-144-node-1020"></a>
+
+- **1020** · clip 88: A woman in a white blouse stands near a whiteboard holding green plant branches and flowers.
+
+<a id="latest-committed-memory-segment-144-node-1021"></a>
+
+- **1021** · clip 88: A woman wearing black clothing sits at the left side of the table, listening and examining a small brown paper box.
+
+<a id="latest-committed-memory-segment-144-node-1022"></a>
+
+- **1022** · clip 88: Two women sit across the table on the right, listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1023"></a>
+
+- **1023** · clip 88: Another person enters the background doorway behind the woman in white.
+
+<a id="latest-committed-memory-segment-144-node-1024"></a>
+
+- **1024** · clip 88: The woman in black gestures with the folded paper box while discussing its purpose.
+
+<a id="latest-committed-memory-segment-144-node-1025"></a>
+
+- **1025** · clip 88: The person holding the camera rests their hands on a patterned pouch on their lap while observing the group.
+
+<a id="latest-committed-memory-segment-144-node-1031"></a>
+
+- **1031** · clip 89: A group of people sits around a table in a room discussing hospitality arrangements.
+
+<a id="latest-committed-memory-segment-144-node-1032"></a>
+
+- **1032** · clip 89: Flowers, a clapperboard, and drinks rest on the checkered table.
+
+<a id="latest-committed-memory-segment-144-node-1033"></a>
+
+- **1033** · clip 89: In the background, an individual handles greenery and floral arrangements near a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1034"></a>
+
+- **1034** · clip 89: A woman in a black top sits at the near side of the table listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1035"></a>
+
+- **1035** · clip 89: Two participants sit across the table, contributing to ideas about serving drinks and coffee to guests.
+
+<a id="latest-committed-memory-segment-144-node-1041"></a>
+
+- **1041** · clip 90: Several people sit and stand around a table with flowers and drinks, discussing event planning.
+
+<a id="latest-committed-memory-segment-144-node-1042"></a>
+
+- **1042** · clip 90: A woman in a white top arranges flowers near a whiteboard at the end of the table.
+
+<a id="latest-committed-memory-segment-144-node-1043"></a>
+
+- **1043** · clip 90: A group member asks about the duration of the upcoming event.
+
+<a id="latest-committed-memory-segment-144-node-1044"></a>
+
+- **1044** · clip 90: Others confirm the event will take place over one afternoon.
+
+<a id="latest-committed-memory-segment-144-node-1045"></a>
+
+- **1045** · clip 90: A participant notes that providing beverages to attendees should suffice.
+
+<a id="latest-committed-memory-segment-144-node-1046"></a>
+
+- **1046** · clip 90: A woman with pink hair points toward the whiteboard while discussing market sections and entertainment.
+
+<a id="latest-committed-memory-segment-144-node-1049"></a>
+
+- **1049** · clip 91: A group of people is gathered around a table inside a room, with flowers, a clapperboard, and papers laid out on the table.
+
+<a id="latest-committed-memory-segment-144-node-1050"></a>
+
+- **1050** · clip 91: A woman standing near the whiteboard in the background trims and arranges lily stems and green leaves.
+
+<a id="latest-committed-memory-segment-144-node-1051"></a>
+
+- **1051** · clip 91: A woman seated on the left side of the table examines dark bouquet wrapping paper and flowers.
+
+<a id="latest-committed-memory-segment-144-node-1052"></a>
+
+- **1052** · clip 91: A person wearing an orange shirt walks into the room through the doorway in the background.
+
+<a id="latest-committed-memory-segment-144-node-1053"></a>
+
+- **1053** · clip 91: Two women sit on the right side of the table, watching the floral preparations and listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1054"></a>
+
+- **1054** · clip 91: &lt;voice_0&gt; discusses whether lunch should be provided on the final day and asks how many people will attend.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1055"></a>
+
+- **1055** · clip 91: &lt;voice_1029&gt; suggests that they do not need to provide lunch, proposing instead to offer some desserts or afternoon tea.  **Links:** ↔ [1029](#latest-committed-memory-segment-144-node-1029)
+
+<a id="latest-committed-memory-segment-144-node-1056"></a>
+
+- **1056** · clip 91: &lt;voice_0&gt; agrees with the afternoon tea idea and suggests scheduling the event timeline from the afternoon until the evening.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1061"></a>
+
+- **1061** · clip 92: A woman in a black top sits at the dining table and playfully looks through a rolled-up wrapper like a telescope.
+
+<a id="latest-committed-memory-segment-144-node-1062"></a>
+
+- **1062** · clip 92: A person in an orange shirt writes or draws on a whiteboard mounted against the wall.
+
+<a id="latest-committed-memory-segment-144-node-1063"></a>
+
+- **1063** · clip 92: A woman in a white shirt arranges flowers and packaging materials on the table near the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1064"></a>
+
+- **1064** · clip 92: A woman sitting on the right side of the table observes and attends to items on the table.
+
+<a id="latest-committed-memory-segment-144-node-1065"></a>
+
+- **1065** · clip 92: The person in the orange shirt finishes at the whiteboard and walks toward the back of the room.
+
+<a id="latest-committed-memory-segment-144-node-1066"></a>
+
+- **1066** · clip 92: The woman in the black top puts down the rolled wrapper and converses with others around the table.
+
+<a id="latest-committed-memory-segment-144-node-1073"></a>
+
+- **1073** · clip 93: A young man wearing an orange t-shirt stands in the room talking to the people gathered around the table.
+
+<a id="latest-committed-memory-segment-144-node-1074"></a>
+
+- **1074** · clip 93: A woman dressed in white stands near the whiteboard, arranging materials and flowers on the table.
+
+<a id="latest-committed-memory-segment-144-node-1075"></a>
+
+- **1075** · clip 93: A woman dressed in black sitting at the table raises a wrapped object while speaking to the group.
+
+<a id="latest-committed-memory-segment-144-node-1076"></a>
+
+- **1076** · clip 93: The woman in black asks the others about their culinary skills and whether they can use a knife.
+
+<a id="latest-committed-memory-segment-144-node-1077"></a>
+
+- **1077** · clip 93: The young man in the orange shirt responds to her question while gesturing with his hands.
+
+<a id="latest-committed-memory-segment-144-node-1078"></a>
+
+- **1078** · clip 93: The young man turns and walks toward the background of the room.
+
+<a id="latest-committed-memory-segment-144-node-1079"></a>
+
+- **1079** · clip 93: The people around the table continue discussing food preparation and cutting meat.
+
+<a id="latest-committed-memory-segment-144-node-1087"></a>
+
+- **1087** · clip 94: At the beginning of the clip, a young man in an orange T-shirt stands in the room before walking away toward the doorway.
+
+<a id="latest-committed-memory-segment-144-node-1088"></a>
+
+- **1088** · clip 94: A woman in a black jacket sits at the checkered dining table, holding and reading a dark folder.
+
+<a id="latest-committed-memory-segment-144-node-1089"></a>
+
+- **1089** · clip 94: A woman dressed in a white shirt stands beside a whiteboard, trimming and arranging pink flowers.
+
+<a id="latest-committed-memory-segment-144-node-1090"></a>
+
+- **1090** · clip 94: Two women sit on the far side of the dining table, listening and engaging in the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1091"></a>
+
+- **1091** · clip 94: The participants discuss food preparation details, including thawing and cutting meat, and grilling.
+
+<a id="latest-committed-memory-segment-144-node-1092"></a>
+
+- **1092** · clip 94: The conversation transitions into planning drinks and cocktails, mentioning the need for ice cubes.
+
+<a id="latest-committed-memory-segment-144-node-1093"></a>
+
+- **1093** · clip 94: The woman with reddish hair gestures toward the kitchen during the conversation about obtaining ice.
+
+<a id="latest-committed-memory-segment-144-node-1094"></a>
+
+- **1094** · clip 94: The camera wearer briefly turns to face the open kitchen area before panning back toward the dining table.
+
+<a id="latest-committed-memory-segment-144-node-1104"></a>
+
+- **1104** · clip 95: A group of people are gathered around a dining table decorated with flowers, notebooks, a clapperboard, and a water bottle.
+
+<a id="latest-committed-memory-segment-144-node-1105"></a>
+
+- **1105** · clip 95: A woman in a white blouse stands next to a whiteboard, inspecting and handling dried flower stems.
+
+<a id="latest-committed-memory-segment-144-node-1106"></a>
+
+- **1106** · clip 95: A woman seated on the left side holds a dark cone-shaped wrapping sleeve.
+
+<a id="latest-committed-memory-segment-144-node-1107"></a>
+
+- **1107** · clip 95: Two women sit on the opposite side of the table, listening and engaging in the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1108"></a>
+
+- **1108** · clip 95: A young man in an orange shirt stands in the background near the doorway.
+
+<a id="latest-committed-memory-segment-144-node-1109"></a>
+
+- **1109** · clip 95: The person holding the camera brings up a smartphone, unlocks it, and begins browsing and typing on it.
+
+<a id="latest-committed-memory-segment-144-node-1110"></a>
+
+- **1110** · clip 95: The participants discuss making clear ice molds using distilled or boiled water.
+
+<a id="latest-committed-memory-segment-144-node-1115"></a>
+
+- **1115** · clip 96: The person holding the camera types on a smartphone with a slate resting on the table.
+
+<a id="latest-committed-memory-segment-144-node-1116"></a>
+
+- **1116** · clip 96: Several people sit around a table covered in a checkered tablecloth with flowers, papers, and bottles.
+
+<a id="latest-committed-memory-segment-144-node-1117"></a>
+
+- **1117** · clip 96: A woman in a white shirt stands near a whiteboard examining flowers.
+
+<a id="latest-committed-memory-segment-144-node-1118"></a>
+
+- **1118** · clip 96: The camera person puts down the phone and leaves the slate on the table.
+
+<a id="latest-committed-memory-segment-144-node-1119"></a>
+
+- **1119** · clip 96: A young man in an orange shirt enters and stands near the background observing the group.
+
+<a id="latest-committed-memory-segment-144-node-1120"></a>
+
+- **1120** · clip 96: The woman near the whiteboard gestures towards it as the discussion about the event schedule continues.
+
+<a id="latest-committed-memory-segment-144-node-1121"></a>
+
+- **1121** · clip 96: The attendees listen and exchange ideas regarding the time management for the event.
+
+<a id="latest-committed-memory-segment-144-node-1125"></a>
+
+- **1125** · clip 97: Several people are gathered in a living room around a dining table, which has a clapperboard and script notes on it.
+
+<a id="latest-committed-memory-segment-144-node-1126"></a>
+
+- **1126** · clip 97: A woman in a white shirt stands by a whiteboard near flowers, while a woman in black sits at the table.
+
+<a id="latest-committed-memory-segment-144-node-1127"></a>
+
+- **1127** · clip 97: A young man wearing an orange t-shirt enters the frame from the left and gestures while talking to the group.
+
+<a id="latest-committed-memory-segment-144-node-1128"></a>
+
+- **1128** · clip 97: The camera wearer gestures toward the group with their right hand while participating in the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1129"></a>
+
+- **1129** · clip 97: The woman seated in black speaks and interacts with the others regarding dancing in the performance.
+
+<a id="latest-committed-memory-segment-144-node-1130"></a>
+
+- **1130** · clip 97: The man in orange continues walking around the room while contributing ideas to the ongoing script and rehearsal discussion.
+
+<a id="latest-committed-memory-segment-144-node-1133"></a>
+
+- **1133** · clip 98: The camera wearer sits with legs extended in front of a table covered with a checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1134"></a>
+
+- **1134** · clip 98: A film clapperboard, scripts, and beverages sit on the table.
+
+<a id="latest-committed-memory-segment-144-node-1135"></a>
+
+- **1135** · clip 98: A woman in white stands near a whiteboard and speaks to the group.
+
+<a id="latest-committed-memory-segment-144-node-1136"></a>
+
+- **1136** · clip 98: A woman wearing black sits on the left side of the table, engaged in conversation.
+
+<a id="latest-committed-memory-segment-144-node-1137"></a>
+
+- **1137** · clip 98: A woman with long dark hair sits across the table reviewing documents.
+
+<a id="latest-committed-memory-segment-144-node-1141"></a>
+
+- **1141** · clip 99: Several people sit around a table covered in a checkered tablecloth in a bright room.
+
+<a id="latest-committed-memory-segment-144-node-1142"></a>
+
+- **1142** · clip 99: A woman in a white top stands by a whiteboard handling pink flowers.
+
+<a id="latest-committed-memory-segment-144-node-1143"></a>
+
+- **1143** · clip 99: A woman seated on the left looks down while holding a mobile phone.
+
+<a id="latest-committed-memory-segment-144-node-1144"></a>
+
+- **1144** · clip 99: Two women sit on the right side of the table participating in the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1145"></a>
+
+- **1145** · clip 99: At 00:01, &lt;voice_290&gt; expresses thoughts about performing.  **Links:** ↔ [290](#latest-committed-memory-segment-144-node-290)
+
+<a id="latest-committed-memory-segment-144-node-1146"></a>
+
+- **1146** · clip 99: At 00:05, &lt;voice_1139&gt; suggests dancing instead.  **Links:** ↔ [1139](#latest-committed-memory-segment-144-node-1139)
+
+<a id="latest-committed-memory-segment-144-node-1147"></a>
+
+- **1147** · clip 99: At 00:08, &lt;voice_912&gt; mentions the lyric about dancing rather than dating.  **Links:** ↔ [912](#latest-committed-memory-segment-144-node-912)
+
+<a id="latest-committed-memory-segment-144-node-1148"></a>
+
+- **1148** · clip 99: At 00:11, &lt;voice_699&gt; agrees on dancing and suggests leaving a timeline.  **Links:** ↔ [699](#latest-committed-memory-segment-144-node-699)
+
+<a id="latest-committed-memory-segment-144-node-1149"></a>
+
+- **1149** · clip 99: The camera position shifts forward, bringing the table into a closer perspective.
+
+<a id="latest-committed-memory-segment-144-node-1150"></a>
+
+- **1150** · clip 99: At 00:17, &lt;voice_1140&gt; raises concern about glasses falling off during a dance.  **Links:** ↔ [1140](#latest-committed-memory-segment-144-node-1140)
+
+<a id="latest-committed-memory-segment-144-node-1151"></a>
+
+- **1151** · clip 99: At 00:21, &lt;voice_332&gt; suggests doing a simpler routine and gestures playfully with her hands.  **Links:** ↔ [332](#latest-committed-memory-segment-144-node-332)
+
+<a id="latest-committed-memory-segment-144-node-1159"></a>
+
+- **1159** · clip 100: A group of people is gathered around a table with a pink-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1160"></a>
+
+- **1160** · clip 100: A woman in a white top stands at the back of the table arranging flowers near a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1161"></a>
+
+- **1161** · clip 100: A young woman in dark clothes and glasses sits in the foreground using her mobile phone.
+
+<a id="latest-committed-memory-segment-144-node-1162"></a>
+
+- **1162** · clip 100: Two young women sit along the right side of the table participating in the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1163"></a>
+
+- **1163** · clip 100: A young man in an orange T-shirt gestures with his arms in the background before stepping back.
+
+<a id="latest-committed-memory-segment-144-node-1164"></a>
+
+- **1164** · clip 100: The woman in dark clothes laughs and displays her phone screen on the table to discuss purchasing options.
+
+<a id="latest-committed-memory-segment-144-node-1165"></a>
+
+- **1165** · clip 100: A clapperboard and film production materials rest in the foreground of the table.
+
+<a id="latest-committed-memory-segment-144-node-1169"></a>
+
+- **1169** · clip 101: A group of people are gathered in an indoor room with a large table in the center.
+
+<a id="latest-committed-memory-segment-144-node-1170"></a>
+
+- **1170** · clip 101: On the table rests a film clapperboard, bottled water, flowers, and other equipment.
+
+<a id="latest-committed-memory-segment-144-node-1171"></a>
+
+- **1171** · clip 101: A person wearing an orange T-shirt enters from the left and stands with hands on hips, observing the group.
+
+<a id="latest-committed-memory-segment-144-node-1172"></a>
+
+- **1172** · clip 101: A person dressed in dark clothing sits at the table, looking down at a phone.
+
+<a id="latest-committed-memory-segment-144-node-1173"></a>
+
+- **1173** · clip 101: In the background, another person stands next to a whiteboard holding flowers.
+
+<a id="latest-committed-memory-segment-144-node-1174"></a>
+
+- **1174** · clip 101: &lt;voice_0&gt; speaks, remarking that the schedule or duration might take around an hour to an hour and a half.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1177"></a>
+
+- **1177** · clip 102: A group of people are gathered around a table in a room discussing event plans, with flowers, a whiteboard, and a clapperboard nearby.
+
+<a id="latest-committed-memory-segment-144-node-1178"></a>
+
+- **1178** · clip 102: A young man in an orange T-shirt stands on the left side of the room, listening and gesturing.
+
+<a id="latest-committed-memory-segment-144-node-1179"></a>
+
+- **1179** · clip 102: A woman dressed in black sits at the dining table, attentively participating in the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1180"></a>
+
+- **1180** · clip 102: A woman in white stands beside the whiteboard in the background, handling plants and flowers.
+
+<a id="latest-committed-memory-segment-144-node-1181"></a>
+
+- **1181** · clip 102: The group discusses rules for an upcoming activity, specifically addressing time control, ways to obtain currency, and an auction process.
+
+<a id="latest-committed-memory-segment-144-node-1185"></a>
+
+- **1185** · clip 103: Several people are gathered in a room around a table discussing plans, with a clapperboard on the table and a whiteboard in the background.
+
+<a id="latest-committed-memory-segment-144-node-1186"></a>
+
+- **1186** · clip 103: A young man in an orange shirt gestures and speaks before walking across the room.
+
+<a id="latest-committed-memory-segment-144-node-1187"></a>
+
+- **1187** · clip 103: &lt;voice_332&gt; discusses the time allocation for an auction process.  **Links:** ↔ [332](#latest-committed-memory-segment-144-node-332)
+
+<a id="latest-committed-memory-segment-144-node-1188"></a>
+
+- **1188** · clip 103: A woman in white stands near the whiteboard handling flowers while others listen.
+
+<a id="latest-committed-memory-segment-144-node-1189"></a>
+
+- **1189** · clip 103: &lt;voice_466&gt; suggests distributing tokens and playing a dice game.  **Links:** ↔ [466](#latest-committed-memory-segment-144-node-466)
+
+<a id="latest-committed-memory-segment-144-node-1190"></a>
+
+- **1190** · clip 103: &lt;voice_0&gt; agrees with the idea of including games.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1191"></a>
+
+- **1191** · clip 103: The person wearing the camera picks up a smartphone and checks the screen.
+
+<a id="latest-committed-memory-segment-144-node-1192"></a>
+
+- **1192** · clip 103: &lt;voice_1184&gt; speaks as the group continues their conversation.  **Links:** ↔ [1184](#latest-committed-memory-segment-144-node-1184)
+
+<a id="latest-committed-memory-segment-144-node-1198"></a>
+
+- **1198** · clip 104: The camera wearer sits at a table and looks at a smartphone screen.
+
+<a id="latest-committed-memory-segment-144-node-1199"></a>
+
+- **1199** · clip 104: The camera wearer places the smartphone down onto the table beside a clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-1200"></a>
+
+- **1200** · clip 104: A group of people are gathered around the table, with one woman standing by a whiteboard arranging flowers.
+
+<a id="latest-committed-memory-segment-144-node-1201"></a>
+
+- **1201** · clip 104: A young man in an orange T-shirt enters the kitchen doorway and converses with the group using &lt;voice_229&gt; and &lt;voice_1197&gt;.  **Links:** ↔ [229](#latest-committed-memory-segment-144-node-229) · ↔ [1197](#latest-committed-memory-segment-144-node-1197)
+
+<a id="latest-committed-memory-segment-144-node-1202"></a>
+
+- **1202** · clip 104: The man in the orange T-shirt gestures outward while proposing an idea about players receiving tokens upon entry.
+
+<a id="latest-committed-memory-segment-144-node-1203"></a>
+
+- **1203** · clip 104: A woman sitting to the left of the camera wearer speaks using &lt;voice_1017&gt;, discussing that participants should earn currency by telling stories.  **Links:** ↔ [1017](#latest-committed-memory-segment-144-node-1017)
+
+<a id="latest-committed-memory-segment-144-node-1209"></a>
+
+- **1209** · clip 105: A group of people gathers around a table covered in a red-and-white checkered tablecloth in a bright room.
+
+<a id="latest-committed-memory-segment-144-node-1210"></a>
+
+- **1210** · clip 105: At the far end of the table near a whiteboard, a woman in a white blouse trims and arranges floral stems.
+
+<a id="latest-committed-memory-segment-144-node-1211"></a>
+
+- **1211** · clip 105: A woman wearing dark clothing and glasses on her head sits on the left side of the table.
+
+<a id="latest-committed-memory-segment-144-node-1212"></a>
+
+- **1212** · clip 105: Two young women sit on the far side of the table, watching the floral arrangement and chatting.
+
+<a id="latest-committed-memory-segment-144-node-1213"></a>
+
+- **1213** · clip 105: &lt;voice_430&gt; expresses concern that new arrivals might be too shy to share stories in front of everyone.  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430)
+
+<a id="latest-committed-memory-segment-144-node-1214"></a>
+
+- **1214** · clip 105: &lt;voice_1206&gt; proposes that guests receive a small gift or reward simply for introducing themselves.  **Links:** ↔ [1206](#latest-committed-memory-segment-144-node-1206)
+
+<a id="latest-committed-memory-segment-144-node-1215"></a>
+
+- **1215** · clip 105: &lt;voice_441&gt; suggests giving five coins to the first person who introduces themselves and three coins to the second.  **Links:** ↔ [441](#latest-committed-memory-segment-144-node-441)
+
+<a id="latest-committed-memory-segment-144-node-1216"></a>
+
+- **1216** · clip 105: A young man in an orange t-shirt enters the frame from the living area on the left and gestures with his raised hand.
+
+<a id="latest-committed-memory-segment-144-node-1217"></a>
+
+- **1217** · clip 105: &lt;voice_0&gt; suggests hiding items or coins around the house for guests to search for.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1218"></a>
+
+- **1218** · clip 105: &lt;voice_1207&gt; compares the hidden item idea to an Easter egg hunt.  **Links:** ↔ [1207](#latest-committed-memory-segment-144-node-1207)
+
+<a id="latest-committed-memory-segment-144-node-1219"></a>
+
+- **1219** · clip 105: The young man in the orange t-shirt walks over toward the open kitchen area while &lt;voice_1208&gt; and others agree on hiding coins.  **Links:** ↔ [1208](#latest-committed-memory-segment-144-node-1208)
+
+<a id="latest-committed-memory-segment-144-node-1227"></a>
+
+- **1227** · clip 106: A group of people are gathered around a table with a checkered tablecloth discussing an event plan.
+
+<a id="latest-committed-memory-segment-144-node-1228"></a>
+
+- **1228** · clip 106: A man in an orange shirt stands near the window explaining game rules (&lt;voice_430&gt;).  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430)
+
+<a id="latest-committed-memory-segment-144-node-1229"></a>
+
+- **1229** · clip 106: A woman in a white blouse stands at the table trimming and arranging flowers.
+
+<a id="latest-committed-memory-segment-144-node-1230"></a>
+
+- **1230** · clip 106: A woman in a black shirt sits on the left side of the table listening attentively.
+
+<a id="latest-committed-memory-segment-144-node-1231"></a>
+
+- **1231** · clip 106: Two women sit on the opposite side of the table facing the group.
+
+<a id="latest-committed-memory-segment-144-node-1232"></a>
+
+- **1232** · clip 106: The man in the orange shirt gestures towards the outside while talking (&lt;voice_1223&gt;).  **Links:** ↔ [1223](#latest-committed-memory-segment-144-node-1223)
+
+<a id="latest-committed-memory-segment-144-node-1233"></a>
+
+- **1233** · clip 106: A clapperboard and craft materials rest on the checkered table.
+
+<a id="latest-committed-memory-segment-144-node-1234"></a>
+
+- **1234** · clip 106: A participant suggests a quiz activity centered around Earth Day (&lt;voice_466&gt;, &lt;voice_1224&gt;).  **Links:** ↔ [466](#latest-committed-memory-segment-144-node-466) · ↔ [1224](#latest-committed-memory-segment-144-node-1224)
+
+<a id="latest-committed-memory-segment-144-node-1235"></a>
+
+- **1235** · clip 106: The man in orange walks across the room behind the table toward the hallway.
+
+<a id="latest-committed-memory-segment-144-node-1236"></a>
+
+- **1236** · clip 106: The group debates whether Earth Day falls on April 21st or 22nd (&lt;voice_1225&gt;, &lt;voice_965&gt;, &lt;voice_1226&gt;).  **Links:** ↔ [965](#latest-committed-memory-segment-144-node-965) · ↔ [1225](#latest-committed-memory-segment-144-node-1225) · ↔ [1226](#latest-committed-memory-segment-144-node-1226)
+
+<a id="latest-committed-memory-segment-144-node-1237"></a>
+
+- **1237** · clip 106: Someone mentions scheduling the event on Sunday, April 21st (&lt;voice_1071&gt;).  **Links:** ↔ [1071](#latest-committed-memory-segment-144-node-1071)
+
+<a id="latest-committed-memory-segment-144-node-1238"></a>
+
+- **1238** · clip 106: The group agrees on promoting their products following the games and quiz (&lt;voice_0&gt;, &lt;voice_667&gt;).  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [667](#latest-committed-memory-segment-144-node-667)
+
+<a id="latest-committed-memory-segment-144-node-1246"></a>
+
+- **1246** · clip 107: A group of young people is gathered around a table covered with a red-and-white checkered tablecloth in an indoor room.
+
+<a id="latest-committed-memory-segment-144-node-1247"></a>
+
+- **1247** · clip 107: In the foreground on the table rests a clapperboard with production information.
+
+<a id="latest-committed-memory-segment-144-node-1248"></a>
+
+- **1248** · clip 107: A woman sitting on the left in black rests her chin in her hands while participating in the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1249"></a>
+
+- **1249** · clip 107: A woman in a white top stands at the table arranging flowers and talking to a person standing near the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1250"></a>
+
+- **1250** · clip 107: Two women sit on the right side of the table facing across toward the others.
+
+<a id="latest-committed-memory-segment-144-node-1251"></a>
+
+- **1251** · clip 107: The group discusses playing music outdoors and inquires about speakers.
+
+<a id="latest-committed-memory-segment-144-node-1252"></a>
+
+- **1252** · clip 107: A conversation occurs about the bottles on the table, clarifying whether a drink is alcohol or water.
+
+<a id="latest-committed-memory-segment-144-node-1253"></a>
+
+- **1253** · clip 107: The woman in white moves flower stems across the table.
+
+<a id="latest-committed-memory-segment-144-node-1258"></a>
+
+- **1258** · clip 108: A group of people is gathered around a table filled with flowers and production equipment in an indoor room.
+
+<a id="latest-committed-memory-segment-144-node-1259"></a>
+
+- **1259** · clip 108: A young man wearing an orange short-sleeved shirt picks up a vase of pink flowers from near the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1260"></a>
+
+- **1260** · clip 108: The young man in the orange shirt carries the vase forward and hands it over to the camera wearer.
+
+<a id="latest-committed-memory-segment-144-node-1261"></a>
+
+- **1261** · clip 108: The camera wearer takes the vase of flowers and walks into the kitchen area.
+
+<a id="latest-committed-memory-segment-144-node-1262"></a>
+
+- **1262** · clip 108: The camera wearer places the vase of flowers on the kitchen counter next to the sink.
+
+<a id="latest-committed-memory-segment-144-node-1263"></a>
+
+- **1263** · clip 108: The camera wearer turns around and walks back toward the table where the others are chatting.
+
+<a id="latest-committed-memory-segment-144-node-1268"></a>
+
+- **1268** · clip 109: A group of people is gathered around a table covered with a checkered tablecloth, containing flowers, scripts, and a film clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-1269"></a>
+
+- **1269** · clip 109: A woman in black wearing sunglasses is seated at the foreground of the table examining materials.
+
+<a id="latest-committed-memory-segment-144-node-1270"></a>
+
+- **1270** · clip 109: A woman in white stands beside a whiteboard at the end of the table.
+
+<a id="latest-committed-memory-segment-144-node-1271"></a>
+
+- **1271** · clip 109: A young man in an orange t-shirt walks across the room toward the kitchen doorway and talks (&lt;voice_1266&gt;).  **Links:** ↔ [1266](#latest-committed-memory-segment-144-node-1266)
+
+<a id="latest-committed-memory-segment-144-node-1272"></a>
+
+- **1272** · clip 109: A hand reaches in from the right edge of the frame holding a pen or marker.
+
+<a id="latest-committed-memory-segment-144-node-1273"></a>
+
+- **1273** · clip 109: The young man in the orange shirt turns and walks toward the back of the kitchen.
+
+<a id="latest-committed-memory-segment-144-node-1274"></a>
+
+- **1274** · clip 109: A woman with pink hair gets up from her chair at the table and heads into the kitchen.
+
+<a id="latest-committed-memory-segment-144-node-1280"></a>
+
+- **1280** · clip 110: A group of people are gathered around a dining table inside a room, with a clapperboard, flowers, and notebooks on the table.
+
+<a id="latest-committed-memory-segment-144-node-1281"></a>
+
+- **1281** · clip 110: In the background, a young man in an orange shirt stands next to a whiteboard, writing on it and erasing parts of it.
+
+<a id="latest-committed-memory-segment-144-node-1282"></a>
+
+- **1282** · clip 110: A woman in a white top stands beside the young man near the whiteboard, looking at the board and conversing with him.
+
+<a id="latest-committed-memory-segment-144-node-1283"></a>
+
+- **1283** · clip 110: A woman with pink hair enters the frame from the right and sits down on a wooden chair at the table.
+
+<a id="latest-committed-memory-segment-144-node-1284"></a>
+
+- **1284** · clip 110: A woman wearing glasses and dark clothing sits on the left side of the table, listening to the discussion and resting her chin in her hand.
+
+<a id="latest-committed-memory-segment-144-node-1285"></a>
+
+- **1285** · clip 110: Another woman sits at the far side of the table, observing the discussion at the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1286"></a>
+
+- **1286** · clip 110: The young man at the whiteboard gestures and explains the timeline and schedule to the team.
+
+<a id="latest-committed-memory-segment-144-node-1292"></a>
+
+- **1292** · clip 111: A group of people are gathered around a table with a checkered tablecloth in a room, conducting a planning meeting.
+
+<a id="latest-committed-memory-segment-144-node-1293"></a>
+
+- **1293** · clip 111: A person wearing an orange shirt stands next to a whiteboard, writing notes and discussing details.
+
+<a id="latest-committed-memory-segment-144-node-1294"></a>
+
+- **1294** · clip 111: A woman in a white blouse stands beside the whiteboard, interacting with the presenter.
+
+<a id="latest-committed-memory-segment-144-node-1295"></a>
+
+- **1295** · clip 111: Several people sit around the table listening and taking part in the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1296"></a>
+
+- **1296** · clip 111: A film clapperboard, flowers, water bottles, and stationery are laid out on the table.
+
+<a id="latest-committed-memory-segment-144-node-1297"></a>
+
+- **1297** · clip 111: The group discusses scheduling and timeline details, specifically regarding arrivals between 2:00 and 3:00.
+
+<a id="latest-committed-memory-segment-144-node-1300"></a>
+
+- **1300** · clip 112: A group of people are gathered inside a room around a dining table.
+
+<a id="latest-committed-memory-segment-144-node-1301"></a>
+
+- **1301** · clip 112: A person in an orange shirt stands beside a whiteboard, gesturing and pointing at it.
+
+<a id="latest-committed-memory-segment-144-node-1302"></a>
+
+- **1302** · clip 112: A person in a light shirt stands next to the whiteboard, engaging with the person in orange.
+
+<a id="latest-committed-memory-segment-144-node-1303"></a>
+
+- **1303** · clip 112: A person wearing dark clothing sits at the left end of the table.
+
+<a id="latest-committed-memory-segment-144-node-1304"></a>
+
+- **1304** · clip 112: Two people, including one with long pink hair, sit on the right side of the table watching the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1305"></a>
+
+- **1305** · clip 112: A film clapperboard and various work materials rest on the table.
+
+<a id="latest-committed-memory-segment-144-node-1306"></a>
+
+- **1306** · clip 112: A film light with a softbox is visible in the background on the left.
+
+<a id="latest-committed-memory-segment-144-node-1309"></a>
+
+- **1309** · clip 113: A group of people are gathered around a wooden table in a room during what appears to be a film production meeting.
+
+<a id="latest-committed-memory-segment-144-node-1310"></a>
+
+- **1310** · clip 113: A person in an orange shirt stands near a whiteboard in the background, writing and referring to notes.
+
+<a id="latest-committed-memory-segment-144-node-1311"></a>
+
+- **1311** · clip 113: Another person dressed in white stands near the whiteboard, interacting with materials on the table.
+
+<a id="latest-committed-memory-segment-144-node-1312"></a>
+
+- **1312** · clip 113: A person with long pink hair sits at the right side of the table, listening and engaging in the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1313"></a>
+
+- **1313** · clip 113: A person wearing black sits on the left side of the table near a water bottle and a production clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-1314"></a>
+
+- **1314** · clip 113: &lt;voice_0&gt; speaks up to ask about scheduled activities at three o'clock and later remarks on human behavior.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1320"></a>
+
+- **1320** · clip 114: A group of people is gathered around a table in a room, holding a discussion in front of a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1321"></a>
+
+- **1321** · clip 114: On the table rest several items including a film clapperboard, a bouquet of flowers, notebooks, and water bottles.
+
+<a id="latest-committed-memory-segment-144-node-1322"></a>
+
+- **1322** · clip 114: A young man in an orange shirt and a woman in a white blouse stand by the whiteboard discussing items on it.
+
+<a id="latest-committed-memory-segment-144-node-1323"></a>
+
+- **1323** · clip 114: At 00:11, &lt;voice_1317&gt; asks about the second point.  **Links:** ↔ [1317](#latest-committed-memory-segment-144-node-1317)
+
+<a id="latest-committed-memory-segment-144-node-1324"></a>
+
+- **1324** · clip 114: At 00:15, &lt;voice_0&gt; inquires about what happens at three o'clock.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1325"></a>
+
+- **1325** · clip 114: Around 00:16, the camera wearer stands up from their seat at the table.
+
+<a id="latest-committed-memory-segment-144-node-1326"></a>
+
+- **1326** · clip 114: At 00:17, &lt;voice_1318&gt; explains that the three o'clock tasks mainly involve general work tasks.  **Links:** ↔ [1318](#latest-committed-memory-segment-144-node-1318)
+
+<a id="latest-committed-memory-segment-144-node-1327"></a>
+
+- **1327** · clip 114: The camera wearer walks across the room toward a teal utility cart topped with a yellow plush toy.
+
+<a id="latest-committed-memory-segment-144-node-1328"></a>
+
+- **1328** · clip 114: At 00:20, &lt;voice_1319&gt; asks about what to do with other items.  **Links:** ↔ [1319](#latest-committed-memory-segment-144-node-1319)
+
+<a id="latest-committed-memory-segment-144-node-1329"></a>
+
+- **1329** · clip 114: From 00:22 to 00:30, &lt;voice_1029&gt; explains the strategy of letting participants earn currency before pitching products.  **Links:** ↔ [1029](#latest-committed-memory-segment-144-node-1029)
+
+<a id="latest-committed-memory-segment-144-node-1330"></a>
+
+- **1330** · clip 114: The camera wearer moves around the living room area while the group continues their meeting.
+
+<a id="latest-committed-memory-segment-144-node-1337"></a>
+
+- **1337** · clip 115: The camera wearer moves across the room toward a group gathered around a dining table.
+
+<a id="latest-committed-memory-segment-144-node-1338"></a>
+
+- **1338** · clip 115: A person in an orange t-shirt stands by a whiteboard writing and explaining details.
+
+<a id="latest-committed-memory-segment-144-node-1339"></a>
+
+- **1339** · clip 115: A person wearing a white shirt and grey skirt stands at the table handling floral materials.
+
+<a id="latest-committed-memory-segment-144-node-1340"></a>
+
+- **1340** · clip 115: Several participants sit around the table engaged in discussion.
+
+<a id="latest-committed-memory-segment-144-node-1341"></a>
+
+- **1341** · clip 115: The camera wearer walks past the meeting area and steps into an adjoining bedroom.
+
+<a id="latest-committed-memory-segment-144-node-1342"></a>
+
+- **1342** · clip 115: The camera wearer surveys the bedroom, which has a multi-monitor desk setup and equipment on the bed.
+
+<a id="latest-committed-memory-segment-144-node-1343"></a>
+
+- **1343** · clip 115: The camera wearer turns around and returns to the main studio room.
+
+<a id="latest-committed-memory-segment-144-node-1347"></a>
+
+- **1347** · clip 116: Jake walks toward a green shelf and picks up a black zipped case.
+
+<a id="latest-committed-memory-segment-144-node-1348"></a>
+
+- **1348** · clip 116: Jake unzips the case to check its contents.
+
+<a id="latest-committed-memory-segment-144-node-1349"></a>
+
+- **1349** · clip 116: Jake walks over to the dining table where a group of people are gathered around a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1350"></a>
+
+- **1350** · clip 116: &lt;voice_1346&gt; speaks while discussing a plan with the group at the table.  **Links:** ↔ [1346](#latest-committed-memory-segment-144-node-1346)
+
+<a id="latest-committed-memory-segment-144-node-1351"></a>
+
+- **1351** · clip 116: Jake takes a charging cable out of the case and hands it toward the people seated at the table.
+
+<a id="latest-committed-memory-segment-144-node-1352"></a>
+
+- **1352** · clip 116: &lt;voice_0&gt; speaks to the group, offering charging cables so they can charge their devices.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1353"></a>
+
+- **1353** · clip 116: Jake walks back toward the shelf with the case.
+
+<a id="latest-committed-memory-segment-144-node-1354"></a>
+
+- **1354** · clip 116: Jake places the case back onto the shelf, exchanges it for another case, and inspects it.
+
+<a id="latest-committed-memory-segment-144-node-1359"></a>
+
+- **1359** · clip 117: The camera wearer holds a black case and walks across the living room toward a table where several people are gathered.
+
+<a id="latest-committed-memory-segment-144-node-1360"></a>
+
+- **1360** · clip 117: At the table, several people are engaged in group work, with flowers, papers, and equipment spread out.
+
+<a id="latest-committed-memory-segment-144-node-1361"></a>
+
+- **1361** · clip 117: The camera wearer approaches the table and notices a power bank and cable plugged in.
+
+<a id="latest-committed-memory-segment-144-node-1362"></a>
+
+- **1362** · clip 117: &lt;voice_0&gt; comments that someone has kept the device plugged in and praises the power bank, then asks whose it is.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1363"></a>
+
+- **1363** · clip 117: &lt;voice_1358&gt; answers that the power bank belongs to them.  **Links:** ↔ [1358](#latest-committed-memory-segment-144-node-1358)
+
+<a id="latest-committed-memory-segment-144-node-1364"></a>
+
+- **1364** · clip 117: &lt;voice_352&gt; instructs them to plug it in and find a spot.  **Links:** ↔ [352](#latest-committed-memory-segment-144-node-352)
+
+<a id="latest-committed-memory-segment-144-node-1365"></a>
+
+- **1365** · clip 117: The camera wearer turns around and walks back toward the storage rack and shelves near the entrance.
+
+<a id="latest-committed-memory-segment-144-node-1366"></a>
+
+- **1366** · clip 117: The camera wearer looks down at another black equipment case resting on the floor while holding the case in their hands.
+
+<a id="latest-committed-memory-segment-144-node-1371"></a>
+
+- **1371** · clip 118: The camera wearer opens a small black case on the floor and takes out a black cable.
+
+<a id="latest-committed-memory-segment-144-node-1372"></a>
+
+- **1372** · clip 118: The camera wearer walks over to the dining table where several individuals are gathered around flowers and a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1373"></a>
+
+- **1373** · clip 118: A person at the table writes notes on the whiteboard while others handle floral stems.
+
+<a id="latest-committed-memory-segment-144-node-1374"></a>
+
+- **1374** · clip 118: The camera wearer interacts with a woman standing beside the table regarding the cable.
+
+<a id="latest-committed-memory-segment-144-node-1375"></a>
+
+- **1375** · clip 118: The camera wearer walks over to a metal shelving unit against the wall.
+
+<a id="latest-committed-memory-segment-144-node-1376"></a>
+
+- **1376** · clip 118: The camera wearer picks up a black portable electronic device from the shelf.
+
+<a id="latest-committed-memory-segment-144-node-1377"></a>
+
+- **1377** · clip 118: The camera wearer walks into an adjacent bedroom filled with laptops and cables.
+
+<a id="latest-committed-memory-segment-144-node-1378"></a>
+
+- **1378** · clip 118: The camera wearer sits or leans by a small movable desk next to the bed and prepares to connect the cable to the device.
+
+<a id="latest-committed-memory-segment-144-node-1386"></a>
+
+- **1386** · clip 119: The camera wearer handles an electronic device and cable on a bedside table before standing up.
+
+<a id="latest-committed-memory-segment-144-node-1387"></a>
+
+- **1387** · clip 119: The camera wearer walks out of the bedroom into the adjoining living room.
+
+<a id="latest-committed-memory-segment-144-node-1388"></a>
+
+- **1388** · clip 119: A group of people is gathered around a dining table covered with a checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1389"></a>
+
+- **1389** · clip 119: A person standing by the whiteboard at the end of the table writes notes during the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1390"></a>
+
+- **1390** · clip 119: A woman dressed in white walks toward the kitchen area and returns toward the table.
+
+<a id="latest-committed-memory-segment-144-node-1391"></a>
+
+- **1391** · clip 119: Multiple individuals around the table discuss the schedule and duration of segments, specifically contrasting general sections with guest parts.
+
+<a id="latest-committed-memory-segment-144-node-1392"></a>
+
+- **1392** · clip 119: A clapperboard, floral arrangements, and notebooks are laid out on the meeting table.
+
+<a id="latest-committed-memory-segment-144-node-1401"></a>
+
+- **1401** · clip 120: Jake walks across the living room toward a group gathered around a dining table.
+
+<a id="latest-committed-memory-segment-144-node-1402"></a>
+
+- **1402** · clip 120: Several people sit and stand around the table discussing an event plan written on a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1403"></a>
+
+- **1403** · clip 120: Jake holds and inspects a white charger and cable beside the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1404"></a>
+
+- **1404** · clip 120: A woman wearing a white shirt and light skirt picks up a small bucket and carries it toward the kitchen.
+
+<a id="latest-committed-memory-segment-144-node-1405"></a>
+
+- **1405** · clip 120: The woman walks past the kitchen counter and heads back into the main room.
+
+<a id="latest-committed-memory-segment-144-node-1406"></a>
+
+- **1406** · clip 120: Jake looks around the hallway and toward the bright kitchen window.
+
+<a id="latest-committed-memory-segment-144-node-1411"></a>
+
+- **1411** · clip 121: Jake inspects and handles a power bank connected to a small camera mounted on the wall near the kitchen window.
+
+<a id="latest-committed-memory-segment-144-node-1412"></a>
+
+- **1412** · clip 121: Jake places the power bank down and walks away from the kitchen counter.
+
+<a id="latest-committed-memory-segment-144-node-1413"></a>
+
+- **1413** · clip 121: Jake enters the adjacent living area where several people are gathered around a table with props, flowers, and equipment.
+
+<a id="latest-committed-memory-segment-144-node-1414"></a>
+
+- **1414** · clip 121: Jake walks past the group at the table and heads into a nearby bedroom.
+
+<a id="latest-committed-memory-segment-144-node-1415"></a>
+
+- **1415** · clip 121: Jake approaches the bed in the room, where multiple electronic devices and cables are laid out.
+
+<a id="latest-committed-memory-segment-144-node-1416"></a>
+
+- **1416** · clip 121: Jake picks up a laptop from the bed.
+
+<a id="latest-committed-memory-segment-144-node-1422"></a>
+
+- **1422** · clip 122: Jake gathers his laptop and cables from the bed in the bedroom.
+
+<a id="latest-committed-memory-segment-144-node-1423"></a>
+
+- **1423** · clip 122: Jake connects a cable adapter to his laptop.
+
+<a id="latest-committed-memory-segment-144-node-1424"></a>
+
+- **1424** · clip 122: Jake walks out of the bedroom into the living area.
+
+<a id="latest-committed-memory-segment-144-node-1425"></a>
+
+- **1425** · clip 122: Several group members are gathered around the dining table discussing event logistics.
+
+<a id="latest-committed-memory-segment-144-node-1426"></a>
+
+- **1426** · clip 122: Jake sits down beside the table holding a clapperboard and his laptop.
+
+<a id="latest-committed-memory-segment-144-node-1427"></a>
+
+- **1427** · clip 122: The group discusses arrangements for the food and afternoon tea segments.
+
+<a id="latest-committed-memory-segment-144-node-1434"></a>
+
+- **1434** · clip 123: The camera wearer places a clapperboard onto a low wooden table next to a checkerboard panel.
+
+<a id="latest-committed-memory-segment-144-node-1435"></a>
+
+- **1435** · clip 123: The camera wearer turns around and walks toward the living and kitchen area where several individuals are gathered.
+
+<a id="latest-committed-memory-segment-144-node-1436"></a>
+
+- **1436** · clip 123: The camera wearer points towards the open kitchen counter and the large window.
+
+<a id="latest-committed-memory-segment-144-node-1437"></a>
+
+- **1437** · clip 123: A person in an orange T-shirt walks over to the kitchen counter and looks out through the large window.
+
+<a id="latest-committed-memory-segment-144-node-1438"></a>
+
+- **1438** · clip 123: A woman in a white top and long skirt walks into the kitchen area and attends to items by the counter.
+
+<a id="latest-committed-memory-segment-144-node-1439"></a>
+
+- **1439** · clip 123: The camera wearer approaches the dining table covered with a pink checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1440"></a>
+
+- **1440** · clip 123: The camera wearer places a laptop on the table and opens the screen.
+
+<a id="latest-committed-memory-segment-144-node-1441"></a>
+
+- **1441** · clip 123: A woman seated at the table in black clothing looks at her phone.
+
+<a id="latest-committed-memory-segment-144-node-1442"></a>
+
+- **1442** · clip 123: A woman in a blue patterned dress gestures toward the whiteboard while speaking to the others.
+
+<a id="latest-committed-memory-segment-144-node-1443"></a>
+
+- **1443** · clip 123: A woman with pink hair sits at the dining table facing the others.
+
+<a id="latest-committed-memory-segment-144-node-1450"></a>
+
+- **1450** · clip 124: A group of people are gathered around a checkered tablecloth table holding a discussion, with an open laptop placed in front of the camera.
+
+<a id="latest-committed-memory-segment-144-node-1451"></a>
+
+- **1451** · clip 124: A woman in a dark jacket sits on the left side of the table looking down at her phone.
+
+<a id="latest-committed-memory-segment-144-node-1452"></a>
+
+- **1452** · clip 124: A woman with dyed reddish hair sits on the right side of the table, while another woman sits further down across the table.
+
+<a id="latest-committed-memory-segment-144-node-1453"></a>
+
+- **1453** · clip 124: &lt;voice_1447&gt; suggests doing things one by one.  **Links:** ↔ [1447](#latest-committed-memory-segment-144-node-1447)
+
+<a id="latest-committed-memory-segment-144-node-1454"></a>
+
+- **1454** · clip 124: A person dressed in a white outfit walks across the room from the left background toward the kitchen window on the right.
+
+<a id="latest-committed-memory-segment-144-node-1455"></a>
+
+- **1455** · clip 124: &lt;voice_0&gt; explains that there are four items that have not yet been fully assembled and will be set up later.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1456"></a>
+
+- **1456** · clip 124: The person in front of the camera operates the laptop trackpad to navigate through windows.
+
+<a id="latest-committed-memory-segment-144-node-1457"></a>
+
+- **1457** · clip 124: &lt;voice_595&gt; inquires whether the afternoon tea time should be scheduled after 4:20.  **Links:** ↔ [595](#latest-committed-memory-segment-144-node-595)
+
+<a id="latest-committed-memory-segment-144-node-1458"></a>
+
+- **1458** · clip 124: &lt;voice_1448&gt; and &lt;voice_1449&gt; agree with the proposal, with &lt;voice_1449&gt; remarking on eating while working.  **Links:** ↔ [1448](#latest-committed-memory-segment-144-node-1448) · ↔ [1449](#latest-committed-memory-segment-144-node-1449)
+
+<a id="latest-committed-memory-segment-144-node-1459"></a>
+
+- **1459** · clip 124: &lt;voice_732&gt; points out that afternoon tea is usually held between 3:00 and 5:00.  **Links:** ↔ [732](#latest-committed-memory-segment-144-node-732)
+
+<a id="latest-committed-memory-segment-144-node-1460"></a>
+
+- **1460** · clip 124: &lt;voice_0&gt; asks if some members of the team can start preparing beforehand.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1469"></a>
+
+- **1469** · clip 125: A group of people is seated around a table covered with a checkered tablecloth, holding an active discussion.
+
+<a id="latest-committed-memory-segment-144-node-1470"></a>
+
+- **1470** · clip 125: The woman with reddish hair on the right gestures toward the whiteboard while discussing the event timeline and dessert presentation.
+
+<a id="latest-committed-memory-segment-144-node-1471"></a>
+
+- **1471** · clip 125: A woman in a white top stands near the back doorway, listening and participating in the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1472"></a>
+
+- **1472** · clip 125: The woman in black seated on the left holds her phone and actively converses with the group.
+
+<a id="latest-committed-memory-segment-144-node-1473"></a>
+
+- **1473** · clip 125: The group discusses logistics regarding dessert preparations, sample distribution, and setting up a display table for the afternoon event.
+
+<a id="latest-committed-memory-segment-144-node-1481"></a>
+
+- **1481** · clip 126: A group of people sits around a table in a room discussing dessert table costs.
+
+<a id="latest-committed-memory-segment-144-node-1482"></a>
+
+- **1482** · clip 126: A woman standing near a whiteboard arranges flowers and then carries a trash bin out of the frame.
+
+<a id="latest-committed-memory-segment-144-node-1483"></a>
+
+- **1483** · clip 126: A woman in a black cardigan sits at the table, gesturing with her phone while discussing prices and equipment.
+
+<a id="latest-committed-memory-segment-144-node-1484"></a>
+
+- **1484** · clip 126: A young man wearing an orange shirt walks into the kitchen area in the background.
+
+<a id="latest-committed-memory-segment-144-node-1485"></a>
+
+- **1485** · clip 126: The participants converse about buying dessert stands and baking appliances.
+
+<a id="latest-committed-memory-segment-144-node-1498"></a>
+
+- **1498** · clip 127: A group of people sits around a table decorated with flowers, drinks, and a laptop.
+
+<a id="latest-committed-memory-segment-144-node-1499"></a>
+
+- **1499** · clip 127: &lt;voice_0&gt; inquires about the price of an item.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1500"></a>
+
+- **1500** · clip 127: &lt;voice_1488&gt; states that it cannot be bought.  **Links:** ↔ [1488](#latest-committed-memory-segment-144-node-1488)
+
+<a id="latest-committed-memory-segment-144-node-1501"></a>
+
+- **1501** · clip 127: &lt;voice_0&gt; asks if it is because the item is too expensive, and &lt;voice_1489&gt; wonders if it costs tens of thousands.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [1489](#latest-committed-memory-segment-144-node-1489)
+
+<a id="latest-committed-memory-segment-144-node-1502"></a>
+
+- **1502** · clip 127: &lt;voice_1490&gt; clarifies that it costs a few thousand.  **Links:** ↔ [1490](#latest-committed-memory-segment-144-node-1490)
+
+<a id="latest-committed-memory-segment-144-node-1503"></a>
+
+- **1503** · clip 127: &lt;voice_1491&gt; holds up her phone to display a reference photo to the others.  **Links:** ↔ [1491](#latest-committed-memory-segment-144-node-1491)
+
+<a id="latest-committed-memory-segment-144-node-1504"></a>
+
+- **1504** · clip 127: &lt;voice_1140&gt; and &lt;voice_1494&gt; praise the look of the item shown on the screen.  **Links:** ↔ [1140](#latest-committed-memory-segment-144-node-1140) · ↔ [1494](#latest-committed-memory-segment-144-node-1494)
+
+<a id="latest-committed-memory-segment-144-node-1505"></a>
+
+- **1505** · clip 127: &lt;voice_1493&gt; comments that the example matches what she envisioned.  **Links:** ↔ [1493](#latest-committed-memory-segment-144-node-1493)
+
+<a id="latest-committed-memory-segment-144-node-1506"></a>
+
+- **1506** · clip 127: &lt;voice_1495&gt; gestures around the table, describing how she plans to sit there during academic conferences.  **Links:** ↔ [1495](#latest-committed-memory-segment-144-node-1495)
+
+<a id="latest-committed-memory-segment-144-node-1507"></a>
+
+- **1507** · clip 127: &lt;voice_1496&gt; and &lt;voice_1497&gt; respond in agreement and tease about being academic figures while laughing.  **Links:** ↔ [1496](#latest-committed-memory-segment-144-node-1496) · ↔ [1497](#latest-committed-memory-segment-144-node-1497)
+
+<a id="latest-committed-memory-segment-144-node-1512"></a>
+
+- **1512** · clip 128: A woman in a black shirt sits at a table and shows her phone screen toward the camera.
+
+<a id="latest-committed-memory-segment-144-node-1513"></a>
+
+- **1513** · clip 128: A blonde woman arrives and sits at the right side of the table.
+
+<a id="latest-committed-memory-segment-144-node-1514"></a>
+
+- **1514** · clip 128: The woman in the black shirt lowers her phone and gestures with both hands while speaking.
+
+<a id="latest-committed-memory-segment-144-node-1515"></a>
+
+- **1515** · clip 128: The other women at the table listen to her conversation.
+
+<a id="latest-committed-memory-segment-144-node-1519"></a>
+
+- **1519** · clip 129: Several people are gathered around a checkered dining table with flowers, notebooks, and a laptop on it.
+
+<a id="latest-committed-memory-segment-144-node-1520"></a>
+
+- **1520** · clip 129: A woman seated on the left holds a bouquet of flowers while talking with others at the table.
+
+<a id="latest-committed-memory-segment-144-node-1521"></a>
+
+- **1521** · clip 129: The camera turns toward the kitchen entryway, showing a person in an orange shirt standing near the counter.
+
+<a id="latest-committed-memory-segment-144-node-1522"></a>
+
+- **1522** · clip 129: The individuals discuss plans for having a barbecue and coordinating dinner for their guests.
+
+<a id="latest-committed-memory-segment-144-node-1528"></a>
+
+- **1528** · clip 130: A group sits around a checkered table inside a room discussing food plans.
+
+<a id="latest-committed-memory-segment-144-node-1529"></a>
+
+- **1529** · clip 130: A woman on the left wearing black inspects small pink flowers in her hands.
+
+<a id="latest-committed-memory-segment-144-node-1530"></a>
+
+- **1530** · clip 130: A woman with pink hair and another woman seated beside the table participate in the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1531"></a>
+
+- **1531** · clip 130: A young man wearing an orange shirt stands in the adjoining kitchen area, gesturing while speaking.
+
+<a id="latest-committed-memory-segment-144-node-1532"></a>
+
+- **1532** · clip 130: The camera wearer sits at the end of the table with a laptop open in front of them.
+
+<a id="latest-committed-memory-segment-144-node-1533"></a>
+
+- **1533** · clip 130: The man in the orange shirt moves around the kitchen while chatting with the group.
+
+<a id="latest-committed-memory-segment-144-node-1534"></a>
+
+- **1534** · clip 130: The group discusses ordering large pizzas instead of doing barbecue for about twenty people.
+
+<a id="latest-committed-memory-segment-144-node-1537"></a>
+
+- **1537** · clip 131: A group of people sits around a table with a red checkered tablecloth in an indoor living space.
+
+<a id="latest-committed-memory-segment-144-node-1538"></a>
+
+- **1538** · clip 131: A woman in a black shirt on the left holds a bunch of small flowers while engaging in conversation.
+
+<a id="latest-committed-memory-segment-144-node-1539"></a>
+
+- **1539** · clip 131: A woman with reddish-pink hair sits on the right side of the table listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1540"></a>
+
+- **1540** · clip 131: A woman with long dark hair sits at the far end of the table facing the group.
+
+<a id="latest-committed-memory-segment-144-node-1541"></a>
+
+- **1541** · clip 131: A man in a tan t-shirt stands near the open window in the adjacent kitchen area.
+
+<a id="latest-committed-memory-segment-144-node-1542"></a>
+
+- **1542** · clip 131: A woman in a white dress enters from the background holding a black container and walks across the room.
+
+<a id="latest-committed-memory-segment-144-node-1543"></a>
+
+- **1543** · clip 131: Another person reaches over from behind the woman in black to handle the flowers.
+
+<a id="latest-committed-memory-segment-144-node-1546"></a>
+
+- **1546** · clip 132: A group of people sits around a checkered table engaged in a discussion.
+
+<a id="latest-committed-memory-segment-144-node-1547"></a>
+
+- **1547** · clip 132: The woman on the left in a dark jacket actively talks and gestures with her hands.
+
+<a id="latest-committed-memory-segment-144-node-1548"></a>
+
+- **1548** · clip 132: A woman in a white top stands up behind the table, picks up a bouquet of pink flowers, and moves them aside.
+
+<a id="latest-committed-memory-segment-144-node-1549"></a>
+
+- **1549** · clip 132: The other women seated along the right side of the table listen attentively.
+
+<a id="latest-committed-memory-segment-144-node-1555"></a>
+
+- **1555** · clip 133: A group of people sit around a checkered dining table engaged in a planning discussion.
+
+<a id="latest-committed-memory-segment-144-node-1556"></a>
+
+- **1556** · clip 133: A woman near the back reaches across the table and picks up a bunch of green leafy vegetables.
+
+<a id="latest-committed-memory-segment-144-node-1557"></a>
+
+- **1557** · clip 133: The camera pans toward the living room, revealing a projector screen and a checkerboard calibration target.
+
+<a id="latest-committed-memory-segment-144-node-1558"></a>
+
+- **1558** · clip 133: A man in an orange t-shirt walks in from the kitchen area while on a phone call.
+
+<a id="latest-committed-memory-segment-144-node-1559"></a>
+
+- **1559** · clip 133: The man in the orange t-shirt stands near the whiteboard at the head of the table.
+
+<a id="latest-committed-memory-segment-144-node-1560"></a>
+
+- **1560** · clip 133: The group discusses scheduling dinner and drinks between 5:00 and 6:00 PM.
+
+<a id="latest-committed-memory-segment-144-node-1567"></a>
+
+- **1567** · clip 134: A group of people is gathered around a dining table covered with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1568"></a>
+
+- **1568** · clip 134: A person in an orange t-shirt sits at the far end of the table facing a whiteboard with writing on it.
+
+<a id="latest-committed-memory-segment-144-node-1569"></a>
+
+- **1569** · clip 134: A woman seated on the left in black clothing gestures while eating a snack and speaking.
+
+<a id="latest-committed-memory-segment-144-node-1570"></a>
+
+- **1570** · clip 134: A woman with long light-colored reddish hair sits on the right side of the table listening to the group.
+
+<a id="latest-committed-memory-segment-144-node-1571"></a>
+
+- **1571** · clip 134: Multiple items including a laptop, water bottle, pouches, and notebooks are placed across the table.
+
+<a id="latest-committed-memory-segment-144-node-1572"></a>
+
+- **1572** · clip 134: The group engages in a conversation discussing dining plans and food choices.
+
+<a id="latest-committed-memory-segment-144-node-1579"></a>
+
+- **1579** · clip 135: A group of young people is seated around a table covered with a red-and-white checkered tablecloth, engaged in an event planning discussion.
+
+<a id="latest-committed-memory-segment-144-node-1580"></a>
+
+- **1580** · clip 135: A person wearing an orange shirt sits by the whiteboard at the end of the table, gesturing toward the timeline and notes written on it.
+
+<a id="latest-committed-memory-segment-144-node-1581"></a>
+
+- **1581** · clip 135: A young woman in a black jacket and glasses sits at the left of the table, holding a small stick or snack in her hands while listening and speaking.
+
+<a id="latest-committed-memory-segment-144-node-1582"></a>
+
+- **1582** · clip 135: Another person sits beside the young woman on the left, partially in view.
+
+<a id="latest-committed-memory-segment-144-node-1583"></a>
+
+- **1583** · clip 135: Two young women sit along the right side of the table, listening attentively to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1584"></a>
+
+- **1584** · clip 135: The group discusses various stages of their event, including bartending throughout the event and serving desserts upon guest arrival.
+
+<a id="latest-committed-memory-segment-144-node-1585"></a>
+
+- **1585** · clip 135: The person near the whiteboard points to specific items on the board while the group talks about evening performances.
+
+<a id="latest-committed-memory-segment-144-node-1586"></a>
+
+- **1586** · clip 135: The woman in the black jacket gestures with her hand as she discusses what remains for the evening schedule.
+
+<a id="latest-committed-memory-segment-144-node-1587"></a>
+
+- **1587** · clip 135: The participants consider timing constraints, noting that the event should not run too late so guests can return home easily.
+
+<a id="latest-committed-memory-segment-144-node-1593"></a>
+
+- **1593** · clip 136: A group of people is gathered around a dining table covered with a checkered tablecloth, holding a planning meeting.
+
+<a id="latest-committed-memory-segment-144-node-1594"></a>
+
+- **1594** · clip 136: At the head of the table, a person in an orange shirt points to and writes notes on a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1595"></a>
+
+- **1595** · clip 136: &lt;voice_1590&gt; notes that an activity will take about two hours.  **Links:** ↔ [1590](#latest-committed-memory-segment-144-node-1590)
+
+<a id="latest-committed-memory-segment-144-node-1596"></a>
+
+- **1596** · clip 136: &lt;voice_0&gt; suggests deciding on a fixed end time for the schedule.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1597"></a>
+
+- **1597** · clip 136: The person by the whiteboard finishes writing and sits down at the table.
+
+<a id="latest-committed-memory-segment-144-node-1598"></a>
+
+- **1598** · clip 136: &lt;voice_1591&gt; remarks that running from 2:30 to 8:00 is quite exhausting.  **Links:** ↔ [1591](#latest-committed-memory-segment-144-node-1591)
+
+<a id="latest-committed-memory-segment-144-node-1599"></a>
+
+- **1599** · clip 136: &lt;voice_1592&gt; agrees in response.  **Links:** ↔ [1592](#latest-committed-memory-segment-144-node-1592)
+
+<a id="latest-committed-memory-segment-144-node-1600"></a>
+
+- **1600** · clip 136: &lt;voice_1578&gt; proposes wrapping up by 6:30 and allocating the remaining hour and a half for performances, asking if participants can prepare acts such as singing.  **Links:** ↔ [1578](#latest-committed-memory-segment-144-node-1578)
+
+<a id="latest-committed-memory-segment-144-node-1606"></a>
+
+- **1606** · clip 137: A group of people sits around a dining table engaged in a meeting and discussion.
+
+<a id="latest-committed-memory-segment-144-node-1607"></a>
+
+- **1607** · clip 137: &lt;voice_1421&gt; mentions having a guitar available for the activity.  **Links:** ↔ [1421](#latest-committed-memory-segment-144-node-1421)
+
+<a id="latest-committed-memory-segment-144-node-1608"></a>
+
+- **1608** · clip 137: &lt;voice_1346&gt; suggests singing and dancing during the event.  **Links:** ↔ [1346](#latest-committed-memory-segment-144-node-1346)
+
+<a id="latest-committed-memory-segment-144-node-1609"></a>
+
+- **1609** · clip 137: &lt;voice_0&gt; points out that the total duration is too long and requires a scheduled break.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1610"></a>
+
+- **1610** · clip 137: &lt;voice_1553&gt; proposes adding a karaoke session.  **Links:** ↔ [1553](#latest-committed-memory-segment-144-node-1553)
+
+<a id="latest-committed-memory-segment-144-node-1611"></a>
+
+- **1611** · clip 137: &lt;voice_0&gt; clarifies that roughly an hour is needed in the middle to offload data from the wearable glasses.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1612"></a>
+
+- **1612** · clip 137: &lt;voice_1060&gt; suggests letting people explore or drink during the data transfer interval.  **Links:** ↔ [1060](#latest-committed-memory-segment-144-node-1060)
+
+<a id="latest-committed-memory-segment-144-node-1613"></a>
+
+- **1613** · clip 137: &lt;voice_1603&gt; suggests singing songs while the data is being transferred.  **Links:** ↔ [1603](#latest-committed-memory-segment-144-node-1603)
+
+<a id="latest-committed-memory-segment-144-node-1614"></a>
+
+- **1614** · clip 137: &lt;voice_1605&gt; proposes screening a short film during the break.  **Links:** ↔ [1605](#latest-committed-memory-segment-144-node-1605)
+
+<a id="latest-committed-memory-segment-144-node-1615"></a>
+
+- **1615** · clip 137: &lt;voice_0&gt; agrees to keep a designated break period in the schedule while gesturing forward with his hand.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1621"></a>
+
+- **1621** · clip 138: A group of people are gathered around a checkered table in a room, conducting a planning meeting.
+
+<a id="latest-committed-memory-segment-144-node-1622"></a>
+
+- **1622** · clip 138: A whiteboard with notes and a schedule outline is visible in the background.
+
+<a id="latest-committed-memory-segment-144-node-1623"></a>
+
+- **1623** · clip 138: A woman sitting on the left side in a light-colored top stands up and walks away from the table.
+
+<a id="latest-committed-memory-segment-144-node-1624"></a>
+
+- **1624** · clip 138: A person seated on the right side extends their arm and points toward the whiteboard while discussing the activity stages and schedule.
+
+<a id="latest-committed-memory-segment-144-node-1625"></a>
+
+- **1625** · clip 138: A woman wearing glasses and a black top on the left side speaks and gestures with both hands as she explains the timeline for introducing products.
+
+<a id="latest-committed-memory-segment-144-node-1634"></a>
+
+- **1634** · clip 139: A group of people are gathered around a checkered table engaged in a discussion.
+
+<a id="latest-committed-memory-segment-144-node-1635"></a>
+
+- **1635** · clip 139: A woman seated on the left gestures with her hands while discussing a presentation schedule and dessert tasting.
+
+<a id="latest-committed-memory-segment-144-node-1636"></a>
+
+- **1636** · clip 139: In the background, a person standing near a whiteboard holds up a bunch of green herbs to show the group.
+
+<a id="latest-committed-memory-segment-144-node-1637"></a>
+
+- **1637** · clip 139: The participants continue conversing about the event timeline, preparation starting in the morning, and allocating two people to help.
+
+<a id="latest-committed-memory-segment-144-node-1638"></a>
+
+- **1638** · clip 139: A member humorously questions whether they can wake up early enough, prompting laughter and lighthearted responses.
+
+<a id="latest-committed-memory-segment-144-node-1644"></a>
+
+- **1644** · clip 140: A group of people are gathered around a dining table covered with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1645"></a>
+
+- **1645** · clip 140: A woman in a black shirt on the left side of the table smiles and speaks while resting her hands on the table.
+
+<a id="latest-committed-memory-segment-144-node-1646"></a>
+
+- **1646** · clip 140: A young man in an orange T-shirt and grey pants stands near the kitchen entryway, stretching and placing his hands behind his head.
+
+<a id="latest-committed-memory-segment-144-node-1647"></a>
+
+- **1647** · clip 140: The young man in the orange T-shirt gestures and points up toward the ceiling while participating in the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1648"></a>
+
+- **1648** · clip 140: A woman with long pink hair sits at the table, looking towards the young man and the others.
+
+<a id="latest-committed-memory-segment-144-node-1649"></a>
+
+- **1649** · clip 140: A woman dressed in a white shirt enters from the hallway, walks over to the table near a whiteboard, and arranges items on the table.
+
+<a id="latest-committed-memory-segment-144-node-1650"></a>
+
+- **1650** · clip 140: The woman in the black top rests her chin on her hands as the group continues their conversation.
+
+<a id="latest-committed-memory-segment-144-node-1657"></a>
+
+- **1657** · clip 141: A group of people are sitting and standing around a table with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1658"></a>
+
+- **1658** · clip 141: On the left, a woman in a black jacket sits at the table holding and adjusting a rolled brown object.
+
+<a id="latest-committed-memory-segment-144-node-1659"></a>
+
+- **1659** · clip 141: A woman in a white long-sleeved shirt stands near the whiteboard in the background, organizing and moving items on the table.
+
+<a id="latest-committed-memory-segment-144-node-1660"></a>
+
+- **1660** · clip 141: &lt;voice_0&gt; asks whether preparations should be done on the same day or the day before.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1661"></a>
+
+- **1661** · clip 141: &lt;voice_500&gt; explains that items requiring refrigeration, such as tiramisu, should be made the day before.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
+
+<a id="latest-committed-memory-segment-144-node-1662"></a>
+
+- **1662** · clip 141: &lt;voice_1478&gt; suggests making something like qingbuliang by buying coconut milk.  **Links:** ↔ [1478](#latest-committed-memory-segment-144-node-1478)
+
+<a id="latest-committed-memory-segment-144-node-1663"></a>
+
+- **1663** · clip 141: &lt;voice_1654&gt; and &lt;voice_1655&gt; join in discussing the preparation details.  **Links:** ↔ [1654](#latest-committed-memory-segment-144-node-1654) · ↔ [1655](#latest-committed-memory-segment-144-node-1655)
+
+<a id="latest-committed-memory-segment-144-node-1664"></a>
+
+- **1664** · clip 141: &lt;voice_500&gt; agrees that ingredients can be prepped the day before and mentions making desserts using gelatin sheets and coconut milk.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
+
+<a id="latest-committed-memory-segment-144-node-1670"></a>
+
+- **1670** · clip 142: A group of people is sitting around a table covered with a red-and-white checkered tablecloth in an indoor room.
+
+<a id="latest-committed-memory-segment-144-node-1671"></a>
+
+- **1671** · clip 142: A woman wearing a black top sits at the left side of the table, holding a rolled-up brown paper cylinder in her hands.
+
+<a id="latest-committed-memory-segment-144-node-1672"></a>
+
+- **1672** · clip 142: In the background, a woman wearing a white shirt stands near a whiteboard before walking out of the room.
+
+<a id="latest-committed-memory-segment-144-node-1673"></a>
+
+- **1673** · clip 142: A woman with long dark hair sits across the table, leaning her head on her hand while listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1674"></a>
+
+- **1674** · clip 142: A woman with dyed blonde hair sits on the right side of the table, eventually getting up and moving away.
+
+<a id="latest-committed-memory-segment-144-node-1675"></a>
+
+- **1675** · clip 142: A man dressed in a peach-colored t-shirt walks across the room in the background toward the whiteboard area.
+
+<a id="latest-committed-memory-segment-144-node-1676"></a>
+
+- **1676** · clip 142: The camera wearer reaches out to open and use a silver laptop resting on the table.
+
+<a id="latest-committed-memory-segment-144-node-1677"></a>
+
+- **1677** · clip 142: The woman in black gestures with the rolled paper while speaking animatedly about dessert recipes.
+
+<a id="latest-committed-memory-segment-144-node-1686"></a>
+
+- **1686** · clip 143: A group is gathered around a table covered in a pink-and-white checkered tablecloth discussing an event plan.
+
+<a id="latest-committed-memory-segment-144-node-1687"></a>
+
+- **1687** · clip 143: The camera wearer has a laptop open on the table displaying a document.
+
+<a id="latest-committed-memory-segment-144-node-1688"></a>
+
+- **1688** · clip 143: A woman wearing a black jacket sits on the left side of the table, participating in the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1689"></a>
+
+- **1689** · clip 143: A woman in a white blouse stands behind the table near a whiteboard holding a notebook or booklet.
+
+<a id="latest-committed-memory-segment-144-node-1690"></a>
+
+- **1690** · clip 143: A woman in a patterned green top sits on the right side of the table.
+
+<a id="latest-committed-memory-segment-144-node-1691"></a>
+
+- **1691** · clip 143: &lt;voice_1681&gt; discusses preparing dessert ingredients like red beans, taro balls, and coconut jelly, suggesting some can be bought ready-made.  **Links:** ↔ [1681](#latest-committed-memory-segment-144-node-1681)
+
+<a id="latest-committed-memory-segment-144-node-1692"></a>
+
+- **1692** · clip 143: &lt;voice_1682&gt; asks if ingredients for taro balls have been prepared.  **Links:** ↔ [1682](#latest-committed-memory-segment-144-node-1682)
+
+<a id="latest-committed-memory-segment-144-node-1693"></a>
+
+- **1693** · clip 143: &lt;voice_1683&gt; replies that materials for taro balls were not purchased.  **Links:** ↔ [1683](#latest-committed-memory-segment-144-node-1683)
+
+<a id="latest-committed-memory-segment-144-node-1694"></a>
+
+- **1694** · clip 143: &lt;voice_1684&gt; and &lt;voice_1685&gt; discuss whether ready-made taro balls can be directly purchased.  **Links:** ↔ [1684](#latest-committed-memory-segment-144-node-1684) · ↔ [1685](#latest-committed-memory-segment-144-node-1685)
+
+<a id="latest-committed-memory-segment-144-node-1695"></a>
+
+- **1695** · clip 143: &lt;voice_1681&gt; reviews the schedule on the laptop, planning the dessert tasting session following a 4:20 presentation.  **Links:** ↔ [1681](#latest-committed-memory-segment-144-node-1681)
+
+<a id="latest-committed-memory-segment-144-node-1696"></a>
+
+- **1696** · clip 143: Near the end of the clip, another person with dyed light-red hair appears on the right edge of the frame.
+
+<a id="latest-committed-memory-segment-144-node-1702"></a>
+
+- **1702** · clip 144: A group of people is gathered around a dining table covered with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1703"></a>
+
+- **1703** · clip 144: A laptop and a water bottle sit on the table in the foreground.
+
+<a id="latest-committed-memory-segment-144-node-1704"></a>
+
+- **1704** · clip 144: A woman wearing a black top sits on the left side of the table, holding and reading from an open booklet.
+
+<a id="latest-committed-memory-segment-144-node-1705"></a>
+
+- **1705** · clip 144: A woman wearing a white shirt stands beside a whiteboard at the head of the table.
+
+<a id="latest-committed-memory-segment-144-node-1706"></a>
+
+- **1706** · clip 144: A woman in a light patterned outfit sits across the table listening to the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1707"></a>
+
+- **1707** · clip 144: A person seated on the right side reaches their arm across the table during the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1708"></a>
+
+- **1708** · clip 144: The woman in the black top lowers the booklet and places it onto the table.
+
+<a id="latest-committed-memory-segment-144-node-1709"></a>
+
+- **1709** · clip 144: The group converses about the schedule, data collection, and arrangements for dinner.
+
+### Inferences
+
+<a id="latest-committed-memory-segment-144-node-9"></a>
+
+- **9** · clip 1: The group is preparing to calibrate or synchronize recording equipment by using a smartphone stopwatch as a visible visual time reference.
+
+<a id="latest-committed-memory-segment-144-node-10"></a>
+
+- **10** · clip 1: &lt;voice_0&gt; is guiding or directing the procedure for synchronizing the devices.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-11"></a>
+
+- **11** · clip 1: The person holding the phone is carrying out the instruction to display and run the stopwatch for the session.
+
+<a id="latest-committed-memory-segment-144-node-18"></a>
+
+- **18** · clip 2: Tapping the smartphone screen in turn serves to synchronize timestamps across individual wearable recording devices.
+
+<a id="latest-committed-memory-segment-144-node-19"></a>
+
+- **19** · clip 2: &lt;voice_0&gt; functions as the leader or coordinator organizing the group's agenda.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-20"></a>
+
+- **20** · clip 2: The group is conducting an introductory coordination meeting before proceeding with their planned activities.
+
+<a id="latest-committed-memory-segment-144-node-27"></a>
+
+- **27** · clip 3: The camera holder is leading the discussion and introducing the hardware equipment and backup tasks to the team.
+
+<a id="latest-committed-memory-segment-144-node-28"></a>
+
+- **28** · clip 3: The group is preparing for a collaborative technical session involving VR equipment and storage devices.
+
+<a id="latest-committed-memory-segment-144-node-29"></a>
+
+- **29** · clip 3: &lt;voice_0&gt; is spoken by the camera holder/presenter.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-41"></a>
+
+- **41** · clip 4: The people gathered are participating in a workshop, technical project, or orientation where specialized equipment is being distributed and prepared.
+
+<a id="latest-committed-memory-segment-144-node-42"></a>
+
+- **42** · clip 4: The dialogue indicates a structured learning or project environment involving a mentor or tutor, explaining why fewer standard participant units were required.
+
+<a id="latest-committed-memory-segment-144-node-43"></a>
+
+- **43** · clip 4: The camera wearer is actively assisting in organizing, cleaning up, or transporting the equipment cases away from the main table.
+
+<a id="latest-committed-memory-segment-144-node-50"></a>
+
+- **50** · clip 5: The group in the room is collaboratively unboxing, organizing, and preparing technical equipment or recording gear.
+
+<a id="latest-committed-memory-segment-144-node-51"></a>
+
+- **51** · clip 5: The presence of a checkerboard calibration board and specialized headset cases suggests preparation for an audiovisual or motion capture/VR setup.
+
+<a id="latest-committed-memory-segment-144-node-52"></a>
+
+- **52** · clip 5: The camera wearer (Jake) is managing cables and equipment cases to support the group's setup.
+
+<a id="latest-committed-memory-segment-144-node-59"></a>
+
+- **59** · clip 6: The group is collaborating to unbox and prepare technical equipment for a shoot or project.
+
+<a id="latest-committed-memory-segment-144-node-60"></a>
+
+- **60** · clip 6: &lt;voice_0&gt; acts as a coordinator, managing the organization and cleanup of the unboxing materials.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-67"></a>
+
+- **67** · clip 7: The camera wearer is the speaker (&lt;voice_0&gt;), serving as an organizer guiding the team through the equipment setup.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-68"></a>
+
+- **68** · clip 7: The group is systematically preparing equipment, likely for a recording session or project setup.
+
+<a id="latest-committed-memory-segment-144-node-78"></a>
+
+- **78** · clip 8: &lt;voice_0&gt; is the camera wearer, who is giving a tour of his bedroom and multi-computer workstation to the group.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-79"></a>
+
+- **79** · clip 8: The people gathered at the table are colleagues or participants collaborating on a project or shoot.
+
+<a id="latest-committed-memory-segment-144-node-80"></a>
+
+- **80** · clip 8: The bedroom doubles as an intensive computing workstation, equipped with several laptops and monitors.
+
+<a id="latest-committed-memory-segment-144-node-86"></a>
+
+- **86** · clip 9: &lt;voice_0&gt; is the camera wearer (Jake), who is giving instructions to the other participants.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) (weight 3.0)
+
+<a id="latest-committed-memory-segment-144-node-87"></a>
+
+- **87** · clip 9: The room serves as a data collection and equipment management station for a multi-person recording study.
+
+<a id="latest-committed-memory-segment-144-node-88"></a>
+
+- **88** · clip 9: &lt;voice_0&gt; explains the workflow for offloading recorded video data from smart glasses to designated laptops and hard drives.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-96"></a>
+
+- **96** · clip 10: &lt;voice_0&gt; is instructing the listeners on the data offloading and backup workflow for their recording gear.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-97"></a>
+
+- **97** · clip 10: The hard drive enclosure setup on the shelf is configured to simulate a host PC environment to facilitate automated data storage.
+
+<a id="latest-committed-memory-segment-144-node-98"></a>
+
+- **98** · clip 10: The individuals standing near the doorway are participants or crew members being briefed on post-recording equipment handling.
+
+<a id="latest-committed-memory-segment-144-node-110"></a>
+
+- **110** · clip 11: &lt;voice_0&gt; is the camera wearer, acting as the person explaining the technical and hardware setup.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-111"></a>
+
+- **111** · clip 11: The group is concerned with equipment maintenance, data integrity, and potential power backup solutions.
+
+<a id="latest-committed-memory-segment-144-node-112"></a>
+
+- **112** · clip 11: The participants are residing together in a shared space, coordinating technical equipment for a joint project or event.
+
+<a id="latest-committed-memory-segment-144-node-120"></a>
+
+- **120** · clip 12: The group is gathering in a shared rental or villa to unpack, assemble, and set up recording or technical equipment.
+
+<a id="latest-committed-memory-segment-144-node-121"></a>
+
+- **121** · clip 12: &lt;voice_0&gt; belongs to the camera operator holding the recording stick, directing the activity and conversing with the participants.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-122"></a>
+
+- **122** · clip 12: &lt;voice_113&gt; is one of the group members seated at the table responding to &lt;voice_0&gt;.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [113](#latest-committed-memory-segment-144-node-113)
+
+<a id="latest-committed-memory-segment-144-node-132"></a>
+
+- **132** · clip 13: The participants are configuring and testing wearable smart glasses and recording hardware for an experiment or data collection session.
+
+<a id="latest-committed-memory-segment-144-node-133"></a>
+
+- **133** · clip 13: &lt;voice_0&gt; is overseeing the equipment preparation, ensuring participants wear the devices correctly for proper visual capture.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-134"></a>
+
+- **134** · clip 13: &lt;voice_123&gt; provides technical guidance on handling fragile components of the wearable gear.  **Links:** ↔ [123](#latest-committed-memory-segment-144-node-123)
+
+<a id="latest-committed-memory-segment-144-node-147"></a>
+
+- **147** · clip 14: The group is collaborating on unpacking and assembling computer or filming hardware, such as hard drives and equipment mounts.
+
+<a id="latest-committed-memory-segment-144-node-148"></a>
+
+- **148** · clip 14: &lt;voice_123&gt; provides step-by-step guidance on how to insert and align a component into the casing.  **Links:** ↔ [123](#latest-committed-memory-segment-144-node-123)
+
+<a id="latest-committed-memory-segment-144-node-149"></a>
+
+- **149** · clip 14: &lt;voice_137&gt; asks about the location of the screws needed for assembly, which another person identifies on the table.  **Links:** ↔ [137](#latest-committed-memory-segment-144-node-137)
+
+<a id="latest-committed-memory-segment-144-node-150"></a>
+
+- **150** · clip 14: &lt;voice_139&gt; confirms understanding the assembly process and feels confident it is easy to complete.  **Links:** ↔ [139](#latest-committed-memory-segment-144-node-139)
+
+<a id="latest-committed-memory-segment-144-node-159"></a>
+
+- **159** · clip 15: The group is collaborating on assembling technical or recording equipment.
+
+<a id="latest-committed-memory-segment-144-node-160"></a>
+
+- **160** · clip 15: &lt;voice_123&gt; takes on a guiding role, instructing the group on the assembly procedure and confirming screw counts.  **Links:** ↔ [123](#latest-committed-memory-segment-144-node-123)
+
+<a id="latest-committed-memory-segment-144-node-161"></a>
+
+- **161** · clip 15: &lt;voice_151&gt; and &lt;voice_152&gt; are actively assembling components and seeking verification on the instructions.  **Links:** ↔ [151](#latest-committed-memory-segment-144-node-151) · ↔ [152](#latest-committed-memory-segment-144-node-152)
+
+<a id="latest-committed-memory-segment-144-node-171"></a>
+
+- **171** · clip 16: The group is engaged in a collaborative workshop or assembly task involving hardware components.
+
+<a id="latest-committed-memory-segment-144-node-172"></a>
+
+- **172** · clip 16: Participants share instructions and verify assembly steps with each other to avoid errors.
+
+<a id="latest-committed-memory-segment-144-node-189"></a>
+
+- **189** · clip 17: The group is participating in a collaborative DIY assembly session, likely building custom mechanical keyboards.
+
+<a id="latest-committed-memory-segment-144-node-190"></a>
+
+- **190** · clip 17: The participants have done this activity together before, as evidenced by references to their complaints from the previous session.
+
+<a id="latest-committed-memory-segment-144-node-191"></a>
+
+- **191** · clip 17: The participants share a relaxed and friendly dynamic, casually discussing the quirks and limitations of the included assembly tools.
+
+<a id="latest-committed-memory-segment-144-node-199"></a>
+
+- **199** · clip 18: The camera wearer advises the woman in black that her hair is obstructing a camera lens on her wearable device.
+
+<a id="latest-committed-memory-segment-144-node-200"></a>
+
+- **200** · clip 18: The woman adjusts and secures her hair to ensure the recording equipment has a clear field of view.
+
+<a id="latest-committed-memory-segment-144-node-201"></a>
+
+- **201** · clip 18: The participants are configuring head-mounted cameras or smart glasses in preparation for a recorded session.
+
+<a id="latest-committed-memory-segment-144-node-214"></a>
+
+- **214** · clip 19: The participants are engaged in a shared activity at the table while having a casual conversation to lighten the atmosphere.
+
+<a id="latest-committed-memory-segment-144-node-215"></a>
+
+- **215** · clip 19: The conversation reflects diverse musical tastes among the group, ranging from R&amp;B to Western pop music.
+
+<a id="latest-committed-memory-segment-144-node-225"></a>
+
+- **225** · clip 20: The group is preparing and setting up electronic or filming equipment together.
+
+<a id="latest-committed-memory-segment-144-node-226"></a>
+
+- **226** · clip 20: The participants are engaged in a casual discussion about choosing energetic video or dance content.
+
+<a id="latest-committed-memory-segment-144-node-227"></a>
+
+- **227** · clip 20: The social atmosphere among the participants is informal and collaborative.
+
+<a id="latest-committed-memory-segment-144-node-239"></a>
+
+- **239** · clip 21: The group members share a friendly and relaxed rapport, engaging in casual geographical trivia and banter while setting up their gear.
+
+<a id="latest-committed-memory-segment-144-node-240"></a>
+
+- **240** · clip 21: The participants are engaged in a collaborative preparation task involving electronics or recording equipment before proceeding with their planned activities.
+
+<a id="latest-committed-memory-segment-144-node-248"></a>
+
+- **248** · clip 22: The group is gathered in an informal setting to collaboratively inspect, assemble, or test equipment.
+
+<a id="latest-committed-memory-segment-144-node-249"></a>
+
+- **249** · clip 22: The atmosphere is casual and relaxed as participants multitask between handling gadgets and chatting.
+
+<a id="latest-committed-memory-segment-144-node-261"></a>
+
+- **261** · clip 23: The participants are preparing and assembling smart glasses or body-worn recording gear for a study or data collection session.
+
+<a id="latest-committed-memory-segment-144-node-262"></a>
+
+- **262** · clip 23: Jake (&lt;voice_0&gt;) acts as an instructor or technical guide, actively assisting team members with hardware setup.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-263"></a>
+
+- **263** · clip 23: Jake performs a hand clap at the end of the clip as a multi-modal synchronization marker for the cameras and sensors.
+
+<a id="latest-committed-memory-segment-144-node-269"></a>
+
+- **269** · clip 24: The participants are engaged in a collaborative workshop or preparation session involving the setup and unboxing of equipment.
+
+<a id="latest-committed-memory-segment-144-node-270"></a>
+
+- **270** · clip 24: The person recording is actively approaching to interact with the group or examine the items on the table.
+
+<a id="latest-committed-memory-segment-144-node-285"></a>
+
+- **285** · clip 25: The group is engaged in setting up or packing technical hardware equipment in a collaborative setting.
+
+<a id="latest-committed-memory-segment-144-node-286"></a>
+
+- **286** · clip 25: The conversation indicates that several participants have a background in engineering, electronics, or a related technical major involving soldering and circuit wiring.
+
+<a id="latest-committed-memory-segment-144-node-287"></a>
+
+- **287** · clip 25: The participants share a friendly, casual relationship, playfully comparing their hands-on setup process to assembly line factory labor.
+
+<a id="latest-committed-memory-segment-144-node-296"></a>
+
+- **296** · clip 26: The group is systematically preparing, testing, or packing electronic equipment for a project in an assembly-line fashion.
+
+<a id="latest-committed-memory-segment-144-node-297"></a>
+
+- **297** · clip 26: The camera wearer serves as a runner transporting packaged items between the workstation table and the staging area on the bed.
+
+<a id="latest-committed-memory-segment-144-node-307"></a>
+
+- **307** · clip 27: The group is gathered around a table assembling or handling computer hardware and hard drive accessories.
+
+<a id="latest-committed-memory-segment-144-node-308"></a>
+
+- **308** · clip 27: The interaction is casual and friendly, with members giving guidance and jokingly framing the task as a competition.
+
+<a id="latest-committed-memory-segment-144-node-318"></a>
+
+- **318** · clip 28: The group is collaborating on an assembly or packaging task involving electronic components.
+
+<a id="latest-committed-memory-segment-144-node-319"></a>
+
+- **319** · clip 28: The camera wearer acts in an instructional or evaluative capacity, directing where finished items should be placed.
+
+<a id="latest-committed-memory-segment-144-node-320"></a>
+
+- **320** · clip 28: The young man in the orange t-shirt is being lightheartedly teased about missing an opportunity or completing a step late.
+
+<a id="latest-committed-memory-segment-144-node-328"></a>
+
+- **328** · clip 29: The participants are engaged in a collaborative group activity or study session involving packing equipment into boxes.
+
+<a id="latest-committed-memory-segment-144-node-329"></a>
+
+- **329** · clip 29: The group concludes an initial task and transitions into discussing upcoming plans and invitations for the final day of their activity.
+
+<a id="latest-committed-memory-segment-144-node-349"></a>
+
+- **349** · clip 30: The group is collaborating on planning a meeting or gathering and using the whiteboard to organize thoughts.
+
+<a id="latest-committed-memory-segment-144-node-350"></a>
+
+- **350** · clip 30: The packaged stand that &lt;voice_0&gt; goes to retrieve is an easel or support rack intended for the whiteboard.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-362"></a>
+
+- **362** · clip 31: Jake is delivering or storing a long package into the bedroom.
+
+<a id="latest-committed-memory-segment-144-node-363"></a>
+
+- **363** · clip 31: The group gathered around the table in the living room is having a relaxed conversation about pens, devices, and tasks.
+
+<a id="latest-committed-memory-segment-144-node-371"></a>
+
+- **371** · clip 32: Jake went upstairs specifically to retrieve the clapperboard and marker for recording preparations.
+
+<a id="latest-committed-memory-segment-144-node-372"></a>
+
+- **372** · clip 32: &lt;voice_364&gt; belongs to Jake as he searches for the marker and informs the others downstairs.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
+
+<a id="latest-committed-memory-segment-144-node-381"></a>
+
+- **381** · clip 33: The individuals are preparing for or reviewing a game or video shoot session, marked by the use of a clapperboard.
+
+<a id="latest-committed-memory-segment-144-node-382"></a>
+
+- **382** · clip 33: The conversation concerns deductions or assignments from a game played the previous day.
+
+<a id="latest-committed-memory-segment-144-node-392"></a>
+
+- **392** · clip 34: The group is engaged in an interactive brainstorming, learning, or script discussion session focused on Chinese character writing.
+
+<a id="latest-committed-memory-segment-144-node-393"></a>
+
+- **393** · clip 34: The attendees are collaboratively observing and correcting the writer's stroke order and character radicals.
+
+<a id="latest-committed-memory-segment-144-node-412"></a>
+
+- **412** · clip 35: The group is holding a planning meeting around the table to coordinate an upcoming event or shoot.
+
+<a id="latest-committed-memory-segment-144-node-413"></a>
+
+- **413** · clip 35: The members are discussing their guest list and expressing concerns about distance affecting attendance.
+
+<a id="latest-committed-memory-segment-144-node-414"></a>
+
+- **414** · clip 35: &lt;voice_0&gt; acts as a meeting facilitator or coordinator tracking each person's invitations.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-426"></a>
+
+- **426** · clip 36: The group is organizing and planning the rules or order of a game or collaborative activity.
+
+<a id="latest-committed-memory-segment-144-node-427"></a>
+
+- **427** · clip 36: The person at the whiteboard acts as the facilitator or scorekeeper for the group.
+
+<a id="latest-committed-memory-segment-144-node-428"></a>
+
+- **428** · clip 36: The camera-wearer actively engages in the discussion by gesturing toward the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-439"></a>
+
+- **439** · clip 37: The group is engaged in a casual creative brainstorming or character design session for their film project, as indicated by the clapperboard labeled 'Morning Ego Life'.
+
+<a id="latest-committed-memory-segment-144-node-440"></a>
+
+- **440** · clip 37: The person at the whiteboard serves as the illustrator, sketching humorous visual representations based on the lively input and banter of the group.
+
+<a id="latest-committed-memory-segment-144-node-449"></a>
+
+- **449** · clip 38: The group is holding a production or planning meeting, as indicated by the clapperboard on the table and notes on the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-450"></a>
+
+- **450** · clip 38: The person standing at the whiteboard acts as the facilitator and scribe for the group.
+
+<a id="latest-committed-memory-segment-144-node-451"></a>
+
+- **451** · clip 38: The camera wearer (&lt;voice_0&gt;) actively participates in organizing the layout and content on the board.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-452"></a>
+
+- **452** · clip 38: The group is discussing recruiting or coordinating participants for an upcoming project or event.
+
+<a id="latest-committed-memory-segment-144-node-463"></a>
+
+- **463** · clip 39: The group is engaged in an interactive planning or game session involving labels and assignments on a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-464"></a>
+
+- **464** · clip 39: &lt;voice_0&gt; serves as a facilitator directing how participants and characters are marked on the board.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-474"></a>
+
+- **474** · clip 40: The group is holding a production or casting planning meeting for an upcoming shoot.
+
+<a id="latest-committed-memory-segment-144-node-475"></a>
+
+- **475** · clip 40: The person at the whiteboard acts as the meeting facilitator, gathering and recording attendee details from the team.
+
+<a id="latest-committed-memory-segment-144-node-486"></a>
+
+- **486** · clip 41: The individuals are holding a production meeting or planning session for a shoot or event, as indicated by the clapperboard, whiteboard, and discussion regarding guest logistics.
+
+<a id="latest-committed-memory-segment-144-node-487"></a>
+
+- **487** · clip 41: The person standing near the whiteboard serves as the facilitator or director leading the briefing.
+
+<a id="latest-committed-memory-segment-144-node-488"></a>
+
+- **488** · clip 41: The participants are collaboratively confirming and clarifying the required count of guests for the upcoming schedule.
+
+<a id="latest-committed-memory-segment-144-node-495"></a>
+
+- **495** · clip 42: The participants are engaged in a team meeting or production discussion regarding methods to recruit attendees or participants.
+
+<a id="latest-committed-memory-segment-144-node-496"></a>
+
+- **496** · clip 42: The clapperboard on the table indicates the gathering is part of a film, documentary, or video production setup.
+
+<a id="latest-committed-memory-segment-144-node-497"></a>
+
+- **497** · clip 42: &lt;voice_0&gt;, &lt;voice_330&gt;, &lt;voice_466&gt;, and &lt;voice_489&gt; actively brainstorm and evaluate different outreach methods, including social media platforms like Xiaohongshu and in-person recruitment.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [330](#latest-committed-memory-segment-144-node-330) · ↔ [466](#latest-committed-memory-segment-144-node-466) · ↔ [489](#latest-committed-memory-segment-144-node-489)
+
+<a id="latest-committed-memory-segment-144-node-506"></a>
+
+- **506** · clip 43: The group is a creative production crew conducting a planning meeting for their video project.
+
+<a id="latest-committed-memory-segment-144-node-507"></a>
+
+- **507** · clip 43: They are brainstorming content, scenes, and interactions involving neighbors for the next day's shoot.
+
+<a id="latest-committed-memory-segment-144-node-517"></a>
+
+- **517** · clip 44: The group is holding a production or brainstorming meeting for an upcoming video project, referencing creative references and plans.
+
+<a id="latest-committed-memory-segment-144-node-518"></a>
+
+- **518** · clip 44: &lt;voice_431&gt; is leading the discussion and outlining steps on the whiteboard.  **Links:** ↔ [431](#latest-committed-memory-segment-144-node-431)
+
+<a id="latest-committed-memory-segment-144-node-519"></a>
+
+- **519** · clip 44: The atmosphere among the collaborators is casual and collaborative.
+
+<a id="latest-committed-memory-segment-144-node-531"></a>
+
+- **531** · clip 45: The group is holding a production planning meeting to coordinate logistics and participant count for an upcoming event or shoot.
+
+<a id="latest-committed-memory-segment-144-node-532"></a>
+
+- **532** · clip 45: The camera operator is documenting behind-the-scenes footage of the team meeting.
+
+<a id="latest-committed-memory-segment-144-node-533"></a>
+
+- **533** · clip 45: The person at the whiteboard serves as the meeting facilitator organizing headcount and tasks.
+
+<a id="latest-committed-memory-segment-144-node-541"></a>
+
+- **541** · clip 46: The team is conducting a film production meeting to plan shooting schedules and logistics.
+
+<a id="latest-committed-memory-segment-144-node-542"></a>
+
+- **542** · clip 46: The individual at the whiteboard is acting as the coordinator leading the planning session.
+
+<a id="latest-committed-memory-segment-144-node-553"></a>
+
+- **553** · clip 47: The group is engaged in a planning or brainstorming meeting, likely for a video production given the clapperboard on the table.
+
+<a id="latest-committed-memory-segment-144-node-554"></a>
+
+- **554** · clip 47: The participants are calculating or estimating target numbers or demographic statistics, debating figures between 1.4 billion and 1.6 billion.
+
+<a id="latest-committed-memory-segment-144-node-562"></a>
+
+- **562** · clip 48: The group is conducting a production or organizational meeting to coordinate personnel and schedule tasks.
+
+<a id="latest-committed-memory-segment-144-node-563"></a>
+
+- **563** · clip 48: The individual standing by the whiteboard is serving as the leader or coordinator of the planning session.
+
+<a id="latest-committed-memory-segment-144-node-569"></a>
+
+- **569** · clip 49: The individuals are holding a collaborative planning or production meeting to discuss project agendas and survey feedback.
+
+<a id="latest-committed-memory-segment-144-node-570"></a>
+
+- **570** · clip 49: The person standing at the whiteboard serves as the facilitator leading the discussion and documenting key ideas.
+
+<a id="latest-committed-memory-segment-144-node-571"></a>
+
+- **571** · clip 49: The participants are deliberating over prioritizing complex agenda topics, specifically regarding event activities.
+
+<a id="latest-committed-memory-segment-144-node-578"></a>
+
+- **578** · clip 50: The group is engaged in a collaborative discussion or brainstorming session, referencing survey answers and project concepts.
+
+<a id="latest-committed-memory-segment-144-node-579"></a>
+
+- **579** · clip 50: The blonde woman is explaining a concrete idea or plan regarding purchasing flowers and distributing vases over a weekly cycle.
+
+<a id="latest-committed-memory-segment-144-node-580"></a>
+
+- **580** · clip 50: The clapperboard and camera setup indicate that this meeting or workshop is being recorded as part of a structured filming session.
+
+<a id="latest-committed-memory-segment-144-node-592"></a>
+
+- **592** · clip 51: The team is holding a brainstorming session to plan creative activities and merchandise involving pressed flower crafts.
+
+<a id="latest-committed-memory-segment-144-node-593"></a>
+
+- **593** · clip 51: Speaker &lt;voice_416&gt; suggests turning carefully nurtured flowers into eco-friendly pressed flower postcards and acrylic crafts as keepsakes.  **Links:** ↔ [416](#latest-committed-memory-segment-144-node-416)
+
+<a id="latest-committed-memory-segment-144-node-594"></a>
+
+- **594** · clip 51: The camera wearer steps away from the meeting to fetch materials or check packages stored in the hallway.
+
+<a id="latest-committed-memory-segment-144-node-604"></a>
+
+- **604** · clip 52: The package contains fresh cut flowers (peonies) ordered as props or materials for an ongoing video shoot.
+
+<a id="latest-committed-memory-segment-144-node-605"></a>
+
+- **605** · clip 52: &lt;voice_595&gt; is the person who purchased the fresh flowers shipped by express delivery from Yunnan.  **Links:** ↔ [595](#latest-committed-memory-segment-144-node-595)
+
+<a id="latest-committed-memory-segment-144-node-612"></a>
+
+- **612** · clip 53: The group is preparing and rehearsing for a video shoot, evident from the clapperboard, lighting equipment, and script/notes on the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-613"></a>
+
+- **613** · clip 53: &lt;voice_0&gt; acts in a directorial or supervisory capacity, guiding the rehearsal flow and praising the participant.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-620"></a>
+
+- **620** · clip 54: The room is being used as a film or video production set, evidenced by the clapperboard and studio lighting.
+
+<a id="latest-committed-memory-segment-144-node-621"></a>
+
+- **621** · clip 54: The team is unpacking and inspecting props or set pieces for an upcoming shoot.
+
+<a id="latest-committed-memory-segment-144-node-631"></a>
+
+- **631** · clip 55: The group is preparing floral props and materials, including flower pressers and desiccants, likely for an art project or video shoot.
+
+<a id="latest-committed-memory-segment-144-node-632"></a>
+
+- **632** · clip 55: &lt;voice_622&gt; is explaining the purchased floral preservation items to the others at the table.  **Links:** ↔ [622](#latest-committed-memory-segment-144-node-622)
+
+<a id="latest-committed-memory-segment-144-node-633"></a>
+
+- **633** · clip 55: The camera wearer steps away from the group to check information on the phone and close the door.
+
+<a id="latest-committed-memory-segment-144-node-640"></a>
+
+- **640** · clip 56: The camera wearer was setting up or calibrating a surveillance/recording device before observing the room.
+
+<a id="latest-committed-memory-segment-144-node-641"></a>
+
+- **641** · clip 56: The individuals at the table are engaged in a floral craft or flower-pressing activity, discussing botanical species and preparation times.
+
+<a id="latest-committed-memory-segment-144-node-652"></a>
+
+- **652** · clip 57: The group is preparing flowers and bouquets, possibly as props or gifts for a video shoot, as indicated by the clapperboard resting on the table.
+
+<a id="latest-committed-memory-segment-144-node-653"></a>
+
+- **653** · clip 57: &lt;voice_0&gt; is addressing a group member named Tasha (塔莎).  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-654"></a>
+
+- **654** · clip 57: &lt;voice_643&gt; is Tasha, responding directly to &lt;voice_0&gt;'s inquiry about which flowers or items belong to her.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [643](#latest-committed-memory-segment-144-node-643)
+
+<a id="latest-committed-memory-segment-144-node-665"></a>
+
+- **665** · clip 58: &lt;voice_0&gt; is the camera wearer (Jake), who enters to check on the film crew's preparation.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) (weight 3.0)
+
+<a id="latest-committed-memory-segment-144-node-666"></a>
+
+- **666** · clip 58: The group is preparing props and equipment for an upcoming video shoot.
+
+<a id="latest-committed-memory-segment-144-node-674"></a>
+
+- **674** · clip 59: The group is organizing an artistic or filming activity focused on flower pressing.
+
+<a id="latest-committed-memory-segment-144-node-675"></a>
+
+- **675** · clip 59: &lt;voice_0&gt; is the camera operator (Jake) seeking clarification on how the scene or activity will unfold.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-676"></a>
+
+- **676** · clip 59: &lt;voice_667&gt; serves as the instructor or organizer guiding the group through the craft steps.  **Links:** ↔ [667](#latest-committed-memory-segment-144-node-667)
+
+<a id="latest-committed-memory-segment-144-node-684"></a>
+
+- **684** · clip 60: The group is planning an interactive craft or workshop session involving pressed flowers, greeting cards, and acrylic frames.
+
+<a id="latest-committed-memory-segment-144-node-685"></a>
+
+- **685** · clip 60: The person speaking (&lt;voice_667&gt; / &lt;voice_430&gt;) is taking the lead in organizing or proposing event ideas.  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430) · ↔ [667](#latest-committed-memory-segment-144-node-667)
+
+<a id="latest-committed-memory-segment-144-node-686"></a>
+
+- **686** · clip 60: The man entering the room is another member of the project or household joining the gathering.
+
+<a id="latest-committed-memory-segment-144-node-697"></a>
+
+- **697** · clip 61: The individuals form a video production crew preparing props and coordinating logistics for an upcoming film shoot.
+
+<a id="latest-committed-memory-segment-144-node-698"></a>
+
+- **698** · clip 61: The presence of lighting stands, a clapperboard, and a whiteboard indicates an active set preparation environment.
+
+<a id="latest-committed-memory-segment-144-node-708"></a>
+
+- **708** · clip 62: The individuals are holding a creative planning or proposal meeting centered on DIY activities for Earth Day.
+
+<a id="latest-committed-memory-segment-144-node-709"></a>
+
+- **709** · clip 62: &lt;voice_311&gt; is presenting her proposal to craft eco-friendly jellyfish lamps instead of buying commercial kits.  **Links:** ↔ [311](#latest-committed-memory-segment-144-node-311)
+
+<a id="latest-committed-memory-segment-144-node-710"></a>
+
+- **710** · clip 62: &lt;voice_699&gt; and &lt;voice_700&gt; act as moderators or coordinators managing the order of presentations in the meeting.  **Links:** ↔ [699](#latest-committed-memory-segment-144-node-699) · ↔ [700](#latest-committed-memory-segment-144-node-700)
+
+<a id="latest-committed-memory-segment-144-node-716"></a>
+
+- **716** · clip 63: &lt;voice_311&gt; is the young woman seated on the right side of the table, gesturing expressively with her hands as she speaks.  **Links:** ↔ [311](#latest-committed-memory-segment-144-node-311)
+
+<a id="latest-committed-memory-segment-144-node-717"></a>
+
+- **717** · clip 63: The group is engaged in a creative brainstorming or workshop planning session, focusing on low-carbon and recycled craft ideas.
+
+<a id="latest-committed-memory-segment-144-node-729"></a>
+
+- **729** · clip 64: The setting is a film or video production environment, as evidenced by the clapperboard and setup.
+
+<a id="latest-committed-memory-segment-144-node-730"></a>
+
+- **730** · clip 64: The woman in the blue dress is proposing and explaining a DIY cardboard dog craft idea to the group.
+
+<a id="latest-committed-memory-segment-144-node-731"></a>
+
+- **731** · clip 64: The atmosphere is collaborative and casual as the group discusses props or creative concepts.
+
+<a id="latest-committed-memory-segment-144-node-740"></a>
+
+- **740** · clip 65: &lt;voice_311&gt; and &lt;voice_732&gt; belong to the same person, who is actively leading the discussion and proposing ideas for the project.  **Links:** ↔ [311](#latest-committed-memory-segment-144-node-311) · ↔ [732](#latest-committed-memory-segment-144-node-732)
+
+<a id="latest-committed-memory-segment-144-node-741"></a>
+
+- **741** · clip 65: The group is conducting a pre-production brainstorming and planning session for an independent film or video shoot.
+
+<a id="latest-committed-memory-segment-144-node-752"></a>
+
+- **752** · clip 66: The group is collaborating on a film or video production project and facing tight time constraints.
+
+<a id="latest-committed-memory-segment-144-node-753"></a>
+
+- **753** · clip 66: They are considering adapting an existing script or short video concept rather than writing an original one from scratch.
+
+<a id="latest-committed-memory-segment-144-node-754"></a>
+
+- **754** · clip 66: The participants are dividing roles and referencing specific individuals, such as Lucia, for their shoot.
+
+<a id="latest-committed-memory-segment-144-node-774"></a>
+
+- **774** · clip 67: The group appears to be a film or video production crew preparing for a scene, indicated by the clapperboard, lighting equipment, and discussion of props and boards.
+
+<a id="latest-committed-memory-segment-144-node-775"></a>
+
+- **775** · clip 67: The atmosphere among the team members is casual, lighthearted, and collaborative as they joke and laugh together during preparation.
+
+<a id="latest-committed-memory-segment-144-node-788"></a>
+
+- **788** · clip 68: The group is preparing for a video shoot, evidenced by the studio lighting, clapperboard, and call for props and background music.
+
+<a id="latest-committed-memory-segment-144-node-789"></a>
+
+- **789** · clip 68: The camera wearer was tasked with fetching the required filming props from the bedroom suitcase.
+
+<a id="latest-committed-memory-segment-144-node-790"></a>
+
+- **790** · clip 68: The woman seated at the table (&lt;voice_500&gt;) is actively coordinating and checking the props needed for the production.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
+
+<a id="latest-committed-memory-segment-144-node-796"></a>
+
+- **796** · clip 69: &lt;voice_352&gt; refers to an ongoing order or delivery that the characters are awaiting.  **Links:** ↔ [352](#latest-committed-memory-segment-144-node-352)
+
+<a id="latest-committed-memory-segment-144-node-797"></a>
+
+- **797** · clip 69: The camera wearer uses their phone to check the status or details of the mentioned purchase.
+
+<a id="latest-committed-memory-segment-144-node-806"></a>
+
+- **806** · clip 70: The person holding the phone is browsing photos or social media involving the individuals present.
+
+<a id="latest-committed-memory-segment-144-node-807"></a>
+
+- **807** · clip 70: &lt;voice_798&gt; and &lt;voice_799&gt; are looking at or discussing the photos displayed on the device.  **Links:** ↔ [798](#latest-committed-memory-segment-144-node-798) · ↔ [799](#latest-committed-memory-segment-144-node-799)
+
+<a id="latest-committed-memory-segment-144-node-816"></a>
+
+- **816** · clip 71: The scene depicts a film or video production crew preparing on set, as evidenced by the clapperboard labeled with production details, camera accessories, and staff preparing props.
+
+<a id="latest-committed-memory-segment-144-node-817"></a>
+
+- **817** · clip 71: The camera wearer is taking a break or waiting between production activities, remaining engrossed in their mobile phone while others manage equipment and props around the room.
+
+<a id="latest-committed-memory-segment-144-node-823"></a>
+
+- **823** · clip 72: The people present are participating in a film or video production setup.
+
+<a id="latest-committed-memory-segment-144-node-824"></a>
+
+- **824** · clip 72: &lt;voice_818&gt; belongs to the woman sitting on the right discussing props or flowers.  **Links:** ↔ [818](#latest-committed-memory-segment-144-node-818)
+
+<a id="latest-committed-memory-segment-144-node-837"></a>
+
+- **837** · clip 73: The people gathered in the room are preparing for a project or event, as evidenced by the clapperboard, floral arrangements, and handwritten cards.
+
+<a id="latest-committed-memory-segment-144-node-838"></a>
+
+- **838** · clip 73: The card handed to Jake is likely a greeting or congratulatory card prepared for the occasion.
+
+<a id="latest-committed-memory-segment-144-node-839"></a>
+
+- **839** · clip 73: The remark by &lt;voice_0&gt; ('被嫌弃了') is made in a lighthearted, playful manner in response to Jake's reaction upon receiving the card.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-849"></a>
+
+- **849** · clip 74: The participants are engaged in a creative or eco-friendly workshop involving handmade crafts, flowers, and recycled paper goods.
+
+<a id="latest-committed-memory-segment-144-node-850"></a>
+
+- **850** · clip 74: &lt;voice_500&gt; is demonstrating and explaining the design concept and environmental features of their DIY seed paper.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
+
+<a id="latest-committed-memory-segment-144-node-851"></a>
+
+- **851** · clip 74: The woman seated in black is an active participant, showing curiosity and interest in the handmade craft items.
+
+<a id="latest-committed-memory-segment-144-node-860"></a>
+
+- **860** · clip 75: The group is engaged in an artistic, promotional, or film production project, as shown by the 'Egolife' slate clapperboard and handmade cards.
+
+<a id="latest-committed-memory-segment-144-node-861"></a>
+
+- **861** · clip 75: The speaker (&lt;voice_500&gt;) designed original plant/Earth-themed educational or commemorative cards for the project.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
+
+<a id="latest-committed-memory-segment-144-node-862"></a>
+
+- **862** · clip 75: The other participants actively listen, encourage, and praise the speaker's original craftwork.
+
+<a id="latest-committed-memory-segment-144-node-877"></a>
+
+- **877** · clip 76: The group is engaged in a creative discussion or production planning session involving eco-friendly materials such as plantable seed paper.
+
+<a id="latest-committed-memory-segment-144-node-878"></a>
+
+- **878** · clip 76: The participants share a collaborative and casual working relationship, discussing design aesthetics and logo placements for their project.
+
+<a id="latest-committed-memory-segment-144-node-885"></a>
+
+- **885** · clip 77: The group is gathered in a creative or production meeting, as suggested by the presence of a film clapperboard, whiteboard, and casual setting.
+
+<a id="latest-committed-memory-segment-144-node-886"></a>
+
+- **886** · clip 77: The speaker in white bought a challenging animal puzzle as a group activity or gift and is sharing details about it.
+
+<a id="latest-committed-memory-segment-144-node-896"></a>
+
+- **896** · clip 78: The gathering appears to be a creative production or concept discussion meeting, indicated by the clapperboard, whiteboard notes, and presentation materials.
+
+<a id="latest-committed-memory-segment-144-node-897"></a>
+
+- **897** · clip 78: The standing woman (&lt;voice_165&gt;) is pitching or explaining a game or design concept to the team.  **Links:** ↔ [165](#latest-committed-memory-segment-144-node-165)
+
+<a id="latest-committed-memory-segment-144-node-898"></a>
+
+- **898** · clip 78: &lt;voice_113&gt; alerts the standing woman that her hair is out of place, leading her to touch and fix it.  **Links:** ↔ [113](#latest-committed-memory-segment-144-node-113)
+
+<a id="latest-committed-memory-segment-144-node-908"></a>
+
+- **908** · clip 79: The gathering is a collaborative project or production planning meeting, indicated by the clapperboard, flowers, and whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-909"></a>
+
+- **909** · clip 79: &lt;voice_165&gt; is presenting a creative proposal regarding participant rewards, providing thoughtful and relatable reasoning to persuade the group.  **Links:** ↔ [165](#latest-committed-memory-segment-144-node-165)
+
+<a id="latest-committed-memory-segment-144-node-910"></a>
+
+- **910** · clip 79: The attendees are focused and receptive to the ideas being discussed during the meeting.
+
+<a id="latest-committed-memory-segment-144-node-922"></a>
+
+- **922** · clip 80: The group is engaged in a planning or review discussion centered around plants and potted gardening.
+
+<a id="latest-committed-memory-segment-144-node-923"></a>
+
+- **923** · clip 80: The woman standing in the white shirt acts as a leader or speaker sharing recommendations with the seated participants.
+
+<a id="latest-committed-memory-segment-144-node-936"></a>
+
+- **936** · clip 81: The group is engaged in a casual creative meeting or workshop involving floral arrangement and prop preparation.
+
+<a id="latest-committed-memory-segment-144-node-937"></a>
+
+- **937** · clip 81: The conversation focuses on dining at Haidilao and its promotional collaboration involving potted plants and merchandise.
+
+<a id="latest-committed-memory-segment-144-node-945"></a>
+
+- **945** · clip 82: The attendees are participating in a casual brainstorming or production planning session.
+
+<a id="latest-committed-memory-segment-144-node-946"></a>
+
+- **946** · clip 82: &lt;voice_467&gt; takes the lead in sharing creative ideas for an event or project.  **Links:** ↔ [467](#latest-committed-memory-segment-144-node-467)
+
+<a id="latest-committed-memory-segment-144-node-947"></a>
+
+- **947** · clip 82: The group maintains a comfortable, engaged, and cooperative atmosphere.
+
+<a id="latest-committed-memory-segment-144-node-961"></a>
+
+- **961** · clip 83: The gathering appears to be a film production or workshop setting involving props and flower arrangement.
+
+<a id="latest-committed-memory-segment-144-node-962"></a>
+
+- **962** · clip 83: &lt;voice_865&gt; corresponds to the woman seated on the left confirming instructions about the items on the table.  **Links:** ↔ [865](#latest-committed-memory-segment-144-node-865)
+
+<a id="latest-committed-memory-segment-144-node-963"></a>
+
+- **963** · clip 83: The participants share a casual, collaborative working relationship.
+
+<a id="latest-committed-memory-segment-144-node-976"></a>
+
+- **976** · clip 84: The group is brainstorming or rehearsing a creative game or workshop format involving storytelling and bidding.
+
+<a id="latest-committed-memory-segment-144-node-977"></a>
+
+- **977** · clip 84: The adjacent bedroom functions as a control room or technical workstation with multiple live monitors and laptops.
+
+<a id="latest-committed-memory-segment-144-node-978"></a>
+
+- **978** · clip 84: The participants share a comfortable, humorous, and collaborative working dynamic.
+
+<a id="latest-committed-memory-segment-144-node-990"></a>
+
+- **990** · clip 85: The participants are engaged in a pre-production meeting or rehearsal, discussing rules and activities for an upcoming filming segment of 'Egolife'.
+
+<a id="latest-committed-memory-segment-144-node-991"></a>
+
+- **991** · clip 85: The planned segment combines personal storytelling with an internal economy and secondhand auction system to create engaging interaction among guests.
+
+<a id="latest-committed-memory-segment-144-node-992"></a>
+
+- **992** · clip 85: The woman in black sitting in the foreground shares a relaxed and friendly rapport with the speaker, chiming in humorously to reference a well-known story or cultural trope.
+
+<a id="latest-committed-memory-segment-144-node-1000"></a>
+
+- **1000** · clip 86: The participants are planning or brainstorming an interactive event involving secondhand item exchanges, auctions, and storytelling connected to environmental concepts.
+
+<a id="latest-committed-memory-segment-144-node-1001"></a>
+
+- **1001** · clip 86: The woman standing near the whiteboard appears to be facilitating or leading a floral arrangement workshop or related demonstration.
+
+<a id="latest-committed-memory-segment-144-node-1012"></a>
+
+- **1012** · clip 87: The participants are engaged in a structured workshop or game combining flower arrangement with an internal trading/auction system.
+
+<a id="latest-committed-memory-segment-144-node-1013"></a>
+
+- **1013** · clip 87: The group maintains a collaborative and friendly atmosphere as they clarify activity guidelines.
+
+<a id="latest-committed-memory-segment-144-node-1026"></a>
+
+- **1026** · clip 88: The participants are planning an event or activity involving handmade crafts and an auction system.
+
+<a id="latest-committed-memory-segment-144-node-1027"></a>
+
+- **1027** · clip 88: The woman seated on the left in black proposes or shows her folded craft box as an item intended to be auctioned.
+
+<a id="latest-committed-memory-segment-144-node-1028"></a>
+
+- **1028** · clip 88: The group collaborates on defining roles and procedures, such as inviting attendees and preparing products for the event.
+
+<a id="latest-committed-memory-segment-144-node-1036"></a>
+
+- **1036** · clip 89: The group is actively brainstorming hospitality and beverage plans for an event or shoot.
+
+<a id="latest-committed-memory-segment-144-node-1037"></a>
+
+- **1037** · clip 89: The combination of a clapperboard and floral materials suggests production planning or workshop preparation.
+
+<a id="latest-committed-memory-segment-144-node-1047"></a>
+
+- **1047** · clip 90: The participants are collaboratively organizing an afternoon event involving market stalls, drinks, and performances.
+
+<a id="latest-committed-memory-segment-144-node-1048"></a>
+
+- **1048** · clip 90: The informal setting and natural dialogue indicate a brainstorming and logistics meeting among teammates.
+
+<a id="latest-committed-memory-segment-144-node-1057"></a>
+
+- **1057** · clip 91: The participants are coordinating an event or video production schedule, handling both timeline planning and floral prop arrangements.
+
+<a id="latest-committed-memory-segment-144-node-1058"></a>
+
+- **1058** · clip 91: &lt;voice_0&gt; and &lt;voice_1029&gt; reach a consensus on catering logistics, opting for an afternoon tea format rather than a full meal to simplify arrangements.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [1029](#latest-committed-memory-segment-144-node-1029)
+
+<a id="latest-committed-memory-segment-144-node-1067"></a>
+
+- **1067** · clip 92: The individuals form a creative team or production crew preparing props and discussing their daily schedule.
+
+<a id="latest-committed-memory-segment-144-node-1068"></a>
+
+- **1068** · clip 92: &lt;voice_1059&gt; and &lt;voice_1060&gt; discuss weather conditions and the possibility of staying outside in the courtyard into the evening.  **Links:** ↔ [1059](#latest-committed-memory-segment-144-node-1059) · ↔ [1060](#latest-committed-memory-segment-144-node-1060)
+
+<a id="latest-committed-memory-segment-144-node-1069"></a>
+
+- **1069** · clip 92: &lt;voice_0&gt; suggests using the courtyard for a barbecue if the weather remains favorable.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1080"></a>
+
+- **1080** · clip 93: The group is organizing and delegating tasks for an upcoming meal or barbecue, as indicated by the discussion about charcoal and knife preparation skills.
+
+<a id="latest-committed-memory-segment-144-node-1081"></a>
+
+- **1081** · clip 93: The woman sitting in black is acting in an organizing role, checking on the cooking abilities of the members to divide responsibilities.
+
+<a id="latest-committed-memory-segment-144-node-1095"></a>
+
+- **1095** · clip 94: The group is planning and coordinating tasks for an upcoming meal or gathering, focusing on food prep and beverage arrangements.
+
+<a id="latest-committed-memory-segment-144-node-1096"></a>
+
+- **1096** · clip 94: The presence of a film clapperboard on the dining table indicates that the gathering is associated with a film production or video shooting project.
+
+<a id="latest-committed-memory-segment-144-node-1097"></a>
+
+- **1097** · clip 94: The casual, cooperative discussion reflects a familiar and comfortable working or personal relationship among the individuals.
+
+<a id="latest-committed-memory-segment-144-node-1111"></a>
+
+- **1111** · clip 95: The individuals are part of a film or video production team, as evidenced by the clapperboard on the table labeled for the project 'Egolife'.
+
+<a id="latest-committed-memory-segment-144-node-1112"></a>
+
+- **1112** · clip 95: The group is brainstorming cost-effective and practical ways to create clear ice as a prop for their shoot.
+
+<a id="latest-committed-memory-segment-144-node-1113"></a>
+
+- **1113** · clip 95: The atmosphere is collaborative and casual, with team members troubleshooting prop creation while someone questions the absurdity or direction of the task.
+
+<a id="latest-committed-memory-segment-144-node-1122"></a>
+
+- **1122** · clip 96: The group is discussing and organizing an event schedule or workflow.
+
+<a id="latest-committed-memory-segment-144-node-1123"></a>
+
+- **1123** · clip 96: The person speaking with voice &lt;voice_1029&gt; is pointing at the whiteboard while explaining event logistics, indicating they are in a coordinating or leading role.  **Links:** ↔ [1029](#latest-committed-memory-segment-144-node-1029)
+
+<a id="latest-committed-memory-segment-144-node-1124"></a>
+
+- **1124** · clip 96: The person recording sets aside their phone and slate to focus on the conversation.
+
+<a id="latest-committed-memory-segment-144-node-1131"></a>
+
+- **1131** · clip 97: The group is actively planning and delegating roles for a video shoot or stage performance, specifically debating who should participate in a dance segment.
+
+<a id="latest-committed-memory-segment-144-node-1132"></a>
+
+- **1132** · clip 97: The man in the orange shirt and the camera wearer are suggesting participants, while the seated woman in black clarifies whether she is expected to dance solo.
+
+<a id="latest-committed-memory-segment-144-node-1138"></a>
+
+- **1138** · clip 98: The scene depicts a film crew or cast gathering for a production meeting or rehearsal, indicated by the clapperboard and studio equipment.
+
+<a id="latest-committed-memory-segment-144-node-1152"></a>
+
+- **1152** · clip 99: The group is brainstorming ideas for an upcoming performance or video shoot.
+
+<a id="latest-committed-memory-segment-144-node-1153"></a>
+
+- **1153** · clip 99: &lt;voice_1140&gt; is spoken by the woman seated in the black top on the left, who is wearing glasses.  **Links:** ↔ [1140](#latest-committed-memory-segment-144-node-1140)
+
+<a id="latest-committed-memory-segment-144-node-1154"></a>
+
+- **1154** · clip 99: &lt;voice_332&gt; belongs to the woman seated on the right in the green dress, who demonstrates the hand dance routine.  **Links:** ↔ [332](#latest-committed-memory-segment-144-node-332)
+
+<a id="latest-committed-memory-segment-144-node-1166"></a>
+
+- **1166** · clip 100: The participants are engaged in a creative or film pre-production meeting, discussing shooting schedules, props, and Douyin choreography.
+
+<a id="latest-committed-memory-segment-144-node-1167"></a>
+
+- **1167** · clip 100: The woman seated in dark clothes actively contributes to budget and prop decisions, advocating for buying physical items rather than virtual goods.
+
+<a id="latest-committed-memory-segment-144-node-1168"></a>
+
+- **1168** · clip 100: The group maintains a casual, collaborative, and cheerful working atmosphere.
+
+<a id="latest-committed-memory-segment-144-node-1175"></a>
+
+- **1175** · clip 101: The presence of a clapperboard, studio lighting equipment, and scheduling discussions indicates the group is a film or video production crew coordinating a shoot.
+
+<a id="latest-committed-memory-segment-144-node-1176"></a>
+
+- **1176** · clip 101: &lt;voice_0&gt; is discussing time management and estimated duration for the team's upcoming task or shoot.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1182"></a>
+
+- **1182** · clip 102: The group is in the pre-production or planning stage of an activity or filming session involving an auction mechanism.
+
+<a id="latest-committed-memory-segment-144-node-1183"></a>
+
+- **1183** · clip 102: The speaker is proposing procedural adjustments to keep the event within a manageable timeframe while preserving the core auction concept.
+
+<a id="latest-committed-memory-segment-144-node-1193"></a>
+
+- **1193** · clip 103: The group is engaged in a planning session or production meeting, coordinating activities and game rules for an upcoming event.
+
+<a id="latest-committed-memory-segment-144-node-1194"></a>
+
+- **1194** · clip 103: The discussion involves time management and interactive engagement strategies like dice games and an auction.
+
+<a id="latest-committed-memory-segment-144-node-1204"></a>
+
+- **1204** · clip 104: The group is engaged in a discussion or brainstorming session regarding the rules and mechanics of an interactive activity or game involving tasks, tokens, and storytelling.
+
+<a id="latest-committed-memory-segment-144-node-1205"></a>
+
+- **1205** · clip 104: The atmosphere is collaborative and casual, with participants freely pitching ideas for user interaction and reward systems.
+
+<a id="latest-committed-memory-segment-144-node-1220"></a>
+
+- **1220** · clip 105: The group is planning and organizing an upcoming social event, workshop, or party, brainstorming icebreaker games for guests.
+
+<a id="latest-committed-memory-segment-144-node-1221"></a>
+
+- **1221** · clip 105: They are mindful of social dynamics, rejecting high-pressure activities like public storytelling in favor of lower-pressure games such as rewarded self-introductions and a coin treasure hunt.
+
+<a id="latest-committed-memory-segment-144-node-1222"></a>
+
+- **1222** · clip 105: The venue is functioning as a creative workshop and meeting space, combining floral preparations with event activity coordination.
+
+<a id="latest-committed-memory-segment-144-node-1239"></a>
+
+- **1239** · clip 106: The group is collaborating to organize an interactive promotional event for Earth Day.
+
+<a id="latest-committed-memory-segment-144-node-1240"></a>
+
+- **1240** · clip 106: The planned event features gamified engagement, including self-introductions and trivia quizzes to win tokens, followed by product sales.
+
+<a id="latest-committed-memory-segment-144-node-1241"></a>
+
+- **1241** · clip 106: The event is specifically scheduled for Sunday, April 21st to align with the weekend of Earth Day.
+
+<a id="latest-committed-memory-segment-144-node-1254"></a>
+
+- **1254** · clip 107: The individuals are preparing for an event or outdoor activity while setting up a video or film shoot.
+
+<a id="latest-committed-memory-segment-144-node-1255"></a>
+
+- **1255** · clip 107: The group shares a comfortable, informal dynamic as they coordinate equipment, props, and personal items.
+
+<a id="latest-committed-memory-segment-144-node-1264"></a>
+
+- **1264** · clip 108: The group is preparing or setting up props for a film or video production, as evidenced by the clapperboard, lighting softboxes, and flowers.
+
+<a id="latest-committed-memory-segment-144-node-1265"></a>
+
+- **1265** · clip 108: The flower vase was relocated to the kitchen counter to prevent it from obstructing the workspace or scene.
+
+<a id="latest-committed-memory-segment-144-node-1275"></a>
+
+- **1275** · clip 109: The group appears to be a film or video production team holding a production meeting or script/timeline discussion.
+
+<a id="latest-committed-memory-segment-144-node-1276"></a>
+
+- **1276** · clip 109: &lt;voice_1266&gt; is spoken by the young man wearing the orange t-shirt who suggests writing an international/English version.  **Links:** ↔ [1266](#latest-committed-memory-segment-144-node-1266)
+
+<a id="latest-committed-memory-segment-144-node-1277"></a>
+
+- **1277** · clip 109: &lt;voice_0&gt; corresponds to the person off-camera on the right who extends their hand with the marker to work on the timeline.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1287"></a>
+
+- **1287** · clip 110: The group appears to be a film or video production team holding a pre-production or production meeting to coordinate their schedule and timeline.
+
+<a id="latest-committed-memory-segment-144-node-1288"></a>
+
+- **1288** · clip 110: The young man in the orange shirt is leading the planning discussion and organizing the schedule on the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1289"></a>
+
+- **1289** · clip 110: &lt;voice_330&gt; and &lt;voice_0&gt; belong to the same speaker who questions the phrasing written on the whiteboard.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [330](#latest-committed-memory-segment-144-node-330)
+
+<a id="latest-committed-memory-segment-144-node-1298"></a>
+
+- **1298** · clip 111: The participants appear to be a creative or film production crew conducting a pre-shoot scheduling or event planning meeting.
+
+<a id="latest-committed-memory-segment-144-node-1299"></a>
+
+- **1299** · clip 111: The discussion focuses on event logistics and participant arrival arrangements.
+
+<a id="latest-committed-memory-segment-144-node-1307"></a>
+
+- **1307** · clip 112: The individuals appear to be a film or video production crew holding a production meeting or scene briefing.
+
+<a id="latest-committed-memory-segment-144-node-1308"></a>
+
+- **1308** · clip 112: The person at the whiteboard is leading the discussion, likely outlining a schedule or storyboard.
+
+<a id="latest-committed-memory-segment-144-node-1315"></a>
+
+- **1315** · clip 113: The group is coordinating schedules and logistics for a video or film shoot, evidenced by the clapperboard, studio light, and whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1316"></a>
+
+- **1316** · clip 113: &lt;voice_0&gt; (MAI) is an active participant in the planning session, discussing the timing of events.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1331"></a>
+
+- **1331** · clip 114: The group is a creative or student film crew conducting a pre-production planning meeting.
+
+<a id="latest-committed-memory-segment-144-node-1332"></a>
+
+- **1332** · clip 114: The members are coordinating an event or film sequence involving schedules, role assignments, and simulated currency mechanics.
+
+<a id="latest-committed-memory-segment-144-node-1333"></a>
+
+- **1333** · clip 114: The camera wearer disengages from the table discussion to walk around and monitor or check on the room.
+
+<a id="latest-committed-memory-segment-144-node-1344"></a>
+
+- **1344** · clip 115: The group around the table is conducting a planning session or meeting regarding an event schedule and Q&amp;A format.
+
+<a id="latest-committed-memory-segment-144-node-1345"></a>
+
+- **1345** · clip 115: The camera wearer is moving through the production and living quarters to check on the team and spaces.
+
+<a id="latest-committed-memory-segment-144-node-1355"></a>
+
+- **1355** · clip 116: The camera wearer (Jake) is &lt;voice_0&gt;, speaking in first person as he hands out charging cables to the group.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1356"></a>
+
+- **1356** · clip 116: The group at the table is engaged in a meeting or production planning session, using a whiteboard and props.
+
+<a id="latest-committed-memory-segment-144-node-1367"></a>
+
+- **1367** · clip 117: &lt;voice_1358&gt; is one of the team members seated at the table who owns the power bank.  **Links:** ↔ [1358](#latest-committed-memory-segment-144-node-1358)
+
+<a id="latest-committed-memory-segment-144-node-1368"></a>
+
+- **1368** · clip 117: The group in the room is actively collaborating and preparing for an event or production shoot involving floral and recording equipment.
+
+<a id="latest-committed-memory-segment-144-node-1379"></a>
+
+- **1379** · clip 118: The people gathered around the dining table are conducting a workshop or meeting involving flower arrangement and brainstorming on a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1380"></a>
+
+- **1380** · clip 118: The camera wearer is assisting with technical setup, retrieving cables and an electronic device to connect or power equipment in the adjacent bedroom.
+
+<a id="latest-committed-memory-segment-144-node-1393"></a>
+
+- **1393** · clip 119: The group is holding a production or pre-shoot planning meeting, coordinating shoot schedules, guest segments, and equipment.
+
+<a id="latest-committed-memory-segment-144-node-1394"></a>
+
+- **1394** · clip 119: The camera wearer is assisting with technical setup or equipment management before joining the team discussion.
+
+<a id="latest-committed-memory-segment-144-node-1407"></a>
+
+- **1407** · clip 120: The group is holding a production or event planning meeting to finalize schedules and activities.
+
+<a id="latest-committed-memory-segment-144-node-1408"></a>
+
+- **1408** · clip 120: Jake is managing electronic devices or power accessories while the meeting proceeds.
+
+<a id="latest-committed-memory-segment-144-node-1417"></a>
+
+- **1417** · clip 121: Jake is performing technical checks and handling equipment for an ongoing production or event setup.
+
+<a id="latest-committed-memory-segment-144-node-1418"></a>
+
+- **1418** · clip 121: &lt;voice_1409&gt; and &lt;voice_1410&gt; are discussing the rules and setup of an interactive activity designed like a small marketplace with specialized currency.  **Links:** ↔ [1409](#latest-committed-memory-segment-144-node-1409) · ↔ [1410](#latest-committed-memory-segment-144-node-1410)
+
+<a id="latest-committed-memory-segment-144-node-1419"></a>
+
+- **1419** · clip 121: The bedroom is functioning as a temporary monitoring or technical workstation, as indicated by the cluster of laptops, displays, and gear.
+
+<a id="latest-committed-memory-segment-144-node-1428"></a>
+
+- **1428** · clip 122: The group is conducting a pre-production or event planning meeting, evidenced by filming equipment, a clapperboard, and schedule discussions.
+
+<a id="latest-committed-memory-segment-144-node-1429"></a>
+
+- **1429** · clip 122: Jake acts as a crew member preparing equipment and coordinating with the team.
+
+<a id="latest-committed-memory-segment-144-node-1444"></a>
+
+- **1444** · clip 123: The people gathered in the room are planning and preparing for a video or film production, discussing scene blocking, bartender placement, and lighting equipment.
+
+<a id="latest-committed-memory-segment-144-node-1445"></a>
+
+- **1445** · clip 123: The group considers using the kitchen window counter as a bar station connecting the interior space with the outdoor patio.
+
+<a id="latest-committed-memory-segment-144-node-1446"></a>
+
+- **1446** · clip 123: The camera wearer serves as part of the production crew, having handled the clapperboard and subsequently setting up a laptop at the table for work.
+
+<a id="latest-committed-memory-segment-144-node-1461"></a>
+
+- **1461** · clip 124: The group is holding an organizational meeting to coordinate an upcoming event schedule and assign tasks.
+
+<a id="latest-committed-memory-segment-144-node-1462"></a>
+
+- **1462** · clip 124: The group members are actively discussing the timeline for afternoon tea to ensure it integrates smoothly into their workflow.
+
+<a id="latest-committed-memory-segment-144-node-1463"></a>
+
+- **1463** · clip 124: The person operating the laptop is reviewing or updating schedules and notes during the group discussion.
+
+<a id="latest-committed-memory-segment-144-node-1474"></a>
+
+- **1474** · clip 125: The group is coordinating and finalizing the schedule and operational details for an upcoming afternoon presentation or event.
+
+<a id="latest-committed-memory-segment-144-node-1475"></a>
+
+- **1475** · clip 125: The reddish-haired woman appears to be leading or clarifying the agenda, explaining the timing and role of the dessert segment.
+
+<a id="latest-committed-memory-segment-144-node-1476"></a>
+
+- **1476** · clip 125: The conversation reflects a collaborative planning session where team members align on tasks such as setup, sampling, and presentation order.
+
+<a id="latest-committed-memory-segment-144-node-1486"></a>
+
+- **1486** · clip 126: The participants are planning an event budget specifically focused on a dessert station setup.
+
+<a id="latest-committed-memory-segment-144-node-1487"></a>
+
+- **1487** · clip 126: The woman in black is actively managing or preparing the dessert table, clarifying equipment costs and what tools she already owns.
+
+<a id="latest-committed-memory-segment-144-node-1508"></a>
+
+- **1508** · clip 127: The woman in black sitting on the left is sharing references on her phone to plan the room and flower arrangements for future video conferences.
+
+<a id="latest-committed-memory-segment-144-node-1509"></a>
+
+- **1509** · clip 127: The people at the table share a relaxed, informal, and friendly relationship, joking casually about academic meetings.
+
+<a id="latest-committed-memory-segment-144-node-1516"></a>
+
+- **1516** · clip 128: The woman in black is sharing a personal anecdote about dining with a teacher and taking home leftovers.
+
+<a id="latest-committed-memory-segment-144-node-1517"></a>
+
+- **1517** · clip 128: The people gathered around the table are engaged in a casual, friendly conversation.
+
+<a id="latest-committed-memory-segment-144-node-1523"></a>
+
+- **1523** · clip 129: The group is planning a social gathering or meal schedule, discussing whether to host a barbecue for dinner.
+
+<a id="latest-committed-memory-segment-144-node-1524"></a>
+
+- **1524** · clip 129: The speakers are concerned about hospitality logistics, specifically regarding how to feed guests if they stay until evening.
+
+<a id="latest-committed-memory-segment-144-node-1535"></a>
+
+- **1535** · clip 130: The group is organizing a gathering for around twenty people and deciding on food logistics.
+
+<a id="latest-committed-memory-segment-144-node-1536"></a>
+
+- **1536** · clip 130: They conclude that preparing barbecue or full meals for twenty people is too laborious, opting instead for pizza delivery around 5:00 PM.
+
+<a id="latest-committed-memory-segment-144-node-1544"></a>
+
+- **1544** · clip 131: The participants are planning the schedule and format of an upcoming social event.
+
+<a id="latest-committed-memory-segment-144-node-1545"></a>
+
+- **1545** · clip 131: The speaker is reflecting on participant comfort levels, suggesting simpler icebreakers like self-introductions over storytelling.
+
+<a id="latest-committed-memory-segment-144-node-1550"></a>
+
+- **1550** · clip 132: The speaker (&lt;voice_1029&gt;) is coordinating an event schedule, proposing an evening session for personal storytelling when participants are more comfortable and emotionally receptive.  **Links:** ↔ [1029](#latest-committed-memory-segment-144-node-1029)
+
+<a id="latest-committed-memory-segment-144-node-1551"></a>
+
+- **1551** · clip 132: The group is holding a casual planning or workshop meeting.
+
+<a id="latest-committed-memory-segment-144-node-1561"></a>
+
+- **1561** · clip 133: The group is planning a timetable for an upcoming event or party, discussing dinner and drink arrangements.
+
+<a id="latest-committed-memory-segment-144-node-1562"></a>
+
+- **1562** · clip 133: The setting is a shared apartment or living room serving as a collaborative workspace.
+
+<a id="latest-committed-memory-segment-144-node-1573"></a>
+
+- **1573** · clip 134: The group is having a planning meeting or study session while coordinating dinner plans for around 5:30.
+
+<a id="latest-committed-memory-segment-144-node-1574"></a>
+
+- **1574** · clip 134: They are discussing food options including pizza and barbecue.
+
+<a id="latest-committed-memory-segment-144-node-1588"></a>
+
+- **1588** · clip 135: The group is holding a collaborative meeting to organize an upcoming party or social event, detailing the program schedule on the whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1589"></a>
+
+- **1589** · clip 135: They are coordinating food, beverage services, and performance logistics to ensure a well-paced schedule that accommodates attendees' departure times.
+
+<a id="latest-committed-memory-segment-144-node-1601"></a>
+
+- **1601** · clip 136: The group is organizing the schedule for an upcoming event or gathering, balancing work sessions with entertainment.
+
+<a id="latest-committed-memory-segment-144-node-1602"></a>
+
+- **1602** · clip 136: &lt;voice_1578&gt; takes an active coordinating role in outlining the timeline and curating performance segments.  **Links:** ↔ [1578](#latest-committed-memory-segment-144-node-1578)
+
+<a id="latest-committed-memory-segment-144-node-1616"></a>
+
+- **1616** · clip 137: The participants are coordinating an itinerary for an event involving wearable recording devices.
+
+<a id="latest-committed-memory-segment-144-node-1617"></a>
+
+- **1617** · clip 137: &lt;voice_0&gt; is the first-person camera wearer (Jake), responsible for technical data management.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
+
+<a id="latest-committed-memory-segment-144-node-1618"></a>
+
+- **1618** · clip 137: The team is brainstorming low-effort entertainment options for attendees during system downtime.
+
+<a id="latest-committed-memory-segment-144-node-1626"></a>
+
+- **1626** · clip 138: The participants are coordinating the detailed schedule and flow for an upcoming event or workshop, including activity stages, coin rewards, meal breaks, and product presentations.
+
+<a id="latest-committed-memory-segment-144-node-1627"></a>
+
+- **1627** · clip 138: The attendees are considering media coverage or recording logistics, deciding to pause recording during meal breaks like eating pizza.
+
+<a id="latest-committed-memory-segment-144-node-1628"></a>
+
+- **1628** · clip 138: The woman in black seated on the left takes an active role in structuring the agenda, specifically organizing when their product introduction should take place.
+
+<a id="latest-committed-memory-segment-144-node-1639"></a>
+
+- **1639** · clip 139: The group is actively planning an upcoming event or workshop involving presentations and dessert preparation.
+
+<a id="latest-committed-memory-segment-144-node-1640"></a>
+
+- **1640** · clip 139: They are finalizing the schedule and coordinating morning setup logistics requiring teamwork.
+
+<a id="latest-committed-memory-segment-144-node-1651"></a>
+
+- **1651** · clip 140: The individuals are roommates or colleagues staying together in a shared residence, casually conversing about hearing alarms between the first and second floors.
+
+<a id="latest-committed-memory-segment-144-node-1652"></a>
+
+- **1652** · clip 140: The young man gestures upwards to explain that his room is directly aligned vertically with another room above or below.
+
+<a id="latest-committed-memory-segment-144-node-1653"></a>
+
+- **1653** · clip 140: The group transitions from sharing personal anecdotes about alarms to discussing upcoming plans and food arrangements.
+
+<a id="latest-committed-memory-segment-144-node-1665"></a>
+
+- **1665** · clip 141: The group is engaged in planning and brainstorming food or dessert offerings for an event, stall, or activity.
+
+<a id="latest-committed-memory-segment-144-node-1666"></a>
+
+- **1666** · clip 141: They are weighing the convenience and feasibility of desserts that can be pre-made and refrigerated versus assembled on the day.
+
+<a id="latest-committed-memory-segment-144-node-1667"></a>
+
+- **1667** · clip 141: The atmosphere is collaborative and casual as they evaluate practical recipes and ingredient requirements.
+
+<a id="latest-committed-memory-segment-144-node-1678"></a>
+
+- **1678** · clip 142: The group is engaged in a casual meeting or brainstorming session, discussing dessert or sweet soup (tong sui / qingbuliang) preparation ideas.
+
+<a id="latest-committed-memory-segment-144-node-1679"></a>
+
+- **1679** · clip 142: The woman in the black top is proposing a simplified recipe using coconut milk, fruit, and corn rather than making gelatinous or solid desserts.
+
+<a id="latest-committed-memory-segment-144-node-1680"></a>
+
+- **1680** · clip 142: The participants share a relaxed and collaborative relationship, casually offering input on food choices and preparation difficulty.
+
+<a id="latest-committed-memory-segment-144-node-1697"></a>
+
+- **1697** · clip 143: The participants are coordinating an upcoming event that includes an introductory presentation followed by a dessert tasting session.
+
+<a id="latest-committed-memory-segment-144-node-1698"></a>
+
+- **1698** · clip 143: The group aims to streamline preparation by buying pre-made ingredients like taro balls to save cooking time before the scheduled tasting.
+
+<a id="latest-committed-memory-segment-144-node-1710"></a>
+
+- **1710** · clip 144: The individuals are coordinating an experimental recording session or project, referencing schedules, participants ('guest part'), and data transmission from recording glasses.
+
+<a id="latest-committed-memory-segment-144-node-1711"></a>
+
+- **1711** · clip 144: The participants agree to pause recording during dinner to avoid damaging the wearable recording equipment.
+
+<a id="latest-committed-memory-segment-144-node-1712"></a>
+
+- **1712** · clip 144: The group decides to order pizza for dinner rather than cook or have a barbecue.
+
+### Voices
+
+<a id="latest-committed-memory-segment-144-node-0"></a>
+
+<details><summary>voice_0 · 146 speech entries · 98 links</summary>
+
+↔ [4](#latest-committed-memory-segment-144-node-4) · ↔ [7](#latest-committed-memory-segment-144-node-7) · ↔ [10](#latest-committed-memory-segment-144-node-10) · ↔ [17](#latest-committed-memory-segment-144-node-17) · ↔ [19](#latest-committed-memory-segment-144-node-19) · ↔ [29](#latest-committed-memory-segment-144-node-29) · ↔ [57](#latest-committed-memory-segment-144-node-57) · ↔ [60](#latest-committed-memory-segment-144-node-60) · ↔ [66](#latest-committed-memory-segment-144-node-66) · ↔ [67](#latest-committed-memory-segment-144-node-67) · ↔ [70](#latest-committed-memory-segment-144-node-70) · ↔ [75](#latest-committed-memory-segment-144-node-75) · ↔ [76](#latest-committed-memory-segment-144-node-76) · ↔ [78](#latest-committed-memory-segment-144-node-78) · ↔ [82](#latest-committed-memory-segment-144-node-82) · ↔ [83](#latest-committed-memory-segment-144-node-83) · ↔ [84](#latest-committed-memory-segment-144-node-84) · ↔ [85](#latest-committed-memory-segment-144-node-85) · ↔ [86](#latest-committed-memory-segment-144-node-86) (weight 3.0) · ↔ [88](#latest-committed-memory-segment-144-node-88) · ↔ [90](#latest-committed-memory-segment-144-node-90) · ↔ [96](#latest-committed-memory-segment-144-node-96) · ↔ [103](#latest-committed-memory-segment-144-node-103) · ↔ [107](#latest-committed-memory-segment-144-node-107) · ↔ [110](#latest-committed-memory-segment-144-node-110) · ↔ [121](#latest-committed-memory-segment-144-node-121) · ↔ [122](#latest-committed-memory-segment-144-node-122) · ↔ [127](#latest-committed-memory-segment-144-node-127) · ↔ [133](#latest-committed-memory-segment-144-node-133) · ↔ [183](#latest-committed-memory-segment-144-node-183) · ↔ [211](#latest-committed-memory-segment-144-node-211) · ↔ [238](#latest-committed-memory-segment-144-node-238) · ↔ [262](#latest-committed-memory-segment-144-node-262) · ↔ [283](#latest-committed-memory-segment-144-node-283) · ↔ [302](#latest-committed-memory-segment-144-node-302) · ↔ [338](#latest-committed-memory-segment-144-node-338) · ↔ [340](#latest-committed-memory-segment-144-node-340) · ↔ [342](#latest-committed-memory-segment-144-node-342) · ↔ [345](#latest-committed-memory-segment-144-node-345) · ↔ [350](#latest-committed-memory-segment-144-node-350) · ↔ [402](#latest-committed-memory-segment-144-node-402) · ↔ [404](#latest-committed-memory-segment-144-node-404) · ↔ [409](#latest-committed-memory-segment-144-node-409) · ↔ [411](#latest-committed-memory-segment-144-node-411) · ↔ [414](#latest-committed-memory-segment-144-node-414) · ↔ [421](#latest-committed-memory-segment-144-node-421) · ↔ [448](#latest-committed-memory-segment-144-node-448) · ↔ [451](#latest-committed-memory-segment-144-node-451) · ↔ [457](#latest-committed-memory-segment-144-node-457) · ↔ [464](#latest-committed-memory-segment-144-node-464) · ↔ [483](#latest-committed-memory-segment-144-node-483) · ↔ [497](#latest-committed-memory-segment-144-node-497) · ↔ [525](#latest-committed-memory-segment-144-node-525) · ↔ [609](#latest-committed-memory-segment-144-node-609) · ↔ [613](#latest-committed-memory-segment-144-node-613) · ↔ [650](#latest-committed-memory-segment-144-node-650) · ↔ [653](#latest-committed-memory-segment-144-node-653) · ↔ [654](#latest-committed-memory-segment-144-node-654) · ↔ [658](#latest-committed-memory-segment-144-node-658) · ↔ [659](#latest-committed-memory-segment-144-node-659) · ↔ [660](#latest-committed-memory-segment-144-node-660) · ↔ [662](#latest-committed-memory-segment-144-node-662) · ↔ [663](#latest-committed-memory-segment-144-node-663) · ↔ [665](#latest-committed-memory-segment-144-node-665) (weight 3.0) · ↔ [670](#latest-committed-memory-segment-144-node-670) · ↔ [675](#latest-committed-memory-segment-144-node-675) · ↔ [766](#latest-committed-memory-segment-144-node-766) · ↔ [778](#latest-committed-memory-segment-144-node-778) · ↔ [835](#latest-committed-memory-segment-144-node-835) · ↔ [839](#latest-committed-memory-segment-144-node-839) · ↔ [842](#latest-committed-memory-segment-144-node-842) · ↔ [1054](#latest-committed-memory-segment-144-node-1054) · ↔ [1056](#latest-committed-memory-segment-144-node-1056) · ↔ [1058](#latest-committed-memory-segment-144-node-1058) · ↔ [1069](#latest-committed-memory-segment-144-node-1069) · ↔ [1174](#latest-committed-memory-segment-144-node-1174) · ↔ [1176](#latest-committed-memory-segment-144-node-1176) · ↔ [1190](#latest-committed-memory-segment-144-node-1190) · ↔ [1217](#latest-committed-memory-segment-144-node-1217) · ↔ [1238](#latest-committed-memory-segment-144-node-1238) · ↔ [1277](#latest-committed-memory-segment-144-node-1277) · ↔ [1289](#latest-committed-memory-segment-144-node-1289) · ↔ [1314](#latest-committed-memory-segment-144-node-1314) · ↔ [1316](#latest-committed-memory-segment-144-node-1316) · ↔ [1324](#latest-committed-memory-segment-144-node-1324) · ↔ [1352](#latest-committed-memory-segment-144-node-1352) · ↔ [1355](#latest-committed-memory-segment-144-node-1355) · ↔ [1362](#latest-committed-memory-segment-144-node-1362) · ↔ [1455](#latest-committed-memory-segment-144-node-1455) · ↔ [1460](#latest-committed-memory-segment-144-node-1460) · ↔ [1499](#latest-committed-memory-segment-144-node-1499) · ↔ [1501](#latest-committed-memory-segment-144-node-1501) · ↔ [1596](#latest-committed-memory-segment-144-node-1596) · ↔ [1609](#latest-committed-memory-segment-144-node-1609) · ↔ [1611](#latest-committed-memory-segment-144-node-1611) · ↔ [1615](#latest-committed-memory-segment-144-node-1615) · ↔ [1617](#latest-committed-memory-segment-144-node-1617) · ↔ [1660](#latest-committed-memory-segment-144-node-1660)
+
+- MAI: 好，然后一个秒表。
+- MAI: 对，戳一下。
+- MAI: 来，都戳一下，每人戳一下。传过去戳一下，哎，你能看到对吧？好，戳完了。行，开机，开。那就是今天我们就讨论讨论，早上讨论讨论我们最后一天干点啥呗。然后可能，嗯。
+- MAI: 就是这边还有四个这个USB，就可能这-这-这叫什么？这个硬盘。嗯，早上我觉得大家主要是讨论，然后讨论的时候闲着没事，如果大家陷入了沉思，陷入了尴尬，可以把这个给装一装。对，只是一个 backup。嗯，所以，现在就尴尬了。
+- MAI: 行，那也行，那也行。
+- MAI: 对。因为你是 mentor。
+- MAI: 我先把这些端走吧。
+- MAI: 好，大家拆出来了，可以摆成什么样了？摆成，这个盒子要留着。呃，里边这个东西可以丢掉，这东西都丢掉吧。
+- MAI: 好，那就先摆成这样。这个是等大家陷入沉思的时候再用，但是这个我可以跟大家先讲一下，这个东西是什么呢？就大家可以看这个地方。
+- MAI: 呃，你们也看不见，这个地方，或者你们过来吧，走动走动。就是你看我的工作间。
+- MAI: 那请请请请。工作间，然后这地方是一共有六台电脑，对吧？
+- MAI: 然后这其实七台八台。
+- Deepgram: Oh, &#124; MAI: 嗯，9台10台，但是就是这边6台电脑，每一个电脑都对应着你们的一个眼-一台眼镜。然后这个每一台电脑，我-你们每次，呃，录完结束，每隔3个小时，然后会，嗯，就是在这儿导到这个硬盘里边。然后这个硬盘就是你们一会儿要装的硬盘。就是比方说这个，这个L1，这个L1，这个L2，然后这个名-你们名字都写在这儿了。你们的数据都在这个里边。嗯。
+- MAI: 对，你们的第二生命都在这个里边。呃，比方说我这个LE对吧，然后你们结束之后就是会把这个眼睛插到这个上面，然后同时现在一直接着这个第一个硬盘。对，然后这个硬盘它有两根线，一个是，一个是接电脑的，一个是接电源的，然后这个电源是为了让这个硬盘假装自己在电脑上。所以这个盒的意思就是说它给模拟一个电脑的环境，然后让硬盘
+- MAI: 对对，让硬盘能知道自己要工作了，对。呃，然后这个线呢，这个线，我们，我们布线还挺有意思的，就长成这个样子。
+- MAI: 那不好讲，就是电脑突然停电就是会很尴尬。
+- MAI: 哦哦，没有，还没那么有钱。就我们只能相信这个别墅，或者相信北京电力吧。对。
+- MAI: 好，你们都开始装了。
+- MAI: 可以边聊边装吧。
+- MAI: 嗯，或者说你们先带，你们带了什么吧？你们带了什么？哎，这个，这-
+- MAI: 戴好。
+- MAI: 这个眼镜，嗯，也不能遮住，应该都不没遮住吧？你现在没遮住，确实。
+- MAI: 嗯，对，确实。
+- MAI: 有有有有很多螺丝。
+- MAI: 上一回我们一直在抱怨磁吸的问题，但是好像今天大家都没有什么。
+- MAI: 对，你的头发没总-总喜欢挡着镜头，要不要想想办法？对，你或者塞到里边去。
+- MAI: 陶哲类型的音乐。
+- MAI: 可以，可以，来自东方的小小震撼。
+- MAI: 对。跳吧，要不然。
+- MAI: 这-这也知道。怎么？你
+- MAI: 然后这边有一个螺丝，你看两边。
+- Deepgram: 你意पन ，你意पन女兼고 你是迄你 &#124; MAI: 可以放，可以放，我昨天成功地放了进去。
+- Deepgram: 你是迄你 意喧乏是意喧乏 意喧乏 是可你乏我是是 好 &#124; MAI: 没没关系，对，它就是美观，它就是看着没有螺丝。然后
+- MAI: 物联网吗？还是什么？
+- MAI: 对。出流水线，下一个流水线。
+- MAI: 三千的技工到五千的技工。
+- MAI: 哎，反了，反了，反了。这个是有俩螺丝。你看侧面，嗨。嗨，你2000的是吧？2000的。
+- MAI: 对，拧完放到一起。
+- MAI: 对对对，放到这个盒子里边。
+- MAI: 你看。
+- MAI: 就出场了。对，这就是最后一步，给你一点机会，但是你还是没有抓住啊。
+- MAI: 装，完全没必要，放里面就好了。
+- MAI: 出场。好，谢谢大家。完成了一个奇怪的第一次任务。然后这个Egonap最后一天大家会邀请什么人呢？啊，都邀请。
+- MAI: 最后一天。
+- MAI: 是周日。
+- MAI: 会邀请几个人呀？
+- MAI: 对，黑板可以写一写。
+- MAI: 好的，我们还有一个架子，要不我们也拼一下好了。
+- MAI: 就是，就是你你如果觉得这个这么写很难写的话，它其实有一个。
+- MAI: 就这个东西，就是你可以下这些。这问题不大，是吧？
+- MAI: 问题不大。
+- Deepgram: fila, &#124; MAI: 对，笔了。
+- MAI: 有啥差别？
+- Deepgram: COMPANY Ni. Oui. [SPEAKER REPRESENTATIVE:] &#124; MAI: 你可以，是这么写的吗？笔画。
+- MAI: 秀硕，你邀请几个人啊？
+- MAI: 浅浅先邀一个。
+- MAI: 那你的工作室？
+- MAI: 好，浅浅邀请一个。
+- MAI: 不用不着，这就用不着了，就是大概就画个阵子得了。
+- MAI: 嗯，或者你用那个小球，我估计也够。
+- MAI: 你可以在每个人下面写一个。
+- Deepgram: 民主，为路或多了ホスト。佛 &#124; MAI: 名字，写一个他的 host。
+- Deepgram: 在住ま？你 就任理了代好吾就任。你 就任大在고 저리내시리시리시리시리시리시고 就 任了。 &#124; MAI: 嗯，你-你是-就是你的代号吧之类的。不不不，你就在这个小人的下面写一个，或者在上面，或者脸上写一个，之类的。
+- MAI: 嗯，呃，4到6位嘉宾。
+- Deepgram: okay &#124; MAI: OK。呃，我们原来还打算有可能的话去邀请周围的人。
+- MAI: 对，呃，剧组吧，剧组还有5个人，然后就是总共看，最后我们要host多少个人，然后看看这活动，在这个人数下应该整点啥。
+- Deepgram: ，论伯耀伯耀 ，论 双论 &#124; MAI: 4，4加5，9。
+- Deepgram: ，论伯耀伯耀 &#124; MAI: 9到11是吗？
+- Deepgram: ，论伯耀伯耀 &#124; MAI: 9到11。
+- Deepgram: 伯耀 &#124; MAI: 9到11，然后各位自己。
+- MAI: 哎，也就先就就先谢谢九到十一吧，九到十一。
+- Deepgram: 你好也你好也好也 &#124; MAI: 嗯，对，对，我们有无穷的邻居，也不是正无穷吧，十六亿。
+- Deepgram: 那覇要bie dama佛 &#124; MAI: 那还有别的吗？
+- MAI: 湖南GPT生成的。
+- MAI: 呃，先秀一下吧，就是先秀一下。眼神好啊，小伙。
+- MAI: 要不，塔莎我们也上才艺，你看看哪些是你的。
+- MAI: 哦，你没有买这个。外面的快递就只有于轩的是吧？还有别人买快递的吗？
+- Deepgram: ¿Está sha dollo tzudaya da? &#124; MAI: 行，没问题。他啥都是自带的，是吧？
+- MAI: 比划一比划，比划比划，就是大概要个什么形式？
+- MAI: 我们先聊吧，这个回头下一条。
+- MAI: 差点，差点像了。
+- Deepgram: Shang Douzi, BGM. &#124; MAI: 上道具，BGM。
+- Deepgram: Echéencio. &#124; MAI: 被嫌弃了。
+- MAI: 我应该拆吗？
+- MAI: 那可地球了。
+- MAI: 哦，结果我拿多了。
+- MAI: 对对，平台方，品-平台方和小店-小店家，平台方，京东。
+- Deepgram: 到来開始の時だ。 &#124; MAI: 突然开心了起来。
+- MAI: 嗯，或者最后一天，应该是从中午，中午管不管饭这个另说，也可以管，也可以不管。一共多少个人？
+- MAI: 对对对，下午茶，是吧？嗯，对。那就是不用管饭，大家吃完饭过来，然后时间线我们列一下，如果是下午开始，2点比如说，或者3点，3点一直干到晚上。
+- MAI: 嗯。对，今天下午的话，这个小院子应该也挺舒服的。你还-还可以烧烤。
+- MAI: 哦哦哦。行，行。
+- MAI: 比如说我们从 3点，3点开始吧。
+- MAI: 对，你的拍卖可以占一点时间，看占多长时间。然后
+- MAI: 然后，哎，就-就这些准备都是我们这几天准备，对吧？然后别的耗时间的短剧。跳舞吗？
+- Deepgram: どえどえ。徐徐且主人役可燃저이가 안에 안에 안에 안에 안에 안에 한는 &#124; MAI: 对对，就是这个时间可能就一个一个半小时了，得。
+- MAI: 就-就你们昨天的那个活动也-
+- MAI: 对对对。整点游戏可以。
+- MAI: 那自我介绍获得，或者
+- MAI: 或者我们其实在这个屋子里面可以藏点东西，然后
+- Deepgram: 你、你、你、你、你。你、你、你。你、你、你。你、你。你。你。你。你。 &#124; MAI: 对对对对。藏点币。
+- MAI: 然后再开始推销。
+- MAI: 嗯，就放刚刚那个曲子。
+- MAI: 这是我的水瓶。
+- MAI: 很-很懂啊，大东北生产的是吧？东北钢铁厂。
+- MAI: 那好，下面开始写英文吧。
+- MAI: 时间线，来。
+- MAI: 为啥是俩词？也也行，也行。
+- MAI: 3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的人。
+- MAI: 对，给他们一点活动。
+- MAI: 鹌鹑。
+- MAI: 然后三点准时干点什么东西？
+- MAI: 这是人类的正常行为。
+- MAI: 然后三点干啥了？
+- MAI: 哦，也行，抢答对吧？
+- MAI: 来，大家插会儿电吧，来，你们继续聊，我给大家发线。
+- MAI: 哦，你一直插着的呀。
+- MAI: 我一直插。
+- MAI: 充电宝，牛啊。这个是谁的？
+- MAI: 我们的食品环节，吃饭环，下午茶环节在什么地方？
+- MAI: 那调酒是在外边，哦，得弄一个台子，也可以啊，在室内，然后如果有人就进来。
+- MAI: 我们有四个。现在还没装完，一会儿装一下。
+- MAI: 就可能我们一些一部分人，还是我们先做好，我们可以先做好吗？
+- MAI: 就是那些。
+- MAI: 甜品，甜品啊，可以先做好。
+- MAI: 架子一千是吗？
+- MAI: 总共五百到一千。
+- MAI: 能-能多少钱？
+- MAI: 不能买是什么？太贵了？
+- MAI: 呃，对啊。
+- MAI: 晚上再烧。
+- MAI: 啊，烧烤太多了。
+- MAI: 好，行，行，可以可以可以可以，那就管晚饭吧。
+- MAI: 是的，是的。那就五点半的时候一个大披萨，差不多。
+- Deepgram: Top pizza. &#124; MAI: 大披萨。
+- MAI: 嗯，那我们就定个结束时间。
+- MAI: 对，这时间太长了，中间得
+- MAI: 不是不是，我我我是说中间可能有一个小时我们要传数据，你们的眼睛。
+- MAI: 对对对，中间中间空一个小。
+- MAI: 呃，就三点到六点，五点半吧，五点半。
+- MAI: 对，呃，他家吃披萨的时候，咱就不拍了吧，行吧？
+- MAI: 甜品是什么时候？
+- MAI: 嗯，3点到5点，两个小时够，挺好。
+- MAI: 所以那一天的甜品是
+- MAI: 当天做还是可以前一天做？
+- MAI: 烧烤也不能录，烧烤把眼睛给烧坏了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1"></a>
+
+<details><summary>voice_1 · 1 speech entries · 1 links</summary>
+
+↔ [6](#latest-committed-memory-segment-144-node-6)
+
+- MAI: 时间戳。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-21"></a>
+
+<details><summary>voice_21 · 1 speech entries · 0 links</summary>
+
+- MAI: 先看，拆开看。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-30"></a>
+
+<details><summary>voice_30 · 2 speech entries · 0 links</summary>
+
+- MAI: 哇哦。
+- MAI: 我。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-31"></a>
+
+<details><summary>voice_31 · 3 speech entries · 0 links</summary>
+
+- MAI: 只有四个吗？
+- MAI: 对，只有四个。
+- MAI: 这个就不知道了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-32"></a>
+
+<details><summary>voice_32 · 2 speech entries · 0 links</summary>
+
+- MAI: Tutor。对。
+- MAI: 对对，是。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-33"></a>
+
+<details><summary>voice_33 · 2 speech entries · 0 links</summary>
+
+- MAI: 我已经装过这个东西了。
+- MAI: 这个是目前暂时的想法。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-99"></a>
+
+<details><summary>voice_99 · 1 speech entries · 0 links</summary>
+
+- MAI: 一个悬着的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-100"></a>
+
+<details><summary>voice_100 · 1 speech entries · 0 links</summary>
+
+- MAI: 那如果突然停电了会怎么样？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-101"></a>
+
+<details><summary>voice_101 · 1 speech entries · 0 links</summary>
+
+- MAI: 那没有什么就是USB数据？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-102"></a>
+
+<details><summary>voice_102 · 1 speech entries · 0 links</summary>
+
+- MAI: 就是那种备用电。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-113"></a>
+
+<details><summary>voice_113 · 6 speech entries · 2 links</summary>
+
+↔ [122](#latest-committed-memory-segment-144-node-122) · ↔ [898](#latest-committed-memory-segment-144-node-898)
+
+- MAI: 可以。
+- MAI: 要拧螺丝。
+- MAI: 对对对对。嗯，这个好。
+- MAI: 你你头头发。
+- MAI: 不用不用不用，就说明字写得好。
+- Deepgram: 나 한 말요 &#124; MAI: 对对，挺好。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-123"></a>
+
+<details><summary>voice_123 · 13 speech entries · 5 links</summary>
+
+↔ [129](#latest-committed-memory-segment-144-node-129) · ↔ [134](#latest-committed-memory-segment-144-node-134) · ↔ [148](#latest-committed-memory-segment-144-node-148) · ↔ [160](#latest-committed-memory-segment-144-node-160) · ↔ [188](#latest-committed-memory-segment-144-node-188)
+
+- MAI: 这个地方是这儿，最好这样往里推，看怎么样。好像要清洁，那天那个同学跟我说这个挺脆弱的。
+- MAI: 就是这不是有一个口吗？
+- MAI: 跟这个是对的，然后慢慢推，看看。推进去。要稍微使点力气，但是还是有一点劲的，但是
+- MAI: 好像很粗了一样，不过我其实也不是很懂这个。
+- MAI: 嗯，对，然后要装到这个盒子里。就是你最好是把这个地方取下来，这个片就可以不要了，因为这里好像也要用螺丝。
+- MAI: 八个，对的。就是你，你把那个条抽出来。
+- MAI: 然后你看到那个孔吗？长条形那个，它那里面
+- MAI: 也有一个螺丝孔，你要把那个也上上。就是那个是大螺丝的螺丝。
+- MAI: 就是这个，这个东西。
+- MAI: 我怎么样给你举得比较清楚。哎，你上的这个是对的。
+- MAI: 对，然后这边每个都有，然后这个也是，所以一共是8个。对的。嗯，这是大螺丝。
+- MAI: 对，所以就是在就是放螺丝时候。
+- MAI: 对，是这里是放大的。呃，它就是这样子，它没有办法就通过这个孔。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-124"></a>
+
+<details><summary>voice_124 · 1 speech entries · 1 links</summary>
+
+↔ [131](#latest-committed-memory-segment-144-node-131)
+
+- MAI: 没事，搞定。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-135"></a>
+
+<details><summary>voice_135 · 2 speech entries · 0 links</summary>
+
+- MAI: 需要你螺丝的力吗？
+- MAI: 大家平时厨艺如何？就会使用刀吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-136"></a>
+
+<details><summary>voice_136 · 1 speech entries · 0 links</summary>
+
+- MAI: 没有。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-137"></a>
+
+<details><summary>voice_137 · 2 speech entries · 2 links</summary>
+
+↔ [149](#latest-committed-memory-segment-144-node-149) · ↔ [186](#latest-committed-memory-segment-144-node-186)
+
+- MAI: 那螺丝呢？
+- MAI: 毕-毕竟附赠了这个，不可能给你什么。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-138"></a>
+
+<details><summary>voice_138 · 1 speech entries · 0 links</summary>
+
+- MAI: 在这儿。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-139"></a>
+
+<details><summary>voice_139 · 1 speech entries · 1 links</summary>
+
+↔ [150](#latest-committed-memory-segment-144-node-150)
+
+- MAI: 懂了。easy。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-151"></a>
+
+<details><summary>voice_151 · 1 speech entries · 1 links</summary>
+
+↔ [161](#latest-committed-memory-segment-144-node-161)
+
+- MAI: 然后就把它装进去啊？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-152"></a>
+
+<details><summary>voice_152 · 1 speech entries · 1 links</summary>
+
+↔ [161](#latest-committed-memory-segment-144-node-161)
+
+- MAI: 是不是要拧四个螺丝？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-153"></a>
+
+<details><summary>voice_153 · 1 speech entries · 0 links</summary>
+
+- MAI: 呃，八个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-162"></a>
+
+<details><summary>voice_162 · 2 speech entries · 0 links</summary>
+
+- MAI: 这里。
+- MAI: 我已经上-上完一个螺丝。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-163"></a>
+
+<details><summary>voice_163 · 1 speech entries · 0 links</summary>
+
+- MAI: 你看这。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-164"></a>
+
+<details><summary>voice_164 · 1 speech entries · 0 links</summary>
+
+- MAI: 对，小螺丝。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-165"></a>
+
+<details><summary>voice_165 · 7 speech entries · 6 links</summary>
+
+↔ [897](#latest-committed-memory-segment-144-node-897) · ↔ [903](#latest-committed-memory-segment-144-node-903) · ↔ [904](#latest-committed-memory-segment-144-node-904) · ↔ [905](#latest-committed-memory-segment-144-node-905) · ↔ [909](#latest-committed-memory-segment-144-node-909) · ↔ [914](#latest-committed-memory-segment-144-node-914)
+
+- MAI: 哦，里面是把它插进去就行了吧？就那个。
+- MAI: 嗯，买了一个拼图。是一个，呃，大底图是一个圆的，然后它那个里面是这种的，就是各种动物的那种。
+- MAI: 然后你看你能不能，就是一个比较难的一个拼图，然后有很多
+- MAI: 各种动物，我想的就是，呃，你去尽力地往里面拼，就是我觉得这个拼图就给人一种，我们在地球上可以和谐共处的那个感觉，然后你不一定全都能拼上，但是因为这种不是那个严丝合缝，不是特别完全严丝合缝，就说你可以拼多一点，也可以拼少一点，然后我就想，呃，可能就是一个小的游戏吧。
+- MAI: 然后就是，我就想给参与者就是一个小奖品，就是一颗水仙种球。因为这个水仙种球，它好养，就是，呃，在我的那种植物杀手朋友身上试验过了，他都能养活的东西。然后这个花开出来也特别的好看，然后还有清香的味道，并且你看着它。
+- MAI: 它一天天长大，你很有那种参与自然的感觉。对，所以这就是我的想法。但是水仙球还没买，但是我有，我知道有一家质量特别好的，我养过的。
+- MAI: 嗯。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-173"></a>
+
+<details><summary>voice_173 · 2 speech entries · 0 links</summary>
+
+- MAI: 呃，那个。
+- MAI: 就煮过煮沸的水。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-174"></a>
+
+<details><summary>voice_174 · 2 speech entries · 1 links</summary>
+
+↔ [213](#latest-committed-memory-segment-144-node-213)
+
+- MAI: 应该是啥意思？集成电路还是什么？
+- MAI: 我是混欧美圈的，所以就乱听。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-175"></a>
+
+<details><summary>voice_175 · 4 speech entries · 1 links</summary>
+
+↔ [184](#latest-committed-memory-segment-144-node-184)
+
+- MAI: 今天大家好像接受良好。
+- MAI: 固定好，是-是这样。
+- MAI: 哦，所以我们是三一两哎，那咱俩是，然后你，昨天我没有，昨天我没有猜出来，虽然我知道他可能是1人。
+- MAI: 这个头发又在头发上了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-176"></a>
+
+<details><summary>voice_176 · 1 speech entries · 1 links</summary>
+
+↔ [185](#latest-committed-memory-segment-144-node-185)
+
+- MAI: 什么事情？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-177"></a>
+
+<details><summary>voice_177 · 2 speech entries · 2 links</summary>
+
+↔ [187](#latest-committed-memory-segment-144-node-187) · ↔ [447](#latest-committed-memory-segment-144-node-447)
+
+- MAI: 就是-就是这个螺丝刀它没有磁吸。
+- MAI: 我其实可以问一个女生，但我不确定她能不能过得来，因为她那边挺远的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-178"></a>
+
+<details><summary>voice_178 · 1 speech entries · 0 links</summary>
+
+- MAI: 磁吸。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-192"></a>
+
+<details><summary>voice_192 · 1 speech entries · 0 links</summary>
+
+- MAI: 我塞了一。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-193"></a>
+
+<details><summary>voice_193 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯，再塞一道。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-202"></a>
+
+<details><summary>voice_202 · 2 speech entries · 2 links</summary>
+
+↔ [207](#latest-committed-memory-segment-144-node-207) · ↔ [209](#latest-committed-memory-segment-144-node-209)
+
+- MAI: 那是不是可以有一点BGM？
+- MAI: 那平时爱听什么类型的音乐？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-203"></a>
+
+<details><summary>voice_203 · 7 speech entries · 2 links</summary>
+
+↔ [208](#latest-committed-memory-segment-144-node-208) · ↔ [235](#latest-committed-memory-segment-144-node-235)
+
+- MAI: 那你放一点。
+- MAI: 嗯，东北稻花的。
+- MAI: 没有没有，那个长春。
+- MAI: 在吉林市，隔壁，啊，你们隔壁是吧？
+- MAI: 可以出场了。
+- MAI: 种子片，种子片。
+- MAI: 种子片。2。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-204"></a>
+
+<details><summary>voice_204 · 1 speech entries · 1 links</summary>
+
+↔ [210](#latest-committed-memory-segment-144-node-210)
+
+- MAI: 我-我听陶哲。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-205"></a>
+
+<details><summary>voice_205 · 3 speech entries · 1 links</summary>
+
+↔ [212](#latest-committed-memory-segment-144-node-212)
+
+- MAI: 嗯，R&amp;B。
+- MAI: R&amp;B。
+- MAI: 对对，固定。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-216"></a>
+
+<details><summary>voice_216 · 1 speech entries · 0 links</summary>
+
+- MAI: 给大家一个比较干劲的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-217"></a>
+
+<details><summary>voice_217 · 1 speech entries · 0 links</summary>
+
+- MAI: 那个东北女警的机器人。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-218"></a>
+
+<details><summary>voice_218 · 1 speech entries · 0 links</summary>
+
+- MAI: 贼有劲。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-219"></a>
+
+<details><summary>voice_219 · 5 speech entries · 2 links</summary>
+
+↔ [236](#latest-committed-memory-segment-144-node-236) · ↔ [237](#latest-committed-memory-segment-144-node-237)
+
+- MAI: 不要扛着来吧。这个半牵就行。
+- MAI: 吉林省长春市。大家知道这个城市吗？
+- MAI: 那大家知道吉林省还有个吉林市吗？
+- MAI: 许愿说一句拧完了，然后他挑衅我，我靠。
+- MAI: 我今天一起购物。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-228"></a>
+
+<details><summary>voice_228 · 1 speech entries · 1 links</summary>
+
+↔ [232](#latest-committed-memory-segment-144-node-232)
+
+- MAI: 大东北，我的家乡。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-229"></a>
+
+<details><summary>voice_229 · 10 speech entries · 5 links</summary>
+
+↔ [233](#latest-committed-memory-segment-144-node-233) · ↔ [282](#latest-committed-memory-segment-144-node-282) · ↔ [306](#latest-committed-memory-segment-144-node-306) · ↔ [405](#latest-committed-memory-segment-144-node-405) · ↔ [1201](#latest-committed-memory-segment-144-node-1201)
+
+- MAI: 你东北哪儿的呀？
+- MAI: 啊，你你你进过场玩过？
+- MAI: 好，硬盘锦标赛。
+- MAI: 那你还有机会吗？
+- MAI: 卢亚呢？
+- MAI: 明天可以拍一段警察的镜头。
+- MAI: 据点是吧？
+- MAI: 先发甜品。
+- MAI: 有钱。
+- MAI: 有有sample。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-230"></a>
+
+<details><summary>voice_230 · 1 speech entries · 1 links</summary>
+
+↔ [234](#latest-committed-memory-segment-144-node-234)
+
+- MAI: 我是稻花乡。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-241"></a>
+
+<details><summary>voice_241 · 3 speech entries · 0 links</summary>
+
+- MAI: 没，嗯。
+- MAI: 我一个人跳吗？
+- MAI: 好，谢谢。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-242"></a>
+
+<details><summary>voice_242 · 5 speech entries · 0 links</summary>
+
+- Deepgram: ¿Qué onda, joven?
+- MAI: 行，可以烤是吧？
+- MAI: 啊，没事。
+- MAI: 你先想想它吧。
+- MAI: 可以啊，来。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-250"></a>
+
+<details><summary>voice_250 · 1 speech entries · 0 links</summary>
+
+- MAI: 有那迷惑行为。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-251"></a>
+
+<details><summary>voice_251 · 2 speech entries · 0 links</summary>
+
+- MAI: 那天说好像吃东西是可以吃的，我们那天还好像都扔了，我记得。
+- MAI: 嗯，对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-252"></a>
+
+<details><summary>voice_252 · 1 speech entries · 0 links</summary>
+
+- MAI: 铁条装了一个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-253"></a>
+
+<details><summary>voice_253 · 1 speech entries · 0 links</summary>
+
+- Deepgram: 你是迄你 &#124; MAI: 啊，原来如此。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-254"></a>
+
+<details><summary>voice_254 · 1 speech entries · 0 links</summary>
+
+- Deepgram: 你是迄你 意喧乏是意喧乏 &#124; MAI: 那那那咱那天呢？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-271"></a>
+
+<details><summary>voice_271 · 1 speech entries · 1 links</summary>
+
+↔ [280](#latest-committed-memory-segment-144-node-280)
+
+- MAI: 可以进场。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-272"></a>
+
+<details><summary>voice_272 · 2 speech entries · 3 links</summary>
+
+↔ [281](#latest-committed-memory-segment-144-node-281) · ↔ [282](#latest-committed-memory-segment-144-node-282) · ↔ [283](#latest-committed-memory-segment-144-node-283)
+
+- MAI: 可以，我已经进过场了。
+- MAI: 我觉得我们大学那些接线的，焊板子的，跟进场没啥区别。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-273"></a>
+
+<details><summary>voice_273 · 1 speech entries · 1 links</summary>
+
+↔ [284](#latest-committed-memory-segment-144-node-284)
+
+- MAI: 焊板。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-288"></a>
+
+<details><summary>voice_288 · 1 speech entries · 0 links</summary>
+
+- MAI: 下一个流水线上接到电脑。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-289"></a>
+
+<details><summary>voice_289 · 1 speech entries · 0 links</summary>
+
+- MAI: 对对对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-290"></a>
+
+<details><summary>voice_290 · 4 speech entries · 1 links</summary>
+
+↔ [1145](#latest-committed-memory-segment-144-node-1145)
+
+- MAI: 下一个需要高级技工。
+- MAI: 你说这是技工吗？
+- MAI: 演，其实也有点想法。
+- MAI: 然后还有什么我们的，或者我们可以提前来活跃一下这个气氛。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-298"></a>
+
+<details><summary>voice_298 · 1 speech entries · 0 links</summary>
+
+- MAI: 技术。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-299"></a>
+
+<details><summary>voice_299 · 1 speech entries · 1 links</summary>
+
+↔ [305](#latest-committed-memory-segment-144-node-305)
+
+- MAI: 不行，我必须要争一下。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-309"></a>
+
+<details><summary>voice_309 · 1 speech entries · 0 links</summary>
+
+- MAI: 拧完应该就做好了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-310"></a>
+
+<details><summary>voice_310 · 1 speech entries · 0 links</summary>
+
+- MAI: 应该是吧。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-311"></a>
+
+<details><summary>voice_311 · 13 speech entries · 5 links</summary>
+
+↔ [709](#latest-committed-memory-segment-144-node-709) · ↔ [712](#latest-committed-memory-segment-144-node-712) · ↔ [716](#latest-committed-memory-segment-144-node-716) · ↔ [735](#latest-committed-memory-segment-144-node-735) · ↔ [740](#latest-committed-memory-segment-144-node-740)
+
+- Deepgram: 你仁你也 &#124; MAI: 你可以把钱放在里面，我需要装的话让自己装。
+- MAI: 其实就是我的构思也跟DIY是有关系的。对，我刚-我刚开始想的是就是可以，因为是世界地球日，所以我想就是做一点环保一点的东西。就我不知道大家有没有做过水母灯，就这两年在景区还挺火的。呃，就是长得像水母一样的一个小灯。
+- MAI: 然后这个东西它原本是有材料包的，就是可以直接在网上买材料包做。但是我就是我想的是就是既然是
+- MAI: 世界地图日的话，我之前在网上刷到过一个教程，就是可以用那个奶茶杯盖，然后以它作为一个主体，然后就是再加一些丝带或者串珠之类的。呃，我不知道咱们这有没有热-热胶枪，如果没有的话，可以后面看有没有什么替代的，或者说买一个也行。然后就是大家一起，就是每个人都做一个这样的小灯，就是它还挺好看的。然后这是其中一个设想，还有一个就是也是有点这种怎么说呢，低碳和循环利用的，就是在
+- MAI: 有没有做过纸箱小狗？
+- MAI: 对，然后可以放在门口。然后纸箱小狗的好处就是，如果想要很简单做一下的话，就拿纸箱简单剪一下，然后画一个小狗头粘上就可以。如果想要复杂一点的话，就是也有一些就是复杂点，就需要多剪几个，然后做成一个大的。我之前看到有人做过杜宾，但是那个我没做过，就是但是就是看了一下教程，好像也挺简单的，只要画一下卡纸就能很容易剪出来。
+- MAI: 对，这个合理。
+- MAI: 想的也是在咱们这里到时候
+- MAI: 肯定会有很多纸箱，如果说就能直接使用的话，就还挺环保的，就也很契合这个地球的这个主题。
+- MAI: 最后还有一个想法，但是这个想法实施起来就比较困难。我本来想的是可能大家可以简单地排一个小短剧或者之类的。对，因为我之前跟我小伙伴有说我们拍一些电影。
+- MAI: 如果是软的肉，我不是很会切，就已经泡好了。
+- MAI: 就是兜烧烤还挺麻烦的。
+- MAI: 而且之前有吃甜的东西的话，可能也不会特别的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-330"></a>
+
+<details><summary>voice_330 · 15 speech entries · 4 links</summary>
+
+↔ [336](#latest-committed-memory-segment-144-node-336) · ↔ [497](#latest-committed-memory-segment-144-node-497) · ↔ [985](#latest-committed-memory-segment-144-node-985) · ↔ [1289](#latest-committed-memory-segment-144-node-1289)
+
+- MAI: 日，周日下午吧。
+- Deepgram: 詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮 &#124; MAI: 对，就是或者小红书，还是
+- Deepgram: 詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮 &#124; MAI: 呃，环球影城门口直接抓人。
+- Deepgram: 詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮 &#124; MAI: 比较好。
+- MAI: 是，但是后期很麻烦。
+- MAI: 完了，完了你，完了你。
+- MAI: 然后就
+- MAI: 走，上海底捞种树去。
+- MAI: 值多少个币是吧？
+- MAI: 对，都都是商品。
+- MAI: 也两个小时了。
+- MAI: 拿走吧，这个花瓶。
+- MAI: 那为啥是俩词？
+- MAI: 买买甜品是吧？
+- MAI: 还打包，打了一包回去。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-331"></a>
+
+<details><summary>voice_331 · 2 speech entries · 1 links</summary>
+
+↔ [337](#latest-committed-memory-segment-144-node-337)
+
+- MAI: 邀请什么人？
+- Deepgram: SS &#124; MAI: 还是SSERT？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-332"></a>
+
+<details><summary>voice_332 · 15 speech entries · 7 links</summary>
+
+↔ [339](#latest-committed-memory-segment-144-node-339) · ↔ [984](#latest-committed-memory-segment-144-node-984) · ↔ [986](#latest-committed-memory-segment-144-node-986) · ↔ [989](#latest-committed-memory-segment-144-node-989) · ↔ [1151](#latest-committed-memory-segment-144-node-1151) · ↔ [1154](#latest-committed-memory-segment-144-node-1154) · ↔ [1187](#latest-committed-memory-segment-144-node-1187)
+
+- MAI: 黑板写一写。
+- MAI: 买大家的一些任何。
+- MAI: 然后然后然后然后然后然后，然后就是一个拍卖吧。然后我们可以怎么样呢？就是来的这些嘉宾。
+- MAI: 然后大家一人分享一个故事，或者是，呃，事故也好，故事也好，然后来我们给评定，觉得这个故事怎么样？
+- MAI: 对，值多少个币，然后给他，然后这个币就
+- MAI: 对，然后这个币就用来拍卖接下来这些嘉宾带来的二手物品，以及是我们就是闲置的一些二手物品，然后来进行这样的一个。
+- MAI: 每个人拍拍卖，就是比如说我我要卖一个什么东西，然后我上来讲一下这个东西，然后我认为它的起拍价大概多少，然后。
+- MAI: 然后拍到这个钱是给了那个拍卖的那个人的，然后它也流通过去的那个货币，然后我拿着这些货币我可以再去拍卖。
+- MAI: 给大家冲咖啡，我们有-有一套手冲的东西。
+- MAI: 还戴眼镜呢？那我们可以表演简单一点。蘑菇蘑菇。
+- MAI: 讲一个小故事，一个-每个人五分钟那种大概。
+- MAI: 或者时间这么控制不好的话，就以其他形式获得币子。但是这个活动的核心是那个拍卖过程。但是这个货币怎么获得，可以再进一步商榷。
+- MAI: 拍卖过程，这个是要保留的，大概像九个人的话，每个人五分钟就四十五，一个小时嘛，就按一个小时算。
+- MAI: 线。首先我们几点。
+- MAI: 你可以细分，这个是他们自己的部分，这是 guest part。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-333"></a>
+
+<details><summary>voice_333 · 3 speech entries · 1 links</summary>
+
+↔ [341](#latest-committed-memory-segment-144-node-341)
+
+- MAI: 来，我来，我字非常好看。
+- MAI: 不影响我的这个书法的发挥。
+- MAI: 笔呢？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-334"></a>
+
+<details><summary>voice_334 · 1 speech entries · 1 links</summary>
+
+↔ [344](#latest-committed-memory-segment-144-node-344)
+
+- MAI: 什么架子？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-351"></a>
+
+<details><summary>voice_351 · 1 speech entries · 0 links</summary>
+
+- MAI: 笔呢？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-352"></a>
+
+<details><summary>voice_352 · 7 speech entries · 4 links</summary>
+
+↔ [783](#latest-committed-memory-segment-144-node-783) · ↔ [793](#latest-committed-memory-segment-144-node-793) · ↔ [796](#latest-committed-memory-segment-144-node-796) · ↔ [1364](#latest-committed-memory-segment-144-node-1364)
+
+- MAI: 好问题。
+- MAI: 好问题。
+- MAI: 你要不 invite 吧。
+- MAI: 啊，因为。
+- MAI: 佩- 佩阳明买了，但是不一定到。不一定到哈，我看一下。
+- MAI: 好，那你插上吧，找一个。
+- MAI: 对，我们有。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-353"></a>
+
+<details><summary>voice_353 · 1 speech entries · 0 links</summary>
+
+- Deepgram: Fila, &#124; MAI: 问问AI笔呢？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-354"></a>
+
+<details><summary>voice_354 · 1 speech entries · 0 links</summary>
+
+- Deepgram: Fila, tre, &#124; MAI: 笔呢？这个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-355"></a>
+
+<details><summary>voice_355 · 1 speech entries · 0 links</summary>
+
+- Deepgram: tre, &#124; MAI: 收我的iPhone吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-364"></a>
+
+<details><summary>voice_364 · 5 speech entries · 2 links</summary>
+
+↔ [372](#latest-committed-memory-segment-144-node-372) · ↔ [918](#latest-committed-memory-segment-144-node-918)
+
+- Deepgram: Pia, &#124; MAI: 笔应该在上面，等一下啊。笔。
+- MAI: 多了是吧。合适吗？问题不大，问题不大。
+- Deepgram: て 金箋。 &#124; MAI: 嘿，挺好。
+- Deepgram: 好。即 位長。 &#124; MAI: 好，仙球。
+- MAI: 一下午呗。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-373"></a>
+
+<details><summary>voice_373 · 1 speech entries · 0 links</summary>
+
+- MAI: 哎，你是1。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-374"></a>
+
+<details><summary>voice_374 · 1 speech entries · 0 links</summary>
+
+- MAI: 我，我是1，不是1，OK？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-375"></a>
+
+<details><summary>voice_375 · 1 speech entries · 0 links</summary>
+
+- MAI: Ego live.
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-376"></a>
+
+<details><summary>voice_376 · 2 speech entries · 0 links</summary>
+
+- MAI: 最后一天的元旦。
+- MAI: 还就没写。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-383"></a>
+
+<details><summary>voice_383 · 5 speech entries · 2 links</summary>
+
+↔ [484](#latest-committed-memory-segment-144-node-484) · ↔ [902](#latest-committed-memory-segment-144-node-902)
+
+- MAI: 腰，腰是这么写的？
+- MAI: 是，是这么写的。
+- MAI: 对，4到6位。
+- Deepgram: mhmm okay should &#124; MAI: 嗯，对，是的。
+- MAI: 要不加进去，挺好。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-384"></a>
+
+<details><summary>voice_384 · 1 speech entries · 0 links</summary>
+
+- MAI: 宝盖，宝盖。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-394"></a>
+
+<details><summary>voice_394 · 7 speech entries · 2 links</summary>
+
+↔ [401](#latest-committed-memory-segment-144-node-401) · ↔ [403](#latest-committed-memory-segment-144-node-403)
+
+- MAI: OK。第一位。
+- MAI: 我浅浅邀一个吧，先。
+- Deepgram: ，论伯耀伯耀 ，论 &#124; MAI: 所以总共1, 2, 3, 4。4加5，5个，这是。
+- Deepgram: ठीक &#124; MAI: 第二点，要开始活动内容部分吗？
+- Deepgram: 那覇要bie dama佛 ， &#124; MAI: 活动内容，我记得大家问卷的时候应该是填过的。
+- MAI: Coffee and alcohol.
+- MAI: 安岗。这字写得太好看了，真。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-395"></a>
+
+<details><summary>voice_395 · 1 speech entries · 1 links</summary>
+
+↔ [406](#latest-committed-memory-segment-144-node-406)
+
+- MAI: 我不太确定，因为咱们这太远了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-396"></a>
+
+<details><summary>voice_396 · 2 speech entries · 1 links</summary>
+
+↔ [407](#latest-committed-memory-segment-144-node-407)
+
+- MAI: 我不知道过不过来。
+- MAI: 烧烤吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-397"></a>
+
+<details><summary>voice_397 · 1 speech entries · 1 links</summary>
+
+↔ [408](#latest-committed-memory-segment-144-node-408)
+
+- MAI: 好。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-398"></a>
+
+<details><summary>voice_398 · 1 speech entries · 1 links</summary>
+
+↔ [410](#latest-committed-memory-segment-144-node-410)
+
+- MAI: 我浅浅邀请一个吧。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-415"></a>
+
+<details><summary>voice_415 · 2 speech entries · 0 links</summary>
+
+- MAI: 画上去。
+- MAI: 摆台吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-416"></a>
+
+<details><summary>voice_416 · 8 speech entries · 3 links</summary>
+
+↔ [423](#latest-committed-memory-segment-144-node-423) · ↔ [593](#latest-committed-memory-segment-144-node-593) · ↔ [920](#latest-committed-memory-segment-144-node-920)
+
+- MAI: 画小龙吧，男人先右点，女生再。
+- MAI: 嗯，丽夏，然后对。LYS。
+- MAI: 是那个，就是呃，7天，然后每，我买了那个花嘛，然后每个人一个花瓶，然后就相当于呃，醒花一-一到两天，然后刚好它一个周期，就是。
+- MAI: 可以让这个花慢慢地开放，然后把这个花的花瓣，然后做成那种压花，然后就比较环保，做成那种明信片，还有买了那种亚克力的玻璃，然后就嵌进去，就是那种比较好看的手工，然后也跟植物有关。然后原材料又是自己精心养了七天的，然后我觉得形成了一个闭环。
+- MAI: 我还想着我第一天差一点要送走一个种草莓的那个盆栽。
+- MAI: 就是讲故事换币，然后就可以购买。
+- MAI: 几点到几点干什么，几点到几点干什么。
+- MAI: 如果在外面玩的话，放点音乐啥。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-417"></a>
+
+<details><summary>voice_417 · 5 speech entries · 4 links</summary>
+
+↔ [424](#latest-committed-memory-segment-144-node-424) · ↔ [482](#latest-committed-memory-segment-144-node-482) · ↔ [512](#latest-committed-memory-segment-144-node-512) · ↔ [516](#latest-committed-memory-segment-144-node-516)
+
+- MAI: 你邀请。
+- MAI: OK。虽然我们有123456，六位嘉宾。
+- MAI: 齐白石看得不错欸。
+- MAI: The riddle。然后我们还-还有-还有什么？
+- MAI: 那既然提到湖南GPT，那我们先从。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-418"></a>
+
+<details><summary>voice_418 · 3 speech entries · 1 links</summary>
+
+↔ [424](#latest-committed-memory-segment-144-node-424)
+
+- MAI: 你邀请的女生吗？
+- MAI: 啊。
+- MAI: 哦，那我也邀请一位女生。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-429"></a>
+
+<details><summary>voice_429 · 3 speech entries · 1 links</summary>
+
+↔ [607](#latest-committed-memory-segment-144-node-607)
+
+- MAI: 这个这个第二它这个充。
+- MAI: 是开价吗？还是说要把后面的练完？
+- MAI: 海底捞就最近不是跟樱桃小丸子联名点，它那个那个盆栽。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-430"></a>
+
+<details><summary>voice_430 · 9 speech entries · 4 links</summary>
+
+↔ [598](#latest-committed-memory-segment-144-node-598) · ↔ [685](#latest-committed-memory-segment-144-node-685) · ↔ [1213](#latest-committed-memory-segment-144-node-1213) · ↔ [1228](#latest-committed-memory-segment-144-node-1228)
+
+- MAI: 假发。
+- MAI: 我想的是种那个什么东西符合那种地球，是地球热，拍七天基本上发不了芽，然后我就想的是买这种花。
+- MAI: 床边也有，然后就大家自己坐着玩，然后最后一天因为想这种形式，这种就邀请什么
+- MAI: 真的很环保，而且还极具美感。
+- MAI: 你构建了我们整个的经济体系。
+- MAI: 一些，嗯，东-东西，那怎么招待他们？要不要搞一点什么？就像我-我-我经常我们学校草坪他，他们会自己调酒。就自己-自己人多的时候就有点像那个小party呀。
+- MAI: 那就是整个活动那一天大概持续多长时间？
+- MAI: 方式，但是他们一进来可能还没那么熟，就要他们在众人面前讲故事。
+- MAI: 不是，就是刚开始自我介绍获得币，然后玩，玩个小游戏赢了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-431"></a>
+
+<details><summary>voice_431 · 3 speech entries · 2 links</summary>
+
+↔ [514](#latest-committed-memory-segment-144-node-514) · ↔ [518](#latest-committed-memory-segment-144-node-518)
+
+- MAI: 你冲天一下，哎。
+- MAI: 嗯。
+- MAI: 这是我们的plan。存疑 plan。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-432"></a>
+
+<details><summary>voice_432 · 2 speech entries · 0 links</summary>
+
+- Deepgram: Ich will auch wieder mal. &#124; MAI: 你是奥特曼。
+- Deepgram: Ich will auch wieder mal. &#124; MAI: 他自己一个男生。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-433"></a>
+
+<details><summary>voice_433 · 1 speech entries · 0 links</summary>
+
+- MAI: 爱心头呢。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-441"></a>
+
+<details><summary>voice_441 · 5 speech entries · 1 links</summary>
+
+↔ [1215](#latest-committed-memory-segment-144-node-1215)
+
+- MAI: 这合适吗？这。
+- MAI: 朔也可以跳，是吧？
+- MAI: 第一个给五个，第二个给三。
+- MAI: 对对，五点吃，OK。
+- Deepgram: 是少了。 &#124; MAI: 大概是几点？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-442"></a>
+
+<details><summary>voice_442 · 1 speech entries · 0 links</summary>
+
+- MAI: 对不起，先画猪头。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-443"></a>
+
+<details><summary>voice_443 · 1 speech entries · 0 links</summary>
+
+- MAI: 存疑是吧？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-453"></a>
+
+<details><summary>voice_453 · 1 speech entries · 1 links</summary>
+
+↔ [460](#latest-committed-memory-segment-144-node-460)
+
+- MAI: 这是谁的？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-454"></a>
+
+<details><summary>voice_454 · 2 speech entries · 1 links</summary>
+
+↔ [461](#latest-committed-memory-segment-144-node-461)
+
+- MAI: 那，啊，Tasha。
+- MAI: Tasha。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-455"></a>
+
+<details><summary>voice_455 · 2 speech entries · 1 links</summary>
+
+↔ [462](#latest-committed-memory-segment-144-node-462)
+
+- MAI: 然后。
+- MAI: 这是羽轩的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-465"></a>
+
+<details><summary>voice_465 · 1 speech entries · 0 links</summary>
+
+- MAI: 这这位是谁的？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-466"></a>
+
+<details><summary>voice_466 · 5 speech entries · 3 links</summary>
+
+↔ [497](#latest-committed-memory-segment-144-node-497) · ↔ [1189](#latest-committed-memory-segment-144-node-1189) · ↔ [1234](#latest-committed-memory-segment-144-node-1234)
+
+- MAI: 我丽夏，或者写个L也行。
+- Deepgram: 詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮 &#124; MAI: 是采取挨家挨户上门询问的方式吗？
+- MAI: 会做一些手工艺品，用来，用来拍卖。
+- MAI: 正常给大家发一些币，然后通过摇骰子，大家玩一会儿。
+- MAI: 哎，问答的话，反正是世界地球日，可以
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-467"></a>
+
+<details><summary>voice_467 · 8 speech entries · 2 links</summary>
+
+↔ [941](#latest-committed-memory-segment-144-node-941) · ↔ [946](#latest-committed-memory-segment-144-node-946)
+
+- MAI: 还有呢？你要你要请两个。
+- MAI: 啊，邀请邻居。感觉妖哥好难接。
+- MAI: 正无穷，因为我们可以邀请。
+- MAI: 所以我们要直接先来这个吗？
+- Deepgram: Okay. &#124; MAI: 呃，是一个，一个类似于二手拍卖的一个一个一个一个一个一个一个想法。
+- MAI: 我不知道大家平时会不会去一些什么，比如说小小小酒馆或者是咖啡店，就那种比较有烟火气的地方。然后之前那个北京有一个连锁的冰酿啤酒叫跳海。
+- MAI: 的东西，它也是一个，是一，是一个诗集，可以是一个故事，然后也可以是一个就是真实存在的物品。然后你每人，就是那个每个物品都做一个小的PPT，然后展示出来。然后，然后然后。
+- MAI: 交换，就是也是跟这个环保理念比较比较挂钩。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-468"></a>
+
+<details><summary>voice_468 · 1 speech entries · 0 links</summary>
+
+- MAI: 对，但有一个可能来不了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-469"></a>
+
+<details><summary>voice_469 · 2 speech entries · 0 links</summary>
+
+- MAI: 性别？
+- MAI: 都是女的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-476"></a>
+
+<details><summary>voice_476 · 1 speech entries · 1 links</summary>
+
+↔ [480](#latest-committed-memory-segment-144-node-480)
+
+- MAI: 有一个，不知道哪。你给我发个星就行了，五角星。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-489"></a>
+
+<details><summary>voice_489 · 1 speech entries · 1 links</summary>
+
+↔ [497](#latest-committed-memory-segment-144-node-497)
+
+- MAI: 行，行。如果如果就是如果他们来的话，可以发进来什么。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-498"></a>
+
+<details><summary>voice_498 · 1 speech entries · 0 links</summary>
+
+- MAI: 明天咱们这地儿就被举报了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-499"></a>
+
+<details><summary>voice_499 · 1 speech entries · 0 links</summary>
+
+- MAI: 我觉得也是。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-500"></a>
+
+<details><summary>voice_500 · 11 speech entries · 7 links</summary>
+
+↔ [786](#latest-committed-memory-segment-144-node-786) · ↔ [790](#latest-committed-memory-segment-144-node-790) · ↔ [844](#latest-committed-memory-segment-144-node-844) · ↔ [850](#latest-committed-memory-segment-144-node-850) · ↔ [861](#latest-committed-memory-segment-144-node-861) · ↔ [1661](#latest-committed-memory-segment-144-node-1661) · ↔ [1664](#latest-committed-memory-segment-144-node-1664)
+
+- MAI: 带上四大，你要是来我就把这单送你，你不来就不送。
+- MAI: 就这个，就这个。啊，你怎么没拆？不是拿现成的吗？你把培养皿拿出来吧。
+- MAI: 就是这是自己设计的一些种子纸，就是把种子放在这个纸里面，这个纸是用废弃的咖啡渣，呃，一些纸，然后做成那种纸浆，然后纸浆里面有那种植物种子，都是用的太阳花种子，太阳花种子它比较容易发芽，然后如果用培养皿水。
+- MAI: 水培的话，大概5天左右就可以发芽。然后做了一些种类的，当然世界地球的任务。
+- MAI: 然后做了5种地球的，做了两种很简单的。
+- MAI: 好的，那就甜品台做一次要八百到一千呢。
+- MAI: 大概从早上就要开始准备，然后需要配两个人。
+- MAI: 有的需要冷藏的会前一天做，比如说提拉米苏。
+- MAI: 嗯，也是前一天做好，然后第二天就直接把原料然后进行一个配就行。
+- MAI: 就是用那个吉利丁片和椰奶就可以做，好像。
+- MAI: 那那晚饭是自己做吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-508"></a>
+
+<details><summary>voice_508 · 1 speech entries · 1 links</summary>
+
+↔ [513](#latest-committed-memory-segment-144-node-513)
+
+- MAI: 有种复古的感觉。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-509"></a>
+
+<details><summary>voice_509 · 1 speech entries · 1 links</summary>
+
+↔ [515](#latest-committed-memory-segment-144-node-515)
+
+- MAI: 好多问号啊，我们好像名人。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-520"></a>
+
+<details><summary>voice_520 · 1 speech entries · 0 links</summary>
+
+- MAI: 呃。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-521"></a>
+
+<details><summary>voice_521 · 1 speech entries · 1 links</summary>
+
+↔ [527](#latest-committed-memory-segment-144-node-527)
+
+- MAI: 屌丝。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-522"></a>
+
+<details><summary>voice_522 · 1 speech entries · 1 links</summary>
+
+↔ [530](#latest-committed-memory-segment-144-node-530)
+
+- MAI: 给大家拍，我靠。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-534"></a>
+
+<details><summary>voice_534 · 2 speech entries · 0 links</summary>
+
+- MAI: 擦，擦掉，擦掉。
+- MAI: 处理一下。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-535"></a>
+
+<details><summary>voice_535 · 1 speech entries · 0 links</summary>
+
+- MAI: 添了多少麻。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-543"></a>
+
+<details><summary>voice_543 · 2 speech entries · 0 links</summary>
+
+- MAI: 算算上我们是吗？
+- MAI: 行，大概就是这个样子。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-544"></a>
+
+<details><summary>voice_544 · 2 speech entries · 0 links</summary>
+
+- MAI: 九到十一。
+- MAI: 嗯。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-545"></a>
+
+<details><summary>voice_545 · 1 speech entries · 0 links</summary>
+
+- Deepgram: 你 &#124; MAI: 现在我我我有十六亿了吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-546"></a>
+
+<details><summary>voice_546 · 2 speech entries · 0 links</summary>
+
+- Deepgram: 你 &#124; MAI: 14？
+- Deepgram: 好也 &#124; MAI: 14吧。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-547"></a>
+
+<details><summary>voice_547 · 1 speech entries · 0 links</summary>
+
+- Deepgram: 好也 &#124; MAI: 那就14吧。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-555"></a>
+
+<details><summary>voice_555 · 1 speech entries · 0 links</summary>
+
+- Deepgram: Okay. &#124; MAI: OK。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-556"></a>
+
+<details><summary>voice_556 · 2 speech entries · 0 links</summary>
+
+- MAI: 然后
+- MAI: 好，到我了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-557"></a>
+
+<details><summary>voice_557 · 5 speech entries · 0 links</summary>
+
+- MAI: 确定了。
+- MAI: 第一，第一大点的第三，下面三个小点，人员。然后我们还要。
+- MAI: 这个我觉得是一块硬骨头，我们要啃很久。
+- MAI: 大家问卷填的是什么来着？不会都是GPT生成的吧？
+- MAI: 一听就是304不锈钢。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-581"></a>
+
+<details><summary>voice_581 · 1 speech entries · 0 links</summary>
+
+- MAI: 做了一些周边。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-582"></a>
+
+<details><summary>voice_582 · 2 speech entries · 0 links</summary>
+
+- MAI: 那一天就可以分发给大家。
+- MAI: 上才艺。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-583"></a>
+
+<details><summary>voice_583 · 1 speech entries · 0 links</summary>
+
+- MAI: 这花的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-595"></a>
+
+<details><summary>voice_595 · 3 speech entries · 3 links</summary>
+
+↔ [600](#latest-committed-memory-segment-144-node-600) · ↔ [605](#latest-committed-memory-segment-144-node-605) · ↔ [1457](#latest-committed-memory-segment-144-node-1457)
+
+- MAI: 直接那个顺风发光。
+- MAI: 云南的花，是，它好像有两个包，对，我买了芍药啊。啊，刚好一些花要找个简。
+- MAI: 那那下午茶时间要不要弄到四点二十之后？要不然插那个地方。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-622"></a>
+
+<details><summary>voice_622 · 4 speech entries · 1 links</summary>
+
+↔ [632](#latest-committed-memory-segment-144-node-632)
+
+- MAI: 然后买了压花器，还有那种干燥剂。这个是它，这个是它。
+- MAI: 嗯，200多万，我看是。
+- MAI: 他说要一到两天才能，才能采样，时间就差不多。压花就要压两三天，这个颜色才好。这是香雪兰还是？
+- MAI: 下一个。我来。下一个是。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-623"></a>
+
+<details><summary>voice_623 · 1 speech entries · 0 links</summary>
+
+- MAI: 是芍药吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-634"></a>
+
+<details><summary>voice_634 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯，百合。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-635"></a>
+
+<details><summary>voice_635 · 2 speech entries · 0 links</summary>
+
+- MAI: 百合兰。
+- MAI: OK。来。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-642"></a>
+
+<details><summary>voice_642 · 1 speech entries · 1 links</summary>
+
+↔ [648](#latest-committed-memory-segment-144-node-648)
+
+- MAI: 营养剂，泡到水里面加速醒发的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-643"></a>
+
+<details><summary>voice_643 · 2 speech entries · 2 links</summary>
+
+↔ [651](#latest-committed-memory-segment-144-node-651) · ↔ [654](#latest-committed-memory-segment-144-node-654)
+
+- MAI: 没有我的。
+- MAI: 对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-655"></a>
+
+<details><summary>voice_655 · 1 speech entries · 0 links</summary>
+
+- MAI: 还没呢。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-656"></a>
+
+<details><summary>voice_656 · 1 speech entries · 0 links</summary>
+
+- Deepgram: ¿Quieres? &#124; MAI: 带资进组，你看。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-657"></a>
+
+<details><summary>voice_657 · 3 speech entries · 0 links</summary>
+
+- Deepgram: ¿Quieres? &#124; MAI: 确实。
+- MAI: 羽泉也，对，羽泉也可以跳。
+- MAI: 怎么？可以，可以，可以。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-667"></a>
+
+<details><summary>voice_667 · 11 speech entries · 5 links</summary>
+
+↔ [671](#latest-committed-memory-segment-144-node-671) · ↔ [673](#latest-committed-memory-segment-144-node-673) · ↔ [676](#latest-committed-memory-segment-144-node-676) · ↔ [685](#latest-committed-memory-segment-144-node-685) · ↔ [1238](#latest-committed-memory-segment-144-node-1238)
+
+- MAI: 形式吗？形式就是我们六个人，一人一个花瓶，我也买好了，然后
+- MAI: 他要把这花分分，分分了以后养了一-一-一到两三天，呃，它这个就会慢慢全部开了。
+- MAI: 然后就用这种花瓣，或者是我看他们压花，就是直接把这个花，花剪下来，然后就直接这样压。
+- MAI: 它就会变成一个那种平面的，然后
+- MAI: 然后展开的那个花，然后就可以坐在那种明信片，我买了那种明信片贺卡，还有那个，包括那个叫什么，那种亚克力双层玻璃，然后像像一个那个相框，就可以送给别人。然后一些叶子什么的，然后我当时想的是你不是有那个户外活动，我们就可以去捡一些叶子。
+- MAI: 什么就可以。你自己做的，自己养的，然后分发给大家就行。然后也比较符合七天这个周期。
+- MAI: 推销我们的产品。
+- MAI: post part，就是他们一二环节不是会得金币吗？
+- MAI: 他们有的那种糖水就是直接椰奶，然后加一点水果，加一点玉米就行了。
+- MAI: 感觉会不会简单，就不要做成那种冻固体的，就不要用那个什么。
+- MAI: 就是直接，就像那种水牛奶一样。因为我自己经常喝的糖水，我看他们就是一点椰奶啊，然后芒果，然后一些那个红。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-668"></a>
+
+<details><summary>voice_668 · 1 speech entries · 1 links</summary>
+
+↔ [672](#latest-committed-memory-segment-144-node-672)
+
+- MAI: 哦。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-677"></a>
+
+<details><summary>voice_677 · 2 speech entries · 0 links</summary>
+
+- MAI: 嗯嗯。
+- MAI: 包饭也麻烦，点外卖也麻烦。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-678"></a>
+
+<details><summary>voice_678 · 1 speech entries · 0 links</summary>
+
+- MAI: 然后画一样，对，然后
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-687"></a>
+
+<details><summary>voice_687 · 2 speech entries · 0 links</summary>
+
+- MAI: 要不先给他醒了吧。
+- MAI: 时间线。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-688"></a>
+
+<details><summary>voice_688 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯，可以啊。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-689"></a>
+
+<details><summary>voice_689 · 1 speech entries · 0 links</summary>
+
+- MAI: 今天我是今天。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-699"></a>
+
+<details><summary>voice_699 · 3 speech entries · 2 links</summary>
+
+↔ [710](#latest-committed-memory-segment-144-node-710) · ↔ [1148](#latest-committed-memory-segment-144-node-1148)
+
+- MAI: 下一个，卢，卢亚。
+- MAI: 这是Lucia，这是露西亚。
+- MAI: 不如跳舞。留下时间线吧。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-700"></a>
+
+<details><summary>voice_700 · 2 speech entries · 1 links</summary>
+
+↔ [710](#latest-committed-memory-segment-144-node-710)
+
+- MAI: 哦哦。
+- MAI: 刘喜。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-718"></a>
+
+<details><summary>voice_718 · 3 speech entries · 0 links</summary>
+
+- MAI: 就前段时间特别火那个。
+- MAI: 对对对，抖音上就大家都可以一起跳，就是排的时间也会短一些，对吧？也没有什么
+- MAI: 比较大的动作，在里面也不影响。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-719"></a>
+
+<details><summary>voice_719 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-720"></a>
+
+<details><summary>voice_720 · 1 speech entries · 0 links</summary>
+
+- MAI: 可以放在那个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-721"></a>
+
+<details><summary>voice_721 · 1 speech entries · 0 links</summary>
+
+- MAI: 反正最不缺的就是纸箱，所以我。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-732"></a>
+
+<details><summary>voice_732 · 7 speech entries · 3 links</summary>
+
+↔ [738](#latest-committed-memory-segment-144-node-738) · ↔ [740](#latest-committed-memory-segment-144-node-740) · ↔ [1459](#latest-committed-memory-segment-144-node-1459)
+
+- MAI: 买了。
+- MAI: 但是如果要排一个小短剧的话，就是我现在暂时还没有想到一个现成我们目前。
+- MAI: 就拿来用的剧本，因为咱们时间比较短。
+- MAI: 不太来得及。就如果大家有想到什么，你们以前看到过的短视频之类的，这种也可以。就如果有个现成的剧本，我觉得咱们可以尝试拍一下。对。
+- MAI: 如果我们要求不那么高的话，就是买一个冰膜，然后自己冻一下。
+- MAI: 如果有现成的剧本的话，我们可以。
+- MAI: 因为一般来说下午茶都是三点到五点这个时间。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-742"></a>
+
+<details><summary>voice_742 · 1 speech entries · 0 links</summary>
+
+- MAI: 所以如果要现在去编的话，可能就
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-743"></a>
+
+<details><summary>voice_743 · 1 speech entries · 0 links</summary>
+
+- MAI: 我们两个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-755"></a>
+
+<details><summary>voice_755 · 1 speech entries · 1 links</summary>
+
+↔ [764](#latest-committed-memory-segment-144-node-764)
+
+- MAI: 你把他名写反了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-756"></a>
+
+<details><summary>voice_756 · 2 speech entries · 1 links</summary>
+
+↔ [765](#latest-committed-memory-segment-144-node-765)
+
+- MAI: 爱流万确。
+- MAI: 哦，这真是好东西。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-757"></a>
+
+<details><summary>voice_757 · 1 speech entries · 1 links</summary>
+
+↔ [768](#latest-committed-memory-segment-144-node-768)
+
+- MAI: 完了，今天那个变异了，做完染色体。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-758"></a>
+
+<details><summary>voice_758 · 2 speech entries · 1 links</summary>
+
+↔ [770](#latest-committed-memory-segment-144-node-770)
+
+- MAI: 好家伙，这俩你都有是吗？
+- MAI: 其其他城市。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-759"></a>
+
+<details><summary>voice_759 · 1 speech entries · 1 links</summary>
+
+↔ [771](#latest-committed-memory-segment-144-node-771)
+
+- MAI: 他闪。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-760"></a>
+
+<details><summary>voice_760 · 1 speech entries · 1 links</summary>
+
+↔ [772](#latest-committed-memory-segment-144-node-772)
+
+- MAI: OK，上我的道具。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-776"></a>
+
+<details><summary>voice_776 · 1 speech entries · 1 links</summary>
+
+↔ [782](#latest-committed-memory-segment-144-node-782)
+
+- MAI: 他的道具为什么在你的行李箱里？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-777"></a>
+
+<details><summary>voice_777 · 1 speech entries · 1 links</summary>
+
+↔ [787](#latest-committed-memory-segment-144-node-787)
+
+- MAI: 培养皿。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-798"></a>
+
+<details><summary>voice_798 · 2 speech entries · 2 links</summary>
+
+↔ [804](#latest-committed-memory-segment-144-node-804) · ↔ [807](#latest-committed-memory-segment-144-node-807)
+
+- Deepgram: Твой. &#124; MAI: 这都是我们三个。
+- MAI: 那应该不止一个小时。是不是再长一个半小时？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-799"></a>
+
+<details><summary>voice_799 · 3 speech entries · 2 links</summary>
+
+↔ [805](#latest-committed-memory-segment-144-node-805) · ↔ [807](#latest-committed-memory-segment-144-node-807)
+
+- Deepgram: Твой. &#124; MAI: 对。
+- MAI: 好的。
+- MAI: 假酒。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-818"></a>
+
+<details><summary>voice_818 · 1 speech entries · 1 links</summary>
+
+↔ [824](#latest-committed-memory-segment-144-node-824)
+
+- MAI: 好像没有别的种类。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-825"></a>
+
+<details><summary>voice_825 · 1 speech entries · 1 links</summary>
+
+↔ [832](#latest-committed-memory-segment-144-node-832)
+
+- Deepgram: Oh. &#124; MAI: 哦。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-852"></a>
+
+<details><summary>voice_852 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-853"></a>
+
+<details><summary>voice_853 · 1 speech entries · 0 links</summary>
+
+- MAI: 但是你是原创。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-863"></a>
+
+<details><summary>voice_863 · 1 speech entries · 0 links</summary>
+
+- MAI: 然后这样就比较环保了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-864"></a>
+
+<details><summary>voice_864 · 1 speech entries · 0 links</summary>
+
+- MAI: 真的很环保。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-865"></a>
+
+<details><summary>voice_865 · 6 speech entries · 1 links</summary>
+
+↔ [962](#latest-committed-memory-segment-144-node-962)
+
+- MAI: 那。
+- MAI: 你-你自己设计的是画的图没？
+- MAI: 应该是这个吗？你刚刚指的是这个吗？
+- MAI: 你刚刚是让我拿这个吗？
+- MAI: 哦，不知道吗？露完露死。
+- MAI: 什么叫会使用？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-866"></a>
+
+<details><summary>voice_866 · 2 speech entries · 0 links</summary>
+
+- MAI: 那就很简单了，就找一些logo。
+- MAI: 清补凉好吃吗？你觉得？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-867"></a>
+
+<details><summary>voice_867 · 1 speech entries · 0 links</summary>
+
+- MAI: 这个logo一找，写个字。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-868"></a>
+
+<details><summary>voice_868 · 2 speech entries · 1 links</summary>
+
+↔ [942](#latest-committed-memory-segment-144-node-942)
+
+- MAI: OK。
+- MAI: OK。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-869"></a>
+
+<details><summary>voice_869 · 1 speech entries · 0 links</summary>
+
+- MAI: 放个框就行了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-887"></a>
+
+<details><summary>voice_887 · 2 speech entries · 0 links</summary>
+
+- MAI: 要不和。
+- MAI: 我只是觉得应该买实体。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-911"></a>
+
+<details><summary>voice_911 · 1 speech entries · 1 links</summary>
+
+↔ [917](#latest-committed-memory-segment-144-node-917)
+
+- Deepgram: 好。即 &#124; MAI: 就是有需要的话可以直接买过来。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-912"></a>
+
+<details><summary>voice_912 · 2 speech entries · 1 links</summary>
+
+↔ [1147](#latest-committed-memory-segment-144-node-1147)
+
+- MAI: 我行吧，不知道我。
+- MAI: 谈恋爱不如跳舞。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-924"></a>
+
+<details><summary>voice_924 · 1 speech entries · 0 links</summary>
+
+- Deepgram: ¿Halliéoláo? &#124; MAI: 也可以种一些。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-925"></a>
+
+<details><summary>voice_925 · 1 speech entries · 0 links</summary>
+
+- Deepgram: ¿Halliéoláo? Ok. &#124; MAI: 海底捞。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-926"></a>
+
+<details><summary>voice_926 · 1 speech entries · 0 links</summary>
+
+- Deepgram: ¿Halliéoláo? Ok. &#124; MAI: 那那个豌豆苗也可以种。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-927"></a>
+
+<details><summary>voice_927 · 2 speech entries · 0 links</summary>
+
+- MAI: OK。
+- MAI: 嗯。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-928"></a>
+
+<details><summary>voice_928 · 1 speech entries · 0 links</summary>
+
+- MAI: 特好。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-929"></a>
+
+<details><summary>voice_929 · 2 speech entries · 0 links</summary>
+
+- MAI: 我说他摆不动，我就过来订阅。我本来想买盆栽，我想订阅一个月。
+- MAI: 可以。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-948"></a>
+
+<details><summary>voice_948 · 2 speech entries · 0 links</summary>
+
+- MAI: 然后他们当年大榕树开业的时候搞了一个。
+- MAI: 拍卖。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-949"></a>
+
+<details><summary>voice_949 · 1 speech entries · 0 links</summary>
+
+- MAI: 一个一个一个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-950"></a>
+
+<details><summary>voice_950 · 1 speech entries · 0 links</summary>
+
+- MAI: 这就一份吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-951"></a>
+
+<details><summary>voice_951 · 1 speech entries · 0 links</summary>
+
+- MAI: 然后
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-952"></a>
+
+<details><summary>voice_952 · 1 speech entries · 0 links</summary>
+
+- MAI: 我说明信片就一份吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-953"></a>
+
+<details><summary>voice_953 · 1 speech entries · 0 links</summary>
+
+- MAI: 哦，他们不知道。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-964"></a>
+
+<details><summary>voice_964 · 1 speech entries · 0 links</summary>
+
+- MAI: PPT吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-965"></a>
+
+<details><summary>voice_965 · 2 speech entries · 1 links</summary>
+
+↔ [1236](#latest-committed-memory-segment-144-node-1236)
+
+- MAI: 这是工作狂游戏吗？
+- MAI: 先要把那个二十几来着，二十一。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-979"></a>
+
+<details><summary>voice_979 · 2 speech entries · 1 links</summary>
+
+↔ [987](#latest-committed-memory-segment-144-node-987)
+
+- MAI: 像什么一个故事换一根藤条的那种。
+- MAI: 甜品是什么时候，哪个时间段吃？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-980"></a>
+
+<details><summary>voice_980 · 2 speech entries · 1 links</summary>
+
+↔ [988](#latest-committed-memory-segment-144-node-988)
+
+- MAI: 哦。
+- Deepgram: 你也말 말了。 &#124; MAI: 碳，这些其实就是外卖都有。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-993"></a>
+
+<details><summary>voice_993 · 2 speech entries · 0 links</summary>
+
+- MAI: 购买。
+- MAI: 购买他们自己带来的闲置物品。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1002"></a>
+
+<details><summary>voice_1002 · 2 speech entries · 0 links</summary>
+
+- MAI: 再去买别的。
+- MAI: 对，剩下的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1003"></a>
+
+<details><summary>voice_1003 · 1 speech entries · 0 links</summary>
+
+- MAI: 反正就是换了一种交流的货币。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1004"></a>
+
+<details><summary>voice_1004 · 1 speech entries · 0 links</summary>
+
+- MAI: OK，那我就判断这些了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1005"></a>
+
+<details><summary>voice_1005 · 1 speech entries · 0 links</summary>
+
+- MAI: 啊，对，可以把这些。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1006"></a>
+
+<details><summary>voice_1006 · 1 speech entries · 0 links</summary>
+
+- MAI: 我们都是，我们都是。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1014"></a>
+
+<details><summary>voice_1014 · 1 speech entries · 0 links</summary>
+
+- MAI: 他是，他是小货币。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1015"></a>
+
+<details><summary>voice_1015 · 1 speech entries · 0 links</summary>
+
+- MAI: 这是我的商品，我要拍卖的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1016"></a>
+
+<details><summary>voice_1016 · 1 speech entries · 0 links</summary>
+
+- MAI: 还有什么想法吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1017"></a>
+
+<details><summary>voice_1017 · 2 speech entries · 1 links</summary>
+
+↔ [1203](#latest-committed-memory-segment-144-node-1203)
+
+- MAI: 在那一天邀请他们过来，这是我们准备的。
+- MAI: 但是一一进来就让，就是刚开始肯定要获得货币，但是你获得货币是让他们通过讲故事。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1029"></a>
+
+<details><summary>voice_1029 · 14 speech entries · 5 links</summary>
+
+↔ [1055](#latest-committed-memory-segment-144-node-1055) · ↔ [1058](#latest-committed-memory-segment-144-node-1058) · ↔ [1123](#latest-committed-memory-segment-144-node-1123) · ↔ [1329](#latest-committed-memory-segment-144-node-1329) · ↔ [1550](#latest-committed-memory-segment-144-node-1550)
+
+- MAI: 对，就是可以请大家喝。
+- MAI: 一些饮品，然后我们就有点像这-这算市集部分和饮品部分也有了。那是不是还要什么节目啊，你之前。
+- MAI: 可好像不用管饭，但是可以请他做一点点甜。
+- MAI: 哎，我像前面我们昨晚这个咖啡厅，借了一块就可以买冰啤。
+- MAI: 因为就五个人这个有点像那种市集，但是那种市集一般都是比较大，让大家随意逛，但是我们这个地方比较小，那你肯定要规定一定的时间干什么，一定的时间干什么，要不然容易他们一下就看完了。
+- MAI: 这是真的酒还是假的酒？
+- MAI: 这些就是我们要让他们先获得会货币以后，我们再推销我们自己的产品。其实感觉不确定他们到底是
+- MAI: 其实可能不会持续很长的时间。这时候拿40分钟把价格。
+- MAI: 那就是，反正他他他的是种子片，就加甜品，就在3点40到4点20介绍，然后他作为我们几个的压轴，然后介绍完了以后，大家可以。
+- MAI: 嗯，现在是五点，呃，五点，那我们的节目就弄到晚上一样。因为我当时想的是你那个讲故事的话，大家不是很熟，因为你那个讲故事设定在酒吧，感觉酒吧大家都是有故事的人，可能就在那种环境下，然后就愿意讲。但是我们这种刚过来，他们可能不太愿意讲故事，所以改成自我介绍还挺好。然后如果说要讲故事或扩金币这个环节，我觉得可以弄。
+- MAI: 的偏晚上一点，大家已经熟了一点，再加上晚上比较感性，可以带着一点自己的故事过来。然后那那就五点是他们介绍完他们的 part。
+- MAI: 然后五点到六点就吃烧烤、调酒这种吗？
+- Deepgram: SS &#124; MAI: 那调酒的话是属于贯穿始终。
+- MAI: 然后三点四十到四点二十的时候，我们介绍我们的产品，然后我想的是你放在最后，然后就是刚好这一块结束以后，大家
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1030"></a>
+
+<details><summary>voice_1030 · 1 speech entries · 0 links</summary>
+
+- MAI: 笑得这么
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1038"></a>
+
+<details><summary>voice_1038 · 1 speech entries · 0 links</summary>
+
+- Deepgram: Okay. &#124; MAI: 就表演。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1039"></a>
+
+<details><summary>voice_1039 · 3 speech entries · 0 links</summary>
+
+- MAI: 一下午。
+- MAI: 呃，那就给他们提供一些饮品就够了吧。
+- MAI: 对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1040"></a>
+
+<details><summary>voice_1040 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯，对，可以。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1059"></a>
+
+<details><summary>voice_1059 · 1 speech entries · 1 links</summary>
+
+↔ [1068](#latest-committed-memory-segment-144-node-1068)
+
+- MAI: 可以待到晚上，今天天气怎么样？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1060"></a>
+
+<details><summary>voice_1060 · 3 speech entries · 2 links</summary>
+
+↔ [1068](#latest-committed-memory-segment-144-node-1068) · ↔ [1612](#latest-committed-memory-segment-144-node-1612)
+
+- MAI: 不下雨的话，如果像今天这种天的话，待到晚上还是挺漂亮。
+- MAI: 传数据让他们自己逛逛我们的世界，然后喝喝酒。
+- MAI: 那就是那个五点结束之后呗。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1070"></a>
+
+<details><summary>voice_1070 · 5 speech entries · 0 links</summary>
+
+- Deepgram: 你也말 말了。 &#124; MAI: 还要买碳，对吧？
+- MAI: 哦哦哦，可以买采购。
+- Deepgram: 你毛体、毛体。你 &#124; MAI: 那茅台，茅台。
+- MAI: 摆什么？是怎么？
+- MAI: 也就摆在这。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1071"></a>
+
+<details><summary>voice_1071 · 5 speech entries · 1 links</summary>
+
+↔ [1237](#latest-committed-memory-segment-144-node-1237)
+
+- MAI: 能不能切个肉什么的吗？
+- MAI: 能切，都能切吧，都能切。
+- MAI: 各位都能切了。
+- MAI: 因-因为你不切。
+- MAI: 因为是星期天。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1072"></a>
+
+<details><summary>voice_1072 · 1 speech entries · 0 links</summary>
+
+- MAI: 有大家这句话我就放心了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1082"></a>
+
+<details><summary>voice_1082 · 1 speech entries · 0 links</summary>
+
+- MAI: 拿出来稍微放一会的时候好切。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1083"></a>
+
+<details><summary>voice_1083 · 2 speech entries · 0 links</summary>
+
+- MAI: 明白。行。
+- MAI: 你也插一个吧。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1084"></a>
+
+<details><summary>voice_1084 · 1 speech entries · 0 links</summary>
+
+- MAI: 其实调酒好像就是买，买一点那种。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1085"></a>
+
+<details><summary>voice_1085 · 1 speech entries · 0 links</summary>
+
+- MAI: 对，然后搞一点冰块。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1086"></a>
+
+<details><summary>voice_1086 · 1 speech entries · 0 links</summary>
+
+- MAI: 对。冰块的话。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1098"></a>
+
+<details><summary>voice_1098 · 1 speech entries · 0 links</summary>
+
+- MAI: 发现蛮简单。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1099"></a>
+
+<details><summary>voice_1099 · 2 speech entries · 0 links</summary>
+
+- MAI: 只不过是冻出来可能没有
+- MAI: 哎，我们有透明。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1100"></a>
+
+<details><summary>voice_1100 · 1 speech entries · 0 links</summary>
+
+- MAI: 我们有冰箱，就买个那个模具倒点水前先冻一下。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1101"></a>
+
+<details><summary>voice_1101 · 1 speech entries · 0 links</summary>
+
+- MAI: 用蒸馏水就行。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1102"></a>
+
+<details><summary>voice_1102 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯，蒸馏水。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1103"></a>
+
+<details><summary>voice_1103 · 1 speech entries · 0 links</summary>
+
+- MAI: 我们到底是在搞什么？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1114"></a>
+
+<details><summary>voice_1114 · 1 speech entries · 0 links</summary>
+
+- MAI: 那它整-整体的时间流程？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1139"></a>
+
+<details><summary>voice_1139 · 1 speech entries · 1 links</summary>
+
+↔ [1146](#latest-committed-memory-segment-144-node-1146)
+
+- MAI: 不如跳舞。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1140"></a>
+
+<details><summary>voice_1140 · 3 speech entries · 3 links</summary>
+
+↔ [1150](#latest-committed-memory-segment-144-node-1150) · ↔ [1153](#latest-committed-memory-segment-144-node-1153) · ↔ [1504](#latest-committed-memory-segment-144-node-1504)
+
+- MAI: 可是这我怕戴眼镜会掉了。
+- MAI: 好漂亮。
+- MAI: 点点披萨倒还行。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1155"></a>
+
+<details><summary>voice_1155 · 1 speech entries · 0 links</summary>
+
+- MAI: 你在挺我说谢谢。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1156"></a>
+
+<details><summary>voice_1156 · 1 speech entries · 0 links</summary>
+
+- MAI: 捋一下时间线。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1157"></a>
+
+<details><summary>voice_1157 · 1 speech entries · 0 links</summary>
+
+- MAI: 要不要买100人民币？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1158"></a>
+
+<details><summary>voice_1158 · 1 speech entries · 0 links</summary>
+
+- MAI: 首先要他们讲故事才能获得那个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1184"></a>
+
+<details><summary>voice_1184 · 1 speech entries · 1 links</summary>
+
+↔ [1192](#latest-committed-memory-segment-144-node-1192)
+
+- MAI: 门门口再来一个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1195"></a>
+
+<details><summary>voice_1195 · 1 speech entries · 0 links</summary>
+
+- MAI: 确实啊，这个听起来有点。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1196"></a>
+
+<details><summary>voice_1196 · 1 speech entries · 0 links</summary>
+
+- MAI: 一会儿发鸡蛋，一会儿摇骰。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1197"></a>
+
+<details><summary>voice_1197 · 1 speech entries · 1 links</summary>
+
+↔ [1201](#latest-committed-memory-segment-144-node-1201)
+
+- MAI: 进来玩玩嘛，进来就可以获得十个币。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1206"></a>
+
+<details><summary>voice_1206 · 2 speech entries · 1 links</summary>
+
+↔ [1214](#latest-committed-memory-segment-144-node-1214)
+
+- MAI: 那就自我介绍就可以获得一个礼。
+- MAI: 啊，自我介绍可以获得，对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1207"></a>
+
+<details><summary>voice_1207 · 1 speech entries · 1 links</summary>
+
+↔ [1218](#latest-committed-memory-segment-144-node-1218)
+
+- Deepgram: 你、你、你、你、你。你、你、你。你、你、你。你、你。你。你。你。你。 &#124; MAI: 哦，像复活节的那种。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1208"></a>
+
+<details><summary>voice_1208 · 2 speech entries · 1 links</summary>
+
+↔ [1219](#latest-committed-memory-segment-144-node-1219)
+
+- MAI: 藏币。
+- MAI: 也行。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1223"></a>
+
+<details><summary>voice_1223 · 2 speech entries · 1 links</summary>
+
+↔ [1232](#latest-committed-memory-segment-144-node-1232)
+
+- MAI: 就是一些问答什么的。
+- MAI: 野生动物拼图那个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1224"></a>
+
+<details><summary>voice_1224 · 2 speech entries · 1 links</summary>
+
+↔ [1234](#latest-committed-memory-segment-144-node-1234)
+
+- MAI: 知识问答得币。
+- MAI: 对对对对对对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1225"></a>
+
+<details><summary>voice_1225 · 1 speech entries · 1 links</summary>
+
+↔ [1236](#latest-committed-memory-segment-144-node-1236)
+
+- MAI: 世界地球日在哪一天？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1226"></a>
+
+<details><summary>voice_1226 · 4 speech entries · 1 links</summary>
+
+↔ [1236](#latest-committed-memory-segment-144-node-1236)
+
+- MAI: 二十二。
+- MAI: 前面他们。
+- MAI: 我们二十一来搞。
+- MAI: 那酒保在什么位置呢？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1242"></a>
+
+<details><summary>voice_1242 · 2 speech entries · 0 links</summary>
+
+- MAI: 那我们有那种大音箱不？
+- MAI: 啊，我以为你们已经喝了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1243"></a>
+
+<details><summary>voice_1243 · 1 speech entries · 0 links</summary>
+
+- MAI: 这个可以有。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1244"></a>
+
+<details><summary>voice_1244 · 1 speech entries · 0 links</summary>
+
+- MAI: 大东北。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1245"></a>
+
+<details><summary>voice_1245 · 1 speech entries · 0 links</summary>
+
+- MAI: 这是问答自我介绍。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1256"></a>
+
+<details><summary>voice_1256 · 2 speech entries · 0 links</summary>
+
+- Deepgram: 你毛体、毛体。你 好奇なぞ我的同。 &#124; MAI: 出来。
+- Deepgram: 好奇なぞ我的同。 &#124; MAI: 那花瓶拿走吧，太挡。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1257"></a>
+
+<details><summary>voice_1257 · 1 speech entries · 0 links</summary>
+
+- MAI: 多的话咱们就放这块。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1266"></a>
+
+<details><summary>voice_1266 · 3 speech entries · 2 links</summary>
+
+↔ [1271](#latest-committed-memory-segment-144-node-1271) · ↔ [1276](#latest-committed-memory-segment-144-node-1276)
+
+- MAI: 哦，我们还要写个英文版吗？
+- MAI: 我们应该 internationally。你看我那个英文就明显跟这个。
+- MAI: 蘸点披萨有那个三十二寸这么大的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1267"></a>
+
+<details><summary>voice_1267 · 1 speech entries · 0 links</summary>
+
+- MAI: 来，咱换一下。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1278"></a>
+
+<details><summary>voice_1278 · 1 speech entries · 0 links</summary>
+
+- MAI: 强调一下这个line。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1279"></a>
+
+<details><summary>voice_1279 · 1 speech entries · 0 links</summary>
+
+- MAI: 好好，行。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1290"></a>
+
+<details><summary>voice_1290 · 1 speech entries · 0 links</summary>
+
+- MAI: 入场式的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1291"></a>
+
+<details><summary>voice_1291 · 1 speech entries · 0 links</summary>
+
+- MAI: 可以。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1317"></a>
+
+<details><summary>voice_1317 · 1 speech entries · 1 links</summary>
+
+↔ [1323](#latest-committed-memory-segment-144-node-1323)
+
+- MAI: 第二点，还有什么？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1318"></a>
+
+<details><summary>voice_1318 · 1 speech entries · 1 links</summary>
+
+↔ [1326](#latest-committed-memory-segment-144-node-1326)
+
+- MAI: 三点工作主要是社会打工做的事。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1319"></a>
+
+<details><summary>voice_1319 · 1 speech entries · 1 links</summary>
+
+↔ [1328](#latest-committed-memory-segment-144-node-1328)
+
+- MAI: 那这像这些呢？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1334"></a>
+
+<details><summary>voice_1334 · 1 speech entries · 0 links</summary>
+
+- MAI: 是一人还是二人，你知道吗？万一。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1335"></a>
+
+<details><summary>voice_1335 · 1 speech entries · 0 links</summary>
+
+- Deepgram: 말요 你저다나 &#124; MAI: QA。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1336"></a>
+
+<details><summary>voice_1336 · 1 speech entries · 0 links</summary>
+
+- Deepgram: 말요 &#124; MAI: 妙啊。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1346"></a>
+
+<details><summary>voice_1346 · 2 speech entries · 2 links</summary>
+
+↔ [1350](#latest-committed-memory-segment-144-node-1350) · ↔ [1608](#latest-committed-memory-segment-144-node-1608)
+
+- MAI: 然后就每个人介绍自己做的这个，然后就跟他们说他们可以拿他们的货币来。
+- MAI: 嗯，对啊，唱唱歌，跳跳舞。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1357"></a>
+
+<details><summary>voice_1357 · 1 speech entries · 0 links</summary>
+
+- MAI: 哎。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1358"></a>
+
+<details><summary>voice_1358 · 1 speech entries · 2 links</summary>
+
+↔ [1363](#latest-committed-memory-segment-144-node-1363) · ↔ [1367](#latest-committed-memory-segment-144-node-1367)
+
+- MAI: 我的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1369"></a>
+
+<details><summary>voice_1369 · 1 speech entries · 0 links</summary>
+
+- MAI: Auction.
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1370"></a>
+
+<details><summary>voice_1370 · 1 speech entries · 0 links</summary>
+
+- MAI: Auction，A-U-C-A.
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1381"></a>
+
+<details><summary>voice_1381 · 2 speech entries · 0 links</summary>
+
+- MAI: 一个半小时差不多。
+- MAI: 七八分钟差不多。七八分钟，40分钟差不多。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1382"></a>
+
+<details><summary>voice_1382 · 1 speech entries · 0 links</summary>
+
+- MAI: 你-你-你不用。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1383"></a>
+
+<details><summary>voice_1383 · 1 speech entries · 0 links</summary>
+
+- MAI: 他们带多少东西。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1384"></a>
+
+<details><summary>voice_1384 · 1 speech entries · 0 links</summary>
+
+- MAI: 以及他们是矮人还是异人？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1385"></a>
+
+<details><summary>voice_1385 · 1 speech entries · 0 links</summary>
+
+- MAI: 对，这个就不确定。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1395"></a>
+
+<details><summary>voice_1395 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯，对，我觉得我们先开始吧。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1396"></a>
+
+<details><summary>voice_1396 · 2 speech entries · 0 links</summary>
+
+- MAI: 我们先开始。
+- MAI: 3点40到4点半是我们先开始。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1397"></a>
+
+<details><summary>voice_1397 · 1 speech entries · 0 links</summary>
+
+- MAI: 会会这么长。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1398"></a>
+
+<details><summary>voice_1398 · 1 speech entries · 0 links</summary>
+
+- MAI: 4点20。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1399"></a>
+
+<details><summary>voice_1399 · 1 speech entries · 0 links</summary>
+
+- MAI: 20。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1400"></a>
+
+<details><summary>voice_1400 · 1 speech entries · 0 links</summary>
+
+- MAI: 或者直接把他们把这段变成我们整体的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1409"></a>
+
+<details><summary>voice_1409 · 3 speech entries · 1 links</summary>
+
+↔ [1418](#latest-committed-memory-segment-144-node-1418)
+
+- MAI: 一个，怎么形容？一个小市集也行，就是可以让他们先。
+- MAI: 对。
+- MAI: 就如果对咱们整体的这个手工制定感，就好比我们是一个商家一样。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1410"></a>
+
+<details><summary>voice_1410 · 2 speech entries · 1 links</summary>
+
+↔ [1418](#latest-committed-memory-segment-144-node-1418)
+
+- MAI: 只不过使用的是这个货币。
+- MAI: 然后如果大家玩得比较高兴的话，就后面让他们在自己之间交谈。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1420"></a>
+
+<details><summary>voice_1420 · 1 speech entries · 0 links</summary>
+
+- MAI: 哦，六六个月，然后多的就放这种公共的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1421"></a>
+
+<details><summary>voice_1421 · 5 speech entries · 1 links</summary>
+
+↔ [1607](#latest-committed-memory-segment-144-node-1607)
+
+- MAI: 啊，要有一直有一个酒保在那边。
+- MAI: 要开饭，dinner。在5点半之后，5点半左右。
+- Deepgram: SS &#124; MAI: 对，就像甜品和
+- Deepgram: SS &#124; MAI: 嗯。
+- MAI: 可以，反正我们有把吉他。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1430"></a>
+
+<details><summary>voice_1430 · 1 speech entries · 0 links</summary>
+
+- MAI: 在外面的玻璃就可以调酒室内。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1431"></a>
+
+<details><summary>voice_1431 · 1 speech entries · 0 links</summary>
+
+- MAI: 来-来一点打光。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1432"></a>
+
+<details><summary>voice_1432 · 1 speech entries · 0 links</summary>
+
+- MAI: 对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1433"></a>
+
+<details><summary>voice_1433 · 1 speech entries · 0 links</summary>
+
+- MAI: 对，我们还有这个影棚灯。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1447"></a>
+
+<details><summary>voice_1447 · 1 speech entries · 1 links</summary>
+
+↔ [1453](#latest-committed-memory-segment-144-node-1453)
+
+- MAI: 像这个，我们是就一个一个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1448"></a>
+
+<details><summary>voice_1448 · 1 speech entries · 1 links</summary>
+
+↔ [1458](#latest-committed-memory-segment-144-node-1458)
+
+- MAI: 对，大家
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1449"></a>
+
+<details><summary>voice_1449 · 2 speech entries · 1 links</summary>
+
+↔ [1458](#latest-committed-memory-segment-144-node-1458)
+
+- MAI: 四点二十之后。
+- MAI: 连吃连干。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1464"></a>
+
+<details><summary>voice_1464 · 1 speech entries · 0 links</summary>
+
+- MAI: 他的那个甜品。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1465"></a>
+
+<details><summary>voice_1465 · 2 speech entries · 0 links</summary>
+
+- MAI: 甜品摆台。
+- MAI: 就是下午看塔的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1466"></a>
+
+<details><summary>voice_1466 · 1 speech entries · 0 links</summary>
+
+- MAI: 真的假的？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1467"></a>
+
+<details><summary>voice_1467 · 1 speech entries · 0 links</summary>
+
+- MAI: 摆。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1468"></a>
+
+<details><summary>voice_1468 · 1 speech entries · 0 links</summary>
+
+- MAI: 看一下有没有好看。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1477"></a>
+
+<details><summary>voice_1477 · 1 speech entries · 0 links</summary>
+
+- MAI: 没有，只是买个甜品台架子。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1478"></a>
+
+<details><summary>voice_1478 · 6 speech entries · 1 links</summary>
+
+↔ [1662](#latest-committed-memory-segment-144-node-1662)
+
+- MAI: 哎，但是你是不是需要很多机器啊？
+- MAI: 啊，对对对。
+- MAI: 烧烤偏晚上吧。
+- MAI: 但是，但是你要留他们到晚上的话，这个晚饭怎么弄？
+- MAI: 然后也不能弄太晚，他们回去。
+- MAI: 哎，其实像那种就是你看他们那种清补凉那种是不是就买点椰奶，然后做一元？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1479"></a>
+
+<details><summary>voice_1479 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯，基础的买了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1480"></a>
+
+<details><summary>voice_1480 · 1 speech entries · 0 links</summary>
+
+- MAI: 厨师机什么的也没买。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1488"></a>
+
+<details><summary>voice_1488 · 1 speech entries · 1 links</summary>
+
+↔ [1500](#latest-committed-memory-segment-144-node-1500)
+
+- MAI: 不能买。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1489"></a>
+
+<details><summary>voice_1489 · 1 speech entries · 1 links</summary>
+
+↔ [1501](#latest-committed-memory-segment-144-node-1501)
+
+- MAI: 上万？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1490"></a>
+
+<details><summary>voice_1490 · 1 speech entries · 1 links</summary>
+
+↔ [1502](#latest-committed-memory-segment-144-node-1502)
+
+- MAI: 嗯，几千块钱吧。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1491"></a>
+
+<details><summary>voice_1491 · 1 speech entries · 1 links</summary>
+
+↔ [1503](#latest-committed-memory-segment-144-node-1503)
+
+- MAI: 产品它就类似这样。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1492"></a>
+
+<details><summary>voice_1492 · 1 speech entries · 0 links</summary>
+
+- MAI: 哦，OK。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1493"></a>
+
+<details><summary>voice_1493 · 2 speech entries · 1 links</summary>
+
+↔ [1505](#latest-committed-memory-segment-144-node-1505)
+
+- MAI: 差不多是我设想的那大块。
+- MAI: 嗯，对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1494"></a>
+
+<details><summary>voice_1494 · 1 speech entries · 1 links</summary>
+
+↔ [1504](#latest-committed-memory-segment-144-node-1504)
+
+- MAI: 好漂亮。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1495"></a>
+
+<details><summary>voice_1495 · 4 speech entries · 1 links</summary>
+
+↔ [1506](#latest-committed-memory-segment-144-node-1506)
+
+- MAI: 到时候坐在这里，可以
+- MAI: 我每次开学术会议的时候。
+- MAI: 关键是老师一般都不怎么吃，最后都是我。
+- MAI: 哎，对，就是可能每人吃那么一两块。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1496"></a>
+
+<details><summary>voice_1496 · 1 speech entries · 1 links</summary>
+
+↔ [1507](#latest-committed-memory-segment-144-node-1507)
+
+- MAI: 对对对，就是为了这个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1497"></a>
+
+<details><summary>voice_1497 · 2 speech entries · 1 links</summary>
+
+↔ [1507](#latest-committed-memory-segment-144-node-1507)
+
+- MAI: 学术蝗虫。
+- MAI: 对对对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1510"></a>
+
+<details><summary>voice_1510 · 1 speech entries · 0 links</summary>
+
+- Deepgram: 你ちゃん。 &#124; MAI: 这样子。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1511"></a>
+
+<details><summary>voice_1511 · 1 speech entries · 0 links</summary>
+
+- MAI: 这样子。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1518"></a>
+
+<details><summary>voice_1518 · 2 speech entries · 0 links</summary>
+
+- MAI: 就是烤呗。
+- MAI: 就是要一起吃这个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1525"></a>
+
+<details><summary>voice_1525 · 1 speech entries · 0 links</summary>
+
+- MAI: 烧烤的人有点累哦，因为有二十个人左右。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1526"></a>
+
+<details><summary>voice_1526 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1527"></a>
+
+<details><summary>voice_1527 · 3 speech entries · 0 links</summary>
+
+- MAI: 不是说要吃得非常饱。
+- MAI: 是的，因为咱俩应该就是差不多上上下这种。
+- MAI: 你那个跟我是一样的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1552"></a>
+
+<details><summary>voice_1552 · 2 speech entries · 0 links</summary>
+
+- MAI: 上次。
+- MAI: 不会完全严格地按照这个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1553"></a>
+
+<details><summary>voice_1553 · 3 speech entries · 1 links</summary>
+
+↔ [1610](#latest-committed-memory-segment-144-node-1610)
+
+- MAI: 嗯，对。
+- MAI: 一起卡拉OK的环节吧。
+- MAI: 哦，也可以。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1554"></a>
+
+<details><summary>voice_1554 · 1 speech entries · 0 links</summary>
+
+- MAI: 所以可以搞个五点到六点的区间。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1563"></a>
+
+<details><summary>voice_1563 · 1 speech entries · 0 links</summary>
+
+- Deepgram: Above. &#124; MAI: above。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1564"></a>
+
+<details><summary>voice_1564 · 1 speech entries · 0 links</summary>
+
+- Deepgram: Biga pieza. &#124; MAI: 逼一个披萨。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1565"></a>
+
+<details><summary>voice_1565 · 2 speech entries · 0 links</summary>
+
+- Deepgram: Biga pieza. Hey. &#124; MAI: 逼个披萨，还有BBQ。
+- Deepgram: SS &#124; MAI: 你说甜品。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1566"></a>
+
+<details><summary>voice_1566 · 1 speech entries · 0 links</summary>
+
+- MAI: BBQ。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1575"></a>
+
+<details><summary>voice_1575 · 2 speech entries · 0 links</summary>
+
+- Deepgram: SS &#124; MAI: 甜品
+- Deepgram: SS &#124; MAI: 这是他们入场的时候。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1576"></a>
+
+<details><summary>voice_1576 · 1 speech entries · 0 links</summary>
+
+- Deepgram: SS &#124; MAI: SS。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1577"></a>
+
+<details><summary>voice_1577 · 1 speech entries · 0 links</summary>
+
+- Deepgram: SS &#124; MAI: 乘二。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1578"></a>
+
+<details><summary>voice_1578 · 2 speech entries · 2 links</summary>
+
+↔ [1600](#latest-committed-memory-segment-144-node-1600) · ↔ [1602](#latest-committed-memory-segment-144-node-1602)
+
+- MAI: 那晚上就还剩啥，还剩我们的节目。
+- MAI: OK，那差不多到六点半。然后还有一个半小时就是表演表演节目。能让他们也准备点节目吗？有没有那种擅长唱歌。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1590"></a>
+
+<details><summary>voice_1590 · 1 speech entries · 1 links</summary>
+
+↔ [1595](#latest-committed-memory-segment-144-node-1595)
+
+- MAI: 的话要两个小时。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1591"></a>
+
+<details><summary>voice_1591 · 1 speech entries · 1 links</summary>
+
+↔ [1598](#latest-committed-memory-segment-144-node-1598)
+
+- MAI: 两点半到八点差不多了，忙够呛。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1592"></a>
+
+<details><summary>voice_1592 · 2 speech entries · 1 links</summary>
+
+↔ [1599](#latest-committed-memory-segment-144-node-1599)
+
+- MAI: 对呀。
+- MAI: 对对，对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1603"></a>
+
+<details><summary>voice_1603 · 2 speech entries · 1 links</summary>
+
+↔ [1613](#latest-committed-memory-segment-144-node-1613)
+
+- MAI: 传数据的时候大家唱唱歌好了。
+- MAI: 不过也正常，我我我本宿舍有一回我早上定了闹铃，我舍友都醒了，我自己还没醒。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1604"></a>
+
+<details><summary>voice_1604 · 1 speech entries · 0 links</summary>
+
+- MAI: 可以，可以，可以。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1605"></a>
+
+<details><summary>voice_1605 · 1 speech entries · 1 links</summary>
+
+↔ [1614](#latest-committed-memory-segment-144-node-1614)
+
+- MAI: 放一个小电影或者干嘛的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1619"></a>
+
+<details><summary>voice_1619 · 1 speech entries · 0 links</summary>
+
+- MAI: 当时还说那个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1620"></a>
+
+<details><summary>voice_1620 · 2 speech entries · 0 links</summary>
+
+- MAI: 甜品是你，就是我们
+- MAI: 贯彻始终。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1629"></a>
+
+<details><summary>voice_1629 · 4 speech entries · 0 links</summary>
+
+- MAI: 就可以尝你的甜品。
+- MAI: 4点20？
+- MAI: 对，就是你压轴。
+- MAI: 你介绍你的种子片和你的甜品。我们介绍我们自己做的种。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1630"></a>
+
+<details><summary>voice_1630 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯嗯。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1631"></a>
+
+<details><summary>voice_1631 · 1 speech entries · 0 links</summary>
+
+- MAI: 配两个人。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1632"></a>
+
+<details><summary>voice_1632 · 1 speech entries · 0 links</summary>
+
+- MAI: 真的起得来吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1633"></a>
+
+<details><summary>voice_1633 · 2 speech entries · 0 links</summary>
+
+- MAI: 可以的，我今天只是失误。到时候死。
+- MAI: 你听到什么？你不是住一楼吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1641"></a>
+
+<details><summary>voice_1641 · 1 speech entries · 0 links</summary>
+
+- MAI: 我听到了你的闹钟。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1642"></a>
+
+<details><summary>voice_1642 · 1 speech entries · 0 links</summary>
+
+- MAI: 自己就听不见了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1643"></a>
+
+<details><summary>voice_1643 · 1 speech entries · 0 links</summary>
+
+- MAI: 嗯，明天听三个。那就差不多剩下了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1654"></a>
+
+<details><summary>voice_1654 · 1 speech entries · 1 links</summary>
+
+↔ [1663](#latest-committed-memory-segment-144-node-1663)
+
+- MAI: 清补凉的话。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1655"></a>
+
+<details><summary>voice_1655 · 1 speech entries · 1 links</summary>
+
+↔ [1663](#latest-committed-memory-segment-144-node-1663)
+
+- MAI: 面是不是好调一点？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1656"></a>
+
+<details><summary>voice_1656 · 1 speech entries · 0 links</summary>
+
+- MAI: 对对对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1668"></a>
+
+<details><summary>voice_1668 · 2 speech entries · 0 links</summary>
+
+- MAI: 我觉得随便。
+- MAI: 就是我感觉会不会简单一点。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1669"></a>
+
+<details><summary>voice_1669 · 1 speech entries · 0 links</summary>
+
+- MAI: 他说不要液体，呃，不要固体的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1681"></a>
+
+<details><summary>voice_1681 · 4 speech entries · 2 links</summary>
+
+↔ [1691](#latest-committed-memory-segment-144-node-1691) · ↔ [1695](#latest-committed-memory-segment-144-node-1695)
+
+- MAI: 红豆就-就这样配，就很快。
+- MAI: 就是芋圆可能要熬一下。椰果能不能现买呀？随便看一看，你说什么就是什么。
+- MAI: 直接买成品的。那我看看，4点20介绍完以后要有一个品尝甜品的时间，那是不是要到
+- MAI: 4点，4点30开始，可能我到5点多，我就开始吃晚饭。晚饭呢，就是 guest part 之后，我们就收眼睛传数据。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1682"></a>
+
+<details><summary>voice_1682 · 1 speech entries · 1 links</summary>
+
+↔ [1692](#latest-committed-memory-segment-144-node-1692)
+
+- MAI: 你准备了芋圆的东西吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1683"></a>
+
+<details><summary>voice_1683 · 1 speech entries · 1 links</summary>
+
+↔ [1693](#latest-committed-memory-segment-144-node-1693)
+
+- MAI: 我-我没有买芋圆材料。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1684"></a>
+
+<details><summary>voice_1684 · 1 speech entries · 1 links</summary>
+
+↔ [1694](#latest-committed-memory-segment-144-node-1694)
+
+- MAI: 芋圆是不是可以直接买？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1685"></a>
+
+<details><summary>voice_1685 · 1 speech entries · 1 links</summary>
+
+↔ [1694](#latest-committed-memory-segment-144-node-1694)
+
+- MAI: 芋圆也有成品的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1699"></a>
+
+<details><summary>voice_1699 · 1 speech entries · 0 links</summary>
+
+- MAI: 吃饭就不录。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1700"></a>
+
+<details><summary>voice_1700 · 1 speech entries · 0 links</summary>
+
+- MAI: 吃饭不录。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1701"></a>
+
+<details><summary>voice_1701 · 2 speech entries · 0 links</summary>
+
+- MAI: 晚饭打披萨。
+- MAI: 哦，点披萨。
+
+</details>
+
+[Original graph](<../../cache/graphs/gemini/results/clip_audits/clip_144_graph.pkl>) · Embeddings and internal metadata omitted.
+
+## Query-time snapshots
+
+Each snapshot includes only its own chronological coverage.
+
+- [q01.md](snapshots/q01.md)
+- [q02.md](snapshots/q02.md)
+- [q03.md](snapshots/q03.md)
+- [q04.md](snapshots/q04.md)
+- [q05.md](snapshots/q05.md)
+- [q06.md](snapshots/q06.md)
+- [q07.md](snapshots/q07.md)
+- [q08.md](snapshots/q08.md)
+- [q09.md](snapshots/q09.md)
+- [q10.md](snapshots/q10.md)
+- [Compressed q01](snapshots/q01_compressed.md)
+- [Compressed q02](snapshots/q02_compressed.md)
+- [Compressed q03](snapshots/q03_compressed.md)
+- [Compressed q04](snapshots/q04_compressed.md)
+- [Compressed q05](snapshots/q05_compressed.md)
+- [Compressed q06](snapshots/q06_compressed.md)
+- [Compressed q07](snapshots/q07_compressed.md)
+- [Compressed q08](snapshots/q08_compressed.md)
+- [Compressed q09](snapshots/q09_compressed.md)
+- [Compressed q10](snapshots/q10_compressed.md)

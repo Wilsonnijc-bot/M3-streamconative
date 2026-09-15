@@ -1,0 +1,66 @@
+{
+  "clip_id": 25,
+  "source": {
+    "segment_id": 25,
+    "source": "DAY1_A1_JAKE_11210000.mp4",
+    "source_clock": "11210000",
+    "start_seconds_in_source": 2.1699999999982538,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 40862.17,
+    "absolute_end_seconds": 40890.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0025.mp4",
+    "asr_failures": [],
+    "status": "committed"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table with a red-and-white checkered tablecloth, working on electronic hardware and packaging.",
+      "The camera wearer reaches over the table to handle a blue rectangular box for an external enclosure.",
+      "The person sitting to the left in a white shirt holds a black external hard drive enclosure and interacts with the camera wearer.",
+      "The camera wearer places the black enclosure and cables inside the blue packaging box.",
+      "The person sitting to the right in black clothing examines a pair of smart glasses.",
+      "The individuals across the table work on unpacking or assembling their own electronic equipment.",
+      "<voice_271> jokes that the hands-on assembly task is akin to working in a manufacturing factory.",
+      "<voice_272> responds that their previous university coursework involving wiring and soldering boards was essentially like working in a factory.",
+      "<voice_229> asks `<voice_272>` with surprise if they had actually worked in a factory before.",
+      "<voice_0> asks whether `<voice_272>`'s university experience was related to the Internet of Things (IoT).",
+      "<voice_273> clarifies that the work involved soldering circuit boards."
+    ],
+    "high_level_conclusions": [
+      "The group is engaged in setting up or packing technical hardware equipment in a collaborative setting.",
+      "The conversation indicates that several participants have a background in engineering, electronics, or a related technical major involving soldering and circuit wiring.",
+      "The participants share a friendly, casual relationship, playfully comparing their hands-on setup process to assembly line factory labor."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table with a red-and-white checkered tablecloth, working on electronic hardware and packaging.\",\n    \"The camera wearer reaches over the table to handle a blue rectangular box for an external enclosure.\",\n    \"The person sitting to the left in a white shirt holds a black external hard drive enclosure and interacts with the camera wearer.\",\n    \"The camera wearer places the black enclosure and cables inside the blue packaging box.\",\n    \"The person sitting to the right in black clothing examines a pair of smart glasses.\",\n    \"The individuals across the table work on unpacking or assembling their own electronic equipment.\",\n    \"<voice_271> jokes that the hands-on assembly task is akin to working in a manufacturing factory.\",\n    \"<voice_272> responds that their previous university coursework involving wiring and soldering boards was essentially like working in a factory.\",\n    \"<voice_229> asks `<voice_272>` with surprise if they had actually worked in a factory before.\",\n    \"<voice_0> asks whether `<voice_272>`'s university experience was related to the Internet of Things (IoT).\",\n    \"<voice_273> clarifies that the work involved soldering circuit boards.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in setting up or packing technical hardware equipment in a collaborative setting.\",\n    \"The conversation indicates that several participants have a background in engineering, electronics, or a related technical major involving soldering and circuit wiring.\",\n    \"The participants share a friendly, casual relationship, playfully comparing their hands-on setup process to assembly line factory labor.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 25,
+      "call_id": "ac021a56-466a-49f9-9a69-460d8e3cdc8d",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789404571.3888822,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 62480,
+      "output_tokens": 1929,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table with a red-and-white checkered tablecloth, working on electronic hardware and packaging.\",\n    \"The camera wearer reaches over the table to handle a blue rectangular box for an external enclosure.\",\n    \"The person sitting to the left in a white shirt holds a black external hard drive enclosure and interacts with the camera wearer.\",\n    \"The camera wearer places the black enclosure and cables inside the blue packaging box.\",\n    \"The person sitting to the right in black clothing examines a pair of smart glasses.\",\n    \"The individuals across the table work on unpacking or assembling their own electronic equipment.\",\n    \"<voice_271> jokes that the hands-on assembly task is akin to working in a manufacturing factory.\",\n    \"<voice_272> responds that their previous university coursework involving wiring and soldering boards was essentially like working in a factory.\",\n    \"<voice_229> asks `<voice_272>` with surprise if they had actually worked in a factory before.\",\n    \"<voice_0> asks whether `<voice_272>`'s university experience was related to the Internet of Things (IoT).\",\n    \"<voice_273> clarifies that the work involved soldering circuit boards.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is engaged in setting up or packing technical hardware equipment in a collaborative setting.\",\n    \"The conversation indicates that several participants have a background in engineering, electronics, or a related technical major involving soldering and circuit wiring.\",\n    \"The participants share a friendly, casual relationship, playfully comparing their hands-on setup process to assembly line factory labor.\"\n  ]\n}\n```",
+      "total_tokens": 64409,
+      "request_end": 1789404618.2785323,
+      "latency_ms": 46889.64933100215,
+      "client_wall_clock_latency_ms": 46889.64933100215,
+      "api_request_wall_clock_latency_ms": 46889.64933100215
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_25_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

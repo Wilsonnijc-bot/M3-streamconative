@@ -1,0 +1,688 @@
+{
+  "clip_id": 123,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0123.mp4",
+  "end_to_end_memory_generation_ms": 482872.038942005,
+  "latency_ms": {
+    "clip_decode": 6196.624240008532,
+    "deepgram_asr": 366.58566299593076,
+    "mai_transcribe_asr": 1300.8401400002185,
+    "asr_total": 1302.1414779941551,
+    "audio_segmentation": 6.311263001407497,
+    "speech_embedding_campplus": 1034.0436569968006,
+    "facial_detection_recognition_buffalo_l": 3361.804040003335,
+    "face_clustering": 1.3694049994228408,
+    "vlm_memory_generation": 195986.9628180022,
+    "text_embedding": 683.3464600058505,
+    "graph_update_total": 790.529037010856
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 123,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 20,
+      "input_chars": 1707,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789441514.7709374,
+          "status": "success",
+          "total_tokens": 377,
+          "request_end": 1789441515.4540532,
+          "latency_ms": 683.1169489887543
+        }
+      ],
+      "total_tokens": 377,
+      "latency_ms": 683.3464600058505
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 366.58566299593076,
+        "openrouter-mai-transcribe-2": 1300.8401400002185
+      },
+      "asr_total_ms": 1302.1414779941551,
+      "audio_segmentation_ms": 6.311263001407497,
+      "speech_embedding_ms": 1034.0436569968006,
+      "graph_update_ms": 790.1738670043414,
+      "asr_segment_count": 7,
+      "speech_embedding_count": 7,
+      "voice_identity_count": 7,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1846.1151260125916
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3361.804040003335,
+      "face_clustering_ms": 1.3694049994228408,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 42,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3386.3717060012277
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1410>",
+        "<voice_364>",
+        "<voice_1663>",
+        "<voice_1372>",
+        "<voice_1664>",
+        "<voice_1665>",
+        "<voice_1666>"
+      ],
+      "context_preparation_ms": 3964.579940002295,
+      "vlm_ms": 195986.9628180022,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"The camera pans across a room featuring a large projector screen and a checkered board leaning against a wall.\",\n\t\t\"A hand holding a clapperboard is visible in the lower center of the frame.\",\n\t\t\"The view shifts to a wider room where a group of people are gathered around a table covered with a red and white checkered tablecloth.\",\n\t\t\"A person dressed in pink and orange clothing walks from the table area towards the kitchen window.\",\n\t\t\"Another individual wearing a white shirt moves near the window and interacts with the space.\",\n\t\t\"The person in pink/orange stands by the window, gazing outside at the building facade.\",\n\t\t\"The camera focuses back on the group seated at the table, which includes flowers and various items.\",\n\t\t\"A person places a silver laptop onto the table in front of the seated group.\",\n\t\t\"The group members engage in conversation while seated around the table.\",\n\t\t\"<voice_1410> asks, \\\"Where is the bartender located?\\\"\",\n\t\t\"<voice_364> responds, \\\"The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in.\\\"\",\n\t\t\"<voice_1663> adds, \\\"Outside glass can adjust bar indoors.\\\"\",\n\t\t\"<voice_1372> confirms, \\\"Yes yes, is.\\\"\",\n\t\t\"<voice_1664> suggests, \\\"Come a bit lighting up.\\\"\",\n\t\t\"<voice_1665> replies, \\\"Yes.\\\"\",\n\t\t\"<voice_1666> concludes, \\\"Yes, we also have this studio light.\\\"\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be planning a social event or gathering involving drinks and lighting setup.\",\n\t\t\"MAI (<voice_1410>, <voice_364>, etc.) is leading the discussion regarding the location and logistics of the bar setup.\",\n\t\t\"The presence of a clapperboard and studio lights suggests a filming or production context within the gathering.\",\n\t\t\"The discussion indicates a preference for outdoor bartending due to space constraints or preference, utilizing the window area.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera pans across a room featuring a large projector screen and a checkered board leaning against a wall.",
+          "A hand holding a clapperboard is visible in the lower center of the frame.",
+          "The view shifts to a wider room where a group of people are gathered around a table covered with a red and white checkered tablecloth.",
+          "A person dressed in pink and orange clothing walks from the table area towards the kitchen window.",
+          "Another individual wearing a white shirt moves near the window and interacts with the space.",
+          "The person in pink/orange stands by the window, gazing outside at the building facade.",
+          "The camera focuses back on the group seated at the table, which includes flowers and various items.",
+          "A person places a silver laptop onto the table in front of the seated group.",
+          "The group members engage in conversation while seated around the table.",
+          "<voice_1410> asks, \"Where is the bartender located?\"",
+          "<voice_364> responds, \"The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in.\"",
+          "<voice_1663> adds, \"Outside glass can adjust bar indoors.\"",
+          "<voice_1372> confirms, \"Yes yes, is.\"",
+          "<voice_1664> suggests, \"Come a bit lighting up.\"",
+          "<voice_1665> replies, \"Yes.\"",
+          "<voice_1666> concludes, \"Yes, we also have this studio light.\""
+        ],
+        "high_level_conclusions": [
+          "The group appears to be planning a social event or gathering involving drinks and lighting setup.",
+          "MAI (<voice_1410>, <voice_364>, etc.) is leading the discussion regarding the location and logistics of the bar setup.",
+          "The presence of a clapperboard and studio lights suggests a filming or production context within the gathering.",
+          "The discussion indicates a preference for outdoor bartending due to space constraints or preference, utilizing the window area."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 123,
+          "call_id": "b65cb9b8-a366-4a2a-a2d3-f808a38c0307",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789441318.782842,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"The camera pans across a room featuring a large projector screen and a checkered board leaning against a wall.\",\n\t\t\"A hand holding a clapperboard is visible in the lower center of the frame.\",\n\t\t\"The view shifts to a wider room where a group of people are gathered around a table covered with a red and white checkered tablecloth.\",\n\t\t\"A person dressed in pink and orange clothing walks from the table area towards the kitchen window.\",\n\t\t\"Another individual wearing a white shirt moves near the window and interacts with the space.\",\n\t\t\"The person in pink/orange stands by the window, gazing outside at the building facade.\",\n\t\t\"The camera focuses back on the group seated at the table, which includes flowers and various items.\",\n\t\t\"A person places a silver laptop onto the table in front of the seated group.\",\n\t\t\"The group members engage in conversation while seated around the table.\",\n\t\t\"<voice_1410> asks, \\\"Where is the bartender located?\\\"\",\n\t\t\"<voice_364> responds, \\\"The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in.\\\"\",\n\t\t\"<voice_1663> adds, \\\"Outside glass can adjust bar indoors.\\\"\",\n\t\t\"<voice_1372> confirms, \\\"Yes yes, is.\\\"\",\n\t\t\"<voice_1664> suggests, \\\"Come a bit lighting up.\\\"\",\n\t\t\"<voice_1665> replies, \\\"Yes.\\\"\",\n\t\t\"<voice_1666> concludes, \\\"Yes, we also have this studio light.\\\"\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be planning a social event or gathering involving drinks and lighting setup.\",\n\t\t\"MAI (<voice_1410>, <voice_364>, etc.) is leading the discussion regarding the location and logistics of the bar setup.\",\n\t\t\"The presence of a clapperboard and studio lights suggests a filming or production context within the gathering.\",\n\t\t\"The discussion indicates a preference for outdoor bartending due to space constraints or preference, utilizing the window area.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   0.00s - 2.00s: The camera moves through a room. There's a projector screen, a checkered board, and some equipment. A hand holding a clapperboard appears.\n    *   2.50s - 4.50s: The view shifts to a dining/living area. Several people are sitting around a table. One person stands near a whiteboard.\n    *   5.00s - 10.00s: The camera focuses on the group. A person in pink/orange clothing walks towards the kitchen window area. Another person sits at the table.\n    *   10.50s - 18.00s: The person in pink/orange stands by the window, looking out. Another person (white shirt) moves around.\n    *   18.50s - 21.00s: The camera pans back to the table where three women are seated. One has long pink hair, one has dark hair, one has dark hair and glasses.\n    *   21.50s - 29.00s: The camera operator (POV) places a laptop on the table. They interact with the woman in black/glasses.\n*   **Voice Features:**\n    *   `<voice_1410>` (00:02-00:04): \"MAI: 那酒保在哪里呢？\" (Where is the bartender?) -> This seems like a question about a location or person named \"Bartender\" or referring to someone else. Wait, looking at the context, maybe \"Jiu Bao\" is a nickname or a specific term. Let's look closer. Actually, it sounds like \"Where is the bartender?\" but in Chinese context, maybe it's a specific reference. Or perhaps \"Jiu Bao\" refers to a person. Let's assume it's a question asked by MAI.\n    *   `<voice_364>` (00:07-00:16): \"MAI: 那调酒是在外面，喏，得举一个桌子，也可以嘛，在室内，如果有人就进来。\" (That bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in.) -> MAI explains where the bar/bartending happens.\n    *   `<voice_1663>` (00:18-00:22): \"MAI: 在外的玻璃就可以调酒室内。\" (Outside glass can adjust bar indoors? No, likely \"Outside glass [window] is where we can bar indoors.\") -> Explaining the setup.\n    *   `<voice_1372>` (00:21-00:24): \"MAI: 对对，是。\" (Yes yes, is.) -> Confirmation.\n    *   `<voice_1664>` (00:23-00:26): \"MAI: 来一点打光。\" (Come a bit lighting up / Let's add some lighting.) -> Suggesting lighting.\n    *   `<voice_1665>` (00:25-00:27): \"MAI: 对。\" (Yes.)\n    *   `<voice_1666>` (00:28-00:30): \"MAI: 对，我们还有这个影棚灯。\" (Yes, we also have this studio light.) -> Mentioning equipment.\n\n**2. Map Voice to Visuals:**\n*   The voice features mention \"MAI\". I need to find who MAI is visually.\n*   In the later frames (around 21s+), there are three women at the table.\n    *   Woman 1: Dark hair, glasses, black top.\n    *   Woman 2: Long pink hair, white top.\n    *   Woman 3: Dark hair, patterned top/jacket.\n*   The voice says \"We also have this studio light.\" At 28s-30s, the woman in the patterned top (Woman 3) gestures towards something off-screen or the equipment.\n*   However, the prompt asks to preserve speaker identity using voice IDs. I don't have explicit face IDs linked to names in the input text provided in the prompt description (only \"Face features:\" header but no actual data follows in the prompt text block, wait... let me re-read carefully).\n*   Ah, the prompt says \"Face features:Voice features:\". It seems the Face features section is empty or missing in the provided text block. Wait, looking at the raw input: \"Face features:Voice features:{...}\". There are no face IDs listed.\n*   Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n*   Since no face IDs are supplied in the input text (it just says \"Face features:\" then immediately \"Voice features:\"), I cannot create equivalences like `Equivalence: <face_x>, <voice_y>`. I must stick to the voice IDs for speaker identification in the memory/conclusion part if needed, but the output format requires `high_level_conclusions` strings.\n*   Wait, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   And: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   So I need to generate memories/conclusions referencing `<voice_1410>`, `<voice_364>`, etc.\n*   The output format requires `video_description` (atomic events) and `high_level_conclusions` (reasoning/inferences).\n*   The prompt instructions say: \"Preserve speaker identity when constructing memory from the supplied character features.\" But the output schema is fixed JSON. Usually, these tasks expect the `video_description` to describe actions and potentially attribute them if possible, but since I can't link faces to voices definitively without face IDs, I will describe the actions generally or attribute the *speech* to the voice ID if it fits the \"memory\" style requested in the system prompt (\"include at least one episodic memory\").\n*   Wait, the system prompt says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". This implies the `video_description` or `high_level_conclusions` might need to contain these memories. Looking at the standard output format provided in the example:\n    ```json\n    {\n        \"video_description\": [ ... ],\n        \"high_level_conclusions\": [ ... ]\n    }\n    ```\n    The system prompt says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    Then it says \"For every supplied voice ID... include at least one episodic memory...\". This usually means embedding the quote into the description or conclusions. Given the constraint \"Do not substitute a plausible scene description for what the speaker actually said\", I should probably put the quotes in the `video_description` as events involving speech, or in `high_level_conclusions` if it's reasoning.\n    Actually, looking at previous similar tasks, often the `video_description` captures the action + speech.\n    Let's draft the descriptions.\n\n**Drafting Video Description:**\n1.  Camera moves through a room with a projector screen and checkered board.\n2.  A hand holds a clapperboard.\n3.  View shifts to a room with people gathered around a table.\n4.  A person in pink/orange walks towards the kitchen window.\n5.  People sit around a table with flowers and items.\n6.  A person in a white shirt moves near the window.\n7.  The person in pink/orange stands by the window looking out.\n8.  The camera pans back to the group at the table.\n9.  A person (camera wearer) places a laptop on the table.\n10. Interaction occurs among the women at the table.\n\n**Drafting High-Level Conclusions & Memories:**\nSince I need to use the voice IDs and preserve speaker identity:\n*   `<voice_1410>` asks about the bartender's location.\n*   `<voice_364>` explains the bar setup (outside vs inside).\n*   `<voice_1663>` confirms the glass/window aspect.\n*   `<voice_1372>` agrees.\n*   `<voice_1664>` suggests adding lighting.\n*   `<voice_1665>` agrees.\n*   `<voice_1666>` mentions having a studio light.\n\nI will incorporate these into the `video_description` as spoken events or `high_level_conclusions` as reasoning about the discussion. The prompt says \"include at least one episodic memory... using the exact ID as the speaker\". I'll put the speech summaries in the `video_description` array as distinct events.\n\nWait, looking closely at the prompt instructions again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis suggests the output should contain these memories. Where? Likely in `video_description` as \"Speaker X says...\".\nHowever, the instruction also says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nAnd \"Your output must be a JSON object...\".\nSo I will construct the JSON accordingly.\n\nLet's refine the descriptions to be atomic.\n1.  Camera enters a room containing a projector screen and a checkered calibration board.\n2.  A hand holding a clapperboard is visible in the foreground.\n3.  The scene shifts to a gathering where several individuals are seated around a table covered with a checkered cloth.\n4.  A person wearing pink/orange clothing walks towards the kitchen window area.\n5.  Another individual in a white shirt moves around the room near the window.\n6.  The person in pink/orange stands by the window, looking outside.\n7.  The camera returns to the group at the table.\n8.  A person places a laptop onto the table in front of the group.\n9.  The group engages in conversation while seated.\n10. **Memory for <voice_1410>:** MAI asks, \"Where is the bartender located?\"\n11. **Memory for <voice_364>:** MAI explains, \"The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in.\"\n12. **Memory for <voice_1663>:** MAI states, \"Outside glass can adjust bar indoors.\"\n13. **Memory for <voice_1372>:** MAI confirms, \"Yes yes, is.\"\n14. **Memory for <voice_1664>:** MAI suggests, \"Come a bit lighting up.\"\n15. **Memory for <voice_1665>:** MAI agrees, \"Yes.\"\n16. **Memory for <voice_1666>:** MAI adds, \"Yes, we also have this studio light.\"\n\nWait, I need to check if I can put multiple sentences in one string or if each string is one atomic event. \"each string is one atomic event description\".\nSo I should combine the speech into the event description or make separate entries.\nGiven the volume of speech, making separate entries for each voice ID might be too verbose for `video_description` if it's meant to be a summary of visual flow. However, the instruction explicitly says \"For every supplied voice ID... include at least one episodic memory\".\nI will try to integrate them naturally or list them as distinct events if necessary.\nActually, looking at the instruction \"Preserve speaker identity when constructing memory from the supplied character features\", it implies I should treat the voice features as the source of truth for the speaker.\nSince I don't have face IDs, I can't say \"Person A says\". I must say \"<voice_X> says\".\n\nLet's organize the `video_description` to capture the visual flow first, then insert the speech memories where appropriate or as a separate list of events if allowed. The schema allows multiple strings.\nI will create a mix: visual events and speech events.\n\nRevised Plan:\n1.  Describe the initial room scan (screen, board, clapperboard).\n2.  Describe the transition to the group scene.\n3.  Describe the movement of the person in pink/orange.\n4.  Describe the interaction at the table.\n5.  Insert the speech memories associated with the voice IDs.\n\nWait, the instruction says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThe schema is:\n```json\n{\n\t\"video_description\": [\n\t\t\"...\",\n\t\t\"...\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"...\"\n\t]\n}\n```\nI will populate `video_description` with the visual events and the speech memories.\nI will populate `high_level_conclusions` with inferences about the meeting (planning, setting up a bar/lighting).\n\nOne detail: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\nSince no face features were provided in the input text (it just says \"Face features:\" then \"Voice features:\" with no data after), I cannot create equivalences. I will leave `high_level_conclusions` focused on the speech content and general context.\n\nWait, checking the input again.\n\"Face features:Voice features:{...}\"\nThere is literally nothing after \"Face features:\".\nSo I definitely cannot make equivalences.\n\nLet's write the JSON.\n\n**Video Description Items:**\n1.  The camera pans across a room featuring a large projector screen and a checkered board leaning against a wall.\n2.  A hand holding a clapperboard is visible in the lower center of the frame.\n3.  The view shifts to a wider room where a group of people are gathered around a table covered with a red and white checkered tablecloth.\n4.  A person dressed in pink and orange clothing walks from the table area towards the kitchen window.\n5.  Another individual wearing a white shirt moves near the window and interacts with the space.\n6.  The person in pink/orange stands by the window, gazing outside at the building facade.\n7.  The camera focuses back on the group seated at the table, which includes flowers and various items.\n8.  A person places a silver laptop onto the table in front of the seated group.\n9.  The group members engage in conversation while seated around the table.\n10. <voice_1410> asks, \"Where is the bartender located?\"\n11. <voice_364> responds, \"The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in.\"\n12. <voice_1663> adds, \"Outside glass can adjust bar indoors.\"\n13. <voice_1372> confirms, \"Yes yes, is.\"\n14. <voice_1664> suggests, \"Come a bit lighting up.\"\n15. <voice_1665> replies, \"Yes.\"\n16. <voice_1666> concludes, \"Yes, we also have this studio light.\"\n\n**High Level Conclusions:**\n1.  The group appears to be planning a social event or gathering involving drinks and lighting setup.\n2.  MAI (<voice_1410>, <voice_364>, etc.) is leading the discussion regarding the location and logistics of the bar setup.\n3.  The presence of a clapperboard and studio lights suggests a filming or production context within the gathering.\n4.  The discussion indicates a preference for outdoor bartending due to space constraints or preference, utilizing the window area.\n\nRefining the `video_description` to ensure it flows well and adheres to \"atomic event\".\nThe speech lines are quite long. I will keep them as distinct events as per the instruction \"include at least one episodic memory...\".\n\nFinal check on constraints:\n- \"Preserve speaker identity... using the exact ID as the speaker.\" -> Done.\n- \"Do not replace the ID with 'a speaker'...\" -> Done.\n- \"If no face IDs are supplied, do not invent any.\" -> Done.\n- \"Keep the existing video_description/high_level_conclusions JSON schema\" -> Done.\n\nOne small correction: The prompt says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". I have included them.\nAlso \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" -> I used the IDs from the input (`<voice_1410>`, etc.).\n\nLet's assemble the JSON.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"The camera pans across a room featuring a large projector screen and a checkered board leaning against a wall.\",\n\t\t\"A hand holding a clapperboard is visible in the lower center of the frame.\",\n\t\t\"The view shifts to a wider room where a group of people are gathered around a table covered with a red and white checkered tablecloth.\",\n\t\t\"A person dressed in pink and orange clothing walks from the table area towards the kitchen window.\",\n\t\t\"Another individual wearing a white shirt moves near the window and interacts with the space.\",\n\t\t\"The person in pink/orange stands by the window, gazing outside at the building facade.\",\n\t\t\"The camera focuses back on the group seated at the table, which includes flowers and various items.\",\n\t\t\"A person places a silver laptop onto the table in front of the seated group.\",\n\t\t\"The group members engage in conversation while seated around the table.\",\n\t\t\"<voice_1410> asks, \\\"Where is the bartender located?\\\"\",\n\t\t\"<voice_364> responds, \\\"The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in.\\\"\",\n\t\t\"<voice_1663> adds, \\\"Outside glass can adjust bar indoors.\\\"\",\n\t\t\"<voice_1372> confirms, \\\"Yes yes, is.\\\"\",\n\t\t\"<voice_1664> suggests, \\\"Come a bit lighting up.\\\"\",\n\t\t\"<voice_1665> replies, \\\"Yes.\\\"\",\n\t\t\"<voice_1666> concludes, \\\"Yes, we also have this studio light.\\\"\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group appears to be planning a social event or gathering involving drinks and lighting setup.\",\n\t\t\"MAI (<voice_1410>, <voice_364>, etc.) is leading the discussion regarding the location and logistics of the bar setup.\",\n\t\t\"The presence of a clapperboard and studio lights suggests a filming or production context within the gathering.\",\n\t\t\"The discussion indicates a preference for outdoor bartending due to space constraints or preference, utilizing the window area.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10641,
+          "output_tokens": 4290,
+          "total_tokens": 14931,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002325003151781857,
+            "media_preparation_ms": 64.80614800238982,
+            "processor_tokenization_ms": 455.4076689964859,
+            "device_transfer_ms": 42.30745699896943,
+            "cuda_generation_ms": 195392.4384540005,
+            "decoding_ms": 3.496746998280287
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 195958.6430069903,
+          "request_end": 1789441514.7698076,
+          "latency_ms": 195986.9628180022,
+          "client_wall_clock_latency_ms": 195986.9628180022
+        }
+      ],
+      "episodic_memory_count": 16,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 16,
+      "text_embedding_ms": null,
+      "text_embedding_count": 16,
+      "graph_update_ms": 0.19977700139861554,
+      "nodes_added": 16,
+      "directed_edges_added": 14,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.15539300511591136,
+      "nodes_added": 4,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 7,
+    "speech_embeddings": 7,
+    "voice_identities": 7,
+    "detected_faces": 42,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 16,
+    "semantic_memories": 4,
+    "nodes_after_clip": 1687,
+    "edges_after_clip": 626,
+    "nodes_added_by_clip": 24,
+    "edges_added_by_clip": 9
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera pans across a room featuring a large projector screen and a checkered board leaning against a wall.",
+      "A hand holding a clapperboard is visible in the lower center of the frame.",
+      "The view shifts to a wider room where a group of people are gathered around a table covered with a red and white checkered tablecloth.",
+      "A person dressed in pink and orange clothing walks from the table area towards the kitchen window.",
+      "Another individual wearing a white shirt moves near the window and interacts with the space.",
+      "The person in pink/orange stands by the window, gazing outside at the building facade.",
+      "The camera focuses back on the group seated at the table, which includes flowers and various items.",
+      "A person places a silver laptop onto the table in front of the seated group.",
+      "The group members engage in conversation while seated around the table.",
+      "<voice_1410> asks, \"Where is the bartender located?\"",
+      "<voice_364> responds, \"The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in.\"",
+      "<voice_1663> adds, \"Outside glass can adjust bar indoors.\"",
+      "<voice_1372> confirms, \"Yes yes, is.\"",
+      "<voice_1664> suggests, \"Come a bit lighting up.\"",
+      "<voice_1665> replies, \"Yes.\"",
+      "<voice_1666> concludes, \"Yes, we also have this studio light.\""
+    ],
+    "high_level_conclusions": [
+      "The group appears to be planning a social event or gathering involving drinks and lighting setup.",
+      "MAI (<voice_1410>, <voice_364>, etc.) is leading the discussion regarding the location and logistics of the bar setup.",
+      "The presence of a clapperboard and studio lights suggests a filming or production context within the gathering.",
+      "The discussion indicates a preference for outdoor bartending due to space constraints or preference, utilizing the window area."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera pans across a room featuring a large projector screen and a checkered board leaning against a wall.",
+      "A hand holding a clapperboard is visible in the lower center of the frame.",
+      "The view shifts to a wider room where a group of people are gathered around a table covered with a red and white checkered tablecloth.",
+      "A person dressed in pink and orange clothing walks from the table area towards the kitchen window.",
+      "Another individual wearing a white shirt moves near the window and interacts with the space.",
+      "The person in pink/orange stands by the window, gazing outside at the building facade.",
+      "The camera focuses back on the group seated at the table, which includes flowers and various items.",
+      "A person places a silver laptop onto the table in front of the seated group.",
+      "The group members engage in conversation while seated around the table.",
+      "<voice_1410> asks, \"Where is the bartender located?\"",
+      "<voice_364> responds, \"The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in.\"",
+      "<voice_1663> adds, \"Outside glass can adjust bar indoors.\"",
+      "<voice_1372> confirms, \"Yes yes, is.\"",
+      "<voice_1664> suggests, \"Come a bit lighting up.\"",
+      "<voice_1665> replies, \"Yes.\"",
+      "<voice_1666> concludes, \"Yes, we also have this studio light.\""
+    ],
+    "high_level_conclusions": [
+      "The group appears to be planning a social event or gathering involving drinks and lighting setup.",
+      "MAI (<voice_1410>, <voice_364>, etc.) is leading the discussion regarding the location and logistics of the bar setup.",
+      "The presence of a clapperboard and studio lights suggests a filming or production context within the gathering.",
+      "The discussion indicates a preference for outdoor bartending due to space constraints or preference, utilizing the window area."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_123_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 24,
+    "edges_added": 9,
+    "nodes": [
+      {
+        "id": 1663,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 在外面的玻璃就可以调酒室内。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1664,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 来-来一点打光。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1665,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1666,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对，我们还有这个影棚灯。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1667,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans across a room featuring a large projector screen and a checkered board leaning against a wall."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1668,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A hand holding a clapperboard is visible in the lower center of the frame."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1669,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The view shifts to a wider room where a group of people are gathered around a table covered with a red and white checkered tablecloth."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1670,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person dressed in pink and orange clothing walks from the table area towards the kitchen window."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1671,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another individual wearing a white shirt moves near the window and interacts with the space."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1672,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in pink/orange stands by the window, gazing outside at the building facade."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1673,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera focuses back on the group seated at the table, which includes flowers and various items."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1674,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person places a silver laptop onto the table in front of the seated group."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1675,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group members engage in conversation while seated around the table."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1676,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1410> asks, \"Where is the bartender located?\""
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1677,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_364> responds, \"The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in.\""
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1678,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1663> adds, \"Outside glass can adjust bar indoors.\""
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1679,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1372> confirms, \"Yes yes, is.\""
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1680,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1664> suggests, \"Come a bit lighting up.\""
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1681,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1665> replies, \"Yes.\""
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1682,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1666> concludes, \"Yes, we also have this studio light.\""
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1683,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group appears to be planning a social event or gathering involving drinks and lighting setup."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1684,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "MAI (<voice_1410>, <voice_364>, etc.) is leading the discussion regarding the location and logistics of the bar setup."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1685,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The presence of a clapperboard and studio lights suggests a filming or production context within the gathering."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1686,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The discussion indicates a preference for outdoor bartending due to space constraints or preference, utilizing the window area."
+          ],
+          "timestamp": 123
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 364,
+        "target": 1677,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 364,
+        "target": 1684,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1372,
+        "target": 1679,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1410,
+        "target": 1676,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1410,
+        "target": 1684,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1663,
+        "target": 1678,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1664,
+        "target": 1680,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1665,
+        "target": 1681,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1666,
+        "target": 1682,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_123_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_123_graph.pkl"
+  },
+  "memory_pickle_bytes": 40276143,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 82219.698847036,
+    "prepared_perf": 82228.627575428,
+    "ordered_start_perf": 82493.158347767,
+    "consumer_wait_ms": 0.013114011380821466,
+    "ready_to_ordered_ms": 264530.77233899967,
+    "preparation_work_ms": 8922.170677004033,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 205875.53919499624
+}

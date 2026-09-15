@@ -1,0 +1,77 @@
+{
+  "clip_id": 83,
+  "source": {
+    "segment_id": 83,
+    "source": "DAY1_A1_JAKE_11490000.mp4",
+    "source_clock": "11490000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 42540.0,
+    "absolute_end_seconds": 42570.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0083.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 49281.718138109,
+      "prepared_perf": 49289.689586817,
+      "ordered_start_perf": 49565.024406025,
+      "consumer_wait_ms": 0.010338997526559979,
+      "ready_to_ordered_ms": 275334.81920799386,
+      "preparation_work_ms": 7966.225323005347,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A group of people is gathered around a table covered in a checkered tablecloth in an indoor room.",
+      "A woman seated on the left wearing a black cardigan talks while looking at the camera person.",
+      "A woman in a white top arranges flowers near a whiteboard in the background.",
+      "The seated woman reaches forward to pick up and inspect a postcard with a heart drawing from the clapperboard.",
+      "The camera wearer gestures toward the card while communicating with the woman.",
+      "The seated woman continues conversing with the camera wearer about the cards on the table.",
+      "Other individuals sit along the right side of the table chatting among themselves."
+    ],
+    "high_level_conclusions": [
+      "The gathering appears to be a film production or workshop setting involving props and flower arrangement.",
+      "<voice_865> corresponds to the woman seated on the left confirming instructions about the items on the table.",
+      "The participants share a casual, collaborative working relationship."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table covered in a checkered tablecloth in an indoor room.\",\n    \"A woman seated on the left wearing a black cardigan talks while looking at the camera person.\",\n    \"A woman in a white top arranges flowers near a whiteboard in the background.\",\n    \"The seated woman reaches forward to pick up and inspect a postcard with a heart drawing from the clapperboard.\",\n    \"The camera wearer gestures toward the card while communicating with the woman.\",\n    \"The seated woman continues conversing with the camera wearer about the cards on the table.\",\n    \"Other individuals sit along the right side of the table chatting among themselves.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The gathering appears to be a film production or workshop setting involving props and flower arrangement.\",\n    \"<voice_865> corresponds to the woman seated on the left confirming instructions about the items on the table.\",\n    \"The participants share a casual, collaborative working relationship.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 83,
+      "call_id": "ece404d7-d707-4717-92f1-3ab793709864",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789408392.3663967,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 67455,
+      "output_tokens": 986,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 37999.817454998265
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A group of people is gathered around a table covered in a checkered tablecloth in an indoor room.\",\n    \"A woman seated on the left wearing a black cardigan talks while looking at the camera person.\",\n    \"A woman in a white top arranges flowers near a whiteboard in the background.\",\n    \"The seated woman reaches forward to pick up and inspect a postcard with a heart drawing from the clapperboard.\",\n    \"The camera wearer gestures toward the card while communicating with the woman.\",\n    \"The seated woman continues conversing with the camera wearer about the cards on the table.\",\n    \"Other individuals sit along the right side of the table chatting among themselves.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The gathering appears to be a film production or workshop setting involving props and flower arrangement.\",\n    \"<voice_865> corresponds to the woman seated on the left confirming instructions about the items on the table.\",\n    \"The participants share a casual, collaborative working relationship.\"\n  ]\n}\n```",
+      "total_tokens": 68441,
+      "request_end": 1789408430.3663273,
+      "latency_ms": 37999.92517599458,
+      "client_wall_clock_latency_ms": 37999.92517599458,
+      "api_request_wall_clock_latency_ms": 37999.92517599458
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_83_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

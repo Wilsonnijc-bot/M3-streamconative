@@ -1,0 +1,468 @@
+{
+  "clip_id": 86,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0086.mp4",
+  "end_to_end_memory_generation_ms": 647642.8119679913,
+  "latency_ms": {
+    "clip_decode": 4868.309604993556,
+    "deepgram_asr": 451.8800780060701,
+    "mai_transcribe_asr": 1278.414527012501,
+    "asr_total": 1279.3518299877178,
+    "audio_segmentation": 7.621277996804565,
+    "speech_embedding_campplus": 1155.1739709975664,
+    "facial_detection_recognition_buffalo_l": 3901.984830008587,
+    "face_clustering": 8.484264995786361,
+    "vlm_memory_generation": 184839.39039800316,
+    "text_embedding": 604.3569309986196,
+    "graph_update_total": 476.92751899012364
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 86,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 959,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789428301.6457014,
+          "status": "success",
+          "total_tokens": 184,
+          "request_end": 1789428302.249812,
+          "latency_ms": 604.112589993747
+        }
+      ],
+      "total_tokens": 184,
+      "latency_ms": 604.3569309986196
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 451.8800780060701,
+        "openrouter-mai-transcribe-2": 1278.414527012501
+      },
+      "asr_total_ms": 1279.3518299877178,
+      "audio_segmentation_ms": 7.621277996804565,
+      "speech_embedding_ms": 1155.1739709975664,
+      "graph_update_ms": 476.81258199736476,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1656.4518450031755
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3901.984830008587,
+      "face_clustering_ms": 8.484264995786361,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 349,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4104.613758987398
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_637>",
+        "<voice_614>",
+        "<voice_467>",
+        "<voice_1124>",
+        "<voice_366>"
+      ],
+      "context_preparation_ms": 4001.1605420004344,
+      "vlm_ms": 184839.39039800316,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of four individuals are gathered around a wooden table covered with a red and white checkered cloth.\",\n\t\t\"One person stands near a whiteboard while three others sit around the table.\",\n\t\t\"A clapperboard and various papers are placed on the table along with a water bottle and flowers.\",\n\t\t\"<voice_637> notes that exchange is connected to environmental concepts.\",\n\t\t\"<voice_614> agrees that the proposal is generally correct.\",\n\t\t\"<voice_467> outlines the mechanism of trading stories for coins to purchase items.\",\n\t\t\"<voice_1124> specifies purchasing items brought by others as idle goods.\",\n\t\t\"<voice_366> details the process of presenting an item and setting a starting bid for sale.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is discussing a proposed economic or trading system involving storytelling and item exchange.\",\n\t\t\"The participants agree on the basic framework of converting stories into currency for acquiring personal items.\",\n\t\t\"There is a structured method for listing and pricing items through explanations and bidding.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of four individuals are gathered around a wooden table covered with a red and white checkered cloth.",
+          "One person stands near a whiteboard while three others sit around the table.",
+          "A clapperboard and various papers are placed on the table along with a water bottle and flowers.",
+          "<voice_637> notes that exchange is connected to environmental concepts.",
+          "<voice_614> agrees that the proposal is generally correct.",
+          "<voice_467> outlines the mechanism of trading stories for coins to purchase items.",
+          "<voice_1124> specifies purchasing items brought by others as idle goods.",
+          "<voice_366> details the process of presenting an item and setting a starting bid for sale."
+        ],
+        "high_level_conclusions": [
+          "The group is discussing a proposed economic or trading system involving storytelling and item exchange.",
+          "The participants agree on the basic framework of converting stories into currency for acquiring personal items.",
+          "There is a structured method for listing and pricing items through explanations and bidding."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 86,
+          "call_id": "11fa3114-4a8e-4de6-95c3-ae8aed14595e",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789428116.8038077,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of four individuals are gathered around a wooden table covered with a red and white checkered cloth.\",\n\t\t\"One person stands near a whiteboard while three others sit around the table.\",\n\t\t\"A clapperboard and various papers are placed on the table along with a water bottle and flowers.\",\n\t\t\"<voice_637> notes that exchange is connected to environmental concepts.\",\n\t\t\"<voice_614> agrees that the proposal is generally correct.\",\n\t\t\"<voice_467> outlines the mechanism of trading stories for coins to purchase items.\",\n\t\t\"<voice_1124> specifies purchasing items brought by others as idle goods.\",\n\t\t\"<voice_366> details the process of presenting an item and setting a starting bid for sale.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is discussing a proposed economic or trading system involving storytelling and item exchange.\",\n\t\t\"The participants agree on the basic framework of converting stories into currency for acquiring personal items.\",\n\t\t\"There is a structured method for listing and pricing items through explanations and bidding.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The scene is consistent throughout. It shows a room with a table covered in a checkered cloth. There are four people around the table.\n    *   One person standing near a whiteboard (wearing light-colored clothing).\n    *   One person sitting on the left (dark clothing).\n    *   Two people sitting on the right side (light clothing).\n    *   There's a clapperboard on the table.\n    *   Lighting equipment is visible on the left.\n    *   The camera seems stationary or slightly moving, capturing the group discussion.\n*   **Voice Features:**\n    *   `<voice_637>`: \"MAI: 交换，就是也是跟这个环保理念比较比较挂钩。\" (Exchange, it's also linked to this environmental concept.)\n    *   `<voice_614>`: \"MAI: 行，大概就是这个样子。\" (Okay, roughly like this.)\n    *   `<voice_467>`: \"MAI: 就是讲故事换币，然后就可以购买。\" (It's about exchanging stories for coins, then you can buy.)\n    *   `<voice_1124>`: \"MAI: 购买。\" (Buy.) / \"MAI: 购买他们自己带来的闲置物品。\" (Buy their own brought idle items.)\n    *   `<voice_366>`: \"MAI: 每个人拍拍卖，比如说说我我要卖一个什么东西，然后我上来讲一下这个东西，然后我认为它的起拍价大概多少，然后。\" (Everyone bids/sells, for example I want to sell something, then I come up and explain this thing, then I think its starting bid is how much, then.)\n    *   Note: All voices are labeled \"MAI\". This suggests a single speaker or multiple speakers with the same label, but usually, in these tasks, if there are multiple distinct voice IDs, they might correspond to different people, or it could be one person talking repeatedly. However, looking at the timestamps, they overlap slightly or follow sequentially. Wait, the prompt says \"Each feature is either a face... or a voice... Each feature has a unique ID\". Here we have 5 voice IDs. Usually, this implies 5 different speakers or the system tagged them differently. But the ASR text starts with \"MAI:\" for all of them. This is ambiguous. Let's look at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" So I need to treat `<voice_637>`, `<voice_614>`, etc., as distinct entities for the purpose of memory generation, even if the name \"MAI\" is repeated in the ASR. Or perhaps \"MAI\" is the name of the speaker associated with these IDs? No, the instruction says \"using the exact ID as the speaker\". So I will use `<voice_637>`, `<voice_614>`, etc.\n    *   Wait, looking closely at the timestamps:\n        *   00:00 - 00:05: `<voice_637>`\n        *   00:06 - 00:08: `<voice_614>`\n        *   00:12 - 00:17: `<voice_467>`\n        *   00:16 - 00:18 & 00:17 - 00:21: `<voice_1124>` (Overlapping/Sequential)\n        *   00:20 - 00:30: `<voice_366>`\n    *   Since there are no face features provided in the input data (the prompt says \"Face features:Voice features:\", implying empty face features), I cannot link specific voice IDs to specific faces visually. I must strictly follow the rule: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person... If no face IDs are supplied, do not invent any.\"\n    *   Therefore, in the `video_description`, I should describe the scene generally without assigning names like \"Person A\" unless I use the voice ID as a reference if allowed, but the instruction says \"Use the provided feature IDs as references to characters (when applicable)\". Since there are no face IDs, I can't link them. I will describe the visual action.\n    *   In `high_level_conclusions`, I need to summarize the conversation. Since all voices say \"MAI\", it's possible it's one person named MAI talking, or the transcription is generic. However, the instruction says \"If a face and a voice feature refer to the same character, indicate it...\". Since there are no face features, I cannot make equivalences.\n    *   Wait, I need to check if there are implicit face IDs. The prompt says \"Face features:Voice features:\". It looks like the Face features section is empty. So I cannot create equivalences.\n    *   I need to construct memories for each voice ID.\n\n**2. Video Description Construction:**\n*   Scene: A meeting or workshop setting.\n*   People: Four individuals seated around a table with a checkered tablecloth. One person stands near a whiteboard.\n*   Action: They appear to be discussing something related to a project or game involving \"exchanging stories for coins\" (based on audio).\n*   Objects: Clapperboard, flowers, water bottle, papers on the table.\n*   Camera: Fisheye lens view.\n*   Time: Day 1, 11:50 AM.\n\n**3. High-Level Conclusions Construction:**\n*   The group is discussing a mechanism for exchange or trading.\n*   Specifically, they mention \"stories for coins\" and \"idle items\".\n*   One person (likely the one standing or leading) explains the process of selling items via bidding/explanation.\n*   Since I don't have face IDs, I won't claim who is saying what visually, just that the group discusses this topic.\n*   Actually, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This goes into the `video_description` array? No, the instruction says \"Your output must be a JSON object with the following structure: ... video_description ... high_level_conclusions\".\n*   Wait, the instruction says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". Where does this go?\n    *   \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\"\n    *   \"For every supplied voice ID... include at least one episodic memory...\". This sounds like part of the Video Description or High Level Conclusions. Given the context of \"episodic memory\", it often fits into a narrative description. However, the schema provided is just `video_description` (list of strings) and `high_level_conclusions` (list of strings).\n    *   Let's re-read carefully: \"Your task consists of two parts: 1. Video Description... Generate a detailed and cohesive description... 2. High-Level Conclusions...\".\n    *   Then: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   This instruction seems to override the standard schema or add to it. But the Output Format specifies the JSON structure. I should probably put the memories in the `video_description` array as atomic events describing the speech, or maybe `high_level_conclusions`.\n    *   Usually, \"episodic memory\" implies a specific event description. Let's put the summaries of the speech in the `video_description` array as distinct events, ensuring the voice ID is used.\n    *   Wait, the instruction says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID... include at least one episodic memory...\".\n    *   Okay, I will add sentences to the `video_description` that capture the speech content attributed to the specific voice ID.\n    *   Example: `<voice_637> states: \"Exchange, it's also linked to this environmental concept.\"`\n    *   Wait, the instruction says \"Do not substitute a plausible scene description for what the speaker actually said.\" So I should quote or summarize accurately.\n    *   Also, \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This means I must stick to the JSON keys provided.\n    *   So, I will populate `video_description` with the visual actions AND the speech events attributed to the voice IDs.\n    *   `high_level_conclusions` will contain the inference about the activity (trading/exchange mechanism).\n\n**Refining the Plan:**\n*   **Video Description:**\n    *   Describe the setting (room, table, people).\n    *   Describe the visual actions (standing, sitting, looking at whiteboard).\n    *   Integrate the speech events using the voice IDs as requested (\"include at least one episodic memory... using the exact ID\").\n    *   Ensure distinct substantive utterances are separate atomic memories.\n*   **High-Level Conclusions:**\n    *   Infer the nature of the gathering (workshop/discussion).\n    *   Infer the topic (exchange economy/trading stories/items).\n    *   Since no face IDs exist, no equivalences.\n\n**Drafting Content:**\n*   Visual: Group of people around a table with a clapperboard. One person stands by a whiteboard.\n*   Speech 1 (`<voice_637>`): Discusses linking exchange to environmental concepts.\n*   Speech 2 (`<voice_614>`): Confirms the general idea (\"roughly like this\").\n*   Speech 3 (`<voice_467>`): Explains the story-for-coins mechanic.\n*   Speech 4 (`<voice_1124>`): Mentions buying idle items brought by others.\n*   Speech 5 (`<voice_366>`): Describes the selling process (explaining item, setting starting bid).\n\n**Constraint Check:**\n*   \"Preserve speaker identity... using the exact ID as the speaker.\" -> Use `<voice_637>`, etc.\n*   \"Do not replace the ID with 'a speaker'...\" -> OK.\n*   \"If no face IDs are supplied, do not invent any.\" -> OK.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> OK.\n\nLet's assemble the JSON.\n\nOne detail: \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\nSo for `<voice_637>`, I'll write: `<voice_637> mentions that exchange is linked to environmental concepts.`\nOr better: `<voice_637> says, \"Exchange, it's also linked to this environmental concept.\"`\nThe instruction says \"quotes or faithfully summarizes\". Quoting is safer for fidelity.\n\nWait, looking at the instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis implies the `video_description` should contain these memories.\n\nLet's organize the `video_description` chronologically or logically.\n1. Visual setup.\n2. Speech events.\n\nActually, the instruction says \"Your description should cover all observable and inferable events.\" and \"Keep dialogue grounded in the provided transcript.\"\nSo I will combine visual observation with the speech attribution.\n\nExample entry: `<voice_637> states regarding the exchange mechanism that it is linked to environmental concepts.`\nExample entry: `<voice_614> confirms the general outline of the plan.`\n\nWait, I need to make sure I don't hallucinate faces. The prompt provides \"Face features:Voice features:\". The Face features part is empty. So I cannot say \"The person standing says...\". I must say \"A voice ID indicates...\".\nHowever, the instruction says \"Use the provided feature IDs as references to characters (when applicable).\" Since there are no face IDs, I can't reference them as characters visually. I will reference them as voice sources.\n\nRevised Plan for `video_description`:\n- Describe the scene (people at table, whiteboard, clapperboard).\n- Insert the voice memories as distinct entries.\n\nRevised Plan for `high_level_conclusions`:\n- Summarize the discussion topic (exchange/trading system).\n- Mention the specific mechanics discussed (stories for coins, bidding).\n\nLet's write the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"A group of four individuals are gathered around a wooden table covered with a red and white checkered cloth.\",\n    \"One person stands near a whiteboard while three others sit around the table.\",\n    \"A clapperboard and various papers are placed on the table along with a water bottle and flowers.\",\n    \"<voice_637> states that the exchange process is linked to environmental concepts.\",\n    \"<voice_614> affirms that the general idea is correct.\",\n    \"<voice_467> explains that the system involves exchanging stories for coins to enable purchases.\",\n    \"<voice_1124> elaborates on purchasing items that others bring as idle goods.\",\n    \"<voice_366> describes the selling process where individuals present items and propose a starting bid.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is discussing a proposed economic or trading system involving storytelling and item exchange.\",\n    \"The participants agree on the basic framework of converting stories into currency for acquiring personal items.\",\n    \"There is a structured method for listing and pricing items through explanations and bidding.\"\n  ]\n}\n```\n\nWait, I need to check if I missed any constraints.\n\"Preserve speaker identity when constructing memory from the supplied character features.\" - Done.\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" - Done (all 5 IDs included).\n\"Do not replace the ID with 'a speaker'...\" - Done.\n\"If no face IDs are supplied, do not invent any.\" - Done.\n\"Keep the existing video_description/high_level_conclusions JSON schema...\" - Done.\n\nOne small adjustment: The instruction says \"Your output must be a JSON object...\". I need to ensure valid JSON.\nAlso, \"Be concise and avoid duplicate events.\"\nThe descriptions look okay.\n\nDouble check the voice IDs against the input.\nInput:\n`<voice_637>`\n`<voice_614>`\n`<voice_467>`\n`<voice_1124>`\n`<voice_366>`\nAll accounted for.\n\nOne detail: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" - I am using the input IDs.\n\nFinal check on the `high_level_conclusions`.\n\"Equivalence: <face_x>, <voice_y>\" format is required ONLY IF a face and voice refer to the same character. Since there are no face features, I will not include any equivalence statements.\n\nWait, looking at the instruction: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\nSince I have no face features, I cannot determine equivalence. So I will leave this out.\n\nOne more check on the `video_description`. Should I merge visual and speech?\n\"Your description should cover all observable and inferable events.\"\n\"Keep dialogue grounded in the provided transcript.\"\nSeparate lines for visual and speech seem appropriate to keep it atomic and clear.\n\nLet's refine the speech descriptions to be very faithful.\n`<voice_637>`: \"Exchange, it's also linked to this environmental concept.\" -> `<voice_637> notes that exchange is connected to environmental concepts.`\n`<voice_614>`: \"Okay, roughly like this.\" -> `<voice_614> agrees that the proposal is generally correct.`\n`<voice_467>`: \"It's about exchanging stories for coins, then you can buy.\" -> `<voice_467> outlines the mechanism of trading stories for coins to purchase items.`\n`<voice_1124>`: \"Buy. Buy their own brought idle items.\" -> `<voice_1124> specifies purchasing items brought by others as idle goods.`\n`<voice_366>`: \"Everyone bids/sells... explain this thing... starting bid...\" -> `<voice_366> details the process of presenting an item and setting a starting bid for sale.`\n\nLooks good.\n\nOne final check on the JSON structure.\nKeys: \"video_description\", \"high_level_conclusions\".\nValues: Arrays of strings.\n\nReady to generate.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of four individuals are gathered around a wooden table covered with a red and white checkered cloth.\",\n\t\t\"One person stands near a whiteboard while three others sit around the table.\",\n\t\t\"A clapperboard and various papers are placed on the table along with a water bottle and flowers.\",\n\t\t\"<voice_637> notes that exchange is connected to environmental concepts.\",\n\t\t\"<voice_614> agrees that the proposal is generally correct.\",\n\t\t\"<voice_467> outlines the mechanism of trading stories for coins to purchase items.\",\n\t\t\"<voice_1124> specifies purchasing items brought by others as idle goods.\",\n\t\t\"<voice_366> details the process of presenting an item and setting a starting bid for sale.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is discussing a proposed economic or trading system involving storytelling and item exchange.\",\n\t\t\"The participants agree on the basic framework of converting stories into currency for acquiring personal items.\",\n\t\t\"There is a structured method for listing and pricing items through explanations and bidding.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10744,
+          "output_tokens": 4011,
+          "total_tokens": 14755,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0015219993656501174,
+            "media_preparation_ms": 60.26530799863394,
+            "processor_tokenization_ms": 368.89287699887063,
+            "device_transfer_ms": 44.94306800188497,
+            "cuda_generation_ms": 184331.39186399058,
+            "decoding_ms": 3.8643449952360243
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 184809.54337099683,
+          "request_end": 1789428301.6432009,
+          "latency_ms": 184839.39039800316,
+          "client_wall_clock_latency_ms": 184839.39039800316
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.09576100273989141,
+      "nodes_added": 8,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.019175990018993616,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 5,
+    "detected_faces": 349,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1136,
+    "edges_after_clip": 404,
+    "nodes_added_by_clip": 12,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of four individuals are gathered around a wooden table covered with a red and white checkered cloth.",
+      "One person stands near a whiteboard while three others sit around the table.",
+      "A clapperboard and various papers are placed on the table along with a water bottle and flowers.",
+      "<voice_637> notes that exchange is connected to environmental concepts.",
+      "<voice_614> agrees that the proposal is generally correct.",
+      "<voice_467> outlines the mechanism of trading stories for coins to purchase items.",
+      "<voice_1124> specifies purchasing items brought by others as idle goods.",
+      "<voice_366> details the process of presenting an item and setting a starting bid for sale."
+    ],
+    "high_level_conclusions": [
+      "The group is discussing a proposed economic or trading system involving storytelling and item exchange.",
+      "The participants agree on the basic framework of converting stories into currency for acquiring personal items.",
+      "There is a structured method for listing and pricing items through explanations and bidding."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of four individuals are gathered around a wooden table covered with a red and white checkered cloth.",
+      "One person stands near a whiteboard while three others sit around the table.",
+      "A clapperboard and various papers are placed on the table along with a water bottle and flowers.",
+      "<voice_637> notes that exchange is connected to environmental concepts.",
+      "<voice_614> agrees that the proposal is generally correct.",
+      "<voice_467> outlines the mechanism of trading stories for coins to purchase items.",
+      "<voice_1124> specifies purchasing items brought by others as idle goods.",
+      "<voice_366> details the process of presenting an item and setting a starting bid for sale."
+    ],
+    "high_level_conclusions": [
+      "The group is discussing a proposed economic or trading system involving storytelling and item exchange.",
+      "The participants agree on the basic framework of converting stories into currency for acquiring personal items.",
+      "There is a structured method for listing and pricing items through explanations and bidding."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_86_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 12,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 1124,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 购买。",
+            "MAI: 购买他们自己带来的闲置物品。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1125,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of four individuals are gathered around a wooden table covered with a red and white checkered cloth."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1126,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person stands near a whiteboard while three others sit around the table."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1127,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A clapperboard and various papers are placed on the table along with a water bottle and flowers."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1128,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_637> notes that exchange is connected to environmental concepts."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1129,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_614> agrees that the proposal is generally correct."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1130,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_467> outlines the mechanism of trading stories for coins to purchase items."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1131,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1124> specifies purchasing items brought by others as idle goods."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1132,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_366> details the process of presenting an item and setting a starting bid for sale."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1133,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is discussing a proposed economic or trading system involving storytelling and item exchange."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1134,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants agree on the basic framework of converting stories into currency for acquiring personal items."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1135,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "There is a structured method for listing and pricing items through explanations and bidding."
+          ],
+          "timestamp": 86
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 366,
+        "target": 1132,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 467,
+        "target": 1130,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 614,
+        "target": 1129,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 637,
+        "target": 1128,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1124,
+        "target": 1131,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_86_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_86_graph.pkl"
+  },
+  "memory_pickle_bytes": 27082658,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 68841.541918193,
+    "prepared_perf": 68849.314610332,
+    "ordered_start_perf": 69291.831595858,
+    "consumer_wait_ms": 0.011461001122370362,
+    "ready_to_ordered_ms": 442516.9855260028,
+    "preparation_work_ms": 7767.38965100958,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 195211.09324300778
+}

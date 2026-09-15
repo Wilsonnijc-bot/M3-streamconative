@@ -1,0 +1,279 @@
+{
+  "clip_id": 24,
+  "clip_path": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0024.mp4",
+  "end_to_end_memory_generation_ms": 18823.387152995565,
+  "latency_ms": {
+    "clip_decode": 481.5637989959214,
+    "deepgram_asr": 513.2855330011807,
+    "mai_transcribe_asr": 688.2623560013599,
+    "asr_total": 1201.5503929942497,
+    "audio_segmentation": 0.3856449984596111,
+    "speech_embedding_campplus": null,
+    "facial_detection_recognition_buffalo_l": 295.35915500309784,
+    "face_clustering": 0.7048269981169142,
+    "vlm_memory_generation": 13544.724455001415,
+    "text_embedding": 3103.273694992822,
+    "graph_update_total": 0.21605399524560198
+  },
+  "stage_details": {
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 513.2855330011807,
+        "openrouter-mai-transcribe-2": 688.2623560013599
+      },
+      "asr_total_ms": 1201.5503929942497,
+      "audio_segmentation_ms": 0.3856449984596111,
+      "speech_embedding_ms": null,
+      "graph_update_ms": null,
+      "asr_segment_count": 0,
+      "speech_embedding_count": 0,
+      "voice_identity_count": 0,
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1202.7904549977393
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 295.35915500309784,
+      "face_clustering_ms": 0.7048269981169142,
+      "graph_update_ms": null,
+      "frame_count": 11,
+      "detected_face_count": 21,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 309.31511800008593
+    },
+    "vlm": {
+      "context_preparation_ms": 179.65024900331628,
+      "vlm_ms": 13544.724455001415,
+      "raw_response": "```json\n{\n  \"video_description\": [\n    \"A group of people are seated around a dining table covered with a checkered cloth in a brightly lit room.\",\n    \"Various open boxes, packaging materials, and electronic devices are scattered across the table.\",\n    \"A person holding the camera walks toward the table, extending their arm forward to gesture toward the center.\",\n    \"A woman in a white top seated near a whiteboard picks up and inspects a small electronic device.\",\n    \"Other participants around the table focus on unpacking and examining items in front of them.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative workshop or preparation session involving the setup and unboxing of equipment.\",\n    \"The person recording is actively approaching to interact with the group or examine the items on the table.\"\n  ]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are seated around a dining table covered with a checkered cloth in a brightly lit room.",
+          "Various open boxes, packaging materials, and electronic devices are scattered across the table.",
+          "A person holding the camera walks toward the table, extending their arm forward to gesture toward the center.",
+          "A woman in a white top seated near a whiteboard picks up and inspects a small electronic device.",
+          "Other participants around the table focus on unpacking and examining items in front of them."
+        ],
+        "high_level_conclusions": [
+          "The participants are engaged in a collaborative workshop or preparation session involving the setup and unboxing of equipment.",
+          "The person recording is actively approaching to interact with the group or examine the items on the table."
+        ]
+      },
+      "media": {
+        "frame_count": 5,
+        "video_duration_seconds": 2.2
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 24,
+          "call_id": "134b4ea5-2b61-4ed0-9cc9-bf77118b1f2e",
+          "purpose": "memory_construction",
+          "model": "gemini-3.8-flash",
+          "provider": "302.ai",
+          "request_start": 1789404539.2885041,
+          "ttft_ms": null,
+          "first_response": null,
+          "input_tokens": 5847,
+          "output_tokens": 627,
+          "returned_model": "gemini-3.8-flash",
+          "finish_reason": "stop",
+          "response": "```json\n{\n  \"video_description\": [\n    \"A group of people are seated around a dining table covered with a checkered cloth in a brightly lit room.\",\n    \"Various open boxes, packaging materials, and electronic devices are scattered across the table.\",\n    \"A person holding the camera walks toward the table, extending their arm forward to gesture toward the center.\",\n    \"A woman in a white top seated near a whiteboard picks up and inspects a small electronic device.\",\n    \"Other participants around the table focus on unpacking and examining items in front of them.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The participants are engaged in a collaborative workshop or preparation session involving the setup and unboxing of equipment.\",\n    \"The person recording is actively approaching to interact with the group or examine the items on the table.\"\n  ]\n}\n```",
+          "total_tokens": 6474,
+          "request_end": 1789404552.8332295,
+          "latency_ms": 13544.724455001415,
+          "client_wall_clock_latency_ms": 13544.724455001415,
+          "api_request_wall_clock_latency_ms": 13544.724455001415
+        }
+      ],
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 2
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": 1454.3281339938403,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.12216799950692803,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "current_process"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 2,
+      "text_embedding_ms": 1648.9455609989818,
+      "text_embedding_count": 2,
+      "graph_update_ms": 0.09388599573867396,
+      "nodes_added": 2,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "current_process"
+    }
+  },
+  "counts": {
+    "input_frames": 11,
+    "asr_segments": 0,
+    "speech_embeddings": 0,
+    "voice_identities": 0,
+    "detected_faces": 21,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 2,
+    "nodes_after_clip": 271,
+    "edges_after_clip": 61,
+    "nodes_added_by_clip": 7,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a dining table covered with a checkered cloth in a brightly lit room.",
+      "Various open boxes, packaging materials, and electronic devices are scattered across the table.",
+      "A person holding the camera walks toward the table, extending their arm forward to gesture toward the center.",
+      "A woman in a white top seated near a whiteboard picks up and inspects a small electronic device.",
+      "Other participants around the table focus on unpacking and examining items in front of them."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a collaborative workshop or preparation session involving the setup and unboxing of equipment.",
+      "The person recording is actively approaching to interact with the group or examine the items on the table."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are seated around a dining table covered with a checkered cloth in a brightly lit room.",
+      "Various open boxes, packaging materials, and electronic devices are scattered across the table.",
+      "A person holding the camera walks toward the table, extending their arm forward to gesture toward the center.",
+      "A woman in a white top seated near a whiteboard picks up and inspects a small electronic device.",
+      "Other participants around the table focus on unpacking and examining items in front of them."
+    ],
+    "high_level_conclusions": [
+      "The participants are engaged in a collaborative workshop or preparation session involving the setup and unboxing of equipment.",
+      "The person recording is actively approaching to interact with the group or examine the items on the table."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_24_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 7,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 264,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are seated around a dining table covered with a checkered cloth in a brightly lit room."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 265,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Various open boxes, packaging materials, and electronic devices are scattered across the table."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 266,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person holding the camera walks toward the table, extending their arm forward to gesture toward the center."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 267,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a white top seated near a whiteboard picks up and inspects a small electronic device."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 268,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Other participants around the table focus on unpacking and examining items in front of them."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 269,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are engaged in a collaborative workshop or preparation session involving the setup and unboxing of equipment."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 270,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person recording is actively approaching to interact with the group or examine the items on the table."
+          ],
+          "timestamp": 24
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_24_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_gemini/results/clip_audits/clip_24_graph.pkl"
+  }
+}

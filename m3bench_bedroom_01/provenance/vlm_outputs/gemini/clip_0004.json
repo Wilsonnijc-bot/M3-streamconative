@@ -1,0 +1,76 @@
+{
+  "clip_id": 4,
+  "source": {
+    "segment_id": 4,
+    "source": "bedroom_01_00013000.mp4",
+    "source_clock": "00013000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 90.0,
+    "absolute_end_seconds": 120.0,
+    "actual_media": "/opt/streammeco/data/m3bench_bedroom/clips/bedroom_01_00013000.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 72390.220849115,
+      "prepared_perf": 72396.19018535,
+      "ordered_start_perf": 72524.013766949,
+      "consumer_wait_ms": 0.00901700695976615,
+      "ready_to_ordered_ms": 127823.58159900468,
+      "preparation_work_ms": 5967.345857003238,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "<face_32> sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone.",
+      "<face_32> speaks aloud, giving instructions to prepare afternoon tea.",
+      "An off-screen voice acknowledges the request with an agreement.",
+      "The camera shifts away from <face_32> and pans through the living space toward the kitchen hallway.",
+      "<face_32> continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake.",
+      "The camera moves and finishes facing a plain interior wall."
+    ],
+    "high_level_conclusions": [
+      "Equivalence: <face_32>, <voice_10>",
+      "<face_32> is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food.",
+      "<voice_31> belongs to the assistant or robot responding to <face_32>'s command."
+    ]
+  },
+  "selected_final_text": "```json\n{\n \"video_description\": [\n  \"<face_32> sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone.\",\n  \"<face_32> speaks aloud, giving instructions to prepare afternoon tea.\",\n  \"An off-screen voice acknowledges the request with an agreement.\",\n  \"The camera shifts away from <face_32> and pans through the living space toward the kitchen hallway.\",\n  \"<face_32> continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake.\",\n  \"The camera moves and finishes facing a plain interior wall.\"\n ],\n \"high_level_conclusions\": [\n  \"Equivalence: <face_32>, <voice_10>\",\n  \"<face_32> is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food.\",\n  \"<voice_31> belongs to the assistant or robot responding to <face_32>'s command.\"\n ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 4,
+      "call_id": "9095959f-90c2-4efd-a35e-44d07f666c03",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789431345.6616733,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66963,
+      "output_tokens": 599,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 17264.910045996658
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n \"video_description\": [\n  \"<face_32> sits at a dining table covered with paperwork, stationery, and bottles while holding a mobile phone.\",\n  \"<face_32> speaks aloud, giving instructions to prepare afternoon tea.\",\n  \"An off-screen voice acknowledges the request with an agreement.\",\n  \"The camera shifts away from <face_32> and pans through the living space toward the kitchen hallway.\",\n  \"<face_32> continues speaking, specifying her order to include ketchup on fried chips and a strawberry cake.\",\n  \"The camera moves and finishes facing a plain interior wall.\"\n ],\n \"high_level_conclusions\": [\n  \"Equivalence: <face_32>, <voice_10>\",\n  \"<face_32> is engaged in work or study at the table and relies on a robotic or voice assistant to prepare her food.\",\n  \"<voice_31> belongs to the assistant or robot responding to <face_32>'s command.\"\n ]\n}\n```",
+      "total_tokens": 67562,
+      "request_end": 1789431362.9266973,
+      "latency_ms": 17265.021163999336,
+      "client_wall_clock_latency_ms": 17265.021163999336,
+      "api_request_wall_clock_latency_ms": 17265.021163999336
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/clip_audits/clip_4_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/m3bench_bedroom_01/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

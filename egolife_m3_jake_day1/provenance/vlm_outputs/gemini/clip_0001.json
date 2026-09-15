@@ -1,0 +1,60 @@
+{
+  "clip_id": 1,
+  "source": {
+    "segment_id": 1,
+    "source": "DAY1_A1_JAKE_11094208.mp4",
+    "source_clock": "11094208",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 17.62999999999738,
+    "absolute_start_seconds": 40182.08,
+    "absolute_end_seconds": 40199.71,
+    "actual_media": "/opt/streammeco/data/egolife_day1/DAY1_A1_JAKE_11094208.mp4"
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "A first-person perspective shows a person holding a smartphone while standing in front of a table where several individuals are seated.",
+      "Multiple people are gathered around the table, which is covered with a checkered tablecloth and holding various equipment cases and devices.",
+      "<voice_0> speaks, suggesting to bring up a stopwatch.",
+      "The person holding the phone navigates through the home screen to locate and open the clock or stopwatch app.",
+      "<voice_1> mentions a timestamp.",
+      "<voice_0> confirms to tap or record the timestamp.",
+      "The person holding the smartphone opens the stopwatch, resets the timer, and starts it."
+    ],
+    "high_level_conclusions": [
+      "The group is preparing to calibrate or synchronize recording equipment by using a smartphone stopwatch as a visible visual time reference.",
+      "<voice_0> is guiding or directing the procedure for synchronizing the devices.",
+      "The person holding the phone is carrying out the instruction to display and run the stopwatch for the session."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"A first-person perspective shows a person holding a smartphone while standing in front of a table where several individuals are seated.\",\n    \"Multiple people are gathered around the table, which is covered with a checkered tablecloth and holding various equipment cases and devices.\",\n    \"<voice_0> speaks, suggesting to bring up a stopwatch.\",\n    \"The person holding the phone navigates through the home screen to locate and open the clock or stopwatch app.\",\n    \"<voice_1> mentions a timestamp.\",\n    \"<voice_0> confirms to tap or record the timestamp.\",\n    \"The person holding the smartphone opens the stopwatch, resets the timer, and starts it.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is preparing to calibrate or synchronize recording equipment by using a smartphone stopwatch as a visible visual time reference.\",\n    \"<voice_0> is guiding or directing the procedure for synchronizing the devices.\",\n    \"The person holding the phone is carrying out the instruction to display and run the stopwatch for the session.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 1,
+      "call_id": "579d80ee-5853-4cc6-9e25-98602a53d3d7",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789396941.7988129,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 40121,
+      "output_tokens": 1248,
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"A first-person perspective shows a person holding a smartphone while standing in front of a table where several individuals are seated.\",\n    \"Multiple people are gathered around the table, which is covered with a checkered tablecloth and holding various equipment cases and devices.\",\n    \"<voice_0> speaks, suggesting to bring up a stopwatch.\",\n    \"The person holding the phone navigates through the home screen to locate and open the clock or stopwatch app.\",\n    \"<voice_1> mentions a timestamp.\",\n    \"<voice_0> confirms to tap or record the timestamp.\",\n    \"The person holding the smartphone opens the stopwatch, resets the timer, and starts it.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is preparing to calibrate or synchronize recording equipment by using a smartphone stopwatch as a visible visual time reference.\",\n    \"<voice_0> is guiding or directing the procedure for synchronizing the devices.\",\n    \"The person holding the phone is carrying out the instruction to display and run the stopwatch for the session.\"\n  ]\n}\n```",
+      "total_tokens": 41369,
+      "request_end": 1789397009.037639,
+      "latency_ms": 67238.81774299662,
+      "client_wall_clock_latency_ms": 67238.81774299662,
+      "api_request_wall_clock_latency_ms": 67238.81774299662
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_1_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

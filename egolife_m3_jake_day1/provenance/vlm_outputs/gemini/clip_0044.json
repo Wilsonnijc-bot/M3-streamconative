@@ -1,0 +1,77 @@
+{
+  "clip_id": 44,
+  "source": {
+    "segment_id": 44,
+    "source": "DAY1_A1_JAKE_11303000.mp4",
+    "source_clock": "11303000",
+    "start_seconds_in_source": 0.0,
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 41430.0,
+    "absolute_end_seconds": 41460.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_gemini/work/segments/segment_0044.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 46855.659493822,
+      "prepared_perf": 46862.185033487,
+      "ordered_start_perf": 46997.549705963,
+      "consumer_wait_ms": 0.01260400313185528,
+      "ready_to_ordered_ms": 135364.67247599649,
+      "preparation_work_ms": 6520.146849004959,
+      "lookahead_segments": 2
+    }
+  },
+  "commit_state": "Committed",
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer sits at the head of a long table, adjusting a patterned cap on their lap.",
+      "A group of people gathers around the table covered in a pink checkered tablecloth with a clapperboard on it.",
+      "<voice_417> comments on Qi Baishi's work.",
+      "<voice_508> remarks that it gives off a retro feeling.",
+      "<voice_431> discusses the plan being written on the whiteboard.",
+      "<voice_509> makes a humorous observation about question marks and feeling like celebrities.",
+      "<voice_417> mentions 'The riddle' and asks what else is left on the agenda."
+    ],
+    "high_level_conclusions": [
+      "The group is holding a production or brainstorming meeting for an upcoming video project, referencing creative references and plans.",
+      "<voice_431> is leading the discussion and outlining steps on the whiteboard.",
+      "The atmosphere among the collaborators is casual and collaborative."
+    ]
+  },
+  "selected_final_text": "```json\n{\n  \"video_description\": [\n    \"The camera wearer sits at the head of a long table, adjusting a patterned cap on their lap.\",\n    \"A group of people gathers around the table covered in a pink checkered tablecloth with a clapperboard on it.\",\n    \"<voice_417> comments on Qi Baishi's work.\",\n    \"<voice_508> remarks that it gives off a retro feeling.\",\n    \"<voice_431> discusses the plan being written on the whiteboard.\",\n    \"<voice_509> makes a humorous observation about question marks and feeling like celebrities.\",\n    \"<voice_417> mentions 'The riddle' and asks what else is left on the agenda.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is holding a production or brainstorming meeting for an upcoming video project, referencing creative references and plans.\",\n    \"<voice_431> is leading the discussion and outlining steps on the whiteboard.\",\n    \"The atmosphere among the collaborators is casual and collaborative.\"\n  ]\n}\n```",
+  "attempts": [
+    {
+      "phase": "build",
+      "question_id": null,
+      "method": null,
+      "segment_id": 44,
+      "call_id": "d5262aed-7c31-47d6-b1c0-4977875f7a5e",
+      "purpose": "memory_construction",
+      "model": "gemini-3.8-flash",
+      "provider": "302.ai",
+      "request_start": 1789405820.4122312,
+      "ttft_ms": null,
+      "first_response": null,
+      "input_tokens": 66772,
+      "output_tokens": 1194,
+      "transport": {
+        "client_previously_used": true,
+        "tcp_connect_count": 0,
+        "tls_handshake_count": 0,
+        "http_wall_ms": 80052.25328599772
+      },
+      "returned_model": "gemini-3.8-flash",
+      "finish_reason": "stop",
+      "response": "```json\n{\n  \"video_description\": [\n    \"The camera wearer sits at the head of a long table, adjusting a patterned cap on their lap.\",\n    \"A group of people gathers around the table covered in a pink checkered tablecloth with a clapperboard on it.\",\n    \"<voice_417> comments on Qi Baishi's work.\",\n    \"<voice_508> remarks that it gives off a retro feeling.\",\n    \"<voice_431> discusses the plan being written on the whiteboard.\",\n    \"<voice_509> makes a humorous observation about question marks and feeling like celebrities.\",\n    \"<voice_417> mentions 'The riddle' and asks what else is left on the agenda.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The group is holding a production or brainstorming meeting for an upcoming video project, referencing creative references and plans.\",\n    \"<voice_431> is leading the discussion and outlining steps on the whiteboard.\",\n    \"The atmosphere among the collaborators is casual and collaborative.\"\n  ]\n}\n```",
+      "total_tokens": 67966,
+      "request_end": 1789405900.464694,
+      "latency_ms": 80052.45475700212,
+      "client_wall_clock_latency_ms": 80052.45475700212,
+      "api_request_wall_clock_latency_ms": 80052.45475700212
+    }
+  ],
+  "source_audit": "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/clip_audits/clip_44_audit.json",
+  "source_call_files": [
+    "/Users/nijiachen/StreamMeCo/egolife_m3_jake_day1/provenance/raw/gemini/results/gemini_calls.jsonl"
+  ]
+}

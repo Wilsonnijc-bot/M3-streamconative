@@ -1,0 +1,496 @@
+{
+  "clip_id": 117,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0117.mp4",
+  "end_to_end_memory_generation_ms": 558830.6134159939,
+  "latency_ms": {
+    "clip_decode": 5806.699150998611,
+    "deepgram_asr": 232.15841100318357,
+    "mai_transcribe_asr": 833.955711001181,
+    "asr_total": 835.0646650069393,
+    "audio_segmentation": 5.515422992175445,
+    "speech_embedding_campplus": 1008.1015860050684,
+    "facial_detection_recognition_buffalo_l": 3159.6937440044712,
+    "face_clustering": 2.179709990741685,
+    "vlm_memory_generation": 160351.45705900504,
+    "text_embedding": 433.81536900415085,
+    "graph_update_total": 661.2311759963632
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 117,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 800,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789440412.9765124,
+          "status": "success",
+          "total_tokens": 191,
+          "request_end": 1789440413.4101696,
+          "latency_ms": 433.65764200279955
+        }
+      ],
+      "total_tokens": 191,
+      "latency_ms": 433.81536900415085
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 232.15841100318357,
+        "openrouter-mai-transcribe-2": 833.955711001181
+      },
+      "asr_total_ms": 835.0646650069393,
+      "audio_segmentation_ms": 5.515422992175445,
+      "speech_embedding_ms": 1008.1015860050684,
+      "graph_update_ms": 651.5372529975139,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1679.7435249900445
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3159.6937440044712,
+      "face_clustering_ms": 2.179709990741685,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 70,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3201.5949619963067
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1573>",
+        "<voice_364>",
+        "<voice_112>",
+        "<voice_1574>",
+        "<voice_386>"
+      ],
+      "context_preparation_ms": 4308.120392001001,
+      "vlm_ms": 160351.45705900504,
+      "raw_response": "{\n  \"video_description\": [\n    \"The camera wearer holds a black case while observing a group of people gathered around a table.\",\n    \"A person in a pink shirt stands near a whiteboard and later sits at the table.\",\n    \"The person in the pink shirt places the black case on the table.\",\n    \"The group discusses the black case, identifying it as a power bank.\",\n    \"The person in the pink shirt claims the power bank belongs to them.\",\n    \"The camera wearer hands a headset to the person in the pink shirt.\",\n    \"The camera wearer walks to a shelving unit and places the black case on a shelf.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_1573>: MAI responds with 'Mm.' during the initial observation.\",\n    \"<voice_364>: MAI comments on someone being plugged in all along.\",\n    \"<voice_112>: MAI asks who owns the power bank.\",\n    \"<voice_1574>: MAI states the power bank is theirs.\",\n    \"<voice_386>: MAI instructs to plug it in and find one.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The camera wearer holds a black case while observing a group of people gathered around a table.",
+          "A person in a pink shirt stands near a whiteboard and later sits at the table.",
+          "The person in the pink shirt places the black case on the table.",
+          "The group discusses the black case, identifying it as a power bank.",
+          "The person in the pink shirt claims the power bank belongs to them.",
+          "The camera wearer hands a headset to the person in the pink shirt.",
+          "The camera wearer walks to a shelving unit and places the black case on a shelf."
+        ],
+        "high_level_conclusions": [
+          "<voice_1573>: MAI responds with 'Mm.' during the initial observation.",
+          "<voice_364>: MAI comments on someone being plugged in all along.",
+          "<voice_112>: MAI asks who owns the power bank.",
+          "<voice_1574>: MAI states the power bank is theirs.",
+          "<voice_386>: MAI instructs to plug it in and find one."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 117,
+          "call_id": "95a500bd-fdeb-44b4-99d7-4c8e56aec7bf",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789440252.6240659,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"The camera wearer holds a black case while observing a group of people gathered around a table.\",\n    \"A person in a pink shirt stands near a whiteboard and later sits at the table.\",\n    \"The person in the pink shirt places the black case on the table.\",\n    \"The group discusses the black case, identifying it as a power bank.\",\n    \"The person in the pink shirt claims the power bank belongs to them.\",\n    \"The camera wearer hands a headset to the person in the pink shirt.\",\n    \"The camera wearer walks to a shelving unit and places the black case on a shelf.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_1573>: MAI responds with 'Mm.' during the initial observation.\",\n    \"<voice_364>: MAI comments on someone being plugged in all along.\",\n    \"<voice_112>: MAI asks who owns the power bank.\",\n    \"<voice_1574>: MAI states the power bank is theirs.\",\n    \"<voice_386>: MAI instructs to plug it in and find one.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Video Frames:**\n*   **0.00s - 0.50s:** First-person view (POV) holding a black case. The room looks like a living area with shelves, a plant, and some boxes.\n*   **1.00s - 1.50s:** Camera pans to show a group of people around a table. There's a whiteboard on the wall. One person is standing near the whiteboard.\n*   **2.00s - 3.50s:** The group is gathered around the table. It looks like a meeting or a collaborative session. There are flowers on the table.\n*   **4.00s - 5.00s:** A person with pink hair is sitting at the table. Another person in a white shirt is standing. Someone else is writing on the whiteboard.\n*   **5.50s - 7.00s:** The camera moves closer to the table. The POV person is still holding the black case.\n*   **7.50s - 9.00s:** The camera focuses on the person writing on the whiteboard (pink shirt). The POV person is holding the case.\n*   **9.50s - 11.00s:** The person in the pink shirt puts the black case on the table. They also seem to be handling a phone or small device.\n*   **11.50s - 13.00s:** The person in the pink shirt is erasing/writing on the whiteboard. The person in the white shirt is standing nearby holding flowers.\n*   **13.50s - 15.00s:** The POV person reaches out towards the table. The person in the white shirt is arranging flowers.\n*   **15.50s - 17.00s:** The POV person hands something (looks like glasses or a headset) to someone. Wait, looking closely at 15.50s-17.00s, the POV person is holding a wire/headset and handing it to the person with pink hair.\n*   **17.50s - 19.00s:** The person with pink hair takes the headset/glasses. The POV person walks away from the table.\n*   **19.50s - 22.00s:** The POV person walks back towards the shelf seen at the beginning.\n*   **22.50s - 25.00s:** The POV person places the black case on a shelf unit.\n*   **25.50s - 29.50s:** The POV person adjusts the case on the shelf.\n\n**2. Analyze the Voice Features:**\n*   `<voice_1573>`: \"MAI: 嗯。\" (Mm.) - Time: 00:03-00:05. This corresponds to the early part of the video where the group is gathered.\n*   `<voice_364>`: \"MAI: 喏，你一直插着的呗。\" / \"MAI: 我一直插。\" (Here, you've been plugging it in all along.) / \"MAI: I've been plugging it.\" - Time: 00:09-00:12. This happens after the camera approaches the table.\n*   `<voice_112>`: \"MAI: 充电宝，牛嘛。这个是谁的？\" (Power bank, awesome. Whose is this?) - Time: 00:11-00:15. This matches the moment the black case is placed on the table.\n*   `<voice_1574>`: \"MAI: 我的。\" (Mine.) - Time: 00:15-00:17. Response to the question about ownership.\n*   `<voice_386>`: \"MAI: 好，那你插上吧，找一个。\" (Okay, then plug it in, find one.) - Time: 00:16-00:19. Instruction regarding the power bank.\n\n**3. Synthesize Video Description:**\n*   Start with the POV holding the case.\n*   Describe the group gathering around the table with a whiteboard.\n*   Mention the interaction involving the black case (power bank).\n*   Describe the transfer of the headset/glasses.\n*   End with the POV person putting the case on the shelf.\n\n**4. Synthesize High-Level Conclusions:**\n*   Identify the speaker MAI. Since the voice features explicitly say \"MAI:\", I need to check if there are face features. The prompt says \"If a face and a voice feature refer to the same character, indicate it...\". However, the prompt *also* says \"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\"\n*   Looking at the provided text, there are NO face features provided in the input section (\"Face features:\"). Wait, let me re-read the input carefully.\n    *   Input: `Face features:` followed by nothing? No, usually there's a list. Ah, the input block ends with `Voice features:...`. There is no explicit list of Face features provided in the text prompt I received.\n    *   Wait, the prompt says \"You will be given a video and a set of character features.\" But the actual input data provided in the prompt text *only* lists Voice features under \"Voice features:\". The \"Face features:\" line is empty or missing specific IDs.\n    *   Let's look at the instruction again: \"Preserve speaker identity when constructing memory from the supplied character features.\" \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n    *   Crucially: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   Since no face IDs are supplied in the input text (the \"Face features:\" section is effectively empty or just the header), I cannot create an \"Equivalence\" statement. I must strictly follow the rule: \"If no face IDs are supplied, do not invent any.\"\n    *   So, `high_level_conclusions` should contain the memory summaries but NOT equivalence statements unless I have face IDs.\n    *   Wait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" and \"Output Format...\".\n    *   The instruction says: \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\n    *   The instruction says: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   So I need to create memory entries for the voices.\n    *   The instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   So I need to add these to the `high_level_conclusions` array? Or `video_description`?\n    *   Re-reading the prompt structure: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   The instruction \"For every supplied voice ID... include at least one episodic memory...\" seems to imply adding them to the output. Usually, in these tasks, memory generation goes into `high_level_conclusions` or a separate field. Given the schema provided in the \"Output Format\" section only has `video_description` and `high_level_conclusions`, I should put the memory summaries in `high_level_conclusions`.\n    *   Wait, the instruction says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID... include at least one episodic memory...\".\n    *   Let's check the constraint: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n    *   Okay, so I will populate `high_level_conclusions` with the memory summaries derived from the voice IDs.\n    *   Also, since there are no face IDs, I cannot make Equivalence statements. I will omit them.\n\n**Refining the Plan:**\n1.  **Video Description:** Break down the visual actions chronologically.\n    *   POV holds a black case.\n    *   Group gathers around a table with a whiteboard.\n    *   Person in pink shirt interacts with the whiteboard and the case.\n    *   Discussion about the power bank (case).\n    *   Transfer of a headset/glasses.\n    *   POV person returns to shelf and places the case.\n2.  **High-Level Conclusions:**\n    *   Create memory entries for each voice ID found (`<voice_1573>`, `<voice_364>`, `<voice_112>`, `<voice_1574>`, `<voice_386>`).\n    *   Format: \"Speaker ID: Transcript summary\".\n    *   Ensure no face IDs are used for equivalence since none were provided.\n\n**Drafting Content:**\n*   **Description:**\n    *   The camera wearer holds a black case while observing a group of people gathered around a table in a room with a whiteboard.\n    *   A person wearing a pink shirt stands near the whiteboard and later sits down.\n    *   The person in the pink shirt places the black case on the table.\n    *   The group discusses the contents of the case, specifically identifying it as a power bank.\n    *   The person in the pink shirt claims ownership of the power bank.\n    *   The camera wearer hands a headset to the person in the pink shirt.\n    *   The camera wearer walks over to a shelving unit and places the black case on a shelf.\n*   **Conclusions (Memory):**\n    *   `<voice_1573>`: MAI responds with \"Mm.\" during the initial observation.\n    *   `<voice_364>`: MAI comments on someone being plugged in all along.\n    *   `<voice_112>`: MAI asks who owns the power bank.\n    *   `<voice_1574>`: MAI states it is their own.\n    *   `<voice_386>`: MAI instructs to plug it in and find one.\n\nWait, I need to check if I should put these in `high_level_conclusions`. The prompt says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\". And the instruction says \"For every supplied voice ID... include at least one episodic memory...\". It doesn't explicitly say *where*, but logically, memory/conclusion fits better in `high_level_conclusions` than `video_description` which is for atomic events. However, sometimes \"memory\" implies a specific field. Since the schema is fixed to `video_description` and `high_level_conclusions`, I will put the memory summaries in `high_level_conclusions`.\n\nLet's double check the \"Equivalence\" rule. \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since there are no face features provided in the input text (the section is empty), I cannot create equivalences. I will stick to the voice-only memories.\n\nOne detail: \"Preserve speaker identity when constructing memory from the supplied character features.\" -> Use the IDs like `<voice_1573>`.\n\nFinal check on constraints:\n- \"Do not replace the ID with 'a speaker'...\" -> Use `<voice_1573>`.\n- \"Keep dialogue grounded in the provided transcript.\" -> Quote or summarize accurately.\n- \"Do not assign it to the camera wearer... without supporting evidence.\" -> The voice says \"MAI:\", implying a third party named MAI. I shouldn't assume MAI is the camera wearer unless stated. The camera wearer is holding the case. MAI is asking \"Whose is this?\". Then says \"Mine.\" This suggests MAI is likely the person in the pink shirt (who handles the case). I won't explicitly link faces because I don't have face IDs.\n\nLet's construct the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"The camera wearer holds a black case while observing a group of people gathered around a table.\",\n    \"A person in a pink shirt stands near a whiteboard and later sits at the table.\",\n    \"The person in the pink shirt places the black case on the table.\",\n    \"The group discusses the black case, identifying it as a power bank.\",\n    \"The person in the pink shirt claims the power bank belongs to them.\",\n    \"The camera wearer hands a headset to the person in the pink shirt.\",\n    \"The camera wearer walks to a shelving unit and places the black case on a shelf.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_1573>: MAI responds with 'Mm.' during the initial observation.\",\n    \"<voice_364>: MAI comments on someone being plugged in all along.\",\n    \"<voice_112>: MAI asks who owns the power bank.\",\n    \"<voice_1574>: MAI states the power bank is theirs.\",\n    \"<voice_386>: MAI instructs to plug it in and find one.\"\n  ]\n}\n```\nWait, I need to make sure I don't miss any voice IDs.\nInput:\n`<voice_1573>`\n`<voice_364>`\n`<voice_112>`\n`<voice_1574>`\n`<voice_386>`\nAll accounted for.\n\nOne correction on the description: At 15.50s, the camera wearer is holding a wire/headset. At 17.00s, the person in pink is holding it. So \"camera wearer hands a headset\" is accurate.\n\nOne correction on the conclusion format: The prompt says \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSo `<voice_1573>: MAI responds with 'Mm.' during the initial observation.` works.\n\nIs there any ambiguity about \"MAI\"? The ASR says \"MAI: ...\". This is likely the name of the speaker. I will use \"MAI\" in the summary.\n\nFinal check on JSON validity.\n</think>\n\n{\n  \"video_description\": [\n    \"The camera wearer holds a black case while observing a group of people gathered around a table.\",\n    \"A person in a pink shirt stands near a whiteboard and later sits at the table.\",\n    \"The person in the pink shirt places the black case on the table.\",\n    \"The group discusses the black case, identifying it as a power bank.\",\n    \"The person in the pink shirt claims the power bank belongs to them.\",\n    \"The camera wearer hands a headset to the person in the pink shirt.\",\n    \"The camera wearer walks to a shelving unit and places the black case on a shelf.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_1573>: MAI responds with 'Mm.' during the initial observation.\",\n    \"<voice_364>: MAI comments on someone being plugged in all along.\",\n    \"<voice_112>: MAI asks who owns the power bank.\",\n    \"<voice_1574>: MAI states the power bank is theirs.\",\n    \"<voice_386>: MAI instructs to plug it in and find one.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10408,
+          "output_tokens": 3496,
+          "total_tokens": 13904,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.003206005203537643,
+            "media_preparation_ms": 59.83817999367602,
+            "processor_tokenization_ms": 487.2676520026289,
+            "device_transfer_ms": 51.021949999267235,
+            "cuda_generation_ms": 159720.5654339923,
+            "decoding_ms": 3.1032150000100955
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 160321.98513500043,
+          "request_end": 1789440412.9755256,
+          "latency_ms": 160351.45705900504,
+          "client_wall_clock_latency_ms": 160351.45705900504
+        }
+      ],
+      "episodic_memory_count": 7,
+      "semantic_memory_count": 5
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 7,
+      "text_embedding_ms": null,
+      "text_embedding_count": 7,
+      "graph_update_ms": 0.0690099986968562,
+      "nodes_added": 7,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 9.624913000152446,
+      "nodes_added": 5,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 5,
+    "detected_faces": 70,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 7,
+    "semantic_memories": 5,
+    "nodes_after_clip": 1587,
+    "edges_after_clip": 594,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "The camera wearer holds a black case while observing a group of people gathered around a table.",
+      "A person in a pink shirt stands near a whiteboard and later sits at the table.",
+      "The person in the pink shirt places the black case on the table.",
+      "The group discusses the black case, identifying it as a power bank.",
+      "The person in the pink shirt claims the power bank belongs to them.",
+      "The camera wearer hands a headset to the person in the pink shirt.",
+      "The camera wearer walks to a shelving unit and places the black case on a shelf."
+    ],
+    "high_level_conclusions": [
+      "<voice_1573>: MAI responds with 'Mm.' during the initial observation.",
+      "<voice_364>: MAI comments on someone being plugged in all along.",
+      "<voice_112>: MAI asks who owns the power bank.",
+      "<voice_1574>: MAI states the power bank is theirs.",
+      "<voice_386>: MAI instructs to plug it in and find one."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The camera wearer holds a black case while observing a group of people gathered around a table.",
+      "A person in a pink shirt stands near a whiteboard and later sits at the table.",
+      "The person in the pink shirt places the black case on the table.",
+      "The group discusses the black case, identifying it as a power bank.",
+      "The person in the pink shirt claims the power bank belongs to them.",
+      "The camera wearer hands a headset to the person in the pink shirt.",
+      "The camera wearer walks to a shelving unit and places the black case on a shelf."
+    ],
+    "high_level_conclusions": [
+      "<voice_1573>: MAI responds with 'Mm.' during the initial observation.",
+      "<voice_364>: MAI comments on someone being plugged in all along.",
+      "<voice_112>: MAI asks who owns the power bank.",
+      "<voice_1574>: MAI states the power bank is theirs.",
+      "<voice_386>: MAI instructs to plug it in and find one."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_117_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 1573,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 哎。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1574,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1575,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer holds a black case while observing a group of people gathered around a table."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1576,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person in a pink shirt stands near a whiteboard and later sits at the table."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1577,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the pink shirt places the black case on the table."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1578,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group discusses the black case, identifying it as a power bank."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1579,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person in the pink shirt claims the power bank belongs to them."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1580,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer hands a headset to the person in the pink shirt."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1581,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer walks to a shelving unit and places the black case on a shelf."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1582,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1573>: MAI responds with 'Mm.' during the initial observation."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1583,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_364>: MAI comments on someone being plugged in all along."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1584,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_112>: MAI asks who owns the power bank."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1585,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1574>: MAI states the power bank is theirs."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1586,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_386>: MAI instructs to plug it in and find one."
+          ],
+          "timestamp": 117
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 112,
+        "target": 1584,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 364,
+        "target": 1583,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 386,
+        "target": 1586,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1573,
+        "target": 1582,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1574,
+        "target": 1585,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_117_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_117_graph.pkl"
+  },
+  "memory_pickle_bytes": 37966132,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 81041.628758291,
+    "prepared_perf": 81050.07962367,
+    "ordered_start_perf": 81427.415480707,
+    "consumer_wait_ms": 0.008867005817592144,
+    "ready_to_ordered_ms": 377335.85703700373,
+    "preparation_work_ms": 8443.68665399088,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 169986.68958700728
+}
