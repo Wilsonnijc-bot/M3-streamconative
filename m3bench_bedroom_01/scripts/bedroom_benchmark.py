@@ -371,7 +371,7 @@ def build_memory(args, questions: list[dict]):
         raise FileNotFoundError(f"No clips found in {args.clips}")
     if args.prefetch:
         from benchmarks.segment_prefetch import SegmentPrefetch
-        from mmagent.utils.asr_resilience import concurrent_providers
+        from mmagent.utils.asr_selection import cached_voice_segments, run_selected_asr, selected_asr_provider
         import base64
         plan = []
         last = clock_seconds(questions[-1]['query_time']['time'])
@@ -393,10 +393,13 @@ def build_memory(args, questions: list[dict]):
             started=time.perf_counter()
             decoded=process_video_clip(str(actual),fps=PROCESSING_CONFIG['fps'],audio_duration_limit=end-offset)
             result={'actual':actual,'decoded':decoded,'decode_ms':(time.perf_counter()-started)*1000,'source_name':src.name,'offset':offset,'end':end}
-            if decoded[2] and not (args.work/'intermediate'/f'clip_{segment_id}_voices.json').exists():
+            if decoded[2]:
                 audio=base64.b64decode(decoded[2])
-                result['asr']=concurrent_providers(PROCESSING_CONFIG['asr_providers'],
-                    lambda provider: chat_api.transcribe_audio_with_retry(provider,audio,audio_format='wav',context={'segment_id':segment_id,'phase':'preparation'}))
+                provider=selected_asr_provider(PROCESSING_CONFIG,chat_api.config)
+                cache_path=args.work/'intermediate'/f'clip_{segment_id}_voices.json'
+                if cached_voice_segments(cache_path,provider,audio) is None:
+                    result['asr']=run_selected_asr(provider,
+                        lambda name: chat_api.transcribe_audio_with_retry(name,audio,audio_format='wav',context={'segment_id':segment_id,'phase':'preparation'}))
             return result
         args._prefetcher=SegmentPrefetch(plan,prepare,args.prefetch)
         print(f'PREPARATION_LOOKAHEAD={args.prefetch} planned_segments={len(plan)}',flush=True)

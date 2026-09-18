@@ -1,9 +1,27 @@
 {
   "clip_id": 122,
   "source": {
+    "segment_id": 122,
     "source": "DAY1_A1_JAKE_12070000.mp4",
+    "source_clock": "12070000",
     "start_seconds_in_source": 0.0,
-    "end_seconds_in_source": 30.0
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43620.0,
+    "absolute_end_seconds": 43650.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0122.mp4",
+    "asr_failures": [
+      "openrouter-mai-transcribe-2: RuntimeError: ASR provider 'openrouter-mai-transcribe-2' failed on attempt 2/2: ASRHTTPError: openrouter transcription HTTP 429: {\"error\":{\"message\":\"Provider returned 429\",\"code\":429}}"
+    ],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 82038.938741507,
+      "prepared_perf": 82049.293446429,
+      "ordered_start_perf": 82396.933973055,
+      "consumer_wait_ms": 0.01743300526868552,
+      "ready_to_ordered_ms": 347640.52662599715,
+      "preparation_work_ms": 10349.458783006412,
+      "lookahead_segments": 2
+    }
   },
   "commit_state": "Committed",
   "generated_memory": {

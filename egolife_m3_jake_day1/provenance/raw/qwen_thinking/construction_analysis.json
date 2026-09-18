@@ -1,0 +1,260 @@
+{
+  "as_of": "2026-09-15T03:53:28.300781+00:00",
+  "processed": 135,
+  "committed": 132,
+  "skipped": [
+    23,
+    39,
+    50
+  ],
+  "snapshots": 9,
+  "qa_rows": 0,
+  "vlm_seconds": {
+    "n": 132,
+    "mean": 184.95313019877293,
+    "median": 183.93963641550363,
+    "p95": 254.50110129899986
+  },
+  "gpu_generation_seconds": {
+    "n": 133,
+    "mean": 184.39193388752648,
+    "median": 183.60355042800074,
+    "p95": 254.07461361099558
+  },
+  "generated_tokens": {
+    "n": 133,
+    "mean": 4025.9774436090224,
+    "median": 3998,
+    "p95": 5458
+  },
+  "recent_seconds_per_segment": 212.70463859407525,
+  "remaining_construction_minutes_estimate": 31.905695789111288,
+  "generated_episodic": 1120,
+  "generated_semantic": 460,
+  "graph_counts": {
+    "input_frames": 150,
+    "asr_segments": 12,
+    "speech_embeddings": 12,
+    "voice_identities": 10,
+    "detected_faces": 420,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 10,
+    "nodes_after_clip": 1897,
+    "edges_after_clip": 720,
+    "nodes_added_by_clip": 21,
+    "edges_added_by_clip": 10
+  },
+  "graph_edges": 720,
+  "face_identity_clips": 0,
+  "snapshot_cutoff_checks": [
+    {
+      "snapshot": "q01_uncompressed",
+      "latest_source_end": 40862.17,
+      "query_time": 40862.17,
+      "within_cutoff": true
+    },
+    {
+      "snapshot": "q02_uncompressed",
+      "latest_source_end": 41700.0,
+      "query_time": 41700.0,
+      "within_cutoff": true
+    },
+    {
+      "snapshot": "q03_uncompressed",
+      "latest_source_end": 41719.11,
+      "query_time": 41719.11,
+      "within_cutoff": true
+    },
+    {
+      "snapshot": "q04_uncompressed",
+      "latest_source_end": 42188.02,
+      "query_time": 42188.02,
+      "within_cutoff": true
+    },
+    {
+      "snapshot": "q05_uncompressed",
+      "latest_source_end": 42990.03,
+      "query_time": 42990.03,
+      "within_cutoff": true
+    },
+    {
+      "snapshot": "q06_uncompressed",
+      "latest_source_end": 43056.06,
+      "query_time": 43056.06,
+      "within_cutoff": true
+    },
+    {
+      "snapshot": "q07_uncompressed",
+      "latest_source_end": 43355.08,
+      "query_time": 43355.08,
+      "within_cutoff": true
+    },
+    {
+      "snapshot": "q08_uncompressed",
+      "latest_source_end": 43812.08,
+      "query_time": 43812.08,
+      "within_cutoff": true
+    },
+    {
+      "snapshot": "q09_uncompressed",
+      "latest_source_end": 43902.04,
+      "query_time": 43902.04,
+      "within_cutoff": true
+    }
+  ],
+  "identity": {
+    "segments_with_voice_input": 125,
+    "fully_attributed_episodic": 88,
+    "fully_attributed_any_memory": 115,
+    "provided_ids": 595,
+    "ids_in_episodic": 438,
+    "ids_in_any_memory": 555,
+    "segments_with_noninput_voice_ids": []
+  },
+  "asr_attempt_statuses": {
+    "cache_hit": 164,
+    "success": 112,
+    "error": 6
+  },
+  "latency_stage_seconds": {
+    "clip_decode": {
+      "n": 132,
+      "mean": 4.56879750141657,
+      "median": 4.452111019993026,
+      "p95": 6.417079685008503
+    },
+    "deepgram_asr": {
+      "n": 132,
+      "mean": 0.31440487587866356,
+      "median": 0.003004402999067679,
+      "p95": 1.16293626800325
+    },
+    "mai_transcribe_asr": {
+      "n": 132,
+      "mean": 1.4509340368715515,
+      "median": 0.0026723469964053947,
+      "p95": 2.2385034570033895
+    },
+    "asr_total": {
+      "n": 132,
+      "mean": 1.4954163759695362,
+      "median": 0.0039372085011564195,
+      "p95": 2.2976172649941873
+    },
+    "audio_segmentation": {
+      "n": 132,
+      "mean": 0.007030187302944162,
+      "median": 0.006743475008988753,
+      "p95": 0.01181540700054029
+    },
+    "speech_embedding_campplus": {
+      "n": 125,
+      "mean": 1.0389443771438092,
+      "median": 0.95627793399035,
+      "p95": 2.015872689000389
+    },
+    "facial_detection_recognition_buffalo_l": {
+      "n": 132,
+      "mean": 3.3871438665599714,
+      "median": 3.524206118498114,
+      "p95": 4.1307044200002565
+    },
+    "face_clustering": {
+      "n": 132,
+      "mean": 0.014845040256907603,
+      "median": 0.00652750250446843,
+      "p95": 0.030819349994999357
+    },
+    "vlm_memory_generation": {
+      "n": 132,
+      "mean": 184.95313019877293,
+      "median": 183.93963641550363,
+      "p95": 254.50110129899986
+    },
+    "text_embedding": {
+      "n": 132,
+      "mean": 0.6427133327580866,
+      "median": 0.5952263674989808,
+      "p95": 0.9459331780017237
+    },
+    "graph_update_total": {
+      "n": 132,
+      "mean": 0.38583144412096415,
+      "median": 0.27374213350049104,
+      "p95": 1.0954108309815638
+    }
+  },
+  "paired_vlm": {
+    "n": 132,
+    "qwen_median_seconds": 183.93963641550363,
+    "gemini_median_seconds": 44.571687192001264
+  },
+  "failure_records": [
+    {
+      "segment_id": 23,
+      "source": "DAY1_A1_JAKE_11203000.mp4",
+      "source_clock": "11203000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 40830.0,
+      "absolute_end_seconds": 40860.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0023.mp4",
+      "status": "skipped_api_failure",
+      "error": "RuntimeError: Qwen returned empty/truncated output",
+      "latency_ms": 758311.4497799979,
+      "graph_update_rolled_back": true
+    },
+    {
+      "segment_id": 39,
+      "source": "DAY1_A1_JAKE_11280000.mp4",
+      "source_clock": "11280000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 41280.0,
+      "absolute_end_seconds": 41310.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0039.mp4",
+      "status": "skipped_api_failure",
+      "error": "RuntimeError: Qwen returned empty/truncated output",
+      "latency_ms": 750822.2358749991,
+      "graph_update_rolled_back": true
+    },
+    {
+      "segment_id": 50,
+      "source": "DAY1_A1_JAKE_11333000.mp4",
+      "source_clock": "11333000",
+      "start_seconds_in_source": 0.0,
+      "end_seconds_in_source": 30.0,
+      "absolute_start_seconds": 41610.0,
+      "absolute_end_seconds": 41640.0,
+      "actual_media": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0050.mp4",
+      "status": "skipped_api_failure",
+      "error": "ValueError: VLM response is not a valid memory object",
+      "latency_ms": 204713.309786006,
+      "graph_update_rolled_back": true
+    },
+    {
+      "stage": "asr",
+      "clip_cache": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/intermediate/clip_98_voices.json",
+      "status": "partial_asr",
+      "successful_providers": [
+        "deepgram-asr"
+      ],
+      "errors": [
+        "openrouter-mai-transcribe-2: RuntimeError: ASR provider 'openrouter-mai-transcribe-2' failed on attempt 2/2: ASRHTTPError: openrouter transcription HTTP 503: {\"error\":{\"message\":\"Provider returned 503\",\"code\":503}}"
+      ]
+    },
+    {
+      "stage": "asr",
+      "clip_cache": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/intermediate/clip_122_voices.json",
+      "status": "partial_asr",
+      "successful_providers": [
+        "deepgram-asr"
+      ],
+      "errors": [
+        "openrouter-mai-transcribe-2: RuntimeError: ASR provider 'openrouter-mai-transcribe-2' failed on attempt 2/2: ASRHTTPError: openrouter transcription HTTP 429: {\"error\":{\"message\":\"Provider returned 429\",\"code\":429}}"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+[Unit]
+Description=Stop GPU VM after validated QA and verified result copy
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/auto_stop_guard.py

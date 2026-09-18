@@ -29,20 +29,20 @@ phase() {
  printf '[%s] PHASE_COMPLETE %s\n' "$(date -Is)" "$name"
 }
 printf 'exit_status=running\nstarted_at=%s\n' "$(date -Is)" > "$RUN/pipeline_status.txt"
-printf '[%s] PIPELINE_START model=gemini-3.8-flash trials=40 session=egolife_10q\n' "$(date -Is)"
+printf '[%s] PIPELINE_START model=gpt-5.6-sol trials=40 session=egolife_10q\n' "$(date -Is)"
 sha256sum benchmarks/egolife_first10.py benchmarks/gemini_runtime.py benchmarks/gemini_report.py mmagent/memory_processing_gemini.py mmagent/utils/chat_api.py mmagent/utils/asr_resilience.py mmagent/voice_processing.py benchmarks/segment_resilience.py benchmarks/segment_prefetch.py cloud_http.py "$MANDOL/benchmarks/egolife_m3_first10.py" > "$RESULTS/code_hashes.sha256"
 COMMON=(--qa "$QA" --results "$RESULTS" --work "$WORK")
 phase memory_build python benchmarks/egolife_first10.py build --clips "$CLIPS" "${COMMON[@]}"
 phase compression python benchmarks/egolife_first10.py compress "${COMMON[@]}"
 phase mandol_export python benchmarks/egolife_first10.py export-mandol "${COMMON[@]}"
 for method in A B C; do
- phase "eval_$method" python benchmarks/egolife_first10.py eval "${COMMON[@]}" --method "$method" --backend gemini
+ phase "eval_$method" python benchmarks/egolife_first10.py eval "${COMMON[@]}" --method "$method" --backend openai
 done
 deactivate
 cd "$MANDOL"
 source /opt/streammeco/mandol-venv/bin/activate
 phase mandol_adapt python benchmarks/egolife_m3_first10.py adapt --qa "$QA" --results "$RESULTS"
-phase eval_D python benchmarks/egolife_m3_first10.py eval --qa "$QA" --results "$RESULTS" --backend gemini
+phase eval_D python benchmarks/egolife_m3_first10.py eval --qa "$QA" --results "$RESULTS" --backend openai
 deactivate
 cd "$SMC"
 source /opt/streammeco/.venv/bin/activate

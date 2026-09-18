@@ -1,0 +1,544 @@
+{
+  "clip_id": 143,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0143.mp4",
+  "end_to_end_memory_generation_ms": 650605.4741789994,
+  "latency_ms": {
+    "clip_decode": 7390.365084997029,
+    "deepgram_asr": 373.46946299658157,
+    "mai_transcribe_asr": 1182.112208000035,
+    "asr_total": 1183.8234269962413,
+    "audio_segmentation": 6.93944699014537,
+    "speech_embedding_campplus": 370.72515999898314,
+    "facial_detection_recognition_buffalo_l": 3631.3728940003784,
+    "face_clustering": 8.415529009653255,
+    "vlm_memory_generation": 172296.66532600822,
+    "text_embedding": 616.4928810030688,
+    "graph_update_total": 1040.8878950111102
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 143,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 11,
+      "input_chars": 850,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789445952.918908,
+          "status": "success",
+          "total_tokens": 187,
+          "request_end": 1789445953.5350602,
+          "latency_ms": 616.1527289950754
+        }
+      ],
+      "total_tokens": 187,
+      "latency_ms": 616.4928810030688
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 373.46946299658157,
+        "openrouter-mai-transcribe-2": 1182.112208000035
+      },
+      "asr_total_ms": 1183.8234269962413,
+      "audio_segmentation_ms": 6.93944699014537,
+      "speech_embedding_ms": 370.72515999898314,
+      "graph_update_ms": 1040.4692970041651,
+      "asr_segment_count": 8,
+      "speech_embedding_count": 8,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1435.4528449912323
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3631.3728940003784,
+      "face_clustering_ms": 8.415529009653255,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 353,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3844.271138004842
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_2006>",
+        "<voice_2007>",
+        "<voice_2008>",
+        "<voice_2009>",
+        "<voice_2010>",
+        "<voice_1909>"
+      ],
+      "context_preparation_ms": 3917.871849000221,
+      "vlm_ms": 172296.66532600822,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people gather around a table with a laptop, engaged in a discussion.\",\n\t\t\"A woman in black sits on the left, a woman in white stands centrally handling documents, and a woman in blue sits on the right.\",\n\t\t\"Speaker <voice_2006> comments on the speed of making red bean paste.\",\n\t\t\"Speaker <voice_2007> asks whether red bean paste was prepared.\",\n\t\t\"Speaker <voice_2008> explains they did not buy red bean paste materials.\",\n\t\t\"Speaker <voice_2009> questions if red bean paste can be purchased directly.\",\n\t\t\"Speaker <voice_2010> informs that finished products exist.\",\n\t\t\"Speaker <voice_1909> affirms this information.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is deliberating on sourcing red bean paste, weighing homemade preparation against buying finished goods.\",\n\t\t\"Speaker <voice_2006> highlights the time-saving aspect of the process.\",\n\t\t\"Speaker <voice_2008> reveals a shortage of ingredients for homemade production.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people gather around a table with a laptop, engaged in a discussion.",
+          "A woman in black sits on the left, a woman in white stands centrally handling documents, and a woman in blue sits on the right.",
+          "Speaker <voice_2006> comments on the speed of making red bean paste.",
+          "Speaker <voice_2007> asks whether red bean paste was prepared.",
+          "Speaker <voice_2008> explains they did not buy red bean paste materials.",
+          "Speaker <voice_2009> questions if red bean paste can be purchased directly.",
+          "Speaker <voice_2010> informs that finished products exist.",
+          "Speaker <voice_1909> affirms this information."
+        ],
+        "high_level_conclusions": [
+          "The group is deliberating on sourcing red bean paste, weighing homemade preparation against buying finished goods.",
+          "Speaker <voice_2006> highlights the time-saving aspect of the process.",
+          "Speaker <voice_2008> reveals a shortage of ingredients for homemade production."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 143,
+          "call_id": "b0b79ff8-0cdf-41c3-95d6-62ebf193e8ed",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789445780.6208901,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people gather around a table with a laptop, engaged in a discussion.\",\n\t\t\"A woman in black sits on the left, a woman in white stands centrally handling documents, and a woman in blue sits on the right.\",\n\t\t\"Speaker <voice_2006> comments on the speed of making red bean paste.\",\n\t\t\"Speaker <voice_2007> asks whether red bean paste was prepared.\",\n\t\t\"Speaker <voice_2008> explains they did not buy red bean paste materials.\",\n\t\t\"Speaker <voice_2009> questions if red bean paste can be purchased directly.\",\n\t\t\"Speaker <voice_2010> informs that finished products exist.\",\n\t\t\"Speaker <voice_1909> affirms this information.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is deliberating on sourcing red bean paste, weighing homemade preparation against buying finished goods.\",\n\t\t\"Speaker <voice_2006> highlights the time-saving aspect of the process.\",\n\t\t\"Speaker <voice_2008> reveals a shortage of ingredients for homemade production.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The scene shows a group of people sitting around a table with a laptop.\n    *   Person 1 (Left): Woman in black top, sitting, looking at laptop/screen.\n    *   Person 2 (Center/Back): Woman in white shirt, standing/moving around, holding papers/books.\n    *   Person 3 (Right): Woman in light blue/green top, sitting.\n    *   Camera Wearer (Foreground): Hands visible on the laptop trackpad. Legs visible.\n    *   Action: They seem to be discussing something related to the laptop screen or documents held by the woman in white. The woman in white moves around the table.\n*   **Voice Features:** All voice features are labeled `<voice_2006>` through `<voice_2010>` and `<voice_1909>`. The ASR text is in Chinese.\n    *   `<voice_2006>`: MAI talks about red beans, buying things, time limits.\n    *   `<voice_2007>`: MAI asks if someone prepared red bean paste.\n    *   `<voice_2008>`: MAI says she didn't buy red bean paste material.\n    *   `<voice_2009>`: MAI asks if red bean paste can be bought directly.\n    *   `<voice_2010>`: MAI says there are also finished products.\n    *   `<voice_1909>`: MAI confirms \"Yes\".\n    *   Note: The speaker is consistently referred to as \"MAI\" in the ASR. I need to map these voice IDs to the visual characters if possible, but the prompt instructions say \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" However, usually, in these tasks, if there's a clear speaker, I might need to link them if the prompt implies it. Wait, the instruction says \"Preserve speaker identity when constructing memory... Voice features map exact IDs... These IDs already identify the speakers; they remain usable even when no face features are supplied\". It also says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   Crucially, the instruction says: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\" Since I don't have explicit face-to-voice mapping data in the input (no `<face_x>` linked to `<voice_y>`), I cannot make an equivalence claim like `Equivalence: <face_1>, <voice_2006>`. I must treat the voice IDs as independent identifiers for the memory generation part.\n    *   Wait, looking closely at the prompt requirements: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since I don't have face IDs provided in the input text (only video frames with blurred faces), I cannot create equivalences unless I infer them strongly. But the instruction explicitly warns against asserting equivalence without evidence. So I will likely leave `high_level_conclusions` empty regarding equivalences or just describe the scene. Actually, looking at the `high_level_conclusions` section of the output format example, it expects strings. I should probably focus on describing the interaction.\n    *   Wait, I missed something. The prompt says \"You will be given a video and a set of character features.\" But the input provided *only* contains video frames and voice features. There are NO face features listed in the text block under \"Face features:\". It just says \"Face features:\" then \"Voice features:\". This implies there are no face IDs provided to link to voices. Therefore, I cannot create equivalences. I must strictly follow the rule: \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\"\n    *   So, for `video_description`, I describe the visual actions. For `high_level_conclusions`, I summarize the conversation/intent based on the voice text, using the voice IDs.\n\n**2. Video Description Construction:**\n*   Scene: Indoor room, table with checkered cloth. Laptop open in center.\n*   Characters:\n    *   Woman in black (left).\n    *   Woman in white (center/back, standing).\n    *   Woman in blue/green (right).\n    *   Camera wearer (hands on laptop).\n*   Actions:\n    *   Woman in white stands up and moves around the table, handling papers/books.\n    *   Others sit and look at the laptop or listen.\n    *   Camera wearer operates the laptop.\n    *   Discussion seems to happen.\n\n**3. High-Level Conclusions Construction:**\n*   Need to summarize the conversation using the voice IDs.\n*   Speaker MAI discusses buying red bean paste (ingredients vs finished product).\n*   She mentions time constraints (4 points 20 minutes?).\n*   She asks about preparation.\n*   She confirms availability of finished products.\n*   I need to construct sentences that reflect this using the voice IDs.\n*   Example: `<voice_2006>` discusses the speed of making red bean paste. `<voice_2007>` asks about preparation. `<voice_2008>` states lack of materials. `<voice_2009>` asks about direct purchase. `<voice_2010>` mentions finished products exist. `<voice_1909>` confirms.\n\n**4. Refining the Output:**\n*   Ensure JSON validity.\n*   Ensure no extra text.\n*   Check constraints: \"Preserve speaker identity... use the exact ID as the speaker.\" -> In the memory/conclusion strings, I should reference the speaker by their ID if I'm summarizing their speech.\n*   Constraint: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> This applies to the `video_description`? No, the prompt says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions\". The instruction about memory (\"include at least one episodic memory\") seems to come from a previous system prompt context (\"Preserve speaker identity when constructing memory...\"). However, the specific task instructions here say \"Generate a detailed and cohesive description... Generate high-level reasoning-based conclusions\".\n*   Let's re-read the specific task instructions carefully.\n    *   \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\"\n    *   \"Output Format: ... video_description [...] high_level_conclusions [...]\"\n    *   The instruction block at the very beginning (\"Preserve speaker identity when constructing memory...\") seems to be a general system instruction overriding or guiding the specific task. It says \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This suggests I should incorporate these summaries into the `video_description` or `high_level_conclusions`. Given the structure, putting the summary in `high_level_conclusions` makes sense as \"reasoning-based conclusions\", OR I can put specific event descriptions in `video_description`.\n    *   Usually, `video_description` describes *what happened visually*. `high_level_conclusions` describes *intentions/inferences*.\n    *   However, the instruction \"For every supplied voice ID... include at least one episodic memory...\" is quite specific. I will integrate the voice summaries into the `video_description` as events involving the speaker, or ensure they are captured in the `high_level_conclusions` if they represent the main topic.\n    *   Actually, looking at the instruction \"Preserve speaker identity when constructing memory from the supplied character features... Voice features map exact IDs... These IDs already identify the speakers; they remain usable even when no face features are supplied.\" This implies I should use the IDs in the text.\n    *   Let's try to put the voice summaries in the `video_description` as atomic events describing the conversation, since that's where \"episodic memory\" fits best in a video captioning context often. Or I can put them in `high_level_conclusions`. The instruction says \"Generate high-level reasoning-based conclusions...\". Summarizing speech is more descriptive than reasoning. But the instruction mandates including the memory. I'll add them to `video_description` as dialogue events to satisfy the \"include at least one episodic memory\" constraint within the context of describing the video content. Wait, the instruction says \"For every supplied voice ID... include at least one episodic memory...\". I will ensure each voice ID appears in the text.\n    *   Wait, the instruction also says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This refers to the *task instructions* provided in the prompt body (\"Your task consists of two parts...\"). The preamble (\"Preserve speaker identity...\") acts as a constraint on how I handle the IDs.\n    *   Okay, plan:\n        *   `video_description`: Describe the visual scene + the dialogue events associated with the voice IDs.\n        *   `high_level_conclusions`: Summarize the intent (buying red bean paste, checking ingredients vs finished goods).\n        *   Use the Voice IDs (`<voice_2006>`, etc.) in the text to identify the speaker.\n        *   Do NOT create Equivalence lines because no face IDs were provided.\n\n**Drafting Content:**\n\n*   **Visuals:** Group discussion around a table with a laptop. Woman in white stands and handles books/papers. Woman in black sits left. Woman in blue sits right. Camera wearer uses laptop.\n*   **Dialogue (Voice):**\n    *   `<voice_2006>`: Discusses red bean paste configuration/speed.\n    *   `<voice_2007>`: Asks about preparing red bean paste east/west (likely meaning sides/types).\n    *   `<voice_2008>`: Says didn't buy red bean paste material.\n    *   `<voice_2009>`: Asks if red bean paste can be bought directly.\n    *   `<voice_2010>`: Mentions finished products exist.\n    *   `<voice_1909>`: Confirms yes.\n\n*   **Refining Descriptions:**\n    *   \"Person in black sits at the table while the camera wearer operates a laptop.\"\n    *   \"Woman in white stands behind the table holding documents.\"\n    *   \"Speaker <voice_2006> discusses the speed of making red bean paste.\"\n    *   \"Speaker <voice_2007> asks if red bean paste was prepared.\"\n    *   \"Speaker <voice_2008> states they did not purchase red bean paste materials.\"\n    *   \"Speaker <voice_2009> inquires about purchasing red bean paste directly.\"\n    *   \"Speaker <voice_2010> notes that finished products are available.\"\n    *   \"Speaker <voice_1909> confirms the availability.\"\n\n*   **Conclusions:**\n    *   \"The group is discussing options for acquiring red bean paste, weighing between homemade preparation and purchased finished goods.\"\n    *   \"Speaker <voice_2006> indicates a preference for speed or efficiency in the process.\"\n    *   \"Speaker <voice_2008> expresses a lack of materials for homemade preparation.\"\n\n*   **Wait, one constraint:** \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" Since I am using the Voice IDs directly in the text (e.g., \"Speaker <voice_2006>\"), I am not assigning a visual ID to the voice ID, nor vice versa. I am just referencing the audio source. This complies with \"Use only IDs supplied in the input\".\n*   Another constraint: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" I will ensure this is met in the `video_description`.\n\nLet's assemble the JSON.\n\nOne detail: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThe schema is:\n```json\n{\n\t\"video_description\": [\n\t\t\"...\",\n\t\t\"...\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"...\"\n\t]\n}\n```\nI need to make sure I don't add keys like \"equivalences\".\n\nFinal check on Voice IDs:\n<voice_2006>, <voice_2007>, <voice_2008>, <voice_2009>, <voice_2010>, <voice_1909>.\nAll need to be mentioned.\n\nLet's write the descriptions concisely.\n\nVideo Description:\n1. A group of individuals are seated around a table covered with a checkered cloth, with a laptop open in front of the camera wearer.\n2. A woman in a black top sits on the left side of the table, while a woman in a white shirt stands behind the table handling papers.\n3. A woman in a light blue top sits on the right side of the table.\n4. Speaker <voice_2006> discusses the speed of making red bean paste.\n5. Speaker <voice_2007> asks if red bean paste was prepared.\n6. Speaker <voice_2008> states they did not purchase red bean paste materials.\n7. Speaker <voice_2009> inquires about purchasing red bean paste directly.\n8. Speaker <voice_2010> mentions that finished products are available.\n9. Speaker <voice_1909> confirms the availability of the items.\n\nHigh Level Conclusions:\n1. The participants are evaluating methods for obtaining red bean paste, considering both preparation and purchasing finished goods.\n2. Speaker <voice_2006> emphasizes the efficiency of the process.\n3. Speaker <voice_2008> indicates a lack of resources for homemade preparation.\n\nThis looks compliant. I will merge some sentences to keep it flowing better as atomic events.\n\nRevised Video Description:\n1. A group of people gather around a table with a laptop, engaged in a discussion.\n2. A woman in black sits on the left, a woman in white stands centrally handling documents, and a woman in blue sits on the right.\n3. Speaker <voice_2006> comments on the speed of making red bean paste.\n4. Speaker <voice_2007> asks whether red bean paste was prepared.\n5. Speaker <voice_2008> explains they did not buy red bean paste materials.\n6. Speaker <voice_2009> questions if red bean paste can be purchased directly.\n7. Speaker <voice_2010> informs that finished products exist.\n8. Speaker <voice_1909> affirms this information.\n\nRevised High Level Conclusions:\n1. The group is deliberating on sourcing red bean paste, weighing homemade preparation against buying finished goods.\n2. Speaker <voice_2006> highlights the time-saving aspect of the process.\n3. Speaker <voice_2008> reveals a shortage of ingredients for homemade production.\n\nWait, I need to check if I should put the voice summaries in `high_level_conclusions` instead of `video_description`. The instruction says \"For every supplied voice ID... include at least one episodic memory...\". Episodic memory usually belongs in the description of events. I'll stick with putting them in `video_description` as dialogue events.\n\nOne more check: \"Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\" -> I used \"Speaker <voice_XX>\", which preserves the ID. Good.\n\nFinal check on JSON syntax.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people gather around a table with a laptop, engaged in a discussion.\",\n\t\t\"A woman in black sits on the left, a woman in white stands centrally handling documents, and a woman in blue sits on the right.\",\n\t\t\"Speaker <voice_2006> comments on the speed of making red bean paste.\",\n\t\t\"Speaker <voice_2007> asks whether red bean paste was prepared.\",\n\t\t\"Speaker <voice_2008> explains they did not buy red bean paste materials.\",\n\t\t\"Speaker <voice_2009> questions if red bean paste can be purchased directly.\",\n\t\t\"Speaker <voice_2010> informs that finished products exist.\",\n\t\t\"Speaker <voice_1909> affirms this information.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The group is deliberating on sourcing red bean paste, weighing homemade preparation against buying finished goods.\",\n\t\t\"Speaker <voice_2006> highlights the time-saving aspect of the process.\",\n\t\t\"Speaker <voice_2008> reveals a shortage of ingredients for homemade production.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10874,
+          "output_tokens": 3833,
+          "total_tokens": 14707,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0025850022211670876,
+            "media_preparation_ms": 47.9124419944128,
+            "processor_tokenization_ms": 559.7951870004181,
+            "device_transfer_ms": 39.07747099583503,
+            "cuda_generation_ms": 171613.14879100246,
+            "decoding_ms": 4.237647008267231
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 172264.50544600084,
+          "request_end": 1789445952.917561,
+          "latency_ms": 172296.66532600822,
+          "client_wall_clock_latency_ms": 172296.66532600822
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.20442499953787774,
+      "nodes_added": 8,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.21417300740722567,
+      "nodes_added": 3,
+      "directed_edges_added": 4,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 8,
+    "speech_embeddings": 8,
+    "voice_identities": 6,
+    "detected_faces": 353,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 3,
+    "nodes_after_clip": 2022,
+    "edges_after_clip": 780,
+    "nodes_added_by_clip": 16,
+    "edges_added_by_clip": 8
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people gather around a table with a laptop, engaged in a discussion.",
+      "A woman in black sits on the left, a woman in white stands centrally handling documents, and a woman in blue sits on the right.",
+      "Speaker <voice_2006> comments on the speed of making red bean paste.",
+      "Speaker <voice_2007> asks whether red bean paste was prepared.",
+      "Speaker <voice_2008> explains they did not buy red bean paste materials.",
+      "Speaker <voice_2009> questions if red bean paste can be purchased directly.",
+      "Speaker <voice_2010> informs that finished products exist.",
+      "Speaker <voice_1909> affirms this information."
+    ],
+    "high_level_conclusions": [
+      "The group is deliberating on sourcing red bean paste, weighing homemade preparation against buying finished goods.",
+      "Speaker <voice_2006> highlights the time-saving aspect of the process.",
+      "Speaker <voice_2008> reveals a shortage of ingredients for homemade production."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people gather around a table with a laptop, engaged in a discussion.",
+      "A woman in black sits on the left, a woman in white stands centrally handling documents, and a woman in blue sits on the right.",
+      "Speaker <voice_2006> comments on the speed of making red bean paste.",
+      "Speaker <voice_2007> asks whether red bean paste was prepared.",
+      "Speaker <voice_2008> explains they did not buy red bean paste materials.",
+      "Speaker <voice_2009> questions if red bean paste can be purchased directly.",
+      "Speaker <voice_2010> informs that finished products exist.",
+      "Speaker <voice_1909> affirms this information."
+    ],
+    "high_level_conclusions": [
+      "The group is deliberating on sourcing red bean paste, weighing homemade preparation against buying finished goods.",
+      "Speaker <voice_2006> highlights the time-saving aspect of the process.",
+      "Speaker <voice_2008> reveals a shortage of ingredients for homemade production."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_143_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 16,
+    "edges_added": 8,
+    "nodes": [
+      {
+        "id": 2006,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 红豆就-就这样配，就很快。",
+            "MAI: 就是芋圆可能要熬一下。椰果能不能现买呀？随便看一看，你说什么就是什么。",
+            "MAI: 直接买成品的。那我看看，4点20介绍完以后要有一个品尝甜品的时间，那是不是要到"
+          ]
+        },
+        "embedding_count": 3,
+        "embedding_dimensions": [
+          192,
+          192,
+          192
+        ]
+      },
+      {
+        "id": 2007,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 你准备了芋圆的东西吗？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 2008,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 我-我没有买芋圆材料。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 2009,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 芋圆是不是可以直接买？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 2010,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 芋圆也有成品的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 2011,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people gather around a table with a laptop, engaged in a discussion."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2012,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in black sits on the left, a woman in white stands centrally handling documents, and a woman in blue sits on the right."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2013,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_2006> comments on the speed of making red bean paste."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2014,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_2007> asks whether red bean paste was prepared."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2015,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_2008> explains they did not buy red bean paste materials."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2016,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_2009> questions if red bean paste can be purchased directly."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2017,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_2010> informs that finished products exist."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2018,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_1909> affirms this information."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2019,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is deliberating on sourcing red bean paste, weighing homemade preparation against buying finished goods."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2020,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_2006> highlights the time-saving aspect of the process."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2021,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_2008> reveals a shortage of ingredients for homemade production."
+          ],
+          "timestamp": 143
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 1909,
+        "target": 2018,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 2006,
+        "target": 2013,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 2006,
+        "target": 2020,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 2007,
+        "target": 2014,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 2008,
+        "target": 2015,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 2008,
+        "target": 2021,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 2009,
+        "target": 2016,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 2010,
+        "target": 2017,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_143_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_143_graph.pkl"
+  },
+  "memory_pickle_bytes": 48008845,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 86490.000901106,
+    "prepared_perf": 86500.0010479,
+    "ordered_start_perf": 86955.217375203,
+    "consumer_wait_ms": 0.02704201324377209,
+    "ready_to_ordered_ms": 455216.3273030019,
+    "preparation_work_ms": 9994.662740005879,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 182115.37228499947
+}

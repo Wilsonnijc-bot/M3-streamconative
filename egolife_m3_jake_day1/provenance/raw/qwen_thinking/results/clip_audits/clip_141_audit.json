@@ -1,0 +1,568 @@
+{
+  "clip_id": 141,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0141.mp4",
+  "end_to_end_memory_generation_ms": 630262.2589920065,
+  "latency_ms": {
+    "clip_decode": 7333.755712010316,
+    "deepgram_asr": 254.15516400244087,
+    "mai_transcribe_asr": 1147.835493000457,
+    "asr_total": 1149.4019000092521,
+    "audio_segmentation": 6.764844001736492,
+    "speech_embedding_campplus": 1396.8397069984348,
+    "facial_detection_recognition_buffalo_l": 3775.0576849939534,
+    "face_clustering": 7.931628002552316,
+    "vlm_memory_generation": 221353.1147379981,
+    "text_embedding": 668.9034009905299,
+    "graph_update_total": 1138.4872299968265
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 141,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 15,
+      "input_chars": 1460,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789445538.0764744,
+          "status": "success",
+          "total_tokens": 288,
+          "request_end": 1789445538.7452412,
+          "latency_ms": 668.7672729894985
+        }
+      ],
+      "total_tokens": 288,
+      "latency_ms": 668.9034009905299
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 254.15516400244087,
+        "openrouter-mai-transcribe-2": 1147.835493000457
+      },
+      "asr_total_ms": 1149.4019000092521,
+      "audio_segmentation_ms": 6.764844001736492,
+      "speech_embedding_ms": 1396.8397069984348,
+      "graph_update_ms": 1138.3223080047173,
+      "asr_segment_count": 8,
+      "speech_embedding_count": 8,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 2557.7692950027995
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3775.0576849939534,
+      "face_clustering_ms": 7.931628002552316,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 309,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3951.1516829952598
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_364>",
+        "<voice_560>",
+        "<voice_1727>",
+        "<voice_1976>",
+        "<voice_1977>",
+        "<voice_1978>"
+      ],
+      "context_preparation_ms": 3812.584348997916,
+      "vlm_ms": 221353.1147379981,
+      "raw_response": "{\n  \"video_description\": [\n    \"A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\",\n    \"One person wearing a white shirt stands behind the table, gesturing and speaking to the seated participants.\",\n    \"Participants seated at the table include an individual in a black top on the left and a person with long blonde hair on the right.\",\n    \"<voice_364> asks if tasks should be done today or the day before.\",\n    \"<voice_560> notes that items requiring cold storage, like pull-flower pastry, should be prepared the day before.\",\n    \"The discussion continues regarding the process of mixing ingredients and making dough the following day.\",\n    \"<voice_1727> draws a comparison to Qingbuliang, asking if it involves buying flour and making one item.\",\n    \"<voice_1976> refers specifically to the Qingbuliang dish.\",\n    \"<voice_1977> questions if the dough should be tasted or adjusted.\",\n    \"<voice_1978> responds affirmatively or suggests pairing/matching.\",\n    \"The group appears engaged in a collaborative discussion about food preparation logistics.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The standing participant is acting as the primary speaker or instructor during the meeting.\",\n    \"The group is planning a workflow involving dough preparation and baking, with a focus on timing and cold storage.\",\n    \"No face features were provided, so visual identity confirmation of the speakers could not be established.\",\n    \"The conversation indicates a structured approach to meal preparation, dividing tasks between preparation days and execution days.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.",
+          "One person wearing a white shirt stands behind the table, gesturing and speaking to the seated participants.",
+          "Participants seated at the table include an individual in a black top on the left and a person with long blonde hair on the right.",
+          "<voice_364> asks if tasks should be done today or the day before.",
+          "<voice_560> notes that items requiring cold storage, like pull-flower pastry, should be prepared the day before.",
+          "The discussion continues regarding the process of mixing ingredients and making dough the following day.",
+          "<voice_1727> draws a comparison to Qingbuliang, asking if it involves buying flour and making one item.",
+          "<voice_1976> refers specifically to the Qingbuliang dish.",
+          "<voice_1977> questions if the dough should be tasted or adjusted.",
+          "<voice_1978> responds affirmatively or suggests pairing/matching.",
+          "The group appears engaged in a collaborative discussion about food preparation logistics."
+        ],
+        "high_level_conclusions": [
+          "The standing participant is acting as the primary speaker or instructor during the meeting.",
+          "The group is planning a workflow involving dough preparation and baking, with a focus on timing and cold storage.",
+          "No face features were provided, so visual identity confirmation of the speakers could not be established.",
+          "The conversation indicates a structured approach to meal preparation, dividing tasks between preparation days and execution days."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 141,
+          "call_id": "04085b49-fc92-480e-8bbe-9fb7e4bfe70f",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789445316.7221508,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n  \"video_description\": [\n    \"A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\",\n    \"One person wearing a white shirt stands behind the table, gesturing and speaking to the seated participants.\",\n    \"Participants seated at the table include an individual in a black top on the left and a person with long blonde hair on the right.\",\n    \"<voice_364> asks if tasks should be done today or the day before.\",\n    \"<voice_560> notes that items requiring cold storage, like pull-flower pastry, should be prepared the day before.\",\n    \"The discussion continues regarding the process of mixing ingredients and making dough the following day.\",\n    \"<voice_1727> draws a comparison to Qingbuliang, asking if it involves buying flour and making one item.\",\n    \"<voice_1976> refers specifically to the Qingbuliang dish.\",\n    \"<voice_1977> questions if the dough should be tasted or adjusted.\",\n    \"<voice_1978> responds affirmatively or suggests pairing/matching.\",\n    \"The group appears engaged in a collaborative discussion about food preparation logistics.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The standing participant is acting as the primary speaker or instructor during the meeting.\",\n    \"The group is planning a workflow involving dough preparation and baking, with a focus on timing and cold storage.\",\n    \"No face features were provided, so visual identity confirmation of the speakers could not be established.\",\n    \"The conversation indicates a structured approach to meal preparation, dividing tasks between preparation days and execution days.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The scene shows a group of people sitting around a table covered with a checkered tablecloth. There's a whiteboard in the background. One person stands near the head of the table, while others sit. Faces are blurred out.\n    *   Person 1 (Standing): Wearing a white shirt, dark pants. Moves around the table, interacting with items on it.\n    *   Person 2 (Sitting Left): Wearing black top. Hands are often clasped or resting on the table.\n    *   Person 3 (Sitting Right/Middle): Wearing light blue/green top.\n    *   Person 4 (Sitting Far Right): Blonde hair, white t-shirt.\n    *   Camera wearer: Seems to be sitting at the table, possibly Person 2 based on hand position relative to the laptop/table edge, but faces are blurred so I can't confirm identity visually. Wait, looking closely at the bottom of the frame, there are feet visible in some frames (e.g., 0.00s, 1.00s), suggesting the camera wearer is seated opposite the standing person or across the table. Actually, looking at the perspective, the camera is likely held by someone sitting at the table, possibly Person 2 given the proximity to the laptop and water bottle. However, the prompt says \"Do not assign it to the camera wearer... without supporting evidence.\" Since faces are blurred, I shouldn't explicitly link the camera wearer to a specific person unless I'm sure. But wait, the prompt asks to use feature IDs. There are no face IDs provided in the text input (\"Face features:\" section is empty). So I cannot create equivalences like `Equivalence: <face_x>, <voice_y>` because there are no `<face_x>` IDs. I need to check if I missed anything. Ah, the input says \"Face features:Voice features:\". It seems the Face features list is empty or missing in the provided text block. Let me re-read carefully.\n    *   Input Text: \"Face features:Voice features:{...}\" -> This implies Face features might be empty or not listed separately. The instruction says \"If no face IDs are supplied, do not invent any.\" So I cannot make equivalences.\n    *   Video Description needs to describe the action. People are gathered around a table. One person stands and talks/demonstrates. Others listen/watch.\n*   **Voice Features:**\n    *   `<voice_364>`: MAI speaks about doing things the day before.\n    *   `<voice_560>`: MAI continues talking about cold storage, pulling bread, making dough the next day.\n    *   `<voice_1727>`: MAI talks about filling circles, buying flour, making something.\n    *   `<voice_1976>`: MAI mentions \"filling circles\".\n    *   `<voice_1977>`: MAI asks if it's good to taste.\n    *   `<voice_1978>`: MAI says \"pair up\" or \"opposite to opposite\".\n    *   All voices are labeled \"MAI\". This suggests a single speaker named MAI.\n    *   The timestamps align with the video progression.\n        *   00:00 - 00:03: MAI starts.\n        *   00:03 - 00:07: MAI continues.\n        *   00:07 - 00:14: MAI continues.\n        *   00:13 - 00:15: MAI continues.\n        *   00:15 - 00:17: MAI continues.\n        *   00:21 - 00:23: MAI continues.\n    *   The standing person seems to be the one speaking (MAI), as they are gesturing towards the table items.\n\n**2. Construct Video Description:**\n*   Need to break down into atomic events.\n*   Scene: Meeting room/classroom setting. Table with checkered cloth. Whiteboard.\n*   Action: Standing person (white shirt) is explaining something involving food preparation (bread, dough, flour mentioned in ASR). Sitting people are listening.\n*   Specific movements: Standing person gestures with hands, points to items on the table. Someone sits on the right (blonde). Someone sits on the left (black top).\n*   Time flow: From 0s to ~30s.\n*   Drafting descriptions:\n    *   A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\n    *   A person wearing a white shirt stands behind the table, gesturing with their hands while speaking.\n    *   Another person wearing a black top sits on the left side of the table, observing the interaction.\n    *   A person with long blonde hair sits on the right side of the table, listening attentively.\n    *   The standing person interacts with items on the table, including books or notebooks.\n    *   At one point, the standing person leans forward slightly while continuing to speak.\n    *   The camera captures the scene from a first-person perspective, showing the feet of the person holding the camera occasionally.\n    *   The lighting changes slightly throughout the clip, becoming dimmer in later frames.\n\n**3. Construct High-Level Conclusions:**\n*   Since there are no face IDs provided in the input text (the \"Face features:\" line is followed immediately by \"Voice features:\"), I cannot create equivalences.\n*   However, I need to check if I missed any implicit face IDs. The prompt says \"Each feature is either a face... or a voice... Each feature has a unique ID enclosed in angle brackets.\"\n*   Looking at the raw input provided in the prompt: \"Face features:Voice features:{...}\". There is no content between \"Face features:\" and \"Voice features:\". This means no face features were supplied.\n*   Instruction: \"If no face IDs are supplied, do not invent any.\"\n*   Therefore, the `high_level_conclusions` array should contain reasoning about the situation but no `Equivalence:` strings. Or perhaps just general reasoning.\n*   Wait, the instruction says: \"Use logical inference to identify character intentions, relationships, and identities. If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\n*   Since I don't have face IDs, I can't state equivalences. I will focus on the intent/inference part.\n*   Inference: The standing person (likely MAI based on voice) appears to be leading a discussion or demonstration about baking or food preparation (references to dough, flour, cold storage). The seated participants are engaged listeners.\n*   Constraint Check: \"Preserve speaker identity when constructing memory from the supplied character features.\" \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   Wait, the prompt asks for \"Video Description\" and \"High-Level Conclusions\". It does *not* ask for \"Memory\". The system instruction says \"Preserve speaker identity when constructing memory...\", but the user prompt defines the task as \"Video Description\" and \"High-Level Conclusions\".\n*   Re-reading the User Prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n*   Re-reading System Instruction: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory...\"\n*   Conflict: The System Instruction asks for \"memory\", but the User Prompt defines the output schema as `video_description` and `high_level_conclusions`. Usually, System Instructions override regarding the *content* requirements if they conflict, but here the Schema is explicit.\n*   However, looking closely at the System Instruction: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should follow the User Prompt's schema (`video_description`, `high_level_conclusions`) but adhere to the content constraints of the System Instruction where possible within those fields?\n*   Actually, usually, the System Instruction acts as a constraint on how I process the data. The User Prompt defines the output format.\n*   Let's look at the System Instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   Where do these memories go? The User Prompt doesn't have a \"memories\" field. It has `video_description` and `high_level_conclusions`.\n*   Perhaps the `video_description` should incorporate these summaries? Or maybe the `high_level_conclusions`?\n*   Given the strict schema requirement in the User Prompt (\"Output Format: Your output must be a JSON object with the following structure...\"), adding a new field would violate the schema.\n*   I will integrate the speaker summaries into the `video_description` as atomic events describing what was said, ensuring the voice ID is used if possible, or just the content if the ID isn't suitable for a narrative description.\n*   Wait, the System Instruction says \"include at least one episodic memory... using the exact ID as the speaker.\" This sounds like a specific task type (like memory retrieval). But the User Prompt is a standard video analysis task.\n*   Hypothesis: The System Instruction is a generic template for a multi-modal task, but the User Prompt specifies a specific subset (Video Analysis). I should prioritize the User Prompt's schema but ensure the content reflects the voice features accurately.\n*   Actually, looking at the instruction \"Preserve speaker identity when constructing memory...\", it might imply I should treat the `video_description` as the \"memory\" construction context.\n*   Let's try to fit the voice summaries into the `video_description` as factual statements attributed to the speaker.\n*   Also, regarding `high_level_conclusions`: Since there are no face IDs, I cannot write `Equivalence`. I will write general conclusions about the activity.\n\n**Refining Plan:**\n1.  **Video Description**: Describe the visual scene (people at table, standing vs sitting). Integrate the spoken content into the description of the event, attributing it to the speaker (who corresponds to the standing person visually, though I won't name them unless I have a face ID). I will mention the topics discussed (baking, dough, flour).\n2.  **High-Level Conclusions**: Infer the purpose of the gathering (instructional meeting, cooking class). Note the active participation of the standing speaker. Since no face IDs exist, omit Equivalence lines.\n\n**Wait, one critical check:** The System Instruction says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". If I don't put this in a specific field, where does it go?\nMaybe the `video_description` *is* the place for these memories in this specific task variant. I will ensure the transcript content is reflected in the description.\nActually, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This suggests I should follow the User Prompt's schema strictly.\nSo I will embed the voice info into the description.\n\n**Voice Content Integration:**\n*   `<voice_364>`: \"Can we do it the day before?\"\n*   `<voice_560>`: \"Need cold storage, like pulling bread, do the day before. Next day direct ingredients and mix.\"\n*   `<voice_1727>`: \"Like filling circles, buy flour, then make one?\"\n*   `<voice_1976>`: \"Filling circles talk.\"\n*   `<voice_1977>`: \"Is it good to taste?\"\n*   `<voice_1978>`: \"Pair up.\"\n\n**Visual Content Integration:**\n*   Group around table.\n*   Standing person (white shirt) leads.\n*   Seated people listen.\n*   Items on table (books, plant).\n\n**Drafting Video Description:**\n*   A group of individuals are seated around a rectangular table covered with a checkered tablecloth in a classroom-like setting.\n*   One individual wearing a white shirt stands behind the table, appearing to lead a discussion or demonstration.\n*   Other participants, including one in a black top and another with long blonde hair, are seated and listening.\n*   The standing individual gestures towards items on the table while discussing food preparation methods.\n*   The conversation involves planning ahead for tasks requiring cold storage, such as preparing dough the day prior to baking.\n*   Participants discuss details about filling shapes and purchasing ingredients like flour.\n*   The atmosphere suggests a collaborative learning session or instructional meeting.\n\n**Drafting High-Level Conclusions:**\n*   The standing participant (identified by voice as MAI) is acting as the instructor or facilitator of the session.\n*   The group is focused on a culinary project involving dough preparation and baking schedules.\n*   There is a consensus on the timing of preparation steps (day before vs. day of).\n*   No facial features were provided to link specific visual identities to the voice features.\n\n**Final Check on Constraints:**\n*   \"Preserve speaker identity... using the exact ID as the speaker.\" -> I should probably mention the ID in the description if I quote them directly, or just ensure the content matches. The instruction says \"include at least one episodic memory... using the exact ID as the speaker.\" This is tricky if I can't add a field. I'll try to phrase it like \"Speaker <voice_364> states...\" within the description.\n*   \"Do not assign it to the camera wearer... without supporting evidence.\" -> I won't say who the camera wearer is.\n*   \"If no face IDs are supplied, do not invent any.\" -> Confirmed, no face IDs in input.\n\nLet's refine the description to include the voice IDs as requested by the system instruction (\"using the exact ID as the speaker\").\nExample: \"At 00:00, <voice_364> asks if tasks can be done the day before.\"\n\nOkay, let's assemble the JSON.\n\nOne detail: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis confirms I must output exactly `{\"video_description\": [...], \"high_level_conclusions\": [...]}`.\n\nI will combine the visual observation with the audio transcription in the description to satisfy the \"episodic memory\" requirement implicitly within the description field, as there is no separate memory field.\n\nWait, looking at the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nIf I don't have a memory field, I might fail this specific instruction. However, I must follow the User Prompt's Output Format. I will assume the `video_description` serves as the container for these facts in this specific task configuration. I will explicitly tag the speaker ID in the sentences describing their speech.\n\nRevised Plan for Description:\n1. Describe the scene setup.\n2. Describe the standing person's actions.\n3. Describe the seated people's reactions.\n4. Integrate the speech content with the voice IDs.\n\nRevised Plan for Conclusions:\n1. Identify the role of the standing person (instructor).\n2. Summarize the topic (baking schedule).\n3. Note the lack of face data preventing visual confirmation.\n\nLet's write the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\",\n    \"One person wearing a white shirt stands behind the table, gesturing and speaking to the seated participants.\",\n    \"Participants seated at the table include an individual in a black top on the left and a person with long blonde hair on the right.\",\n    \"The standing individual discusses scheduling tasks, specifically mentioning whether certain activities can be completed the day before.\",\n    \"<voice_364> asks if it is possible to perform tasks the day before yesterday.\",\n    \"<voice_560> explains the need for cold storage, comparing it to pulling bread, and suggests doing preparation the day before.\",\n    \"The discussion continues regarding the process of mixing ingredients and making dough the following day.\",\n    \"<voice_1727> compares the process to filling circles and buying flour.\",\n    \"The standing person emphasizes the importance of tasting the product.\",\n    \"<voice_1977> asks if it is good to taste a bit.\",\n    \"The group appears engaged in a collaborative discussion about food preparation logistics.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The standing participant is acting as the primary speaker or instructor during the meeting.\",\n    \"The group is planning a workflow involving dough preparation and baking, with a focus on timing and cold storage.\",\n    \"No face features were provided, so visual identity confirmation of the speakers could not be established.\",\n    \"The conversation indicates a structured approach to meal preparation, dividing tasks between preparation days and execution days.\"\n  ]\n}\n```\nWait, I need to check if I should use the ID in the description. \"using the exact ID as the speaker\". Yes, I did that.\nAlso, check \"Preserve distinct substantive utterances as separate atomic memories.\" -> My description entries are somewhat granular.\nCheck \"Do not substitute a plausible scene description for what the speaker actually said.\" -> I am quoting/summarizing the ASR.\nCheck \"Keep the existing video_description/high_level_conclusions JSON schema\". -> Yes.\n\nOne small correction: The ASR for `<voice_364>` is \"MAI: 当天做还是以前一天做？\" (Today do or do the day before?). My translation \"asks if it is possible to perform tasks the day before yesterday\" is slightly off. \"Day before\" usually means \"yesterday\" relative to today. \"Before yesterday\" would be \"two days ago\". The Chinese \"前一天\" means \"the day before\". I should translate accurately. \"Does one do it today or the day before?\".\nASR `<voice_560>`: \"有的需要冷藏的会前一天做，比如说拉花酥。\" (Some need cold storage, do the day before, e.g., pull flower pastry.)\nASR `<voice_1727>`: \"像那种就是你看他们那种清补凉那种是不是就买点面粉，然后做一个？\" (Like that kind, you see them like Qingbuliang, is it just buy some flour, then make one?)\nASR `<voice_1976>`: \"清补凉的话。\" (Speaking of Qingbuliang.)\nASR `<voice_1977>`: \"面是不是好调一点？\" (Is the dough better adjusted/tasted a bit?)\nASR `<voice_1978>`: \"对对面。\" (Opposite to opposite / Pair up / Match up).\n\nI will adjust the translations to be more accurate in the description.\n\nRevised Description Entries:\n- \"<voice_364> asks if tasks should be done today or the day before.\"\n- \"<voice_560> notes that items requiring cold storage, like pull-flower pastry, should be prepared the day before.\"\n- \"<voice_1727> draws a comparison to Qingbuliang, asking if it involves buying flour and making one item.\"\n- \"<voice_1976> refers specifically to the Qingbuliang dish.\"\n- \"<voice_1977> questions if the dough should be tasted or adjusted.\"\n- \"<voice_1978> responds affirmatively or suggests pairing/matching.\"\n\nI will keep the video description concise and atomic.\n\nOne more thing: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features, I skip this.\n\nFinal check on JSON validity. Ensure quotes are escaped properly if needed (none expected in simple text). Ensure no trailing commas.\n\nOne detail from System Instruction: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nSince I am putting this in `video_description`, I will ensure each voice ID gets a sentence in the description.\n\nLet's finalize the text.\n</think>\n\n{\n  \"video_description\": [\n    \"A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.\",\n    \"One person wearing a white shirt stands behind the table, gesturing and speaking to the seated participants.\",\n    \"Participants seated at the table include an individual in a black top on the left and a person with long blonde hair on the right.\",\n    \"<voice_364> asks if tasks should be done today or the day before.\",\n    \"<voice_560> notes that items requiring cold storage, like pull-flower pastry, should be prepared the day before.\",\n    \"The discussion continues regarding the process of mixing ingredients and making dough the following day.\",\n    \"<voice_1727> draws a comparison to Qingbuliang, asking if it involves buying flour and making one item.\",\n    \"<voice_1976> refers specifically to the Qingbuliang dish.\",\n    \"<voice_1977> questions if the dough should be tasted or adjusted.\",\n    \"<voice_1978> responds affirmatively or suggests pairing/matching.\",\n    \"The group appears engaged in a collaborative discussion about food preparation logistics.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The standing participant is acting as the primary speaker or instructor during the meeting.\",\n    \"The group is planning a workflow involving dough preparation and baking, with a focus on timing and cold storage.\",\n    \"No face features were provided, so visual identity confirmation of the speakers could not be established.\",\n    \"The conversation indicates a structured approach to meal preparation, dividing tasks between preparation days and execution days.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10916,
+          "output_tokens": 4920,
+          "total_tokens": 15836,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0031370000215247273,
+            "media_preparation_ms": 60.68353301088791,
+            "processor_tokenization_ms": 539.0059749915963,
+            "device_transfer_ms": 46.67089799477253,
+            "cuda_generation_ms": 220668.18927200802,
+            "decoding_ms": 5.97601399931591
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 221321.00784899376,
+          "request_end": 1789445538.0752683,
+          "latency_ms": 221353.1147379981,
+          "client_wall_clock_latency_ms": 221353.1147379981
+        }
+      ],
+      "episodic_memory_count": 11,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 11,
+      "text_embedding_ms": null,
+      "text_embedding_count": 11,
+      "graph_update_ms": 0.1394239952787757,
+      "nodes_added": 11,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.025497996830381453,
+      "nodes_added": 4,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 8,
+    "speech_embeddings": 8,
+    "voice_identities": 6,
+    "detected_faces": 309,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 11,
+    "semantic_memories": 4,
+    "nodes_after_clip": 1994,
+    "edges_after_clip": 768,
+    "nodes_added_by_clip": 18,
+    "edges_added_by_clip": 6
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.",
+      "One person wearing a white shirt stands behind the table, gesturing and speaking to the seated participants.",
+      "Participants seated at the table include an individual in a black top on the left and a person with long blonde hair on the right.",
+      "<voice_364> asks if tasks should be done today or the day before.",
+      "<voice_560> notes that items requiring cold storage, like pull-flower pastry, should be prepared the day before.",
+      "The discussion continues regarding the process of mixing ingredients and making dough the following day.",
+      "<voice_1727> draws a comparison to Qingbuliang, asking if it involves buying flour and making one item.",
+      "<voice_1976> refers specifically to the Qingbuliang dish.",
+      "<voice_1977> questions if the dough should be tasted or adjusted.",
+      "<voice_1978> responds affirmatively or suggests pairing/matching.",
+      "The group appears engaged in a collaborative discussion about food preparation logistics."
+    ],
+    "high_level_conclusions": [
+      "The standing participant is acting as the primary speaker or instructor during the meeting.",
+      "The group is planning a workflow involving dough preparation and baking, with a focus on timing and cold storage.",
+      "No face features were provided, so visual identity confirmation of the speakers could not be established.",
+      "The conversation indicates a structured approach to meal preparation, dividing tasks between preparation days and execution days."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.",
+      "One person wearing a white shirt stands behind the table, gesturing and speaking to the seated participants.",
+      "Participants seated at the table include an individual in a black top on the left and a person with long blonde hair on the right.",
+      "<voice_364> asks if tasks should be done today or the day before.",
+      "<voice_560> notes that items requiring cold storage, like pull-flower pastry, should be prepared the day before.",
+      "The discussion continues regarding the process of mixing ingredients and making dough the following day.",
+      "<voice_1727> draws a comparison to Qingbuliang, asking if it involves buying flour and making one item.",
+      "<voice_1976> refers specifically to the Qingbuliang dish.",
+      "<voice_1977> questions if the dough should be tasted or adjusted.",
+      "<voice_1978> responds affirmatively or suggests pairing/matching.",
+      "The group appears engaged in a collaborative discussion about food preparation logistics."
+    ],
+    "high_level_conclusions": [
+      "The standing participant is acting as the primary speaker or instructor during the meeting.",
+      "The group is planning a workflow involving dough preparation and baking, with a focus on timing and cold storage.",
+      "No face features were provided, so visual identity confirmation of the speakers could not be established.",
+      "The conversation indicates a structured approach to meal preparation, dividing tasks between preparation days and execution days."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_141_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 18,
+    "edges_added": 6,
+    "nodes": [
+      {
+        "id": 1976,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 清补凉的话。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1977,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 面是不是好调一点？"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1978,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 对对对。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1979,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1980,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person wearing a white shirt stands behind the table, gesturing and speaking to the seated participants."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1981,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Participants seated at the table include an individual in a black top on the left and a person with long blonde hair on the right."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1982,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_364> asks if tasks should be done today or the day before."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1983,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_560> notes that items requiring cold storage, like pull-flower pastry, should be prepared the day before."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1984,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The discussion continues regarding the process of mixing ingredients and making dough the following day."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1985,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1727> draws a comparison to Qingbuliang, asking if it involves buying flour and making one item."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1986,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1976> refers specifically to the Qingbuliang dish."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1987,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1977> questions if the dough should be tasted or adjusted."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1988,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1978> responds affirmatively or suggests pairing/matching."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1989,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group appears engaged in a collaborative discussion about food preparation logistics."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1990,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The standing participant is acting as the primary speaker or instructor during the meeting."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1991,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is planning a workflow involving dough preparation and baking, with a focus on timing and cold storage."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1992,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "No face features were provided, so visual identity confirmation of the speakers could not be established."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1993,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The conversation indicates a structured approach to meal preparation, dividing tasks between preparation days and execution days."
+          ],
+          "timestamp": 141
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 364,
+        "target": 1982,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 560,
+        "target": 1983,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1727,
+        "target": 1985,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1976,
+        "target": 1986,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1977,
+        "target": 1987,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1978,
+        "target": 1988,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_141_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_141_graph.pkl"
+  },
+  "memory_pickle_bytes": 47397191,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 86095.56319731,
+    "prepared_perf": 86105.53276871,
+    "ordered_start_perf": 86490.001076627,
+    "consumer_wait_ms": 0.014546996681019664,
+    "ready_to_ordered_ms": 384468.30791699176,
+    "preparation_work_ms": 9964.109938009642,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 232348.43478399853
+}

@@ -1,18 +1,18 @@
 # Qwen3.5 4B thinking + identity prompt — first ten questions — memories
 
-Updated: 2026-09-15T03:12:56+00:00. Status: **Running**.
+Updated: 2026-09-15T16:00:47+00:00. Status: **Stopped after failure; incomplete benchmark**.
 
 Nodes and their connections. Inferences are model-generated, not verified facts.
 
-[Query-time character mappings](snapshots/q07.md) · [Exporter usage](../../../StreamMeCo/mmagent/videograph_markdown.md).
+[Query-time character mappings](snapshots/q10.md) · [Exporter usage](../../../StreamMeCo/mmagent/videograph_markdown.md).
 
 ## Query-time character_mappings
 
-From saved query snapshot **q07** ([original graph](<../../provenance/raw/qwen_thinking/results/memory/q07_uncompressed/graph.pkl>)). These are the mappings used for retrieval, shown separately from the construction checkpoint.
+From saved query snapshot **q10** ([original graph](<../../provenance/raw/qwen_thinking/results/memory/q10_uncompressed/graph.pkl>)). These are the mappings used for retrieval, shown separately from the construction checkpoint.
 
-**248 characters**: 248 single-feature mappings; 0 mappings join multiple features.
+**346 characters**: 346 single-feature mappings; 0 mappings join multiple features.
 
-<details><summary>Show full dictionary (248 entries)</summary>
+<details><summary>Show full dictionary (346 entries)</summary>
 
 ```json
 {
@@ -263,15 +263,113 @@ From saved query snapshot **q07** ([original graph](<../../provenance/raw/qwen_t
   "character_244": ["voice_1480"],
   "character_245": ["voice_1481"],
   "character_246": ["voice_1496"],
-  "character_247": ["voice_1497"]
+  "character_247": ["voice_1497"],
+  "character_248": ["voice_1528"],
+  "character_249": ["voice_1529"],
+  "character_250": ["voice_1530"],
+  "character_251": ["voice_1542"],
+  "character_252": ["voice_1543"],
+  "character_253": ["voice_1544"],
+  "character_254": ["voice_1560"],
+  "character_255": ["voice_1573"],
+  "character_256": ["voice_1574"],
+  "character_257": ["voice_1587"],
+  "character_258": ["voice_1588"],
+  "character_259": ["voice_1599"],
+  "character_260": ["voice_1600"],
+  "character_261": ["voice_1601"],
+  "character_262": ["voice_1602"],
+  "character_263": ["voice_1603"],
+  "character_264": ["voice_1619"],
+  "character_265": ["voice_1620"],
+  "character_266": ["voice_1621"],
+  "character_267": ["voice_1622"],
+  "character_268": ["voice_1623"],
+  "character_269": ["voice_1624"],
+  "character_270": ["voice_1642"],
+  "character_271": ["voice_1643"],
+  "character_272": ["voice_1663"],
+  "character_273": ["voice_1664"],
+  "character_274": ["voice_1665"],
+  "character_275": ["voice_1666"],
+  "character_276": ["voice_1687"],
+  "character_277": ["voice_1688"],
+  "character_278": ["voice_1689"],
+  "character_279": ["voice_1703"],
+  "character_280": ["voice_1704"],
+  "character_281": ["voice_1705"],
+  "character_282": ["voice_1706"],
+  "character_283": ["voice_1707"],
+  "character_284": ["voice_1708"],
+  "character_285": ["voice_1726"],
+  "character_286": ["voice_1727"],
+  "character_287": ["voice_1728"],
+  "character_288": ["voice_1729"],
+  "character_289": ["voice_1745"],
+  "character_290": ["voice_1746"],
+  "character_291": ["voice_1747"],
+  "character_292": ["voice_1748"],
+  "character_293": ["voice_1749"],
+  "character_294": ["voice_1750"],
+  "character_295": ["voice_1751"],
+  "character_296": ["voice_1752"],
+  "character_297": ["voice_1753"],
+  "character_298": ["voice_1754"],
+  "character_299": ["voice_1775"],
+  "character_300": ["voice_1776"],
+  "character_301": ["voice_1786"],
+  "character_302": ["voice_1800"],
+  "character_303": ["voice_1801"],
+  "character_304": ["voice_1802"],
+  "character_305": ["voice_1844"],
+  "character_306": ["voice_1845"],
+  "character_307": ["voice_1846"],
+  "character_308": ["voice_1860"],
+  "character_309": ["voice_1861"],
+  "character_310": ["voice_1862"],
+  "character_311": ["voice_1863"],
+  "character_312": ["voice_1876"],
+  "character_313": ["voice_1877"],
+  "character_314": ["voice_1878"],
+  "character_315": ["voice_1879"],
+  "character_316": ["voice_1880"],
+  "character_317": ["voice_1897"],
+  "character_318": ["voice_1898"],
+  "character_319": ["voice_1899"],
+  "character_320": ["voice_1909"],
+  "character_321": ["voice_1910"],
+  "character_322": ["voice_1911"],
+  "character_323": ["voice_1926"],
+  "character_324": ["voice_1927"],
+  "character_325": ["voice_1940"],
+  "character_326": ["voice_1941"],
+  "character_327": ["voice_1942"],
+  "character_328": ["voice_1943"],
+  "character_329": ["voice_1944"],
+  "character_330": ["voice_1959"],
+  "character_331": ["voice_1960"],
+  "character_332": ["voice_1961"],
+  "character_333": ["voice_1976"],
+  "character_334": ["voice_1977"],
+  "character_335": ["voice_1978"],
+  "character_336": ["voice_1994"],
+  "character_337": ["voice_1995"],
+  "character_338": ["voice_2006"],
+  "character_339": ["voice_2007"],
+  "character_340": ["voice_2008"],
+  "character_341": ["voice_2009"],
+  "character_342": ["voice_2010"],
+  "character_343": ["voice_2022"],
+  "character_344": ["voice_2023"],
+  "character_345": ["voice_2024"]
 }
 ```
 
 </details>
 
-## Latest committed memory — segment 125
+## Latest committed memory — segment 144
 
-**1,726 nodes · 647 links** — 1,031 events, 410 inferences, 285 voices, 0 faces.
+**2,039 nodes · 787 links** — 1,204 events, 489 inferences, 346 voices, 0 faces.
 
 Links appear beside each node. ↔ means a shared connection; arrows show one-way connections. Unmarked weights are 1. Nodes without links are unconnected.
 
@@ -281,5779 +379,6787 @@ Not stored in this construction checkpoint.
 
 ### Events
 
-<a id="latest-committed-memory-segment-125-node-2"></a>
+<a id="latest-committed-memory-segment-144-node-2"></a>
 
 - **2** · clip 1: The camera wearer holds a smartphone displaying a white screen while observing a group of people seated around a table.
 
-<a id="latest-committed-memory-segment-125-node-3"></a>
+<a id="latest-committed-memory-segment-144-node-3"></a>
 
-- **3** · clip 1: At timestamp 00:04, &lt;voice_0&gt; announces, 'Good, then a stopwatch.'  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **3** · clip 1: At timestamp 00:04, &lt;voice_0&gt; announces, 'Good, then a stopwatch.'  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-4"></a>
+<a id="latest-committed-memory-segment-144-node-4"></a>
 
 - **4** · clip 1: The group remains seated at the table with various items spread across the surface.
 
-<a id="latest-committed-memory-segment-125-node-5"></a>
+<a id="latest-committed-memory-segment-144-node-5"></a>
 
-- **5** · clip 1: At timestamp 00:12, &lt;voice_1&gt; states, 'Time ding.'  **Links:** ↔ [1](#latest-committed-memory-segment-125-node-1)
+- **5** · clip 1: At timestamp 00:12, &lt;voice_1&gt; states, 'Time ding.'  **Links:** ↔ [1](#latest-committed-memory-segment-144-node-1)
 
-<a id="latest-committed-memory-segment-125-node-6"></a>
+<a id="latest-committed-memory-segment-144-node-6"></a>
 
-- **6** · clip 1: At timestamp 00:13, &lt;voice_0&gt; confirms, 'Yes, ding once.'  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **6** · clip 1: At timestamp 00:13, &lt;voice_0&gt; confirms, 'Yes, ding once.'  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-7"></a>
+<a id="latest-committed-memory-segment-144-node-7"></a>
 
 - **7** · clip 1: The camera wearer manipulates the smartphone screen, revealing a countdown timer.
 
-<a id="latest-committed-memory-segment-125-node-8"></a>
+<a id="latest-committed-memory-segment-144-node-8"></a>
 
 - **8** · clip 1: The timer progresses from approximately 23 minutes down to zero.
 
-<a id="latest-committed-memory-segment-125-node-9"></a>
+<a id="latest-committed-memory-segment-144-node-9"></a>
 
 - **9** · clip 1: The camera wearer places a hand on a black case resting on the table near the end of the sequence.
 
-<a id="latest-committed-memory-segment-125-node-13"></a>
+<a id="latest-committed-memory-segment-144-node-13"></a>
 
 - **13** · clip 2: A group of five individuals sits around a rectangular table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-14"></a>
+<a id="latest-committed-memory-segment-144-node-14"></a>
 
 - **14** · clip 2: The camera wearer distributes black carrying cases to the participants seated at the table.
 
-<a id="latest-committed-memory-segment-125-node-15"></a>
+<a id="latest-committed-memory-segment-144-node-15"></a>
 
 - **15** · clip 2: Each participant places the contents of the case, which appear to be earplugs, into their ears.
 
-<a id="latest-committed-memory-segment-125-node-16"></a>
+<a id="latest-committed-memory-segment-144-node-16"></a>
 
 - **16** · clip 2: The camera wearer confirms that all group members have successfully put on the earplugs.
 
-<a id="latest-committed-memory-segment-125-node-17"></a>
+<a id="latest-committed-memory-segment-144-node-17"></a>
 
 - **17** · clip 2: The camera wearer holds up a smartphone displaying a digital timer set to zero.
 
-<a id="latest-committed-memory-segment-125-node-18"></a>
+<a id="latest-committed-memory-segment-144-node-18"></a>
 
 - **18** · clip 2: The group discusses their plans for the final day of their current activity.
 
-<a id="latest-committed-memory-segment-125-node-23"></a>
+<a id="latest-committed-memory-segment-144-node-23"></a>
 
 - **23** · clip 3: A group of people sits around a table covered with a checkered cloth, examining various items including black cases and papers.
 
-<a id="latest-committed-memory-segment-125-node-24"></a>
+<a id="latest-committed-memory-segment-144-node-24"></a>
 
-- **24** · clip 3: &lt;voice_0&gt; mentions finding four USB drives, referring to them as hard disks, and notes that the previous discussion had stalled, proposing a backup solution.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **24** · clip 3: &lt;voice_0&gt; mentions finding four USB drives, referring to them as hard disks, and notes that the previous discussion had stalled, proposing a backup solution.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-25"></a>
+<a id="latest-committed-memory-segment-144-node-25"></a>
 
 - **25** · clip 3: The camera wearer holds a small object and gestures while interacting with the group members seated around the table.
 
-<a id="latest-committed-memory-segment-125-node-26"></a>
+<a id="latest-committed-memory-segment-144-node-26"></a>
 
-- **26** · clip 3: &lt;voice_22&gt; instructs the group to first look and open something up to see inside.  **Links:** ↔ [22](#latest-committed-memory-segment-125-node-22)
+- **26** · clip 3: &lt;voice_22&gt; instructs the group to first look and open something up to see inside.  **Links:** ↔ [22](#latest-committed-memory-segment-144-node-22)
 
-<a id="latest-committed-memory-segment-125-node-27"></a>
+<a id="latest-committed-memory-segment-144-node-27"></a>
 
 - **27** · clip 3: Participants continue to handle papers and devices on the table while the discussion proceeds.
 
-<a id="latest-committed-memory-segment-125-node-35"></a>
+<a id="latest-committed-memory-segment-144-node-35"></a>
 
 - **35** · clip 4: Four individuals wearing VR headsets sit around a table with a checkered cloth and black carrying cases.
 
-<a id="latest-committed-memory-segment-125-node-36"></a>
+<a id="latest-committed-memory-segment-144-node-36"></a>
 
-- **36** · clip 4: Speaker &lt;voice_31&gt; speaks the name Sakiko.  **Links:** ↔ [31](#latest-committed-memory-segment-125-node-31)
+- **36** · clip 4: Speaker &lt;voice_31&gt; speaks the name Sakiko.  **Links:** ↔ [31](#latest-committed-memory-segment-144-node-31)
 
-<a id="latest-committed-memory-segment-125-node-37"></a>
+<a id="latest-committed-memory-segment-144-node-37"></a>
 
-- **37** · clip 4: Speaker &lt;voice_32&gt; inquires about the number of people, stating Only four? and confirming Yes, only four.  **Links:** ↔ [32](#latest-committed-memory-segment-125-node-32)
+- **37** · clip 4: Speaker &lt;voice_32&gt; inquires about the number of people, stating Only four? and confirming Yes, only four.  **Links:** ↔ [32](#latest-committed-memory-segment-144-node-32)
 
-<a id="latest-committed-memory-segment-125-node-38"></a>
+<a id="latest-committed-memory-segment-144-node-38"></a>
 
-- **38** · clip 4: Speaker &lt;voice_0&gt; affirms the count and explains, Yes. Because you are the mentor.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **38** · clip 4: Speaker &lt;voice_0&gt; affirms the count and explains, Yes. Because you are the mentor.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-39"></a>
+<a id="latest-committed-memory-segment-144-node-39"></a>
 
-- **39** · clip 4: Speaker &lt;voice_33&gt; identifies themselves as a Tutor. Yes.  **Links:** ↔ [33](#latest-committed-memory-segment-125-node-33)
+- **39** · clip 4: Speaker &lt;voice_33&gt; identifies themselves as a Tutor. Yes.  **Links:** ↔ [33](#latest-committed-memory-segment-144-node-33)
 
-<a id="latest-committed-memory-segment-125-node-40"></a>
+<a id="latest-committed-memory-segment-144-node-40"></a>
 
-- **40** · clip 4: Speaker &lt;voice_34&gt; notes that they have already installed the equipment.  **Links:** ↔ [34](#latest-committed-memory-segment-125-node-34)
+- **40** · clip 4: Speaker &lt;voice_34&gt; notes that they have already installed the equipment.  **Links:** ↔ [34](#latest-committed-memory-segment-144-node-34)
 
-<a id="latest-committed-memory-segment-125-node-41"></a>
+<a id="latest-committed-memory-segment-144-node-41"></a>
 
 - **41** · clip 4: The camera operator interacts with the items on the table, handling a black case and a cable.
 
-<a id="latest-committed-memory-segment-125-node-42"></a>
+<a id="latest-committed-memory-segment-144-node-42"></a>
 
 - **42** · clip 4: The camera pans to show the surrounding room environment.
 
-<a id="latest-committed-memory-segment-125-node-47"></a>
+<a id="latest-committed-memory-segment-144-node-47"></a>
 
 - **47** · clip 5: A group of four individuals sits around a table covered with a red-and-white checkered cloth, reviewing documents and handling electronic devices.
 
-<a id="latest-committed-memory-segment-125-node-48"></a>
+<a id="latest-committed-memory-segment-144-node-48"></a>
 
 - **48** · clip 5: The camera operator moves away from the table into a hallway area, holding a black carrying case and manipulating a cable.
 
-<a id="latest-committed-memory-segment-125-node-49"></a>
+<a id="latest-committed-memory-segment-144-node-49"></a>
 
 - **49** · clip 5: The operator returns to the main room and places the black case on the table alongside other equipment and paperwork.
 
-<a id="latest-committed-memory-segment-125-node-50"></a>
+<a id="latest-committed-memory-segment-144-node-50"></a>
 
 - **50** · clip 5: The operator walks toward a corner of the room containing a large projection screen and a checkerboard target, placing the case on the floor nearby.
 
-<a id="latest-committed-memory-segment-125-node-51"></a>
+<a id="latest-committed-memory-segment-144-node-51"></a>
 
 - **51** · clip 5: The camera pans back to the group, who continue their collaborative work at the table.
 
-<a id="latest-committed-memory-segment-125-node-55"></a>
+<a id="latest-committed-memory-segment-144-node-55"></a>
 
 - **55** · clip 6: At 0.00s, a person places a black bag onto a green shelving unit.
 
-<a id="latest-committed-memory-segment-125-node-56"></a>
+<a id="latest-committed-memory-segment-144-node-56"></a>
 
 - **56** · clip 6: The camera pans to reveal cardboard boxes stacked on the floor near a doorway.
 
-<a id="latest-committed-memory-segment-125-node-57"></a>
+<a id="latest-committed-memory-segment-144-node-57"></a>
 
 - **57** · clip 6: A group of five individuals is seated around a rectangular table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-58"></a>
+<a id="latest-committed-memory-segment-144-node-58"></a>
 
 - **58** · clip 6: From 11.50s onwards, the first-person perspective shows hands reaching for and manipulating items on the table.
 
-<a id="latest-committed-memory-segment-125-node-59"></a>
+<a id="latest-committed-memory-segment-144-node-59"></a>
 
 - **59** · clip 6: Multiple participants are seen examining electronic devices and unpacking boxes.
 
-<a id="latest-committed-memory-segment-125-node-60"></a>
+<a id="latest-committed-memory-segment-144-node-60"></a>
 
-- **60** · clip 6: &lt;voice_0&gt; asks how the items look after being opened.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **60** · clip 6: &lt;voice_0&gt; asks how the items look after being opened.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-61"></a>
+<a id="latest-committed-memory-segment-144-node-61"></a>
 
-- **61** · clip 6: &lt;voice_0&gt; instructs to keep the box.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **61** · clip 6: &lt;voice_0&gt; instructs to keep the box.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-62"></a>
+<a id="latest-committed-memory-segment-144-node-62"></a>
 
-- **62** · clip 6: &lt;voice_0&gt; suggests discarding the item inside the package.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **62** · clip 6: &lt;voice_0&gt; suggests discarding the item inside the package.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-66"></a>
+<a id="latest-committed-memory-segment-144-node-66"></a>
 
 - **66** · clip 7: A group of people sit around a table with a checkered cloth, examining boxes and items.
 
-<a id="latest-committed-memory-segment-125-node-67"></a>
+<a id="latest-committed-memory-segment-144-node-67"></a>
 
 - **67** · clip 7: The camera operator packs items into a cardboard box on the floor before returning to the table.
 
-<a id="latest-committed-memory-segment-125-node-68"></a>
+<a id="latest-committed-memory-segment-144-node-68"></a>
 
-- **68** · clip 7: &lt;voice_0&gt; explains that the current setup is temporary and the item is for later use during deep thought, inviting the group to observe the location.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **68** · clip 7: &lt;voice_0&gt; explains that the current setup is temporary and the item is for later use during deep thought, inviting the group to observe the location.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-71"></a>
+<a id="latest-committed-memory-segment-144-node-71"></a>
 
 - **71** · clip 8: A group of individuals are seated around a table in a room featuring a whiteboard and natural light from a window.
 
-<a id="latest-committed-memory-segment-125-node-72"></a>
+<a id="latest-committed-memory-segment-144-node-72"></a>
 
 - **72** · clip 8: The camera operator, wearing a blue sleeve, adjusts a large softbox light stand positioned near the wall.
 
-<a id="latest-committed-memory-segment-125-node-73"></a>
+<a id="latest-committed-memory-segment-144-node-73"></a>
 
 - **73** · clip 8: The camera moves through a doorway into an adjacent bedroom containing an unmade bed and a desk cluttered with electronics.
 
-<a id="latest-committed-memory-segment-125-node-74"></a>
+<a id="latest-committed-memory-segment-144-node-74"></a>
 
 - **74** · clip 8: A person wearing an orange shirt stands in the doorway observing the camera operator.
 
-<a id="latest-committed-memory-segment-125-node-75"></a>
+<a id="latest-committed-memory-segment-144-node-75"></a>
 
-- **75** · clip 8: &lt;voice_0&gt; states, 'Just look at my workspace,' while the camera focuses on the room's layout.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **75** · clip 8: &lt;voice_0&gt; states, 'Just look at my workspace,' while the camera focuses on the room's layout.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-76"></a>
+<a id="latest-committed-memory-segment-144-node-76"></a>
 
 - **76** · clip 8: The camera operator picks up a yellow chair and examines the desk setup which includes multiple laptops and monitors.
 
-<a id="latest-committed-memory-segment-125-node-77"></a>
+<a id="latest-committed-memory-segment-144-node-77"></a>
 
-- **77** · clip 8: &lt;voice_0&gt; mentions that the workspace contains six or eight computers.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **77** · clip 8: &lt;voice_0&gt; mentions that the workspace contains six or eight computers.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-80"></a>
+<a id="latest-committed-memory-segment-144-node-80"></a>
 
 - **80** · clip 9: The video shows a first-person perspective inside a bedroom with a messy bed and a desk filled with computer equipment.
 
-<a id="latest-committed-memory-segment-125-node-81"></a>
+<a id="latest-committed-memory-segment-144-node-81"></a>
 
 - **81** · clip 9: A man in a pink shirt and a woman stand near the doorway, observing the camera operator.
 
-<a id="latest-committed-memory-segment-125-node-82"></a>
+<a id="latest-committed-memory-segment-144-node-82"></a>
 
 - **82** · clip 9: The camera operator interacts with the computer monitors on a rack, touching the screens and gesturing towards them.
 
-<a id="latest-committed-memory-segment-125-node-83"></a>
+<a id="latest-committed-memory-segment-144-node-83"></a>
 
-- **83** · clip 9: The speaker (&lt;voice_0&gt;) explains the configuration, stating there are six computers corresponding to eye-cams and a hard drive for recording data every three hours.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **83** · clip 9: The speaker (&lt;voice_0&gt;) explains the configuration, stating there are six computers corresponding to eye-cams and a hard drive for recording data every three hours.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-84"></a>
+<a id="latest-committed-memory-segment-144-node-84"></a>
 
 - **84** · clip 9: The camera alternates between the desk setup and the two people standing by the door.
 
-<a id="latest-committed-memory-segment-125-node-87"></a>
+<a id="latest-committed-memory-segment-144-node-87"></a>
 
 - **87** · clip 10: Two individuals stand near the doorway of a bedroom.
 
-<a id="latest-committed-memory-segment-125-node-88"></a>
+<a id="latest-committed-memory-segment-144-node-88"></a>
 
 - **88** · clip 10: The camera pans to reveal a desk area filled with multiple laptops and computer equipment.
 
-<a id="latest-committed-memory-segment-125-node-89"></a>
+<a id="latest-committed-memory-segment-144-node-89"></a>
 
 - **89** · clip 10: A hand reaches out to adjust or inspect the screens on the shelving unit.
 
-<a id="latest-committed-memory-segment-125-node-90"></a>
+<a id="latest-committed-memory-segment-144-node-90"></a>
 
 - **90** · clip 10: The camera alternates between the computer setup and the people standing by the door.
 
-<a id="latest-committed-memory-segment-125-node-91"></a>
+<a id="latest-committed-memory-segment-144-node-91"></a>
 
 - **91** · clip 10: The camera operator gestures with their hands while looking around the room.
 
-<a id="latest-committed-memory-segment-125-node-99"></a>
+<a id="latest-committed-memory-segment-144-node-99"></a>
 
 - **99** · clip 11: The camera is positioned in a bedroom featuring an unmade bed and a desk cluttered with electronic equipment.
 
-<a id="latest-committed-memory-segment-125-node-100"></a>
+<a id="latest-committed-memory-segment-144-node-100"></a>
 
 - **100** · clip 11: Two individuals stand near the doorway, one wearing a pinkish-orange shirt.
 
-<a id="latest-committed-memory-segment-125-node-101"></a>
+<a id="latest-committed-memory-segment-144-node-101"></a>
 
-- **101** · clip 11: &lt;voice_0&gt; confirms that hard drives need to know they are working and comments on the interesting layout of the wiring.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **101** · clip 11: &lt;voice_0&gt; confirms that hard drives need to know they are working and comments on the interesting layout of the wiring.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-102"></a>
+<a id="latest-committed-memory-segment-144-node-102"></a>
 
 - **102** · clip 11: The camera pans across the desk revealing multiple laptop screens and complex cabling.
 
-<a id="latest-committed-memory-segment-125-node-103"></a>
+<a id="latest-committed-memory-segment-144-node-103"></a>
 
-- **103** · clip 11: &lt;voice_95&gt; refers to something wrapped.  **Links:** ↔ [95](#latest-committed-memory-segment-125-node-95)
+- **103** · clip 11: &lt;voice_95&gt; refers to something wrapped.  **Links:** ↔ [95](#latest-committed-memory-segment-144-node-95)
 
-<a id="latest-committed-memory-segment-125-node-104"></a>
+<a id="latest-committed-memory-segment-144-node-104"></a>
 
-- **104** · clip 11: &lt;voice_96&gt; asks hypothetically what would happen if power suddenly stopped.  **Links:** ↔ [96](#latest-committed-memory-segment-125-node-96)
+- **104** · clip 11: &lt;voice_96&gt; asks hypothetically what would happen if power suddenly stopped.  **Links:** ↔ [96](#latest-committed-memory-segment-144-node-96)
 
-<a id="latest-committed-memory-segment-125-node-105"></a>
+<a id="latest-committed-memory-segment-144-node-105"></a>
 
 - **105** · clip 11: A hand reaches out to adjust or inspect the cables on the desk.
 
-<a id="latest-committed-memory-segment-125-node-106"></a>
+<a id="latest-committed-memory-segment-144-node-106"></a>
 
-- **106** · clip 11: &lt;voice_97&gt; speculates that the issue might relate to USB data.  **Links:** ↔ [97](#latest-committed-memory-segment-125-node-97)
+- **106** · clip 11: &lt;voice_97&gt; speculates that the issue might relate to USB data.  **Links:** ↔ [97](#latest-committed-memory-segment-144-node-97)
 
-<a id="latest-committed-memory-segment-125-node-107"></a>
+<a id="latest-committed-memory-segment-144-node-107"></a>
 
-- **107** · clip 11: &lt;voice_98&gt; clarifies that it involves backup power.  **Links:** ↔ [98](#latest-committed-memory-segment-125-node-98)
+- **107** · clip 11: &lt;voice_98&gt; clarifies that it involves backup power.  **Links:** ↔ [98](#latest-committed-memory-segment-144-node-98)
 
-<a id="latest-committed-memory-segment-125-node-108"></a>
+<a id="latest-committed-memory-segment-144-node-108"></a>
 
 - **108** · clip 11: The camera moves out of the bedroom into a larger living space where several people are gathered around a table.
 
-<a id="latest-committed-memory-segment-125-node-113"></a>
+<a id="latest-committed-memory-segment-144-node-113"></a>
 
 - **113** · clip 12: At 0.00s, a person in a pink shirt stands near a table while another person stands by the window.
 
-<a id="latest-committed-memory-segment-125-node-114"></a>
+<a id="latest-committed-memory-segment-144-node-114"></a>
 
 - **114** · clip 12: At 0.50s, a person wearing a white top and hijab enters the room from the right.
 
-<a id="latest-committed-memory-segment-125-node-115"></a>
+<a id="latest-committed-memory-segment-144-node-115"></a>
 
-- **115** · clip 12: At 0.01s, speaker &lt;voice_0&gt; states: 'MAI: 没有，没那么有钱。就我们只能相信这个墙壁，或者相信北京电力吧。对。' (No, not that rich. We can only trust this wall, or trust Beijing power.)  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **115** · clip 12: At 0.01s, speaker &lt;voice_0&gt; states: 'MAI: 没有，没那么有钱。就我们只能相信这个墙壁，或者相信北京电力吧。对。' (No, not that rich. We can only trust this wall, or trust Beijing power.)  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-116"></a>
+<a id="latest-committed-memory-segment-144-node-116"></a>
 
 - **116** · clip 12: At 5.00s, a person in a black top sits down at the table on the left side.
 
-<a id="latest-committed-memory-segment-125-node-117"></a>
+<a id="latest-committed-memory-segment-144-node-117"></a>
 
 - **117** · clip 12: At 6.00s, the group gathers around the table, which is cluttered with boxes and electronic devices.
 
-<a id="latest-committed-memory-segment-125-node-118"></a>
+<a id="latest-committed-memory-segment-144-node-118"></a>
 
 - **118** · clip 12: At 7.00s, a person in a pink shirt sits down on a chair at the table.
 
-<a id="latest-committed-memory-segment-125-node-119"></a>
+<a id="latest-committed-memory-segment-144-node-119"></a>
 
 - **119** · clip 12: From 8.00s to 20.00s, the group remains seated around the table, appearing to work on or inspect items placed on the checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-120"></a>
+<a id="latest-committed-memory-segment-144-node-120"></a>
 
-- **120** · clip 12: At 0.15s, speaker &lt;voice_0&gt; states: 'MAI: 好，你们都开始装了。' (Okay, you guys have started installing.)  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **120** · clip 12: At 0.15s, speaker &lt;voice_0&gt; states: 'MAI: 好，你们都开始装了。' (Okay, you guys have started installing.)  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-121"></a>
+<a id="latest-committed-memory-segment-144-node-121"></a>
 
-- **121** · clip 12: At 0.21s, speaker &lt;voice_0&gt; states: 'MAI: 可以边聊边装吧。' (We can chat while installing.)  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **121** · clip 12: At 0.21s, speaker &lt;voice_0&gt; states: 'MAI: 可以边聊边装吧。' (We can chat while installing.)  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-122"></a>
+<a id="latest-committed-memory-segment-144-node-122"></a>
 
-- **122** · clip 12: At 0.23s, speaker &lt;voice_0&gt; states: 'MAI: 嗯，或者说你们先带，你们带了什么呀？你们带了什么？嗯，这个，这-' (Um, or rather you bring first, what did you bring? What did you bring? Um, this, this-)  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **122** · clip 12: At 0.23s, speaker &lt;voice_0&gt; states: 'MAI: 嗯，或者说你们先带，你们带了什么呀？你们带了什么？嗯，这个，这-' (Um, or rather you bring first, what did you bring? What did you bring? Um, this, this-)  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-123"></a>
+<a id="latest-committed-memory-segment-144-node-123"></a>
 
-- **123** · clip 12: At 0.20s, speaker &lt;voice_112&gt; states: 'MAI: 可以。' (Okay.)  **Links:** ↔ [112](#latest-committed-memory-segment-125-node-112)
+- **123** · clip 12: At 0.20s, speaker &lt;voice_112&gt; states: 'MAI: 可以。' (Okay.)  **Links:** ↔ [112](#latest-committed-memory-segment-144-node-112)
 
-<a id="latest-committed-memory-segment-125-node-124"></a>
+<a id="latest-committed-memory-segment-144-node-124"></a>
 
 - **124** · clip 12: At 27.00s, a hand holding a selfie stick or camera pole comes into view from the bottom right.
 
-<a id="latest-committed-memory-segment-125-node-125"></a>
+<a id="latest-committed-memory-segment-144-node-125"></a>
 
 - **125** · clip 12: At 29.00s, hands reach towards the camera lens from the foreground.
 
-<a id="latest-committed-memory-segment-125-node-131"></a>
+<a id="latest-committed-memory-segment-144-node-131"></a>
 
 - **131** · clip 13: A group of people are seated around a table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-132"></a>
+<a id="latest-committed-memory-segment-144-node-132"></a>
 
 - **132** · clip 13: The camera pans around the room, showing a whiteboard and a doorway in the background.
 
-<a id="latest-committed-memory-segment-125-node-133"></a>
+<a id="latest-committed-memory-segment-144-node-133"></a>
 
 - **133** · clip 13: Hands appear in the foreground pointing towards the seated individuals.
 
-<a id="latest-committed-memory-segment-125-node-134"></a>
+<a id="latest-committed-memory-segment-144-node-134"></a>
 
-- **134** · clip 13: Speaker `&lt;voice_0&gt;` adjusts glasses and remarks that they do not obstruct vision.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **134** · clip 13: Speaker `&lt;voice_0&gt;` adjusts glasses and remarks that they do not obstruct vision.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-135"></a>
+<a id="latest-committed-memory-segment-144-node-135"></a>
 
 - **135** · clip 13: Individuals are seen handling papers and electronic devices on the table.
 
-<a id="latest-committed-memory-segment-125-node-136"></a>
+<a id="latest-committed-memory-segment-144-node-136"></a>
 
-- **136** · clip 13: Speaker `&lt;voice_129&gt;` discusses a location and mentions cleaning, referencing a classmate's comment.  **Links:** ↔ [129](#latest-committed-memory-segment-125-node-129)
+- **136** · clip 13: Speaker `&lt;voice_129&gt;` discusses a location and mentions cleaning, referencing a classmate's comment.  **Links:** ↔ [129](#latest-committed-memory-segment-144-node-129)
 
-<a id="latest-committed-memory-segment-125-node-137"></a>
+<a id="latest-committed-memory-segment-144-node-137"></a>
 
 - **137** · clip 13: The camera focuses on different participants engaging in conversation and work.
 
-<a id="latest-committed-memory-segment-125-node-138"></a>
+<a id="latest-committed-memory-segment-144-node-138"></a>
 
-- **138** · clip 13: Speaker `&lt;voice_130&gt;` confirms that the matter is settled or fixed.  **Links:** ↔ [130](#latest-committed-memory-segment-125-node-130)
+- **138** · clip 13: Speaker `&lt;voice_130&gt;` confirms that the matter is settled or fixed.  **Links:** ↔ [130](#latest-committed-memory-segment-144-node-130)
 
-<a id="latest-committed-memory-segment-125-node-139"></a>
+<a id="latest-committed-memory-segment-144-node-139"></a>
 
 - **139** · clip 13: The camera continues to move around the room, capturing the ongoing interaction.
 
-<a id="latest-committed-memory-segment-125-node-149"></a>
+<a id="latest-committed-memory-segment-144-node-149"></a>
 
 - **149** · clip 14: A group of four individuals sits around a table covered with a red and white checkered cloth, engaging in an activity involving boxes and electronic components.
 
-<a id="latest-committed-memory-segment-125-node-150"></a>
+<a id="latest-committed-memory-segment-144-node-150"></a>
 
 - **150** · clip 14: A person in a dark top and glasses on the left handles a small black device while conversing.
 
-<a id="latest-committed-memory-segment-125-node-151"></a>
+<a id="latest-committed-memory-segment-144-node-151"></a>
 
 - **151** · clip 14: A person in an orange shirt enters the frame from the right and joins the group.
 
-<a id="latest-committed-memory-segment-125-node-152"></a>
+<a id="latest-committed-memory-segment-144-node-152"></a>
 
 - **152** · clip 14: The camera operator, wearing a blue shirt, interacts with the person in the orange shirt regarding a black rectangular object.
 
-<a id="latest-committed-memory-segment-125-node-153"></a>
+<a id="latest-committed-memory-segment-144-node-153"></a>
 
-- **153** · clip 14: MAI (&lt;voice_129&gt;) comments on the difficulty of pushing an item gently, noting it feels slightly weak.  **Links:** ↔ [129](#latest-committed-memory-segment-125-node-129)
+- **153** · clip 14: MAI (&lt;voice_129&gt;) comments on the difficulty of pushing an item gently, noting it feels slightly weak.  **Links:** ↔ [129](#latest-committed-memory-segment-144-node-129)
 
-<a id="latest-committed-memory-segment-125-node-154"></a>
+<a id="latest-committed-memory-segment-144-node-154"></a>
 
-- **154** · clip 14: MAI (&lt;voice_144&gt;) asks if the person requires strength from the thread.  **Links:** ↔ [144](#latest-committed-memory-segment-125-node-144)
+- **154** · clip 14: MAI (&lt;voice_144&gt;) asks if the person requires strength from the thread.  **Links:** ↔ [144](#latest-committed-memory-segment-144-node-144)
 
-<a id="latest-committed-memory-segment-125-node-155"></a>
+<a id="latest-committed-memory-segment-144-node-155"></a>
 
-- **155** · clip 14: MAI (&lt;voice_145&gt;) replies that no strength is needed.  **Links:** ↔ [145](#latest-committed-memory-segment-125-node-145)
+- **155** · clip 14: MAI (&lt;voice_145&gt;) replies that no strength is needed.  **Links:** ↔ [145](#latest-committed-memory-segment-144-node-145)
 
-<a id="latest-committed-memory-segment-125-node-156"></a>
+<a id="latest-committed-memory-segment-144-node-156"></a>
 
-- **156** · clip 14: MAI (&lt;voice_0&gt;) mentions there are many threads available on the table.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **156** · clip 14: MAI (&lt;voice_0&gt;) mentions there are many threads available on the table.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-157"></a>
+<a id="latest-committed-memory-segment-144-node-157"></a>
 
-- **157** · clip 14: MAI (&lt;voice_112&gt;) states that the threads need to be tied.  **Links:** ↔ [112](#latest-committed-memory-segment-125-node-112)
+- **157** · clip 14: MAI (&lt;voice_112&gt;) states that the threads need to be tied.  **Links:** ↔ [112](#latest-committed-memory-segment-144-node-112)
 
-<a id="latest-committed-memory-segment-125-node-158"></a>
+<a id="latest-committed-memory-segment-144-node-158"></a>
 
-- **158** · clip 14: MAI (&lt;voice_146&gt;) inquires about the location of the thread.  **Links:** ↔ [146](#latest-committed-memory-segment-125-node-146)
+- **158** · clip 14: MAI (&lt;voice_146&gt;) inquires about the location of the thread.  **Links:** ↔ [146](#latest-committed-memory-segment-144-node-146)
 
-<a id="latest-committed-memory-segment-125-node-159"></a>
+<a id="latest-committed-memory-segment-144-node-159"></a>
 
-- **159** · clip 14: MAI (&lt;voice_147&gt;) indicates the thread is present in the immediate area.  **Links:** ↔ [147](#latest-committed-memory-segment-125-node-147)
+- **159** · clip 14: MAI (&lt;voice_147&gt;) indicates the thread is present in the immediate area.  **Links:** ↔ [147](#latest-committed-memory-segment-144-node-147)
 
-<a id="latest-committed-memory-segment-125-node-160"></a>
+<a id="latest-committed-memory-segment-144-node-160"></a>
 
-- **160** · clip 14: MAI (&lt;voice_148&gt;) confirms understanding and describes the task as easy.  **Links:** ↔ [148](#latest-committed-memory-segment-125-node-148)
+- **160** · clip 14: MAI (&lt;voice_148&gt;) confirms understanding and describes the task as easy.  **Links:** ↔ [148](#latest-committed-memory-segment-144-node-148)
 
-<a id="latest-committed-memory-segment-125-node-161"></a>
+<a id="latest-committed-memory-segment-144-node-161"></a>
 
 - **161** · clip 14: The group continues to handle various items on the table, including a white packet and the black device.
 
-<a id="latest-committed-memory-segment-125-node-168"></a>
+<a id="latest-committed-memory-segment-144-node-168"></a>
 
 - **168** · clip 15: A group of people are seated around a table covered with a checkered cloth, working on assembling electronic equipment.
 
-<a id="latest-committed-memory-segment-125-node-169"></a>
+<a id="latest-committed-memory-segment-144-node-169"></a>
 
 - **169** · clip 15: One person in a peach shirt is seen holding a camera device before moving around the room.
 
-<a id="latest-committed-memory-segment-125-node-170"></a>
+<a id="latest-committed-memory-segment-144-node-170"></a>
 
 - **170** · clip 15: Another participant wearing black sits on the left side of the table, handling small components.
 
-<a id="latest-committed-memory-segment-125-node-171"></a>
+<a id="latest-committed-memory-segment-144-node-171"></a>
 
 - **171** · clip 15: A person with pink hair is visible near the head of the table.
 
-<a id="latest-committed-memory-segment-125-node-172"></a>
+<a id="latest-committed-memory-segment-144-node-172"></a>
 
 - **172** · clip 15: The camera pans across the room revealing a projector screen, a whiteboard, and a kitchen area.
 
-<a id="latest-committed-memory-segment-125-node-173"></a>
+<a id="latest-committed-memory-segment-144-node-173"></a>
 
 - **173** · clip 15: The camera operator walks past tripods and props placed on the floor.
 
-<a id="latest-committed-memory-segment-125-node-174"></a>
+<a id="latest-committed-memory-segment-144-node-174"></a>
 
-- **174** · clip 15: Speaker &lt;voice_129&gt; instructs the group to install parts into a box and removes a specific piece because thick wire is needed.  **Links:** ↔ [129](#latest-committed-memory-segment-125-node-129)
+- **174** · clip 15: Speaker &lt;voice_129&gt; instructs the group to install parts into a box and removes a specific piece because thick wire is needed.  **Links:** ↔ [129](#latest-committed-memory-segment-144-node-129)
 
-<a id="latest-committed-memory-segment-125-node-175"></a>
+<a id="latest-committed-memory-segment-144-node-175"></a>
 
-- **175** · clip 15: Speaker &lt;voice_165&gt; asks if a component should be installed.  **Links:** ↔ [165](#latest-committed-memory-segment-125-node-165)
+- **175** · clip 15: Speaker &lt;voice_165&gt; asks if a component should be installed.  **Links:** ↔ [165](#latest-committed-memory-segment-144-node-165)
 
-<a id="latest-committed-memory-segment-125-node-176"></a>
+<a id="latest-committed-memory-segment-144-node-176"></a>
 
-- **176** · clip 15: Speaker &lt;voice_166&gt; questions whether four screws are required for the assembly.  **Links:** ↔ [166](#latest-committed-memory-segment-125-node-166)
+- **176** · clip 15: Speaker &lt;voice_166&gt; questions whether four screws are required for the assembly.  **Links:** ↔ [166](#latest-committed-memory-segment-144-node-166)
 
-<a id="latest-committed-memory-segment-125-node-177"></a>
+<a id="latest-committed-memory-segment-144-node-177"></a>
 
-- **177** · clip 15: Speaker &lt;voice_129&gt; clarifies that eight screws are needed instead.  **Links:** ↔ [129](#latest-committed-memory-segment-125-node-129)
+- **177** · clip 15: Speaker &lt;voice_129&gt; clarifies that eight screws are needed instead.  **Links:** ↔ [129](#latest-committed-memory-segment-144-node-129)
 
-<a id="latest-committed-memory-segment-125-node-178"></a>
+<a id="latest-committed-memory-segment-144-node-178"></a>
 
-- **178** · clip 15: Speaker &lt;voice_167&gt; confirms the number of screws needed is eight.  **Links:** ↔ [167](#latest-committed-memory-segment-125-node-167)
+- **178** · clip 15: Speaker &lt;voice_167&gt; confirms the number of screws needed is eight.  **Links:** ↔ [167](#latest-committed-memory-segment-144-node-167)
 
-<a id="latest-committed-memory-segment-125-node-179"></a>
+<a id="latest-committed-memory-segment-144-node-179"></a>
 
 - **179** · clip 15: The group continues to discuss and manipulate the electronic parts on the table.
 
-<a id="latest-committed-memory-segment-125-node-187"></a>
+<a id="latest-committed-memory-segment-144-node-187"></a>
 
 - **187** · clip 16: A group of individuals sits around a rectangular table covered with a red-and-white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-188"></a>
+<a id="latest-committed-memory-segment-144-node-188"></a>
 
 - **188** · clip 16: The participants are gathered around open cardboard boxes containing small black electronic devices or components.
 
-<a id="latest-committed-memory-segment-125-node-189"></a>
+<a id="latest-committed-memory-segment-144-node-189"></a>
 
 - **189** · clip 16: People pass items across the table and manipulate the objects with their hands.
 
-<a id="latest-committed-memory-segment-125-node-190"></a>
+<a id="latest-committed-memory-segment-144-node-190"></a>
 
 - **190** · clip 16: The camera operator moves around the table, shifting perspectives from front-facing to side and rear views.
 
-<a id="latest-committed-memory-segment-125-node-191"></a>
+<a id="latest-committed-memory-segment-144-node-191"></a>
 
 - **191** · clip 16: A person in a brown shirt is seen handling a device on the right side of the table.
 
-<a id="latest-committed-memory-segment-125-node-192"></a>
+<a id="latest-committed-memory-segment-144-node-192"></a>
 
 - **192** · clip 16: Another participant in a white shirt is visible near the back of the table.
 
-<a id="latest-committed-memory-segment-125-node-193"></a>
+<a id="latest-committed-memory-segment-144-node-193"></a>
 
 - **193** · clip 16: The group appears to be collaborating on assembling or testing the devices together.
 
-<a id="latest-committed-memory-segment-125-node-205"></a>
+<a id="latest-committed-memory-segment-144-node-205"></a>
 
 - **205** · clip 17: A group of people are seated around a rectangular table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-206"></a>
+<a id="latest-committed-memory-segment-144-node-206"></a>
 
 - **206** · clip 17: The room contains a projector screen, a whiteboard, and a red refrigerator visible in the background.
 
-<a id="latest-committed-memory-segment-125-node-207"></a>
+<a id="latest-committed-memory-segment-144-node-207"></a>
 
 - **207** · clip 17: Participants are gathered around the table, handling various electronic components and tools.
 
-<a id="latest-committed-memory-segment-125-node-208"></a>
+<a id="latest-committed-memory-segment-144-node-208"></a>
 
 - **208** · clip 17: A person in a pink shirt is prominently featured handling objects on the table.
 
-<a id="latest-committed-memory-segment-125-node-209"></a>
+<a id="latest-committed-memory-segment-144-node-209"></a>
 
 - **209** · clip 17: The camera moves around the table, providing different perspectives of the group's activity.
 
-<a id="latest-committed-memory-segment-125-node-210"></a>
+<a id="latest-committed-memory-segment-144-node-210"></a>
 
 - **210** · clip 17: Close-up shots show hands manipulating devices and items on the checkered table surface.
 
-<a id="latest-committed-memory-segment-125-node-222"></a>
+<a id="latest-committed-memory-segment-144-node-222"></a>
 
 - **222** · clip 18: A group of people sits around a table with a checkered tablecloth, surrounded by boxes and electronic components.
 
-<a id="latest-committed-memory-segment-125-node-223"></a>
+<a id="latest-committed-memory-segment-144-node-223"></a>
 
-- **223** · clip 18: At 00:00, &lt;voice_129&gt; explains that an object is too large to fit through a hole.  **Links:** ↔ [129](#latest-committed-memory-segment-125-node-129)
+- **223** · clip 18: At 00:00, &lt;voice_129&gt; explains that an object is too large to fit through a hole.  **Links:** ↔ [129](#latest-committed-memory-segment-144-node-129)
 
-<a id="latest-committed-memory-segment-125-node-224"></a>
+<a id="latest-committed-memory-segment-144-node-224"></a>
 
-- **224** · clip 18: At 00:07, &lt;voice_0&gt; discusses placing an item on the head or considering alternative methods.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **224** · clip 18: At 00:07, &lt;voice_0&gt; discusses placing an item on the head or considering alternative methods.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-225"></a>
+<a id="latest-committed-memory-segment-144-node-225"></a>
 
-- **225** · clip 18: At 00:14, &lt;voice_220&gt; confirms that one item has been successfully placed.  **Links:** ↔ [220](#latest-committed-memory-segment-125-node-220)
+- **225** · clip 18: At 00:14, &lt;voice_220&gt; confirms that one item has been successfully placed.  **Links:** ↔ [220](#latest-committed-memory-segment-144-node-220)
 
-<a id="latest-committed-memory-segment-125-node-226"></a>
+<a id="latest-committed-memory-segment-144-node-226"></a>
 
-- **226** · clip 18: At 00:17, &lt;voice_221&gt; requests that another item be added.  **Links:** ↔ [221](#latest-committed-memory-segment-125-node-221)
+- **226** · clip 18: At 00:17, &lt;voice_221&gt; requests that another item be added.  **Links:** ↔ [221](#latest-committed-memory-segment-144-node-221)
 
-<a id="latest-committed-memory-segment-125-node-227"></a>
+<a id="latest-committed-memory-segment-144-node-227"></a>
 
-- **227** · clip 18: At 00:18, &lt;voice_201&gt; verifies that the setup is now fixed and stable.  **Links:** ↔ [201](#latest-committed-memory-segment-125-node-201)
+- **227** · clip 18: At 00:18, &lt;voice_201&gt; verifies that the setup is now fixed and stable.  **Links:** ↔ [201](#latest-committed-memory-segment-144-node-201)
 
-<a id="latest-committed-memory-segment-125-node-228"></a>
+<a id="latest-committed-memory-segment-144-node-228"></a>
 
-- **228** · clip 18: At 00:20, &lt;voice_112&gt; affirms that the arrangement is satisfactory.  **Links:** ↔ [112](#latest-committed-memory-segment-125-node-112)
+- **228** · clip 18: At 00:20, &lt;voice_112&gt; affirms that the arrangement is satisfactory.  **Links:** ↔ [112](#latest-committed-memory-segment-144-node-112)
 
-<a id="latest-committed-memory-segment-125-node-229"></a>
+<a id="latest-committed-memory-segment-144-node-229"></a>
 
 - **229** · clip 18: The camera operator reaches out to touch a device on the table while others continue to assemble items.
 
-<a id="latest-committed-memory-segment-125-node-236"></a>
+<a id="latest-committed-memory-segment-144-node-236"></a>
 
 - **236** · clip 19: A group of individuals are seated around a wooden table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-237"></a>
+<a id="latest-committed-memory-segment-144-node-237"></a>
 
 - **237** · clip 19: The room contains a whiteboard, a projector screen, and a window letting in daylight.
 
-<a id="latest-committed-memory-segment-125-node-238"></a>
+<a id="latest-committed-memory-segment-144-node-238"></a>
 
 - **238** · clip 19: One person on the right holds a black handheld device.
 
-<a id="latest-committed-memory-segment-125-node-239"></a>
+<a id="latest-committed-memory-segment-144-node-239"></a>
 
-- **239** · clip 19: &lt;voice_233&gt; asks if background music can be added to the session.  **Links:** ↔ [233](#latest-committed-memory-segment-125-node-233)
+- **239** · clip 19: &lt;voice_233&gt; asks if background music can be added to the session.  **Links:** ↔ [233](#latest-committed-memory-segment-144-node-233)
 
-<a id="latest-committed-memory-segment-125-node-240"></a>
+<a id="latest-committed-memory-segment-144-node-240"></a>
 
-- **240** · clip 19: &lt;voice_0&gt; responds by suggesting to play a bit of music.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **240** · clip 19: &lt;voice_0&gt; responds by suggesting to play a bit of music.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-241"></a>
+<a id="latest-committed-memory-segment-144-node-241"></a>
 
-- **241** · clip 19: &lt;voice_234&gt; mentions that they listen to rock music.  **Links:** ↔ [234](#latest-committed-memory-segment-125-node-234)
+- **241** · clip 19: &lt;voice_234&gt; mentions that they listen to rock music.  **Links:** ↔ [234](#latest-committed-memory-segment-144-node-234)
 
-<a id="latest-committed-memory-segment-125-node-242"></a>
+<a id="latest-committed-memory-segment-144-node-242"></a>
 
-- **242** · clip 19: &lt;voice_235&gt; indicates a preference for R&amp;B music.  **Links:** ↔ [235](#latest-committed-memory-segment-125-node-235)
+- **242** · clip 19: &lt;voice_235&gt; indicates a preference for R&amp;B music.  **Links:** ↔ [235](#latest-committed-memory-segment-144-node-235)
 
-<a id="latest-committed-memory-segment-125-node-243"></a>
+<a id="latest-committed-memory-segment-144-node-243"></a>
 
-- **243** · clip 19: &lt;voice_200&gt; explains their music taste is influenced by being mixed in Western circles.  **Links:** ↔ [200](#latest-committed-memory-segment-125-node-200)
+- **243** · clip 19: &lt;voice_200&gt; explains their music taste is influenced by being mixed in Western circles.  **Links:** ↔ [200](#latest-committed-memory-segment-144-node-200)
 
-<a id="latest-committed-memory-segment-125-node-251"></a>
+<a id="latest-committed-memory-segment-144-node-251"></a>
 
-- **251** · clip 20: At 00:00, &lt;voice_247&gt; remarks, 'MAI: 给大家一个比较干的。' while four individuals sit around a checkered table.  **Links:** ↔ [247](#latest-committed-memory-segment-125-node-247)
+- **251** · clip 20: At 00:00, &lt;voice_247&gt; remarks, 'MAI: 给大家一个比较干的。' while four individuals sit around a checkered table.  **Links:** ↔ [247](#latest-committed-memory-segment-144-node-247)
 
-<a id="latest-committed-memory-segment-125-node-252"></a>
+<a id="latest-committed-memory-segment-144-node-252"></a>
 
-- **252** · clip 20: At 00:04, &lt;voice_248&gt; identifies 'MAI: 那个东北女的机器人。' amidst the group discussion.  **Links:** ↔ [248](#latest-committed-memory-segment-125-node-248)
+- **252** · clip 20: At 00:04, &lt;voice_248&gt; identifies 'MAI: 那个东北女的机器人。' amidst the group discussion.  **Links:** ↔ [248](#latest-committed-memory-segment-144-node-248)
 
-<a id="latest-committed-memory-segment-125-node-253"></a>
+<a id="latest-committed-memory-segment-144-node-253"></a>
 
-- **253** · clip 20: At 00:10, &lt;voice_0&gt; responds with 'MAI: 可以，可以，来自东方的小小鲸鱼.' regarding the item being discussed.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **253** · clip 20: At 00:10, &lt;voice_0&gt; responds with 'MAI: 可以，可以，来自东方的小小鲸鱼.' regarding the item being discussed.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-254"></a>
+<a id="latest-committed-memory-segment-144-node-254"></a>
 
-- **254** · clip 20: At 00:14, &lt;voice_0&gt; adds 'MAI: 对。跳吧，要不然.' suggesting movement.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **254** · clip 20: At 00:14, &lt;voice_0&gt; adds 'MAI: 对。跳吧，要不然.' suggesting movement.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-255"></a>
+<a id="latest-committed-memory-segment-144-node-255"></a>
 
-- **255** · clip 20: At 00:19, &lt;voice_250&gt; instructs 'MAI: 不要抓着来呀。这个半蹲就行.' regarding posture.  **Links:** ↔ [250](#latest-committed-memory-segment-125-node-250)
+- **255** · clip 20: At 00:19, &lt;voice_250&gt; instructs 'MAI: 不要抓着来呀。这个半蹲就行.' regarding posture.  **Links:** ↔ [250](#latest-committed-memory-segment-144-node-250)
 
-<a id="latest-committed-memory-segment-125-node-256"></a>
+<a id="latest-committed-memory-segment-144-node-256"></a>
 
-- **256** · clip 20: At 00:28, &lt;voice_235&gt; confirms 'MAI: 对对，固定.' validating the setup.  **Links:** ↔ [235](#latest-committed-memory-segment-125-node-235)
+- **256** · clip 20: At 00:28, &lt;voice_235&gt; confirms 'MAI: 对对，固定.' validating the setup.  **Links:** ↔ [235](#latest-committed-memory-segment-144-node-235)
 
-<a id="latest-committed-memory-segment-125-node-263"></a>
+<a id="latest-committed-memory-segment-144-node-263"></a>
 
 - **263** · clip 21: A group of people are seated around a wooden table covered with a red and white checkered cloth in a room equipped with a whiteboard and lighting gear.
 
-<a id="latest-committed-memory-segment-125-node-264"></a>
+<a id="latest-committed-memory-segment-144-node-264"></a>
 
 - **264** · clip 21: Various electronic devices, open boxes, and water bottles are arranged on the table surface.
 
-<a id="latest-committed-memory-segment-125-node-265"></a>
+<a id="latest-committed-memory-segment-144-node-265"></a>
 
-- **265** · clip 21: At 00:02, &lt;voice_260&gt; speaks, stating '大东北，我的家乡。'  **Links:** ↔ [260](#latest-committed-memory-segment-125-node-260)
+- **265** · clip 21: At 00:02, &lt;voice_260&gt; speaks, stating '大东北，我的家乡。'  **Links:** ↔ [260](#latest-committed-memory-segment-144-node-260)
 
-<a id="latest-committed-memory-segment-125-node-266"></a>
+<a id="latest-committed-memory-segment-144-node-266"></a>
 
-- **266** · clip 21: At 00:07, &lt;voice_261&gt; asks '你东北哪儿的？' regarding the specific region.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **266** · clip 21: At 00:07, &lt;voice_261&gt; asks '你东北哪儿的？' regarding the specific region.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-267"></a>
+<a id="latest-committed-memory-segment-144-node-267"></a>
 
-- **267** · clip 21: At 00:09, &lt;voice_262&gt; identifies themselves as being from '栾花村'.  **Links:** ↔ [262](#latest-committed-memory-segment-125-node-262)
+- **267** · clip 21: At 00:09, &lt;voice_262&gt; identifies themselves as being from '栾花村'.  **Links:** ↔ [262](#latest-committed-memory-segment-144-node-262)
 
-<a id="latest-committed-memory-segment-125-node-268"></a>
+<a id="latest-committed-memory-segment-144-node-268"></a>
 
-- **268** · clip 21: At 00:16, &lt;voice_250&gt; mentions '吉林省长春市' and asks if others know the city.  **Links:** ↔ [250](#latest-committed-memory-segment-125-node-250)
+- **268** · clip 21: At 00:16, &lt;voice_250&gt; mentions '吉林省长春市' and asks if others know the city.  **Links:** ↔ [250](#latest-committed-memory-segment-144-node-250)
 
-<a id="latest-committed-memory-segment-125-node-269"></a>
+<a id="latest-committed-memory-segment-144-node-269"></a>
 
-- **269** · clip 21: At 00:26, &lt;voice_0&gt; responds, saying '这-这也知道。'  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **269** · clip 21: At 00:26, &lt;voice_0&gt; responds, saying '这-这也知道。'  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-270"></a>
+<a id="latest-committed-memory-segment-144-node-270"></a>
 
 - **270** · clip 21: The participants continue to handle objects and engage in discussion throughout the clip.
 
-<a id="latest-committed-memory-segment-125-node-271"></a>
+<a id="latest-committed-memory-segment-144-node-271"></a>
 
 - **271** · clip 21: The camera perspective shifts slightly, revealing a window and a projector screen in the background.
 
-<a id="latest-committed-memory-segment-125-node-278"></a>
+<a id="latest-committed-memory-segment-144-node-278"></a>
 
 - **278** · clip 22: A group of individuals is seated around a wooden table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-279"></a>
+<a id="latest-committed-memory-segment-144-node-279"></a>
 
 - **279** · clip 22: One person wearing an orange shirt is positioned on the right side of the table, handling a small electronic device.
 
-<a id="latest-committed-memory-segment-125-node-280"></a>
+<a id="latest-committed-memory-segment-144-node-280"></a>
 
 - **280** · clip 22: Another individual dressed in black is seated on the left side, interacting with items placed on the table.
 
-<a id="latest-committed-memory-segment-125-node-281"></a>
+<a id="latest-committed-memory-segment-144-node-281"></a>
 
 - **281** · clip 22: The camera captures the group engaged in collaborative work involving various components and boxes.
 
-<a id="latest-committed-memory-segment-125-node-282"></a>
+<a id="latest-committed-memory-segment-144-node-282"></a>
 
 - **282** · clip 22: At approximately 15 seconds, the camera pans away from the table to reveal a large projection screen and a checkered target board on the wall.
 
-<a id="latest-committed-memory-segment-125-node-283"></a>
+<a id="latest-committed-memory-segment-144-node-283"></a>
 
 - **283** · clip 22: Lighting equipment stands are visible near the window and adjacent to the projection screen.
 
-<a id="latest-committed-memory-segment-125-node-284"></a>
+<a id="latest-committed-memory-segment-144-node-284"></a>
 
 - **284** · clip 22: The camera returns its focus to the group at the table after showing the room layout.
 
-<a id="latest-committed-memory-segment-125-node-285"></a>
+<a id="latest-committed-memory-segment-144-node-285"></a>
 
 - **285** · clip 22: The participants continue to manipulate objects and discuss while seated around the table.
 
-<a id="latest-committed-memory-segment-125-node-289"></a>
+<a id="latest-committed-memory-segment-144-node-289"></a>
 
 - **289** · clip 24: A group of people are seated around a table in a room equipped with a whiteboard and projector.
 
-<a id="latest-committed-memory-segment-125-node-290"></a>
+<a id="latest-committed-memory-segment-144-node-290"></a>
 
 - **290** · clip 24: The camera wearer extends their arm into the frame towards the group.
 
-<a id="latest-committed-memory-segment-125-node-291"></a>
+<a id="latest-committed-memory-segment-144-node-291"></a>
 
 - **291** · clip 24: The hand moves closer to a woman with reddish hair wearing a white shirt.
 
-<a id="latest-committed-memory-segment-125-node-292"></a>
+<a id="latest-committed-memory-segment-144-node-292"></a>
 
 - **292** · clip 24: Other participants are visible seated along the sides of the table.
 
-<a id="latest-committed-memory-segment-125-node-293"></a>
+<a id="latest-committed-memory-segment-144-node-293"></a>
 
 - **293** · clip 24: The setting appears to be a collaborative workspace or meeting area.
 
-<a id="latest-committed-memory-segment-125-node-299"></a>
+<a id="latest-committed-memory-segment-144-node-299"></a>
 
 - **299** · clip 25: Four individuals are seated around a table covered with a checkered cloth, examining electronic components and cardboard boxes.
 
-<a id="latest-committed-memory-segment-125-node-300"></a>
+<a id="latest-committed-memory-segment-144-node-300"></a>
 
 - **300** · clip 25: A person wearing a white shirt and glasses in the foreground handles small black devices and wires.
 
-<a id="latest-committed-memory-segment-125-node-301"></a>
+<a id="latest-committed-memory-segment-144-node-301"></a>
 
 - **301** · clip 25: The camera wearer, wearing a blue shirt, holds a large blue box labeled HONOR and opens it to reveal a device inside.
 
-<a id="latest-committed-memory-segment-125-node-302"></a>
+<a id="latest-committed-memory-segment-144-node-302"></a>
 
 - **302** · clip 25: Other participants, including one with blonde hair and another with dark hair, assist by organizing items on the table.
 
-<a id="latest-committed-memory-segment-125-node-303"></a>
+<a id="latest-committed-memory-segment-144-node-303"></a>
 
-- **303** · clip 25: &lt;voice_296&gt; states 'Can enter.' during the initial phase of the interaction.  **Links:** ↔ [296](#latest-committed-memory-segment-125-node-296)
+- **303** · clip 25: &lt;voice_296&gt; states 'Can enter.' during the initial phase of the interaction.  **Links:** ↔ [296](#latest-committed-memory-segment-144-node-296)
 
-<a id="latest-committed-memory-segment-125-node-304"></a>
+<a id="latest-committed-memory-segment-144-node-304"></a>
 
-- **304** · clip 25: &lt;voice_297&gt; responds 'Okay, I've been through the field already' and compares the current task to university wiring projects.  **Links:** ↔ [297](#latest-committed-memory-segment-125-node-297)
+- **304** · clip 25: &lt;voice_297&gt; responds 'Okay, I've been through the field already' and compares the current task to university wiring projects.  **Links:** ↔ [297](#latest-committed-memory-segment-144-node-297)
 
-<a id="latest-committed-memory-segment-125-node-305"></a>
+<a id="latest-committed-memory-segment-144-node-305"></a>
 
-- **305** · clip 25: &lt;voice_0&gt; asks '&lt;voice_297&gt; if they have played through the field before' and questions if the activity involves IoT technology.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0) · ↔ [297](#latest-committed-memory-segment-125-node-297)
+- **305** · clip 25: &lt;voice_0&gt; asks '&lt;voice_297&gt; if they have played through the field before' and questions if the activity involves IoT technology.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [297](#latest-committed-memory-segment-144-node-297)
 
-<a id="latest-committed-memory-segment-125-node-306"></a>
+<a id="latest-committed-memory-segment-144-node-306"></a>
 
-- **306** · clip 25: &lt;voice_298&gt; clarifies the terminology used, specifying 'wall panel.'  **Links:** ↔ [298](#latest-committed-memory-segment-125-node-298)
+- **306** · clip 25: &lt;voice_298&gt; clarifies the terminology used, specifying 'wall panel.'  **Links:** ↔ [298](#latest-committed-memory-segment-144-node-298)
 
-<a id="latest-committed-memory-segment-125-node-313"></a>
+<a id="latest-committed-memory-segment-144-node-313"></a>
 
 - **313** · clip 26: A group of people are seated around a table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-314"></a>
+<a id="latest-committed-memory-segment-144-node-314"></a>
 
-- **314** · clip 26: Speaker &lt;voice_0&gt; discusses production lines, stating, 'MAI: 对。出流水线，下一个流水线。'  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **314** · clip 26: Speaker &lt;voice_0&gt; discusses production lines, stating, 'MAI: 对。出流水线，下一个流水线。'  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-315"></a>
+<a id="latest-committed-memory-segment-144-node-315"></a>
 
-- **315** · clip 26: The conversation continues with speaker &lt;voice_310&gt; mentioning connections to a computer on the next line.  **Links:** ↔ [310](#latest-committed-memory-segment-125-node-310)
+- **315** · clip 26: The conversation continues with speaker &lt;voice_310&gt; mentioning connections to a computer on the next line.  **Links:** ↔ [310](#latest-committed-memory-segment-144-node-310)
 
-<a id="latest-committed-memory-segment-125-node-316"></a>
+<a id="latest-committed-memory-segment-144-node-316"></a>
 
-- **316** · clip 26: Speaker &lt;voice_311&gt; seeks confirmation with the phrase, 'MAI: 对不对。'  **Links:** ↔ [311](#latest-committed-memory-segment-125-node-311)
+- **316** · clip 26: Speaker &lt;voice_311&gt; seeks confirmation with the phrase, 'MAI: 对不对。'  **Links:** ↔ [311](#latest-committed-memory-segment-144-node-311)
 
-<a id="latest-committed-memory-segment-125-node-317"></a>
+<a id="latest-committed-memory-segment-144-node-317"></a>
 
-- **317** · clip 26: Speaker &lt;voice_312&gt; notes that the next step requires a senior technician and questions if the current role is a technician.  **Links:** ↔ [312](#latest-committed-memory-segment-125-node-312)
+- **317** · clip 26: Speaker &lt;voice_312&gt; notes that the next step requires a senior technician and questions if the current role is a technician.  **Links:** ↔ [312](#latest-committed-memory-segment-144-node-312)
 
-<a id="latest-committed-memory-segment-125-node-318"></a>
+<a id="latest-committed-memory-segment-144-node-318"></a>
 
 - **318** · clip 26: The camera wearer holds a blue box while observing the discussion at the table.
 
-<a id="latest-committed-memory-segment-125-node-319"></a>
+<a id="latest-committed-memory-segment-144-node-319"></a>
 
 - **319** · clip 26: After the discussion, the camera wearer stands up and walks away from the table.
 
-<a id="latest-committed-memory-segment-125-node-320"></a>
+<a id="latest-committed-memory-segment-144-node-320"></a>
 
 - **320** · clip 26: The camera wearer enters a bedroom and places the blue box on the unmade bed.
 
-<a id="latest-committed-memory-segment-125-node-325"></a>
+<a id="latest-committed-memory-segment-144-node-325"></a>
 
 - **325** · clip 27: A group of individuals are gathered around a table with a checkered tablecloth in a room featuring a kitchenette.
 
-<a id="latest-committed-memory-segment-125-node-326"></a>
+<a id="latest-committed-memory-segment-144-node-326"></a>
 
-- **326** · clip 27: &lt;voice_323&gt; states 'Technology.' during the initial segment.  **Links:** ↔ [323](#latest-committed-memory-segment-125-node-323)
+- **326** · clip 27: &lt;voice_323&gt; states 'Technology.' during the initial segment.  **Links:** ↔ [323](#latest-committed-memory-segment-144-node-323)
 
-<a id="latest-committed-memory-segment-125-node-327"></a>
+<a id="latest-committed-memory-segment-144-node-327"></a>
 
 - **327** · clip 27: The camera captures various angles of the participants, including a person in an orange shirt handling a black device.
 
-<a id="latest-committed-memory-segment-125-node-328"></a>
+<a id="latest-committed-memory-segment-144-node-328"></a>
 
-- **328** · clip 27: &lt;voice_0&gt; remarks 'Sigh, upside down, upside down, upside down. This has value lines. Look at the side, curved. Curved, is your 2000? The 2000.' regarding the object.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **328** · clip 27: &lt;voice_0&gt; remarks 'Sigh, upside down, upside down, upside down. This has value lines. Look at the side, curved. Curved, is your 2000? The 2000.' regarding the object.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-329"></a>
+<a id="latest-committed-memory-segment-144-node-329"></a>
 
-- **329** · clip 27: &lt;voice_324&gt; responds 'No, I have to compete a bit.' indicating a challenge or competition aspect.  **Links:** ↔ [324](#latest-committed-memory-segment-125-node-324)
+- **329** · clip 27: &lt;voice_324&gt; responds 'No, I have to compete a bit.' indicating a challenge or competition aspect.  **Links:** ↔ [324](#latest-committed-memory-segment-144-node-324)
 
-<a id="latest-committed-memory-segment-125-node-330"></a>
+<a id="latest-committed-memory-segment-144-node-330"></a>
 
-- **330** · clip 27: &lt;voice_0&gt; concludes 'Okay, hard drive benchmark.' confirming the purpose of the activity.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **330** · clip 27: &lt;voice_0&gt; concludes 'Okay, hard drive benchmark.' confirming the purpose of the activity.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-331"></a>
+<a id="latest-committed-memory-segment-144-node-331"></a>
 
 - **331** · clip 27: The camera wearer reaches out to interact with the device held by the person in the orange shirt.
 
-<a id="latest-committed-memory-segment-125-node-332"></a>
+<a id="latest-committed-memory-segment-144-node-332"></a>
 
 - **332** · clip 27: The camera pans to show a tripod and a whiteboard mounted on the wall.
 
-<a id="latest-committed-memory-segment-125-node-333"></a>
+<a id="latest-committed-memory-segment-144-node-333"></a>
 
 - **333** · clip 27: The group continues to examine and discuss the device on the table.
 
-<a id="latest-committed-memory-segment-125-node-340"></a>
+<a id="latest-committed-memory-segment-144-node-340"></a>
 
 - **340** · clip 28: A group of people are seated around a wooden table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-341"></a>
+<a id="latest-committed-memory-segment-144-node-341"></a>
 
 - **341** · clip 28: The camera is positioned from a first-person perspective, showing the legs and hands of the person filming.
 
-<a id="latest-committed-memory-segment-125-node-342"></a>
+<a id="latest-committed-memory-segment-144-node-342"></a>
 
 - **342** · clip 28: People on the table are engaged in conversation and handling various items, including a cardboard box.
 
-<a id="latest-committed-memory-segment-125-node-343"></a>
+<a id="latest-committed-memory-segment-144-node-343"></a>
 
 - **343** · clip 28: One individual wearing a peach-colored shirt holds a black rectangular object.
 
-<a id="latest-committed-memory-segment-125-node-344"></a>
+<a id="latest-committed-memory-segment-144-node-344"></a>
 
 - **344** · clip 28: Hands from the foreground reach towards the box on the table during the interaction.
 
-<a id="latest-committed-memory-segment-125-node-345"></a>
+<a id="latest-committed-memory-segment-144-node-345"></a>
 
 - **345** · clip 28: The group appears to be discussing tasks or plans while sitting in a room with a window and whiteboard in the background.
 
-<a id="latest-committed-memory-segment-125-node-352"></a>
+<a id="latest-committed-memory-segment-144-node-352"></a>
 
 - **352** · clip 29: A group of people are seated around a table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-353"></a>
+<a id="latest-committed-memory-segment-144-node-353"></a>
 
 - **353** · clip 29: A person wearing a brown shirt is handling a blue and white box on the table.
 
-<a id="latest-committed-memory-segment-125-node-354"></a>
+<a id="latest-committed-memory-segment-144-node-354"></a>
 
 - **354** · clip 29: The camera wearer reaches out towards the box held by the person in the brown shirt.
 
-<a id="latest-committed-memory-segment-125-node-355"></a>
+<a id="latest-committed-memory-segment-144-node-355"></a>
 
 - **355** · clip 29: The person in the brown shirt places the box on the table.
 
-<a id="latest-committed-memory-segment-125-node-356"></a>
+<a id="latest-committed-memory-segment-144-node-356"></a>
 
 - **356** · clip 29: The camera wearer picks up the box and holds it with both hands.
 
-<a id="latest-committed-memory-segment-125-node-357"></a>
+<a id="latest-committed-memory-segment-144-node-357"></a>
 
 - **357** · clip 29: The camera wearer lifts the box to inspect it.
 
-<a id="latest-committed-memory-segment-125-node-358"></a>
+<a id="latest-committed-memory-segment-144-node-358"></a>
 
 - **358** · clip 29: The camera wearer places the box back on the table.
 
-<a id="latest-committed-memory-segment-125-node-359"></a>
+<a id="latest-committed-memory-segment-144-node-359"></a>
 
 - **359** · clip 29: The camera wearer rests their hands on their lap.
 
-<a id="latest-committed-memory-segment-125-node-369"></a>
+<a id="latest-committed-memory-segment-144-node-369"></a>
 
 - **369** · clip 30: The video opens with a group of individuals seated around a table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-370"></a>
+<a id="latest-committed-memory-segment-144-node-370"></a>
 
-- **370** · clip 30: At 00:00, &lt;voice_364&gt; confirms that it is Sunday afternoon.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **370** · clip 30: At 00:00, &lt;voice_364&gt; confirms that it is Sunday afternoon.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-371"></a>
+<a id="latest-committed-memory-segment-144-node-371"></a>
 
-- **371** · clip 30: At 00:04, &lt;voice_365&gt; asks who is being invited.  **Links:** ↔ [365](#latest-committed-memory-segment-125-node-365)
+- **371** · clip 30: At 00:04, &lt;voice_365&gt; asks who is being invited.  **Links:** ↔ [365](#latest-committed-memory-segment-144-node-365)
 
-<a id="latest-committed-memory-segment-125-node-372"></a>
+<a id="latest-committed-memory-segment-144-node-372"></a>
 
-- **372** · clip 30: At 00:06, &lt;voice_0&gt; inquires about the number of invitees and suggests writing on the blackboard.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **372** · clip 30: At 00:06, &lt;voice_0&gt; inquires about the number of invitees and suggests writing on the blackboard.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-373"></a>
+<a id="latest-committed-memory-segment-144-node-373"></a>
 
-- **373** · clip 30: At 00:08, &lt;voice_366&gt; agrees to write on the blackboard.  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **373** · clip 30: At 00:08, &lt;voice_366&gt; agrees to write on the blackboard.  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-374"></a>
+<a id="latest-committed-memory-segment-144-node-374"></a>
 
-- **374** · clip 30: At 00:10, &lt;voice_0&gt; mentions having a shelf and proposes assembling it.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **374** · clip 30: At 00:10, &lt;voice_0&gt; mentions having a shelf and proposes assembling it.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-375"></a>
+<a id="latest-committed-memory-segment-144-node-375"></a>
 
-- **375** · clip 30: At 00:11, &lt;voice_367&gt; claims their handwriting is very good.  **Links:** ↔ [367](#latest-committed-memory-segment-125-node-367)
+- **375** · clip 30: At 00:11, &lt;voice_367&gt; claims their handwriting is very good.  **Links:** ↔ [367](#latest-committed-memory-segment-144-node-367)
 
-<a id="latest-committed-memory-segment-125-node-376"></a>
+<a id="latest-committed-memory-segment-144-node-376"></a>
 
-- **376** · clip 30: At 00:18, &lt;voice_368&gt; asks what kind of shelf they are referring to.  **Links:** ↔ [368](#latest-committed-memory-segment-125-node-368)
+- **376** · clip 30: At 00:18, &lt;voice_368&gt; asks what kind of shelf they are referring to.  **Links:** ↔ [368](#latest-committed-memory-segment-144-node-368)
 
-<a id="latest-committed-memory-segment-125-node-377"></a>
+<a id="latest-committed-memory-segment-144-node-377"></a>
 
 - **377** · clip 30: A person wearing a pink shirt stands up from the table around 00:13.
 
-<a id="latest-committed-memory-segment-125-node-378"></a>
+<a id="latest-committed-memory-segment-144-node-378"></a>
 
 - **378** · clip 30: The camera pans to show a bedroom area containing a desk and an unmade bed.
 
-<a id="latest-committed-memory-segment-125-node-379"></a>
+<a id="latest-committed-memory-segment-144-node-379"></a>
 
 - **379** · clip 30: A person is seen holding a box or book near the bed.
 
-<a id="latest-committed-memory-segment-125-node-380"></a>
+<a id="latest-committed-memory-segment-144-node-380"></a>
 
 - **380** · clip 30: The camera returns to the main room where the person in the pink shirt stands near the doorway.
 
-<a id="latest-committed-memory-segment-125-node-381"></a>
+<a id="latest-committed-memory-segment-144-node-381"></a>
 
 - **381** · clip 30: The camera moves into a hallway where a hand reaches out to pick up a long cardboard box leaning against the wall.
 
-<a id="latest-committed-memory-segment-125-node-390"></a>
+<a id="latest-committed-memory-segment-144-node-390"></a>
 
 - **390** · clip 31: The camera wearer carries a long cardboard box with red markings through a hallway.
 
-<a id="latest-committed-memory-segment-125-node-391"></a>
+<a id="latest-committed-memory-segment-144-node-391"></a>
 
 - **391** · clip 31: In the adjacent room, a person in a pink shirt stands near a projector screen while others sit at a table.
 
-<a id="latest-committed-memory-segment-125-node-392"></a>
+<a id="latest-committed-memory-segment-144-node-392"></a>
 
 - **392** · clip 31: The camera wearer enters a bedroom and places the box on a desk.
 
-<a id="latest-committed-memory-segment-125-node-393"></a>
+<a id="latest-committed-memory-segment-144-node-393"></a>
 
 - **393** · clip 31: The camera pans around the room, showing the group at the table and the person in the pink shirt walking away.
 
-<a id="latest-committed-memory-segment-125-node-399"></a>
+<a id="latest-committed-memory-segment-144-node-399"></a>
 
 - **399** · clip 32: The camera is positioned in a room containing cardboard boxes, a tripod, and a shoe rack.
 
-<a id="latest-committed-memory-segment-125-node-400"></a>
+<a id="latest-committed-memory-segment-144-node-400"></a>
 
-- **400** · clip 32: Audio from `&lt;voice_398&gt;` is captured stating, 'Pia, &#124; MAI: 笔应该在上面，等一下嘛。笔。'  **Links:** ↔ [398](#latest-committed-memory-segment-125-node-398)
+- **400** · clip 32: Audio from `&lt;voice_398&gt;` is captured stating, 'Pia, &#124; MAI: 笔应该在上面，等一下嘛。笔。'  **Links:** ↔ [398](#latest-committed-memory-segment-144-node-398)
 
-<a id="latest-committed-memory-segment-125-node-401"></a>
+<a id="latest-committed-memory-segment-144-node-401"></a>
 
 - **401** · clip 32: The camera operator walks through a doorway into a hallway area.
 
-<a id="latest-committed-memory-segment-125-node-402"></a>
+<a id="latest-committed-memory-segment-144-node-402"></a>
 
 - **402** · clip 32: The view shifts to show a washing machine and more boxes in the adjacent room.
 
-<a id="latest-committed-memory-segment-125-node-403"></a>
+<a id="latest-committed-memory-segment-144-node-403"></a>
 
 - **403** · clip 32: The camera proceeds to ascend a wooden staircase.
 
-<a id="latest-committed-memory-segment-125-node-404"></a>
+<a id="latest-committed-memory-segment-144-node-404"></a>
 
 - **404** · clip 32: Upon reaching the top, the camera enters a room furnished with a desk, chairs, and a large white projection screen.
 
-<a id="latest-committed-memory-segment-125-node-405"></a>
+<a id="latest-committed-memory-segment-144-node-405"></a>
 
 - **405** · clip 32: The camera operator reaches out and picks up a black and white film clapperboard resting on the desk.
 
-<a id="latest-committed-memory-segment-125-node-406"></a>
+<a id="latest-committed-memory-segment-144-node-406"></a>
 
 - **406** · clip 32: Holding the clapperboard, the camera turns and begins descending the staircase again.
 
-<a id="latest-committed-memory-segment-125-node-407"></a>
+<a id="latest-committed-memory-segment-144-node-407"></a>
 
 - **407** · clip 32: The camera passes through a doorway into a room where several people are seated around a table.
 
-<a id="latest-committed-memory-segment-125-node-416"></a>
+<a id="latest-committed-memory-segment-144-node-416"></a>
 
 - **416** · clip 33: A group of people sit around a table covered with a red and white checkered tablecloth while one person stands nearby wearing a peach-colored t-shirt.
 
-<a id="latest-committed-memory-segment-125-node-417"></a>
+<a id="latest-committed-memory-segment-144-node-417"></a>
 
-- **417** · clip 33: &lt;voice_31&gt; states 'MAI: 我。'  **Links:** ↔ [31](#latest-committed-memory-segment-125-node-31)
+- **417** · clip 33: &lt;voice_31&gt; states 'MAI: 我。'  **Links:** ↔ [31](#latest-committed-memory-segment-144-node-31)
 
-<a id="latest-committed-memory-segment-125-node-418"></a>
+<a id="latest-committed-memory-segment-144-node-418"></a>
 
-- **418** · clip 33: &lt;voice_411&gt; remarks 'MAI: 唉，你是1。'  **Links:** ↔ [411](#latest-committed-memory-segment-125-node-411)
+- **418** · clip 33: &lt;voice_411&gt; remarks 'MAI: 唉，你是1。'  **Links:** ↔ [411](#latest-committed-memory-segment-144-node-411)
 
-<a id="latest-committed-memory-segment-125-node-419"></a>
+<a id="latest-committed-memory-segment-144-node-419"></a>
 
-- **419** · clip 33: &lt;voice_412&gt; clarifies 'MAI: 我，我是1，不是1，OK？'  **Links:** ↔ [412](#latest-committed-memory-segment-125-node-412)
+- **419** · clip 33: &lt;voice_412&gt; clarifies 'MAI: 我，我是1，不是1，OK？'  **Links:** ↔ [412](#latest-committed-memory-segment-144-node-412)
 
-<a id="latest-committed-memory-segment-125-node-420"></a>
+<a id="latest-committed-memory-segment-144-node-420"></a>
 
-- **420** · clip 33: &lt;voice_413&gt; asks 'MAI: 有啥区别？'  **Links:** ↔ [413](#latest-committed-memory-segment-125-node-413)
+- **420** · clip 33: &lt;voice_413&gt; asks 'MAI: 有啥区别？'  **Links:** ↔ [413](#latest-committed-memory-segment-144-node-413)
 
-<a id="latest-committed-memory-segment-125-node-421"></a>
+<a id="latest-committed-memory-segment-144-node-421"></a>
 
-- **421** · clip 33: &lt;voice_201&gt; explains 'MAI: 哦，所以我们是三一两唉，那倩欣是，然后你，昨天我没有，昨天我没有猜到来，虽然我知道他可能是1人。'  **Links:** ↔ [201](#latest-committed-memory-segment-125-node-201)
+- **421** · clip 33: &lt;voice_201&gt; explains 'MAI: 哦，所以我们是三一两唉，那倩欣是，然后你，昨天我没有，昨天我没有猜到来，虽然我知道他可能是1人。'  **Links:** ↔ [201](#latest-committed-memory-segment-144-node-201)
 
-<a id="latest-committed-memory-segment-125-node-422"></a>
+<a id="latest-committed-memory-segment-144-node-422"></a>
 
-- **422** · clip 33: &lt;voice_414&gt; announces 'MAI: Ego live.'  **Links:** ↔ [414](#latest-committed-memory-segment-125-node-414)
+- **422** · clip 33: &lt;voice_414&gt; announces 'MAI: Ego live.'  **Links:** ↔ [414](#latest-committed-memory-segment-144-node-414)
 
-<a id="latest-committed-memory-segment-125-node-423"></a>
+<a id="latest-committed-memory-segment-144-node-423"></a>
 
-- **423** · clip 33: &lt;voice_415&gt; notes 'MAI: 最后一天的一天。'  **Links:** ↔ [415](#latest-committed-memory-segment-125-node-415)
+- **423** · clip 33: &lt;voice_415&gt; notes 'MAI: 最后一天的一天。'  **Links:** ↔ [415](#latest-committed-memory-segment-144-node-415)
 
-<a id="latest-committed-memory-segment-125-node-424"></a>
+<a id="latest-committed-memory-segment-144-node-424"></a>
 
 - **424** · clip 33: The camera pans briefly to show a projector screen and lighting equipment before returning to the group.
 
-<a id="latest-committed-memory-segment-125-node-425"></a>
+<a id="latest-committed-memory-segment-144-node-425"></a>
 
 - **425** · clip 33: The standing individual moves toward a whiteboard mounted on the wall and begins writing on it.
 
-<a id="latest-committed-memory-segment-125-node-432"></a>
+<a id="latest-committed-memory-segment-144-node-432"></a>
 
 - **432** · clip 34: A group of individuals are gathered around a long table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-433"></a>
+<a id="latest-committed-memory-segment-144-node-433"></a>
 
 - **433** · clip 34: One person stands at the head of the table near a whiteboard, while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-434"></a>
+<a id="latest-committed-memory-segment-144-node-434"></a>
 
 - **434** · clip 34: A clapperboard rests on the table in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-435"></a>
+<a id="latest-committed-memory-segment-144-node-435"></a>
 
-- **435** · clip 34: At 00:06, voice &lt;voice_0&gt; speaks, confirming comprehension and asking if 'painting' is written correctly.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **435** · clip 34: At 00:06, voice &lt;voice_0&gt; speaks, confirming comprehension and asking if 'painting' is written correctly.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-436"></a>
+<a id="latest-committed-memory-segment-144-node-436"></a>
 
-- **436** · clip 34: At 00:11, voice &lt;voice_430&gt; asks about the spelling of 'waist' and confirms the correct writing.  **Links:** ↔ [430](#latest-committed-memory-segment-125-node-430)
+- **436** · clip 34: At 00:11, voice &lt;voice_430&gt; asks about the spelling of 'waist' and confirms the correct writing.  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430)
 
-<a id="latest-committed-memory-segment-125-node-437"></a>
+<a id="latest-committed-memory-segment-144-node-437"></a>
 
-- **437** · clip 34: At 00:24, voice &lt;voice_415&gt; states that something has not been written yet.  **Links:** ↔ [415](#latest-committed-memory-segment-125-node-415)
+- **437** · clip 34: At 00:24, voice &lt;voice_415&gt; states that something has not been written yet.  **Links:** ↔ [415](#latest-committed-memory-segment-144-node-415)
 
-<a id="latest-committed-memory-segment-125-node-438"></a>
+<a id="latest-committed-memory-segment-144-node-438"></a>
 
-- **438** · clip 34: At 00:26, voice &lt;voice_431&gt; repeats the term 'treasure box'.  **Links:** ↔ [431](#latest-committed-memory-segment-125-node-431)
+- **438** · clip 34: At 00:26, voice &lt;voice_431&gt; repeats the term 'treasure box'.  **Links:** ↔ [431](#latest-committed-memory-segment-144-node-431)
 
-<a id="latest-committed-memory-segment-125-node-439"></a>
+<a id="latest-committed-memory-segment-144-node-439"></a>
 
 - **439** · clip 34: The camera remains stationary, capturing the group's interaction and the whiteboard activity.
 
-<a id="latest-committed-memory-segment-125-node-449"></a>
+<a id="latest-committed-memory-segment-144-node-449"></a>
 
 - **449** · clip 35: A group of individuals gather around a long table covered with a red-and-white checkered cloth in a room equipped with a projector screen and whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-450"></a>
+<a id="latest-committed-memory-segment-144-node-450"></a>
 
 - **450** · clip 35: A clapperboard rests on the table, indicating a film set or rehearsal environment.
 
-<a id="latest-committed-memory-segment-125-node-451"></a>
+<a id="latest-committed-memory-segment-144-node-451"></a>
 
 - **451** · clip 35: The camera is positioned from a first-person perspective, showing the hands of the operator resting on the table.
 
-<a id="latest-committed-memory-segment-125-node-452"></a>
+<a id="latest-committed-memory-segment-144-node-452"></a>
 
-- **452** · clip 35: &lt;voice_443&gt; announces, 'OK. First position.' while standing near the whiteboard.  **Links:** ↔ [443](#latest-committed-memory-segment-125-node-443)
+- **452** · clip 35: &lt;voice_443&gt; announces, 'OK. First position.' while standing near the whiteboard.  **Links:** ↔ [443](#latest-committed-memory-segment-144-node-443)
 
-<a id="latest-committed-memory-segment-125-node-453"></a>
+<a id="latest-committed-memory-segment-144-node-453"></a>
 
-- **453** · clip 35: &lt;voice_0&gt; asks, 'Kiyomi, you invited several people, right?' during the discussion.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **453** · clip 35: &lt;voice_0&gt; asks, 'Kiyomi, you invited several people, right?' during the discussion.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-454"></a>
+<a id="latest-committed-memory-segment-144-node-454"></a>
 
-- **454** · clip 35: &lt;voice_430&gt; instructs, 'Kiyomi first invite one,' and later confirms, 'Okay, Kiyomi invite one.'  **Links:** ↔ [430](#latest-committed-memory-segment-125-node-430)
+- **454** · clip 35: &lt;voice_430&gt; instructs, 'Kiyomi first invite one,' and later confirms, 'Okay, Kiyomi invite one.'  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430)
 
-<a id="latest-committed-memory-segment-125-node-455"></a>
+<a id="latest-committed-memory-segment-144-node-455"></a>
 
-- **455** · clip 35: &lt;voice_444&gt; calls out, 'Lara?' to address a specific participant.  **Links:** ↔ [444](#latest-committed-memory-segment-125-node-444)
+- **455** · clip 35: &lt;voice_444&gt; calls out, 'Lara?' to address a specific participant.  **Links:** ↔ [444](#latest-committed-memory-segment-144-node-444)
 
-<a id="latest-committed-memory-segment-125-node-456"></a>
+<a id="latest-committed-memory-segment-144-node-456"></a>
 
-- **456** · clip 35: &lt;voice_445&gt; explains uncertainty, stating, 'I'm not too sure because they are too far away.'  **Links:** ↔ [445](#latest-committed-memory-segment-125-node-445)
+- **456** · clip 35: &lt;voice_445&gt; explains uncertainty, stating, 'I'm not too sure because they are too far away.'  **Links:** ↔ [445](#latest-committed-memory-segment-144-node-445)
 
-<a id="latest-committed-memory-segment-125-node-457"></a>
+<a id="latest-committed-memory-segment-144-node-457"></a>
 
-- **457** · clip 35: &lt;voice_446&gt; responds, 'I don't know if I can come.'  **Links:** ↔ [446](#latest-committed-memory-segment-125-node-446)
+- **457** · clip 35: &lt;voice_446&gt; responds, 'I don't know if I can come.'  **Links:** ↔ [446](#latest-committed-memory-segment-144-node-446)
 
-<a id="latest-committed-memory-segment-125-node-458"></a>
+<a id="latest-committed-memory-segment-144-node-458"></a>
 
-- **458** · clip 35: &lt;voice_447&gt; acknowledges with, 'Okay.'  **Links:** ↔ [447](#latest-committed-memory-segment-125-node-447)
+- **458** · clip 35: &lt;voice_447&gt; acknowledges with, 'Okay.'  **Links:** ↔ [447](#latest-committed-memory-segment-144-node-447)
 
-<a id="latest-committed-memory-segment-125-node-459"></a>
+<a id="latest-committed-memory-segment-144-node-459"></a>
 
-- **459** · clip 35: &lt;voice_261&gt; inquires, 'So where is your workplace?' regarding the potential attendee.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **459** · clip 35: &lt;voice_261&gt; inquires, 'So where is your workplace?' regarding the potential attendee.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-460"></a>
+<a id="latest-committed-memory-segment-144-node-460"></a>
 
-- **460** · clip 35: &lt;voice_448&gt; reiterates, 'Let's invite one, Kiyomi.'  **Links:** ↔ [448](#latest-committed-memory-segment-125-node-448)
+- **460** · clip 35: &lt;voice_448&gt; reiterates, 'Let's invite one, Kiyomi.'  **Links:** ↔ [448](#latest-committed-memory-segment-144-node-448)
 
-<a id="latest-committed-memory-segment-125-node-461"></a>
+<a id="latest-committed-memory-segment-144-node-461"></a>
 
 - **461** · clip 35: The participants continue to converse and gesture around the table throughout the sequence.
 
-<a id="latest-committed-memory-segment-125-node-470"></a>
+<a id="latest-committed-memory-segment-144-node-470"></a>
 
 - **470** · clip 36: A group of people are seated around a long wooden table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-471"></a>
+<a id="latest-committed-memory-segment-144-node-471"></a>
 
 - **471** · clip 36: One person stands at the far end of the table next to a whiteboard, appearing to write or draw on it.
 
-<a id="latest-committed-memory-segment-125-node-472"></a>
+<a id="latest-committed-memory-segment-144-node-472"></a>
 
 - **472** · clip 36: Several other individuals sit along the sides of the table, facing the person at the whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-473"></a>
+<a id="latest-committed-memory-segment-144-node-473"></a>
 
 - **473** · clip 36: A clapperboard is placed on the table in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-474"></a>
+<a id="latest-committed-memory-segment-144-node-474"></a>
 
 - **474** · clip 36: The room contains a projector screen on the left wall and a window with curtains on the right.
 
-<a id="latest-committed-memory-segment-125-node-475"></a>
+<a id="latest-committed-memory-segment-144-node-475"></a>
 
 - **475** · clip 36: The overhead circular light fixture is illuminated throughout the sequence.
 
-<a id="latest-committed-memory-segment-125-node-476"></a>
+<a id="latest-committed-memory-segment-144-node-476"></a>
 
 - **476** · clip 36: The camera view includes the arms and legs of the person filming, who is seated at the table.
 
-<a id="latest-committed-memory-segment-125-node-477"></a>
+<a id="latest-committed-memory-segment-144-node-477"></a>
 
 - **477** · clip 36: The camera operator raises their arm and points towards the center of the table.
 
-<a id="latest-committed-memory-segment-125-node-488"></a>
+<a id="latest-committed-memory-segment-144-node-488"></a>
 
 - **488** · clip 37: A group of four individuals are gathered around a long wooden table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-489"></a>
+<a id="latest-committed-memory-segment-144-node-489"></a>
 
 - **489** · clip 37: One person stands at the head of the table near a whiteboard, appearing to write or explain something.
 
-<a id="latest-committed-memory-segment-125-node-490"></a>
+<a id="latest-committed-memory-segment-144-node-490"></a>
 
 - **490** · clip 37: Three other individuals are seated along the sides of the table, facing the standing person.
 
-<a id="latest-committed-memory-segment-125-node-491"></a>
+<a id="latest-committed-memory-segment-144-node-491"></a>
 
 - **491** · clip 37: The camera wearer is seated at the table, indicated by legs visible in the lower portion of the frame.
 
-<a id="latest-committed-memory-segment-125-node-492"></a>
+<a id="latest-committed-memory-segment-144-node-492"></a>
 
 - **492** · clip 37: A projector screen is positioned against the wall on the left side of the room.
 
-<a id="latest-committed-memory-segment-125-node-493"></a>
+<a id="latest-committed-memory-segment-144-node-493"></a>
 
 - **493** · clip 37: The group engages in a discussion, with the standing individual gesturing towards the whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-503"></a>
+<a id="latest-committed-memory-segment-144-node-503"></a>
 
 - **503** · clip 38: A group of people are gathered around a table with a red checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-504"></a>
+<a id="latest-committed-memory-segment-144-node-504"></a>
 
 - **504** · clip 38: One individual stands at a whiteboard while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-505"></a>
+<a id="latest-committed-memory-segment-144-node-505"></a>
 
-- **505** · clip 38: &lt;voice_500&gt; asks, "MAI: 这合适吗？这。"  **Links:** ↔ [500](#latest-committed-memory-segment-125-node-500)
+- **505** · clip 38: &lt;voice_500&gt; asks, "MAI: 这合适吗？这。"  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
 
-<a id="latest-committed-memory-segment-125-node-506"></a>
+<a id="latest-committed-memory-segment-144-node-506"></a>
 
-- **506** · clip 38: &lt;voice_501&gt; says, "MAI: 对不起，先画猪头。"  **Links:** ↔ [501](#latest-committed-memory-segment-125-node-501)
+- **506** · clip 38: &lt;voice_501&gt; says, "MAI: 对不起，先画猪头。"  **Links:** ↔ [501](#latest-committed-memory-segment-144-node-501)
 
-<a id="latest-committed-memory-segment-125-node-507"></a>
+<a id="latest-committed-memory-segment-144-node-507"></a>
 
-- **507** · clip 38: &lt;voice_203&gt; states, "MAI: 我其实可以问一个女生，但不确定她能不能过来，因为她那边挺远的。"  **Links:** ↔ [203](#latest-committed-memory-segment-125-node-203)
+- **507** · clip 38: &lt;voice_203&gt; states, "MAI: 我其实可以问一个女生，但不确定她能不能过来，因为她那边挺远的。"  **Links:** ↔ [203](#latest-committed-memory-segment-144-node-203)
 
-<a id="latest-committed-memory-segment-125-node-508"></a>
+<a id="latest-committed-memory-segment-144-node-508"></a>
 
-- **508** · clip 38: &lt;voice_502&gt; asks, "MAI: 存疑是吗？"  **Links:** ↔ [502](#latest-committed-memory-segment-125-node-502)
+- **508** · clip 38: &lt;voice_502&gt; asks, "MAI: 存疑是吗？"  **Links:** ↔ [502](#latest-committed-memory-segment-144-node-502)
 
-<a id="latest-committed-memory-segment-125-node-509"></a>
+<a id="latest-committed-memory-segment-144-node-509"></a>
 
-- **509** · clip 38: &lt;voice_364&gt; instructs, "MAI: 你可以在每个人下面写一个。"  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **509** · clip 38: &lt;voice_364&gt; instructs, "MAI: 你可以在每个人下面写一个。"  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-510"></a>
+<a id="latest-committed-memory-segment-144-node-510"></a>
 
 - **510** · clip 38: The camera angle shifts to reveal the legs of the person holding the device.
 
-<a id="latest-committed-memory-segment-125-node-511"></a>
+<a id="latest-committed-memory-segment-144-node-511"></a>
 
 - **511** · clip 38: A hand reaches out to point towards the person at the whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-521"></a>
+<a id="latest-committed-memory-segment-144-node-521"></a>
 
 - **521** · clip 40: A group of people are seated around a long wooden table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-522"></a>
+<a id="latest-committed-memory-segment-144-node-522"></a>
 
 - **522** · clip 40: One individual stands at the head of the table writing on a whiteboard mounted on the wall.
 
-<a id="latest-committed-memory-segment-125-node-523"></a>
+<a id="latest-committed-memory-segment-144-node-523"></a>
 
 - **523** · clip 40: Several others are seated around the table, observing the whiteboard and engaging in conversation.
 
-<a id="latest-committed-memory-segment-125-node-524"></a>
+<a id="latest-committed-memory-segment-144-node-524"></a>
 
 - **524** · clip 40: A clapperboard rests on the table near the foreground, along with a plastic water bottle.
 
-<a id="latest-committed-memory-segment-125-node-525"></a>
+<a id="latest-committed-memory-segment-144-node-525"></a>
 
-- **525** · clip 40: The speaker &lt;voice_467&gt; addresses the group saying 'MAI: 喏，紫夏，然后对。LYS.'  **Links:** ↔ [467](#latest-committed-memory-segment-125-node-467)
+- **525** · clip 40: The speaker &lt;voice_467&gt; addresses the group saying 'MAI: 喏，紫夏，然后对。LYS.'  **Links:** ↔ [467](#latest-committed-memory-segment-144-node-467)
 
-<a id="latest-committed-memory-segment-125-node-526"></a>
+<a id="latest-committed-memory-segment-144-node-526"></a>
 
-- **526** · clip 40: Later, the speaker &lt;voice_516&gt; asks 'MAI: 这位是谁的？'  **Links:** ↔ [516](#latest-committed-memory-segment-125-node-516)
+- **526** · clip 40: Later, the speaker &lt;voice_516&gt; asks 'MAI: 这位是谁的？'  **Links:** ↔ [516](#latest-committed-memory-segment-144-node-516)
 
-<a id="latest-committed-memory-segment-125-node-527"></a>
+<a id="latest-committed-memory-segment-144-node-527"></a>
 
-- **527** · clip 40: The speaker &lt;voice_517&gt; responds 'MAI: 我紫夏，或者写个L也行。'  **Links:** ↔ [517](#latest-committed-memory-segment-125-node-517)
+- **527** · clip 40: The speaker &lt;voice_517&gt; responds 'MAI: 我紫夏，或者写个L也行。'  **Links:** ↔ [517](#latest-committed-memory-segment-144-node-517)
 
-<a id="latest-committed-memory-segment-125-node-528"></a>
+<a id="latest-committed-memory-segment-144-node-528"></a>
 
-- **528** · clip 40: The speaker &lt;voice_518&gt; continues the discussion asking 'MAI: 还有呢？你要你请两个。'  **Links:** ↔ [518](#latest-committed-memory-segment-125-node-518)
+- **528** · clip 40: The speaker &lt;voice_518&gt; continues the discussion asking 'MAI: 还有呢？你要你请两个。'  **Links:** ↔ [518](#latest-committed-memory-segment-144-node-518)
 
-<a id="latest-committed-memory-segment-125-node-529"></a>
+<a id="latest-committed-memory-segment-144-node-529"></a>
 
-- **529** · clip 40: The speaker &lt;voice_519&gt; adds 'MAI: 对，但有一个可能来不了。'  **Links:** ↔ [519](#latest-committed-memory-segment-125-node-519)
+- **529** · clip 40: The speaker &lt;voice_519&gt; adds 'MAI: 对，但有一个可能来不了。'  **Links:** ↔ [519](#latest-committed-memory-segment-144-node-519)
 
-<a id="latest-committed-memory-segment-125-node-530"></a>
+<a id="latest-committed-memory-segment-144-node-530"></a>
 
-- **530** · clip 40: Finally, the speaker &lt;voice_520&gt; clarifies 'MAI: 性别？', followed by 'MAI: 都是女的。'  **Links:** ↔ [520](#latest-committed-memory-segment-125-node-520)
+- **530** · clip 40: Finally, the speaker &lt;voice_520&gt; clarifies 'MAI: 性别？', followed by 'MAI: 都是女的。'  **Links:** ↔ [520](#latest-committed-memory-segment-144-node-520)
 
-<a id="latest-committed-memory-segment-125-node-535"></a>
+<a id="latest-committed-memory-segment-144-node-535"></a>
 
 - **535** · clip 41: A group of people are gathered around a table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-536"></a>
+<a id="latest-committed-memory-segment-144-node-536"></a>
 
 - **536** · clip 41: One person stands at a whiteboard at the head of the table while others sit around it.
 
-<a id="latest-committed-memory-segment-125-node-537"></a>
+<a id="latest-committed-memory-segment-144-node-537"></a>
 
 - **537** · clip 41: A clapperboard is placed on the table in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-538"></a>
+<a id="latest-committed-memory-segment-144-node-538"></a>
 
-- **538** · clip 41: MAI (&lt;voice_534&gt;) mentions needing a five-pointed star.  **Links:** ↔ [534](#latest-committed-memory-segment-125-node-534)
+- **538** · clip 41: MAI (&lt;voice_534&gt;) mentions needing a five-pointed star.  **Links:** ↔ [534](#latest-committed-memory-segment-144-node-534)
 
-<a id="latest-committed-memory-segment-125-node-539"></a>
+<a id="latest-committed-memory-segment-144-node-539"></a>
 
-- **539** · clip 41: MAI (&lt;voice_468&gt;) discusses the number of guests, initially mentioning 123456.  **Links:** ↔ [468](#latest-committed-memory-segment-125-node-468)
+- **539** · clip 41: MAI (&lt;voice_468&gt;) discusses the number of guests, initially mentioning 123456.  **Links:** ↔ [468](#latest-committed-memory-segment-144-node-468)
 
-<a id="latest-committed-memory-segment-125-node-540"></a>
+<a id="latest-committed-memory-segment-144-node-540"></a>
 
-- **540** · clip 41: MAI (&lt;voice_444&gt;) clarifies the guest count is between 4 and 6.  **Links:** ↔ [444](#latest-committed-memory-segment-125-node-444)
+- **540** · clip 41: MAI (&lt;voice_444&gt;) clarifies the guest count is between 4 and 6.  **Links:** ↔ [444](#latest-committed-memory-segment-144-node-444)
 
-<a id="latest-committed-memory-segment-125-node-541"></a>
+<a id="latest-committed-memory-segment-144-node-541"></a>
 
-- **541** · clip 41: MAI (&lt;voice_430&gt;) confirms the guest count is 4 to 6.  **Links:** ↔ [430](#latest-committed-memory-segment-125-node-430)
+- **541** · clip 41: MAI (&lt;voice_430&gt;) confirms the guest count is 4 to 6.  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430)
 
-<a id="latest-committed-memory-segment-125-node-546"></a>
+<a id="latest-committed-memory-segment-144-node-546"></a>
 
 - **546** · clip 42: A group of people are seated around a wooden table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-547"></a>
+<a id="latest-committed-memory-segment-144-node-547"></a>
 
 - **547** · clip 42: A clapperboard labeled 'Ego life' is placed on the table in front of the group.
 
-<a id="latest-committed-memory-segment-125-node-548"></a>
+<a id="latest-committed-memory-segment-144-node-548"></a>
 
 - **548** · clip 42: One individual stands near a whiteboard in the background while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-549"></a>
+<a id="latest-committed-memory-segment-144-node-549"></a>
 
 - **549** · clip 42: The camera perspective indicates a participant is seated at the table, with their legs and hands occasionally visible in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-550"></a>
+<a id="latest-committed-memory-segment-144-node-550"></a>
 
-- **550** · clip 42: &lt;voice_364&gt; states: 'Okay, we originally planned to invite people around if possible.'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **550** · clip 42: &lt;voice_364&gt; states: 'Okay, we originally planned to invite people around if possible.'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-551"></a>
+<a id="latest-committed-memory-segment-144-node-551"></a>
 
-- **551** · clip 42: &lt;voice_364&gt; continues discussing platforms, mentioning 'Xiaohongshu' and 'Planet City Gate'.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **551** · clip 42: &lt;voice_364&gt; continues discussing platforms, mentioning 'Xiaohongshu' and 'Planet City Gate'.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-552"></a>
+<a id="latest-committed-memory-segment-144-node-552"></a>
 
-- **552** · clip 42: &lt;voice_517&gt; asks if the approach involves customers coming up to inquire.  **Links:** ↔ [517](#latest-committed-memory-segment-125-node-517)
+- **552** · clip 42: &lt;voice_517&gt; asks if the approach involves customers coming up to inquire.  **Links:** ↔ [517](#latest-committed-memory-segment-144-node-517)
 
-<a id="latest-committed-memory-segment-125-node-553"></a>
+<a id="latest-committed-memory-segment-144-node-553"></a>
 
-- **553** · clip 42: &lt;voice_545&gt; agrees and suggests sending materials if people arrive.  **Links:** ↔ [545](#latest-committed-memory-segment-125-node-545)
+- **553** · clip 42: &lt;voice_545&gt; agrees and suggests sending materials if people arrive.  **Links:** ↔ [545](#latest-committed-memory-segment-144-node-545)
 
-<a id="latest-committed-memory-segment-125-node-561"></a>
+<a id="latest-committed-memory-segment-144-node-561"></a>
 
 - **561** · clip 43: A group of people are seated around a table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-562"></a>
+<a id="latest-committed-memory-segment-144-node-562"></a>
 
 - **562** · clip 43: One person stands at the head of the table near a whiteboard while others sit.
 
-<a id="latest-committed-memory-segment-125-node-563"></a>
+<a id="latest-committed-memory-segment-144-node-563"></a>
 
 - **563** · clip 43: A clapperboard labeled 'EgoLife' is placed on the table.
 
-<a id="latest-committed-memory-segment-125-node-564"></a>
+<a id="latest-committed-memory-segment-144-node-564"></a>
 
-- **564** · clip 43: Speaker &lt;voice_558&gt; says, 'Tomorrow we will be reported here.'  **Links:** ↔ [558](#latest-committed-memory-segment-125-node-558)
+- **564** · clip 43: Speaker &lt;voice_558&gt; says, 'Tomorrow we will be reported here.'  **Links:** ↔ [558](#latest-committed-memory-segment-144-node-558)
 
-<a id="latest-committed-memory-segment-125-node-565"></a>
+<a id="latest-committed-memory-segment-144-node-565"></a>
 
-- **565** · clip 43: Speaker &lt;voice_364&gt; suggests, 'Tomorrow you can film a warning shot.'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **565** · clip 43: Speaker &lt;voice_364&gt; suggests, 'Tomorrow you can film a warning shot.'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-566"></a>
+<a id="latest-committed-memory-segment-144-node-566"></a>
 
-- **566** · clip 43: Speaker &lt;voice_518&gt; comments, 'Ah, invite neighbors. Feel like Ego is hard to connect.'  **Links:** ↔ [518](#latest-committed-memory-segment-125-node-518)
+- **566** · clip 43: Speaker &lt;voice_518&gt; comments, 'Ah, invite neighbors. Feel like Ego is hard to connect.'  **Links:** ↔ [518](#latest-committed-memory-segment-144-node-518)
 
-<a id="latest-committed-memory-segment-125-node-567"></a>
+<a id="latest-committed-memory-segment-144-node-567"></a>
 
-- **567** · clip 43: Speaker &lt;voice_386&gt; asks, 'Why don't you invite?'  **Links:** ↔ [386](#latest-committed-memory-segment-125-node-386)
+- **567** · clip 43: Speaker &lt;voice_386&gt; asks, 'Why don't you invite?'  **Links:** ↔ [386](#latest-committed-memory-segment-144-node-386)
 
-<a id="latest-committed-memory-segment-125-node-568"></a>
+<a id="latest-committed-memory-segment-144-node-568"></a>
 
-- **568** · clip 43: Speaker &lt;voice_559&gt; responds, 'I think so too.'  **Links:** ↔ [559](#latest-committed-memory-segment-125-node-559)
+- **568** · clip 43: Speaker &lt;voice_559&gt; responds, 'I think so too.'  **Links:** ↔ [559](#latest-committed-memory-segment-144-node-559)
 
-<a id="latest-committed-memory-segment-125-node-569"></a>
+<a id="latest-committed-memory-segment-144-node-569"></a>
 
-- **569** · clip 43: Speaker &lt;voice_560&gt; states, 'Bring the big four, if you come I'll give you this order, if you don't come I won't.'  **Links:** ↔ [560](#latest-committed-memory-segment-125-node-560)
+- **569** · clip 43: Speaker &lt;voice_560&gt; states, 'Bring the big four, if you come I'll give you this order, if you don't come I won't.'  **Links:** ↔ [560](#latest-committed-memory-segment-144-node-560)
 
-<a id="latest-committed-memory-segment-125-node-575"></a>
+<a id="latest-committed-memory-segment-144-node-575"></a>
 
 - **575** · clip 44: A first-person perspective shows hands resting on a patterned bag.
 
-<a id="latest-committed-memory-segment-125-node-576"></a>
+<a id="latest-committed-memory-segment-144-node-576"></a>
 
 - **576** · clip 44: The camera view shifts to a wide shot of a group gathered around a table.
 
-<a id="latest-committed-memory-segment-125-node-577"></a>
+<a id="latest-committed-memory-segment-144-node-577"></a>
 
 - **577** · clip 44: The table is covered with a red and white checkered cloth and holds a clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-578"></a>
+<a id="latest-committed-memory-segment-144-node-578"></a>
 
 - **578** · clip 44: A person stands at the head of the table next to a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-579"></a>
+<a id="latest-committed-memory-segment-144-node-579"></a>
 
 - **579** · clip 44: Other participants are seated along both sides of the table.
 
-<a id="latest-committed-memory-segment-125-node-580"></a>
+<a id="latest-committed-memory-segment-144-node-580"></a>
 
 - **580** · clip 44: A softbox light stand is visible on the left side of the room.
 
-<a id="latest-committed-memory-segment-125-node-590"></a>
+<a id="latest-committed-memory-segment-144-node-590"></a>
 
 - **590** · clip 45: A group of people are gathered around a long wooden table covered with a red and white checkered tablecloth in a room with a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-591"></a>
+<a id="latest-committed-memory-segment-144-node-591"></a>
 
 - **591** · clip 45: One woman stands near the whiteboard, appearing to lead a discussion or explain a plan to the seated participants.
 
-<a id="latest-committed-memory-segment-125-node-592"></a>
+<a id="latest-committed-memory-segment-144-node-592"></a>
 
-- **592** · clip 45: &lt;voice_364&gt; discusses the crew composition, mentioning there are five additional people, and outlines the planning for the activity and hosting capacity.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **592** · clip 45: &lt;voice_364&gt; discusses the crew composition, mentioning there are five additional people, and outlines the planning for the activity and hosting capacity.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-593"></a>
+<a id="latest-committed-memory-segment-144-node-593"></a>
 
 - **593** · clip 45: The camera, held by a participant, captures the scene from a first-person perspective, with the operator's hands visible at the bottom of the frame.
 
-<a id="latest-committed-memory-segment-125-node-594"></a>
+<a id="latest-committed-memory-segment-144-node-594"></a>
 
-- **594** · clip 45: &lt;voice_587&gt; provides a short affirmative sound during the conversation.  **Links:** ↔ [587](#latest-committed-memory-segment-125-node-587)
+- **594** · clip 45: &lt;voice_587&gt; provides a short affirmative sound during the conversation.  **Links:** ↔ [587](#latest-committed-memory-segment-144-node-587)
 
-<a id="latest-committed-memory-segment-125-node-595"></a>
+<a id="latest-committed-memory-segment-144-node-595"></a>
 
 - **595** · clip 45: The camera pans to the right, shifting focus towards a woman with long blonde hair and a man seated at the table.
 
-<a id="latest-committed-memory-segment-125-node-596"></a>
+<a id="latest-committed-memory-segment-144-node-596"></a>
 
-- **596** · clip 45: &lt;voice_588&gt; makes a brief sound, followed by &lt;voice_589&gt; indicating an intention to take pictures or videos for everyone.  **Links:** ↔ [588](#latest-committed-memory-segment-125-node-588) · ↔ [589](#latest-committed-memory-segment-125-node-589)
+- **596** · clip 45: &lt;voice_588&gt; makes a brief sound, followed by &lt;voice_589&gt; indicating an intention to take pictures or videos for everyone.  **Links:** ↔ [588](#latest-committed-memory-segment-144-node-588) · ↔ [589](#latest-committed-memory-segment-144-node-589)
 
-<a id="latest-committed-memory-segment-125-node-597"></a>
+<a id="latest-committed-memory-segment-144-node-597"></a>
 
 - **597** · clip 45: The camera moves closer to the woman with blonde hair, providing a closer view of the group interaction and the whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-603"></a>
+<a id="latest-committed-memory-segment-144-node-603"></a>
 
 - **603** · clip 46: A group of people sit around a table with a red checkered cloth in a room with a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-604"></a>
+<a id="latest-committed-memory-segment-144-node-604"></a>
 
 - **604** · clip 46: A person in an orange shirt stands at the whiteboard while others observe.
 
-<a id="latest-committed-memory-segment-125-node-605"></a>
+<a id="latest-committed-memory-segment-144-node-605"></a>
 
-- **605** · clip 46: &lt;voice_601&gt; instructs, 'Wipe, wipe off, wipe off. Handle it.'  **Links:** ↔ [601](#latest-committed-memory-segment-125-node-601)
+- **605** · clip 46: &lt;voice_601&gt; instructs, 'Wipe, wipe off, wipe off. Handle it.'  **Links:** ↔ [601](#latest-committed-memory-segment-144-node-601)
 
-<a id="latest-committed-memory-segment-125-node-606"></a>
+<a id="latest-committed-memory-segment-144-node-606"></a>
 
-- **606** · clip 46: &lt;voice_364&gt; notes, 'Yes, but post-production is troublesome.'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **606** · clip 46: &lt;voice_364&gt; notes, 'Yes, but post-production is troublesome.'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-607"></a>
+<a id="latest-committed-memory-segment-144-node-607"></a>
 
-- **607** · clip 46: &lt;voice_602&gt; asks, 'How much trouble was added.'  **Links:** ↔ [602](#latest-committed-memory-segment-125-node-602)
+- **607** · clip 46: &lt;voice_602&gt; asks, 'How much trouble was added.'  **Links:** ↔ [602](#latest-committed-memory-segment-144-node-602)
 
-<a id="latest-committed-memory-segment-125-node-608"></a>
+<a id="latest-committed-memory-segment-144-node-608"></a>
 
-- **608** · clip 46: &lt;voice_443&gt; counts, 'So total 1, 2, 3, 4. 4 plus 5, 5, this is.'  **Links:** ↔ [443](#latest-committed-memory-segment-125-node-443)
+- **608** · clip 46: &lt;voice_443&gt; counts, 'So total 1, 2, 3, 4. 4 plus 5, 5, this is.'  **Links:** ↔ [443](#latest-committed-memory-segment-144-node-443)
 
-<a id="latest-committed-memory-segment-125-node-609"></a>
+<a id="latest-committed-memory-segment-144-node-609"></a>
 
-- **609** · clip 46: &lt;voice_413&gt; sums up, '4, 4 plus 5, 9.'  **Links:** ↔ [413](#latest-committed-memory-segment-125-node-413)
+- **609** · clip 46: &lt;voice_413&gt; sums up, '4, 4 plus 5, 9.'  **Links:** ↔ [413](#latest-committed-memory-segment-144-node-413)
 
-<a id="latest-committed-memory-segment-125-node-610"></a>
+<a id="latest-committed-memory-segment-144-node-610"></a>
 
 - **610** · clip 46: A clapperboard rests on the table.
 
-<a id="latest-committed-memory-segment-125-node-619"></a>
+<a id="latest-committed-memory-segment-144-node-619"></a>
 
 - **619** · clip 47: A group of people are seated around a long wooden table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-620"></a>
+<a id="latest-committed-memory-segment-144-node-620"></a>
 
 - **620** · clip 47: One person stands at the head of the table near a whiteboard, while another person on the left wears a virtual reality headset.
 
-<a id="latest-committed-memory-segment-125-node-621"></a>
+<a id="latest-committed-memory-segment-144-node-621"></a>
 
 - **621** · clip 47: A clapperboard is placed on the center of the table.
 
-<a id="latest-committed-memory-segment-125-node-622"></a>
+<a id="latest-committed-memory-segment-144-node-622"></a>
 
 - **622** · clip 47: The camera is positioned from a seated viewpoint, showing the operator's legs in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-623"></a>
+<a id="latest-committed-memory-segment-144-node-623"></a>
 
-- **623** · clip 47: At 00:00, &lt;voice_614&gt; asks, 'On the algorithm side, are we?'  **Links:** ↔ [614](#latest-committed-memory-segment-125-node-614)
+- **623** · clip 47: At 00:00, &lt;voice_614&gt; asks, 'On the algorithm side, are we?'  **Links:** ↔ [614](#latest-committed-memory-segment-144-node-614)
 
-<a id="latest-committed-memory-segment-125-node-624"></a>
+<a id="latest-committed-memory-segment-144-node-624"></a>
 
-- **624** · clip 47: At 00:02, &lt;voice_364&gt; responds, 'Well, then just thank you from nine to eleven, nine to eleven.'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **624** · clip 47: At 00:02, &lt;voice_364&gt; responds, 'Well, then just thank you from nine to eleven, nine to eleven.'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-625"></a>
+<a id="latest-committed-memory-segment-144-node-625"></a>
 
-- **625** · clip 47: At 00:06, &lt;voice_615&gt; confirms, 'Nine to eleven.'  **Links:** ↔ [615](#latest-committed-memory-segment-125-node-615)
+- **625** · clip 47: At 00:06, &lt;voice_615&gt; confirms, 'Nine to eleven.'  **Links:** ↔ [615](#latest-committed-memory-segment-144-node-615)
 
-<a id="latest-committed-memory-segment-125-node-626"></a>
+<a id="latest-committed-memory-segment-144-node-626"></a>
 
-- **626** · clip 47: At 00:08, &lt;voice_518&gt; states, 'Innocent, because we can invite.'  **Links:** ↔ [518](#latest-committed-memory-segment-125-node-518)
+- **626** · clip 47: At 00:08, &lt;voice_518&gt; states, 'Innocent, because we can invite.'  **Links:** ↔ [518](#latest-committed-memory-segment-144-node-518)
 
-<a id="latest-committed-memory-segment-125-node-627"></a>
+<a id="latest-committed-memory-segment-144-node-627"></a>
 
-- **627** · clip 47: At 00:12, &lt;voice_364&gt; continues, 'We have innocent neighbors, not exactly innocent, 1.6 billion.'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **627** · clip 47: At 00:12, &lt;voice_364&gt; continues, 'We have innocent neighbors, not exactly innocent, 1.6 billion.'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-628"></a>
+<a id="latest-committed-memory-segment-144-node-628"></a>
 
-- **628** · clip 47: At 00:21, &lt;voice_616&gt; asks, 'Now I have I have I got 1.6 billion yet?'  **Links:** ↔ [616](#latest-committed-memory-segment-125-node-616)
+- **628** · clip 47: At 00:21, &lt;voice_616&gt; asks, 'Now I have I have I got 1.6 billion yet?'  **Links:** ↔ [616](#latest-committed-memory-segment-144-node-616)
 
-<a id="latest-committed-memory-segment-125-node-629"></a>
+<a id="latest-committed-memory-segment-144-node-629"></a>
 
-- **629** · clip 47: At 00:24, &lt;voice_617&gt; and &lt;voice_618&gt; discuss agreeing on the number 14.  **Links:** ↔ [617](#latest-committed-memory-segment-125-node-617) · ↔ [618](#latest-committed-memory-segment-125-node-618)
+- **629** · clip 47: At 00:24, &lt;voice_617&gt; and &lt;voice_618&gt; discuss agreeing on the number 14.  **Links:** ↔ [617](#latest-committed-memory-segment-144-node-617) · ↔ [618](#latest-committed-memory-segment-144-node-618)
 
-<a id="latest-committed-memory-segment-125-node-630"></a>
+<a id="latest-committed-memory-segment-144-node-630"></a>
 
 - **630** · clip 47: The participants continue their discussion throughout the clip.
 
-<a id="latest-committed-memory-segment-125-node-638"></a>
+<a id="latest-committed-memory-segment-144-node-638"></a>
 
 - **638** · clip 48: A group of four people are gathered around a rectangular wooden table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-639"></a>
+<a id="latest-committed-memory-segment-144-node-639"></a>
 
 - **639** · clip 48: One individual stands near a whiteboard at the far end of the table, appearing to lead a discussion.
 
-<a id="latest-committed-memory-segment-125-node-640"></a>
+<a id="latest-committed-memory-segment-144-node-640"></a>
 
 - **640** · clip 48: Three other individuals are seated around the table, listening and participating.
 
-<a id="latest-committed-memory-segment-125-node-641"></a>
+<a id="latest-committed-memory-segment-144-node-641"></a>
 
 - **641** · clip 48: Professional lighting equipment, specifically softboxes, is visible on the left side of the room.
 
-<a id="latest-committed-memory-segment-125-node-642"></a>
+<a id="latest-committed-memory-segment-144-node-642"></a>
 
 - **642** · clip 48: A clapperboard is placed prominently on the table in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-643"></a>
+<a id="latest-committed-memory-segment-144-node-643"></a>
 
 - **643** · clip 48: The camera view is from a first-person perspective, showing the legs and lap of the person filming.
 
-<a id="latest-committed-memory-segment-125-node-644"></a>
+<a id="latest-committed-memory-segment-144-node-644"></a>
 
-- **644** · clip 48: &lt;voice_398&gt;: MAI: 多了吗？合适吗？问题不大，问题不大。  **Links:** ↔ [398](#latest-committed-memory-segment-125-node-398)
+- **644** · clip 48: &lt;voice_398&gt;: MAI: 多了吗？合适吗？问题不大，问题不大。  **Links:** ↔ [398](#latest-committed-memory-segment-144-node-398)
 
-<a id="latest-committed-memory-segment-125-node-645"></a>
+<a id="latest-committed-memory-segment-144-node-645"></a>
 
-- **645** · clip 48: &lt;voice_635&gt;: MAI: OK.  **Links:** ↔ [635](#latest-committed-memory-segment-125-node-635)
+- **645** · clip 48: &lt;voice_635&gt;: MAI: OK.  **Links:** ↔ [635](#latest-committed-memory-segment-144-node-635)
 
-<a id="latest-committed-memory-segment-125-node-646"></a>
+<a id="latest-committed-memory-segment-144-node-646"></a>
 
-- **646** · clip 48: &lt;voice_636&gt;: MAI: 然后  **Links:** ↔ [636](#latest-committed-memory-segment-125-node-636)
+- **646** · clip 48: &lt;voice_636&gt;: MAI: 然后  **Links:** ↔ [636](#latest-committed-memory-segment-144-node-636)
 
-<a id="latest-committed-memory-segment-125-node-647"></a>
+<a id="latest-committed-memory-segment-144-node-647"></a>
 
-- **647** · clip 48: &lt;voice_637&gt;: MAI: 确定了。  **Links:** ↔ [637](#latest-committed-memory-segment-125-node-637)
+- **647** · clip 48: &lt;voice_637&gt;: MAI: 确定了。  **Links:** ↔ [637](#latest-committed-memory-segment-144-node-637)
 
-<a id="latest-committed-memory-segment-125-node-648"></a>
+<a id="latest-committed-memory-segment-144-node-648"></a>
 
-- **648** · clip 48: &lt;voice_637&gt;: MAI: 第一，第一大点的第三，下面三个小点，人员。然后我们还需要。  **Links:** ↔ [637](#latest-committed-memory-segment-125-node-637)
+- **648** · clip 48: &lt;voice_637&gt;: MAI: 第一，第一大点的第三，下面三个小点，人员。然后我们还需要。  **Links:** ↔ [637](#latest-committed-memory-segment-144-node-637)
 
-<a id="latest-committed-memory-segment-125-node-652"></a>
+<a id="latest-committed-memory-segment-144-node-652"></a>
 
 - **652** · clip 49: A group of people are gathered around a wooden table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-653"></a>
+<a id="latest-committed-memory-segment-144-node-653"></a>
 
 - **653** · clip 49: One person stands near a whiteboard while others sit around the table discussing.
 
-<a id="latest-committed-memory-segment-125-node-654"></a>
+<a id="latest-committed-memory-segment-144-node-654"></a>
 
 - **654** · clip 49: A clapperboard rests on the table amidst various personal items.
 
-<a id="latest-committed-memory-segment-125-node-655"></a>
+<a id="latest-committed-memory-segment-144-node-655"></a>
 
-- **655** · clip 49: &lt;voice_443&gt; asks if they should start the activity content section of the second point.  **Links:** ↔ [443](#latest-committed-memory-segment-125-node-443)
+- **655** · clip 49: &lt;voice_443&gt; asks if they should start the activity content section of the second point.  **Links:** ↔ [443](#latest-committed-memory-segment-144-node-443)
 
-<a id="latest-committed-memory-segment-125-node-656"></a>
+<a id="latest-committed-memory-segment-144-node-656"></a>
 
-- **656** · clip 49: &lt;voice_443&gt; recalls that the questionnaire was filled out during the previous session.  **Links:** ↔ [443](#latest-committed-memory-segment-125-node-443)
+- **656** · clip 49: &lt;voice_443&gt; recalls that the questionnaire was filled out during the previous session.  **Links:** ↔ [443](#latest-committed-memory-segment-144-node-443)
 
-<a id="latest-committed-memory-segment-125-node-657"></a>
+<a id="latest-committed-memory-segment-144-node-657"></a>
 
-- **657** · clip 49: &lt;voice_637&gt; describes a specific task as a hard bone requiring significant effort.  **Links:** ↔ [637](#latest-committed-memory-segment-125-node-637)
+- **657** · clip 49: &lt;voice_637&gt; describes a specific task as a hard bone requiring significant effort.  **Links:** ↔ [637](#latest-committed-memory-segment-144-node-637)
 
-<a id="latest-committed-memory-segment-125-node-658"></a>
+<a id="latest-committed-memory-segment-144-node-658"></a>
 
-- **658** · clip 49: &lt;voice_518&gt; suggests proceeding directly to the current topic.  **Links:** ↔ [518](#latest-committed-memory-segment-125-node-518)
+- **658** · clip 49: &lt;voice_518&gt; suggests proceeding directly to the current topic.  **Links:** ↔ [518](#latest-committed-memory-segment-144-node-518)
 
-<a id="latest-committed-memory-segment-125-node-659"></a>
+<a id="latest-committed-memory-segment-144-node-659"></a>
 
-- **659** · clip 49: &lt;voice_364&gt; confirms the inclusion of Bie Dama and asks if there are other items.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **659** · clip 49: &lt;voice_364&gt; confirms the inclusion of Bie Dama and asks if there are other items.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-660"></a>
+<a id="latest-committed-memory-segment-144-node-660"></a>
 
-- **660** · clip 49: &lt;voice_430&gt; agrees to the proposal with affirmative responses.  **Links:** ↔ [430](#latest-committed-memory-segment-125-node-430)
+- **660** · clip 49: &lt;voice_430&gt; agrees to the proposal with affirmative responses.  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430)
 
-<a id="latest-committed-memory-segment-125-node-669"></a>
+<a id="latest-committed-memory-segment-144-node-669"></a>
 
 - **669** · clip 51: A group of individuals are gathered around a table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-670"></a>
+<a id="latest-committed-memory-segment-144-node-670"></a>
 
 - **670** · clip 51: One person stands near a whiteboard in the background while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-671"></a>
+<a id="latest-committed-memory-segment-144-node-671"></a>
 
 - **671** · clip 51: The person standing appears to be leading a discussion or presenting information on the board.
 
-<a id="latest-committed-memory-segment-125-node-672"></a>
+<a id="latest-committed-memory-segment-144-node-672"></a>
 
 - **672** · clip 51: The camera view shifts away from the group and moves through a hallway containing several cardboard boxes.
 
-<a id="latest-committed-memory-segment-125-node-673"></a>
+<a id="latest-committed-memory-segment-144-node-673"></a>
 
 - **673** · clip 51: The camera operator walks past a washing machine and approaches a stack of packages near the stairs.
 
-<a id="latest-committed-memory-segment-125-node-679"></a>
+<a id="latest-committed-memory-segment-144-node-679"></a>
 
 - **679** · clip 52: The camera wearer carries a long cardboard box through a doorway.
 
-<a id="latest-committed-memory-segment-125-node-680"></a>
+<a id="latest-committed-memory-segment-144-node-680"></a>
 
 - **680** · clip 52: A group of four people is seated around a table covered with a checkered tablecloth in a room with a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-681"></a>
+<a id="latest-committed-memory-segment-144-node-681"></a>
 
 - **681** · clip 52: The camera wearer places the cardboard box on the table in front of the group.
 
-<a id="latest-committed-memory-segment-125-node-682"></a>
+<a id="latest-committed-memory-segment-144-node-682"></a>
 
 - **682** · clip 52: The group members gather around the box to open it together.
 
-<a id="latest-committed-memory-segment-125-node-683"></a>
+<a id="latest-committed-memory-segment-144-node-683"></a>
 
 - **683** · clip 52: Items are removed from the box and placed on the table.
 
-<a id="latest-committed-memory-segment-125-node-687"></a>
+<a id="latest-committed-memory-segment-144-node-687"></a>
 
 - **687** · clip 53: A group of people are gathered in a room equipped with filming gear, including tripods and a projector screen.
 
-<a id="latest-committed-memory-segment-125-node-688"></a>
+<a id="latest-committed-memory-segment-144-node-688"></a>
 
 - **688** · clip 53: A person in a white dress stands near a shelving unit while another individual sits at a table covered with a checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-689"></a>
+<a id="latest-committed-memory-segment-144-node-689"></a>
 
 - **689** · clip 53: A person wearing a pink shirt stands near a lighting rig and a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-690"></a>
+<a id="latest-committed-memory-segment-144-node-690"></a>
 
 - **690** · clip 53: The camera moves into an adjacent bedroom, showing a bed with unmade sheets and a desk with multiple computer monitors.
 
-<a id="latest-committed-memory-segment-125-node-691"></a>
+<a id="latest-committed-memory-segment-144-node-691"></a>
 
 - **691** · clip 53: After exiting the bedroom, the person in the pink shirt walks across the main room.
 
-<a id="latest-committed-memory-segment-125-node-692"></a>
+<a id="latest-committed-memory-segment-144-node-692"></a>
 
 - **692** · clip 53: A person in a white outfit walks towards the table where other participants are seated.
 
-<a id="latest-committed-memory-segment-125-node-695"></a>
+<a id="latest-committed-memory-segment-144-node-695"></a>
 
 - **695** · clip 54: A group of four individuals are gathered around a table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-696"></a>
+<a id="latest-committed-memory-segment-144-node-696"></a>
 
 - **696** · clip 54: One person sits on the left wearing dark clothing and a head-mounted device.
 
-<a id="latest-committed-memory-segment-125-node-697"></a>
+<a id="latest-committed-memory-segment-144-node-697"></a>
 
 - **697** · clip 54: Another person stands near the center wearing a white shirt.
 
-<a id="latest-committed-memory-segment-125-node-698"></a>
+<a id="latest-committed-memory-segment-144-node-698"></a>
 
 - **698** · clip 54: A third person stands on the right wearing a blue patterned outfit.
 
-<a id="latest-committed-memory-segment-125-node-699"></a>
+<a id="latest-committed-memory-segment-144-node-699"></a>
 
 - **699** · clip 54: A fourth person stands in the background wearing an orange top.
 
-<a id="latest-committed-memory-segment-125-node-700"></a>
+<a id="latest-committed-memory-segment-144-node-700"></a>
 
 - **700** · clip 54: A clapperboard rests on the table in front of the seated person.
 
-<a id="latest-committed-memory-segment-125-node-701"></a>
+<a id="latest-committed-memory-segment-144-node-701"></a>
 
 - **701** · clip 54: The standing individuals appear to be handling items inside a wooden box on the table.
 
-<a id="latest-committed-memory-segment-125-node-702"></a>
+<a id="latest-committed-memory-segment-144-node-702"></a>
 
 - **702** · clip 54: The person in the background observes the activity at the table.
 
-<a id="latest-committed-memory-segment-125-node-707"></a>
+<a id="latest-committed-memory-segment-144-node-707"></a>
 
 - **707** · clip 55: A group of people are gathered around a table with a checkered cloth in a room equipped with lighting.
 
-<a id="latest-committed-memory-segment-125-node-708"></a>
+<a id="latest-committed-memory-segment-144-node-708"></a>
 
-- **708** · clip 55: &lt;voice_705&gt; states they purchased a flower presser and desiccant while pointing to items on the table.  **Links:** ↔ [705](#latest-committed-memory-segment-125-node-705)
+- **708** · clip 55: &lt;voice_705&gt; states they purchased a flower presser and desiccant while pointing to items on the table.  **Links:** ↔ [705](#latest-committed-memory-segment-144-node-705)
 
-<a id="latest-committed-memory-segment-125-node-709"></a>
+<a id="latest-committed-memory-segment-144-node-709"></a>
 
 - **709** · clip 55: A person in a white shirt handles the items while others observe the process.
 
-<a id="latest-committed-memory-segment-125-node-710"></a>
+<a id="latest-committed-memory-segment-144-node-710"></a>
 
-- **710** · clip 55: &lt;voice_706&gt; asks if one of the items is cat medicine.  **Links:** ↔ [706](#latest-committed-memory-segment-125-node-706)
+- **710** · clip 55: &lt;voice_706&gt; asks if one of the items is cat medicine.  **Links:** ↔ [706](#latest-committed-memory-segment-144-node-706)
 
-<a id="latest-committed-memory-segment-125-node-711"></a>
+<a id="latest-committed-memory-segment-144-node-711"></a>
 
-- **711** · clip 55: &lt;voice_705&gt; remarks on a figure of over 2 million regarding the items.  **Links:** ↔ [705](#latest-committed-memory-segment-125-node-705)
+- **711** · clip 55: &lt;voice_705&gt; remarks on a figure of over 2 million regarding the items.  **Links:** ↔ [705](#latest-committed-memory-segment-144-node-705)
 
-<a id="latest-committed-memory-segment-125-node-712"></a>
+<a id="latest-committed-memory-segment-144-node-712"></a>
 
 - **712** · clip 55: The camera operator holds a smartphone and appears to take photos of the scene.
 
-<a id="latest-committed-memory-segment-125-node-713"></a>
+<a id="latest-committed-memory-segment-144-node-713"></a>
 
 - **713** · clip 55: The camera moves away from the group towards a red refrigerator and then down a hallway.
 
-<a id="latest-committed-memory-segment-125-node-719"></a>
+<a id="latest-committed-memory-segment-144-node-719"></a>
 
 - **719** · clip 56: A hand reaches out and adjusts a small black device mounted on the edge of a white door.
 
-<a id="latest-committed-memory-segment-125-node-720"></a>
+<a id="latest-committed-memory-segment-144-node-720"></a>
 
 - **720** · clip 56: The camera pans to the right, revealing a room where three people are gathered around a table.
 
-<a id="latest-committed-memory-segment-125-node-725"></a>
+<a id="latest-committed-memory-segment-144-node-725"></a>
 
 - **725** · clip 57: Three individuals are gathered in a room equipped with a projector screen and lighting equipment.
 
-<a id="latest-committed-memory-segment-125-node-726"></a>
+<a id="latest-committed-memory-segment-144-node-726"></a>
 
 - **726** · clip 57: Two women stand near a dresser while a man in an orange shirt observes the activity.
 
-<a id="latest-committed-memory-segment-125-node-727"></a>
+<a id="latest-committed-memory-segment-144-node-727"></a>
 
-- **727** · clip 57: Speaker &lt;voice_724&gt; explains that cultivation medium is soaked in water to accelerate fermentation.  **Links:** ↔ [724](#latest-committed-memory-segment-125-node-724)
+- **727** · clip 57: Speaker &lt;voice_724&gt; explains that cultivation medium is soaked in water to accelerate fermentation.  **Links:** ↔ [724](#latest-committed-memory-segment-144-node-724)
 
-<a id="latest-committed-memory-segment-125-node-728"></a>
+<a id="latest-committed-memory-segment-144-node-728"></a>
 
 - **728** · clip 57: The camera operator moves toward a door and adjusts the mounting hook.
 
-<a id="latest-committed-memory-segment-125-node-729"></a>
+<a id="latest-committed-memory-segment-144-node-729"></a>
 
-- **729** · clip 57: Speaker &lt;voice_364&gt; suggests putting potatoes on a talent show and asks which ones are theirs.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **729** · clip 57: Speaker &lt;voice_364&gt; suggests putting potatoes on a talent show and asks which ones are theirs.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-730"></a>
+<a id="latest-committed-memory-segment-144-node-730"></a>
 
-- **730** · clip 57: Speaker &lt;voice_444&gt; replies that there are none of theirs.  **Links:** ↔ [444](#latest-committed-memory-segment-125-node-444)
+- **730** · clip 57: Speaker &lt;voice_444&gt; replies that there are none of theirs.  **Links:** ↔ [444](#latest-committed-memory-segment-144-node-444)
 
-<a id="latest-committed-memory-segment-125-node-731"></a>
+<a id="latest-committed-memory-segment-144-node-731"></a>
 
 - **731** · clip 57: The group continues to arrange items on the table and dresser.
 
-<a id="latest-committed-memory-segment-125-node-738"></a>
+<a id="latest-committed-memory-segment-144-node-738"></a>
 
 - **738** · clip 58: The camera wearer walks through a hallway lined with cardboard boxes placed on a bench.
 
-<a id="latest-committed-memory-segment-125-node-739"></a>
+<a id="latest-committed-memory-segment-144-node-739"></a>
 
 - **739** · clip 58: They proceed down the stairs and enter a room containing a table with filming equipment, including a clapperboard and lighting stands.
 
-<a id="latest-committed-memory-segment-125-node-740"></a>
+<a id="latest-committed-memory-segment-144-node-740"></a>
 
 - **740** · clip 58: Several individuals are gathered in the room; one person wears an orange shirt and moves around the space.
 
-<a id="latest-committed-memory-segment-125-node-741"></a>
+<a id="latest-committed-memory-segment-144-node-741"></a>
 
 - **741** · clip 58: At 00:00, a voice asks Zhe whether they purchased an item, noting that external deliveries seem to belong to Yu Xuan.
 
-<a id="latest-committed-memory-segment-125-node-742"></a>
+<a id="latest-committed-memory-segment-144-node-742"></a>
 
 - **742** · clip 58: At 00:11, a response states that the item has not been bought yet.
 
-<a id="latest-committed-memory-segment-125-node-743"></a>
+<a id="latest-committed-memory-segment-144-node-743"></a>
 
 - **743** · clip 58: Around 00:20, a discussion arises regarding bringing capital to join the group.
 
-<a id="latest-committed-memory-segment-125-node-744"></a>
+<a id="latest-committed-memory-segment-144-node-744"></a>
 
 - **744** · clip 58: At 00:22, confirmation is given that the idea is indeed correct.
 
-<a id="latest-committed-memory-segment-125-node-745"></a>
+<a id="latest-committed-memory-segment-144-node-745"></a>
 
 - **745** · clip 58: Later in the clip, the camera wearer's legs are visible in the foreground as they stand among the group.
 
-<a id="latest-committed-memory-segment-125-node-746"></a>
+<a id="latest-committed-memory-segment-144-node-746"></a>
 
 - **746** · clip 58: Faces of the participants become blurred in the later frames of the video.
 
-<a id="latest-committed-memory-segment-125-node-754"></a>
+<a id="latest-committed-memory-segment-144-node-754"></a>
 
 - **754** · clip 59: A group of people are gathered around a table covered with a red and white checkered cloth in a room.
 
-<a id="latest-committed-memory-segment-125-node-755"></a>
+<a id="latest-committed-memory-segment-144-node-755"></a>
 
 - **755** · clip 59: On the table, there is a clapperboard labeled 'EgoLife', along with several bouquets of flowers and other supplies.
 
-<a id="latest-committed-memory-segment-125-node-756"></a>
+<a id="latest-committed-memory-segment-144-node-756"></a>
 
 - **756** · clip 59: A person in a white shirt stands centrally, while another person sits to the left in dark clothing.
 
-<a id="latest-committed-memory-segment-125-node-757"></a>
+<a id="latest-committed-memory-segment-144-node-757"></a>
 
 - **757** · clip 59: A third individual stands to the right wearing a blue patterned dress.
 
-<a id="latest-committed-memory-segment-125-node-758"></a>
+<a id="latest-committed-memory-segment-144-node-758"></a>
 
 - **758** · clip 59: A fourth person with pink hair and a white t-shirt enters the frame and joins the group.
 
-<a id="latest-committed-memory-segment-125-node-759"></a>
+<a id="latest-committed-memory-segment-144-node-759"></a>
 
 - **759** · clip 59: Hands belonging to the camera operator are visible in the foreground, reaching towards the table.
 
-<a id="latest-committed-memory-segment-125-node-760"></a>
+<a id="latest-committed-memory-segment-144-node-760"></a>
 
-- **760** · clip 59: Using &lt;voice_364&gt;, a speaker instructs the group to gesture to figure out the general shape they are aiming for.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **760** · clip 59: Using &lt;voice_364&gt;, a speaker instructs the group to gesture to figure out the general shape they are aiming for.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-761"></a>
+<a id="latest-committed-memory-segment-144-node-761"></a>
 
-- **761** · clip 59: Continuing with &lt;voice_752&gt;, the speaker mentions there are six people total, with one vase assigned to each person.  **Links:** ↔ [752](#latest-committed-memory-segment-125-node-752)
+- **761** · clip 59: Continuing with &lt;voice_752&gt;, the speaker mentions there are six people total, with one vase assigned to each person.  **Links:** ↔ [752](#latest-committed-memory-segment-144-node-752)
 
-<a id="latest-committed-memory-segment-125-node-762"></a>
+<a id="latest-committed-memory-segment-144-node-762"></a>
 
 - **762** · clip 59: The speaker notes that they have purchased a vase themselves and plans to divide the flowers among them.
 
-<a id="latest-committed-memory-segment-125-node-763"></a>
+<a id="latest-committed-memory-segment-144-node-763"></a>
 
 - **763** · clip 59: They discuss a timeline where the flowers will be grown for a couple of days until they bloom.
 
-<a id="latest-committed-memory-segment-125-node-764"></a>
+<a id="latest-committed-memory-segment-144-node-764"></a>
 
 - **764** · clip 59: The speaker proposes a method involving cutting the petals off the flowers and pressing them flat using a specific vase.
 
-<a id="latest-committed-memory-segment-125-node-765"></a>
+<a id="latest-committed-memory-segment-144-node-765"></a>
 
-- **765** · clip 59: Using &lt;voice_753&gt;, the speaker acknowledges the suggestion with a brief 'Oh'.  **Links:** ↔ [753](#latest-committed-memory-segment-125-node-753)
+- **765** · clip 59: Using &lt;voice_753&gt;, the speaker acknowledges the suggestion with a brief 'Oh'.  **Links:** ↔ [753](#latest-committed-memory-segment-144-node-753)
 
-<a id="latest-committed-memory-segment-125-node-766"></a>
+<a id="latest-committed-memory-segment-144-node-766"></a>
 
 - **766** · clip 59: The group appears to be discussing the logistics and artistic direction of a flower arrangement project.
 
-<a id="latest-committed-memory-segment-125-node-773"></a>
+<a id="latest-committed-memory-segment-144-node-773"></a>
 
 - **773** · clip 60: Four individuals stand around a table covered with a checkered cloth, examining items including a clapperboard and flowers.
 
-<a id="latest-committed-memory-segment-125-node-774"></a>
+<a id="latest-committed-memory-segment-144-node-774"></a>
 
-- **774** · clip 60: &lt;voice_752&gt; discusses plans involving flowers, cards, acrylic glass, and photo frames for an outdoor activity.  **Links:** ↔ [752](#latest-committed-memory-segment-125-node-752)
+- **774** · clip 60: &lt;voice_752&gt; discusses plans involving flowers, cards, acrylic glass, and photo frames for an outdoor activity.  **Links:** ↔ [752](#latest-committed-memory-segment-144-node-752)
 
-<a id="latest-committed-memory-segment-125-node-775"></a>
+<a id="latest-committed-memory-segment-144-node-775"></a>
 
-- **775** · clip 60: &lt;voice_771&gt; acknowledges with 'Okay'.  **Links:** ↔ [771](#latest-committed-memory-segment-125-node-771)
+- **775** · clip 60: &lt;voice_771&gt; acknowledges with 'Okay'.  **Links:** ↔ [771](#latest-committed-memory-segment-144-node-771)
 
-<a id="latest-committed-memory-segment-125-node-776"></a>
+<a id="latest-committed-memory-segment-144-node-776"></a>
 
-- **776** · clip 60: &lt;voice_772&gt; instructs to draw the same way.  **Links:** ↔ [772](#latest-committed-memory-segment-125-node-772)
+- **776** · clip 60: &lt;voice_772&gt; instructs to draw the same way.  **Links:** ↔ [772](#latest-committed-memory-segment-144-node-772)
 
-<a id="latest-committed-memory-segment-125-node-777"></a>
+<a id="latest-committed-memory-segment-144-node-777"></a>
 
-- **777** · clip 60: &lt;voice_484&gt; mentions items on the bed side and invites someone to play.  **Links:** ↔ [484](#latest-committed-memory-segment-125-node-484)
+- **777** · clip 60: &lt;voice_484&gt; mentions items on the bed side and invites someone to play.  **Links:** ↔ [484](#latest-committed-memory-segment-144-node-484)
 
-<a id="latest-committed-memory-segment-125-node-778"></a>
+<a id="latest-committed-memory-segment-144-node-778"></a>
 
 - **778** · clip 60: A person wearing an orange shirt enters the room from the left side.
 
-<a id="latest-committed-memory-segment-125-node-779"></a>
+<a id="latest-committed-memory-segment-144-node-779"></a>
 
 - **779** · clip 60: The group continues their discussion while the new member stands nearby observing.
 
-<a id="latest-committed-memory-segment-125-node-785"></a>
+<a id="latest-committed-memory-segment-144-node-785"></a>
 
 - **785** · clip 61: A group of people are gathered around a wooden table covered with a red and white checkered cloth, where a clapperboard is placed, suggesting a film set or rehearsal environment.
 
-<a id="latest-committed-memory-segment-125-node-786"></a>
+<a id="latest-committed-memory-segment-144-node-786"></a>
 
-- **786** · clip 61: &lt;voice_752&gt; discusses the process of making and raising items oneself before distributing them, noting that this approach fits a seven-day cycle.  **Links:** ↔ [752](#latest-committed-memory-segment-125-node-752)
+- **786** · clip 61: &lt;voice_752&gt; discusses the process of making and raising items oneself before distributing them, noting that this approach fits a seven-day cycle.  **Links:** ↔ [752](#latest-committed-memory-segment-144-node-752)
 
-<a id="latest-committed-memory-segment-125-node-787"></a>
+<a id="latest-committed-memory-segment-144-node-787"></a>
 
-- **787** · clip 61: &lt;voice_782&gt; suggests calling out to someone else first.  **Links:** ↔ [782](#latest-committed-memory-segment-125-node-782)
+- **787** · clip 61: &lt;voice_782&gt; suggests calling out to someone else first.  **Links:** ↔ [782](#latest-committed-memory-segment-144-node-782)
 
-<a id="latest-committed-memory-segment-125-node-788"></a>
+<a id="latest-committed-memory-segment-144-node-788"></a>
 
-- **788** · clip 61: &lt;voice_783&gt; responds affirmatively, agreeing that it is okay to proceed.  **Links:** ↔ [783](#latest-committed-memory-segment-125-node-783)
+- **788** · clip 61: &lt;voice_783&gt; responds affirmatively, agreeing that it is okay to proceed.  **Links:** ↔ [783](#latest-committed-memory-segment-144-node-783)
 
-<a id="latest-committed-memory-segment-125-node-789"></a>
+<a id="latest-committed-memory-segment-144-node-789"></a>
 
-- **789** · clip 61: &lt;voice_784&gt; specifies that the current day is the relevant time for the action.  **Links:** ↔ [784](#latest-committed-memory-segment-125-node-784)
+- **789** · clip 61: &lt;voice_784&gt; specifies that the current day is the relevant time for the action.  **Links:** ↔ [784](#latest-committed-memory-segment-144-node-784)
 
-<a id="latest-committed-memory-segment-125-node-790"></a>
+<a id="latest-committed-memory-segment-144-node-790"></a>
 
-- **790** · clip 61: &lt;voice_364&gt; proposes chatting first before moving on to the next topic.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **790** · clip 61: &lt;voice_364&gt; proposes chatting first before moving on to the next topic.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-791"></a>
+<a id="latest-committed-memory-segment-144-node-791"></a>
 
-- **791** · clip 61: &lt;voice_705&gt; indicates taking turns, mentioning 'next one' and 'I come'.  **Links:** ↔ [705](#latest-committed-memory-segment-125-node-705)
+- **791** · clip 61: &lt;voice_705&gt; indicates taking turns, mentioning 'next one' and 'I come'.  **Links:** ↔ [705](#latest-committed-memory-segment-144-node-705)
 
-<a id="latest-committed-memory-segment-125-node-792"></a>
+<a id="latest-committed-memory-segment-144-node-792"></a>
 
 - **792** · clip 61: A man wearing a peach t-shirt enters the room from the left side and stands near the group.
 
-<a id="latest-committed-memory-segment-125-node-793"></a>
+<a id="latest-committed-memory-segment-144-node-793"></a>
 
 - **793** · clip 61: The participants continue to arrange items on the table while the man observes from the side.
 
-<a id="latest-committed-memory-segment-125-node-799"></a>
+<a id="latest-committed-memory-segment-144-node-799"></a>
 
 - **799** · clip 62: A group of people gather around a wooden table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-800"></a>
+<a id="latest-committed-memory-segment-144-node-800"></a>
 
 - **800** · clip 62: Filming equipment, including a clapperboard labeled 'Ego Life' and a softbox light, is positioned on the table.
 
-<a id="latest-committed-memory-segment-125-node-801"></a>
+<a id="latest-committed-memory-segment-144-node-801"></a>
 
-- **801** · clip 62: MAI (&lt;voice_797&gt;) says 'Next, spicy, spicy Ya.'  **Links:** ↔ [797](#latest-committed-memory-segment-125-node-797)
+- **801** · clip 62: MAI (&lt;voice_797&gt;) says 'Next, spicy, spicy Ya.'  **Links:** ↔ [797](#latest-committed-memory-segment-144-node-797)
 
-<a id="latest-committed-memory-segment-125-node-802"></a>
+<a id="latest-committed-memory-segment-144-node-802"></a>
 
-- **802** · clip 62: MAI (&lt;voice_798&gt;) says 'Hehe' and then 'Liu Huan'.  **Links:** ↔ [798](#latest-committed-memory-segment-125-node-798)
+- **802** · clip 62: MAI (&lt;voice_798&gt;) says 'Hehe' and then 'Liu Huan'.  **Links:** ↔ [798](#latest-committed-memory-segment-144-node-798)
 
-<a id="latest-committed-memory-segment-125-node-803"></a>
+<a id="latest-committed-memory-segment-144-node-803"></a>
 
-- **803** · clip 62: MAI (&lt;voice_339&gt;) explains that her idea is related to DIY and creating an eco-friendly item for World Earth Day.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **803** · clip 62: MAI (&lt;voice_339&gt;) explains that her idea is related to DIY and creating an eco-friendly item for World Earth Day.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-804"></a>
+<a id="latest-committed-memory-segment-144-node-804"></a>
 
-- **804** · clip 62: MAI (&lt;voice_339&gt;) mentions she wants to make a small lamp resembling a jellyfish.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **804** · clip 62: MAI (&lt;voice_339&gt;) mentions she wants to make a small lamp resembling a jellyfish.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-805"></a>
+<a id="latest-committed-memory-segment-144-node-805"></a>
 
-- **805** · clip 62: MAI (&lt;voice_339&gt;) notes that the project originally comes with a material pack that can be bought online.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **805** · clip 62: MAI (&lt;voice_339&gt;) notes that the project originally comes with a material pack that can be bought online.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-806"></a>
+<a id="latest-committed-memory-segment-144-node-806"></a>
 
 - **806** · clip 62: A person with pink hair stands on the right side of the table holding a green object.
 
-<a id="latest-committed-memory-segment-125-node-807"></a>
+<a id="latest-committed-memory-segment-144-node-807"></a>
 
 - **807** · clip 62: A person wearing a blue dress sits on the right side of the table.
 
-<a id="latest-committed-memory-segment-125-node-808"></a>
+<a id="latest-committed-memory-segment-144-node-808"></a>
 
 - **808** · clip 62: A person in black clothing sits on the left side of the table.
 
-<a id="latest-committed-memory-segment-125-node-809"></a>
+<a id="latest-committed-memory-segment-144-node-809"></a>
 
 - **809** · clip 62: A person in a white shirt stands behind the table arranging items.
 
-<a id="latest-committed-memory-segment-125-node-810"></a>
+<a id="latest-committed-memory-segment-144-node-810"></a>
 
 - **810** · clip 62: Legs of the camera operator are visible in the foreground towards the end of the clip.
 
-<a id="latest-committed-memory-segment-125-node-814"></a>
+<a id="latest-committed-memory-segment-144-node-814"></a>
 
 - **814** · clip 63: Four individuals are gathered around a table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-815"></a>
+<a id="latest-committed-memory-segment-144-node-815"></a>
 
 - **815** · clip 63: A person wearing white stands near a whiteboard while others sit or stand nearby.
 
-<a id="latest-committed-memory-segment-125-node-816"></a>
+<a id="latest-committed-memory-segment-144-node-816"></a>
 
 - **816** · clip 63: The table holds various items including floral arrangements, boxes, and a clapperboard labeled EgoLife.
 
-<a id="latest-committed-memory-segment-125-node-817"></a>
+<a id="latest-committed-memory-segment-144-node-817"></a>
 
-- **817** · clip 63: &lt;voice_339&gt; discusses a craft tutorial found online involving using a teacup lid as a base for a small light.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **817** · clip 63: &lt;voice_339&gt; discusses a craft tutorial found online involving using a teacup lid as a base for a small light.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-818"></a>
+<a id="latest-committed-memory-segment-144-node-818"></a>
 
 - **818** · clip 63: The speaker mentions adding ribbons or beads to the craft and questions the availability of a hot glue gun.
 
-<a id="latest-committed-memory-segment-125-node-819"></a>
+<a id="latest-committed-memory-segment-144-node-819"></a>
 
 - **819** · clip 63: It is noted that the plan involves everyone creating their own version of the small light.
 
-<a id="latest-committed-memory-segment-125-node-820"></a>
+<a id="latest-committed-memory-segment-144-node-820"></a>
 
 - **820** · clip 63: The speaker also proposes an idea related to low carbon and circular usage.
 
-<a id="latest-committed-memory-segment-125-node-828"></a>
+<a id="latest-committed-memory-segment-144-node-828"></a>
 
 - **828** · clip 64: A group of individuals gathers around a wooden table covered with a red and white checkered cloth in a room equipped with studio lighting.
 
-<a id="latest-committed-memory-segment-125-node-829"></a>
+<a id="latest-committed-memory-segment-144-node-829"></a>
 
 - **829** · clip 64: One person in a white shirt stands behind the table arranging materials while others sit or stand nearby observing.
 
-<a id="latest-committed-memory-segment-125-node-830"></a>
+<a id="latest-committed-memory-segment-144-node-830"></a>
 
-- **830** · clip 64: &lt;voice_339&gt; discusses the process of making a paper dog craft, suggesting options for simple or complex versions.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **830** · clip 64: &lt;voice_339&gt; discusses the process of making a paper dog craft, suggesting options for simple or complex versions.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-831"></a>
+<a id="latest-committed-memory-segment-144-node-831"></a>
 
-- **831** · clip 64: &lt;voice_339&gt; mentions having seen tutorials for dollhouses but notes they did not personally execute the project.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **831** · clip 64: &lt;voice_339&gt; mentions having seen tutorials for dollhouses but notes they did not personally execute the project.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-832"></a>
+<a id="latest-committed-memory-segment-144-node-832"></a>
 
-- **832** · clip 64: &lt;voice_824&gt; remarks on a previous occasion being particularly hot.  **Links:** ↔ [824](#latest-committed-memory-segment-125-node-824)
+- **832** · clip 64: &lt;voice_824&gt; remarks on a previous occasion being particularly hot.  **Links:** ↔ [824](#latest-committed-memory-segment-144-node-824)
 
-<a id="latest-committed-memory-segment-125-node-833"></a>
+<a id="latest-committed-memory-segment-144-node-833"></a>
 
-- **833** · clip 64: &lt;voice_825&gt; responds with a brief acknowledgment.  **Links:** ↔ [825](#latest-committed-memory-segment-125-node-825)
+- **833** · clip 64: &lt;voice_825&gt; responds with a brief acknowledgment.  **Links:** ↔ [825](#latest-committed-memory-segment-144-node-825)
 
-<a id="latest-committed-memory-segment-125-node-834"></a>
+<a id="latest-committed-memory-segment-144-node-834"></a>
 
-- **834** · clip 64: &lt;voice_826&gt; suggests placing the item in a specific location.  **Links:** ↔ [826](#latest-committed-memory-segment-125-node-826)
+- **834** · clip 64: &lt;voice_826&gt; suggests placing the item in a specific location.  **Links:** ↔ [826](#latest-committed-memory-segment-144-node-826)
 
-<a id="latest-committed-memory-segment-125-node-835"></a>
+<a id="latest-committed-memory-segment-144-node-835"></a>
 
-- **835** · clip 64: &lt;voice_827&gt; affirms the suitability of the paper bag for the intended purpose.  **Links:** ↔ [827](#latest-committed-memory-segment-125-node-827)
+- **835** · clip 64: &lt;voice_827&gt; affirms the suitability of the paper bag for the intended purpose.  **Links:** ↔ [827](#latest-committed-memory-segment-144-node-827)
 
-<a id="latest-committed-memory-segment-125-node-836"></a>
+<a id="latest-committed-memory-segment-144-node-836"></a>
 
 - **836** · clip 64: The camera view shifts to reveal a kitchen area with a window overlooking an outdoor patio.
 
-<a id="latest-committed-memory-segment-125-node-837"></a>
+<a id="latest-committed-memory-segment-144-node-837"></a>
 
 - **837** · clip 64: A film clapperboard labeled 'EgoLife' rests on the table throughout the interaction.
 
-<a id="latest-committed-memory-segment-125-node-842"></a>
+<a id="latest-committed-memory-segment-144-node-842"></a>
 
 - **842** · clip 65: A group of people gathers around a wooden table covered with a checkered cloth in a room equipped with lighting equipment.
 
-<a id="latest-committed-memory-segment-125-node-843"></a>
+<a id="latest-committed-memory-segment-144-node-843"></a>
 
 - **843** · clip 65: A clapperboard rests on the table alongside a water bottle and other miscellaneous items.
 
-<a id="latest-committed-memory-segment-125-node-844"></a>
+<a id="latest-committed-memory-segment-144-node-844"></a>
 
 - **844** · clip 65: A man stands near a whiteboard, gesturing as he addresses the seated participants.
 
-<a id="latest-committed-memory-segment-125-node-845"></a>
+<a id="latest-committed-memory-segment-144-node-845"></a>
 
 - **845** · clip 65: Two women sit at the table, observing the discussion.
 
-<a id="latest-committed-memory-segment-125-node-846"></a>
+<a id="latest-committed-memory-segment-144-node-846"></a>
 
 - **846** · clip 65: The camera pans to the right, revealing a kitchen area with a large window and a view of an exterior building.
 
-<a id="latest-committed-memory-segment-125-node-847"></a>
+<a id="latest-committed-memory-segment-144-node-847"></a>
 
 - **847** · clip 65: The camera returns to the group as the man continues to speak and point at the whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-848"></a>
+<a id="latest-committed-memory-segment-144-node-848"></a>
 
 - **848** · clip 65: The perspective shifts to a first-person view, showing hands resting on a patterned bag on the floor.
 
-<a id="latest-committed-memory-segment-125-node-855"></a>
+<a id="latest-committed-memory-segment-144-node-855"></a>
 
 - **855** · clip 66: A group of four people are gathered around a wooden dining table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-856"></a>
+<a id="latest-committed-memory-segment-144-node-856"></a>
 
 - **856** · clip 66: Film lighting equipment, including softboxes, is set up in the background against the wall.
 
-<a id="latest-committed-memory-segment-125-node-857"></a>
+<a id="latest-committed-memory-segment-144-node-857"></a>
 
 - **857** · clip 66: A whiteboard stands behind the group, and a clapperboard lies on the table.
 
-<a id="latest-committed-memory-segment-125-node-858"></a>
+<a id="latest-committed-memory-segment-144-node-858"></a>
 
 - **858** · clip 66: One person sits on the left wearing a black top, another stands in the center wearing white, a third stands on the right with pink hair, and a fourth sits on the far right.
 
-<a id="latest-committed-memory-segment-125-node-859"></a>
+<a id="latest-committed-memory-segment-144-node-859"></a>
 
 - **859** · clip 66: The camera wearer's hand is visible in the foreground in several frames.
 
-<a id="latest-committed-memory-segment-125-node-860"></a>
+<a id="latest-committed-memory-segment-144-node-860"></a>
 
 - **860** · clip 66: The group appears to be engaged in a discussion about a filming project.
 
-<a id="latest-committed-memory-segment-125-node-873"></a>
+<a id="latest-committed-memory-segment-144-node-873"></a>
 
 - **873** · clip 67: A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room with a whiteboard in the background.
 
-<a id="latest-committed-memory-segment-125-node-874"></a>
+<a id="latest-committed-memory-segment-144-node-874"></a>
 
 - **874** · clip 67: One person stands near the whiteboard while others sit around the table, including one person on the left in black and two on the right.
 
-<a id="latest-committed-memory-segment-125-node-875"></a>
+<a id="latest-committed-memory-segment-144-node-875"></a>
 
 - **875** · clip 67: A clapperboard rests on the table in front of the seated individuals.
 
-<a id="latest-committed-memory-segment-125-node-876"></a>
+<a id="latest-committed-memory-segment-144-node-876"></a>
 
-- **876** · clip 67: &lt;voice_867&gt;: MAI: 你把他的名字写反了。  **Links:** ↔ [867](#latest-committed-memory-segment-125-node-867)
+- **876** · clip 67: &lt;voice_867&gt;: MAI: 你把他的名字写反了。  **Links:** ↔ [867](#latest-committed-memory-segment-144-node-867)
 
-<a id="latest-committed-memory-segment-125-node-877"></a>
+<a id="latest-committed-memory-segment-144-node-877"></a>
 
-- **877** · clip 67: &lt;voice_868&gt;: MAI: 爱流万确。  **Links:** ↔ [868](#latest-committed-memory-segment-125-node-868)
+- **877** · clip 67: &lt;voice_868&gt;: MAI: 爱流万确。  **Links:** ↔ [868](#latest-committed-memory-segment-144-node-868)
 
-<a id="latest-committed-memory-segment-125-node-878"></a>
+<a id="latest-committed-memory-segment-144-node-878"></a>
 
-- **878** · clip 67: &lt;voice_364&gt;: MAI: 差点，差点像了。  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **878** · clip 67: &lt;voice_364&gt;: MAI: 差点，差点像了。  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-879"></a>
+<a id="latest-committed-memory-segment-144-node-879"></a>
 
-- **879** · clip 67: &lt;voice_869&gt;: MAI: 完成了，今天那个变异了，做全染色体。  **Links:** ↔ [869](#latest-committed-memory-segment-125-node-869)
+- **879** · clip 67: &lt;voice_869&gt;: MAI: 完成了，今天那个变异了，做全染色体。  **Links:** ↔ [869](#latest-committed-memory-segment-144-node-869)
 
-<a id="latest-committed-memory-segment-125-node-880"></a>
+<a id="latest-committed-memory-segment-144-node-880"></a>
 
-- **880** · clip 67: &lt;voice_870&gt;: MAI: 好家俊，这件你都有是与否？  **Links:** ↔ [870](#latest-committed-memory-segment-125-node-870)
+- **880** · clip 67: &lt;voice_870&gt;: MAI: 好家俊，这件你都有是与否？  **Links:** ↔ [870](#latest-committed-memory-segment-144-node-870)
 
-<a id="latest-committed-memory-segment-125-node-881"></a>
+<a id="latest-committed-memory-segment-144-node-881"></a>
 
-- **881** · clip 67: &lt;voice_871&gt;: MAI: 他闪。  **Links:** ↔ [871](#latest-committed-memory-segment-125-node-871)
+- **881** · clip 67: &lt;voice_871&gt;: MAI: 他闪。  **Links:** ↔ [871](#latest-committed-memory-segment-144-node-871)
 
-<a id="latest-committed-memory-segment-125-node-882"></a>
+<a id="latest-committed-memory-segment-144-node-882"></a>
 
-- **882** · clip 67: &lt;voice_872&gt;: MAI: OK，上我的道具。  **Links:** ↔ [872](#latest-committed-memory-segment-125-node-872)
+- **882** · clip 67: &lt;voice_872&gt;: MAI: OK，上我的道具。  **Links:** ↔ [872](#latest-committed-memory-segment-144-node-872)
 
-<a id="latest-committed-memory-segment-125-node-883"></a>
+<a id="latest-committed-memory-segment-144-node-883"></a>
 
 - **883** · clip 67: Starting from 13.00s, the faces of the participants become blurred.
 
-<a id="latest-committed-memory-segment-125-node-884"></a>
+<a id="latest-committed-memory-segment-144-node-884"></a>
 
 - **884** · clip 67: At 28.50s, the person sitting on the left raises their hand and gestures towards the center of the table.
 
-<a id="latest-committed-memory-segment-125-node-891"></a>
+<a id="latest-committed-memory-segment-144-node-891"></a>
 
 - **891** · clip 68: The video begins with a view of a communal room where several people are seated around a table.
 
-<a id="latest-committed-memory-segment-125-node-892"></a>
+<a id="latest-committed-memory-segment-144-node-892"></a>
 
 - **892** · clip 68: A person wearing a pink shirt walks from the communal area into an adjacent bedroom.
 
-<a id="latest-committed-memory-segment-125-node-893"></a>
+<a id="latest-committed-memory-segment-144-node-893"></a>
 
 - **893** · clip 68: The camera enters the bedroom, revealing a messy bed and a desk cluttered with multiple computer monitors.
 
-<a id="latest-committed-memory-segment-125-node-894"></a>
+<a id="latest-committed-memory-segment-144-node-894"></a>
 
 - **894** · clip 68: The camera operator approaches a suitcase located near a closet and opens it.
 
-<a id="latest-committed-memory-segment-125-node-895"></a>
+<a id="latest-committed-memory-segment-144-node-895"></a>
 
-- **895** · clip 68: While searching the suitcase, a conversation occurs where &lt;voice_889&gt; asks about an item in the travel bag.  **Links:** ↔ [889](#latest-committed-memory-segment-125-node-889)
+- **895** · clip 68: While searching the suitcase, a conversation occurs where &lt;voice_889&gt; asks about an item in the travel bag.  **Links:** ↔ [889](#latest-committed-memory-segment-144-node-889)
 
-<a id="latest-committed-memory-segment-125-node-896"></a>
+<a id="latest-committed-memory-segment-144-node-896"></a>
 
-- **896** · clip 68: &lt;voice_386&gt; responds briefly, followed by &lt;voice_560&gt; identifying the retrieved item as a 'training photo' and noting it was not torn.  **Links:** ↔ [386](#latest-committed-memory-segment-125-node-386) · ↔ [560](#latest-committed-memory-segment-125-node-560)
+- **896** · clip 68: &lt;voice_386&gt; responds briefly, followed by &lt;voice_560&gt; identifying the retrieved item as a 'training photo' and noting it was not torn.  **Links:** ↔ [386](#latest-committed-memory-segment-144-node-386) · ↔ [560](#latest-committed-memory-segment-144-node-560)
 
-<a id="latest-committed-memory-segment-125-node-897"></a>
+<a id="latest-committed-memory-segment-144-node-897"></a>
 
-- **897** · clip 68: &lt;voice_890&gt; confirms the identification of the item as a training photo.  **Links:** ↔ [890](#latest-committed-memory-segment-125-node-890)
+- **897** · clip 68: &lt;voice_890&gt; confirms the identification of the item as a training photo.  **Links:** ↔ [890](#latest-committed-memory-segment-144-node-890)
 
-<a id="latest-committed-memory-segment-125-node-898"></a>
+<a id="latest-committed-memory-segment-144-node-898"></a>
 
 - **898** · clip 68: The camera operator retrieves cards, including one with a picture and another with a red heart, from the suitcase.
 
-<a id="latest-committed-memory-segment-125-node-899"></a>
+<a id="latest-committed-memory-segment-144-node-899"></a>
 
 - **899** · clip 68: After collecting the items, the camera turns back towards the communal room.
 
-<a id="latest-committed-memory-segment-125-node-900"></a>
+<a id="latest-committed-memory-segment-144-node-900"></a>
 
 - **900** · clip 68: The camera operator approaches the group seated at the table and hands over the cards.
 
-<a id="latest-committed-memory-segment-125-node-901"></a>
+<a id="latest-committed-memory-segment-144-node-901"></a>
 
 - **901** · clip 68: One of the women at the table accepts a card while others observe.
 
-<a id="latest-committed-memory-segment-125-node-905"></a>
+<a id="latest-committed-memory-segment-144-node-905"></a>
 
 - **905** · clip 69: The camera wearer observes three individuals gathered around a table in a room.
 
-<a id="latest-committed-memory-segment-125-node-906"></a>
+<a id="latest-committed-memory-segment-144-node-906"></a>
 
 - **906** · clip 69: The camera wearer holds a smartphone and interacts with it while looking at the group.
 
-<a id="latest-committed-memory-segment-125-node-907"></a>
+<a id="latest-committed-memory-segment-144-node-907"></a>
 
 - **907** · clip 69: The camera wearer walks out of the room into a corridor and then returns.
 
-<a id="latest-committed-memory-segment-125-node-908"></a>
+<a id="latest-committed-memory-segment-144-node-908"></a>
 
 - **908** · clip 69: The camera wearer sits down and continues to operate the smartphone.
 
-<a id="latest-committed-memory-segment-125-node-909"></a>
+<a id="latest-committed-memory-segment-144-node-909"></a>
 
 - **909** · clip 69: One person at the table arranges flowers or greenery while others work nearby.
 
-<a id="latest-committed-memory-segment-125-node-914"></a>
+<a id="latest-committed-memory-segment-144-node-914"></a>
 
 - **914** · clip 70: The camera wearer is seated at a wooden table, holding a smartphone in both hands and scrolling through the screen.
 
-<a id="latest-committed-memory-segment-125-node-915"></a>
+<a id="latest-committed-memory-segment-144-node-915"></a>
 
 - **915** · clip 70: Various items are arranged on the table, including a clapperboard, a plastic water bottle, and notebooks.
 
-<a id="latest-committed-memory-segment-125-node-916"></a>
+<a id="latest-committed-memory-segment-144-node-916"></a>
 
 - **916** · clip 70: In the background, a person wearing a white shirt stands near the table, facing away from the camera.
 
-<a id="latest-committed-memory-segment-125-node-917"></a>
+<a id="latest-committed-memory-segment-144-node-917"></a>
 
-- **917** · clip 70: Between 00:04 and 00:06, &lt;voice_912&gt; speaks the transcript 'Deepgram: Твой. &#124; MAI: 这也是我们三个。'  **Links:** ↔ [912](#latest-committed-memory-segment-125-node-912)
+- **917** · clip 70: Between 00:04 and 00:06, &lt;voice_912&gt; speaks the transcript 'Deepgram: Твой. &#124; MAI: 这也是我们三个。'  **Links:** ↔ [912](#latest-committed-memory-segment-144-node-912)
 
-<a id="latest-committed-memory-segment-125-node-918"></a>
+<a id="latest-committed-memory-segment-144-node-918"></a>
 
-- **918** · clip 70: Between 00:05 and 00:07, &lt;voice_913&gt; responds with the transcript 'Deepgram: Твой. &#124; MAI: 对。'  **Links:** ↔ [913](#latest-committed-memory-segment-125-node-913)
+- **918** · clip 70: Between 00:05 and 00:07, &lt;voice_913&gt; responds with the transcript 'Deepgram: Твой. &#124; MAI: 对。'  **Links:** ↔ [913](#latest-committed-memory-segment-144-node-913)
 
-<a id="latest-committed-memory-segment-125-node-921"></a>
+<a id="latest-committed-memory-segment-144-node-921"></a>
 
 - **921** · clip 71: A person is seated and scrolling through a smartphone application.
 
-<a id="latest-committed-memory-segment-125-node-922"></a>
+<a id="latest-committed-memory-segment-144-node-922"></a>
 
 - **922** · clip 71: In the background, a person wearing a white shirt stands behind a table covered with props.
 
-<a id="latest-committed-memory-segment-125-node-923"></a>
+<a id="latest-committed-memory-segment-144-node-923"></a>
 
 - **923** · clip 71: An individual is seated at the table to the right.
 
-<a id="latest-committed-memory-segment-125-node-924"></a>
+<a id="latest-committed-memory-segment-144-node-924"></a>
 
 - **924** · clip 71: A woman in a black top enters the scene from the left side.
 
-<a id="latest-committed-memory-segment-125-node-925"></a>
+<a id="latest-committed-memory-segment-144-node-925"></a>
 
 - **925** · clip 71: The woman in black approaches the table and interacts with the person in white.
 
-<a id="latest-committed-memory-segment-125-node-926"></a>
+<a id="latest-committed-memory-segment-144-node-926"></a>
 
 - **926** · clip 71: A person wearing an orange shirt walks into the frame from the left background.
 
-<a id="latest-committed-memory-segment-125-node-927"></a>
+<a id="latest-committed-memory-segment-144-node-927"></a>
 
 - **927** · clip 71: The camera wearer continues to look at their phone while observing the activity around them.
 
-<a id="latest-committed-memory-segment-125-node-932"></a>
+<a id="latest-committed-memory-segment-144-node-932"></a>
 
 - **932** · clip 72: A first-person perspective shows a person sitting and scrolling through a smartphone application.
 
-<a id="latest-committed-memory-segment-125-node-933"></a>
+<a id="latest-committed-memory-segment-144-node-933"></a>
 
 - **933** · clip 72: The individual has a tattoo visible on their left forearm.
 
-<a id="latest-committed-memory-segment-125-node-934"></a>
+<a id="latest-committed-memory-segment-144-node-934"></a>
 
 - **934** · clip 72: Behind the camera wearer, a table displays filming paraphernalia such as a clapperboard, scripts, and a water bottle.
 
-<a id="latest-committed-memory-segment-125-node-935"></a>
+<a id="latest-committed-memory-segment-144-node-935"></a>
 
 - **935** · clip 72: Two other people are present in the background, one standing on the left and one seated on the right.
 
-<a id="latest-committed-memory-segment-125-node-936"></a>
+<a id="latest-committed-memory-segment-144-node-936"></a>
 
-- **936** · clip 72: At 00:19, &lt;voice_931&gt; makes a comment: 'MAI: 好像没有别的种类。'  **Links:** ↔ [931](#latest-committed-memory-segment-125-node-931)
+- **936** · clip 72: At 00:19, &lt;voice_931&gt; makes a comment: 'MAI: 好像没有别的种类。'  **Links:** ↔ [931](#latest-committed-memory-segment-144-node-931)
 
-<a id="latest-committed-memory-segment-125-node-937"></a>
+<a id="latest-committed-memory-segment-144-node-937"></a>
 
 - **937** · clip 72: The camera wearer continues to navigate the phone interface.
 
-<a id="latest-committed-memory-segment-125-node-941"></a>
+<a id="latest-committed-memory-segment-144-node-941"></a>
 
 - **941** · clip 73: At 00:00, the camera wearer is seated and actively scrolling through a smartphone application.
 
-<a id="latest-committed-memory-segment-125-node-942"></a>
+<a id="latest-committed-memory-segment-144-node-942"></a>
 
 - **942** · clip 73: In the background, a group of people gathers around a table cluttered with items including a clapperboard, water bottles, and floral arrangements.
 
-<a id="latest-committed-memory-segment-125-node-943"></a>
+<a id="latest-committed-memory-segment-144-node-943"></a>
 
-- **943** · clip 73: At 00:16, &lt;voice_940&gt; utters 'Oh.'  **Links:** ↔ [940](#latest-committed-memory-segment-125-node-940)
+- **943** · clip 73: At 00:16, &lt;voice_940&gt; utters 'Oh.'  **Links:** ↔ [940](#latest-committed-memory-segment-144-node-940)
 
-<a id="latest-committed-memory-segment-125-node-944"></a>
+<a id="latest-committed-memory-segment-144-node-944"></a>
 
 - **944** · clip 73: A woman wearing a black top and glasses stands on the left side of the table, handling various items.
 
-<a id="latest-committed-memory-segment-125-node-945"></a>
+<a id="latest-committed-memory-segment-144-node-945"></a>
 
 - **945** · clip 73: At 00:24, the woman in the black top holds up a card with a red heart drawing towards the camera.
 
-<a id="latest-committed-memory-segment-125-node-946"></a>
+<a id="latest-committed-memory-segment-144-node-946"></a>
 
-- **946** · clip 73: At 00:27, &lt;voice_430&gt; speaks 'Echéencio.', followed by MAI stating '被取消了。'  **Links:** ↔ [430](#latest-committed-memory-segment-125-node-430)
+- **946** · clip 73: At 00:27, &lt;voice_430&gt; speaks 'Echéencio.', followed by MAI stating '被取消了。'  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430)
 
-<a id="latest-committed-memory-segment-125-node-947"></a>
+<a id="latest-committed-memory-segment-144-node-947"></a>
 
 - **947** · clip 73: The woman in the black top then picks up a yellow pouch featuring a cartoon face design.
 
-<a id="latest-committed-memory-segment-125-node-951"></a>
+<a id="latest-committed-memory-segment-144-node-951"></a>
 
-- **951** · clip 74: At 00:00, &lt;voice_364&gt; asks, 'Should I tear it?' while seated at the table.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **951** · clip 74: At 00:00, &lt;voice_364&gt; asks, 'Should I tear it?' while seated at the table.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-952"></a>
+<a id="latest-committed-memory-segment-144-node-952"></a>
 
 - **952** · clip 74: A group of individuals are gathered around a table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-953"></a>
+<a id="latest-committed-memory-segment-144-node-953"></a>
 
-- **953** · clip 74: From 00:03 to 00:30, &lt;voice_560&gt; explains the project involves seed paper designed by themselves, made from discarded coffee cups containing sunflower seeds.  **Links:** ↔ [560](#latest-committed-memory-segment-125-node-560)
+- **953** · clip 74: From 00:03 to 00:30, &lt;voice_560&gt; explains the project involves seed paper designed by themselves, made from discarded coffee cups containing sunflower seeds.  **Links:** ↔ [560](#latest-committed-memory-segment-144-node-560)
 
-<a id="latest-committed-memory-segment-125-node-954"></a>
+<a id="latest-committed-memory-segment-144-node-954"></a>
 
 - **954** · clip 74: The speaker mentions that sunflower seeds are easy to sprout and require growing soil and water.
 
-<a id="latest-committed-memory-segment-125-node-955"></a>
+<a id="latest-committed-memory-segment-144-node-955"></a>
 
 - **955** · clip 74: Various items including flowers, papers, and a clapperboard are visible on the table.
 
-<a id="latest-committed-memory-segment-125-node-960"></a>
+<a id="latest-committed-memory-segment-144-node-960"></a>
 
 - **960** · clip 75: A group of three women sits around a table covered with a checkered tablecloth while one woman stands behind it.
 
-<a id="latest-committed-memory-segment-125-node-961"></a>
+<a id="latest-committed-memory-segment-144-node-961"></a>
 
-- **961** · clip 75: MAI (&lt;voice_560&gt;) discusses a project, stating that for water balloon tasks, payment is expected in approximately five days.  **Links:** ↔ [560](#latest-committed-memory-segment-125-node-560)
+- **961** · clip 75: MAI (&lt;voice_560&gt;) discusses a project, stating that for water balloon tasks, payment is expected in approximately five days.  **Links:** ↔ [560](#latest-committed-memory-segment-144-node-560)
 
-<a id="latest-committed-memory-segment-125-node-962"></a>
+<a id="latest-committed-memory-segment-144-node-962"></a>
 
 - **962** · clip 75: MAI mentions completing various tasks, including five types of 'Earth' tasks, noting that two were particularly simple.
 
-<a id="latest-committed-memory-segment-125-node-963"></a>
+<a id="latest-committed-memory-segment-144-node-963"></a>
 
 - **963** · clip 75: Another participant confirms the completion of the Earth tasks.
 
-<a id="latest-committed-memory-segment-125-node-964"></a>
+<a id="latest-committed-memory-segment-144-node-964"></a>
 
 - **964** · clip 75: MAI acknowledges the work and comments that the other person is being original.
 
-<a id="latest-committed-memory-segment-125-node-965"></a>
+<a id="latest-committed-memory-segment-144-node-965"></a>
 
 - **965** · clip 75: The group handles cards and papers on the table while interacting.
 
-<a id="latest-committed-memory-segment-125-node-966"></a>
+<a id="latest-committed-memory-segment-144-node-966"></a>
 
 - **966** · clip 75: A clapperboard labeled 'EgoLife' is visible on the table.
 
-<a id="latest-committed-memory-segment-125-node-967"></a>
+<a id="latest-committed-memory-segment-144-node-967"></a>
 
 - **967** · clip 75: The camera wearer holds a card featuring a red heart.
 
-<a id="latest-committed-memory-segment-125-node-978"></a>
+<a id="latest-committed-memory-segment-144-node-978"></a>
 
 - **978** · clip 76: A group of individuals gather around a wooden table covered with a checkered cloth for a collaborative session.
 
-<a id="latest-committed-memory-segment-125-node-979"></a>
+<a id="latest-committed-memory-segment-144-node-979"></a>
 
 - **979** · clip 76: The camera wearer holds a white card displaying a red heart symbol towards the center of the table.
 
-<a id="latest-committed-memory-segment-125-node-980"></a>
+<a id="latest-committed-memory-segment-144-node-980"></a>
 
 - **980** · clip 76: A person wearing a black top sits on the left side of the table, actively arranging items.
 
-<a id="latest-committed-memory-segment-125-node-981"></a>
+<a id="latest-committed-memory-segment-144-node-981"></a>
 
 - **981** · clip 76: A person in a white top stands behind the table near a whiteboard, participating in the discussion.
 
-<a id="latest-committed-memory-segment-125-node-982"></a>
+<a id="latest-committed-memory-segment-144-node-982"></a>
 
 - **982** · clip 76: A person in a light-colored top sits on the right side of the table.
 
-<a id="latest-committed-memory-segment-125-node-983"></a>
+<a id="latest-committed-memory-segment-144-node-983"></a>
 
 - **983** · clip 76: A person wearing an orange shirt enters the room from the left and moves through the space.
 
-<a id="latest-committed-memory-segment-125-node-984"></a>
+<a id="latest-committed-memory-segment-144-node-984"></a>
 
-- **984** · clip 76: At 00:01, &lt;voice_364&gt; states '种子片，种子片。'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **984** · clip 76: At 00:01, &lt;voice_364&gt; states '种子片，种子片。'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-985"></a>
+<a id="latest-committed-memory-segment-144-node-985"></a>
 
-- **985** · clip 76: At 00:07, &lt;voice_971&gt; remarks that the approach is relatively environmentally friendly.  **Links:** ↔ [971](#latest-committed-memory-segment-125-node-971)
+- **985** · clip 76: At 00:07, &lt;voice_971&gt; remarks that the approach is relatively environmentally friendly.  **Links:** ↔ [971](#latest-committed-memory-segment-144-node-971)
 
-<a id="latest-committed-memory-segment-125-node-986"></a>
+<a id="latest-committed-memory-segment-144-node-986"></a>
 
-- **986** · clip 76: At 00:12, &lt;voice_972&gt; confirms that it is indeed very eco-friendly.  **Links:** ↔ [972](#latest-committed-memory-segment-125-node-972)
+- **986** · clip 76: At 00:12, &lt;voice_972&gt; confirms that it is indeed very eco-friendly.  **Links:** ↔ [972](#latest-committed-memory-segment-144-node-972)
 
-<a id="latest-committed-memory-segment-125-node-987"></a>
+<a id="latest-committed-memory-segment-144-node-987"></a>
 
-- **987** · clip 76: At 00:14, &lt;voice_484&gt; adds that the option is also extremely aesthetic.  **Links:** ↔ [484](#latest-committed-memory-segment-125-node-484)
+- **987** · clip 76: At 00:14, &lt;voice_484&gt; adds that the option is also extremely aesthetic.  **Links:** ↔ [484](#latest-committed-memory-segment-144-node-484)
 
-<a id="latest-committed-memory-segment-125-node-988"></a>
+<a id="latest-committed-memory-segment-144-node-988"></a>
 
-- **988** · clip 76: At 00:19, &lt;voice_973&gt; asks if the design was created by the speaker themselves.  **Links:** ↔ [973](#latest-committed-memory-segment-125-node-973)
+- **988** · clip 76: At 00:19, &lt;voice_973&gt; asks if the design was created by the speaker themselves.  **Links:** ↔ [973](#latest-committed-memory-segment-144-node-973)
 
-<a id="latest-committed-memory-segment-125-node-989"></a>
+<a id="latest-committed-memory-segment-144-node-989"></a>
 
-- **989** · clip 76: At 00:23, &lt;voice_974&gt; suggests that it is simple enough to just find some logos.  **Links:** ↔ [974](#latest-committed-memory-segment-125-node-974)
+- **989** · clip 76: At 00:23, &lt;voice_974&gt; suggests that it is simple enough to just find some logos.  **Links:** ↔ [974](#latest-committed-memory-segment-144-node-974)
 
-<a id="latest-committed-memory-segment-125-node-990"></a>
+<a id="latest-committed-memory-segment-144-node-990"></a>
 
-- **990** · clip 76: At 00:26, &lt;voice_975&gt; proposes writing a word after finding the logo.  **Links:** ↔ [975](#latest-committed-memory-segment-125-node-975)
+- **990** · clip 76: At 00:26, &lt;voice_975&gt; proposes writing a word after finding the logo.  **Links:** ↔ [975](#latest-committed-memory-segment-144-node-975)
 
-<a id="latest-committed-memory-segment-125-node-991"></a>
+<a id="latest-committed-memory-segment-144-node-991"></a>
 
-- **991** · clip 76: At 00:27, &lt;voice_976&gt; responds with 'OK'.  **Links:** ↔ [976](#latest-committed-memory-segment-125-node-976)
+- **991** · clip 76: At 00:27, &lt;voice_976&gt; responds with 'OK'.  **Links:** ↔ [976](#latest-committed-memory-segment-144-node-976)
 
-<a id="latest-committed-memory-segment-125-node-992"></a>
+<a id="latest-committed-memory-segment-144-node-992"></a>
 
-- **992** · clip 76: At 00:28, &lt;voice_977&gt; concludes that placing a frame is sufficient.  **Links:** ↔ [977](#latest-committed-memory-segment-125-node-977)
+- **992** · clip 76: At 00:28, &lt;voice_977&gt; concludes that placing a frame is sufficient.  **Links:** ↔ [977](#latest-committed-memory-segment-144-node-977)
 
-<a id="latest-committed-memory-segment-125-node-997"></a>
+<a id="latest-committed-memory-segment-144-node-997"></a>
 
 - **997** · clip 77: At the start of the clip, three individuals are seated around a table covered with a red and white checkered cloth, with a clapperboard and scattered papers visible.
 
-<a id="latest-committed-memory-segment-125-node-998"></a>
+<a id="latest-committed-memory-segment-144-node-998"></a>
 
-- **998** · clip 77: &lt;voice_398&gt; remarks 'Hmm, quite good.' shortly after the recording begins.  **Links:** ↔ [398](#latest-committed-memory-segment-125-node-398)
+- **998** · clip 77: &lt;voice_398&gt; remarks 'Hmm, quite good.' shortly after the recording begins.  **Links:** ↔ [398](#latest-committed-memory-segment-144-node-398)
 
-<a id="latest-committed-memory-segment-125-node-999"></a>
+<a id="latest-committed-memory-segment-144-node-999"></a>
 
 - **999** · clip 77: A person wearing an orange top walks through the background behind the seated group.
 
-<a id="latest-committed-memory-segment-125-node-1000"></a>
+<a id="latest-committed-memory-segment-144-node-1000"></a>
 
 - **1000** · clip 77: Hands enter the foreground, partially obscuring the view of the table as the camera adjusts.
 
-<a id="latest-committed-memory-segment-125-node-1001"></a>
+<a id="latest-committed-memory-segment-144-node-1001"></a>
 
 - **1001** · clip 77: At 00:09, a person in a white shirt stands up and moves toward the center of the room near a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1002"></a>
+<a id="latest-committed-memory-segment-144-node-1002"></a>
 
-- **1002** · clip 77: &lt;voice_186&gt; begins speaking about buying a puzzle, describing it as having a round base image with various animals inside.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **1002** · clip 77: &lt;voice_186&gt; begins speaking about buying a puzzle, describing it as having a round base image with various animals inside.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-1003"></a>
+<a id="latest-committed-memory-segment-144-node-1003"></a>
 
 - **1003** · clip 77: The person in the white shirt continues to gesture and explain while the others seated at the table listen attentively.
 
-<a id="latest-committed-memory-segment-125-node-1007"></a>
+<a id="latest-committed-memory-segment-144-node-1007"></a>
 
 - **1007** · clip 78: A group of people are gathered around a table covered with a red and white checkered tablecloth in a room.
 
-<a id="latest-committed-memory-segment-125-node-1008"></a>
+<a id="latest-committed-memory-segment-144-node-1008"></a>
 
-- **1008** · clip 78: One individual stands near a whiteboard, identified by voice features as &lt;voice_186&gt;, and begins speaking about stitching various animals together.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **1008** · clip 78: One individual stands near a whiteboard, identified by voice features as &lt;voice_186&gt;, and begins speaking about stitching various animals together.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-1009"></a>
+<a id="latest-committed-memory-segment-144-node-1009"></a>
 
-- **1009** · clip 78: The speaker &lt;voice_186&gt; explains that the stitching does not need to be perfectly tight or seamless.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **1009** · clip 78: The speaker &lt;voice_186&gt; explains that the stitching does not need to be perfectly tight or seamless.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-1010"></a>
+<a id="latest-committed-memory-segment-144-node-1010"></a>
 
-- **1010** · clip 78: &lt;voice_186&gt; suggests that varying the amount of stitching could imply a small game.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **1010** · clip 78: &lt;voice_186&gt; suggests that varying the amount of stitching could imply a small game.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-1011"></a>
+<a id="latest-committed-memory-segment-144-node-1011"></a>
 
-- **1011** · clip 78: At the 00:24 mark, the speaker &lt;voice_112&gt; comments on someone's hair.  **Links:** ↔ [112](#latest-committed-memory-segment-125-node-112)
+- **1011** · clip 78: At the 00:24 mark, the speaker &lt;voice_112&gt; comments on someone's hair.  **Links:** ↔ [112](#latest-committed-memory-segment-144-node-112)
 
-<a id="latest-committed-memory-segment-125-node-1012"></a>
+<a id="latest-committed-memory-segment-144-node-1012"></a>
 
-- **1012** · clip 78: Shortly after, the speaker &lt;voice_1006&gt; makes a brief remark.  **Links:** ↔ [1006](#latest-committed-memory-segment-125-node-1006)
+- **1012** · clip 78: Shortly after, the speaker &lt;voice_1006&gt; makes a brief remark.  **Links:** ↔ [1006](#latest-committed-memory-segment-144-node-1006)
 
-<a id="latest-committed-memory-segment-125-node-1013"></a>
+<a id="latest-committed-memory-segment-144-node-1013"></a>
 
 - **1013** · clip 78: Towards the end of the clip, a hand enters the foreground, partially obstructing the camera view.
 
-<a id="latest-committed-memory-segment-125-node-1017"></a>
+<a id="latest-committed-memory-segment-144-node-1017"></a>
 
 - **1017** · clip 79: A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1018"></a>
+<a id="latest-committed-memory-segment-144-node-1018"></a>
 
 - **1018** · clip 79: A person wearing light-colored clothing stands near the whiteboard while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-1019"></a>
+<a id="latest-committed-memory-segment-144-node-1019"></a>
 
 - **1019** · clip 79: Hands are visible in the foreground of the early frames, suggesting the camera is being operated by a participant.
 
-<a id="latest-committed-memory-segment-125-node-1020"></a>
+<a id="latest-committed-memory-segment-144-node-1020"></a>
 
-- **1020** · clip 79: &lt;voice_430&gt; asks if something should be added, stating it is quite good.  **Links:** ↔ [430](#latest-committed-memory-segment-125-node-430)
+- **1020** · clip 79: &lt;voice_430&gt; asks if something should be added, stating it is quite good.  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430)
 
-<a id="latest-committed-memory-segment-125-node-1021"></a>
+<a id="latest-committed-memory-segment-144-node-1021"></a>
 
-- **1021** · clip 79: &lt;voice_186&gt; explains her intention to give participants a small prize consisting of narcissus bulbs.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **1021** · clip 79: &lt;voice_186&gt; explains her intention to give participants a small prize consisting of narcissus bulbs.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-1022"></a>
+<a id="latest-committed-memory-segment-144-node-1022"></a>
 
-- **1022** · clip 79: &lt;voice_186&gt; describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **1022** · clip 79: &lt;voice_186&gt; describes the narcissus bulbs as easy to cultivate and having survived on her plant-killing friends' plants.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-1023"></a>
+<a id="latest-committed-memory-segment-144-node-1023"></a>
 
-- **1023** · clip 79: &lt;voice_186&gt; notes the aesthetic appeal and fragrance of the blooming narcissus flowers.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **1023** · clip 79: &lt;voice_186&gt; notes the aesthetic appeal and fragrance of the blooming narcissus flowers.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-1024"></a>
+<a id="latest-committed-memory-segment-144-node-1024"></a>
 
 - **1024** · clip 79: A clapperboard labeled "Ego Life" rests on the table among various papers and items.
 
-<a id="latest-committed-memory-segment-125-node-1025"></a>
+<a id="latest-committed-memory-segment-144-node-1025"></a>
 
 - **1025** · clip 79: The seated individuals listen attentively to the standing speaker.
 
-<a id="latest-committed-memory-segment-125-node-1031"></a>
+<a id="latest-committed-memory-segment-144-node-1031"></a>
 
 - **1031** · clip 80: A group of people are gathered around a table with a checkered tablecloth in a room with a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1032"></a>
+<a id="latest-committed-memory-segment-144-node-1032"></a>
 
 - **1032** · clip 80: One person stands near the whiteboard wearing a light-colored top while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-1033"></a>
+<a id="latest-committed-memory-segment-144-node-1033"></a>
 
-- **1033** · clip 80: At 00:00, &lt;voice_186&gt; explains a day-long plan and mentions possessing a special quality water balloon.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **1033** · clip 80: At 00:00, &lt;voice_186&gt; explains a day-long plan and mentions possessing a special quality water balloon.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-1034"></a>
+<a id="latest-committed-memory-segment-144-node-1034"></a>
 
 - **1034** · clip 80: The standing individual organizes items on the table, including flowers and papers.
 
-<a id="latest-committed-memory-segment-125-node-1035"></a>
+<a id="latest-committed-memory-segment-144-node-1035"></a>
 
-- **1035** · clip 80: During the conversation, &lt;voice_1029&gt; and &lt;voice_398&gt; discuss purchasing items directly if necessary.  **Links:** ↔ [398](#latest-committed-memory-segment-125-node-398) · ↔ [1029](#latest-committed-memory-segment-125-node-1029)
+- **1035** · clip 80: During the conversation, &lt;voice_1029&gt; and &lt;voice_398&gt; discuss purchasing items directly if necessary.  **Links:** ↔ [398](#latest-committed-memory-segment-144-node-398) · ↔ [1029](#latest-committed-memory-segment-144-node-1029)
 
-<a id="latest-committed-memory-segment-125-node-1036"></a>
+<a id="latest-committed-memory-segment-144-node-1036"></a>
 
-- **1036** · clip 80: At 00:21, &lt;voice_1030&gt; expresses uncertainty, stating 'Okay, I don't know about me.'  **Links:** ↔ [1030](#latest-committed-memory-segment-125-node-1030)
+- **1036** · clip 80: At 00:21, &lt;voice_1030&gt; expresses uncertainty, stating 'Okay, I don't know about me.'  **Links:** ↔ [1030](#latest-committed-memory-segment-144-node-1030)
 
-<a id="latest-committed-memory-segment-125-node-1037"></a>
+<a id="latest-committed-memory-segment-144-node-1037"></a>
 
-- **1037** · clip 80: Towards the end, &lt;voice_467&gt; recalls wanting to remember sending a flower bouquet on the first day.  **Links:** ↔ [467](#latest-committed-memory-segment-125-node-467)
+- **1037** · clip 80: Towards the end, &lt;voice_467&gt; recalls wanting to remember sending a flower bouquet on the first day.  **Links:** ↔ [467](#latest-committed-memory-segment-144-node-467)
 
-<a id="latest-committed-memory-segment-125-node-1038"></a>
+<a id="latest-committed-memory-segment-144-node-1038"></a>
 
 - **1038** · clip 80: The person seated on the left interacts with cards on the table before resting their head on their arm around 00:25.
 
-<a id="latest-committed-memory-segment-125-node-1039"></a>
+<a id="latest-committed-memory-segment-144-node-1039"></a>
 
 - **1039** · clip 80: A clapperboard labeled 'DAY 1' is visible on the table throughout the sequence.
 
-<a id="latest-committed-memory-segment-125-node-1050"></a>
+<a id="latest-committed-memory-segment-144-node-1050"></a>
 
 - **1050** · clip 81: At 00:00, a group of people gather around a table covered with a red-and-white checkered cloth, featuring flowers and a clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1051"></a>
+<a id="latest-committed-memory-segment-144-node-1051"></a>
 
 - **1051** · clip 81: A person in a light-colored top stands near a whiteboard while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-1052"></a>
+<a id="latest-committed-memory-segment-144-node-1052"></a>
 
 - **1052** · clip 81: At 00:04, the standing person discusses a potential collaboration between Haidilao and a plant-related theme.
 
-<a id="latest-committed-memory-segment-125-node-1053"></a>
+<a id="latest-committed-memory-segment-144-node-1053"></a>
 
 - **1053** · clip 81: At 00:12, the seated individual on the left listens attentively while the person standing elaborates on a subscription plan.
 
-<a id="latest-committed-memory-segment-125-node-1054"></a>
+<a id="latest-committed-memory-segment-144-node-1054"></a>
 
 - **1054** · clip 81: At 00:20, the camera perspective shifts to show the legs of the person holding the camera.
 
-<a id="latest-committed-memory-segment-125-node-1055"></a>
+<a id="latest-committed-memory-segment-144-node-1055"></a>
 
 - **1055** · clip 81: At 00:25, a person in an orange shirt walks into the background near a projector screen.
 
-<a id="latest-committed-memory-segment-125-node-1056"></a>
+<a id="latest-committed-memory-segment-144-node-1056"></a>
 
 - **1056** · clip 81: Throughout the clip, the group remains engaged in a discussion about planting activities and brand collaborations.
 
-<a id="latest-committed-memory-segment-125-node-1060"></a>
+<a id="latest-committed-memory-segment-144-node-1060"></a>
 
 - **1060** · clip 82: A group of people are seated around a wooden table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-1061"></a>
+<a id="latest-committed-memory-segment-144-node-1061"></a>
 
 - **1061** · clip 82: On the table, there are pink flowers, papers, a smartphone, a water bottle, and a film clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1062"></a>
+<a id="latest-committed-memory-segment-144-node-1062"></a>
 
 - **1062** · clip 82: One person stands near a whiteboard in the background while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-1063"></a>
+<a id="latest-committed-memory-segment-144-node-1063"></a>
 
-- **1063** · clip 82: Voice &lt;voice_468&gt; describes ideas similar to second-hand dealers and suggests visiting bars or coffee shops with a lively atmosphere.  **Links:** ↔ [468](#latest-committed-memory-segment-125-node-468)
+- **1063** · clip 82: Voice &lt;voice_468&gt; describes ideas similar to second-hand dealers and suggests visiting bars or coffee shops with a lively atmosphere.  **Links:** ↔ [468](#latest-committed-memory-segment-144-node-468)
 
-<a id="latest-committed-memory-segment-125-node-1064"></a>
+<a id="latest-committed-memory-segment-144-node-1064"></a>
 
-- **1064** · clip 82: Voice &lt;voice_468&gt; continues by mentioning a chain ice cream shop in Beijing called Tiao Hai.  **Links:** ↔ [468](#latest-committed-memory-segment-125-node-468)
+- **1064** · clip 82: Voice &lt;voice_468&gt; continues by mentioning a chain ice cream shop in Beijing called Tiao Hai.  **Links:** ↔ [468](#latest-committed-memory-segment-144-node-468)
 
-<a id="latest-committed-memory-segment-125-node-1065"></a>
+<a id="latest-committed-memory-segment-144-node-1065"></a>
 
-- **1065** · clip 82: Voice &lt;voice_976&gt; acknowledges the statement with 'OK'.  **Links:** ↔ [976](#latest-committed-memory-segment-125-node-976)
+- **1065** · clip 82: Voice &lt;voice_976&gt; acknowledges the statement with 'OK'.  **Links:** ↔ [976](#latest-committed-memory-segment-144-node-976)
 
-<a id="latest-committed-memory-segment-125-node-1066"></a>
+<a id="latest-committed-memory-segment-144-node-1066"></a>
 
 - **1066** · clip 82: The person seated on the left gestures with their hands while participating in the discussion.
 
-<a id="latest-committed-memory-segment-125-node-1067"></a>
+<a id="latest-committed-memory-segment-144-node-1067"></a>
 
 - **1067** · clip 82: Towards the end of the clip, the camera zooms in closer to the table surface and the person on the left.
 
-<a id="latest-committed-memory-segment-125-node-1077"></a>
+<a id="latest-committed-memory-segment-144-node-1077"></a>
 
 - **1077** · clip 83: A woman in a black top sits at a table covered with a checkered cloth while another woman in white stands behind the table arranging flowers.
 
-<a id="latest-committed-memory-segment-125-node-1078"></a>
+<a id="latest-committed-memory-segment-144-node-1078"></a>
 
 - **1078** · clip 83: A clapperboard and papers rest on the table in front of the seated woman.
 
-<a id="latest-committed-memory-segment-125-node-1079"></a>
+<a id="latest-committed-memory-segment-144-node-1079"></a>
 
-- **1079** · clip 83: At 00:03, &lt;voice_973&gt; asks 'Should this be this one?'  **Links:** ↔ [973](#latest-committed-memory-segment-125-node-973)
+- **1079** · clip 83: At 00:03, &lt;voice_973&gt; asks 'Should this be this one?'  **Links:** ↔ [973](#latest-committed-memory-segment-144-node-973)
 
-<a id="latest-committed-memory-segment-125-node-1080"></a>
+<a id="latest-committed-memory-segment-144-node-1080"></a>
 
-- **1080** · clip 83: At 00:07, &lt;voice_870&gt; mentions 'Other cities.'  **Links:** ↔ [870](#latest-committed-memory-segment-125-node-870)
+- **1080** · clip 83: At 00:07, &lt;voice_870&gt; mentions 'Other cities.'  **Links:** ↔ [870](#latest-committed-memory-segment-144-node-870)
 
-<a id="latest-committed-memory-segment-125-node-1081"></a>
+<a id="latest-committed-memory-segment-144-node-1081"></a>
 
-- **1081** · clip 83: At 00:09, &lt;voice_973&gt; asks 'So you just made me hold this one?'  **Links:** ↔ [973](#latest-committed-memory-segment-125-node-973)
+- **1081** · clip 83: At 00:09, &lt;voice_973&gt; asks 'So you just made me hold this one?'  **Links:** ↔ [973](#latest-committed-memory-segment-144-node-973)
 
-<a id="latest-committed-memory-segment-125-node-1082"></a>
+<a id="latest-committed-memory-segment-144-node-1082"></a>
 
-- **1082** · clip 83: At 00:10, &lt;voice_1071&gt; states 'Then they opened a business back then.'  **Links:** ↔ [1071](#latest-committed-memory-segment-125-node-1071)
+- **1082** · clip 83: At 00:10, &lt;voice_1071&gt; states 'Then they opened a business back then.'  **Links:** ↔ [1071](#latest-committed-memory-segment-144-node-1071)
 
-<a id="latest-committed-memory-segment-125-node-1083"></a>
+<a id="latest-committed-memory-segment-144-node-1083"></a>
 
-- **1083** · clip 83: At 00:13, &lt;voice_364&gt; responds 'Yeah, I got too much.'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1083** · clip 83: At 00:13, &lt;voice_364&gt; responds 'Yeah, I got too much.'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1084"></a>
+<a id="latest-committed-memory-segment-144-node-1084"></a>
 
-- **1084** · clip 83: At 00:16, &lt;voice_1072&gt; says 'One by one.'  **Links:** ↔ [1072](#latest-committed-memory-segment-125-node-1072)
+- **1084** · clip 83: At 00:16, &lt;voice_1072&gt; says 'One by one.'  **Links:** ↔ [1072](#latest-committed-memory-segment-144-node-1072)
 
-<a id="latest-committed-memory-segment-125-node-1085"></a>
+<a id="latest-committed-memory-segment-144-node-1085"></a>
 
-- **1085** · clip 83: At 00:17, &lt;voice_1073&gt; asks 'Is this one piece?'  **Links:** ↔ [1073](#latest-committed-memory-segment-125-node-1073)
+- **1085** · clip 83: At 00:17, &lt;voice_1073&gt; asks 'Is this one piece?'  **Links:** ↔ [1073](#latest-committed-memory-segment-144-node-1073)
 
-<a id="latest-committed-memory-segment-125-node-1086"></a>
+<a id="latest-committed-memory-segment-144-node-1086"></a>
 
-- **1086** · clip 83: At 00:18, &lt;voice_1074&gt; says 'Then.'  **Links:** ↔ [1074](#latest-committed-memory-segment-125-node-1074)
+- **1086** · clip 83: At 00:18, &lt;voice_1074&gt; says 'Then.'  **Links:** ↔ [1074](#latest-committed-memory-segment-144-node-1074)
 
-<a id="latest-committed-memory-segment-125-node-1087"></a>
+<a id="latest-committed-memory-segment-144-node-1087"></a>
 
-- **1087** · clip 83: At 00:20, &lt;voice_1075&gt; asks 'Did I explain the card is one piece?'  **Links:** ↔ [1075](#latest-committed-memory-segment-125-node-1075)
+- **1087** · clip 83: At 00:20, &lt;voice_1075&gt; asks 'Did I explain the card is one piece?'  **Links:** ↔ [1075](#latest-committed-memory-segment-144-node-1075)
 
-<a id="latest-committed-memory-segment-125-node-1088"></a>
+<a id="latest-committed-memory-segment-144-node-1088"></a>
 
-- **1088** · clip 83: At 00:22, &lt;voice_1076&gt; remarks 'Huh, they don't know.'  **Links:** ↔ [1076](#latest-committed-memory-segment-125-node-1076)
+- **1088** · clip 83: At 00:22, &lt;voice_1076&gt; remarks 'Huh, they don't know.'  **Links:** ↔ [1076](#latest-committed-memory-segment-144-node-1076)
 
-<a id="latest-committed-memory-segment-125-node-1089"></a>
+<a id="latest-committed-memory-segment-144-node-1089"></a>
 
-- **1089** · clip 83: At 00:24, &lt;voice_973&gt; remarks 'Huh, don't know? Lu wan lu si.'  **Links:** ↔ [973](#latest-committed-memory-segment-125-node-973)
+- **1089** · clip 83: At 00:24, &lt;voice_973&gt; remarks 'Huh, don't know? Lu wan lu si.'  **Links:** ↔ [973](#latest-committed-memory-segment-144-node-973)
 
-<a id="latest-committed-memory-segment-125-node-1090"></a>
+<a id="latest-committed-memory-segment-144-node-1090"></a>
 
-- **1090** · clip 83: At 00:28, &lt;voice_366&gt; says 'Buy everyone's anything.'  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1090** · clip 83: At 00:28, &lt;voice_366&gt; says 'Buy everyone's anything.'  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1091"></a>
+<a id="latest-committed-memory-segment-144-node-1091"></a>
 
 - **1091** · clip 83: The standing woman turns to a whiteboard and begins writing.
 
-<a id="latest-committed-memory-segment-125-node-1092"></a>
+<a id="latest-committed-memory-segment-144-node-1092"></a>
 
 - **1092** · clip 83: The seated woman holds up a card with a red heart symbol.
 
-<a id="latest-committed-memory-segment-125-node-1093"></a>
+<a id="latest-committed-memory-segment-144-node-1093"></a>
 
 - **1093** · clip 83: The camera wearer makes hand gestures near the clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1100"></a>
+<a id="latest-committed-memory-segment-144-node-1100"></a>
 
 - **1100** · clip 84: A group of people are gathered around a table covered with a checkered cloth, flowers, and a clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1101"></a>
+<a id="latest-committed-memory-segment-144-node-1101"></a>
 
 - **1101** · clip 84: A woman in a white outfit stands near a whiteboard, leading a discussion while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-1102"></a>
+<a id="latest-committed-memory-segment-144-node-1102"></a>
 
 - **1102** · clip 84: The camera moves into an adjacent room where a person in a pink shirt walks through a doorway.
 
-<a id="latest-committed-memory-segment-125-node-1103"></a>
+<a id="latest-committed-memory-segment-144-node-1103"></a>
 
 - **1103** · clip 84: A close-up view shows a hand placing a card with a red heart onto a desk cluttered with laptops.
 
-<a id="latest-committed-memory-segment-125-node-1104"></a>
+<a id="latest-committed-memory-segment-144-node-1104"></a>
 
 - **1104** · clip 84: The camera returns to the main room where the woman continues to speak and gesture towards the whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1105"></a>
+<a id="latest-committed-memory-segment-144-node-1105"></a>
 
 - **1105** · clip 84: Participants appear engaged in a collaborative meeting or workshop environment.
 
-<a id="latest-committed-memory-segment-125-node-1113"></a>
+<a id="latest-committed-memory-segment-144-node-1113"></a>
 
 - **1113** · clip 85: Four individuals are seated or standing around a table covered with a red-and-white checkered cloth in a room with professional lighting.
 
-<a id="latest-committed-memory-segment-125-node-1114"></a>
+<a id="latest-committed-memory-segment-144-node-1114"></a>
 
 - **1114** · clip 85: A clapperboard sits on the table next to a vase of pink flowers and scattered papers.
 
-<a id="latest-committed-memory-segment-125-node-1115"></a>
+<a id="latest-committed-memory-segment-144-node-1115"></a>
 
 - **1115** · clip 85: One participant stands facing a whiteboard while three others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-1116"></a>
+<a id="latest-committed-memory-segment-144-node-1116"></a>
 
-- **1116** · clip 85: &lt;voice_366&gt; MAI explains the process of sharing stories and evaluating their quality.  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1116** · clip 85: &lt;voice_366&gt; MAI explains the process of sharing stories and evaluating their quality.  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1117"></a>
+<a id="latest-committed-memory-segment-144-node-1117"></a>
 
-- **1117** · clip 85: &lt;voice_364&gt; MAI inquires about the specific monetary value of the subject matter.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1117** · clip 85: &lt;voice_364&gt; MAI inquires about the specific monetary value of the subject matter.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1118"></a>
+<a id="latest-committed-memory-segment-144-node-1118"></a>
 
-- **1118** · clip 85: &lt;voice_1111&gt; MAI draws a parallel between the topic and a story changing into a branch.  **Links:** ↔ [1111](#latest-committed-memory-segment-125-node-1111)
+- **1118** · clip 85: &lt;voice_1111&gt; MAI draws a parallel between the topic and a story changing into a branch.  **Links:** ↔ [1111](#latest-committed-memory-segment-144-node-1111)
 
-<a id="latest-committed-memory-segment-125-node-1119"></a>
+<a id="latest-committed-memory-segment-144-node-1119"></a>
 
-- **1119** · clip 85: &lt;voice_1112&gt; MAI acknowledges the statement briefly.  **Links:** ↔ [1112](#latest-committed-memory-segment-125-node-1112)
+- **1119** · clip 85: &lt;voice_1112&gt; MAI acknowledges the statement briefly.  **Links:** ↔ [1112](#latest-committed-memory-segment-144-node-1112)
 
-<a id="latest-committed-memory-segment-125-node-1120"></a>
+<a id="latest-committed-memory-segment-144-node-1120"></a>
 
 - **1120** · clip 85: In the latter part of the clip, the legs of the camera operator become visible in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-1125"></a>
+<a id="latest-committed-memory-segment-144-node-1125"></a>
 
 - **1125** · clip 86: A group of four individuals are gathered around a wooden table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-1126"></a>
+<a id="latest-committed-memory-segment-144-node-1126"></a>
 
 - **1126** · clip 86: One person stands near a whiteboard while three others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-1127"></a>
+<a id="latest-committed-memory-segment-144-node-1127"></a>
 
 - **1127** · clip 86: A clapperboard and various papers are placed on the table along with a water bottle and flowers.
 
-<a id="latest-committed-memory-segment-125-node-1128"></a>
+<a id="latest-committed-memory-segment-144-node-1128"></a>
 
-- **1128** · clip 86: &lt;voice_637&gt; notes that exchange is connected to environmental concepts.  **Links:** ↔ [637](#latest-committed-memory-segment-125-node-637)
+- **1128** · clip 86: &lt;voice_637&gt; notes that exchange is connected to environmental concepts.  **Links:** ↔ [637](#latest-committed-memory-segment-144-node-637)
 
-<a id="latest-committed-memory-segment-125-node-1129"></a>
+<a id="latest-committed-memory-segment-144-node-1129"></a>
 
-- **1129** · clip 86: &lt;voice_614&gt; agrees that the proposal is generally correct.  **Links:** ↔ [614](#latest-committed-memory-segment-125-node-614)
+- **1129** · clip 86: &lt;voice_614&gt; agrees that the proposal is generally correct.  **Links:** ↔ [614](#latest-committed-memory-segment-144-node-614)
 
-<a id="latest-committed-memory-segment-125-node-1130"></a>
+<a id="latest-committed-memory-segment-144-node-1130"></a>
 
-- **1130** · clip 86: &lt;voice_467&gt; outlines the mechanism of trading stories for coins to purchase items.  **Links:** ↔ [467](#latest-committed-memory-segment-125-node-467)
+- **1130** · clip 86: &lt;voice_467&gt; outlines the mechanism of trading stories for coins to purchase items.  **Links:** ↔ [467](#latest-committed-memory-segment-144-node-467)
 
-<a id="latest-committed-memory-segment-125-node-1131"></a>
+<a id="latest-committed-memory-segment-144-node-1131"></a>
 
-- **1131** · clip 86: &lt;voice_1124&gt; specifies purchasing items brought by others as idle goods.  **Links:** ↔ [1124](#latest-committed-memory-segment-125-node-1124)
+- **1131** · clip 86: &lt;voice_1124&gt; specifies purchasing items brought by others as idle goods.  **Links:** ↔ [1124](#latest-committed-memory-segment-144-node-1124)
 
-<a id="latest-committed-memory-segment-125-node-1132"></a>
+<a id="latest-committed-memory-segment-144-node-1132"></a>
 
-- **1132** · clip 86: &lt;voice_366&gt; details the process of presenting an item and setting a starting bid for sale.  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1132** · clip 86: &lt;voice_366&gt; details the process of presenting an item and setting a starting bid for sale.  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1141"></a>
+<a id="latest-committed-memory-segment-144-node-1141"></a>
 
 - **1141** · clip 87: A group of people are gathered around a wooden table covered with a red and white checkered tablecloth in a room with beige walls.
 
-<a id="latest-committed-memory-segment-125-node-1142"></a>
+<a id="latest-committed-memory-segment-144-node-1142"></a>
 
 - **1142** · clip 87: A woman wearing a white dress stands near a whiteboard in the background, appearing to explain something written on it.
 
-<a id="latest-committed-memory-segment-125-node-1143"></a>
+<a id="latest-committed-memory-segment-144-node-1143"></a>
 
 - **1143** · clip 87: A woman wearing a black long-sleeved top sits at the head of the table, facing the camera.
 
-<a id="latest-committed-memory-segment-125-node-1144"></a>
+<a id="latest-committed-memory-segment-144-node-1144"></a>
 
 - **1144** · clip 87: Several other individuals are seated along the right side of the table.
 
-<a id="latest-committed-memory-segment-125-node-1145"></a>
+<a id="latest-committed-memory-segment-144-node-1145"></a>
 
 - **1145** · clip 87: On the table, there are various items including a clapperboard, a bottle of water, flowers, and papers.
 
-<a id="latest-committed-memory-segment-125-node-1146"></a>
+<a id="latest-committed-memory-segment-144-node-1146"></a>
 
 - **1146** · clip 87: The woman in black interacts with the items on the table, occasionally reaching out towards the center.
 
-<a id="latest-committed-memory-segment-125-node-1147"></a>
+<a id="latest-committed-memory-segment-144-node-1147"></a>
 
 - **1147** · clip 87: The standing woman gestures towards the whiteboard and the items on the table during the discussion.
 
-<a id="latest-committed-memory-segment-125-node-1148"></a>
+<a id="latest-committed-memory-segment-144-node-1148"></a>
 
 - **1148** · clip 87: The camera remains relatively static, capturing the group interaction from a wide angle.
 
-<a id="latest-committed-memory-segment-125-node-1157"></a>
+<a id="latest-committed-memory-segment-144-node-1157"></a>
 
 - **1157** · clip 88: A group of individuals are gathered around a wooden table covered with a red-and-white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-1158"></a>
+<a id="latest-committed-memory-segment-144-node-1158"></a>
 
 - **1158** · clip 88: On the table, there are pink flowers, a clapperboard, papers, and a water bottle.
 
-<a id="latest-committed-memory-segment-125-node-1159"></a>
+<a id="latest-committed-memory-segment-144-node-1159"></a>
 
 - **1159** · clip 88: One person stands behind the table holding a bouquet of flowers while others sit around it.
 
-<a id="latest-committed-memory-segment-125-node-1160"></a>
+<a id="latest-committed-memory-segment-144-node-1160"></a>
 
-- **1160** · clip 88: MAI (&lt;voice_1153&gt;) speaks first, stating, 'He is, he is small currency.'  **Links:** ↔ [1153](#latest-committed-memory-segment-125-node-1153)
+- **1160** · clip 88: MAI (&lt;voice_1153&gt;) speaks first, stating, 'He is, he is small currency.'  **Links:** ↔ [1153](#latest-committed-memory-segment-144-node-1153)
 
-<a id="latest-committed-memory-segment-125-node-1161"></a>
+<a id="latest-committed-memory-segment-144-node-1161"></a>
 
-- **1161** · clip 88: MAI (&lt;voice_517&gt;) continues the discussion, saying, 'Can make some handmade art pieces, use them, use them for auction.'  **Links:** ↔ [517](#latest-committed-memory-segment-125-node-517)
+- **1161** · clip 88: MAI (&lt;voice_517&gt;) continues the discussion, saying, 'Can make some handmade art pieces, use them, use them for auction.'  **Links:** ↔ [517](#latest-committed-memory-segment-144-node-517)
 
-<a id="latest-committed-memory-segment-125-node-1162"></a>
+<a id="latest-committed-memory-segment-144-node-1162"></a>
 
-- **1162** · clip 88: MAI (&lt;voice_364&gt;) elaborates on the business arrangement, mentioning, 'Platform side, item-platform side and small shop-small shop owner, platform side, JD.com.'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1162** · clip 88: MAI (&lt;voice_364&gt;) elaborates on the business arrangement, mentioning, 'Platform side, item-platform side and small shop-small shop owner, platform side, JD.com.'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1163"></a>
+<a id="latest-committed-memory-segment-144-node-1163"></a>
 
-- **1163** · clip 88: MAI (&lt;voice_1154&gt;) confirms the intent, declaring, 'This is my product, I want to auction/sell it.'  **Links:** ↔ [1154](#latest-committed-memory-segment-125-node-1154)
+- **1163** · clip 88: MAI (&lt;voice_1154&gt;) confirms the intent, declaring, 'This is my product, I want to auction/sell it.'  **Links:** ↔ [1154](#latest-committed-memory-segment-144-node-1154)
 
-<a id="latest-committed-memory-segment-125-node-1164"></a>
+<a id="latest-committed-memory-segment-144-node-1164"></a>
 
-- **1164** · clip 88: MAI (&lt;voice_1155&gt;) asks the group, 'Any other ideas?'  **Links:** ↔ [1155](#latest-committed-memory-segment-125-node-1155)
+- **1164** · clip 88: MAI (&lt;voice_1155&gt;) asks the group, 'Any other ideas?'  **Links:** ↔ [1155](#latest-committed-memory-segment-144-node-1155)
 
-<a id="latest-committed-memory-segment-125-node-1165"></a>
+<a id="latest-committed-memory-segment-144-node-1165"></a>
 
-- **1165** · clip 88: Finally, MAI (&lt;voice_1156&gt;) concludes by saying, 'Invite them over on that day, this is what we prepared.'  **Links:** ↔ [1156](#latest-committed-memory-segment-125-node-1156)
+- **1165** · clip 88: Finally, MAI (&lt;voice_1156&gt;) concludes by saying, 'Invite them over on that day, this is what we prepared.'  **Links:** ↔ [1156](#latest-committed-memory-segment-144-node-1156)
 
-<a id="latest-committed-memory-segment-125-node-1166"></a>
+<a id="latest-committed-memory-segment-144-node-1166"></a>
 
 - **1166** · clip 88: The group appears to be brainstorming strategies for selling handmade crafts online.
 
-<a id="latest-committed-memory-segment-125-node-1172"></a>
+<a id="latest-committed-memory-segment-144-node-1172"></a>
 
 - **1172** · clip 89: A group of people are gathered around a table with a checkered tablecloth in a room.
 
-<a id="latest-committed-memory-segment-125-node-1173"></a>
+<a id="latest-committed-memory-segment-144-node-1173"></a>
 
 - **1173** · clip 89: One person stands near a whiteboard while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-1174"></a>
+<a id="latest-committed-memory-segment-144-node-1174"></a>
 
 - **1174** · clip 89: A person seated on the left holds a bottle with a red cap.
 
-<a id="latest-committed-memory-segment-125-node-1175"></a>
+<a id="latest-committed-memory-segment-144-node-1175"></a>
 
 - **1175** · clip 89: The camera wearer is reclining in the foreground with legs visible.
 
-<a id="latest-committed-memory-segment-125-node-1176"></a>
+<a id="latest-committed-memory-segment-144-node-1176"></a>
 
-- **1176** · clip 89: Speaker &lt;voice_484&gt; discusses entertaining guests and mentions mixing drinks like at a small party.  **Links:** ↔ [484](#latest-committed-memory-segment-125-node-484)
+- **1176** · clip 89: Speaker &lt;voice_484&gt; discusses entertaining guests and mentions mixing drinks like at a small party.  **Links:** ↔ [484](#latest-committed-memory-segment-144-node-484)
 
-<a id="latest-committed-memory-segment-125-node-1177"></a>
+<a id="latest-committed-memory-segment-144-node-1177"></a>
 
-- **1177** · clip 89: Speaker &lt;voice_366&gt; suggests making coffee for everyone using a hand-pour kit.  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1177** · clip 89: Speaker &lt;voice_366&gt; suggests making coffee for everyone using a hand-pour kit.  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1178"></a>
+<a id="latest-committed-memory-segment-144-node-1178"></a>
 
-- **1178** · clip 89: Speaker &lt;voice_1170&gt; agrees and states they can invite everyone to drink.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170)
+- **1178** · clip 89: Speaker &lt;voice_1170&gt; agrees and states they can invite everyone to drink.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
 
-<a id="latest-committed-memory-segment-125-node-1179"></a>
+<a id="latest-committed-memory-segment-144-node-1179"></a>
 
-- **1179** · clip 89: Speaker &lt;voice_1171&gt; laughs during the conversation.  **Links:** ↔ [1171](#latest-committed-memory-segment-125-node-1171)
+- **1179** · clip 89: Speaker &lt;voice_1171&gt; laughs during the conversation.  **Links:** ↔ [1171](#latest-committed-memory-segment-144-node-1171)
 
-<a id="latest-committed-memory-segment-125-node-1180"></a>
+<a id="latest-committed-memory-segment-144-node-1180"></a>
 
-- **1180** · clip 89: Speaker &lt;voice_364&gt; remarks on the sudden happiness at the beginning of the gathering.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1180** · clip 89: Speaker &lt;voice_364&gt; remarks on the sudden happiness at the beginning of the gathering.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1187"></a>
+<a id="latest-committed-memory-segment-144-node-1187"></a>
 
 - **1187** · clip 90: A first-person perspective view captures a group of four people gathered around a wooden table in a room equipped with a whiteboard and projector screen.
 
-<a id="latest-committed-memory-segment-125-node-1188"></a>
+<a id="latest-committed-memory-segment-144-node-1188"></a>
 
 - **1188** · clip 90: The camera wearer sits in the foreground with their legs visible, while three other individuals occupy chairs around the table.
 
-<a id="latest-committed-memory-segment-125-node-1189"></a>
+<a id="latest-committed-memory-segment-144-node-1189"></a>
 
 - **1189** · clip 90: One person stands near the whiteboard, appearing to write or point at the board while addressing the seated group.
 
-<a id="latest-committed-memory-segment-125-node-1190"></a>
+<a id="latest-committed-memory-segment-144-node-1190"></a>
 
-- **1190** · clip 90: &lt;voice_1184&gt; speaks stating 'Just perform.'  **Links:** ↔ [1184](#latest-committed-memory-segment-125-node-1184)
+- **1190** · clip 90: &lt;voice_1184&gt; speaks stating 'Just perform.'  **Links:** ↔ [1184](#latest-committed-memory-segment-144-node-1184)
 
-<a id="latest-committed-memory-segment-125-node-1191"></a>
+<a id="latest-committed-memory-segment-144-node-1191"></a>
 
-- **1191** · clip 90: &lt;voice_443&gt; mentions 'Coffee and alcohol.'  **Links:** ↔ [443](#latest-committed-memory-segment-125-node-443)
+- **1191** · clip 90: &lt;voice_443&gt; mentions 'Coffee and alcohol.'  **Links:** ↔ [443](#latest-committed-memory-segment-144-node-443)
 
-<a id="latest-committed-memory-segment-125-node-1192"></a>
+<a id="latest-committed-memory-segment-144-node-1192"></a>
 
-- **1192** · clip 90: &lt;voice_484&gt; asks about the total duration of the entire activity.  **Links:** ↔ [484](#latest-committed-memory-segment-125-node-484)
+- **1192** · clip 90: &lt;voice_484&gt; asks about the total duration of the entire activity.  **Links:** ↔ [484](#latest-committed-memory-segment-144-node-484)
 
-<a id="latest-committed-memory-segment-125-node-1193"></a>
+<a id="latest-committed-memory-segment-144-node-1193"></a>
 
-- **1193** · clip 90: &lt;voice_398&gt; responds that it lasts 'an afternoon.'  **Links:** ↔ [398](#latest-committed-memory-segment-125-node-398)
+- **1193** · clip 90: &lt;voice_398&gt; responds that it lasts 'an afternoon.'  **Links:** ↔ [398](#latest-committed-memory-segment-144-node-398)
 
-<a id="latest-committed-memory-segment-125-node-1194"></a>
+<a id="latest-committed-memory-segment-144-node-1194"></a>
 
-- **1194** · clip 90: &lt;voice_1185&gt; confirms the time and suggests providing some food for the participants.  **Links:** ↔ [1185](#latest-committed-memory-segment-125-node-1185)
+- **1194** · clip 90: &lt;voice_1185&gt; confirms the time and suggests providing some food for the participants.  **Links:** ↔ [1185](#latest-committed-memory-segment-144-node-1185)
 
-<a id="latest-committed-memory-segment-125-node-1195"></a>
+<a id="latest-committed-memory-segment-144-node-1195"></a>
 
-- **1195** · clip 90: &lt;voice_1170&gt; discusses the existence of market and catering department sections.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170)
+- **1195** · clip 90: &lt;voice_1170&gt; discusses the existence of market and catering department sections.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
 
-<a id="latest-committed-memory-segment-125-node-1196"></a>
+<a id="latest-committed-memory-segment-144-node-1196"></a>
 
-- **1196** · clip 90: &lt;voice_1186&gt; agrees to the plan.  **Links:** ↔ [1186](#latest-committed-memory-segment-125-node-1186)
+- **1196** · clip 90: &lt;voice_1186&gt; agrees to the plan.  **Links:** ↔ [1186](#latest-committed-memory-segment-144-node-1186)
 
-<a id="latest-committed-memory-segment-125-node-1200"></a>
+<a id="latest-committed-memory-segment-144-node-1200"></a>
 
 - **1200** · clip 91: A group of four individuals is gathered around a wooden table in a room equipped with a projector screen and whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1201"></a>
+<a id="latest-committed-memory-segment-144-node-1201"></a>
 
-- **1201** · clip 91: Voice &lt;voice_364&gt; discusses meal management options and asks about the total number of people involved.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1201** · clip 91: Voice &lt;voice_364&gt; discusses meal management options and asks about the total number of people involved.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1202"></a>
+<a id="latest-committed-memory-segment-144-node-1202"></a>
 
-- **1202** · clip 91: Voice &lt;voice_364&gt; proposes an afternoon tea schedule, suggesting a timeline starting at 2 PM or 3 PM and continuing until night.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1202** · clip 91: Voice &lt;voice_364&gt; proposes an afternoon tea schedule, suggesting a timeline starting at 2 PM or 3 PM and continuing until night.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1203"></a>
+<a id="latest-committed-memory-segment-144-node-1203"></a>
 
-- **1203** · clip 91: Voice &lt;voice_1170&gt; suggests that while meals may not be managed, requesting someone to make dessert is acceptable.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170)
+- **1203** · clip 91: Voice &lt;voice_1170&gt; suggests that while meals may not be managed, requesting someone to make dessert is acceptable.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
 
-<a id="latest-committed-memory-segment-125-node-1204"></a>
+<a id="latest-committed-memory-segment-144-node-1204"></a>
 
 - **1204** · clip 91: The standing participant holds a folder and gestures while the seated members listen attentively.
 
-<a id="latest-committed-memory-segment-125-node-1209"></a>
+<a id="latest-committed-memory-segment-144-node-1209"></a>
 
-- **1209** · clip 92: In a room with a whiteboard, a group gathers around a table where &lt;voice_1207&gt; asks if they can wait until night and inquires about the weather.  **Links:** ↔ [1207](#latest-committed-memory-segment-125-node-1207)
+- **1209** · clip 92: In a room with a whiteboard, a group gathers around a table where &lt;voice_1207&gt; asks if they can wait until night and inquires about the weather.  **Links:** ↔ [1207](#latest-committed-memory-segment-144-node-1207)
 
-<a id="latest-committed-memory-segment-125-node-1210"></a>
+<a id="latest-committed-memory-segment-144-node-1210"></a>
 
-- **1210** · clip 92: &lt;voice_32&gt; replies that they don't know about a specific detail.  **Links:** ↔ [32](#latest-committed-memory-segment-125-node-32)
+- **1210** · clip 92: &lt;voice_32&gt; replies that they don't know about a specific detail.  **Links:** ↔ [32](#latest-committed-memory-segment-144-node-32)
 
-<a id="latest-committed-memory-segment-125-node-1211"></a>
+<a id="latest-committed-memory-segment-144-node-1211"></a>
 
-- **1211** · clip 92: &lt;voice_1208&gt; adds that if it doesn't rain, waiting until night would be quite dazzling.  **Links:** ↔ [1208](#latest-committed-memory-segment-125-node-1208)
+- **1211** · clip 92: &lt;voice_1208&gt; adds that if it doesn't rain, waiting until night would be quite dazzling.  **Links:** ↔ [1208](#latest-committed-memory-segment-144-node-1208)
 
-<a id="latest-committed-memory-segment-125-node-1212"></a>
+<a id="latest-committed-memory-segment-144-node-1212"></a>
 
-- **1212** · clip 92: &lt;voice_364&gt; agrees, noting the courtyard is comfortable for the afternoon scene and suggesting barbecuing.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1212** · clip 92: &lt;voice_364&gt; agrees, noting the courtyard is comfortable for the afternoon scene and suggesting barbecuing.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1213"></a>
+<a id="latest-committed-memory-segment-144-node-1213"></a>
 
-- **1213** · clip 92: &lt;voice_250&gt; mentions shopping together today.  **Links:** ↔ [250](#latest-committed-memory-segment-125-node-250)
+- **1213** · clip 92: &lt;voice_250&gt; mentions shopping together today.  **Links:** ↔ [250](#latest-committed-memory-segment-144-node-250)
 
-<a id="latest-committed-memory-segment-125-node-1214"></a>
+<a id="latest-committed-memory-segment-144-node-1214"></a>
 
-- **1214** · clip 92: &lt;voice_913&gt; confirms the plan.  **Links:** ↔ [913](#latest-committed-memory-segment-125-node-913)
+- **1214** · clip 92: &lt;voice_913&gt; confirms the plan.  **Links:** ↔ [913](#latest-committed-memory-segment-144-node-913)
 
-<a id="latest-committed-memory-segment-125-node-1215"></a>
+<a id="latest-committed-memory-segment-144-node-1215"></a>
 
 - **1215** · clip 92: A man in an orange shirt enters the room from the left.
 
-<a id="latest-committed-memory-segment-125-node-1216"></a>
+<a id="latest-committed-memory-segment-144-node-1216"></a>
 
 - **1216** · clip 92: The camera pans to reveal a kitchen area with a window overlooking a building.
 
-<a id="latest-committed-memory-segment-125-node-1222"></a>
+<a id="latest-committed-memory-segment-144-node-1222"></a>
 
 - **1222** · clip 93: A group of people are gathered around a wooden table covered with a red and white checkered cloth in a room.
 
-<a id="latest-committed-memory-segment-125-node-1223"></a>
+<a id="latest-committed-memory-segment-144-node-1223"></a>
 
 - **1223** · clip 93: A person wearing a pink t-shirt stands near a projection screen on the left side of the room.
 
-<a id="latest-committed-memory-segment-125-node-1224"></a>
+<a id="latest-committed-memory-segment-144-node-1224"></a>
 
 - **1224** · clip 93: Another person in a white shirt stands behind the table, organizing items.
 
-<a id="latest-committed-memory-segment-125-node-1225"></a>
+<a id="latest-committed-memory-segment-144-node-1225"></a>
 
 - **1225** · clip 93: Two women are seated at the table, engaged in conversation.
 
-<a id="latest-committed-memory-segment-125-node-1226"></a>
+<a id="latest-committed-memory-segment-144-node-1226"></a>
 
 - **1226** · clip 93: A clapperboard rests on the table in front of the seated individuals.
 
-<a id="latest-committed-memory-segment-125-node-1227"></a>
+<a id="latest-committed-memory-segment-144-node-1227"></a>
 
 - **1227** · clip 93: The person in the pink shirt gestures while speaking to the group.
 
-<a id="latest-committed-memory-segment-125-node-1228"></a>
+<a id="latest-committed-memory-segment-144-node-1228"></a>
 
 - **1228** · clip 93: The person in the white shirt picks up a book or script from the table.
 
-<a id="latest-committed-memory-segment-125-node-1229"></a>
+<a id="latest-committed-memory-segment-144-node-1229"></a>
 
 - **1229** · clip 93: The camera view shows legs of the person holding the camera in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-1230"></a>
+<a id="latest-committed-memory-segment-144-node-1230"></a>
 
 - **1230** · clip 93: The person in the pink shirt walks towards the projection screen at the end of the sequence.
 
-<a id="latest-committed-memory-segment-125-node-1239"></a>
+<a id="latest-committed-memory-segment-144-node-1239"></a>
 
 - **1239** · clip 94: At 00:00, a person in a peach t-shirt stands on the left while others gather around a table with a checkered cloth and a clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1240"></a>
+<a id="latest-committed-memory-segment-144-node-1240"></a>
 
-- **1240** · clip 94: &lt;voice_1234&gt; mentions taking something out and letting it rest before cutting.  **Links:** ↔ [1234](#latest-committed-memory-segment-125-node-1234)
+- **1240** · clip 94: &lt;voice_1234&gt; mentions taking something out and letting it rest before cutting.  **Links:** ↔ [1234](#latest-committed-memory-segment-144-node-1234)
 
-<a id="latest-committed-memory-segment-125-node-1241"></a>
+<a id="latest-committed-memory-segment-144-node-1241"></a>
 
-- **1241** · clip 94: &lt;voice_339&gt; discusses soft meat and chewing, indicating a discussion about food preparation.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **1241** · clip 94: &lt;voice_339&gt; discusses soft meat and chewing, indicating a discussion about food preparation.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-1242"></a>
+<a id="latest-committed-memory-segment-144-node-1242"></a>
 
-- **1242** · clip 94: &lt;voice_1235&gt; confirms understanding and readiness.  **Links:** ↔ [1235](#latest-committed-memory-segment-125-node-1235)
+- **1242** · clip 94: &lt;voice_1235&gt; confirms understanding and readiness.  **Links:** ↔ [1235](#latest-committed-memory-segment-144-node-1235)
 
-<a id="latest-committed-memory-segment-125-node-1243"></a>
+<a id="latest-committed-memory-segment-144-node-1243"></a>
 
-- **1243** · clip 94: &lt;voice_277&gt; asks if they can grill the item.  **Links:** ↔ [277](#latest-committed-memory-segment-125-node-277)
+- **1243** · clip 94: &lt;voice_277&gt; asks if they can grill the item.  **Links:** ↔ [277](#latest-committed-memory-segment-144-node-277)
 
-<a id="latest-committed-memory-segment-125-node-1244"></a>
+<a id="latest-committed-memory-segment-144-node-1244"></a>
 
-- **1244** · clip 94: &lt;voice_1236&gt; mentions buying alcohol and mixing drinks.  **Links:** ↔ [1236](#latest-committed-memory-segment-125-node-1236)
+- **1244** · clip 94: &lt;voice_1236&gt; mentions buying alcohol and mixing drinks.  **Links:** ↔ [1236](#latest-committed-memory-segment-144-node-1236)
 
-<a id="latest-committed-memory-segment-125-node-1245"></a>
+<a id="latest-committed-memory-segment-144-node-1245"></a>
 
-- **1245** · clip 94: &lt;voice_1237&gt; adds that ice cubes should be added.  **Links:** ↔ [1237](#latest-committed-memory-segment-125-node-1237)
+- **1245** · clip 94: &lt;voice_1237&gt; adds that ice cubes should be added.  **Links:** ↔ [1237](#latest-committed-memory-segment-144-node-1237)
 
-<a id="latest-committed-memory-segment-125-node-1246"></a>
+<a id="latest-committed-memory-segment-144-node-1246"></a>
 
-- **1246** · clip 94: &lt;voice_1238&gt; reiterates the topic of ice cubes.  **Links:** ↔ [1238](#latest-committed-memory-segment-125-node-1238)
+- **1246** · clip 94: &lt;voice_1238&gt; reiterates the topic of ice cubes.  **Links:** ↔ [1238](#latest-committed-memory-segment-144-node-1238)
 
-<a id="latest-committed-memory-segment-125-node-1247"></a>
+<a id="latest-committed-memory-segment-144-node-1247"></a>
 
-- **1247** · clip 94: &lt;voice_1170&gt; recalls borrowing a block from a coffee shop previously.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170)
+- **1247** · clip 94: &lt;voice_1170&gt; recalls borrowing a block from a coffee shop previously.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
 
-<a id="latest-committed-memory-segment-125-node-1248"></a>
+<a id="latest-committed-memory-segment-144-node-1248"></a>
 
 - **1248** · clip 94: The person in the white shirt holds a script and interacts with a whiteboard while the person in the peach shirt moves around the room.
 
-<a id="latest-committed-memory-segment-125-node-1249"></a>
+<a id="latest-committed-memory-segment-144-node-1249"></a>
 
 - **1249** · clip 94: The camera pans to show a kitchen area with a window overlooking a building.
 
-<a id="latest-committed-memory-segment-125-node-1250"></a>
+<a id="latest-committed-memory-segment-144-node-1250"></a>
 
 - **1250** · clip 94: The group resumes gathering around the table, continuing the script reading.
 
-<a id="latest-committed-memory-segment-125-node-1260"></a>
+<a id="latest-committed-memory-segment-144-node-1260"></a>
 
-- **1260** · clip 95: At a table with a clapperboard reading 'Ego Life', &lt;voice_1254&gt; comments that the script is simple.  **Links:** ↔ [1254](#latest-committed-memory-segment-125-node-1254)
+- **1260** · clip 95: At a table with a clapperboard reading 'Ego Life', &lt;voice_1254&gt; comments that the script is simple.  **Links:** ↔ [1254](#latest-committed-memory-segment-144-node-1254)
 
-<a id="latest-committed-memory-segment-125-node-1261"></a>
+<a id="latest-committed-memory-segment-144-node-1261"></a>
 
-- **1261** · clip 95: &lt;voice_841&gt; suggests buying a freezer to freeze items if high requirements are not needed.  **Links:** ↔ [841](#latest-committed-memory-segment-125-node-841)
+- **1261** · clip 95: &lt;voice_841&gt; suggests buying a freezer to freeze items if high requirements are not needed.  **Links:** ↔ [841](#latest-committed-memory-segment-144-node-841)
 
-<a id="latest-committed-memory-segment-125-node-1262"></a>
+<a id="latest-committed-memory-segment-144-node-1262"></a>
 
-- **1262** · clip 95: &lt;voice_1255&gt; discusses transparency issues and notes they have access to it.  **Links:** ↔ [1255](#latest-committed-memory-segment-125-node-1255)
+- **1262** · clip 95: &lt;voice_1255&gt; discusses transparency issues and notes they have access to it.  **Links:** ↔ [1255](#latest-committed-memory-segment-144-node-1255)
 
-<a id="latest-committed-memory-segment-125-node-1263"></a>
+<a id="latest-committed-memory-segment-144-node-1263"></a>
 
-- **1263** · clip 95: &lt;voice_1256&gt; states they have a freezer and plan to use a mold to freeze water before pouring.  **Links:** ↔ [1256](#latest-committed-memory-segment-125-node-1256)
+- **1263** · clip 95: &lt;voice_1256&gt; states they have a freezer and plan to use a mold to freeze water before pouring.  **Links:** ↔ [1256](#latest-committed-memory-segment-144-node-1256)
 
-<a id="latest-committed-memory-segment-125-node-1264"></a>
+<a id="latest-committed-memory-segment-144-node-1264"></a>
 
-- **1264** · clip 95: &lt;voice_1257&gt; proposes using steam water as a viable option.  **Links:** ↔ [1257](#latest-committed-memory-segment-125-node-1257)
+- **1264** · clip 95: &lt;voice_1257&gt; proposes using steam water as a viable option.  **Links:** ↔ [1257](#latest-committed-memory-segment-144-node-1257)
 
-<a id="latest-committed-memory-segment-125-node-1265"></a>
+<a id="latest-committed-memory-segment-144-node-1265"></a>
 
-- **1265** · clip 95: &lt;voice_199&gt; clarifies that boiled water would suffice.  **Links:** ↔ [199](#latest-committed-memory-segment-125-node-199)
+- **1265** · clip 95: &lt;voice_199&gt; clarifies that boiled water would suffice.  **Links:** ↔ [199](#latest-committed-memory-segment-144-node-199)
 
-<a id="latest-committed-memory-segment-125-node-1266"></a>
+<a id="latest-committed-memory-segment-144-node-1266"></a>
 
-- **1266** · clip 95: &lt;voice_1258&gt; confirms the decision to use steam water.  **Links:** ↔ [1258](#latest-committed-memory-segment-125-node-1258)
+- **1266** · clip 95: &lt;voice_1258&gt; confirms the decision to use steam water.  **Links:** ↔ [1258](#latest-committed-memory-segment-144-node-1258)
 
-<a id="latest-committed-memory-segment-125-node-1267"></a>
+<a id="latest-committed-memory-segment-144-node-1267"></a>
 
-- **1267** · clip 95: &lt;voice_1259&gt; asks what specific game or activity they are actually playing.  **Links:** ↔ [1259](#latest-committed-memory-segment-125-node-1259)
+- **1267** · clip 95: &lt;voice_1259&gt; asks what specific game or activity they are actually playing.  **Links:** ↔ [1259](#latest-committed-memory-segment-144-node-1259)
 
-<a id="latest-committed-memory-segment-125-node-1268"></a>
+<a id="latest-committed-memory-segment-144-node-1268"></a>
 
 - **1268** · clip 95: A participant in the foreground holds up a smartphone to record the ongoing discussion.
 
-<a id="latest-committed-memory-segment-125-node-1273"></a>
+<a id="latest-committed-memory-segment-144-node-1273"></a>
 
 - **1273** · clip 96: Camera wearer holds a smartphone while filming a group of three women gathered around a table covered with a checkered cloth and a clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1274"></a>
+<a id="latest-committed-memory-segment-144-node-1274"></a>
 
-- **1274** · clip 96: &lt;voice_1272&gt; asks about the overall time flow.  **Links:** ↔ [1272](#latest-committed-memory-segment-125-node-1272)
+- **1274** · clip 96: &lt;voice_1272&gt; asks about the overall time flow.  **Links:** ↔ [1272](#latest-committed-memory-segment-144-node-1272)
 
-<a id="latest-committed-memory-segment-125-node-1275"></a>
+<a id="latest-committed-memory-segment-144-node-1275"></a>
 
 - **1275** · clip 96: The woman standing in a white top begins explaining the schedule.
 
-<a id="latest-committed-memory-segment-125-node-1276"></a>
+<a id="latest-committed-memory-segment-144-node-1276"></a>
 
-- **1276** · clip 96: &lt;voice_364&gt; states that they should start from 3 o'clock and mentions that shooting can occupy some time.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1276** · clip 96: &lt;voice_364&gt; states that they should start from 3 o'clock and mentions that shooting can occupy some time.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1277"></a>
+<a id="latest-committed-memory-segment-144-node-1277"></a>
 
-- **1277** · clip 96: &lt;voice_467&gt; clarifies the need to specify what happens between certain time points.  **Links:** ↔ [467](#latest-committed-memory-segment-125-node-467)
+- **1277** · clip 96: &lt;voice_467&gt; clarifies the need to specify what happens between certain time points.  **Links:** ↔ [467](#latest-committed-memory-segment-144-node-467)
 
-<a id="latest-committed-memory-segment-125-node-1278"></a>
+<a id="latest-committed-memory-segment-144-node-1278"></a>
 
-- **1278** · clip 96: &lt;voice_1170&gt; compares the group of five people to a market but notes the smaller venue requires strict time regulations to avoid rushing through tasks.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170)
+- **1278** · clip 96: &lt;voice_1170&gt; compares the group of five people to a market but notes the smaller venue requires strict time regulations to avoid rushing through tasks.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
 
-<a id="latest-committed-memory-segment-125-node-1279"></a>
+<a id="latest-committed-memory-segment-144-node-1279"></a>
 
 - **1279** · clip 96: A man wearing an orange shirt enters the room from the left and stands near the projector screen.
 
-<a id="latest-committed-memory-segment-125-node-1283"></a>
+<a id="latest-committed-memory-segment-144-node-1283"></a>
 
 - **1283** · clip 97: Three individuals are gathered around a wooden table covered with a red-and-white checkered cloth in a room equipped with lighting gear and a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1284"></a>
+<a id="latest-committed-memory-segment-144-node-1284"></a>
 
 - **1284** · clip 97: A person wearing a white shirt stands near the whiteboard while two others sit at the table.
 
-<a id="latest-committed-memory-segment-125-node-1285"></a>
+<a id="latest-committed-memory-segment-144-node-1285"></a>
 
 - **1285** · clip 97: An individual wearing an orange t-shirt enters the room from the left side and stands near a projector screen.
 
-<a id="latest-committed-memory-segment-125-node-1286"></a>
+<a id="latest-committed-memory-segment-144-node-1286"></a>
 
 - **1286** · clip 97: The person in the white shirt gestures towards the whiteboard during the discussion.
 
-<a id="latest-committed-memory-segment-125-node-1287"></a>
+<a id="latest-committed-memory-segment-144-node-1287"></a>
 
 - **1287** · clip 97: The person in the black top sits at the table interacting with various items on the table.
 
-<a id="latest-committed-memory-segment-125-node-1288"></a>
+<a id="latest-committed-memory-segment-144-node-1288"></a>
 
 - **1288** · clip 97: The camera wearer remains seated, their legs visible in the foreground throughout the clip.
 
-<a id="latest-committed-memory-segment-125-node-1294"></a>
+<a id="latest-committed-memory-segment-144-node-1294"></a>
 
 - **1294** · clip 98: A group of four individuals are gathered around a wooden table in a room.
 
-<a id="latest-committed-memory-segment-125-node-1295"></a>
+<a id="latest-committed-memory-segment-144-node-1295"></a>
 
 - **1295** · clip 98: One person sits on the left side of the table wearing a black top.
 
-<a id="latest-committed-memory-segment-125-node-1296"></a>
+<a id="latest-committed-memory-segment-144-node-1296"></a>
 
 - **1296** · clip 98: Another individual stands behind the table in the center wearing a white shirt.
 
-<a id="latest-committed-memory-segment-125-node-1297"></a>
+<a id="latest-committed-memory-segment-144-node-1297"></a>
 
 - **1297** · clip 98: A third person sits on the right side of the table with long dark hair.
 
-<a id="latest-committed-memory-segment-125-node-1298"></a>
+<a id="latest-committed-memory-segment-144-node-1298"></a>
 
 - **1298** · clip 98: The camera perspective is from a first-person viewpoint, showing the legs of the person holding the camera in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-1299"></a>
+<a id="latest-committed-memory-segment-144-node-1299"></a>
 
 - **1299** · clip 98: Professional filming equipment, including a projector and softbox lights, is visible in the background.
 
-<a id="latest-committed-memory-segment-125-node-1304"></a>
+<a id="latest-committed-memory-segment-144-node-1304"></a>
 
 - **1304** · clip 99: A group of people gather around a table covered with a checkered cloth, featuring a whiteboard, flowers, and a clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1305"></a>
+<a id="latest-committed-memory-segment-144-node-1305"></a>
 
-- **1305** · clip 99: At 00:01, &lt;voice_312&gt; states, "Acting, actually have some ideas."  **Links:** ↔ [312](#latest-committed-memory-segment-125-node-312)
+- **1305** · clip 99: At 00:01, &lt;voice_312&gt; states, "Acting, actually have some ideas."  **Links:** ↔ [312](#latest-committed-memory-segment-144-node-312)
 
-<a id="latest-committed-memory-segment-125-node-1306"></a>
+<a id="latest-committed-memory-segment-144-node-1306"></a>
 
-- **1306** · clip 99: At 00:05, &lt;voice_1302&gt; suggests, "How about dancing?"  **Links:** ↔ [1302](#latest-committed-memory-segment-125-node-1302)
+- **1306** · clip 99: At 00:05, &lt;voice_1302&gt; suggests, "How about dancing?"  **Links:** ↔ [1302](#latest-committed-memory-segment-144-node-1302)
 
-<a id="latest-committed-memory-segment-125-node-1307"></a>
+<a id="latest-committed-memory-segment-144-node-1307"></a>
 
-- **1307** · clip 99: At 00:08, &lt;voice_1030&gt; remarks, "Dating is not as good as dancing."  **Links:** ↔ [1030](#latest-committed-memory-segment-125-node-1030)
+- **1307** · clip 99: At 00:08, &lt;voice_1030&gt; remarks, "Dating is not as good as dancing."  **Links:** ↔ [1030](#latest-committed-memory-segment-144-node-1030)
 
-<a id="latest-committed-memory-segment-125-node-1308"></a>
+<a id="latest-committed-memory-segment-144-node-1308"></a>
 
-- **1308** · clip 99: At 00:11, &lt;voice_797&gt; proposes, "How about dancing. Leave a timeline okay."  **Links:** ↔ [797](#latest-committed-memory-segment-125-node-797)
+- **1308** · clip 99: At 00:11, &lt;voice_797&gt; proposes, "How about dancing. Leave a timeline okay."  **Links:** ↔ [797](#latest-committed-memory-segment-144-node-797)
 
-<a id="latest-committed-memory-segment-125-node-1309"></a>
+<a id="latest-committed-memory-segment-144-node-1309"></a>
 
-- **1309** · clip 99: At 00:17, &lt;voice_1303&gt; mentions, "But I'm afraid putting on glasses might make them fall off."  **Links:** ↔ [1303](#latest-committed-memory-segment-125-node-1303)
+- **1309** · clip 99: At 00:17, &lt;voice_1303&gt; mentions, "But I'm afraid putting on glasses might make them fall off."  **Links:** ↔ [1303](#latest-committed-memory-segment-144-node-1303)
 
-<a id="latest-committed-memory-segment-125-node-1310"></a>
+<a id="latest-committed-memory-segment-144-node-1310"></a>
 
-- **1310** · clip 99: At 00:21, &lt;voice_366&gt; asks, "Still wear glasses? Then let's perform something simple. Strawberry strawberry."  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1310** · clip 99: At 00:21, &lt;voice_366&gt; asks, "Still wear glasses? Then let's perform something simple. Strawberry strawberry."  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1311"></a>
+<a id="latest-committed-memory-segment-144-node-1311"></a>
 
 - **1311** · clip 99: While the group discusses performance concepts, a person on the left uses a smartphone.
 
-<a id="latest-committed-memory-segment-125-node-1319"></a>
+<a id="latest-committed-memory-segment-144-node-1319"></a>
 
 - **1319** · clip 100: A group of people gather around a table covered with a checkered cloth, surrounded by filming equipment and flowers.
 
-<a id="latest-committed-memory-segment-125-node-1320"></a>
+<a id="latest-committed-memory-segment-144-node-1320"></a>
 
 - **1320** · clip 100: A woman in white stands near a whiteboard, organizing items on the table.
 
-<a id="latest-committed-memory-segment-125-node-1321"></a>
+<a id="latest-committed-memory-segment-144-node-1321"></a>
 
 - **1321** · clip 100: A woman in black sits at the table, interacting with a mobile device.
 
-<a id="latest-committed-memory-segment-125-node-1322"></a>
+<a id="latest-committed-memory-segment-144-node-1322"></a>
 
 - **1322** · clip 100: A man wearing an orange t-shirt stands near the left side of the room, gesturing.
 
-<a id="latest-committed-memory-segment-125-node-1323"></a>
+<a id="latest-committed-memory-segment-144-node-1323"></a>
 
-- **1323** · clip 100: Speaker &lt;voice_1315&gt; mentions being praised and thanks.  **Links:** ↔ [1315](#latest-committed-memory-segment-125-node-1315)
+- **1323** · clip 100: Speaker &lt;voice_1315&gt; mentions being praised and thanks.  **Links:** ↔ [1315](#latest-committed-memory-segment-144-node-1315)
 
-<a id="latest-committed-memory-segment-125-node-1324"></a>
+<a id="latest-committed-memory-segment-144-node-1324"></a>
 
-- **1324** · clip 100: Speaker &lt;voice_824&gt; discusses scheduling for dancing and movement restrictions.  **Links:** ↔ [824](#latest-committed-memory-segment-125-node-824)
+- **1324** · clip 100: Speaker &lt;voice_824&gt; discusses scheduling for dancing and movement restrictions.  **Links:** ↔ [824](#latest-committed-memory-segment-144-node-824)
 
-<a id="latest-committed-memory-segment-125-node-1325"></a>
+<a id="latest-committed-memory-segment-144-node-1325"></a>
 
-- **1325** · clip 100: Speaker &lt;voice_1316&gt; refers to a timeline.  **Links:** ↔ [1316](#latest-committed-memory-segment-125-node-1316)
+- **1325** · clip 100: Speaker &lt;voice_1316&gt; refers to a timeline.  **Links:** ↔ [1316](#latest-committed-memory-segment-144-node-1316)
 
-<a id="latest-committed-memory-segment-125-node-1326"></a>
+<a id="latest-committed-memory-segment-144-node-1326"></a>
 
-- **1326** · clip 100: Speaker &lt;voice_1317&gt; asks about purchasing 100 RMB.  **Links:** ↔ [1317](#latest-committed-memory-segment-125-node-1317)
+- **1326** · clip 100: Speaker &lt;voice_1317&gt; asks about purchasing 100 RMB.  **Links:** ↔ [1317](#latest-committed-memory-segment-144-node-1317)
 
-<a id="latest-committed-memory-segment-125-node-1327"></a>
+<a id="latest-committed-memory-segment-144-node-1327"></a>
 
-- **1327** · clip 100: Speaker &lt;voice_277&gt; responds that there is nothing wrong.  **Links:** ↔ [277](#latest-committed-memory-segment-125-node-277)
+- **1327** · clip 100: Speaker &lt;voice_277&gt; responds that there is nothing wrong.  **Links:** ↔ [277](#latest-committed-memory-segment-144-node-277)
 
-<a id="latest-committed-memory-segment-125-node-1328"></a>
+<a id="latest-committed-memory-segment-144-node-1328"></a>
 
-- **1328** · clip 100: Speaker &lt;voice_1006&gt; expresses a preference for buying physical items.  **Links:** ↔ [1006](#latest-committed-memory-segment-125-node-1006)
+- **1328** · clip 100: Speaker &lt;voice_1006&gt; expresses a preference for buying physical items.  **Links:** ↔ [1006](#latest-committed-memory-segment-144-node-1006)
 
-<a id="latest-committed-memory-segment-125-node-1329"></a>
+<a id="latest-committed-memory-segment-144-node-1329"></a>
 
-- **1329** · clip 100: Speaker &lt;voice_1219&gt; agrees to purchase procurement.  **Links:** ↔ [1219](#latest-committed-memory-segment-125-node-1219)
+- **1329** · clip 100: Speaker &lt;voice_1219&gt; agrees to purchase procurement.  **Links:** ↔ [1219](#latest-committed-memory-segment-144-node-1219)
 
-<a id="latest-committed-memory-segment-125-node-1330"></a>
+<a id="latest-committed-memory-segment-144-node-1330"></a>
 
-- **1330** · clip 100: Speaker &lt;voice_1318&gt; states that storytelling is required to obtain something.  **Links:** ↔ [1318](#latest-committed-memory-segment-125-node-1318)
+- **1330** · clip 100: Speaker &lt;voice_1318&gt; states that storytelling is required to obtain something.  **Links:** ↔ [1318](#latest-committed-memory-segment-144-node-1318)
 
-<a id="latest-committed-memory-segment-125-node-1331"></a>
+<a id="latest-committed-memory-segment-144-node-1331"></a>
 
 - **1331** · clip 100: The camera pans to reveal lighting equipment and a clapperboard labeled 'Ego Life'.
 
-<a id="latest-committed-memory-segment-125-node-1332"></a>
+<a id="latest-committed-memory-segment-144-node-1332"></a>
 
 - **1332** · clip 100: The camera wearer's legs and hands become visible, indicating they are seated at the table participating in the session.
 
-<a id="latest-committed-memory-segment-125-node-1337"></a>
+<a id="latest-committed-memory-segment-144-node-1337"></a>
 
 - **1337** · clip 101: A group of individuals are gathered around a table with a clapperboard and papers, facing a whiteboard in the background.
 
-<a id="latest-committed-memory-segment-125-node-1338"></a>
+<a id="latest-committed-memory-segment-144-node-1338"></a>
 
 - **1338** · clip 101: A person wearing a peach t-shirt enters the scene from the left and stands near the wall next to a projector screen.
 
-<a id="latest-committed-memory-segment-125-node-1339"></a>
+<a id="latest-committed-memory-segment-144-node-1339"></a>
 
-- **1339** · clip 101: A voice identified as &lt;voice_364&gt; is heard discussing time duration, indicating a potential timeframe of one and a half hours.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1339** · clip 101: A voice identified as &lt;voice_364&gt; is heard discussing time duration, indicating a potential timeframe of one and a half hours.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1342"></a>
+<a id="latest-committed-memory-segment-144-node-1342"></a>
 
 - **1342** · clip 102: A group of people are gathered around a table in a room with a whiteboard in the background.
 
-<a id="latest-committed-memory-segment-125-node-1343"></a>
+<a id="latest-committed-memory-segment-144-node-1343"></a>
 
 - **1343** · clip 102: An individual wearing an orange shirt stands on the left side of the frame.
 
-<a id="latest-committed-memory-segment-125-node-1344"></a>
+<a id="latest-committed-memory-segment-144-node-1344"></a>
 
 - **1344** · clip 102: Another individual sits at the table wearing dark clothing.
 
-<a id="latest-committed-memory-segment-125-node-1345"></a>
+<a id="latest-committed-memory-segment-144-node-1345"></a>
 
 - **1345** · clip 102: A third individual stands behind the table wearing white.
 
-<a id="latest-committed-memory-segment-125-node-1346"></a>
+<a id="latest-committed-memory-segment-144-node-1346"></a>
 
 - **1346** · clip 102: A fourth individual sits at the table on the right side.
 
-<a id="latest-committed-memory-segment-125-node-1347"></a>
+<a id="latest-committed-memory-segment-144-node-1347"></a>
 
 - **1347** · clip 102: The camera perspective is from a person reclining, with legs visible in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-1348"></a>
+<a id="latest-committed-memory-segment-144-node-1348"></a>
 
-- **1348** · clip 102: Individual &lt;voice_364&gt; begins speaking, referencing a previous activity from the day before.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1348** · clip 102: Individual &lt;voice_364&gt; begins speaking, referencing a previous activity from the day before.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1349"></a>
+<a id="latest-committed-memory-segment-144-node-1349"></a>
 
-- **1349** · clip 102: Individual &lt;voice_261&gt; adds that the session has been going on for two hours.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **1349** · clip 102: Individual &lt;voice_261&gt; adds that the session has been going on for two hours.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-1350"></a>
+<a id="latest-committed-memory-segment-144-node-1350"></a>
 
-- **1350** · clip 102: Individual &lt;voice_366&gt; proposes telling a short story about an auction process where everyone gets five minutes.  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1350** · clip 102: Individual &lt;voice_366&gt; proposes telling a short story about an auction process where everyone gets five minutes.  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1351"></a>
+<a id="latest-committed-memory-segment-144-node-1351"></a>
 
 - **1351** · clip 102: The speaker elaborates on controlling time and alternative ways to obtain currency if time control is difficult.
 
-<a id="latest-committed-memory-segment-125-node-1352"></a>
+<a id="latest-committed-memory-segment-144-node-1352"></a>
 
 - **1352** · clip 102: The speaker concludes that the core of the activity is the auction process itself.
 
-<a id="latest-committed-memory-segment-125-node-1358"></a>
+<a id="latest-committed-memory-segment-144-node-1358"></a>
 
 - **1358** · clip 103: A group of people are gathered around a table in a room featuring a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1359"></a>
+<a id="latest-committed-memory-segment-144-node-1359"></a>
 
 - **1359** · clip 103: A person wearing a pink shirt enters the room and stands near the wall.
 
-<a id="latest-committed-memory-segment-125-node-1360"></a>
+<a id="latest-committed-memory-segment-144-node-1360"></a>
 
 - **1360** · clip 103: An individual in a white shirt stands by the whiteboard, gesturing during the discussion.
 
-<a id="latest-committed-memory-segment-125-node-1361"></a>
+<a id="latest-committed-memory-segment-144-node-1361"></a>
 
 - **1361** · clip 103: Two other participants sit at the table while the group converses.
 
-<a id="latest-committed-memory-segment-125-node-1362"></a>
+<a id="latest-committed-memory-segment-144-node-1362"></a>
 
 - **1362** · clip 103: The camera wearer remains seated in the foreground with legs visible throughout most of the clip.
 
-<a id="latest-committed-memory-segment-125-node-1363"></a>
+<a id="latest-committed-memory-segment-144-node-1363"></a>
 
 - **1363** · clip 103: Towards the end of the sequence, the camera wearer picks up a smartphone and interacts with the screen.
 
-<a id="latest-committed-memory-segment-125-node-1364"></a>
+<a id="latest-committed-memory-segment-144-node-1364"></a>
 
 - **1364** · clip 103: Various individuals engage in conversation and gesture towards the whiteboard and each other.
 
-<a id="latest-committed-memory-segment-125-node-1374"></a>
+<a id="latest-committed-memory-segment-144-node-1374"></a>
 
 - **1374** · clip 104: The camera wearer holds a smartphone while seated at a table surrounded by others.
 
-<a id="latest-committed-memory-segment-125-node-1375"></a>
+<a id="latest-committed-memory-segment-144-node-1375"></a>
 
-- **1375** · clip 104: MAI (&lt;voice_1370&gt;) remarks, '确实嘛，这个听起来有点。'  **Links:** ↔ [1370](#latest-committed-memory-segment-125-node-1370)
+- **1375** · clip 104: MAI (&lt;voice_1370&gt;) remarks, '确实嘛，这个听起来有点。'  **Links:** ↔ [1370](#latest-committed-memory-segment-144-node-1370)
 
-<a id="latest-committed-memory-segment-125-node-1376"></a>
+<a id="latest-committed-memory-segment-144-node-1376"></a>
 
 - **1376** · clip 104: The camera wearer places the phone down and picks up a clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1377"></a>
+<a id="latest-committed-memory-segment-144-node-1377"></a>
 
-- **1377** · clip 104: MAI (&lt;voice_1371&gt;) discusses sending eggs or meals, stating '一会儿发鸡蛋，一会儿发顿。'  **Links:** ↔ [1371](#latest-committed-memory-segment-125-node-1371)
+- **1377** · clip 104: MAI (&lt;voice_1371&gt;) discusses sending eggs or meals, stating '一会儿发鸡蛋，一会儿发顿。'  **Links:** ↔ [1371](#latest-committed-memory-segment-144-node-1371)
 
-<a id="latest-committed-memory-segment-125-node-1378"></a>
+<a id="latest-committed-memory-segment-144-node-1378"></a>
 
-- **1378** · clip 104: MAI (&lt;voice_1372&gt;) questions if the location is a base point, asking '据点是不是？'  **Links:** ↔ [1372](#latest-committed-memory-segment-125-node-1372)
+- **1378** · clip 104: MAI (&lt;voice_1372&gt;) questions if the location is a base point, asking '据点是不是？'  **Links:** ↔ [1372](#latest-committed-memory-segment-144-node-1372)
 
-<a id="latest-committed-memory-segment-125-node-1379"></a>
+<a id="latest-committed-memory-segment-144-node-1379"></a>
 
 - **1379** · clip 104: A person wearing an orange shirt stands by the window while others remain seated.
 
-<a id="latest-committed-memory-segment-125-node-1380"></a>
+<a id="latest-committed-memory-segment-144-node-1380"></a>
 
-- **1380** · clip 104: MAI (&lt;voice_1373&gt;) invites participation and mentions receiving ten coins, saying '进来玩玩吧，进来就可以获得十个币。'  **Links:** ↔ [1373](#latest-committed-memory-segment-125-node-1373)
+- **1380** · clip 104: MAI (&lt;voice_1373&gt;) invites participation and mentions receiving ten coins, saying '进来玩玩吧，进来就可以获得十个币。'  **Links:** ↔ [1373](#latest-committed-memory-segment-144-node-1373)
 
-<a id="latest-committed-memory-segment-125-node-1381"></a>
+<a id="latest-committed-memory-segment-144-node-1381"></a>
 
-- **1381** · clip 104: MAI (&lt;voice_1156&gt;) explains that obtaining goods requires storytelling, noting '但是一一进来就让，就是刚开始肯定要想得到货，但是是你获得货是让他们通过讲故事。'  **Links:** ↔ [1156](#latest-committed-memory-segment-125-node-1156)
+- **1381** · clip 104: MAI (&lt;voice_1156&gt;) explains that obtaining goods requires storytelling, noting '但是一一进来就让，就是刚开始肯定要想得到货，但是是你获得货是让他们通过讲故事。'  **Links:** ↔ [1156](#latest-committed-memory-segment-144-node-1156)
 
-<a id="latest-committed-memory-segment-125-node-1382"></a>
+<a id="latest-committed-memory-segment-144-node-1382"></a>
 
 - **1382** · clip 104: The group continues their discussion around the table with props and flowers visible.
 
-<a id="latest-committed-memory-segment-125-node-1389"></a>
+<a id="latest-committed-memory-segment-144-node-1389"></a>
 
 - **1389** · clip 105: A group of people are gathered around a table with a checkered cloth in a room.
 
-<a id="latest-committed-memory-segment-125-node-1390"></a>
+<a id="latest-committed-memory-segment-144-node-1390"></a>
 
 - **1390** · clip 105: A man in a white shirt stands near a whiteboard, appearing to lead the discussion.
 
-<a id="latest-committed-memory-segment-125-node-1391"></a>
+<a id="latest-committed-memory-segment-144-node-1391"></a>
 
-- **1391** · clip 105: At 00:00, Speaker &lt;voice_484&gt; suggests that new participants should tell stories in front of the group to build familiarity.  **Links:** ↔ [484](#latest-committed-memory-segment-125-node-484)
+- **1391** · clip 105: At 00:00, Speaker &lt;voice_484&gt; suggests that new participants should tell stories in front of the group to build familiarity.  **Links:** ↔ [484](#latest-committed-memory-segment-144-node-484)
 
-<a id="latest-committed-memory-segment-125-node-1392"></a>
+<a id="latest-committed-memory-segment-144-node-1392"></a>
 
-- **1392** · clip 105: At 00:05, Speaker &lt;voice_1386&gt; explains that self-introduction can earn a gift.  **Links:** ↔ [1386](#latest-committed-memory-segment-125-node-1386)
+- **1392** · clip 105: At 00:05, Speaker &lt;voice_1386&gt; explains that self-introduction can earn a gift.  **Links:** ↔ [1386](#latest-committed-memory-segment-144-node-1386)
 
-<a id="latest-committed-memory-segment-125-node-1393"></a>
+<a id="latest-committed-memory-segment-144-node-1393"></a>
 
-- **1393** · clip 105: At 00:09, Speaker &lt;voice_364&gt; proposes hiding items inside the house, specifically mentioning coins.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1393** · clip 105: At 00:09, Speaker &lt;voice_364&gt; proposes hiding items inside the house, specifically mentioning coins.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1394"></a>
+<a id="latest-committed-memory-segment-144-node-1394"></a>
 
-- **1394** · clip 105: At 00:11, Speaker &lt;voice_500&gt; assigns points or items, giving five to the first person and three to the second.  **Links:** ↔ [500](#latest-committed-memory-segment-125-node-500)
+- **1394** · clip 105: At 00:11, Speaker &lt;voice_500&gt; assigns points or items, giving five to the first person and three to the second.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
 
-<a id="latest-committed-memory-segment-125-node-1395"></a>
+<a id="latest-committed-memory-segment-144-node-1395"></a>
 
-- **1395** · clip 105: At 00:15, Speaker &lt;voice_1049&gt; confirms the arrangement.  **Links:** ↔ [1049](#latest-committed-memory-segment-125-node-1049)
+- **1395** · clip 105: At 00:15, Speaker &lt;voice_1049&gt; confirms the arrangement.  **Links:** ↔ [1049](#latest-committed-memory-segment-144-node-1049)
 
-<a id="latest-committed-memory-segment-125-node-1396"></a>
+<a id="latest-committed-memory-segment-144-node-1396"></a>
 
-- **1396** · clip 105: At 00:21, Speaker &lt;voice_1387&gt; compares the activity to Easter-like traditions.  **Links:** ↔ [1387](#latest-committed-memory-segment-125-node-1387)
+- **1396** · clip 105: At 00:21, Speaker &lt;voice_1387&gt; compares the activity to Easter-like traditions.  **Links:** ↔ [1387](#latest-committed-memory-segment-144-node-1387)
 
-<a id="latest-committed-memory-segment-125-node-1397"></a>
+<a id="latest-committed-memory-segment-144-node-1397"></a>
 
-- **1397** · clip 105: At 00:27, Speaker &lt;voice_1388&gt; reiterates the plan to hide coins and agrees.  **Links:** ↔ [1388](#latest-committed-memory-segment-125-node-1388)
+- **1397** · clip 105: At 00:27, Speaker &lt;voice_1388&gt; reiterates the plan to hide coins and agrees.  **Links:** ↔ [1388](#latest-committed-memory-segment-144-node-1388)
 
-<a id="latest-committed-memory-segment-125-node-1398"></a>
+<a id="latest-committed-memory-segment-144-node-1398"></a>
 
 - **1398** · clip 105: Around 16.50s, a person wearing an orange shirt enters the room from the left.
 
-<a id="latest-committed-memory-segment-125-node-1399"></a>
+<a id="latest-committed-memory-segment-144-node-1399"></a>
 
 - **1399** · clip 105: The person in orange walks across the room, eventually standing near the balcony door.
 
-<a id="latest-committed-memory-segment-125-node-1400"></a>
+<a id="latest-committed-memory-segment-144-node-1400"></a>
 
 - **1400** · clip 105: The camera perspective shifts to show the legs of the person filming at 21.00s.
 
-<a id="latest-committed-memory-segment-125-node-1401"></a>
+<a id="latest-committed-memory-segment-144-node-1401"></a>
 
 - **1401** · clip 105: Towards the end, the person in orange stands still near the window, observing the room.
 
-<a id="latest-committed-memory-segment-125-node-1411"></a>
+<a id="latest-committed-memory-segment-144-node-1411"></a>
 
 - **1411** · clip 106: A person wearing a VR headset stands by the window holding a device.
 
-<a id="latest-committed-memory-segment-125-node-1412"></a>
+<a id="latest-committed-memory-segment-144-node-1412"></a>
 
 - **1412** · clip 106: The camera shifts to a group of people gathered around a table with a checkered cloth and a clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1413"></a>
+<a id="latest-committed-memory-segment-144-node-1413"></a>
 
 - **1413** · clip 106: A man in a white shirt stands near a whiteboard while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-1414"></a>
+<a id="latest-committed-memory-segment-144-node-1414"></a>
 
 - **1414** · clip 106: A person in an orange shirt walks into the room from the left side.
 
-<a id="latest-committed-memory-segment-125-node-1415"></a>
+<a id="latest-committed-memory-segment-144-node-1415"></a>
 
-- **1415** · clip 106: &lt;voice_484&gt;: MAI: 不是，就是刚开始自己介绍获得票，然后玩，玩个小游戏赢了。  **Links:** ↔ [484](#latest-committed-memory-segment-125-node-484)
+- **1415** · clip 106: &lt;voice_484&gt;: MAI: 不是，就是刚开始自己介绍获得票，然后玩，玩个小游戏赢了。  **Links:** ↔ [484](#latest-committed-memory-segment-144-node-484)
 
-<a id="latest-committed-memory-segment-125-node-1416"></a>
+<a id="latest-committed-memory-segment-144-node-1416"></a>
 
-- **1416** · clip 106: &lt;voice_1407&gt;: MAI: 就是一些什么问题的。  **Links:** ↔ [1407](#latest-committed-memory-segment-125-node-1407)
+- **1416** · clip 106: &lt;voice_1407&gt;: MAI: 就是一些什么问题的。  **Links:** ↔ [1407](#latest-committed-memory-segment-144-node-1407)
 
-<a id="latest-committed-memory-segment-125-node-1417"></a>
+<a id="latest-committed-memory-segment-144-node-1417"></a>
 
-- **1417** · clip 106: &lt;voice_1407&gt;: MAI: 植物动物拼图那个。  **Links:** ↔ [1407](#latest-committed-memory-segment-125-node-1407)
+- **1417** · clip 106: &lt;voice_1407&gt;: MAI: 植物动物拼图那个。  **Links:** ↔ [1407](#latest-committed-memory-segment-144-node-1407)
 
-<a id="latest-committed-memory-segment-125-node-1418"></a>
+<a id="latest-committed-memory-segment-144-node-1418"></a>
 
-- **1418** · clip 106: &lt;voice_517&gt;: MAI: 哎，问答的话，反正就是世界地球日，可以  **Links:** ↔ [517](#latest-committed-memory-segment-125-node-517)
+- **1418** · clip 106: &lt;voice_517&gt;: MAI: 哎，问答的话，反正就是世界地球日，可以  **Links:** ↔ [517](#latest-committed-memory-segment-144-node-517)
 
-<a id="latest-committed-memory-segment-125-node-1419"></a>
+<a id="latest-committed-memory-segment-144-node-1419"></a>
 
-- **1419** · clip 106: &lt;voice_1408&gt;: MAI: 知识问答赢。  **Links:** ↔ [1408](#latest-committed-memory-segment-125-node-1408)
+- **1419** · clip 106: &lt;voice_1408&gt;: MAI: 知识问答赢。  **Links:** ↔ [1408](#latest-committed-memory-segment-144-node-1408)
 
-<a id="latest-committed-memory-segment-125-node-1420"></a>
+<a id="latest-committed-memory-segment-144-node-1420"></a>
 
-- **1420** · clip 106: &lt;voice_1408&gt;: MAI: 对对对对对对。  **Links:** ↔ [1408](#latest-committed-memory-segment-125-node-1408)
+- **1420** · clip 106: &lt;voice_1408&gt;: MAI: 对对对对对对。  **Links:** ↔ [1408](#latest-committed-memory-segment-144-node-1408)
 
-<a id="latest-committed-memory-segment-125-node-1421"></a>
+<a id="latest-committed-memory-segment-144-node-1421"></a>
 
-- **1421** · clip 106: &lt;voice_1099&gt;: MAI: 先把那个二十几来着，二十一。  **Links:** ↔ [1099](#latest-committed-memory-segment-125-node-1099)
+- **1421** · clip 106: &lt;voice_1099&gt;: MAI: 先把那个二十几来着，二十一。  **Links:** ↔ [1099](#latest-committed-memory-segment-144-node-1099)
 
-<a id="latest-committed-memory-segment-125-node-1422"></a>
+<a id="latest-committed-memory-segment-144-node-1422"></a>
 
-- **1422** · clip 106: &lt;voice_1410&gt;: MAI: 二十二。  **Links:** ↔ [1410](#latest-committed-memory-segment-125-node-1410)
+- **1422** · clip 106: &lt;voice_1410&gt;: MAI: 二十二。  **Links:** ↔ [1410](#latest-committed-memory-segment-144-node-1410)
 
-<a id="latest-committed-memory-segment-125-node-1423"></a>
+<a id="latest-committed-memory-segment-144-node-1423"></a>
 
-- **1423** · clip 106: &lt;voice_1410&gt;: MAI: 前面他们。  **Links:** ↔ [1410](#latest-committed-memory-segment-125-node-1410)
+- **1423** · clip 106: &lt;voice_1410&gt;: MAI: 前面他们。  **Links:** ↔ [1410](#latest-committed-memory-segment-144-node-1410)
 
-<a id="latest-committed-memory-segment-125-node-1424"></a>
+<a id="latest-committed-memory-segment-144-node-1424"></a>
 
-- **1424** · clip 106: &lt;voice_1410&gt;: MAI: 我们二十一来看。  **Links:** ↔ [1410](#latest-committed-memory-segment-125-node-1410)
+- **1424** · clip 106: &lt;voice_1410&gt;: MAI: 我们二十一来看。  **Links:** ↔ [1410](#latest-committed-memory-segment-144-node-1410)
 
-<a id="latest-committed-memory-segment-125-node-1425"></a>
+<a id="latest-committed-memory-segment-144-node-1425"></a>
 
-- **1425** · clip 106: &lt;voice_364&gt;: MAI: 然后再开始推销。  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1425** · clip 106: &lt;voice_364&gt;: MAI: 然后再开始推销。  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1426"></a>
+<a id="latest-committed-memory-segment-144-node-1426"></a>
 
-- **1426** · clip 106: &lt;voice_364&gt;: MAI: 因为是星期天。  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1426** · clip 106: &lt;voice_364&gt;: MAI: 因为是星期天。  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1427"></a>
+<a id="latest-committed-memory-segment-144-node-1427"></a>
 
-- **1427** · clip 106: &lt;voice_752&gt;: MAI: 推销我们的产品。  **Links:** ↔ [752](#latest-committed-memory-segment-125-node-752)
+- **1427** · clip 106: &lt;voice_752&gt;: MAI: 推销我们的产品。  **Links:** ↔ [752](#latest-committed-memory-segment-144-node-752)
 
-<a id="latest-committed-memory-segment-125-node-1428"></a>
+<a id="latest-committed-memory-segment-144-node-1428"></a>
 
 - **1428** · clip 106: The camera focuses on the legs of the person filming and the clapperboard on the table.
 
-<a id="latest-committed-memory-segment-125-node-1436"></a>
+<a id="latest-committed-memory-segment-144-node-1436"></a>
 
 - **1436** · clip 107: A group of people are gathered around a wooden table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-1437"></a>
+<a id="latest-committed-memory-segment-144-node-1437"></a>
 
 - **1437** · clip 107: A clapperboard is placed on the table in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-1438"></a>
+<a id="latest-committed-memory-segment-144-node-1438"></a>
 
-- **1438** · clip 107: MAI (&lt;voice_1432&gt;) asks if they have a big speaker.  **Links:** ↔ [1432](#latest-committed-memory-segment-125-node-1432)
+- **1438** · clip 107: MAI (&lt;voice_1432&gt;) asks if they have a big speaker.  **Links:** ↔ [1432](#latest-committed-memory-segment-144-node-1432)
 
-<a id="latest-committed-memory-segment-125-node-1439"></a>
+<a id="latest-committed-memory-segment-144-node-1439"></a>
 
-- **1439** · clip 107: MAI (&lt;voice_1433&gt;) responds that having a big speaker is possible.  **Links:** ↔ [1433](#latest-committed-memory-segment-125-node-1433)
+- **1439** · clip 107: MAI (&lt;voice_1433&gt;) responds that having a big speaker is possible.  **Links:** ↔ [1433](#latest-committed-memory-segment-144-node-1433)
 
-<a id="latest-committed-memory-segment-125-node-1440"></a>
+<a id="latest-committed-memory-segment-144-node-1440"></a>
 
-- **1440** · clip 107: MAI (&lt;voice_467&gt;) suggests playing music if playing outside.  **Links:** ↔ [467](#latest-committed-memory-segment-125-node-467)
+- **1440** · clip 107: MAI (&lt;voice_467&gt;) suggests playing music if playing outside.  **Links:** ↔ [467](#latest-committed-memory-segment-144-node-467)
 
-<a id="latest-committed-memory-segment-125-node-1441"></a>
+<a id="latest-committed-memory-segment-144-node-1441"></a>
 
-- **1441** · clip 107: MAI (&lt;voice_364&gt;) instructs to play the previous song.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1441** · clip 107: MAI (&lt;voice_364&gt;) instructs to play the previous song.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1442"></a>
+<a id="latest-committed-memory-segment-144-node-1442"></a>
 
-- **1442** · clip 107: MAI (&lt;voice_1434&gt;) mentions Big Northeast.  **Links:** ↔ [1434](#latest-committed-memory-segment-125-node-1434)
+- **1442** · clip 107: MAI (&lt;voice_1434&gt;) mentions Big Northeast.  **Links:** ↔ [1434](#latest-committed-memory-segment-144-node-1434)
 
-<a id="latest-committed-memory-segment-125-node-1443"></a>
+<a id="latest-committed-memory-segment-144-node-1443"></a>
 
-- **1443** · clip 107: MAI (&lt;voice_1435&gt;) explains this is for Q&amp;A self-introduction.  **Links:** ↔ [1435](#latest-committed-memory-segment-125-node-1435)
+- **1443** · clip 107: MAI (&lt;voice_1435&gt;) explains this is for Q&amp;A self-introduction.  **Links:** ↔ [1435](#latest-committed-memory-segment-144-node-1435)
 
-<a id="latest-committed-memory-segment-125-node-1444"></a>
+<a id="latest-committed-memory-segment-144-node-1444"></a>
 
-- **1444** · clip 107: MAI (&lt;voice_261&gt;) tells someone to take the vase.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **1444** · clip 107: MAI (&lt;voice_261&gt;) tells someone to take the vase.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-1445"></a>
+<a id="latest-committed-memory-segment-144-node-1445"></a>
 
-- **1445** · clip 107: MAI (&lt;voice_1170&gt;) asks if the wine is real or fake.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170)
+- **1445** · clip 107: MAI (&lt;voice_1170&gt;) asks if the wine is real or fake.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
 
-<a id="latest-committed-memory-segment-125-node-1446"></a>
+<a id="latest-committed-memory-segment-144-node-1446"></a>
 
-- **1446** · clip 107: MAI (&lt;voice_913&gt;) confirms the wine is fake.  **Links:** ↔ [913](#latest-committed-memory-segment-125-node-913)
+- **1446** · clip 107: MAI (&lt;voice_913&gt;) confirms the wine is fake.  **Links:** ↔ [913](#latest-committed-memory-segment-144-node-913)
 
-<a id="latest-committed-memory-segment-125-node-1447"></a>
+<a id="latest-committed-memory-segment-144-node-1447"></a>
 
-- **1447** · clip 107: MAI (&lt;voice_364&gt;) identifies a water bottle as theirs.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1447** · clip 107: MAI (&lt;voice_364&gt;) identifies a water bottle as theirs.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1448"></a>
+<a id="latest-committed-memory-segment-144-node-1448"></a>
 
 - **1448** · clip 107: One person stands near a whiteboard while others are seated around the table.
 
-<a id="latest-committed-memory-segment-125-node-1449"></a>
+<a id="latest-committed-memory-segment-144-node-1449"></a>
 
 - **1449** · clip 107: The person on the left holds a mobile device and listens to the discussion.
 
-<a id="latest-committed-memory-segment-125-node-1455"></a>
+<a id="latest-committed-memory-segment-144-node-1455"></a>
 
 - **1455** · clip 108: A group of people are seated around a table with a checkered tablecloth, surrounded by flowers and filming equipment.
 
-<a id="latest-committed-memory-segment-125-node-1456"></a>
+<a id="latest-committed-memory-segment-144-node-1456"></a>
 
-- **1456** · clip 108: At 00:00, &lt;voice_1219&gt; asks about the flower stand while another voice responds.  **Links:** ↔ [1219](#latest-committed-memory-segment-125-node-1219)
+- **1456** · clip 108: At 00:00, &lt;voice_1219&gt; asks about the flower stand while another voice responds.  **Links:** ↔ [1219](#latest-committed-memory-segment-144-node-1219)
 
-<a id="latest-committed-memory-segment-125-node-1457"></a>
+<a id="latest-committed-memory-segment-144-node-1457"></a>
 
-- **1457** · clip 108: At 00:02, &lt;voice_1453&gt; suggests taking away a vase because it is too ugly.  **Links:** ↔ [1453](#latest-committed-memory-segment-125-node-1453)
+- **1457** · clip 108: At 00:02, &lt;voice_1453&gt; suggests taking away a vase because it is too ugly.  **Links:** ↔ [1453](#latest-committed-memory-segment-144-node-1453)
 
-<a id="latest-committed-memory-segment-125-node-1458"></a>
+<a id="latest-committed-memory-segment-144-node-1458"></a>
 
-- **1458** · clip 108: At 00:08, &lt;voice_1454&gt; comments on the amount of talk.  **Links:** ↔ [1454](#latest-committed-memory-segment-125-node-1454)
+- **1458** · clip 108: At 00:08, &lt;voice_1454&gt; comments on the amount of talk.  **Links:** ↔ [1454](#latest-committed-memory-segment-144-node-1454)
 
-<a id="latest-committed-memory-segment-125-node-1459"></a>
+<a id="latest-committed-memory-segment-144-node-1459"></a>
 
 - **1459** · clip 108: The camera pans to reveal a kitchen area and a balcony outside.
 
-<a id="latest-committed-memory-segment-125-node-1460"></a>
+<a id="latest-committed-memory-segment-144-node-1460"></a>
 
-- **1460** · clip 108: At 00:17, &lt;voice_868&gt; states that the item is really good.  **Links:** ↔ [868](#latest-committed-memory-segment-125-node-868)
+- **1460** · clip 108: At 00:17, &lt;voice_868&gt; states that the item is really good.  **Links:** ↔ [868](#latest-committed-memory-segment-144-node-868)
 
-<a id="latest-committed-memory-segment-125-node-1461"></a>
+<a id="latest-committed-memory-segment-144-node-1461"></a>
 
-- **1461** · clip 108: At 00:20, &lt;voice_637&gt; identifies the material as stainless steel.  **Links:** ↔ [637](#latest-committed-memory-segment-125-node-637)
+- **1461** · clip 108: At 00:20, &lt;voice_637&gt; identifies the material as stainless steel.  **Links:** ↔ [637](#latest-committed-memory-segment-144-node-637)
 
-<a id="latest-committed-memory-segment-125-node-1462"></a>
+<a id="latest-committed-memory-segment-144-node-1462"></a>
 
-- **1462** · clip 108: At 00:24, &lt;voice_261&gt; discusses the origin, mentioning the Northeast China steel factory.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **1462** · clip 108: At 00:24, &lt;voice_261&gt; discusses the origin, mentioning the Northeast China steel factory.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-1463"></a>
+<a id="latest-committed-memory-segment-144-node-1463"></a>
 
 - **1463** · clip 108: A person enters the room carrying a bouquet of pink flowers.
 
-<a id="latest-committed-memory-segment-125-node-1469"></a>
+<a id="latest-committed-memory-segment-144-node-1469"></a>
 
 - **1469** · clip 109: A group of people are gathered around a table in a room with a whiteboard, engaged in a collaborative session.
 
-<a id="latest-committed-memory-segment-125-node-1470"></a>
+<a id="latest-committed-memory-segment-144-node-1470"></a>
 
 - **1470** · clip 109: One person stands near the whiteboard while others sit around the table with papers and a clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1471"></a>
+<a id="latest-committed-memory-segment-144-node-1471"></a>
 
 - **1471** · clip 109: A person wearing an orange shirt stands near the window holding a mobile device.
 
-<a id="latest-committed-memory-segment-125-node-1472"></a>
+<a id="latest-committed-memory-segment-144-node-1472"></a>
 
 - **1472** · clip 109: The person in the orange shirt moves around the room and eventually joins the group at the table.
 
-<a id="latest-committed-memory-segment-125-node-1473"></a>
+<a id="latest-committed-memory-segment-144-node-1473"></a>
 
 - **1473** · clip 109: Another individual enters the room from the right side, adding to the group discussion.
 
-<a id="latest-committed-memory-segment-125-node-1482"></a>
+<a id="latest-committed-memory-segment-144-node-1482"></a>
 
 - **1482** · clip 110: A group of individuals gather around a wooden table covered with a red and white checkered cloth.
 
-<a id="latest-committed-memory-segment-125-node-1483"></a>
+<a id="latest-committed-memory-segment-144-node-1483"></a>
 
 - **1483** · clip 110: A clapperboard labeled 'Eye Life' sits prominently on the table.
 
-<a id="latest-committed-memory-segment-125-node-1484"></a>
+<a id="latest-committed-memory-segment-144-node-1484"></a>
 
 - **1484** · clip 110: A person wearing a white shirt stands near a whiteboard in the background.
 
-<a id="latest-committed-memory-segment-125-node-1485"></a>
+<a id="latest-committed-memory-segment-144-node-1485"></a>
 
 - **1485** · clip 110: A person in a pink top stands next to the individual in white.
 
-<a id="latest-committed-memory-segment-125-node-1486"></a>
+<a id="latest-committed-memory-segment-144-node-1486"></a>
 
 - **1486** · clip 110: A person with long pink hair enters from the right and approaches the table.
 
-<a id="latest-committed-memory-segment-125-node-1487"></a>
+<a id="latest-committed-memory-segment-144-node-1487"></a>
 
-- **1487** · clip 110: At 00:17, &lt;voice_261&gt; asks why the term 'frame word' is being used.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **1487** · clip 110: At 00:17, &lt;voice_261&gt; asks why the term 'frame word' is being used.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-1488"></a>
+<a id="latest-committed-memory-segment-144-node-1488"></a>
 
-- **1488** · clip 110: At 00:19, &lt;voice_782&gt; clarifies that it refers to a 'timeline'.  **Links:** ↔ [782](#latest-committed-memory-segment-125-node-782)
+- **1488** · clip 110: At 00:19, &lt;voice_782&gt; clarifies that it refers to a 'timeline'.  **Links:** ↔ [782](#latest-committed-memory-segment-144-node-782)
 
-<a id="latest-committed-memory-segment-125-node-1489"></a>
+<a id="latest-committed-memory-segment-144-node-1489"></a>
 
-- **1489** · clip 110: At 00:21, &lt;voice_364&gt; questions the term again but accepts it as acceptable.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1489** · clip 110: At 00:21, &lt;voice_364&gt; questions the term again but accepts it as acceptable.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1490"></a>
+<a id="latest-committed-memory-segment-144-node-1490"></a>
 
-- **1490** · clip 110: At 00:23, &lt;voice_1480&gt; instructs to emphasize a specific line.  **Links:** ↔ [1480](#latest-committed-memory-segment-125-node-1480)
+- **1490** · clip 110: At 00:23, &lt;voice_1480&gt; instructs to emphasize a specific line.  **Links:** ↔ [1480](#latest-committed-memory-segment-144-node-1480)
 
-<a id="latest-committed-memory-segment-125-node-1491"></a>
+<a id="latest-committed-memory-segment-144-node-1491"></a>
 
-- **1491** · clip 110: At 00:24, &lt;voice_1481&gt; confirms agreement with the suggestion.  **Links:** ↔ [1481](#latest-committed-memory-segment-125-node-1481)
+- **1491** · clip 110: At 00:24, &lt;voice_1481&gt; confirms agreement with the suggestion.  **Links:** ↔ [1481](#latest-committed-memory-segment-144-node-1481)
 
-<a id="latest-committed-memory-segment-125-node-1492"></a>
+<a id="latest-committed-memory-segment-144-node-1492"></a>
 
-- **1492** · clip 110: At 00:26, &lt;voice_366&gt; mentions a line and begins discussing specific time points.  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1492** · clip 110: At 00:26, &lt;voice_366&gt; mentions a line and begins discussing specific time points.  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1498"></a>
+<a id="latest-committed-memory-segment-144-node-1498"></a>
 
 - **1498** · clip 111: A group of people are gathered around a table with a red-and-white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-1499"></a>
+<a id="latest-committed-memory-segment-144-node-1499"></a>
 
 - **1499** · clip 111: One person stands near a whiteboard while others sit around the table.
 
-<a id="latest-committed-memory-segment-125-node-1500"></a>
+<a id="latest-committed-memory-segment-144-node-1500"></a>
 
 - **1500** · clip 111: A clapperboard is placed on the table in the foreground.
 
-<a id="latest-committed-memory-segment-125-node-1501"></a>
+<a id="latest-committed-memory-segment-144-node-1501"></a>
 
 - **1501** · clip 111: Lighting equipment is visible in the background.
 
-<a id="latest-committed-memory-segment-125-node-1502"></a>
+<a id="latest-committed-memory-segment-144-node-1502"></a>
 
-- **1502** · clip 111: Audio from &lt;voice_364&gt; states: '3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1502** · clip 111: Audio from &lt;voice_364&gt; states: '3点，3点吧。应该是2点到3点逐步入场，然后前面可能先到的。'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1503"></a>
+<a id="latest-committed-memory-segment-144-node-1503"></a>
 
-- **1503** · clip 111: Audio from &lt;voice_261&gt; states: '给他们一点活动。'  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **1503** · clip 111: Audio from &lt;voice_261&gt; states: '给他们一点活动。'  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-1504"></a>
+<a id="latest-committed-memory-segment-144-node-1504"></a>
 
-- **1504** · clip 111: Audio from &lt;voice_277&gt; states: '原谅。'  **Links:** ↔ [277](#latest-committed-memory-segment-125-node-277)
+- **1504** · clip 111: Audio from &lt;voice_277&gt; states: '原谅。'  **Links:** ↔ [277](#latest-committed-memory-segment-144-node-277)
 
-<a id="latest-committed-memory-segment-125-node-1505"></a>
+<a id="latest-committed-memory-segment-144-node-1505"></a>
 
-- **1505** · clip 111: Audio from &lt;voice_1496&gt; states: '入场式的。'  **Links:** ↔ [1496](#latest-committed-memory-segment-125-node-1496)
+- **1505** · clip 111: Audio from &lt;voice_1496&gt; states: '入场式的。'  **Links:** ↔ [1496](#latest-committed-memory-segment-144-node-1496)
 
-<a id="latest-committed-memory-segment-125-node-1506"></a>
+<a id="latest-committed-memory-segment-144-node-1506"></a>
 
-- **1506** · clip 111: Audio from &lt;voice_1497&gt; states: '可以。'  **Links:** ↔ [1497](#latest-committed-memory-segment-125-node-1497)
+- **1506** · clip 111: Audio from &lt;voice_1497&gt; states: '可以。'  **Links:** ↔ [1497](#latest-committed-memory-segment-144-node-1497)
 
-<a id="latest-committed-memory-segment-125-node-1511"></a>
+<a id="latest-committed-memory-segment-144-node-1511"></a>
 
 - **1511** · clip 112: A group of four individuals are gathered around a wooden table covered with a red-and-white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-1512"></a>
+<a id="latest-committed-memory-segment-144-node-1512"></a>
 
 - **1512** · clip 112: One person with long blonde hair sits on the right side of the table wearing a white t-shirt.
 
-<a id="latest-committed-memory-segment-125-node-1513"></a>
+<a id="latest-committed-memory-segment-144-node-1513"></a>
 
 - **1513** · clip 112: A second person sits on the left side of the table wearing dark clothing and looking down at the table surface.
 
-<a id="latest-committed-memory-segment-125-node-1514"></a>
+<a id="latest-committed-memory-segment-144-node-1514"></a>
 
 - **1514** · clip 112: Two other individuals stand in the background near a whiteboard; one is wearing an orange top and gesturing toward the board.
 
-<a id="latest-committed-memory-segment-125-node-1515"></a>
+<a id="latest-committed-memory-segment-144-node-1515"></a>
 
 - **1515** · clip 112: A clapperboard is placed on the table in the center, indicating a filming or rehearsal context.
 
-<a id="latest-committed-memory-segment-125-node-1516"></a>
+<a id="latest-committed-memory-segment-144-node-1516"></a>
 
 - **1516** · clip 112: The camera view includes the knees and legs of the person holding the device, suggesting a reclined position.
 
-<a id="latest-committed-memory-segment-125-node-1517"></a>
+<a id="latest-committed-memory-segment-144-node-1517"></a>
 
 - **1517** · clip 112: The scene remains relatively static throughout the sequence with minimal movement from the participants.
 
-<a id="latest-committed-memory-segment-125-node-1521"></a>
+<a id="latest-committed-memory-segment-144-node-1521"></a>
 
 - **1521** · clip 113: A group of four people are gathered around a wooden table in a room.
 
-<a id="latest-committed-memory-segment-125-node-1522"></a>
+<a id="latest-committed-memory-segment-144-node-1522"></a>
 
 - **1522** · clip 113: One person stands near a whiteboard, appearing to explain something to the seated individuals.
 
-<a id="latest-committed-memory-segment-125-node-1523"></a>
+<a id="latest-committed-memory-segment-144-node-1523"></a>
 
-- **1523** · clip 113: &lt;voice_364&gt; asks, 'Then what do you do exactly at three o'clock?'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1523** · clip 113: &lt;voice_364&gt; asks, 'Then what do you do exactly at three o'clock?'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1524"></a>
+<a id="latest-committed-memory-segment-144-node-1524"></a>
 
-- **1524** · clip 113: &lt;voice_364&gt; states, 'This is normal human behavior.'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1524** · clip 113: &lt;voice_364&gt; states, 'This is normal human behavior.'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1525"></a>
+<a id="latest-committed-memory-segment-144-node-1525"></a>
 
 - **1525** · clip 113: The camera wearer's legs are visible in the foreground throughout the clip.
 
-<a id="latest-committed-memory-segment-125-node-1531"></a>
+<a id="latest-committed-memory-segment-144-node-1531"></a>
 
 - **1531** · clip 114: A group of individuals gathers around a table covered with a red-and-white checkered cloth, surrounded by props including a clapperboard, flowers, and papers.
 
-<a id="latest-committed-memory-segment-125-node-1532"></a>
+<a id="latest-committed-memory-segment-144-node-1532"></a>
 
-- **1532** · clip 114: At 00:11, &lt;voice_1528&gt; asks 'Second point, anything else?' while standing near a whiteboard.  **Links:** ↔ [1528](#latest-committed-memory-segment-125-node-1528)
+- **1532** · clip 114: At 00:11, &lt;voice_1528&gt; asks 'Second point, anything else?' while standing near a whiteboard.  **Links:** ↔ [1528](#latest-committed-memory-segment-144-node-1528)
 
-<a id="latest-committed-memory-segment-125-node-1533"></a>
+<a id="latest-committed-memory-segment-144-node-1533"></a>
 
-- **1533** · clip 114: Immediately after, &lt;voice_1219&gt; inquires 'Then what about point three?' during the ongoing discussion.  **Links:** ↔ [1219](#latest-committed-memory-segment-125-node-1219)
+- **1533** · clip 114: Immediately after, &lt;voice_1219&gt; inquires 'Then what about point three?' during the ongoing discussion.  **Links:** ↔ [1219](#latest-committed-memory-segment-144-node-1219)
 
-<a id="latest-committed-memory-segment-125-node-1534"></a>
+<a id="latest-committed-memory-segment-144-node-1534"></a>
 
-- **1534** · clip 114: &lt;voice_1529&gt; responds at 00:17, stating that point three work is mainly things society workers do.  **Links:** ↔ [1529](#latest-committed-memory-segment-125-node-1529)
+- **1534** · clip 114: &lt;voice_1529&gt; responds at 00:17, stating that point three work is mainly things society workers do.  **Links:** ↔ [1529](#latest-committed-memory-segment-144-node-1529)
 
-<a id="latest-committed-memory-segment-125-node-1535"></a>
+<a id="latest-committed-memory-segment-144-node-1535"></a>
 
-- **1535** · clip 114: At 00:20, &lt;voice_1530&gt; asks 'So like these?' regarding the proposed activities.  **Links:** ↔ [1530](#latest-committed-memory-segment-125-node-1530)
+- **1535** · clip 114: At 00:20, &lt;voice_1530&gt; asks 'So like these?' regarding the proposed activities.  **Links:** ↔ [1530](#latest-committed-memory-segment-144-node-1530)
 
-<a id="latest-committed-memory-segment-125-node-1536"></a>
+<a id="latest-committed-memory-segment-144-node-1536"></a>
 
-- **1536** · clip 114: From 00:22 to 00:30, &lt;voice_1170&gt; explains a plan where participants obtain currency first before promoting their own products, noting uncertainty about their true nature.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170)
+- **1536** · clip 114: From 00:22 to 00:30, &lt;voice_1170&gt; explains a plan where participants obtain currency first before promoting their own products, noting uncertainty about their true nature.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
 
-<a id="latest-committed-memory-segment-125-node-1537"></a>
+<a id="latest-committed-memory-segment-144-node-1537"></a>
 
 - **1537** · clip 114: Between 00:16 and 00:21, the camera pans away from the group to focus on a blue shelving unit displaying a yellow sun-shaped plush toy and various small items.
 
-<a id="latest-committed-memory-segment-125-node-1538"></a>
+<a id="latest-committed-memory-segment-144-node-1538"></a>
 
 - **1538** · clip 114: The camera then returns to a wider view of the room, showing the group continuing their meeting near the window and whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1545"></a>
+<a id="latest-committed-memory-segment-144-node-1545"></a>
 
 - **1545** · clip 115: The video begins with a view of an empty room equipped with a projector screen and lighting gear.
 
-<a id="latest-committed-memory-segment-125-node-1546"></a>
+<a id="latest-committed-memory-segment-144-node-1546"></a>
 
-- **1546** · clip 115: At 00:00, &lt;voice_1542&gt; inquires whether the scenario involves one or two people.  **Links:** ↔ [1542](#latest-committed-memory-segment-125-node-1542)
+- **1546** · clip 115: At 00:00, &lt;voice_1542&gt; inquires whether the scenario involves one or two people.  **Links:** ↔ [1542](#latest-committed-memory-segment-144-node-1542)
 
-<a id="latest-committed-memory-segment-125-node-1547"></a>
+<a id="latest-committed-memory-segment-144-node-1547"></a>
 
-- **1547** · clip 115: At 00:04, &lt;voice_1170&gt; states that the duration might not be long and mentions a 40-minute timeframe.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170)
+- **1547** · clip 115: At 00:04, &lt;voice_1170&gt; states that the duration might not be long and mentions a 40-minute timeframe.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
 
-<a id="latest-committed-memory-segment-125-node-1548"></a>
+<a id="latest-committed-memory-segment-144-node-1548"></a>
 
-- **1548** · clip 115: At 00:12, &lt;voice_364&gt; affirms readiness to answer correctly.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1548** · clip 115: At 00:12, &lt;voice_364&gt; affirms readiness to answer correctly.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1549"></a>
+<a id="latest-committed-memory-segment-144-node-1549"></a>
 
-- **1549** · clip 115: At 00:16, &lt;voice_112&gt; validates the previous statement as good.  **Links:** ↔ [112](#latest-committed-memory-segment-125-node-112)
+- **1549** · clip 115: At 00:16, &lt;voice_112&gt; validates the previous statement as good.  **Links:** ↔ [112](#latest-committed-memory-segment-144-node-112)
 
-<a id="latest-committed-memory-segment-125-node-1550"></a>
+<a id="latest-committed-memory-segment-144-node-1550"></a>
 
-- **1550** · clip 115: At 00:21, &lt;voice_1543&gt; provides a brief response labeled QA.  **Links:** ↔ [1543](#latest-committed-memory-segment-125-node-1543)
+- **1550** · clip 115: At 00:21, &lt;voice_1543&gt; provides a brief response labeled QA.  **Links:** ↔ [1543](#latest-committed-memory-segment-144-node-1543)
 
-<a id="latest-committed-memory-segment-125-node-1551"></a>
+<a id="latest-committed-memory-segment-144-node-1551"></a>
 
-- **1551** · clip 115: At 00:23, &lt;voice_1544&gt; offers an affirmative acknowledgment.  **Links:** ↔ [1544](#latest-committed-memory-segment-125-node-1544)
+- **1551** · clip 115: At 00:23, &lt;voice_1544&gt; offers an affirmative acknowledgment.  **Links:** ↔ [1544](#latest-committed-memory-segment-144-node-1544)
 
-<a id="latest-committed-memory-segment-125-node-1552"></a>
+<a id="latest-committed-memory-segment-144-node-1552"></a>
 
 - **1552** · clip 115: Individuals gather around a table cluttered with items, including a clapperboard, suggesting a film set preparation.
 
-<a id="latest-committed-memory-segment-125-node-1553"></a>
+<a id="latest-committed-memory-segment-144-node-1553"></a>
 
 - **1553** · clip 115: A woman in white stands near a whiteboard while others sit at the table.
 
-<a id="latest-committed-memory-segment-125-node-1554"></a>
+<a id="latest-committed-memory-segment-144-node-1554"></a>
 
 - **1554** · clip 115: The camera pans into an adjacent bedroom, revealing a bed and a desk with multiple monitors.
 
-<a id="latest-committed-memory-segment-125-node-1555"></a>
+<a id="latest-committed-memory-segment-144-node-1555"></a>
 
 - **1555** · clip 115: The camera returns to the main room, focusing on the lighting equipment and projector screen.
 
-<a id="latest-committed-memory-segment-125-node-1561"></a>
+<a id="latest-committed-memory-segment-144-node-1561"></a>
 
 - **1561** · clip 116: The camera pans across a room featuring a green shelving unit, a projector screen, and scattered boxes.
 
-<a id="latest-committed-memory-segment-125-node-1562"></a>
+<a id="latest-committed-memory-segment-144-node-1562"></a>
 
-- **1562** · clip 116: &lt;voice_718&gt; states, 'OK. Come.'  **Links:** ↔ [718](#latest-committed-memory-segment-125-node-718)
+- **1562** · clip 116: &lt;voice_718&gt; states, 'OK. Come.'  **Links:** ↔ [718](#latest-committed-memory-segment-144-node-718)
 
-<a id="latest-committed-memory-segment-125-node-1563"></a>
+<a id="latest-committed-memory-segment-144-node-1563"></a>
 
 - **1563** · clip 116: The camera wearer approaches the shelving unit and retrieves a black carrying case.
 
-<a id="latest-committed-memory-segment-125-node-1564"></a>
+<a id="latest-committed-memory-segment-144-node-1564"></a>
 
 - **1564** · clip 116: The case is opened to reveal coiled cables and electronic gear.
 
-<a id="latest-committed-memory-segment-125-node-1565"></a>
+<a id="latest-committed-memory-segment-144-node-1565"></a>
 
-- **1565** · clip 116: &lt;voice_1560&gt; remarks, 'Then just introduce yourself to make this one, and then tell them you can take their money.'  **Links:** ↔ [1560](#latest-committed-memory-segment-125-node-1560)
+- **1565** · clip 116: &lt;voice_1560&gt; remarks, 'Then just introduce yourself to make this one, and then tell them you can take their money.'  **Links:** ↔ [1560](#latest-committed-memory-segment-144-node-1560)
 
-<a id="latest-committed-memory-segment-125-node-1566"></a>
+<a id="latest-committed-memory-segment-144-node-1566"></a>
 
 - **1566** · clip 116: The camera wearer moves toward a group of people gathered around a table with a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1567"></a>
+<a id="latest-committed-memory-segment-144-node-1567"></a>
 
-- **1567** · clip 116: &lt;voice_364&gt; announces, 'Come, let's plug in the electric cable, come, keep talking, I'll give everyone the line.'  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1567** · clip 116: &lt;voice_364&gt; announces, 'Come, let's plug in the electric cable, come, keep talking, I'll give everyone the line.'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1568"></a>
+<a id="latest-committed-memory-segment-144-node-1568"></a>
 
 - **1568** · clip 116: The camera wearer extends cables onto the table for the seated participants.
 
-<a id="latest-committed-memory-segment-125-node-1569"></a>
+<a id="latest-committed-memory-segment-144-node-1569"></a>
 
 - **1569** · clip 116: The camera wearer returns to the shelving unit and places the black case back on the shelf.
 
-<a id="latest-committed-memory-segment-125-node-1570"></a>
+<a id="latest-committed-memory-segment-144-node-1570"></a>
 
 - **1570** · clip 116: The case is closed and held in front of the body.
 
-<a id="latest-committed-memory-segment-125-node-1575"></a>
+<a id="latest-committed-memory-segment-144-node-1575"></a>
 
 - **1575** · clip 117: The camera wearer holds a black case while observing a group of people gathered around a table.
 
-<a id="latest-committed-memory-segment-125-node-1576"></a>
+<a id="latest-committed-memory-segment-144-node-1576"></a>
 
 - **1576** · clip 117: A person in a pink shirt stands near a whiteboard and later sits at the table.
 
-<a id="latest-committed-memory-segment-125-node-1577"></a>
+<a id="latest-committed-memory-segment-144-node-1577"></a>
 
 - **1577** · clip 117: The person in the pink shirt places the black case on the table.
 
-<a id="latest-committed-memory-segment-125-node-1578"></a>
+<a id="latest-committed-memory-segment-144-node-1578"></a>
 
 - **1578** · clip 117: The group discusses the black case, identifying it as a power bank.
 
-<a id="latest-committed-memory-segment-125-node-1579"></a>
+<a id="latest-committed-memory-segment-144-node-1579"></a>
 
 - **1579** · clip 117: The person in the pink shirt claims the power bank belongs to them.
 
-<a id="latest-committed-memory-segment-125-node-1580"></a>
+<a id="latest-committed-memory-segment-144-node-1580"></a>
 
 - **1580** · clip 117: The camera wearer hands a headset to the person in the pink shirt.
 
-<a id="latest-committed-memory-segment-125-node-1581"></a>
+<a id="latest-committed-memory-segment-144-node-1581"></a>
 
 - **1581** · clip 117: The camera wearer walks to a shelving unit and places the black case on a shelf.
 
-<a id="latest-committed-memory-segment-125-node-1589"></a>
+<a id="latest-committed-memory-segment-144-node-1589"></a>
 
 - **1589** · clip 118: The camera operator holds a black case against a shelf.
 
-<a id="latest-committed-memory-segment-125-node-1590"></a>
+<a id="latest-committed-memory-segment-144-node-1590"></a>
 
-- **1590** · clip 118: &lt;voice_1587&gt; says: MAI: Auction.  **Links:** ↔ [1587](#latest-committed-memory-segment-125-node-1587)
+- **1590** · clip 118: &lt;voice_1587&gt; says: MAI: Auction.  **Links:** ↔ [1587](#latest-committed-memory-segment-144-node-1587)
 
-<a id="latest-committed-memory-segment-125-node-1591"></a>
+<a id="latest-committed-memory-segment-144-node-1591"></a>
 
-- **1591** · clip 118: &lt;voice_1588&gt; says: MAI: Auction, A-U-C-A.  **Links:** ↔ [1588](#latest-committed-memory-segment-125-node-1588)
+- **1591** · clip 118: &lt;voice_1588&gt; says: MAI: Auction, A-U-C-A.  **Links:** ↔ [1588](#latest-committed-memory-segment-144-node-1588)
 
-<a id="latest-committed-memory-segment-125-node-1592"></a>
+<a id="latest-committed-memory-segment-144-node-1592"></a>
 
 - **1592** · clip 118: The camera pans to a group of people sitting around a table with a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1593"></a>
+<a id="latest-committed-memory-segment-144-node-1593"></a>
 
-- **1593** · clip 118: &lt;voice_1235&gt; says: MAI: You also plug one in.  **Links:** ↔ [1235](#latest-committed-memory-segment-125-node-1235)
+- **1593** · clip 118: &lt;voice_1235&gt; says: MAI: You also plug one in.  **Links:** ↔ [1235](#latest-committed-memory-segment-144-node-1235)
 
-<a id="latest-committed-memory-segment-125-node-1594"></a>
+<a id="latest-committed-memory-segment-144-node-1594"></a>
 
 - **1594** · clip 118: The camera moves past a lighting setup and projector screen.
 
-<a id="latest-committed-memory-segment-125-node-1595"></a>
+<a id="latest-committed-memory-segment-144-node-1595"></a>
 
-- **1595** · clip 118: &lt;voice_276&gt; says: MAI: Good, thanks.  **Links:** ↔ [276](#latest-committed-memory-segment-125-node-276)
+- **1595** · clip 118: &lt;voice_276&gt; says: MAI: Good, thanks.  **Links:** ↔ [276](#latest-committed-memory-segment-144-node-276)
 
-<a id="latest-committed-memory-segment-125-node-1596"></a>
+<a id="latest-committed-memory-segment-144-node-1596"></a>
 
 - **1596** · clip 118: The operator returns to the shelf, picks up the case, and enters a bedroom to place it on a bedside table.
 
-<a id="latest-committed-memory-segment-125-node-1604"></a>
+<a id="latest-committed-memory-segment-144-node-1604"></a>
 
 - **1604** · clip 119: First-person view shows hands manipulating cables and devices on a desk next to a bed.
 
-<a id="latest-committed-memory-segment-125-node-1605"></a>
+<a id="latest-committed-memory-segment-144-node-1605"></a>
 
 - **1605** · clip 119: The camera pans to reveal a room where a group of people are gathered around a table.
 
-<a id="latest-committed-memory-segment-125-node-1606"></a>
+<a id="latest-committed-memory-segment-144-node-1606"></a>
 
 - **1606** · clip 119: A woman in white stands near the table while others sit.
 
-<a id="latest-committed-memory-segment-125-node-1607"></a>
+<a id="latest-committed-memory-segment-144-node-1607"></a>
 
-- **1607** · clip 119: &lt;voice_912&gt; asks: 'That shouldn't stop for a short time. Is it longer half an hour?'  **Links:** ↔ [912](#latest-committed-memory-segment-125-node-912)
+- **1607** · clip 119: &lt;voice_912&gt; asks: 'That shouldn't stop for a short time. Is it longer half an hour?'  **Links:** ↔ [912](#latest-committed-memory-segment-144-node-912)
 
-<a id="latest-committed-memory-segment-125-node-1608"></a>
+<a id="latest-committed-memory-segment-144-node-1608"></a>
 
-- **1608** · clip 119: &lt;voice_1599&gt; responds: 'Half an hour isn't much.'  **Links:** ↔ [1599](#latest-committed-memory-segment-125-node-1599)
+- **1608** · clip 119: &lt;voice_1599&gt; responds: 'Half an hour isn't much.'  **Links:** ↔ [1599](#latest-committed-memory-segment-144-node-1599)
 
-<a id="latest-committed-memory-segment-125-node-1609"></a>
+<a id="latest-committed-memory-segment-144-node-1609"></a>
 
-- **1609** · clip 119: &lt;voice_366&gt; states: 'You can break it down, this is their own part, this is guest part.'  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1609** · clip 119: &lt;voice_366&gt; states: 'You can break it down, this is their own part, this is guest part.'  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1610"></a>
+<a id="latest-committed-memory-segment-144-node-1610"></a>
 
-- **1610** · clip 119: &lt;voice_1600&gt; says: 'You-you don't need.'  **Links:** ↔ [1600](#latest-committed-memory-segment-125-node-1600)
+- **1610** · clip 119: &lt;voice_1600&gt; says: 'You-you don't need.'  **Links:** ↔ [1600](#latest-committed-memory-segment-144-node-1600)
 
-<a id="latest-committed-memory-segment-125-node-1611"></a>
+<a id="latest-committed-memory-segment-144-node-1611"></a>
 
-- **1611** · clip 119: &lt;voice_1601&gt; asks: 'How many things they bring.'  **Links:** ↔ [1601](#latest-committed-memory-segment-125-node-1601)
+- **1611** · clip 119: &lt;voice_1601&gt; asks: 'How many things they bring.'  **Links:** ↔ [1601](#latest-committed-memory-segment-144-node-1601)
 
-<a id="latest-committed-memory-segment-125-node-1612"></a>
+<a id="latest-committed-memory-segment-144-node-1612"></a>
 
-- **1612** · clip 119: &lt;voice_1602&gt; asks: 'And whether they are extras or regular cast?'  **Links:** ↔ [1602](#latest-committed-memory-segment-125-node-1602)
+- **1612** · clip 119: &lt;voice_1602&gt; asks: 'And whether they are extras or regular cast?'  **Links:** ↔ [1602](#latest-committed-memory-segment-144-node-1602)
 
-<a id="latest-committed-memory-segment-125-node-1613"></a>
+<a id="latest-committed-memory-segment-144-node-1613"></a>
 
-- **1613** · clip 119: &lt;voice_1603&gt; replies: 'Yes, that's uncertain.'  **Links:** ↔ [1603](#latest-committed-memory-segment-125-node-1603)
+- **1613** · clip 119: &lt;voice_1603&gt; replies: 'Yes, that's uncertain.'  **Links:** ↔ [1603](#latest-committed-memory-segment-144-node-1603)
 
-<a id="latest-committed-memory-segment-125-node-1614"></a>
+<a id="latest-committed-memory-segment-144-node-1614"></a>
 
 - **1614** · clip 119: The group continues discussing around a table with a whiteboard and clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1625"></a>
+<a id="latest-committed-memory-segment-144-node-1625"></a>
 
 - **1625** · clip 120: The camera pans across an empty room featuring a tripod, cardboard boxes, and a projector screen.
 
-<a id="latest-committed-memory-segment-125-node-1626"></a>
+<a id="latest-committed-memory-segment-144-node-1626"></a>
 
-- **1626** · clip 120: At 00:01, &lt;voice_312&gt; suggests, 'Then what else do we have, or we can come early to liven up the atmosphere.'  **Links:** ↔ [312](#latest-committed-memory-segment-125-node-312)
+- **1626** · clip 120: At 00:01, &lt;voice_312&gt; suggests, 'Then what else do we have, or we can come early to liven up the atmosphere.'  **Links:** ↔ [312](#latest-committed-memory-segment-144-node-312)
 
-<a id="latest-committed-memory-segment-125-node-1627"></a>
+<a id="latest-committed-memory-segment-144-node-1627"></a>
 
 - **1627** · clip 120: The view shifts to reveal a group of people gathered around a table with a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1628"></a>
+<a id="latest-committed-memory-segment-144-node-1628"></a>
 
-- **1628** · clip 120: At 00:08, &lt;voice_1619&gt; agrees, stating, 'Yes, I think let's start first.'  **Links:** ↔ [1619](#latest-committed-memory-segment-125-node-1619)
+- **1628** · clip 120: At 00:08, &lt;voice_1619&gt; agrees, stating, 'Yes, I think let's start first.'  **Links:** ↔ [1619](#latest-committed-memory-segment-144-node-1619)
 
-<a id="latest-committed-memory-segment-125-node-1629"></a>
+<a id="latest-committed-memory-segment-144-node-1629"></a>
 
-- **1629** · clip 120: At 00:10, &lt;voice_1620&gt; confirms, 'Let's start first,' and specifies the time slot from 3:40 to 4:30.  **Links:** ↔ [1620](#latest-committed-memory-segment-125-node-1620)
+- **1629** · clip 120: At 00:10, &lt;voice_1620&gt; confirms, 'Let's start first,' and specifies the time slot from 3:40 to 4:30.  **Links:** ↔ [1620](#latest-committed-memory-segment-144-node-1620)
 
-<a id="latest-committed-memory-segment-125-node-1630"></a>
+<a id="latest-committed-memory-segment-144-node-1630"></a>
 
-- **1630** · clip 120: At 00:14, &lt;voice_1621&gt; comments, 'The meeting is so long.'  **Links:** ↔ [1621](#latest-committed-memory-segment-125-node-1621)
+- **1630** · clip 120: At 00:14, &lt;voice_1621&gt; comments, 'The meeting is so long.'  **Links:** ↔ [1621](#latest-committed-memory-segment-144-node-1621)
 
-<a id="latest-committed-memory-segment-125-node-1631"></a>
+<a id="latest-committed-memory-segment-144-node-1631"></a>
 
-- **1631** · clip 120: At 00:15, &lt;voice_1599&gt; estimates the duration, mentioning 'About 78 minutes' and 'About 40 minutes.'  **Links:** ↔ [1599](#latest-committed-memory-segment-125-node-1599)
+- **1631** · clip 120: At 00:15, &lt;voice_1599&gt; estimates the duration, mentioning 'About 78 minutes' and 'About 40 minutes.'  **Links:** ↔ [1599](#latest-committed-memory-segment-144-node-1599)
 
-<a id="latest-committed-memory-segment-125-node-1632"></a>
+<a id="latest-committed-memory-segment-144-node-1632"></a>
 
-- **1632** · clip 120: At 00:21, &lt;voice_1622&gt; mentions the time '4:20.'  **Links:** ↔ [1622](#latest-committed-memory-segment-125-node-1622)
+- **1632** · clip 120: At 00:21, &lt;voice_1622&gt; mentions the time '4:20.'  **Links:** ↔ [1622](#latest-committed-memory-segment-144-node-1622)
 
-<a id="latest-committed-memory-segment-125-node-1633"></a>
+<a id="latest-committed-memory-segment-144-node-1633"></a>
 
-- **1633** · clip 120: At 00:22, &lt;voice_1623&gt; adds the number '20.'  **Links:** ↔ [1623](#latest-committed-memory-segment-125-node-1623)
+- **1633** · clip 120: At 00:22, &lt;voice_1623&gt; adds the number '20.'  **Links:** ↔ [1623](#latest-committed-memory-segment-144-node-1623)
 
-<a id="latest-committed-memory-segment-125-node-1634"></a>
+<a id="latest-committed-memory-segment-144-node-1634"></a>
 
-- **1634** · clip 120: At 00:26, &lt;voice_1624&gt; proposes, 'Or directly turn this segment into ours overall.'  **Links:** ↔ [1624](#latest-committed-memory-segment-125-node-1624)
+- **1634** · clip 120: At 00:26, &lt;voice_1624&gt; proposes, 'Or directly turn this segment into ours overall.'  **Links:** ↔ [1624](#latest-committed-memory-segment-144-node-1624)
 
-<a id="latest-committed-memory-segment-125-node-1635"></a>
+<a id="latest-committed-memory-segment-144-node-1635"></a>
 
 - **1635** · clip 120: A person wearing a white outfit stands near the whiteboard while others sit at the table.
 
-<a id="latest-committed-memory-segment-125-node-1636"></a>
+<a id="latest-committed-memory-segment-144-node-1636"></a>
 
 - **1636** · clip 120: The person in white walks away from the table towards a doorway.
 
-<a id="latest-committed-memory-segment-125-node-1637"></a>
+<a id="latest-committed-memory-segment-144-node-1637"></a>
 
 - **1637** · clip 120: The camera follows the person into a kitchen area where they stand near the window.
 
-<a id="latest-committed-memory-segment-125-node-1644"></a>
+<a id="latest-committed-memory-segment-144-node-1644"></a>
 
 - **1644** · clip 121: The camera begins in a kitchen area, capturing a view of an outdoor patio with a white umbrella and seating furniture through a large window.
 
-<a id="latest-committed-memory-segment-125-node-1645"></a>
+<a id="latest-committed-memory-segment-144-node-1645"></a>
 
 - **1645** · clip 121: The perspective shifts to show a tiled wall featuring a dark vase with flowers before returning to the kitchen counter.
 
-<a id="latest-committed-memory-segment-125-node-1646"></a>
+<a id="latest-committed-memory-segment-144-node-1646"></a>
 
 - **1646** · clip 121: The camera moves into an adjacent living room where several people are gathered around a table.
 
-<a id="latest-committed-memory-segment-125-node-1647"></a>
+<a id="latest-committed-memory-segment-144-node-1647"></a>
 
 - **1647** · clip 121: A woman with long blonde hair sits in the foreground while others engage in activities at the table, with a projector screen visible in the background.
 
-<a id="latest-committed-memory-segment-125-node-1648"></a>
+<a id="latest-committed-memory-segment-144-node-1648"></a>
 
 - **1648** · clip 121: The viewpoint transitions through a doorway into a bedroom containing an unmade bed and a desk with multiple computer monitors.
 
-<a id="latest-committed-memory-segment-125-node-1649"></a>
+<a id="latest-committed-memory-segment-144-node-1649"></a>
 
 - **1649** · clip 121: The camera operator reaches down and picks up a laptop from the bed.
 
-<a id="latest-committed-memory-segment-125-node-1653"></a>
+<a id="latest-committed-memory-segment-144-node-1653"></a>
 
 - **1653** · clip 122: The camera wearer is situated in a bedroom, holding a laptop and interacting with items placed in a black tray on the bed.
 
-<a id="latest-committed-memory-segment-125-node-1654"></a>
+<a id="latest-committed-memory-segment-144-node-1654"></a>
 
 - **1654** · clip 122: The camera pans across the room to show a group of people gathered around a table covered with a checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-1655"></a>
+<a id="latest-committed-memory-segment-144-node-1655"></a>
 
 - **1655** · clip 122: Several individuals are seated at the table, while one woman in white stands near a whiteboard filled with notes.
 
-<a id="latest-committed-memory-segment-125-node-1656"></a>
+<a id="latest-committed-memory-segment-144-node-1656"></a>
 
 - **1656** · clip 122: The camera wearer raises a clapperboard into view, signaling the start of a recording session.
 
-<a id="latest-committed-memory-segment-125-node-1657"></a>
+<a id="latest-committed-memory-segment-144-node-1657"></a>
 
 - **1657** · clip 122: The camera wearer moves away from the table toward a corner of the room where lighting equipment and tripods are set up.
 
-<a id="latest-committed-memory-segment-125-node-1658"></a>
+<a id="latest-committed-memory-segment-144-node-1658"></a>
 
 - **1658** · clip 122: The view shifts back to the group at the table, capturing their interactions and the surrounding studio-like environment.
 
-<a id="latest-committed-memory-segment-125-node-1659"></a>
+<a id="latest-committed-memory-segment-144-node-1659"></a>
 
 - **1659** · clip 122: Various pieces of photography and filming gear, including softboxes and a projector screen, are visible in the background.
 
-<a id="latest-committed-memory-segment-125-node-1667"></a>
+<a id="latest-committed-memory-segment-144-node-1667"></a>
 
 - **1667** · clip 123: The camera pans across a room featuring a large projector screen and a checkered board leaning against a wall.
 
-<a id="latest-committed-memory-segment-125-node-1668"></a>
+<a id="latest-committed-memory-segment-144-node-1668"></a>
 
 - **1668** · clip 123: A hand holding a clapperboard is visible in the lower center of the frame.
 
-<a id="latest-committed-memory-segment-125-node-1669"></a>
+<a id="latest-committed-memory-segment-144-node-1669"></a>
 
 - **1669** · clip 123: The view shifts to a wider room where a group of people are gathered around a table covered with a red and white checkered tablecloth.
 
-<a id="latest-committed-memory-segment-125-node-1670"></a>
+<a id="latest-committed-memory-segment-144-node-1670"></a>
 
 - **1670** · clip 123: A person dressed in pink and orange clothing walks from the table area towards the kitchen window.
 
-<a id="latest-committed-memory-segment-125-node-1671"></a>
+<a id="latest-committed-memory-segment-144-node-1671"></a>
 
 - **1671** · clip 123: Another individual wearing a white shirt moves near the window and interacts with the space.
 
-<a id="latest-committed-memory-segment-125-node-1672"></a>
+<a id="latest-committed-memory-segment-144-node-1672"></a>
 
 - **1672** · clip 123: The person in pink/orange stands by the window, gazing outside at the building facade.
 
-<a id="latest-committed-memory-segment-125-node-1673"></a>
+<a id="latest-committed-memory-segment-144-node-1673"></a>
 
 - **1673** · clip 123: The camera focuses back on the group seated at the table, which includes flowers and various items.
 
-<a id="latest-committed-memory-segment-125-node-1674"></a>
+<a id="latest-committed-memory-segment-144-node-1674"></a>
 
 - **1674** · clip 123: A person places a silver laptop onto the table in front of the seated group.
 
-<a id="latest-committed-memory-segment-125-node-1675"></a>
+<a id="latest-committed-memory-segment-144-node-1675"></a>
 
 - **1675** · clip 123: The group members engage in conversation while seated around the table.
 
-<a id="latest-committed-memory-segment-125-node-1676"></a>
+<a id="latest-committed-memory-segment-144-node-1676"></a>
 
-- **1676** · clip 123: &lt;voice_1410&gt; asks, "Where is the bartender located?"  **Links:** ↔ [1410](#latest-committed-memory-segment-125-node-1410)
+- **1676** · clip 123: &lt;voice_1410&gt; asks, "Where is the bartender located?"  **Links:** ↔ [1410](#latest-committed-memory-segment-144-node-1410)
 
-<a id="latest-committed-memory-segment-125-node-1677"></a>
+<a id="latest-committed-memory-segment-144-node-1677"></a>
 
-- **1677** · clip 123: &lt;voice_364&gt; responds, "The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in."  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1677** · clip 123: &lt;voice_364&gt; responds, "The bartending is outside, here, you need to raise a table, can also, inside, if there's someone come in."  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1678"></a>
+<a id="latest-committed-memory-segment-144-node-1678"></a>
 
-- **1678** · clip 123: &lt;voice_1663&gt; adds, "Outside glass can adjust bar indoors."  **Links:** ↔ [1663](#latest-committed-memory-segment-125-node-1663)
+- **1678** · clip 123: &lt;voice_1663&gt; adds, "Outside glass can adjust bar indoors."  **Links:** ↔ [1663](#latest-committed-memory-segment-144-node-1663)
 
-<a id="latest-committed-memory-segment-125-node-1679"></a>
+<a id="latest-committed-memory-segment-144-node-1679"></a>
 
-- **1679** · clip 123: &lt;voice_1372&gt; confirms, "Yes yes, is."  **Links:** ↔ [1372](#latest-committed-memory-segment-125-node-1372)
+- **1679** · clip 123: &lt;voice_1372&gt; confirms, "Yes yes, is."  **Links:** ↔ [1372](#latest-committed-memory-segment-144-node-1372)
 
-<a id="latest-committed-memory-segment-125-node-1680"></a>
+<a id="latest-committed-memory-segment-144-node-1680"></a>
 
-- **1680** · clip 123: &lt;voice_1664&gt; suggests, "Come a bit lighting up."  **Links:** ↔ [1664](#latest-committed-memory-segment-125-node-1664)
+- **1680** · clip 123: &lt;voice_1664&gt; suggests, "Come a bit lighting up."  **Links:** ↔ [1664](#latest-committed-memory-segment-144-node-1664)
 
-<a id="latest-committed-memory-segment-125-node-1681"></a>
+<a id="latest-committed-memory-segment-144-node-1681"></a>
 
-- **1681** · clip 123: &lt;voice_1665&gt; replies, "Yes."  **Links:** ↔ [1665](#latest-committed-memory-segment-125-node-1665)
+- **1681** · clip 123: &lt;voice_1665&gt; replies, "Yes."  **Links:** ↔ [1665](#latest-committed-memory-segment-144-node-1665)
 
-<a id="latest-committed-memory-segment-125-node-1682"></a>
+<a id="latest-committed-memory-segment-144-node-1682"></a>
 
-- **1682** · clip 123: &lt;voice_1666&gt; concludes, "Yes, we also have this studio light."  **Links:** ↔ [1666](#latest-committed-memory-segment-125-node-1666)
+- **1682** · clip 123: &lt;voice_1666&gt; concludes, "Yes, we also have this studio light."  **Links:** ↔ [1666](#latest-committed-memory-segment-144-node-1666)
 
-<a id="latest-committed-memory-segment-125-node-1690"></a>
+<a id="latest-committed-memory-segment-144-node-1690"></a>
 
-- **1690** · clip 124: At 00:00, &lt;voice_1687&gt; remarks, 'Like this, we are just one one.'  **Links:** ↔ [1687](#latest-committed-memory-segment-125-node-1687)
+- **1690** · clip 124: At 00:00, &lt;voice_1687&gt; remarks, 'Like this, we are just one one.'  **Links:** ↔ [1687](#latest-committed-memory-segment-144-node-1687)
 
-<a id="latest-committed-memory-segment-125-node-1691"></a>
+<a id="latest-committed-memory-segment-144-node-1691"></a>
 
-- **1691** · clip 124: At 00:02, &lt;voice_0&gt; notes, 'We have four. Now haven't finished yet, install one by one.'  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **1691** · clip 124: At 00:02, &lt;voice_0&gt; notes, 'We have four. Now haven't finished yet, install one by one.'  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-1692"></a>
+<a id="latest-committed-memory-segment-144-node-1692"></a>
 
-- **1692** · clip 124: At 00:07, &lt;voice_678&gt; queries about scheduling afternoon tea after 4:20.  **Links:** ↔ [678](#latest-committed-memory-segment-125-node-678)
+- **1692** · clip 124: At 00:07, &lt;voice_678&gt; queries about scheduling afternoon tea after 4:20.  **Links:** ↔ [678](#latest-committed-memory-segment-144-node-678)
 
-<a id="latest-committed-memory-segment-125-node-1693"></a>
+<a id="latest-committed-memory-segment-144-node-1693"></a>
 
-- **1693** · clip 124: At 00:14, &lt;voice_1688&gt; confirms, 'Yes, everyone.'  **Links:** ↔ [1688](#latest-committed-memory-segment-125-node-1688)
+- **1693** · clip 124: At 00:14, &lt;voice_1688&gt; confirms, 'Yes, everyone.'  **Links:** ↔ [1688](#latest-committed-memory-segment-144-node-1688)
 
-<a id="latest-committed-memory-segment-125-node-1694"></a>
+<a id="latest-committed-memory-segment-144-node-1694"></a>
 
-- **1694** · clip 124: At 00:15, &lt;voice_1689&gt; specifies the time as 'Four twenty' and mentions eating.  **Links:** ↔ [1689](#latest-committed-memory-segment-125-node-1689)
+- **1694** · clip 124: At 00:15, &lt;voice_1689&gt; specifies the time as 'Four twenty' and mentions eating.  **Links:** ↔ [1689](#latest-committed-memory-segment-144-node-1689)
 
-<a id="latest-committed-memory-segment-125-node-1695"></a>
+<a id="latest-committed-memory-segment-144-node-1695"></a>
 
-- **1695** · clip 124: At 00:17, &lt;voice_841&gt; explains afternoon tea typically occurs between 3 and 5 PM.  **Links:** ↔ [841](#latest-committed-memory-segment-125-node-841)
+- **1695** · clip 124: At 00:17, &lt;voice_841&gt; explains afternoon tea typically occurs between 3 and 5 PM.  **Links:** ↔ [841](#latest-committed-memory-segment-144-node-841)
 
-<a id="latest-committed-memory-segment-125-node-1696"></a>
+<a id="latest-committed-memory-segment-144-node-1696"></a>
 
-- **1696** · clip 124: At 00:21, &lt;voice_364&gt; suggests some members could finish their tasks first.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1696** · clip 124: At 00:21, &lt;voice_364&gt; suggests some members could finish their tasks first.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1697"></a>
+<a id="latest-committed-memory-segment-144-node-1697"></a>
 
 - **1697** · clip 124: A woman in white enters the room at 05:00 and exits at 26:00.
 
-<a id="latest-committed-memory-segment-125-node-1698"></a>
+<a id="latest-committed-memory-segment-144-node-1698"></a>
 
 - **1698** · clip 124: A man in a pink shirt becomes visible near the balcony at 17:50.
 
-<a id="latest-committed-memory-segment-125-node-1699"></a>
+<a id="latest-committed-memory-segment-144-node-1699"></a>
 
 - **1699** · clip 124: The participants continue working on laptops and discussing the plan.
 
-<a id="latest-committed-memory-segment-125-node-1709"></a>
+<a id="latest-committed-memory-segment-144-node-1709"></a>
 
-- **1709** · clip 125: At 00:00, &lt;voice_386&gt; suggests that the sweet product can be prepared first.  **Links:** ↔ [386](#latest-committed-memory-segment-125-node-386)
+- **1709** · clip 125: At 00:00, &lt;voice_386&gt; suggests that the sweet product can be prepared first.  **Links:** ↔ [386](#latest-committed-memory-segment-144-node-386)
 
-<a id="latest-committed-memory-segment-125-node-1710"></a>
+<a id="latest-committed-memory-segment-144-node-1710"></a>
 
-- **1710** · clip 125: At 00:02, &lt;voice_1170&gt; explains that the product involves adding the sweet product during the introduction segment from 3:40 to 4:20.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170)
+- **1710** · clip 125: At 00:02, &lt;voice_1170&gt; explains that the product involves adding the sweet product during the introduction segment from 3:40 to 4:20.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
 
-<a id="latest-committed-memory-segment-125-node-1711"></a>
+<a id="latest-committed-memory-segment-144-node-1711"></a>
 
-- **1711** · clip 125: At 00:13, &lt;voice_261&gt; asks if they should buy the sweet product.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **1711** · clip 125: At 00:13, &lt;voice_261&gt; asks if they should buy the sweet product.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-1712"></a>
+<a id="latest-committed-memory-segment-144-node-1712"></a>
 
-- **1712** · clip 125: At 00:14, &lt;voice_1703&gt; refers specifically to 'his' sweet product.  **Links:** ↔ [1703](#latest-committed-memory-segment-125-node-1703)
+- **1712** · clip 125: At 00:14, &lt;voice_1703&gt; refers specifically to 'his' sweet product.  **Links:** ↔ [1703](#latest-committed-memory-segment-144-node-1703)
 
-<a id="latest-committed-memory-segment-125-node-1713"></a>
+<a id="latest-committed-memory-segment-144-node-1713"></a>
 
-- **1713** · clip 125: At 00:16, &lt;voice_364&gt; mentions sending out the sweet product first.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1713** · clip 125: At 00:16, &lt;voice_364&gt; mentions sending out the sweet product first.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1714"></a>
+<a id="latest-committed-memory-segment-144-node-1714"></a>
 
-- **1714** · clip 125: At 00:17, &lt;voice_1704&gt; states that there is money available.  **Links:** ↔ [1704](#latest-committed-memory-segment-125-node-1704)
+- **1714** · clip 125: At 00:17, &lt;voice_1704&gt; states that there is money available.  **Links:** ↔ [1704](#latest-committed-memory-segment-144-node-1704)
 
-<a id="latest-committed-memory-segment-125-node-1715"></a>
+<a id="latest-committed-memory-segment-144-node-1715"></a>
 
-- **1715** · clip 125: At 00:18, &lt;voice_1704&gt; adds that there are samples available.  **Links:** ↔ [1704](#latest-committed-memory-segment-125-node-1704)
+- **1715** · clip 125: At 00:18, &lt;voice_1704&gt; adds that there are samples available.  **Links:** ↔ [1704](#latest-committed-memory-segment-144-node-1704)
 
-<a id="latest-committed-memory-segment-125-node-1716"></a>
+<a id="latest-committed-memory-segment-144-node-1716"></a>
 
-- **1716** · clip 125: At 00:19, &lt;voice_466&gt; asks about a display stand.  **Links:** ↔ [466](#latest-committed-memory-segment-125-node-466)
+- **1716** · clip 125: At 00:19, &lt;voice_466&gt; asks about a display stand.  **Links:** ↔ [466](#latest-committed-memory-segment-144-node-466)
 
-<a id="latest-committed-memory-segment-125-node-1717"></a>
+<a id="latest-committed-memory-segment-144-node-1717"></a>
 
-- **1717** · clip 125: At 00:20, &lt;voice_466&gt; clarifies their question about what digging or excavating means.  **Links:** ↔ [466](#latest-committed-memory-segment-125-node-466)
+- **1717** · clip 125: At 00:20, &lt;voice_466&gt; clarifies their question about what digging or excavating means.  **Links:** ↔ [466](#latest-committed-memory-segment-144-node-466)
 
-<a id="latest-committed-memory-segment-125-node-1718"></a>
+<a id="latest-committed-memory-segment-144-node-1718"></a>
 
-- **1718** · clip 125: At 00:22, &lt;voice_1705&gt; confirms it is the sweet product display stand.  **Links:** ↔ [1705](#latest-committed-memory-segment-125-node-1705)
+- **1718** · clip 125: At 00:22, &lt;voice_1705&gt; confirms it is the sweet product display stand.  **Links:** ↔ [1705](#latest-committed-memory-segment-144-node-1705)
 
-<a id="latest-committed-memory-segment-125-node-1719"></a>
+<a id="latest-committed-memory-segment-144-node-1719"></a>
 
-- **1719** · clip 125: At 00:23, &lt;voice_1705&gt; notes that it is for the afternoon viewing.  **Links:** ↔ [1705](#latest-committed-memory-segment-125-node-1705)
+- **1719** · clip 125: At 00:23, &lt;voice_1705&gt; notes that it is for the afternoon viewing.  **Links:** ↔ [1705](#latest-committed-memory-segment-144-node-1705)
 
-<a id="latest-committed-memory-segment-125-node-1720"></a>
+<a id="latest-committed-memory-segment-144-node-1720"></a>
 
-- **1720** · clip 125: At 00:26, &lt;voice_1706&gt; questions if the situation is really fake.  **Links:** ↔ [1706](#latest-committed-memory-segment-125-node-1706)
+- **1720** · clip 125: At 00:26, &lt;voice_1706&gt; questions if the situation is really fake.  **Links:** ↔ [1706](#latest-committed-memory-segment-144-node-1706)
 
-<a id="latest-committed-memory-segment-125-node-1721"></a>
+<a id="latest-committed-memory-segment-144-node-1721"></a>
 
-- **1721** · clip 125: At 00:27, &lt;voice_1707&gt; responds with the word 'dig'.  **Links:** ↔ [1707](#latest-committed-memory-segment-125-node-1707)
+- **1721** · clip 125: At 00:27, &lt;voice_1707&gt; responds with the word 'dig'.  **Links:** ↔ [1707](#latest-committed-memory-segment-144-node-1707)
 
-<a id="latest-committed-memory-segment-125-node-1722"></a>
+<a id="latest-committed-memory-segment-144-node-1722"></a>
 
-- **1722** · clip 125: At 00:28, &lt;voice_1708&gt; asks to check if there is anything good to look at.  **Links:** ↔ [1708](#latest-committed-memory-segment-125-node-1708)
+- **1722** · clip 125: At 00:28, &lt;voice_1708&gt; asks to check if there is anything good to look at.  **Links:** ↔ [1708](#latest-committed-memory-segment-144-node-1708)
+
+<a id="latest-committed-memory-segment-144-node-1730"></a>
+
+- **1730** · clip 126: A group gathers around a table; the woman in black speaks: '&lt;voice_444&gt;: MAI: 对。'  **Links:** ↔ [444](#latest-committed-memory-segment-144-node-444)
+
+<a id="latest-committed-memory-segment-144-node-1731"></a>
+
+- **1731** · clip 126: Discussion on dessert table production costs begins: '&lt;voice_560&gt;: MAI: 好的，那甜品台做一次要八千到一千吗？'  **Links:** ↔ [560](#latest-committed-memory-segment-144-node-560)
+
+<a id="latest-committed-memory-segment-144-node-1732"></a>
+
+- **1732** · clip 126: Response confirming feasibility: '&lt;voice_737&gt;: MAI: 怎么？可以，可以，可以。'  **Links:** ↔ [737](#latest-committed-memory-segment-144-node-737)
+
+<a id="latest-committed-memory-segment-144-node-1733"></a>
+
+- **1733** · clip 126: Clarification that only the stand is being purchased: '&lt;voice_1726&gt;: MAI: 没有，只是买个甜品台架子。'  **Links:** ↔ [1726](#latest-committed-memory-segment-144-node-1726)
+
+<a id="latest-committed-memory-segment-144-node-1734"></a>
+
+- **1734** · clip 126: Inquiry about the stand's price: '&lt;voice_364&gt;: MAI: 架子一千是几？'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
+
+<a id="latest-committed-memory-segment-144-node-1735"></a>
+
+- **1735** · clip 126: Statement of total budget range: '&lt;voice_1221&gt;: MAI: 总共五万到一万。'  **Links:** ↔ [1221](#latest-committed-memory-segment-144-node-1221)
+
+<a id="latest-committed-memory-segment-144-node-1736"></a>
+
+- **1736** · clip 126: Question regarding necessary machinery: '&lt;voice_1727&gt;: MAI: 哎，但是你是不是需要很多机器啊？'  **Links:** ↔ [1727](#latest-committed-memory-segment-144-node-1727)
+
+<a id="latest-committed-memory-segment-144-node-1737"></a>
+
+- **1737** · clip 126: Confirmation of purchasing basic equipment: '&lt;voice_1728&gt;: MAI: 嗯，基础的买了。'  **Links:** ↔ [1728](#latest-committed-memory-segment-144-node-1728)
+
+<a id="latest-committed-memory-segment-144-node-1738"></a>
+
+- **1738** · clip 126: Mention of not purchasing a stand mixer: '&lt;voice_1729&gt;: MAI: 厨师机什么的没买。'  **Links:** ↔ [1729](#latest-committed-memory-segment-144-node-1729)
+
+<a id="latest-committed-memory-segment-144-node-1739"></a>
+
+- **1739** · clip 126: Camera view shifts to a man standing by the window.
+
+<a id="latest-committed-memory-segment-144-node-1740"></a>
+
+- **1740** · clip 126: Man in white shirt walks away from the table carrying a bag.
+
+<a id="latest-committed-memory-segment-144-node-1741"></a>
+
+- **1741** · clip 126: View returns to the group discussion with the woman in black continuing to explain.
+
+<a id="latest-committed-memory-segment-144-node-1755"></a>
+
+- **1755** · clip 127: A group of people are seated around a table with a red-and-white checkered tablecloth in a room featuring a whiteboard and projector screen.
+
+<a id="latest-committed-memory-segment-144-node-1756"></a>
+
+- **1756** · clip 127: Voice &lt;voice_364&gt; asks, '能-能多少钱？' (Can - can how much money?).  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
+
+<a id="latest-committed-memory-segment-144-node-1757"></a>
+
+- **1757** · clip 127: Voice &lt;voice_1745&gt; responds, '不能买。' (Cannot buy.).  **Links:** ↔ [1745](#latest-committed-memory-segment-144-node-1745)
+
+<a id="latest-committed-memory-segment-144-node-1758"></a>
+
+- **1758** · clip 127: Voice &lt;voice_261&gt; acknowledges, '哦，对啊。' (Oh, right.).  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
+
+<a id="latest-committed-memory-segment-144-node-1759"></a>
+
+- **1759** · clip 127: Voice &lt;voice_1746&gt; questions, '上万？' (Over ten thousand?).  **Links:** ↔ [1746](#latest-committed-memory-segment-144-node-1746)
+
+<a id="latest-committed-memory-segment-144-node-1760"></a>
+
+- **1760** · clip 127: Voice &lt;voice_1747&gt; estimates the price, '嗯，几千块钱吧。' (Um, a few thousand yuan.).  **Links:** ↔ [1747](#latest-committed-memory-segment-144-node-1747)
+
+<a id="latest-committed-memory-segment-144-node-1761"></a>
+
+- **1761** · clip 127: Voice &lt;voice_1748&gt; describes the item, '产品它就像这样。' (The product is like this.).  **Links:** ↔ [1748](#latest-committed-memory-segment-144-node-1748)
+
+<a id="latest-committed-memory-segment-144-node-1762"></a>
+
+- **1762** · clip 127: Voice &lt;voice_1303&gt; comments, '好漂亮。' (So beautiful.).  **Links:** ↔ [1303](#latest-committed-memory-segment-144-node-1303)
+
+<a id="latest-committed-memory-segment-144-node-1763"></a>
+
+- **1763** · clip 127: Voice &lt;voice_1727&gt; agrees, '是啊，对不对。' (Yes, right.).  **Links:** ↔ [1727](#latest-committed-memory-segment-144-node-1727)
+
+<a id="latest-committed-memory-segment-144-node-1764"></a>
+
+- **1764** · clip 127: Voice &lt;voice_1750&gt; states, '差不多是我想的那大块。' (About that big piece I wanted.).  **Links:** ↔ [1750](#latest-committed-memory-segment-144-node-1750)
+
+<a id="latest-committed-memory-segment-144-node-1765"></a>
+
+- **1765** · clip 127: Voice &lt;voice_1751&gt; repeats, '好漂亮。' (So beautiful.).  **Links:** ↔ [1751](#latest-committed-memory-segment-144-node-1751)
+
+<a id="latest-committed-memory-segment-144-node-1766"></a>
+
+- **1766** · clip 127: Voice &lt;voice_1752&gt; mentions, '到时候坐在这里，可以... 我每次开学术会议的时候。' (When we sit here... Every time I hold academic meetings.).  **Links:** ↔ [1752](#latest-committed-memory-segment-144-node-1752)
+
+<a id="latest-committed-memory-segment-144-node-1767"></a>
+
+- **1767** · clip 127: Voice &lt;voice_1753&gt; confirms, '对不对，就是为了这个。' (Right, just for this.).  **Links:** ↔ [1753](#latest-committed-memory-segment-144-node-1753)
+
+<a id="latest-committed-memory-segment-144-node-1768"></a>
+
+- **1768** · clip 127: Voice &lt;voice_1754&gt; concludes, '学术角。' (Academic corner.).  **Links:** ↔ [1754](#latest-committed-memory-segment-144-node-1754)
+
+<a id="latest-committed-memory-segment-144-node-1769"></a>
+
+- **1769** · clip 127: A person in black attire sits at the table and raises a smartphone to show the screen to the group.
+
+<a id="latest-committed-memory-segment-144-node-1770"></a>
+
+- **1770** · clip 127: The camera briefly pans towards the window where a person is standing before returning to the table view.
+
+<a id="latest-committed-memory-segment-144-node-1777"></a>
+
+- **1777** · clip 128: At 00:00, &lt;voice_1775&gt; greets with 'Konnichiwa.' while a person in black holds a smartphone upright.  **Links:** ↔ [1775](#latest-committed-memory-segment-144-node-1775)
+
+<a id="latest-committed-memory-segment-144-node-1778"></a>
+
+- **1778** · clip 128: The person in black continues to hold the phone, and &lt;voice_1776&gt; repeats 'Mou souji.' indicating adjustment or confirmation.  **Links:** ↔ [1776](#latest-committed-memory-segment-144-node-1776)
+
+<a id="latest-committed-memory-segment-144-node-1779"></a>
+
+- **1779** · clip 128: A third individual with blonde hair wearing a white shirt appears on the right side of the table around 00:04.
+
+<a id="latest-committed-memory-segment-144-node-1780"></a>
+
+- **1780** · clip 128: The group discusses meal habits, with &lt;voice_1752&gt; stating 'Key point is teachers generally don't eat much, finally it's me.'  **Links:** ↔ [1752](#latest-committed-memory-segment-144-node-1752)
+
+<a id="latest-committed-memory-segment-144-node-1781"></a>
+
+- **1781** · clip 128: Later, &lt;voice_413&gt; mentions packing for a round trip while the group remains seated around the table.  **Links:** ↔ [413](#latest-committed-memory-segment-144-node-413)
+
+<a id="latest-committed-memory-segment-144-node-1782"></a>
+
+- **1782** · clip 128: The person on the left gestures with the phone throughout the interaction.
+
+<a id="latest-committed-memory-segment-144-node-1787"></a>
+
+- **1787** · clip 129: Three individuals are seated around a dining table covered with a red and white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1788"></a>
+
+- **1788** · clip 129: A woman in a black top sits on the left, gesturing with her hands while holding a small floral arrangement.
+
+<a id="latest-committed-memory-segment-144-node-1789"></a>
+
+- **1789** · clip 129: A laptop is open on the table in the foreground.
+
+<a id="latest-committed-memory-segment-144-node-1790"></a>
+
+- **1790** · clip 129: A woman wearing a pink headscarf and white shirt sits on the right side of the table.
+
+<a id="latest-committed-memory-segment-144-node-1791"></a>
+
+- **1791** · clip 129: Another woman in a light blue top is seated in the background.
+
+<a id="latest-committed-memory-segment-144-node-1792"></a>
+
+- **1792** · clip 129: The camera view shifts to show a kitchen area through a large opening.
+
+<a id="latest-committed-memory-segment-144-node-1793"></a>
+
+- **1793** · clip 129: A man in a striped shirt stands near the kitchen counter and sink.
+
+<a id="latest-committed-memory-segment-144-node-1794"></a>
+
+- **1794** · clip 129: The group continues their conversation while the man remains in the background.
+
+<a id="latest-committed-memory-segment-144-node-1803"></a>
+
+- **1803** · clip 130: The video begins with a wide shot of a room containing a table covered with a checkered cloth.
+
+<a id="latest-committed-memory-segment-144-node-1804"></a>
+
+- **1804** · clip 130: A person wearing an orange shirt stands near a balcony door in the background.
+
+<a id="latest-committed-memory-segment-144-node-1805"></a>
+
+- **1805** · clip 130: Two other individuals are seated at the table, one on the left in a black top and one in the center in a white top.
+
+<a id="latest-committed-memory-segment-144-node-1806"></a>
+
+- **1806** · clip 130: The camera angle shifts to a first-person perspective, showing the legs of the camera wearer in the foreground.
+
+<a id="latest-committed-memory-segment-144-node-1807"></a>
+
+- **1807** · clip 130: A person seated on the left is seen holding a bouquet of flowers while looking towards the center of the table.
+
+<a id="latest-committed-memory-segment-144-node-1808"></a>
+
+- **1808** · clip 130: Laptops and various items are placed on the table in front of the seated individuals.
+
+<a id="latest-committed-memory-segment-144-node-1809"></a>
+
+- **1809** · clip 130: The view switches back to the original wide shot, showing the person in the orange shirt standing by the window.
+
+<a id="latest-committed-memory-segment-144-node-1810"></a>
+
+- **1810** · clip 130: The camera returns to the close-up view of the table interaction between the person in black and the person in white.
+
+<a id="latest-committed-memory-segment-144-node-1811"></a>
+
+- **1811** · clip 130: The individuals appear to be engaged in a casual discussion while handling food items and flowers.
+
+<a id="latest-committed-memory-segment-144-node-1824"></a>
+
+- **1824** · clip 131: Three individuals are seated around a wooden table covered with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1825"></a>
+
+- **1825** · clip 131: A person in a black top sits on the left, holding a bouquet of flowers or plants.
+
+<a id="latest-committed-memory-segment-144-node-1826"></a>
+
+- **1826** · clip 131: Another individual with long pink hair and sunglasses sits on the right.
+
+<a id="latest-committed-memory-segment-144-node-1827"></a>
+
+- **1827** · clip 131: A third person with dark hair sits in the center-right position.
+
+<a id="latest-committed-memory-segment-144-node-1828"></a>
+
+- **1828** · clip 131: The camera perspective shifts to reveal a man standing near a large window or balcony door.
+
+<a id="latest-committed-memory-segment-144-node-1829"></a>
+
+- **1829** · clip 131: A woman dressed in a white outfit enters the room from the left, walking towards the table area.
+
+<a id="latest-committed-memory-segment-144-node-1830"></a>
+
+- **1830** · clip 131: The group appears to be engaged in a discussion or meeting within a casual indoor environment.
+
+<a id="latest-committed-memory-segment-144-node-1835"></a>
+
+- **1835** · clip 132: A group of people are seated around a table covered with a red and white checkered tablecloth in a room with a whiteboard in the background.
+
+<a id="latest-committed-memory-segment-144-node-1836"></a>
+
+- **1836** · clip 132: A laptop computer is open on the table in the immediate foreground.
+
+<a id="latest-committed-memory-segment-144-node-1837"></a>
+
+- **1837** · clip 132: A person wearing a black top sits on the left side of the table and uses hand gestures while speaking.
+
+<a id="latest-committed-memory-segment-144-node-1838"></a>
+
+- **1838** · clip 132: From 00:00 to 00:12, &lt;voice_1170&gt; remarks that it is evening and suggests that participants should share personal stories during the introduction phase.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
+
+<a id="latest-committed-memory-segment-144-node-1839"></a>
+
+- **1839** · clip 132: At approximately 08:00, a person wearing a white shirt enters the frame from the background carrying a bouquet of pink flowers.
+
+<a id="latest-committed-memory-segment-144-node-1840"></a>
+
+- **1840** · clip 132: The individual places the flowers on the table among the other items.
+
+<a id="latest-committed-memory-segment-144-node-1847"></a>
+
+- **1847** · clip 133: A group of people are seated around a table with a checkered tablecloth in a room featuring a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1848"></a>
+
+- **1848** · clip 133: While gesturing, &lt;voice_1170&gt; asks if the plan involves eating BBQ and mixing drinks between 5 and 6 PM.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
+
+<a id="latest-committed-memory-segment-144-node-1849"></a>
+
+- **1849** · clip 133: A man in a white shirt approaches the table and places a potted plant on it.
+
+<a id="latest-committed-memory-segment-144-node-1850"></a>
+
+- **1850** · clip 133: &lt;voice_444&gt; responds affirmatively, stating 'Okay, come.'  **Links:** ↔ [444](#latest-committed-memory-segment-144-node-444)
+
+<a id="latest-committed-memory-segment-144-node-1851"></a>
+
+- **1851** · clip 133: &lt;voice_1844&gt; mentions 'last time' and adds that they will not follow the plan strictly.  **Links:** ↔ [1844](#latest-committed-memory-segment-144-node-1844)
+
+<a id="latest-committed-memory-segment-144-node-1852"></a>
+
+- **1852** · clip 133: &lt;voice_1845&gt; confirms with 'Yes.'  **Links:** ↔ [1845](#latest-committed-memory-segment-144-node-1845)
+
+<a id="latest-committed-memory-segment-144-node-1853"></a>
+
+- **1853** · clip 133: &lt;voice_1846&gt; concludes by proposing a 5 to 6 PM time interval.  **Links:** ↔ [1846](#latest-committed-memory-segment-144-node-1846)
+
+<a id="latest-committed-memory-segment-144-node-1854"></a>
+
+- **1854** · clip 133: The camera pans away to reveal a projector screen and the general layout of the room.
+
+<a id="latest-committed-memory-segment-144-node-1855"></a>
+
+- **1855** · clip 133: A man in a pink shirt stands up and moves towards the window area.
+
+<a id="latest-committed-memory-segment-144-node-1856"></a>
+
+- **1856** · clip 133: The group continues their discussion while seated around the table.
+
+<a id="latest-committed-memory-segment-144-node-1864"></a>
+
+- **1864** · clip 134: A group of people are seated around a table with a checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1865"></a>
+
+- **1865** · clip 134: A person on the left gestures while speaking.
+
+<a id="latest-committed-memory-segment-144-node-1866"></a>
+
+- **1866** · clip 134: An open laptop and a water bottle rest on the table.
+
+<a id="latest-committed-memory-segment-144-node-1867"></a>
+
+- **1867** · clip 134: A whiteboard is mounted on the wall in the background.
+
+<a id="latest-committed-memory-segment-144-node-1868"></a>
+
+- **1868** · clip 134: A person with pink hair and sunglasses is seated on the right.
+
+<a id="latest-committed-memory-segment-144-node-1869"></a>
+
+- **1869** · clip 134: Voice track &lt;voice_443&gt; announces dinner is around 5:30 PM.  **Links:** ↔ [443](#latest-committed-memory-segment-144-node-443)
+
+<a id="latest-committed-memory-segment-144-node-1870"></a>
+
+- **1870** · clip 134: Voice track &lt;voice_444&gt; and &lt;voice_1861&gt; discuss a large pizza.  **Links:** ↔ [444](#latest-committed-memory-segment-144-node-444) · ↔ [1861](#latest-committed-memory-segment-144-node-1861)
+
+<a id="latest-committed-memory-segment-144-node-1871"></a>
+
+- **1871** · clip 134: Voice track &lt;voice_1862&gt; and &lt;voice_1863&gt; mention BBQ.  **Links:** ↔ [1862](#latest-committed-memory-segment-144-node-1862) · ↔ [1863](#latest-committed-memory-segment-144-node-1863)
+
+<a id="latest-committed-memory-segment-144-node-1872"></a>
+
+- **1872** · clip 134: Voice track &lt;voice_1860&gt; refers to something 'above'.  **Links:** ↔ [1860](#latest-committed-memory-segment-144-node-1860)
+
+<a id="latest-committed-memory-segment-144-node-1881"></a>
+
+- **1881** · clip 135: A group of four individuals sits around a wooden table covered with a red-and-white checkered tablecloth.
+
+<a id="latest-committed-memory-segment-144-node-1882"></a>
+
+- **1882** · clip 135: One person stands at the front of the room, interacting with a whiteboard filled with writing.
+
+<a id="latest-committed-memory-segment-144-node-1883"></a>
+
+- **1883** · clip 135: The person seated on the left side of the table wears a black top and puts on virtual reality goggles during the clip.
+
+<a id="latest-committed-memory-segment-144-node-1884"></a>
+
+- **1884** · clip 135: The person on the right has long reddish hair and wears a white shirt, adjusting their own device.
+
+<a id="latest-committed-memory-segment-144-node-1885"></a>
+
+- **1885** · clip 135: The camera wearer is seated at the table with legs visible in the foreground.
+
+<a id="latest-committed-memory-segment-144-node-1886"></a>
+
+- **1886** · clip 135: The group engages in a discussion while observing the whiteboard and each other.
+
+<a id="latest-committed-memory-segment-144-node-1900"></a>
+
+- **1900** · clip 136: A group of people are seated around a table covered with a red and white checkered cloth in a room with a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1901"></a>
+
+- **1901** · clip 136: One individual wearing a pink shirt stands near the whiteboard and gestures towards it while others observe.
+
+<a id="latest-committed-memory-segment-144-node-1902"></a>
+
+- **1902** · clip 136: A voice identified as &lt;voice_1897&gt; states that the matter requires two hours.  **Links:** ↔ [1897](#latest-committed-memory-segment-144-node-1897)
+
+<a id="latest-committed-memory-segment-144-node-1903"></a>
+
+- **1903** · clip 136: The same voice &lt;voice_364&gt; suggests establishing a specific end time.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
+
+<a id="latest-committed-memory-segment-144-node-1904"></a>
+
+- **1904** · clip 136: Voice &lt;voice_1898&gt; proposes a duration from 2:30 to 8:30 as sufficient.  **Links:** ↔ [1898](#latest-committed-memory-segment-144-node-1898)
+
+<a id="latest-committed-memory-segment-144-node-1905"></a>
+
+- **1905** · clip 136: Voice &lt;voice_1899&gt; affirms the agreement.  **Links:** ↔ [1899](#latest-committed-memory-segment-144-node-1899)
+
+<a id="latest-committed-memory-segment-144-node-1906"></a>
+
+- **1906** · clip 136: Voice &lt;voice_1880&gt; outlines a plan including a performance segment around 6:30 and asks if others can prepare a funny song.  **Links:** ↔ [1880](#latest-committed-memory-segment-144-node-1880)
+
+<a id="latest-committed-memory-segment-144-node-1912"></a>
+
+- **1912** · clip 137: A group of people are seated around a table covered with a red and white checkered tablecloth in a room with a whiteboard in the background.
+
+<a id="latest-committed-memory-segment-144-node-1913"></a>
+
+- **1913** · clip 137: &lt;voice_1876&gt; says: '可以，纠正我们有把契他。'  **Links:** ↔ [1876](#latest-committed-memory-segment-144-node-1876)
+
+<a id="latest-committed-memory-segment-144-node-1914"></a>
+
+- **1914** · clip 137: &lt;voice_1560&gt; says: '喏，对嘛，唱唱歌，跳跳舞。'  **Links:** ↔ [1560](#latest-committed-memory-segment-144-node-1560)
+
+<a id="latest-committed-memory-segment-144-node-1915"></a>
+
+- **1915** · clip 137: &lt;voice_364&gt; says: '对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
+
+<a id="latest-committed-memory-segment-144-node-1916"></a>
+
+- **1916** · clip 137: &lt;voice_1845&gt; says: '一起卡拉OK的环境吧。 喏，也可以。'  **Links:** ↔ [1845](#latest-committed-memory-segment-144-node-1845)
+
+<a id="latest-committed-memory-segment-144-node-1917"></a>
+
+- **1917** · clip 137: &lt;voice_1208&gt; says: '传数据让他们自己通过我们的世界，然后喝喝酒。'  **Links:** ↔ [1208](#latest-committed-memory-segment-144-node-1208)
+
+<a id="latest-committed-memory-segment-144-node-1918"></a>
+
+- **1918** · clip 137: &lt;voice_1909&gt; says: '传数据的时候大家唱唱歌好了。'  **Links:** ↔ [1909](#latest-committed-memory-segment-144-node-1909)
+
+<a id="latest-committed-memory-segment-144-node-1919"></a>
+
+- **1919** · clip 137: &lt;voice_1910&gt; says: '可以，可以，可以。'  **Links:** ↔ [1910](#latest-committed-memory-segment-144-node-1910)
+
+<a id="latest-committed-memory-segment-144-node-1920"></a>
+
+- **1920** · clip 137: &lt;voice_1911&gt; says: '放一个小电影或者干巴的。'  **Links:** ↔ [1911](#latest-committed-memory-segment-144-node-1911)
+
+<a id="latest-committed-memory-segment-144-node-1921"></a>
+
+- **1921** · clip 137: &lt;voice_261&gt; says: '对不对，中间中间空一个小的。'  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
+
+<a id="latest-committed-memory-segment-144-node-1922"></a>
+
+- **1922** · clip 137: At the end of the clip, a person's finger points towards the camera lens.
+
+<a id="latest-committed-memory-segment-144-node-1928"></a>
+
+- **1928** · clip 138: At 00:00, &lt;voice_500&gt; asks 'Is it less. Roughly what time?' during a group meeting.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
+
+<a id="latest-committed-memory-segment-144-node-1929"></a>
+
+- **1929** · clip 138: At 00:01, &lt;voice_1926&gt; responds stating 'They also said that back then.'  **Links:** ↔ [1926](#latest-committed-memory-segment-144-node-1926)
+
+<a id="latest-committed-memory-segment-144-node-1930"></a>
+
+- **1930** · clip 138: At 00:02, &lt;voice_261&gt; discusses time slots from 3 PM to 6 PM, mentioning half past five, and notes that recording stops when the family eats pizza.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
+
+<a id="latest-committed-memory-segment-144-node-1931"></a>
+
+- **1931** · clip 138: At 00:06, &lt;voice_1208&gt; clarifies that the session ends at five o'clock.  **Links:** ↔ [1208](#latest-committed-memory-segment-144-node-1208)
+
+<a id="latest-committed-memory-segment-144-node-1932"></a>
+
+- **1932** · clip 138: At 00:10, &lt;voice_1111&gt; inquires about the timing for dessert consumption.  **Links:** ↔ [1111](#latest-committed-memory-segment-144-node-1111)
+
+<a id="latest-committed-memory-segment-144-node-1933"></a>
+
+- **1933** · clip 138: At 00:13, &lt;voice_364&gt; repeats the question asking 'When is dessert?'  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
+
+<a id="latest-committed-memory-segment-144-node-1934"></a>
+
+- **1934** · clip 138: At 00:14, &lt;voice_1927&gt; identifies dessert as belonging to 'you, us' and mentions 'fullness always'.  **Links:** ↔ [1927](#latest-committed-memory-segment-144-node-1927)
+
+<a id="latest-committed-memory-segment-144-node-1935"></a>
+
+- **1935** · clip 138: At 00:16, &lt;voice_752&gt; questions whether participants receive gold coins in a specific segment.  **Links:** ↔ [752](#latest-committed-memory-segment-144-node-752)
+
+<a id="latest-committed-memory-segment-144-node-1936"></a>
+
+- **1936** · clip 138: At 00:21, &lt;voice_1170&gt; outlines a schedule from 3:40 PM to 4:20 PM for introducing products, suggesting placing certain items at the end before concluding.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
+
+<a id="latest-committed-memory-segment-144-node-1945"></a>
+
+- **1945** · clip 139: A group of individuals is seated around a table covered with a red and white checkered tablecloth in a room with a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1946"></a>
+
+- **1946** · clip 139: The person on the left, wearing glasses and a dark top, engages in conversation while the person on the right eats.
+
+<a id="latest-committed-memory-segment-144-node-1947"></a>
+
+- **1947** · clip 139: &lt;voice_1940&gt; says: 'Try your sweets. 4 point 20? Yes, that's your pressure. You introduce your seedlings and your sweets. We introduce our own made ones.'  **Links:** ↔ [1940](#latest-committed-memory-segment-144-node-1940)
+
+<a id="latest-committed-memory-segment-144-node-1948"></a>
+
+- **1948** · clip 139: A person in a pink shirt stands near the whiteboard while another individual holds a green plant.
+
+<a id="latest-committed-memory-segment-144-node-1949"></a>
+
+- **1949** · clip 139: &lt;voice_1879&gt; says: 'Oh, 3 to 5, two hours, pretty good.'  **Links:** ↔ [1879](#latest-committed-memory-segment-144-node-1879)
+
+<a id="latest-committed-memory-segment-144-node-1950"></a>
+
+- **1950** · clip 139: &lt;voice_560&gt; says: 'Generally need to prepare from morning, then need to match two people.'  **Links:** ↔ [560](#latest-committed-memory-segment-144-node-560)
+
+<a id="latest-committed-memory-segment-144-node-1951"></a>
+
+- **1951** · clip 139: &lt;voice_1941&gt; says: 'Oh oh.'  **Links:** ↔ [1941](#latest-committed-memory-segment-144-node-1941)
+
+<a id="latest-committed-memory-segment-144-node-1952"></a>
+
+- **1952** · clip 139: &lt;voice_1942&gt; says: 'Match two people.'  **Links:** ↔ [1942](#latest-committed-memory-segment-144-node-1942)
+
+<a id="latest-committed-memory-segment-144-node-1953"></a>
+
+- **1953** · clip 139: &lt;voice_1943&gt; says: 'Really come up?'  **Links:** ↔ [1943](#latest-committed-memory-segment-144-node-1943)
+
+<a id="latest-committed-memory-segment-144-node-1954"></a>
+
+- **1954** · clip 139: &lt;voice_1944&gt; says: 'Okay, today I just made a mistake. To time die.'  **Links:** ↔ [1944](#latest-committed-memory-segment-144-node-1944)
+
+<a id="latest-committed-memory-segment-144-node-1955"></a>
+
+- **1955** · clip 139: The person in the pink shirt stands up fully towards the end of the clip.
+
+<a id="latest-committed-memory-segment-144-node-1962"></a>
+
+- **1962** · clip 140: A person wearing a VR headset speaks via &lt;voice_1959&gt;, stating 'I heard your alarm.'  **Links:** ↔ [1959](#latest-committed-memory-segment-144-node-1959)
+
+<a id="latest-committed-memory-segment-144-node-1963"></a>
+
+- **1963** · clip 140: Another participant speaks via &lt;voice_1944&gt;, asking 'What did you hear? Don't you live in the main building?'  **Links:** ↔ [1944](#latest-committed-memory-segment-144-node-1944)
+
+<a id="latest-committed-memory-segment-144-node-1964"></a>
+
+- **1964** · clip 140: Participant &lt;voice_1802&gt; responds, 'Yes, because the apartment should just be up and down like this.'  **Links:** ↔ [1802](#latest-committed-memory-segment-144-node-1802)
+
+<a id="latest-committed-memory-segment-144-node-1965"></a>
+
+- **1965** · clip 140: &lt;voice_1802&gt; continues, noting 'Yours is the same as mine.'  **Links:** ↔ [1802](#latest-committed-memory-segment-144-node-1802)
+
+<a id="latest-committed-memory-segment-144-node-1966"></a>
+
+- **1966** · clip 140: &lt;voice_1909&gt; explains, 'But it's normal too, I have my own room, I set an alarm early morning, my friends woke up, but I haven't woken up yet.'  **Links:** ↔ [1909](#latest-committed-memory-segment-144-node-1909)
+
+<a id="latest-committed-memory-segment-144-node-1967"></a>
+
+- **1967** · clip 140: &lt;voice_1960&gt; remarks, 'Just can't hear it yourself.'  **Links:** ↔ [1960](#latest-committed-memory-segment-144-node-1960)
+
+<a id="latest-committed-memory-segment-144-node-1968"></a>
+
+- **1968** · clip 140: &lt;voice_1961&gt; mentions plans, 'Listen to three tomorrow. That leaves about...'  **Links:** ↔ [1961](#latest-committed-memory-segment-144-node-1961)
+
+<a id="latest-committed-memory-segment-144-node-1969"></a>
+
+- **1969** · clip 140: &lt;voice_261&gt; begins a sentence, 'So the dessert on that day is...'  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
+
+<a id="latest-committed-memory-segment-144-node-1970"></a>
+
+- **1970** · clip 140: Visually, several individuals are seated around a table with laptops and VR headsets.
+
+<a id="latest-committed-memory-segment-144-node-1971"></a>
+
+- **1971** · clip 140: One person with pink hair sits at the table while another stands by the window adjusting equipment.
+
+<a id="latest-committed-memory-segment-144-node-1979"></a>
+
+- **1979** · clip 141: A group of people are gathered around a table covered with a red and white checkered tablecloth in a room with a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1980"></a>
+
+- **1980** · clip 141: One person wearing a white shirt stands behind the table, gesturing and speaking to the seated participants.
+
+<a id="latest-committed-memory-segment-144-node-1981"></a>
+
+- **1981** · clip 141: Participants seated at the table include an individual in a black top on the left and a person with long blonde hair on the right.
+
+<a id="latest-committed-memory-segment-144-node-1982"></a>
+
+- **1982** · clip 141: &lt;voice_364&gt; asks if tasks should be done today or the day before.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
+
+<a id="latest-committed-memory-segment-144-node-1983"></a>
+
+- **1983** · clip 141: &lt;voice_560&gt; notes that items requiring cold storage, like pull-flower pastry, should be prepared the day before.  **Links:** ↔ [560](#latest-committed-memory-segment-144-node-560)
+
+<a id="latest-committed-memory-segment-144-node-1984"></a>
+
+- **1984** · clip 141: The discussion continues regarding the process of mixing ingredients and making dough the following day.
+
+<a id="latest-committed-memory-segment-144-node-1985"></a>
+
+- **1985** · clip 141: &lt;voice_1727&gt; draws a comparison to Qingbuliang, asking if it involves buying flour and making one item.  **Links:** ↔ [1727](#latest-committed-memory-segment-144-node-1727)
+
+<a id="latest-committed-memory-segment-144-node-1986"></a>
+
+- **1986** · clip 141: &lt;voice_1976&gt; refers specifically to the Qingbuliang dish.  **Links:** ↔ [1976](#latest-committed-memory-segment-144-node-1976)
+
+<a id="latest-committed-memory-segment-144-node-1987"></a>
+
+- **1987** · clip 141: &lt;voice_1977&gt; questions if the dough should be tasted or adjusted.  **Links:** ↔ [1977](#latest-committed-memory-segment-144-node-1977)
+
+<a id="latest-committed-memory-segment-144-node-1988"></a>
+
+- **1988** · clip 141: &lt;voice_1978&gt; responds affirmatively or suggests pairing/matching.  **Links:** ↔ [1978](#latest-committed-memory-segment-144-node-1978)
+
+<a id="latest-committed-memory-segment-144-node-1989"></a>
+
+- **1989** · clip 141: The group appears engaged in a collaborative discussion about food preparation logistics.
+
+<a id="latest-committed-memory-segment-144-node-1996"></a>
+
+- **1996** · clip 142: Multiple individuals are gathered around a table covered with a checkered tablecloth in a room featuring a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-1997"></a>
+
+- **1997** · clip 142: A person wearing a white shirt stands behind the table while engaging in conversation with seated participants.
+
+<a id="latest-committed-memory-segment-144-node-1998"></a>
+
+- **1998** · clip 142: At approximately 12 seconds, a person dressed in a pink top enters the room from the left side.
+
+<a id="latest-committed-memory-segment-144-node-1999"></a>
+
+- **1999** · clip 142: The person in the white shirt moves away from the table area during the middle segment of the video.
+
+<a id="latest-committed-memory-segment-144-node-2000"></a>
+
+- **2000** · clip 142: Towards the end of the clip, the camera wearer opens a laptop computer placed on their lap.
+
+<a id="latest-committed-memory-segment-144-node-2001"></a>
+
+- **2001** · clip 142: The camera wearer interacts with the laptop keyboard while others continue their discussion around the table.
+
+<a id="latest-committed-memory-segment-144-node-2011"></a>
+
+- **2011** · clip 143: A group of people gather around a table with a laptop, engaged in a discussion.
+
+<a id="latest-committed-memory-segment-144-node-2012"></a>
+
+- **2012** · clip 143: A woman in black sits on the left, a woman in white stands centrally handling documents, and a woman in blue sits on the right.
+
+<a id="latest-committed-memory-segment-144-node-2013"></a>
+
+- **2013** · clip 143: Speaker &lt;voice_2006&gt; comments on the speed of making red bean paste.  **Links:** ↔ [2006](#latest-committed-memory-segment-144-node-2006)
+
+<a id="latest-committed-memory-segment-144-node-2014"></a>
+
+- **2014** · clip 143: Speaker &lt;voice_2007&gt; asks whether red bean paste was prepared.  **Links:** ↔ [2007](#latest-committed-memory-segment-144-node-2007)
+
+<a id="latest-committed-memory-segment-144-node-2015"></a>
+
+- **2015** · clip 143: Speaker &lt;voice_2008&gt; explains they did not buy red bean paste materials.  **Links:** ↔ [2008](#latest-committed-memory-segment-144-node-2008)
+
+<a id="latest-committed-memory-segment-144-node-2016"></a>
+
+- **2016** · clip 143: Speaker &lt;voice_2009&gt; questions if red bean paste can be purchased directly.  **Links:** ↔ [2009](#latest-committed-memory-segment-144-node-2009)
+
+<a id="latest-committed-memory-segment-144-node-2017"></a>
+
+- **2017** · clip 143: Speaker &lt;voice_2010&gt; informs that finished products exist.  **Links:** ↔ [2010](#latest-committed-memory-segment-144-node-2010)
+
+<a id="latest-committed-memory-segment-144-node-2018"></a>
+
+- **2018** · clip 143: Speaker &lt;voice_1909&gt; affirms this information.  **Links:** ↔ [1909](#latest-committed-memory-segment-144-node-1909)
+
+<a id="latest-committed-memory-segment-144-node-2025"></a>
+
+- **2025** · clip 144: A group of people are gathered around a table covered with a checkered cloth in a room with a whiteboard.
+
+<a id="latest-committed-memory-segment-144-node-2026"></a>
+
+- **2026** · clip 144: A laptop computer is open on the table in the foreground.
+
+<a id="latest-committed-memory-segment-144-node-2027"></a>
+
+- **2027** · clip 144: A man in a white shirt stands behind the table while several women are seated around it.
+
+<a id="latest-committed-memory-segment-144-node-2028"></a>
+
+- **2028** · clip 144: At 10.00s, a person on the right extends their arm to point towards the center of the table.
+
+<a id="latest-committed-memory-segment-144-node-2029"></a>
+
+- **2029** · clip 144: Speaker &lt;voice_2006&gt; discusses the schedule starting at 4:30 and mentions eating dinner before transmitting data with glasses.  **Links:** ↔ [2006](#latest-committed-memory-segment-144-node-2006)
+
+<a id="latest-committed-memory-segment-144-node-2030"></a>
+
+- **2030** · clip 144: Speaker &lt;voice_1899&gt; confirms the agreed-upon details.  **Links:** ↔ [1899](#latest-committed-memory-segment-144-node-1899)
+
+<a id="latest-committed-memory-segment-144-node-2031"></a>
+
+- **2031** · clip 144: Speaker &lt;voice_2022&gt; states that recording is not allowed while eating.  **Links:** ↔ [2022](#latest-committed-memory-segment-144-node-2022)
+
+<a id="latest-committed-memory-segment-144-node-2032"></a>
+
+- **2032** · clip 144: Speaker &lt;voice_2023&gt; repeats the rule about not recording during meals.  **Links:** ↔ [2023](#latest-committed-memory-segment-144-node-2023)
+
+<a id="latest-committed-memory-segment-144-node-2033"></a>
+
+- **2033** · clip 144: Speaker &lt;voice_560&gt; asks if the dinner is homemade.  **Links:** ↔ [560](#latest-committed-memory-segment-144-node-560)
+
+<a id="latest-committed-memory-segment-144-node-2034"></a>
+
+- **2034** · clip 144: Speaker &lt;voice_2024&gt; answers that they ordered pizza for dinner.  **Links:** ↔ [2024](#latest-committed-memory-segment-144-node-2024)
+
+<a id="latest-committed-memory-segment-144-node-2035"></a>
+
+- **2035** · clip 144: Speaker &lt;voice_261&gt; notes that BBQ cannot be recorded as it burns the glasses.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
 ### Inferences
 
-<a id="latest-committed-memory-segment-125-node-10"></a>
+<a id="latest-committed-memory-segment-144-node-10"></a>
 
 - **10** · clip 1: The participants appear to be engaging in a timed activity or challenge facilitated by the smartphone.
 
-<a id="latest-committed-memory-segment-125-node-11"></a>
+<a id="latest-committed-memory-segment-144-node-11"></a>
 
-- **11** · clip 1: Speaker MAI (&lt;voice_0&gt;, &lt;voice_1&gt;) is responsible for initiating and signaling the timing mechanism.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0) · ↔ [1](#latest-committed-memory-segment-125-node-1)
+- **11** · clip 1: Speaker MAI (&lt;voice_0&gt;, &lt;voice_1&gt;) is responsible for initiating and signaling the timing mechanism.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [1](#latest-committed-memory-segment-144-node-1)
 
-<a id="latest-committed-memory-segment-125-node-12"></a>
+<a id="latest-committed-memory-segment-144-node-12"></a>
 
 - **12** · clip 1: No facial features are provided to visually identify the speaker MAI among the group members.
 
-<a id="latest-committed-memory-segment-125-node-19"></a>
+<a id="latest-committed-memory-segment-144-node-19"></a>
 
 - **19** · clip 2: The group is preparing for a discussion session scheduled for their last day.
 
-<a id="latest-committed-memory-segment-125-node-20"></a>
+<a id="latest-committed-memory-segment-144-node-20"></a>
 
 - **20** · clip 2: Participants utilize earplugs to manage auditory environment before the discussion begins.
 
-<a id="latest-committed-memory-segment-125-node-21"></a>
+<a id="latest-committed-memory-segment-144-node-21"></a>
 
-- **21** · clip 2: The speaker identified as &lt;voice_0&gt; coordinates the distribution of equipment and initiates the session.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **21** · clip 2: The speaker identified as &lt;voice_0&gt; coordinates the distribution of equipment and initiates the session.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-28"></a>
+<a id="latest-committed-memory-segment-144-node-28"></a>
 
 - **28** · clip 3: The group is engaged in a collaborative session focused on reviewing equipment or data storage options.
 
-<a id="latest-committed-memory-segment-125-node-29"></a>
+<a id="latest-committed-memory-segment-144-node-29"></a>
 
-- **29** · clip 3: &lt;voice_0&gt; proposes a backup strategy involving multiple USB drives or hard disks after noting the discussion had stalled.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **29** · clip 3: &lt;voice_0&gt; proposes a backup strategy involving multiple USB drives or hard disks after noting the discussion had stalled.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-30"></a>
+<a id="latest-committed-memory-segment-144-node-30"></a>
 
-- **30** · clip 3: &lt;voice_22&gt; directs immediate physical inspection of an item during the discussion.  **Links:** ↔ [22](#latest-committed-memory-segment-125-node-22)
+- **30** · clip 3: &lt;voice_22&gt; directs immediate physical inspection of an item during the discussion.  **Links:** ↔ [22](#latest-committed-memory-segment-144-node-22)
 
-<a id="latest-committed-memory-segment-125-node-43"></a>
+<a id="latest-committed-memory-segment-144-node-43"></a>
 
 - **43** · clip 4: The scene depicts a group session involving VR technology, likely a training or instructional setting.
 
-<a id="latest-committed-memory-segment-125-node-44"></a>
+<a id="latest-committed-memory-segment-144-node-44"></a>
 
-- **44** · clip 4: Speaker &lt;voice_0&gt; establishes a hierarchical relationship by identifying the camera wearer as a mentor.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **44** · clip 4: Speaker &lt;voice_0&gt; establishes a hierarchical relationship by identifying the camera wearer as a mentor.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-45"></a>
+<a id="latest-committed-memory-segment-144-node-45"></a>
 
-- **45** · clip 4: Speaker &lt;voice_33&gt; corroborates the presence of a tutor in the group.  **Links:** ↔ [33](#latest-committed-memory-segment-125-node-33)
+- **45** · clip 4: Speaker &lt;voice_33&gt; corroborates the presence of a tutor in the group.  **Links:** ↔ [33](#latest-committed-memory-segment-144-node-33)
 
-<a id="latest-committed-memory-segment-125-node-46"></a>
+<a id="latest-committed-memory-segment-144-node-46"></a>
 
 - **46** · clip 4: The participants discuss logistical details such as participant count and equipment status.
 
-<a id="latest-committed-memory-segment-125-node-52"></a>
+<a id="latest-committed-memory-segment-144-node-52"></a>
 
 - **52** · clip 5: The environment contains specialized equipment such as a projection screen and a checkerboard target, suggesting a technical setup or calibration session.
 
-<a id="latest-committed-memory-segment-125-node-53"></a>
+<a id="latest-committed-memory-segment-144-node-53"></a>
 
 - **53** · clip 5: The group appears to be coordinating a project involving the organization or testing of electronic gear.
 
-<a id="latest-committed-memory-segment-125-node-54"></a>
+<a id="latest-committed-memory-segment-144-node-54"></a>
 
 - **54** · clip 5: The camera operator is actively participating in the logistics of the room, moving between the group and the equipment storage areas.
 
-<a id="latest-committed-memory-segment-125-node-63"></a>
+<a id="latest-committed-memory-segment-144-node-63"></a>
 
 - **63** · clip 6: The group is participating in a collaborative product unboxing or review session.
 
-<a id="latest-committed-memory-segment-125-node-64"></a>
+<a id="latest-committed-memory-segment-144-node-64"></a>
 
-- **64** · clip 6: &lt;voice_0&gt; is acting as a facilitator or host guiding the discussion on the unboxed items.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **64** · clip 6: &lt;voice_0&gt; is acting as a facilitator or host guiding the discussion on the unboxed items.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-65"></a>
+<a id="latest-committed-memory-segment-144-node-65"></a>
 
 - **65** · clip 6: The setting appears to be a prepared space for filming or demonstrating the products.
 
-<a id="latest-committed-memory-segment-125-node-69"></a>
+<a id="latest-committed-memory-segment-144-node-69"></a>
 
-- **69** · clip 7: &lt;voice_0&gt; is demonstrating a product to the group, outlining its intended future application.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **69** · clip 7: &lt;voice_0&gt; is demonstrating a product to the group, outlining its intended future application.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-70"></a>
+<a id="latest-committed-memory-segment-144-node-70"></a>
 
 - **70** · clip 7: The session appears to be a collaborative review or unboxing.
 
-<a id="latest-committed-memory-segment-125-node-78"></a>
+<a id="latest-committed-memory-segment-144-node-78"></a>
 
-- **78** · clip 8: &lt;voice_0&gt; identifies the current location as a workspace equipped with a substantial number of computers.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **78** · clip 8: &lt;voice_0&gt; identifies the current location as a workspace equipped with a substantial number of computers.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-79"></a>
+<a id="latest-committed-memory-segment-144-node-79"></a>
 
 - **79** · clip 8: The interaction involves a tour of a technical environment characterized by multiple workstations.
 
-<a id="latest-committed-memory-segment-125-node-85"></a>
+<a id="latest-committed-memory-segment-144-node-85"></a>
 
-- **85** · clip 9: The speaker (&lt;voice_0&gt;) is providing technical instructions regarding a multi-computer setup and a specific data recording schedule.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **85** · clip 9: The speaker (&lt;voice_0&gt;) is providing technical instructions regarding a multi-computer setup and a specific data recording schedule.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-86"></a>
+<a id="latest-committed-memory-segment-144-node-86"></a>
 
 - **86** · clip 9: The equipment is organized with labels such as L1 and L2, and the data is stored on a hard drive.
 
-<a id="latest-committed-memory-segment-125-node-92"></a>
+<a id="latest-committed-memory-segment-144-node-92"></a>
 
-- **92** · clip 10: Speaker &lt;voice_0&gt; explains that the hard drive setup simulates a computer environment by connecting the drive to a device via specific wires.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **92** · clip 10: Speaker &lt;voice_0&gt; explains that the hard drive setup simulates a computer environment by connecting the drive to a device via specific wires.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-93"></a>
+<a id="latest-committed-memory-segment-144-node-93"></a>
 
-- **93** · clip 10: The camera wearer interacts with the hardware described by &lt;voice_0&gt;, touching the screens and equipment.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **93** · clip 10: The camera wearer interacts with the hardware described by &lt;voice_0&gt;, touching the screens and equipment.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-94"></a>
+<a id="latest-committed-memory-segment-144-node-94"></a>
 
-- **94** · clip 10: The individuals at the door appear to be listening to the explanation provided by &lt;voice_0&gt;.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **94** · clip 10: The individuals at the door appear to be listening to the explanation provided by &lt;voice_0&gt;.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-109"></a>
+<a id="latest-committed-memory-segment-144-node-109"></a>
 
 - **109** · clip 11: The group appears to be setting up or troubleshooting a technical installation involving hard drives and power systems.
 
-<a id="latest-committed-memory-segment-125-node-110"></a>
+<a id="latest-committed-memory-segment-144-node-110"></a>
 
 - **110** · clip 11: Concerns are raised regarding system stability during power failures and data integrity.
 
-<a id="latest-committed-memory-segment-125-node-111"></a>
+<a id="latest-committed-memory-segment-144-node-111"></a>
 
 - **111** · clip 11: The discussion revolves around ensuring reliable backup solutions for the equipment.
 
-<a id="latest-committed-memory-segment-125-node-126"></a>
+<a id="latest-committed-memory-segment-144-node-126"></a>
 
 - **126** · clip 12: The group is engaged in a collaborative installation or setup process involving electronic equipment.
 
-<a id="latest-committed-memory-segment-125-node-127"></a>
+<a id="latest-committed-memory-segment-144-node-127"></a>
 
-- **127** · clip 12: Speaker &lt;voice_0&gt; appears to be leading the discussion and providing instructions regarding the installation progress.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **127** · clip 12: Speaker &lt;voice_0&gt; appears to be leading the discussion and providing instructions regarding the installation progress.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-128"></a>
+<a id="latest-committed-memory-segment-144-node-128"></a>
 
 - **128** · clip 12: The participants are discussing logistical details such as equipment brought and financial resources before proceeding.
 
-<a id="latest-committed-memory-segment-125-node-140"></a>
+<a id="latest-committed-memory-segment-144-node-140"></a>
 
-- **140** · clip 13: Speaker `&lt;voice_0&gt;` is concerned with ensuring proper wear of glasses and verifying visibility.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **140** · clip 13: Speaker `&lt;voice_0&gt;` is concerned with ensuring proper wear of glasses and verifying visibility.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-141"></a>
+<a id="latest-committed-memory-segment-144-node-141"></a>
 
-- **141** · clip 13: Speaker `&lt;voice_129&gt;` appears to be planning a physical task involving pushing or moving objects in a specific area.  **Links:** ↔ [129](#latest-committed-memory-segment-125-node-129)
+- **141** · clip 13: Speaker `&lt;voice_129&gt;` appears to be planning a physical task involving pushing or moving objects in a specific area.  **Links:** ↔ [129](#latest-committed-memory-segment-144-node-129)
 
-<a id="latest-committed-memory-segment-125-node-142"></a>
+<a id="latest-committed-memory-segment-144-node-142"></a>
 
-- **142** · clip 13: Speaker `&lt;voice_130&gt;` indicates agreement or confirmation that a previous issue has been resolved.  **Links:** ↔ [130](#latest-committed-memory-segment-125-node-130)
+- **142** · clip 13: Speaker `&lt;voice_130&gt;` indicates agreement or confirmation that a previous issue has been resolved.  **Links:** ↔ [130](#latest-committed-memory-segment-144-node-130)
 
-<a id="latest-committed-memory-segment-125-node-143"></a>
+<a id="latest-committed-memory-segment-144-node-143"></a>
 
 - **143** · clip 13: The group is collaborating in a casual indoor setting, possibly a home office or living room.
 
-<a id="latest-committed-memory-segment-125-node-162"></a>
+<a id="latest-committed-memory-segment-144-node-162"></a>
 
 - **162** · clip 14: The participants are collaborating on a task that involves precise manual manipulation, likely related to electronics or photography gear setup.
 
-<a id="latest-committed-memory-segment-125-node-163"></a>
+<a id="latest-committed-memory-segment-144-node-163"></a>
 
-- **163** · clip 14: MAI (&lt;voice_129&gt;, &lt;voice_144&gt;, &lt;voice_145&gt;, &lt;voice_0&gt;, &lt;voice_112&gt;, &lt;voice_146&gt;, &lt;voice_147&gt;, &lt;voice_148&gt;) acts as a guide, providing instructions on tension and tool usage during the assembly process.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0) · ↔ [112](#latest-committed-memory-segment-125-node-112) · ↔ [129](#latest-committed-memory-segment-125-node-129) · ↔ [144](#latest-committed-memory-segment-125-node-144) · ↔ [145](#latest-committed-memory-segment-125-node-145) · ↔ [146](#latest-committed-memory-segment-125-node-146) · ↔ [147](#latest-committed-memory-segment-125-node-147) · ↔ [148](#latest-committed-memory-segment-125-node-148)
+- **163** · clip 14: MAI (&lt;voice_129&gt;, &lt;voice_144&gt;, &lt;voice_145&gt;, &lt;voice_0&gt;, &lt;voice_112&gt;, &lt;voice_146&gt;, &lt;voice_147&gt;, &lt;voice_148&gt;) acts as a guide, providing instructions on tension and tool usage during the assembly process.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [112](#latest-committed-memory-segment-144-node-112) · ↔ [129](#latest-committed-memory-segment-144-node-129) · ↔ [144](#latest-committed-memory-segment-144-node-144) · ↔ [145](#latest-committed-memory-segment-144-node-145) · ↔ [146](#latest-committed-memory-segment-144-node-146) · ↔ [147](#latest-committed-memory-segment-144-node-147) · ↔ [148](#latest-committed-memory-segment-144-node-148)
 
-<a id="latest-committed-memory-segment-125-node-164"></a>
+<a id="latest-committed-memory-segment-144-node-164"></a>
 
 - **164** · clip 14: The interaction indicates a shared workspace environment where multiple roles are involved in the project.
 
-<a id="latest-committed-memory-segment-125-node-180"></a>
+<a id="latest-committed-memory-segment-144-node-180"></a>
 
 - **180** · clip 15: The participants are engaged in a collaborative technical assembly task involving precise hardware installation.
 
-<a id="latest-committed-memory-segment-125-node-181"></a>
+<a id="latest-committed-memory-segment-144-node-181"></a>
 
 - **181** · clip 15: Discussion points focus on specific technical requirements such as wire types and screw quantities.
 
-<a id="latest-committed-memory-segment-125-node-182"></a>
+<a id="latest-committed-memory-segment-144-node-182"></a>
 
 - **182** · clip 15: No visual face features are provided to confirm the physical identity of the speakers.
 
-<a id="latest-committed-memory-segment-125-node-194"></a>
+<a id="latest-committed-memory-segment-144-node-194"></a>
 
-- **194** · clip 16: Speaker &lt;voice_129&gt; discusses the assembly of a large strap component, noting there are eight items in total.  **Links:** ↔ [129](#latest-committed-memory-segment-125-node-129)
+- **194** · clip 16: Speaker &lt;voice_129&gt; discusses the assembly of a large strap component, noting there are eight items in total.  **Links:** ↔ [129](#latest-committed-memory-segment-144-node-129)
 
-<a id="latest-committed-memory-segment-125-node-195"></a>
+<a id="latest-committed-memory-segment-144-node-195"></a>
 
-- **195** · clip 16: Speaker &lt;voice_183&gt; confirms completion of attaching one strap component.  **Links:** ↔ [183](#latest-committed-memory-segment-125-node-183)
+- **195** · clip 16: Speaker &lt;voice_183&gt; confirms completion of attaching one strap component.  **Links:** ↔ [183](#latest-committed-memory-segment-144-node-183)
 
-<a id="latest-committed-memory-segment-125-node-196"></a>
+<a id="latest-committed-memory-segment-144-node-196"></a>
 
-- **196** · clip 16: Speaker &lt;voice_184&gt; directs attention to a specific item on the table.  **Links:** ↔ [184](#latest-committed-memory-segment-125-node-184)
+- **196** · clip 16: Speaker &lt;voice_184&gt; directs attention to a specific item on the table.  **Links:** ↔ [184](#latest-committed-memory-segment-144-node-184)
 
-<a id="latest-committed-memory-segment-125-node-197"></a>
+<a id="latest-committed-memory-segment-144-node-197"></a>
 
-- **197** · clip 16: Speaker &lt;voice_185&gt; distinguishes between a larger and smaller strap component during the assembly process.  **Links:** ↔ [185](#latest-committed-memory-segment-125-node-185)
+- **197** · clip 16: Speaker &lt;voice_185&gt; distinguishes between a larger and smaller strap component during the assembly process.  **Links:** ↔ [185](#latest-committed-memory-segment-144-node-185)
 
-<a id="latest-committed-memory-segment-125-node-198"></a>
+<a id="latest-committed-memory-segment-144-node-198"></a>
 
-- **198** · clip 16: Speaker &lt;voice_186&gt; verifies the correct insertion method for a component into the device.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **198** · clip 16: Speaker &lt;voice_186&gt; verifies the correct insertion method for a component into the device.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-211"></a>
+<a id="latest-committed-memory-segment-144-node-211"></a>
 
-- **211** · clip 17: &lt;voice_199&gt;: Initiates the conversation with a brief acknowledgment.  **Links:** ↔ [199](#latest-committed-memory-segment-125-node-199)
+- **211** · clip 17: &lt;voice_199&gt;: Initiates the conversation with a brief acknowledgment.  **Links:** ↔ [199](#latest-committed-memory-segment-144-node-199)
 
-<a id="latest-committed-memory-segment-125-node-212"></a>
+<a id="latest-committed-memory-segment-144-node-212"></a>
 
-- **212** · clip 17: &lt;voice_200&gt;: Questions the definition of the term, asking if it refers to an integrated circuit.  **Links:** ↔ [200](#latest-committed-memory-segment-125-node-200)
+- **212** · clip 17: &lt;voice_200&gt;: Questions the definition of the term, asking if it refers to an integrated circuit.  **Links:** ↔ [200](#latest-committed-memory-segment-144-node-200)
 
-<a id="latest-committed-memory-segment-125-node-213"></a>
+<a id="latest-committed-memory-segment-144-node-213"></a>
 
-- **213** · clip 17: &lt;voice_0&gt;: Reflects on previous struggles with magnetic issues compared to the current session.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **213** · clip 17: &lt;voice_0&gt;: Reflects on previous struggles with magnetic issues compared to the current session.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-214"></a>
+<a id="latest-committed-memory-segment-144-node-214"></a>
 
-- **214** · clip 17: &lt;voice_201&gt;: Observes that the group is receiving the information well today.  **Links:** ↔ [201](#latest-committed-memory-segment-125-node-201)
+- **214** · clip 17: &lt;voice_201&gt;: Observes that the group is receiving the information well today.  **Links:** ↔ [201](#latest-committed-memory-segment-144-node-201)
 
-<a id="latest-committed-memory-segment-125-node-215"></a>
+<a id="latest-committed-memory-segment-144-node-215"></a>
 
-- **215** · clip 17: &lt;voice_202&gt;: Asks for clarification on the specific matter being discussed.  **Links:** ↔ [202](#latest-committed-memory-segment-125-node-202)
+- **215** · clip 17: &lt;voice_202&gt;: Asks for clarification on the specific matter being discussed.  **Links:** ↔ [202](#latest-committed-memory-segment-144-node-202)
 
-<a id="latest-committed-memory-segment-125-node-216"></a>
+<a id="latest-committed-memory-segment-144-node-216"></a>
 
-- **216** · clip 17: &lt;voice_146&gt;: Notes that an accessory was included but provides no additional value.  **Links:** ↔ [146](#latest-committed-memory-segment-125-node-146)
+- **216** · clip 17: &lt;voice_146&gt;: Notes that an accessory was included but provides no additional value.  **Links:** ↔ [146](#latest-committed-memory-segment-144-node-146)
 
-<a id="latest-committed-memory-segment-125-node-217"></a>
+<a id="latest-committed-memory-segment-144-node-217"></a>
 
-- **217** · clip 17: &lt;voice_203&gt;: Identifies that the wire cutter does not possess magnetic properties.  **Links:** ↔ [203](#latest-committed-memory-segment-125-node-203)
+- **217** · clip 17: &lt;voice_203&gt;: Identifies that the wire cutter does not possess magnetic properties.  **Links:** ↔ [203](#latest-committed-memory-segment-144-node-203)
 
-<a id="latest-committed-memory-segment-125-node-218"></a>
+<a id="latest-committed-memory-segment-144-node-218"></a>
 
-- **218** · clip 17: &lt;voice_204&gt;: Confirms the attribute of magnetism in the context of the problem.  **Links:** ↔ [204](#latest-committed-memory-segment-125-node-204)
+- **218** · clip 17: &lt;voice_204&gt;: Confirms the attribute of magnetism in the context of the problem.  **Links:** ↔ [204](#latest-committed-memory-segment-144-node-204)
 
-<a id="latest-committed-memory-segment-125-node-219"></a>
+<a id="latest-committed-memory-segment-144-node-219"></a>
 
-- **219** · clip 17: &lt;voice_129&gt;: Clarifies that the action involves placing the wire cutter.  **Links:** ↔ [129](#latest-committed-memory-segment-125-node-129)
+- **219** · clip 17: &lt;voice_129&gt;: Clarifies that the action involves placing the wire cutter.  **Links:** ↔ [129](#latest-committed-memory-segment-144-node-129)
 
-<a id="latest-committed-memory-segment-125-node-230"></a>
+<a id="latest-committed-memory-segment-144-node-230"></a>
 
 - **230** · clip 18: The participants are engaged in a collaborative technical setup, likely involving virtual reality equipment given the discussion of head placement.
 
-<a id="latest-committed-memory-segment-125-node-231"></a>
+<a id="latest-committed-memory-segment-144-node-231"></a>
 
 - **231** · clip 18: The group works together to resolve a physical compatibility issue with a component.
 
-<a id="latest-committed-memory-segment-125-node-232"></a>
+<a id="latest-committed-memory-segment-144-node-232"></a>
 
 - **232** · clip 18: Positive reinforcement is exchanged once the device is properly installed.
 
-<a id="latest-committed-memory-segment-125-node-244"></a>
+<a id="latest-committed-memory-segment-144-node-244"></a>
 
 - **244** · clip 19: The participants are discussing the inclusion of background music for an upcoming activity.
 
-<a id="latest-committed-memory-segment-125-node-245"></a>
+<a id="latest-committed-memory-segment-144-node-245"></a>
 
 - **245** · clip 19: Different members express varied musical preferences, specifically citing Rock and R&amp;B genres.
 
-<a id="latest-committed-memory-segment-125-node-246"></a>
+<a id="latest-committed-memory-segment-144-node-246"></a>
 
 - **246** · clip 19: One participant attributes their eclectic listening habits to exposure in Western music circles.
 
-<a id="latest-committed-memory-segment-125-node-257"></a>
+<a id="latest-committed-memory-segment-144-node-257"></a>
 
 - **257** · clip 20: The group is conducting a review or test session involving a device described as a 'robot' or linked to 'Little Whale'.
 
-<a id="latest-committed-memory-segment-125-node-258"></a>
+<a id="latest-committed-memory-segment-144-node-258"></a>
 
 - **258** · clip 20: Participants exchange feedback on the device's characteristics ('dry') and provide physical guidance ('half-squat').
 
-<a id="latest-committed-memory-segment-125-node-259"></a>
+<a id="latest-committed-memory-segment-144-node-259"></a>
 
 - **259** · clip 20: The session concludes with validation of the equipment's stability ('fixed').
 
-<a id="latest-committed-memory-segment-125-node-272"></a>
+<a id="latest-committed-memory-segment-144-node-272"></a>
 
 - **272** · clip 21: Multiple individuals are collaborating around a table, focusing on technical items.
 
-<a id="latest-committed-memory-segment-125-node-273"></a>
+<a id="latest-committed-memory-segment-144-node-273"></a>
 
 - **273** · clip 21: The dialogue primarily revolves around geographical identification, specifically Northeast China and Jilin Province.
 
-<a id="latest-committed-memory-segment-125-node-274"></a>
+<a id="latest-committed-memory-segment-144-node-274"></a>
 
-- **274** · clip 21: &lt;voice_260&gt;, &lt;voice_261&gt;, &lt;voice_262&gt;, &lt;voice_250&gt;, and &lt;voice_0&gt; represent distinct speakers in the conversation.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0) · ↔ [250](#latest-committed-memory-segment-125-node-250) · ↔ [260](#latest-committed-memory-segment-125-node-260) · ↔ [261](#latest-committed-memory-segment-125-node-261) · ↔ [262](#latest-committed-memory-segment-125-node-262)
+- **274** · clip 21: &lt;voice_260&gt;, &lt;voice_261&gt;, &lt;voice_262&gt;, &lt;voice_250&gt;, and &lt;voice_0&gt; represent distinct speakers in the conversation.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0) · ↔ [250](#latest-committed-memory-segment-144-node-250) · ↔ [260](#latest-committed-memory-segment-144-node-260) · ↔ [261](#latest-committed-memory-segment-144-node-261) · ↔ [262](#latest-committed-memory-segment-144-node-262)
 
-<a id="latest-committed-memory-segment-125-node-275"></a>
+<a id="latest-committed-memory-segment-144-node-275"></a>
 
 - **275** · clip 21: No facial features were provided to visually correlate with the voice tracks.
 
-<a id="latest-committed-memory-segment-125-node-286"></a>
+<a id="latest-committed-memory-segment-144-node-286"></a>
 
 - **286** · clip 22: The setting appears to be a workshop or studio environment equipped for technical demonstrations or presentations.
 
-<a id="latest-committed-memory-segment-125-node-287"></a>
+<a id="latest-committed-memory-segment-144-node-287"></a>
 
 - **287** · clip 22: The participants are actively engaged in hands-on collaboration rather than passive observation.
 
-<a id="latest-committed-memory-segment-125-node-288"></a>
+<a id="latest-committed-memory-segment-144-node-288"></a>
 
 - **288** · clip 22: The presence of a whiteboard and projector suggests an educational or instructional context.
 
-<a id="latest-committed-memory-segment-125-node-294"></a>
+<a id="latest-committed-memory-segment-144-node-294"></a>
 
 - **294** · clip 24: The camera wearer is actively engaging with the seated group members.
 
-<a id="latest-committed-memory-segment-125-node-295"></a>
+<a id="latest-committed-memory-segment-144-node-295"></a>
 
 - **295** · clip 24: No specific character equivalences could be established due to the absence of facial or voice features.
 
-<a id="latest-committed-memory-segment-125-node-307"></a>
+<a id="latest-committed-memory-segment-144-node-307"></a>
 
 - **307** · clip 25: The group is engaged in a collaborative technical setup or unboxing session involving smart hardware and networking equipment.
 
-<a id="latest-committed-memory-segment-125-node-308"></a>
+<a id="latest-committed-memory-segment-144-node-308"></a>
 
-- **308** · clip 25: Based on &lt;voice_297&gt;'s statement, the participants possess prior professional or academic experience with similar infrastructure tasks.  **Links:** ↔ [297](#latest-committed-memory-segment-125-node-297)
+- **308** · clip 25: Based on &lt;voice_297&gt;'s statement, the participants possess prior professional or academic experience with similar infrastructure tasks.  **Links:** ↔ [297](#latest-committed-memory-segment-144-node-297)
 
-<a id="latest-committed-memory-segment-125-node-309"></a>
+<a id="latest-committed-memory-segment-144-node-309"></a>
 
 - **309** · clip 25: The discussion revolves around terminology related to networking or smart home installations, indicating a specialized context.
 
-<a id="latest-committed-memory-segment-125-node-321"></a>
+<a id="latest-committed-memory-segment-144-node-321"></a>
 
 - **321** · clip 26: The participants are engaged in a collaborative discussion regarding technical workflows and staffing requirements.
 
-<a id="latest-committed-memory-segment-125-node-322"></a>
+<a id="latest-committed-memory-segment-144-node-322"></a>
 
 - **322** · clip 26: The camera wearer transitions from the communal workspace to a private bedroom, suggesting a change in activity or storage of equipment.
 
-<a id="latest-committed-memory-segment-125-node-334"></a>
+<a id="latest-committed-memory-segment-144-node-334"></a>
 
 - **334** · clip 27: The participants are engaged in a technical evaluation or benchmarking process involving computer hardware.
 
-<a id="latest-committed-memory-segment-125-node-335"></a>
+<a id="latest-committed-memory-segment-144-node-335"></a>
 
 - **335** · clip 27: There is a collaborative effort to inspect and verify the specifications of the device being handled.
 
-<a id="latest-committed-memory-segment-125-node-336"></a>
+<a id="latest-committed-memory-segment-144-node-336"></a>
 
 - **336** · clip 27: The conversation indicates a focus on specific technical attributes like 'value lines' and '2000' models.
 
-<a id="latest-committed-memory-segment-125-node-346"></a>
+<a id="latest-committed-memory-segment-144-node-346"></a>
 
-- **346** · clip 28: &lt;voice_337&gt;: MAI states that her work should be considered finished.  **Links:** ↔ [337](#latest-committed-memory-segment-125-node-337)
+- **346** · clip 28: &lt;voice_337&gt;: MAI states that her work should be considered finished.  **Links:** ↔ [337](#latest-committed-memory-segment-144-node-337)
 
-<a id="latest-committed-memory-segment-125-node-347"></a>
+<a id="latest-committed-memory-segment-144-node-347"></a>
 
-- **347** · clip 28: &lt;voice_0&gt;: MAI instructs placing items in a box, mentions setting off, and notes that someone missed their chance.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **347** · clip 28: &lt;voice_0&gt;: MAI instructs placing items in a box, mentions setting off, and notes that someone missed their chance.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-348"></a>
+<a id="latest-committed-memory-segment-144-node-348"></a>
 
-- **348** · clip 28: &lt;voice_250&gt;: MAI mentions completing a task and feeling provoked by someone else.  **Links:** ↔ [250](#latest-committed-memory-segment-125-node-250)
+- **348** · clip 28: &lt;voice_250&gt;: MAI mentions completing a task and feeling provoked by someone else.  **Links:** ↔ [250](#latest-committed-memory-segment-144-node-250)
 
-<a id="latest-committed-memory-segment-125-node-349"></a>
+<a id="latest-committed-memory-segment-144-node-349"></a>
 
-- **349** · clip 28: &lt;voice_261&gt;: MAI asks if there are still opportunities remaining.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **349** · clip 28: &lt;voice_261&gt;: MAI asks if there are still opportunities remaining.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-350"></a>
+<a id="latest-committed-memory-segment-144-node-350"></a>
 
-- **350** · clip 28: &lt;voice_338&gt;: MAI confirms that something is likely correct.  **Links:** ↔ [338](#latest-committed-memory-segment-125-node-338)
+- **350** · clip 28: &lt;voice_338&gt;: MAI confirms that something is likely correct.  **Links:** ↔ [338](#latest-committed-memory-segment-144-node-338)
 
-<a id="latest-committed-memory-segment-125-node-351"></a>
+<a id="latest-committed-memory-segment-144-node-351"></a>
 
-- **351** · clip 28: &lt;voice_339&gt;: MAI suggests putting money inside a container and packing oneself.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **351** · clip 28: &lt;voice_339&gt;: MAI suggests putting money inside a container and packing oneself.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-360"></a>
+<a id="latest-committed-memory-segment-144-node-360"></a>
 
-- **360** · clip 29: MAI (&lt;voice_0&gt;) states that packaging is unnecessary and suggests putting things inside.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **360** · clip 29: MAI (&lt;voice_0&gt;) states that packaging is unnecessary and suggests putting things inside.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-361"></a>
+<a id="latest-committed-memory-segment-144-node-361"></a>
 
-- **361** · clip 29: MAI (&lt;voice_0&gt;) thanks everyone after completing a strange first task and discusses inviting everyone for Egonap's last day.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **361** · clip 29: MAI (&lt;voice_0&gt;) thanks everyone after completing a strange first task and discusses inviting everyone for Egonap's last day.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-362"></a>
+<a id="latest-committed-memory-segment-144-node-362"></a>
 
-- **362** · clip 29: MAI (&lt;voice_0&gt;) confirms the current day is Sunday and marks it as the final day.  **Links:** ↔ [0](#latest-committed-memory-segment-125-node-0)
+- **362** · clip 29: MAI (&lt;voice_0&gt;) confirms the current day is Sunday and marks it as the final day.  **Links:** ↔ [0](#latest-committed-memory-segment-144-node-0)
 
-<a id="latest-committed-memory-segment-125-node-363"></a>
+<a id="latest-committed-memory-segment-144-node-363"></a>
 
-- **363** · clip 29: MAI (&lt;voice_261&gt;) confirms that they can depart.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **363** · clip 29: MAI (&lt;voice_261&gt;) confirms that they can depart.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-382"></a>
+<a id="latest-committed-memory-segment-144-node-382"></a>
 
 - **382** · clip 30: The group is planning activities for a Sunday afternoon involving writing on a blackboard and assembling furniture.
 
-<a id="latest-committed-memory-segment-125-node-383"></a>
+<a id="latest-committed-memory-segment-144-node-383"></a>
 
 - **383** · clip 30: The setting includes a communal dining area connected to a bedroom and a hallway storage area.
 
-<a id="latest-committed-memory-segment-125-node-384"></a>
+<a id="latest-committed-memory-segment-144-node-384"></a>
 
 - **384** · clip 30: No face features were provided to confirm visual identities of the speakers.
 
-<a id="latest-committed-memory-segment-125-node-394"></a>
+<a id="latest-committed-memory-segment-144-node-394"></a>
 
 - **394** · clip 31: MAI states that the current situation does not significantly affect their calligraphy practice.
 
-<a id="latest-committed-memory-segment-125-node-395"></a>
+<a id="latest-committed-memory-segment-144-node-395"></a>
 
 - **395** · clip 31: MAI confirms that the problem is not major.
 
-<a id="latest-committed-memory-segment-125-node-396"></a>
+<a id="latest-committed-memory-segment-144-node-396"></a>
 
 - **396** · clip 31: MAI inquires about a pen during the conversation.
 
-<a id="latest-committed-memory-segment-125-node-397"></a>
+<a id="latest-committed-memory-segment-144-node-397"></a>
 
 - **397** · clip 31: MAI asks if the group intends to collect an iPhone.
 
-<a id="latest-committed-memory-segment-125-node-408"></a>
+<a id="latest-committed-memory-segment-144-node-408"></a>
 
 - **408** · clip 32: The presence of a clapperboard, tripods, and a projection screen indicates that the space is being used for filming or photography production.
 
-<a id="latest-committed-memory-segment-125-node-409"></a>
+<a id="latest-committed-memory-segment-144-node-409"></a>
 
 - **409** · clip 32: The movement between rooms suggests the camera wearer is setting up or moving equipment for a shoot.
 
-<a id="latest-committed-memory-segment-125-node-410"></a>
+<a id="latest-committed-memory-segment-144-node-410"></a>
 
 - **410** · clip 32: The audio suggests a conversation about locating a pen, possibly related to writing notes or scripts for the upcoming activity.
 
-<a id="latest-committed-memory-segment-125-node-426"></a>
+<a id="latest-committed-memory-segment-144-node-426"></a>
 
-- **426** · clip 33: The speaker &lt;voice_31&gt; identifies themselves as '1' during a discussion involving identity roles.  **Links:** ↔ [31](#latest-committed-memory-segment-125-node-31)
+- **426** · clip 33: The speaker &lt;voice_31&gt; identifies themselves as '1' during a discussion involving identity roles.  **Links:** ↔ [31](#latest-committed-memory-segment-144-node-31)
 
-<a id="latest-committed-memory-segment-125-node-427"></a>
+<a id="latest-committed-memory-segment-144-node-427"></a>
 
-- **427** · clip 33: There is a debate regarding whether a specific person is '1' versus 'not 1' as discussed by &lt;voice_412&gt;.  **Links:** ↔ [412](#latest-committed-memory-segment-125-node-412)
+- **427** · clip 33: There is a debate regarding whether a specific person is '1' versus 'not 1' as discussed by &lt;voice_412&gt;.  **Links:** ↔ [412](#latest-committed-memory-segment-144-node-412)
 
-<a id="latest-committed-memory-segment-125-node-428"></a>
+<a id="latest-committed-memory-segment-144-node-428"></a>
 
-- **428** · clip 33: The session takes place on the 'last day' according to the statement made by &lt;voice_415&gt;.  **Links:** ↔ [415](#latest-committed-memory-segment-125-node-415)
+- **428** · clip 33: The session takes place on the 'last day' according to the statement made by &lt;voice_415&gt;.  **Links:** ↔ [415](#latest-committed-memory-segment-144-node-415)
 
-<a id="latest-committed-memory-segment-125-node-429"></a>
+<a id="latest-committed-memory-segment-144-node-429"></a>
 
-- **429** · clip 33: The group appears to be engaged in a role-playing or identification exercise involving numbers and names like 'Qianxin' mentioned by &lt;voice_201&gt;.  **Links:** ↔ [201](#latest-committed-memory-segment-125-node-201)
+- **429** · clip 33: The group appears to be engaged in a role-playing or identification exercise involving numbers and names like 'Qianxin' mentioned by &lt;voice_201&gt;.  **Links:** ↔ [201](#latest-committed-memory-segment-144-node-201)
 
-<a id="latest-committed-memory-segment-125-node-440"></a>
+<a id="latest-committed-memory-segment-144-node-440"></a>
 
 - **440** · clip 34: The group is engaged in a collaborative session involving verification of written terms on a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-441"></a>
+<a id="latest-committed-memory-segment-144-node-441"></a>
 
 - **441** · clip 34: Specific attention is paid to the spelling and definition of words like 'painting' and 'waist'.
 
-<a id="latest-committed-memory-segment-125-node-442"></a>
+<a id="latest-committed-memory-segment-144-node-442"></a>
 
 - **442** · clip 34: The recurring mention of 'treasure box' indicates it is a central topic of their discussion.
 
-<a id="latest-committed-memory-segment-125-node-462"></a>
+<a id="latest-committed-memory-segment-144-node-462"></a>
 
 - **462** · clip 35: The group appears to be coordinating casting or scheduling for a production, indicated by the clapperboard and discussion of 'positions'.
 
-<a id="latest-committed-memory-segment-125-node-463"></a>
+<a id="latest-committed-memory-segment-144-node-463"></a>
 
 - **463** · clip 35: There is a specific focus on inviting an individual named Kiyomi to participate.
 
-<a id="latest-committed-memory-segment-125-node-464"></a>
+<a id="latest-committed-memory-segment-144-node-464"></a>
 
 - **464** · clip 35: Attendance uncertainty is raised due to geographical distance from the workplace.
 
-<a id="latest-committed-memory-segment-125-node-465"></a>
+<a id="latest-committed-memory-segment-144-node-465"></a>
 
 - **465** · clip 35: No facial features were provided to visually confirm the identities of the speakers.
 
-<a id="latest-committed-memory-segment-125-node-478"></a>
+<a id="latest-committed-memory-segment-144-node-478"></a>
 
 - **478** · clip 36: The group is participating in a meeting focused on organizing or planning, indicated by the presence of a whiteboard and the discussion of forming a team.
 
-<a id="latest-committed-memory-segment-125-node-479"></a>
+<a id="latest-committed-memory-segment-144-node-479"></a>
 
-- **479** · clip 36: Speaker &lt;voice_261&gt; states the objective is to draw a team, estimating that a small ball might suffice for the representation.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261)
+- **479** · clip 36: Speaker &lt;voice_261&gt; states the objective is to draw a team, estimating that a small ball might suffice for the representation.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
 
-<a id="latest-committed-memory-segment-125-node-480"></a>
+<a id="latest-committed-memory-segment-144-node-480"></a>
 
-- **480** · clip 36: Speaker &lt;voice_466&gt; directs the group to proceed with drawing the plan.  **Links:** ↔ [466](#latest-committed-memory-segment-125-node-466)
+- **480** · clip 36: Speaker &lt;voice_466&gt; directs the group to proceed with drawing the plan.  **Links:** ↔ [466](#latest-committed-memory-segment-144-node-466)
 
-<a id="latest-committed-memory-segment-125-node-481"></a>
+<a id="latest-committed-memory-segment-144-node-481"></a>
 
-- **481** · clip 36: Speaker &lt;voice_467&gt; outlines the selection criteria, specifying that men should be chosen before women.  **Links:** ↔ [467](#latest-committed-memory-segment-125-node-467)
+- **481** · clip 36: Speaker &lt;voice_467&gt; outlines the selection criteria, specifying that men should be chosen before women.  **Links:** ↔ [467](#latest-committed-memory-segment-144-node-467)
 
-<a id="latest-committed-memory-segment-125-node-482"></a>
+<a id="latest-committed-memory-segment-144-node-482"></a>
 
-- **482** · clip 36: Speaker &lt;voice_468&gt; and &lt;voice_469&gt; confirm the invitation status, noting that a woman was invited and the speaker is also extending an invitation to another woman.  **Links:** ↔ [468](#latest-committed-memory-segment-125-node-468) · ↔ [469](#latest-committed-memory-segment-125-node-469)
+- **482** · clip 36: Speaker &lt;voice_468&gt; and &lt;voice_469&gt; confirm the invitation status, noting that a woman was invited and the speaker is also extending an invitation to another woman.  **Links:** ↔ [468](#latest-committed-memory-segment-144-node-468) · ↔ [469](#latest-committed-memory-segment-144-node-469)
 
-<a id="latest-committed-memory-segment-125-node-494"></a>
+<a id="latest-committed-memory-segment-144-node-494"></a>
 
-- **494** · clip 37: Voice &lt;voice_483&gt; mentions that the second item is full.  **Links:** ↔ [483](#latest-committed-memory-segment-125-node-483)
+- **494** · clip 37: Voice &lt;voice_483&gt; mentions that the second item is full.  **Links:** ↔ [483](#latest-committed-memory-segment-144-node-483)
 
-<a id="latest-committed-memory-segment-125-node-495"></a>
+<a id="latest-committed-memory-segment-144-node-495"></a>
 
-- **495** · clip 37: Voice &lt;voice_201&gt; notes that the hair is on top of the head.  **Links:** ↔ [201](#latest-committed-memory-segment-125-node-201)
+- **495** · clip 37: Voice &lt;voice_201&gt; notes that the hair is on top of the head.  **Links:** ↔ [201](#latest-committed-memory-segment-144-node-201)
 
-<a id="latest-committed-memory-segment-125-node-496"></a>
+<a id="latest-committed-memory-segment-144-node-496"></a>
 
-- **496** · clip 37: Voice &lt;voice_484&gt; identifies the object as a wig.  **Links:** ↔ [484](#latest-committed-memory-segment-125-node-484)
+- **496** · clip 37: Voice &lt;voice_484&gt; identifies the object as a wig.  **Links:** ↔ [484](#latest-committed-memory-segment-144-node-484)
 
-<a id="latest-committed-memory-segment-125-node-497"></a>
+<a id="latest-committed-memory-segment-144-node-497"></a>
 
-- **497** · clip 37: Voice &lt;voice_485&gt; speaks about charging the sky.  **Links:** ↔ [485](#latest-committed-memory-segment-125-node-485)
+- **497** · clip 37: Voice &lt;voice_485&gt; speaks about charging the sky.  **Links:** ↔ [485](#latest-committed-memory-segment-144-node-485)
 
-<a id="latest-committed-memory-segment-125-node-498"></a>
+<a id="latest-committed-memory-segment-144-node-498"></a>
 
-- **498** · clip 37: Voice &lt;voice_486&gt; identifies a participant as Ultraman and confirms he is male.  **Links:** ↔ [486](#latest-committed-memory-segment-125-node-486)
+- **498** · clip 37: Voice &lt;voice_486&gt; identifies a participant as Ultraman and confirms he is male.  **Links:** ↔ [486](#latest-committed-memory-segment-144-node-486)
 
-<a id="latest-committed-memory-segment-125-node-499"></a>
+<a id="latest-committed-memory-segment-144-node-499"></a>
 
-- **499** · clip 37: Voice &lt;voice_487&gt; mentions a love heart head.  **Links:** ↔ [487](#latest-committed-memory-segment-125-node-487)
+- **499** · clip 37: Voice &lt;voice_487&gt; mentions a love heart head.  **Links:** ↔ [487](#latest-committed-memory-segment-144-node-487)
 
-<a id="latest-committed-memory-segment-125-node-512"></a>
+<a id="latest-committed-memory-segment-144-node-512"></a>
 
 - **512** · clip 38: The group is engaged in a collaborative activity centered around a whiteboard and table discussion.
 
-<a id="latest-committed-memory-segment-125-node-513"></a>
+<a id="latest-committed-memory-segment-144-node-513"></a>
 
-- **513** · clip 38: &lt;voice_500&gt; raises a question regarding the appropriateness of the current situation.  **Links:** ↔ [500](#latest-committed-memory-segment-125-node-500)
+- **513** · clip 38: &lt;voice_500&gt; raises a question regarding the appropriateness of the current situation.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
 
-<a id="latest-committed-memory-segment-125-node-514"></a>
+<a id="latest-committed-memory-segment-144-node-514"></a>
 
-- **514** · clip 38: &lt;voice_203&gt; contemplates contacting a female contact who resides far away.  **Links:** ↔ [203](#latest-committed-memory-segment-125-node-203)
+- **514** · clip 38: &lt;voice_203&gt; contemplates contacting a female contact who resides far away.  **Links:** ↔ [203](#latest-committed-memory-segment-144-node-203)
 
-<a id="latest-committed-memory-segment-125-node-515"></a>
+<a id="latest-committed-memory-segment-144-node-515"></a>
 
-- **515** · clip 38: &lt;voice_364&gt; directs the group to write something beneath each person.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **515** · clip 38: &lt;voice_364&gt; directs the group to write something beneath each person.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-531"></a>
+<a id="latest-committed-memory-segment-144-node-531"></a>
 
-- **531** · clip 40: The speaker &lt;voice_467&gt; is leading a session involving name identification and attendance checks.  **Links:** ↔ [467](#latest-committed-memory-segment-125-node-467)
+- **531** · clip 40: The speaker &lt;voice_467&gt; is leading a session involving name identification and attendance checks.  **Links:** ↔ [467](#latest-committed-memory-segment-144-node-467)
 
-<a id="latest-committed-memory-segment-125-node-532"></a>
+<a id="latest-committed-memory-segment-144-node-532"></a>
 
-- **532** · clip 40: The speaker &lt;voice_517&gt; identifies herself as Zi Xia.  **Links:** ↔ [517](#latest-committed-memory-segment-125-node-517)
+- **532** · clip 40: The speaker &lt;voice_517&gt; identifies herself as Zi Xia.  **Links:** ↔ [517](#latest-committed-memory-segment-144-node-517)
 
-<a id="latest-committed-memory-segment-125-node-533"></a>
+<a id="latest-committed-memory-segment-144-node-533"></a>
 
-- **533** · clip 40: The speaker &lt;voice_520&gt; confirms that all participants in the group are female.  **Links:** ↔ [520](#latest-committed-memory-segment-125-node-520)
+- **533** · clip 40: The speaker &lt;voice_520&gt; confirms that all participants in the group are female.  **Links:** ↔ [520](#latest-committed-memory-segment-144-node-520)
 
-<a id="latest-committed-memory-segment-125-node-542"></a>
+<a id="latest-committed-memory-segment-144-node-542"></a>
 
-- **542** · clip 41: MAI (&lt;voice_534&gt;) is coordinating specific requirements for the event.  **Links:** ↔ [534](#latest-committed-memory-segment-125-node-534)
+- **542** · clip 41: MAI (&lt;voice_534&gt;) is coordinating specific requirements for the event.  **Links:** ↔ [534](#latest-committed-memory-segment-144-node-534)
 
-<a id="latest-committed-memory-segment-125-node-543"></a>
+<a id="latest-committed-memory-segment-144-node-543"></a>
 
-- **543** · clip 41: MAI (&lt;voice_468&gt;) through &lt;voice_444&gt; and &lt;voice_430&gt; is refining the estimated number of attendees.  **Links:** ↔ [430](#latest-committed-memory-segment-125-node-430) · ↔ [444](#latest-committed-memory-segment-125-node-444) · ↔ [468](#latest-committed-memory-segment-125-node-468)
+- **543** · clip 41: MAI (&lt;voice_468&gt;) through &lt;voice_444&gt; and &lt;voice_430&gt; is refining the estimated number of attendees.  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430) · ↔ [444](#latest-committed-memory-segment-144-node-444) · ↔ [468](#latest-committed-memory-segment-144-node-468)
 
-<a id="latest-committed-memory-segment-125-node-544"></a>
+<a id="latest-committed-memory-segment-144-node-544"></a>
 
 - **544** · clip 41: The group is engaged in planning the logistics of the gathering.
 
-<a id="latest-committed-memory-segment-125-node-554"></a>
+<a id="latest-committed-memory-segment-144-node-554"></a>
 
 - **554** · clip 42: The group is conducting a meeting or rehearsal session regarding marketing or outreach strategies.
 
-<a id="latest-committed-memory-segment-125-node-555"></a>
+<a id="latest-committed-memory-segment-144-node-555"></a>
 
 - **555** · clip 42: They are evaluating different channels for contacting potential clients, including social media platforms.
 
-<a id="latest-committed-memory-segment-125-node-556"></a>
+<a id="latest-committed-memory-segment-144-node-556"></a>
 
 - **556** · clip 42: The presence of the clapperboard suggests this is related to film production or a scripted scenario.
 
-<a id="latest-committed-memory-segment-125-node-557"></a>
+<a id="latest-committed-memory-segment-144-node-557"></a>
 
 - **557** · clip 42: The discussion focuses on direct engagement methods versus passive waiting for inquiries.
 
-<a id="latest-committed-memory-segment-125-node-570"></a>
+<a id="latest-committed-memory-segment-144-node-570"></a>
 
 - **570** · clip 43: The participants are discussing plans for the next day involving potential reporting or filming.
 
-<a id="latest-committed-memory-segment-125-node-571"></a>
+<a id="latest-committed-memory-segment-144-node-571"></a>
 
 - **571** · clip 43: There is a negotiation regarding an order that depends on the arrival of 'the big four'.
 
-<a id="latest-committed-memory-segment-125-node-572"></a>
+<a id="latest-committed-memory-segment-144-node-572"></a>
 
 - **572** · clip 43: Concerns are raised about the difficulty of connecting with 'Ego' and the necessity of inviting neighbors.
 
-<a id="latest-committed-memory-segment-125-node-581"></a>
+<a id="latest-committed-memory-segment-144-node-581"></a>
 
-- **581** · clip 44: &lt;voice_468&gt; states that Zhong Baishi looks good.  **Links:** ↔ [468](#latest-committed-memory-segment-125-node-468)
+- **581** · clip 44: &lt;voice_468&gt; states that Zhong Baishi looks good.  **Links:** ↔ [468](#latest-committed-memory-segment-144-node-468)
 
-<a id="latest-committed-memory-segment-125-node-582"></a>
+<a id="latest-committed-memory-segment-144-node-582"></a>
 
-- **582** · clip 44: &lt;voice_468&gt; mentions a riddle and asks about remaining items.  **Links:** ↔ [468](#latest-committed-memory-segment-125-node-468)
+- **582** · clip 44: &lt;voice_468&gt; mentions a riddle and asks about remaining items.  **Links:** ↔ [468](#latest-committed-memory-segment-144-node-468)
 
-<a id="latest-committed-memory-segment-125-node-583"></a>
+<a id="latest-committed-memory-segment-144-node-583"></a>
 
-- **583** · clip 44: &lt;voice_573&gt; notes a retro feeling.  **Links:** ↔ [573](#latest-committed-memory-segment-125-node-573)
+- **583** · clip 44: &lt;voice_573&gt; notes a retro feeling.  **Links:** ↔ [573](#latest-committed-memory-segment-144-node-573)
 
-<a id="latest-committed-memory-segment-125-node-584"></a>
+<a id="latest-committed-memory-segment-144-node-584"></a>
 
-- **584** · clip 44: &lt;voice_485&gt; discusses their plan and uncertainty.  **Links:** ↔ [485](#latest-committed-memory-segment-125-node-485)
+- **584** · clip 44: &lt;voice_485&gt; discusses their plan and uncertainty.  **Links:** ↔ [485](#latest-committed-memory-segment-144-node-485)
 
-<a id="latest-committed-memory-segment-125-node-585"></a>
+<a id="latest-committed-memory-segment-144-node-585"></a>
 
-- **585** · clip 44: &lt;voice_574&gt; mentions many question marks and celebrities.  **Links:** ↔ [574](#latest-committed-memory-segment-125-node-574)
+- **585** · clip 44: &lt;voice_574&gt; mentions many question marks and celebrities.  **Links:** ↔ [574](#latest-committed-memory-segment-144-node-574)
 
-<a id="latest-committed-memory-segment-125-node-586"></a>
+<a id="latest-committed-memory-segment-144-node-586"></a>
 
 - **586** · clip 44: The group is engaged in a collaborative discussion or planning session.
 
-<a id="latest-committed-memory-segment-125-node-598"></a>
+<a id="latest-committed-memory-segment-144-node-598"></a>
 
 - **598** · clip 45: The group is engaged in a collaborative planning session regarding the logistics of a production or event, specifically concerning crew allocation and hosting capacity.
 
-<a id="latest-committed-memory-segment-125-node-599"></a>
+<a id="latest-committed-memory-segment-144-node-599"></a>
 
 - **599** · clip 45: MAI plays a central role in the discussion, outlining the scope of the activity and the necessary personnel.
 
-<a id="latest-committed-memory-segment-125-node-600"></a>
+<a id="latest-committed-memory-segment-144-node-600"></a>
 
 - **600** · clip 45: There is a clear intent to document the proceedings, as indicated by the proposal to capture media for the attendees.
 
-<a id="latest-committed-memory-segment-125-node-611"></a>
+<a id="latest-committed-memory-segment-144-node-611"></a>
 
 - **611** · clip 46: The participants are engaged in a collaborative planning session involving calculations.
 
-<a id="latest-committed-memory-segment-125-node-612"></a>
+<a id="latest-committed-memory-segment-144-node-612"></a>
 
-- **612** · clip 46: Speaker &lt;voice_601&gt; manages the discussion and makes corrections on the whiteboard.  **Links:** ↔ [601](#latest-committed-memory-segment-125-node-601)
+- **612** · clip 46: Speaker &lt;voice_601&gt; manages the discussion and makes corrections on the whiteboard.  **Links:** ↔ [601](#latest-committed-memory-segment-144-node-601)
 
-<a id="latest-committed-memory-segment-125-node-613"></a>
+<a id="latest-committed-memory-segment-144-node-613"></a>
 
 - **613** · clip 46: The conversation addresses post-production difficulties and numerical totals.
 
-<a id="latest-committed-memory-segment-125-node-631"></a>
+<a id="latest-committed-memory-segment-144-node-631"></a>
 
 - **631** · clip 47: The group is engaged in a collaborative planning session, likely for a production or rehearsal given the clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-632"></a>
+<a id="latest-committed-memory-segment-144-node-632"></a>
 
-- **632** · clip 47: &lt;voice_364&gt; appears to be facilitating the discussion regarding timelines and scope.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **632** · clip 47: &lt;voice_364&gt; appears to be facilitating the discussion regarding timelines and scope.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-633"></a>
+<a id="latest-committed-memory-segment-144-node-633"></a>
 
 - **633** · clip 47: There is a consensus reached among the participants regarding the number 14.
 
-<a id="latest-committed-memory-segment-125-node-634"></a>
+<a id="latest-committed-memory-segment-144-node-634"></a>
 
 - **634** · clip 47: The presence of VR equipment suggests the project involves digital interaction or simulation.
 
-<a id="latest-committed-memory-segment-125-node-649"></a>
+<a id="latest-committed-memory-segment-144-node-649"></a>
 
 - **649** · clip 48: The participants appear to be engaged in a production planning session or script review.
 
-<a id="latest-committed-memory-segment-125-node-650"></a>
+<a id="latest-committed-memory-segment-144-node-650"></a>
 
 - **650** · clip 48: MAI is confirming the suitability of the current arrangement and detailing specific points regarding personnel.
 
-<a id="latest-committed-memory-segment-125-node-651"></a>
+<a id="latest-committed-memory-segment-144-node-651"></a>
 
 - **651** · clip 48: The presence of a clapperboard and lighting gear indicates a film or video production environment.
 
-<a id="latest-committed-memory-segment-125-node-661"></a>
+<a id="latest-committed-memory-segment-144-node-661"></a>
 
 - **661** · clip 49: The group is conducting a collaborative session focused on planning or reviewing project content.
 
-<a id="latest-committed-memory-segment-125-node-662"></a>
+<a id="latest-committed-memory-segment-144-node-662"></a>
 
-- **662** · clip 49: Speaker &lt;voice_443&gt; appears to be leading the discussion regarding the agenda and activity details.  **Links:** ↔ [443](#latest-committed-memory-segment-125-node-443)
+- **662** · clip 49: Speaker &lt;voice_443&gt; appears to be leading the discussion regarding the agenda and activity details.  **Links:** ↔ [443](#latest-committed-memory-segment-144-node-443)
 
-<a id="latest-committed-memory-segment-125-node-663"></a>
+<a id="latest-committed-memory-segment-144-node-663"></a>
 
 - **663** · clip 49: The team acknowledges previous preparations, specifically mentioning completed questionnaires.
 
-<a id="latest-committed-memory-segment-125-node-664"></a>
+<a id="latest-committed-memory-segment-144-node-664"></a>
 
 - **664** · clip 49: Concerns about the difficulty of certain tasks are raised during the planning phase.
 
-<a id="latest-committed-memory-segment-125-node-665"></a>
+<a id="latest-committed-memory-segment-144-node-665"></a>
 
 - **665** · clip 49: Consensus is reached to move forward with the designated activities.
 
-<a id="latest-committed-memory-segment-125-node-674"></a>
+<a id="latest-committed-memory-segment-144-node-674"></a>
 
-- **674** · clip 51: &lt;voice_467&gt; describes a process of slowly opening flowers, pressing petals, and creating eco-friendly clear films using Yakima glass for a handmade plant-related project.  **Links:** ↔ [467](#latest-committed-memory-segment-125-node-467)
+- **674** · clip 51: &lt;voice_467&gt; describes a process of slowly opening flowers, pressing petals, and creating eco-friendly clear films using Yakima glass for a handmade plant-related project.  **Links:** ↔ [467](#latest-committed-memory-segment-144-node-467)
 
-<a id="latest-committed-memory-segment-125-node-675"></a>
+<a id="latest-committed-memory-segment-144-node-675"></a>
 
-- **675** · clip 51: &lt;voice_666&gt; mentions making borders as part of the craft.  **Links:** ↔ [666](#latest-committed-memory-segment-125-node-666)
+- **675** · clip 51: &lt;voice_666&gt; mentions making borders as part of the craft.  **Links:** ↔ [666](#latest-committed-memory-segment-144-node-666)
 
-<a id="latest-committed-memory-segment-125-node-676"></a>
+<a id="latest-committed-memory-segment-144-node-676"></a>
 
-- **676** · clip 51: &lt;voice_667&gt; states that the work can be distributed to everyone and considers it talented.  **Links:** ↔ [667](#latest-committed-memory-segment-125-node-667)
+- **676** · clip 51: &lt;voice_667&gt; states that the work can be distributed to everyone and considers it talented.  **Links:** ↔ [667](#latest-committed-memory-segment-144-node-667)
 
-<a id="latest-committed-memory-segment-125-node-677"></a>
+<a id="latest-committed-memory-segment-144-node-677"></a>
 
-- **677** · clip 51: &lt;voice_668&gt; refers to the flower component of the creation.  **Links:** ↔ [668](#latest-committed-memory-segment-125-node-668)
+- **677** · clip 51: &lt;voice_668&gt; refers to the flower component of the creation.  **Links:** ↔ [668](#latest-committed-memory-segment-144-node-668)
 
-<a id="latest-committed-memory-segment-125-node-684"></a>
+<a id="latest-committed-memory-segment-144-node-684"></a>
 
-- **684** · clip 52: Speaker &lt;voice_484&gt; discusses planting something suitable for Earth heat conditions and decides to purchase flowers instead.  **Links:** ↔ [484](#latest-committed-memory-segment-125-node-484)
+- **684** · clip 52: Speaker &lt;voice_484&gt; discusses planting something suitable for Earth heat conditions and decides to purchase flowers instead.  **Links:** ↔ [484](#latest-committed-memory-segment-144-node-484)
 
-<a id="latest-committed-memory-segment-125-node-685"></a>
+<a id="latest-committed-memory-segment-144-node-685"></a>
 
-- **685** · clip 52: Speaker &lt;voice_678&gt; mentions purchasing flowers from Yunnan and notes there appear to be two packages involved.  **Links:** ↔ [678](#latest-committed-memory-segment-125-node-678)
+- **685** · clip 52: Speaker &lt;voice_678&gt; mentions purchasing flowers from Yunnan and notes there appear to be two packages involved.  **Links:** ↔ [678](#latest-committed-memory-segment-144-node-678)
 
-<a id="latest-committed-memory-segment-125-node-686"></a>
+<a id="latest-committed-memory-segment-144-node-686"></a>
 
-- **686** · clip 52: Speaker &lt;voice_678&gt; confirms the purchase and mentions needing to find a simple solution.  **Links:** ↔ [678](#latest-committed-memory-segment-125-node-678)
+- **686** · clip 52: Speaker &lt;voice_678&gt; confirms the purchase and mentions needing to find a simple solution.  **Links:** ↔ [678](#latest-committed-memory-segment-144-node-678)
 
-<a id="latest-committed-memory-segment-125-node-693"></a>
+<a id="latest-committed-memory-segment-144-node-693"></a>
 
-- **693** · clip 53: MAI (&lt;voice_483&gt;) inquires whether the current activity involves setting a price or completing the remaining practice.  **Links:** ↔ [483](#latest-committed-memory-segment-125-node-483)
+- **693** · clip 53: MAI (&lt;voice_483&gt;) inquires whether the current activity involves setting a price or completing the remaining practice.  **Links:** ↔ [483](#latest-committed-memory-segment-144-node-483)
 
-<a id="latest-committed-memory-segment-125-node-694"></a>
+<a id="latest-committed-memory-segment-144-node-694"></a>
 
-- **694** · clip 53: MAI (&lt;voice_364&gt;) suggests reviewing something first and compliments Xiao You regarding their eyesight.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **694** · clip 53: MAI (&lt;voice_364&gt;) suggests reviewing something first and compliments Xiao You regarding their eyesight.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-703"></a>
+<a id="latest-committed-memory-segment-144-node-703"></a>
 
 - **703** · clip 54: The presence of a clapperboard indicates a film or video production rehearsal is taking place.
 
-<a id="latest-committed-memory-segment-125-node-704"></a>
+<a id="latest-committed-memory-segment-144-node-704"></a>
 
 - **704** · clip 54: The group is collaboratively working on a project involving props or scripts located in the wooden box.
 
-<a id="latest-committed-memory-segment-125-node-714"></a>
+<a id="latest-committed-memory-segment-144-node-714"></a>
 
-- **714** · clip 55: Speaker &lt;voice_705&gt; is organizing items related to flower preservation.  **Links:** ↔ [705](#latest-committed-memory-segment-125-node-705)
+- **714** · clip 55: Speaker &lt;voice_705&gt; is organizing items related to flower preservation.  **Links:** ↔ [705](#latest-committed-memory-segment-144-node-705)
 
-<a id="latest-committed-memory-segment-125-node-715"></a>
+<a id="latest-committed-memory-segment-144-node-715"></a>
 
-- **715** · clip 55: Speaker &lt;voice_705&gt; makes a comment about the cost being over 2 million.  **Links:** ↔ [705](#latest-committed-memory-segment-125-node-705)
+- **715** · clip 55: Speaker &lt;voice_705&gt; makes a comment about the cost being over 2 million.  **Links:** ↔ [705](#latest-committed-memory-segment-144-node-705)
 
-<a id="latest-committed-memory-segment-125-node-716"></a>
+<a id="latest-committed-memory-segment-144-node-716"></a>
 
-- **716** · clip 55: Speaker &lt;voice_706&gt; expresses uncertainty about the nature of a specific item.  **Links:** ↔ [706](#latest-committed-memory-segment-125-node-706)
+- **716** · clip 55: Speaker &lt;voice_706&gt; expresses uncertainty about the nature of a specific item.  **Links:** ↔ [706](#latest-committed-memory-segment-144-node-706)
 
-<a id="latest-committed-memory-segment-125-node-721"></a>
+<a id="latest-committed-memory-segment-144-node-721"></a>
 
-- **721** · clip 56: &lt;voice_705&gt; discusses sampling timelines and colors, stating 'He said he can sample only after two days, time difference isn't much. Pressure needs pressure for two-three days, this color is good. Is this Xiangyunlan or what?'  **Links:** ↔ [705](#latest-committed-memory-segment-125-node-705)
+- **721** · clip 56: &lt;voice_705&gt; discusses sampling timelines and colors, stating 'He said he can sample only after two days, time difference isn't much. Pressure needs pressure for two-three days, this color is good. Is this Xiangyunlan or what?'  **Links:** ↔ [705](#latest-committed-memory-segment-144-node-705)
 
-<a id="latest-committed-memory-segment-125-node-722"></a>
+<a id="latest-committed-memory-segment-144-node-722"></a>
 
-- **722** · clip 56: &lt;voice_717&gt; confirms the statement by saying 'Okay, hundred percent.'  **Links:** ↔ [717](#latest-committed-memory-segment-125-node-717)
+- **722** · clip 56: &lt;voice_717&gt; confirms the statement by saying 'Okay, hundred percent.'  **Links:** ↔ [717](#latest-committed-memory-segment-144-node-717)
 
-<a id="latest-committed-memory-segment-125-node-723"></a>
+<a id="latest-committed-memory-segment-144-node-723"></a>
 
-- **723** · clip 56: &lt;voice_718&gt; reiterates the confirmation with 'Hundred percent.'  **Links:** ↔ [718](#latest-committed-memory-segment-125-node-718)
+- **723** · clip 56: &lt;voice_718&gt; reiterates the confirmation with 'Hundred percent.'  **Links:** ↔ [718](#latest-committed-memory-segment-144-node-718)
 
-<a id="latest-committed-memory-segment-125-node-732"></a>
+<a id="latest-committed-memory-segment-144-node-732"></a>
 
 - **732** · clip 57: The presence of a clapperboard and lighting suggests a film or video production setup.
 
-<a id="latest-committed-memory-segment-125-node-733"></a>
+<a id="latest-committed-memory-segment-144-node-733"></a>
 
 - **733** · clip 57: The dialogue contains technical terms like 'cultivation medium' and 'fermentation', indicating a specific subject matter or prop discussion.
 
-<a id="latest-committed-memory-segment-125-node-734"></a>
+<a id="latest-committed-memory-segment-144-node-734"></a>
 
 - **734** · clip 57: The interaction near the door involves securing the camera equipment.
 
-<a id="latest-committed-memory-segment-125-node-747"></a>
+<a id="latest-committed-memory-segment-144-node-747"></a>
 
-- **747** · clip 58: &lt;voice_364&gt; inquires about the purchase status of an item and identifies Yu Xuan as the recipient of external deliveries.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **747** · clip 58: &lt;voice_364&gt; inquires about the purchase status of an item and identifies Yu Xuan as the recipient of external deliveries.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-748"></a>
+<a id="latest-committed-memory-segment-144-node-748"></a>
 
-- **748** · clip 58: &lt;voice_735&gt; confirms that the item has not been purchased yet.  **Links:** ↔ [735](#latest-committed-memory-segment-125-node-735)
+- **748** · clip 58: &lt;voice_735&gt; confirms that the item has not been purchased yet.  **Links:** ↔ [735](#latest-committed-memory-segment-144-node-735)
 
-<a id="latest-committed-memory-segment-125-node-749"></a>
+<a id="latest-committed-memory-segment-144-node-749"></a>
 
-- **749** · clip 58: &lt;voice_736&gt; suggests bringing financial resources to join the group.  **Links:** ↔ [736](#latest-committed-memory-segment-125-node-736)
+- **749** · clip 58: &lt;voice_736&gt; suggests bringing financial resources to join the group.  **Links:** ↔ [736](#latest-committed-memory-segment-144-node-736)
 
-<a id="latest-committed-memory-segment-125-node-750"></a>
+<a id="latest-committed-memory-segment-144-node-750"></a>
 
-- **750** · clip 58: &lt;voice_737&gt; affirms the suggestion to bring capital.  **Links:** ↔ [737](#latest-committed-memory-segment-125-node-737)
+- **750** · clip 58: &lt;voice_737&gt; affirms the suggestion to bring capital.  **Links:** ↔ [737](#latest-committed-memory-segment-144-node-737)
 
-<a id="latest-committed-memory-segment-125-node-751"></a>
+<a id="latest-committed-memory-segment-144-node-751"></a>
 
 - **751** · clip 58: The group appears to be coordinating logistics and funding for a project or production.
 
-<a id="latest-committed-memory-segment-125-node-767"></a>
+<a id="latest-committed-memory-segment-144-node-767"></a>
 
 - **767** · clip 59: The group is engaged in a collaborative project involving the preparation and artistic processing of flowers.
 
-<a id="latest-committed-memory-segment-125-node-768"></a>
+<a id="latest-committed-memory-segment-144-node-768"></a>
 
 - **768** · clip 59: There is a planned distribution of materials, specifically vases, among six participants.
 
-<a id="latest-committed-memory-segment-125-node-769"></a>
+<a id="latest-committed-memory-segment-144-node-769"></a>
 
 - **769** · clip 59: The goal involves transforming fresh flowers into preserved, flat shapes through a specific pressing technique.
 
-<a id="latest-committed-memory-segment-125-node-770"></a>
+<a id="latest-committed-memory-segment-144-node-770"></a>
 
 - **770** · clip 59: The presence of a clapperboard suggests this activity is taking place during a film shoot or rehearsal session.
 
-<a id="latest-committed-memory-segment-125-node-780"></a>
+<a id="latest-committed-memory-segment-144-node-780"></a>
 
 - **780** · clip 60: The participants are coordinating props and decorations for a planned event or gathering.
 
-<a id="latest-committed-memory-segment-125-node-781"></a>
+<a id="latest-committed-memory-segment-144-node-781"></a>
 
 - **781** · clip 60: No face features were provided to confirm visual identities of the speakers.
 
-<a id="latest-committed-memory-segment-125-node-794"></a>
+<a id="latest-committed-memory-segment-144-node-794"></a>
 
 - **794** · clip 61: The group is collaborating on a plan involving a seven-day schedule and the distribution of self-made items.
 
-<a id="latest-committed-memory-segment-125-node-795"></a>
+<a id="latest-committed-memory-segment-144-node-795"></a>
 
 - **795** · clip 61: The presence of professional lighting equipment and a clapperboard indicates a production or creative work session.
 
-<a id="latest-committed-memory-segment-125-node-796"></a>
+<a id="latest-committed-memory-segment-144-node-796"></a>
 
-- **796** · clip 61: &lt;voice_752&gt; appears to be providing guidance on the logistical aspects of the project.  **Links:** ↔ [752](#latest-committed-memory-segment-125-node-752)
+- **796** · clip 61: &lt;voice_752&gt; appears to be providing guidance on the logistical aspects of the project.  **Links:** ↔ [752](#latest-committed-memory-segment-144-node-752)
 
-<a id="latest-committed-memory-segment-125-node-811"></a>
+<a id="latest-committed-memory-segment-144-node-811"></a>
 
-- **811** · clip 62: MAI (&lt;voice_339&gt;) is planning a DIY project inspired by World Earth Day.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **811** · clip 62: MAI (&lt;voice_339&gt;) is planning a DIY project inspired by World Earth Day.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-812"></a>
+<a id="latest-committed-memory-segment-144-node-812"></a>
 
 - **812** · clip 62: The group is engaged in a filming session indicated by the clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-813"></a>
+<a id="latest-committed-memory-segment-144-node-813"></a>
 
-- **813** · clip 62: MAI (&lt;voice_797&gt;) and MAI (&lt;voice_798&gt;) contribute brief comments during the discussion.  **Links:** ↔ [797](#latest-committed-memory-segment-125-node-797) · ↔ [798](#latest-committed-memory-segment-125-node-798)
+- **813** · clip 62: MAI (&lt;voice_797&gt;) and MAI (&lt;voice_798&gt;) contribute brief comments during the discussion.  **Links:** ↔ [797](#latest-committed-memory-segment-144-node-797) · ↔ [798](#latest-committed-memory-segment-144-node-798)
 
-<a id="latest-committed-memory-segment-125-node-821"></a>
+<a id="latest-committed-memory-segment-144-node-821"></a>
 
 - **821** · clip 63: The group is collaborating on a creative project likely themed around World Map Day.
 
-<a id="latest-committed-memory-segment-125-node-822"></a>
+<a id="latest-committed-memory-segment-144-node-822"></a>
 
 - **822** · clip 63: They are brainstorming DIY craft ideas that involve repurposing items like teacup lids.
 
-<a id="latest-committed-memory-segment-125-node-823"></a>
+<a id="latest-committed-memory-segment-144-node-823"></a>
 
 - **823** · clip 63: No face features were provided, so visual-voice equivalence could not be determined.
 
-<a id="latest-committed-memory-segment-125-node-838"></a>
+<a id="latest-committed-memory-segment-144-node-838"></a>
 
 - **838** · clip 64: The participants are engaged in a collaborative crafting session focused on paper art.
 
-<a id="latest-committed-memory-segment-125-node-839"></a>
+<a id="latest-committed-memory-segment-144-node-839"></a>
 
-- **839** · clip 64: &lt;voice_339&gt; demonstrates knowledge of various craft techniques ranging from simple to complex projects.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **839** · clip 64: &lt;voice_339&gt; demonstrates knowledge of various craft techniques ranging from simple to complex projects.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-840"></a>
+<a id="latest-committed-memory-segment-144-node-840"></a>
 
 - **840** · clip 64: The setting includes professional lighting equipment, suggesting a filming or production environment.
 
-<a id="latest-committed-memory-segment-125-node-849"></a>
+<a id="latest-committed-memory-segment-144-node-849"></a>
 
 - **849** · clip 65: The participants are collaborating on a creative project involving film or drama, evidenced by the clapperboard and whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-850"></a>
+<a id="latest-committed-memory-segment-144-node-850"></a>
 
-- **850** · clip 65: &lt;voice_339&gt; proposes using paper boxes for a theme, citing their environmental friendliness and suitability for the project.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **850** · clip 65: &lt;voice_339&gt; proposes using paper boxes for a theme, citing their environmental friendliness and suitability for the project.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-851"></a>
+<a id="latest-committed-memory-segment-144-node-851"></a>
 
-- **851** · clip 65: &lt;voice_339&gt; suggests organizing a short play or drama, recalling previous filming activities with a friend.  **Links:** ↔ [339](#latest-committed-memory-segment-125-node-339)
+- **851** · clip 65: &lt;voice_339&gt; suggests organizing a short play or drama, recalling previous filming activities with a friend.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
 
-<a id="latest-committed-memory-segment-125-node-852"></a>
+<a id="latest-committed-memory-segment-144-node-852"></a>
 
-- **852** · clip 65: &lt;voice_841&gt; acknowledges purchasing materials but states that a completed script for a short drama is not yet available.  **Links:** ↔ [841](#latest-committed-memory-segment-125-node-841)
+- **852** · clip 65: &lt;voice_841&gt; acknowledges purchasing materials but states that a completed script for a short drama is not yet available.  **Links:** ↔ [841](#latest-committed-memory-segment-144-node-841)
 
-<a id="latest-committed-memory-segment-125-node-861"></a>
+<a id="latest-committed-memory-segment-144-node-861"></a>
 
-- **861** · clip 66: Speaker &lt;voice_841&gt; explains they are using a script because their time is short and not much time remains.  **Links:** ↔ [841](#latest-committed-memory-segment-125-node-841)
+- **861** · clip 66: Speaker &lt;voice_841&gt; explains they are using a script because their time is short and not much time remains.  **Links:** ↔ [841](#latest-committed-memory-segment-144-node-841)
 
-<a id="latest-committed-memory-segment-125-node-862"></a>
+<a id="latest-committed-memory-segment-144-node-862"></a>
 
-- **862** · clip 66: Speaker &lt;voice_841&gt; further suggests that if they lack a script, they can use ideas from short videos or attempt to shoot a ready-made script.  **Links:** ↔ [841](#latest-committed-memory-segment-125-node-841)
+- **862** · clip 66: Speaker &lt;voice_841&gt; further suggests that if they lack a script, they can use ideas from short videos or attempt to shoot a ready-made script.  **Links:** ↔ [841](#latest-committed-memory-segment-144-node-841)
 
-<a id="latest-committed-memory-segment-125-node-863"></a>
+<a id="latest-committed-memory-segment-144-node-863"></a>
 
-- **863** · clip 66: Speaker &lt;voice_853&gt; considers the option of writing a script if necessary.  **Links:** ↔ [853](#latest-committed-memory-segment-125-node-853)
+- **863** · clip 66: Speaker &lt;voice_853&gt; considers the option of writing a script if necessary.  **Links:** ↔ [853](#latest-committed-memory-segment-144-node-853)
 
-<a id="latest-committed-memory-segment-125-node-864"></a>
+<a id="latest-committed-memory-segment-144-node-864"></a>
 
-- **864** · clip 66: Speaker &lt;voice_34&gt; states that the current plan involves a ready-made script.  **Links:** ↔ [34](#latest-committed-memory-segment-125-node-34)
+- **864** · clip 66: Speaker &lt;voice_34&gt; states that the current plan involves a ready-made script.  **Links:** ↔ [34](#latest-committed-memory-segment-144-node-34)
 
-<a id="latest-committed-memory-segment-125-node-865"></a>
+<a id="latest-committed-memory-segment-144-node-865"></a>
 
-- **865** · clip 66: Speaker &lt;voice_797&gt; introduces two people named Lucia and Lucía.  **Links:** ↔ [797](#latest-committed-memory-segment-125-node-797)
+- **865** · clip 66: Speaker &lt;voice_797&gt; introduces two people named Lucia and Lucía.  **Links:** ↔ [797](#latest-committed-memory-segment-144-node-797)
 
-<a id="latest-committed-memory-segment-125-node-866"></a>
+<a id="latest-committed-memory-segment-144-node-866"></a>
 
-- **866** · clip 66: Speaker &lt;voice_854&gt; concludes by mentioning 'us two,' implying a collaborative effort between two main parties.  **Links:** ↔ [854](#latest-committed-memory-segment-125-node-854)
+- **866** · clip 66: Speaker &lt;voice_854&gt; concludes by mentioning 'us two,' implying a collaborative effort between two main parties.  **Links:** ↔ [854](#latest-committed-memory-segment-144-node-854)
 
-<a id="latest-committed-memory-segment-125-node-885"></a>
+<a id="latest-committed-memory-segment-144-node-885"></a>
 
 - **885** · clip 67: The group appears to be engaged in a collaborative creative session, possibly a film rehearsal or script review, indicated by the presence of a clapperboard and whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-886"></a>
+<a id="latest-committed-memory-segment-144-node-886"></a>
 
 - **886** · clip 67: The conversation involves corrections and confirmations regarding details like names and visual elements, suggesting a focus on accuracy in production design or acting.
 
-<a id="latest-committed-memory-segment-125-node-887"></a>
+<a id="latest-committed-memory-segment-144-node-887"></a>
 
 - **887** · clip 67: The instruction to 'up my props' indicates preparation for a physical shoot or performance is imminent.
 
-<a id="latest-committed-memory-segment-125-node-888"></a>
+<a id="latest-committed-memory-segment-144-node-888"></a>
 
 - **888** · clip 67: The sudden blurring of faces suggests privacy protection measures were applied post-recording or during processing.
 
-<a id="latest-committed-memory-segment-125-node-902"></a>
+<a id="latest-committed-memory-segment-144-node-902"></a>
 
 - **902** · clip 68: The group appears to be engaged in a collaborative activity or rehearsal session, indicated by the presence of 'training photos' found in the suitcase.
 
-<a id="latest-committed-memory-segment-125-node-903"></a>
+<a id="latest-committed-memory-segment-144-node-903"></a>
 
 - **903** · clip 68: The exchange of cards suggests a social or celebratory element within the professional or creative setting.
 
-<a id="latest-committed-memory-segment-125-node-904"></a>
+<a id="latest-committed-memory-segment-144-node-904"></a>
 
 - **904** · clip 68: The conversation regarding the 'tool' or item in the bag implies a discussion about equipment or props used in the activity.
 
-<a id="latest-committed-memory-segment-125-node-910"></a>
+<a id="latest-committed-memory-segment-144-node-910"></a>
 
-- **910** · clip 69: Speaker &lt;voice_386&gt; reports that Sunny purchased an item but it has not arrived yet.  **Links:** ↔ [386](#latest-committed-memory-segment-125-node-386)
+- **910** · clip 69: Speaker &lt;voice_386&gt; reports that Sunny purchased an item but it has not arrived yet.  **Links:** ↔ [386](#latest-committed-memory-segment-144-node-386)
 
-<a id="latest-committed-memory-segment-125-node-911"></a>
+<a id="latest-committed-memory-segment-144-node-911"></a>
 
 - **911** · clip 69: The group appears to be preparing for a production given the clapperboard on the table.
 
-<a id="latest-committed-memory-segment-125-node-919"></a>
+<a id="latest-committed-memory-segment-144-node-919"></a>
 
-- **919** · clip 70: &lt;voice_912&gt; and &lt;voice_913&gt; represent the speaker MAI who confirms the presence of a group of three people.  **Links:** ↔ [912](#latest-committed-memory-segment-125-node-912) · ↔ [913](#latest-committed-memory-segment-125-node-913)
+- **919** · clip 70: &lt;voice_912&gt; and &lt;voice_913&gt; represent the speaker MAI who confirms the presence of a group of three people.  **Links:** ↔ [912](#latest-committed-memory-segment-144-node-912) · ↔ [913](#latest-committed-memory-segment-144-node-913)
 
-<a id="latest-committed-memory-segment-125-node-920"></a>
+<a id="latest-committed-memory-segment-144-node-920"></a>
 
 - **920** · clip 70: No face features were provided to visually correlate with the voice IDs.
 
-<a id="latest-committed-memory-segment-125-node-928"></a>
+<a id="latest-committed-memory-segment-144-node-928"></a>
 
 - **928** · clip 71: The setting appears to be a film production environment, evidenced by the clapperboard and whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-929"></a>
+<a id="latest-committed-memory-segment-144-node-929"></a>
 
 - **929** · clip 71: The woman in black seems to be coordinating or preparing materials at the table.
 
-<a id="latest-committed-memory-segment-125-node-930"></a>
+<a id="latest-committed-memory-segment-144-node-930"></a>
 
 - **930** · clip 71: Multiple participants are present, indicating a collaborative meeting or rehearsal.
 
-<a id="latest-committed-memory-segment-125-node-938"></a>
+<a id="latest-committed-memory-segment-144-node-938"></a>
 
 - **938** · clip 72: The presence of a clapperboard and scripts suggests a film production or rehearsal environment.
 
-<a id="latest-committed-memory-segment-125-node-939"></a>
+<a id="latest-committed-memory-segment-144-node-939"></a>
 
 - **939** · clip 72: The camera wearer remains focused on their device while the group interacts around the table.
 
-<a id="latest-committed-memory-segment-125-node-948"></a>
+<a id="latest-committed-memory-segment-144-node-948"></a>
 
 - **948** · clip 73: The presence of a clapperboard and organized props suggests the group is preparing for a film shoot or similar production event.
 
-<a id="latest-committed-memory-segment-125-node-949"></a>
+<a id="latest-committed-memory-segment-144-node-949"></a>
 
-- **949** · clip 73: The exchange between &lt;voice_430&gt; and MAI regarding cancellation indicates a discussion about scheduling or event logistics.  **Links:** ↔ [430](#latest-committed-memory-segment-125-node-430)
+- **949** · clip 73: The exchange between &lt;voice_430&gt; and MAI regarding cancellation indicates a discussion about scheduling or event logistics.  **Links:** ↔ [430](#latest-committed-memory-segment-144-node-430)
 
-<a id="latest-committed-memory-segment-125-node-950"></a>
+<a id="latest-committed-memory-segment-144-node-950"></a>
 
 - **950** · clip 73: No facial features were provided to definitively link the voice IDs to specific individuals in the visual frames.
 
-<a id="latest-committed-memory-segment-125-node-956"></a>
+<a id="latest-committed-memory-segment-144-node-956"></a>
 
-- **956** · clip 74: &lt;voice_560&gt; is explaining the composition of a DIY seed paper project involving recycled coffee cups and sunflower seeds.  **Links:** ↔ [560](#latest-committed-memory-segment-125-node-560)
+- **956** · clip 74: &lt;voice_560&gt; is explaining the composition of a DIY seed paper project involving recycled coffee cups and sunflower seeds.  **Links:** ↔ [560](#latest-committed-memory-segment-144-node-560)
 
-<a id="latest-committed-memory-segment-125-node-957"></a>
+<a id="latest-committed-memory-segment-144-node-957"></a>
 
 - **957** · clip 74: The participants appear to be engaged in a collaborative crafting session.
 
-<a id="latest-committed-memory-segment-125-node-968"></a>
+<a id="latest-committed-memory-segment-144-node-968"></a>
 
 - **968** · clip 75: The group is participating in a collaborative activity, possibly a film production or game session indicated by the clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-969"></a>
+<a id="latest-committed-memory-segment-144-node-969"></a>
 
 - **969** · clip 75: There is a structured workflow involving specific tasks and subsequent financial compensation.
 
-<a id="latest-committed-memory-segment-125-node-970"></a>
+<a id="latest-committed-memory-segment-144-node-970"></a>
 
 - **970** · clip 75: The atmosphere appears casual yet focused on the creative process.
 
-<a id="latest-committed-memory-segment-125-node-993"></a>
+<a id="latest-committed-memory-segment-144-node-993"></a>
 
 - **993** · clip 76: The participants are evaluating a design concept centered around eco-friendly seed chips.
 
-<a id="latest-committed-memory-segment-125-node-994"></a>
+<a id="latest-committed-memory-segment-144-node-994"></a>
 
 - **994** · clip 76: There is a consensus among the group regarding the environmental benefits and visual appeal of the proposed material.
 
-<a id="latest-committed-memory-segment-125-node-995"></a>
+<a id="latest-committed-memory-segment-144-node-995"></a>
 
 - **995** · clip 76: The discussion focuses on branding details, specifically incorporating logos and text.
 
-<a id="latest-committed-memory-segment-125-node-996"></a>
+<a id="latest-committed-memory-segment-144-node-996"></a>
 
 - **996** · clip 76: The final plan involves framing the selected design elements.
 
-<a id="latest-committed-memory-segment-125-node-1004"></a>
+<a id="latest-committed-memory-segment-144-node-1004"></a>
 
 - **1004** · clip 77: The group appears to be engaged in a collaborative session or meeting, evidenced by the clapperboard and focused discussion.
 
-<a id="latest-committed-memory-segment-125-node-1005"></a>
+<a id="latest-committed-memory-segment-144-node-1005"></a>
 
 - **1005** · clip 77: A conversation regarding a puzzle is occurring, indicating a potential activity or project review is taking place.
 
-<a id="latest-committed-memory-segment-125-node-1014"></a>
+<a id="latest-committed-memory-segment-144-node-1014"></a>
 
-- **1014** · clip 78: Speaker &lt;voice_186&gt; is leading a discussion about a creative process involving stitching or assembling elements.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **1014** · clip 78: Speaker &lt;voice_186&gt; is leading a discussion about a creative process involving stitching or assembling elements.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-1015"></a>
+<a id="latest-committed-memory-segment-144-node-1015"></a>
 
 - **1015** · clip 78: The group appears to be collaborating on a project, indicated by the presence of a clapperboard on the table.
 
-<a id="latest-committed-memory-segment-125-node-1016"></a>
+<a id="latest-committed-memory-segment-144-node-1016"></a>
 
-- **1016** · clip 78: Speaker &lt;voice_112&gt; offers feedback on personal appearance during the meeting.  **Links:** ↔ [112](#latest-committed-memory-segment-125-node-112)
+- **1016** · clip 78: Speaker &lt;voice_112&gt; offers feedback on personal appearance during the meeting.  **Links:** ↔ [112](#latest-committed-memory-segment-144-node-112)
 
-<a id="latest-committed-memory-segment-125-node-1026"></a>
+<a id="latest-committed-memory-segment-144-node-1026"></a>
 
-- **1026** · clip 79: &lt;voice_186&gt; intends to distribute narcissus bulbs as a reward for the participants.  **Links:** ↔ [186](#latest-committed-memory-segment-125-node-186)
+- **1026** · clip 79: &lt;voice_186&gt; intends to distribute narcissus bulbs as a reward for the participants.  **Links:** ↔ [186](#latest-committed-memory-segment-144-node-186)
 
-<a id="latest-committed-memory-segment-125-node-1027"></a>
+<a id="latest-committed-memory-segment-144-node-1027"></a>
 
 - **1027** · clip 79: The choice of narcissus bulbs is based on their resilience and ease of growth.
 
-<a id="latest-committed-memory-segment-125-node-1028"></a>
+<a id="latest-committed-memory-segment-144-node-1028"></a>
 
 - **1028** · clip 79: The event appears to be a collaborative session focused on plant care or a similar hobby.
 
-<a id="latest-committed-memory-segment-125-node-1040"></a>
+<a id="latest-committed-memory-segment-144-node-1040"></a>
 
 - **1040** · clip 80: The presence of the clapperboard and the discussion about plans suggests a collaborative work session or rehearsal.
 
-<a id="latest-committed-memory-segment-125-node-1041"></a>
+<a id="latest-committed-memory-segment-144-node-1041"></a>
 
 - **1041** · clip 80: The standing individual appears to be leading the discussion regarding the project plan and props.
 
-<a id="latest-committed-memory-segment-125-node-1042"></a>
+<a id="latest-committed-memory-segment-144-node-1042"></a>
 
 - **1042** · clip 80: The mention of specific props like a 'water balloon' and 'flower bouquet' indicates preparation for a specific event or performance.
 
-<a id="latest-committed-memory-segment-125-node-1043"></a>
+<a id="latest-committed-memory-segment-144-node-1043"></a>
 
 - **1043** · clip 80: The seated individual on the left eventually shows signs of fatigue or disengagement during the meeting.
 
-<a id="latest-committed-memory-segment-125-node-1057"></a>
+<a id="latest-committed-memory-segment-144-node-1057"></a>
 
 - **1057** · clip 81: The group appears to be coordinating a project involving planting or a subscription service related to plants.
 
-<a id="latest-committed-memory-segment-125-node-1058"></a>
+<a id="latest-committed-memory-segment-144-node-1058"></a>
 
 - **1058** · clip 81: MAI is the primary speaker driving the discussion about the specific plans and brands involved.
 
-<a id="latest-committed-memory-segment-125-node-1059"></a>
+<a id="latest-committed-memory-segment-144-node-1059"></a>
 
 - **1059** · clip 81: The setting includes filming equipment (clapperboard), suggesting a production environment.
 
-<a id="latest-committed-memory-segment-125-node-1068"></a>
+<a id="latest-committed-memory-segment-144-node-1068"></a>
 
 - **1068** · clip 82: The participants are brainstorming concepts related to business or location ideas, referencing specific types of venues.
 
-<a id="latest-committed-memory-segment-125-node-1069"></a>
+<a id="latest-committed-memory-segment-144-node-1069"></a>
 
 - **1069** · clip 82: The presence of a clapperboard suggests a filming project or rehearsal is taking place.
 
-<a id="latest-committed-memory-segment-125-node-1070"></a>
+<a id="latest-committed-memory-segment-144-node-1070"></a>
 
-- **1070** · clip 82: Voice &lt;voice_468&gt; provides the primary details regarding the discussed topics.  **Links:** ↔ [468](#latest-committed-memory-segment-125-node-468)
+- **1070** · clip 82: Voice &lt;voice_468&gt; provides the primary details regarding the discussed topics.  **Links:** ↔ [468](#latest-committed-memory-segment-144-node-468)
 
-<a id="latest-committed-memory-segment-125-node-1094"></a>
+<a id="latest-committed-memory-segment-144-node-1094"></a>
 
 - **1094** · clip 83: The participants are engaged in a discussion regarding props and scripts, indicated by the clapperboard and card handling.
 
-<a id="latest-committed-memory-segment-125-node-1095"></a>
+<a id="latest-committed-memory-segment-144-node-1095"></a>
 
-- **1095** · clip 83: MAI (&lt;voice_973&gt;, &lt;voice_870&gt;, &lt;voice_1071&gt;, &lt;voice_364&gt;, &lt;voice_1072&gt;, &lt;voice_1073&gt;, &lt;voice_1074&gt;, &lt;voice_1075&gt;, &lt;voice_1076&gt;, &lt;voice_366&gt;) is the primary speaker providing instructions or questions.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364) · ↔ [366](#latest-committed-memory-segment-125-node-366) · ↔ [870](#latest-committed-memory-segment-125-node-870) · ↔ [973](#latest-committed-memory-segment-125-node-973) · ↔ [1071](#latest-committed-memory-segment-125-node-1071) · ↔ [1072](#latest-committed-memory-segment-125-node-1072) · ↔ [1073](#latest-committed-memory-segment-125-node-1073) · ↔ [1074](#latest-committed-memory-segment-125-node-1074) · ↔ [1075](#latest-committed-memory-segment-125-node-1075) · ↔ [1076](#latest-committed-memory-segment-125-node-1076)
+- **1095** · clip 83: MAI (&lt;voice_973&gt;, &lt;voice_870&gt;, &lt;voice_1071&gt;, &lt;voice_364&gt;, &lt;voice_1072&gt;, &lt;voice_1073&gt;, &lt;voice_1074&gt;, &lt;voice_1075&gt;, &lt;voice_1076&gt;, &lt;voice_366&gt;) is the primary speaker providing instructions or questions.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364) · ↔ [366](#latest-committed-memory-segment-144-node-366) · ↔ [870](#latest-committed-memory-segment-144-node-870) · ↔ [973](#latest-committed-memory-segment-144-node-973) · ↔ [1071](#latest-committed-memory-segment-144-node-1071) · ↔ [1072](#latest-committed-memory-segment-144-node-1072) · ↔ [1073](#latest-committed-memory-segment-144-node-1073) · ↔ [1074](#latest-committed-memory-segment-144-node-1074) · ↔ [1075](#latest-committed-memory-segment-144-node-1075) · ↔ [1076](#latest-committed-memory-segment-144-node-1076)
 
-<a id="latest-committed-memory-segment-125-node-1096"></a>
+<a id="latest-committed-memory-segment-144-node-1096"></a>
 
 - **1096** · clip 83: The standing woman is preparing materials, including flowers and writing on a whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1097"></a>
+<a id="latest-committed-memory-segment-144-node-1097"></a>
 
 - **1097** · clip 83: Visual identification of individuals is obscured due to face blurring.
 
-<a id="latest-committed-memory-segment-125-node-1106"></a>
+<a id="latest-committed-memory-segment-144-node-1106"></a>
 
-- **1106** · clip 84: Speaker &lt;voice_468&gt; explains that items can be stories or collections and instructs everyone to create a small PPT for each item.  **Links:** ↔ [468](#latest-committed-memory-segment-125-node-468)
+- **1106** · clip 84: Speaker &lt;voice_468&gt; explains that items can be stories or collections and instructs everyone to create a small PPT for each item.  **Links:** ↔ [468](#latest-committed-memory-segment-144-node-468)
 
-<a id="latest-committed-memory-segment-125-node-1107"></a>
+<a id="latest-committed-memory-segment-144-node-1107"></a>
 
-- **1107** · clip 84: Speaker &lt;voice_1098&gt; asks for confirmation regarding the creation of a PPT.  **Links:** ↔ [1098](#latest-committed-memory-segment-125-node-1098)
+- **1107** · clip 84: Speaker &lt;voice_1098&gt; asks for confirmation regarding the creation of a PPT.  **Links:** ↔ [1098](#latest-committed-memory-segment-144-node-1098)
 
-<a id="latest-committed-memory-segment-125-node-1108"></a>
+<a id="latest-committed-memory-segment-144-node-1108"></a>
 
-- **1108** · clip 84: Speaker &lt;voice_1099&gt; inquires whether the current activity is a work corner game.  **Links:** ↔ [1099](#latest-committed-memory-segment-125-node-1099)
+- **1108** · clip 84: Speaker &lt;voice_1099&gt; inquires whether the current activity is a work corner game.  **Links:** ↔ [1099](#latest-committed-memory-segment-144-node-1099)
 
-<a id="latest-committed-memory-segment-125-node-1109"></a>
+<a id="latest-committed-memory-segment-144-node-1109"></a>
 
-- **1109** · clip 84: Speaker &lt;voice_366&gt; mentions an auction and asks about the tents that have been brought in.  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1109** · clip 84: Speaker &lt;voice_366&gt; mentions an auction and asks about the tents that have been brought in.  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1110"></a>
+<a id="latest-committed-memory-segment-144-node-1110"></a>
 
 - **1110** · clip 84: The group is discussing a project involving item presentations and potential auctions.
 
-<a id="latest-committed-memory-segment-125-node-1121"></a>
+<a id="latest-committed-memory-segment-144-node-1121"></a>
 
 - **1121** · clip 85: The group is conducting a session that involves both storytelling and the valuation of items or concepts.
 
-<a id="latest-committed-memory-segment-125-node-1122"></a>
+<a id="latest-committed-memory-segment-144-node-1122"></a>
 
-- **1122** · clip 85: &lt;voice_366&gt; leads the discussion, focusing on the transition from narrative to economic value.  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1122** · clip 85: &lt;voice_366&gt; leads the discussion, focusing on the transition from narrative to economic value.  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1123"></a>
+<a id="latest-committed-memory-segment-144-node-1123"></a>
 
 - **1123** · clip 85: The presence of a clapperboard indicates a formal recording or production environment.
 
-<a id="latest-committed-memory-segment-125-node-1133"></a>
+<a id="latest-committed-memory-segment-144-node-1133"></a>
 
 - **1133** · clip 86: The group is discussing a proposed economic or trading system involving storytelling and item exchange.
 
-<a id="latest-committed-memory-segment-125-node-1134"></a>
+<a id="latest-committed-memory-segment-144-node-1134"></a>
 
 - **1134** · clip 86: The participants agree on the basic framework of converting stories into currency for acquiring personal items.
 
-<a id="latest-committed-memory-segment-125-node-1135"></a>
+<a id="latest-committed-memory-segment-144-node-1135"></a>
 
 - **1135** · clip 86: There is a structured method for listing and pricing items through explanations and bidding.
 
-<a id="latest-committed-memory-segment-125-node-1149"></a>
+<a id="latest-committed-memory-segment-144-node-1149"></a>
 
-- **1149** · clip 87: Speaker &lt;voice_366&gt; describes a process involving exchanging money and invoices for auction purposes.  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1149** · clip 87: Speaker &lt;voice_366&gt; describes a process involving exchanging money and invoices for auction purposes.  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1150"></a>
+<a id="latest-committed-memory-segment-144-node-1150"></a>
 
-- **1150** · clip 87: Speaker &lt;voice_484&gt; acknowledges the creation of an economic system by another participant.  **Links:** ↔ [484](#latest-committed-memory-segment-125-node-484)
+- **1150** · clip 87: Speaker &lt;voice_484&gt; acknowledges the creation of an economic system by another participant.  **Links:** ↔ [484](#latest-committed-memory-segment-144-node-484)
 
-<a id="latest-committed-memory-segment-125-node-1151"></a>
+<a id="latest-committed-memory-segment-144-node-1151"></a>
 
 - **1151** · clip 87: The group consensus indicates that the items discussed are commodities used within this system.
 
-<a id="latest-committed-memory-segment-125-node-1152"></a>
+<a id="latest-committed-memory-segment-144-node-1152"></a>
 
 - **1152** · clip 87: The discussion involves verifying and judging specific documents or items on the table.
 
-<a id="latest-committed-memory-segment-125-node-1167"></a>
+<a id="latest-committed-memory-segment-144-node-1167"></a>
 
 - **1167** · clip 88: MAI is the primary organizer planning an auction for handmade art products.
 
-<a id="latest-committed-memory-segment-125-node-1168"></a>
+<a id="latest-committed-memory-segment-144-node-1168"></a>
 
 - **1168** · clip 88: The group is evaluating sales channels, with a specific mention of JD.com as a platform.
 
-<a id="latest-committed-memory-segment-125-node-1169"></a>
+<a id="latest-committed-memory-segment-144-node-1169"></a>
 
 - **1169** · clip 88: Preparations are underway for a scheduled event where customers will be invited.
 
-<a id="latest-committed-memory-segment-125-node-1181"></a>
+<a id="latest-committed-memory-segment-144-node-1181"></a>
 
 - **1181** · clip 89: The group is planning refreshments, specifically coffee, to entertain guests in a casual manner.
 
-<a id="latest-committed-memory-segment-125-node-1182"></a>
+<a id="latest-committed-memory-segment-144-node-1182"></a>
 
 - **1182** · clip 89: The atmosphere appears relaxed and informal, described as resembling a small party.
 
-<a id="latest-committed-memory-segment-125-node-1183"></a>
+<a id="latest-committed-memory-segment-144-node-1183"></a>
 
 - **1183** · clip 89: No facial features were provided to confirm the identity of the speakers visually.
 
-<a id="latest-committed-memory-segment-125-node-1197"></a>
+<a id="latest-committed-memory-segment-144-node-1197"></a>
 
-- **1197** · clip 90: MAI (&lt;voice_1184&gt;, &lt;voice_443&gt;, &lt;voice_484&gt;, &lt;voice_398&gt;, &lt;voice_1185&gt;, &lt;voice_1170&gt;, &lt;voice_1186&gt;) is coordinating the logistics for an event that includes performance, catering, and market activities.  **Links:** ↔ [398](#latest-committed-memory-segment-125-node-398) · ↔ [443](#latest-committed-memory-segment-125-node-443) · ↔ [484](#latest-committed-memory-segment-125-node-484) · ↔ [1170](#latest-committed-memory-segment-125-node-1170) · ↔ [1184](#latest-committed-memory-segment-125-node-1184) · ↔ [1185](#latest-committed-memory-segment-125-node-1185) · ↔ [1186](#latest-committed-memory-segment-125-node-1186)
+- **1197** · clip 90: MAI (&lt;voice_1184&gt;, &lt;voice_443&gt;, &lt;voice_484&gt;, &lt;voice_398&gt;, &lt;voice_1185&gt;, &lt;voice_1170&gt;, &lt;voice_1186&gt;) is coordinating the logistics for an event that includes performance, catering, and market activities.  **Links:** ↔ [398](#latest-committed-memory-segment-144-node-398) · ↔ [443](#latest-committed-memory-segment-144-node-443) · ↔ [484](#latest-committed-memory-segment-144-node-484) · ↔ [1170](#latest-committed-memory-segment-144-node-1170) · ↔ [1184](#latest-committed-memory-segment-144-node-1184) · ↔ [1185](#latest-committed-memory-segment-144-node-1185) · ↔ [1186](#latest-committed-memory-segment-144-node-1186)
 
-<a id="latest-committed-memory-segment-125-node-1198"></a>
+<a id="latest-committed-memory-segment-144-node-1198"></a>
 
 - **1198** · clip 90: The group is determining the schedule and necessary provisions such as food and drinks for the afternoon session.
 
-<a id="latest-committed-memory-segment-125-node-1199"></a>
+<a id="latest-committed-memory-segment-144-node-1199"></a>
 
 - **1199** · clip 90: No face features were provided to link visual identities to the voice ID &lt;voice_*&gt;.
 
-<a id="latest-committed-memory-segment-125-node-1205"></a>
+<a id="latest-committed-memory-segment-144-node-1205"></a>
 
 - **1205** · clip 91: The participants are collaborating on scheduling and catering details for a future period.
 
-<a id="latest-committed-memory-segment-125-node-1206"></a>
+<a id="latest-committed-memory-segment-144-node-1206"></a>
 
 - **1206** · clip 91: The standing individual leads the discussion, indicating a facilitative role in the meeting.
 
-<a id="latest-committed-memory-segment-125-node-1217"></a>
+<a id="latest-committed-memory-segment-144-node-1217"></a>
 
-- **1217** · clip 92: The participant identified as &lt;voice_1207&gt; is coordinating plans for an outdoor activity contingent on weather conditions.  **Links:** ↔ [1207](#latest-committed-memory-segment-125-node-1207)
+- **1217** · clip 92: The participant identified as &lt;voice_1207&gt; is coordinating plans for an outdoor activity contingent on weather conditions.  **Links:** ↔ [1207](#latest-committed-memory-segment-144-node-1207)
 
-<a id="latest-committed-memory-segment-125-node-1218"></a>
+<a id="latest-committed-memory-segment-144-node-1218"></a>
 
-- **1218** · clip 92: The speaker &lt;voice_364&gt; manages logistics for shopping and potential food preparation like barbecuing.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1218** · clip 92: The speaker &lt;voice_364&gt; manages logistics for shopping and potential food preparation like barbecuing.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1231"></a>
+<a id="latest-committed-memory-segment-144-node-1231"></a>
 
 - **1231** · clip 93: The group appears to be rehearsing or preparing for a production, indicated by the presence of a clapperboard and scripts.
 
-<a id="latest-committed-memory-segment-125-node-1232"></a>
+<a id="latest-committed-memory-segment-144-node-1232"></a>
 
 - **1232** · clip 93: The conversation involves practical details about meal preparation, specifically charcoal and cutting meat, suggesting a break or catering arrangement.
 
-<a id="latest-committed-memory-segment-125-node-1233"></a>
+<a id="latest-committed-memory-segment-144-node-1233"></a>
 
 - **1233** · clip 93: The participants discuss knife usage, indicating a shared activity involving food preparation.
 
-<a id="latest-committed-memory-segment-125-node-1251"></a>
+<a id="latest-committed-memory-segment-144-node-1251"></a>
 
 - **1251** · clip 94: The group is conducting a rehearsal or workshop session involving a script and props.
 
-<a id="latest-committed-memory-segment-125-node-1252"></a>
+<a id="latest-committed-memory-segment-144-node-1252"></a>
 
 - **1252** · clip 94: The dialogue suggests they are discussing a scene involving food and drink preparation.
 
-<a id="latest-committed-memory-segment-125-node-1253"></a>
+<a id="latest-committed-memory-segment-144-node-1253"></a>
 
 - **1253** · clip 94: The person in the white shirt appears to be leading the discussion or directing the scene.
 
-<a id="latest-committed-memory-segment-125-node-1269"></a>
+<a id="latest-committed-memory-segment-144-node-1269"></a>
 
 - **1269** · clip 95: The group is rehearsing or planning a production titled 'Ego Life' based on the clapperboard.
 
-<a id="latest-committed-memory-segment-125-node-1270"></a>
+<a id="latest-committed-memory-segment-144-node-1270"></a>
 
 - **1270** · clip 95: They are debating practical solutions for prop preparation involving freezing and water treatment.
 
-<a id="latest-committed-memory-segment-125-node-1271"></a>
+<a id="latest-committed-memory-segment-144-node-1271"></a>
 
 - **1271** · clip 95: The conversation shifts from logistical planning to questioning the fundamental nature of their activity.
 
-<a id="latest-committed-memory-segment-125-node-1280"></a>
+<a id="latest-committed-memory-segment-144-node-1280"></a>
 
 - **1280** · clip 96: The group is organizing a structured timeline for a collaborative activity, potentially involving filming given the clapperboard on the table.
 
-<a id="latest-committed-memory-segment-125-node-1281"></a>
+<a id="latest-committed-memory-segment-144-node-1281"></a>
 
 - **1281** · clip 96: The speaker argues that unlike a large market where free movement is possible, the current small space necessitates defined time slots for each participant.
 
-<a id="latest-committed-memory-segment-125-node-1282"></a>
+<a id="latest-committed-memory-segment-144-node-1282"></a>
 
 - **1282** · clip 96: Multiple individuals are participating in the discussion, with a new member joining the scene later in the sequence.
 
-<a id="latest-committed-memory-segment-125-node-1289"></a>
+<a id="latest-committed-memory-segment-144-node-1289"></a>
 
-- **1289** · clip 97: Speaker &lt;voice_364&gt; states that the preparations were done over the past few days and asks if others should dance instead of wasting time on short dramas.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1289** · clip 97: Speaker &lt;voice_364&gt; states that the preparations were done over the past few days and asks if others should dance instead of wasting time on short dramas.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1290"></a>
+<a id="latest-committed-memory-segment-144-node-1290"></a>
 
-- **1290** · clip 97: Speaker &lt;voice_276&gt; asks if they should dance alone.  **Links:** ↔ [276](#latest-committed-memory-segment-125-node-276)
+- **1290** · clip 97: Speaker &lt;voice_276&gt; asks if they should dance alone.  **Links:** ↔ [276](#latest-committed-memory-segment-144-node-276)
 
-<a id="latest-committed-memory-segment-125-node-1291"></a>
+<a id="latest-committed-memory-segment-144-node-1291"></a>
 
-- **1291** · clip 97: Speaker &lt;voice_737&gt; confirms that Lin Han can also dance.  **Links:** ↔ [737](#latest-committed-memory-segment-125-node-737)
+- **1291** · clip 97: Speaker &lt;voice_737&gt; confirms that Lin Han can also dance.  **Links:** ↔ [737](#latest-committed-memory-segment-144-node-737)
 
-<a id="latest-committed-memory-segment-125-node-1292"></a>
+<a id="latest-committed-memory-segment-144-node-1292"></a>
 
-- **1292** · clip 97: Speaker &lt;voice_500&gt; asks if Shu can also dance.  **Links:** ↔ [500](#latest-committed-memory-segment-125-node-500)
+- **1292** · clip 97: Speaker &lt;voice_500&gt; asks if Shu can also dance.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
 
-<a id="latest-committed-memory-segment-125-node-1293"></a>
+<a id="latest-committed-memory-segment-144-node-1293"></a>
 
-- **1293** · clip 97: Speaker &lt;voice_841&gt; suggests they could proceed if there is a ready-made script available.  **Links:** ↔ [841](#latest-committed-memory-segment-125-node-841)
+- **1293** · clip 97: Speaker &lt;voice_841&gt; suggests they could proceed if there is a ready-made script available.  **Links:** ↔ [841](#latest-committed-memory-segment-144-node-841)
 
-<a id="latest-committed-memory-segment-125-node-1300"></a>
+<a id="latest-committed-memory-segment-144-node-1300"></a>
 
 - **1300** · clip 98: The setup with lighting rigs and a projector indicates a film or media production environment.
 
-<a id="latest-committed-memory-segment-125-node-1301"></a>
+<a id="latest-committed-memory-segment-144-node-1301"></a>
 
 - **1301** · clip 98: The group appears to be collaborating on a project involving the items on the table.
 
-<a id="latest-committed-memory-segment-125-node-1312"></a>
+<a id="latest-committed-memory-segment-144-node-1312"></a>
 
 - **1312** · clip 99: The participants appear to be planning a creative performance or skit, indicated by the presence of a clapperboard and brainstorming dialogue.
 
-<a id="latest-committed-memory-segment-125-node-1313"></a>
+<a id="latest-committed-memory-segment-144-node-1313"></a>
 
 - **1313** · clip 99: The discussion involves evaluating different performance themes, specifically comparing acting and dancing.
 
-<a id="latest-committed-memory-segment-125-node-1314"></a>
+<a id="latest-committed-memory-segment-144-node-1314"></a>
 
 - **1314** · clip 99: Practical considerations regarding props, such as glasses, are integrated into the planning process.
 
-<a id="latest-committed-memory-segment-125-node-1333"></a>
+<a id="latest-committed-memory-segment-144-node-1333"></a>
 
 - **1333** · clip 100: The group appears to be a production team rehearsing or planning a shoot, evidenced by the clapperboard and lighting gear.
 
-<a id="latest-committed-memory-segment-125-node-1334"></a>
+<a id="latest-committed-memory-segment-144-node-1334"></a>
 
 - **1334** · clip 100: The standing woman in white seems to be coordinating the activity or props.
 
-<a id="latest-committed-memory-segment-125-node-1335"></a>
+<a id="latest-committed-memory-segment-144-node-1335"></a>
 
 - **1335** · clip 100: The conversation indicates logistical discussions regarding timing, budget (buying items), and content creation (storytelling).
 
-<a id="latest-committed-memory-segment-125-node-1336"></a>
+<a id="latest-committed-memory-segment-144-node-1336"></a>
 
 - **1336** · clip 100: No direct visual confirmation links specific voice IDs to the visible individuals due to obscured faces.
 
-<a id="latest-committed-memory-segment-125-node-1340"></a>
+<a id="latest-committed-memory-segment-144-node-1340"></a>
 
 - **1340** · clip 101: The presence of a clapperboard and whiteboard suggests the group is involved in a production or rehearsal process.
 
-<a id="latest-committed-memory-segment-125-node-1341"></a>
+<a id="latest-committed-memory-segment-144-node-1341"></a>
 
-- **1341** · clip 101: The discussion regarding time intervals by &lt;voice_364&gt; indicates coordination of schedules or session lengths among the participants.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1341** · clip 101: The discussion regarding time intervals by &lt;voice_364&gt; indicates coordination of schedules or session lengths among the participants.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1353"></a>
+<a id="latest-committed-memory-segment-144-node-1353"></a>
 
-- **1353** · clip 102: The speaker &lt;voice_366&gt; defines the primary objective of the gathering as an auction process.  **Links:** ↔ [366](#latest-committed-memory-segment-125-node-366)
+- **1353** · clip 102: The speaker &lt;voice_366&gt; defines the primary objective of the gathering as an auction process.  **Links:** ↔ [366](#latest-committed-memory-segment-144-node-366)
 
-<a id="latest-committed-memory-segment-125-node-1354"></a>
+<a id="latest-committed-memory-segment-144-node-1354"></a>
 
 - **1354** · clip 102: Time management is a critical component, with a target of five minutes per participant.
 
-<a id="latest-committed-memory-segment-125-node-1355"></a>
+<a id="latest-committed-memory-segment-144-node-1355"></a>
 
 - **1355** · clip 102: The speaker addresses potential issues with time control and suggests alternative methods for acquisition.
 
-<a id="latest-committed-memory-segment-125-node-1356"></a>
+<a id="latest-committed-memory-segment-144-node-1356"></a>
 
 - **1356** · clip 102: The discussion revolves around the mechanics of the auction and how proceeds are obtained.
 
-<a id="latest-committed-memory-segment-125-node-1365"></a>
+<a id="latest-committed-memory-segment-144-node-1365"></a>
 
-- **1365** · clip 103: Speaker `&lt;voice_637&gt;` discusses a filming schedule estimating 45 minutes for 9 people at 5 minutes each.  **Links:** ↔ [637](#latest-committed-memory-segment-125-node-637)
+- **1365** · clip 103: Speaker `&lt;voice_637&gt;` discusses a filming schedule estimating 45 minutes for 9 people at 5 minutes each.  **Links:** ↔ [637](#latest-committed-memory-segment-144-node-637)
 
-<a id="latest-committed-memory-segment-125-node-1366"></a>
+<a id="latest-committed-memory-segment-144-node-1366"></a>
 
-- **1366** · clip 103: Speaker `&lt;voice_517&gt;` mentions distributing coins and playing a game involving shaking dice.  **Links:** ↔ [517](#latest-committed-memory-segment-125-node-517)
+- **1366** · clip 103: Speaker `&lt;voice_517&gt;` mentions distributing coins and playing a game involving shaking dice.  **Links:** ↔ [517](#latest-committed-memory-segment-144-node-517)
 
-<a id="latest-committed-memory-segment-125-node-1367"></a>
+<a id="latest-committed-memory-segment-144-node-1367"></a>
 
-- **1367** · clip 103: Speaker `&lt;voice_364&gt;` confirms agreement to the proposed game.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1367** · clip 103: Speaker `&lt;voice_364&gt;` confirms agreement to the proposed game.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1368"></a>
+<a id="latest-committed-memory-segment-144-node-1368"></a>
 
-- **1368** · clip 103: Speaker `&lt;voice_1357&gt;` notes someone arriving at the doorway.  **Links:** ↔ [1357](#latest-committed-memory-segment-125-node-1357)
+- **1368** · clip 103: Speaker `&lt;voice_1357&gt;` notes someone arriving at the doorway.  **Links:** ↔ [1357](#latest-committed-memory-segment-144-node-1357)
 
-<a id="latest-committed-memory-segment-125-node-1369"></a>
+<a id="latest-committed-memory-segment-144-node-1369"></a>
 
 - **1369** · clip 103: The group appears to be coordinating a session involving timing calculations and planned breaks.
 
-<a id="latest-committed-memory-segment-125-node-1383"></a>
+<a id="latest-committed-memory-segment-144-node-1383"></a>
 
 - **1383** · clip 104: The participants are engaged in a rehearsal or game session, evidenced by the clapperboard and focused interaction.
 
-<a id="latest-committed-memory-segment-125-node-1384"></a>
+<a id="latest-committed-memory-segment-144-node-1384"></a>
 
-- **1384** · clip 104: MAI (&lt;voice_1370&gt;, &lt;voice_1371&gt;, &lt;voice_1372&gt;, &lt;voice_1373&gt;, &lt;voice_1156&gt;) establishes the rules of the activity, specifically tying rewards to storytelling.  **Links:** ↔ [1156](#latest-committed-memory-segment-125-node-1156) · ↔ [1370](#latest-committed-memory-segment-125-node-1370) · ↔ [1371](#latest-committed-memory-segment-125-node-1371) · ↔ [1372](#latest-committed-memory-segment-125-node-1372) · ↔ [1373](#latest-committed-memory-segment-125-node-1373)
+- **1384** · clip 104: MAI (&lt;voice_1370&gt;, &lt;voice_1371&gt;, &lt;voice_1372&gt;, &lt;voice_1373&gt;, &lt;voice_1156&gt;) establishes the rules of the activity, specifically tying rewards to storytelling.  **Links:** ↔ [1156](#latest-committed-memory-segment-144-node-1156) · ↔ [1370](#latest-committed-memory-segment-144-node-1370) · ↔ [1371](#latest-committed-memory-segment-144-node-1371) · ↔ [1372](#latest-committed-memory-segment-144-node-1372) · ↔ [1373](#latest-committed-memory-segment-144-node-1373)
 
-<a id="latest-committed-memory-segment-125-node-1385"></a>
+<a id="latest-committed-memory-segment-144-node-1385"></a>
 
 - **1385** · clip 104: The standing individual appears to be taking on a role or demonstrating an action during the session.
 
-<a id="latest-committed-memory-segment-125-node-1402"></a>
+<a id="latest-committed-memory-segment-144-node-1402"></a>
 
 - **1402** · clip 105: The group is organizing a social activity that involves ice-breaking through storytelling and gift exchange.
 
-<a id="latest-committed-memory-segment-125-node-1403"></a>
+<a id="latest-committed-memory-segment-144-node-1403"></a>
 
 - **1403** · clip 105: There is a planned element of hiding items (coins) within the house, suggesting a scavenger hunt or treasure hunt.
 
-<a id="latest-committed-memory-segment-125-node-1404"></a>
+<a id="latest-committed-memory-segment-144-node-1404"></a>
 
 - **1404** · clip 105: The man in the white shirt appears to be the facilitator or host of the session.
 
-<a id="latest-committed-memory-segment-125-node-1405"></a>
+<a id="latest-committed-memory-segment-144-node-1405"></a>
 
 - **1405** · clip 105: The person in the orange shirt joins the group later, integrating into the ongoing activity.
 
-<a id="latest-committed-memory-segment-125-node-1406"></a>
+<a id="latest-committed-memory-segment-144-node-1406"></a>
 
 - **1406** · clip 105: The conversation indicates a casual, friendly atmosphere despite the structured rules being discussed.
 
-<a id="latest-committed-memory-segment-125-node-1429"></a>
+<a id="latest-committed-memory-segment-144-node-1429"></a>
 
 - **1429** · clip 106: The group appears to be participating in a game or quiz session involving tickets and prizes.
 
-<a id="latest-committed-memory-segment-125-node-1430"></a>
+<a id="latest-committed-memory-segment-144-node-1430"></a>
 
 - **1430** · clip 106: The topic of discussion includes World Earth Day and knowledge quizzes.
 
-<a id="latest-committed-memory-segment-125-node-1431"></a>
+<a id="latest-committed-memory-segment-144-node-1431"></a>
 
 - **1431** · clip 106: There is a transition from playing games to discussing product sales.
 
-<a id="latest-committed-memory-segment-125-node-1450"></a>
+<a id="latest-committed-memory-segment-144-node-1450"></a>
 
 - **1450** · clip 107: The group is preparing for a recording or presentation session involving Q&amp;A.
 
-<a id="latest-committed-memory-segment-125-node-1451"></a>
+<a id="latest-committed-memory-segment-144-node-1451"></a>
 
 - **1451** · clip 107: MAI is actively coordinating the setup and props for the event.
 
-<a id="latest-committed-memory-segment-125-node-1452"></a>
+<a id="latest-committed-memory-segment-144-node-1452"></a>
 
 - **1452** · clip 107: There is a discussion regarding the authenticity of the wine on the table.
 
-<a id="latest-committed-memory-segment-125-node-1464"></a>
+<a id="latest-committed-memory-segment-144-node-1464"></a>
 
 - **1464** · clip 108: The setting includes a clapperboard and softbox lights, suggesting a photoshoot or video recording session.
 
-<a id="latest-committed-memory-segment-125-node-1465"></a>
+<a id="latest-committed-memory-segment-144-node-1465"></a>
 
 - **1465** · clip 108: The participants discuss the quality and origin of various objects, specifically referencing stainless steel and manufacturing locations.
 
-<a id="latest-committed-memory-segment-125-node-1466"></a>
+<a id="latest-committed-memory-segment-144-node-1466"></a>
 
 - **1466** · clip 108: No facial features were provided to link the voice tracks to specific individuals.
 
-<a id="latest-committed-memory-segment-125-node-1474"></a>
+<a id="latest-committed-memory-segment-144-node-1474"></a>
 
-- **1474** · clip 109: &lt;voice_468&gt; observes that the handwriting on the documents is aesthetically pleasing.  **Links:** ↔ [468](#latest-committed-memory-segment-125-node-468)
+- **1474** · clip 109: &lt;voice_468&gt; observes that the handwriting on the documents is aesthetically pleasing.  **Links:** ↔ [468](#latest-committed-memory-segment-144-node-468)
 
-<a id="latest-committed-memory-segment-125-node-1475"></a>
+<a id="latest-committed-memory-segment-144-node-1475"></a>
 
-- **1475** · clip 109: &lt;voice_1467&gt; questions whether an English version of the text should be created for international distribution.  **Links:** ↔ [1467](#latest-committed-memory-segment-125-node-1467)
+- **1475** · clip 109: &lt;voice_1467&gt; questions whether an English version of the text should be created for international distribution.  **Links:** ↔ [1467](#latest-committed-memory-segment-144-node-1467)
 
-<a id="latest-committed-memory-segment-125-node-1476"></a>
+<a id="latest-committed-memory-segment-144-node-1476"></a>
 
-- **1476** · clip 109: &lt;voice_112&gt; suggests stopping corrections and simply acknowledging the quality of the handwriting.  **Links:** ↔ [112](#latest-committed-memory-segment-125-node-112)
+- **1476** · clip 109: &lt;voice_112&gt; suggests stopping corrections and simply acknowledging the quality of the handwriting.  **Links:** ↔ [112](#latest-committed-memory-segment-144-node-112)
 
-<a id="latest-committed-memory-segment-125-node-1477"></a>
+<a id="latest-committed-memory-segment-144-node-1477"></a>
 
-- **1477** · clip 109: &lt;voice_364&gt; directs the group to begin writing the timeline and proceeds to suggest modifications.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1477** · clip 109: &lt;voice_364&gt; directs the group to begin writing the timeline and proceeds to suggest modifications.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1478"></a>
+<a id="latest-committed-memory-segment-144-node-1478"></a>
 
-- **1478** · clip 109: &lt;voice_1468&gt; proposes changing certain aspects of the current plan.  **Links:** ↔ [1468](#latest-committed-memory-segment-125-node-1468)
+- **1478** · clip 109: &lt;voice_1468&gt; proposes changing certain aspects of the current plan.  **Links:** ↔ [1468](#latest-committed-memory-segment-144-node-1468)
 
-<a id="latest-committed-memory-segment-125-node-1479"></a>
+<a id="latest-committed-memory-segment-144-node-1479"></a>
 
 - **1479** · clip 109: The participants appear to be coordinating a project that involves bilingual content creation and script refinement.
 
-<a id="latest-committed-memory-segment-125-node-1493"></a>
+<a id="latest-committed-memory-segment-144-node-1493"></a>
 
 - **1493** · clip 110: The group appears to be conducting a film or video production meeting, indicated by the clapperboard and whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1494"></a>
+<a id="latest-committed-memory-segment-144-node-1494"></a>
 
-- **1494** · clip 110: &lt;voice_261&gt;, &lt;voice_782&gt;, &lt;voice_364&gt;, &lt;voice_1480&gt;, &lt;voice_1481&gt;, and &lt;voice_366&gt; are collaborating to define terminology and establish a schedule.  **Links:** ↔ [261](#latest-committed-memory-segment-125-node-261) · ↔ [364](#latest-committed-memory-segment-125-node-364) · ↔ [366](#latest-committed-memory-segment-125-node-366) · ↔ [782](#latest-committed-memory-segment-125-node-782) · ↔ [1480](#latest-committed-memory-segment-125-node-1480) · ↔ [1481](#latest-committed-memory-segment-125-node-1481)
+- **1494** · clip 110: &lt;voice_261&gt;, &lt;voice_782&gt;, &lt;voice_364&gt;, &lt;voice_1480&gt;, &lt;voice_1481&gt;, and &lt;voice_366&gt; are collaborating to define terminology and establish a schedule.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261) · ↔ [364](#latest-committed-memory-segment-144-node-364) · ↔ [366](#latest-committed-memory-segment-144-node-366) · ↔ [782](#latest-committed-memory-segment-144-node-782) · ↔ [1480](#latest-committed-memory-segment-144-node-1480) · ↔ [1481](#latest-committed-memory-segment-144-node-1481)
 
-<a id="latest-committed-memory-segment-125-node-1495"></a>
+<a id="latest-committed-memory-segment-144-node-1495"></a>
 
 - **1495** · clip 110: The discussion involves clarifying technical terms like 'frame word' and aligning on timeline details.
 
-<a id="latest-committed-memory-segment-125-node-1507"></a>
+<a id="latest-committed-memory-segment-144-node-1507"></a>
 
 - **1507** · clip 111: The group is discussing the logistics of an event, specifically entry timing and activities.
 
-<a id="latest-committed-memory-segment-125-node-1508"></a>
+<a id="latest-committed-memory-segment-144-node-1508"></a>
 
-- **1508** · clip 111: &lt;voice_364&gt; proposes a gradual entry schedule from 2 PM to 3 PM.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1508** · clip 111: &lt;voice_364&gt; proposes a gradual entry schedule from 2 PM to 3 PM.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1509"></a>
+<a id="latest-committed-memory-segment-144-node-1509"></a>
 
-- **1509** · clip 111: &lt;voice_1496&gt; identifies the event type as an entrance ceremony.  **Links:** ↔ [1496](#latest-committed-memory-segment-125-node-1496)
+- **1509** · clip 111: &lt;voice_1496&gt; identifies the event type as an entrance ceremony.  **Links:** ↔ [1496](#latest-committed-memory-segment-144-node-1496)
 
-<a id="latest-committed-memory-segment-125-node-1510"></a>
+<a id="latest-committed-memory-segment-144-node-1510"></a>
 
-- **1510** · clip 111: &lt;voice_1497&gt; validates the proposed arrangement.  **Links:** ↔ [1497](#latest-committed-memory-segment-125-node-1497)
+- **1510** · clip 111: &lt;voice_1497&gt; validates the proposed arrangement.  **Links:** ↔ [1497](#latest-committed-memory-segment-144-node-1497)
 
-<a id="latest-committed-memory-segment-125-node-1518"></a>
+<a id="latest-committed-memory-segment-144-node-1518"></a>
 
 - **1518** · clip 112: The presence of a clapperboard and a whiteboard suggests the group is engaged in a collaborative creative project, such as film production or script development.
 
-<a id="latest-committed-memory-segment-125-node-1519"></a>
+<a id="latest-committed-memory-segment-144-node-1519"></a>
 
 - **1519** · clip 112: The participants appear to be working together in a domestic setting, utilizing the available space for their activity.
 
-<a id="latest-committed-memory-segment-125-node-1520"></a>
+<a id="latest-committed-memory-segment-144-node-1520"></a>
 
 - **1520** · clip 112: One individual appears to be taking a leading role in explaining or presenting information regarding the whiteboard.
 
-<a id="latest-committed-memory-segment-125-node-1526"></a>
+<a id="latest-committed-memory-segment-144-node-1526"></a>
 
 - **1526** · clip 113: The group appears to be discussing a schedule or plan involving a specific time.
 
-<a id="latest-committed-memory-segment-125-node-1527"></a>
+<a id="latest-committed-memory-segment-144-node-1527"></a>
 
-- **1527** · clip 113: &lt;voice_364&gt; reflects on the situation as standard human conduct.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1527** · clip 113: &lt;voice_364&gt; reflects on the situation as standard human conduct.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1539"></a>
+<a id="latest-committed-memory-segment-144-node-1539"></a>
 
 - **1539** · clip 114: The presence of a clapperboard and whiteboard indicates the group is engaged in a collaborative project, likely scriptwriting or filming preparation.
 
-<a id="latest-committed-memory-segment-125-node-1540"></a>
+<a id="latest-committed-memory-segment-144-node-1540"></a>
 
-- **1540** · clip 114: MAI (&lt;voice_1528&gt;, &lt;voice_1219&gt;, &lt;voice_1529&gt;, &lt;voice_1530&gt;, &lt;voice_1170&gt;) acts as the primary speaker, leading the conversation regarding a business strategy involving currency acquisition and product distribution.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170) · ↔ [1219](#latest-committed-memory-segment-125-node-1219) · ↔ [1528](#latest-committed-memory-segment-125-node-1528) · ↔ [1529](#latest-committed-memory-segment-125-node-1529) · ↔ [1530](#latest-committed-memory-segment-125-node-1530)
+- **1540** · clip 114: MAI (&lt;voice_1528&gt;, &lt;voice_1219&gt;, &lt;voice_1529&gt;, &lt;voice_1530&gt;, &lt;voice_1170&gt;) acts as the primary speaker, leading the conversation regarding a business strategy involving currency acquisition and product distribution.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170) · ↔ [1219](#latest-committed-memory-segment-144-node-1219) · ↔ [1528](#latest-committed-memory-segment-144-node-1528) · ↔ [1529](#latest-committed-memory-segment-144-node-1529) · ↔ [1530](#latest-committed-memory-segment-144-node-1530)
 
-<a id="latest-committed-memory-segment-125-node-1541"></a>
+<a id="latest-committed-memory-segment-144-node-1541"></a>
 
 - **1541** · clip 114: The casual setting with personal items like a plush toy suggests a relaxed, informal workspace rather than a formal corporate office.
 
-<a id="latest-committed-memory-segment-125-node-1556"></a>
+<a id="latest-committed-memory-segment-144-node-1556"></a>
 
-- **1556** · clip 115: &lt;voice_1542&gt; is coordinating the personnel count for the upcoming shoot.  **Links:** ↔ [1542](#latest-committed-memory-segment-125-node-1542)
+- **1556** · clip 115: &lt;voice_1542&gt; is coordinating the personnel count for the upcoming shoot.  **Links:** ↔ [1542](#latest-committed-memory-segment-144-node-1542)
 
-<a id="latest-committed-memory-segment-125-node-1557"></a>
+<a id="latest-committed-memory-segment-144-node-1557"></a>
 
-- **1557** · clip 115: &lt;voice_1170&gt; sets a time constraint of approximately 40 minutes for the pricing or scheduling discussion.  **Links:** ↔ [1170](#latest-committed-memory-segment-125-node-1170)
+- **1557** · clip 115: &lt;voice_1170&gt; sets a time constraint of approximately 40 minutes for the pricing or scheduling discussion.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
 
-<a id="latest-committed-memory-segment-125-node-1558"></a>
+<a id="latest-committed-memory-segment-144-node-1558"></a>
 
 - **1558** · clip 115: The group engages in a collaborative discussion involving both Chinese and Korean languages.
 
-<a id="latest-committed-memory-segment-125-node-1559"></a>
+<a id="latest-committed-memory-segment-144-node-1559"></a>
 
 - **1559** · clip 115: The presence of a clapperboard and lighting equipment indicates a professional or semi-professional filming setup.
 
-<a id="latest-committed-memory-segment-125-node-1571"></a>
+<a id="latest-committed-memory-segment-144-node-1571"></a>
 
-- **1571** · clip 116: MAI (&lt;voice_718&gt;, &lt;voice_1560&gt;, &lt;voice_364&gt;) is coordinating the technical setup for a group session.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364) · ↔ [718](#latest-committed-memory-segment-125-node-718) · ↔ [1560](#latest-committed-memory-segment-125-node-1560)
+- **1571** · clip 116: MAI (&lt;voice_718&gt;, &lt;voice_1560&gt;, &lt;voice_364&gt;) is coordinating the technical setup for a group session.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364) · ↔ [718](#latest-committed-memory-segment-144-node-718) · ↔ [1560](#latest-committed-memory-segment-144-node-1560)
 
-<a id="latest-committed-memory-segment-125-node-1572"></a>
+<a id="latest-committed-memory-segment-144-node-1572"></a>
 
 - **1572** · clip 116: The speaker manages both verbal communication and physical equipment distribution.
 
-<a id="latest-committed-memory-segment-125-node-1582"></a>
+<a id="latest-committed-memory-segment-144-node-1582"></a>
 
-- **1582** · clip 117: &lt;voice_1573&gt;: MAI responds with 'Mm.' during the initial observation.  **Links:** ↔ [1573](#latest-committed-memory-segment-125-node-1573)
+- **1582** · clip 117: &lt;voice_1573&gt;: MAI responds with 'Mm.' during the initial observation.  **Links:** ↔ [1573](#latest-committed-memory-segment-144-node-1573)
 
-<a id="latest-committed-memory-segment-125-node-1583"></a>
+<a id="latest-committed-memory-segment-144-node-1583"></a>
 
-- **1583** · clip 117: &lt;voice_364&gt;: MAI comments on someone being plugged in all along.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364)
+- **1583** · clip 117: &lt;voice_364&gt;: MAI comments on someone being plugged in all along.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364)
 
-<a id="latest-committed-memory-segment-125-node-1584"></a>
+<a id="latest-committed-memory-segment-144-node-1584"></a>
 
-- **1584** · clip 117: &lt;voice_112&gt;: MAI asks who owns the power bank.  **Links:** ↔ [112](#latest-committed-memory-segment-125-node-112)
+- **1584** · clip 117: &lt;voice_112&gt;: MAI asks who owns the power bank.  **Links:** ↔ [112](#latest-committed-memory-segment-144-node-112)
 
-<a id="latest-committed-memory-segment-125-node-1585"></a>
+<a id="latest-committed-memory-segment-144-node-1585"></a>
 
-- **1585** · clip 117: &lt;voice_1574&gt;: MAI states the power bank is theirs.  **Links:** ↔ [1574](#latest-committed-memory-segment-125-node-1574)
+- **1585** · clip 117: &lt;voice_1574&gt;: MAI states the power bank is theirs.  **Links:** ↔ [1574](#latest-committed-memory-segment-144-node-1574)
 
-<a id="latest-committed-memory-segment-125-node-1586"></a>
+<a id="latest-committed-memory-segment-144-node-1586"></a>
 
-- **1586** · clip 117: &lt;voice_386&gt;: MAI instructs to plug it in and find one.  **Links:** ↔ [386](#latest-committed-memory-segment-125-node-386)
+- **1586** · clip 117: &lt;voice_386&gt;: MAI instructs to plug it in and find one.  **Links:** ↔ [386](#latest-committed-memory-segment-144-node-386)
 
-<a id="latest-committed-memory-segment-125-node-1597"></a>
+<a id="latest-committed-memory-segment-144-node-1597"></a>
 
 - **1597** · clip 118: The group is participating in a workshop or meeting focused on setting up technical equipment.
 
-<a id="latest-committed-memory-segment-125-node-1598"></a>
+<a id="latest-committed-memory-segment-144-node-1598"></a>
 
 - **1598** · clip 118: Speaker MAI is providing instructions on connecting devices to the setup.
 
-<a id="latest-committed-memory-segment-125-node-1615"></a>
+<a id="latest-committed-memory-segment-144-node-1615"></a>
 
 - **1615** · clip 119: The group is conducting a meeting related to a film or video production project.
 
-<a id="latest-committed-memory-segment-125-node-1616"></a>
+<a id="latest-committed-memory-segment-144-node-1616"></a>
 
 - **1616** · clip 119: Speaker MAI is coordinating the duration and script roles of the participants.
 
-<a id="latest-committed-memory-segment-125-node-1617"></a>
+<a id="latest-committed-memory-segment-144-node-1617"></a>
 
 - **1617** · clip 119: There is uncertainty regarding whether certain participants are extras or regular cast members.
 
-<a id="latest-committed-memory-segment-125-node-1618"></a>
+<a id="latest-committed-memory-segment-144-node-1618"></a>
 
 - **1618** · clip 119: The environment includes equipment like a projector screen and lighting, suggesting a rehearsal space.
 
-<a id="latest-committed-memory-segment-125-node-1638"></a>
+<a id="latest-committed-memory-segment-144-node-1638"></a>
 
 - **1638** · clip 120: The group is engaged in planning a structured session, evidenced by the whiteboard and discussion of specific time slots.
 
-<a id="latest-committed-memory-segment-125-node-1639"></a>
+<a id="latest-committed-memory-segment-144-node-1639"></a>
 
-- **1639** · clip 120: &lt;voice_312&gt; initiates the conversation regarding setting the mood for the gathering.  **Links:** ↔ [312](#latest-committed-memory-segment-125-node-312)
+- **1639** · clip 120: &lt;voice_312&gt; initiates the conversation regarding setting the mood for the gathering.  **Links:** ↔ [312](#latest-committed-memory-segment-144-node-312)
 
-<a id="latest-committed-memory-segment-125-node-1640"></a>
+<a id="latest-committed-memory-segment-144-node-1640"></a>
 
-- **1640** · clip 120: &lt;voice_1620&gt; confirms the start time and agenda structure for the meeting.  **Links:** ↔ [1620](#latest-committed-memory-segment-125-node-1620)
+- **1640** · clip 120: &lt;voice_1620&gt; confirms the start time and agenda structure for the meeting.  **Links:** ↔ [1620](#latest-committed-memory-segment-144-node-1620)
 
-<a id="latest-committed-memory-segment-125-node-1641"></a>
+<a id="latest-committed-memory-segment-144-node-1641"></a>
 
 - **1641** · clip 120: The discussion involves logistical details regarding the total duration and scheduling of segments.
 
-<a id="latest-committed-memory-segment-125-node-1650"></a>
+<a id="latest-committed-memory-segment-144-node-1650"></a>
 
-- **1650** · clip 121: The group in the living room is participating in a structured activity or game, as &lt;voice_1642&gt; describes the dynamic as similar to a merchant relationship involving handmade customization.  **Links:** ↔ [1642](#latest-committed-memory-segment-125-node-1642)
+- **1650** · clip 121: The group in the living room is participating in a structured activity or game, as &lt;voice_1642&gt; describes the dynamic as similar to a merchant relationship involving handmade customization.  **Links:** ↔ [1642](#latest-committed-memory-segment-144-node-1642)
 
-<a id="latest-committed-memory-segment-125-node-1651"></a>
+<a id="latest-committed-memory-segment-144-node-1651"></a>
 
-- **1651** · clip 121: According to &lt;voice_1643&gt;, the activity utilizes a specific currency and permits participants to converse freely among themselves if they are enjoying the game.  **Links:** ↔ [1643](#latest-committed-memory-segment-125-node-1643)
+- **1651** · clip 121: According to &lt;voice_1643&gt;, the activity utilizes a specific currency and permits participants to converse freely among themselves if they are enjoying the game.  **Links:** ↔ [1643](#latest-committed-memory-segment-144-node-1643)
 
-<a id="latest-committed-memory-segment-125-node-1652"></a>
+<a id="latest-committed-memory-segment-144-node-1652"></a>
 
 - **1652** · clip 121: The technical setup in the room, including multiple screens and a projector, supports the discussion about customization and digital elements mentioned in the audio.
 
-<a id="latest-committed-memory-segment-125-node-1660"></a>
+<a id="latest-committed-memory-segment-144-node-1660"></a>
 
 - **1660** · clip 122: The setting indicates a professional or semi-professional production environment, likely a photoshoot or video shoot preparation.
 
-<a id="latest-committed-memory-segment-125-node-1661"></a>
+<a id="latest-committed-memory-segment-144-node-1661"></a>
 
 - **1661** · clip 122: The presence of a clapperboard, lighting equipment, and a whiteboard suggests a structured workflow involving script review or direction.
 
-<a id="latest-committed-memory-segment-125-node-1662"></a>
+<a id="latest-committed-memory-segment-144-node-1662"></a>
 
 - **1662** · clip 122: The camera wearer appears to be part of the crew, managing equipment or directing the session.
 
-<a id="latest-committed-memory-segment-125-node-1683"></a>
+<a id="latest-committed-memory-segment-144-node-1683"></a>
 
 - **1683** · clip 123: The group appears to be planning a social event or gathering involving drinks and lighting setup.
 
-<a id="latest-committed-memory-segment-125-node-1684"></a>
+<a id="latest-committed-memory-segment-144-node-1684"></a>
 
-- **1684** · clip 123: MAI (&lt;voice_1410&gt;, &lt;voice_364&gt;, etc.) is leading the discussion regarding the location and logistics of the bar setup.  **Links:** ↔ [364](#latest-committed-memory-segment-125-node-364) · ↔ [1410](#latest-committed-memory-segment-125-node-1410)
+- **1684** · clip 123: MAI (&lt;voice_1410&gt;, &lt;voice_364&gt;, etc.) is leading the discussion regarding the location and logistics of the bar setup.  **Links:** ↔ [364](#latest-committed-memory-segment-144-node-364) · ↔ [1410](#latest-committed-memory-segment-144-node-1410)
 
-<a id="latest-committed-memory-segment-125-node-1685"></a>
+<a id="latest-committed-memory-segment-144-node-1685"></a>
 
 - **1685** · clip 123: The presence of a clapperboard and studio lights suggests a filming or production context within the gathering.
 
-<a id="latest-committed-memory-segment-125-node-1686"></a>
+<a id="latest-committed-memory-segment-144-node-1686"></a>
 
 - **1686** · clip 123: The discussion indicates a preference for outdoor bartending due to space constraints or preference, utilizing the window area.
 
-<a id="latest-committed-memory-segment-125-node-1700"></a>
+<a id="latest-committed-memory-segment-144-node-1700"></a>
 
 - **1700** · clip 124: The group is coordinating an installation project involving four distinct items or units.
 
-<a id="latest-committed-memory-segment-125-node-1701"></a>
+<a id="latest-committed-memory-segment-144-node-1701"></a>
 
 - **1701** · clip 124: They are discussing scheduling a break for afternoon tea during the work session.
 
-<a id="latest-committed-memory-segment-125-node-1702"></a>
+<a id="latest-committed-memory-segment-144-node-1702"></a>
 
 - **1702** · clip 124: The woman in black appears to be leading the discussion regarding the installation progress and timing.
 
-<a id="latest-committed-memory-segment-125-node-1723"></a>
+<a id="latest-committed-memory-segment-144-node-1723"></a>
 
 - **1723** · clip 125: The group is engaged in a planning session regarding a product showcase or presentation involving a 'sweet product'.
 
-<a id="latest-committed-memory-segment-125-node-1724"></a>
+<a id="latest-committed-memory-segment-144-node-1724"></a>
 
 - **1724** · clip 125: There is a debate over purchasing samples and setting up a display stand for an afternoon viewing event.
 
-<a id="latest-committed-memory-segment-125-node-1725"></a>
+<a id="latest-committed-memory-segment-144-node-1725"></a>
 
 - **1725** · clip 125: Some participants express skepticism regarding the authenticity of the proposed display stand.
 
+<a id="latest-committed-memory-segment-144-node-1742"></a>
+
+- **1742** · clip 126: The group is engaged in a planning meeting focused on the budget and equipment for a dessert table project.
+
+<a id="latest-committed-memory-segment-144-node-1743"></a>
+
+- **1743** · clip 126: The woman in black appears to be the primary facilitator or planner during the discussion.
+
+<a id="latest-committed-memory-segment-144-node-1744"></a>
+
+- **1744** · clip 126: There is a discrepancy noted between the initial estimate and the final budget confirmation.
+
+<a id="latest-committed-memory-segment-144-node-1771"></a>
+
+- **1771** · clip 127: The group is engaged in a discussion regarding the acquisition of a product intended for academic meetings.
+
+<a id="latest-committed-memory-segment-144-node-1772"></a>
+
+- **1772** · clip 127: Concerns about the price are raised, with estimates ranging from thousands to tens of thousands of currency units.
+
+<a id="latest-committed-memory-segment-144-node-1773"></a>
+
+- **1773** · clip 127: The participants express satisfaction with the appearance and utility of the proposed setup.
+
+<a id="latest-committed-memory-segment-144-node-1774"></a>
+
+- **1774** · clip 127: The location is considered suitable for establishing an 'academic corner' for future meetings.
+
+<a id="latest-committed-memory-segment-144-node-1783"></a>
+
+- **1783** · clip 128: The group is engaged in a discussion involving travel logistics and meal preferences.
+
+<a id="latest-committed-memory-segment-144-node-1784"></a>
+
+- **1784** · clip 128: No facial feature IDs were provided, so visual confirmation of the speakers matching the voice tracks is unavailable.
+
+<a id="latest-committed-memory-segment-144-node-1785"></a>
+
+- **1785** · clip 128: The person on the left appears to be leading the documentation or presentation aspect of the meeting.
+
+<a id="latest-committed-memory-segment-144-node-1795"></a>
+
+- **1795** · clip 129: &lt;voice_446&gt; asks about the method of cooking or tearing.  **Links:** ↔ [446](#latest-committed-memory-segment-144-node-446)
+
+<a id="latest-committed-memory-segment-144-node-1796"></a>
+
+- **1796** · clip 129: &lt;voice_1727&gt; discusses the timing of the meal, suggesting waiting until evening and asking how to prepare dinner.  **Links:** ↔ [1727](#latest-committed-memory-segment-144-node-1727)
+
+<a id="latest-committed-memory-segment-144-node-1797"></a>
+
+- **1797** · clip 129: &lt;voice_261&gt; suggests cooking in the evening.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
+
+<a id="latest-committed-memory-segment-144-node-1798"></a>
+
+- **1798** · clip 129: &lt;voice_1786&gt; confirms the plan is to cook and eat together.  **Links:** ↔ [1786](#latest-committed-memory-segment-144-node-1786)
+
+<a id="latest-committed-memory-segment-144-node-1799"></a>
+
+- **1799** · clip 129: The group is planning their dinner schedule and cooking method.
+
+<a id="latest-committed-memory-segment-144-node-1812"></a>
+
+- **1812** · clip 130: &lt;voice_1800&gt; mentions that burning is somewhat tiring because there are twenty people involved.  **Links:** ↔ [1800](#latest-committed-memory-segment-144-node-1800)
+
+<a id="latest-committed-memory-segment-144-node-1813"></a>
+
+- **1813** · clip 130: &lt;voice_147&gt; states that the burning is too excessive.  **Links:** ↔ [147](#latest-committed-memory-segment-144-node-147)
+
+<a id="latest-committed-memory-segment-144-node-1814"></a>
+
+- **1814** · clip 130: &lt;voice_339&gt; comments that charcoal burning is troublesome and refers to previous conversations about sweet western food.  **Links:** ↔ [339](#latest-committed-memory-segment-144-node-339)
+
+<a id="latest-committed-memory-segment-144-node-1815"></a>
+
+- **1815** · clip 130: &lt;voice_1801&gt; acknowledges the statement with a short remark.  **Links:** ↔ [1801](#latest-committed-memory-segment-144-node-1801)
+
+<a id="latest-committed-memory-segment-144-node-1816"></a>
+
+- **1816** · clip 130: &lt;voice_771&gt; notes that both cooking and ordering takeout are troublesome activities.  **Links:** ↔ [771](#latest-committed-memory-segment-144-node-771)
+
+<a id="latest-committed-memory-segment-144-node-1817"></a>
+
+- **1817** · clip 130: &lt;voice_1303&gt; concludes that ordering delivery is acceptable.  **Links:** ↔ [1303](#latest-committed-memory-segment-144-node-1303)
+
+<a id="latest-committed-memory-segment-144-node-1818"></a>
+
+- **1818** · clip 130: &lt;voice_1752&gt; agrees that perhaps everyone should eat one or two pieces.  **Links:** ↔ [1752](#latest-committed-memory-segment-144-node-1752)
+
+<a id="latest-committed-memory-segment-144-node-1819"></a>
+
+- **1819** · clip 130: &lt;voice_1802&gt; clarifies that they are not suggesting eating extremely heavily.  **Links:** ↔ [1802](#latest-committed-memory-segment-144-node-1802)
+
+<a id="latest-committed-memory-segment-144-node-1820"></a>
+
+- **1820** · clip 130: &lt;voice_1467&gt; points out that ordering delivery includes a 30cm size option.  **Links:** ↔ [1467](#latest-committed-memory-segment-144-node-1467)
+
+<a id="latest-committed-memory-segment-144-node-1821"></a>
+
+- **1821** · clip 130: &lt;voice_261&gt; repeatedly agrees and decides to manage the late dinner.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
+
+<a id="latest-committed-memory-segment-144-node-1822"></a>
+
+- **1822** · clip 130: &lt;voice_1219&gt; adds that they will simply eat here.  **Links:** ↔ [1219](#latest-committed-memory-segment-144-node-1219)
+
+<a id="latest-committed-memory-segment-144-node-1823"></a>
+
+- **1823** · clip 130: &lt;voice_500&gt; confirms the plan to eat at five o'clock.  **Links:** ↔ [500](#latest-committed-memory-segment-144-node-500)
+
+<a id="latest-committed-memory-segment-144-node-1831"></a>
+
+- **1831** · clip 131: Speaker &lt;voice_261&gt; confirms a schedule involving a pizza around 5:30 PM.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261)
+
+<a id="latest-committed-memory-segment-144-node-1832"></a>
+
+- **1832** · clip 131: Speaker &lt;voice_1170&gt; notes the current time is 5:00 PM and plans to extend the program until night.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
+
+<a id="latest-committed-memory-segment-144-node-1833"></a>
+
+- **1833** · clip 131: Speaker &lt;voice_1170&gt; explains the decision to switch from storytelling to self-introductions because the audience is new and unfamiliar with the bar-themed narrative.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
+
+<a id="latest-committed-memory-segment-144-node-1834"></a>
+
+- **1834** · clip 131: Speaker &lt;voice_1170&gt; suggests that a virtual currency segment could be added to the event.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
+
+<a id="latest-committed-memory-segment-144-node-1841"></a>
+
+- **1841** · clip 132: The session involves a structured introduction process where participants are encouraged to share personal anecdotes.
+
+<a id="latest-committed-memory-segment-144-node-1842"></a>
+
+- **1842** · clip 132: The arrival of flowers suggests a celebratory element or a gesture of welcome within the meeting.
+
+<a id="latest-committed-memory-segment-144-node-1843"></a>
+
+- **1843** · clip 132: The interaction takes place in a casual indoor environment suitable for informal discussions.
+
+<a id="latest-committed-memory-segment-144-node-1857"></a>
+
+- **1857** · clip 133: The participants are coordinating a schedule for an evening social gathering involving food and drinks.
+
+<a id="latest-committed-memory-segment-144-node-1858"></a>
+
+- **1858** · clip 133: They decided to allow some flexibility regarding the strict timing of the event.
+
+<a id="latest-committed-memory-segment-144-node-1859"></a>
+
+- **1859** · clip 133: The proposed time slot for the activity is between 5 PM and 6 PM.
+
+<a id="latest-committed-memory-segment-144-node-1873"></a>
+
+- **1873** · clip 134: Speaker &lt;voice_443&gt; sets the dinner time to approximately 5:30 PM.  **Links:** ↔ [443](#latest-committed-memory-segment-144-node-443)
+
+<a id="latest-committed-memory-segment-144-node-1874"></a>
+
+- **1874** · clip 134: Speakers &lt;voice_444&gt; and &lt;voice_1861&gt; confirm the menu includes a large pizza.  **Links:** ↔ [444](#latest-committed-memory-segment-144-node-444) · ↔ [1861](#latest-committed-memory-segment-144-node-1861)
+
+<a id="latest-committed-memory-segment-144-node-1875"></a>
+
+- **1875** · clip 134: Speakers &lt;voice_1862&gt; and &lt;voice_1863&gt; confirm the inclusion of BBQ.  **Links:** ↔ [1862](#latest-committed-memory-segment-144-node-1862) · ↔ [1863](#latest-committed-memory-segment-144-node-1863)
+
+<a id="latest-committed-memory-segment-144-node-1887"></a>
+
+- **1887** · clip 135: &lt;voice_1170&gt; states that the discussion on cocktail talk persists throughout the session.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
+
+<a id="latest-committed-memory-segment-144-node-1888"></a>
+
+- **1888** · clip 135: &lt;voice_1876&gt; compares the topic to dessert.  **Links:** ↔ [1876](#latest-committed-memory-segment-144-node-1876)
+
+<a id="latest-committed-memory-segment-144-node-1889"></a>
+
+- **1889** · clip 135: &lt;voice_1877&gt; identifies dessert as the topic upon entry.  **Links:** ↔ [1877](#latest-committed-memory-segment-144-node-1877)
+
+<a id="latest-committed-memory-segment-144-node-1890"></a>
+
+- **1890** · clip 135: &lt;voice_365&gt; questions if the term is SERT.  **Links:** ↔ [365](#latest-committed-memory-segment-144-node-365)
+
+<a id="latest-committed-memory-segment-144-node-1891"></a>
+
+- **1891** · clip 135: &lt;voice_1878&gt; confirms the term is SS.  **Links:** ↔ [1878](#latest-committed-memory-segment-144-node-1878)
+
+<a id="latest-committed-memory-segment-144-node-1892"></a>
+
+- **1892** · clip 135: &lt;voice_1879&gt; suggests multiplying by two.  **Links:** ↔ [1879](#latest-committed-memory-segment-144-node-1879)
+
+<a id="latest-committed-memory-segment-144-node-1893"></a>
+
+- **1893** · clip 135: &lt;voice_1862&gt; confirms the speaker said dessert.  **Links:** ↔ [1862](#latest-committed-memory-segment-144-node-1862)
+
+<a id="latest-committed-memory-segment-144-node-1894"></a>
+
+- **1894** · clip 135: &lt;voice_1880&gt; notes their show remains for the evening.  **Links:** ↔ [1880](#latest-committed-memory-segment-144-node-1880)
+
+<a id="latest-committed-memory-segment-144-node-1895"></a>
+
+- **1895** · clip 135: &lt;voice_386&gt; affirms they have the items.  **Links:** ↔ [386](#latest-committed-memory-segment-144-node-386)
+
+<a id="latest-committed-memory-segment-144-node-1896"></a>
+
+- **1896** · clip 135: &lt;voice_1727&gt; advises leaving before others return.  **Links:** ↔ [1727](#latest-committed-memory-segment-144-node-1727)
+
+<a id="latest-committed-memory-segment-144-node-1907"></a>
+
+- **1907** · clip 136: The participants are collaboratively scheduling a multi-part event involving preparation and performance.
+
+<a id="latest-committed-memory-segment-144-node-1908"></a>
+
+- **1908** · clip 136: Speaker MAI (&lt;voice_1897&gt;) is actively managing the timeline and discussing requirements for entertainment.  **Links:** ↔ [1897](#latest-committed-memory-segment-144-node-1897)
+
+<a id="latest-committed-memory-segment-144-node-1923"></a>
+
+- **1923** · clip 137: The participants are planning a session that combines data transfer tasks with entertainment activities such as karaoke and dancing.
+
+<a id="latest-committed-memory-segment-144-node-1924"></a>
+
+- **1924** · clip 137: There is consensus among the group to schedule breaks for singing and watching movies during the data transfer process.
+
+<a id="latest-committed-memory-segment-144-node-1925"></a>
+
+- **1925** · clip 137: The discussion involves logistical details regarding timing and the environment for the activities.
+
+<a id="latest-committed-memory-segment-144-node-1937"></a>
+
+- **1937** · clip 138: The group is collaboratively planning a schedule involving specific time blocks for activities such as product introduction and meals.
+
+<a id="latest-committed-memory-segment-144-node-1938"></a>
+
+- **1938** · clip 138: &lt;voice_1170&gt; indicates a structured agenda where product presentation occurs between 3:40 PM and 4:20 PM.  **Links:** ↔ [1170](#latest-committed-memory-segment-144-node-1170)
+
+<a id="latest-committed-memory-segment-144-node-1939"></a>
+
+- **1939** · clip 138: There is a discussion regarding rewards (gold coins) associated with different segments of the activity.
+
+<a id="latest-committed-memory-segment-144-node-1956"></a>
+
+- **1956** · clip 139: The group is discussing the preparation and timing of an event involving product introduction.
+
+<a id="latest-committed-memory-segment-144-node-1957"></a>
+
+- **1957** · clip 139: There is a consensus on needing to coordinate between two people for the task.
+
+<a id="latest-committed-memory-segment-144-node-1958"></a>
+
+- **1958** · clip 139: One participant acknowledges making a mistake during the day's activities.
+
+<a id="latest-committed-memory-segment-144-node-1972"></a>
+
+- **1972** · clip 140: The speaker &lt;voice_1959&gt; through &lt;voice_261&gt; (MAI) discusses differences in waking up habits related to living arrangements.  **Links:** ↔ [261](#latest-committed-memory-segment-144-node-261) · ↔ [1959](#latest-committed-memory-segment-144-node-1959)
+
+<a id="latest-committed-memory-segment-144-node-1973"></a>
+
+- **1973** · clip 140: MAI plans to listen to three items tomorrow.
+
+<a id="latest-committed-memory-segment-144-node-1974"></a>
+
+- **1974** · clip 140: MAI initiates a discussion about desserts.
+
+<a id="latest-committed-memory-segment-144-node-1975"></a>
+
+- **1975** · clip 140: No face features were provided to link visual identities to the voice &lt;voice_*&gt;.
+
+<a id="latest-committed-memory-segment-144-node-1990"></a>
+
+- **1990** · clip 141: The standing participant is acting as the primary speaker or instructor during the meeting.
+
+<a id="latest-committed-memory-segment-144-node-1991"></a>
+
+- **1991** · clip 141: The group is planning a workflow involving dough preparation and baking, with a focus on timing and cold storage.
+
+<a id="latest-committed-memory-segment-144-node-1992"></a>
+
+- **1992** · clip 141: No face features were provided, so visual identity confirmation of the speakers could not be established.
+
+<a id="latest-committed-memory-segment-144-node-1993"></a>
+
+- **1993** · clip 141: The conversation indicates a structured approach to meal preparation, dividing tasks between preparation days and execution days.
+
+<a id="latest-committed-memory-segment-144-node-2002"></a>
+
+- **2002** · clip 142: Speaker &lt;voice_752&gt; explains that the sugar water is made directly with ice cream and fruit added.  **Links:** ↔ [752](#latest-committed-memory-segment-144-node-752)
+
+<a id="latest-committed-memory-segment-144-node-2003"></a>
+
+- **2003** · clip 142: Speaker &lt;voice_974&gt; asks if the taste is good.  **Links:** ↔ [974](#latest-committed-memory-segment-144-node-974)
+
+<a id="latest-committed-memory-segment-144-node-2004"></a>
+
+- **2004** · clip 142: Speaker &lt;voice_1994&gt; remarks that it feels casual and not simple.  **Links:** ↔ [1994](#latest-committed-memory-segment-144-node-1994)
+
+<a id="latest-committed-memory-segment-144-node-2005"></a>
+
+- **2005** · clip 142: Speaker &lt;voice_1995&gt; mentions not wanting liquid or solid components.  **Links:** ↔ [1995](#latest-committed-memory-segment-144-node-1995)
+
+<a id="latest-committed-memory-segment-144-node-2019"></a>
+
+- **2019** · clip 143: The group is deliberating on sourcing red bean paste, weighing homemade preparation against buying finished goods.
+
+<a id="latest-committed-memory-segment-144-node-2020"></a>
+
+- **2020** · clip 143: Speaker &lt;voice_2006&gt; highlights the time-saving aspect of the process.  **Links:** ↔ [2006](#latest-committed-memory-segment-144-node-2006)
+
+<a id="latest-committed-memory-segment-144-node-2021"></a>
+
+- **2021** · clip 143: Speaker &lt;voice_2008&gt; reveals a shortage of ingredients for homemade production.  **Links:** ↔ [2008](#latest-committed-memory-segment-144-node-2008)
+
+<a id="latest-committed-memory-segment-144-node-2036"></a>
+
+- **2036** · clip 144: The group is coordinating a technical session that involves VR headset usage.
+
+<a id="latest-committed-memory-segment-144-node-2037"></a>
+
+- **2037** · clip 144: Dinner is planned to be ordered pizza rather than prepared at home.
+
+<a id="latest-committed-memory-segment-144-node-2038"></a>
+
+- **2038** · clip 144: There are strict safety protocols prohibiting recording during meals and barbecues to prevent damage to the equipment.
+
 ### Voices
 
-<a id="latest-committed-memory-segment-125-node-0"></a>
+<a id="latest-committed-memory-segment-144-node-0"></a>
 
 <details><summary>voice_0 · 54 speech entries · 52 links</summary>
 
-↔ [3](#latest-committed-memory-segment-125-node-3) · ↔ [6](#latest-committed-memory-segment-125-node-6) · ↔ [11](#latest-committed-memory-segment-125-node-11) · ↔ [21](#latest-committed-memory-segment-125-node-21) · ↔ [24](#latest-committed-memory-segment-125-node-24) · ↔ [29](#latest-committed-memory-segment-125-node-29) · ↔ [38](#latest-committed-memory-segment-125-node-38) · ↔ [44](#latest-committed-memory-segment-125-node-44) · ↔ [60](#latest-committed-memory-segment-125-node-60) · ↔ [61](#latest-committed-memory-segment-125-node-61) · ↔ [62](#latest-committed-memory-segment-125-node-62) · ↔ [64](#latest-committed-memory-segment-125-node-64) · ↔ [68](#latest-committed-memory-segment-125-node-68) · ↔ [69](#latest-committed-memory-segment-125-node-69) · ↔ [75](#latest-committed-memory-segment-125-node-75) · ↔ [77](#latest-committed-memory-segment-125-node-77) · ↔ [78](#latest-committed-memory-segment-125-node-78) · ↔ [83](#latest-committed-memory-segment-125-node-83) · ↔ [85](#latest-committed-memory-segment-125-node-85) · ↔ [92](#latest-committed-memory-segment-125-node-92) · ↔ [93](#latest-committed-memory-segment-125-node-93) · ↔ [94](#latest-committed-memory-segment-125-node-94) · ↔ [101](#latest-committed-memory-segment-125-node-101) · ↔ [115](#latest-committed-memory-segment-125-node-115) · ↔ [120](#latest-committed-memory-segment-125-node-120) · ↔ [121](#latest-committed-memory-segment-125-node-121) · ↔ [122](#latest-committed-memory-segment-125-node-122) · ↔ [127](#latest-committed-memory-segment-125-node-127) · ↔ [134](#latest-committed-memory-segment-125-node-134) · ↔ [140](#latest-committed-memory-segment-125-node-140) · ↔ [156](#latest-committed-memory-segment-125-node-156) · ↔ [163](#latest-committed-memory-segment-125-node-163) · ↔ [213](#latest-committed-memory-segment-125-node-213) · ↔ [224](#latest-committed-memory-segment-125-node-224) · ↔ [240](#latest-committed-memory-segment-125-node-240) · ↔ [253](#latest-committed-memory-segment-125-node-253) · ↔ [254](#latest-committed-memory-segment-125-node-254) · ↔ [269](#latest-committed-memory-segment-125-node-269) · ↔ [274](#latest-committed-memory-segment-125-node-274) · ↔ [305](#latest-committed-memory-segment-125-node-305) · ↔ [314](#latest-committed-memory-segment-125-node-314) · ↔ [328](#latest-committed-memory-segment-125-node-328) · ↔ [330](#latest-committed-memory-segment-125-node-330) · ↔ [347](#latest-committed-memory-segment-125-node-347) · ↔ [360](#latest-committed-memory-segment-125-node-360) · ↔ [361](#latest-committed-memory-segment-125-node-361) · ↔ [362](#latest-committed-memory-segment-125-node-362) · ↔ [372](#latest-committed-memory-segment-125-node-372) · ↔ [374](#latest-committed-memory-segment-125-node-374) · ↔ [435](#latest-committed-memory-segment-125-node-435) · ↔ [453](#latest-committed-memory-segment-125-node-453) · ↔ [1691](#latest-committed-memory-segment-125-node-1691)
+↔ [3](#latest-committed-memory-segment-144-node-3) · ↔ [6](#latest-committed-memory-segment-144-node-6) · ↔ [11](#latest-committed-memory-segment-144-node-11) · ↔ [21](#latest-committed-memory-segment-144-node-21) · ↔ [24](#latest-committed-memory-segment-144-node-24) · ↔ [29](#latest-committed-memory-segment-144-node-29) · ↔ [38](#latest-committed-memory-segment-144-node-38) · ↔ [44](#latest-committed-memory-segment-144-node-44) · ↔ [60](#latest-committed-memory-segment-144-node-60) · ↔ [61](#latest-committed-memory-segment-144-node-61) · ↔ [62](#latest-committed-memory-segment-144-node-62) · ↔ [64](#latest-committed-memory-segment-144-node-64) · ↔ [68](#latest-committed-memory-segment-144-node-68) · ↔ [69](#latest-committed-memory-segment-144-node-69) · ↔ [75](#latest-committed-memory-segment-144-node-75) · ↔ [77](#latest-committed-memory-segment-144-node-77) · ↔ [78](#latest-committed-memory-segment-144-node-78) · ↔ [83](#latest-committed-memory-segment-144-node-83) · ↔ [85](#latest-committed-memory-segment-144-node-85) · ↔ [92](#latest-committed-memory-segment-144-node-92) · ↔ [93](#latest-committed-memory-segment-144-node-93) · ↔ [94](#latest-committed-memory-segment-144-node-94) · ↔ [101](#latest-committed-memory-segment-144-node-101) · ↔ [115](#latest-committed-memory-segment-144-node-115) · ↔ [120](#latest-committed-memory-segment-144-node-120) · ↔ [121](#latest-committed-memory-segment-144-node-121) · ↔ [122](#latest-committed-memory-segment-144-node-122) · ↔ [127](#latest-committed-memory-segment-144-node-127) · ↔ [134](#latest-committed-memory-segment-144-node-134) · ↔ [140](#latest-committed-memory-segment-144-node-140) · ↔ [156](#latest-committed-memory-segment-144-node-156) · ↔ [163](#latest-committed-memory-segment-144-node-163) · ↔ [213](#latest-committed-memory-segment-144-node-213) · ↔ [224](#latest-committed-memory-segment-144-node-224) · ↔ [240](#latest-committed-memory-segment-144-node-240) · ↔ [253](#latest-committed-memory-segment-144-node-253) · ↔ [254](#latest-committed-memory-segment-144-node-254) · ↔ [269](#latest-committed-memory-segment-144-node-269) · ↔ [274](#latest-committed-memory-segment-144-node-274) · ↔ [305](#latest-committed-memory-segment-144-node-305) · ↔ [314](#latest-committed-memory-segment-144-node-314) · ↔ [328](#latest-committed-memory-segment-144-node-328) · ↔ [330](#latest-committed-memory-segment-144-node-330) · ↔ [347](#latest-committed-memory-segment-144-node-347) · ↔ [360](#latest-committed-memory-segment-144-node-360) · ↔ [361](#latest-committed-memory-segment-144-node-361) · ↔ [362](#latest-committed-memory-segment-144-node-362) · ↔ [372](#latest-committed-memory-segment-144-node-372) · ↔ [374](#latest-committed-memory-segment-144-node-374) · ↔ [435](#latest-committed-memory-segment-144-node-435) · ↔ [453](#latest-committed-memory-segment-144-node-453) · ↔ [1691](#latest-committed-memory-segment-144-node-1691)
 
 - MAI: 好，然后一个秒表。
 - MAI: 对，戳一下。
@@ -6112,42 +7218,42 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1"></a>
+<a id="latest-committed-memory-segment-144-node-1"></a>
 
 <details><summary>voice_1 · 1 speech entries · 2 links</summary>
 
-↔ [5](#latest-committed-memory-segment-125-node-5) · ↔ [11](#latest-committed-memory-segment-125-node-11)
+↔ [5](#latest-committed-memory-segment-144-node-5) · ↔ [11](#latest-committed-memory-segment-144-node-11)
 
 - MAI: 时间戳。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-22"></a>
+<a id="latest-committed-memory-segment-144-node-22"></a>
 
 <details><summary>voice_22 · 1 speech entries · 2 links</summary>
 
-↔ [26](#latest-committed-memory-segment-125-node-26) · ↔ [30](#latest-committed-memory-segment-125-node-30)
+↔ [26](#latest-committed-memory-segment-144-node-26) · ↔ [30](#latest-committed-memory-segment-144-node-30)
 
 - MAI: 先看，拆开看。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-31"></a>
+<a id="latest-committed-memory-segment-144-node-31"></a>
 
 <details><summary>voice_31 · 2 speech entries · 3 links</summary>
 
-↔ [36](#latest-committed-memory-segment-125-node-36) · ↔ [417](#latest-committed-memory-segment-125-node-417) · ↔ [426](#latest-committed-memory-segment-125-node-426)
+↔ [36](#latest-committed-memory-segment-144-node-36) · ↔ [417](#latest-committed-memory-segment-144-node-417) · ↔ [426](#latest-committed-memory-segment-144-node-426)
 
 - MAI: 哇哦。
 - MAI: 我。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-32"></a>
+<a id="latest-committed-memory-segment-144-node-32"></a>
 
 <details><summary>voice_32 · 3 speech entries · 2 links</summary>
 
-↔ [37](#latest-committed-memory-segment-125-node-37) · ↔ [1210](#latest-committed-memory-segment-125-node-1210)
+↔ [37](#latest-committed-memory-segment-144-node-37) · ↔ [1210](#latest-committed-memory-segment-144-node-1210)
 
 - MAI: 只有四个吗？
 - MAI: 对，只有四个。
@@ -6155,72 +7261,72 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-33"></a>
+<a id="latest-committed-memory-segment-144-node-33"></a>
 
 <details><summary>voice_33 · 1 speech entries · 2 links</summary>
 
-↔ [39](#latest-committed-memory-segment-125-node-39) · ↔ [45](#latest-committed-memory-segment-125-node-45)
+↔ [39](#latest-committed-memory-segment-144-node-39) · ↔ [45](#latest-committed-memory-segment-144-node-45)
 
 - MAI: Tutor。对。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-34"></a>
+<a id="latest-committed-memory-segment-144-node-34"></a>
 
 <details><summary>voice_34 · 2 speech entries · 2 links</summary>
 
-↔ [40](#latest-committed-memory-segment-125-node-40) · ↔ [864](#latest-committed-memory-segment-125-node-864)
+↔ [40](#latest-committed-memory-segment-144-node-40) · ↔ [864](#latest-committed-memory-segment-144-node-864)
 
 - MAI: 我已经装过这个东西了。
 - MAI: 这个是目前暂时的想法。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-95"></a>
+<a id="latest-committed-memory-segment-144-node-95"></a>
 
 <details><summary>voice_95 · 1 speech entries · 1 links</summary>
 
-↔ [103](#latest-committed-memory-segment-125-node-103)
+↔ [103](#latest-committed-memory-segment-144-node-103)
 
 - MAI: 一个悬着的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-96"></a>
+<a id="latest-committed-memory-segment-144-node-96"></a>
 
 <details><summary>voice_96 · 1 speech entries · 1 links</summary>
 
-↔ [104](#latest-committed-memory-segment-125-node-104)
+↔ [104](#latest-committed-memory-segment-144-node-104)
 
 - MAI: 那如果突然停电了会怎么样？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-97"></a>
+<a id="latest-committed-memory-segment-144-node-97"></a>
 
 <details><summary>voice_97 · 1 speech entries · 1 links</summary>
 
-↔ [106](#latest-committed-memory-segment-125-node-106)
+↔ [106](#latest-committed-memory-segment-144-node-106)
 
 - MAI: 那没有什么就是USB数据？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-98"></a>
+<a id="latest-committed-memory-segment-144-node-98"></a>
 
 <details><summary>voice_98 · 1 speech entries · 1 links</summary>
 
-↔ [107](#latest-committed-memory-segment-125-node-107)
+↔ [107](#latest-committed-memory-segment-144-node-107)
 
 - MAI: 就是那种备用电。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-112"></a>
+<a id="latest-committed-memory-segment-144-node-112"></a>
 
 <details><summary>voice_112 · 7 speech entries · 9 links</summary>
 
-↔ [123](#latest-committed-memory-segment-125-node-123) · ↔ [157](#latest-committed-memory-segment-125-node-157) · ↔ [163](#latest-committed-memory-segment-125-node-163) · ↔ [228](#latest-committed-memory-segment-125-node-228) · ↔ [1011](#latest-committed-memory-segment-125-node-1011) · ↔ [1016](#latest-committed-memory-segment-125-node-1016) · ↔ [1476](#latest-committed-memory-segment-125-node-1476) · ↔ [1549](#latest-committed-memory-segment-125-node-1549) · ↔ [1584](#latest-committed-memory-segment-125-node-1584)
+↔ [123](#latest-committed-memory-segment-144-node-123) · ↔ [157](#latest-committed-memory-segment-144-node-157) · ↔ [163](#latest-committed-memory-segment-144-node-163) · ↔ [228](#latest-committed-memory-segment-144-node-228) · ↔ [1011](#latest-committed-memory-segment-144-node-1011) · ↔ [1016](#latest-committed-memory-segment-144-node-1016) · ↔ [1476](#latest-committed-memory-segment-144-node-1476) · ↔ [1549](#latest-committed-memory-segment-144-node-1549) · ↔ [1584](#latest-committed-memory-segment-144-node-1584)
 
 - MAI: 可以。
 - MAI: 要拧螺丝。
@@ -6232,11 +7338,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-129"></a>
+<a id="latest-committed-memory-segment-144-node-129"></a>
 
 <details><summary>voice_129 · 13 speech entries · 9 links</summary>
 
-↔ [136](#latest-committed-memory-segment-125-node-136) · ↔ [141](#latest-committed-memory-segment-125-node-141) · ↔ [153](#latest-committed-memory-segment-125-node-153) · ↔ [163](#latest-committed-memory-segment-125-node-163) · ↔ [174](#latest-committed-memory-segment-125-node-174) · ↔ [177](#latest-committed-memory-segment-125-node-177) · ↔ [194](#latest-committed-memory-segment-125-node-194) · ↔ [219](#latest-committed-memory-segment-125-node-219) · ↔ [223](#latest-committed-memory-segment-125-node-223)
+↔ [136](#latest-committed-memory-segment-144-node-136) · ↔ [141](#latest-committed-memory-segment-144-node-141) · ↔ [153](#latest-committed-memory-segment-144-node-153) · ↔ [163](#latest-committed-memory-segment-144-node-163) · ↔ [174](#latest-committed-memory-segment-144-node-174) · ↔ [177](#latest-committed-memory-segment-144-node-177) · ↔ [194](#latest-committed-memory-segment-144-node-194) · ↔ [219](#latest-committed-memory-segment-144-node-219) · ↔ [223](#latest-committed-memory-segment-144-node-223)
 
 - MAI: 这个地方是这儿，最好这样往里推，看怎么样。好像要清洁，那天那个同学跟我说这个挺脆弱的。
 - MAI: 就是这不是有一个口吗？
@@ -6254,134 +7360,135 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-130"></a>
+<a id="latest-committed-memory-segment-144-node-130"></a>
 
 <details><summary>voice_130 · 1 speech entries · 2 links</summary>
 
-↔ [138](#latest-committed-memory-segment-125-node-138) · ↔ [142](#latest-committed-memory-segment-125-node-142)
+↔ [138](#latest-committed-memory-segment-144-node-138) · ↔ [142](#latest-committed-memory-segment-144-node-142)
 
 - MAI: 没事，搞定。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-144"></a>
+<a id="latest-committed-memory-segment-144-node-144"></a>
 
 <details><summary>voice_144 · 2 speech entries · 2 links</summary>
 
-↔ [154](#latest-committed-memory-segment-125-node-154) · ↔ [163](#latest-committed-memory-segment-125-node-163)
+↔ [154](#latest-committed-memory-segment-144-node-154) · ↔ [163](#latest-committed-memory-segment-144-node-163)
 
 - MAI: 需要你螺丝的力吗？
 - MAI: 大家平时厨艺如何？就会使用刀吗？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-145"></a>
+<a id="latest-committed-memory-segment-144-node-145"></a>
 
 <details><summary>voice_145 · 1 speech entries · 2 links</summary>
 
-↔ [155](#latest-committed-memory-segment-125-node-155) · ↔ [163](#latest-committed-memory-segment-125-node-163)
+↔ [155](#latest-committed-memory-segment-144-node-155) · ↔ [163](#latest-committed-memory-segment-144-node-163)
 
 - MAI: 没有。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-146"></a>
+<a id="latest-committed-memory-segment-144-node-146"></a>
 
 <details><summary>voice_146 · 2 speech entries · 3 links</summary>
 
-↔ [158](#latest-committed-memory-segment-125-node-158) · ↔ [163](#latest-committed-memory-segment-125-node-163) · ↔ [216](#latest-committed-memory-segment-125-node-216)
+↔ [158](#latest-committed-memory-segment-144-node-158) · ↔ [163](#latest-committed-memory-segment-144-node-163) · ↔ [216](#latest-committed-memory-segment-144-node-216)
 
 - MAI: 那螺丝呢？
 - MAI: 毕-毕竟附赠了这个，不可能给你什么。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-147"></a>
+<a id="latest-committed-memory-segment-144-node-147"></a>
 
-<details><summary>voice_147 · 1 speech entries · 2 links</summary>
+<details><summary>voice_147 · 2 speech entries · 3 links</summary>
 
-↔ [159](#latest-committed-memory-segment-125-node-159) · ↔ [163](#latest-committed-memory-segment-125-node-163)
+↔ [159](#latest-committed-memory-segment-144-node-159) · ↔ [163](#latest-committed-memory-segment-144-node-163) · ↔ [1813](#latest-committed-memory-segment-144-node-1813)
 
 - MAI: 在这儿。
+- MAI: 啊，烧烤太多了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-148"></a>
+<a id="latest-committed-memory-segment-144-node-148"></a>
 
 <details><summary>voice_148 · 1 speech entries · 2 links</summary>
 
-↔ [160](#latest-committed-memory-segment-125-node-160) · ↔ [163](#latest-committed-memory-segment-125-node-163)
+↔ [160](#latest-committed-memory-segment-144-node-160) · ↔ [163](#latest-committed-memory-segment-144-node-163)
 
 - MAI: 懂了。easy。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-165"></a>
+<a id="latest-committed-memory-segment-144-node-165"></a>
 
 <details><summary>voice_165 · 1 speech entries · 1 links</summary>
 
-↔ [175](#latest-committed-memory-segment-125-node-175)
+↔ [175](#latest-committed-memory-segment-144-node-175)
 
 - MAI: 然后就把它装进去啊？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-166"></a>
+<a id="latest-committed-memory-segment-144-node-166"></a>
 
 <details><summary>voice_166 · 1 speech entries · 1 links</summary>
 
-↔ [176](#latest-committed-memory-segment-125-node-176)
+↔ [176](#latest-committed-memory-segment-144-node-176)
 
 - MAI: 是不是要拧四个螺丝？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-167"></a>
+<a id="latest-committed-memory-segment-144-node-167"></a>
 
 <details><summary>voice_167 · 1 speech entries · 1 links</summary>
 
-↔ [178](#latest-committed-memory-segment-125-node-178)
+↔ [178](#latest-committed-memory-segment-144-node-178)
 
 - MAI: 呃，八个。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-183"></a>
+<a id="latest-committed-memory-segment-144-node-183"></a>
 
 <details><summary>voice_183 · 2 speech entries · 1 links</summary>
 
-↔ [195](#latest-committed-memory-segment-125-node-195)
+↔ [195](#latest-committed-memory-segment-144-node-195)
 
 - MAI: 这里。
 - MAI: 我已经上-上完一个螺丝。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-184"></a>
+<a id="latest-committed-memory-segment-144-node-184"></a>
 
 <details><summary>voice_184 · 1 speech entries · 1 links</summary>
 
-↔ [196](#latest-committed-memory-segment-125-node-196)
+↔ [196](#latest-committed-memory-segment-144-node-196)
 
 - MAI: 你看这。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-185"></a>
+<a id="latest-committed-memory-segment-144-node-185"></a>
 
 <details><summary>voice_185 · 1 speech entries · 1 links</summary>
 
-↔ [197](#latest-committed-memory-segment-125-node-197)
+↔ [197](#latest-committed-memory-segment-144-node-197)
 
 - MAI: 对，小螺丝。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-186"></a>
+<a id="latest-committed-memory-segment-144-node-186"></a>
 
 <details><summary>voice_186 · 7 speech entries · 11 links</summary>
 
-↔ [198](#latest-committed-memory-segment-125-node-198) · ↔ [1002](#latest-committed-memory-segment-125-node-1002) · ↔ [1008](#latest-committed-memory-segment-125-node-1008) · ↔ [1009](#latest-committed-memory-segment-125-node-1009) · ↔ [1010](#latest-committed-memory-segment-125-node-1010) · ↔ [1014](#latest-committed-memory-segment-125-node-1014) · ↔ [1021](#latest-committed-memory-segment-125-node-1021) · ↔ [1022](#latest-committed-memory-segment-125-node-1022) · ↔ [1023](#latest-committed-memory-segment-125-node-1023) · ↔ [1026](#latest-committed-memory-segment-125-node-1026) · ↔ [1033](#latest-committed-memory-segment-125-node-1033)
+↔ [198](#latest-committed-memory-segment-144-node-198) · ↔ [1002](#latest-committed-memory-segment-144-node-1002) · ↔ [1008](#latest-committed-memory-segment-144-node-1008) · ↔ [1009](#latest-committed-memory-segment-144-node-1009) · ↔ [1010](#latest-committed-memory-segment-144-node-1010) · ↔ [1014](#latest-committed-memory-segment-144-node-1014) · ↔ [1021](#latest-committed-memory-segment-144-node-1021) · ↔ [1022](#latest-committed-memory-segment-144-node-1022) · ↔ [1023](#latest-committed-memory-segment-144-node-1023) · ↔ [1026](#latest-committed-memory-segment-144-node-1026) · ↔ [1033](#latest-committed-memory-segment-144-node-1033)
 
 - MAI: 哦，里面是把它插进去就行了吧？就那个。
 - MAI: 嗯，买了一个拼图。是一个，呃，大底图是一个圆的，然后它那个里面是这种的，就是各种动物的那种。
@@ -6393,33 +7500,33 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-199"></a>
+<a id="latest-committed-memory-segment-144-node-199"></a>
 
 <details><summary>voice_199 · 2 speech entries · 2 links</summary>
 
-↔ [211](#latest-committed-memory-segment-125-node-211) · ↔ [1265](#latest-committed-memory-segment-125-node-1265)
+↔ [211](#latest-committed-memory-segment-144-node-211) · ↔ [1265](#latest-committed-memory-segment-144-node-1265)
 
 - MAI: 呃，那个。
 - MAI: 就煮过煮沸的水。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-200"></a>
+<a id="latest-committed-memory-segment-144-node-200"></a>
 
 <details><summary>voice_200 · 2 speech entries · 2 links</summary>
 
-↔ [212](#latest-committed-memory-segment-125-node-212) · ↔ [243](#latest-committed-memory-segment-125-node-243)
+↔ [212](#latest-committed-memory-segment-144-node-212) · ↔ [243](#latest-committed-memory-segment-144-node-243)
 
 - MAI: 应该是啥意思？集成电路还是什么？
 - MAI: 我是混欧美圈的，所以就乱听。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-201"></a>
+<a id="latest-committed-memory-segment-144-node-201"></a>
 
 <details><summary>voice_201 · 4 speech entries · 5 links</summary>
 
-↔ [214](#latest-committed-memory-segment-125-node-214) · ↔ [227](#latest-committed-memory-segment-125-node-227) · ↔ [421](#latest-committed-memory-segment-125-node-421) · ↔ [429](#latest-committed-memory-segment-125-node-429) · ↔ [495](#latest-committed-memory-segment-125-node-495)
+↔ [214](#latest-committed-memory-segment-144-node-214) · ↔ [227](#latest-committed-memory-segment-144-node-227) · ↔ [421](#latest-committed-memory-segment-144-node-421) · ↔ [429](#latest-committed-memory-segment-144-node-429) · ↔ [495](#latest-committed-memory-segment-144-node-495)
 
 - MAI: 今天大家好像接受良好。
 - MAI: 固定好，是-是这样。
@@ -6428,83 +7535,83 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-202"></a>
+<a id="latest-committed-memory-segment-144-node-202"></a>
 
 <details><summary>voice_202 · 1 speech entries · 1 links</summary>
 
-↔ [215](#latest-committed-memory-segment-125-node-215)
+↔ [215](#latest-committed-memory-segment-144-node-215)
 
 - MAI: 什么事情？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-203"></a>
+<a id="latest-committed-memory-segment-144-node-203"></a>
 
 <details><summary>voice_203 · 2 speech entries · 3 links</summary>
 
-↔ [217](#latest-committed-memory-segment-125-node-217) · ↔ [507](#latest-committed-memory-segment-125-node-507) · ↔ [514](#latest-committed-memory-segment-125-node-514)
+↔ [217](#latest-committed-memory-segment-144-node-217) · ↔ [507](#latest-committed-memory-segment-144-node-507) · ↔ [514](#latest-committed-memory-segment-144-node-514)
 
 - MAI: 就是-就是这个螺丝刀它没有磁吸。
 - MAI: 我其实可以问一个女生，但我不确定她能不能过得来，因为她那边挺远的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-204"></a>
+<a id="latest-committed-memory-segment-144-node-204"></a>
 
 <details><summary>voice_204 · 1 speech entries · 1 links</summary>
 
-↔ [218](#latest-committed-memory-segment-125-node-218)
+↔ [218](#latest-committed-memory-segment-144-node-218)
 
 - MAI: 磁吸。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-220"></a>
+<a id="latest-committed-memory-segment-144-node-220"></a>
 
 <details><summary>voice_220 · 1 speech entries · 1 links</summary>
 
-↔ [225](#latest-committed-memory-segment-125-node-225)
+↔ [225](#latest-committed-memory-segment-144-node-225)
 
 - MAI: 我塞了一。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-221"></a>
+<a id="latest-committed-memory-segment-144-node-221"></a>
 
 <details><summary>voice_221 · 1 speech entries · 1 links</summary>
 
-↔ [226](#latest-committed-memory-segment-125-node-226)
+↔ [226](#latest-committed-memory-segment-144-node-226)
 
 - MAI: 嗯，再塞一道。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-233"></a>
+<a id="latest-committed-memory-segment-144-node-233"></a>
 
 <details><summary>voice_233 · 2 speech entries · 1 links</summary>
 
-↔ [239](#latest-committed-memory-segment-125-node-239)
+↔ [239](#latest-committed-memory-segment-144-node-239)
 
 - MAI: 那是不是可以有一点BGM？
 - MAI: 那平时爱听什么类型的音乐？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-234"></a>
+<a id="latest-committed-memory-segment-144-node-234"></a>
 
 <details><summary>voice_234 · 1 speech entries · 1 links</summary>
 
-↔ [241](#latest-committed-memory-segment-125-node-241)
+↔ [241](#latest-committed-memory-segment-144-node-241)
 
 - MAI: 我-我听陶哲。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-235"></a>
+<a id="latest-committed-memory-segment-144-node-235"></a>
 
 <details><summary>voice_235 · 3 speech entries · 2 links</summary>
 
-↔ [242](#latest-committed-memory-segment-125-node-242) · ↔ [256](#latest-committed-memory-segment-125-node-256)
+↔ [242](#latest-committed-memory-segment-144-node-242) · ↔ [256](#latest-committed-memory-segment-144-node-256)
 
 - MAI: 嗯，R&amp;B。
 - MAI: R&amp;B。
@@ -6512,27 +7619,27 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-247"></a>
+<a id="latest-committed-memory-segment-144-node-247"></a>
 
 <details><summary>voice_247 · 1 speech entries · 1 links</summary>
 
-↔ [251](#latest-committed-memory-segment-125-node-251)
+↔ [251](#latest-committed-memory-segment-144-node-251)
 
 - MAI: 给大家一个比较干劲的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-248"></a>
+<a id="latest-committed-memory-segment-144-node-248"></a>
 
 <details><summary>voice_248 · 1 speech entries · 1 links</summary>
 
-↔ [252](#latest-committed-memory-segment-125-node-252)
+↔ [252](#latest-committed-memory-segment-144-node-252)
 
 - MAI: 那个东北女警的机器人。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-249"></a>
+<a id="latest-committed-memory-segment-144-node-249"></a>
 
 <details><summary>voice_249 · 1 speech entries · 0 links</summary>
 
@@ -6540,11 +7647,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-250"></a>
+<a id="latest-committed-memory-segment-144-node-250"></a>
 
 <details><summary>voice_250 · 5 speech entries · 5 links</summary>
 
-↔ [255](#latest-committed-memory-segment-125-node-255) · ↔ [268](#latest-committed-memory-segment-125-node-268) · ↔ [274](#latest-committed-memory-segment-125-node-274) · ↔ [348](#latest-committed-memory-segment-125-node-348) · ↔ [1213](#latest-committed-memory-segment-125-node-1213)
+↔ [255](#latest-committed-memory-segment-144-node-255) · ↔ [268](#latest-committed-memory-segment-144-node-268) · ↔ [274](#latest-committed-memory-segment-144-node-274) · ↔ [348](#latest-committed-memory-segment-144-node-348) · ↔ [1213](#latest-committed-memory-segment-144-node-1213)
 
 - MAI: 不要扛着来吧。这个半牵就行。
 - MAI: 吉林省长春市。大家知道这个城市吗？
@@ -6554,21 +7661,21 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-260"></a>
+<a id="latest-committed-memory-segment-144-node-260"></a>
 
 <details><summary>voice_260 · 1 speech entries · 2 links</summary>
 
-↔ [265](#latest-committed-memory-segment-125-node-265) · ↔ [274](#latest-committed-memory-segment-125-node-274)
+↔ [265](#latest-committed-memory-segment-144-node-265) · ↔ [274](#latest-committed-memory-segment-144-node-274)
 
 - MAI: 大东北，我的家乡。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-261"></a>
+<a id="latest-committed-memory-segment-144-node-261"></a>
 
-<details><summary>voice_261 · 16 speech entries · 13 links</summary>
+<details><summary>voice_261 · 25 speech entries · 22 links</summary>
 
-↔ [266](#latest-committed-memory-segment-125-node-266) · ↔ [274](#latest-committed-memory-segment-125-node-274) · ↔ [349](#latest-committed-memory-segment-125-node-349) · ↔ [363](#latest-committed-memory-segment-125-node-363) · ↔ [459](#latest-committed-memory-segment-125-node-459) · ↔ [479](#latest-committed-memory-segment-125-node-479) · ↔ [1349](#latest-committed-memory-segment-125-node-1349) · ↔ [1444](#latest-committed-memory-segment-125-node-1444) · ↔ [1462](#latest-committed-memory-segment-125-node-1462) · ↔ [1487](#latest-committed-memory-segment-125-node-1487) · ↔ [1494](#latest-committed-memory-segment-125-node-1494) · ↔ [1503](#latest-committed-memory-segment-125-node-1503) · ↔ [1711](#latest-committed-memory-segment-125-node-1711)
+↔ [266](#latest-committed-memory-segment-144-node-266) · ↔ [274](#latest-committed-memory-segment-144-node-274) · ↔ [349](#latest-committed-memory-segment-144-node-349) · ↔ [363](#latest-committed-memory-segment-144-node-363) · ↔ [459](#latest-committed-memory-segment-144-node-459) · ↔ [479](#latest-committed-memory-segment-144-node-479) · ↔ [1349](#latest-committed-memory-segment-144-node-1349) · ↔ [1444](#latest-committed-memory-segment-144-node-1444) · ↔ [1462](#latest-committed-memory-segment-144-node-1462) · ↔ [1487](#latest-committed-memory-segment-144-node-1487) · ↔ [1494](#latest-committed-memory-segment-144-node-1494) · ↔ [1503](#latest-committed-memory-segment-144-node-1503) · ↔ [1711](#latest-committed-memory-segment-144-node-1711) · ↔ [1758](#latest-committed-memory-segment-144-node-1758) · ↔ [1797](#latest-committed-memory-segment-144-node-1797) · ↔ [1821](#latest-committed-memory-segment-144-node-1821) · ↔ [1831](#latest-committed-memory-segment-144-node-1831) · ↔ [1921](#latest-committed-memory-segment-144-node-1921) · ↔ [1930](#latest-committed-memory-segment-144-node-1930) · ↔ [1969](#latest-committed-memory-segment-144-node-1969) · ↔ [1972](#latest-committed-memory-segment-144-node-1972) · ↔ [2035](#latest-committed-memory-segment-144-node-2035)
 
 - MAI: 你东北哪儿的呀？
 - MAI: 嗯，东北稻花的。
@@ -6586,24 +7693,33 @@ Not stored in this construction checkpoint.
 - MAI: 那为啥是俩词？
 - MAI: 对，给他们一点活动。
 - MAI: 买买甜品是吧？
+- MAI: 呃，对啊。
+- MAI: 晚上再烧。
+- MAI: 好，行，行，可以可以可以可以，那就管晚饭吧。
+- MAI: 是的，是的。那就五点半的时候一个大披萨，差不多。
+- MAI: 对对对，中间中间空一个小。
+- MAI: 呃，就三点到六点，五点半吧，五点半。
+- MAI: 对，呃，他家吃披萨的时候，咱就不拍了吧，行吧？
+- MAI: 所以那一天的甜品是
+- MAI: 烧烤也不能录，烧烤把眼睛给烧坏了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-262"></a>
+<a id="latest-committed-memory-segment-144-node-262"></a>
 
 <details><summary>voice_262 · 1 speech entries · 2 links</summary>
 
-↔ [267](#latest-committed-memory-segment-125-node-267) · ↔ [274](#latest-committed-memory-segment-125-node-274)
+↔ [267](#latest-committed-memory-segment-144-node-267) · ↔ [274](#latest-committed-memory-segment-144-node-274)
 
 - MAI: 我是稻花乡。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-276"></a>
+<a id="latest-committed-memory-segment-144-node-276"></a>
 
 <details><summary>voice_276 · 3 speech entries · 2 links</summary>
 
-↔ [1290](#latest-committed-memory-segment-125-node-1290) · ↔ [1595](#latest-committed-memory-segment-125-node-1595)
+↔ [1290](#latest-committed-memory-segment-144-node-1290) · ↔ [1595](#latest-committed-memory-segment-144-node-1595)
 
 - MAI: 没，嗯。
 - MAI: 我一个人跳吗？
@@ -6611,11 +7727,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-277"></a>
+<a id="latest-committed-memory-segment-144-node-277"></a>
 
 <details><summary>voice_277 · 4 speech entries · 3 links</summary>
 
-↔ [1243](#latest-committed-memory-segment-125-node-1243) · ↔ [1327](#latest-committed-memory-segment-125-node-1327) · ↔ [1504](#latest-committed-memory-segment-125-node-1504)
+↔ [1243](#latest-committed-memory-segment-144-node-1243) · ↔ [1327](#latest-committed-memory-segment-144-node-1327) · ↔ [1504](#latest-committed-memory-segment-144-node-1504)
 
 - Deepgram: ¿Qué onda, joven?
 - MAI: 行，可以烤是吧？
@@ -6624,62 +7740,62 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-296"></a>
+<a id="latest-committed-memory-segment-144-node-296"></a>
 
 <details><summary>voice_296 · 1 speech entries · 1 links</summary>
 
-↔ [303](#latest-committed-memory-segment-125-node-303)
+↔ [303](#latest-committed-memory-segment-144-node-303)
 
 - MAI: 可以进场。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-297"></a>
+<a id="latest-committed-memory-segment-144-node-297"></a>
 
 <details><summary>voice_297 · 2 speech entries · 3 links</summary>
 
-↔ [304](#latest-committed-memory-segment-125-node-304) · ↔ [305](#latest-committed-memory-segment-125-node-305) · ↔ [308](#latest-committed-memory-segment-125-node-308)
+↔ [304](#latest-committed-memory-segment-144-node-304) · ↔ [305](#latest-committed-memory-segment-144-node-305) · ↔ [308](#latest-committed-memory-segment-144-node-308)
 
 - MAI: 可以，我已经进过场了。
 - MAI: 我觉得我们大学那些接线的，焊板子的，跟进场没啥区别。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-298"></a>
+<a id="latest-committed-memory-segment-144-node-298"></a>
 
 <details><summary>voice_298 · 1 speech entries · 1 links</summary>
 
-↔ [306](#latest-committed-memory-segment-125-node-306)
+↔ [306](#latest-committed-memory-segment-144-node-306)
 
 - MAI: 焊板。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-310"></a>
+<a id="latest-committed-memory-segment-144-node-310"></a>
 
 <details><summary>voice_310 · 1 speech entries · 1 links</summary>
 
-↔ [315](#latest-committed-memory-segment-125-node-315)
+↔ [315](#latest-committed-memory-segment-144-node-315)
 
 - MAI: 下一个流水线上接到电脑。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-311"></a>
+<a id="latest-committed-memory-segment-144-node-311"></a>
 
 <details><summary>voice_311 · 1 speech entries · 1 links</summary>
 
-↔ [316](#latest-committed-memory-segment-125-node-316)
+↔ [316](#latest-committed-memory-segment-144-node-316)
 
 - MAI: 对对对。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-312"></a>
+<a id="latest-committed-memory-segment-144-node-312"></a>
 
 <details><summary>voice_312 · 4 speech entries · 4 links</summary>
 
-↔ [317](#latest-committed-memory-segment-125-node-317) · ↔ [1305](#latest-committed-memory-segment-125-node-1305) · ↔ [1626](#latest-committed-memory-segment-125-node-1626) · ↔ [1639](#latest-committed-memory-segment-125-node-1639)
+↔ [317](#latest-committed-memory-segment-144-node-317) · ↔ [1305](#latest-committed-memory-segment-144-node-1305) · ↔ [1626](#latest-committed-memory-segment-144-node-1626) · ↔ [1639](#latest-committed-memory-segment-144-node-1639)
 
 - MAI: 下一个需要高级技工。
 - MAI: 你说这是技工吗？
@@ -6688,51 +7804,51 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-323"></a>
+<a id="latest-committed-memory-segment-144-node-323"></a>
 
 <details><summary>voice_323 · 1 speech entries · 1 links</summary>
 
-↔ [326](#latest-committed-memory-segment-125-node-326)
+↔ [326](#latest-committed-memory-segment-144-node-326)
 
 - MAI: 技术。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-324"></a>
+<a id="latest-committed-memory-segment-144-node-324"></a>
 
 <details><summary>voice_324 · 1 speech entries · 1 links</summary>
 
-↔ [329](#latest-committed-memory-segment-125-node-329)
+↔ [329](#latest-committed-memory-segment-144-node-329)
 
 - MAI: 不行，我必须要争一下。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-337"></a>
+<a id="latest-committed-memory-segment-144-node-337"></a>
 
 <details><summary>voice_337 · 1 speech entries · 1 links</summary>
 
-↔ [346](#latest-committed-memory-segment-125-node-346)
+↔ [346](#latest-committed-memory-segment-144-node-346)
 
 - MAI: 拧完应该就做好了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-338"></a>
+<a id="latest-committed-memory-segment-144-node-338"></a>
 
 <details><summary>voice_338 · 1 speech entries · 1 links</summary>
 
-↔ [350](#latest-committed-memory-segment-125-node-350)
+↔ [350](#latest-committed-memory-segment-144-node-350)
 
 - MAI: 应该是吧。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-339"></a>
+<a id="latest-committed-memory-segment-144-node-339"></a>
 
-<details><summary>voice_339 · 11 speech entries · 12 links</summary>
+<details><summary>voice_339 · 13 speech entries · 13 links</summary>
 
-↔ [351](#latest-committed-memory-segment-125-node-351) · ↔ [803](#latest-committed-memory-segment-125-node-803) · ↔ [804](#latest-committed-memory-segment-125-node-804) · ↔ [805](#latest-committed-memory-segment-125-node-805) · ↔ [811](#latest-committed-memory-segment-125-node-811) · ↔ [817](#latest-committed-memory-segment-125-node-817) · ↔ [830](#latest-committed-memory-segment-125-node-830) · ↔ [831](#latest-committed-memory-segment-125-node-831) · ↔ [839](#latest-committed-memory-segment-125-node-839) · ↔ [850](#latest-committed-memory-segment-125-node-850) · ↔ [851](#latest-committed-memory-segment-125-node-851) · ↔ [1241](#latest-committed-memory-segment-125-node-1241)
+↔ [351](#latest-committed-memory-segment-144-node-351) · ↔ [803](#latest-committed-memory-segment-144-node-803) · ↔ [804](#latest-committed-memory-segment-144-node-804) · ↔ [805](#latest-committed-memory-segment-144-node-805) · ↔ [811](#latest-committed-memory-segment-144-node-811) · ↔ [817](#latest-committed-memory-segment-144-node-817) · ↔ [830](#latest-committed-memory-segment-144-node-830) · ↔ [831](#latest-committed-memory-segment-144-node-831) · ↔ [839](#latest-committed-memory-segment-144-node-839) · ↔ [850](#latest-committed-memory-segment-144-node-850) · ↔ [851](#latest-committed-memory-segment-144-node-851) · ↔ [1241](#latest-committed-memory-segment-144-node-1241) · ↔ [1814](#latest-committed-memory-segment-144-node-1814)
 
 - Deepgram: 你仁你也 &#124; MAI: 你可以把钱放在里面，我需要装的话让自己装。
 - MAI: 其实就是我的构思也跟DIY是有关系的。对，我刚-我刚开始想的是就是可以，因为是世界地球日，所以我想就是做一点环保一点的东西。就我不知道大家有没有做过水母灯，就这两年在景区还挺火的。呃，就是长得像水母一样的一个小灯。
@@ -6745,14 +7861,16 @@ Not stored in this construction checkpoint.
 - MAI: 肯定会有很多纸箱，如果说就能直接使用的话，就还挺环保的，就也很契合这个地球的这个主题。
 - MAI: 最后还有一个想法，但是这个想法实施起来就比较困难。我本来想的是可能大家可以简单地排一个小短剧或者之类的。对，因为我之前跟我小伙伴有说我们拍一些电影。
 - MAI: 如果是软的肉，我不是很会切，就已经泡好了。
+- MAI: 就是兜烧烤还挺麻烦的。
+- MAI: 而且之前有吃甜的东西的话，可能也不会特别的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-364"></a>
+<a id="latest-committed-memory-segment-144-node-364"></a>
 
-<details><summary>voice_364 · 67 speech entries · 56 links</summary>
+<details><summary>voice_364 · 75 speech entries · 62 links</summary>
 
-↔ [370](#latest-committed-memory-segment-125-node-370) · ↔ [509](#latest-committed-memory-segment-125-node-509) · ↔ [515](#latest-committed-memory-segment-125-node-515) · ↔ [550](#latest-committed-memory-segment-125-node-550) · ↔ [551](#latest-committed-memory-segment-125-node-551) · ↔ [565](#latest-committed-memory-segment-125-node-565) · ↔ [592](#latest-committed-memory-segment-125-node-592) · ↔ [606](#latest-committed-memory-segment-125-node-606) · ↔ [624](#latest-committed-memory-segment-125-node-624) · ↔ [627](#latest-committed-memory-segment-125-node-627) · ↔ [632](#latest-committed-memory-segment-125-node-632) · ↔ [659](#latest-committed-memory-segment-125-node-659) · ↔ [694](#latest-committed-memory-segment-125-node-694) · ↔ [729](#latest-committed-memory-segment-125-node-729) · ↔ [747](#latest-committed-memory-segment-125-node-747) · ↔ [760](#latest-committed-memory-segment-125-node-760) · ↔ [790](#latest-committed-memory-segment-125-node-790) · ↔ [878](#latest-committed-memory-segment-125-node-878) · ↔ [951](#latest-committed-memory-segment-125-node-951) · ↔ [984](#latest-committed-memory-segment-125-node-984) · ↔ [1083](#latest-committed-memory-segment-125-node-1083) · ↔ [1095](#latest-committed-memory-segment-125-node-1095) · ↔ [1117](#latest-committed-memory-segment-125-node-1117) · ↔ [1162](#latest-committed-memory-segment-125-node-1162) · ↔ [1180](#latest-committed-memory-segment-125-node-1180) · ↔ [1201](#latest-committed-memory-segment-125-node-1201) · ↔ [1202](#latest-committed-memory-segment-125-node-1202) · ↔ [1212](#latest-committed-memory-segment-125-node-1212) · ↔ [1218](#latest-committed-memory-segment-125-node-1218) · ↔ [1276](#latest-committed-memory-segment-125-node-1276) · ↔ [1289](#latest-committed-memory-segment-125-node-1289) · ↔ [1339](#latest-committed-memory-segment-125-node-1339) · ↔ [1341](#latest-committed-memory-segment-125-node-1341) · ↔ [1348](#latest-committed-memory-segment-125-node-1348) · ↔ [1367](#latest-committed-memory-segment-125-node-1367) · ↔ [1393](#latest-committed-memory-segment-125-node-1393) · ↔ [1425](#latest-committed-memory-segment-125-node-1425) · ↔ [1426](#latest-committed-memory-segment-125-node-1426) · ↔ [1441](#latest-committed-memory-segment-125-node-1441) · ↔ [1447](#latest-committed-memory-segment-125-node-1447) · ↔ [1477](#latest-committed-memory-segment-125-node-1477) · ↔ [1489](#latest-committed-memory-segment-125-node-1489) · ↔ [1494](#latest-committed-memory-segment-125-node-1494) · ↔ [1502](#latest-committed-memory-segment-125-node-1502) · ↔ [1508](#latest-committed-memory-segment-125-node-1508) · ↔ [1523](#latest-committed-memory-segment-125-node-1523) · ↔ [1524](#latest-committed-memory-segment-125-node-1524) · ↔ [1527](#latest-committed-memory-segment-125-node-1527) · ↔ [1548](#latest-committed-memory-segment-125-node-1548) · ↔ [1567](#latest-committed-memory-segment-125-node-1567) · ↔ [1571](#latest-committed-memory-segment-125-node-1571) · ↔ [1583](#latest-committed-memory-segment-125-node-1583) · ↔ [1677](#latest-committed-memory-segment-125-node-1677) · ↔ [1684](#latest-committed-memory-segment-125-node-1684) · ↔ [1696](#latest-committed-memory-segment-125-node-1696) · ↔ [1713](#latest-committed-memory-segment-125-node-1713)
+↔ [370](#latest-committed-memory-segment-144-node-370) · ↔ [509](#latest-committed-memory-segment-144-node-509) · ↔ [515](#latest-committed-memory-segment-144-node-515) · ↔ [550](#latest-committed-memory-segment-144-node-550) · ↔ [551](#latest-committed-memory-segment-144-node-551) · ↔ [565](#latest-committed-memory-segment-144-node-565) · ↔ [592](#latest-committed-memory-segment-144-node-592) · ↔ [606](#latest-committed-memory-segment-144-node-606) · ↔ [624](#latest-committed-memory-segment-144-node-624) · ↔ [627](#latest-committed-memory-segment-144-node-627) · ↔ [632](#latest-committed-memory-segment-144-node-632) · ↔ [659](#latest-committed-memory-segment-144-node-659) · ↔ [694](#latest-committed-memory-segment-144-node-694) · ↔ [729](#latest-committed-memory-segment-144-node-729) · ↔ [747](#latest-committed-memory-segment-144-node-747) · ↔ [760](#latest-committed-memory-segment-144-node-760) · ↔ [790](#latest-committed-memory-segment-144-node-790) · ↔ [878](#latest-committed-memory-segment-144-node-878) · ↔ [951](#latest-committed-memory-segment-144-node-951) · ↔ [984](#latest-committed-memory-segment-144-node-984) · ↔ [1083](#latest-committed-memory-segment-144-node-1083) · ↔ [1095](#latest-committed-memory-segment-144-node-1095) · ↔ [1117](#latest-committed-memory-segment-144-node-1117) · ↔ [1162](#latest-committed-memory-segment-144-node-1162) · ↔ [1180](#latest-committed-memory-segment-144-node-1180) · ↔ [1201](#latest-committed-memory-segment-144-node-1201) · ↔ [1202](#latest-committed-memory-segment-144-node-1202) · ↔ [1212](#latest-committed-memory-segment-144-node-1212) · ↔ [1218](#latest-committed-memory-segment-144-node-1218) · ↔ [1276](#latest-committed-memory-segment-144-node-1276) · ↔ [1289](#latest-committed-memory-segment-144-node-1289) · ↔ [1339](#latest-committed-memory-segment-144-node-1339) · ↔ [1341](#latest-committed-memory-segment-144-node-1341) · ↔ [1348](#latest-committed-memory-segment-144-node-1348) · ↔ [1367](#latest-committed-memory-segment-144-node-1367) · ↔ [1393](#latest-committed-memory-segment-144-node-1393) · ↔ [1425](#latest-committed-memory-segment-144-node-1425) · ↔ [1426](#latest-committed-memory-segment-144-node-1426) · ↔ [1441](#latest-committed-memory-segment-144-node-1441) · ↔ [1447](#latest-committed-memory-segment-144-node-1447) · ↔ [1477](#latest-committed-memory-segment-144-node-1477) · ↔ [1489](#latest-committed-memory-segment-144-node-1489) · ↔ [1494](#latest-committed-memory-segment-144-node-1494) · ↔ [1502](#latest-committed-memory-segment-144-node-1502) · ↔ [1508](#latest-committed-memory-segment-144-node-1508) · ↔ [1523](#latest-committed-memory-segment-144-node-1523) · ↔ [1524](#latest-committed-memory-segment-144-node-1524) · ↔ [1527](#latest-committed-memory-segment-144-node-1527) · ↔ [1548](#latest-committed-memory-segment-144-node-1548) · ↔ [1567](#latest-committed-memory-segment-144-node-1567) · ↔ [1571](#latest-committed-memory-segment-144-node-1571) · ↔ [1583](#latest-committed-memory-segment-144-node-1583) · ↔ [1677](#latest-committed-memory-segment-144-node-1677) · ↔ [1684](#latest-committed-memory-segment-144-node-1684) · ↔ [1696](#latest-committed-memory-segment-144-node-1696) · ↔ [1713](#latest-committed-memory-segment-144-node-1713) · ↔ [1734](#latest-committed-memory-segment-144-node-1734) · ↔ [1756](#latest-committed-memory-segment-144-node-1756) · ↔ [1903](#latest-committed-memory-segment-144-node-1903) · ↔ [1915](#latest-committed-memory-segment-144-node-1915) · ↔ [1933](#latest-committed-memory-segment-144-node-1933) · ↔ [1982](#latest-committed-memory-segment-144-node-1982)
 
 - MAI: 日，周日下午吧。
 - MAI: 就这个东西，就是你可以下这些。这问题不大，是吧？
@@ -6821,24 +7939,33 @@ Not stored in this construction checkpoint.
 - MAI: 就可能我们一些一部分人，还是我们先做好，我们可以先做好吗？
 - MAI: 就是那些。
 - MAI: 先发甜品。
+- MAI: 架子一千是吗？
+- MAI: 能-能多少钱？
+- MAI: 不能买是什么？太贵了？
+- MAI: 嗯，那我们就定个结束时间。
+- MAI: 对，这时间太长了，中间得
+- MAI: 不是不是，我我我是说中间可能有一个小时我们要传数据，你们的眼睛。
+- MAI: 甜品是什么时候？
+- MAI: 当天做还是可以前一天做？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-365"></a>
+<a id="latest-committed-memory-segment-144-node-365"></a>
 
-<details><summary>voice_365 · 1 speech entries · 1 links</summary>
+<details><summary>voice_365 · 2 speech entries · 2 links</summary>
 
-↔ [371](#latest-committed-memory-segment-125-node-371)
+↔ [371](#latest-committed-memory-segment-144-node-371) · ↔ [1890](#latest-committed-memory-segment-144-node-1890)
 
 - MAI: 邀请什么人？
+- Deepgram: SS &#124; MAI: 还是SSERT？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-366"></a>
+<a id="latest-committed-memory-segment-144-node-366"></a>
 
 <details><summary>voice_366 · 14 speech entries · 15 links</summary>
 
-↔ [373](#latest-committed-memory-segment-125-node-373) · ↔ [1090](#latest-committed-memory-segment-125-node-1090) · ↔ [1095](#latest-committed-memory-segment-125-node-1095) · ↔ [1109](#latest-committed-memory-segment-125-node-1109) · ↔ [1116](#latest-committed-memory-segment-125-node-1116) · ↔ [1122](#latest-committed-memory-segment-125-node-1122) · ↔ [1132](#latest-committed-memory-segment-125-node-1132) · ↔ [1149](#latest-committed-memory-segment-125-node-1149) · ↔ [1177](#latest-committed-memory-segment-125-node-1177) · ↔ [1310](#latest-committed-memory-segment-125-node-1310) · ↔ [1350](#latest-committed-memory-segment-125-node-1350) · ↔ [1353](#latest-committed-memory-segment-125-node-1353) · ↔ [1492](#latest-committed-memory-segment-125-node-1492) · ↔ [1494](#latest-committed-memory-segment-125-node-1494) · ↔ [1609](#latest-committed-memory-segment-125-node-1609)
+↔ [373](#latest-committed-memory-segment-144-node-373) · ↔ [1090](#latest-committed-memory-segment-144-node-1090) · ↔ [1095](#latest-committed-memory-segment-144-node-1095) · ↔ [1109](#latest-committed-memory-segment-144-node-1109) · ↔ [1116](#latest-committed-memory-segment-144-node-1116) · ↔ [1122](#latest-committed-memory-segment-144-node-1122) · ↔ [1132](#latest-committed-memory-segment-144-node-1132) · ↔ [1149](#latest-committed-memory-segment-144-node-1149) · ↔ [1177](#latest-committed-memory-segment-144-node-1177) · ↔ [1310](#latest-committed-memory-segment-144-node-1310) · ↔ [1350](#latest-committed-memory-segment-144-node-1350) · ↔ [1353](#latest-committed-memory-segment-144-node-1353) · ↔ [1492](#latest-committed-memory-segment-144-node-1492) · ↔ [1494](#latest-committed-memory-segment-144-node-1494) · ↔ [1609](#latest-committed-memory-segment-144-node-1609)
 
 - MAI: 黑板写一写。
 - MAI: 买大家的一些任何。
@@ -6857,11 +7984,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-367"></a>
+<a id="latest-committed-memory-segment-144-node-367"></a>
 
 <details><summary>voice_367 · 4 speech entries · 1 links</summary>
 
-↔ [375](#latest-committed-memory-segment-125-node-375)
+↔ [375](#latest-committed-memory-segment-144-node-375)
 
 - MAI: 来，我来，我字非常好看。
 - MAI: 不影响我的这个书法的发挥。
@@ -6870,17 +7997,17 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-368"></a>
+<a id="latest-committed-memory-segment-144-node-368"></a>
 
 <details><summary>voice_368 · 1 speech entries · 1 links</summary>
 
-↔ [376](#latest-committed-memory-segment-125-node-376)
+↔ [376](#latest-committed-memory-segment-144-node-376)
 
 - MAI: 什么架子？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-385"></a>
+<a id="latest-committed-memory-segment-144-node-385"></a>
 
 <details><summary>voice_385 · 1 speech entries · 0 links</summary>
 
@@ -6888,11 +8015,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-386"></a>
+<a id="latest-committed-memory-segment-144-node-386"></a>
 
-<details><summary>voice_386 · 7 speech entries · 5 links</summary>
+<details><summary>voice_386 · 8 speech entries · 6 links</summary>
 
-↔ [567](#latest-committed-memory-segment-125-node-567) · ↔ [896](#latest-committed-memory-segment-125-node-896) · ↔ [910](#latest-committed-memory-segment-125-node-910) · ↔ [1586](#latest-committed-memory-segment-125-node-1586) · ↔ [1709](#latest-committed-memory-segment-125-node-1709)
+↔ [567](#latest-committed-memory-segment-144-node-567) · ↔ [896](#latest-committed-memory-segment-144-node-896) · ↔ [910](#latest-committed-memory-segment-144-node-910) · ↔ [1586](#latest-committed-memory-segment-144-node-1586) · ↔ [1709](#latest-committed-memory-segment-144-node-1709) · ↔ [1895](#latest-committed-memory-segment-144-node-1895)
 
 - MAI: 好问题。
 - MAI: 好问题。
@@ -6901,10 +8028,11 @@ Not stored in this construction checkpoint.
 - MAI: 佩- 佩阳明买了，但是不一定到。不一定到哈，我看一下。
 - MAI: 好，那你插上吧，找一个。
 - MAI: 甜品，甜品啊，可以先做好。
+- MAI: 对，我们有。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-387"></a>
+<a id="latest-committed-memory-segment-144-node-387"></a>
 
 <details><summary>voice_387 · 1 speech entries · 0 links</summary>
 
@@ -6912,7 +8040,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-388"></a>
+<a id="latest-committed-memory-segment-144-node-388"></a>
 
 <details><summary>voice_388 · 1 speech entries · 0 links</summary>
 
@@ -6920,7 +8048,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-389"></a>
+<a id="latest-committed-memory-segment-144-node-389"></a>
 
 <details><summary>voice_389 · 1 speech entries · 0 links</summary>
 
@@ -6928,11 +8056,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-398"></a>
+<a id="latest-committed-memory-segment-144-node-398"></a>
 
 <details><summary>voice_398 · 5 speech entries · 6 links</summary>
 
-↔ [400](#latest-committed-memory-segment-125-node-400) · ↔ [644](#latest-committed-memory-segment-125-node-644) · ↔ [998](#latest-committed-memory-segment-125-node-998) · ↔ [1035](#latest-committed-memory-segment-125-node-1035) · ↔ [1193](#latest-committed-memory-segment-125-node-1193) · ↔ [1197](#latest-committed-memory-segment-125-node-1197)
+↔ [400](#latest-committed-memory-segment-144-node-400) · ↔ [644](#latest-committed-memory-segment-144-node-644) · ↔ [998](#latest-committed-memory-segment-144-node-998) · ↔ [1035](#latest-committed-memory-segment-144-node-1035) · ↔ [1193](#latest-committed-memory-segment-144-node-1193) · ↔ [1197](#latest-committed-memory-segment-144-node-1197)
 
 - Deepgram: Pia, &#124; MAI: 笔应该在上面，等一下啊。笔。
 - MAI: 多了是吧。合适吗？问题不大，问题不大。
@@ -6942,63 +8070,64 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-411"></a>
+<a id="latest-committed-memory-segment-144-node-411"></a>
 
 <details><summary>voice_411 · 1 speech entries · 1 links</summary>
 
-↔ [418](#latest-committed-memory-segment-125-node-418)
+↔ [418](#latest-committed-memory-segment-144-node-418)
 
 - MAI: 哎，你是1。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-412"></a>
+<a id="latest-committed-memory-segment-144-node-412"></a>
 
 <details><summary>voice_412 · 1 speech entries · 2 links</summary>
 
-↔ [419](#latest-committed-memory-segment-125-node-419) · ↔ [427](#latest-committed-memory-segment-125-node-427)
+↔ [419](#latest-committed-memory-segment-144-node-419) · ↔ [427](#latest-committed-memory-segment-144-node-427)
 
 - MAI: 我，我是1，不是1，OK？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-413"></a>
+<a id="latest-committed-memory-segment-144-node-413"></a>
 
-<details><summary>voice_413 · 2 speech entries · 2 links</summary>
+<details><summary>voice_413 · 3 speech entries · 3 links</summary>
 
-↔ [420](#latest-committed-memory-segment-125-node-420) · ↔ [609](#latest-committed-memory-segment-125-node-609)
+↔ [420](#latest-committed-memory-segment-144-node-420) · ↔ [609](#latest-committed-memory-segment-144-node-609) · ↔ [1781](#latest-committed-memory-segment-144-node-1781)
 
 - MAI: 有啥差别？
 - Deepgram: ，论伯耀伯耀 ，论 双论 &#124; MAI: 4，4加5，9。
+- MAI: 还打包，打了一包回去。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-414"></a>
+<a id="latest-committed-memory-segment-144-node-414"></a>
 
 <details><summary>voice_414 · 1 speech entries · 1 links</summary>
 
-↔ [422](#latest-committed-memory-segment-125-node-422)
+↔ [422](#latest-committed-memory-segment-144-node-422)
 
 - MAI: Ego live.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-415"></a>
+<a id="latest-committed-memory-segment-144-node-415"></a>
 
 <details><summary>voice_415 · 2 speech entries · 3 links</summary>
 
-↔ [423](#latest-committed-memory-segment-125-node-423) · ↔ [428](#latest-committed-memory-segment-125-node-428) · ↔ [437](#latest-committed-memory-segment-125-node-437)
+↔ [423](#latest-committed-memory-segment-144-node-423) · ↔ [428](#latest-committed-memory-segment-144-node-428) · ↔ [437](#latest-committed-memory-segment-144-node-437)
 
 - MAI: 最后一天的元旦。
 - MAI: 还就没写。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-430"></a>
+<a id="latest-committed-memory-segment-144-node-430"></a>
 
 <details><summary>voice_430 · 8 speech entries · 8 links</summary>
 
-↔ [436](#latest-committed-memory-segment-125-node-436) · ↔ [454](#latest-committed-memory-segment-125-node-454) · ↔ [541](#latest-committed-memory-segment-125-node-541) · ↔ [543](#latest-committed-memory-segment-125-node-543) · ↔ [660](#latest-committed-memory-segment-125-node-660) · ↔ [946](#latest-committed-memory-segment-125-node-946) · ↔ [949](#latest-committed-memory-segment-125-node-949) · ↔ [1020](#latest-committed-memory-segment-125-node-1020)
+↔ [436](#latest-committed-memory-segment-144-node-436) · ↔ [454](#latest-committed-memory-segment-144-node-454) · ↔ [541](#latest-committed-memory-segment-144-node-541) · ↔ [543](#latest-committed-memory-segment-144-node-543) · ↔ [660](#latest-committed-memory-segment-144-node-660) · ↔ [946](#latest-committed-memory-segment-144-node-946) · ↔ [949](#latest-committed-memory-segment-144-node-949) · ↔ [1020](#latest-committed-memory-segment-144-node-1020)
 
 - MAI: 腰，腰是这么写的？
 - MAI: 是，是这么写的。
@@ -7011,21 +8140,21 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-431"></a>
+<a id="latest-committed-memory-segment-144-node-431"></a>
 
 <details><summary>voice_431 · 1 speech entries · 1 links</summary>
 
-↔ [438](#latest-committed-memory-segment-125-node-438)
+↔ [438](#latest-committed-memory-segment-144-node-438)
 
 - MAI: 宝盖，宝盖。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-443"></a>
+<a id="latest-committed-memory-segment-144-node-443"></a>
 
-<details><summary>voice_443 · 6 speech entries · 7 links</summary>
+<details><summary>voice_443 · 7 speech entries · 9 links</summary>
 
-↔ [452](#latest-committed-memory-segment-125-node-452) · ↔ [608](#latest-committed-memory-segment-125-node-608) · ↔ [655](#latest-committed-memory-segment-125-node-655) · ↔ [656](#latest-committed-memory-segment-125-node-656) · ↔ [662](#latest-committed-memory-segment-125-node-662) · ↔ [1191](#latest-committed-memory-segment-125-node-1191) · ↔ [1197](#latest-committed-memory-segment-125-node-1197)
+↔ [452](#latest-committed-memory-segment-144-node-452) · ↔ [608](#latest-committed-memory-segment-144-node-608) · ↔ [655](#latest-committed-memory-segment-144-node-655) · ↔ [656](#latest-committed-memory-segment-144-node-656) · ↔ [662](#latest-committed-memory-segment-144-node-662) · ↔ [1191](#latest-committed-memory-segment-144-node-1191) · ↔ [1197](#latest-committed-memory-segment-144-node-1197) · ↔ [1869](#latest-committed-memory-segment-144-node-1869) · ↔ [1873](#latest-committed-memory-segment-144-node-1873)
 
 - MAI: OK。第一位。
 - MAI: 我浅浅邀一个吧，先。
@@ -7033,66 +8162,71 @@ Not stored in this construction checkpoint.
 - Deepgram: ठीक &#124; MAI: 第二点，要开始活动内容部分吗？
 - Deepgram: 那覇要bie dama佛 ， &#124; MAI: 活动内容，我记得大家问卷的时候应该是填过的。
 - MAI: Coffee and alcohol.
+- MAI: 要开饭，dinner。在5点半之后，5点半左右。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-444"></a>
+<a id="latest-committed-memory-segment-144-node-444"></a>
 
-<details><summary>voice_444 · 3 speech entries · 4 links</summary>
+<details><summary>voice_444 · 6 speech entries · 8 links</summary>
 
-↔ [455](#latest-committed-memory-segment-125-node-455) · ↔ [540](#latest-committed-memory-segment-125-node-540) · ↔ [543](#latest-committed-memory-segment-125-node-543) · ↔ [730](#latest-committed-memory-segment-125-node-730)
+↔ [455](#latest-committed-memory-segment-144-node-455) · ↔ [540](#latest-committed-memory-segment-144-node-540) · ↔ [543](#latest-committed-memory-segment-144-node-543) · ↔ [730](#latest-committed-memory-segment-144-node-730) · ↔ [1730](#latest-committed-memory-segment-144-node-1730) · ↔ [1850](#latest-committed-memory-segment-144-node-1850) · ↔ [1870](#latest-committed-memory-segment-144-node-1870) · ↔ [1874](#latest-committed-memory-segment-144-node-1874)
 
 - MAI: 卢亚呢？
 - MAI: 嗯，呃，4到6位嘉宾。
 - MAI: 没有我的。
+- MAI: 对。
+- MAI: 可以啊，来。
+- Deepgram: Top pizza. &#124; MAI: 大披萨。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-445"></a>
+<a id="latest-committed-memory-segment-144-node-445"></a>
 
 <details><summary>voice_445 · 1 speech entries · 1 links</summary>
 
-↔ [456](#latest-committed-memory-segment-125-node-456)
+↔ [456](#latest-committed-memory-segment-144-node-456)
 
 - MAI: 我不太确定，因为咱们这太远了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-446"></a>
+<a id="latest-committed-memory-segment-144-node-446"></a>
 
-<details><summary>voice_446 · 1 speech entries · 1 links</summary>
+<details><summary>voice_446 · 2 speech entries · 2 links</summary>
 
-↔ [457](#latest-committed-memory-segment-125-node-457)
+↔ [457](#latest-committed-memory-segment-144-node-457) · ↔ [1795](#latest-committed-memory-segment-144-node-1795)
 
 - MAI: 我不知道过不过来。
+- MAI: 烧烤吗？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-447"></a>
+<a id="latest-committed-memory-segment-144-node-447"></a>
 
 <details><summary>voice_447 · 1 speech entries · 1 links</summary>
 
-↔ [458](#latest-committed-memory-segment-125-node-458)
+↔ [458](#latest-committed-memory-segment-144-node-458)
 
 - MAI: 好。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-448"></a>
+<a id="latest-committed-memory-segment-144-node-448"></a>
 
 <details><summary>voice_448 · 1 speech entries · 1 links</summary>
 
-↔ [460](#latest-committed-memory-segment-125-node-460)
+↔ [460](#latest-committed-memory-segment-144-node-460)
 
 - MAI: 我浅浅邀请一个吧。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-466"></a>
+<a id="latest-committed-memory-segment-144-node-466"></a>
 
 <details><summary>voice_466 · 3 speech entries · 3 links</summary>
 
-↔ [480](#latest-committed-memory-segment-125-node-480) · ↔ [1716](#latest-committed-memory-segment-125-node-1716) · ↔ [1717](#latest-committed-memory-segment-125-node-1717)
+↔ [480](#latest-committed-memory-segment-144-node-480) · ↔ [1716](#latest-committed-memory-segment-144-node-1716) · ↔ [1717](#latest-committed-memory-segment-144-node-1717)
 
 - MAI: 画上去。
 - MAI: 摆台吗？
@@ -7100,11 +8234,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-467"></a>
+<a id="latest-committed-memory-segment-144-node-467"></a>
 
 <details><summary>voice_467 · 7 speech entries · 8 links</summary>
 
-↔ [481](#latest-committed-memory-segment-125-node-481) · ↔ [525](#latest-committed-memory-segment-125-node-525) · ↔ [531](#latest-committed-memory-segment-125-node-531) · ↔ [674](#latest-committed-memory-segment-125-node-674) · ↔ [1037](#latest-committed-memory-segment-125-node-1037) · ↔ [1130](#latest-committed-memory-segment-125-node-1130) · ↔ [1277](#latest-committed-memory-segment-125-node-1277) · ↔ [1440](#latest-committed-memory-segment-125-node-1440)
+↔ [481](#latest-committed-memory-segment-144-node-481) · ↔ [525](#latest-committed-memory-segment-144-node-525) · ↔ [531](#latest-committed-memory-segment-144-node-531) · ↔ [674](#latest-committed-memory-segment-144-node-674) · ↔ [1037](#latest-committed-memory-segment-144-node-1037) · ↔ [1130](#latest-committed-memory-segment-144-node-1130) · ↔ [1277](#latest-committed-memory-segment-144-node-1277) · ↔ [1440](#latest-committed-memory-segment-144-node-1440)
 
 - MAI: 画小龙吧，男人先右点，女生再。
 - MAI: 嗯，丽夏，然后对。LYS。
@@ -7116,11 +8250,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-468"></a>
+<a id="latest-committed-memory-segment-144-node-468"></a>
 
 <details><summary>voice_468 · 8 speech entries · 10 links</summary>
 
-↔ [482](#latest-committed-memory-segment-125-node-482) · ↔ [539](#latest-committed-memory-segment-125-node-539) · ↔ [543](#latest-committed-memory-segment-125-node-543) · ↔ [581](#latest-committed-memory-segment-125-node-581) · ↔ [582](#latest-committed-memory-segment-125-node-582) · ↔ [1063](#latest-committed-memory-segment-125-node-1063) · ↔ [1064](#latest-committed-memory-segment-125-node-1064) · ↔ [1070](#latest-committed-memory-segment-125-node-1070) · ↔ [1106](#latest-committed-memory-segment-125-node-1106) · ↔ [1474](#latest-committed-memory-segment-125-node-1474)
+↔ [482](#latest-committed-memory-segment-144-node-482) · ↔ [539](#latest-committed-memory-segment-144-node-539) · ↔ [543](#latest-committed-memory-segment-144-node-543) · ↔ [581](#latest-committed-memory-segment-144-node-581) · ↔ [582](#latest-committed-memory-segment-144-node-582) · ↔ [1063](#latest-committed-memory-segment-144-node-1063) · ↔ [1064](#latest-committed-memory-segment-144-node-1064) · ↔ [1070](#latest-committed-memory-segment-144-node-1070) · ↔ [1106](#latest-committed-memory-segment-144-node-1106) · ↔ [1474](#latest-committed-memory-segment-144-node-1474)
 
 - MAI: 你邀请。
 - MAI: OK。虽然我们有123456，六位嘉宾。
@@ -7133,11 +8267,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-469"></a>
+<a id="latest-committed-memory-segment-144-node-469"></a>
 
 <details><summary>voice_469 · 3 speech entries · 1 links</summary>
 
-↔ [482](#latest-committed-memory-segment-125-node-482)
+↔ [482](#latest-committed-memory-segment-144-node-482)
 
 - MAI: 你邀请的女生吗？
 - MAI: 啊。
@@ -7145,11 +8279,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-483"></a>
+<a id="latest-committed-memory-segment-144-node-483"></a>
 
 <details><summary>voice_483 · 3 speech entries · 2 links</summary>
 
-↔ [494](#latest-committed-memory-segment-125-node-494) · ↔ [693](#latest-committed-memory-segment-125-node-693)
+↔ [494](#latest-committed-memory-segment-144-node-494) · ↔ [693](#latest-committed-memory-segment-144-node-693)
 
 - MAI: 这个这个第二它这个充。
 - MAI: 是开价吗？还是说要把后面的练完？
@@ -7157,11 +8291,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-484"></a>
+<a id="latest-committed-memory-segment-144-node-484"></a>
 
 <details><summary>voice_484 · 9 speech entries · 10 links</summary>
 
-↔ [496](#latest-committed-memory-segment-125-node-496) · ↔ [684](#latest-committed-memory-segment-125-node-684) · ↔ [777](#latest-committed-memory-segment-125-node-777) · ↔ [987](#latest-committed-memory-segment-125-node-987) · ↔ [1150](#latest-committed-memory-segment-125-node-1150) · ↔ [1176](#latest-committed-memory-segment-125-node-1176) · ↔ [1192](#latest-committed-memory-segment-125-node-1192) · ↔ [1197](#latest-committed-memory-segment-125-node-1197) · ↔ [1391](#latest-committed-memory-segment-125-node-1391) · ↔ [1415](#latest-committed-memory-segment-125-node-1415)
+↔ [496](#latest-committed-memory-segment-144-node-496) · ↔ [684](#latest-committed-memory-segment-144-node-684) · ↔ [777](#latest-committed-memory-segment-144-node-777) · ↔ [987](#latest-committed-memory-segment-144-node-987) · ↔ [1150](#latest-committed-memory-segment-144-node-1150) · ↔ [1176](#latest-committed-memory-segment-144-node-1176) · ↔ [1192](#latest-committed-memory-segment-144-node-1192) · ↔ [1197](#latest-committed-memory-segment-144-node-1197) · ↔ [1391](#latest-committed-memory-segment-144-node-1391) · ↔ [1415](#latest-committed-memory-segment-144-node-1415)
 
 - MAI: 假发。
 - MAI: 我想的是种那个什么东西符合那种地球，是地球热，拍七天基本上发不了芽，然后我就想的是买这种花。
@@ -7175,11 +8309,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-485"></a>
+<a id="latest-committed-memory-segment-144-node-485"></a>
 
 <details><summary>voice_485 · 3 speech entries · 2 links</summary>
 
-↔ [497](#latest-committed-memory-segment-125-node-497) · ↔ [584](#latest-committed-memory-segment-125-node-584)
+↔ [497](#latest-committed-memory-segment-144-node-497) · ↔ [584](#latest-committed-memory-segment-144-node-584)
 
 - MAI: 你冲天一下，哎。
 - MAI: 嗯。
@@ -7187,74 +8321,76 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-486"></a>
+<a id="latest-committed-memory-segment-144-node-486"></a>
 
 <details><summary>voice_486 · 2 speech entries · 1 links</summary>
 
-↔ [498](#latest-committed-memory-segment-125-node-498)
+↔ [498](#latest-committed-memory-segment-144-node-498)
 
 - Deepgram: Ich will auch wieder mal. &#124; MAI: 你是奥特曼。
 - Deepgram: Ich will auch wieder mal. &#124; MAI: 他自己一个男生。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-487"></a>
+<a id="latest-committed-memory-segment-144-node-487"></a>
 
 <details><summary>voice_487 · 1 speech entries · 1 links</summary>
 
-↔ [499](#latest-committed-memory-segment-125-node-499)
+↔ [499](#latest-committed-memory-segment-144-node-499)
 
 - MAI: 爱心头呢。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-500"></a>
+<a id="latest-committed-memory-segment-144-node-500"></a>
 
-<details><summary>voice_500 · 3 speech entries · 4 links</summary>
+<details><summary>voice_500 · 5 speech entries · 6 links</summary>
 
-↔ [505](#latest-committed-memory-segment-125-node-505) · ↔ [513](#latest-committed-memory-segment-125-node-513) · ↔ [1292](#latest-committed-memory-segment-125-node-1292) · ↔ [1394](#latest-committed-memory-segment-125-node-1394)
+↔ [505](#latest-committed-memory-segment-144-node-505) · ↔ [513](#latest-committed-memory-segment-144-node-513) · ↔ [1292](#latest-committed-memory-segment-144-node-1292) · ↔ [1394](#latest-committed-memory-segment-144-node-1394) · ↔ [1823](#latest-committed-memory-segment-144-node-1823) · ↔ [1928](#latest-committed-memory-segment-144-node-1928)
 
 - MAI: 这合适吗？这。
 - MAI: 朔也可以跳，是吧？
 - MAI: 第一个给五个，第二个给三。
+- MAI: 对对，五点吃，OK。
+- Deepgram: 是少了。 &#124; MAI: 大概是几点？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-501"></a>
+<a id="latest-committed-memory-segment-144-node-501"></a>
 
 <details><summary>voice_501 · 1 speech entries · 1 links</summary>
 
-↔ [506](#latest-committed-memory-segment-125-node-506)
+↔ [506](#latest-committed-memory-segment-144-node-506)
 
 - MAI: 对不起，先画猪头。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-502"></a>
+<a id="latest-committed-memory-segment-144-node-502"></a>
 
 <details><summary>voice_502 · 1 speech entries · 1 links</summary>
 
-↔ [508](#latest-committed-memory-segment-125-node-508)
+↔ [508](#latest-committed-memory-segment-144-node-508)
 
 - MAI: 存疑是吧？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-516"></a>
+<a id="latest-committed-memory-segment-144-node-516"></a>
 
 <details><summary>voice_516 · 1 speech entries · 1 links</summary>
 
-↔ [526](#latest-committed-memory-segment-125-node-526)
+↔ [526](#latest-committed-memory-segment-144-node-526)
 
 - MAI: 这这位是谁的？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-517"></a>
+<a id="latest-committed-memory-segment-144-node-517"></a>
 
 <details><summary>voice_517 · 5 speech entries · 6 links</summary>
 
-↔ [527](#latest-committed-memory-segment-125-node-527) · ↔ [532](#latest-committed-memory-segment-125-node-532) · ↔ [552](#latest-committed-memory-segment-125-node-552) · ↔ [1161](#latest-committed-memory-segment-125-node-1161) · ↔ [1366](#latest-committed-memory-segment-125-node-1366) · ↔ [1418](#latest-committed-memory-segment-125-node-1418)
+↔ [527](#latest-committed-memory-segment-144-node-527) · ↔ [532](#latest-committed-memory-segment-144-node-532) · ↔ [552](#latest-committed-memory-segment-144-node-552) · ↔ [1161](#latest-committed-memory-segment-144-node-1161) · ↔ [1366](#latest-committed-memory-segment-144-node-1366) · ↔ [1418](#latest-committed-memory-segment-144-node-1418)
 
 - MAI: 我丽夏，或者写个L也行。
 - Deepgram: 詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮詮 &#124; MAI: 是采取挨家挨户上门询问的方式吗？
@@ -7264,11 +8400,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-518"></a>
+<a id="latest-committed-memory-segment-144-node-518"></a>
 
 <details><summary>voice_518 · 4 speech entries · 4 links</summary>
 
-↔ [528](#latest-committed-memory-segment-125-node-528) · ↔ [566](#latest-committed-memory-segment-125-node-566) · ↔ [626](#latest-committed-memory-segment-125-node-626) · ↔ [658](#latest-committed-memory-segment-125-node-658)
+↔ [528](#latest-committed-memory-segment-144-node-528) · ↔ [566](#latest-committed-memory-segment-144-node-566) · ↔ [626](#latest-committed-memory-segment-144-node-626) · ↔ [658](#latest-committed-memory-segment-144-node-658)
 
 - MAI: 还有呢？你要你要请两个。
 - MAI: 啊，邀请邻居。感觉妖哥好难接。
@@ -7277,231 +8413,237 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-519"></a>
+<a id="latest-committed-memory-segment-144-node-519"></a>
 
 <details><summary>voice_519 · 1 speech entries · 1 links</summary>
 
-↔ [529](#latest-committed-memory-segment-125-node-529)
+↔ [529](#latest-committed-memory-segment-144-node-529)
 
 - MAI: 对，但有一个可能来不了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-520"></a>
+<a id="latest-committed-memory-segment-144-node-520"></a>
 
 <details><summary>voice_520 · 2 speech entries · 2 links</summary>
 
-↔ [530](#latest-committed-memory-segment-125-node-530) · ↔ [533](#latest-committed-memory-segment-125-node-533)
+↔ [530](#latest-committed-memory-segment-144-node-530) · ↔ [533](#latest-committed-memory-segment-144-node-533)
 
 - MAI: 性别？
 - MAI: 都是女的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-534"></a>
+<a id="latest-committed-memory-segment-144-node-534"></a>
 
 <details><summary>voice_534 · 1 speech entries · 2 links</summary>
 
-↔ [538](#latest-committed-memory-segment-125-node-538) · ↔ [542](#latest-committed-memory-segment-125-node-542)
+↔ [538](#latest-committed-memory-segment-144-node-538) · ↔ [542](#latest-committed-memory-segment-144-node-542)
 
 - MAI: 有一个，不知道哪。你给我发个星就行了，五角星。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-545"></a>
+<a id="latest-committed-memory-segment-144-node-545"></a>
 
 <details><summary>voice_545 · 1 speech entries · 1 links</summary>
 
-↔ [553](#latest-committed-memory-segment-125-node-553)
+↔ [553](#latest-committed-memory-segment-144-node-553)
 
 - MAI: 行，行。如果如果就是如果他们来的话，可以发进来什么。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-558"></a>
+<a id="latest-committed-memory-segment-144-node-558"></a>
 
 <details><summary>voice_558 · 1 speech entries · 1 links</summary>
 
-↔ [564](#latest-committed-memory-segment-125-node-564)
+↔ [564](#latest-committed-memory-segment-144-node-564)
 
 - MAI: 明天咱们这地儿就被举报了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-559"></a>
+<a id="latest-committed-memory-segment-144-node-559"></a>
 
 <details><summary>voice_559 · 1 speech entries · 1 links</summary>
 
-↔ [568](#latest-committed-memory-segment-125-node-568)
+↔ [568](#latest-committed-memory-segment-144-node-568)
 
 - MAI: 我觉得也是。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-560"></a>
+<a id="latest-committed-memory-segment-144-node-560"></a>
 
-<details><summary>voice_560 · 5 speech entries · 5 links</summary>
+<details><summary>voice_560 · 11 speech entries · 9 links</summary>
 
-↔ [569](#latest-committed-memory-segment-125-node-569) · ↔ [896](#latest-committed-memory-segment-125-node-896) · ↔ [953](#latest-committed-memory-segment-125-node-953) · ↔ [956](#latest-committed-memory-segment-125-node-956) · ↔ [961](#latest-committed-memory-segment-125-node-961)
+↔ [569](#latest-committed-memory-segment-144-node-569) · ↔ [896](#latest-committed-memory-segment-144-node-896) · ↔ [953](#latest-committed-memory-segment-144-node-953) · ↔ [956](#latest-committed-memory-segment-144-node-956) · ↔ [961](#latest-committed-memory-segment-144-node-961) · ↔ [1731](#latest-committed-memory-segment-144-node-1731) · ↔ [1950](#latest-committed-memory-segment-144-node-1950) · ↔ [1983](#latest-committed-memory-segment-144-node-1983) · ↔ [2033](#latest-committed-memory-segment-144-node-2033)
 
 - MAI: 带上四大，你要是来我就把这单送你，你不来就不送。
 - MAI: 就这个，就这个。啊，你怎么没拆？不是拿现成的吗？你把培养皿拿出来吧。
 - MAI: 就是这是自己设计的一些种子纸，就是把种子放在这个纸里面，这个纸是用废弃的咖啡渣，呃，一些纸，然后做成那种纸浆，然后纸浆里面有那种植物种子，都是用的太阳花种子，太阳花种子它比较容易发芽，然后如果用培养皿水。
 - MAI: 水培的话，大概5天左右就可以发芽。然后做了一些种类的，当然世界地球的任务。
 - MAI: 然后做了5种地球的，做了两种很简单的。
+- MAI: 好的，那甜品台做一次要八百到一千呢。
+- MAI: 大概从早上就要开始准备，然后需要配两个人。
+- MAI: 有的需要冷藏的会前一天做，比如说提拉米苏。
+- MAI: 嗯，也是前一天做好，然后第二天就直接把原料然后进行一个配就行。
+- MAI: 就是用那个吉利丁片和椰奶就可以做，好像。
+- MAI: 那那晚饭是自己做吗？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-573"></a>
+<a id="latest-committed-memory-segment-144-node-573"></a>
 
 <details><summary>voice_573 · 1 speech entries · 1 links</summary>
 
-↔ [583](#latest-committed-memory-segment-125-node-583)
+↔ [583](#latest-committed-memory-segment-144-node-583)
 
 - MAI: 有种复古的感觉。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-574"></a>
+<a id="latest-committed-memory-segment-144-node-574"></a>
 
 <details><summary>voice_574 · 1 speech entries · 1 links</summary>
 
-↔ [585](#latest-committed-memory-segment-125-node-585)
+↔ [585](#latest-committed-memory-segment-144-node-585)
 
 - MAI: 好多问号啊，我们好像名人。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-587"></a>
+<a id="latest-committed-memory-segment-144-node-587"></a>
 
 <details><summary>voice_587 · 1 speech entries · 1 links</summary>
 
-↔ [594](#latest-committed-memory-segment-125-node-594)
+↔ [594](#latest-committed-memory-segment-144-node-594)
 
 - MAI: 呃。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-588"></a>
+<a id="latest-committed-memory-segment-144-node-588"></a>
 
 <details><summary>voice_588 · 1 speech entries · 1 links</summary>
 
-↔ [596](#latest-committed-memory-segment-125-node-596)
+↔ [596](#latest-committed-memory-segment-144-node-596)
 
 - MAI: 屌丝。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-589"></a>
+<a id="latest-committed-memory-segment-144-node-589"></a>
 
 <details><summary>voice_589 · 1 speech entries · 1 links</summary>
 
-↔ [596](#latest-committed-memory-segment-125-node-596)
+↔ [596](#latest-committed-memory-segment-144-node-596)
 
 - MAI: 给大家拍，我靠。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-601"></a>
+<a id="latest-committed-memory-segment-144-node-601"></a>
 
 <details><summary>voice_601 · 2 speech entries · 2 links</summary>
 
-↔ [605](#latest-committed-memory-segment-125-node-605) · ↔ [612](#latest-committed-memory-segment-125-node-612)
+↔ [605](#latest-committed-memory-segment-144-node-605) · ↔ [612](#latest-committed-memory-segment-144-node-612)
 
 - MAI: 擦，擦掉，擦掉。
 - MAI: 处理一下。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-602"></a>
+<a id="latest-committed-memory-segment-144-node-602"></a>
 
 <details><summary>voice_602 · 1 speech entries · 1 links</summary>
 
-↔ [607](#latest-committed-memory-segment-125-node-607)
+↔ [607](#latest-committed-memory-segment-144-node-607)
 
 - MAI: 添了多少麻。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-614"></a>
+<a id="latest-committed-memory-segment-144-node-614"></a>
 
 <details><summary>voice_614 · 2 speech entries · 2 links</summary>
 
-↔ [623](#latest-committed-memory-segment-125-node-623) · ↔ [1129](#latest-committed-memory-segment-125-node-1129)
+↔ [623](#latest-committed-memory-segment-144-node-623) · ↔ [1129](#latest-committed-memory-segment-144-node-1129)
 
 - MAI: 算算上我们是吗？
 - MAI: 行，大概就是这个样子。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-615"></a>
+<a id="latest-committed-memory-segment-144-node-615"></a>
 
 <details><summary>voice_615 · 2 speech entries · 1 links</summary>
 
-↔ [625](#latest-committed-memory-segment-125-node-625)
+↔ [625](#latest-committed-memory-segment-144-node-625)
 
 - MAI: 九到十一。
 - MAI: 嗯。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-616"></a>
+<a id="latest-committed-memory-segment-144-node-616"></a>
 
 <details><summary>voice_616 · 1 speech entries · 1 links</summary>
 
-↔ [628](#latest-committed-memory-segment-125-node-628)
+↔ [628](#latest-committed-memory-segment-144-node-628)
 
 - Deepgram: 你 &#124; MAI: 现在我我我有十六亿了吗？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-617"></a>
+<a id="latest-committed-memory-segment-144-node-617"></a>
 
 <details><summary>voice_617 · 2 speech entries · 1 links</summary>
 
-↔ [629](#latest-committed-memory-segment-125-node-629)
+↔ [629](#latest-committed-memory-segment-144-node-629)
 
 - Deepgram: 你 &#124; MAI: 14？
 - Deepgram: 好也 &#124; MAI: 14吧。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-618"></a>
+<a id="latest-committed-memory-segment-144-node-618"></a>
 
 <details><summary>voice_618 · 1 speech entries · 1 links</summary>
 
-↔ [629](#latest-committed-memory-segment-125-node-629)
+↔ [629](#latest-committed-memory-segment-144-node-629)
 
 - Deepgram: 好也 &#124; MAI: 那就14吧。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-635"></a>
+<a id="latest-committed-memory-segment-144-node-635"></a>
 
 <details><summary>voice_635 · 1 speech entries · 1 links</summary>
 
-↔ [645](#latest-committed-memory-segment-125-node-645)
+↔ [645](#latest-committed-memory-segment-144-node-645)
 
 - Deepgram: Okay. &#124; MAI: OK。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-636"></a>
+<a id="latest-committed-memory-segment-144-node-636"></a>
 
 <details><summary>voice_636 · 2 speech entries · 1 links</summary>
 
-↔ [646](#latest-committed-memory-segment-125-node-646)
+↔ [646](#latest-committed-memory-segment-144-node-646)
 
 - MAI: 然后
 - MAI: 好，到我了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-637"></a>
+<a id="latest-committed-memory-segment-144-node-637"></a>
 
 <details><summary>voice_637 · 6 speech entries · 6 links</summary>
 
-↔ [647](#latest-committed-memory-segment-125-node-647) · ↔ [648](#latest-committed-memory-segment-125-node-648) · ↔ [657](#latest-committed-memory-segment-125-node-657) · ↔ [1128](#latest-committed-memory-segment-125-node-1128) · ↔ [1365](#latest-committed-memory-segment-125-node-1365) · ↔ [1461](#latest-committed-memory-segment-125-node-1461)
+↔ [647](#latest-committed-memory-segment-144-node-647) · ↔ [648](#latest-committed-memory-segment-144-node-648) · ↔ [657](#latest-committed-memory-segment-144-node-657) · ↔ [1128](#latest-committed-memory-segment-144-node-1128) · ↔ [1365](#latest-committed-memory-segment-144-node-1365) · ↔ [1461](#latest-committed-memory-segment-144-node-1461)
 
 - MAI: 确定了。
 - MAI: 第一，第一大点的第三，下面三个小点，人员。然后我们还要。
@@ -7512,42 +8654,42 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-666"></a>
+<a id="latest-committed-memory-segment-144-node-666"></a>
 
 <details><summary>voice_666 · 1 speech entries · 1 links</summary>
 
-↔ [675](#latest-committed-memory-segment-125-node-675)
+↔ [675](#latest-committed-memory-segment-144-node-675)
 
 - MAI: 做了一些周边。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-667"></a>
+<a id="latest-committed-memory-segment-144-node-667"></a>
 
 <details><summary>voice_667 · 2 speech entries · 1 links</summary>
 
-↔ [676](#latest-committed-memory-segment-125-node-676)
+↔ [676](#latest-committed-memory-segment-144-node-676)
 
 - MAI: 那一天就可以分发给大家。
 - MAI: 上才艺。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-668"></a>
+<a id="latest-committed-memory-segment-144-node-668"></a>
 
 <details><summary>voice_668 · 1 speech entries · 1 links</summary>
 
-↔ [677](#latest-committed-memory-segment-125-node-677)
+↔ [677](#latest-committed-memory-segment-144-node-677)
 
 - MAI: 这花的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-678"></a>
+<a id="latest-committed-memory-segment-144-node-678"></a>
 
 <details><summary>voice_678 · 3 speech entries · 3 links</summary>
 
-↔ [685](#latest-committed-memory-segment-125-node-685) · ↔ [686](#latest-committed-memory-segment-125-node-686) · ↔ [1692](#latest-committed-memory-segment-125-node-1692)
+↔ [685](#latest-committed-memory-segment-144-node-685) · ↔ [686](#latest-committed-memory-segment-144-node-686) · ↔ [1692](#latest-committed-memory-segment-144-node-1692)
 
 - MAI: 直接那个顺风发光。
 - MAI: 云南的花，是，它好像有两个包，对，我买了芍药啊。啊，刚好一些花要找个简。
@@ -7555,11 +8697,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-705"></a>
+<a id="latest-committed-memory-segment-144-node-705"></a>
 
 <details><summary>voice_705 · 4 speech entries · 6 links</summary>
 
-↔ [708](#latest-committed-memory-segment-125-node-708) · ↔ [711](#latest-committed-memory-segment-125-node-711) · ↔ [714](#latest-committed-memory-segment-125-node-714) · ↔ [715](#latest-committed-memory-segment-125-node-715) · ↔ [721](#latest-committed-memory-segment-125-node-721) · ↔ [791](#latest-committed-memory-segment-125-node-791)
+↔ [708](#latest-committed-memory-segment-144-node-708) · ↔ [711](#latest-committed-memory-segment-144-node-711) · ↔ [714](#latest-committed-memory-segment-144-node-714) · ↔ [715](#latest-committed-memory-segment-144-node-715) · ↔ [721](#latest-committed-memory-segment-144-node-721) · ↔ [791](#latest-committed-memory-segment-144-node-791)
 
 - MAI: 然后买了压花器，还有那种干燥剂。这个是它，这个是它。
 - MAI: 嗯，200多万，我看是。
@@ -7568,83 +8710,84 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-706"></a>
+<a id="latest-committed-memory-segment-144-node-706"></a>
 
 <details><summary>voice_706 · 1 speech entries · 2 links</summary>
 
-↔ [710](#latest-committed-memory-segment-125-node-710) · ↔ [716](#latest-committed-memory-segment-125-node-716)
+↔ [710](#latest-committed-memory-segment-144-node-710) · ↔ [716](#latest-committed-memory-segment-144-node-716)
 
 - MAI: 是芍药吗？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-717"></a>
+<a id="latest-committed-memory-segment-144-node-717"></a>
 
 <details><summary>voice_717 · 1 speech entries · 1 links</summary>
 
-↔ [722](#latest-committed-memory-segment-125-node-722)
+↔ [722](#latest-committed-memory-segment-144-node-722)
 
 - MAI: 嗯，百合。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-718"></a>
+<a id="latest-committed-memory-segment-144-node-718"></a>
 
 <details><summary>voice_718 · 2 speech entries · 3 links</summary>
 
-↔ [723](#latest-committed-memory-segment-125-node-723) · ↔ [1562](#latest-committed-memory-segment-125-node-1562) · ↔ [1571](#latest-committed-memory-segment-125-node-1571)
+↔ [723](#latest-committed-memory-segment-144-node-723) · ↔ [1562](#latest-committed-memory-segment-144-node-1562) · ↔ [1571](#latest-committed-memory-segment-144-node-1571)
 
 - MAI: 百合兰。
 - MAI: OK。来。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-724"></a>
+<a id="latest-committed-memory-segment-144-node-724"></a>
 
 <details><summary>voice_724 · 1 speech entries · 1 links</summary>
 
-↔ [727](#latest-committed-memory-segment-125-node-727)
+↔ [727](#latest-committed-memory-segment-144-node-727)
 
 - MAI: 营养剂，泡到水里面加速醒发的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-735"></a>
+<a id="latest-committed-memory-segment-144-node-735"></a>
 
 <details><summary>voice_735 · 1 speech entries · 1 links</summary>
 
-↔ [748](#latest-committed-memory-segment-125-node-748)
+↔ [748](#latest-committed-memory-segment-144-node-748)
 
 - MAI: 还没呢。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-736"></a>
+<a id="latest-committed-memory-segment-144-node-736"></a>
 
 <details><summary>voice_736 · 1 speech entries · 1 links</summary>
 
-↔ [749](#latest-committed-memory-segment-125-node-749)
+↔ [749](#latest-committed-memory-segment-144-node-749)
 
 - Deepgram: ¿Quieres? &#124; MAI: 带资进组，你看。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-737"></a>
+<a id="latest-committed-memory-segment-144-node-737"></a>
 
-<details><summary>voice_737 · 2 speech entries · 2 links</summary>
+<details><summary>voice_737 · 3 speech entries · 3 links</summary>
 
-↔ [750](#latest-committed-memory-segment-125-node-750) · ↔ [1291](#latest-committed-memory-segment-125-node-1291)
+↔ [750](#latest-committed-memory-segment-144-node-750) · ↔ [1291](#latest-committed-memory-segment-144-node-1291) · ↔ [1732](#latest-committed-memory-segment-144-node-1732)
 
 - Deepgram: ¿Quieres? &#124; MAI: 确实。
 - MAI: 羽泉也，对，羽泉也可以跳。
+- MAI: 怎么？可以，可以，可以。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-752"></a>
+<a id="latest-committed-memory-segment-144-node-752"></a>
 
-<details><summary>voice_752 · 7 speech entries · 5 links</summary>
+<details><summary>voice_752 · 11 speech entries · 7 links</summary>
 
-↔ [761](#latest-committed-memory-segment-125-node-761) · ↔ [774](#latest-committed-memory-segment-125-node-774) · ↔ [786](#latest-committed-memory-segment-125-node-786) · ↔ [796](#latest-committed-memory-segment-125-node-796) · ↔ [1427](#latest-committed-memory-segment-125-node-1427)
+↔ [761](#latest-committed-memory-segment-144-node-761) · ↔ [774](#latest-committed-memory-segment-144-node-774) · ↔ [786](#latest-committed-memory-segment-144-node-786) · ↔ [796](#latest-committed-memory-segment-144-node-796) · ↔ [1427](#latest-committed-memory-segment-144-node-1427) · ↔ [1935](#latest-committed-memory-segment-144-node-1935) · ↔ [2002](#latest-committed-memory-segment-144-node-2002)
 
 - MAI: 形式吗？形式就是我们六个人，一人一个花瓶，我也买好了，然后
 - MAI: 他要把这花分分，分分了以后养了一-一-一到两三天，呃，它这个就会慢慢全部开了。
@@ -7653,75 +8796,80 @@ Not stored in this construction checkpoint.
 - MAI: 然后展开的那个花，然后就可以坐在那种明信片，我买了那种明信片贺卡，还有那个，包括那个叫什么，那种亚克力双层玻璃，然后像像一个那个相框，就可以送给别人。然后一些叶子什么的，然后我当时想的是你不是有那个户外活动，我们就可以去捡一些叶子。
 - MAI: 什么就可以。你自己做的，自己养的，然后分发给大家就行。然后也比较符合七天这个周期。
 - MAI: 推销我们的产品。
+- MAI: post part，就是他们一二环节不是会得金币吗？
+- MAI: 他们有的那种糖水就是直接椰奶，然后加一点水果，加一点玉米就行了。
+- MAI: 感觉会不会简单，就不要做成那种动固体的，就不要用那个什么。
+- MAI: 就是直接，就像那种水牛奶一样。因为我自己经常喝的糖水，我看他们就是一点椰奶呀，然后芒果，然后一些那个红。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-753"></a>
+<a id="latest-committed-memory-segment-144-node-753"></a>
 
 <details><summary>voice_753 · 1 speech entries · 1 links</summary>
 
-↔ [765](#latest-committed-memory-segment-125-node-765)
+↔ [765](#latest-committed-memory-segment-144-node-765)
 
 - MAI: 哦。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-771"></a>
+<a id="latest-committed-memory-segment-144-node-771"></a>
 
-<details><summary>voice_771 · 1 speech entries · 1 links</summary>
+<details><summary>voice_771 · 2 speech entries · 2 links</summary>
 
-↔ [775](#latest-committed-memory-segment-125-node-775)
+↔ [775](#latest-committed-memory-segment-144-node-775) · ↔ [1816](#latest-committed-memory-segment-144-node-1816)
 
 - MAI: 嗯嗯。
+- MAI: 包饭也麻烦，点外卖也麻烦。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-772"></a>
+<a id="latest-committed-memory-segment-144-node-772"></a>
 
 <details><summary>voice_772 · 1 speech entries · 1 links</summary>
 
-↔ [776](#latest-committed-memory-segment-125-node-776)
+↔ [776](#latest-committed-memory-segment-144-node-776)
 
 - MAI: 然后画一样，对，然后
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-782"></a>
+<a id="latest-committed-memory-segment-144-node-782"></a>
 
 <details><summary>voice_782 · 2 speech entries · 3 links</summary>
 
-↔ [787](#latest-committed-memory-segment-125-node-787) · ↔ [1488](#latest-committed-memory-segment-125-node-1488) · ↔ [1494](#latest-committed-memory-segment-125-node-1494)
+↔ [787](#latest-committed-memory-segment-144-node-787) · ↔ [1488](#latest-committed-memory-segment-144-node-1488) · ↔ [1494](#latest-committed-memory-segment-144-node-1494)
 
 - MAI: 要不先给他醒了吧。
 - MAI: 时间线。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-783"></a>
+<a id="latest-committed-memory-segment-144-node-783"></a>
 
 <details><summary>voice_783 · 1 speech entries · 1 links</summary>
 
-↔ [788](#latest-committed-memory-segment-125-node-788)
+↔ [788](#latest-committed-memory-segment-144-node-788)
 
 - MAI: 嗯，可以啊。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-784"></a>
+<a id="latest-committed-memory-segment-144-node-784"></a>
 
 <details><summary>voice_784 · 1 speech entries · 1 links</summary>
 
-↔ [789](#latest-committed-memory-segment-125-node-789)
+↔ [789](#latest-committed-memory-segment-144-node-789)
 
 - MAI: 今天我是今天。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-797"></a>
+<a id="latest-committed-memory-segment-144-node-797"></a>
 
 <details><summary>voice_797 · 3 speech entries · 4 links</summary>
 
-↔ [801](#latest-committed-memory-segment-125-node-801) · ↔ [813](#latest-committed-memory-segment-125-node-813) · ↔ [865](#latest-committed-memory-segment-125-node-865) · ↔ [1308](#latest-committed-memory-segment-125-node-1308)
+↔ [801](#latest-committed-memory-segment-144-node-801) · ↔ [813](#latest-committed-memory-segment-144-node-813) · ↔ [865](#latest-committed-memory-segment-144-node-865) · ↔ [1308](#latest-committed-memory-segment-144-node-1308)
 
 - MAI: 下一个，卢，卢亚。
 - MAI: 这是Lucia，这是露西亚。
@@ -7729,22 +8877,22 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-798"></a>
+<a id="latest-committed-memory-segment-144-node-798"></a>
 
 <details><summary>voice_798 · 2 speech entries · 2 links</summary>
 
-↔ [802](#latest-committed-memory-segment-125-node-802) · ↔ [813](#latest-committed-memory-segment-125-node-813)
+↔ [802](#latest-committed-memory-segment-144-node-802) · ↔ [813](#latest-committed-memory-segment-144-node-813)
 
 - MAI: 哦哦。
 - MAI: 刘喜。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-824"></a>
+<a id="latest-committed-memory-segment-144-node-824"></a>
 
 <details><summary>voice_824 · 3 speech entries · 2 links</summary>
 
-↔ [832](#latest-committed-memory-segment-125-node-832) · ↔ [1324](#latest-committed-memory-segment-125-node-1324)
+↔ [832](#latest-committed-memory-segment-144-node-832) · ↔ [1324](#latest-committed-memory-segment-144-node-1324)
 
 - MAI: 就前段时间特别火那个。
 - MAI: 对对对，抖音上就大家都可以一起跳，就是排的时间也会短一些，对吧？也没有什么
@@ -7752,41 +8900,41 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-825"></a>
+<a id="latest-committed-memory-segment-144-node-825"></a>
 
 <details><summary>voice_825 · 1 speech entries · 1 links</summary>
 
-↔ [833](#latest-committed-memory-segment-125-node-833)
+↔ [833](#latest-committed-memory-segment-144-node-833)
 
 - MAI: 嗯。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-826"></a>
+<a id="latest-committed-memory-segment-144-node-826"></a>
 
 <details><summary>voice_826 · 1 speech entries · 1 links</summary>
 
-↔ [834](#latest-committed-memory-segment-125-node-834)
+↔ [834](#latest-committed-memory-segment-144-node-834)
 
 - MAI: 可以放在那个。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-827"></a>
+<a id="latest-committed-memory-segment-144-node-827"></a>
 
 <details><summary>voice_827 · 1 speech entries · 1 links</summary>
 
-↔ [835](#latest-committed-memory-segment-125-node-835)
+↔ [835](#latest-committed-memory-segment-144-node-835)
 
 - MAI: 反正最不缺的就是纸箱，所以我。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-841"></a>
+<a id="latest-committed-memory-segment-144-node-841"></a>
 
 <details><summary>voice_841 · 7 speech entries · 6 links</summary>
 
-↔ [852](#latest-committed-memory-segment-125-node-852) · ↔ [861](#latest-committed-memory-segment-125-node-861) · ↔ [862](#latest-committed-memory-segment-125-node-862) · ↔ [1261](#latest-committed-memory-segment-125-node-1261) · ↔ [1293](#latest-committed-memory-segment-125-node-1293) · ↔ [1695](#latest-committed-memory-segment-125-node-1695)
+↔ [852](#latest-committed-memory-segment-144-node-852) · ↔ [861](#latest-committed-memory-segment-144-node-861) · ↔ [862](#latest-committed-memory-segment-144-node-862) · ↔ [1261](#latest-committed-memory-segment-144-node-1261) · ↔ [1293](#latest-committed-memory-segment-144-node-1293) · ↔ [1695](#latest-committed-memory-segment-144-node-1695)
 
 - MAI: 买了。
 - MAI: 但是如果要排一个小短剧的话，就是我现在暂时还没有想到一个现成我们目前。
@@ -7798,124 +8946,124 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-853"></a>
+<a id="latest-committed-memory-segment-144-node-853"></a>
 
 <details><summary>voice_853 · 1 speech entries · 1 links</summary>
 
-↔ [863](#latest-committed-memory-segment-125-node-863)
+↔ [863](#latest-committed-memory-segment-144-node-863)
 
 - MAI: 所以如果要现在去编的话，可能就
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-854"></a>
+<a id="latest-committed-memory-segment-144-node-854"></a>
 
 <details><summary>voice_854 · 1 speech entries · 1 links</summary>
 
-↔ [866](#latest-committed-memory-segment-125-node-866)
+↔ [866](#latest-committed-memory-segment-144-node-866)
 
 - MAI: 我们两个。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-867"></a>
+<a id="latest-committed-memory-segment-144-node-867"></a>
 
 <details><summary>voice_867 · 1 speech entries · 1 links</summary>
 
-↔ [876](#latest-committed-memory-segment-125-node-876)
+↔ [876](#latest-committed-memory-segment-144-node-876)
 
 - MAI: 你把他名写反了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-868"></a>
+<a id="latest-committed-memory-segment-144-node-868"></a>
 
 <details><summary>voice_868 · 2 speech entries · 2 links</summary>
 
-↔ [877](#latest-committed-memory-segment-125-node-877) · ↔ [1460](#latest-committed-memory-segment-125-node-1460)
+↔ [877](#latest-committed-memory-segment-144-node-877) · ↔ [1460](#latest-committed-memory-segment-144-node-1460)
 
 - MAI: 爱流万确。
 - MAI: 哦，这真是好东西。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-869"></a>
+<a id="latest-committed-memory-segment-144-node-869"></a>
 
 <details><summary>voice_869 · 1 speech entries · 1 links</summary>
 
-↔ [879](#latest-committed-memory-segment-125-node-879)
+↔ [879](#latest-committed-memory-segment-144-node-879)
 
 - MAI: 完了，今天那个变异了，做完染色体。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-870"></a>
+<a id="latest-committed-memory-segment-144-node-870"></a>
 
 <details><summary>voice_870 · 2 speech entries · 3 links</summary>
 
-↔ [880](#latest-committed-memory-segment-125-node-880) · ↔ [1080](#latest-committed-memory-segment-125-node-1080) · ↔ [1095](#latest-committed-memory-segment-125-node-1095)
+↔ [880](#latest-committed-memory-segment-144-node-880) · ↔ [1080](#latest-committed-memory-segment-144-node-1080) · ↔ [1095](#latest-committed-memory-segment-144-node-1095)
 
 - MAI: 好家伙，这俩你都有是吗？
 - MAI: 其其他城市。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-871"></a>
+<a id="latest-committed-memory-segment-144-node-871"></a>
 
 <details><summary>voice_871 · 1 speech entries · 1 links</summary>
 
-↔ [881](#latest-committed-memory-segment-125-node-881)
+↔ [881](#latest-committed-memory-segment-144-node-881)
 
 - MAI: 他闪。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-872"></a>
+<a id="latest-committed-memory-segment-144-node-872"></a>
 
 <details><summary>voice_872 · 1 speech entries · 1 links</summary>
 
-↔ [882](#latest-committed-memory-segment-125-node-882)
+↔ [882](#latest-committed-memory-segment-144-node-882)
 
 - MAI: OK，上我的道具。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-889"></a>
+<a id="latest-committed-memory-segment-144-node-889"></a>
 
 <details><summary>voice_889 · 1 speech entries · 1 links</summary>
 
-↔ [895](#latest-committed-memory-segment-125-node-895)
+↔ [895](#latest-committed-memory-segment-144-node-895)
 
 - MAI: 他的道具为什么在你的行李箱里？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-890"></a>
+<a id="latest-committed-memory-segment-144-node-890"></a>
 
 <details><summary>voice_890 · 1 speech entries · 1 links</summary>
 
-↔ [897](#latest-committed-memory-segment-125-node-897)
+↔ [897](#latest-committed-memory-segment-144-node-897)
 
 - MAI: 培养皿。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-912"></a>
+<a id="latest-committed-memory-segment-144-node-912"></a>
 
 <details><summary>voice_912 · 2 speech entries · 3 links</summary>
 
-↔ [917](#latest-committed-memory-segment-125-node-917) · ↔ [919](#latest-committed-memory-segment-125-node-919) · ↔ [1607](#latest-committed-memory-segment-125-node-1607)
+↔ [917](#latest-committed-memory-segment-144-node-917) · ↔ [919](#latest-committed-memory-segment-144-node-919) · ↔ [1607](#latest-committed-memory-segment-144-node-1607)
 
 - Deepgram: Твой. &#124; MAI: 这都是我们三个。
 - MAI: 那应该不止一个小时。是不是再长一个半小时？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-913"></a>
+<a id="latest-committed-memory-segment-144-node-913"></a>
 
 <details><summary>voice_913 · 3 speech entries · 4 links</summary>
 
-↔ [918](#latest-committed-memory-segment-125-node-918) · ↔ [919](#latest-committed-memory-segment-125-node-919) · ↔ [1214](#latest-committed-memory-segment-125-node-1214) · ↔ [1446](#latest-committed-memory-segment-125-node-1446)
+↔ [918](#latest-committed-memory-segment-144-node-918) · ↔ [919](#latest-committed-memory-segment-144-node-919) · ↔ [1214](#latest-committed-memory-segment-144-node-1214) · ↔ [1446](#latest-committed-memory-segment-144-node-1446)
 
 - Deepgram: Твой. &#124; MAI: 对。
 - MAI: 好的。
@@ -7923,27 +9071,27 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-931"></a>
+<a id="latest-committed-memory-segment-144-node-931"></a>
 
 <details><summary>voice_931 · 1 speech entries · 1 links</summary>
 
-↔ [936](#latest-committed-memory-segment-125-node-936)
+↔ [936](#latest-committed-memory-segment-144-node-936)
 
 - MAI: 好像没有别的种类。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-940"></a>
+<a id="latest-committed-memory-segment-144-node-940"></a>
 
 <details><summary>voice_940 · 1 speech entries · 1 links</summary>
 
-↔ [943](#latest-committed-memory-segment-125-node-943)
+↔ [943](#latest-committed-memory-segment-144-node-943)
 
 - Deepgram: Oh. &#124; MAI: 哦。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-958"></a>
+<a id="latest-committed-memory-segment-144-node-958"></a>
 
 <details><summary>voice_958 · 1 speech entries · 0 links</summary>
 
@@ -7951,7 +9099,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-959"></a>
+<a id="latest-committed-memory-segment-144-node-959"></a>
 
 <details><summary>voice_959 · 1 speech entries · 0 links</summary>
 
@@ -7959,31 +9107,31 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-971"></a>
+<a id="latest-committed-memory-segment-144-node-971"></a>
 
 <details><summary>voice_971 · 1 speech entries · 1 links</summary>
 
-↔ [985](#latest-committed-memory-segment-125-node-985)
+↔ [985](#latest-committed-memory-segment-144-node-985)
 
 - MAI: 然后这样就比较环保了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-972"></a>
+<a id="latest-committed-memory-segment-144-node-972"></a>
 
 <details><summary>voice_972 · 1 speech entries · 1 links</summary>
 
-↔ [986](#latest-committed-memory-segment-125-node-986)
+↔ [986](#latest-committed-memory-segment-144-node-986)
 
 - MAI: 真的很环保。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-973"></a>
+<a id="latest-committed-memory-segment-144-node-973"></a>
 
 <details><summary>voice_973 · 6 speech entries · 5 links</summary>
 
-↔ [988](#latest-committed-memory-segment-125-node-988) · ↔ [1079](#latest-committed-memory-segment-125-node-1079) · ↔ [1081](#latest-committed-memory-segment-125-node-1081) · ↔ [1089](#latest-committed-memory-segment-125-node-1089) · ↔ [1095](#latest-committed-memory-segment-125-node-1095)
+↔ [988](#latest-committed-memory-segment-144-node-988) · ↔ [1079](#latest-committed-memory-segment-144-node-1079) · ↔ [1081](#latest-committed-memory-segment-144-node-1081) · ↔ [1089](#latest-committed-memory-segment-144-node-1089) · ↔ [1095](#latest-committed-memory-segment-144-node-1095)
 
 - MAI: 那。
 - MAI: 你-你自己设计的是画的图没？
@@ -7994,80 +9142,81 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-974"></a>
+<a id="latest-committed-memory-segment-144-node-974"></a>
 
-<details><summary>voice_974 · 1 speech entries · 1 links</summary>
+<details><summary>voice_974 · 2 speech entries · 2 links</summary>
 
-↔ [989](#latest-committed-memory-segment-125-node-989)
+↔ [989](#latest-committed-memory-segment-144-node-989) · ↔ [2003](#latest-committed-memory-segment-144-node-2003)
 
 - MAI: 那就很简单了，就找一些logo。
+- MAI: 清补凉好吃吗？你觉得？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-975"></a>
+<a id="latest-committed-memory-segment-144-node-975"></a>
 
 <details><summary>voice_975 · 1 speech entries · 1 links</summary>
 
-↔ [990](#latest-committed-memory-segment-125-node-990)
+↔ [990](#latest-committed-memory-segment-144-node-990)
 
 - MAI: 这个logo一找，写个字。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-976"></a>
+<a id="latest-committed-memory-segment-144-node-976"></a>
 
 <details><summary>voice_976 · 2 speech entries · 2 links</summary>
 
-↔ [991](#latest-committed-memory-segment-125-node-991) · ↔ [1065](#latest-committed-memory-segment-125-node-1065)
+↔ [991](#latest-committed-memory-segment-144-node-991) · ↔ [1065](#latest-committed-memory-segment-144-node-1065)
 
 - MAI: OK。
 - MAI: OK。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-977"></a>
+<a id="latest-committed-memory-segment-144-node-977"></a>
 
 <details><summary>voice_977 · 1 speech entries · 1 links</summary>
 
-↔ [992](#latest-committed-memory-segment-125-node-992)
+↔ [992](#latest-committed-memory-segment-144-node-992)
 
 - MAI: 放个框就行了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1006"></a>
+<a id="latest-committed-memory-segment-144-node-1006"></a>
 
 <details><summary>voice_1006 · 2 speech entries · 2 links</summary>
 
-↔ [1012](#latest-committed-memory-segment-125-node-1012) · ↔ [1328](#latest-committed-memory-segment-125-node-1328)
+↔ [1012](#latest-committed-memory-segment-144-node-1012) · ↔ [1328](#latest-committed-memory-segment-144-node-1328)
 
 - MAI: 要不和。
 - MAI: 我只是觉得应该买实体。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1029"></a>
+<a id="latest-committed-memory-segment-144-node-1029"></a>
 
 <details><summary>voice_1029 · 1 speech entries · 1 links</summary>
 
-↔ [1035](#latest-committed-memory-segment-125-node-1035)
+↔ [1035](#latest-committed-memory-segment-144-node-1035)
 
 - Deepgram: 好。即 &#124; MAI: 就是有需要的话可以直接买过来。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1030"></a>
+<a id="latest-committed-memory-segment-144-node-1030"></a>
 
 <details><summary>voice_1030 · 2 speech entries · 2 links</summary>
 
-↔ [1036](#latest-committed-memory-segment-125-node-1036) · ↔ [1307](#latest-committed-memory-segment-125-node-1307)
+↔ [1036](#latest-committed-memory-segment-144-node-1036) · ↔ [1307](#latest-committed-memory-segment-144-node-1307)
 
 - MAI: 我行吧，不知道我。
 - MAI: 谈恋爱不如跳舞。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1044"></a>
+<a id="latest-committed-memory-segment-144-node-1044"></a>
 
 <details><summary>voice_1044 · 1 speech entries · 0 links</summary>
 
@@ -8075,7 +9224,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1045"></a>
+<a id="latest-committed-memory-segment-144-node-1045"></a>
 
 <details><summary>voice_1045 · 1 speech entries · 0 links</summary>
 
@@ -8083,7 +9232,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1046"></a>
+<a id="latest-committed-memory-segment-144-node-1046"></a>
 
 <details><summary>voice_1046 · 1 speech entries · 0 links</summary>
 
@@ -8091,7 +9240,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1047"></a>
+<a id="latest-committed-memory-segment-144-node-1047"></a>
 
 <details><summary>voice_1047 · 2 speech entries · 0 links</summary>
 
@@ -8100,7 +9249,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1048"></a>
+<a id="latest-committed-memory-segment-144-node-1048"></a>
 
 <details><summary>voice_1048 · 1 speech entries · 0 links</summary>
 
@@ -8108,132 +9257,133 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1049"></a>
+<a id="latest-committed-memory-segment-144-node-1049"></a>
 
 <details><summary>voice_1049 · 2 speech entries · 1 links</summary>
 
-↔ [1395](#latest-committed-memory-segment-125-node-1395)
+↔ [1395](#latest-committed-memory-segment-144-node-1395)
 
 - MAI: 我说他摆不动，我就过来订阅。我本来想买盆栽，我想订阅一个月。
 - MAI: 可以。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1071"></a>
+<a id="latest-committed-memory-segment-144-node-1071"></a>
 
 <details><summary>voice_1071 · 2 speech entries · 2 links</summary>
 
-↔ [1082](#latest-committed-memory-segment-125-node-1082) · ↔ [1095](#latest-committed-memory-segment-125-node-1095)
+↔ [1082](#latest-committed-memory-segment-144-node-1082) · ↔ [1095](#latest-committed-memory-segment-144-node-1095)
 
 - MAI: 然后他们当年大榕树开业的时候搞了一个。
 - MAI: 拍卖。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1072"></a>
+<a id="latest-committed-memory-segment-144-node-1072"></a>
 
 <details><summary>voice_1072 · 1 speech entries · 2 links</summary>
 
-↔ [1084](#latest-committed-memory-segment-125-node-1084) · ↔ [1095](#latest-committed-memory-segment-125-node-1095)
+↔ [1084](#latest-committed-memory-segment-144-node-1084) · ↔ [1095](#latest-committed-memory-segment-144-node-1095)
 
 - MAI: 一个一个一个。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1073"></a>
+<a id="latest-committed-memory-segment-144-node-1073"></a>
 
 <details><summary>voice_1073 · 1 speech entries · 2 links</summary>
 
-↔ [1085](#latest-committed-memory-segment-125-node-1085) · ↔ [1095](#latest-committed-memory-segment-125-node-1095)
+↔ [1085](#latest-committed-memory-segment-144-node-1085) · ↔ [1095](#latest-committed-memory-segment-144-node-1095)
 
 - MAI: 这就一份吗？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1074"></a>
+<a id="latest-committed-memory-segment-144-node-1074"></a>
 
 <details><summary>voice_1074 · 1 speech entries · 2 links</summary>
 
-↔ [1086](#latest-committed-memory-segment-125-node-1086) · ↔ [1095](#latest-committed-memory-segment-125-node-1095)
+↔ [1086](#latest-committed-memory-segment-144-node-1086) · ↔ [1095](#latest-committed-memory-segment-144-node-1095)
 
 - MAI: 然后
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1075"></a>
+<a id="latest-committed-memory-segment-144-node-1075"></a>
 
 <details><summary>voice_1075 · 1 speech entries · 2 links</summary>
 
-↔ [1087](#latest-committed-memory-segment-125-node-1087) · ↔ [1095](#latest-committed-memory-segment-125-node-1095)
+↔ [1087](#latest-committed-memory-segment-144-node-1087) · ↔ [1095](#latest-committed-memory-segment-144-node-1095)
 
 - MAI: 我说明信片就一份吗？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1076"></a>
+<a id="latest-committed-memory-segment-144-node-1076"></a>
 
 <details><summary>voice_1076 · 1 speech entries · 2 links</summary>
 
-↔ [1088](#latest-committed-memory-segment-125-node-1088) · ↔ [1095](#latest-committed-memory-segment-125-node-1095)
+↔ [1088](#latest-committed-memory-segment-144-node-1088) · ↔ [1095](#latest-committed-memory-segment-144-node-1095)
 
 - MAI: 哦，他们不知道。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1098"></a>
+<a id="latest-committed-memory-segment-144-node-1098"></a>
 
 <details><summary>voice_1098 · 1 speech entries · 1 links</summary>
 
-↔ [1107](#latest-committed-memory-segment-125-node-1107)
+↔ [1107](#latest-committed-memory-segment-144-node-1107)
 
 - MAI: PPT吗？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1099"></a>
+<a id="latest-committed-memory-segment-144-node-1099"></a>
 
 <details><summary>voice_1099 · 2 speech entries · 2 links</summary>
 
-↔ [1108](#latest-committed-memory-segment-125-node-1108) · ↔ [1421](#latest-committed-memory-segment-125-node-1421)
+↔ [1108](#latest-committed-memory-segment-144-node-1108) · ↔ [1421](#latest-committed-memory-segment-144-node-1421)
 
 - MAI: 这是工作狂游戏吗？
 - MAI: 先要把那个二十几来着，二十一。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1111"></a>
+<a id="latest-committed-memory-segment-144-node-1111"></a>
 
-<details><summary>voice_1111 · 1 speech entries · 1 links</summary>
+<details><summary>voice_1111 · 2 speech entries · 2 links</summary>
 
-↔ [1118](#latest-committed-memory-segment-125-node-1118)
+↔ [1118](#latest-committed-memory-segment-144-node-1118) · ↔ [1932](#latest-committed-memory-segment-144-node-1932)
 
 - MAI: 像什么一个故事换一根藤条的那种。
+- MAI: 甜品是什么时候，哪个时间段吃？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1112"></a>
+<a id="latest-committed-memory-segment-144-node-1112"></a>
 
 <details><summary>voice_1112 · 2 speech entries · 1 links</summary>
 
-↔ [1119](#latest-committed-memory-segment-125-node-1119)
+↔ [1119](#latest-committed-memory-segment-144-node-1119)
 
 - MAI: 哦。
 - Deepgram: 你也말 말了。 &#124; MAI: 碳，这些其实就是外卖都有。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1124"></a>
+<a id="latest-committed-memory-segment-144-node-1124"></a>
 
 <details><summary>voice_1124 · 2 speech entries · 1 links</summary>
 
-↔ [1131](#latest-committed-memory-segment-125-node-1131)
+↔ [1131](#latest-committed-memory-segment-144-node-1131)
 
 - MAI: 购买。
 - MAI: 购买他们自己带来的闲置物品。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1136"></a>
+<a id="latest-committed-memory-segment-144-node-1136"></a>
 
 <details><summary>voice_1136 · 2 speech entries · 0 links</summary>
 
@@ -8242,7 +9392,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1137"></a>
+<a id="latest-committed-memory-segment-144-node-1137"></a>
 
 <details><summary>voice_1137 · 1 speech entries · 0 links</summary>
 
@@ -8250,7 +9400,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1138"></a>
+<a id="latest-committed-memory-segment-144-node-1138"></a>
 
 <details><summary>voice_1138 · 1 speech entries · 0 links</summary>
 
@@ -8258,7 +9408,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1139"></a>
+<a id="latest-committed-memory-segment-144-node-1139"></a>
 
 <details><summary>voice_1139 · 1 speech entries · 0 links</summary>
 
@@ -8266,7 +9416,7 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1140"></a>
+<a id="latest-committed-memory-segment-144-node-1140"></a>
 
 <details><summary>voice_1140 · 1 speech entries · 0 links</summary>
 
@@ -8274,52 +9424,52 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1153"></a>
+<a id="latest-committed-memory-segment-144-node-1153"></a>
 
 <details><summary>voice_1153 · 1 speech entries · 1 links</summary>
 
-↔ [1160](#latest-committed-memory-segment-125-node-1160)
+↔ [1160](#latest-committed-memory-segment-144-node-1160)
 
 - MAI: 他是，他是小货币。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1154"></a>
+<a id="latest-committed-memory-segment-144-node-1154"></a>
 
 <details><summary>voice_1154 · 1 speech entries · 1 links</summary>
 
-↔ [1163](#latest-committed-memory-segment-125-node-1163)
+↔ [1163](#latest-committed-memory-segment-144-node-1163)
 
 - MAI: 这是我的商品，我要拍卖的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1155"></a>
+<a id="latest-committed-memory-segment-144-node-1155"></a>
 
 <details><summary>voice_1155 · 1 speech entries · 1 links</summary>
 
-↔ [1164](#latest-committed-memory-segment-125-node-1164)
+↔ [1164](#latest-committed-memory-segment-144-node-1164)
 
 - MAI: 还有什么想法吗？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1156"></a>
+<a id="latest-committed-memory-segment-144-node-1156"></a>
 
 <details><summary>voice_1156 · 2 speech entries · 3 links</summary>
 
-↔ [1165](#latest-committed-memory-segment-125-node-1165) · ↔ [1381](#latest-committed-memory-segment-125-node-1381) · ↔ [1384](#latest-committed-memory-segment-125-node-1384)
+↔ [1165](#latest-committed-memory-segment-144-node-1165) · ↔ [1381](#latest-committed-memory-segment-144-node-1381) · ↔ [1384](#latest-committed-memory-segment-144-node-1384)
 
 - MAI: 在那一天邀请他们过来，这是我们准备的。
 - MAI: 但是一一进来就让，就是刚开始肯定要获得货币，但是你获得货币是让他们通过讲故事。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1170"></a>
+<a id="latest-committed-memory-segment-144-node-1170"></a>
 
-<details><summary>voice_1170 · 9 speech entries · 12 links</summary>
+<details><summary>voice_1170 · 14 speech entries · 20 links</summary>
 
-↔ [1178](#latest-committed-memory-segment-125-node-1178) · ↔ [1195](#latest-committed-memory-segment-125-node-1195) · ↔ [1197](#latest-committed-memory-segment-125-node-1197) · ↔ [1203](#latest-committed-memory-segment-125-node-1203) · ↔ [1247](#latest-committed-memory-segment-125-node-1247) · ↔ [1278](#latest-committed-memory-segment-125-node-1278) · ↔ [1445](#latest-committed-memory-segment-125-node-1445) · ↔ [1536](#latest-committed-memory-segment-125-node-1536) · ↔ [1540](#latest-committed-memory-segment-125-node-1540) · ↔ [1547](#latest-committed-memory-segment-125-node-1547) · ↔ [1557](#latest-committed-memory-segment-125-node-1557) · ↔ [1710](#latest-committed-memory-segment-125-node-1710)
+↔ [1178](#latest-committed-memory-segment-144-node-1178) · ↔ [1195](#latest-committed-memory-segment-144-node-1195) · ↔ [1197](#latest-committed-memory-segment-144-node-1197) · ↔ [1203](#latest-committed-memory-segment-144-node-1203) · ↔ [1247](#latest-committed-memory-segment-144-node-1247) · ↔ [1278](#latest-committed-memory-segment-144-node-1278) · ↔ [1445](#latest-committed-memory-segment-144-node-1445) · ↔ [1536](#latest-committed-memory-segment-144-node-1536) · ↔ [1540](#latest-committed-memory-segment-144-node-1540) · ↔ [1547](#latest-committed-memory-segment-144-node-1547) · ↔ [1557](#latest-committed-memory-segment-144-node-1557) · ↔ [1710](#latest-committed-memory-segment-144-node-1710) · ↔ [1832](#latest-committed-memory-segment-144-node-1832) · ↔ [1833](#latest-committed-memory-segment-144-node-1833) · ↔ [1834](#latest-committed-memory-segment-144-node-1834) · ↔ [1838](#latest-committed-memory-segment-144-node-1838) · ↔ [1848](#latest-committed-memory-segment-144-node-1848) · ↔ [1887](#latest-committed-memory-segment-144-node-1887) · ↔ [1936](#latest-committed-memory-segment-144-node-1936) · ↔ [1938](#latest-committed-memory-segment-144-node-1938)
 
 - MAI: 对，就是可以请大家喝。
 - Deepgram: Mhm, tu é koi. &#124; MAI: 一些饮品，然后我们就有点像这-这算市集部分和饮品部分也有了。那是不是还要什么节目啊，你之前。
@@ -8330,34 +9480,39 @@ Not stored in this construction checkpoint.
 - MAI: 这些就是我们要让他们先获得会货币以后，我们再推销我们自己的产品。其实感觉不确定他们到底是
 - MAI: 其实可能不会持续很长的时间。这时候拿40分钟把价格。
 - MAI: 那就是，反正他他他的是种子片，就加甜品，就在3点40到4点20介绍，然后他作为我们几个的压轴，然后介绍完了以后，大家可以。
+- MAI: 嗯，现在是五点，呃，五点，那我们的节目就弄到晚上一样。因为我当时想的是你那个讲故事的话，大家不是很熟，因为你那个讲故事设定在酒吧，感觉酒吧大家都是有故事的人，可能就在那种环境下，然后就愿意讲。但是我们这种刚过来，他们可能不太愿意讲故事，所以改成自我介绍还挺好。然后如果说要讲故事或扩金币这个环节，我觉得可以弄。
+- MAI: 的偏晚上一点，大家已经熟了一点，再加上晚上比较感性，可以带着一点自己的故事过来。然后那那就五点是他们介绍完他们的 part。
+- MAI: 然后五点到六点就吃烧烤、调酒这种吗？
+- Deepgram: SS &#124; MAI: 那调酒的话是属于贯穿始终。
+- MAI: 然后三点四十到四点二十的时候，我们介绍我们的产品，然后我想的是你放在最后，然后就是刚好这一块结束以后，大家
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1171"></a>
+<a id="latest-committed-memory-segment-144-node-1171"></a>
 
 <details><summary>voice_1171 · 1 speech entries · 1 links</summary>
 
-↔ [1179](#latest-committed-memory-segment-125-node-1179)
+↔ [1179](#latest-committed-memory-segment-144-node-1179)
 
 - MAI: 笑得这么
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1184"></a>
+<a id="latest-committed-memory-segment-144-node-1184"></a>
 
 <details><summary>voice_1184 · 1 speech entries · 2 links</summary>
 
-↔ [1190](#latest-committed-memory-segment-125-node-1190) · ↔ [1197](#latest-committed-memory-segment-125-node-1197)
+↔ [1190](#latest-committed-memory-segment-144-node-1190) · ↔ [1197](#latest-committed-memory-segment-144-node-1197)
 
 - Deepgram: Okay. &#124; MAI: 就表演。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1185"></a>
+<a id="latest-committed-memory-segment-144-node-1185"></a>
 
 <details><summary>voice_1185 · 3 speech entries · 2 links</summary>
 
-↔ [1194](#latest-committed-memory-segment-125-node-1194) · ↔ [1197](#latest-committed-memory-segment-125-node-1197)
+↔ [1194](#latest-committed-memory-segment-144-node-1194) · ↔ [1197](#latest-committed-memory-segment-144-node-1197)
 
 - MAI: 一下午。
 - MAI: 呃，那就给他们提供一些饮品就够了吧。
@@ -8365,50 +9520,53 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1186"></a>
+<a id="latest-committed-memory-segment-144-node-1186"></a>
 
 <details><summary>voice_1186 · 1 speech entries · 2 links</summary>
 
-↔ [1196](#latest-committed-memory-segment-125-node-1196) · ↔ [1197](#latest-committed-memory-segment-125-node-1197)
+↔ [1196](#latest-committed-memory-segment-144-node-1196) · ↔ [1197](#latest-committed-memory-segment-144-node-1197)
 
 - Deepgram: Mhm, tu é koi. &#124; MAI: 嗯，对，可以。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1207"></a>
+<a id="latest-committed-memory-segment-144-node-1207"></a>
 
 <details><summary>voice_1207 · 1 speech entries · 2 links</summary>
 
-↔ [1209](#latest-committed-memory-segment-125-node-1209) · ↔ [1217](#latest-committed-memory-segment-125-node-1217)
+↔ [1209](#latest-committed-memory-segment-144-node-1209) · ↔ [1217](#latest-committed-memory-segment-144-node-1217)
 
 - MAI: 可以待到晚上，今天天气怎么样？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1208"></a>
+<a id="latest-committed-memory-segment-144-node-1208"></a>
 
-<details><summary>voice_1208 · 1 speech entries · 1 links</summary>
+<details><summary>voice_1208 · 3 speech entries · 3 links</summary>
 
-↔ [1211](#latest-committed-memory-segment-125-node-1211)
+↔ [1211](#latest-committed-memory-segment-144-node-1211) · ↔ [1917](#latest-committed-memory-segment-144-node-1917) · ↔ [1931](#latest-committed-memory-segment-144-node-1931)
 
 - MAI: 不下雨的话，如果像今天这种天的话，待到晚上还是挺漂亮。
+- MAI: 传数据让他们自己逛逛我们的世界，然后喝喝酒。
+- MAI: 那就是那个五点结束之后呗。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1219"></a>
+<a id="latest-committed-memory-segment-144-node-1219"></a>
 
-<details><summary>voice_1219 · 4 speech entries · 4 links</summary>
+<details><summary>voice_1219 · 5 speech entries · 5 links</summary>
 
-↔ [1329](#latest-committed-memory-segment-125-node-1329) · ↔ [1456](#latest-committed-memory-segment-125-node-1456) · ↔ [1533](#latest-committed-memory-segment-125-node-1533) · ↔ [1540](#latest-committed-memory-segment-125-node-1540)
+↔ [1329](#latest-committed-memory-segment-144-node-1329) · ↔ [1456](#latest-committed-memory-segment-144-node-1456) · ↔ [1533](#latest-committed-memory-segment-144-node-1533) · ↔ [1540](#latest-committed-memory-segment-144-node-1540) · ↔ [1822](#latest-committed-memory-segment-144-node-1822)
 
 - Deepgram: 你也말 말了。 &#124; MAI: 还要买碳，对吧？
 - MAI: 哦哦哦，可以买采购。
 - Deepgram: 你毛体、毛体。你 &#124; MAI: 那茅台，茅台。
 - MAI: 然后三点干啥了？
+- MAI: 也就摆在这。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1220"></a>
+<a id="latest-committed-memory-segment-144-node-1220"></a>
 
 <details><summary>voice_1220 · 1 speech entries · 0 links</summary>
 
@@ -8416,302 +9574,307 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1221"></a>
+<a id="latest-committed-memory-segment-144-node-1221"></a>
 
-<details><summary>voice_1221 · 1 speech entries · 0 links</summary>
+<details><summary>voice_1221 · 2 speech entries · 1 links</summary>
+
+↔ [1735](#latest-committed-memory-segment-144-node-1735)
 
 - MAI: 因-因为你不切。
+- MAI: 总共五百到一千。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1234"></a>
+<a id="latest-committed-memory-segment-144-node-1234"></a>
 
 <details><summary>voice_1234 · 1 speech entries · 1 links</summary>
 
-↔ [1240](#latest-committed-memory-segment-125-node-1240)
+↔ [1240](#latest-committed-memory-segment-144-node-1240)
 
 - MAI: 拿出来稍微放一会的时候好切。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1235"></a>
+<a id="latest-committed-memory-segment-144-node-1235"></a>
 
 <details><summary>voice_1235 · 2 speech entries · 2 links</summary>
 
-↔ [1242](#latest-committed-memory-segment-125-node-1242) · ↔ [1593](#latest-committed-memory-segment-125-node-1593)
+↔ [1242](#latest-committed-memory-segment-144-node-1242) · ↔ [1593](#latest-committed-memory-segment-144-node-1593)
 
 - MAI: 明白。行。
 - MAI: 你也插一个吧。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1236"></a>
+<a id="latest-committed-memory-segment-144-node-1236"></a>
 
 <details><summary>voice_1236 · 1 speech entries · 1 links</summary>
 
-↔ [1244](#latest-committed-memory-segment-125-node-1244)
+↔ [1244](#latest-committed-memory-segment-144-node-1244)
 
 - MAI: 其实调酒好像就是买，买一点那种。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1237"></a>
+<a id="latest-committed-memory-segment-144-node-1237"></a>
 
 <details><summary>voice_1237 · 1 speech entries · 1 links</summary>
 
-↔ [1245](#latest-committed-memory-segment-125-node-1245)
+↔ [1245](#latest-committed-memory-segment-144-node-1245)
 
 - MAI: 对，然后搞一点冰块。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1238"></a>
+<a id="latest-committed-memory-segment-144-node-1238"></a>
 
 <details><summary>voice_1238 · 1 speech entries · 1 links</summary>
 
-↔ [1246](#latest-committed-memory-segment-125-node-1246)
+↔ [1246](#latest-committed-memory-segment-144-node-1246)
 
 - MAI: 对。冰块的话。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1254"></a>
+<a id="latest-committed-memory-segment-144-node-1254"></a>
 
 <details><summary>voice_1254 · 1 speech entries · 1 links</summary>
 
-↔ [1260](#latest-committed-memory-segment-125-node-1260)
+↔ [1260](#latest-committed-memory-segment-144-node-1260)
 
 - MAI: 发现蛮简单。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1255"></a>
+<a id="latest-committed-memory-segment-144-node-1255"></a>
 
 <details><summary>voice_1255 · 2 speech entries · 1 links</summary>
 
-↔ [1262](#latest-committed-memory-segment-125-node-1262)
+↔ [1262](#latest-committed-memory-segment-144-node-1262)
 
 - MAI: 只不过是冻出来可能没有
 - MAI: 哎，我们有透明。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1256"></a>
+<a id="latest-committed-memory-segment-144-node-1256"></a>
 
 <details><summary>voice_1256 · 1 speech entries · 1 links</summary>
 
-↔ [1263](#latest-committed-memory-segment-125-node-1263)
+↔ [1263](#latest-committed-memory-segment-144-node-1263)
 
 - MAI: 我们有冰箱，就买个那个模具倒点水前先冻一下。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1257"></a>
+<a id="latest-committed-memory-segment-144-node-1257"></a>
 
 <details><summary>voice_1257 · 1 speech entries · 1 links</summary>
 
-↔ [1264](#latest-committed-memory-segment-125-node-1264)
+↔ [1264](#latest-committed-memory-segment-144-node-1264)
 
 - MAI: 用蒸馏水就行。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1258"></a>
+<a id="latest-committed-memory-segment-144-node-1258"></a>
 
 <details><summary>voice_1258 · 1 speech entries · 1 links</summary>
 
-↔ [1266](#latest-committed-memory-segment-125-node-1266)
+↔ [1266](#latest-committed-memory-segment-144-node-1266)
 
 - MAI: 嗯，蒸馏水。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1259"></a>
+<a id="latest-committed-memory-segment-144-node-1259"></a>
 
 <details><summary>voice_1259 · 1 speech entries · 1 links</summary>
 
-↔ [1267](#latest-committed-memory-segment-125-node-1267)
+↔ [1267](#latest-committed-memory-segment-144-node-1267)
 
 - MAI: 我们到底是在搞什么？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1272"></a>
+<a id="latest-committed-memory-segment-144-node-1272"></a>
 
 <details><summary>voice_1272 · 1 speech entries · 1 links</summary>
 
-↔ [1274](#latest-committed-memory-segment-125-node-1274)
+↔ [1274](#latest-committed-memory-segment-144-node-1274)
 
 - MAI: 那它整-整体的时间流程？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1302"></a>
+<a id="latest-committed-memory-segment-144-node-1302"></a>
 
 <details><summary>voice_1302 · 1 speech entries · 1 links</summary>
 
-↔ [1306](#latest-committed-memory-segment-125-node-1306)
+↔ [1306](#latest-committed-memory-segment-144-node-1306)
 
 - MAI: 不如跳舞。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1303"></a>
+<a id="latest-committed-memory-segment-144-node-1303"></a>
 
-<details><summary>voice_1303 · 1 speech entries · 1 links</summary>
+<details><summary>voice_1303 · 3 speech entries · 3 links</summary>
 
-↔ [1309](#latest-committed-memory-segment-125-node-1309)
+↔ [1309](#latest-committed-memory-segment-144-node-1309) · ↔ [1762](#latest-committed-memory-segment-144-node-1762) · ↔ [1817](#latest-committed-memory-segment-144-node-1817)
 
 - MAI: 可是这我怕戴眼镜会掉了。
+- MAI: 好漂亮。
+- MAI: 点点披萨倒还行。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1315"></a>
+<a id="latest-committed-memory-segment-144-node-1315"></a>
 
 <details><summary>voice_1315 · 1 speech entries · 1 links</summary>
 
-↔ [1323](#latest-committed-memory-segment-125-node-1323)
+↔ [1323](#latest-committed-memory-segment-144-node-1323)
 
 - MAI: 你在挺我说谢谢。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1316"></a>
+<a id="latest-committed-memory-segment-144-node-1316"></a>
 
 <details><summary>voice_1316 · 1 speech entries · 1 links</summary>
 
-↔ [1325](#latest-committed-memory-segment-125-node-1325)
+↔ [1325](#latest-committed-memory-segment-144-node-1325)
 
 - MAI: 捋一下时间线。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1317"></a>
+<a id="latest-committed-memory-segment-144-node-1317"></a>
 
 <details><summary>voice_1317 · 1 speech entries · 1 links</summary>
 
-↔ [1326](#latest-committed-memory-segment-125-node-1326)
+↔ [1326](#latest-committed-memory-segment-144-node-1326)
 
 - MAI: 要不要买100人民币？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1318"></a>
+<a id="latest-committed-memory-segment-144-node-1318"></a>
 
 <details><summary>voice_1318 · 1 speech entries · 1 links</summary>
 
-↔ [1330](#latest-committed-memory-segment-125-node-1330)
+↔ [1330](#latest-committed-memory-segment-144-node-1330)
 
 - MAI: 首先要他们讲故事才能获得那个。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1357"></a>
+<a id="latest-committed-memory-segment-144-node-1357"></a>
 
 <details><summary>voice_1357 · 1 speech entries · 1 links</summary>
 
-↔ [1368](#latest-committed-memory-segment-125-node-1368)
+↔ [1368](#latest-committed-memory-segment-144-node-1368)
 
 - MAI: 门门口再来一个。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1370"></a>
+<a id="latest-committed-memory-segment-144-node-1370"></a>
 
 <details><summary>voice_1370 · 1 speech entries · 2 links</summary>
 
-↔ [1375](#latest-committed-memory-segment-125-node-1375) · ↔ [1384](#latest-committed-memory-segment-125-node-1384)
+↔ [1375](#latest-committed-memory-segment-144-node-1375) · ↔ [1384](#latest-committed-memory-segment-144-node-1384)
 
 - MAI: 确实啊，这个听起来有点。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1371"></a>
+<a id="latest-committed-memory-segment-144-node-1371"></a>
 
 <details><summary>voice_1371 · 1 speech entries · 2 links</summary>
 
-↔ [1377](#latest-committed-memory-segment-125-node-1377) · ↔ [1384](#latest-committed-memory-segment-125-node-1384)
+↔ [1377](#latest-committed-memory-segment-144-node-1377) · ↔ [1384](#latest-committed-memory-segment-144-node-1384)
 
 - MAI: 一会儿发鸡蛋，一会儿摇骰。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1372"></a>
+<a id="latest-committed-memory-segment-144-node-1372"></a>
 
 <details><summary>voice_1372 · 2 speech entries · 3 links</summary>
 
-↔ [1378](#latest-committed-memory-segment-125-node-1378) · ↔ [1384](#latest-committed-memory-segment-125-node-1384) · ↔ [1679](#latest-committed-memory-segment-125-node-1679)
+↔ [1378](#latest-committed-memory-segment-144-node-1378) · ↔ [1384](#latest-committed-memory-segment-144-node-1384) · ↔ [1679](#latest-committed-memory-segment-144-node-1679)
 
 - MAI: 据点是吧？
 - MAI: 对对，是。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1373"></a>
+<a id="latest-committed-memory-segment-144-node-1373"></a>
 
 <details><summary>voice_1373 · 1 speech entries · 2 links</summary>
 
-↔ [1380](#latest-committed-memory-segment-125-node-1380) · ↔ [1384](#latest-committed-memory-segment-125-node-1384)
+↔ [1380](#latest-committed-memory-segment-144-node-1380) · ↔ [1384](#latest-committed-memory-segment-144-node-1384)
 
 - MAI: 进来玩玩嘛，进来就可以获得十个币。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1386"></a>
+<a id="latest-committed-memory-segment-144-node-1386"></a>
 
 <details><summary>voice_1386 · 2 speech entries · 1 links</summary>
 
-↔ [1392](#latest-committed-memory-segment-125-node-1392)
+↔ [1392](#latest-committed-memory-segment-144-node-1392)
 
 - MAI: 那就自我介绍就可以获得一个礼。
 - MAI: 啊，自我介绍可以获得，对。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1387"></a>
+<a id="latest-committed-memory-segment-144-node-1387"></a>
 
 <details><summary>voice_1387 · 1 speech entries · 1 links</summary>
 
-↔ [1396](#latest-committed-memory-segment-125-node-1396)
+↔ [1396](#latest-committed-memory-segment-144-node-1396)
 
 - Deepgram: 你、你、你、你、你。你、你、你。你、你、你。你、你。你。你。你。你。 &#124; MAI: 哦，像复活节的那种。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1388"></a>
+<a id="latest-committed-memory-segment-144-node-1388"></a>
 
 <details><summary>voice_1388 · 2 speech entries · 1 links</summary>
 
-↔ [1397](#latest-committed-memory-segment-125-node-1397)
+↔ [1397](#latest-committed-memory-segment-144-node-1397)
 
 - MAI: 藏币。
 - MAI: 也行。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1407"></a>
+<a id="latest-committed-memory-segment-144-node-1407"></a>
 
 <details><summary>voice_1407 · 2 speech entries · 2 links</summary>
 
-↔ [1416](#latest-committed-memory-segment-125-node-1416) · ↔ [1417](#latest-committed-memory-segment-125-node-1417)
+↔ [1416](#latest-committed-memory-segment-144-node-1416) · ↔ [1417](#latest-committed-memory-segment-144-node-1417)
 
 - MAI: 就是一些问答什么的。
 - MAI: 野生动物拼图那个。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1408"></a>
+<a id="latest-committed-memory-segment-144-node-1408"></a>
 
 <details><summary>voice_1408 · 2 speech entries · 2 links</summary>
 
-↔ [1419](#latest-committed-memory-segment-125-node-1419) · ↔ [1420](#latest-committed-memory-segment-125-node-1420)
+↔ [1419](#latest-committed-memory-segment-144-node-1419) · ↔ [1420](#latest-committed-memory-segment-144-node-1420)
 
 - MAI: 知识问答得币。
 - MAI: 对对对对对对。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1409"></a>
+<a id="latest-committed-memory-segment-144-node-1409"></a>
 
 <details><summary>voice_1409 · 1 speech entries · 0 links</summary>
 
@@ -8719,11 +9882,11 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1410"></a>
+<a id="latest-committed-memory-segment-144-node-1410"></a>
 
 <details><summary>voice_1410 · 4 speech entries · 5 links</summary>
 
-↔ [1422](#latest-committed-memory-segment-125-node-1422) · ↔ [1423](#latest-committed-memory-segment-125-node-1423) · ↔ [1424](#latest-committed-memory-segment-125-node-1424) · ↔ [1676](#latest-committed-memory-segment-125-node-1676) · ↔ [1684](#latest-committed-memory-segment-125-node-1684)
+↔ [1422](#latest-committed-memory-segment-144-node-1422) · ↔ [1423](#latest-committed-memory-segment-144-node-1423) · ↔ [1424](#latest-committed-memory-segment-144-node-1424) · ↔ [1676](#latest-committed-memory-segment-144-node-1676) · ↔ [1684](#latest-committed-memory-segment-144-node-1684)
 
 - MAI: 二十二。
 - MAI: 前面他们。
@@ -8732,356 +9895,358 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1432"></a>
+<a id="latest-committed-memory-segment-144-node-1432"></a>
 
 <details><summary>voice_1432 · 2 speech entries · 1 links</summary>
 
-↔ [1438](#latest-committed-memory-segment-125-node-1438)
+↔ [1438](#latest-committed-memory-segment-144-node-1438)
 
 - MAI: 那我们有那种大音箱不？
 - MAI: 啊，我以为你们已经喝了。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1433"></a>
+<a id="latest-committed-memory-segment-144-node-1433"></a>
 
 <details><summary>voice_1433 · 1 speech entries · 1 links</summary>
 
-↔ [1439](#latest-committed-memory-segment-125-node-1439)
+↔ [1439](#latest-committed-memory-segment-144-node-1439)
 
 - MAI: 这个可以有。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1434"></a>
+<a id="latest-committed-memory-segment-144-node-1434"></a>
 
 <details><summary>voice_1434 · 1 speech entries · 1 links</summary>
 
-↔ [1442](#latest-committed-memory-segment-125-node-1442)
+↔ [1442](#latest-committed-memory-segment-144-node-1442)
 
 - MAI: 大东北。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1435"></a>
+<a id="latest-committed-memory-segment-144-node-1435"></a>
 
 <details><summary>voice_1435 · 1 speech entries · 1 links</summary>
 
-↔ [1443](#latest-committed-memory-segment-125-node-1443)
+↔ [1443](#latest-committed-memory-segment-144-node-1443)
 
 - MAI: 这是问答自我介绍。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1453"></a>
+<a id="latest-committed-memory-segment-144-node-1453"></a>
 
 <details><summary>voice_1453 · 2 speech entries · 1 links</summary>
 
-↔ [1457](#latest-committed-memory-segment-125-node-1457)
+↔ [1457](#latest-committed-memory-segment-144-node-1457)
 
 - Deepgram: 你毛体、毛体。你 好奇なぞ我的同。 &#124; MAI: 出来。
 - Deepgram: 好奇なぞ我的同。 &#124; MAI: 那花瓶拿走吧，太挡。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1454"></a>
+<a id="latest-committed-memory-segment-144-node-1454"></a>
 
 <details><summary>voice_1454 · 1 speech entries · 1 links</summary>
 
-↔ [1458](#latest-committed-memory-segment-125-node-1458)
+↔ [1458](#latest-committed-memory-segment-144-node-1458)
 
 - MAI: 多的话咱们就放这块。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1467"></a>
+<a id="latest-committed-memory-segment-144-node-1467"></a>
 
-<details><summary>voice_1467 · 2 speech entries · 1 links</summary>
+<details><summary>voice_1467 · 3 speech entries · 2 links</summary>
 
-↔ [1475](#latest-committed-memory-segment-125-node-1475)
+↔ [1475](#latest-committed-memory-segment-144-node-1475) · ↔ [1820](#latest-committed-memory-segment-144-node-1820)
 
 - MAI: 哦，我们还要写个英文版吗？
 - MAI: 我们应该 internationally。你看我那个英文就明显跟这个。
+- MAI: 蘸点披萨有那个三十二寸这么大的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1468"></a>
+<a id="latest-committed-memory-segment-144-node-1468"></a>
 
 <details><summary>voice_1468 · 1 speech entries · 1 links</summary>
 
-↔ [1478](#latest-committed-memory-segment-125-node-1478)
+↔ [1478](#latest-committed-memory-segment-144-node-1478)
 
 - MAI: 来，咱换一下。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1480"></a>
+<a id="latest-committed-memory-segment-144-node-1480"></a>
 
 <details><summary>voice_1480 · 1 speech entries · 2 links</summary>
 
-↔ [1490](#latest-committed-memory-segment-125-node-1490) · ↔ [1494](#latest-committed-memory-segment-125-node-1494)
+↔ [1490](#latest-committed-memory-segment-144-node-1490) · ↔ [1494](#latest-committed-memory-segment-144-node-1494)
 
 - MAI: 强调一下这个line。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1481"></a>
+<a id="latest-committed-memory-segment-144-node-1481"></a>
 
 <details><summary>voice_1481 · 1 speech entries · 2 links</summary>
 
-↔ [1491](#latest-committed-memory-segment-125-node-1491) · ↔ [1494](#latest-committed-memory-segment-125-node-1494)
+↔ [1491](#latest-committed-memory-segment-144-node-1491) · ↔ [1494](#latest-committed-memory-segment-144-node-1494)
 
 - MAI: 好好，行。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1496"></a>
+<a id="latest-committed-memory-segment-144-node-1496"></a>
 
 <details><summary>voice_1496 · 1 speech entries · 2 links</summary>
 
-↔ [1505](#latest-committed-memory-segment-125-node-1505) · ↔ [1509](#latest-committed-memory-segment-125-node-1509)
+↔ [1505](#latest-committed-memory-segment-144-node-1505) · ↔ [1509](#latest-committed-memory-segment-144-node-1509)
 
 - MAI: 入场式的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1497"></a>
+<a id="latest-committed-memory-segment-144-node-1497"></a>
 
 <details><summary>voice_1497 · 1 speech entries · 2 links</summary>
 
-↔ [1506](#latest-committed-memory-segment-125-node-1506) · ↔ [1510](#latest-committed-memory-segment-125-node-1510)
+↔ [1506](#latest-committed-memory-segment-144-node-1506) · ↔ [1510](#latest-committed-memory-segment-144-node-1510)
 
 - MAI: 可以。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1528"></a>
+<a id="latest-committed-memory-segment-144-node-1528"></a>
 
 <details><summary>voice_1528 · 1 speech entries · 2 links</summary>
 
-↔ [1532](#latest-committed-memory-segment-125-node-1532) · ↔ [1540](#latest-committed-memory-segment-125-node-1540)
+↔ [1532](#latest-committed-memory-segment-144-node-1532) · ↔ [1540](#latest-committed-memory-segment-144-node-1540)
 
 - MAI: 第二点，还有什么？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1529"></a>
+<a id="latest-committed-memory-segment-144-node-1529"></a>
 
 <details><summary>voice_1529 · 1 speech entries · 2 links</summary>
 
-↔ [1534](#latest-committed-memory-segment-125-node-1534) · ↔ [1540](#latest-committed-memory-segment-125-node-1540)
+↔ [1534](#latest-committed-memory-segment-144-node-1534) · ↔ [1540](#latest-committed-memory-segment-144-node-1540)
 
 - MAI: 三点工作主要是社会打工做的事。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1530"></a>
+<a id="latest-committed-memory-segment-144-node-1530"></a>
 
 <details><summary>voice_1530 · 1 speech entries · 2 links</summary>
 
-↔ [1535](#latest-committed-memory-segment-125-node-1535) · ↔ [1540](#latest-committed-memory-segment-125-node-1540)
+↔ [1535](#latest-committed-memory-segment-144-node-1535) · ↔ [1540](#latest-committed-memory-segment-144-node-1540)
 
 - MAI: 那这像这些呢？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1542"></a>
+<a id="latest-committed-memory-segment-144-node-1542"></a>
 
 <details><summary>voice_1542 · 1 speech entries · 2 links</summary>
 
-↔ [1546](#latest-committed-memory-segment-125-node-1546) · ↔ [1556](#latest-committed-memory-segment-125-node-1556)
+↔ [1546](#latest-committed-memory-segment-144-node-1546) · ↔ [1556](#latest-committed-memory-segment-144-node-1556)
 
 - MAI: 是一人还是二人，你知道吗？万一。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1543"></a>
+<a id="latest-committed-memory-segment-144-node-1543"></a>
 
 <details><summary>voice_1543 · 1 speech entries · 1 links</summary>
 
-↔ [1550](#latest-committed-memory-segment-125-node-1550)
+↔ [1550](#latest-committed-memory-segment-144-node-1550)
 
 - Deepgram: 말요 你저다나 &#124; MAI: QA。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1544"></a>
+<a id="latest-committed-memory-segment-144-node-1544"></a>
 
 <details><summary>voice_1544 · 1 speech entries · 1 links</summary>
 
-↔ [1551](#latest-committed-memory-segment-125-node-1551)
+↔ [1551](#latest-committed-memory-segment-144-node-1551)
 
 - Deepgram: 말요 &#124; MAI: 妙啊。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1560"></a>
+<a id="latest-committed-memory-segment-144-node-1560"></a>
 
-<details><summary>voice_1560 · 1 speech entries · 2 links</summary>
+<details><summary>voice_1560 · 2 speech entries · 3 links</summary>
 
-↔ [1565](#latest-committed-memory-segment-125-node-1565) · ↔ [1571](#latest-committed-memory-segment-125-node-1571)
+↔ [1565](#latest-committed-memory-segment-144-node-1565) · ↔ [1571](#latest-committed-memory-segment-144-node-1571) · ↔ [1914](#latest-committed-memory-segment-144-node-1914)
 
 - MAI: 然后就每个人介绍自己做的这个，然后就跟他们说他们可以拿他们的货币来。
+- MAI: 嗯，对啊，唱唱歌，跳跳舞。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1573"></a>
+<a id="latest-committed-memory-segment-144-node-1573"></a>
 
 <details><summary>voice_1573 · 1 speech entries · 1 links</summary>
 
-↔ [1582](#latest-committed-memory-segment-125-node-1582)
+↔ [1582](#latest-committed-memory-segment-144-node-1582)
 
 - MAI: 哎。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1574"></a>
+<a id="latest-committed-memory-segment-144-node-1574"></a>
 
 <details><summary>voice_1574 · 1 speech entries · 1 links</summary>
 
-↔ [1585](#latest-committed-memory-segment-125-node-1585)
+↔ [1585](#latest-committed-memory-segment-144-node-1585)
 
 - MAI: 我的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1587"></a>
+<a id="latest-committed-memory-segment-144-node-1587"></a>
 
 <details><summary>voice_1587 · 1 speech entries · 1 links</summary>
 
-↔ [1590](#latest-committed-memory-segment-125-node-1590)
+↔ [1590](#latest-committed-memory-segment-144-node-1590)
 
 - MAI: Auction.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1588"></a>
+<a id="latest-committed-memory-segment-144-node-1588"></a>
 
 <details><summary>voice_1588 · 1 speech entries · 1 links</summary>
 
-↔ [1591](#latest-committed-memory-segment-125-node-1591)
+↔ [1591](#latest-committed-memory-segment-144-node-1591)
 
 - MAI: Auction，A-U-C-A.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1599"></a>
+<a id="latest-committed-memory-segment-144-node-1599"></a>
 
 <details><summary>voice_1599 · 2 speech entries · 2 links</summary>
 
-↔ [1608](#latest-committed-memory-segment-125-node-1608) · ↔ [1631](#latest-committed-memory-segment-125-node-1631)
+↔ [1608](#latest-committed-memory-segment-144-node-1608) · ↔ [1631](#latest-committed-memory-segment-144-node-1631)
 
 - MAI: 一个半小时差不多。
 - MAI: 七八分钟差不多。七八分钟，40分钟差不多。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1600"></a>
+<a id="latest-committed-memory-segment-144-node-1600"></a>
 
 <details><summary>voice_1600 · 1 speech entries · 1 links</summary>
 
-↔ [1610](#latest-committed-memory-segment-125-node-1610)
+↔ [1610](#latest-committed-memory-segment-144-node-1610)
 
 - MAI: 你-你-你不用。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1601"></a>
+<a id="latest-committed-memory-segment-144-node-1601"></a>
 
 <details><summary>voice_1601 · 1 speech entries · 1 links</summary>
 
-↔ [1611](#latest-committed-memory-segment-125-node-1611)
+↔ [1611](#latest-committed-memory-segment-144-node-1611)
 
 - MAI: 他们带多少东西。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1602"></a>
+<a id="latest-committed-memory-segment-144-node-1602"></a>
 
 <details><summary>voice_1602 · 1 speech entries · 1 links</summary>
 
-↔ [1612](#latest-committed-memory-segment-125-node-1612)
+↔ [1612](#latest-committed-memory-segment-144-node-1612)
 
 - MAI: 以及他们是矮人还是异人？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1603"></a>
+<a id="latest-committed-memory-segment-144-node-1603"></a>
 
 <details><summary>voice_1603 · 1 speech entries · 1 links</summary>
 
-↔ [1613](#latest-committed-memory-segment-125-node-1613)
+↔ [1613](#latest-committed-memory-segment-144-node-1613)
 
 - MAI: 对，这个就不确定。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1619"></a>
+<a id="latest-committed-memory-segment-144-node-1619"></a>
 
 <details><summary>voice_1619 · 1 speech entries · 1 links</summary>
 
-↔ [1628](#latest-committed-memory-segment-125-node-1628)
+↔ [1628](#latest-committed-memory-segment-144-node-1628)
 
 - MAI: 嗯，对，我觉得我们先开始吧。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1620"></a>
+<a id="latest-committed-memory-segment-144-node-1620"></a>
 
 <details><summary>voice_1620 · 2 speech entries · 2 links</summary>
 
-↔ [1629](#latest-committed-memory-segment-125-node-1629) · ↔ [1640](#latest-committed-memory-segment-125-node-1640)
+↔ [1629](#latest-committed-memory-segment-144-node-1629) · ↔ [1640](#latest-committed-memory-segment-144-node-1640)
 
 - MAI: 我们先开始。
 - MAI: 3点40到4点半是我们先开始。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1621"></a>
+<a id="latest-committed-memory-segment-144-node-1621"></a>
 
 <details><summary>voice_1621 · 1 speech entries · 1 links</summary>
 
-↔ [1630](#latest-committed-memory-segment-125-node-1630)
+↔ [1630](#latest-committed-memory-segment-144-node-1630)
 
 - MAI: 会会这么长。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1622"></a>
+<a id="latest-committed-memory-segment-144-node-1622"></a>
 
 <details><summary>voice_1622 · 1 speech entries · 1 links</summary>
 
-↔ [1632](#latest-committed-memory-segment-125-node-1632)
+↔ [1632](#latest-committed-memory-segment-144-node-1632)
 
 - MAI: 4点20。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1623"></a>
+<a id="latest-committed-memory-segment-144-node-1623"></a>
 
 <details><summary>voice_1623 · 1 speech entries · 1 links</summary>
 
-↔ [1633](#latest-committed-memory-segment-125-node-1633)
+↔ [1633](#latest-committed-memory-segment-144-node-1633)
 
 - MAI: 20。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1624"></a>
+<a id="latest-committed-memory-segment-144-node-1624"></a>
 
 <details><summary>voice_1624 · 1 speech entries · 1 links</summary>
 
-↔ [1634](#latest-committed-memory-segment-125-node-1634)
+↔ [1634](#latest-committed-memory-segment-144-node-1634)
 
 - MAI: 或者直接把他们把这段变成我们整体的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1642"></a>
+<a id="latest-committed-memory-segment-144-node-1642"></a>
 
 <details><summary>voice_1642 · 3 speech entries · 1 links</summary>
 
-↔ [1650](#latest-committed-memory-segment-125-node-1650)
+↔ [1650](#latest-committed-memory-segment-144-node-1650)
 
 - MAI: 一个，怎么形容？一个小市集也行，就是可以让他们先。
 - MAI: 对。
@@ -9089,151 +10254,794 @@ Not stored in this construction checkpoint.
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1643"></a>
+<a id="latest-committed-memory-segment-144-node-1643"></a>
 
 <details><summary>voice_1643 · 2 speech entries · 1 links</summary>
 
-↔ [1651](#latest-committed-memory-segment-125-node-1651)
+↔ [1651](#latest-committed-memory-segment-144-node-1651)
 
 - MAI: 只不过使用的是这个货币。
 - MAI: 然后如果大家玩得比较高兴的话，就后面让他们在自己之间交谈。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1663"></a>
+<a id="latest-committed-memory-segment-144-node-1663"></a>
 
 <details><summary>voice_1663 · 1 speech entries · 1 links</summary>
 
-↔ [1678](#latest-committed-memory-segment-125-node-1678)
+↔ [1678](#latest-committed-memory-segment-144-node-1678)
 
 - MAI: 在外面的玻璃就可以调酒室内。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1664"></a>
+<a id="latest-committed-memory-segment-144-node-1664"></a>
 
 <details><summary>voice_1664 · 1 speech entries · 1 links</summary>
 
-↔ [1680](#latest-committed-memory-segment-125-node-1680)
+↔ [1680](#latest-committed-memory-segment-144-node-1680)
 
 - MAI: 来-来一点打光。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1665"></a>
+<a id="latest-committed-memory-segment-144-node-1665"></a>
 
 <details><summary>voice_1665 · 1 speech entries · 1 links</summary>
 
-↔ [1681](#latest-committed-memory-segment-125-node-1681)
+↔ [1681](#latest-committed-memory-segment-144-node-1681)
 
 - MAI: 对。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1666"></a>
+<a id="latest-committed-memory-segment-144-node-1666"></a>
 
 <details><summary>voice_1666 · 1 speech entries · 1 links</summary>
 
-↔ [1682](#latest-committed-memory-segment-125-node-1682)
+↔ [1682](#latest-committed-memory-segment-144-node-1682)
 
 - MAI: 对，我们还有这个影棚灯。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1687"></a>
+<a id="latest-committed-memory-segment-144-node-1687"></a>
 
 <details><summary>voice_1687 · 1 speech entries · 1 links</summary>
 
-↔ [1690](#latest-committed-memory-segment-125-node-1690)
+↔ [1690](#latest-committed-memory-segment-144-node-1690)
 
 - MAI: 像这个，我们是就一个一个。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1688"></a>
+<a id="latest-committed-memory-segment-144-node-1688"></a>
 
 <details><summary>voice_1688 · 1 speech entries · 1 links</summary>
 
-↔ [1693](#latest-committed-memory-segment-125-node-1693)
+↔ [1693](#latest-committed-memory-segment-144-node-1693)
 
 - MAI: 对，大家
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1689"></a>
+<a id="latest-committed-memory-segment-144-node-1689"></a>
 
 <details><summary>voice_1689 · 2 speech entries · 1 links</summary>
 
-↔ [1694](#latest-committed-memory-segment-125-node-1694)
+↔ [1694](#latest-committed-memory-segment-144-node-1694)
 
 - MAI: 四点二十之后。
 - MAI: 连吃连干。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1703"></a>
+<a id="latest-committed-memory-segment-144-node-1703"></a>
 
 <details><summary>voice_1703 · 1 speech entries · 1 links</summary>
 
-↔ [1712](#latest-committed-memory-segment-125-node-1712)
+↔ [1712](#latest-committed-memory-segment-144-node-1712)
 
 - MAI: 他的那个甜品。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1704"></a>
+<a id="latest-committed-memory-segment-144-node-1704"></a>
 
 <details><summary>voice_1704 · 2 speech entries · 2 links</summary>
 
-↔ [1714](#latest-committed-memory-segment-125-node-1714) · ↔ [1715](#latest-committed-memory-segment-125-node-1715)
+↔ [1714](#latest-committed-memory-segment-144-node-1714) · ↔ [1715](#latest-committed-memory-segment-144-node-1715)
 
 - MAI: 有钱。
 - MAI: 有有sample。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1705"></a>
+<a id="latest-committed-memory-segment-144-node-1705"></a>
 
 <details><summary>voice_1705 · 2 speech entries · 2 links</summary>
 
-↔ [1718](#latest-committed-memory-segment-125-node-1718) · ↔ [1719](#latest-committed-memory-segment-125-node-1719)
+↔ [1718](#latest-committed-memory-segment-144-node-1718) · ↔ [1719](#latest-committed-memory-segment-144-node-1719)
 
 - MAI: 甜品摆台。
 - MAI: 就是下午看塔的。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1706"></a>
+<a id="latest-committed-memory-segment-144-node-1706"></a>
 
 <details><summary>voice_1706 · 1 speech entries · 1 links</summary>
 
-↔ [1720](#latest-committed-memory-segment-125-node-1720)
+↔ [1720](#latest-committed-memory-segment-144-node-1720)
 
 - MAI: 真的假的？
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1707"></a>
+<a id="latest-committed-memory-segment-144-node-1707"></a>
 
 <details><summary>voice_1707 · 1 speech entries · 1 links</summary>
 
-↔ [1721](#latest-committed-memory-segment-125-node-1721)
+↔ [1721](#latest-committed-memory-segment-144-node-1721)
 
 - MAI: 摆。
 
 </details>
 
-<a id="latest-committed-memory-segment-125-node-1708"></a>
+<a id="latest-committed-memory-segment-144-node-1708"></a>
 
 <details><summary>voice_1708 · 1 speech entries · 1 links</summary>
 
-↔ [1722](#latest-committed-memory-segment-125-node-1722)
+↔ [1722](#latest-committed-memory-segment-144-node-1722)
 
 - MAI: 看一下有没有好看。
 
 </details>
 
-[Original graph](<../../cache/graphs/qwen_thinking/results/clip_audits/clip_125_graph.pkl>) · Embeddings and internal metadata omitted.
+<a id="latest-committed-memory-segment-144-node-1726"></a>
+
+<details><summary>voice_1726 · 1 speech entries · 1 links</summary>
+
+↔ [1733](#latest-committed-memory-segment-144-node-1733)
+
+- MAI: 没有，只是买个甜品台架子。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1727"></a>
+
+<details><summary>voice_1727 · 6 speech entries · 5 links</summary>
+
+↔ [1736](#latest-committed-memory-segment-144-node-1736) · ↔ [1763](#latest-committed-memory-segment-144-node-1763) · ↔ [1796](#latest-committed-memory-segment-144-node-1796) · ↔ [1896](#latest-committed-memory-segment-144-node-1896) · ↔ [1985](#latest-committed-memory-segment-144-node-1985)
+
+- MAI: 哎，但是你是不是需要很多机器啊？
+- MAI: 啊，对对对。
+- MAI: 烧烤偏晚上吧。
+- MAI: 但是，但是你要留他们到晚上的话，这个晚饭怎么弄？
+- MAI: 然后也不能弄太晚，他们回去。
+- MAI: 哎，其实像那种就是你看他们那种清补凉那种是不是就买点椰奶，然后做一元？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1728"></a>
+
+<details><summary>voice_1728 · 1 speech entries · 1 links</summary>
+
+↔ [1737](#latest-committed-memory-segment-144-node-1737)
+
+- MAI: 嗯，基础的买了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1729"></a>
+
+<details><summary>voice_1729 · 1 speech entries · 1 links</summary>
+
+↔ [1738](#latest-committed-memory-segment-144-node-1738)
+
+- MAI: 厨师机什么的没买。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1745"></a>
+
+<details><summary>voice_1745 · 1 speech entries · 1 links</summary>
+
+↔ [1757](#latest-committed-memory-segment-144-node-1757)
+
+- MAI: 不能买。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1746"></a>
+
+<details><summary>voice_1746 · 1 speech entries · 1 links</summary>
+
+↔ [1759](#latest-committed-memory-segment-144-node-1759)
+
+- MAI: 上万？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1747"></a>
+
+<details><summary>voice_1747 · 1 speech entries · 1 links</summary>
+
+↔ [1760](#latest-committed-memory-segment-144-node-1760)
+
+- MAI: 嗯，几千块钱吧。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1748"></a>
+
+<details><summary>voice_1748 · 1 speech entries · 1 links</summary>
+
+↔ [1761](#latest-committed-memory-segment-144-node-1761)
+
+- MAI: 产品它就类似这样。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1749"></a>
+
+<details><summary>voice_1749 · 1 speech entries · 0 links</summary>
+
+- MAI: 哦，OK。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1750"></a>
+
+<details><summary>voice_1750 · 2 speech entries · 1 links</summary>
+
+↔ [1764](#latest-committed-memory-segment-144-node-1764)
+
+- MAI: 差不多是我设想的那大块。
+- MAI: 嗯，对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1751"></a>
+
+<details><summary>voice_1751 · 1 speech entries · 1 links</summary>
+
+↔ [1765](#latest-committed-memory-segment-144-node-1765)
+
+- MAI: 好漂亮。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1752"></a>
+
+<details><summary>voice_1752 · 4 speech entries · 3 links</summary>
+
+↔ [1766](#latest-committed-memory-segment-144-node-1766) · ↔ [1780](#latest-committed-memory-segment-144-node-1780) · ↔ [1818](#latest-committed-memory-segment-144-node-1818)
+
+- MAI: 到时候坐在这里，可以
+- MAI: 我每次开学术会议的时候。
+- MAI: 关键是老师一般都不怎么吃，最后都是我。
+- MAI: 哎，对，就是可能每人吃那么一两块。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1753"></a>
+
+<details><summary>voice_1753 · 1 speech entries · 1 links</summary>
+
+↔ [1767](#latest-committed-memory-segment-144-node-1767)
+
+- MAI: 对对对，就是为了这个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1754"></a>
+
+<details><summary>voice_1754 · 2 speech entries · 1 links</summary>
+
+↔ [1768](#latest-committed-memory-segment-144-node-1768)
+
+- MAI: 学术蝗虫。
+- MAI: 对对对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1775"></a>
+
+<details><summary>voice_1775 · 1 speech entries · 1 links</summary>
+
+↔ [1777](#latest-committed-memory-segment-144-node-1777)
+
+- Deepgram: 你ちゃん。 &#124; MAI: 这样子。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1776"></a>
+
+<details><summary>voice_1776 · 1 speech entries · 1 links</summary>
+
+↔ [1778](#latest-committed-memory-segment-144-node-1778)
+
+- MAI: 这样子。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1786"></a>
+
+<details><summary>voice_1786 · 2 speech entries · 1 links</summary>
+
+↔ [1798](#latest-committed-memory-segment-144-node-1798)
+
+- MAI: 就是烤呗。
+- MAI: 就是要一起吃这个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1800"></a>
+
+<details><summary>voice_1800 · 1 speech entries · 1 links</summary>
+
+↔ [1812](#latest-committed-memory-segment-144-node-1812)
+
+- MAI: 烧烤的人有点累哦，因为有二十个人左右。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1801"></a>
+
+<details><summary>voice_1801 · 1 speech entries · 1 links</summary>
+
+↔ [1815](#latest-committed-memory-segment-144-node-1815)
+
+- MAI: 嗯。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1802"></a>
+
+<details><summary>voice_1802 · 3 speech entries · 3 links</summary>
+
+↔ [1819](#latest-committed-memory-segment-144-node-1819) · ↔ [1964](#latest-committed-memory-segment-144-node-1964) · ↔ [1965](#latest-committed-memory-segment-144-node-1965)
+
+- MAI: 不是说要吃得非常饱。
+- MAI: 是的，因为咱俩应该就是差不多上上下这种。
+- MAI: 你那个跟我是一样的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1844"></a>
+
+<details><summary>voice_1844 · 2 speech entries · 1 links</summary>
+
+↔ [1851](#latest-committed-memory-segment-144-node-1851)
+
+- MAI: 上次。
+- MAI: 不会完全严格地按照这个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1845"></a>
+
+<details><summary>voice_1845 · 3 speech entries · 2 links</summary>
+
+↔ [1852](#latest-committed-memory-segment-144-node-1852) · ↔ [1916](#latest-committed-memory-segment-144-node-1916)
+
+- MAI: 嗯，对。
+- MAI: 一起卡拉OK的环节吧。
+- MAI: 哦，也可以。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1846"></a>
+
+<details><summary>voice_1846 · 1 speech entries · 1 links</summary>
+
+↔ [1853](#latest-committed-memory-segment-144-node-1853)
+
+- MAI: 所以可以搞个五点到六点的区间。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1860"></a>
+
+<details><summary>voice_1860 · 1 speech entries · 1 links</summary>
+
+↔ [1872](#latest-committed-memory-segment-144-node-1872)
+
+- Deepgram: Above. &#124; MAI: above。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1861"></a>
+
+<details><summary>voice_1861 · 1 speech entries · 2 links</summary>
+
+↔ [1870](#latest-committed-memory-segment-144-node-1870) · ↔ [1874](#latest-committed-memory-segment-144-node-1874)
+
+- Deepgram: Biga pieza. &#124; MAI: 逼一个披萨。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1862"></a>
+
+<details><summary>voice_1862 · 2 speech entries · 3 links</summary>
+
+↔ [1871](#latest-committed-memory-segment-144-node-1871) · ↔ [1875](#latest-committed-memory-segment-144-node-1875) · ↔ [1893](#latest-committed-memory-segment-144-node-1893)
+
+- Deepgram: Biga pieza. Hey. &#124; MAI: 逼个披萨，还有BBQ。
+- Deepgram: SS &#124; MAI: 你说甜品。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1863"></a>
+
+<details><summary>voice_1863 · 1 speech entries · 2 links</summary>
+
+↔ [1871](#latest-committed-memory-segment-144-node-1871) · ↔ [1875](#latest-committed-memory-segment-144-node-1875)
+
+- MAI: BBQ。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1876"></a>
+
+<details><summary>voice_1876 · 3 speech entries · 2 links</summary>
+
+↔ [1888](#latest-committed-memory-segment-144-node-1888) · ↔ [1913](#latest-committed-memory-segment-144-node-1913)
+
+- Deepgram: SS &#124; MAI: 对，就像甜品和
+- Deepgram: SS &#124; MAI: 嗯。
+- MAI: 可以，反正我们有把吉他。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1877"></a>
+
+<details><summary>voice_1877 · 2 speech entries · 1 links</summary>
+
+↔ [1889](#latest-committed-memory-segment-144-node-1889)
+
+- Deepgram: SS &#124; MAI: 甜品
+- Deepgram: SS &#124; MAI: 这是他们入场的时候。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1878"></a>
+
+<details><summary>voice_1878 · 1 speech entries · 1 links</summary>
+
+↔ [1891](#latest-committed-memory-segment-144-node-1891)
+
+- Deepgram: SS &#124; MAI: SS。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1879"></a>
+
+<details><summary>voice_1879 · 2 speech entries · 2 links</summary>
+
+↔ [1892](#latest-committed-memory-segment-144-node-1892) · ↔ [1949](#latest-committed-memory-segment-144-node-1949)
+
+- Deepgram: SS &#124; MAI: 乘二。
+- MAI: 嗯，3点到5点，两个小时够，挺好。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1880"></a>
+
+<details><summary>voice_1880 · 2 speech entries · 2 links</summary>
+
+↔ [1894](#latest-committed-memory-segment-144-node-1894) · ↔ [1906](#latest-committed-memory-segment-144-node-1906)
+
+- MAI: 那晚上就还剩啥，还剩我们的节目。
+- MAI: OK，那差不多到六点半。然后还有一个半小时就是表演表演节目。能让他们也准备点节目吗？有没有那种擅长唱歌。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1897"></a>
+
+<details><summary>voice_1897 · 1 speech entries · 2 links</summary>
+
+↔ [1902](#latest-committed-memory-segment-144-node-1902) · ↔ [1908](#latest-committed-memory-segment-144-node-1908)
+
+- MAI: 的话要两个小时。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1898"></a>
+
+<details><summary>voice_1898 · 1 speech entries · 1 links</summary>
+
+↔ [1904](#latest-committed-memory-segment-144-node-1904)
+
+- MAI: 两点半到八点差不多了，忙够呛。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1899"></a>
+
+<details><summary>voice_1899 · 2 speech entries · 2 links</summary>
+
+↔ [1905](#latest-committed-memory-segment-144-node-1905) · ↔ [2030](#latest-committed-memory-segment-144-node-2030)
+
+- MAI: 对呀。
+- MAI: 对对，对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1909"></a>
+
+<details><summary>voice_1909 · 3 speech entries · 3 links</summary>
+
+↔ [1918](#latest-committed-memory-segment-144-node-1918) · ↔ [1966](#latest-committed-memory-segment-144-node-1966) · ↔ [2018](#latest-committed-memory-segment-144-node-2018)
+
+- MAI: 传数据的时候大家唱唱歌好了。
+- MAI: 不过也正常，我我我本宿舍有一回我早上定了闹铃，我舍友都醒了，我自己还没醒。
+- MAI: 嗯，对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1910"></a>
+
+<details><summary>voice_1910 · 1 speech entries · 1 links</summary>
+
+↔ [1919](#latest-committed-memory-segment-144-node-1919)
+
+- MAI: 可以，可以，可以。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1911"></a>
+
+<details><summary>voice_1911 · 1 speech entries · 1 links</summary>
+
+↔ [1920](#latest-committed-memory-segment-144-node-1920)
+
+- MAI: 放一个小电影或者干嘛的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1926"></a>
+
+<details><summary>voice_1926 · 1 speech entries · 1 links</summary>
+
+↔ [1929](#latest-committed-memory-segment-144-node-1929)
+
+- MAI: 当时还说那个。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1927"></a>
+
+<details><summary>voice_1927 · 2 speech entries · 1 links</summary>
+
+↔ [1934](#latest-committed-memory-segment-144-node-1934)
+
+- MAI: 甜品是你，就是我们
+- MAI: 贯彻始终。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1940"></a>
+
+<details><summary>voice_1940 · 4 speech entries · 1 links</summary>
+
+↔ [1947](#latest-committed-memory-segment-144-node-1947)
+
+- MAI: 就可以尝你的甜品。
+- MAI: 4点20？
+- MAI: 对，就是你压轴。
+- MAI: 你介绍你的种子片和你的甜品。我们介绍我们自己做的种。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1941"></a>
+
+<details><summary>voice_1941 · 1 speech entries · 1 links</summary>
+
+↔ [1951](#latest-committed-memory-segment-144-node-1951)
+
+- MAI: 嗯嗯。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1942"></a>
+
+<details><summary>voice_1942 · 1 speech entries · 1 links</summary>
+
+↔ [1952](#latest-committed-memory-segment-144-node-1952)
+
+- MAI: 配两个人。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1943"></a>
+
+<details><summary>voice_1943 · 1 speech entries · 1 links</summary>
+
+↔ [1953](#latest-committed-memory-segment-144-node-1953)
+
+- MAI: 真的起得来吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1944"></a>
+
+<details><summary>voice_1944 · 2 speech entries · 2 links</summary>
+
+↔ [1954](#latest-committed-memory-segment-144-node-1954) · ↔ [1963](#latest-committed-memory-segment-144-node-1963)
+
+- MAI: 可以的，我今天只是失误。到时候死。
+- MAI: 你听到什么？你不是住一楼吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1959"></a>
+
+<details><summary>voice_1959 · 1 speech entries · 2 links</summary>
+
+↔ [1962](#latest-committed-memory-segment-144-node-1962) · ↔ [1972](#latest-committed-memory-segment-144-node-1972)
+
+- MAI: 我听到了你的闹钟。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1960"></a>
+
+<details><summary>voice_1960 · 1 speech entries · 1 links</summary>
+
+↔ [1967](#latest-committed-memory-segment-144-node-1967)
+
+- MAI: 自己就听不见了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1961"></a>
+
+<details><summary>voice_1961 · 1 speech entries · 1 links</summary>
+
+↔ [1968](#latest-committed-memory-segment-144-node-1968)
+
+- MAI: 嗯，明天听三个。那就差不多剩下了。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1976"></a>
+
+<details><summary>voice_1976 · 1 speech entries · 1 links</summary>
+
+↔ [1986](#latest-committed-memory-segment-144-node-1986)
+
+- MAI: 清补凉的话。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1977"></a>
+
+<details><summary>voice_1977 · 1 speech entries · 1 links</summary>
+
+↔ [1987](#latest-committed-memory-segment-144-node-1987)
+
+- MAI: 面是不是好调一点？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1978"></a>
+
+<details><summary>voice_1978 · 1 speech entries · 1 links</summary>
+
+↔ [1988](#latest-committed-memory-segment-144-node-1988)
+
+- MAI: 对对对。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1994"></a>
+
+<details><summary>voice_1994 · 2 speech entries · 1 links</summary>
+
+↔ [2004](#latest-committed-memory-segment-144-node-2004)
+
+- MAI: 我觉得随便。
+- MAI: 就是我感觉会不会简单一点。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-1995"></a>
+
+<details><summary>voice_1995 · 1 speech entries · 1 links</summary>
+
+↔ [2005](#latest-committed-memory-segment-144-node-2005)
+
+- MAI: 他说不要液体，呃，不要固体的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-2006"></a>
+
+<details><summary>voice_2006 · 4 speech entries · 3 links</summary>
+
+↔ [2013](#latest-committed-memory-segment-144-node-2013) · ↔ [2020](#latest-committed-memory-segment-144-node-2020) · ↔ [2029](#latest-committed-memory-segment-144-node-2029)
+
+- MAI: 红豆就-就这样配，就很快。
+- MAI: 就是芋圆可能要熬一下。椰果能不能现买呀？随便看一看，你说什么就是什么。
+- MAI: 直接买成品的。那我看看，4点20介绍完以后要有一个品尝甜品的时间，那是不是要到
+- MAI: 4点，4点30开始，可能我到5点多，我就开始吃晚饭。晚饭呢，就是 guest part 之后，我们就收眼睛传数据。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-2007"></a>
+
+<details><summary>voice_2007 · 1 speech entries · 1 links</summary>
+
+↔ [2014](#latest-committed-memory-segment-144-node-2014)
+
+- MAI: 你准备了芋圆的东西吗？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-2008"></a>
+
+<details><summary>voice_2008 · 1 speech entries · 2 links</summary>
+
+↔ [2015](#latest-committed-memory-segment-144-node-2015) · ↔ [2021](#latest-committed-memory-segment-144-node-2021)
+
+- MAI: 我-我没有买芋圆材料。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-2009"></a>
+
+<details><summary>voice_2009 · 1 speech entries · 1 links</summary>
+
+↔ [2016](#latest-committed-memory-segment-144-node-2016)
+
+- MAI: 芋圆是不是可以直接买？
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-2010"></a>
+
+<details><summary>voice_2010 · 1 speech entries · 1 links</summary>
+
+↔ [2017](#latest-committed-memory-segment-144-node-2017)
+
+- MAI: 芋圆也有成品的。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-2022"></a>
+
+<details><summary>voice_2022 · 1 speech entries · 1 links</summary>
+
+↔ [2031](#latest-committed-memory-segment-144-node-2031)
+
+- MAI: 吃饭就不录。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-2023"></a>
+
+<details><summary>voice_2023 · 1 speech entries · 1 links</summary>
+
+↔ [2032](#latest-committed-memory-segment-144-node-2032)
+
+- MAI: 吃饭不录。
+
+</details>
+
+<a id="latest-committed-memory-segment-144-node-2024"></a>
+
+<details><summary>voice_2024 · 2 speech entries · 1 links</summary>
+
+↔ [2034](#latest-committed-memory-segment-144-node-2034)
+
+- MAI: 晚饭打披萨。
+- MAI: 哦，点披萨。
+
+</details>
+
+[Original graph](<../../cache/graphs/qwen_thinking/results/clip_audits/clip_144_graph.pkl>) · Embeddings and internal metadata omitted.
 
 ## Query-time snapshots
 
@@ -9246,3 +11054,16 @@ Each snapshot includes only its own chronological coverage.
 - [q05.md](snapshots/q05.md)
 - [q06.md](snapshots/q06.md)
 - [q07.md](snapshots/q07.md)
+- [q08.md](snapshots/q08.md)
+- [q09.md](snapshots/q09.md)
+- [q10.md](snapshots/q10.md)
+- [Compressed q01](snapshots/q01_compressed.md)
+- [Compressed q02](snapshots/q02_compressed.md)
+- [Compressed q03](snapshots/q03_compressed.md)
+- [Compressed q04](snapshots/q04_compressed.md)
+- [Compressed q05](snapshots/q05_compressed.md)
+- [Compressed q06](snapshots/q06_compressed.md)
+- [Compressed q07](snapshots/q07_compressed.md)
+- [Compressed q08](snapshots/q08_compressed.md)
+- [Compressed q09](snapshots/q09_compressed.md)
+- [Compressed q10](snapshots/q10_compressed.md)

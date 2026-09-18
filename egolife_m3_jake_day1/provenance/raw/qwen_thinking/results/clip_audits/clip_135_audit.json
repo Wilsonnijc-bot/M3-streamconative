@@ -1,0 +1,647 @@
+{
+  "clip_id": 135,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0135.mp4",
+  "end_to_end_memory_generation_ms": 667756.9216629927,
+  "latency_ms": {
+    "clip_decode": 6539.252617003513,
+    "deepgram_asr": 246.48636998608708,
+    "mai_transcribe_asr": 1871.503574991948,
+    "asr_total": 1872.9407929931767,
+    "audio_segmentation": 6.684260995825753,
+    "speech_embedding_campplus": 2279.900515990448,
+    "facial_detection_recognition_buffalo_l": 4327.727841999149,
+    "face_clustering": 10.158600998693146,
+    "vlm_memory_generation": 236496.33081100183,
+    "text_embedding": 453.57903599506244,
+    "graph_update_total": 1552.6800509978784
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 135,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 16,
+      "input_chars": 1071,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789444281.1163378,
+          "status": "success",
+          "total_tokens": 245,
+          "request_end": 1789444281.5697656,
+          "latency_ms": 453.42848300060723
+        }
+      ],
+      "total_tokens": 245,
+      "latency_ms": 453.57903599506244
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 246.48636998608708,
+        "openrouter-mai-transcribe-2": 1871.503574991948
+      },
+      "asr_total_ms": 1872.9407929931767,
+      "audio_segmentation_ms": 6.684260995825753,
+      "speech_embedding_ms": 2279.900515990448,
+      "graph_update_ms": 1546.9234579941258,
+      "asr_segment_count": 12,
+      "speech_embedding_count": 12,
+      "voice_identity_count": 10,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 3851.1128760001156
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4327.727841999149,
+      "face_clustering_ms": 10.158600998693146,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 420,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4560.00405800296
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1170>",
+        "<voice_1876>",
+        "<voice_1877>",
+        "<voice_365>",
+        "<voice_1878>",
+        "<voice_1879>",
+        "<voice_1862>",
+        "<voice_1880>",
+        "<voice_386>",
+        "<voice_1727>"
+      ],
+      "context_preparation_ms": 3782.697532995371,
+      "vlm_ms": 236496.33081100183,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of four individuals sits around a wooden table covered with a red-and-white checkered tablecloth.\",\n\t\t\"One person stands at the front of the room, interacting with a whiteboard filled with writing.\",\n\t\t\"The person seated on the left side of the table wears a black top and puts on virtual reality goggles during the clip.\",\n\t\t\"The person on the right has long reddish hair and wears a white shirt, adjusting their own device.\",\n\t\t\"The camera wearer is seated at the table with legs visible in the foreground.\",\n\t\t\"The group engages in a discussion while observing the whiteboard and each other.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_1170> states that the discussion on cocktail talk persists throughout the session.\",\n\t\t\"<voice_1876> compares the topic to dessert.\",\n\t\t\"<voice_1877> identifies dessert as the topic upon entry.\",\n\t\t\"<voice_365> questions if the term is SERT.\",\n\t\t\"<voice_1878> confirms the term is SS.\",\n\t\t\"<voice_1879> suggests multiplying by two.\",\n\t\t\"<voice_1862> confirms the speaker said dessert.\",\n\t\t\"<voice_1880> notes their show remains for the evening.\",\n\t\t\"<voice_386> affirms they have the items.\",\n\t\t\"<voice_1727> advises leaving before others return.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of four individuals sits around a wooden table covered with a red-and-white checkered tablecloth.",
+          "One person stands at the front of the room, interacting with a whiteboard filled with writing.",
+          "The person seated on the left side of the table wears a black top and puts on virtual reality goggles during the clip.",
+          "The person on the right has long reddish hair and wears a white shirt, adjusting their own device.",
+          "The camera wearer is seated at the table with legs visible in the foreground.",
+          "The group engages in a discussion while observing the whiteboard and each other."
+        ],
+        "high_level_conclusions": [
+          "<voice_1170> states that the discussion on cocktail talk persists throughout the session.",
+          "<voice_1876> compares the topic to dessert.",
+          "<voice_1877> identifies dessert as the topic upon entry.",
+          "<voice_365> questions if the term is SERT.",
+          "<voice_1878> confirms the term is SS.",
+          "<voice_1879> suggests multiplying by two.",
+          "<voice_1862> confirms the speaker said dessert.",
+          "<voice_1880> notes their show remains for the evening.",
+          "<voice_386> affirms they have the items.",
+          "<voice_1727> advises leaving before others return."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 135,
+          "call_id": "bc5374a7-8a73-4db7-9f93-143ab295e7f2",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789444044.6182973,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of four individuals sits around a wooden table covered with a red-and-white checkered tablecloth.\",\n\t\t\"One person stands at the front of the room, interacting with a whiteboard filled with writing.\",\n\t\t\"The person seated on the left side of the table wears a black top and puts on virtual reality goggles during the clip.\",\n\t\t\"The person on the right has long reddish hair and wears a white shirt, adjusting their own device.\",\n\t\t\"The camera wearer is seated at the table with legs visible in the foreground.\",\n\t\t\"The group engages in a discussion while observing the whiteboard and each other.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_1170> states that the discussion on cocktail talk persists throughout the session.\",\n\t\t\"<voice_1876> compares the topic to dessert.\",\n\t\t\"<voice_1877> identifies dessert as the topic upon entry.\",\n\t\t\"<voice_365> questions if the term is SERT.\",\n\t\t\"<voice_1878> confirms the term is SS.\",\n\t\t\"<voice_1879> suggests multiplying by two.\",\n\t\t\"<voice_1862> confirms the speaker said dessert.\",\n\t\t\"<voice_1880> notes their show remains for the evening.\",\n\t\t\"<voice_386> affirms they have the items.\",\n\t\t\"<voice_1727> advises leaving before others return.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are multiple frames from 0.00s to 29.50s. The camera seems to be a 360-degree or wide-angle lens (fisheye effect).\n    *   **Setting:** A room with a table covered in a checkered tablecloth. There's a whiteboard on the wall.\n    *   **People:**\n        *   Person 1 (Left): Wearing black, sitting at the table, wearing VR headsets/goggles later in the video.\n        *   Person 2 (Center-Back): Standing near the whiteboard, pointing/writing on it. Wearing pinkish top.\n        *   Person 3 (Right-Center): Sitting at the table, dark hair.\n        *   Person 4 (Right): Sitting at the table, long reddish hair, white shirt.\n        *   Camera wearer (implied): Legs visible at the bottom, likely sitting opposite the group.\n    *   **Action:** They seem to be having a meeting or discussion around the table. The person in the back interacts with the whiteboard. The person on the left puts on VR goggles around 12s-13s.\n*   **Voice Features:**\n    *   `<voice_1170>`: \"那调酒的话是属于贯穿始终。\" (That cocktail talk belongs throughout.) - Time: 00:00-00:04.\n    *   `<voice_1876>`: \"对，就像甜品和... 嗯。\" (Yes, like dessert and... um.) - Time: 00:04-00:07, 00:10-00:12.\n    *   `<voice_1877>`: \"甜品 这是他们入场的时候。\" (Dessert. This is when they entered.) - Time: 00:07-00:09.\n    *   `<voice_365>`: \"还是SSERT？\" (Or SERT?) - Time: 00:11-00:13.\n    *   `<voice_1878>`: \"SS。\" (SS.) - Time: 00:13-00:15.\n    *   `<voice_1879>`: \"乘二。\" (Multiply by two.) - Time: 00:15-00:17.\n    *   `<voice_1862>`: \"你说甜品。\" (You say dessert.) - Time: 00:17-00:19.\n    *   `<voice_1880>`: \"那晚上就还剩啥，还剩下我们的节目。\" (So what's left tonight, we have our show left.) - Time: 00:23-00:27.\n    *   `<voice_386>`: \"对，我们有。\" (Yes, we have.) - Time: 00:27-00:29.\n    *   `<voice_1727>`: \"然后也不能太晚，他们回去。\" (And also can't stay too late, they go back.) - Time: 00:28-00:30.\n\n**2. Map Voice to Visuals (Speaker Identification):**\n*   The prompt instructions say: \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   However, I don't have explicit Face IDs linked to these Voice IDs in the input text provided. The input says \"Face features:\" but it's empty. Wait, looking closely at the prompt structure:\n    *   \"Face features:Voice features:{\"...}\" -> It looks like the Face features section might be missing or empty in the provided text block, or perhaps the instruction implies I need to infer if possible, but the constraint says \"If no face IDs are supplied, do not invent any.\"\n    *   Actually, looking at the raw input provided in the prompt:\n        ```\n        Face features:Voice features:{\"<voice_1170>\": ...\n        ```\n        It seems the Face features list is empty or just a label. There are no specific `<face_x>` IDs provided in the text.\n    *   Therefore, I cannot create `Equivalence` statements because there are no face IDs to link them to. I must strictly follow: \"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   So, `high_level_conclusions` will contain the voice summaries but no equivalences.\n    *   Wait, the instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   And: \"Keep the existing video_description/high_level_conclusions JSON schema\".\n    *   The schema expects strings in the arrays.\n    *   The instruction about \"episodic memory\" usually applies to a different task type (memory construction), but here the task is Video Description + High Level Conclusions.\n    *   Let's re-read the specific instruction for *this* turn: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   BUT, the system prompt at the very beginning says: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\n    *   This creates a conflict between the system prompt (which asks for memory construction logic) and the user prompt (which asks for Video Description and High-Level Conclusions).\n    *   Usually, the system prompt overrides regarding the *format*, but the user prompt defines the *content*.\n    *   However, the user prompt explicitly says: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This refers to the system prompt's constraints.\n    *   So I need to integrate the voice ID preservation into the `high_level_conclusions` or `video_description`.\n    *   Looking at the schema: `\"high_level_conclusions\": [ \"...\", \"Equivalence: <face_1>, <voice_2>\" ]`.\n    *   The instruction says: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   Since I don't have face IDs, I can't do equivalences. But I can use the voice IDs in the descriptions/conclusions to attribute speech.\n    *   The instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\" suggests I should treat the `high_level_conclusions` or `video_description` as the place where this happens. Given the schema, `high_level_conclusions` seems appropriate for attributing speech to specific IDs if they represent facts/conclusions. Or `video_description` as atomic events.\n    *   Let's look at the instruction again: \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   Example: `\"<voice_1170>: That cocktail talk belongs throughout.\"`\n    *   Where does this fit? The schema allows strings.\n    *   Let's try to put the attributed speech in `high_level_conclusions` as factual statements derived from the audio, or in `video_description` as events involving the speaker.\n    *   Actually, usually \"episodic memory\" implies a summary of what happened.\n    *   Let's construct the `video_description` first based on visuals.\n    *   Then construct `high_level_conclusions` incorporating the voice IDs as required (\"retain that speaker's exact voice ID\").\n\n**3. Drafting Content:**\n\n*   **Video Description:**\n    *   Group of people sitting around a table with a checkered cloth.\n    *   One person stands at the whiteboard writing/drawing.\n    *   Others sit listening/watching.\n    *   Person on the left puts on VR headset.\n    *   Camera wearer is present (legs visible).\n    *   Time progresses from 12:30 to 12:59.\n    *   Specific actions: Person in pink points at board. Person on right adjusts glasses/headset.\n\n*   **High-Level Conclusions:**\n    *   Need to incorporate voice IDs.\n    *   `<voice_1170>` discusses \"cocktail talk\" belonging throughout.\n    *   `<voice_1876>` mentions \"dessert\".\n    *   `<voice_1877>` mentions \"dessert\" and \"entry time\".\n    *   `<voice_365>` asks about \"SSERT\".\n    *   `<voice_1878>` says \"SS\".\n    *   `<voice_1879>` says \"multiply by two\".\n    *   `<voice_1862>` confirms \"dessert\".\n    *   `<voice_1880>` talks about \"show remaining tonight\".\n    *   `<voice_386>` confirms \"we have\".\n    *   `<voice_1727>` mentions not staying too late.\n    *   Constraint: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n    *   I will formulate conclusions that summarize the conversation flow using the IDs.\n    *   Example: `<voice_1170> states that the topic of cocktail talk persists throughout.`\n    *   Example: `<voice_1876> and <voice_1877> discuss dessert and entry times.`\n    *   Example: `<voice_1880> notes that their show remains for the evening.`\n\n**4. Refining Constraints:**\n*   \"Preserve speaker identity... Voice features map exact IDs... These IDs already identify the speakers; they remain usable even when no face features are supplied\".\n*   \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   \"Keep the existing video_description/high_level_conclusions JSON schema\".\n*   \"Output Format: ... high_level_conclusions: [ ..., \"Equivalence: ...\" ]\".\n*   Since there are no face IDs, no Equivalences.\n*   I need to make sure every voice ID appears in the output.\n*   I need to ensure the `video_description` describes the visual events accurately.\n*   I need to ensure `high_level_conclusions` contains the voice ID summaries.\n\n**5. Finalizing the Output Structure:**\n\n*   `video_description`: List of strings describing visual events.\n    *   \"A group of four individuals sits around a table with a red-and-white checkered tablecloth in a room.\"\n    *   \"One individual stands facing a whiteboard, pointing at written content while others observe.\"\n    *   \"An individual seated on the left wears a black top and later puts on virtual reality goggles.\"\n    *   \"An individual with long reddish hair sits on the right, adjusting their own device.\"\n    *   \"The camera wearer is seated at the table, legs visible in the foreground.\"\n    *   \"The group engages in a discussion, with attention focused on the whiteboard and each other.\"\n*   `high_level_conclusions`: List of strings summarizing speech/conversations with Voice IDs.\n    *   `<voice_1170> indicates that the discussion regarding cocktail talk spans the entire duration.`\n    *   `<voice_1876> and <voice_1877> mention dessert and the timing of someone entering.`\n    *   `<voice_365> questions whether the term is SERT or SS.`\n    *   `<voice_1878> confirms the term as SS.`\n    *   `<voice_1879> suggests multiplying by two.`\n    *   `<voice_1862> reiterates the word dessert.`\n    *   `<voice_1880> states that their program remains for the night.`\n    *   `<voice_386> affirms that they possess something related to the plan.`\n    *   `<voice_1727> advises against staying too late as others will leave.`\n\nWait, I need to check if I should put the voice summaries in `video_description` or `high_level_conclusions`.\nThe instruction says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nUsually, \"episodic memory\" sounds like a narrative summary. `high_level_conclusions` fits better for \"reasoning-based conclusions\" that go beyond surface observations, including speech attribution.\nHowever, `video_description` is for \"observable and inferable events\". Speech is observable via ASR.\nLet's look at the instruction: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThe system prompt instruction about \"episodic memory\" seems to be a general instruction for the model's behavior regarding voice IDs.\nGiven the schema provided in the User Prompt (`video_description`, `high_level_conclusions`), I will place the voice summaries in `high_level_conclusions` as they represent the \"semantic conclusion\" part of the interaction, or potentially split them.\nActually, the instruction says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" This strongly points to `high_level_conclusions`.\nAlso, \"include at least one episodic memory...\". An episodic memory is often a statement of fact.\nI will put the voice summaries in `high_level_conclusions` to satisfy the \"semantic conclusion\" requirement and the \"retain voice ID\" requirement.\nWait, I need to make sure I don't miss any voice ID.\nThere are 10 voice IDs.\nI will draft 10 entries in `high_level_conclusions` corresponding to the 10 voice IDs.\n\nLet's double check the `Equivalence` rule. \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\nSince no face IDs are provided in the input text (it just says \"Face features:\" then immediately \"Voice features:\"), I cannot create equivalences. I will omit this line.\n\nLet's refine the `video_description` to be purely visual/atomic events.\nLet's refine the `high_level_conclusions` to include the voice ID summaries.\n\nOne detail: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis implies the output *must* contain these summaries.\nWhere? The prompt says \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nIt doesn't explicitly forbid putting voice summaries in Video Description, but High-Level Conclusions is defined as \"reasoning-based conclusions that go beyond surface-level observations\". Summarizing speech is closer to observation/fact than deep reasoning, but the instruction specifically links \"semantic conclusion\" to retaining the ID.\nI'll put the voice summaries in `high_level_conclusions` as they act as conclusions drawn from the audio data.\n\nWait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis refers to the System Prompt's instructions.\nThe System Prompt says: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nIt doesn't specify *where* in the JSON. But standard practice for this type of task (often used in multimodal evaluation) is to put the memory/conclusion in the `high_level_conclusions` array or a specific `memories` field if it existed. Here, `high_level_conclusions` is the main container for inferences.\nI will add the voice summaries to `high_level_conclusions`.\n\nLet's verify the voice IDs again.\n1. `<voice_1170>`\n2. `<voice_1876>`\n3. `<voice_1877>`\n4. `<voice_365>`\n5. `<voice_1878>`\n6. `<voice_1879>`\n7. `<voice_1862>`\n8. `<voice_1880>`\n9. `<voice_386>`\n10. `<voice_1727>`\n\nI will write one sentence per ID in `high_level_conclusions`.\n\nOne more check: \"Do not substitute a plausible scene description for what the speaker actually said.\"\nSo in `high_level_conclusions`, I must quote or summarize the transcript accurately.\n\nFinal check on JSON validity. No trailing commas. Quotes escaped properly.\n\nOne detail: \"If no face IDs are supplied, do not invent any.\"\nConfirmed. No Equivalence lines.\n\nLet's write the response.\n\n**Video Description Plan:**\n1. Scene setup: Room, table, people.\n2. Action: Whiteboard interaction.\n3. Action: VR usage.\n4. Action: Discussion/Listening.\n\n**High Level Conclusions Plan:**\n1. `<voice_1170>`: Cocktail talk context.\n2. `<voice_1876>`: Dessert comparison.\n3. `<voice_1877>`: Entry time reference.\n4. `<voice_365>`: Questioning acronym.\n5. `<voice_1878>`: Confirming acronym.\n6. `<voice_1879>`: Math operation mentioned.\n7. `<voice_1862>`: Confirmation of dessert.\n8. `<voice_1880>`: Evening schedule.\n9. `<voice_386>`: Possession confirmation.\n10. `<voice_1727>`: Timing advice.\n\nWait, I should check if I can merge some short ones to keep it concise? \"Be concise and avoid duplicate events.\"\nBut the instruction says \"For *every* supplied voice ID... include at least one episodic memory\". So I must include all of them. Merging might violate \"every supplied voice ID\". I will list them individually to be safe.\n\nRevised Plan for Conciseness:\nCombine related ones if they form a coherent thought process, but ensure the ID is preserved.\nActually, listing them separately ensures compliance with \"every supplied voice ID\".\nI will write distinct sentences for each ID.\n\nWait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis implies I should follow the System Prompt's rules exactly.\nSystem Prompt Rule: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nOkay, I will ensure this is met.\n\nOne nuance: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nThis implies the output should reflect the memory construction.\nI will put the voice summaries in `high_level_conclusions`.\n\nLet's finalize the text.\n`<voice_1170>`: \"That cocktail talk belongs throughout.\" -> `<voice_1170> states that the discussion on cocktail talk persists throughout the session.`\n`<voice_1876>`: \"Yes, like dessert and...\" -> `<voice_1876> compares the topic to dessert.`\n`<voice_1877>`: \"Dessert. This is when they entered.\" -> `<voice_1877> identifies dessert as the topic upon entry.`\n`<voice_365>`: \"Or SERT?\" -> `<voice_365> questions if the term is SERT.`\n`<voice_1878>`: \"SS.\" -> `<voice_1878> confirms the term is SS.`\n`<voice_1879>`: \"Multiply by two.\" -> `<voice_1879> suggests multiplying by two.`\n`<voice_1862>`: \"You say dessert.\" -> `<voice_1862> confirms the speaker said dessert.`\n`<voice_1880>`: \"What's left tonight, we have our show left.\" -> `<voice_1880> notes their show remains for the evening.`\n`<voice_386>`: \"Yes, we have.\" -> `<voice_386> affirms they have the items.`\n`<voice_1727>`: \"Can't stay too late, they go back.\" -> `<voice_1727> advises leaving before others return.`\n\nLooks good. I will combine the visual description and these conclusions into the final JSON.\nI need to make sure I don't use markdown code blocks for the JSON itself, just the raw JSON string? \"Please only return the valid JSON object, without any additional explanation or formatting.\"\nOkay, raw JSON.\n\nWait, one more thing. \"Preserve speaker identity when constructing memory from the supplied character features.\"\nDoes this mean I should create a `memories` field? No, the schema is fixed: `video_description` and `high_level_conclusions`.\nSo I must embed the memory logic into these fields.\n`high_level_conclusions` is the best place for \"semantic conclusions\" involving speaker IDs.\n\nOne check on \"episodic memory\". An episodic memory is a recollection of a specific event.\nExample: `<voice_1170> recalls that the cocktail talk belongs throughout.`\nI will phrase them as factual statements about the conversation.\n\nFinal check on constraints:\n- \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" (Done)\n- \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" (Done, since no face IDs, I won't assign names, just IDs).\n- \"Keep the existing video_description/high_level_conclusions JSON schema\". (Done).\n\nReady to generate.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of four individuals sits around a wooden table covered with a red-and-white checkered tablecloth.\",\n\t\t\"One person stands at the front of the room, interacting with a whiteboard filled with writing.\",\n\t\t\"The person seated on the left side of the table wears a black top and puts on virtual reality goggles during the clip.\",\n\t\t\"The person on the right has long reddish hair and wears a white shirt, adjusting their own device.\",\n\t\t\"The camera wearer is seated at the table with legs visible in the foreground.\",\n\t\t\"The group engages in a discussion while observing the whiteboard and each other.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_1170> states that the discussion on cocktail talk persists throughout the session.\",\n\t\t\"<voice_1876> compares the topic to dessert.\",\n\t\t\"<voice_1877> identifies dessert as the topic upon entry.\",\n\t\t\"<voice_365> questions if the term is SERT.\",\n\t\t\"<voice_1878> confirms the term is SS.\",\n\t\t\"<voice_1879> suggests multiplying by two.\",\n\t\t\"<voice_1862> confirms the speaker said dessert.\",\n\t\t\"<voice_1880> notes their show remains for the evening.\",\n\t\t\"<voice_386> affirms they have the items.\",\n\t\t\"<voice_1727> advises leaving before others return.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10857,
+          "output_tokens": 5296,
+          "total_tokens": 16153,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0022940075723454356,
+            "media_preparation_ms": 66.14383099076804,
+            "processor_tokenization_ms": 351.69786198821384,
+            "device_transfer_ms": 46.884427007171325,
+            "cuda_generation_ms": 235993.77624200133,
+            "decoding_ms": 7.371406987658702
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 236466.2035520014,
+          "request_end": 1789444281.1146302,
+          "latency_ms": 236496.33081100183,
+          "client_wall_clock_latency_ms": 236496.33081100183
+        }
+      ],
+      "episodic_memory_count": 6,
+      "semantic_memory_count": 10
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 6,
+      "text_embedding_ms": null,
+      "text_embedding_count": 6,
+      "graph_update_ms": 0.05525500455405563,
+      "nodes_added": 6,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 10,
+      "text_embedding_ms": null,
+      "text_embedding_count": 10,
+      "graph_update_ms": 5.701337999198586,
+      "nodes_added": 10,
+      "directed_edges_added": 20,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 12,
+    "speech_embeddings": 12,
+    "voice_identities": 10,
+    "detected_faces": 420,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 6,
+    "semantic_memories": 10,
+    "nodes_after_clip": 1897,
+    "edges_after_clip": 720,
+    "nodes_added_by_clip": 21,
+    "edges_added_by_clip": 10
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of four individuals sits around a wooden table covered with a red-and-white checkered tablecloth.",
+      "One person stands at the front of the room, interacting with a whiteboard filled with writing.",
+      "The person seated on the left side of the table wears a black top and puts on virtual reality goggles during the clip.",
+      "The person on the right has long reddish hair and wears a white shirt, adjusting their own device.",
+      "The camera wearer is seated at the table with legs visible in the foreground.",
+      "The group engages in a discussion while observing the whiteboard and each other."
+    ],
+    "high_level_conclusions": [
+      "<voice_1170> states that the discussion on cocktail talk persists throughout the session.",
+      "<voice_1876> compares the topic to dessert.",
+      "<voice_1877> identifies dessert as the topic upon entry.",
+      "<voice_365> questions if the term is SERT.",
+      "<voice_1878> confirms the term is SS.",
+      "<voice_1879> suggests multiplying by two.",
+      "<voice_1862> confirms the speaker said dessert.",
+      "<voice_1880> notes their show remains for the evening.",
+      "<voice_386> affirms they have the items.",
+      "<voice_1727> advises leaving before others return."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of four individuals sits around a wooden table covered with a red-and-white checkered tablecloth.",
+      "One person stands at the front of the room, interacting with a whiteboard filled with writing.",
+      "The person seated on the left side of the table wears a black top and puts on virtual reality goggles during the clip.",
+      "The person on the right has long reddish hair and wears a white shirt, adjusting their own device.",
+      "The camera wearer is seated at the table with legs visible in the foreground.",
+      "The group engages in a discussion while observing the whiteboard and each other."
+    ],
+    "high_level_conclusions": [
+      "<voice_1170> states that the discussion on cocktail talk persists throughout the session.",
+      "<voice_1876> compares the topic to dessert.",
+      "<voice_1877> identifies dessert as the topic upon entry.",
+      "<voice_365> questions if the term is SERT.",
+      "<voice_1878> confirms the term is SS.",
+      "<voice_1879> suggests multiplying by two.",
+      "<voice_1862> confirms the speaker said dessert.",
+      "<voice_1880> notes their show remains for the evening.",
+      "<voice_386> affirms they have the items.",
+      "<voice_1727> advises leaving before others return."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_135_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 21,
+    "edges_added": 10,
+    "nodes": [
+      {
+        "id": 1876,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: SS | MAI: 对，就像甜品和",
+            "Deepgram: SS | MAI: 嗯。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1877,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: SS | MAI: 甜品",
+            "Deepgram: SS | MAI: 这是他们入场的时候。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1878,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: SS | MAI: SS。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1879,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: SS | MAI: 乘二。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1880,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 那晚上就还剩啥，还剩我们的节目。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1881,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of four individuals sits around a wooden table covered with a red-and-white checkered tablecloth."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1882,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "One person stands at the front of the room, interacting with a whiteboard filled with writing."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1883,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person seated on the left side of the table wears a black top and puts on virtual reality goggles during the clip."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1884,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The person on the right has long reddish hair and wears a white shirt, adjusting their own device."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1885,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera wearer is seated at the table with legs visible in the foreground."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1886,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group engages in a discussion while observing the whiteboard and each other."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1887,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1170> states that the discussion on cocktail talk persists throughout the session."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1888,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1876> compares the topic to dessert."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1889,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1877> identifies dessert as the topic upon entry."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1890,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_365> questions if the term is SERT."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1891,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1878> confirms the term is SS."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1892,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1879> suggests multiplying by two."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1893,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1862> confirms the speaker said dessert."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1894,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1880> notes their show remains for the evening."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1895,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_386> affirms they have the items."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1896,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1727> advises leaving before others return."
+          ],
+          "timestamp": 135
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 365,
+        "target": 1890,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 386,
+        "target": 1895,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1170,
+        "target": 1887,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1727,
+        "target": 1896,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1862,
+        "target": 1893,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1876,
+        "target": 1888,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1877,
+        "target": 1889,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1878,
+        "target": 1891,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1879,
+        "target": 1892,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1880,
+        "target": 1894,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_135_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_135_graph.pkl"
+  },
+  "memory_pickle_bytes": 45146112,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 84800.819846414,
+    "prepared_perf": 84810.775369394,
+    "ordered_start_perf": 85215.995454948,
+    "consumer_wait_ms": 0.010119008948095143,
+    "ready_to_ordered_ms": 405220.0855539995,
+    "preparation_work_ms": 9950.21245200769,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 249153.79543400195
+}

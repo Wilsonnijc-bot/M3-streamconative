@@ -1,0 +1,369 @@
+{
+  "export_ms": 225.2198599962867,
+  "mandol_build_ms": 35850.85229000106,
+  "adaptor_ms": 36076.072149997344,
+  "embedding": {
+    "call_count": 37,
+    "each_call_ms": [
+      1210.968719999073,
+      833.4023099960177,
+      811.9185460018343,
+      851.1876960037625,
+      792.0911409964901,
+      838.4197799969115,
+      872.096942999633,
+      628.9842889964348,
+      848.247784000705,
+      816.7250869955751,
+      932.8309709962923,
+      799.8343489962281,
+      863.9299319984275,
+      803.9552760019433,
+      900.7072590029566,
+      819.4215859984979,
+      873.6603989964351,
+      1028.8754040011554,
+      634.027915999468,
+      871.2140670031658,
+      602.870326001721,
+      608.043155996711,
+      774.5590840058867,
+      835.4781070011086,
+      584.17727300548,
+      824.6586589957587,
+      838.001620999421,
+      602.9003680014284,
+      823.1773559964495,
+      559.938478996628,
+      1087.121994998597,
+      819.934065999405,
+      797.2222129974398,
+      781.4778550018673,
+      1058.1534049997572,
+      1098.0996929938556,
+      608.164156001294
+    ],
+    "total_ms": 30336.477266973816,
+    "provider": "302.ai",
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "calls": [
+      {
+        "input_count": 32,
+        "input_chars": 1430,
+        "latency_ms": 1210.968719999073,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 1440,
+        "latency_ms": 833.4023099960177,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 1440,
+        "latency_ms": 811.9185460018343,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 1468,
+        "latency_ms": 851.1876960037625,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 1472,
+        "latency_ms": 792.0911409964901,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 1472,
+        "latency_ms": 838.4197799969115,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 1472,
+        "latency_ms": 872.096942999633,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 2,
+        "input_chars": 92,
+        "latency_ms": 628.9842889964348,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2934,
+        "latency_ms": 848.247784000705,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3055,
+        "latency_ms": 816.7250869955751,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2966,
+        "latency_ms": 932.8309709962923,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3209,
+        "latency_ms": 799.8343489962281,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3316,
+        "latency_ms": 863.9299319984275,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2832,
+        "latency_ms": 803.9552760019433,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3259,
+        "latency_ms": 900.7072590029566,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3171,
+        "latency_ms": 819.4215859984979,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2845,
+        "latency_ms": 873.6603989964351,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2687,
+        "latency_ms": 1028.8754040011554,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2963,
+        "latency_ms": 634.027915999468,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2948,
+        "latency_ms": 871.2140670031658,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2813,
+        "latency_ms": 602.870326001721,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3053,
+        "latency_ms": 608.043155996711,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3163,
+        "latency_ms": 774.5590840058867,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3038,
+        "latency_ms": 835.4781070011086,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2923,
+        "latency_ms": 584.17727300548,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3111,
+        "latency_ms": 824.6586589957587,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3073,
+        "latency_ms": 838.001620999421,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2781,
+        "latency_ms": 602.9003680014284,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2823,
+        "latency_ms": 823.1773559964495,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3219,
+        "latency_ms": 559.938478996628,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3376,
+        "latency_ms": 1087.121994998597,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3047,
+        "latency_ms": 819.934065999405,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3276,
+        "latency_ms": 797.2222129974398,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3107,
+        "latency_ms": 781.4778550018673,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3249,
+        "latency_ms": 1058.1534049997572,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3300,
+        "latency_ms": 1098.0996929938556,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 17,
+        "input_chars": 1800,
+        "latency_ms": 608.164156001294,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      }
+    ],
+    "source_m3_vectors_imported": false
+  },
+  "relations": {
+    "generated_relations_enabled": false,
+    "reason": "Preserve native M3-derived memory without adding LLM-generated facts"
+  },
+  "result": {
+    "schema_version": "m3-mandol/v1",
+    "video_id": "jake-day1-q05",
+    "source_embedding": {
+      "model": "text-embedding-3-large",
+      "dimension": 3072,
+      "vectors_imported": false
+    },
+    "mandol_embedding": {
+      "provider": "302.ai",
+      "base_url": "https://api.302.ai/v1",
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "dimension": 1024
+    },
+    "counts": {
+      "source_memories": 913,
+      "entities": 226,
+      "relations": 0,
+      "relation_llm_calls": 0
+    },
+    "index_build": {
+      "total_retrievers": 2,
+      "built_count": 2,
+      "skipped_count": 0,
+      "failed_count": 0,
+      "total_duration": 3.080303907394409,
+      "details": {
+        "bm25": {
+          "status": "success",
+          "duration": 2.9645497798919678
+        },
+        "splade": {
+          "status": "success",
+          "duration": 0.11561965942382812
+        }
+      }
+    },
+    "config": {
+      "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+      "embedding_dimension": 1024,
+      "embedding_base_url": "https://api.302.ai/v1",
+      "embedding_batch_size": 32,
+      "embedding_max_retries": 2,
+      "embedding_timeout_seconds": 60.0,
+      "relation_model": "gemini-3.8-flash-302",
+      "relation_base_url": "https://api.302.ai/v1",
+      "relation_max_retries": 2,
+      "relation_timeout_seconds": 60.0,
+      "build_relations": false,
+      "generate_sparse_embeddings": true,
+      "overwrite": true
+    }
+  }
+}

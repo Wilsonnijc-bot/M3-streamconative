@@ -1,0 +1,18 @@
+{
+  "status": "blocked",
+  "benchmark_started": false,
+  "instance_id": "1042997",
+  "gpu": "NVIDIA RTX A6000",
+  "torch": "2.6.0+cu124",
+  "cuda_tensor_check": "passed",
+  "disk_free_bytes": 2955632640,
+  "aea_recordings": 109,
+  "aea_missing_media": [],
+  "tmux_available": true,
+  "blockers": [
+    "Integrated online C1-C4 benchmark entrypoint absent",
+    "TST online integration, verified enrollment and independent threshold calibration absent",
+    "Primary model ID/access not verified; no configured Sol backend",
+    "Only 2.8 GiB disk available at inspection"
+  ]
+}

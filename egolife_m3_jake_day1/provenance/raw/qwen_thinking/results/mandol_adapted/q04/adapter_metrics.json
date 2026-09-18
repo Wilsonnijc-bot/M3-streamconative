@@ -1,0 +1,305 @@
+{
+  "export_ms": 189.6207819954725,
+  "mandol_build_ms": 26250.411291010096,
+  "adaptor_ms": 26440.03207300557,
+  "embedding": {
+    "call_count": 29,
+    "each_call_ms": [
+      1284.6376620000228,
+      766.7425489926245,
+      927.9220609896583,
+      822.8897369990591,
+      540.3659409930697,
+      839.4113999966066,
+      846.6611079929862,
+      824.4381630065618,
+      833.6692690063501,
+      835.469726996962,
+      812.3236820101738,
+      831.2624969985336,
+      795.2067089936463,
+      1068.943100006436,
+      812.0136279903818,
+      863.6403660057113,
+      839.1006710007787,
+      863.8737970031798,
+      836.4309799944749,
+      580.503539997153,
+      809.6911780012306,
+      840.0578209984815,
+      644.4959159998689,
+      1070.299414001056,
+      831.8967910017818,
+      836.7434359970503,
+      785.9278870018898,
+      830.9800589922816,
+      601.198745003785
+    ],
+    "total_ms": 24076.797833971796,
+    "provider": "302.ai",
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "calls": [
+      {
+        "input_count": 32,
+        "input_chars": 1430,
+        "latency_ms": 1284.6376620000228,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 1440,
+        "latency_ms": 766.7425489926245,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 1440,
+        "latency_ms": 927.9220609896583,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 1468,
+        "latency_ms": 822.8897369990591,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 28,
+        "input_chars": 1288,
+        "latency_ms": 540.3659409930697,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2933,
+        "latency_ms": 839.4113999966066,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2986,
+        "latency_ms": 846.6611079929862,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2995,
+        "latency_ms": 824.4381630065618,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3053,
+        "latency_ms": 833.6692690063501,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2985,
+        "latency_ms": 835.469726996962,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2819,
+        "latency_ms": 812.3236820101738,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2646,
+        "latency_ms": 831.2624969985336,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3043,
+        "latency_ms": 795.2067089936463,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3200,
+        "latency_ms": 1068.943100006436,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2430,
+        "latency_ms": 812.0136279903818,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2537,
+        "latency_ms": 863.6403660057113,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2877,
+        "latency_ms": 839.1006710007787,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2634,
+        "latency_ms": 863.8737970031798,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2393,
+        "latency_ms": 836.4309799944749,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2483,
+        "latency_ms": 580.503539997153,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2869,
+        "latency_ms": 809.6911780012306,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2476,
+        "latency_ms": 840.0578209984815,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2966,
+        "latency_ms": 644.4959159998689,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2732,
+        "latency_ms": 1070.299414001056,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 3061,
+        "latency_ms": 831.8967910017818,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2704,
+        "latency_ms": 836.7434359970503,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2890,
+        "latency_ms": 785.9278870018898,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 32,
+        "input_chars": 2907,
+        "latency_ms": 830.9800589922816,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      },
+      {
+        "input_count": 29,
+        "input_chars": 2754,
+        "latency_ms": 601.198745003785,
+        "provider": "302.ai",
+        "model": "Qwen/Qwen3-Embedding-0.6B"
+      }
+    ],
+    "source_m3_vectors_imported": false
+  },
+  "relations": {
+    "generated_relations_enabled": false,
+    "reason": "Preserve native M3-derived memory without adding LLM-generated facts"
+  },
+  "result": {
+    "schema_version": "m3-mandol/v1",
+    "video_id": "jake-day1-q04",
+    "source_embedding": {
+      "model": "text-embedding-3-large",
+      "dimension": 3072,
+      "vectors_imported": false
+    },
+    "mandol_embedding": {
+      "provider": "302.ai",
+      "base_url": "https://api.302.ai/v1",
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "dimension": 1024
+    },
+    "counts": {
+      "source_memories": 765,
+      "entities": 156,
+      "relations": 0,
+      "relation_llm_calls": 0
+    },
+    "index_build": {
+      "total_retrievers": 2,
+      "built_count": 2,
+      "skipped_count": 0,
+      "failed_count": 0,
+      "total_duration": 1.4178578853607178,
+      "details": {
+        "bm25": {
+          "status": "success",
+          "duration": 1.3243021965026855
+        },
+        "splade": {
+          "status": "success",
+          "duration": 0.0934607982635498
+        }
+      }
+    },
+    "config": {
+      "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+      "embedding_dimension": 1024,
+      "embedding_base_url": "https://api.302.ai/v1",
+      "embedding_batch_size": 32,
+      "embedding_max_retries": 2,
+      "embedding_timeout_seconds": 60.0,
+      "relation_model": "gemini-3.8-flash-302",
+      "relation_base_url": "https://api.302.ai/v1",
+      "relation_max_retries": 2,
+      "relation_timeout_seconds": 60.0,
+      "build_relations": false,
+      "generate_sparse_embeddings": true,
+      "overwrite": true
+    }
+  }
+}

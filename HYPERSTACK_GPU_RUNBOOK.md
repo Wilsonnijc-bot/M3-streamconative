@@ -30,6 +30,11 @@ It runs video decoding, Deepgram and MAI-Transcribe-2 ASR, CAM++ speaker
 embedding, Buffalo-L face processing, local Qwen 3.5 4B, Gemini 3.8 Flash,
 OpenRouter text embeddings, and VideoGraph construction.
 
+This describes the September 14, 2026 historical comparison. New construction
+selects exactly one ASR alias via `asr_provider` in `processing_config.json`;
+Deepgram and MAI are alternatives, not co-required services. Use a fresh voice
+graph and provider-bound caches when changing the selected ASR service.
+
 ## 1. Required Machine
 
 Create a Hyperstack VM with:

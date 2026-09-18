@@ -9,10 +9,11 @@
   "face_preprocessing_fps": 5,
   "generation": {
     "thinking": true,
+    "qa_thinking": false,
     "max_new_tokens": 16384,
     "do_sample": false,
     "memory_repetition_penalty": 1.08,
-    "text_repetition_penalty": 1.0
+    "text_repetition_penalty": 1.08
   },
   "prompt_change": "Qwen-only identity system prompt v2: preserve supplied speaker IDs and transcript coverage; unchanged shared base prompt and decoding",
   "sampling": "same explicit timestamped JPEG image sequence as Gemini; no processor video resampling",

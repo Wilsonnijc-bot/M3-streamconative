@@ -1,0 +1,14 @@
+{
+  "instance_id": 1042997,
+  "action": "guest poweroff / SHUTOFF",
+  "remote_timer": "qwen-auto-stop.timer",
+  "gates": [
+    "Qwen pipeline and launcher exit 0",
+    "Gemini pipeline exit 0",
+    "40 validated unique predictions",
+    "ten snapshots and required artifacts",
+    "Mac checksum-verified copy acknowledgement"
+  ],
+  "billing": "SHUTOFF retains compute allocation and charges; this is not hibernation",
+  "one_shot": true
+}

@@ -171,3 +171,76 @@
 
 - User requested Method D candidate pool 100 and final return count 20. Applied before any Method D predictions existed; effective CLI defaults verified as `--candidate-k 100 --top-k 20`. Both the unrelated warmup probe and actual questions use these settings.
 - Patched only the isolated Qwen Mandol entrypoint; A/B/C and Gemini unchanged. Each Method D row now includes candidate_k as well as top_k. Original file/hash and new configuration/hash recorded under remote `lineage/mandol_pool_100_final_20`, with canonical provenance `results/mandol_retrieval_config.json`. Running construction was not restarted.
+
+### Qwen interim result fetch and analysis — 2026-09-15 03:51 UTC
+
+- Fetched into the canonical result contract: 134/144 processed, 131 committed, skips 23/39/50, 9 query snapshots, 0 QA rows. No final accuracy/retrieval result exists yet. Nine snapshot source-cutoff checks passed.
+- Median committed VLM wall time 183.75 s (mean 184.56 s; P95 254.50 s). Same-segment saved Gemini median 44.39 s across 131 paired segments; descriptive only because prompt/thinking/backend/contention differ. Recent 20-segment interval rate 211.37 s/segment.
+- Direct speaker coverage: 88/124 voiced clips include all supplied IDs in episodic memory, 114/124 in either memory class; 438/585 supplied ID occurrences in episodic text, 545/585 in either class. Zero qualified-face clips. Partial ASR on 98/122 retained Deepgram.
+- Human-readable analysis: `egolife_m3_jake_day1/results/qwen_thinking/analysis.md`; exact metrics in `provenance/raw/qwen_thinking/construction_analysis.json`. Findings are interim and do not imply grounded semantic accuracy.
+
+### Automatic stop after validated QA — 2026-09-15 UTC
+
+- Superseded by user-requested Hyperstack hibernation; guest poweroff removed. Hibernation API authentication remains unavailable.
+
+- User authorized stopping Hyperstack instance 1042997 once QA is done. Installed enabled systemd timer `qwen-auto-stop.timer` checking every minute. Gate: Qwen and Gemini successful exit, 40 validated unique Qwen predictions, required results/snapshots, and matching Mac checksum-copy receipt. Timer disables itself before guest poweroff; it does not delete or hibernate the VM.
+- Mac copy verifier runs independently, refreshes canonical results, verifies SHA-256 for the ready manifest and uploads only the matching receipt. Local record: `provenance/auto_stop_configuration.json`; remote state: `auto_stop_status.json`. Guard negative tests passed for running/failed/duplicate-result cases. User informed that Hyperstack SHUTOFF continues GPU billing; hibernation is needed to release compute billing.
+
+### Qwen QA resume after thinking loop - 2026-09-15
+
+- Status: running. Hyperstack instance 1042997, RTX A6000; same Qwen3.5-4B checkpoint and environment. GPU tensor operation passed and resume verification found all 144 segments processed.
+- First controller call failed after 16384 tokens with no completed thinking boundary; 1379 lines contained only 251 unique lines. QA now uses repetition penalty 1.08 and a concise action/answer system instruction. Thinking remains enabled, token cap unchanged. Memory decoding and existing snapshots preserved; Gemini unchanged.
+- Prior source, statuses, server log and manifest archived remotely under `lineage/qa_thinking_loop_fix`. Exact policy recorded in `results/qa_generation_repair.json`.
+- Resumed through `launch_full.sh` in tmux `egolife_10q_qwen:qa_resume`; durable logs `pipeline.log`, `launcher.log`, `server.log` in the existing full Qwen run. QA results pending verification.
+- User subsequently requested non-thinking QA. Stopped the thinking QA restart and launched `egolife_10q_qwen:qa_no_thinking`. Server now sets `enable_thinking=False` for QA and correctly accepts direct final output without a thinking terminator. Memory construction retains thinking=True. Per-call flags and model manifest distinguish the two modes; any partial method rows archived under `lineage/qa_no_thinking` before restarting QA. Repetition penalty 1.08 and concise QA instruction retained.
+- Final execution: all 40 trials finished at 13:34 UTC. Reporting initially failed on a duplicate `round` keyword; repaired reporting without rerunning inference. Validation now checks memory and QA thinking modes separately and reports two invalid Method A predictions (Q1/Q2 abstentions). Status: failed strict validation, inference finished. Scores A 0/10, B 5/10, C 3/10, D 1/10. Outputs retained unchanged. Hibernation remains blocked by missing Hyperstack credentials.
+
+## Offline MOSS + GPT-6 Astra entity consolidation — 2026-09-17
+
+- **Status:** 20-minute baseline and two recall rounds completed and verified; 40-minute work stopped at user request.
+- **Provider / instance:** Hyperstack `1042997` (`streammeco-a6000-20260914`), RTX A6000 48 GB. Reattached public IP for SSH; original saved run data remains intact.
+- **Purpose:** Real audio-backed consolidation of the EgoLife Gemini 20/40-minute committed graphs, followed by official GPT-6 Astra reconciliation and versioned retrieval rebuild.
+- **Method:** Full audio prefixes through 1187.92 s and 2387.92 s; MOSS-Transcribe-Diarize 0.9B revision `704aa4a9c304e8520be88901e0d1960158ef5b15`. Upstream helper revision `61bc29cd4120be7b5d3b761b64cd5dff57263642`. No assumption of matching speaker labels across MOSS runs. GPT-6 Astra uses configured official credentials and high reasoning effort; it receives derived transcripts/diarization because raw audio is not supported by Astra.
+- **Environment / preflight:** `/opt/streammeco/.venv/bin/python`, torch `2.6.0+cu124`, transformers `5.17.0`; isolated extra audio dependencies under the new run's `deps/`. GPU tensor test, MOSS imports, checkpoint config, and all referenced source clips passed. 16 GB free disk before download. GPU initially idle.
+- **Entrypoint / tmux:** `consolidation/scripts/run_moss_hyperstack.sh`; session `consolidation-moss-20260917`; cwd `/opt/streammeco/run/consolidation_live`; durable `moss.log` and `exit_status.txt` there.
+- **Artifacts:** Remote checkpoint `/opt/streammeco/models/MOSS-Transcribe-Diarize`; remote prefix audio and raw/normalized outputs under `results/prefix_20` and `results/prefix_40`. Local canonical result root `consolidation/runs/live/`.
+- **Results:** pending; model download and official Astra access verified. No success or accuracy claim until output verification.
+
+- **Attempt 1 failure / repair:** MOSS generated the 20-minute transcript, but JSON persistence raised `UnicodeEncodeError` under the remote ASCII locale. Exit status 1 verified; no normalized output or graph published. Preserved `metadata/moss_attempt1.log` and status. Added explicit UTF-8 file writing plus UTF-8 runtime locale; rerun uses tmux `consolidation-moss-20260917-retry1`.
+- **40-minute transcript repair:** The initial helper returned success after 16,385 output tokens, but its raw text ended inside a timestamp at ~2372 s. Detected by raw-output inspection; cancelled the pending 40-minute Astra response before publication. Preserving that initial MOSS result and cancelled Astra request. Continuing MOSS from its exact transcript prefix with the same entire 2387.92-second audio input, explicit generation kwargs, and strict full-text parsing; no separately diarized windows are combined. Repair tmux: `consolidation-moss40-continuation-20260917`, log `continuation.log`, exit file `continuation_exit_status.txt` under the same remote run directory.
+- **Continuation check:** Exact-prefix continuation emitted only 11 tokens and again ended with an incomplete bracket; strict parsing rejected it and no updated MOSS evidence was published. A targeted full-audio follow-up now requests only the missing tail with explicit prior speaker anchors (no independent speaker-label equality assumption), capped at 1024 output tokens. Tmux `consolidation-moss40-tail-20260917`; `tail.log` / `tail_exit_status.txt`. Raw initial and continuation responses remain retained.
+
+- **User stopped 40-minute work:** targeted tail follow-up also failed strict parsing (exit 1); no active consolidation tmux remains and no 40-minute graph was published. All failed artifacts retained. User redirected work to recall-oriented 20-minute consolidation.
+- **Recall iteration:** reuses the verified 275-segment 20-minute MOSS result without new GPU inference; two sequential official GPT-6 Astra calls use cluster defaults with exceptions and versioned confidence/provenance. Results root `consolidation/runs/recall_20/`, durable log `controller.log`.
+
+- **Recall results verified:** baseline 24/224 assigned (10.7%); round 1 and round 2 each 216/224 (96.4%), including 152 named observations (Jake 94, Xiu Shuo 58) and 64 assigned to two unnamed people. Round 1 accepted 71/75 decisions; round 2 accepted 18/18. Official embeddings rebuilt for each version. 29 tests passed and `verify_recall` validated both exact artifact bundles, source preservation, cutoff, registry lineage and retrieval version integrity. Results: `consolidation/runs/recall_20/README.md`. No independent identity accuracy measurement.
+- **Native M3 character write-back integration (2026-09-17):** Reused the saved 20-minute
+  recall round-1 accepted decisions and original Hyperstack native checkpoint. No new
+  Astra or GPU inference run. Local native publication used M3's configured OpenRouter
+  `openai/text-embedding-3-large` backend with the existing runtime environment credential.
+  Four supported native characters, 216 scoped observations, 87 globally safe features;
+  105 text nodes re-embedded, 278 text and all 106 voice embedding collections unchanged.
+  Raw contents and edges verified unchanged. 55 tests passed. Results and hashes:
+  `consolidation/runs/native_character/`; report: `consolidation/NATIVE_CHARACTER_INTEGRATION.md`.
+## Automatic consolidation retrieval cycle - 2026-09-17
+
+- **Status:** completed.
+- **Provider / instance:** Hyperstack 1042997, RTX A6000 48 GB; GPU idle before launch.
+- **Purpose:** Validate that accepted saved Astra decisions automatically produce a complete native M3 and Mandol retrieval publication, without a separate indexing interval.
+- **Method:** Saved 20-minute recall round-1 conclusions; native configured text reindex, full Mandol Qwen3-Embedding-0.6B/302.AI dense rebuild, BM25 and SPLADE rebuild, reload and hybrid search probe. No new Astra call or relation LLM calls.
+- **Environment:** isolated `/opt/streammeco/run/consolidation_deployment`; native `/opt/streammeco/.venv/bin/python`; Mandol `/opt/streammeco/mandol-venv/bin/python`. Native import (489 nodes), Mandol import, CUDA arithmetic (4.0), disk and tmux preflight passed.
+- **Execution:** tmux `consolidation-auto-reindex-20260917`; results `results/auto_cycle`, durable `validation.log`, `exit_status.txt`, and version-local `mandol_build.log`.
+- **Results:** exit 0 on retry; 105 native text nodes re-embedded, 384 native embedding collections unchanged, raw contents/edges unchanged. All 383 Mandol memories verified with dense/BM25/SPLADE indexes; hybrid probe and published-reader query each returned 3 results. Published artifact hashes remained unchanged after querying. Version `v_66eb04de45183ff45dd782fdfb306defbbc592fc4b50113983c2c626420e53d7`; local artifacts `consolidation/runs/deployment_cycle/`.
+- **Retry:** first attempt failed to resolve the existing relative SPLADE checkpoint and published nothing. Worker working directory corrected; isolated deployment symlink reuses installed `naver/splade-cocondenser-ensembledistil` weights under the existing `naver/splade-v3` alias. Preflight loaded the model. Successful tmux `consolidation-auto-reindex-20260917-retry1`; failed logs retained under `metadata/attempt1`, model provenance under `metadata/splade_checkpoint_source.json`. Actual remote completion timestamp 2026-09-18 03:16 UTC.
+
+## Online long-horizon Sol / Astra preparation — 2026-09-18
+
+- **Status:** blocked before benchmark launch; diagnostic preflight exited 2 as designed. No substantive benchmark inference started.
+- **Provider / instance:** Hyperstack `1042997`, RTX A6000; current SSH endpoint `38.80.122.150`.
+- **Requested configuration:** Jake and AEA, C1–C4, paired R1/R2; GPT-5.6 Sol primary (exact model ID unverified, “median” provisionally interpreted as medium); `gpt-6-astra` consolidation with existing high-effort default.
+- **Verified:** CUDA tensor operation passed, torch `2.6.0+cu124`, all 109 AEA recording paths present, tmux installed. GPU idle at inspection. Free disk approximately 2.8 GiB.
+- **Blockers:** No integrated C1–C4 online entrypoint; TST is offline only, with no verified enrollment/calibrated threshold configuration found; no configured Sol backend. Disk capacity also requires resolution before the full run.
+- **Artifacts:** local `online_memory_benchmark/20260918_sol_astra/`; remote `/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/`. Reused code snapshot, shell references, specification, requested configuration, and source hashes retained separately from results. API credential configuration excluded.
+- **Tmux / logs:** `online-memory-sol-astra-20260918-preflight`, retained exited pane; `logs/preflight.log`, `metadata/preflight.json`, `metadata/preflight_exit_status.txt`. Diagnostic results synced locally. No benchmark accuracy or latency results exist.
+- **September 18 readiness update:** Official `gpt-5.6-sol` with medium reasoning confirmed by the model endpoint (HTTP 200 locally and on VM); private official credential staged outside run artifacts. Isolated normalized question manifests contain 10 Jake first-ten and 1,994 AEA scheduled questions. New tmux `online-memory-sol-astra-20260918-readiness` exited 2 as designed; GPU arithmetic, media, question manifests and model access passed. Remaining blockers: no integrated online C1–C4 runner, no independently calibrated TST enrollment/threshold for either dataset, with 2.75 GiB free recorded as a capacity risk (the provisional 20 GiB gate was removed after review). Local/remote readiness report and log under `online_memory_benchmark/20260918_sol_astra`. No benchmark inference ran.
+- **VM storage inventory:** pip cache 2.2 GiB (~2.13 GiB unique-link) is low-risk to purge. uv cache 8.1 GiB has only ~0.14 GiB unique-link because installed environments share hard links. Five old generated segment directories total ~13.5 GiB unique-link, but are preserved for earlier run provenance/resumption. No deletion performed; actual peak-space need is pending a measured short-prefix run with bounded temp files.

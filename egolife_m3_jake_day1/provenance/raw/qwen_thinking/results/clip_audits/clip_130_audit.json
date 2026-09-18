@@ -1,0 +1,718 @@
+{
+  "clip_id": 130,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0130.mp4",
+  "end_to_end_memory_generation_ms": 707027.096403006,
+  "latency_ms": {
+    "clip_decode": 5855.021408002358,
+    "deepgram_asr": 822.243743998115,
+    "mai_transcribe_asr": 1592.1017789951293,
+    "asr_total": 1593.2525249954779,
+    "audio_segmentation": 7.4330000061308965,
+    "speech_embedding_campplus": 1932.5301140052034,
+    "facial_detection_recognition_buffalo_l": 3655.526200993336,
+    "face_clustering": 5.790148992673494,
+    "vlm_memory_generation": 196512.71793199703,
+    "text_embedding": 614.1787270025816,
+    "graph_update_total": 1675.261099007912
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 130,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 21,
+      "input_chars": 1786,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789443207.4605088,
+          "status": "success",
+          "total_tokens": 379,
+          "request_end": 1789443208.0745697,
+          "latency_ms": 614.0612669987604
+        }
+      ],
+      "total_tokens": 379,
+      "latency_ms": 614.1787270025816
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 822.243743998115,
+        "openrouter-mai-transcribe-2": 1592.1017789951293
+      },
+      "asr_total_ms": 1593.2525249954779,
+      "audio_segmentation_ms": 7.4330000061308965,
+      "speech_embedding_ms": 1932.5301140052034,
+      "graph_update_ms": 1666.1631049937569,
+      "asr_segment_count": 13,
+      "speech_embedding_count": 13,
+      "voice_identity_count": 12,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 3635.7492139941314
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 3655.526200993336,
+      "face_clustering_ms": 5.790148992673494,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 224,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 3784.185159005574
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1800>",
+        "<voice_147>",
+        "<voice_339>",
+        "<voice_1801>",
+        "<voice_771>",
+        "<voice_1303>",
+        "<voice_1752>",
+        "<voice_1802>",
+        "<voice_1467>",
+        "<voice_261>",
+        "<voice_1219>",
+        "<voice_500>"
+      ],
+      "context_preparation_ms": 4038.6791019991506,
+      "vlm_ms": 196512.71793199703,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"The video begins with a wide shot of a room containing a table covered with a checkered cloth.\",\n\t\t\"A person wearing an orange shirt stands near a balcony door in the background.\",\n\t\t\"Two other individuals are seated at the table, one on the left in a black top and one in the center in a white top.\",\n\t\t\"The camera angle shifts to a first-person perspective, showing the legs of the camera wearer in the foreground.\",\n\t\t\"A person seated on the left is seen holding a bouquet of flowers while looking towards the center of the table.\",\n\t\t\"Laptops and various items are placed on the table in front of the seated individuals.\",\n\t\t\"The view switches back to the original wide shot, showing the person in the orange shirt standing by the window.\",\n\t\t\"The camera returns to the close-up view of the table interaction between the person in black and the person in white.\",\n\t\t\"The individuals appear to be engaged in a casual discussion while handling food items and flowers.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_1800> mentions that burning is somewhat tiring because there are twenty people involved.\",\n\t\t\"<voice_147> states that the burning is too excessive.\",\n\t\t\"<voice_339> comments that charcoal burning is troublesome and refers to previous conversations about sweet western food.\",\n\t\t\"<voice_1801> acknowledges the statement with a short remark.\",\n\t\t\"<voice_771> notes that both cooking and ordering takeout are troublesome activities.\",\n\t\t\"<voice_1303> concludes that ordering delivery is acceptable.\",\n\t\t\"<voice_1752> agrees that perhaps everyone should eat one or two pieces.\",\n\t\t\"<voice_1802> clarifies that they are not suggesting eating extremely heavily.\",\n\t\t\"<voice_1467> points out that ordering delivery includes a 30cm size option.\",\n\t\t\"<voice_261> repeatedly agrees and decides to manage the late dinner.\",\n\t\t\"<voice_1219> adds that they will simply eat here.\",\n\t\t\"<voice_500> confirms the plan to eat at five o'clock.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The video begins with a wide shot of a room containing a table covered with a checkered cloth.",
+          "A person wearing an orange shirt stands near a balcony door in the background.",
+          "Two other individuals are seated at the table, one on the left in a black top and one in the center in a white top.",
+          "The camera angle shifts to a first-person perspective, showing the legs of the camera wearer in the foreground.",
+          "A person seated on the left is seen holding a bouquet of flowers while looking towards the center of the table.",
+          "Laptops and various items are placed on the table in front of the seated individuals.",
+          "The view switches back to the original wide shot, showing the person in the orange shirt standing by the window.",
+          "The camera returns to the close-up view of the table interaction between the person in black and the person in white.",
+          "The individuals appear to be engaged in a casual discussion while handling food items and flowers."
+        ],
+        "high_level_conclusions": [
+          "<voice_1800> mentions that burning is somewhat tiring because there are twenty people involved.",
+          "<voice_147> states that the burning is too excessive.",
+          "<voice_339> comments that charcoal burning is troublesome and refers to previous conversations about sweet western food.",
+          "<voice_1801> acknowledges the statement with a short remark.",
+          "<voice_771> notes that both cooking and ordering takeout are troublesome activities.",
+          "<voice_1303> concludes that ordering delivery is acceptable.",
+          "<voice_1752> agrees that perhaps everyone should eat one or two pieces.",
+          "<voice_1802> clarifies that they are not suggesting eating extremely heavily.",
+          "<voice_1467> points out that ordering delivery includes a 30cm size option.",
+          "<voice_261> repeatedly agrees and decides to manage the late dinner.",
+          "<voice_1219> adds that they will simply eat here.",
+          "<voice_500> confirms the plan to eat at five o'clock."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 130,
+          "call_id": "a3049b92-6289-4721-bfda-cb2799f097f7",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789443010.9468706,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"The video begins with a wide shot of a room containing a table covered with a checkered cloth.\",\n\t\t\"A person wearing an orange shirt stands near a balcony door in the background.\",\n\t\t\"Two other individuals are seated at the table, one on the left in a black top and one in the center in a white top.\",\n\t\t\"The camera angle shifts to a first-person perspective, showing the legs of the camera wearer in the foreground.\",\n\t\t\"A person seated on the left is seen holding a bouquet of flowers while looking towards the center of the table.\",\n\t\t\"Laptops and various items are placed on the table in front of the seated individuals.\",\n\t\t\"The view switches back to the original wide shot, showing the person in the orange shirt standing by the window.\",\n\t\t\"The camera returns to the close-up view of the table interaction between the person in black and the person in white.\",\n\t\t\"The individuals appear to be engaged in a casual discussion while handling food items and flowers.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_1800> mentions that burning is somewhat tiring because there are twenty people involved.\",\n\t\t\"<voice_147> states that the burning is too excessive.\",\n\t\t\"<voice_339> comments that charcoal burning is troublesome and refers to previous conversations about sweet western food.\",\n\t\t\"<voice_1801> acknowledges the statement with a short remark.\",\n\t\t\"<voice_771> notes that both cooking and ordering takeout are troublesome activities.\",\n\t\t\"<voice_1303> concludes that ordering delivery is acceptable.\",\n\t\t\"<voice_1752> agrees that perhaps everyone should eat one or two pieces.\",\n\t\t\"<voice_1802> clarifies that they are not suggesting eating extremely heavily.\",\n\t\t\"<voice_1467> points out that ordering delivery includes a 30cm size option.\",\n\t\t\"<voice_261> repeatedly agrees and decides to manage the late dinner.\",\n\t\t\"<voice_1219> adds that they will simply eat here.\",\n\t\t\"<voice_500> confirms the plan to eat at five o'clock.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The camera seems to be handheld or mounted on someone moving around.\n    *   **Scene:** A room with a table covered in a checkered cloth. There are laptops, flowers, and various items on the table.\n    *   **People:**\n        *   One person sitting on the left side of the table (dark hair, black top).\n        *   One person sitting in the middle/background (lighter top, long dark hair).\n        *   One person standing near the window/balcony door (orange/pinkish shirt, light pants).\n        *   One person whose legs are visible in the foreground (blue shorts/pants), likely the camera operator or someone sitting opposite. Wait, looking closely at frames 4.00s - 9.00s, there are legs visible in the foreground wearing patterned shorts/skirt and blue shorts. This suggests multiple people sitting around the table.\n        *   Actually, let's look closer. In frames 0.00-3.00, there's a person standing by the window (orange shirt). Two people sitting at the table. One on the left (black top), one in the middle (white/light top, pinkish head covering/hair?).\n        *   From 4.00s onwards, the camera angle shifts significantly. It looks like the camera is now positioned lower, possibly on someone's lap or held low. We see legs in the foreground. The person in the black top is still visible on the left holding flowers. The person in the white top is on the right. The person in the background is less visible but present.\n        *   The camera moves around a lot. At 17.00s, it goes back to a wider shot similar to the beginning, showing the person in orange standing again.\n    *   **Action:** People seem to be talking, eating, or preparing food. Flowers are being handled. Laptops are open.\n*   **Voice Features:** All voices are labeled `<voice_1800>`, `<voice_147>`, etc., and all ASR text starts with \"MAI:\". This implies all these voice tracks belong to the same speaker named MAI.\n    *   Content: Discussion about burning things (\"burning is a bit tiring\"), eating sweets/desserts, ordering takeout, portion sizes (30cm?), late dinner, eating at 5 PM.\n    *   Since all voice IDs have the same name \"MAI\" in the ASR text, I need to treat them as belonging to the same character entity if possible, or just use their specific IDs as requested. The prompt says \"For every supplied voice ID with nonempty speech, include at least one episodic memory... using the exact ID as the speaker.\" So I must use the specific IDs like `<voice_1800>`.\n    *   Wait, the instruction says \"Use only IDs supplied in the input\". The input provides specific IDs. I need to make sure I don't merge them into a generic \"MAI\" unless I can link them visually. However, the prompt also says \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\n    *   Looking at the video, faces are blurred out (pixelated). I cannot definitively link a specific face ID (which isn't provided in the `Face features` section anyway, wait, the prompt says \"Face features:\" but the list is empty in the provided text block? No, looking at the raw input, under \"Face features:\", there is nothing listed. Just \"Voice features:\".\n    *   Ah, I see \"Face features:Voice features:\" in the prompt text provided by the user. It seems the Face features section is empty or missing specific IDs. Let me re-read carefully.\n    *   \"Face features:Voice features:{...}\" -> It looks like the Face features section is completely empty in the provided text.\n    *   Constraint: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   Okay, so since no face IDs are supplied, I cannot create Equivalence statements linking faces to voices. I must stick to the voice IDs for the memory generation.\n    *   Wait, I need to check if there are implicit face IDs. The prompt says \"Each feature is either a face ... or a voice ... Each feature has a unique ID enclosed in angle brackets.\" But the input text under \"Face features:\" is blank.\n    *   So I will rely solely on the voice IDs for the memory part.\n    *   For the Video Description, I describe the visual actions.\n    *   For High-Level Conclusions, I reason about the conversation content.\n\n**2. Draft Video Description:**\n*   **0.00s - 3.00s:** Wide shot of a room. A person in an orange shirt stands by a balcony door. Two people sit at a table. One on the left (black top), one in the center (white top).\n*   **4.00s - 16.00s:** Camera angle changes to a first-person perspective or low angle. Legs of the camera wearer are visible in the foreground. A person in a black top sits on the left holding a bouquet of flowers. Another person sits on the right. Laptops are on the table.\n*   **17.00s - 20.00s:** Camera returns to a wide shot similar to the beginning. The person in the orange shirt is standing by the window again.\n*   **21.00s - 29.50s:** Camera moves back to the close-up view of the table. The person in black holds flowers. The person in white sits opposite. They appear to be interacting.\n\n**3. Draft High-Level Conclusions:**\n*   The conversation revolves around food preparation, specifically dealing with burnt food or desserts (\"burning is tiring\", \"eating sweets\").\n*   They discuss ordering takeout (\"ordering outside is tiring\") and portion sizes (\"30cm\").\n*   They agree on a schedule for eating (\"late dinner\", \"eat at 5 o'clock\").\n*   Since I cannot link faces to voices (no face IDs provided), I won't use the Equivalence format. I will just summarize the conversation context.\n*   Wait, the instruction says \"If a face and a voice feature refer to the same character, indicate it...\". Since I have no face IDs, I can't do this.\n*   I need to make sure I quote the speakers correctly using their IDs.\n*   Memory generation requirement: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   There are many voice IDs. I should probably group them or pick representative ones if listing all makes the JSON too large, but the instruction says \"For every supplied voice ID... include at least one episodic memory\". This implies I might need to list many memories. However, usually, in these tasks, summarizing the conversation flow is better than listing every single second. But strict adherence says \"every supplied voice ID\". Let's look at the IDs: 1800, 147, 339, 1801, 771, 1303, 1752, 1802, 1467, 261, 1219, 500. That's 12 IDs. I should try to include a memory for each or group them logically if the system allows. Given the constraint \"Preserve speaker identity... using the exact ID\", I will create a memory entry for each distinct voice segment provided in the JSON.\n*   Actually, reading the instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This suggests I need to output a memory for each ID.\n*   Wait, the output format is `video_description` and `high_level_conclusions`. Where do the memories go?\n*   Re-reading the prompt: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n*   BUT the initial system instruction says: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory...\".\n*   This creates a conflict. The user prompt defines the output format as JSON with `video_description` and `high_level_conclusions`. The system instruction talks about \"memory\". Usually, in these multi-modal tasks, the \"High-Level Conclusions\" or a specific field is where the reasoning/memory lives.\n*   Let's look at the \"Output Format\" section in the user prompt:\n    ```json\n    {\n        \"video_description\": [...],\n        \"high_level_conclusions\": [...]\n    }\n    ```\n*   The system instruction says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\n*   So I must put the memory/conclusion stuff into `high_level_conclusions`.\n*   The system instruction says \"include at least one episodic memory... using the exact ID as the speaker\".\n*   So inside `high_level_conclusions`, I should have strings that represent these memories/inferences.\n*   Example: `\"MAI: <voice_1800> says '...'\"` or just `\"MAI: <voice_1800> mentions...\"`.\n*   Wait, the instruction says \"Do not replace the ID with 'a speaker'...\". So I must use `<voice_1800>` in the text.\n*   Also \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   So I will populate `high_level_conclusions` with summaries of the speech attributed to the specific voice IDs.\n\n**Plan:**\n1.  **Video Description:** Describe the visual sequence chronologically. Mention the setting (room, table, laptops, flowers), the people (person in black, person in white/orange), and camera movements (wide to POV back to wide).\n2.  **High-Level Conclusions:**\n    *   Create entries for each voice ID found in the input.\n    *   Attribute the speech to the ID.\n    *   Summarize the content (food, burning, takeout, timing).\n    *   Since no face IDs exist, no Equivalence lines.\n\n**Refining Voice Memories:**\n*   `<voice_1800>`: Discusses burning/tiring due to twenty people.\n*   `<voice_147>`: Says burning is too much.\n*   `<voice_339>`: Mentions charcoal burning is troublesome. Earlier talk about sweet western food might not be special.\n*   `<voice_1801>`: \"Huh.\"\n*   `<voice_771>`: Takeout is troublesome, ordering outside is troublesome.\n*   `<voice_1303>`: Ordering delivery is okay.\n*   `<voice_1752>`: Yes, maybe everyone eats one or two pieces.\n*   `<voice_1802>`: Not saying we need to eat very heavy.\n*   `<voice_1467>`: Ordering delivery has that 30cm size.\n*   `<voice_261>`: Okay, okay, okay, okay, okay, then manage late dinner.\n*   `<voice_1219>`: Also just eat here.\n*   `<voice_500>`: Right, five o'clock eat, OK.\n\n**Constraint Check:**\n*   \"Preserve speaker identity... using the exact ID as the speaker.\" -> Use `<voice_X>`.\n*   \"Do not replace the ID with 'a speaker'...\" -> OK.\n*   \"If no face IDs are supplied, do not invent any.\" -> OK.\n*   \"Keep the existing video_description/high_level_conclusions JSON schema\" -> OK.\n\nLet's construct the JSON.\n\n**Video Description:**\n1.  The video opens with a wide shot of a room where three individuals are present. One person stands by a balcony door wearing an orange shirt, while two others sit at a table covered with a checkered cloth.\n2.  The camera angle shifts to a first-person perspective, revealing the legs of the person filming in the foreground.\n3.  A person seated on the left side of the table, dressed in black, is seen holding a bouquet of flowers.\n4.  Another individual sits on the right side of the table, facing the person in black.\n5.  Several laptops and other items are scattered across the table.\n6.  The camera view switches back to the original wide shot, showing the person in the orange shirt standing near the window again.\n7.  The perspective returns to the close-up view of the table interaction between the person in black and the person in white.\n8.  Throughout the clip, the individuals appear to be engaged in a casual gathering involving food and conversation.\n\n**High-Level Conclusions:**\n*   `<voice_1800>` discusses how burning is somewhat tiring because there are twenty people involved.\n*   `<voice_147>` states that the burning is too excessive.\n*   `<voice_339>` remarks that charcoal burning is quite troublesome and mentions previous discussions about sweet western food.\n*   `<voice_1801>` responds with a sound of agreement or acknowledgment.\n*   `<voice_771>` notes that both cooking and ordering takeout are troublesome matters.\n*   `<voice_1303>` concludes that ordering delivery is acceptable.\n*   `<voice_1752>` agrees that perhaps everyone should eat one or two pieces.\n*   `<voice_1802>` clarifies that they are not suggesting eating extremely heavily.\n*   `<voice_1467>` points out that ordering delivery comes with a 30cm size option.\n*   `<voice_261>` repeatedly agrees and decides to manage the late dinner.\n*   `<voice_1219>` adds that they will simply eat here.\n*   `<voice_500>` confirms the plan to eat at five o'clock.\n\nWait, I need to check if I should combine some or keep them separate. \"For every supplied voice ID... include at least one episodic memory\". I will include one per ID to be safe and precise.\n\nOne detail: The prompt asks to \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"Keep the existing video_description/high_level_conclusions JSON schema\".\nSo the `high_level_conclusions` array should contain the memories/inferences.\n\nLet's double check the voice IDs.\nInput:\n`<voice_1800>`\n`<voice_147>`\n`<voice_339>`\n`<voice_1801>`\n`<voice_771>`\n`<voice_1303>`\n`<voice_1752>`\n`<voice_1802>`\n`<voice_1467>`\n`<voice_261>`\n`<voice_1219>`\n`<voice_500>`\n\nAll start with \"MAI:\". This means they are all the same speaker. But I must preserve the ID.\nSo in the conclusion, I will write something like: \"`<voice_1800>` indicates that burning is tiring due to the number of people.\"\n\nFinal check on constraints:\n- \"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence.\" -> Since no face IDs, I won't say who is speaking visually. I'll just attribute the speech to the ID.\n- \"If no face IDs are supplied, do not invent any.\" -> Confirmed.\n\nOkay, ready to generate JSON.\n\nOne small thing: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThe schema provided in the prompt is:\n```json\n{\n\t\"video_description\": [\n\t\t\"...\",\n\t\t\"...\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"...\",\n\t\t\"Equivalence: <face_1>, <voice_2>\"\n\t]\n}\n```\nI will follow this exactly.\n\nOne more check on the video description.\nFrames 0-3: Wide shot. Person in orange standing. Two people sitting.\nFrames 4-16: Close up/POV. Person in black holding flowers. Person in white sitting. Laptop on table.\nFrames 17-20: Wide shot again. Person in orange standing.\nFrames 21-29: Close up again. Person in black holding flowers. Person in white sitting.\n\nI will synthesize this into concise sentences.\n\nOne detail on the voice content:\n`<voice_339>` has two segments. I should probably mention the main point or just treat the ID as one unit. The instruction says \"For every supplied voice ID... include at least one episodic memory\". So one memory per ID is sufficient.\n\nLet's write the response.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"The video begins with a wide shot of a room containing a table covered with a checkered cloth.\",\n\t\t\"A person wearing an orange shirt stands near a balcony door in the background.\",\n\t\t\"Two other individuals are seated at the table, one on the left in a black top and one in the center in a white top.\",\n\t\t\"The camera angle shifts to a first-person perspective, showing the legs of the camera wearer in the foreground.\",\n\t\t\"A person seated on the left is seen holding a bouquet of flowers while looking towards the center of the table.\",\n\t\t\"Laptops and various items are placed on the table in front of the seated individuals.\",\n\t\t\"The view switches back to the original wide shot, showing the person in the orange shirt standing by the window.\",\n\t\t\"The camera returns to the close-up view of the table interaction between the person in black and the person in white.\",\n\t\t\"The individuals appear to be engaged in a casual discussion while handling food items and flowers.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"<voice_1800> mentions that burning is somewhat tiring because there are twenty people involved.\",\n\t\t\"<voice_147> states that the burning is too excessive.\",\n\t\t\"<voice_339> comments that charcoal burning is troublesome and refers to previous conversations about sweet western food.\",\n\t\t\"<voice_1801> acknowledges the statement with a short remark.\",\n\t\t\"<voice_771> notes that both cooking and ordering takeout are troublesome activities.\",\n\t\t\"<voice_1303> concludes that ordering delivery is acceptable.\",\n\t\t\"<voice_1752> agrees that perhaps everyone should eat one or two pieces.\",\n\t\t\"<voice_1802> clarifies that they are not suggesting eating extremely heavily.\",\n\t\t\"<voice_1467> points out that ordering delivery includes a 30cm size option.\",\n\t\t\"<voice_261> repeatedly agrees and decides to manage the late dinner.\",\n\t\t\"<voice_1219> adds that they will simply eat here.\",\n\t\t\"<voice_500> confirms the plan to eat at five o'clock.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 11232,
+          "output_tokens": 4333,
+          "total_tokens": 15565,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.004427987732924521,
+            "media_preparation_ms": 61.301780995563604,
+            "processor_tokenization_ms": 336.53780999884475,
+            "device_transfer_ms": 48.55725199740846,
+            "cuda_generation_ms": 196030.43895399605,
+            "decoding_ms": 4.227236000588164
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 196481.47467599483,
+          "request_end": 1789443207.4595912,
+          "latency_ms": 196512.71793199703,
+          "client_wall_clock_latency_ms": 196512.71793199703
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 12
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.05840000812895596,
+      "nodes_added": 9,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 12,
+      "text_embedding_ms": null,
+      "text_embedding_count": 12,
+      "graph_update_ms": 9.039594006026164,
+      "nodes_added": 12,
+      "directed_edges_added": 24,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 13,
+    "speech_embeddings": 13,
+    "voice_identities": 12,
+    "detected_faces": 224,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 12,
+    "nodes_after_clip": 1824,
+    "edges_after_clip": 689,
+    "nodes_added_by_clip": 24,
+    "edges_added_by_clip": 12
+  },
+  "generated_memory": {
+    "video_description": [
+      "The video begins with a wide shot of a room containing a table covered with a checkered cloth.",
+      "A person wearing an orange shirt stands near a balcony door in the background.",
+      "Two other individuals are seated at the table, one on the left in a black top and one in the center in a white top.",
+      "The camera angle shifts to a first-person perspective, showing the legs of the camera wearer in the foreground.",
+      "A person seated on the left is seen holding a bouquet of flowers while looking towards the center of the table.",
+      "Laptops and various items are placed on the table in front of the seated individuals.",
+      "The view switches back to the original wide shot, showing the person in the orange shirt standing by the window.",
+      "The camera returns to the close-up view of the table interaction between the person in black and the person in white.",
+      "The individuals appear to be engaged in a casual discussion while handling food items and flowers."
+    ],
+    "high_level_conclusions": [
+      "<voice_1800> mentions that burning is somewhat tiring because there are twenty people involved.",
+      "<voice_147> states that the burning is too excessive.",
+      "<voice_339> comments that charcoal burning is troublesome and refers to previous conversations about sweet western food.",
+      "<voice_1801> acknowledges the statement with a short remark.",
+      "<voice_771> notes that both cooking and ordering takeout are troublesome activities.",
+      "<voice_1303> concludes that ordering delivery is acceptable.",
+      "<voice_1752> agrees that perhaps everyone should eat one or two pieces.",
+      "<voice_1802> clarifies that they are not suggesting eating extremely heavily.",
+      "<voice_1467> points out that ordering delivery includes a 30cm size option.",
+      "<voice_261> repeatedly agrees and decides to manage the late dinner.",
+      "<voice_1219> adds that they will simply eat here.",
+      "<voice_500> confirms the plan to eat at five o'clock."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The video begins with a wide shot of a room containing a table covered with a checkered cloth.",
+      "A person wearing an orange shirt stands near a balcony door in the background.",
+      "Two other individuals are seated at the table, one on the left in a black top and one in the center in a white top.",
+      "The camera angle shifts to a first-person perspective, showing the legs of the camera wearer in the foreground.",
+      "A person seated on the left is seen holding a bouquet of flowers while looking towards the center of the table.",
+      "Laptops and various items are placed on the table in front of the seated individuals.",
+      "The view switches back to the original wide shot, showing the person in the orange shirt standing by the window.",
+      "The camera returns to the close-up view of the table interaction between the person in black and the person in white.",
+      "The individuals appear to be engaged in a casual discussion while handling food items and flowers."
+    ],
+    "high_level_conclusions": [
+      "<voice_1800> mentions that burning is somewhat tiring because there are twenty people involved.",
+      "<voice_147> states that the burning is too excessive.",
+      "<voice_339> comments that charcoal burning is troublesome and refers to previous conversations about sweet western food.",
+      "<voice_1801> acknowledges the statement with a short remark.",
+      "<voice_771> notes that both cooking and ordering takeout are troublesome activities.",
+      "<voice_1303> concludes that ordering delivery is acceptable.",
+      "<voice_1752> agrees that perhaps everyone should eat one or two pieces.",
+      "<voice_1802> clarifies that they are not suggesting eating extremely heavily.",
+      "<voice_1467> points out that ordering delivery includes a 30cm size option.",
+      "<voice_261> repeatedly agrees and decides to manage the late dinner.",
+      "<voice_1219> adds that they will simply eat here.",
+      "<voice_500> confirms the plan to eat at five o'clock."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_130_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 24,
+    "edges_added": 12,
+    "nodes": [
+      {
+        "id": 1800,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 烧烤的人有点累哦，因为有二十个人左右。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1801,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1802,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 不是说要吃得非常饱。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1803,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The video begins with a wide shot of a room containing a table covered with a checkered cloth."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1804,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person wearing an orange shirt stands near a balcony door in the background."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1805,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two other individuals are seated at the table, one on the left in a black top and one in the center in a white top."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1806,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera angle shifts to a first-person perspective, showing the legs of the camera wearer in the foreground."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1807,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person seated on the left is seen holding a bouquet of flowers while looking towards the center of the table."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1808,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Laptops and various items are placed on the table in front of the seated individuals."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1809,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The view switches back to the original wide shot, showing the person in the orange shirt standing by the window."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1810,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera returns to the close-up view of the table interaction between the person in black and the person in white."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1811,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The individuals appear to be engaged in a casual discussion while handling food items and flowers."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1812,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1800> mentions that burning is somewhat tiring because there are twenty people involved."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1813,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_147> states that the burning is too excessive."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1814,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_339> comments that charcoal burning is troublesome and refers to previous conversations about sweet western food."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1815,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1801> acknowledges the statement with a short remark."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1816,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_771> notes that both cooking and ordering takeout are troublesome activities."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1817,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1303> concludes that ordering delivery is acceptable."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1818,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1752> agrees that perhaps everyone should eat one or two pieces."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1819,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1802> clarifies that they are not suggesting eating extremely heavily."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1820,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1467> points out that ordering delivery includes a 30cm size option."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1821,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_261> repeatedly agrees and decides to manage the late dinner."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1822,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1219> adds that they will simply eat here."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1823,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_500> confirms the plan to eat at five o'clock."
+          ],
+          "timestamp": 130
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 147,
+        "target": 1813,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 261,
+        "target": 1821,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 339,
+        "target": 1814,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 500,
+        "target": 1823,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 771,
+        "target": 1816,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1219,
+        "target": 1822,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1303,
+        "target": 1817,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1467,
+        "target": 1820,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1752,
+        "target": 1818,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1800,
+        "target": 1812,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1801,
+        "target": 1815,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1802,
+        "target": 1819,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_130_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_130_graph.pkl"
+  },
+  "memory_pickle_bytes": 43400068,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 83688.055305588,
+    "prepared_perf": 83697.17593008,
+    "ordered_start_perf": 84183.50552491,
+    "consumer_wait_ms": 0.00800398993305862,
+    "ready_to_ordered_ms": 486329.59482999286,
+    "preparation_work_ms": 9115.442316004192,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 208597.06986100355
+}

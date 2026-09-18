@@ -1,6 +1,6 @@
 # Gemini — first ten questions
 
-**Complete: 40 verified QA predictions** · updated 2026-09-15T03:12:56+00:00
+**Complete: 40 verified QA predictions** · updated 2026-09-15T16:00:47+00:00
 
 Model: `gemini-3.8-flash`. Saved committed segment audits: **144**; latest segment: **144**; query snapshots: **10/10**; actual QA rows: **40/40**.
 

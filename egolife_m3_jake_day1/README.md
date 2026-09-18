@@ -1,11 +1,11 @@
 # Jake DAY1 experiments
 
-Updated: 2026-09-15T03:12:56+00:00. Start with a run below; memories and detailed latency are Markdown.
+Updated: 2026-09-15T16:00:47+00:00. Start with a run below; memories and detailed latency are Markdown.
 
 | Full benchmark | State | Latest segment | Snapshots | QA rows |
 | --- | --- | --- | --- | --- |
 | [Gemini — first ten questions](results/gemini/README.md) | Complete: 40 verified QA predictions | 144 | 10 | 40 |
-| [Qwen3.5 4B thinking + identity prompt — first ten questions](results/qwen_thinking/README.md) | Running | 125 | 7 | 0 |
+| [Qwen3.5 4B thinking + identity prompt — first ten questions](results/qwen_thinking/README.md) | Stopped after failure; incomplete benchmark | 144 | 10 | 40 |
 
 [Smoke tests: first-clip comparisons, preflights and short Qwen checks](smoke_tests/README.md). These are separate from the full 10-question runs.
 

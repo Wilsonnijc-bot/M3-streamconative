@@ -1,0 +1,494 @@
+{
+  "clip_id": 129,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0129.mp4",
+  "end_to_end_memory_generation_ms": 810965.1151500002,
+  "latency_ms": {
+    "clip_decode": 4582.909844000824,
+    "deepgram_asr": 447.2828169964487,
+    "mai_transcribe_asr": 899.1198790026829,
+    "asr_total": 905.562520987587,
+    "audio_segmentation": 6.125150001025759,
+    "speech_embedding_campplus": 879.0090429974953,
+    "facial_detection_recognition_buffalo_l": 2187.006815991481,
+    "face_clustering": 5.56256998970639,
+    "vlm_memory_generation": 218719.3240369961,
+    "text_embedding": 473.55062600399833,
+    "graph_update_total": 885.8414630085463
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 129,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 953,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789442995.8065357,
+          "status": "success",
+          "total_tokens": 203,
+          "request_end": 1789442996.2799425,
+          "latency_ms": 473.4072150022257
+        }
+      ],
+      "total_tokens": 203,
+      "latency_ms": 473.55062600399833
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 447.2828169964487,
+        "openrouter-mai-transcribe-2": 899.1198790026829
+      },
+      "asr_total_ms": 905.562520987587,
+      "audio_segmentation_ms": 6.125150001025759,
+      "speech_embedding_ms": 879.0090429974953,
+      "graph_update_ms": 882.9658510076115,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 4,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1777.5442209967878
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2187.006815991481,
+      "face_clustering_ms": 5.56256998970639,
+      "graph_update_ms": null,
+      "frame_count": 90,
+      "detected_face_count": 126,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2269.476971006952
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_446>",
+        "<voice_1727>",
+        "<voice_261>",
+        "<voice_1786>"
+      ],
+      "context_preparation_ms": 2358.2165730040288,
+      "vlm_ms": 218719.3240369961,
+      "raw_response": "{\n  \"video_description\": [\n    \"Three individuals are seated around a dining table covered with a red and white checkered tablecloth.\",\n    \"A woman in a black top sits on the left, gesturing with her hands while holding a small floral arrangement.\",\n    \"A laptop is open on the table in the foreground.\",\n    \"A woman wearing a pink headscarf and white shirt sits on the right side of the table.\",\n    \"Another woman in a light blue top is seated in the background.\",\n    \"The camera view shifts to show a kitchen area through a large opening.\",\n    \"A man in a striped shirt stands near the kitchen counter and sink.\",\n    \"The group continues their conversation while the man remains in the background.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_446> asks about the method of cooking or tearing.\",\n    \"<voice_1727> discusses the timing of the meal, suggesting waiting until evening and asking how to prepare dinner.\",\n    \"<voice_261> suggests cooking in the evening.\",\n    \"<voice_1786> confirms the plan is to cook and eat together.\",\n    \"The group is planning their dinner schedule and cooking method.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "Three individuals are seated around a dining table covered with a red and white checkered tablecloth.",
+          "A woman in a black top sits on the left, gesturing with her hands while holding a small floral arrangement.",
+          "A laptop is open on the table in the foreground.",
+          "A woman wearing a pink headscarf and white shirt sits on the right side of the table.",
+          "Another woman in a light blue top is seated in the background.",
+          "The camera view shifts to show a kitchen area through a large opening.",
+          "A man in a striped shirt stands near the kitchen counter and sink.",
+          "The group continues their conversation while the man remains in the background."
+        ],
+        "high_level_conclusions": [
+          "<voice_446> asks about the method of cooking or tearing.",
+          "<voice_1727> discusses the timing of the meal, suggesting waiting until evening and asking how to prepare dinner.",
+          "<voice_261> suggests cooking in the evening.",
+          "<voice_1786> confirms the plan is to cook and eat together.",
+          "The group is planning their dinner schedule and cooking method."
+        ]
+      },
+      "media": {
+        "frame_count": 36,
+        "video_duration_seconds": 17.9
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 129,
+          "call_id": "6a8163a1-79e0-4e4d-b9fd-851047411aa1",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789442777.08631,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 36,
+            "video_duration_seconds": 17.9
+          },
+          "response": "{\n  \"video_description\": [\n    \"Three individuals are seated around a dining table covered with a red and white checkered tablecloth.\",\n    \"A woman in a black top sits on the left, gesturing with her hands while holding a small floral arrangement.\",\n    \"A laptop is open on the table in the foreground.\",\n    \"A woman wearing a pink headscarf and white shirt sits on the right side of the table.\",\n    \"Another woman in a light blue top is seated in the background.\",\n    \"The camera view shifts to show a kitchen area through a large opening.\",\n    \"A man in a striped shirt stands near the kitchen counter and sink.\",\n    \"The group continues their conversation while the man remains in the background.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_446> asks about the method of cooking or tearing.\",\n    \"<voice_1727> discusses the timing of the meal, suggesting waiting until evening and asking how to prepare dinner.\",\n    \"<voice_261> suggests cooking in the evening.\",\n    \"<voice_1786> confirms the plan is to cook and eat together.\",\n    \"The group is planning their dinner schedule and cooking method.\"\n  ]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are multiple frames showing a group of people sitting around a table. The camera seems to be held by someone sitting at the table (POV).\n    *   **People:**\n        *   Person 1 (Left): Wearing black, holding something (maybe flowers or a phone), gesturing.\n        *   Person 2 (Center/Back): Sitting further back, wearing light blue/green top.\n        *   Person 3 (Right): Wearing white shirt, pink headscarf/hijab.\n        *   Person 4 (Standing/Kitchen area): Appears later in the sequence (around 5.00s onwards), standing near the kitchen window/balcony door.\n    *   **Action:** They seem to be having a conversation. The person on the left gestures frequently. The person on the right listens. The person in the background sits. Later, the view shifts slightly or the camera moves, revealing a kitchen area where a fourth person stands.\n    *   **Environment:** A dining room with a checkered tablecloth, a laptop on the table, a whiteboard on the wall. There's a doorway leading to a kitchen/balcony area.\n*   **Voice Features:**\n    *   `<voice_446>`: \"MAI: 撕烧吗？\" (Mai: Is it tearing/burning?) - Time: 00:04-00:06\n    *   `<voice_1727>`: \"MAI: 撕烧偏晚上啊。\" (Mai: Tearing/burning leans towards evening.) & \"MAI: 但是，但是你留他们到晚上的话，这个晚饭怎么弄？\" (But if you leave them until evening, how about dinner?) - Time: 00:06-00:13\n    *   `<voice_261>`: \"MAI: 晚上再撕。\" (Mai: Tear again in the evening.) - Time: 00:07-00:09\n    *   `<voice_1786>`: \"MAI: 就是烧啊。\" (Mai: Just burning/cooking.) & \"MAI: 就是一起吃这个。\" (Mai: It's just eating this together.) - Time: 00:12-00:16\n    *   Note: All voices are labeled \"MAI\". This suggests a specific speaker or perhaps a transcription error where the name is repeated, but I must use the provided IDs. Wait, looking closely at the ASR, it says \"MAI:\" followed by the text. This likely indicates the speaker's name is Mai. However, the instruction says \"Use only IDs supplied in the input; do not copy example IDs from instructions.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory... using the exact ID as the speaker.\" So I need to attribute these lines to `<voice_446>`, `<voice_1727>`, etc., assuming they represent the same speaker or different speakers labeled similarly. Given the context of a conversation, it's possible there's only one speaker named Mai, or the labels are generic. Let's look at the timestamps. They overlap significantly (00:04-00:06, 00:06-00:08, 00:07-00:09). This implies overlapping speech or rapid turns. I will treat them as distinct voice tracks associated with the speaker(s) in the video. Since I don't have explicit face-to-voice mapping instructions other than \"If a face and a voice feature refer to the same character, indicate it...\", I need to be careful. The prompt asks to preserve speaker identity. The voice IDs are `<voice_446>`, `<voice_1727>`, `<voice_261>`, `<voice_1786>`. I will associate these with the visible speakers.\n    *   Looking at the video, there are three main seated people. One person stands up later.\n    *   The voice content discusses \"burning\" (cooking?), \"evening\", \"dinner\".\n    *   The person on the left (black shirt) seems to be the active speaker based on hand gestures matching the timing of the conversation flow (though audio isn't perfectly synced to frames in my analysis, the general vibe fits).\n    *   Actually, usually in these tasks, if multiple voice IDs are provided, they correspond to different speakers unless specified otherwise. However, the ASR prefix \"MAI:\" appears for all. This might mean the system thinks it's the same speaker, or it's a label artifact. I will assume these are distinct voice tracks. I need to map them to faces if possible.\n    *   Without explicit face IDs (like `<face_1>`), I can't make `Equivalence` statements easily unless I infer. But the prompt says \"Do not assign it to the camera wearer or another visible person... without supporting evidence.\" I see no face IDs in the input data provided in the prompt text (only video frames and voice features). Wait, the prompt says \"Each feature is either a face... or a voice...\". But the input section only lists \"Face features:\" (empty) and \"Voice features:\". This means I *cannot* create equivalences because I don't have face IDs. I must strictly follow \"If no face IDs are supplied, do not invent any.\"\n    *   So, `high_level_conclusions` will contain the voice summaries but no `Equivalence` strings because there are no face IDs.\n    *   Wait, let me re-read carefully. \"Face features:Voice features:{\"...}\". It looks like Face features is empty.\n    *   Okay, so I will describe the video using the voice content to ground the actions.\n\n**2. Construct Video Description:**\n*   **0.00s - 4.50s:** Three people are seated around a table covered with a red-and-white checkered cloth. A laptop is open in front of the camera wearer. A woman in black on the left holds a bouquet of flowers or similar items and gestures while talking. Another woman in a light blue top sits in the center-back. A third woman in a white shirt and pink headscarf sits on the right.\n*   **5.00s - 8.00s:** The camera pans or the view shifts to show a kitchen area through a large opening/window. A man in a striped shirt stands near the kitchen counter/sink area. The women remain seated.\n*   **8.50s - 17.50s:** The view returns to the table. The woman in black continues to gesture with her hands. The woman in the pink headscarf is listening. The man remains visible in the background kitchen area occasionally.\n*   **Overall:** A group discussion taking place in a dining room, transitioning to a view of a kitchen area.\n\n**3. Construct High-Level Conclusions:**\n*   Since there are no face IDs, I cannot state equivalences.\n*   I need to summarize the conversation based on the voice features.\n*   Speaker `<voice_446>` asks about \"tearing/burning\".\n*   Speaker `<voice_1727>` mentions leaving things until evening and asks about dinner preparation (\"how to handle this dinner\").\n*   Speaker `<voice_261>` suggests doing it in the evening.\n*   Speaker `<voice_1786>` confirms it's about cooking/burning and eating together.\n*   Conclusion: The group is discussing meal preparation plans, specifically regarding cooking and timing for dinner.\n\n**Refining the Output:**\n*   **JSON Structure:** Must match the requested schema.\n*   **Content:**\n    *   `video_description`: List of strings describing atomic events.\n    *   `high_level_conclusions`: List of strings. Since no face IDs exist, I won't add `Equivalence:` lines. I will add reasoning about the conversation.\n\nLet's draft the descriptions.\n1.  Three individuals are seated around a dining table with a checkered tablecloth, engaging in a conversation.\n2.  A woman dressed in black on the left side of the table gestures with her hands while holding a small arrangement of flowers.\n3.  A laptop computer rests open on the table in the foreground.\n4.  A woman wearing a pink headscarf and white shirt sits on the right side of the table.\n5.  Another woman in a light-colored top is seated further back at the table.\n6.  The camera perspective shifts to reveal a kitchen area adjacent to the dining space.\n7.  A man in a striped shirt stands near the kitchen sink and counter area.\n8.  The group continues their discussion while the man remains in the background.\n\nDrafting conclusions:\n1.  The participants are discussing plans related to cooking and meal timing, specifically mentioning preparing dinner for the evening.\n2.  The conversation involves questions about whether to cook immediately or wait until later in the day.\n3.  The group agrees on eating together.\n\nWait, I need to check if I missed any face IDs. The prompt text says \"Face features:Voice features:...\". It seems the Face features list is empty. So no equivalences.\n\nOne detail: \"Preserve speaker identity when constructing memory... Use only IDs supplied in the input\".\nSo in the `high_level_conclusions`, I should probably mention the speaker IDs if I'm summarizing speech, but the schema example shows `\"Equivalence: <face_1>, <voice_2>\"`. If I don't have face IDs, I can't do that. I will just write the conclusions as inferences.\nActually, looking at the instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\". This instruction seems to apply to a different part of the task (Memory Construction) which might be implicit or I need to ensure the `high_level_conclusions` captures this.\nHowever, the output format requested is specific: `video_description` and `high_level_conclusions`.\nThe instruction \"For every supplied voice ID... include at least one episodic memory...\" sounds like it belongs to a \"Memory\" generation task often paired with these videos. But here the output format is fixed to `video_description` and `high_level_conclusions`.\nI will interpret \"include at least one episodic memory\" as ensuring the `high_level_conclusions` reflects the content of the speech accurately. Or perhaps I should just stick to the JSON schema provided. The prompt says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This implies I should follow the schema. The instruction about memory construction might be a general guideline for how to process the data, but the output must be the JSON.\nWait, \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\nAnd \"For every supplied voice ID... include at least one episodic memory...\". This instruction is contradictory to the output format if interpreted literally as adding a new field.\nHowever, usually, in these prompts, the \"task instructions\" override the \"output format\" if they conflict, OR the \"output format\" dictates the final structure.\nLet's look at the instruction again: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis suggests I should follow the schema. The instruction about memory might be referring to internal processing or a different expected output type that was standard in a previous version of the prompt. Given the strict \"Output Format\" section, I will prioritize the JSON structure. I will incorporate the speech content into the `high_level_conclusions` as reasoning/inference rather than raw memory blocks, as that fits the \"High-Level Conclusions\" definition (\"reasoning-based conclusions that go beyond surface-level observations\").\nActually, reading the first paragraph: \"Your task consists of two parts... 1. Video Description... 2. High-Level Conclusions...\".\nThen \"Output Format: ... video_description ... high_level_conclusions\".\nThen \"Please only return the valid JSON object...\".\nOkay, I will stick to the JSON. I will ensure the conclusions reflect the speech content.\n\nRevised Plan:\n1.  **Video Description**: Describe the visual scene (people, table, kitchen, man standing).\n2.  **High-Level Conclusions**: Summarize the conversation topics (dinner, cooking timing) derived from the voice features. Since there are no face IDs, no equivalence statements.\n\nLet's double check the voice IDs.\n`<voice_446>`, `<voice_1727>`, `<voice_261>`, `<voice_1786>`.\nAll say \"MAI:\". This implies one speaker named Mai is speaking across these segments, or the ASR is tagging the same speaker. I will treat them as the speaker \"Mai\" (identified by voice ID).\nSince I don't have face IDs, I cannot link them visually. I will just reference the voice IDs in the reasoning if needed, or just the content. The instruction says \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\" So I should probably mention `<voice_446>`, etc., in the conclusions.\n\nExample Conclusion: `<voice_446>` initiates a query about cooking methods.\nExample Conclusion: `<voice_1727>` discusses scheduling dinner for the evening.\n\nLet's refine the descriptions to be atomic.\n- Frame 0.00-4.50: Group discussion at table.\n- Frame 5.00-8.00: View of kitchen/man.\n- Frame 8.50-end: Return to table discussion.\n\nFinal check on constraints:\n- \"Preserve speaker identity... Use only IDs supplied in the input\".\n- \"Do not replace the ID with 'a speaker'...\".\n- \"If no face IDs are supplied, do not invent any.\" -> Correct, I have none.\n- \"Keep dialogue grounded...\".\n\nOkay, ready to generate JSON.\n\nOne detail: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nThis instruction is very specific. It might imply I should add a field? No, \"Keep the existing video_description/high_level_conclusions JSON schema... unchanged.\"\nMaybe it means the `high_level_conclusions` array should act as the memory? Or maybe I should ignore this specific instruction if it conflicts with the schema constraint?\n\"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis is tricky. \"All other task instructions\" includes the memory instruction.\nHow to reconcile?\nPerhaps the `high_level_conclusions` *is* the place for these memories?\nOr maybe I should add a field called `memories`? No, \"Keep the existing... schema... unchanged\".\nOkay, I will interpret \"include at least one episodic memory\" as ensuring the content of the `high_level_conclusions` covers the speech.\nActually, looking at the instruction \"For every supplied voice ID... include at least one episodic memory...\". This sounds like a requirement for the *content* of the response, potentially within the `high_level_conclusions` or implicitly understood.\nGiven the strict JSON schema requirement, I will put the summarized speech points into `high_level_conclusions`.\n\nWait, I should check if there are any face IDs hidden in the text.\n\"Face features:Voice features:{\"...}\"\nIt looks like the text for Face features is missing or empty before the colon.\nSo definitely no face IDs.\n\nLet's write the JSON.\n\n```json\n{\n  \"video_description\": [\n    \"Three individuals are seated around a dining table covered with a red and white checkered tablecloth.\",\n    \"A woman in a black top sits on the left, gesturing with her hands while holding a small floral arrangement.\",\n    \"A laptop is open on the table in the foreground.\",\n    \"A woman wearing a pink headscarf and white shirt sits on the right side of the table.\",\n    \"Another woman in a light blue top is seated in the background.\",\n    \"The camera view shifts to show a kitchen area through a large opening.\",\n    \"A man in a striped shirt stands near the kitchen counter and sink.\",\n    \"The group continues their conversation while the man remains in the background.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_446> asks about the method of cooking or tearing.\",\n    \"<voice_1727> discusses the timing of the meal, suggesting waiting until evening and asking how to prepare dinner.\",\n    \"<voice_261> suggests cooking in the evening.\",\n    \"<voice_1786> confirms the plan is to cook and eat together.\",\n    \"The group is planning their dinner schedule and cooking method.\"\n  ]\n}\n```\nWait, I need to make sure I don't hallucinate face IDs. I am not using any.\nI need to make sure I use the exact voice IDs. Yes, `<voice_446>`, etc.\nI need to make sure the descriptions are atomic.\nI need to make sure the JSON is valid.\n\nOne correction: The instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript...\".\nIf I put this in `high_level_conclusions`, does it count as an \"episodic memory\"?\nUsually, `high_level_conclusions` are inferences.\nMaybe I should add a separate field? \"Keep the existing... schema... unchanged\".\nIf I add a field, I violate \"unchanged schema\".\nIf I don't add a field, I violate \"include at least one episodic memory\".\nThis is a common conflict in prompt engineering. Usually, the \"Output Format\" section takes precedence for the final structure. The \"Task Instructions\" guide the content.\nI will integrate the memory-like summaries into the `high_level_conclusions` as they are the closest available container. I will phrase them as factual summaries of the speech events.\n\nAlso, checking the voice content again:\n`<voice_446>`: \"MAI: 撕烧吗？\" -> \"Is it tearing/burning?\"\n`<voice_1727>`: \"MAI: 撕烧偏晚上啊。\" / \"MAI: 但是，但是你留他们到晚上的话，这个晚饭怎么弄？\" -> \"Tearing/burning leans towards evening.\" / \"But if you leave them until evening, how about dinner?\"\n`<voice_261>`: \"MAI: 晚上再撕。\" -> \"Tear again in the evening.\"\n`<voice_1786>`: \"MAI: 就是烧啊。\" / \"MAI: 就是一起吃这个。\" -> \"Just burning/cooking.\" / \"It's just eating this together.\"\n\nI will formulate the conclusions to reflect this.\n\nOne more thing: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nThis reinforces using the IDs.\n\nFinal check on JSON syntax. Quotes, commas, braces.\nNo markdown code blocks around the JSON? \"Please only return the valid JSON object, without any additional explanation or formatting.\"\nOkay, raw JSON.\n\nWait, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThis implies I should NOT change the schema.\nDoes \"all other task instructions\" include the memory instruction? Yes.\nSo I must include the memory.\nWhere?\nMaybe inside `high_level_conclusions`?\nOr maybe I should add a field `memory`?\n\"Keep the existing... schema... unchanged\". Adding a field changes the schema.\nSo I must put it inside `high_level_conclusions`.\nI will treat `high_level_conclusions` as containing both inferences and the required memory summaries.\n\nLet's finalize the text.\n</think>\n\n{\n  \"video_description\": [\n    \"Three individuals are seated around a dining table covered with a red and white checkered tablecloth.\",\n    \"A woman in a black top sits on the left, gesturing with her hands while holding a small floral arrangement.\",\n    \"A laptop is open on the table in the foreground.\",\n    \"A woman wearing a pink headscarf and white shirt sits on the right side of the table.\",\n    \"Another woman in a light blue top is seated in the background.\",\n    \"The camera view shifts to show a kitchen area through a large opening.\",\n    \"A man in a striped shirt stands near the kitchen counter and sink.\",\n    \"The group continues their conversation while the man remains in the background.\"\n  ],\n  \"high_level_conclusions\": [\n    \"<voice_446> asks about the method of cooking or tearing.\",\n    \"<voice_1727> discusses the timing of the meal, suggesting waiting until evening and asking how to prepare dinner.\",\n    \"<voice_261> suggests cooking in the evening.\",\n    \"<voice_1786> confirms the plan is to cook and eat together.\",\n    \"The group is planning their dinner schedule and cooking method.\"\n  ]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 6697,
+          "output_tokens": 4637,
+          "total_tokens": 11334,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0017229904187843204,
+            "media_preparation_ms": 41.149876997224055,
+            "processor_tokenization_ms": 1712.2337569890078,
+            "device_transfer_ms": 31.652510006097145,
+            "cuda_generation_ms": 216910.66287299327,
+            "decoding_ms": 4.658528006984852
+          },
+          "submitted_image_count": 36,
+          "processed_image_count": 36,
+          "video_frame_count": 36,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 218700.72710300155,
+          "request_end": 1789442995.805637,
+          "latency_ms": 218719.3240369961,
+          "client_wall_clock_latency_ms": 218719.3240369961
+        }
+      ],
+      "episodic_memory_count": 8,
+      "semantic_memory_count": 5
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 8,
+      "text_embedding_ms": null,
+      "text_embedding_count": 8,
+      "graph_update_ms": 0.05871999019291252,
+      "nodes_added": 8,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 2.816892010741867,
+      "nodes_added": 5,
+      "directed_edges_added": 8,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 90,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 4,
+    "detected_faces": 126,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 8,
+    "semantic_memories": 5,
+    "nodes_after_clip": 1800,
+    "edges_after_clip": 677,
+    "nodes_added_by_clip": 14,
+    "edges_added_by_clip": 4
+  },
+  "generated_memory": {
+    "video_description": [
+      "Three individuals are seated around a dining table covered with a red and white checkered tablecloth.",
+      "A woman in a black top sits on the left, gesturing with her hands while holding a small floral arrangement.",
+      "A laptop is open on the table in the foreground.",
+      "A woman wearing a pink headscarf and white shirt sits on the right side of the table.",
+      "Another woman in a light blue top is seated in the background.",
+      "The camera view shifts to show a kitchen area through a large opening.",
+      "A man in a striped shirt stands near the kitchen counter and sink.",
+      "The group continues their conversation while the man remains in the background."
+    ],
+    "high_level_conclusions": [
+      "<voice_446> asks about the method of cooking or tearing.",
+      "<voice_1727> discusses the timing of the meal, suggesting waiting until evening and asking how to prepare dinner.",
+      "<voice_261> suggests cooking in the evening.",
+      "<voice_1786> confirms the plan is to cook and eat together.",
+      "The group is planning their dinner schedule and cooking method."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "Three individuals are seated around a dining table covered with a red and white checkered tablecloth.",
+      "A woman in a black top sits on the left, gesturing with her hands while holding a small floral arrangement.",
+      "A laptop is open on the table in the foreground.",
+      "A woman wearing a pink headscarf and white shirt sits on the right side of the table.",
+      "Another woman in a light blue top is seated in the background.",
+      "The camera view shifts to show a kitchen area through a large opening.",
+      "A man in a striped shirt stands near the kitchen counter and sink.",
+      "The group continues their conversation while the man remains in the background."
+    ],
+    "high_level_conclusions": [
+      "<voice_446> asks about the method of cooking or tearing.",
+      "<voice_1727> discusses the timing of the meal, suggesting waiting until evening and asking how to prepare dinner.",
+      "<voice_261> suggests cooking in the evening.",
+      "<voice_1786> confirms the plan is to cook and eat together.",
+      "The group is planning their dinner schedule and cooking method."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_129_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 14,
+    "edges_added": 4,
+    "nodes": [
+      {
+        "id": 1786,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 就是烤呗。",
+            "MAI: 就是要一起吃这个。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1787,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Three individuals are seated around a dining table covered with a red and white checkered tablecloth."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1788,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman in a black top sits on the left, gesturing with her hands while holding a small floral arrangement."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1789,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A laptop is open on the table in the foreground."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1790,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A woman wearing a pink headscarf and white shirt sits on the right side of the table."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1791,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Another woman in a light blue top is seated in the background."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1792,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera view shifts to show a kitchen area through a large opening."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1793,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A man in a striped shirt stands near the kitchen counter and sink."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1794,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group continues their conversation while the man remains in the background."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1795,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_446> asks about the method of cooking or tearing."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1796,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1727> discusses the timing of the meal, suggesting waiting until evening and asking how to prepare dinner."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1797,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_261> suggests cooking in the evening."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1798,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "<voice_1786> confirms the plan is to cook and eat together."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1799,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The group is planning their dinner schedule and cooking method."
+          ],
+          "timestamp": 129
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 261,
+        "target": 1797,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 446,
+        "target": 1795,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1727,
+        "target": 1796,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1786,
+        "target": 1798,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_129_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_129_graph.pkl"
+  },
+  "memory_pickle_bytes": 42792428,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 83372.328217829,
+    "prepared_perf": 83379.227109964,
+    "ordered_start_perf": 83954.423168231,
+    "consumer_wait_ms": 0.010510004358366132,
+    "ready_to_ordered_ms": 575196.0582669999,
+    "preparation_work_ms": 6893.604987999424,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 225603.2423430006
+}

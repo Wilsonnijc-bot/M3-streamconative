@@ -1,9 +1,25 @@
 {
   "clip_id": 124,
   "source": {
+    "segment_id": 124,
     "source": "DAY1_A1_JAKE_12080000.mp4",
+    "source_clock": "12080000",
     "start_seconds_in_source": 0.0,
-    "end_seconds_in_source": 30.0
+    "end_seconds_in_source": 30.0,
+    "absolute_start_seconds": 43680.0,
+    "absolute_end_seconds": 43710.0,
+    "actual_media": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0124.mp4",
+    "asr_failures": [],
+    "status": "committed",
+    "pipeline_timing": {
+      "admitted_perf": 82396.933827631,
+      "prepared_perf": 82405.148520706,
+      "ordered_start_perf": 82702.794346918,
+      "consumer_wait_ms": 0.00850600190460682,
+      "ready_to_ordered_ms": 297645.8262119995,
+      "preparation_work_ms": 8208.505836009863,
+      "lookahead_segments": 2
+    }
   },
   "commit_state": "Committed",
   "generated_memory": {

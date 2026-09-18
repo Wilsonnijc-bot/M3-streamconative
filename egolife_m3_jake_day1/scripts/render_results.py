@@ -203,11 +203,13 @@ def render_case(raw,memory_only=False):
  if case=='gemini' and (out/'replays/README.md').exists():
   desc+=['', '- [Memory replays at 20, 40 and 60 minutes](replays/README.md).']
  if case=='qwen_thinking':
-  desc+=['', '**Configuration:** thinking enabled; 2 FPS VLM sampling; Qwen-only identity prompt v2; 16,384-token output budget. Gemini may share the GPU, so latency can include contention.', '',
+  qa_mode=read(root/'model_manifest.json',{}).get('generation',{}).get('qa_thinking',True)
+  desc+=['', '**Configuration:** memory construction thinking enabled; QA thinking '+('enabled' if qa_mode else '**disabled (user-requested QA restart)**')+'; 2 FPS VLM sampling; Qwen-only identity prompt v2; 16,384-token output budget. Gemini may share the GPU, so latency can include contention.', '',
          link(raw/'qwen_identity_system_prompt.md',out,'Exact Qwen-specific prompt')+' · '+link(raw/'memory_resume_manifest.json',out,'Memory lineage and known attribution limitations')+' · '+link(raw/'gemini_prompt_unchanged.txt',out,'Gemini prompt hash verification')]
  if case=='qwen_thinking' and (root/'mandol_retrieval_config.json').exists():
   cfg=read(root/'mandol_retrieval_config.json',{})
   desc+=['',f"**Mandol Method D:** candidate pool **{cfg.get('candidate_pool')}**, final results **{cfg.get('final_results')}**. "+link(root/'mandol_retrieval_config.json',out,'Effective retrieval configuration')]
+ if (out/'analysis.md').exists():desc+=['','[Interim analysis](analysis.md) — dated interpretation of fetched evidence; see live counts above for newer progress.']
  if case=='gemini_preflight':desc+=['','This is the three-clip functional preflight, not the full first-ten benchmark.']
  if d_note:desc += ['',d_note]
  write(out/'README.md','\n'.join(desc))

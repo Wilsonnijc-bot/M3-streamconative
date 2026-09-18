@@ -7,7 +7,7 @@ mkdir -p "$RUN/smoke/prior_attempts"
 mv "$TEST/method_D_mandol.jsonl" "$RUN/smoke/prior_attempts/method_D_initial_timing.jsonl"
 cd "$MANDOL"
 source /opt/streammeco/mandol-venv/bin/activate
-python benchmarks/egolife_m3_first10.py eval --qa "$QA" --results "$TEST" --limit 1 --backend gemini
+python benchmarks/egolife_m3_first10.py eval --qa "$QA" --results "$TEST" --limit 1 --backend openai
 python - <<'PY'
 import json
 from pathlib import Path

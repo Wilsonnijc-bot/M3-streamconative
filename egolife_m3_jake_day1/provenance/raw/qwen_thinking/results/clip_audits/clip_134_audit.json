@@ -1,0 +1,565 @@
+{
+  "clip_id": 134,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0134.mp4",
+  "end_to_end_memory_generation_ms": 570611.1817230121,
+  "latency_ms": {
+    "clip_decode": 5412.669810000807,
+    "deepgram_asr": 267.6157770038117,
+    "mai_transcribe_asr": 926.4980860025389,
+    "asr_total": 927.9810080042807,
+    "audio_segmentation": 5.513084004633129,
+    "speech_embedding_campplus": 1183.4908190066926,
+    "facial_detection_recognition_buffalo_l": 4027.0130680000875,
+    "face_clustering": 10.767686006147414,
+    "vlm_memory_generation": 217103.79014599312,
+    "text_embedding": 349.60430799401365,
+    "graph_update_total": 783.9123209996615
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 134,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 12,
+      "input_chars": 726,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789444028.407598,
+          "status": "success",
+          "total_tokens": 191,
+          "request_end": 1789444028.7568715,
+          "latency_ms": 349.2764320108108
+        }
+      ],
+      "total_tokens": 191,
+      "latency_ms": 349.60430799401365
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 267.6157770038117,
+        "openrouter-mai-transcribe-2": 926.4980860025389
+      },
+      "asr_total_ms": 927.9810080042807,
+      "audio_segmentation_ms": 5.513084004633129,
+      "speech_embedding_ms": 1183.4908190066926,
+      "graph_update_ms": 782.4056100071175,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 6,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1983.242621005047
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4027.0130680000875,
+      "face_clustering_ms": 10.767686006147414,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 410,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4260.23125401116
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_443>",
+        "<voice_444>",
+        "<voice_1860>",
+        "<voice_1861>",
+        "<voice_1862>",
+        "<voice_1863>"
+      ],
+      "context_preparation_ms": 3803.0008079949766,
+      "vlm_ms": 217103.79014599312,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table with a checkered tablecloth.\",\n\t\t\"A person on the left gestures while speaking.\",\n\t\t\"An open laptop and a water bottle rest on the table.\",\n\t\t\"A whiteboard is mounted on the wall in the background.\",\n\t\t\"A person with pink hair and sunglasses is seated on the right.\",\n\t\t\"Voice track <voice_443> announces dinner is around 5:30 PM.\",\n\t\t\"Voice track <voice_444> and <voice_1861> discuss a large pizza.\",\n\t\t\"Voice track <voice_1862> and <voice_1863> mention BBQ.\",\n\t\t\"Voice track <voice_1860> refers to something 'above'.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_443> sets the dinner time to approximately 5:30 PM.\",\n\t\t\"Speakers <voice_444> and <voice_1861> confirm the menu includes a large pizza.\",\n\t\t\"Speakers <voice_1862> and <voice_1863> confirm the inclusion of BBQ.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are seated around a table with a checkered tablecloth.",
+          "A person on the left gestures while speaking.",
+          "An open laptop and a water bottle rest on the table.",
+          "A whiteboard is mounted on the wall in the background.",
+          "A person with pink hair and sunglasses is seated on the right.",
+          "Voice track <voice_443> announces dinner is around 5:30 PM.",
+          "Voice track <voice_444> and <voice_1861> discuss a large pizza.",
+          "Voice track <voice_1862> and <voice_1863> mention BBQ.",
+          "Voice track <voice_1860> refers to something 'above'."
+        ],
+        "high_level_conclusions": [
+          "Speaker <voice_443> sets the dinner time to approximately 5:30 PM.",
+          "Speakers <voice_444> and <voice_1861> confirm the menu includes a large pizza.",
+          "Speakers <voice_1862> and <voice_1863> confirm the inclusion of BBQ."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 134,
+          "call_id": "cb99278d-a9cc-4bd9-b72c-b286dcc2f44e",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789443811.3023903,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table with a checkered tablecloth.\",\n\t\t\"A person on the left gestures while speaking.\",\n\t\t\"An open laptop and a water bottle rest on the table.\",\n\t\t\"A whiteboard is mounted on the wall in the background.\",\n\t\t\"A person with pink hair and sunglasses is seated on the right.\",\n\t\t\"Voice track <voice_443> announces dinner is around 5:30 PM.\",\n\t\t\"Voice track <voice_444> and <voice_1861> discuss a large pizza.\",\n\t\t\"Voice track <voice_1862> and <voice_1863> mention BBQ.\",\n\t\t\"Voice track <voice_1860> refers to something 'above'.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_443> sets the dinner time to approximately 5:30 PM.\",\n\t\t\"Speakers <voice_444> and <voice_1861> confirm the menu includes a large pizza.\",\n\t\t\"Speakers <voice_1862> and <voice_1863> confirm the inclusion of BBQ.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a video description and high-level conclusions based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The scene is consistent throughout. It shows a group of people sitting around a table covered with a checkered tablecloth. There is a whiteboard in the background. One person (on the left, wearing black) seems to be gesturing or talking. Another person (pink hair, right side) is visible. Others are seated further back. The camera angle is wide-angle/fisheye.\n*   **Voice Features:**\n    *   `<voice_443>`: \"MAI: 要开饭，dinner。在5点半之后，5点半左右。\" (Time: 00:00 - 00:10) -> Speaker MAI talks about dinner time being around 5:30 PM.\n    *   `<voice_444>`: \"Deepgram: Top pizza. | MAI: 大披萨。\" (Time: 00:12 - 00:14) -> Speaker MAI mentions a large pizza.\n    *   `<voice_1860>`: \"Deepgram: Above. | MAI: above。\" (Time: 00:15 - 00:17) -> Speaker MAI says \"above\".\n    *   `<voice_1861>`: \"Deepgram: Biga pieza. | MAI: 一个披萨。\" (Time: 00:21 - 00:23) -> Speaker MAI mentions \"one pizza\".\n    *   `<voice_1862>`: \"Deepgram: Biga pieza. Hey. | MAI: 一个披萨，还有BBQ。\" (Time: 00:22 - 00:25) -> Speaker MAI mentions one pizza and BBQ.\n    *   `<voice_1863>`: \"MAI: BBQ。\" (Time: 00:25 - 00:27) -> Speaker MAI mentions BBQ again.\n\n**2. Construct Video Description:**\n*   I need to describe the visual events. Since there are no specific face IDs provided in the prompt's `Face features` section (it's empty), I can't link specific faces to names like MAI directly unless I infer from context or just describe the visual scene generally while referencing the voice speakers if needed for identification in conclusions. Wait, the instruction says \"Use the provided feature IDs as references to characters (when applicable)\". Since no face IDs are provided, I cannot use `<face_x>`. I must rely on the voice IDs for speaker identification in the descriptions/conclusions where appropriate, but the video description should focus on observable events.\n*   Observable events: People sitting at a table. A person on the left gestures. A laptop is open on the table. A water bottle is present. The lighting changes slightly or the camera moves slightly. The main action is conversation/dining preparation discussion.\n*   I need to break this down into atomic events.\n    *   Group of people sitting around a table with a checkered cloth.\n    *   Person on the left gestures with hands.\n    *   Laptop is open on the table.\n    *   Water bottle sits on the table.\n    *   Whiteboard is visible in the background.\n    *   Conversation continues throughout the clip.\n\n**3. Construct High-Level Conclusions:**\n*   I need to link voice IDs to the speakers.\n*   `<voice_443>` is clearly MAI.\n*   `<voice_444>` contains both Deepgram and MAI. MAI speaks here too.\n*   `<voice_1860>` contains Deepgram and MAI. MAI speaks here too.\n*   `<voice_1861>` contains Deepgram and MAI. MAI speaks here too.\n*   `<voice_1862>` contains Deepgram and MAI. MAI speaks here too.\n*   `<voice_1863>` is MAI.\n*   So, MAI is the primary speaker discussing the menu (pizza, BBQ, dinner time).\n*   Are there face IDs? No. The prompt says \"Face features:\" followed by nothing. So I cannot create equivalences like `Equivalence: <face_1>, <voice_2>`. I must strictly follow the instruction: \"If a face and a voice feature refer to the same character, indicate it...\". Since no face features are supplied, I cannot make these equivalences. I will focus on the voice features.\n*   Wait, looking closely at the prompt structure: \"Face features:Voice features:\". It seems the Face features list is empty.\n*   Instruction: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\n*   Instruction: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features exist, I won't have any equivalences.\n*   However, I need to ensure I don't hallucinate face IDs.\n*   Let's check the voice content again. MAI is talking about dinner plans.\n*   Conclusion: MAI discusses the schedule for dinner (around 5:30 PM) and the food items (pizza, BBQ).\n\n**Refining Video Description:**\n*   Frame 0.00s - 29.50s: A group of individuals are seated around a rectangular table covered with a red-and-white checkered tablecloth in a room with beige walls.\n*   A person wearing dark clothing sits on the left side of the table, gesturing with their hands while facing the others.\n*   An open laptop computer rests on the table in front of the person on the left.\n*   A plastic water bottle with a red cap is placed near the laptop.\n*   In the background, a whiteboard with writing on it stands against the wall.\n*   Other participants are seated along the far side and right side of the table.\n*   The person on the right has long pinkish hair and wears sunglasses.\n*   Throughout the sequence, the group appears engaged in a discussion or meeting.\n\n**Refining High-Level Conclusions:**\n*   Based on `<voice_443>`, MAI indicates that dinner is scheduled for around 5:30 PM.\n*   Based on `<voice_444>`, MAI specifies that the meal includes a large pizza.\n*   Based on `<voice_1862>`, MAI adds that there will also be BBQ.\n*   Based on `<voice_1863>`, MAI reiterates the presence of BBQ.\n*   Since there are no face features, I cannot state equivalences. I will just state the conclusions derived from the voice features regarding MAI's statements.\n\nWait, I need to check if I missed any face features. The text says \"Face features:Voice features:\". It looks like the Face features section is indeed empty.\nSo I will not include any \"Equivalence\" lines.\n\nLet's double check the instruction: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features are provided, I simply omit this part.\n\nOne detail: The prompt asks to \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\". This applies to the \"memory\" part usually, but here the output format is \"video_description\" and \"high_level_conclusions\". The instruction \"include at least one episodic memory...\" seems to be part of the general system instruction for a different task type (likely a retrieval-augmented generation task involving memory construction), but the specific output format requested here is JSON with `video_description` and `high_level_conclusions`.\nHowever, the instruction \"Your task consists of two parts: 1. Video Description ... 2. High-Level Conclusions\" overrides the general memory construction instruction for the final output structure. But I should still ensure the content reflects the voice features accurately within those sections.\nActually, looking at the system prompt: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This sounds like instructions for how to process the data internally or perhaps for a different output field. But the user prompt explicitly defines the Output Format as JSON with `video_description` and `high_level_conclusions`.\nI will interpret \"episodic memory\" as factual statements within the `video_description` or `high_level_conclusions` that capture the speech content attributed to the correct voice ID.\nSpecifically, the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\" might imply I should put these summaries somewhere. Given the output schema, `high_level_conclusions` is the best place for summarizing the speech content/intentions. Or `video_description` can contain the speech if it's an observable event (audio is observable).\nLet's look at the instruction again: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" This suggests I should follow the standard schema provided in the user prompt.\nThe system prompt instructions about \"memory\" seem to be constraints on *how* I handle the data, ensuring I don't lose speaker info.\nSo, in `high_level_conclusions`, I will summarize what MAI said.\n\nLet's draft the response.\n\n**Video Description:**\n1.  A group of people are gathered around a table with a checkered tablecloth in a room.\n2.  A person in dark clothing on the left gestures while speaking.\n3.  An open laptop and a water bottle are on the table.\n4.  A whiteboard is visible in the background.\n5.  A person with pink hair and sunglasses sits on the right.\n6.  The group engages in a discussion about dinner plans.\n\n**High-Level Conclusions:**\n1.  MAI states that dinner is scheduled for around 5:30 PM.\n2.  MAI confirms the menu includes a large pizza.\n3.  MAI mentions that BBQ will also be served.\n\nWait, I need to check if I can infer face IDs. The prompt says \"Face features:Voice features:\". It is empty. So no face IDs.\nI will proceed with generating the JSON.\n\nOne constraint: \"Do not substitute a plausible scene description for what the speaker actually said.\"\nSo in video description, I shouldn't say \"They discuss dinner\" if I can't see them saying it, but since audio is provided as a feature, describing the audio content as an event is usually acceptable in these tasks (\"observable and inferable events\"). Audio is observable.\nSo I will include the speech content in the description or conclusions.\nGiven the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\", I should probably ensure the transcript is captured.\nSince the output format doesn't have a \"memories\" field, I will integrate this into `high_level_conclusions` as facts derived from the audio.\n\nRevised Plan:\nVideo Description: Focus on visual actions + mentioning the audio content as an event (since audio is a feature).\nHigh Level Conclusions: Summarize the intent and specific details mentioned by MAI.\n\nWait, looking at the instruction \"Preserve speaker identity when constructing memory...\". This implies I should treat the voice IDs as the ground truth for who spoke.\nSo, in the conclusions, I will attribute the statements to MAI using her voice ID implicitly or explicitly if allowed. The instruction says \"retain that speaker's exact voice ID\" for semantic conclusions.\nSo instead of \"MAI states...\", I should use `<voice_443>` or similar?\nInstruction: \"When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID.\"\nOkay, so I should write something like: \"Speaker <voice_443> indicates dinner is at 5:30 PM.\"\nAnd \"Speaker <voice_444> mentions top pizza.\"\nBut wait, `<voice_444>` has multiple speakers (Deepgram and MAI). The ASR says \"Top pizza. | MAI: 大披萨。\". So MAI is the one speaking Chinese.\nI will use the voice IDs in the conclusions.\n\nLet's refine the Video Description to be purely visual first, then add audio events if necessary. The prompt says \"Each description should focus on a single atomic event or fact.\"\nEvent 1: People sit at table.\nEvent 2: Person on left gestures.\nEvent 3: Audio from <voice_443> plays stating dinner time.\nEvent 4: Audio from <voice_444> plays mentioning pizza.\n...\nThis might clutter the description. Usually, video description focuses on visuals. But the instruction says \"Use the provided feature IDs as references to characters (when applicable)\". Since no face IDs, I can't reference characters visually.\nI will stick to visual description primarily, and put the speech summary in High-Level Conclusions to satisfy the \"semantic conclusion\" requirement better.\nActually, the instruction \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\" suggests I *must* include the speech content. Where? Probably in `high_level_conclusions` as they are reasoning-based conclusions about the content.\nOr I can add sentences in `video_description` like \"A voice track <voice_443> announces dinner time.\"\nLet's try to keep `video_description` visual and `high_level_conclusions` for the speech analysis.\nWait, \"Your description should cover all observable and inferable events.\" Audio is observable.\nOkay, I will include the speech events in `video_description` to be safe and comprehensive.\n\nWait, checking the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nThe system prompt says \"Preserve speaker identity...\".\nOkay, I will construct the JSON now.\n\nVideo Description:\n- A group of people are seated around a table with a checkered tablecloth.\n- A person on the left gestures with their hand.\n- An open laptop and a water bottle are on the table.\n- A whiteboard is visible in the background.\n- A person with pink hair sits on the right.\n- Voice track <voice_443> states dinner is around 5:30 PM.\n- Voice track <voice_444> mentions a large pizza.\n- Voice track <voice_1862> mentions BBQ.\n\nHigh Level Conclusions:\n- Speaker <voice_443> sets the dinner time to approximately 5:30 PM.\n- Speaker <voice_444> identifies the main dish as a large pizza.\n- Speaker <voice_1862> adds that BBQ is included in the meal plan.\n\nWait, I need to check if I should use `<voice_x>` in the text or just the name. \"retain that speaker's exact voice ID\". So I will use `<voice_443>`.\n\nOne more thing: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features, I skip this.\n\nFinal check on constraints:\n- Valid JSON.\n- No extra explanation.\n- Concise.\n- Atomic events.\n\nLet's finalize the content.\nVideo Description:\n1. A group of individuals are seated around a table covered with a checkered tablecloth.\n2. A person wearing dark clothing on the left gestures with their hands.\n3. An open laptop and a water bottle rest on the table.\n4. A whiteboard is mounted on the wall in the background.\n5. A person with pink hair and sunglasses is seated on the right.\n6. Voice track <voice_443> announces that dinner is scheduled for around 5:30 PM.\n7. Voice track <voice_444> mentions a large pizza.\n8. Voice track <voice_1862> states that BBQ will also be served.\n\nHigh Level Conclusions:\n1. Speaker <voice_443> determines the dinner time is after 5:30 PM.\n2. Speaker <voice_444> confirms the menu includes a large pizza.\n3. Speaker <voice_1862> adds that BBQ is part of the meal.\n\nWait, I should check if I need to include all voice IDs. Yes, \"For every supplied voice ID with nonempty speech, include at least one episodic memory\".\nSo I need to cover <voice_443>, <voice_444>, <voice_1860>, <voice_1861>, <video_1862>, <voice_1863>.\n<voice_1860>: \"Above.\"\n<voice_1861>: \"One pizza.\"\n<voice_1863>: \"BBQ.\"\nThese are short. I can combine them or list them. Listing them ensures compliance.\nActually, combining related ones is better for conciseness, but listing ensures coverage.\nLet's try to group them logically in the description/conclusions.\nIn description:\n- <voice_443> mentions dinner time.\n- <voice_444> mentions pizza.\n- <voice_1860> mentions \"above\".\n- <voice_1861> mentions \"one pizza\".\n- <voice_1862> mentions pizza and BBQ.\n- <voice_1863> mentions BBQ.\n\nTo be concise, I'll summarize the pizza/BBQ discussion in the conclusions.\nConclusions:\n- Speaker <voice_443> schedules dinner for around 5:30 PM.\n- Speaker <voice_444> and <voice_1861> discuss a large pizza.\n- Speaker <voice_1862> and <voice_1863> confirm the inclusion of BBQ.\n\nThis covers all IDs.\n\nWait, instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript\".\nSo I need to make sure each ID gets a mention.\nI will add specific lines for the shorter ones in the description or conclusions.\nDescription is better for \"episodic memory\" (events happening).\nConclusions are for \"reasoning\".\nI'll put the specific quotes in the description to be safe.\n\nRevised Video Description:\n1. A group of people are seated around a table with a checkered tablecloth.\n2. A person on the left gestures while speaking.\n3. Voice track <voice_443> states dinner is around 5:30 PM.\n4. Voice track <voice_444> mentions a large pizza.\n5. Voice track <voice_1860> says \"above\".\n6. Voice track <voice_1861> mentions one pizza.\n7. Voice track <voice_1862> mentions one pizza and BBQ.\n8. Voice track <voice_1863> repeats BBQ.\n\nThis is very repetitive. I can consolidate.\n\"Voice tracks <voice_443>, <voice_444>, <voice_1860>, <voice_1861>, <voice_1862>, and <voice_1863> are heard during the meeting.\" -> Too vague.\nI need to quote/summarize.\nMaybe:\n1. A group of people are seated around a table with a checkered tablecloth.\n2. A person on the left gestures while speaking.\n3. Voice track <voice_443> announces dinner is around 5:30 PM.\n4. Voice track <voice_444> and <voice_1861> discuss a large pizza.\n5. Voice track <voice_1862> and <voice_1863> mention BBQ.\n6. Voice track <voice_1860> refers to something \"above\".\n\nThis covers all IDs.\n\nHigh Level Conclusions:\n1. Speaker <voice_443> sets the dinner time to approximately 5:30 PM.\n2. Speakers <voice_444> and <voice_1861> confirm the menu includes a large pizza.\n3. Speakers <voice_1862> and <voice_1863> confirm the inclusion of BBQ.\n\nThis looks good. I will ensure the JSON is valid.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table with a checkered tablecloth.\",\n\t\t\"A person on the left gestures while speaking.\",\n\t\t\"An open laptop and a water bottle rest on the table.\",\n\t\t\"A whiteboard is mounted on the wall in the background.\",\n\t\t\"A person with pink hair and sunglasses is seated on the right.\",\n\t\t\"Voice track <voice_443> announces dinner is around 5:30 PM.\",\n\t\t\"Voice track <voice_444> and <voice_1861> discuss a large pizza.\",\n\t\t\"Voice track <voice_1862> and <voice_1863> mention BBQ.\",\n\t\t\"Voice track <voice_1860> refers to something 'above'.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"Speaker <voice_443> sets the dinner time to approximately 5:30 PM.\",\n\t\t\"Speakers <voice_444> and <voice_1861> confirm the menu includes a large pizza.\",\n\t\t\"Speakers <voice_1862> and <voice_1863> confirm the inclusion of BBQ.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 10411,
+          "output_tokens": 4853,
+          "total_tokens": 15264,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.0024450127966701984,
+            "media_preparation_ms": 58.981105001294054,
+            "processor_tokenization_ms": 299.6489479992306,
+            "device_transfer_ms": 41.441299006692134,
+            "cuda_generation_ms": 216669.8827650107,
+            "decoding_ms": 3.921368988812901
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 217074.1882930015,
+          "request_end": 1789444028.4061828,
+          "latency_ms": 217103.79014599312,
+          "client_wall_clock_latency_ms": 217103.79014599312
+        }
+      ],
+      "episodic_memory_count": 9,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 9,
+      "text_embedding_ms": null,
+      "text_embedding_count": 9,
+      "graph_update_ms": 0.15607399109285325,
+      "nodes_added": 9,
+      "directed_edges_added": 12,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 1.3506370014511049,
+      "nodes_added": 3,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 6,
+    "detected_faces": 410,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 9,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1876,
+    "edges_after_clip": 710,
+    "nodes_added_by_clip": 16,
+    "edges_added_by_clip": 11
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a table with a checkered tablecloth.",
+      "A person on the left gestures while speaking.",
+      "An open laptop and a water bottle rest on the table.",
+      "A whiteboard is mounted on the wall in the background.",
+      "A person with pink hair and sunglasses is seated on the right.",
+      "Voice track <voice_443> announces dinner is around 5:30 PM.",
+      "Voice track <voice_444> and <voice_1861> discuss a large pizza.",
+      "Voice track <voice_1862> and <voice_1863> mention BBQ.",
+      "Voice track <voice_1860> refers to something 'above'."
+    ],
+    "high_level_conclusions": [
+      "Speaker <voice_443> sets the dinner time to approximately 5:30 PM.",
+      "Speakers <voice_444> and <voice_1861> confirm the menu includes a large pizza.",
+      "Speakers <voice_1862> and <voice_1863> confirm the inclusion of BBQ."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are seated around a table with a checkered tablecloth.",
+      "A person on the left gestures while speaking.",
+      "An open laptop and a water bottle rest on the table.",
+      "A whiteboard is mounted on the wall in the background.",
+      "A person with pink hair and sunglasses is seated on the right.",
+      "Voice track <voice_443> announces dinner is around 5:30 PM.",
+      "Voice track <voice_444> and <voice_1861> discuss a large pizza.",
+      "Voice track <voice_1862> and <voice_1863> mention BBQ.",
+      "Voice track <voice_1860> refers to something 'above'."
+    ],
+    "high_level_conclusions": [
+      "Speaker <voice_443> sets the dinner time to approximately 5:30 PM.",
+      "Speakers <voice_444> and <voice_1861> confirm the menu includes a large pizza.",
+      "Speakers <voice_1862> and <voice_1863> confirm the inclusion of BBQ."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_134_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 16,
+    "edges_added": 11,
+    "nodes": [
+      {
+        "id": 1860,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Above. | MAI: above。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1861,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Biga pieza. | MAI: 逼一个披萨。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1862,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "Deepgram: Biga pieza. Hey. | MAI: 逼个披萨，还有BBQ。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1863,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: BBQ。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1864,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are seated around a table with a checkered tablecloth."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1865,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person on the left gestures while speaking."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1866,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "An open laptop and a water bottle rest on the table."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1867,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A whiteboard is mounted on the wall in the background."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1868,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A person with pink hair and sunglasses is seated on the right."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1869,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Voice track <voice_443> announces dinner is around 5:30 PM."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1870,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Voice track <voice_444> and <voice_1861> discuss a large pizza."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1871,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Voice track <voice_1862> and <voice_1863> mention BBQ."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1872,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Voice track <voice_1860> refers to something 'above'."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1873,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speaker <voice_443> sets the dinner time to approximately 5:30 PM."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1874,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speakers <voice_444> and <voice_1861> confirm the menu includes a large pizza."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1875,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "Speakers <voice_1862> and <voice_1863> confirm the inclusion of BBQ."
+          ],
+          "timestamp": 134
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 443,
+        "target": 1869,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 443,
+        "target": 1873,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 444,
+        "target": 1870,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 444,
+        "target": 1874,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1860,
+        "target": 1872,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1861,
+        "target": 1870,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1861,
+        "target": 1874,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1862,
+        "target": 1871,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1862,
+        "target": 1875,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      },
+      {
+        "source": 1863,
+        "target": 1871,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1863,
+        "target": 1875,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "semantic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_134_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_134_graph.pkl"
+  },
+  "memory_pickle_bytes": 44679629,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 84645.151349813,
+    "prepared_perf": 84652.998936444,
+    "ordered_start_perf": 84984.981659399,
+    "consumer_wait_ms": 0.00790499325376004,
+    "ready_to_ordered_ms": 331982.7229549992,
+    "preparation_work_ms": 7842.302115997882,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 227505.81421599782
+}

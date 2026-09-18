@@ -1,0 +1,21 @@
+{
+  "status": "blocked",
+  "benchmark_started": false,
+  "instance_id": "1042997",
+  "primary_backend": "gpt-5.6-sol",
+  "primary_reasoning_effort": "medium",
+  "consolidation_backend": "gpt-6-astra",
+  "gpu": "NVIDIA RTX A6000",
+  "torch": "2.6.0+cu124",
+  "cuda_tensor_check": true,
+  "disk_free_bytes": 2953719808,
+  "aea_recordings": 109,
+  "aea_missing_media": [],
+  "model_access": true,
+  "blockers": [
+    "Integrated online C1-C4 benchmark entrypoint is absent",
+    "Verified TST enrollment and independent threshold calibration absent for jake",
+    "Verified TST enrollment and independent threshold calibration absent for aea",
+    "Only 2.75 GiB free, below 20 GiB launch reserve"
+  ]
+}

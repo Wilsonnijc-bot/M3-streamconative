@@ -1,6 +1,6 @@
 # M3-Agent + StreamMeCo GPU Pipeline Requirements
 
-Last updated: September 14, 2026
+Last updated: September 17, 2026
 
 ## Purpose
 
@@ -11,7 +11,7 @@ required component below is installed, configured, and passes its smoke test.
 The target pipeline is:
 
 1. Decode video and audio with FFmpeg.
-2. Produce speech transcripts and speaker turns using both required ASR services.
+2. Produce speech transcripts and speaker turns using one selected ASR service.
 3. compute speaker embeddings locally with SpeakerLab CAM++ on the GPU.
 4. Detect faces and compute face embeddings locally with InsightFace Buffalo-L
    on the GPU.
@@ -23,8 +23,8 @@ The target pipeline is:
 
 | Capability | Required implementation | Execution location | Requirement |
 | --- | --- | --- | --- |
-| ASR and utterance timing | Deepgram API, Nova-3 | Remote API | Primary and mandatory |
-| ASR and speaker diarization | OpenRouter `microsoft/mai-transcribe-2`, Azure provider with diarization enabled | Remote API | Primary and mandatory |
+| ASR and utterance timing | Deepgram API, Nova-3 | Remote API | Selectable alternative |
+| ASR and speaker diarization | OpenRouter `microsoft/mai-transcribe-2`, Azure provider with diarization enabled | Remote API | Selectable alternative |
 | Speaker embedding | SpeakerLab CAM++ | GPU | Local model, mandatory |
 | Face detection | InsightFace Buffalo-L detector | GPU | Local model, mandatory |
 | Face recognition and embedding | InsightFace Buffalo-L recognizer | GPU | Local model, mandatory |
@@ -34,11 +34,14 @@ The target pipeline is:
 | Text retrieval embeddings | Configured OpenAI-compatible embedding endpoint | Remote API unless replaced locally | Mandatory for retrieval |
 | Media processing | FFmpeg, MoviePy, PyDub, OpenCV | CPU/GPU host | Mandatory |
 
-## Dual-Primary ASR Contract
+## Selected-ASR Contract
 
-Deepgram and MAI-Transcribe-2 are **co-primary dependencies**. They are not an
-ordered fallback pair. Pipeline readiness requires valid credentials and a
-successful transcription request to both services.
+Set `asr_provider` in `StreamMeCo/configs/processing_config.json` to exactly
+one alias from `configs/api_config.json`, such as `deepgram-asr` (the default)
+or `openrouter-mai-transcribe-2`. Other configured aliases require a supported
+transcription adapter. Pipeline readiness requires only the selected service's
+credential and a successful transcription request to that service. No fallback
+or cross-provider fusion occurs within a construction run.
 
 ### Deepgram
 
@@ -57,25 +60,29 @@ successful transcription request to both services.
 - Required provider option: Azure diarization enabled.
 - Credential: `OPENROUTER_API_KEY`.
 
-### Combined output
+### Selected output
 
-For each audio clip, both providers must return successfully. Their outputs must
-be normalized to the StreamMeCo speech-segment schema:
+For each audio clip, the selected provider's output is normalized to the
+StreamMeCo speech-segment schema:
 
 ```json
 {
   "start_time": "MM:SS",
   "end_time": "MM:SS",
   "asr": "transcribed speech",
-  "speaker": "provider speaker label when available"
+  "speaker": "provider speaker label when available",
+  "asr_provider": "selected alias",
+  "asr_sources": ["selected alias"]
 }
 ```
 
-The intended integration aligns both results by timestamp. Deepgram supplies a
-primary transcript and utterance structure, while MAI-Transcribe-2 supplies an
-independent transcript and primary speaker-turn evidence. A clip must not be
-marked ASR-ready when only one provider succeeds. Material transcript or timing
-disagreement must be logged for inspection rather than silently discarded.
+The selected provider supplies transcript, timing, and speaker labels when
+available. The normalized `MM:SS` intervals have whole-second precision.
+Provider failure stops voice construction except in the explicitly logged
+EgoLife video-only continuation mode. Per-clip cache sidecars bind the audio
+SHA-256 and selected alias; changing providers requires fresh voice graph state.
+The standalone TST mapper consumes prepared segments from one declared provider
+per run and does not call ASR services.
 
 ## GPU Models
 
@@ -208,16 +215,16 @@ Required Python package groups include:
 Secrets must be supplied through environment variables on the GPU host:
 
 ```bash
-export DEEPGRAM_API_KEY="..."
-export OPENROUTER_API_KEY="..."
+export DEEPGRAM_API_KEY="..."    # only when deepgram-asr is selected
+export OPENROUTER_API_KEY="..."  # only when openrouter-mai-transcribe-2 is selected
 ```
 
 The text-embedding endpoint and any remaining API-backed reasoning endpoint must
 also have valid credentials. API keys must not be committed to Git or copied
 into diagnostic reports.
 
-The processing configuration must identify both ASR providers as required
-co-primary services. It must also point the VLM path to Qwen 3.5 and the agent
+The processing configuration must identify exactly one ASR provider. It must
+also point the VLM path to Qwen 3.5 and the agent
 paths to the local M3 checkpoints.
 
 ## Readiness Gate
@@ -229,10 +236,9 @@ The pipeline is ready only when all checks below pass in the same environment:
 - [ ] CUDA is available to PyTorch.
 - [ ] Required GPU memory is available for Qwen 3.5 and M3-Agent execution.
 - [ ] FFmpeg can decode a representative MP4 and extract a 16 kHz WAV stream.
-- [ ] Deepgram returns nonempty timestamped speech for the WAV fixture.
-- [ ] MAI-Transcribe-2 returns nonempty timestamped diarized speech for the same
-      fixture.
-- [ ] The dual-provider alignment step produces valid StreamMeCo speech segments.
+- [ ] The selected ASR alias returns nonempty timestamped speech for the WAV fixture.
+- [ ] Its normalized segments retain only that provider's provenance and speaker labels.
+- [ ] Reusing a cache or graph from another provider is rejected or recomputed as appropriate.
 - [ ] CAM++ produces a finite 192-dimensional GPU speaker embedding.
 - [ ] Buffalo-L detects a face and produces a finite GPU face embedding.
 - [ ] Qwen 3.5 processes an extracted frame and returns nonempty VLM output.
@@ -247,9 +253,8 @@ The pipeline is ready only when all checks below pass in the same environment:
 
 At the time of this document:
 
-1. `processing_config.json` lists Deepgram and OpenRouter in order, while the
-   current voice code treats them as fallbacks. This must be changed to invoke
-   and validate both providers for every required clip.
+1. New construction uses a single selected ASR provider. Historical fused voice
+   caches and graphs cannot be resumed without reconstructing voice evidence.
 2. `gpu_setup/download_models.py` and `gpu_setup/verify_insightface.py` currently
    target Buffalo-M. They must be changed to download and verify Buffalo-L.
 3. The original StreamMeCo Qwen integration targets Qwen 2.5 Omni. The production
@@ -274,7 +279,7 @@ OpenRouter at `POST /api/v1/embeddings` with model
 | Clip decode (89 frames at pipeline FPS) | 2,268.80 |
 | Deepgram Nova-3 ASR | 2,658.19 |
 | OpenRouter MAI-Transcribe-2 ASR | 8,177.42 |
-| Mandatory dual-ASR total | 10,835.62 |
+| Historical two-ASR total | 10,835.62 |
 | Audio segmentation | 5.06 |
 | CAM++ speaker embeddings (3 x 192 dimensions) | 977.72 |
 | Voice graph update | 2.07 |

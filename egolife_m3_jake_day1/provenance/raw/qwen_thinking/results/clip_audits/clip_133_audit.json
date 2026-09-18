@@ -1,0 +1,528 @@
+{
+  "clip_id": 133,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0133.mp4",
+  "end_to_end_memory_generation_ms": 589455.8455710066,
+  "latency_ms": {
+    "clip_decode": 4485.030850002659,
+    "deepgram_asr": 797.2332100034691,
+    "mai_transcribe_asr": 937.7110220084433,
+    "asr_total": 938.4729739977047,
+    "audio_segmentation": 4.92463399132248,
+    "speech_embedding_campplus": 1029.9875070049893,
+    "facial_detection_recognition_buffalo_l": 2306.128373995307,
+    "face_clustering": 4.657113007851876,
+    "vlm_memory_generation": 173476.98450399912,
+    "text_embedding": 656.7345490038861,
+    "graph_update_total": 782.488510987605
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 133,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 13,
+      "input_chars": 990,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789443797.1042516,
+          "status": "success",
+          "total_tokens": 226,
+          "request_end": 1789443797.7608454,
+          "latency_ms": 656.5941559965722
+        }
+      ],
+      "total_tokens": 226,
+      "latency_ms": 656.7345490038861
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 797.2332100034691,
+        "openrouter-mai-transcribe-2": 937.7110220084433
+      },
+      "asr_total_ms": 938.4729739977047,
+      "audio_segmentation_ms": 4.92463399132248,
+      "speech_embedding_ms": 1029.9875070049893,
+      "graph_update_ms": 782.3700070002815,
+      "asr_segment_count": 6,
+      "speech_embedding_count": 6,
+      "voice_identity_count": 5,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 1828.1318939989433
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2306.128373995307,
+      "face_clustering_ms": 4.657113007851876,
+      "graph_update_ms": null,
+      "frame_count": 90,
+      "detected_face_count": 174,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2409.908738991362
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1170>",
+        "<voice_444>",
+        "<voice_1844>",
+        "<voice_1845>",
+        "<voice_1846>"
+      ],
+      "context_preparation_ms": 2236.207725989516,
+      "vlm_ms": 173476.98450399912,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table with a checkered tablecloth in a room featuring a whiteboard.\",\n\t\t\"While gesturing, <voice_1170> asks if the plan involves eating BBQ and mixing drinks between 5 and 6 PM.\",\n\t\t\"A man in a white shirt approaches the table and places a potted plant on it.\",\n\t\t\"<voice_444> responds affirmatively, stating 'Okay, come.'\",\n\t\t\"<voice_1844> mentions 'last time' and adds that they will not follow the plan strictly.\",\n\t\t\"<voice_1845> confirms with 'Yes.'\",\n\t\t\"<voice_1846> concludes by proposing a 5 to 6 PM time interval.\",\n\t\t\"The camera pans away to reveal a projector screen and the general layout of the room.\",\n\t\t\"A man in a pink shirt stands up and moves towards the window area.\",\n\t\t\"The group continues their discussion while seated around the table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are coordinating a schedule for an evening social gathering involving food and drinks.\",\n\t\t\"They decided to allow some flexibility regarding the strict timing of the event.\",\n\t\t\"The proposed time slot for the activity is between 5 PM and 6 PM.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are seated around a table with a checkered tablecloth in a room featuring a whiteboard.",
+          "While gesturing, <voice_1170> asks if the plan involves eating BBQ and mixing drinks between 5 and 6 PM.",
+          "A man in a white shirt approaches the table and places a potted plant on it.",
+          "<voice_444> responds affirmatively, stating 'Okay, come.'",
+          "<voice_1844> mentions 'last time' and adds that they will not follow the plan strictly.",
+          "<voice_1845> confirms with 'Yes.'",
+          "<voice_1846> concludes by proposing a 5 to 6 PM time interval.",
+          "The camera pans away to reveal a projector screen and the general layout of the room.",
+          "A man in a pink shirt stands up and moves towards the window area.",
+          "The group continues their discussion while seated around the table."
+        ],
+        "high_level_conclusions": [
+          "The participants are coordinating a schedule for an evening social gathering involving food and drinks.",
+          "They decided to allow some flexibility regarding the strict timing of the event.",
+          "The proposed time slot for the activity is between 5 PM and 6 PM."
+        ]
+      },
+      "media": {
+        "frame_count": 36,
+        "video_duration_seconds": 17.95
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 133,
+          "call_id": "cafbd6c3-65d0-4ced-91c2-ec198275a69c",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789443623.6261873,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 36,
+            "video_duration_seconds": 17.95
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table with a checkered tablecloth in a room featuring a whiteboard.\",\n\t\t\"While gesturing, <voice_1170> asks if the plan involves eating BBQ and mixing drinks between 5 and 6 PM.\",\n\t\t\"A man in a white shirt approaches the table and places a potted plant on it.\",\n\t\t\"<voice_444> responds affirmatively, stating 'Okay, come.'\",\n\t\t\"<voice_1844> mentions 'last time' and adds that they will not follow the plan strictly.\",\n\t\t\"<voice_1845> confirms with 'Yes.'\",\n\t\t\"<voice_1846> concludes by proposing a 5 to 6 PM time interval.\",\n\t\t\"The camera pans away to reveal a projector screen and the general layout of the room.\",\n\t\t\"A man in a pink shirt stands up and moves towards the window area.\",\n\t\t\"The group continues their discussion while seated around the table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are coordinating a schedule for an evening social gathering involving food and drinks.\",\n\t\t\"They decided to allow some flexibility regarding the strict timing of the event.\",\n\t\t\"The proposed time slot for the activity is between 5 PM and 6 PM.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:**\n    *   0.00s - 9.50s: A group of people sitting around a table with a checkered tablecloth. There's a whiteboard in the background. One person (left, dark hair) is gesturing. Another person (right, pink hair) is seated. A third person (center-right, dark hair) is seated. At 6.00s, a man in a white shirt appears behind the left person, holding something (looks like a plant or flowers). He places it on the table.\n    *   10.00s: The camera pans away to show a projector screen and a room layout.\n    *   10.50s - 17.50s: The camera returns to the group. The man in the pink/orange shirt is now standing near the window/whiteboard area. The person with pink hair is still seated. The person on the left is still gesturing/talking.\n*   **Voice Features:**\n    *   `<voice_1170>` (00:03-00:07): \"MAI: 然后五点到六点就吃烧烤、调酒这种吗？\" (So then eat BBQ, mix drinks between 5 and 6 o'clock?)\n    *   `<voice_444>` (00:08-00:11): \"MAI: 可以嘛，来。\" (Okay, come.)\n    *   `<voice_1844>` (00:10-00:12, 00:11-00:14): \"MAI: 上次。... 不会完全严格地按照这个。\" (Last time... won't follow this strictly.)\n    *   `<voice_1845>` (00:13-00:15): \"MAI: 嗯，对。\" (Hmm, yes.)\n    *   `<voice_1846>` (00:14-00:17): \"MAI: 所以可以搞个五点到六点的区间。\" (So we can make a 5 to 6 o'clock interval.)\n    *   All voices are labeled \"MAI\". This suggests a single speaker named MAI is talking throughout these segments.\n    *   Looking at the video, the person on the left (dark hair, black top) seems to be the one talking/gesturing most actively during the first part. Later, the man in the pink shirt stands up. However, the voice label is consistently \"MAI\". I need to be careful not to assume visual identity if not explicitly linked, but the prompt asks to preserve speaker identity using voice IDs. Since all voice IDs have \"MAI\" as the speaker name in the ASR, I will treat them as belonging to the same speaker entity \"MAI\". Wait, looking closely at the prompt instructions: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" It doesn't say I need to link it to a specific face unless there's an equivalence. But usually, in these tasks, if multiple voice IDs exist, they might belong to different people or the same person. Here, all ASR lines start with \"MAI:\". This implies one speaker. Let's look at the video again. The person on the left is gesturing and talking. The man in the pink shirt enters later. It's possible MAI is the person on the left. Or maybe the man in the pink shirt is MAI? No, the man in the pink shirt is standing near the window later. The person on the left is seated. The voice timestamps overlap with the first part of the video where the person on the left is active.\n    *   Actually, I don't have explicit face IDs in the input text provided in the prompt description (\"Face features:\" section is empty in the prompt text provided, wait, let me check the raw input).\n    *   Ah, the prompt says \"Face features:Voice features:\". The text after \"Face features:\" is empty. Then \"Voice features:\" follows. So there are NO face features provided in the input data block.\n    *   Instruction: \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\n    *   Okay, so I cannot link `<voice_1170>` etc. to a specific face ID because none were provided. I just use the voice IDs in the descriptions/conclusions.\n    *   Wait, the instruction says \"Use the provided feature IDs as references to characters (when applicable)\". Since no face IDs are provided, I can't reference faces. I will reference the voice IDs.\n    *   Wait, looking at the instruction again: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\". Since no face features are provided, I cannot create equivalences.\n    *   However, I need to describe the video. I see people. I should describe them generally or by their actions.\n    *   The voice content is about scheduling (BBQ, drinks, 5-6pm interval).\n    *   The video shows a meeting/discussion setting.\n    *   Person on left gestures. Man in white shirt brings flowers/plant. Man in pink shirt stands up later.\n    *   I need to construct the JSON.\n\n**2. Construct Video Description:**\n*   Event 1: Group discussion around a table.\n*   Event 2: Person on left gestures while talking.\n*   Event 3: Man in white shirt brings a plant/flowers to the table.\n*   Event 4: Camera pans to show the room/projector.\n*   Event 5: Man in pink shirt stands up near the window.\n*   Event 6: Discussion continues about timing/scheduling.\n\n**3. Construct High-Level Conclusions:**\n*   The speakers are discussing a schedule involving eating and drinking (BBQ, cocktails) between 5 PM and 6 PM.\n*   They decided not to be strict about the timing but rather create an interval.\n*   Speaker MAI proposes the 5-6 PM interval.\n\n**4. Refine based on constraints:**\n*   \"Preserve speaker identity when constructing memory from the supplied character features.\" -> Use `<voice_1170>`, etc.\n*   \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" -> I need to add sentences describing the audio events associated with these IDs.\n*   \"Do not replace the ID with 'a speaker'...\" -> Must use `<voice_X>`.\n*   \"Keep dialogue grounded in the provided transcript.\" -> Quote the ASR.\n\n**Drafting Content:**\n\n*   **Video Description:**\n    *   A group of individuals are seated around a table covered with a checkered cloth, engaging in a discussion.\n    *   One individual on the left gestures with their hands while speaking.\n    *   A man wearing a white shirt approaches the table and places a potted plant on it.\n    *   The camera briefly pans to reveal a projector screen and the surrounding room layout before returning to the group.\n    *   A man in a pink shirt stands up and moves towards the window area.\n    *   The conversation continues with participants seated around the table.\n\n*   **High-Level Conclusions:**\n    *   The group is planning an evening activity involving food and drinks.\n    *   Speaker `<voice_1170>` asks if the plan involves eating BBQ and mixing drinks between 5 and 6 PM.\n    *   Speaker `<voice_444>` agrees to the plan.\n    *   Speaker `<voice_1844>` mentions previous arrangements and notes they won't follow rules strictly.\n    *   Speaker `<voice_1845>` confirms understanding.\n    *   Speaker `<voice_1846>` concludes by suggesting a 5 to 6 PM time interval.\n    *   Since there are no face features, I cannot create Equivalence statements. I will omit that part or ensure I don't hallucinate one. The instruction says \"If a face and a voice feature refer to the same character...\". Since no face features, I can't.\n\nWait, I need to check if I missed any face features in the prompt text.\n\"Face features:Voice features:{\"...\"\"\nIt looks like the Face features section is indeed empty.\nSo I will proceed without face IDs.\n\nLet's refine the \"episodic memory\" requirement.\n\"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis likely means within the `video_description` or `high_level_conclusions`?\nUsually, `video_description` describes visual events. `high_level_conclusions` describes reasoning/inference.\nHowever, the instruction says \"include at least one episodic memory...\". An episodic memory often sounds like a narrative sentence.\nLooking at the example structure provided in the system prompt (which isn't fully shown here but implied), usually descriptions are visual.\nBut the instruction specifically says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"For every supplied voice ID... include at least one episodic memory...\".\nThis might imply adding these as items in the `video_description` array or perhaps `high_level_conclusions`. Given `video_description` is for \"observable and inferable events\", quoting speech fits there as an event (speaking).\nLet's put the speech summaries in `video_description` as events of speaking.\nActually, looking at similar tasks, often the `video_description` captures the action \"Person X speaks Y\".\nSo:\n- `<voice_1170>` speaks about BBQ and drinks at 5-6 PM.\n- `<voice_444>` agrees.\n- `<voice_1844>` discusses strictness.\n- `<voice_1845>` confirms.\n- `<voice_1846>` finalizes the interval.\n\nLet's combine visual and audio events.\n\n**Revised Plan:**\n1.  **Video Description:**\n    *   Describe the scene: People at a table.\n    *   Describe the action: Person on left talks/gestures.\n    *   Describe the audio event: `<voice_1170>` asks about BBQ/drinks at 5-6 PM.\n    *   Describe the action: Man in white puts plant on table.\n    *   Describe the audio event: `<voice_444>` agrees.\n    *   Describe the audio event: `<voice_1844>` mentions last time and flexibility.\n    *   Describe the audio event: `<voice_1846>` proposes the 5-6 PM interval.\n    *   Describe the visual change: Camera pans to room.\n    *   Describe the visual change: Man in pink stands up.\n\n2.  **High-Level Conclusions:**\n    *   Reasoning about the schedule decision.\n    *   Reasoning about the atmosphere (relaxed, not strict).\n\nWait, I need to check the constraint: \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"\nAnd \"Output Format: ... video_description: [...], high_level_conclusions: [...]\".\nAnd \"Be concise and avoid duplicate events.\"\n\nLet's try to keep `video_description` focused on visual + audio events combined.\nAnd `high_level_conclusions` on the reasoning.\n\nOne detail: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\nThis sounds like I need to write a sentence like: \"Speaker `<voice_1170>` says: 'Then between 5 and 6 o'clock eat BBQ, mix drinks like that?'\".\nI will integrate this into the `video_description` list items.\n\nLet's finalize the JSON content.\n\n**Video Description Items:**\n1.  A group of people are seated around a table with a checkered tablecloth in a room with a whiteboard.\n2.  A person on the left gestures while speaking, and `<voice_1170>` asks if the plan includes eating BBQ and mixing drinks between 5 and 6 PM.\n3.  A man in a white shirt walks to the table and places a potted plant on it.\n4.  `<voice_444>` responds affirmatively, saying \"Okay, come.\"\n5.  `<voice_1844>` mentions \"last time\" and states they won't follow the plan strictly.\n6.  `<voice_1845>` confirms with \"Yes.\"\n7.  `<voice_1846>` concludes by proposing a 5 to 6 PM time interval.\n8.  The camera pans away to show a projector screen and the rest of the room.\n9.  A man in a pink shirt stands up and moves towards the window.\n10. The group continues their discussion around the table.\n\n**High Level Conclusions:**\n1.  The group is coordinating a schedule for an evening social gathering involving food and drinks.\n2.  They decided to allow some flexibility regarding the strict timing of the event.\n3.  The proposed time slot is between 5 PM and 6 PM.\n\nWait, I need to check if I should merge the voice IDs into the descriptions properly.\nThe instruction says \"using the exact ID as the speaker\".\nSo: \"Speaker `<voice_1170>` asks...\"\n\nLet's double check the voice IDs.\n`<voice_1170>`\n`<voice_444>`\n`<voice_1844>`\n`<voice_1845>`\n`<voice_1846>`\n\nAll good.\n\nOne constraint: \"Preserve speaker identity when constructing memory from the supplied character features.\"\nThis reinforces using the IDs.\n\nAnother constraint: \"Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\"\nSince no face IDs are supplied, I will not mention who visually corresponds to the voice, just that the voice occurred.\n\nFinal check on JSON structure.\n```json\n{\n  \"video_description\": [\n    \"...\",\n    \"...\"\n  ],\n  \"high_level_conclusions\": [\n    \"...\",\n    \"...\"\n  ]\n}\n```\n\nI will formulate the strings carefully to be concise.\n\nItem 1: A group of people sit around a table with a checkered cloth, engaged in a discussion.\nItem 2: While gesturing, `<voice_1170>` asks if the plan involves eating BBQ and mixing drinks between 5 and 6 PM.\nItem 3: A man in a white shirt places a plant on the table.\nItem 4: `<voice_444>` agrees to the suggestion.\nItem 5: `<voice_1844>` mentions previous arrangements and notes they won't follow the plan strictly.\nItem 6: `<voice_1845>` confirms the understanding.\nItem 7: `<voice_1846>` proposes establishing a 5 to 6 PM time interval.\nItem 8: The camera pans to show a projector screen and the room layout.\nItem 9: A man in a pink shirt stands up near the window.\nItem 10: The group remains seated and continues the conversation.\n\nConclusions:\n1. The participants are planning a casual evening event involving food and drinks.\n2. They agreed to have some flexibility in adhering to a strict schedule.\n3. The finalized time slot for the activity is between 5 PM and 6 PM.\n\nLooks solid. I will ensure the JSON is valid.\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table with a checkered tablecloth in a room featuring a whiteboard.\",\n\t\t\"While gesturing, <voice_1170> asks if the plan involves eating BBQ and mixing drinks between 5 and 6 PM.\",\n\t\t\"A man in a white shirt approaches the table and places a potted plant on it.\",\n\t\t\"<voice_444> responds affirmatively, stating 'Okay, come.'\",\n\t\t\"<voice_1844> mentions 'last time' and adds that they will not follow the plan strictly.\",\n\t\t\"<voice_1845> confirms with 'Yes.'\",\n\t\t\"<voice_1846> concludes by proposing a 5 to 6 PM time interval.\",\n\t\t\"The camera pans away to reveal a projector screen and the general layout of the room.\",\n\t\t\"A man in a pink shirt stands up and moves towards the window area.\",\n\t\t\"The group continues their discussion while seated around the table.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are coordinating a schedule for an evening social gathering involving food and drinks.\",\n\t\t\"They decided to allow some flexibility regarding the strict timing of the event.\",\n\t\t\"The proposed time slot for the activity is between 5 PM and 6 PM.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 6727,
+          "output_tokens": 3867,
+          "total_tokens": 10594,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002374988980591297,
+            "media_preparation_ms": 35.06796699366532,
+            "processor_tokenization_ms": 385.9104169969214,
+            "device_transfer_ms": 30.81832999305334,
+            "cuda_generation_ms": 172998.23944400123,
+            "decoding_ms": 5.931760999374092
+          },
+          "submitted_image_count": 36,
+          "processed_image_count": 36,
+          "video_frame_count": 36,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 173456.3125759887,
+          "request_end": 1789443797.1031759,
+          "latency_ms": 173476.98450399912,
+          "client_wall_clock_latency_ms": 173476.98450399912
+        }
+      ],
+      "episodic_memory_count": 10,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 10,
+      "text_embedding_ms": null,
+      "text_embedding_count": 10,
+      "graph_update_ms": 0.09872698865365237,
+      "nodes_added": 10,
+      "directed_edges_added": 10,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.019776998669840395,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 90,
+    "asr_segments": 6,
+    "speech_embeddings": 6,
+    "voice_identities": 5,
+    "detected_faces": 174,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 10,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1860,
+    "edges_after_clip": 699,
+    "nodes_added_by_clip": 16,
+    "edges_added_by_clip": 5
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a table with a checkered tablecloth in a room featuring a whiteboard.",
+      "While gesturing, <voice_1170> asks if the plan involves eating BBQ and mixing drinks between 5 and 6 PM.",
+      "A man in a white shirt approaches the table and places a potted plant on it.",
+      "<voice_444> responds affirmatively, stating 'Okay, come.'",
+      "<voice_1844> mentions 'last time' and adds that they will not follow the plan strictly.",
+      "<voice_1845> confirms with 'Yes.'",
+      "<voice_1846> concludes by proposing a 5 to 6 PM time interval.",
+      "The camera pans away to reveal a projector screen and the general layout of the room.",
+      "A man in a pink shirt stands up and moves towards the window area.",
+      "The group continues their discussion while seated around the table."
+    ],
+    "high_level_conclusions": [
+      "The participants are coordinating a schedule for an evening social gathering involving food and drinks.",
+      "They decided to allow some flexibility regarding the strict timing of the event.",
+      "The proposed time slot for the activity is between 5 PM and 6 PM."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are seated around a table with a checkered tablecloth in a room featuring a whiteboard.",
+      "While gesturing, <voice_1170> asks if the plan involves eating BBQ and mixing drinks between 5 and 6 PM.",
+      "A man in a white shirt approaches the table and places a potted plant on it.",
+      "<voice_444> responds affirmatively, stating 'Okay, come.'",
+      "<voice_1844> mentions 'last time' and adds that they will not follow the plan strictly.",
+      "<voice_1845> confirms with 'Yes.'",
+      "<voice_1846> concludes by proposing a 5 to 6 PM time interval.",
+      "The camera pans away to reveal a projector screen and the general layout of the room.",
+      "A man in a pink shirt stands up and moves towards the window area.",
+      "The group continues their discussion while seated around the table."
+    ],
+    "high_level_conclusions": [
+      "The participants are coordinating a schedule for an evening social gathering involving food and drinks.",
+      "They decided to allow some flexibility regarding the strict timing of the event.",
+      "The proposed time slot for the activity is between 5 PM and 6 PM."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_133_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 16,
+    "edges_added": 5,
+    "nodes": [
+      {
+        "id": 1844,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 上次。",
+            "MAI: 不会完全严格地按照这个。"
+          ]
+        },
+        "embedding_count": 2,
+        "embedding_dimensions": [
+          192,
+          192
+        ]
+      },
+      {
+        "id": 1845,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 嗯，对。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1846,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 所以可以搞个五点到六点的区间。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1847,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are seated around a table with a checkered tablecloth in a room featuring a whiteboard."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1848,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "While gesturing, <voice_1170> asks if the plan involves eating BBQ and mixing drinks between 5 and 6 PM."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1849,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A man in a white shirt approaches the table and places a potted plant on it."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1850,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_444> responds affirmatively, stating 'Okay, come.'"
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1851,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1844> mentions 'last time' and adds that they will not follow the plan strictly."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1852,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1845> confirms with 'Yes.'"
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1853,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1846> concludes by proposing a 5 to 6 PM time interval."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1854,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans away to reveal a projector screen and the general layout of the room."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1855,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A man in a pink shirt stands up and moves towards the window area."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1856,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The group continues their discussion while seated around the table."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1857,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are coordinating a schedule for an evening social gathering involving food and drinks."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1858,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "They decided to allow some flexibility regarding the strict timing of the event."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1859,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The proposed time slot for the activity is between 5 PM and 6 PM."
+          ],
+          "timestamp": 133
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 444,
+        "target": 1850,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1170,
+        "target": 1848,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1844,
+        "target": 1851,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1845,
+        "target": 1852,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1846,
+        "target": 1853,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_133_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_133_graph.pkl"
+  },
+  "memory_pickle_bytes": 44334995,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 84395.305408057,
+    "prepared_perf": 84401.864906452,
+    "ordered_start_perf": 84800.819907208,
+    "consumer_wait_ms": 0.00970800465438515,
+    "ready_to_ordered_ms": 398955.00075600285,
+    "preparation_work_ms": 6554.226712993113,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 180610.69329899328
+}

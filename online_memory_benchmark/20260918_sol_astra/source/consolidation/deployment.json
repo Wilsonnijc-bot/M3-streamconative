@@ -1,0 +1,12 @@
+{
+  "mandol": {
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "embedding_dimension": 1024,
+    "embedding_base_url": "https://api.302.ai/v1",
+    "embedding_batch_size": 32,
+    "embedding_max_retries": 2,
+    "embedding_timeout_seconds": 60,
+    "build_relations": false,
+    "generate_sparse_embeddings": true
+  }
+}

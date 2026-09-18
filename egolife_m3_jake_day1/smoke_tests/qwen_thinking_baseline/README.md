@@ -1,6 +1,6 @@
 # Qwen3.5 4B thinking — baseline prompt preflight
 
-**Stage/preflight exited successfully; full benchmark not verified** · updated 2026-09-15T03:12:56+00:00
+**Stage/preflight exited successfully; full benchmark not verified** · updated 2026-09-15T16:00:47+00:00
 
 Model: `Qwen/Qwen3.5-4B`. Saved committed segment audits: **3**; latest segment: **3**; query snapshots: **0/10**; actual QA rows: **0/40**.
 

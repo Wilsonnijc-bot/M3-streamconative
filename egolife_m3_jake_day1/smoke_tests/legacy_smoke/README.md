@@ -1,6 +1,6 @@
 # Early memory/QA smoke test
 
-**Saved diagnostic/preflight artifacts; full benchmark not verified** · updated 2026-09-15T03:12:56+00:00
+**Saved diagnostic/preflight artifacts; full benchmark not verified** · updated 2026-09-15T16:00:47+00:00
 
 Model: `See provenance`. Saved committed segment audits: **0**; latest segment: **—**; query snapshots: **0/10**; actual QA rows: **0/40**.
 

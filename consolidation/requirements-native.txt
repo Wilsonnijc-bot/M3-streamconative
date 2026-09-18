@@ -1,0 +1,10 @@
+-r requirements.txt
+scikit-learn>=1.3,<2
+matplotlib>=3.8,<4
+pillow>=10,<12
+openai>=1,<3
+httpx>=0.27,<1
+moviepy>=2,<3
+tqdm>=4,<5
+pydantic>=2,<3
+eval_type_backport; python_version < '3.10'

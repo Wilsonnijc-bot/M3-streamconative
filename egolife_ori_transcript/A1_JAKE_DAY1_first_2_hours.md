@@ -1,0 +1,2969 @@
+# EgoLife — A1_JAKE Day 1 — First 2 Hours of Recorded Transcript
+
+- **Target duration:** `02:00:00.000` of concatenated recorded transcript time.
+- **Selection rule:** Day-1 transcript chunks are ordered chronologically; wall-clock gaps with no transcript file are skipped. Within each chunk, time is measured from its first subtitle cue.
+- **Cues included:** `2,943`.
+- **First source cue:** `11000000` at `00:09:47,100`.
+- **Last included source cue:** `13000000` cue `173` at `00:09:43,500 --> 00:09:48,633`.
+- **Boundary rule:** include a cue when its start is before the target; the final cue extends `1.533s` past the boundary.
+- **Text:** preserves the dataset speaker labels, Chinese transcript, and provided English translation when present. ASCII comma spacing is normalized to comma+space after transport parsing.
+
+## Source chunks
+
+- [A1_JAKE_DAY1_11000000.srt](https://huggingface.co/datasets/lmms-lab/EgoLife/blob/main/EgoLifeCap/Transcript/A1_JAKE/DAY1/A1_JAKE_DAY1_11000000.srt) — full; `1,351` cues used.
+- [A1_JAKE_DAY1_12000000.srt](https://huggingface.co/datasets/lmms-lab/EgoLife/blob/main/EgoLifeCap/Transcript/A1_JAKE/DAY1/A1_JAKE_DAY1_12000000.srt) — full; `1,419` cues used.
+- [A1_JAKE_DAY1_13000000.srt](https://huggingface.co/datasets/lmms-lab/EgoLife/blob/main/EgoLifeCap/Transcript/A1_JAKE/DAY1/A1_JAKE_DAY1_13000000.srt) — partial through cue 173; `173` cues used.
+
+## Transcript
+
+### `A1_JAKE_DAY1_11000000.srt`
+
+- `00:09:47,100 → 00:09:50,766` **Jake:** 好然后一个秒表 / Okay, then we need a stopwatch.
+- `00:09:54,700 → 00:09:55,700` **Shure:** 时间戳呗 / Mark a timestamp, right?
+- `00:09:56,033 → 00:09:56,833` **Jake:** 对 戳一下 / Yes, mark it.
+- `00:10:00,233 → 00:10:01,200` **Jake:** 来都戳一下 / Come on, everyone mark it.
+- `00:10:01,200 → 00:10:02,200` **Jake:** 每人戳一下 / Each person marks it.
+- `00:10:04,166 → 00:10:05,266` **Jake:** 传过去戳一下哎 / Pass it along and mark it, hey.
+- `00:10:05,266 → 00:10:06,366` **Jake:** 你能看到对吗 / You can see it, right?
+- `00:10:12,333 → 00:10:14,133` **Jake:** 好戳完了 / Alright, all done marking.
+- `00:10:16,366 → 00:10:16,766` **Jake:** 行 / Okay.
+- `00:10:17,566 → 00:10:18,933` **Jake:** 开机开 / Turn it on.
+- `00:10:20,200 → 00:10:23,400` **Jake:** 就是今天我们就讨论讨论 / So today we're just going to discuss a bit.
+- `00:10:23,400 → 00:10:24,000` **Jake:** 早上讨论讨论 / Discuss this morning.
+- `00:10:24,000 → 00:10:25,766` **Jake:** 我们最后一天干点啥呗 / What should we do on our last day?
+- `00:10:25,766 → 00:10:26,966` **Jake:** 然后可能 / And then maybe...
+- `00:10:28,233 → 00:10:28,766` **Jake:** 嗯 / Hmm...
+- `00:10:29,933 → 00:10:31,666` **Jake:** 就是这边还有4个 / There are still 4 more here.
+- `00:10:31,666 → 00:10:34,533` **Jake:** 这个USB就可能这 / These USBs, maybe this...
+- `00:10:34,566 → 00:10:34,933` **Jake:** 这叫什么 / What's this called?
+- `00:10:34,933 → 00:10:35,733` **Jake:** 这个硬盘 / This hard drive.
+- `00:10:36,066 → 00:10:36,900` **Jake:** 嗯 / Hmm...
+- `00:10:37,566 → 00:10:39,866` **Jake:** 早上我觉得大家主要是讨论 / In the morning, I think everyone should mainly discuss.
+- `00:10:39,900 → 00:10:42,700` **Jake:** 然后讨论的时候闲着没事 / And while discussing, if we have nothing to do...
+- `00:10:42,700 → 00:10:44,333` **Jake:** 如果大家陷入了沉思 / If everyone gets lost in thought...
+- `00:10:44,333 → 00:10:45,133` **Jake:** 陷入了尴尬 / Or it gets awkward...
+- `00:10:45,133 → 00:10:46,700` **Jake:** 可以把这个给装一装 / We can install this.
+- `00:10:46,933 → 00:10:48,400` **Jake:** 对只是一个back up / Yes, just as a backup.
+- `00:10:49,133 → 00:10:49,933` **Jake:** 嗯 / Hmm...
+- `00:10:50,500 → 00:10:51,300` **Jake:** 所以 / So...
+- `00:10:53,133 → 00:10:54,700` **Jake:** 现在就尴尬了啊 / Now it's awkward, huh?
+- `00:10:55,633 → 00:10:57,666` **Shure:** 没有没有先看 拆开看是什么 / No, no, let's open it up and see what it is first.
+- `00:10:58,200 → 00:10:59,633` **Jake:** 行那也行那也行 / Alright, that works too.
+- `00:11:03,533 → 00:11:04,266` **Jake:** 哇哦 / Wow.
+- `00:11:05,133 → 00:11:06,366` **Lucia:** 只有4个吗 / Only 4 of them?
+- `00:11:06,366 → 00:11:07,333` **Jake:** 对只有4个 / Yes, only 4.
+- `00:11:07,633 → 00:11:08,500` **Lucia:** 那要不没事没事 / That's okay.
+- `00:11:08,500 → 00:11:09,400` **Lucia:** 我拆过这个 / I've taken this apart before.
+- `00:11:09,400 → 00:11:10,000` **Jake:** 对对对 / Yes, yes.
+- `00:11:11,966 → 00:11:13,600` **Jake:** 因为你是menter / Because you're the mentor.
+- `00:11:13,566 → 00:11:14,333` **Lucia:** 啊对 / Ah, yes.
+- `00:11:14,433 → 00:11:15,000` **Jake:** tutor / Tutor.
+- `00:11:15,000 → 00:11:17,966` **Lucia:** 哈哈我已经装过这个东西了 / Haha, I've already installed this thing.
+- `00:11:18,566 → 00:11:20,333` **Shure:** 需要充电宝在这里拿 / If you need a power bank, take one from here.
+- `00:11:20,700 → 00:11:21,766` **Lucia:** 好的谢谢 / Okay, thanks.
+- `00:11:22,533 → 00:11:24,466` **Jake:** 我先把这些端走 / I'll take these away first.
+- `00:11:26,366 → 00:11:27,966` **Katrina:** 哇还有螺丝呀 / Wow, there are screws too!
+- `00:12:08,900 → 00:12:12,566` **Jake:** 好 大家拆出来了可以摆成什么样呢 / Okay, what can you make out of these once they're dismantled?
+- `00:12:13,800 → 00:12:14,400` **Jake:** 摆成 / Make it into...
+- `00:12:14,400 → 00:12:16,566` **Jake:** 这个盒子要留着 / Keep this box.
+- `00:12:17,766 → 00:12:19,800` **Jake:** 嗯里边这个东西可以丢掉 / Hmm, you can throw away what's inside.
+- `00:12:19,866 → 00:12:21,166` **Jake:** 这东西都丢掉吧 / Just throw all this stuff away.
+- `00:12:26,000 → 00:12:27,133` **Shure:** 这眼镜布留着 / Keep this lens cloth.
+- `00:12:46,433 → 00:12:47,866` **Jake:** 好那就先摆成这样 / Okay, let's arrange it like this for now.
+- `00:12:49,766 → 00:12:52,866` **Jake:** 这个是等大家陷入沉思的时候再用 / We'll use this when everyone is deep in thought.
+- `00:12:52,866 → 00:12:54,766` **Jake:** 但是这个我可以跟大家先讲一下 / But I can explain it to everyone first.
+- `00:12:54,766 → 00:12:56,066` **Jake:** 这个东西是什么呢 / What is this thing?
+- `00:12:56,066 → 00:12:58,866` **Jake:** 就大家可以看这个地方 / So, you can see this place.
+- `00:13:00,800 → 00:13:03,300` **Jake:** 你们也看不见这个地方 / Actually, you can't see this place.
+- `00:13:04,300 → 00:13:05,166` **Jake:** 或者你们过来吧 / Or you guys can come over.
+- `00:13:05,166 → 00:13:05,966` **Jake:** 走动走动 / Walk around.
+- `00:13:14,966 → 00:13:17,200` **Jake:** 就是看我的工作间 / Just check out my workstation.
+- `00:13:18,933 → 00:13:20,966` **Shure:** 我们这算私闯闺房吗 / Are we trespassing into your private space?
+- `00:13:20,966 → 00:13:22,366` **Jake:** 那请请请请 / No, no, please come in.
+- `00:13:22,800 → 00:13:23,600` **Jake:** 工作间 / The workstation.
+- `00:13:24,133 → 00:13:27,566` **Jake:** 然后这地方是一共有6台电脑对吧 / And here, there are a total of six computers, right?
+- `00:13:27,666 → 00:13:27,900` **Katrina:** 嗯 / Hmm.
+- `00:13:27,966 → 00:13:29,066` **Jake:** 然后这7台 / And this is the seventh.
+- `00:13:29,066 → 00:13:30,000` **Jake:** 8台 / Eighth.
+- `00:13:30,000 → 00:13:30,733` **Jake:** 嗯 / Hmm.
+- `00:13:30,833 → 00:13:31,600` **Jake:** 9台 10台 / Ninth, tenth.
+- `00:13:31,600 → 00:13:32,966` **Jake:** 但是就是这边6台电脑 / But mainly, six computers here.
+- `00:13:32,966 → 00:13:33,566` **Jake:** 每一个电脑 / Each computer.
+- `00:13:33,566 → 00:13:36,066` **Jake:** 都对应着你们的一台眼镜 / Corresponds to one of your glasses.
+- `00:13:36,600 → 00:13:38,500` **Jake:** 然后这个每一台电脑 / Then, each computer.
+- `00:13:38,500 → 00:13:41,833` **Jake:** 你们每次录完结束 / After each recording session.
+- `00:13:41,833 → 00:13:42,733` **Jake:** 每隔三个小时 / Every three hours.
+- `00:13:42,766 → 00:13:47,266` **Jake:** 然后会在这导到这个硬盘里边 / Will transfer the data to this hard drive.
+- `00:13:47,266 → 00:13:48,100` **Jake:** 然后这个硬盘 / Then this hard drive.
+- `00:13:48,100 → 00:13:49,533` **Jake:** 就是你们一会要装的硬盘 / Is the one you will install later.
+- `00:13:49,933 → 00:13:53,100` **Jake:** 就是比方说这个这个L1这个L1这个L2 / For example, this L1, this L1, and this L2.
+- `00:13:53,100 → 00:13:54,866` **Jake:** 然后这个名字的名字都写在这了 / The names are all written here.
+- `00:13:55,533 → 00:13:58,900` **Jake:** 哈哈哈你们的数据都在这个里边 / Hahaha, all your data is in here.
+- `00:13:58,966 → 00:14:00,900` **Shure:** 这我们的第二生命 / This is our second life.
+- `00:14:00,900 → 00:14:03,900` **Jake:** 对你们的第二生命都在这个里边啊 / Yes, your second life is all in here.
+- `00:14:03,900 → 00:14:05,366` **Jake:** 比方说我这个L1 / For example, this is my L1.
+- `00:14:05,366 → 00:14:07,300` **Jake:** 对吧然后你们结束之后 / Right, then after you finish...
+- `00:14:07,300 → 00:14:10,100` **Jake:** 就是会把这个眼镜插到这个上面 / You'll plug these glasses into this thing.
+- `00:14:10,100 → 00:14:10,866` **Jake:** 然后同时 / And at the same time...
+- `00:14:10,866 → 00:14:13,000` **Jake:** 现在一直接着这个第一个硬盘 / Now always connecting to this first hard drive.
+- `00:14:13,566 → 00:14:16,400` **Jake:** 对然后这个硬盘它有两根线 / Yes, then this hard drive has two cables.
+- `00:14:16,400 → 00:14:19,166` **Jake:** 一个是一个是接电脑的 / One is for connecting to the computer.
+- `00:14:19,166 → 00:14:20,366` **Jake:** 一个是接电源的 / One is for the power source.
+- `00:14:20,366 → 00:14:21,200` **Jake:** 然后这个电源 / And this power source...
+- `00:14:21,200 → 00:14:24,600` **Jake:** 是为了让这个硬盘假装自己在电脑上 / Is to make this hard drive pretend it's on a computer.
+- `00:14:25,766 → 00:14:27,333` **Jake:** 所以这个盒的意思就是说 / So the purpose of this box is to...
+- `00:14:27,333 → 00:14:29,333` **Jake:** 他给模拟一个电脑的环境 / Simulate a computer environment for it.
+- `00:14:29,333 → 00:14:30,600` **Jake:** 然后用硬盘对对 / Then use the hard drive, right.
+- `00:14:30,600 → 00:14:33,000` **Jake:** 让硬盘能知道自己要工作了 / So the hard drive knows it needs to work.
+- `00:14:33,366 → 00:14:35,766` **Jake:** 对啊然后这个线啊 / Yeah, and then this cable...
+- `00:14:35,766 → 00:14:39,300` **Jake:** 这个线我们我们布线还挺有意思的 / This cable, our cable management is pretty interesting.
+- `00:14:39,300 → 00:14:40,400` **Jake:** 就长成这个样子 / It looks like this.
+- `00:14:40,700 → 00:14:41,500` **Jake:** 呵呵 / Hehe.
+- `00:14:41,500 → 00:14:42,300` **Shure:** 是一个悬着的 / It's kind of hanging.
+- `00:14:42,366 → 00:14:42,933` **Jake:** 对 / Right.
+- `00:14:43,666 → 00:14:45,733` **Shure:** 那如果突然停电了会怎么样 / So what happens if there's a sudden power outage?
+- `00:14:45,800 → 00:14:47,733` **Jake:** 那不好讲 / That's hard to say.
+- `00:14:48,866 → 00:14:50,200` **Jake:** 就是电脑突然停电 / If the computer suddenly loses power...
+- `00:14:50,200 → 00:14:51,200` **Jake:** 就是会很尴尬 / It would be awkward.
+- `00:14:52,500 → 00:14:54,366` **Shure:** 那没有什么 / Then there's no...
+- `00:14:54,733 → 00:14:56,766` **Shure:** 就是USP之类的 / Like a USB backup power supply?
+- `00:14:57,266 → 00:14:57,766` **Jake:** 嗯 / Hmm.
+- `00:14:57,766 → 00:15:00,133` **Shure:** 就是那种备用电源 / Like those backup power sources.
+- `00:15:01,333 → 00:15:02,933` **Jake:** 哦哦没有 / Oh, no.
+- `00:15:03,700 → 00:15:04,900` **Jake:** 还没那么有钱 / We're not that rich yet.
+- `00:15:05,866 → 00:15:07,766` **Jake:** 我们只能相信这个别墅 / We can only rely on this villa.
+- `00:15:08,000 → 00:15:09,766` **Jake:** 或者相信北京电力吧 / Or trust Beijing Electric.
+- `00:15:11,366 → 00:15:12,166` **Jake:** 对 / Right.
+- `00:15:14,133 → 00:15:14,933` **Shure:** 感谢 / Thank you.
+- `00:15:15,800 → 00:15:17,333` **Jake:** 好你们都开始装了 / Alright, you guys start installing.
+- `00:15:18,066 → 00:15:21,100` **Shure:** 我们我们可以 / We, we can...
+- `00:15:21,900 → 00:15:23,033` **Jake:** 可以边聊边装吧 / You can chat while installing.
+- `00:15:23,033 → 00:15:23,300` 俢硕：对 / Shure: Right.
+- `00:15:23,900 → 00:15:26,666` **Jake:** 嗯或者说你们先带你们带点什么吧 / Hmm, or you guys can bring something first.
+- `00:15:27,366 → 00:15:28,733` **Jake:** 你们带点什么 / What will you bring?
+- `00:15:28,733 → 00:15:31,200` **Jake:** 哎这个这个眼镜你得带好 / Hey, these glasses, you need to wear them properly.
+- `00:15:33,266 → 00:15:34,200` **Jake:** 这眼镜 / These glasses.
+- `00:15:35,966 → 00:15:37,866` **Jake:** 嗯也不能遮住 / Hmm, they shouldn't cover...
+- `00:15:38,100 → 00:15:39,466` **Jake:** 应该都不没遮住吧 / They shouldn't cover, right?
+- `00:15:40,300 → 00:15:41,566` **Jake:** 你现在没遮住 / You're not covering anything now.
+- `00:15:41,733 → 00:15:43,200` **Lucia:** 但这里有一个孔 / But there's a hole here.
+- `00:15:43,766 → 00:15:45,900` **Lucia:** 然后这个地方是要坐在这的 / And this part needs to sit here.
+- `00:15:46,500 → 00:15:48,300` **Lucia:** 所以你要就是最好这样对齐 / So you need to align it like this.
+- `00:15:48,300 → 00:15:49,800` **Lucia:** 然后慢慢往里推 / And then slowly push it in.
+- `00:15:49,800 → 00:15:51,200` **Lucia:** 看怎么样能推进去 / See how it goes in.
+- `00:15:51,533 → 00:15:52,366` **Lucia:** 好像要轻一点 / It seems like it needs to be gentle.
+- `00:15:52,366 → 00:15:54,800` **Lucia:** 那天那同学跟我说这个挺脆弱的 / That day a classmate told me this is quite fragile.
+- `00:15:54,800 → 00:15:55,933` **Jake:** 嗯对就是 / Hmm, yeah, it is.
+- `00:15:55,933 → 00:15:57,266` **Shure:** 没事搞定 / No worries, got it.
+- `00:15:57,800 → 00:15:59,800` **Lucia:** 就是这不是有一个口吗 / There's a notch here, right?
+- `00:15:59,900 → 00:16:01,300` **Lucia:** 跟这个是对着的 / It aligns with this.
+- `00:16:01,533 → 00:16:03,600` **Lucia:** 你就他们这样对着 / You just need to align them like this.
+- `00:16:03,600 → 00:16:04,600` **Lucia:** 然后慢慢推
+- `00:16:04,600 → 00:16:06,766` **Lucia:** 看这样说不定能把他推进去
+- `00:16:05,566 → 00:16:06,266` 俢硕：哎呦我天
+- `00:16:08,300 → 00:16:09,666` **Lucia:** 要稍微使点力气
+- `00:16:09,666 → 00:16:10,900` **Lucia:** 他这还是有一点紧的
+- `00:16:10,900 → 00:16:12,100` **Lucia:** 但是别太使劲
+- `00:16:11,100 → 00:16:13,566` **Shure:** 需要拧螺丝的地方吗没有吧
+- `00:16:12,100 → 00:16:12,866` **Lucia:** 别掰坏了
+- `00:16:13,966 → 00:16:17,133` **Lucia:** 好像很脆弱的样子，不过我其实也不是很懂这个
+- `00:16:18,900 → 00:16:20,966` **Jake:** 有有有很多螺丝
+- `00:16:20,966 → 00:16:21,666` **Lucia:** 要拧螺丝
+- `00:16:21,666 → 00:16:22,066` **Jake:** 对
+- `00:16:22,600 → 00:16:23,666` **Shure:** 那螺丝呢
+- `00:16:23,933 → 00:16:24,766` **Lucia:** 在那里面
+- `00:16:24,766 → 00:16:26,666` **Shure:** 哦懂了
+- `00:16:27,733 → 00:16:28,533` **Shure:** easy
+- `00:16:31,733 → 00:16:33,066` **Katrina:** 然后就把它装进去了
+- `00:16:33,733 → 00:16:35,866` **Lucia:** 嗯对然后要装到这个盒子里
+- `00:16:36,200 → 00:16:39,300` **Lucia:** 就是你最好是把这个地方取下来
+- `00:16:39,466 → 00:16:41,100` **Lucia:** 然后这个片就可以不要了
+- `00:16:41,500 → 00:16:43,866` **Lucia:** 因为这里一会要也要用来拧螺丝 / Because we'll need to use this to screw in the bolts later.
+- `00:16:46,266 → 00:16:47,966` **Alice:** 是不是只要拧4个螺丝 / Do we just need to screw in 4 bolts?
+- `00:16:48,466 → 00:16:50,233` **Lucia:** 呃8个 / Uh, 8
+- `00:16:50,233 → 00:16:50,933` **Alice:** 8个吗 / 8?
+- `00:16:50,933 → 00:16:51,433` **Lucia:** 对 / Yes.
+- `00:16:51,633 → 00:16:52,066` 俢硕：是的 / Shure: That's right.
+- `00:16:53,500 → 00:16:56,066` **Lucia:** 对你你把那个条抽出来 / Yes, you need to pull out that strip.
+- `00:16:56,166 → 00:16:58,366` **Lucia:** 对然后就你看到那个孔了没 / Yes, and then, do you see that hole?
+- `00:16:58,366 → 00:16:59,466` **Lucia:** 长条形那个 / The long one.
+- `00:16:59,466 → 00:17:00,800` **Lucia:** 他那里面也有一个螺丝孔 / There's also a screw hole inside.
+- `00:17:00,800 → 00:17:02,100` **Lucia:** 你要把那个也上上 / You need to screw that in too.
+- `00:17:03,000 → 00:17:04,866` **Lucia:** 就是那个是大螺丝的螺丝孔 / That's the screw hole for the big screw.
+- `00:17:05,266 → 00:17:06,166` **Alice:** 啊哪个 / Ah, which one?
+- `00:17:06,500 → 00:17:08,533` **Lucia:** 呃这里你看 / Uh, here, look.
+- `00:17:08,533 → 00:17:10,533` **Alice:** 我已经上上完一个螺丝 / I've already screwed in one screw.
+- `00:17:11,733 → 00:17:14,333` **Lucia:** 就是这个这个东西 / It's this one, this thing.
+- `00:17:14,333 → 00:17:16,700` **Lucia:** 嗯我怎么样给你指的比较清楚 / Hmm, how can I point it out more clearly?
+- `00:17:16,700 → 00:17:18,200` **Lucia:** 哎你上的这是对的 / Oh, you've got it right.
+- `00:17:17,633 → 00:17:18,600` **Alice:** 嗯 / Hmm.
+- `00:17:18,266 → 00:17:19,766` **Lucia:** 对然后这边每个都有 / Yes, and each one over here has one.
+- `00:17:19,766 → 00:17:22,333` **Lucia:** 然后这个也是所以一共是8个对的 / And this one too, so there are 8 in total.
+- `00:17:20,933 → 00:17:21,566` **Alice:** 昂 / Got it.
+- `00:17:22,366 → 00:17:23,333` **Alice:** 懂了看见了 / I see it now.
+- `00:17:23,333 → 00:17:24,133` **Katrina:** 这是大螺丝 / This is the big screw.
+- `00:17:24,066 → 00:17:24,966` **Alice:** 没看见刚刚 / I didn't see it earlier.
+- `00:17:24,133 → 00:17:25,166` **Katrina:** 你看上在这儿是 吗 / See, it's here, right?
+- `00:17:25,533 → 00:17:25,966` **Lucia:** 对对 / Yes, yes.
+- `00:17:26,033 → 00:17:26,700` **Katrina:** 小螺丝上这儿 / The small screw goes here.
+- `00:17:26,933 → 00:17:27,100` **Lucia:** 对的 / Correct.
+- `00:17:27,000 → 00:17:28,866` **Alice:** 哦里边是把它插进去就行了吧 / Oh, inside, just insert it, right?
+- `00:17:29,066 → 00:17:29,533` **Alice:** 就那个 / Just that one.
+- `00:17:29,800 → 00:17:30,100` **Jake:** 对 / Yes.
+- `00:17:30,366 → 00:17:32,200` **Alice:** 呃那个对 / Uh, that one, right.
+- `00:17:32,533 → 00:17:32,700` **Alice:** 嗯 / Hmm.
+- `00:17:33,333 → 00:17:35,100` **Lucia:** 里面应该插进去就就行了 / Inside, it should just be inserted, that's it.
+- `00:17:33,533 → 00:17:35,466` **Alice:** 叫啥集成电路还是什么 / What's it called, an integrated circuit or something?
+- `00:17:41,166 → 00:17:43,600` **Jake:** 上一回我们一直在抱怨磁吸的问题 / Last time, we kept complaining about the magnetic issue.
+- `00:17:43,600 → 00:17:45,900` **Jake:** 但是好像今天大家都没有什么 / But it seems like today, no one has any problems.
+- `00:17:45,933 → 00:17:48,333` **Lucia:** 对今天大家好像接受良好 / Yes, today everyone seems to be okay with it.
+- `00:17:49,033 → 00:17:49,433` **Jake:** 对 / Right.
+- `00:17:49,600 → 00:17:50,366` **Alice:** 什么实吸的 / What are you talking about?
+- `00:17:50,000 → 00:17:50,300` 俢硕：他 / Shure: He
+- `00:17:50,766 → 00:17:53,333` **Shure:** 毕竟附赠的这个不可能给你什么 / After all, this freebie can't really give you anything.
+- `00:17:53,333 → 00:17:54,066` **Lucia:** 就是就是 / Exactly, exactly.
+- `00:17:54,066 → 00:17:55,800` **Lucia:** 这个螺丝刀它没有磁性 / This screwdriver isn't magnetic.
+- `00:17:55,266 → 00:17:56,200` 俢硕：没有磁吸 / Shure: No magnetic attraction.
+- `00:17:56,733 → 00:17:58,333` **Lucia:** 对所以就是在 / Yeah, so when
+- `00:17:58,333 → 00:17:59,166` **Katrina:** 这是装大的 / This one is for the bigger screws.
+- `00:17:59,166 → 00:18:00,400` **Lucia:** 放螺丝的时候就很麻烦 / It's really troublesome when you're putting screws in.
+- `00:18:00,400 → 00:18:01,966` **Lucia:** 对是这里是放大的 / Yeah, this one is for the bigger ones.
+- `00:18:01,966 → 00:18:03,533` **Katrina:** 嗯大的能卡进去 / Yeah, the big one can fit in.
+- `00:18:03,933 → 00:18:05,300` **Lucia:** 呃他就是这样子 / Um, it's just like this.
+- `00:18:05,300 → 00:18:06,966` **Lucia:** 他没有办法就穿过这个孔 / It can't really go through this hole.
+- `00:18:06,966 → 00:18:07,366` **Lucia:** 你就是要把 / You just have to
+- `00:18:07,366 → 00:18:11,666` **Jake:** 你的头发总喜欢挡着镜头要不想想办法 / Your hair is always blocking the camera, can you do something about it?
+- `00:18:10,800 → 00:18:11,466` **Tasha:** 这个吗 / This one?
+- `00:18:11,666 → 00:18:13,466` **Jake:** 对或者塞到里边去 / Yeah, or tuck it inside.
+- `00:18:13,966 → 00:18:15,266` **Tasha:** 我塞了已经 / I've already tucked it in.
+- `00:18:16,466 → 00:18:16,966` **Katrina:** 找个小夹子 / Find a small clip.
+- `00:18:16,833 → 00:18:19,166` **Lucia:** 应该只要把它固定住就好 / You just need to fix it in place.
+- `00:18:19,266 → 00:18:20,466` **Lucia:** 是是这样吗 / Is this okay?
+- `00:18:26,066 → 00:18:27,333` **Jake:** 嗯这个好 / Yeah, this is good.
+- `00:18:32,666 → 00:18:33,466` **Shure:** 我们 / We
+- `00:18:35,266 → 00:18:37,266` **Shure:** 是不是可以有一点BGM / Can we have some background music?
+- `00:18:37,633 → 00:18:38,933` **Jake:** 那你放一点 / Then you can play some.
+- `00:18:38,200 → 00:18:39,533` **Lucia:** 支持来 / Go ahead.
+- `00:18:45,000 → 00:18:47,100` **Shure:** 大家平时爱听什么类型的音乐 / What kind of music do you guys usually listen to?
+- `00:18:48,166 → 00:18:49,566` **Katrina:** 我我听陶喆 / I listen to David Tao.
+- `00:18:50,933 → 00:18:52,133` **Jake:** 陶喆类型的音乐 / David Tao type of music.
+- `00:18:52,500 → 00:18:53,433` **Katrina:** 嗯RMB / Yeah, R&B.
+- `00:18:52,566 → 00:18:53,966` **Jake:** RMB / R&B.
+- `00:18:53,633 → 00:18:54,333` **Shure:** R&B / R&B.
+- `00:18:56,133 → 00:18:57,400` **Lucia:** 我是混欧美圈的 / I'm into Western music.
+- `00:18:57,400 → 00:18:58,766` **Lucia:** 所以就乱听 / So I listen to random stuff.
+- `00:19:00,266 → 00:19:01,833` **Alice:** 给大家一个比较干劲的 / Let's play something energetic for everyone.
+- `00:19:03,733 → 00:19:04,166` **Jake:** 好 / Okay.
+- `00:19:04,033 → 00:19:06,066` **Katrina:** 那个东北雨姐的BGM / How about some upbeat music from Northeast China?
+- `00:19:06,966 → 00:19:10,500` **Shure:** 哈哈哈哈哈ok / Hahaha, okay.
+- `00:19:07,100 → 00:19:09,133` **Jake:** 哈哈哈 / Hahaha.
+- `00:19:09,466 → 00:19:10,266` **Jake:** 可以可以 / Okay, okay.
+- `00:19:10,266 → 00:19:12,366` **Jake:** 来自东方的小小震撼 / A little shock from the East.
+- `00:19:11,966 → 00:19:13,900` **Alice:** 笑死我了贼有劲 / I'm dying of laughter, it's so powerful.
+- `00:19:14,333 → 00:19:14,800` **Jake:** 对 / Yeah.
+- `00:19:15,633 → 00:19:16,066` **Shure:** 来 / Come on.
+- `00:19:16,300 → 00:19:17,366` **Jake:** 跳吧要不然 / Jump then, or else...
+- `00:19:18,966 → 00:19:20,466` **Shure:** 我想扛起来了 / I want to lift it up.
+- `00:19:21,100 → 00:19:21,766` **Katrina:** 扛起来 / Lift it up.
+- `00:19:26,000 → 00:19:28,000` **Shure:** 这个半嵌入就行是吧 / Just embed this halfway, right?
+- `00:19:28,000 → 00:19:28,466` **Shure:** 这样 / Like this.
+- `00:19:28,633 → 00:19:30,233` **Jake:** 对对固定就行 / Yeah, just fix it.
+- `00:19:32,166 → 00:19:32,733` **Alice:** OK / OK.
+- `00:19:32,533 → 00:19:35,433` **Shure:** 大东北我的家乡 / My hometown in the Great Northeast.
+- `00:19:37,500 → 00:19:38,600` **Jake:** 你东北哪的呀 / Where in the Northeast are you from?
+- `00:19:39,700 → 00:19:41,500` **Shure:** 我稻花香 / I'm from Daohuaxiang.
+- `00:19:42,400 → 00:19:43,333` **Jake:** 东北稻花的 / From Northeast Daohua?
+- `00:19:43,333 → 00:19:44,000` **Shure:** 不是不是 / No, no.
+- `00:19:44,000 → 00:19:45,166` **Shure:** 那个长春的 / From Changchun.
+- `00:19:45,166 → 00:19:45,933` **Jake:** 长春的 / Changchun.
+- `00:19:46,300 → 00:19:50,966` **Shure:** 吉林省长春市大家知道这个城市吗 / Changchun, Jilin Province, does everyone know this city?
+- `00:19:51,533 → 00:19:52,333` **Katrina:** 知道呀 / Yes.
+- `00:19:53,666 → 00:19:56,333` **Shure:** 大家知道吉林省还有个吉林市吗 / Does everyone know there's also a city named Jilin in Jilin Province?
+- `00:19:56,533 → 00:19:56,666` **Alice:** 昂 / Uh-huh.
+- `00:19:56,533 → 00:19:58,066` **Jake:** 啊对这也知道 / Ah, yes, we know that too.
+- `00:19:59,266 → 00:20:00,933` **Jake:** 怎么你在吉林市 / So are you in Jilin City?
+- `00:20:01,166 → 00:20:02,366` **Shure:** 没有我在长春 / No, I'm in Changchun.
+- `00:20:02,666 → 00:20:03,400` **Jake:** 你们隔壁是吧 / Your neighbor, right?
+- `00:20:03,400 → 00:20:04,766` **Shure:** 好像是 / Seems like it.
+- `00:20:10,100 → 00:20:11,400` **Shure:** 大东北 / Great Northeast.
+- `00:20:28,000 → 00:20:31,133` **Shure:** AI人类为什么喜欢听这样的音乐 / AI, why do humans like listening to this kind of music?
+- `00:20:29,000 → 00:20:29,966` **Jake:** 这个在后面 / This goes in the back.
+- `00:20:31,133 → 00:20:32,300` **Katrina:** 人类迷惑行为 / Human confusing behavior.
+- `00:20:34,500 → 00:20:36,500` **Jake:** 然后这边有一个螺丝 / Then there's a screw here.
+- `00:20:37,066 → 00:20:38,100` **Jake:** 你看两边 / Look at both sides.
+- `00:20:40,333 → 00:20:42,100` **Lucia:** 外面这好像不装回去也 / It seems like we don't have to put this back.
+- `00:20:42,100 → 00:20:43,666` **Lucia:** 也可以就这个条 / We can just use this strip.
+- `00:20:43,666 → 00:20:46,066` **Lucia:** 我们那天反正好像都扔了我记得 / I remember we threw it away last time anyway.
+- `00:20:46,066 → 00:20:46,733` **Shure:** 这条刚好 / This strip fits perfectly.
+- `00:20:46,733 → 00:20:47,600` **Lucia:** 这条可以扔 / We can throw this strip away.
+- `00:20:47,600 → 00:20:48,533` **Jake:** 可以放可以放 / We can put it here, we can put it here.
+- `00:20:48,533 → 00:20:50,266` **Jake:** 我昨天成功的放了进去 / I successfully put it in yesterday.
+- `00:20:50,266 → 00:20:52,066` **Lucia:** 哦哦原来如此 / Oh, I see.
+- `00:20:52,066 → 00:20:52,533` **Jake:** 对 / Yes.
+- `00:20:52,066 → 00:20:53,766` **Lucia:** 那那那咱那天的嘞 / What about that day then?
+- `00:20:53,766 → 00:20:54,700` **Jake:** 没关系对 / It doesn't matter.
+- `00:20:55,066 → 00:20:56,166` **Jake:** 它就是美观 / It's just for aesthetics.
+- `00:20:56,266 → 00:20:58,333` **Jake:** 它就是看的没有螺丝 / It looks like there are no screws.
+- `00:20:56,466 → 00:20:57,400` **Alice:** 可以了吗 / Is it done?
+- `00:20:59,700 → 00:21:02,466` **Jake:** 然后把它这样 / Then you do it like this.
+- `00:21:02,466 → 00:21:03,900` **Shure:** 可以进场了 / Ready to go in.
+- `00:21:04,033 → 00:21:05,466` **Lucia:** 哈可以进场 / Oh, ready to go in.
+- `00:21:04,433 → 00:21:06,966` **Alice:** 可以我已经进过场了 / Yes, I’ve already been in.
+- `00:21:07,900 → 00:21:09,300` **Jake:** 啊你你进过场玩过 / Oh, you've been in and played?
+- `00:21:10,533 → 00:21:13,466` **Alice:** 我觉得我们大学那些接线的 / I think the wiring we did in college...
+- `00:21:13,466 → 00:21:15,800` **Alice:** 焊板子的跟进场没啥区别 / Soldering boards, it's no different from going in.
+- `00:21:16,066 → 00:21:16,666` **Jake:** 互联网吗 / Internet?
+- `00:21:16,466 → 00:21:16,666` **Jake:** 还是什么 / Or what?
+- `00:21:16,666 → 00:21:16,933` **Jake:** 还是什么 / Or what?
+- `00:21:17,066 → 00:21:18,966` **Alice:** 嗯对电工 / Yeah, electrician.
+- `00:21:17,433 → 00:21:18,066` **Katrina:** 电工嗯 / Electrician, yeah.
+- `00:21:18,966 → 00:21:19,966` **Katrina:** 焊板子的 / Soldering boards.
+- `00:21:19,100 → 00:21:22,566` **Lucia:** 哦对电工实习会做一些神奇的东西 / Oh right, electrician internships do some magical things.
+- `00:21:21,433 → 00:21:22,966` **Katrina:** 我不知当时 / I didn't know back then...
+- `00:21:22,133 → 00:21:22,966` **Jake:** 对    最后 / Right, in the end...
+- `00:21:22,566 → 00:21:24,266` **Lucia:** 最后我们学校也是 / In the end, our school also...
+- `00:21:23,966 → 00:21:30,200` **Jake:** 最后放成这个样子好吧然后就就可以出叫出场了对 / Finally, put it like this, then it can be called done, right?
+- `00:21:25,966 → 00:21:27,633` **Katrina:** 开玩笑我们阮工 也要训练 / Just kidding, our Nguyen engineer also needs training.
+- `00:21:32,866 → 00:21:33,733` **Jake:** 出流水线 / On the assembly line.
+- `00:21:34,666 → 00:21:35,733` **Jake:** 下一个流水线 / Next assembly line.
+- `00:21:36,900 → 00:21:38,766` **Lucia:** 下一个流水线是让你接到电脑上的 / The next assembly line connects to the computer.
+- `00:21:38,600 → 00:21:39,866` **Jake:** 嘿嘿嘿 / Hehehe.
+- `00:21:38,766 → 00:21:39,800` **Lucia:** 哈哈哈 / Hahaha.
+- `00:21:40,733 → 00:21:42,500` **Shure:** 下一个需要高级技工 / The next one needs a senior technician.
+- `00:21:42,566 → 00:21:44,633` **Lucia:** 哈哈哈高级技工 / Hahaha, senior technician.
+- `00:21:43,333 → 00:21:45,500` **Alice:** 哈哈哈暂停 / Hahaha, pause.
+- `00:21:47,366 → 00:21:48,200` **Alice:** 吵吵的 / Noisy.
+- `00:21:50,266 → 00:21:52,366` **Jake:** 3, 000的技工到5, 000的技工 / From a 3, 000 technician to a 5, 000 technician.
+- `00:21:53,500 → 00:21:55,266` **Shure:** 你说这是技工吗 / You call this a technician?
+- `00:21:57,600 → 00:21:58,700` **Alice:** 什么是技工 / What's a technician?
+- `00:21:59,400 → 00:22:00,200` **Alice:** 鸡公煲 / Chicken pot.
+- `00:21:59,400 → 00:22:01,800` **Lucia:** 技术工人 技术工人 / Skilled worker, skilled worker.
+- `00:22:03,866 → 00:22:04,766` **Shure:** 哎为什么我 / Hey, why me?
+- `00:22:06,300 → 00:22:07,600` **Alice:** 因为你按反了啊 / Because you pressed it the wrong way.
+- `00:22:06,300 → 00:22:07,633` **Jake:** 因为按反了 / Because you pressed it the wrong way.
+- `00:22:07,633 → 00:22:08,133` **Shure:** 昂啊 / Oh, I see.
+- `00:22:08,366 → 00:22:11,200` **Jake:** 这个是有俩螺丝 / There are two screws here.
+- `00:22:11,833 → 00:22:14,233` **Shure:** 哦哦哎哎 / Oh, oh, right, right.
+- `00:22:12,200 → 00:22:14,466` **Jake:** 你看侧面哎 / Look at the side here.
+- `00:22:15,900 → 00:22:18,266` **Jake:** 2, 000 了是吧2, 000了 / 2, 0, right? It’s 2, 0
+- `00:22:17,066 → 00:22:19,066` **Shure:** 完了丢人了倒数第一个 / Oh no, I’m the last one, how embarrassing.
+- `00:22:21,766 → 00:22:23,366` **Shure:** 不行我必须要争一下 / No, I have to fight for it.
+- `00:22:23,366 → 00:22:24,300` **Shure:** 我不能倒数第一 / I can't be the last one.
+- `00:22:24,300 → 00:22:25,900` **Jake:** 哈哈好 / Haha, okay.
+- `00:22:26,200 → 00:22:27,533` **Jake:** 硬盘硬盘锦标赛 / Hard drive competition.
+- `00:22:26,733 → 00:22:29,733` **Katrina:** 你完了然后呢就不用干什么了吧 / You’re done, so you don’t need to do anything else, right?
+- `00:22:30,533 → 00:22:31,866` **Lucia:** 拧完应该就就好了 / Tighten it, and it should be fine.
+- `00:22:31,866 → 00:22:34,866` **Jake:** 对 放那儿就行 / Yes, just leave it there.
+- `00:22:31,866 → 00:22:35,166` **Shure:** 他风轻云淡的说一句拧完了 / He casually says he’s done tightening it.
+- `00:22:35,166 → 00:22:36,033` **Shure:** 然后呢 / Then what?
+- `00:22:37,466 → 00:22:38,200` **Shure:** 他挑衅我 / He’s provoking me.
+- `00:22:38,200 → 00:22:39,300` **Shure:** 我靠 / Damn.
+- `00:22:39,300 → 00:22:40,600` **Jake:** 到底还有机会吗 / Do we still have a chance?
+- `00:22:41,966 → 00:22:42,866` **Katrina:** 是这样吗 / Is it like this?
+- `00:22:42,866 → 00:22:43,866` **Lucia:** 应该是吧 / It should be, right?
+- `00:22:44,533 → 00:22:46,533` **Jake:** 对对对放到这个盒子里面 / Yes, yes, put it in this box.
+- `00:22:46,533 → 00:22:48,266` **Shure:** 你看你没有装上那一关 / Look, you didn’t put it in that level.
+- `00:22:47,100 → 00:22:51,733` **Jake:** 这出场对这就是最后一步 / This is the entrance, yes, this is the last step.
+- `00:22:51,333 → 00:22:54,333` **Lucia:** 条壮壮的都行不装了挺麻烦的 / It’s fine if you don’t install it, it’s quite troublesome.
+- `00:22:52,300 → 00:22:54,900` **Jake:** 给你一点机会但是你还是没有抓住 / I gave you a chance, but you still missed it.
+- `00:22:54,900 → 00:22:56,100` **Lucia:** 你可以把条放在里面 / You can put the strip inside.
+- `00:22:56,100 → 00:22:57,166` **Lucia:** 如果需要装的话 / If it needs to be installed.
+- `00:22:57,166 → 00:22:59,466` **Lucia:** 然后尽量自己装就好了 / Then try to install it yourself.
+- `00:22:59,533 → 00:23:02,666` **Jake:** 没需要装完全没必要放里面就好 / No need to install, just put it inside, it’s fine.
+- `00:23:05,333 → 00:23:05,666` **Shure:** OK / OK.
+- `00:23:07,733 → 00:23:09,400` **Shure:** 大家可以出场了 / Everyone can go out now.
+- `00:23:09,400 → 00:23:12,700` **Jake:** 出场好谢谢大家 / Exit, thank you everyone.
+- `00:23:16,700 → 00:23:18,933` **Jake:** 完成了一个奇怪的第一次任务 / Completed a strange first task.
+- `00:23:19,766 → 00:23:23,166` **Jake:** 然后这个EGO life最后一天 / And this is the last day of EGO life.
+- `00:23:23,166 → 00:23:24,766` **Jake:** 大家会邀请什么人呢 / Who will you invite?
+- `00:23:26,566 → 00:23:26,900` **Jake:** 啊 / Ah.
+- `00:23:26,700 → 00:23:27,733` **Shure:** 最后一天 / The last day
+- `00:23:27,766 → 00:23:28,500` **Jake:** 最后一天 / The last day
+- `00:23:28,666 → 00:23:29,600` **Shure:** 是周日是吗 / It's Sunday, right?
+- `00:23:29,600 → 00:23:31,966` **Jake:** 周周日周日下午吧 / Sunday afternoon, maybe
+- `00:23:33,600 → 00:23:35,866` **Shure:** 啊咱俩会邀请什么人 / Who are we inviting?
+- `00:23:36,200 → 00:23:36,966` **Jake:** 会邀请几个人 / We'll invite a few people.
+- `00:23:36,966 → 00:23:37,766` **Jake:** 呀 / Yeah
+- `00:23:38,100 → 00:23:40,100` **Shure:** 黑板写一写吧 / Let's write it on the blackboard.
+- `00:23:38,200 → 00:23:39,500` **Katrina:** 应该一个吧 / Should be one, right?
+- `00:23:40,133 → 00:23:41,566` **Jake:** 对黑板可以写一写 / Yeah, we can write it on the blackboard.
+- `00:23:41,733 → 00:23:43,800` **Shure:** 来我来我字非常好看 / Let me do it, I have great handwriting.
+- `00:23:43,800 → 00:23:44,600` **Jake:** 好的 / Sure
+- `00:23:45,133 → 00:23:46,266` **Jake:** 我们还有一个架子 / We also have a shelf
+- `00:23:46,266 → 00:23:47,700` **Jake:** 要不我们也拼一下好 / Why don't we assemble it too?
+- `00:23:49,000 → 00:23:49,533` **Shure:** 什么架子 / What shelf?
+- `00:23:49,533 → 00:23:50,566` **Jake:** 就是就是 / Just, just
+- `00:23:50,566 → 00:23:53,800` **Jake:** 你如果觉得这个这么写很难写的话 / If you find writing this way difficult
+- `00:23:53,900 → 00:23:55,133` **Jake:** 它其实有一个 / There's actually a
+- `00:24:05,733 → 00:24:09,800` **Jake:** 就这个东西就是你可以下这些 / This thing, you can put these down
+- `00:24:08,533 → 00:24:10,600` **Shure:** 等等再装吧先写吧 / Let's assemble it later, let's write first.
+- `00:24:09,800 → 00:24:11,100` **Jake:** 这问题不大是吧 / It's not a big problem, right?
+- `00:24:11,100 → 00:24:11,900` **Shure:** 问题不大问题不大 / Not a big problem, not a big problem.
+- `00:24:11,866 → 00:24:12,666` **Jake:** 问题不大 / Not a big problem.
+- `00:24:12,666 → 00:24:15,300` **Shure:** 不影响我这个书法的发挥 / It won't affect my calligraphy.
+- `00:24:15,800 → 00:24:16,166` **Jake:** 笔呢 / Where's the pen?
+- `00:24:16,666 → 00:24:17,166` **Shure:** 笔呢 / Where's the pen?
+- `00:24:18,666 → 00:24:19,433` **Shure:** 好问题 / Good question.
+- `00:24:19,466 → 00:24:20,000` **Jake:** 好问题 / Good question.
+- `00:24:22,200 → 00:24:24,466` **Shure:** 问问他问问AI笔呢 / Ask him, ask AI, where's the pen?
+- `00:24:24,600 → 00:24:25,133` **Jake:** 笔呢笔呢 / Where's the pen, where's the pen?
+- `00:24:25,966 → 00:24:27,100` **Lucia:** 寻找我的iPhone吗 / Looking for my iPhone?
+- `00:24:27,100 → 00:24:29,100` **Lucia:** 哈哈哈 / Hahaha
+- `00:24:29,100 → 00:24:30,000` **Jake:** 对笔呢 / Yeah, where's the pen?
+- `00:24:30,000 → 00:24:30,933` **Lucia:** 寻找我的 / Looking for my...
+- `00:24:31,000 → 00:24:32,133` **Lucia:** 寻找我的pencil / Looking for my pencil.
+- `00:24:32,133 → 00:24:33,466` **Jake:** 笔应该在上面 / The pen should be up there.
+- `00:24:33,466 → 00:24:33,966` **Jake:** 等一下啊 / Hold on.
+- `00:24:56,466 → 00:24:59,166` **Lucia:** 哎所以我们的E人到底是哪两位啊 / Hey, so who exactly are our guests?
+- `00:24:59,766 → 00:25:00,100` **Jake:** 笔
+- `00:24:59,933 → 00:25:00,300` **Katrina:** 我 / Me
+- `00:25:01,066 → 00:25:02,200` **Shure:** 我也是E / Me too, I'm a...
+- `00:25:02,200 → 00:25:03,600` **Lucia:** 哎你 是一吗 / Hey, are you an "I"?
+- `00:25:04,566 → 00:25:06,933` **Shure:** 我我是e不是一啊OK / No, I'm an "E", not "I", OK?
+- `00:25:08,400 → 00:25:09,966` **Jake:** 有啥差别啊 / What's the difference?
+- `00:25:09,966 → 00:25:10,900` **Jake:** 嗯你是一 / Hmm, you're an "I"?
+- `00:25:11,133 → 00:25:14,433` **Lucia:** 所以哎等等我们是三三三e两i / So, wait a minute, we are three "E"s, two "I"s.
+- `00:25:11,633 → 00:25:13,533` **Katrina:** 他要是一就完蛋了 / If he was an "I", we'd be doomed.
+- `00:25:12,400 → 00:25:12,900` **Shure:** 我是 / I'm...
+- `00:25:15,000 → 00:25:16,466` **Lucia:** 哎那咱俩是然后呢 / Hey, so we are... and then?
+- `00:25:16,466 → 00:25:18,733` **Lucia:** 啊OK昨天我没有 / Ah, OK, yesterday I didn't...
+- `00:25:18,433 → 00:25:20,233` **Shure:** 我们来辩一下 / Let's debate a bit.
+- `00:25:18,733 → 00:25:19,700` **Lucia:** 昨天我没有猜出来 / Yesterday I didn't guess it.
+- `00:25:19,700 → 00:25:22,066` **Lucia:** 虽然我猜到他可能是疑人 / Although I thought he might be a suspect.
+- `00:25:22,800 → 00:25:24,466` **Shure:** EGO life / EGO life.
+- `00:25:27,600 → 00:25:27,700` **Jake:** 嗯 / Hmm.
+- `00:25:28,333 → 00:25:29,733` **Shure:** 最后一天的名单 / The final day's list.
+- `00:25:30,333 → 00:25:30,733` **Jake:** 行啊 / Okay.
+- `00:25:33,666 → 00:25:34,100` **Shure:** 你 / You...
+- `00:25:36,666 → 00:25:37,133` **Shure:** 要 / Need...
+- `00:25:37,466 → 00:25:38,766` **Jake:** 哈哈可以 / Haha, sure.
+- `00:25:39,500 → 00:25:40,400` **Jake:** 是这么写的 / This is how it's written.
+- `00:25:40,700 → 00:25:41,200` **Jake:** 笔画 / Strokes.
+- `00:25:41,333 → 00:25:42,400` **Shure:** 11是这么写的 / Yeah, this is how 11 is written.
+- `00:25:42,400 → 00:25:43,466` **Jake:** 是这么写的 / This is how it's written.
+- `00:25:49,733 → 00:25:51,366` **Shure:** 夹子的夹怎么写呵呵呵 / How do you write "夹"? Haha.
+- `00:25:52,866 → 00:25:55,266` **Shure:** 啊太久没写 / Ah, it's been too long since I wrote it.
+- `00:25:56,900 → 00:25:57,600` **Alice:** 宝盖头 / It starts with "宝".
+- `00:25:57,233 → 00:25:59,233` **Tasha:** 宝盖头宝盖 / "宝", 宝.
+- `00:25:57,600 → 00:25:59,666` **Jake:** 哼哼呵呵呵 / Hmm, hmm, haha.
+- `00:26:01,600 → 00:26:03,933` **Shure:** OK第一位 / OK, the first one.
+- `00:26:06,966 → 00:26:08,700` **Jake:** 修硕你邀请几个人啊 / Shure, how many people did you invite?
+- `00:26:09,366 → 00:26:12,033` **Shure:** 我浅浅邀一个吧先 / I'll start by inviting just one.
+- `00:26:12,800 → 00:26:14,466` **Jake:** 浅浅先邀一个啊 / Just one to start?
+- `00:26:13,900 → 00:26:14,300` **Shure:** 嗯 / Yeah.
+- `00:26:14,733 → 00:26:15,533` **Jake:** 路亚呢 / What about Luya?
+- `00:26:16,600 → 00:26:18,966` **Lucia:** 我不太确定因为咱们这太远了 / I'm not sure because it's too far.
+- `00:26:18,966 → 00:26:20,800` **Lucia:** 我不知道我小伙伴过不过得来 / I don't know if my friend can make it.
+- `00:26:19,133 → 00:26:20,066` **Jake:** 哦 / Oh.
+- `00:26:20,800 → 00:26:23,000` **Jake:** 好那你的工作室 / Okay, then your studio...
+- `00:26:25,200 → 00:26:26,733` **Tasha:** 我浅浅邀请一个吧 / I'll just invite one for now.
+- `00:26:26,733 → 00:26:28,266` **Jake:** 好浅浅邀请一个 / Okay, Tasha, invite someone.
+- `00:26:29,433 → 00:26:30,366` **Shure:** 叫什么名字 / What's their name?
+- `00:26:30,500 → 00:26:32,600` **Jake:** 用不着这就用不着了 / No need, there's no need.
+- `00:26:33,366 → 00:26:35,366` **Jake:** 就是大概画个正字得了 / Just roughly draw a tick mark.
+- `00:26:35,366 → 00:26:36,933` **Shure:** 啊画正字好 / Ah, a tick mark, got it.
+- `00:26:37,500 → 00:26:38,566` **Jake:** 或者你用那个小球 / Or you can use that little ball.
+- `00:26:38,566 → 00:26:39,500` **Jake:** 我估计也够 / I think that's enough.
+- `00:26:40,566 → 00:26:41,800` **Katrina:** 画小人吧 / Draw a little person.
+- `00:26:41,800 → 00:26:43,200` **Katrina:** 男生就是这样 / Boys are like this.
+- `00:26:43,200 → 00:26:44,500` **Katrina:** 女生夹两边 / Girls are on both sides.
+- `00:26:47,533 → 00:26:48,300` **Shure:** 你邀请 / You invite.
+- `00:26:48,466 → 00:26:51,166` **Jake:** 额呵呵呵 / Uh, hehe.
+- `00:26:49,833 → 00:26:51,500` **Tasha:** 这是你邀请的女生吗 / Is this the girl you invited?
+- `00:26:51,500 → 00:26:52,666` **Shure:** 啊你啊 / Ah, you?
+- `00:26:52,700 → 00:26:54,633` **Tasha:** 那我也邀请一位女生 / Then I'll invite a girl too.
+- `00:27:01,066 → 00:27:02,266` **Lucia:** 你这个你这个辫 / This, this braid.
+- `00:27:02,266 → 00:27:05,600` **Lucia:** 他这个接口没有在头上这个 / This connection isn't on top of the head.
+- `00:27:03,133 → 00:27:04,200` **Alice:** 抽象 / Abstract.
+- `00:27:06,766 → 00:27:07,333` **Katrina:** 假发 / Wig.
+- `00:27:07,200 → 00:27:08,366` **Alice:** 我的天呐 / Oh my god.
+- `00:27:09,933 → 00:27:12,500` **Shure:** 哈哈我们重填一下哎 / Haha, let's redo it.
+- `00:27:12,866 → 00:27:14,633` **Jake:** 哼哼奥特曼 / Hmm, Ultraman.
+- `00:27:13,900 → 00:27:15,700` **Katrina:** 我应该邀请一个男生 / I should invite a boy.
+- `00:27:15,933 → 00:27:16,733` **Shure:** 男生 / A boy.
+- `00:27:16,900 → 00:27:17,433` **Katrina:** 嗯 / Yeah.
+- `00:27:23,333 → 00:27:24,133` **Alice:** 爱心童的 / Loving children.
+- `00:27:24,633 → 00:27:25,600` **Katrina:** 三条腿 / Three legs.
+- `00:27:30,000 → 00:27:31,366` **Jake:** 这合适吧这样 / Is this okay like this?
+- `00:27:33,266 → 00:27:35,333` **Shure:** 对不起不小心画出头 / Sorry, I accidentally drew the head.
+- `00:27:41,933 → 00:27:42,433` **Shure:** OK / OK.
+- `00:27:42,900 → 00:27:45,866` **Lucia:** 我其实可以问一个女生但我不确定他能不能过得来 / I could actually ask a girl, but I'm not sure if she can make it.
+- `00:27:45,866 → 00:27:47,500` **Lucia:** 因为他那边挺远的 / Because she's quite far.
+- `00:27:50,500 → 00:27:54,566` **Lucia:** 哈哈哈哈存疑是吧存疑 / Hahaha, doubtful, right? Doubtful.
+- `00:27:52,900 → 00:27:54,900` **Shure:** ok存疑 / OK, doubtful.
+- `00:27:57,633 → 00:27:58,033` **Shure:** 还有呢 / Anything else?
+- `00:27:57,833 → 00:27:59,100` **Alice:** 额我可以 / Uh, I can.
+- `00:27:58,433 → 00:28:00,700` **Jake:** 你可以在每个人下面写一个名字 / You can write a name under everyone.
+- `00:28:00,766 → 00:28:02,133` **Jake:** 写一个他的host / Write their host.
+- `00:28:02,766 → 00:28:03,566` **Shure:** host是吗 / Host, right?
+- `00:28:03,900 → 00:28:06,400` **Jake:** 嗯就是你的代号吧之类 / Yeah, like your code name or something.
+- `00:28:05,700 → 00:28:06,533` **Shure:** 认领一下 / Claim it
+- `00:28:06,766 → 00:28:07,133` **Jake:** 不不不 / No no no
+- `00:28:07,133 → 00:28:09,433` **Jake:** 你就在这个小人的下面写一个 / Just write one under this little guy
+- `00:28:09,500 → 00:28:12,766` **Jake:** 或者在上面或者脸上写一个之类的 / Or write one above or on the face or something
+- `00:28:18,700 → 00:28:19,566` **Shure:** 这是谁的来着 / Whose is this again?
+- `00:28:20,566 → 00:28:22,033` **Alice:** 额塔莎 / Uh, Tasha's
+- `00:28:20,866 → 00:28:22,333` **Shure:** 昂塔莎 / Oh, Tasha's
+- `00:28:27,500 → 00:28:28,100` **Shure:** 然后 / And then
+- `00:28:28,400 → 00:28:29,566` **Alice:** 这个是你喜欢的 / This is the one you like
+- `00:28:29,933 → 00:28:30,300` **Shure:** 嗯 / Hmm
+- `00:28:30,633 → 00:28:32,266` **Katrina:** 那就写LYX / Then just write LYX
+- `00:28:34,133 → 00:28:34,900` **Katrina:** LYX / LYX
+- `00:28:38,133 → 00:28:42,466` **Jake:** 啊哈哈哈哈 / Ah hahaha
+- `00:28:42,500 → 00:28:43,733` **Shure:** 这这位是谁的人 / Whose person is this?
+- `00:28:43,866 → 00:28:47,933` **Shure:** 我录像或者写个l也行哈哈哈 / I record it or write an L, that's fine haha
+- `00:28:48,400 → 00:28:51,566` **Shure:** NC艾特 / NC @
+- `00:28:52,700 → 00:28:54,933` **Shure:** 还有呢你要邀请奖了是吗 / Also, are you going to invite the award?
+- `00:28:54,933 → 00:28:56,533` **Alice:** 对但是有一个可能来不了 / Yeah, but one might not come
+- `00:28:57,866 → 00:28:58,933` **Shure:** 性别 / Gender
+- `00:28:58,933 → 00:28:59,433` **Alice:** 都是女的呵 / All girls, heh
+- `00:29:01,133 → 00:29:01,433` **Shure:** 呵 / Heh
+- `00:29:03,500 → 00:29:06,200` **Alice:** 有一个不知道能来不能 / There's one who might not be able to come
+- `00:29:12,500 → 00:29:15,333` **Alice:** 你给我画个星就行了五角星 / Just draw me a star, a five-pointed star
+- `00:29:16,866 → 00:29:17,200` **Alice:** ;OK了 / OK
+- `00:29:16,866 → 00:29:17,200` Shure:  OK / Alice: OK
+- `00:29:18,566 → 00:29:22,366` **Shure:** 现在我们有一二三四五六六位嘉宾 / Now we have one, two, three, four, five, six, six guests
+- `00:29:23,066 → 00:29:26,100` **Jake:** 嗯呃4-6位嘉宾 / Hmm, uh, 4-6 guests
+- `00:29:26,900 → 00:29:29,000` **Shure:** 对 4-6位 / Yeah, 4-6 guests
+- `00:29:29,200 → 00:29:30,766` **Jake:** 4-6位嘉宾OK / 4-6 guests, OK
+- `00:29:32,133 → 00:29:32,600` **Jake:** 呃 / Uh
+- `00:29:33,833 → 00:29:37,200` **Jake:** 我们原来还打算有可能的话 / We originally planned, if possible
+- `00:29:37,200 → 00:29:39,400` **Jake:** 去邀请周围的人 / To invite people from around here
+- `00:29:40,500 → 00:29:41,000` **Shure:** 啊 / Ah
+- `00:29:41,433 → 00:29:41,833` **Jake:** 对 / Yeah
+- `00:29:41,933 → 00:29:44,133` **Jake:** 就是或者小红书 / Like from Xiaohongshu
+- `00:29:45,133 → 00:29:45,366` **Jake:** 还是 / Or
+- `00:29:45,566 → 00:29:48,333` **Lucia:** 是采取挨家挨户敲门询问的方式吗 / Is it like going door to door asking?
+- `00:29:48,633 → 00:29:49,300` **Jake:** 呃 / Uh
+- `00:29:50,133 → 00:29:51,800` **Jake:** 环球影城门口直接抓人 / Grabbing people directly at Universal Studios
+- `00:29:50,266 → 00:29:52,133` **Tasha:** 提一篮子 鸡蛋比较好 / Bringing a basket of eggs is better
+- `00:29:52,500 → 00:29:55,266` **Lucia:** 提一篮确实如果 / Carrying a basket, indeed, if...
+- `00:29:55,266 → 00:29:57,433` **Lucia:** 如果就是如果他们来的话可以发鸡蛋 / If they come, we can give them eggs.
+- `00:29:59,500 → 00:30:00,300` **Jake:** 对对对 / Yes, yes, yes.
+- `00:30:01,266 → 00:30:02,966` **Shure:** 明天咱们这地就被举报了 / Tomorrow, we'll get reported here.
+- `00:30:03,066 → 00:30:04,866` **Jake:** 哈哈哈哈 / Hahahaha.
+- `00:30:04,900 → 00:30:07,400` **Jake:** 明天可以拍一段警察的镜头 / Tomorrow, we can shoot a scene with the police.
+- `00:30:10,566 → 00:30:12,933` **Shure:** 二 邀请邻居 / Second, invite the neighbors.
+- `00:30:15,866 → 00:30:17,533` **Shure:** 哎这邀字好难写 / Oh, this "invite" character is hard to write.
+- `00:30:18,500 → 00:30:19,766` **Jake:** 要不隐外字吧 / How about using a simpler character?
+- `00:30:19,933 → 00:30:21,300` **Shure:** 我觉得也是 / I think so too.
+- `00:30:21,433 → 00:30:22,366` **Tasha:** 带上鸡蛋 / Bring the eggs.
+- `00:30:22,400 → 00:30:24,266` **Tasha:** 你要是来我就把这一篮送你 / If you come, I'll give you this basket.
+- `00:30:24,266 → 00:30:25,733` **Tasha:** 你不来就不送 / If you don't come, no eggs for you.
+- `00:30:27,133 → 00:30:29,766` **Shure:** 邻居 / Neighbors.
+- `00:30:31,700 → 00:30:32,700` **Shure:** 哎这字 / Oh, this character...
+- `00:30:33,066 → 00:30:34,633` **Shure:** 齐白石看着都落泪 / Even Qi Baishi would cry looking at it.
+- `00:30:35,133 → 00:30:36,566` **Alice:** 有种复古的感觉 / It has a vintage feel.
+- `00:30:40,133 → 00:30:41,633` **Shure:** 这是我们的plan / This is our plan.
+- `00:30:43,266 → 00:30:44,133` **Shure:** 存疑plan / Suspicious plan.
+- `00:30:50,066 → 00:30:50,433` **Shure:** ok / Okay.
+- `00:30:50,566 → 00:30:51,433` **Lucia:** 好多问号啊 / So many question marks.
+- `00:30:51,433 → 00:30:52,600` **Lucia:** 我们好像谜语人 / We look like riddlers.
+- `00:30:54,766 → 00:30:55,400` **Shure:** riddle / Riddle.
+- `00:30:57,133 → 00:30:59,133` **Shure:** 然后我们还还有 / And we still have...
+- `00:30:59,133 → 00:30:59,933` **Shure:** 还有什么 / What else?
+- `00:31:00,933 → 00:31:01,766` **Shure:** 呃这是人员 / Uh, this is the personnel.
+- `00:31:01,766 → 00:31:02,366` **Shure:** 部分 / Section.
+- `00:31:02,766 → 00:31:05,233` **Jake:** 剧组吧剧组还有5个人 / The crew, we still have 5 people.
+- `00:31:06,200 → 00:31:08,133` **Jake:** 然后就是总共看 / Then let's see overall...
+- `00:31:10,266 → 00:31:12,100` **Jake:** 最后我们要host多少个人 / Finally, how many people do we have to host?
+- `00:31:12,066 → 00:31:15,366` **Jake:** 然后看看这活动在这个人数下 / And see what we should do with this number.
+- `00:31:15,400 → 00:31:16,266` **Jake:** 应该整点啥 / What should we do?
+- `00:31:18,566 → 00:31:19,066` **Alice:** 屌丝 / Loser.
+- `00:31:27,133 → 00:31:28,000` **Jake:** 给大家拍 / And filmed it for everyone.
+- `00:31:31,900 → 00:31:33,700` **Lucia:** 这是不是可以技术处理一下吗 / Can't we handle this technically?
+- `00:31:33,933 → 00:31:36,866` **Jake:** 是但是后期很麻烦 / Yes, but it's a hassle in post-production.
+- `00:31:34,766 → 00:31:35,666` **Shure:** 后期给 / It's a hassle in post-production.
+- `00:31:37,066 → 00:31:38,133` **Shure:** 添了多少麻烦 / How much trouble for post-production.
+- `00:31:40,266 → 00:31:44,066` **Shure:** OK所以总共one two three four / OK, so in total, one, two, three, four...
+- `00:31:46,366 → 00:31:46,933` **Alice:** 4到6 / 4 to 6.
+- `00:31:47,333 → 00:31:52,200` **Shure:** four加五五个这是9 / Four plus five, that makes nine.
+- `00:31:52,266 → 00:31:54,733` **Jake:** 四加五 九九到11是吧 / Four plus five, nine. Nine to eleven, right?
+- `00:31:54,766 → 00:31:55,800` **Shure:** 9到11 人 / Nine to eleven people.
+- `00:31:56,066 → 00:31:58,333` **Jake:** 9到11 然后各位自己 / Nine to eleven, then everyone will...
+- `00:32:01,066 → 00:32:01,933` **Shure:** 算算上我们是吧 / Count us in, right?
+- `00:32:01,933 → 00:32:04,833` **Jake:** 哎就先先先谢谢9-11吧 / Yeah, let's start with nine to eleven.
+- `00:32:05,333 → 00:32:05,700` **Jake:** 9-11 / Nine to eleven.
+- `00:32:06,000 → 00:32:09,066` **Shure:** 9-11 正无穷
+- `00:32:09,766 → 00:32:11,900` **Shure:** 因为我们可以邀请邻居 / Because we can invite the neighbors.
+- `00:32:11,933 → 00:32:12,900` **Jake:** 嗯对对 / Yeah, right.
+- `00:32:12,933 → 00:32:13,933` **Shure:** 非常严谨吧 / Very thorough, right?
+- `00:32:12,933 → 00:32:14,866` **Jake:** 我们有无穷的邻居 / We have endless neighbors.
+- `00:32:15,366 → 00:32:17,500` **Jake:** 也不是正无穷吧 16亿 / Maybe not endless, 1.6 billion.
+- `00:32:21,766 → 00:32:24,366` **Shure:** 现在我们我我国人口有16亿了吗 / Do we have 1.6 billion people now?
+- `00:32:24,900 → 00:32:27,266` **Jake:** 14 那就14 / Fourteen, let's say fourteen.
+- `00:32:25,833 → 00:32:26,366` **Shure:** 14吧 / Fourteen, then.
+- `00:32:27,266 → 00:32:30,333` **Shure:** 完了这移动的五十万 / Plus the five hundred thousand that move around.
+- `00:32:29,900 → 00:32:31,066` **Jake:** 爆爆多了这 / That's a lot.
+- `00:32:36,900 → 00:32:37,500` **Jake:** 合适吗 / Is it appropriate?
+- `00:32:37,566 → 00:32:41,766` **Jake:** 哈哈哈哈哈哈 / Hahahahaha.
+- `00:32:41,766 → 00:32:42,900` **Jake:** 问题不大问题不大 / No big deal, no big deal.
+- `00:32:45,433 → 00:32:46,833` **Shure:** 第一点OK / First point, OK.
+- `00:32:47,566 → 00:32:48,033` **Jake:** OK / OK.
+- `00:32:49,766 → 00:32:52,433` **Shure:** 然后好人员确定了 / Then, the personnel is confirmed.
+- `00:32:52,433 → 00:32:52,833` **Jake:** 嗯 / Mm-hmm.
+- `00:32:52,433 → 00:32:53,300` **Shure:** 嗯这是第一 / Yeah, that's the first.
+- `00:32:53,333 → 00:32:55,000` **Shure:** 第一大点的第三 / The first big point's third.
+- `00:32:55,133 → 00:32:57,133` **Shure:** 下面三个小点人员 / Next, three sub-points about personnel.
+- `00:32:58,766 → 00:33:00,633` **Shure:** 然后我们还有第二点 / And then we have the second point.
+- `00:33:02,566 → 00:33:03,966` **Shure:** 要开始 / To start.
+- `00:33:04,000 → 00:33:05,066` **Shure:** 活动内容部分吗 / The activity content part?
+- `00:33:05,066 → 00:33:05,433` **Jake:** 对 / Yes.
+- `00:33:08,133 → 00:33:11,233` **Shure:** 这我觉得是一块硬骨头我们要啃很久 / I think this is a tough one, we're going to chew on this for a while.
+- `00:33:11,266 → 00:33:11,566` **Jake:** 嗯 / Mm-hmm.
+- `00:33:11,266 → 00:33:14,100` **Shure:** 所以我们要直接先来这个吗 / So should we start with this directly?
+- `00:33:16,700 → 00:33:17,700` **Jake:** 那还有别的吗 / Is there anything else?
+- `00:33:19,766 → 00:33:20,766` **Shure:** 活动内容 / Activity content.
+- `00:33:22,266 → 00:33:23,066` **Shure:** 大家想想 / Everyone, think about it.
+- `00:33:24,333 → 00:33:27,000` **Shure:** 我记得大家问卷的时候应该是填过的 / I remember everyone filled out the questionnaire, right?
+- `00:33:29,133 → 00:33:29,666` **Shure:** 是吧 / Right?
+- `00:33:29,700 → 00:33:30,066` **Jake:** 是的 / Yes.
+- `00:33:30,566 → 00:33:32,500` **Shure:** 大家问卷填的是什么来着 / What did everyone write in the questionnaire?
+- `00:33:32,500 → 00:33:34,166` **Shure:** 不会都是GPT生成的吧 / It wasn't all generated by GPT, was it?
+- `00:33:34,200 → 00:33:36,700` **Katrina:** 不是哈哈哈我自己写的 / No, haha, I wrote it myself.
+- `00:33:36,766 → 00:33:38,133` **Jake:** 湖南GPT生成的 / Generated by Hunan GPT.
+- `00:33:39,633 → 00:33:42,066` **Shure:** 那既然提到湖南GPT那我们先从
+- `00:33:45,766 → 00:33:48,000` **Shure:** Lyx同学哈哈哈 / Lyx, haha.
+- `00:33:45,766 → 00:33:48,933` **Jake:** 完完了你完了你 / Oh no, you're in trouble.
+- `00:33:48,500 → 00:33:52,233` **Katrina:** 我我想是那个就是呃7天 / I, I was thinking, um, 7 days.
+- `00:33:52,266 → 00:33:53,933` **Katrina:** 然后每我买那花嘛 / And then I bought flowers.
+- `00:33:53,933 → 00:33:55,266` **Katrina:** 然后每人一个花瓶 / And everyone got a vase.
+- `00:33:55,266 → 00:33:58,066` **Katrina:** 然后就相当于醒花一一到2天 / So the flowers would bloom in 1 to 2 days.
+- `00:33:58,066 → 00:33:59,566` **Katrina:** 然后刚好他一个周期 / And it perfectly fits the cycle.
+- `00:33:59,566 → 00:34:01,633` **Katrina:** 就是可以让这花慢慢的开放 / So the flowers would slowly bloom.
+- `00:34:01,633 → 00:34:03,266` **Katrina:** 然后把这个花的花瓣 / Then I would use the petals.
+- `00:34:03,266 → 00:34:04,833` **Katrina:** 然后做成那种压花 / To make pressed flowers.
+- `00:34:04,866 → 00:34:07,600` **Katrina:** 然后就比较环保做成那种明信片 / It's more eco-friendly and can be made into postcards.
+- `00:34:07,700 → 00:34:09,633` **Katrina:** 还有买了那种亚克力的玻璃 / I also bought some acrylic glass.
+- `00:34:10,066 → 00:34:11,133` **Katrina:** 然后就嵌进去 / And embedded it in.
+- `00:34:11,133 → 00:34:12,566` **Katrina:** 就是那种比较好看的手工 / It's a nice handmade craft.
+- `00:34:12,566 → 00:34:14,133` **Katrina:** 然后也跟植物有关 / And it's related to plants.
+- `00:34:14,500 → 00:34:17,700` **Katrina:** 然后原材料又是自己精心养了7天的 / The raw materials are carefully cultivated for 7 days.
+- `00:34:18,000 → 00:34:20,066` **Katrina:** 然后又觉得形成了一个闭环 / So it forms a complete cycle.
+- `00:34:20,566 → 00:34:22,266` **Katrina:** 就做了一些周边 / I made some peripherals.
+- `00:34:20,700 → 00:34:25,300` **Jake:** 好上上才艺 / Good, show your talent.
+- `00:34:22,266 → 00:34:24,666` **Katrina:** 到时候那一天就可以分发给大家 / On that day, we can distribute them to everyone.
+- `00:34:26,766 → 00:34:27,800` **Katrina:** 那花的在哪 / Where are the flowers?
+- `00:34:27,933 → 00:34:28,333` **Alice:** 在那儿 / Over there.
+- `00:34:29,400 → 00:34:30,333` **Katrina:** 花还要醒一的 / The flowers need to wake up.
+- `00:34:30,333 → 00:34:30,900` **Katrina:** 因为我看我 / Because I saw...
+- `00:34:30,900 → 00:34:33,400` **Katrina:** 我刚才想的是种那种什么东西 / I was thinking of planting something.
+- `00:34:33,400 → 00:34:35,700` **Katrina:** 符合那种地球世界 / That fits the Earth Day theme.
+- `00:34:35,700 → 00:34:38,500` **Katrina:** 地球日他7天基本上发不了芽 / But it wouldn't sprout in 7 days.
+- `00:34:38,766 → 00:34:41,000` **Katrina:** 然后我就想是买这种花 / So I thought of buying these flowers.
+- `00:34:41,000 → 00:34:41,500` **Jake:** 上才艺 / Show your talent.
+- `00:34:41,500 → 00:34:46,933` **Katrina:** 直接那个顺丰发过来云南的花 / Directly shipped by SF Express, flowers from Yunnan.
+- `00:34:45,133 → 00:34:45,866` **Jake:** 是这个吗 / Is it this one?
+- `00:34:46,933 → 00:34:48,533` **Katrina:** 是他好像有两个包 / It seems like he has two packages.
+- `00:34:49,266 → 00:34:51,500` **Katrina:** 对我买了芍药啊什么的 / Yeah, I bought some peonies and stuff.
+- `00:34:51,000 → 00:34:52,766` **Shure:** 天呐不想送了 / Oh my god, I don't want to give them anymore.
+- `00:34:54,266 → 00:34:55,066` **Katrina:** 哇 / Wow.
+- `00:34:55,133 → 00:34:58,333` **Katrina:** 刚好一些花骨朵就这两天就可以开了 / Just right, some flower buds can bloom in the next couple of days.
+- `00:34:58,933 → 00:35:01,033` **Lucia:** 你要找个剪刀什么的吗 / Do you need to find some scissors or something?
+- `00:35:01,133 → 00:35:02,333` **Alice:** 剪刀 / Scissors.
+- `00:35:01,700 → 00:35:03,933` **Katrina:** 直接开始干吗还是说要把后面的列完 / Should we start directly or list everything first?
+- `00:35:04,433 → 00:35:07,566` **Jake:** 呃先秀一下吧就是先秀一下 / Uh, let's showcase a bit first, just showcase a bit.
+- `00:35:06,266 → 00:35:07,400` **Shure:** 先秀一下 / Let's showcase a bit first.
+- `00:35:07,566 → 00:35:08,566` **Alice:** 剪刀在哪 / Where are the scissors?
+- `00:35:08,566 → 00:35:10,333` **Katrina:** 我买了好几束来着 / I bought quite a few bunches.
+- `00:35:10,366 → 00:35:11,300` **Shure:** 剪刀在这呢 / The scissors are here.
+- `00:35:12,266 → 00:35:13,800` **Katrina:** 还买康乃馨 / And I also bought some carnations.
+- `00:35:16,133 → 00:35:17,333` **Jake:** 眼神好啊小伙 / Good eyes, young man.
+- `00:35:17,433 → 00:35:20,633` **Katrina:** 剪刚好我们女孩子比较多哈哈 / Just cut them, we have more girls here, haha.
+- `00:35:26,200 → 00:35:27,266` **Katrina:** 啊这也是 / Ah, that's true.
+- `00:35:28,366 → 00:35:29,900` **Katrina:** 这花瓣就可以做压花 / These petals can be used for pressed flowers.
+- `00:35:29,900 → 00:35:34,366` **Katrina:** 然后买了压花器还有那种干燥剂 / And then I bought a flower press and some desiccants.
+- `00:35:40,500 → 00:35:41,400` **Katrina:** 这是什么 / What is this?
+- `00:35:41,566 → 00:35:44,133` **Katrina:** 这是花这个要酝酿一下 / These flowers need to be prepared a bit.
+- `00:35:54,633 → 00:35:55,633` **Alice:** 是芍药吗 / Are these peonies?
+- `00:35:56,000 → 00:35:59,766` **Katrina:** 嗯我买多了我才知道 / Yeah, I only found out after I bought too many.
+- `00:36:00,000 → 00:36:02,500` **Katrina:** 他说要一到两天才能开花 / He said it would take one to two days for them to bloom.
+- `00:36:03,433 → 00:36:05,133` **Katrina:** 然后想时间就差不多 / So I thought the timing would be just right.
+- `00:36:05,566 → 00:36:07,366` **Katrina:** 压花就要压两三天 / Pressed flowers need two to three days.
+- `00:36:07,366 → 00:36:08,900` **Katrina:** 然后这个养个两三天 / And these need to be cared for two to three days.
+- `00:36:19,633 → 00:36:20,900` **Katrina:** 这是什么百合 / What are these, lilies?
+- `00:36:20,133 → 00:36:24,333` **Alice:** 这是香雪兰还是啥铃兰百合蓝 / Are these freesia or something? Lily of the valley, maybe?
+- `00:36:22,266 → 00:36:23,600` **Katrina:** 什么百合来着 / What kind of lilies are these?
+- `00:36:33,266 → 00:36:36,766` **Tasha:** 营养剂泡在水里面加速醒发的 / Nutrients soaked in water to speed up the blooming.
+- `00:36:39,500 → 00:36:40,766` **Alice:** 这两个颜色的 / These are the two colors.
+- `00:36:41,700 → 00:36:43,500` **Katrina:** 对一个白一个黄 / Yeah, one white and one yellow.
+- `00:36:45,200 → 00:36:46,133` **Katrina:** 是一个包裹 / It's one package.
+- `00:36:46,133 → 00:36:48,600` **Katrina:** 我看我记得他好像发两个包裹 / I think I remember him sending two packages.
+- `00:36:53,000 → 00:36:55,566` **Jake:** 要不他上我们也上 / If he goes, we should go too.
+- `00:36:55,566 → 00:36:57,766` **Jake:** 才艺你看看哪些是你的 / Talents, see which ones are yours.
+- `00:36:58,500 → 00:36:59,433` **Tasha:** 没有我的 / None of mine.
+- `00:36:59,500 → 00:37:00,366` **Jake:** 没有你的啊 / None of yours, huh?
+- `00:37:00,366 → 00:37:01,533` **Jake:** 你没有买这个 / You didn't buy this.
+- `00:37:03,766 → 00:37:08,066` **Jake:** 外面的快递就只有雨轩的是吧 / The only package outside is Yuxuan's, right?
+- `00:37:09,133 → 00:37:10,466` **Jake:** 还有别人买快递的没 / Did anyone else order a package?
+- `00:37:10,500 → 00:37:11,500` **Katrina:** 你们买东西了吗 / Did you guys buy anything?
+- `00:37:11,633 → 00:37:12,033` **Shure:** 还没呢 / Not yet.
+- `00:37:12,133 → 00:37:12,533` **Lucia:** 还没 / Not yet.
+- `00:37:13,066 → 00:37:14,700` **Jake:** 行没问题 / Okay, no problem.
+- `00:37:17,133 → 00:37:18,866` **Jake:** 他仨都是自带的是吧 / All three of them brought their own stuff, right?
+- `00:37:20,333 → 00:37:21,300` **Shure:** 带资进组 / They brought funding.
+- `00:37:21,266 → 00:37:23,666` **Shure:** 你看这就有觉悟 / You see, they've got the right mindset.
+- `00:37:22,333 → 00:37:23,000` **Jake:** 确实 / Indeed.
+- `00:37:29,500 → 00:37:30,133` **Katrina:** 然后呢 / And then?
+- `00:37:30,700 → 00:37:35,166` **Jake:** 然后就比划比划比划比划 / And then just gesture, gesture, gesture.
+- `00:37:33,400 → 00:37:34,066` **Katrina:** 花瓶 / Vase.
+- `00:37:33,400 → 00:37:34,200` **Alice:** 先洗 / Wash first.
+- `00:37:35,200 → 00:37:37,200` **Jake:** 就是大概要个什么形式 / So what kind of format are we looking at?
+- `00:37:37,200 → 00:37:40,700` **Katrina:** 形式吗形式就是我们6个人一人一个 / Format, well, the six of us each get one.
+- `00:37:40,700 → 00:37:42,133` **Katrina:** 花瓶我也买好了 / I already bought the vases.
+- `00:37:42,133 → 00:37:45,400` **Katrina:** 然后大家把这花分分分分了以后养了 / Then everyone can distribute the flowers and take care of them.
+- `00:37:42,633 → 00:37:43,133` **Jake:** 哦 / Oh.
+- `00:37:45,400 → 00:37:47,066` **Katrina:** 一一一到两三天 / In about one to two or three days
+- `00:37:47,500 → 00:37:49,666` **Katrina:** 呃他这个就会慢慢全部开了吗 / They'll slowly start to bloom.
+- `00:37:49,700 → 00:37:52,133` **Katrina:** 开了以后就用这种花瓣或者是 / Once they bloom, we can use the petals or
+- `00:37:49,866 → 00:37:50,266` **Jake:** 哦 / Oh.
+- `00:37:52,133 → 00:37:52,900` **Katrina:** 我看他们压花 / I saw people pressing flowers.
+- `00:37:52,933 → 00:37:56,300` **Katrina:** 就是直接把这个花骨朵花剪下来 / They just cut off the flower buds and press them.
+- `00:37:56,266 → 00:37:57,433` **Katrina:** 然后就直接这样压 / Press them flat.
+- `00:37:57,433 → 00:37:59,833` **Katrina:** 他就会变成一个那种平面的 / And they turn into a flat, spread-out flower.
+- `00:37:59,866 → 00:38:01,366` **Katrina:** 然后展开的那个花 / Then we can put them on postcards.
+- `00:38:01,400 → 00:38:03,700` **Katrina:** 然后就可以坐在那种明信片 / I bought those postcards and greeting cards.
+- `00:38:03,700 → 00:38:05,200` **Katrina:** 我买的那种明信片贺卡 / And also, what are they called
+- `00:38:05,200 → 00:38:07,566` **Katrina:** 还有那个包括那个叫什么 / Those acrylic double-layer glass frames.
+- `00:38:07,566 → 00:38:09,333` **Katrina:** 那种亚克力双层玻璃 / Like a frame, we can give them as gifts.
+- `00:38:09,366 → 00:38:11,733` **Katrina:** 然后像像一个那种相框就可以 / And some leaves and stuff.
+- `00:38:11,933 → 00:38:14,866` **Katrina:** 送给别人然后一些叶子啊什么的 / Then we can arrange them into a picture.
+- `00:38:14,866 → 00:38:15,733` **Katrina:** 然后当时想的是 / I was thinking
+- `00:38:15,700 → 00:38:17,133` **Katrina:** 你不是有那个户外活动吗 / You have that outdoor activity, right?
+- `00:38:17,133 → 00:38:18,700` **Katrina:** 我们就可以去捡一些叶子 / We can collect some leaves.
+- `00:38:18,566 → 00:38:19,500` **Jake:** 嗯嗯 / Mm-hmm.
+- `00:38:18,700 → 00:38:20,533` **Katrina:** 然后就把它拼成一幅画一样的 / Then arrange them into a picture.
+- `00:38:20,766 → 00:38:21,433` **Katrina:** 对 / Right.
+- `00:38:21,433 → 00:38:23,900` **Katrina:** 然后书签也有然后就大家自己做着玩 / And then there are bookmarks, so everyone can make their own for fun.
+- `00:38:23,933 → 00:38:25,333` **Katrina:** 然后最后一天 / Then on the last day
+- `00:38:25,333 → 00:38:26,766` **Katrina:** 因为想这种形式 / Because we wanted this format
+- `00:38:26,766 → 00:38:30,333` **Katrina:** 这种就邀请什么各种好朋友啊什么的 / We invited all kinds of good friends and such.
+- `00:38:30,333 → 00:38:33,066` **Katrina:** 就可以你自己做的自己养的 / You can make and raise your own.
+- `00:38:33,066 → 00:38:35,000` **Katrina:** 然后分发给大家就挺好 / And then distribute them to everyone, it’s pretty nice.
+- `00:38:35,766 → 00:38:38,666` **Katrina:** 然后也比较符合7天这个周期嘛 / It also fits well with the 7-day cycle.
+- `00:38:39,000 → 00:38:39,533` **Jake:** 嗯 / Hmm.
+- `00:38:40,200 → 00:38:41,333` **Alice:** 嗯要不先给他醒了吧 / Hmm, why don't we wake him up first?
+- `00:38:41,366 → 00:38:45,133` **Katrina:** 嗯可以啊今天我肯今天是一定要他醒 / Hmm, sure. Today I definitely want him to wake up.
+- `00:38:45,133 → 00:38:48,300` **Jake:** 你们先聊吧这个回头下一个 / You guys chat first, we’ll do the next one later.
+- `00:38:47,833 → 00:38:48,100` **Katrina:** 行 / Okay.
+- `00:38:48,500 → 00:38:49,900` **Katrina:** 下一个下一个谁 / Who’s next?
+- `00:38:49,933 → 00:38:50,266` **Alice:** 下一个 / Next one.
+- `00:38:50,933 → 00:38:51,633` **Katrina:** 我来弄这个吧 / I’ll handle this one.
+- `00:38:56,566 → 00:39:00,700` **Katrina:** 哎呀一把菜叶 下一个谁来 / Ah, a bunch of veggie leaves. Who’s next?
+- `00:39:00,700 → 00:39:02,933` **Shure:** 下一个露露亚同学 / Next is Lucia.
+- `00:39:03,500 → 00:39:04,133` **Lucia:** 昂我来 / Okay, I’ll go.
+- `00:39:04,500 → 00:39:05,000` **Shure:** 露西 / Lucia.
+- `00:39:05,700 → 00:39:07,333` **Lucia:** 其实就是我的构思 / Actually, my idea
+- `00:39:07,333 → 00:39:09,066` **Lucia:** 也跟DIY是有关系的 / Is also related to DIY.
+- `00:39:09,066 → 00:39:10,900` **Lucia:** 对我刚我刚开始想的是 / At first, I was thinking
+- `00:39:10,900 → 00:39:12,933` **Lucia:** 就是可以因为是世界地球日 / Since it’s Earth Day
+- `00:39:12,933 → 00:39:15,400` **Lucia:** 所以我想就是做一点环保一点的东西 / So I wanted to make something eco-friendly.
+- `00:39:15,400 → 00:39:17,766` **Lucia:** 就我不知道大家有没有做过水母灯 / I don’t know if you guys have made jellyfish lamps before.
+- `00:39:17,933 → 00:39:20,000` **Lucia:** 就这两年在景区还挺火的 / They’ve been pretty popular in scenic spots these past couple of years.
+- `00:39:20,500 → 00:39:22,900` **Lucia:** 呃就是长得像水母一样的一个小灯 / It’s a little lamp that looks like a jellyfish.
+- `00:39:23,200 → 00:39:23,566` **Lucia:** 对 / Yeah.
+- `00:39:23,566 → 00:39:26,066` **Lucia:** 然后这个东西它原本是有材料包的 / And this thing originally comes with a materials kit.
+- `00:39:26,066 → 00:39:28,000` **Lucia:** 就是可以直接在网上买材料包做 / You can buy the kit online and make it.
+- `00:39:28,133 → 00:39:29,333` **Lucia:** 但是我就是我想的是 / But what I was thinking
+- `00:39:29,333 → 00:39:31,200` **Lucia:** 就是既然是世界地球日的话 / Since it’s Earth Day
+- `00:39:31,200 → 00:39:33,266` **Lucia:** 我之前在网上刷到过一个教程 / I saw a tutorial online before.
+- `00:39:33,266 → 00:39:35,366` **Lucia:** 就是可以用那个奶茶杯盖 / You can use a bubble tea cup lid
+- `00:39:35,700 → 00:39:37,100` **Lucia:** 然后以它作为一个主体 / As the main part
+- `00:39:37,133 → 00:39:38,933` **Lucia:** 然后就是再加一些丝带 / And then add some ribbons
+- `00:39:38,933 → 00:39:40,200` **Lucia:** 或者串珠之类的 / Or beads and such.
+- `00:39:40,200 → 00:39:42,633` **Lucia:** 呃我不知道咱们这有没有热热胶枪 / I don't know if we have a hot glue gun here.
+- `00:39:42,633 → 00:39:43,433` **Lucia:** 如果没有的话 / If we don’t
+- `00:39:43,433 → 00:39:44,933` **Lucia:** 可以后面看有没有什么替代的 / We can see if there are any alternatives.
+- `00:39:44,933 → 00:39:46,166` **Lucia:** 或者说买一个也行 / Or we could just buy one.
+- `00:39:46,366 → 00:39:47,733` **Lucia:** 然后就是大家一起 / And then everyone together.
+- `00:39:47,700 → 00:39:49,900` **Lucia:** 就是每个人都做一个这样的小灯 / Each person makes one of these little lights.
+- `00:39:49,933 → 00:39:51,600` **Lucia:** 就是它还挺好看的 / They look pretty nice.
+- `00:39:51,900 → 00:39:54,333` **Lucia:** 然后这是其中一个设想 / And that's one of the ideas.
+- `00:39:54,333 → 00:39:55,500` **Lucia:** 还有一个就是也是 / Another idea is also...
+- `00:39:55,500 → 00:39:56,866` **Lucia:** 有点这种怎么说呢 / How should I put it...
+- `00:39:56,900 → 00:39:58,266` **Lucia:** 低碳和循环利用的 / It's low-carbon and recyclable.
+- `00:39:58,266 → 00:40:01,600` **Lucia:** 就是大家有没有做过纸箱小狗 / Have you all ever made a cardboard dog?
+- `00:40:02,333 → 00:40:04,133` **Lucia:** 就前段时间特别火那个啊 / It was really popular some time ago.
+- `00:40:04,133 → 00:40:05,466` **Katrina:** 可以放在那个 / You can put it...
+- `00:40:05,566 → 00:40:06,933` **Lucia:** 对然后可以放在门口 / Yes, you can put it at the door.
+- `00:40:06,000 → 00:40:06,500` **Katrina:** 门口 / At the door.
+- `00:40:06,933 → 00:40:08,933` **Lucia:** 然后纸箱小狗的好处就是 / And the good thing about the cardboard dog is...
+- `00:40:08,933 → 00:40:10,566` **Lucia:** 如果想要很简单做一下的话 / If you want to make it simple...
+- `00:40:10,566 → 00:40:11,866` **Lucia:** 就拿纸箱简单剪一下 / Just cut the cardboard simply.
+- `00:40:11,866 → 00:40:14,000` **Lucia:** 然后画一个小狗头粘上就可以 / Then draw a dog head and stick it on.
+- `00:40:14,066 → 00:40:15,333` **Lucia:** 如果想要复杂一点的话 / If you want it more complex...
+- `00:40:15,366 → 00:40:16,533` **Lucia:** 就是也有一些 / There are also some...
+- `00:40:16,500 → 00:40:19,333` **Lucia:** 就是复杂点就需要多剪几个 / For more complex ones, you need to cut more pieces.
+- `00:40:19,366 → 00:40:20,366` **Lucia:** 然后做成一个大的 / And make a bigger one.
+- `00:40:20,366 → 00:40:21,933` **Lucia:** 我之前看到有人做过杜宾 / I saw someone make a Doberman before.
+- `00:40:22,266 → 00:40:23,466` **Lucia:** 但是那个我没做过就是 / But I haven't made that one myself.
+- `00:40:23,500 → 00:40:24,933` **Lucia:** 但是就是看了一下教程 / I just watched the tutorial.
+- `00:40:24,933 → 00:40:26,000` **Lucia:** 好像也挺简单的 / It seemed pretty easy.
+- `00:40:26,000 → 00:40:28,133` **Lucia:** 只要画一下卡纸就能很容易剪出来 / Just draw on the cardboard and cut it out easily.
+- `00:40:28,133 → 00:40:29,766` **Shure:** 咱们最不缺的就是纸箱 / What we have plenty of is cardboard.
+- `00:40:29,766 → 00:40:30,900` **Shure:** 所以我觉得这个 / So I think this...
+- `00:40:31,366 → 00:40:32,533` **Lucia:** 对我当时想的也是 / Yes, I was thinking the same.
+- `00:40:31,366 → 00:40:33,433` **Jake:** 对这个合理对 / Yes, this makes sense.
+- `00:40:32,500 → 00:40:34,566` **Lucia:** 在咱们这里到时候肯定会有很多纸箱 / We'll definitely have a lot of cardboard here.
+- `00:40:34,566 → 00:40:36,333` **Lucia:** 如果说就能直接使用的话 / If we can directly use it...
+- `00:40:35,000 → 00:40:35,800` **Shure:** 非常可行 / It's very doable.
+- `00:40:36,366 → 00:40:37,633` **Lucia:** 就还挺环保的 / It's quite environmentally friendly.
+- `00:40:37,633 → 00:40:39,833` **Lucia:** 就也很契合世界地球日这个主题 / It fits the Earth Day theme well.
+- `00:40:39,866 → 00:40:40,066` **Jake:** 对 / Yeah.
+- `00:40:39,866 → 00:40:43,133` **Lucia:** 然后最后还有一个想法 / And then there's one last idea.
+- `00:40:43,133 → 00:40:45,100` **Lucia:** 但是这个想法实施起来就比较困难 / But this one is harder to implement.
+- `00:40:45,066 → 00:40:46,100` **Lucia:** 我本来想的是 / I was thinking...
+- `00:40:46,133 → 00:40:49,100` **Lucia:** 可能大家可以简单的排一个小短剧 / Maybe everyone could act out a short play.
+- `00:40:49,066 → 00:40:50,066` **Lucia:** 或者之类的 / Or something like that.
+- `00:40:50,266 → 00:40:52,133` **Lucia:** 对因为我之前跟我小伙伴有说 / Yeah, because I mentioned it to my buddy before.
+- `00:40:52,133 → 00:40:54,233` **Lucia:** 我们今天拍一些微电影这种 / We are shooting some short films today.
+- `00:40:53,766 → 00:40:54,133` **Jake:** 买了 / Bought it.
+- `00:40:54,366 → 00:40:56,766` **Lucia:** 但是如果要拍一个小短剧的话 / But if we want to shoot a short skit
+- `00:40:56,766 → 00:40:59,400` **Lucia:** 就是我现在暂时还没有想到一个现成 / I haven't thought of a ready-made script yet.
+- `00:40:59,400 → 00:41:01,000` **Lucia:** 我们目前就拿来用的剧本 / We don't have a script ready for now.
+- `00:41:01,000 → 00:41:02,333` **Lucia:** 因为咱们时间比较短 / Because we are short on time.
+- `00:41:02,766 → 00:41:04,600` **Lucia:** 就如果要现在去编的话 / If we were to write one now
+- `00:41:04,566 → 00:41:06,766` **Lucia:** 可能就不太来得及 / it might not be in time.
+- `00:41:05,200 → 00:41:05,566` **Jake:** 好 / Okay.
+- `00:41:06,900 → 00:41:08,566` **Lucia:** 就如果大家有想到什么 / So if anyone has any ideas
+- `00:41:08,566 → 00:41:10,733` **Lucia:** 你们以前看到过的短视频之类的 / like short videos you've seen before
+- `00:41:10,766 → 00:41:11,766` **Lucia:** 这种也可以 / those could work too.
+- `00:41:11,766 → 00:41:12,866` **Lucia:** 就如果有个现成的剧本 / If there's a ready-made script
+- `00:41:12,866 → 00:41:15,433` **Lucia:** 我觉得咱们可以尝试拍一下对 / I think we can try to shoot it.
+- `00:41:15,433 → 00:41:16,933` **Shure:** OK好 / OK, sounds good.
+- `00:41:17,000 → 00:41:18,900` **Lucia:** 这个是目前暂时的想法 / This is the current idea for now.
+- `00:41:19,933 → 00:41:21,833` **Shure:** 这是露西 / This is Lucia.
+- `00:41:23,500 → 00:41:24,266` **Shure:** 这是 / This is...
+- `00:41:25,700 → 00:41:27,933` **Shure:** 露西亚哈哈 / Lucia, haha.
+- `00:41:28,566 → 00:41:30,933` **Lucia:** 哦我们两个名字好像 / Oh, our names sound similar.
+- `00:41:30,933 → 00:41:32,233` **Alice:** 你把他名写反了 / You wrote his name backwards.
+- `00:41:32,266 → 00:41:32,800` **Katrina:** 这 / This...
+- `00:41:32,766 → 00:41:33,033` **Shure:** 嗯 / Hmm.
+- `00:41:34,066 → 00:41:37,066` **Katrina:** 刘雨萱哈哈哈 / Liu Yuxuan, hahaha.
+- `00:41:34,066 → 00:41:37,066` Lucia:人家是  LYX哈哈哈哈哈哈 / Katrina: Liu Yuxuan, hahaha.
+- `00:41:35,900 → 00:41:38,266` **Jake:** 差点差点像 / Almost, almost looks like it.
+- `00:41:37,266 → 00:41:38,233` **Alice:** 你再加一道就行 / Just add another stroke.
+- `00:41:41,333 → 00:41:43,300` **Jake:** 哈哈哈哈哈 / Hahahahaha.
+- `00:41:43,133 → 00:41:43,700` **Shure:** 要对称 / It needs to be symmetrical.
+- `00:41:43,400 → 00:41:45,933` **Katrina:** 完了就是那个变异来XY染色体的 / Then it becomes XY chromosomes, like a mutation.
+- `00:41:45,933 → 00:41:46,633` **Shure:** 对对对 / Right, right.
+- `00:41:47,133 → 00:41:47,533` **Jake:** 变异 / Mutation.
+- `00:41:48,000 → 00:41:49,433` **Shure:** 好家伙这俩你都有 / Wow, you've got both.
+- `00:41:49,433 → 00:41:52,700` **Shure:** 是吗哈哈哈哈 / Really? Hahaha.
+- `00:41:56,200 → 00:41:57,000` **Shure:** 塔莎 / Tasha.
+- `00:41:57,566 → 00:42:00,333` **Tasha:** OK上我的道具拿出来 / OK, I'll get my props out.
+- `00:41:59,566 → 00:42:03,166` **Jake:** 好上道具BGM / Alright, get the props and BGM ready.
+- `00:42:04,633 → 00:42:09,600` **Shure:** 当当当当当当当 / Da-da-da-da-da-da-da.
+- `00:42:13,566 → 00:42:15,733` **Shure:** 他的道具为什么在你的行李箱里 / Why are his props in your suitcase?
+- `00:42:18,766 → 00:42:20,100` **Jake:** 啊因为 / Uh, because...
+- `00:42:20,266 → 00:42:20,633` **Shure:** 又是带资进 / Again, funded by himself?
+- `00:42:20,633 → 00:42:21,166` **Tasha:** 不就这个 / Isn't it just this?
+- `00:42:21,200 → 00:42:23,066` **Tasha:** 就这个啊 / Just this one?
+- `00:42:23,066 → 00:42:24,066` **Tasha:** 你怎么没拆 / Why didn't you unpack it?
+- `00:42:24,066 → 00:42:25,633` **Tasha:** 我去拿现成的吧 / I'll go get the ready-made one.
+- `00:42:25,633 → 00:42:27,266` **Tasha:** 你把培养皿拿出来吧 / You take out the petri dish.
+- `00:42:27,366 → 00:42:27,900` **Shure:** 培养皿 / Petri dish.
+- `00:42:29,133 → 00:42:29,500` **Jake:** 培养皿 / Petri dish.
+- `00:42:30,933 → 00:42:32,166` **Jake:** 培养皿买了 / Petri dish was bought.
+- `00:42:32,200 → 00:42:33,066` **Jake:** 但是不一定到了 / But it might not have arrived yet.
+- `00:42:34,933 → 00:42:35,666` **Jake:** 不一定到哈 / Might not have arrived.
+- `00:42:35,700 → 00:42:36,633` **Jake:** 我看一下 / Let me check.
+- `00:42:36,700 → 00:42:38,133` **Katrina:** 买了康乃馨 / Bought carnations.
+- `00:42:38,133 → 00:42:39,333` **Katrina:** 这个叫叫叫 / This is called, called...
+- `00:42:39,366 → 00:42:41,433` **Katrina:** 芍药康乃馨 / Peony carnations.
+- `00:42:44,133 → 00:42:45,300` **Katrina:** 直播间买的 / Bought it in the live stream.
+- `00:42:47,433 → 00:42:48,266` **Lucia:** 好好看呀 / Looks so nice.
+- `00:42:48,566 → 00:42:49,766` **Katrina:** 直播间买 / Bought in the live stream.
+- `00:42:49,766 → 00:42:51,100` **Katrina:** 顺丰秒送 / Delivered by SF Express instantly.
+- `00:42:54,066 → 00:42:58,800` **Katrina:** 哎他昨天花瓶昨天也到了他没有 / Hey, the vase also arrived yesterday, but he didn't...
+- `00:42:58,766 → 00:42:59,566` **Jake:** 对到了 / Yes, it arrived.
+- `00:43:04,133 → 00:43:05,700` **Katrina:** 这都是我们的快递 / These are all our packages.
+- `00:43:05,700 → 00:43:06,133` **Jake:** 对 / Yes.
+- `00:43:50,066 → 00:43:51,500` **Tasha:** 好像没有别的种类 / Seems like there are no other types.
+- `00:43:56,933 → 00:43:58,466` **Katrina:** 可以装在这种里面 / Can be put in this kind.
+- `00:43:59,100 → 00:43:59,666` **Katrina:** 我看一下 / Let me check.
+- `00:43:59,666 → 00:44:00,833` **Katrina:** 弄出来特别漂亮 / Looks especially pretty when taken out.
+- `00:44:12,666 → 00:44:13,700` **Shure:** 你这是香框 / Is this a fragrance frame?
+- `00:44:14,400 → 00:44:16,000` **Katrina:** 对就把花夹在里面 / Yes, just put the flowers in it.
+- `00:44:16,000 → 00:44:18,800` **Katrina:** 还有一些叶子什么的可以摆在家里 / And some leaves or whatever, can be placed at home.
+- `00:44:16,100 → 00:44:16,333` **Jake:** 哦 / Oh.
+- `00:44:19,033 → 00:44:19,300` **Shure:** 有的 / Got it.
+- `00:44:20,666 → 00:44:22,833` **Katrina:** 这确实这怎么雾蒙蒙的 / Why is it so foggy?
+- `00:44:24,500 → 00:44:26,366` **Katrina:** 他中间应该夹了一层东西 / There must be something sandwiched in the middle.
+- `00:44:27,566 → 00:44:28,533` **Jake:** 被嫌弃了 / It got rejected.
+- `00:44:30,166 → 00:44:31,333` **Jake:** 我应该拆吗 / Should I unpack it?
+- `00:44:31,933 → 00:44:32,400` **Tasha:** 然后 / And then...
+- `00:44:33,933 → 00:44:35,033` **Tasha:** 就是这是 / So this is...
+- `00:44:36,533 → 00:44:40,700` **Tasha:** 自己设计的一些种子纸 / Some seed paper I designed myself
+- `00:44:41,333 → 00:44:43,933` **Tasha:** 就是把种子放在这个纸里面 / It's basically putting seeds in this paper
+- `00:44:43,933 → 00:44:47,500` **Tasha:** 这个纸是用废弃的咖啡渣 / This paper is made from discarded coffee grounds
+- `00:44:47,933 → 00:44:49,166` **Tasha:** 呃一些纸 / Uh, some paper
+- `00:44:49,366 → 00:44:51,033` **Tasha:** 然后做成那种纸浆 / And then making it into pulp
+- `00:44:51,166 → 00:44:53,533` **Tasha:** 然后纸浆里面有那种乳 / And the pulp contains the seeds
+- `00:44:53,533 → 00:44:55,900` **Tasha:** 种子都是用的太阳花种子 / The seeds are sunflower seeds
+- `00:44:56,100 → 00:44:58,766` **Tasha:** 太阳花种子它比较容易发芽 / Sunflower seeds are easier to sprout
+- `00:44:58,766 → 00:45:00,966` **Tasha:** 然后如果用培养皿水培的话 / And if you use a petri dish for hydroponics
+- `00:45:01,266 → 00:45:03,533` **Tasha:** 大概5天左右就可以发芽 / It can sprout in about 5 days
+- `00:45:04,033 → 00:45:07,700` **Tasha:** 然后做了一些种类的 / Then I made some different kinds
+- `00:45:08,600 → 00:45:10,366` **Tasha:** 算世界地球日吗 / For Earth Day, right?
+- `00:45:10,600 → 00:45:11,833` **Jake:** 那可地球了 / Totally for Earth Day
+- `00:45:11,366 → 00:45:12,433` **Katrina:** 都是你自己做的吗 / Did you make all of these yourself?
+- `00:45:11,833 → 00:45:12,766` **Lucia:** 哇好厉害 / Wow, that's amazing
+- `00:45:13,000 → 00:45:13,400` **Tasha:** 昂 / Yep
+- `00:45:14,033 → 00:45:15,033` **Katrina:** 好厉害 / So impressive
+- `00:45:16,033 → 00:45:18,900` **Tasha:** 然后做了5种 / And I made five kinds
+- `00:45:20,266 → 00:45:21,266` **Tasha:** 地球的 / Earth-related ones
+- `00:45:21,266 → 00:45:24,400` **Tasha:** 然后做了两种很简单的 / And two really simple ones
+- `00:45:25,900 → 00:45:27,466` **Katrina:** 但是你是原创哎 / But they're your original designs
+- `00:45:29,166 → 00:45:29,600` **Jake:** 有点强 / Pretty strong
+- `00:45:30,266 → 00:45:30,666` **Katrina:** 对 / Yeah
+- `00:45:31,666 → 00:45:32,466` **Jake:** 种子片 / Seed paper
+- `00:45:33,166 → 00:45:33,566` **Jake:** 种子片嗯 / Seed paper, hmm
+- `00:45:34,166 → 00:45:34,533` **Tasha:** 嗯 / Yeah
+- `00:45:34,533 → 00:45:35,766` **Shure:** 啊种子片 / Ah, seed paper
+- `00:45:35,766 → 00:45:37,433` **Jake:** 种子片嗯 / Seed paper, hmm
+- `00:45:37,866 → 00:45:40,000` **Tasha:** 嗯然后这样就比较环保 / Yeah, it's more environmentally friendly this way
+- `00:45:42,800 → 00:45:43,733` **Lucia:** 真的很环保 / It's really eco-friendly
+- `00:45:44,266 → 00:45:45,200` **Katrina:** 真的很环保 / It's really eco-friendly
+- `00:45:46,333 → 00:45:48,200` **Katrina:** 而且还极具美感好吗 / And it's also very aesthetically pleasing
+- `00:45:48,166 → 00:45:50,200` **Katrina:** 1234 好那 / 1234, okay then
+- `00:45:50,300 → 00:45:51,500` **Jake:** 你自己设计的 / Did you design it yourself?
+- `00:45:51,500 → 00:45:52,766` **Jake:** 是画的图吗 / Did you draw the pictures?
+- `00:45:51,600 → 00:45:53,033` **Alice:** 哦对我得去拿下我的东西 / Oh, I need to go get my stuff
+- `00:45:53,766 → 00:45:54,766` **Tasha:** 啊这很简单了 / Ah, it's really simple
+- `00:45:54,766 → 00:45:55,966` **Tasha:** 就找一些logo / Just find some logos
+- `00:45:56,033 → 00:45:56,833` **Jake:** 哦 / Oh
+- `00:45:56,166 → 00:45:57,366` **Tasha:** 然后这个logo一找 / Then you just find this logo
+- `00:45:57,400 → 00:45:59,800` **Tasha:** 写个字框个框就行了 / Just write a word and frame it.
+- `00:45:57,466 → 00:45:58,366` **Alice:** 哎呀不给你看 / Oh no, I'm not showing you.
+- `00:45:57,766 → 00:45:58,233` **Jake:** OK / OK
+- `00:45:59,800 → 00:46:00,600` **Jake:** OK / OK
+- `00:46:00,966 → 00:46:01,533` **Alice:** 天呐 / Oh my gosh.
+- `00:46:02,033 → 00:46:02,533` **Jake:** 挺好 / Pretty good.
+- `00:46:03,300 → 00:46:04,100` **Lucia:** 好厉害 / So impressive.
+- `00:46:07,100 → 00:46:08,100` **Katrina:** 种子卡片 / A seed card.
+- `00:46:08,600 → 00:46:09,600` **Katrina:** 然后呢就是 / And then
+- `00:46:09,933 → 00:46:13,333` **Alice:** 额买了一个拼图 / Um, I bought a puzzle.
+- `00:46:17,033 → 00:46:19,800` **Alice:** 是一个呃大底层是一个圆的 / It's a big round base.
+- `00:46:21,000 → 00:46:23,166` **Alice:** 然后它那个里面是这种的 / And inside it, there are
+- `00:46:23,666 → 00:46:25,433` **Alice:** 就是各种动物的那种 / all kinds of animals.
+- `00:46:25,466 → 00:46:27,133` **Alice:** 哦然后你看你能不能 / Oh, and then you see if you can
+- `00:46:27,266 → 00:46:29,466` **Alice:** 就是一个比较难的一个拼图 / it's a relatively difficult puzzle.
+- `00:46:29,466 → 00:46:30,866` **Alice:** 然后有很多种动物 / And there are many kinds of animals.
+- `00:46:30,866 → 00:46:34,700` **Alice:** 我想的就是呃你去尽力的往里面拼 / What I think is, um, you try your best to fit it together.
+- `00:46:34,733 → 00:46:37,533` **Alice:** 就是我觉得这个拼图就给人一种 / I think this puzzle gives a feeling that
+- `00:46:38,533 → 00:46:39,300` **Alice:** 我们在地球上 / we are on Earth
+- `00:46:39,333 → 00:46:41,400` **Alice:** 可以和谐共处的那个感觉 / and can live harmoniously together.
+- `00:46:41,666 → 00:46:43,700` **Alice:** 然后你不一定全都能拼上 / And you might not be able to fit it all.
+- `00:46:43,733 → 00:46:46,866` **Alice:** 但是因为这种不是那个严丝合缝 / Because it's not perfectly seamless.
+- `00:46:46,866 → 00:46:48,466` **Alice:** 不是特别完全严丝合缝 / It's not very perfectly seamless.
+- `00:46:48,466 → 00:46:49,933` **Alice:** 就是说你可以拼多一点 / So you can fit more pieces
+- `00:46:49,933 → 00:46:51,100` **Alice:** 也可以拼少一点 / or you can fit fewer pieces.
+- `00:46:51,300 → 00:46:52,100` **Alice:** 然后我就想 / And then I thought
+- `00:46:52,600 → 00:46:55,100` **Alice:** 呃可能就是一个小的游戏吧 / um, maybe it's just a little game.
+- `00:46:54,600 → 00:46:55,533` **Jake:** 你的头头发 / Your hair
+- `00:46:57,166 → 00:46:59,033` **Jake:** 呵呵呵要不 / Haha, maybe
+- `00:46:58,166 → 00:46:58,600` **Alice:** 对 / Yeah
+- `00:47:01,166 → 00:47:02,300` **Jake:** 要不夹进去 / Maybe clip it.
+- `00:47:02,933 → 00:47:03,933` **Katrina:** 有没有夹子 / Do you have a clip?
+- `00:47:02,933 → 00:47:04,000` **Jake:** 挺好 / Pretty good.
+- `00:47:04,000 → 00:47:04,600` **Jake:** 好 / Okay.
+- `00:47:05,533 → 00:47:06,433` **Shure:** 今天买点发夹 / Let's buy some hair clips today.
+- `00:47:05,533 → 00:47:07,166` **Alice:** 然后就是 / And then
+- `00:47:07,800 → 00:47:11,000` **Alice:** 我就想给参与者就是一个小奖品 / I want to give the participants a small prize.
+- `00:47:11,000 → 00:47:13,300` **Alice:** 就是一颗水仙种球 / It's a daffodil bulb.
+- `00:47:13,666 → 00:47:16,466` **Alice:** 因为这个水仙种球它好养 / Because this daffodil bulb is easy to grow.
+- `00:47:16,800 → 00:47:18,500` **Alice:** 就是呃 / So, um
+- `00:47:18,500 → 00:47:21,900` **Alice:** 在我的那种植物杀手朋友身上 / Tried it on my plant-killer friend
+- `00:47:21,900 → 00:47:22,666` **Alice:** 试验过了 / It worked
+- `00:47:22,666 → 00:47:24,266` **Alice:** 他都能养活的东西 / If he can keep it alive
+- `00:47:24,333 → 00:47:26,733` **Alice:** 然后这个花开出来也特别的好看 / Then the flower that blooms is really beautiful
+- `00:47:27,033 → 00:47:28,766` **Alice:** 然后还有清香的味道 / And it has a lovely fragrance
+- `00:47:28,800 → 00:47:30,933` **Alice:** 并且你看着他一天天长大 / Plus, you get to watch it grow day by day
+- `00:47:30,933 → 00:47:33,033` **Alice:** 你很有那种参与自然的感觉 / It really gives you a sense of being part of nature
+- `00:47:33,033 → 00:47:35,233` **Alice:** 对所以这就是我的想法 / So that's my idea
+- `00:47:35,266 → 00:47:37,133` **Alice:** 但是水仙球还没买 / But I haven't bought the narcissus bulbs yet
+- `00:47:37,100 → 00:47:37,500` **Alice:** 但是我有 / But I know
+- `00:47:37,533 → 00:47:39,866` **Alice:** 我知道有一家质量特别好的 / I know a place that sells really good quality ones
+- `00:47:39,866 → 00:47:41,533` **Alice:** 我养过的就是 / The ones I grew were from there
+- `00:47:41,533 → 00:47:42,966` **Alice:** 有需要他可以直接买过来 / If you need, I can buy them directly
+- `00:47:42,766 → 00:47:43,533` **Jake:** 好 / Okay
+- `00:47:43,000 → 00:47:43,800` **Jake:** 好 / Alright
+- `00:47:44,533 → 00:47:45,333` **Jake:** 仙球 / Narcissus bulbs
+- `00:47:49,666 → 00:47:51,233` **Shure:** 活动内容现在有4个 / We have 4 activities now
+- `00:47:51,266 → 00:47:51,933` **Shure:** 到谁了 / Whose turn is it?
+- `00:47:52,000 → 00:47:54,500` **Alice:** 我接吧不是到我啊吗 / I'll go, isn't it my turn?
+- `00:47:54,466 → 00:47:55,666` **Shure:** 野生动物拼图 / A wildlife puzzle
+- `00:47:55,966 → 00:47:58,033` **Katrina:** 哎我还想让我第一天吃海底捞 / Oh, I still want to go to Haidilao on my first day
+- `00:47:58,033 → 00:48:00,133` **Katrina:** 送了我一个种草莓的那个盆栽 / They gave me a strawberry planting kit
+- `00:48:00,533 → 00:48:01,866` **Katrina:** 也可以种一下 / We can plant it too
+- `00:48:01,933 → 00:48:02,600` **Jake:** 海底捞 / Haidilao
+- `00:48:02,433 → 00:48:04,800` **Tasha:** 那那个豌豆苗也可以种 / Then we can also plant pea shoots
+- `00:48:04,800 → 00:48:07,266` **Katrina:** 海底捞就最近不是跟樱桃小丸子联名 / Haidilao recently partnered with Chibi Maruko-chan
+- `00:48:07,266 → 00:48:09,600` **Katrina:** 点他那个东西他就送你那个盆栽 / If you order that, they give you the planting kit
+- `00:48:09,600 → 00:48:10,800` **Lucia:** 哦这么好 / Oh, that's nice
+- `00:48:10,800 → 00:48:12,966` **Shure:** 我们宿舍摆着呢 / We have it in our dorm
+- `00:48:12,966 → 00:48:15,100` **Katrina:** 我说他咋知道我要过来种东西 / I was wondering how they knew I wanted to plant something
+- `00:48:15,100 → 00:48:17,933` **Katrina:** 哈哈哈哈 / Hahaha
+- `00:48:17,933 → 00:48:19,666` **Katrina:** 我当时本来想买盆栽来着 / I was actually planning to buy a plant
+- `00:48:19,666 → 00:48:21,933` **Katrina:** 想盆栽要一个月才能发芽 / But it takes a month for a plant to sprout
+- `00:48:22,400 → 00:48:24,100` **Jake:** 走上海边种树去 / Let's go plant trees by the sea
+- `00:48:25,300 → 00:48:27,966` **Shure:** 然后到我了 / Then it's my turn
+- `00:48:27,966 → 00:48:28,866` **Jake:** 到您了 / Yes, it's your turn
+- `00:48:30,500 → 00:48:31,500` **Shure:** 我的是一个 / Mine is a
+- `00:48:33,033 → 00:48:35,533` **Shure:** 一个类似于二手拍卖的 / A kind of second-hand auction
+- `00:48:35,533 → 00:48:38,500` **Shure:** 一个一个一个一个一个一个一个想法 / An idea, idea, idea, idea, idea
+- `00:48:38,900 → 00:48:39,600` **Jake:** OK / OK
+- `00:48:39,600 → 00:48:44,933` **Shure:** 我不知道大家平时会不会去一些什么 / I don't know if you guys usually go to some places like...
+- `00:48:44,933 → 00:48:47,700` **Shure:** 比如说小小小酒馆啊 / For example, small bars...
+- `00:48:47,666 → 00:48:49,333` **Shure:** 或者是咖啡店 / Or coffee shops...
+- `00:48:49,366 → 00:48:53,300` **Shure:** 就那种比较有烟火气的地方 / You know, places with a bit of a cozy and lively atmosphere.
+- `00:48:54,166 → 00:48:55,966` **Shure:** 然后之前那个 / And before...
+- `00:48:56,166 → 00:48:58,733` **Shure:** 北京有一个连锁的精酿啤酒 / There was a craft beer chain in Beijing...
+- `00:48:58,766 → 00:48:59,966` **Shure:** 叫跳海 / Called Jumping Sea.
+- `00:48:59,966 → 00:49:02,033` **Katrina:** 哦我知道在什刹海那是不是 / Oh, I know, it's in Shichahai, right?
+- `00:49:02,033 → 00:49:03,000` **Shure:** 对什刹海 / Yes, Shichahai.
+- `00:49:03,033 → 00:49:04,166` **Jake:** 应该是这个吧 / It should be this one, right?
+- `00:49:04,166 → 00:49:05,766` **Shure:** 然后 / And...
+- `00:49:05,366 → 00:49:06,966` **Jake:** 指的是这个吗 / Are you talking about this one?
+- `00:49:07,333 → 00:49:08,533` 小薇;哪个 / Tasha: Which one?
+- `00:49:07,333 → 00:49:08,933` **Shure:** 其其他城市也有 / It's also in other cities.
+- `00:49:07,900 → 00:49:10,900` **Jake:** 你刚刚让我拿这个吗 / Did you just ask me to get this?
+- `00:49:09,100 → 00:49:09,933` **Shure:** 什么市场也有 / And in some markets too.
+- `00:49:10,366 → 00:49:12,900` **Shure:** 然后他们前两天大榕寺开业的时候 / And a few days ago, when they opened at Da Rong Temple...
+- `00:49:10,366 → 00:49:13,366` **Tasha:** 我想让你帮忙帮忙把这个拿出来 / I wanted you to help take this out.
+- `00:49:12,733 → 00:49:14,933` **Jake:** 我结果拿多了 / I ended up getting too much.
+- `00:49:12,900 → 00:49:13,933` **Shure:** 他们搞了一个 / They organized...
+- `00:49:13,933 → 00:49:16,500` **Shure:** 就是这个拍卖的 / Like an auction...
+- `00:49:14,933 → 00:49:17,933` **Jake:** 对不起 / Sorry.
+- `00:49:16,500 → 00:49:18,533` **Shure:** 一个一个一个形式吧 / A kind of format.
+- `00:49:16,500 → 00:49:19,500` **Tasha:** 这就一份吗 / Is this just one copy?
+- `00:49:18,866 → 00:49:20,200` **Shure:** 然后就是 / And then...
+- `00:49:18,866 → 00:49:21,866` **Jake:** 啊 / Ah.
+- `00:49:19,600 → 00:49:21,400` **Katrina:** 嗯 / Hmm.
+- `00:49:20,800 → 00:49:21,600` **Shure:** 嗯 / Hmm.
+- `00:49:21,866 → 00:49:24,866` **Jake:** 他们不知道 / They don't know.
+- `00:49:21,866 → 00:49:24,866` **Tasha:** 我说明信片就一份吗
+- `00:49:22,500 → 00:49:25,600` **Shure:** 他们当时是你喝酒会给你一个币 / At that time, if you drank, they would give you a token.
+- `00:49:24,866 → 00:49:26,100` **Jake:** 不知道 / No idea.
+- `00:49:25,800 → 00:49:27,466` **Shure:** 然后用这个币 / And with that token...
+- `00:49:27,466 → 00:49:30,866` **Shure:** 来买大家的一些任何的东西 / You could buy anything from anyone.
+- `00:49:30,933 → 00:49:33,933` **Shure:** 可以是一个是是一个诗集 / It could be a poetry collection...
+- `00:49:33,933 → 00:49:35,033` **Shure:** 可以是一个故事 / It could be a story...
+- `00:49:35,033 → 00:49:36,500` **Shure:** 然后也可以是一个 / Or it could be a...
+- `00:49:36,533 → 00:49:38,533` **Shure:** 就是真实存在的一个物品 / A real physical item.
+- `00:49:38,866 → 00:49:39,933` **Shure:** 然后就每人 / And then everyone...
+- `00:49:40,366 → 00:49:43,100` **Shure:** 就是那个每个物品都做一个小的PPT / So, for each item, we make a small PPT.
+- `00:49:43,400 → 00:49:44,666` **Shure:** 然后展示出来 / Then we present it.
+- `00:49:45,533 → 00:49:46,700` **Tasha:** 哎呀还要做PPT啊 / Oh no, we have to make a PPT?
+- `00:49:46,366 → 00:49:49,666` **Shure:** 然后然后然后哈哈哈哈 / And then, and then, hahaha.
+- `00:49:47,000 → 00:49:52,166` **Jake:** 哈哈哈 / Hahaha.
+- `00:49:49,666 → 00:49:51,166` **Lucia:** 这是工作狂游戏吗 / Is this a workaholic game?
+- `00:49:51,166 → 00:49:53,400` **Shure:** 啊不然后然 / Uh, no, and then...
+- `00:49:53,400 → 00:49:53,800` **Shure:** 后然后 / After that...
+- `00:49:53,800 → 00:49:54,600` **Shure:** 然后然后 / And then...
+- `00:49:54,666 → 00:49:56,300` **Shure:** 然后就是一个拍卖吧 / Then there's an auction.
+- `00:49:56,666 → 00:49:57,966` **Shure:** 然后我们可以怎么样呢 / And we can...
+- `00:49:58,000 → 00:50:00,166` **Shure:** 就是来的这些嘉宾 / The guests who come...
+- `00:50:00,533 → 00:50:03,300` **Shure:** 然后大家一人分享一个故事 / Each person shares a story.
+- `00:50:03,366 → 00:50:04,966` **Shure:** 或者是呃 / Or, um...
+- `00:50:04,966 → 00:50:05,766` **Shure:** 事故也好 / An incident.
+- `00:50:05,766 → 00:50:06,666` **Shure:** 故事也好 / Or a story.
+- `00:50:06,933 → 00:50:09,266` **Shure:** 然后来我们给评定 / Then we evaluate it.
+- `00:50:09,500 → 00:50:11,100` **Shure:** 觉得这个故事怎么样 / See how the story is.
+- `00:50:11,033 → 00:50:11,566` **Jake:** 值多少个币是吧 / How many coins it's worth, right?
+- `00:50:12,100 → 00:50:13,066` **Shure:** 对值多少个币 / Yes, how many coins.
+- `00:50:13,100 → 00:50:14,033` **Shure:** 然后给他 / And then give it to them.
+- `00:50:14,266 → 00:50:16,100` **Shure:** 然后这个币就什么 / And then those coins...
+- `00:50:16,100 → 00:50:18,533` **Tasha:** 一个故事换一根藤条的那种 / A story for a stick, that kind of thing.
+- `00:50:18,533 → 00:50:18,833` **Jake:** 昂 / Hmm.
+- `00:50:19,233 → 00:50:19,500` **Shure:** 哦对 / Oh, right.
+- `00:50:19,500 → 00:50:21,766` **Shure:** 然后这个币就用来拍卖 / Then those coins are used for the auction.
+- `00:50:21,766 → 00:50:24,466` **Shure:** 接下来这些嘉宾带来的二手物品 / For the second-hand items brought by the guests.
+- `00:50:24,466 → 00:50:27,933` **Shure:** 以及是我们就是闲置的一些二手物品 / And also for our own unused second-hand items.
+- `00:50:28,166 → 00:50:31,100` **Shure:** 然后来进行这样的一个交换 / And then we do an exchange.
+- `00:50:31,333 → 00:50:32,166` **Shure:** 就是 / It's...
+- `00:50:32,366 → 00:50:35,533` **Shure:** 也是跟这个环保理念比较比较挂钩的 / It's also closely related to the concept of environmental protection.
+- `00:50:35,000 → 00:50:35,266` **Jake:** 嗯 / Hmm.
+- `00:50:36,100 → 00:50:37,800` **Shure:** 行大概就是这个样子 / Yeah, that's basically it.
+- `00:50:41,033 → 00:50:43,233` **Jake:** 妙啊 / Brilliant.
+- `00:50:42,600 → 00:50:43,733` **Katrina:** 就是讲故事 / So, we tell stories.
+- `00:50:43,733 → 00:50:46,333` **Katrina:** 换了币然后就可以购买 / Earn coins and then we can buy...
+- `00:50:46,600 → 00:50:47,033` **Jake:** 购买一个 / Buy something...
+- `00:50:47,166 → 00:50:50,300` **Katrina:** 购买他们自己带来的闲置物品嘛 / Buy the items they brought themselves, right?
+- `00:50:50,533 → 00:50:51,266` **Shure:** 每个人拍 / Everyone auctions...
+- `00:50:51,300 → 00:50:53,466` **Shure:** 拍卖就是比如说我 / Auctions like, for example, I...
+- `00:50:53,466 → 00:50:55,300` **Shure:** 我要卖一个什么东西 / I want to sell something.
+- `00:50:55,300 → 00:50:57,033` **Shure:** 然后我上来讲一下这个东西 / Then I'll come up and talk about this item.
+- `00:50:57,033 → 00:50:59,300` **Shure:** 然后我认为他的起拍价大概多少 / And then I'll say what I think the starting bid should be.
+- `00:50:59,866 → 00:51:01,900` **Shure:** 然后拍到这个钱 / Then it will be auctioned off.
+- `00:51:01,900 → 00:51:03,866` **Shure:** 是给到那个拍卖的那个人的 / The money will go to the person who auctioned it.
+- `00:51:03,866 → 00:51:05,900` **Shure:** 然后他也流通过去那个货币 / And the currency will circulate.
+- `00:51:06,000 → 00:51:07,100` **Shure:** 然后我拿着这些货币 / Then I'll have some of this currency.
+- `00:51:07,100 → 00:51:08,500` **Shure:** 我可以再去拍卖 / I can go to another auction.
+- `00:51:08,800 → 00:51:09,666` **Shure:** 你再去买别的 / And buy other things.
+- `00:51:09,666 → 00:51:11,300` **Shure:** 对剩下的 / For the remaining items.
+- `00:51:12,100 → 00:51:15,666` **Alice:** 反正就是换了一种交流的货币 / So, it's basically just a different form of currency exchange.
+- `00:51:15,666 → 00:51:16,133` **Alice:** 哈哈哈 / Hahaha.
+- `00:51:16,100 → 00:51:18,933` **Katrina:** 也构建了我们整个的经济体系 / It also builds our entire economic system.
+- `00:51:18,666 → 00:51:20,700` **Jake:** 哈哈哈 / Hahaha.
+- `00:51:20,366 → 00:51:21,033` **Katrina:** 货币由头 / The origin of the currency.
+- `00:51:21,833 → 00:51:24,833` **Katrina:** 我们都是这个市场的内容 / We are all part of this market.
+- `00:51:22,900 → 00:51:25,900` **Jake:** 呵呵呵 / Hehehe.
+- `00:51:25,900 → 00:51:26,600` **Shure:** 对可以把 / Yes, you can add these too.
+- `00:51:26,600 → 00:51:28,000` **Shure:** 这些也给加进来 / These can also be included.
+- `00:51:27,733 → 00:51:30,733` **Jake:** 对都是商品 / Yes, they are all commodities.
+- `00:51:28,500 → 00:51:30,166` **Katrina:** 我们都是搞赚币的 / We are all in the currency business.
+- `00:51:29,433 → 00:51:31,100` **Alice:** 转币的 哈哈哈 / In the currency business. Hahaha.
+- `00:51:30,366 → 00:51:32,933` **Lucia:** 他是他是搞货币流通的 / He is in the currency circulation business.
+- `00:51:32,533 → 00:51:34,233` **Jake:** 昂 / Hmm.
+- `00:51:33,533 → 00:51:35,133` **Lucia:** 可以做一些手工艺品 / You can make some handicrafts.
+- `00:51:34,833 → 00:51:36,800` **Jake:** 对平台方 / For the platform side.
+- `00:51:35,166 → 00:51:36,333` **Lucia:** 用来用来拍卖 / To auction off.
+- `00:51:36,400 → 00:51:37,100` **Lucia:** 对可以啊 / Yes, it can work.
+- `00:51:36,966 → 00:51:39,133` **Jake:** 平台方和小店 / The platform side and small shops.
+- `00:51:37,100 → 00:51:38,133` **Katrina:** 就我们平台方做这个 / Just our platform side does this.
+- `00:51:38,166 → 00:51:40,333` **Jake:** 也可以平台方和小店 / The platform side and small shops can do it.
+- `00:51:39,300 → 00:51:40,400` **Jake:** 小店家对 / Small shops, right.
+- `00:51:40,366 → 00:51:41,466` **Jake:** 小店家对 / Small shops, right.
+- `00:51:41,300 → 00:51:44,300` **Jake:** 平台方京东 / Platform side like JD.
+- `00:51:42,666 → 00:51:44,200` **Shure:** 大概就是这样的形式 / That's basically how it works.
+- `00:51:49,266 → 00:51:50,266` **Tasha:** 这是我的商品 / This is my item.
+- `00:51:50,266 → 00:51:51,266` **Tasha:** 我拍卖的 / I'm auctioning it off.
+- `00:51:51,266 → 00:51:52,900` **Tasha:** 哈哈哈 / Hahaha.
+- `00:51:53,733 → 00:51:54,533` **Shure:** 还有什么想法吗 / Any other thoughts?
+- `00:51:54,533 → 00:51:55,233` **Shure:** 大家 / Everyone.
+- `00:51:55,233 → 00:51:58,533` **Katrina:** 我看看啊在那一天邀请他 / Let me see, invite him on that day.
+- `00:51:58,533 → 00:52:02,833` **Katrina:** 们过来这是我们准备的一些嗯东东西 / They can come over, these are some things we prepared.
+- `00:52:02,866 → 00:52:05,900` **Katrina:** 那怎么招待他们要不要搞一点什么 / How should we entertain them? Should we do something special?
+- `00:52:06,166 → 00:52:08,166` **Katrina:** 就像我我我经常我们学校草坪发 / Like, I often hold events on our school's lawn.
+- `00:52:08,166 → 00:52:09,600` **Katrina:** 他们会自己调酒 / They can make their own cocktails.
+- `00:52:11,533 → 00:52:12,300` **Katrina:** 就自己自己 / Just by themselves.
+- `00:52:12,300 → 00:52:15,366` **Katrina:** 人多的时候就有点像那种小party一样 / When there are a lot of people, it feels like a small party.
+- `00:52:15,366 → 00:52:16,333` **Katrina:** 啊 / Ah.
+- `00:52:16,333 → 00:52:22,733` **Shure:** 我可以可以在外面给大家冲咖啡我那有有一套手冲的东西哈哈 / I can make coffee for everyone outside, I have a set of pour-over tools, haha.
+- `00:52:22,733 → 00:52:25,666` **Katrina:** 对就是可以请大家喝点东西 / Yes, we can serve drinks to everyone.
+- `00:52:25,533 → 00:52:26,966` **Jake:** 哈哈哈 / Hahaha.
+- `00:52:25,666 → 00:52:26,800` **Shure:** 笑的这么开心 / Laughing so happily.
+- `00:52:27,400 → 00:52:28,666` **Jake:** 突然开心的起来 / Suddenly feeling happy.
+- `00:52:29,500 → 00:52:35,166` **Shure:** 支持OK就表演c加a coffee and alcohol / Supporting OK, let's present C plus A, coffee and alcohol.
+- `00:52:35,500 → 00:52:37,100` **Shure:** 嗯可以吧 / Hmm, sounds good.
+- `00:52:38,166 → 00:52:39,866` **Katrina:** 对那就是整个活动 / Yes, so the whole event
+- `00:52:39,866 → 00:52:42,166` **Katrina:** 那一天大概持续多长时间 / How long will it last on that day?
+- `00:52:42,500 → 00:52:43,333` **Jake:** 一下午呗 / An afternoon, I guess.
+- `00:52:43,333 → 00:52:44,700` **Jake:** 嗯 / Hmm.
+- `00:52:43,400 → 00:52:44,366` **Katrina:** 一下午 / An afternoon.
+- `00:52:44,466 → 00:52:48,766` **Katrina:** 嗯那就给他们提供一些饮品就够了吧 / Hmm, so just providing them with some drinks should be enough, right?
+- `00:52:48,800 → 00:52:51,800` **Shure:** 对 / Yes.
+- `00:52:48,800 → 00:52:52,300` **Katrina:** 先饮品然后我们就有点像 / First drinks, then we can have something like
+- `00:52:52,333 → 00:52:54,100` **Katrina:** 这这算市级部分 / This counts as a city-level part
+- `00:52:54,100 → 00:52:55,533` **Katrina:** 然后饮品部分也有了 / And then we have the drinks part
+- `00:52:55,533 → 00:52:57,566` **Katrina:** 那是不是还要什么节目啊您之前 / Do we need any programs? You mentioned before.
+- `00:52:57,600 → 00:52:58,866` **Jake:** 嗯对可以 / Hmm, yes, we can.
+- `00:52:59,966 → 00:53:05,266` **Jake:** 嗯或者最后一天应该是从中午 / Hmm, or on the last day, it should start from noon.
+- `00:53:05,266 → 00:53:06,533` **Jake:** 中午管不管饭 / Do we provide lunch?
+- `00:53:06,533 → 00:53:07,366` **Jake:** 这个另说 / That's another matter.
+- `00:53:07,366 → 00:53:10,533` **Jake:** 也可以管也可以不管共多少个人 / We can or cannot provide it, depending on the number of people.
+- `00:53:11,766 → 00:53:12,000` **Katrina:** 好像 / Seems like
+- `00:53:12,000 → 00:53:14,766` **Katrina:** 不用管饭但是可以请他做一点点甜的 / We don't need to provide lunch, but we can offer some sweets.
+- `00:53:14,766 → 00:53:16,033` **Jake:** 对对对下午茶 / Yes, yes, afternoon tea.
+- `00:53:16,100 → 00:53:19,366` **Jake:** 对嗯对那就是不用管饭 / Yes, right, so no need to provide lunch.
+- `00:53:19,500 → 00:53:20,966` **Jake:** 大家吃完饭过来 / Everyone can come over after lunch.
+- `00:53:21,166 → 00:53:23,433` **Jake:** 然后时间线我们捏一下 / Then we can adjust the timeline.
+- `00:53:23,666 → 00:53:28,000` **Jake:** 如果是下午开始两点比如说或者3点 / If it starts in the afternoon, say 2 PM or 3 PM
+- `00:53:28,800 → 00:53:30,966` **Jake:** 3点一直干到晚上之类的 / And goes on until the evening or so.
+- `00:53:32,266 → 00:53:35,100` **Katrina:** 可以干到晚上但是天气怎么样 / We can go on until the evening, but how's the weather?
+- `00:53:35,366 → 00:53:36,833` **Jake:** 这个就不知道了 / I'm not sure about that.
+- `00:53:36,833 → 00:53:39,200` **Katrina:** 我看会不会下雨不下雨的话如果像今天这种天的话 / I'll see if it rains. If it's like today...
+- `00:53:39,166 → 00:53:41,333` **Katrina:** 弄到晚上还是挺漂亮的 / It'll still be pretty nice in the evening.
+- `00:53:42,733 → 00:53:43,933` **Jake:** 对今天下午的话 / Yeah, this afternoon...
+- `00:53:43,933 → 00:53:47,466` **Jake:** 这个小院子应该也挺舒服的 / This little yard should be quite comfortable.
+- `00:53:48,100 → 00:53:49,600` **Jake:** 你还还可以烧烤 / You can even have a barbecue.
+- `00:53:49,933 → 00:53:51,166` **Shure:** 嗯是的 / Yeah, that's right.
+- `00:53:52,000 → 00:53:52,966` **Jake:** 买签了吗 / Did you buy the skewers?
+- `00:53:53,366 → 00:53:54,333` **Jake:** 好 / Okay.
+- `00:53:53,366 → 00:53:57,433` **Shure:** 还没呢我今天一起购入 / Not yet, I'll get them today.
+- `00:53:57,433 → 00:54:01,400` **Jake:** 好的还要买碳的对吧 / Alright, and we need to buy charcoal too, right?
+- `00:54:01,400 → 00:54:05,866` **Shure:** 签碳肉这些其实就是外卖都有其实可以当日达的 / Skewers, charcoal, meat, all these can be delivered on the same day.
+- `00:54:04,366 → 00:54:06,833` **Jake:** 昂昂   行行 / Yeah, okay, sounds good.
+- `00:54:09,166 → 00:54:10,300` **Katrina:** 21号 / The 21st.
+- `00:54:11,533 → 00:54:13,866` **Shure:** 大家平时厨艺如何 / How's everyone's cooking skills?
+- `00:54:14,166 → 00:54:16,266` **Shure:** 就是会使用刀吗 / Can you handle a knife?
+- `00:54:16,733 → 00:54:19,166` **Jake:** 哈哈哈什么叫会使用 / Hahaha, what do you mean by handle?
+- `00:54:18,333 → 00:54:21,333` **Katrina:** 我我还行 / I'm alright.
+- `00:54:19,666 → 00:54:21,333` **Shure:** 能切个肉什么的吗 / Can you cut meat?
+- `00:54:21,333 → 00:54:23,333` **Jake:** 能切都能切吧 / We can all cut meat, right?
+- `00:54:23,766 → 00:54:26,000` **Jake:** 都能切各位都能切了 / Everyone can cut it, no problem.
+- `00:54:26,000 → 00:54:27,900` **Shure:** OK 有大家这句话我就放心了 / Okay, hearing that puts my mind at ease.
+- `00:54:27,933 → 00:54:28,866` **Jake:** 因因为你不切 / Because you won't be cutting.
+- `00:54:28,866 → 00:54:29,733` **Lucia:** 稍微冷藏一下 / Slightly chill it.
+- `00:54:29,733 → 00:54:31,966` **Lucia:** 然后拿出来稍微放一会的时候好切 / Then let it sit a bit before cutting, it's easier that way.
+- `00:54:32,300 → 00:54:35,166` **Lucia:** 嗯如果是软的肉我不是很会切 / If the meat is soft, I'm not good at cutting it.
+- `00:54:35,166 → 00:54:37,466` **Lucia:** 就已经化好的那种 / When it's already thawed.
+- `00:54:37,466 → 00:54:40,466` **Shure:** 明白行 / Got it, alright.
+- `00:54:40,666 → 00:54:42,166` **Jake:** 行可以烤是吧 / Okay, we can grill it, right?
+- `00:54:42,166 → 00:54:42,833` **Shure:** 可以烤 / We can grill it.
+- `00:54:42,833 → 00:54:43,933` **Jake:** 长春烤串 / Changchun skewers.
+- `00:54:44,100 → 00:54:45,766` **Shure:** 哈哈哈 / Hahaha.
+- `00:54:46,033 → 00:54:49,866` **Katrina:** 其实调酒好像就是买买一点那种啤酒 / Actually, for cocktails, you just need to buy some beer.
+- `00:54:49,933 → 00:54:51,766` **Katrina:** 对然后搞一点冰块 / Yeah, and get some ice.
+- `00:54:51,766 → 00:54:52,533` **Shure:** 对 / Right.
+- `00:54:53,166 → 00:54:54,000` **Shure:** 冰块的话 / About the ice...
+- `00:54:54,166 → 00:54:56,000` **Katrina:** 哎我现在前面我们走两步 / Hey, there's a café a few steps ahead.
+- `00:54:56,000 → 00:54:56,766` **Katrina:** 不是有个咖啡厅 / Should we ask them for some ice?
+- `00:54:56,766 → 00:54:58,300` **Katrina:** 能不能问他们借点冰块 / So we don't have to buy an ice machine.
+- `00:54:58,300 → 00:55:00,166` **Katrina:** 就不用自己买制冰机了 / It saves us the trouble.
+- `00:55:00,400 → 00:55:02,033` **Katrina:** 可以请问他们花钱买点冰块 / Can we ask them to buy some ice?
+- `00:55:02,033 → 00:55:03,100` **Katrina:** 那边有咖啡厅吗 / Is there a café over there?
+- `00:55:03,333 → 00:55:04,866` **Katrina:** 对啊昨天停车那位置 / Yeah, the spot where we parked yesterday.
+- `00:55:05,866 → 00:55:07,766` **Lucia:** 如果我们要求不那么高的话 / If our requirements aren't too high
+- `00:55:07,766 → 00:55:10,100` **Lucia:** 就是买一个冰膜然后自己冻一下 / we can just buy an ice mold and freeze it ourselves.
+- `00:55:10,100 → 00:55:10,966` **Lucia:** 也可以啊 / That works too.
+- `00:55:10,966 → 00:55:12,366` **Lucia:** 只不过就是冻出来可能没有 / It's just that the ice might not be as
+- `00:55:12,366 → 00:55:13,366` **Lucia:** 咖啡厅透明 / clear as the café's.
+- `00:55:13,366 → 00:55:14,533` **Katrina:** 我们有冰箱 / We have a fridge.
+- `00:55:14,533 → 00:55:16,000` **Katrina:** 就买个那个模具倒点水 / Just buy the mold and pour some water in.
+- `00:55:16,000 → 00:55:16,966` **Katrina:** 前天晚上冻一下 / Freeze it overnight.
+- `00:55:16,966 → 00:55:18,200` **Alice:** 用蒸馏水就行 / Just use distilled water.
+- `00:55:18,166 → 00:55:20,133` **Alice:** 就煮过煮沸的水 / Boiled water works too.
+- `00:55:20,366 → 00:55:23,366` **Jake:** 嗯蒸馏水 / Hmm, distilled water.
+- `00:55:22,333 → 00:55:24,533` **Shure:** 还行呵呵呵 / Not bad, haha.
+- `00:55:25,266 → 00:55:26,866` **Shure:** 我们到底是在搞什么 / What are we even doing?
+- `00:55:27,100 → 00:55:28,166` **Shure:** 搞实验了是吗 / Are we doing an experiment or what?
+- `00:55:27,266 → 00:55:28,900` **Jake:** 呵呵呵 / Haha.
+- `00:55:33,466 → 00:55:36,166` **Katrina:** 那他整整体的时间流程呢 / So what's the overall schedule then?
+- `00:55:37,533 → 00:55:40,333` **Jake:** 比如说我们从入场3点3点开始吧 / For example, we start at 3 PM, right?
+- `00:55:40,333 → 00:55:41,766` **Katrina:** 几点到几点干什么 / What do we do from what time to what time?
+- `00:55:41,766 → 00:55:43,100` **Katrina:** 几点到几点干什么 / From what time to what time?
+- `00:55:43,166 → 00:55:45,866` **Katrina:** 因为就5个人 / Because there are only five of us.
+- `00:55:43,300 → 00:55:43,766` **Jake:** 对 / Right.
+- `00:55:45,900 → 00:55:47,400` **Katrina:** 这个有点像那种市集 / This feels like a market.
+- `00:55:47,400 → 00:55:48,800` **Katrina:** 但是那种市集一般都是比较大 / But those markets are usually bigger.
+- `00:55:48,800 → 00:55:49,666` **Katrina:** 然后大家随意逛 / People just wander around.
+- `00:55:49,666 → 00:55:51,300` **Katrina:** 但是我们这个地方比较小 / But our place is smaller.
+- `00:55:51,333 → 00:55:53,266` **Katrina:** 那你肯定要规定一定的时间干什么 / So we need to set specific times for activities.
+- `00:55:53,266 → 00:55:54,033` **Katrina:** 一定的时间干什么 / Specific times for activities.
+- `00:55:54,033 → 00:55:56,366` **Katrina:** 要不然容易他们一下就看完了 / Otherwise, they'll finish everything too quickly.
+- `00:55:56,400 → 00:55:58,400` **Jake:** 对你的拍卖可以占一点时间 / Your auction can take up some time.
+- `00:55:58,400 → 00:55:59,600` **Jake:** 看占多长时间 / See how long it takes.
+- `00:55:59,800 → 00:56:00,600` **Jake:** 然后 / Then...
+- `00:56:01,266 → 00:56:01,966` **Jake:** 唉 / Sigh.
+- `00:56:01,966 → 00:56:05,000` **Jake:** 就这些准备都是我们这几天准备对吧 / All these preparations are what we've been working on these past few days, right?
+- `00:56:05,000 → 00:56:06,900` **Jake:** 然后别的耗时间的短剧 / Then other time-consuming short activities...
+- `00:56:08,166 → 00:56:09,100` **Jake:** 跳舞吗哈哈哈 / Dancing? Haha.
+- `00:56:09,100 → 00:56:13,066` **Lucia:** 哈哈我一个人跳吗 / Haha, am I dancing alone?
+- `00:56:14,166 → 00:56:16,466` **Jake:** 以前也对  以前也可以跳 / We used to do it before, we can do it again.
+- `00:56:17,666 → 00:56:19,666` **Katrina:** 可以拍个稍微简单点的 / Can we shoot something a bit simpler?
+- `00:56:18,666 → 00:56:19,700` **Jake:** 帅也可以跳 / Choiszt can dance too.
+- `00:56:21,433 → 00:56:21,733` **Jake:** 是吧 / Right?
+- `00:56:21,733 → 00:56:22,966` **Katrina:** 你也可以跳吗 / Can you dance too?
+- `00:56:21,733 → 00:56:23,700` **Lucia:** 短片如果有现成的剧本的话 / If we have a script for a short film...
+- `00:56:23,666 → 00:56:26,733` **Lucia:** 我们可以拍一个哈哈哈 / We can shoot one, haha.
+- `00:56:31,366 → 00:56:33,900` **Shure:** 演其实有有点小尬 / Acting is actually a bit awkward.
+- `00:56:34,000 → 00:56:36,366` **Katrina:** 嗯不如跳舞 / Hmm, dancing is better.
+- `00:56:36,666 → 00:56:38,366` **Katrina:** 因为那个音乐放上了 / Because once the music starts...
+- `00:56:36,800 → 00:56:37,800` **Jake:** 不如跳舞 / Let's dance instead.
+- `00:56:38,366 → 00:56:39,033` **Lucia:** 不如跳舞 / Let's dance instead.
+- `00:56:39,033 → 00:56:40,433` **Alice:** 谈恋爱不如跳舞 / Dancing is better than dating.
+- `00:56:41,000 → 00:56:42,333` **Shure:** 不如跳舞 / Let's dance instead.
+- `00:56:45,100 → 00:56:46,500` **Shure:** 捋一下时间线吧 / Let's go over the timeline.
+- `00:56:47,033 → 00:56:49,833` **Lucia:** 可是跳舞的话戴眼镜会掉耶 / But if we dance, my glasses might fall off.
+- `00:56:50,600 → 00:56:51,400` **Lucia:** 哈哈哈 / Hahaha.
+- `00:56:51,400 → 00:56:52,933` **Shure:** 还戴眼镜那时候 / Wearing glasses at that time?
+- `00:56:53,733 → 00:56:55,533` **Shure:** 那我们可以挑点简单的 / We can choose something simpler.
+- `00:56:55,966 → 00:56:57,333` **Shure:** 蘑菇蘑菇哎 / Mushrooms, mushrooms, hey!
+- `00:56:57,366 → 00:56:59,100` **Lucia:** 我们可以跳抖音上的那种 / We can dance to something from TikTok.
+- `00:56:57,366 → 00:56:59,266` **Jake:** 哈哈哈哈 / Hahaha.
+- `00:56:59,100 → 00:57:02,000` **Shure:** 哈哈哈 / Hahaha.
+- `00:57:02,900 → 00:57:03,900` **Shure:** 这个听我说 / Listen to me.
+- `00:57:03,900 → 00:57:04,900` **Shure:** 谢谢你对对对 / Thank you, yes, yes.
+- `00:57:04,900 → 00:57:06,766` **Lucia:** 对对对抖音上就大家都可以一起挑 / Yes, on TikTok everyone can join in.
+- `00:57:07,033 → 00:57:09,533` **Lucia:** 就是排的时间也会短一些对吧 / It also takes less time to plan, right?
+- `00:57:10,266 → 00:57:11,866` **Lucia:** 也没有什么比较大的动作 / And there aren't any big moves.
+- `00:57:10,600 → 00:57:11,033` **Jake:** 对 / Right.
+- `00:57:11,866 → 00:57:13,100` **Lucia:** 戴眼镜也不影响 / Glasses won't get in the way.
+- `00:57:15,100 → 00:57:15,900` **Shure:** 哎 / Hey.
+- `00:57:18,400 → 00:57:19,266` **Shure:** 捋下时间线 / Let's go over the timeline.
+- `00:57:19,266 → 00:57:20,533` **Tasha:** 可拍满100个硬币 / We can shoot 100 coins.
+- `00:57:20,533 → 00:57:21,733` **Tasha:** 哈哈哈啊 / Hahaha.
+- `00:57:21,333 → 00:57:23,266` **Jake:** 啊   买 / Ah, buy them.
+- `00:57:21,733 → 00:57:22,733` 小薇;啊没事 / Tasha: Ah, it's okay.
+- `00:57:22,733 → 00:57:25,533` **Tasha:** 我只是觉得应该买实体硬币 / I just think we should buy real coins.
+- `00:57:24,666 → 00:57:27,666` **Jake:** 哦 可以买 采购 / Oh, we can buy them, procurement.
+- `00:57:25,533 → 00:57:26,533` **Katrina:** 哦哦不对 / Oh, no, wait.
+- `00:57:26,766 → 00:57:29,000` **Katrina:** 拍卖之前首先要他们讲故事 / Before the auction, they need to tell a story.
+- `00:57:29,000 → 00:57:30,533` **Katrina:** 才能获得那个币 / Only then can they get the coins.
+- `00:57:31,233 → 00:57:32,766` **Jake:** 对对对就是这个时间 / Yes, yes, yes, it's this time.
+- `00:57:32,766 → 00:57:34,966` **Jake:** 可能就得放一个半小时了对 / It might take about an hour and a half.
+- `00:57:36,233 → 00:57:38,666` **Jake:** 就就你们昨天的那个活动 / Just like your event yesterday.
+- `00:57:38,800 → 00:57:40,766` **Jake:** 也也两个小时了 / It was also two hours.
+- `00:57:39,466 → 00:57:40,966` **Shure:** 也不用讲那么长 / No need to make it that long.
+- `00:57:40,966 → 00:57:42,166` **Shure:** 就讲一个小故事 / Just tell a short story.
+- `00:57:42,166 → 00:57:44,133` **Shure:** 一个每个人5分钟那种大概 / Like, each person gets 5 minutes or so.
+- `00:57:45,300 → 00:57:47,533` **Jake:** 哦  可以啊 / Oh, that works.
+- `00:57:47,900 → 00:57:50,033` **Shure:** 或者时间成本控制不好的话 / Or if we can't control the time cost well...
+- `00:57:50,033 → 00:57:51,833` **Shure:** 就以其他形式获得币 / We can gain the coins in other ways.
+- `00:57:51,866 → 00:57:55,500` **Shure:** 但是这个活动的核心是那个拍卖过程 / But the core of this event is the auction process.
+- `00:57:55,500 → 00:57:57,000` **Shure:** 但是这个货币怎么获得 / As for how to earn the coins...
+- `00:57:57,000 → 00:57:58,666` **Shure:** 可以再进一步上去 / We can refine that further.
+- `00:58:00,033 → 00:58:00,700` **Jake:** 嗯嗯 / Mm-hmm.
+- `00:58:00,500 → 00:58:02,866` **Shure:** 对拍卖过程这个是要保留的 / Yes, we need to keep the auction process.
+- `00:58:02,866 → 00:58:05,866` **Shure:** 大概像9个人的话每个人5分钟 / For about 9 people, each person gets 5 minutes.
+- `00:58:05,866 → 00:58:07,500` **Shure:** 5945一个小时吧 / 5945, that's an hour.
+- `00:58:07,500 → 00:58:08,933` **Shure:** 就按一个小时算的 / We can just consider it as an hour.
+- `00:58:13,366 → 00:58:14,600` **Lucia:** 路上给大家发一些币 / Hand out some coins on the way.
+- `00:58:14,600 → 00:58:17,666` **Lucia:** 然后通过摇骰子让大家玩一会 / And let everyone play by rolling dice.
+- `00:58:18,300 → 00:58:19,866` **Katrina:** 啊可以设置一些游戏 / Ah, we can set up some games.
+- `00:58:18,300 → 00:58:20,933` **Jake:** 嗯对对对 / Mm, yeah, yeah.
+- `00:58:21,966 → 00:58:24,366` **Jake:** 哈哈哈整点游戏可以 / Hahaha, some games would be fine.
+- `00:58:24,366 → 00:58:26,333` **Shure:** 我们门门口再来一个 / Let's have one at the entrance.
+- `00:58:27,533 → 00:58:28,866` **Lucia:** 哈哈哈没有没有开个玩笑 / Hahaha, no, just kidding.
+- `00:58:27,833 → 00:58:34,266` **Jake:** 哈哈哈 / Hahaha.
+- `00:58:28,900 → 00:58:29,400` **Lucia:** 可以可以可以 / Okay, okay, okay.
+- `00:58:29,400 → 00:58:31,100` **Lucia:** 确实啊 / Seriously.
+- `00:58:31,100 → 00:58:32,300` **Lucia:** 这个听起来有点 / This sounds a bit...
+- `00:58:33,533 → 00:58:37,466` **Lucia:** 哈哈哈一会发鸡蛋一会摇骰子 / Hahaha, handing out eggs and rolling dice.
+- `00:58:35,666 → 00:58:36,100` **Jake:** 然后 / Then...
+- `00:58:37,466 → 00:58:40,200` **Jake:** 哈哈哈据点是吧 / Hahaha, it's like a stronghold.
+- `00:58:39,500 → 00:58:40,866` **Jake:** 哈哈哈据点是吧 / Hahaha, it's like a stronghold.
+- `00:58:40,866 → 00:58:44,266` **Shure:** 一锅端了小心这 / Be careful, we might get busted.
+- `00:58:44,266 → 00:58:47,000` **Tasha:** 进来玩玩嘛进来就可以获得10个币
+- `00:58:51,666 → 00:58:52,666` **Shure:** 哈哈 / Haha.
+- `00:58:53,333 → 00:58:55,033` **Katrina:** 但是一一进来就让 / But once they come in...
+- `00:58:55,100 → 00:58:57,533` **Katrina:** 就是刚开始肯定要获得货币 / At first, they definitely need to earn some currency.
+- `00:58:57,533 → 00:58:58,566` **Katrina:** 但是你获得货币 / But to earn currency...
+- `00:58:58,600 → 00:59:00,533` **Katrina:** 是要他们通过讲故事的方式 / They need to do it by telling stories.
+- `00:59:00,766 → 00:59:02,866` **Katrina:** 但是他们一进来可能还没那么熟 / But when they first come in, they might not be that familiar.
+- `00:59:02,866 → 00:59:05,133` **Katrina:** 就要让他们在众人面前讲故事干什么 / And we expect them to tell stories in front of everyone?
+- `00:59:05,100 → 00:59:05,966` **Katrina:** 那就自我介绍 / How about self-introductions?
+- `00:59:06,000 → 00:59:07,666` **Tasha:** 会冷场可以获得一个币啊 / It might be awkward, but they can earn a coin!
+- `00:59:06,833 → 00:59:08,100` **Jake:** 昂 / Hmm.
+- `00:59:07,666 → 00:59:08,933` **Lucia:** 自我介绍可以获得 / Self-introductions can earn...
+- `00:59:08,933 → 00:59:11,533` **Katrina:** 对啊自我介绍可以获得 / Yeah, self-introductions can earn...
+- `00:59:10,600 → 00:59:12,266` **Jake:** 自我介绍获得或者 / Earn through self-introductions or...
+- `00:59:11,533 → 00:59:12,800` **Alice:** 第一个给5个 / The first one gets five.
+- `00:59:12,800 → 00:59:13,666` **Alice:** 第二个给仨 / The second one gets three.
+- `00:59:15,900 → 00:59:17,166` **Katrina:** 奖惩机制 / Reward and punishment system.
+- `00:59:17,300 → 00:59:19,333` **Jake:** 或者我们其实在这个屋子里面 / Or we could actually hide things in this room.
+- `00:59:19,333 → 00:59:20,600` **Jake:** 可以藏点东西 / And then, um...
+- `00:59:20,666 → 00:59:21,466` **Jake:** 然后啊 / Like...
+- `00:59:21,500 → 00:59:24,166` **Lucia:** 像复活节的那种寻彩蛋游戏一样 / Like an Easter egg hunt kind of game?
+- `00:59:22,766 → 00:59:24,500` **Jake:** 对对对 / Yeah, yeah, exactly.
+- `00:59:26,100 → 00:59:26,900` **Jake:** 藏点币 / Hide some coins.
+- `00:59:27,666 → 00:59:29,300` **Shure:** 藏币也行 / Hiding coins works too.
+- `00:59:31,166 → 00:59:33,166` **Katrina:** 就是刚开始自我介绍获得币 / So, at first, earn coins through self-introductions.
+- `00:59:33,166 → 00:59:36,066` **Katrina:** 然后玩玩点小游戏赢赢了的币 / Then play some mini-games to win more coins.
+- `00:59:36,100 → 00:59:38,100` **Shure:** 对就比如说一些问答什么的 / Yeah, like some quiz or something.
+- `00:59:38,100 → 00:59:39,700` **Shure:** 野生动物拼图那个 / Like the wildlife puzzle one.
+- `00:59:39,733 → 00:59:41,933` **Lucia:** 哎问答的话反正是世界地球日 / Yeah, since it's Earth Day anyway.
+- `00:59:41,933 → 00:59:42,300` **Lucia:** 对可以 / Yeah, that's good.
+- `00:59:42,300 → 00:59:44,033` **Lucia:** 知识问答知识问答 / Knowledge quizzes, knowledge quizzes.
+- `00:59:44,033 → 00:59:45,633` **Shure:** 知识问答得币 / Earn coins through knowledge quizzes.
+- `00:59:46,000 → 00:59:46,900` **Shure:** 对对对好 / Yeah, exactly, great.
+- `00:59:47,033 → 00:59:48,100` **Shure:** 我想起来了 / I remember now.
+- `00:59:47,033 → 00:59:48,500` **Tasha:** 好世界地球日是哪一天 / Alright, when is Earth Day?
+- `00:59:48,533 → 00:59:49,433` **Katrina:** 先要把那个 / First, we need to...
+- `00:59:49,600 → 00:59:50,633` **Lucia:** 二十几来着 / It's on the twenty-something.
+- `00:59:51,033 → 00:59:54,000` **Katrina:** 先要把这个钱给让他们得到 / First, we need to let them earn that money.
+- `00:59:51,800 → 00:59:54,900` **Jake:** 二十二我把我把二十一来搞 / Twenty-second. I'll go with the twenty-first.
+- `00:59:54,500 → 00:59:55,733` **Katrina:** 然后再开始推销 / Then we start promoting...
+- `00:59:55,600 → 00:59:56,800` **Jake:** 因为是星期天 / Because it's a Sunday.
+- `00:59:56,500 → 00:59:58,333` **Katrina:** 推销我们的产品 / Promoting our products.
+
+### `A1_JAKE_DAY1_12000000.srt`
+
+- `00:00:01,533 → 00:00:03,500` **Katrina:** 然后我们有那种大音箱不 / So do we have those big speakers?
+- `00:00:04,266 → 00:00:05,533` **Shure:** 这个可以有 / We can get those.
+- `00:00:06,166 → 00:00:08,800` **Katrina:** 如果在外面玩的话放点音乐啥 / If we play outside, we can put on some music.
+- `00:00:08,800 → 00:00:11,033` **Jake:** 嗯就放刚刚那个曲子 / Yeah, let's play that song from earlier.
+- `00:00:11,033 → 00:00:11,700` **Lucia:** 嗯对 / Yeah, right.
+- `00:00:11,533 → 00:00:12,333` **Alice:** 大东 北 / Northeast China
+- `00:00:13,466 → 00:00:14,266` **Lucia:** 对 / Right.
+- `00:00:14,733 → 00:00:15,800` **Shure:** 大东北 / Northeast China.
+- `00:00:15,400 → 00:00:17,033` **Katrina:** 知识问答自我介绍 / Trivia and self-introductions.
+- `00:00:19,100 → 00:00:19,833` **Jake:** 拿走把这个 / Take this away.
+- `00:00:19,866 → 00:00:20,533` **Jake:** 花瓶 / The vase.
+- `00:00:21,000 → 00:00:22,766` **Katrina:** 这是真的酒还是假酒 / Is this real liquor or fake?
+- `00:00:22,800 → 00:00:23,866` **Jake:** 假酒 / Fake.
+- `00:00:23,866 → 00:00:25,600` **Katrina:** 啊我还以为你们已经喝了 / Ah, I thought you guys had already drunk it.
+- `00:00:27,666 → 00:00:28,766` **Jake:** 这是我的水瓶 / This is my water bottle.
+- `00:00:30,733 → 00:00:31,966` **Jake:** 茅台茅台 / Maotai, Maotai.
+- `00:00:31,966 → 00:00:34,300` **Katrina:** 再拿起出来干一口 / Take another swig.
+- `00:00:34,533 → 00:00:36,966` **Jake:** 那花瓶拿走了还倒 / The vase is gone, but you still pour.
+- `00:00:38,333 → 00:00:39,533` **Katrina:** 这多的话等会就放 / There's a lot, we'll put it later.
+- `00:00:39,533 → 00:00:40,533` **Katrina:** 这花瓶 / This vase.
+- `00:00:39,966 → 00:00:40,266` **Jake:** 好 / Okay.
+- `00:00:41,533 → 00:00:42,533` **Lucia:** 小心 / Be careful.
+- `00:00:42,533 → 00:00:42,866` **Shure:** 完了 / It's over.
+- `00:00:43,666 → 00:00:44,833` **Alice:** 叮铃咣当的 / Clink-clank.
+- `00:00:45,866 → 00:00:47,966` **Shure:** 这是个保温杯啊 / This is a thermos.
+- `00:00:47,966 → 00:00:49,033` **Lucia:** 这居然是保温杯 / This is actually a thermos.
+- `00:00:50,166 → 00:00:51,900` **Shure:** 一听就是304不锈钢 / You can tell it's 304 stainless steel.
+- `00:00:54,666 → 00:00:55,333` **Lucia:** 厉害了 / Impressive.
+- `00:00:55,333 → 00:00:56,500` **Jake:** 很懂啊大东北 / You really know your stuff about Northeast China.
+- `00:00:56,500 → 00:00:57,233` **Jake:** 生产的是吧 / Manufactured there, right?
+- `00:00:58,033 → 00:00:58,966` **Jake:** 东北钢铁厂 / Northeast Steel Plant.
+- `00:01:00,666 → 00:01:01,466` **Shure:** 鞍钢 / Anshan Steel.
+- `00:01:03,800 → 00:01:05,166` **Shure:** 这字写的太好看了 / The writing is so beautiful.
+- `00:01:05,166 → 00:01:06,866` **Shure:** 真的嗯 / Really, yeah.
+- `00:01:06,366 → 00:01:08,733` **Jake:** 嗯 一看就是中文 / Yeah, you can tell it's Chinese.
+- `00:01:07,100 → 00:01:08,033` **Shure:** 可歌可泣 / Epic.
+- `00:01:10,366 → 00:01:12,000` **Shure:** 哦我们还要写个英文版吗 / Oh, do we also need to write an English version?
+- `00:01:11,800 → 00:01:12,600` **Jake:** 不用不用不用 / No, no, no.
+- `00:01:13,300 → 00:01:15,166` **Jake:** 对说明我们字写的好 / It just shows our writing is good.
+- `00:01:15,300 → 00:01:17,166` **Shure:** 我们应该international一点 / We should be more international.
+- `00:01:17,166 → 00:01:19,266` **Shure:** 你看我那个英文就明显跟这个 / Look, my English is obviously different from this.
+- `00:01:19,266 → 00:01:21,033` **Jake:** 那好下面开始写英文吧 / Alright, let's start writing in English then.
+- `00:01:21,033 → 00:01:21,566` **Shure:** OK / OK.
+- `00:01:21,733 → 00:01:23,033` **Jake:** 时间线来 / Timeline, please.
+- `00:01:23,533 → 00:01:24,766` **Shure:** 来来咱俩换一下 / Come on, let's switch places.
+- `00:01:24,766 → 00:01:26,266` **Shure:** 你去那边坐一会去 / You go sit over there for a bit.
+- `00:01:31,100 → 00:01:31,900` **Jake:** 或坐这 / Or sit here.
+- `00:01:45,933 → 00:01:48,366` **Shure:** timeline / Timeline.
+- `00:01:47,366 → 00:01:48,266` **Jake:** 为啥是俩词 / Why is it two words?
+- `00:01:49,533 → 00:01:50,500` **Alice:** 时间线吧 / Timeline, right?
+- `00:01:51,033 → 00:01:51,933` **Jake:** 为啥是俩词 / Why is it two words?
+- `00:01:52,166 → 00:01:53,033` **Jake:** 也行也行 / Okay, okay.
+- `00:01:53,333 → 00:01:56,800` **Shure:** 强调一下这个line好好线 / Emphasize this line... okay, line.
+- `00:01:54,666 → 00:01:55,966` **Jake:** 好好 / Alright, alright.
+- `00:01:58,800 → 00:02:00,666` **Shure:** 首先我们几点入场 / First, what time do we arrive?
+- `00:02:01,000 → 00:02:02,033` **Jake:** 3点 3点吧 / 3 o'clock, 3 o'clock.
+- `00:02:04,433 → 00:02:06,300` **Jake:** 应该是2点到3点逐步入场 / It should be from 2 to 3, gradually arriving.
+- `00:02:06,300 → 00:02:08,466` **Jake:** 然后前面可能签到的人 / And then maybe the early arrivals will sign in.
+- `00:02:09,600 → 00:02:10,100` **Katrina:** 逛逛 / Walk around.
+- `00:02:10,100 → 00:02:11,866` **Jake:** 对给他们一点活动 / Yeah, give them some activities.
+- `00:02:11,866 → 00:02:14,033` **Shure:** 鹌鹑哈哈 / Quail, haha.
+- `00:02:14,333 → 00:02:15,000` **Jake:** 行 / Okay.
+- `00:02:14,666 → 00:02:16,300` **Shure:** 入场是怎么拍的吗 / How are the arrivals being recorded?
+- `00:02:16,300 → 00:02:17,766` **Katrina:** 2点半到3点 / 2:30 to 3:00.
+- `00:02:19,733 → 00:02:20,100` **Jake:** 可以 / Sure.
+- `00:02:30,366 → 00:02:31,633` **Jake:** 对 这意思就是3点之前 / Yes, that means before 3 o'clock.
+- `00:02:31,833 → 00:02:35,166` **Jake:** 我们搞一些flexible的游戏或者活动 / We'll have some flexible games or activities.
+- `00:02:35,166 → 00:02:37,066` **Jake:** 然后3点准时干点什么东西 / And then at 3 o'clock, we'll do something.
+- `00:02:40,666 → 00:02:41,466` **Shure:** game / Game.
+- `00:02:44,933 → 00:02:45,733` **Shure:** before / Before.
+- `00:02:49,666 → 00:02:50,500` **Shure:** 是不是污染数据 / Does it contaminate the data?
+- `00:02:51,533 → 00:02:51,966` **Jake:** 不污染 / No, it doesn't.
+- `00:02:52,266 → 00:02:53,766` **Jake:** 这是人类的正常行为 / It's normal human behavior.
+- `00:03:10,500 → 00:03:12,000` **Shure:** 第二点
+- `00:03:14,266 → 00:03:15,433` **Shure:** 还有什么 / What else?
+- `00:03:15,533 → 00:03:16,600` **Jake:** 然后 3点干啥了 / And then, what do we do at 3 o'clock?
+- `00:03:16,966 → 00:03:19,933` **Katrina:** 3点开始就有知识问答和自我介绍 / At 3 o'clock, we'll have a Q&A and introductions.
+- `00:03:20,300 → 00:03:21,966` **Shure:** 那这这些呢 / And these?
+- `00:03:21,966 → 00:03:25,500` **Katrina:** 这些就是我们要让他们先获得货币 / These are for us to let them earn currency first.
+- `00:03:25,500 → 00:03:27,166` **Katrina:** 以后我们再推销我们自己的产品 / Then we can promote our own products.
+- `00:03:27,166 → 00:03:29,433` **Katrina:** 我其实感觉不确定 / I'm actually not sure about it.
+- `00:03:29,466 → 00:03:31,000` **Katrina:** 他们到底是一人还是二人 / Are they one person or two?
+- `00:03:31,000 → 00:03:31,533` **Katrina:** 你知道吗 / Do you know?
+- `00:03:31,533 → 00:03:33,933` **Katrina:** 就万一 / Just in case...
+- `00:03:34,266 → 00:03:36,500` **Katrina:** 其实可能不会持续很长的时间 / It might not last very long.
+- `00:03:36,500 → 00:03:37,300` **Katrina:** 自我介绍 / Self-introduction.
+- `00:03:37,300 → 00:03:39,333` **Katrina:** 知识问答40分钟吧 / Knowledge quiz for 40 minutes, maybe.
+- `00:03:39,333 → 00:03:40,366` **Katrina:** 加自我介绍 / Plus self-introduction.
+- `00:03:40,800 → 00:03:42,766` **Shure:** 您说也行 / Sure, if you say so.
+- `00:03:42,100 → 00:03:43,366` **Jake:** 也行抢答对吧 / Sure, we can do a quick-answer format, right?
+- `00:03:43,933 → 00:03:46,100` **Katrina:** 嗯很快其实 / Yeah, it will be quick actually.
+- `00:03:46,100 → 00:03:47,433` **Jake:** 对对挺好 / Yes, that sounds good.
+- `00:03:51,033 → 00:03:52,633` **Shure:** 知识问答昂 / Knowledge quiz.
+- `00:03:51,666 → 00:03:52,133` **Katrina:** QA / QA.
+- `00:03:53,600 → 00:03:54,000` **Jake:** 妙啊 / Brilliant.
+- `00:04:01,000 → 00:04:01,800` **Shure:** OK / OK.
+- `00:04:04,000 → 00:04:04,800` **Shure:** 第3点 / Point three.
+- `00:04:06,900 → 00:04:10,966` **Katrina:** 然后就每个人介绍自己做的这个 / Then everyone introduces what they are doing.
+- `00:04:10,966 → 00:04:12,866` **Katrina:** 然后就跟他们说 / Then tell them.
+- `00:04:12,866 → 00:04:14,733` **Katrina:** 他们可以拿他们的货币来 / They can use their currency to...
+- `00:04:16,033 → 00:04:18,300` **Jake:** 大家插会电吧 / Everyone plug in.
+- `00:04:18,366 → 00:04:20,033` **Jake:** 来你们继续聊 / Continue chatting.
+- `00:04:20,033 → 00:04:22,900` **Jake:** 我给大家发线 / I will distribute the wires.
+- `00:04:27,533 → 00:04:28,333` **Katrina:** 40 / Forty.
+- `00:04:36,400 → 00:04:37,166` **Shure:** 然后呢 / And then?
+- `00:04:39,366 → 00:04:40,666` **Jake:** 哦你一直插着的 / Oh, you always keep it plugged in.
+- `00:04:40,733 → 00:04:42,533` **Jake:** 充电宝 牛啊 / Power bank, nice.
+- `00:04:40,866 → 00:04:41,966` **Shure:** 我一直插着充电宝 / I always keep it plugged in.
+- `00:04:43,500 → 00:04:44,400` **Jake:** 这个是谁的 / Whose is this?
+- `00:04:45,166 → 00:04:46,233` **Katrina:** 我我的 / Mine.
+- `00:04:46,266 → 00:04:48,700` **Jake:** 好那你插上吧少一个 / Alright, plug it in, one less.
+- `00:04:55,800 → 00:04:56,733` **Shure:** 3 / Three.
+- `00:04:56,733 → 00:04:58,300` **Katrina:** 介绍自己的产品吗 / Introduce our products?
+- `00:04:58,300 → 00:04:59,500` **Katrina:** 每个人啊 / Each person?
+- `00:04:59,500 → 00:05:01,466` **Shure:** 3就开始拍卖 / Three, and then start the auction.
+- `00:05:01,466 → 00:05:03,333` **Shure:** 怎么说 / How about that?
+- `00:05:05,466 → 00:05:06,933` **Shure:** 啊IUCA / Ah, IUCA.
+- `00:05:09,000 → 00:05:10,166` **Jake:** 也插一个吧 / Plug in one more.
+- `00:05:14,866 → 00:05:16,266` **Lucia:** OK谢谢 / OK, thank you.
+- `00:05:17,266 → 00:05:20,666` **Shure:** 预计3:40到 / Expected to arrive at 3:40.
+- `00:05:22,266 → 00:05:23,800` **Lucia:** 一个小时或许 / About an hour, maybe.
+- `00:05:23,800 → 00:05:25,400` **Shure:** 4点半吧差不多 / Around 4:30, I guess.
+- `00:05:35,466 → 00:05:36,533` **Lucia:** 和咱们的产品 / And our product...
+- `00:05:40,100 → 00:05:43,166` **Lucia:** 不止吗那就再长一个半小时 / Not enough? Then let's extend it by another hour and a half.
+- `00:05:43,166 → 00:05:44,533` **Katrina:** 一个半小时差不多 / An hour and a half should be enough.
+- `00:05:45,033 → 00:05:46,533` **Shure:** 主要是我们可以细分 / Mainly, we can break it down.
+- `00:05:46,800 → 00:05:48,666` **Shure:** 这个是他们自己的部分 / This is their own part.
+- `00:05:49,900 → 00:05:51,666` **Shure:** 这是guest part / This is the guest part.
+- `00:05:53,500 → 00:05:54,333` **Lucia:** 这些这些 / These, these...
+- `00:05:53,600 → 00:05:55,166` **Jake:** 啊你不用 / Ah, you don't need...
+- `00:05:54,333 → 00:05:55,100` **Lucia:** 这些gets / These gets...
+- `00:05:55,100 → 00:05:56,533` **Lucia:** 他们带多少东西 / How much stuff are they bringing?
+- `00:05:56,533 → 00:05:58,066` **Lucia:** 以及他们是矮人还是艺人 / And are they dwarves or artisans?
+- `00:05:58,100 → 00:05:59,533` **Lucia:** 对这就不确定 / Yeah, that's uncertain.
+- `00:06:01,300 → 00:06:04,166` **Shure:** 然后还有什么我们的 / And what else is ours?
+- `00:06:05,266 → 00:06:06,733` **Shure:** 或者我们可以提前来 / Or we could come early.
+- `00:06:06,733 → 00:06:08,166` **Shure:** 活跃一下这个气氛 / To liven up the atmosphere.
+- `00:06:08,500 → 00:06:09,033` **Katrina:** 嗯对 / Yeah, right.
+- `00:06:09,033 → 00:06:10,466` **Katrina:** 我觉得我们先开始吧 / I think we should start first.
+- `00:06:10,500 → 00:06:11,166` **Katrina:** 我们先开始 / Let's start first.
+- `00:06:11,166 → 00:06:12,166` **Katrina:** 3:40到4点半 / From 3:40 to 4:30.
+- `00:06:12,166 → 00:06:13,333` **Katrina:** 是我们先开始 / We'll start first.
+- `00:06:13,400 → 00:06:16,033` **Shure:** 我们会会这么长
+- `00:06:14,333 → 00:06:17,233` **Katrina:** 每个人7  8分钟差不多
+- `00:06:18,100 → 00:06:18,666` **Katrina:** 七八分钟 / Seven or eight minutes.
+- `00:06:18,666 → 00:06:20,133` **Katrina:** 那40分钟差不多 / So, 40 minutes should be enough.
+- `00:06:21,100 → 00:06:22,633` **Katrina:** 那就4:20 / So, at 4:20.
+- `00:06:26,900 → 00:06:27,166` **Lucia:** 或者 / Or...
+- `00:06:27,166 → 00:06:30,000` **Lucia:** 直接把他们把这段变成我们整体的 / We could turn this segment into part of our overall plan.
+- `00:06:30,000 → 00:06:30,800` **Lucia:** 一个 / Like...
+- `00:06:32,666 → 00:06:35,200` **Lucia:** 怎么形容一个小续集也行 / How to describe it, a mini sequel could work.
+- `00:06:35,166 → 00:06:37,066` **Lucia:** 就是可以让他们先对 / Like, let them first...
+- `00:06:37,100 → 00:06:39,166` **Lucia:** 就是如果对咱们整体的这个手工制品 / If they're interested in our handmade crafts.
+- `00:06:39,166 → 00:06:41,533` **Lucia:** 感觉就好比我们是一个商家一样 / It feels like we're a merchant.
+- `00:06:41,533 → 00:06:44,300` **Lucia:** 嗯只不过使用的是这个虚拟货币 / Except we're using this virtual currency.
+- `00:06:44,533 → 00:06:46,700` **Lucia:** 对然后如果大家玩的比较高兴的 / And if everyone has fun
+- `00:06:46,733 → 00:06:49,600` **Lucia:** 话就后面让他们在自己之间交换 / They can trade among themselves afterward.
+- `00:07:09,166 → 00:07:11,166` **Katrina:** 哦六六个瓶子吗 / Oh, six bottles?
+- `00:07:11,166 → 00:07:12,900` **Katrina:** 然后多的就放这种公共的 / And the extras can be put in the common area.
+- `00:07:12,900 → 00:07:14,366` **Katrina:** 刚才还有花瓶啥的 / And there were vases and stuff.
+- `00:07:15,833 → 00:07:16,933` **Katrina:** 对先醒醒他吧 / Yeah, let him wake up first.
+- `00:07:16,233 → 00:07:21,000` **Jake:** 好我们的食品环节吃饭环下午茶环节 / Okay, our food session, the meal and afternoon tea session.
+- `00:07:20,966 → 00:07:21,866` **Jake:** 在什么地方 / Where is it?
+- `00:07:25,600 → 00:07:28,166` **Shure:** 啊要有一直有一个酒保在那边 / Ah, there should always be a bartender over there.
+- `00:07:28,400 → 00:07:31,266` **Lucia:** 哈哈哈一直有一个酒保 / Hahaha, there's always a bartender.
+- `00:07:32,333 → 00:07:34,200` **Jake:** 那酒保在什么位置呢 / So, where is the bartender located?
+- `00:07:34,166 → 00:07:36,533` **Katrina:** 我感觉就外面这里已经很好了 / I think just outside here is good enough.
+- `00:07:37,466 → 00:07:38,800` **Jake:** 那调酒是在外面 / So, the mixing is done outside?
+- `00:07:38,800 → 00:07:40,733` **Lucia:** 但是但是但是我喝酒 / But but but I drink...
+- `00:07:40,733 → 00:07:42,766` **Lucia:** 调酒是在这个台子上调 / The mixing is done on this counter.
+- `00:07:41,033 → 00:07:42,200` **Jake:** 得弄一个台子 / We'll need a counter.
+- `00:07:42,766 → 00:07:45,900` **Jake:** 也可以啊在室内然后如果有人就进来 / It can be inside, and if someone comes in...
+- `00:07:46,033 → 00:07:46,833` **Katrina:** 哇 / Wow.
+- `00:07:47,033 → 00:07:48,700` **Lucia:** 对刚才那表演就是 / Yeah, the performance just now...
+- `00:07:48,733 → 00:07:50,300` **Lucia:** 大家在外面的玻璃就可以看到 / Everyone outside can see through the glass...
+- `00:07:50,300 → 00:07:51,766` **Lucia:** 调酒师在里面如何调 / How the bartender mixes inside.
+- `00:07:51,266 → 00:07:52,966` **Katrina:** 哇好高级啊 / Wow, so fancy.
+- `00:07:51,900 → 00:07:53,400` **Jake:** 对对是 / Yeah, exactly.
+- `00:07:54,000 → 00:07:55,166` **Lucia:** 来来一点打光 / Let's get some lighting.
+- `00:07:55,166 → 00:07:56,300` **Lucia:** 哈哈哈对 / Hahaha, yeah.
+- `00:07:55,833 → 00:07:56,166` **Jake:** 对 / Right.
+- `00:07:58,033 → 00:08:00,066` **Lucia:** 对我们还有这个影棚灯 / Yes, we also have this studio light.
+- `00:08:00,600 → 00:08:02,100` **Lucia:** 虽然这个我们是就一个 / Although we only have one...
+- `00:08:02,100 → 00:08:02,500` **Lucia:** 一个灯吗 / One light?
+- `00:08:02,466 → 00:08:03,133` **Jake:** 我们有四个 / We have four.
+- `00:08:03,100 → 00:08:03,866` **Lucia:** 昂OK / Oh, OK.
+- `00:08:04,233 → 00:08:06,900` **Jake:** 现在还没装晚一会装一下 / They're not set up yet, we'll set them up later.
+- `00:08:07,666 → 00:08:10,700` **Katrina:** 那那下午茶时间要不要弄到4:20之后 / So, should we move the afternoon tea to after 4:20?
+- `00:08:12,966 → 00:08:14,500` **Katrina:** 要不然插在哪个地方 / Otherwise, where should we fit it in?
+- `00:08:14,800 → 00:08:17,300` **Shure:** 就大家边吃边干 / We'll just eat and work at the same time.
+- `00:08:15,233 → 00:08:17,200` **Lucia:** 我觉得四点二十之后也可以 / I think after 4:20 is fine too.
+- `00:08:17,333 → 00:08:18,266` **Lucia:** 因为一般来说 / Because usually...
+- `00:08:18,266 → 00:08:21,200` **Lucia:** 下午茶就是3点到5点这个时间段 / Afternoon tea is from 3 to 5 PM.
+- `00:08:21,666 → 00:08:24,833` **Jake:** 就可能我们一一部分人 / So, maybe some of us...
+- `00:08:24,866 → 00:08:26,033` **Jake:** 还是我们先做好 / Should we prepare first?
+- `00:08:26,033 → 00:08:27,500` **Jake:** 我们可以先做好吗 / Can we prepare first?
+- `00:08:28,233 → 00:08:28,600` **Tasha:** 什么 / What?
+- `00:08:28,666 → 00:08:30,700` **Jake:** 就是那些甜品 / I mean the desserts.
+- `00:08:30,933 → 00:08:31,800` **Tasha:** 可以啊 / Sure.
+- `00:08:31,800 → 00:08:32,266` **Jake:** 可以先做好 / We can prepare first.
+- `00:08:32,266 → 00:08:36,166` **Katrina:** 哎那就是反正他他他是种子片 / Oh, I mean, he, he, he is the seed...
+- `00:08:36,166 → 00:08:37,133` **Katrina:** 就加甜品 / Just add desserts.
+- `00:08:37,100 → 00:08:39,266` **Katrina:** 就在3:40-4:20介绍 / Introduce it between 3:40 to 4:20.
+- `00:08:39,300 → 00:08:41,300` **Katrina:** 然后他作为我们几个的压轴 / Then he will be our finale.
+- `00:08:41,333 → 00:08:44,300` **Katrina:** 然后介绍完了以后大家可以分发一下 / After his introduction, everyone can distribute it.
+- `00:08:43,666 → 00:08:46,033` **Jake:** 买甜品是吧哈哈 / Buy desserts, right? Haha.
+- `00:08:44,300 → 00:08:46,033` **Katrina:** 尝一下他的那个甜品 / Try his desserts.
+- `00:08:46,033 → 00:08:47,133` **Katrina:** 对他们是摆台 / Yes, they are setting up.
+- `00:08:46,533 → 00:08:48,100` **Jake:** 先发甜品 / Distribute the desserts first.
+- `00:08:47,366 → 00:08:48,400` **Katrina:** 也有钱了嘛 / They have money now.
+- `00:08:48,400 → 00:08:50,600` **Jake:** 有三颇 / There are three big pieces.
+- `00:08:48,433 → 00:08:50,366` **Tasha:** 甜品摆台吗 / Dessert setup?
+- `00:08:50,866 → 00:08:51,933` **Jake:** 摆什么 / Setup what?
+- `00:08:52,466 → 00:08:53,466` **Tasha:** 甜品摆台 / Dessert setup.
+- `00:08:53,666 → 00:08:55,500` **Lucia:** 那种三层塔的 / The three-tier tower kind.
+- `00:08:55,666 → 00:08:56,900` **Tasha:** 啊啊 / Ah, ah.
+- `00:08:55,666 → 00:08:58,666` **Jake:** 可以摆啊可以摆摆 / Yes, we can set it up, go ahead.
+- `00:08:56,900 → 00:08:57,666` **Tasha:** 真的假的 / Really?
+- `00:08:58,766 → 00:09:01,766` **Jake:** 当然可以摆啊对 / Of course, we can set it up.
+- `00:09:00,533 → 00:09:01,766` **Tasha:** 嗯好的 / Okay, got it.
+- `00:09:01,766 → 00:09:05,600` **Tasha:** 那就是甜品台做一次要800-1, 000呢 / But setting up a dessert table costs 800-1, 0
+- `00:09:05,600 → 00:09:08,600` **Tasha:** 哈哈哈哈哈 / Hahahahaha.
+- `00:09:08,733 → 00:09:10,700` **Shure:** 怎么杨老板突然空手了 / Why is Jake suddenly empty-handed?
+- `00:09:11,966 → 00:09:13,400` **Jake:** 可以可以可以 / It's fine, it's fine, it's fine.
+- `00:09:13,666 → 00:09:15,766` **Tasha:** 没有只是买个甜品台架子 / No, it's just buying a dessert table stand.
+- `00:09:16,100 → 00:09:17,233` **Jake:** 架子1, 000是吧 / The stand is 1, 0, right?
+- `00:09:17,500 → 00:09:17,900` **Tasha:** 没有 / No.
+- `00:09:18,233 → 00:09:18,900` **Jake:** 那是什么 / Then what?
+- `00:09:19,266 → 00:09:19,900` **Alice:** 总共的吧 / The total, I guess.
+- `00:09:19,966 → 00:09:21,200` **Jake:** 总共500-1, 0 / The total is 500-1, 0
+- `00:09:20,666 → 00:09:21,733` **Tasha:** 你去做的话 / If you do it yourself.
+- `00:09:22,100 → 00:09:22,533` **Jake:** 哦 / Oh.
+- `00:09:22,733 → 00:09:24,766` **Katrina:** 哎但是你需不需要很多机器啊 / But don't you need a lot of machines?
+- `00:09:25,300 → 00:09:27,666` **Tasha:** 嗯基础的买了 / Hmm, bought the basic ones.
+- `00:09:27,866 → 00:09:30,100` **Tasha:** 嗯除湿机什么的肯定没买 / But definitely didn't buy a dehumidifier or anything like that.
+- `00:09:30,100 → 00:09:32,033` **Jake:** 能能多少钱 / How much could it cost?
+- `00:09:32,366 → 00:09:33,200` **Tasha:** 嗯不能买 / Hmm, can't buy it.
+- `00:09:33,166 → 00:09:34,900` **Jake:** 呵呵呵不能买是什么 / Hehe, why can't you buy it?
+- `00:09:34,933 → 00:09:35,533` **Jake:** 太贵了 / Too expensive.
+- `00:09:35,466 → 00:09:36,200` **Tasha:** 对啊 / Yeah.
+- `00:09:36,733 → 00:09:37,333` **Jake:** 上万 / Over ten thousand.
+- `00:09:37,866 → 00:09:39,600` **Tasha:** 嗯几千块钱吧 / Hmm, a few thousand yuan maybe.
+- `00:09:39,600 → 00:09:40,933` **Jake:** OK确实 / OK, sure.
+- `00:09:40,933 → 00:09:43,533` **Tasha:** 甜品台就类似这样子 / The dessert table would look something like this.
+- `00:09:42,833 → 00:09:44,700` **Jake:** 哦OK / Oh, OK.
+- `00:09:43,966 → 00:09:45,733` **Katrina:** 啊看一眼好漂亮啊 / Ah, look at it, it's so pretty.
+- `00:09:45,733 → 00:09:46,400` **Katrina:** 对对对 / Yeah, yeah.
+- `00:09:46,400 → 00:09:49,300` **Lucia:** 差不多是我设想的那个大盘子好漂亮 / It's almost like the big plate I imagined, so pretty.
+- `00:09:50,166 → 00:09:51,633` **Tasha:** 到时候坐在这里 / You can sit here later.
+- `00:09:52,000 → 00:09:55,266` **Tasha:** 可以就想去吃 / And just want to eat it.
+- `00:09:52,000 → 00:09:56,233` **Lucia:** 我每次开学术会议的时候去学校就疯狂携带 / Every time I go to an academic conference at school, I just grab as much as I can.
+- `00:09:54,000 → 00:09:56,666` **Jake:** 对对对就是为了这个哈哈哈哈 / Yeah, yeah, that's the whole point, haha.
+- `00:09:56,366 → 00:09:57,533` **Tasha:** 就是哈哈哈 / Exactly, haha.
+- `00:09:57,533 → 00:09:58,666` **Katrina:** 学术蝗虫 / Academic locusts.
+- `00:10:00,533 → 00:10:01,100` **Tasha:** 是这样的 / That's how it is.
+- `00:10:02,366 → 00:10:02,900` **Jake:** 可以 / Got it.
+- `00:10:03,600 → 00:10:04,133` **Tasha:** 哈哈哈这样子的 / Haha, exactly.
+- `00:10:04,166 → 00:10:06,333` **Lucia:** 而且关键是老师一般都不怎么吃 / And the key thing is, the teachers usually don't eat much.
+- `00:10:06,400 → 00:10:07,800` **Lucia:** 结果都是我吃 / So I end up eating it all.
+- `00:10:09,333 → 00:10:11,166` **Jake:** 还打包打了一包回去 / I even packed some to take home.
+- `00:10:16,900 → 00:10:17,466` **Jake:** 烧烤吗 / BBQ?
+- `00:10:18,600 → 00:10:19,866` **Katrina:** 烧烤偏晚上吧 / BBQ is more of an evening thing.
+- `00:10:19,866 → 00:10:20,366` **Jake:** 晚上再烧 / Grill in the evening.
+- `00:10:20,366 → 00:10:22,800` **Katrina:** 那就是但是你要留他们到晚上的话 / But if you want to keep them until the evening...
+- `00:10:23,033 → 00:10:24,366` **Katrina:** 这个晚饭怎么弄 / How about dinner?
+- `00:10:24,600 → 00:10:25,533` **Shure:** 大家一起烤呗 / Everyone grills together.
+- `00:10:24,666 → 00:10:27,666` **Jake:** 就是烤呗 / Yeah, just grill together.
+- `00:10:25,533 → 00:10:26,233` **Shure:** 一起吃烧烤 / Eat BBQ together.
+- `00:10:26,266 → 00:10:28,000` **Shure:** 一起吃这个是吗 / Eat this together, right?
+- `00:10:28,666 → 00:10:29,433` **Jake:** 一起吃什么 / Eat what together?
+- `00:10:30,000 → 00:10:33,000` **Katrina:** 烧烤的人有点累哦因为有20个人左右 / BBQing for so many people is tiring, there are about 20 people.
+- `00:10:33,400 → 00:10:34,733` **Lucia:** 如果来的人多的话 / If a lot of people come...
+- `00:10:33,400 → 00:10:34,800` **Jake:** 烧烤太多了 / BBQ is too much.
+- `00:10:34,733 → 00:10:36,800` **Lucia:** 就是都烧烤还挺麻麻烦的 / BBQ for everyone is pretty troublesome.
+- `00:10:36,800 → 00:10:37,466` **Jake:** 嗯 / Yeah.
+- `00:10:37,466 → 00:10:39,366` **Katrina:** 而且包饭也麻烦你 点外卖也麻烦 / And making packed meals is troublesome, ordering takeout is troublesome.
+- `00:10:39,366 → 00:10:40,133` **Katrina:** 放进去啊 / Just put it in.
+- `00:10:39,533 → 00:10:40,000` **Lucia:** 确实 / True.
+- `00:10:40,000 → 00:10:40,500` **Jake:** 确实 / Indeed.
+- `00:10:40,766 → 00:10:42,033` **Katrina:** 哎点披萨倒还行 / Hey, ordering pizza might work.
+- `00:10:42,800 → 00:10:45,666` **Lucia:** 哎 对就是可能每人吃那么一两块 / Yeah, everyone could just have a slice or two.
+- `00:10:45,666 → 00:10:47,466` **Lucia:** 也不是说要吃的非常饱嘛 / Not like everyone needs to be super full.
+- `00:10:47,666 → 00:10:48,300` **Shure:** 蘸点披萨 / Dip some pizza
+- `00:10:48,300 → 00:10:49,900` **Shure:** 有那个32寸这么大 / It's as big as 32 inches
+- `00:10:50,033 → 00:10:51,166` **Jake:** 好行 / Okay, sure
+- `00:10:50,533 → 00:10:51,933` **Shure:** 行可以弄一张就可以 / Yeah, one will be enough
+- `00:10:51,800 → 00:10:52,333` **Jake:** 可以可以 / Yes, yes
+- `00:10:52,333 → 00:10:55,333` **Jake:** 那就管晚饭吧 对对 / Then let's have it for dinner, yeah
+- `00:10:52,500 → 00:10:54,533` **Katrina:** 就到了晚饭的点就摆在这 / Just put it here when it's dinner time
+- `00:10:54,533 → 00:10:56,600` **Katrina:** 对大家饿了自己拿点吃 / Everyone can grab some when they're hungry
+- `00:10:55,533 → 00:10:58,733` **Jake:** 五点吃ok / Okay, let's eat at 5
+- `00:10:56,600 → 00:10:57,500` **Lucia:** 而且如果之前 / And if earlier
+- `00:10:57,500 → 00:10:57,666` **Lucia:** 有 / If
+- `00:10:57,666 → 00:11:00,166` **Lucia:** 吃甜的东西的话可能也不会特别的饿 / We had some sweets, we might not be that hungry
+- `00:11:00,166 → 00:11:01,066` **Jake:** 是的是的 / Yes, yes
+- `00:11:01,266 → 00:11:02,500` **Jake:** 那就5点半的时候 / So at 5:30
+- `00:11:02,500 → 00:11:03,400` **Jake:** 一个大披萨 / A big pizza
+- `00:11:04,266 → 00:11:05,233` **Jake:** 差不多 / Almost
+- `00:11:04,800 → 00:11:06,100` **Katrina:** 嗯现在是5点 / Hmm, it's 5 now
+- `00:11:06,300 → 00:11:07,266` **Katrina:** 嗯 5点 / Yeah, 5
+- `00:11:07,266 → 00:11:09,500` **Katrina:** 那我们的节目就弄到晚上一样 / Then our program will go on into the evening
+- `00:11:09,800 → 00:11:10,966` **Katrina:** 因为我当时想的是 / Because I was thinking
+- `00:11:10,966 → 00:11:13,300` **Katrina:** 你那个讲故事的话大家不是很熟 / If you tell stories, people aren't very familiar
+- `00:11:13,400 → 00:11:15,533` **Katrina:** 因为你那个讲故事设定在酒吧 / Because your story setting is in a bar
+- `00:11:15,533 → 00:11:17,666` **Katrina:** 根据酒吧大家都是有故事的人 / In a bar, everyone has stories to tell
+- `00:11:17,666 → 00:11:19,600` **Katrina:** 可能就在那种环境下 / Maybe in that environment
+- `00:11:19,600 → 00:11:20,666` **Katrina:** 然后就愿意讲 / They'd be willing to share
+- `00:11:20,666 → 00:11:22,500` **Katrina:** 但是我们这种刚过来 / But since we just arrived
+- `00:11:22,533 → 00:11:24,033` **Katrina:** 他们可能不太愿意讲故事 / They might not want to share stories
+- `00:11:24,033 → 00:11:25,966` **Katrina:** 所以改成自我介绍还挺好 / So changing to self-introductions is good
+- `00:11:26,333 → 00:11:26,500` **Katrina:** 然后 / And then
+- `00:11:26,500 → 00:11:29,100` **Katrina:** 如果说要讲故事或获金币这个环节 / If we have a story-telling or coin-winning segment
+- `00:11:29,100 → 00:11:30,833` **Katrina:** 我觉得可以弄到偏晚上一点 / I think we can do it later in the evening
+- `00:11:30,866 → 00:11:32,266` **Katrina:** 大家已经熟了一点 / When people are more familiar
+- `00:11:32,600 → 00:11:34,100` **Katrina:** 再加上晚上比较感性 / Plus, people are more emotional at night
+- `00:11:34,300 → 00:11:36,400` **Katrina:** 可以带着一点自己的故事过来 / They can bring their own stories
+- `00:11:37,100 → 00:11:37,600` **Katrina:** 然后那 / And then
+- `00:11:37,600 → 00:11:38,900` **Katrina:** 那就5点 / So at 5
+- `00:11:38,900 → 00:11:41,666` **Katrina:** 是他们介绍完他们的pass / After they finish their introductions
+- `00:11:45,100 → 00:11:48,533` **Katrina:** 然后5点到6点就吃烧烤调酒这种吗 / Then from 5 to 6 we can have BBQ and drinks
+- `00:11:51,033 → 00:11:52,033` **Jake:** 可以啊来 / Sure, let's do that
+- `00:11:52,366 → 00:11:55,466` **Katrina:** 其实他并不会完全严格的按照这个 / Actually, it won't be strictly according to this
+- `00:11:53,000 → 00:11:53,500` **Jake:** 上字 / Next word.
+- `00:11:54,933 → 00:11:56,433` **Jake:** 嗯对 / Yeah, right.
+- `00:11:56,100 → 00:11:58,666` **Katrina:** 对所以可以搞个5点到6点的区间 / Yeah, so we can aim for a 5 to 6 PM window.
+- `00:11:59,733 → 00:12:02,800` **Shure:** 反正开饭dinner / Anyway, let's have dinner.
+- `00:12:06,666 → 00:12:08,533` **Shure:** 在5点半之后 / After 5:30 PM.
+- `00:12:08,533 → 00:12:10,800` **Shure:** 5点半左右嗯 / Around 5:30, yeah.
+- `00:12:12,400 → 00:12:13,166` **Jake:** 大披萨 / Big pizza.
+- `00:12:15,600 → 00:12:16,400` **Jake:** a bow / A bow.
+- `00:12:21,466 → 00:12:23,666` **Jake:** 第一个披萨可以 / The first pizza is fine.
+- `00:12:25,933 → 00:12:26,733` **Shure:** bbq / BBQ.
+- `00:12:30,333 → 00:12:33,800` **Katrina:** 那调酒的话是属于贯穿始终 / So the cocktails will be throughout the event.
+- `00:12:34,533 → 00:12:36,533` **Shure:** 对就像甜品和 / Yeah, just like desserts and...
+- `00:12:37,966 → 00:12:38,366` **Shure:** 甜品就是 / Desserts are...
+- `00:12:38,366 → 00:12:40,900` **Katrina:** 他们入场的时候 / When they enter.
+- `00:12:40,900 → 00:12:42,733` **Shure:** 嗯还是SS / Yeah, still SS.
+- `00:12:43,166 → 00:12:46,133` **Jake:** SS乘2 / SS times 2.
+- `00:12:47,000 → 00:12:48,466` **Katrina:** 哦你说甜品啊 / Oh, you mean desserts?
+- `00:12:51,666 → 00:12:52,466` **Shure:** and / And...
+- `00:12:53,533 → 00:12:54,866` **Katrina:** 那晚上就还剩啥 / So what's left for the evening?
+- `00:12:54,900 → 00:12:56,733` **Katrina:** 我想想还剩我们的节目 / Let me think, our show is left.
+- `00:12:56,966 → 00:12:58,366` **Jake:** 对我们有 / Yeah, we have...
+- `00:12:58,366 → 00:12:59,400` **Katrina:** 然后也不能弄太晚 / And we can't make it too late.
+- `00:12:59,400 → 00:13:01,266` **Katrina:** 他们回去的话要两个小时 / It takes them two hours to get back.
+- `00:13:01,266 → 00:13:03,466` **Jake:** 嗯那我们就定个结束时间 / Yeah, so we'll set an end time.
+- `00:13:03,466 → 00:13:03,966` **Katrina:** 八点 / 8 PM.
+- `00:13:05,033 → 00:13:05,466` **Jake:** 可以 / Okay.
+- `00:13:08,500 → 00:13:10,100` **Katrina:** 2点半到8点差不多了 / 2:30 PM to 8 PM is about right.
+- `00:13:10,100 → 00:13:11,100` **Katrina:** 忙够呛了 / Busy enough.
+- `00:13:11,800 → 00:13:12,166` **Jake:** 对 / Yeah.
+- `00:13:16,533 → 00:13:17,766` **Katrina:** 跟戴娜差不多 / Similar to Dana.
+- `00:13:17,766 → 00:13:19,000` **Katrina:** 到6点半 / Until 6:30 PM.
+- `00:13:21,366 → 00:13:23,600` **Katrina:** 然后还有一个半小时就是表演 / Then there's an hour and a half for performances.
+- `00:13:23,600 → 00:13:24,533` **Katrina:** 表演节目 / Performances.
+- `00:13:26,800 → 00:13:28,666` **Katrina:** 能让他们也准备点节目吗 / Can we also ask them to prepare something?
+- `00:13:28,666 → 00:13:30,533` **Katrina:** 有没有那种擅长唱歌的 / Anyone good at singing?
+- `00:13:31,466 → 00:13:33,500` **Shure:** 可以反正我们有把吉他 / Sure, we have the guitar anyway.
+- `00:13:33,666 → 00:13:34,833` **Katrina:** 嗯对 / Yeah, right.
+- `00:13:34,866 → 00:13:37,366` **Katrina:** 啊唱唱歌跳跳舞 / Ah, singing and dancing.
+- `00:13:37,366 → 00:13:39,700` **Jake:** 对时间太长了中间得 / Yeah, it's a long time, we need...
+- `00:13:38,800 → 00:13:41,166` **Lucia:** 来一个大家一起卡拉OK的环节吧 / Let's have a karaoke session for everyone.
+- `00:13:41,666 → 00:13:42,700` **Jake:** 昂也可以 / Hmm, that works too.
+- `00:13:42,000 → 00:13:42,966` **Katrina:** 哪个时间太长 / That time is too long.
+- `00:13:43,033 → 00:13:43,533` **Jake:** 不是不是 / No, no.
+- `00:13:43,600 → 00:13:45,433` **Jake:** 我我我是说中间可能有一个小时 / What I'm saying is there might be an hour in between.
+- `00:13:45,433 → 00:13:46,033` **Jake:** 我们要传数据 / We need to transfer data.
+- `00:13:47,100 → 00:13:48,100` **Jake:** 你们的眼镜 / Your glasses.
+- `00:13:48,933 → 00:13:50,800` **Katrina:** 传数据让他们自己逛逛我们的世界 / Transfer data and let them wander around our world.
+- `00:13:50,800 → 00:13:52,166` **Katrina:** 然后喝点酒 / And then have some drinks.
+- `00:13:52,166 → 00:13:54,166` **Lucia:** 传数据的时候带大家唱唱歌好了 / We can sing some songs while transferring data.
+- `00:13:54,166 → 00:13:57,066` **Tasha:** free time在这放一个小电影或者干嘛的 / During free time, we can play a short film or something.
+- `00:13:54,166 → 00:13:57,166` **Jake:** 可以可以可以 / Sure, sure, sure.
+- `00:13:57,100 → 00:13:57,866` **Shure:** 小电影 / A short film.
+- `00:13:57,600 → 00:13:59,966` **Lucia:** 小电影可以 / A short film works.
+- `00:13:57,766 → 00:14:00,633` **Jake:** 对中间中间空一个小时出来 / Yes, let's leave an hour in between.
+- `00:13:59,966 → 00:14:05,666` **Shure:** 对啊对当时还说那个什么什么记录片什么的 / Yeah, remember we talked about some documentary or something.
+- `00:14:00,766 → 00:14:02,400` **Katrina:** 大概是几点到几点 / What time is that roughly?
+- `00:14:02,666 → 00:14:06,433` **Jake:** 额就三点到六五点半吧五点半 / Umm, around 3 to 5:30, 5:30.
+- `00:14:06,100 → 00:14:07,900` **Katrina:** 那就是那个5点结束之后呗 / So, after it ends at 5?
+- `00:14:07,933 → 00:14:10,400` **Jake:** 对啊他家吃披萨时候咱就不拍了吧 / Yeah, we won't shoot while they're having pizza, right?
+- `00:14:10,400 → 00:14:10,866` **Jake:** 行吧 / Okay?
+- `00:14:10,766 → 00:14:13,200` **Tasha:** 甜品是什么时候哪个时间段吃 / When are we having dessert, at what time?
+- `00:14:13,600 → 00:14:14,533` **Jake:** 甜品什么时候 / When's dessert?
+- `00:14:13,900 → 00:14:15,666` **Katrina:** 甜品是你就是我 / Dessert, you're the host.
+- `00:14:15,666 → 00:14:19,333` **Katrina:** host host part就是他们一二环节 / Host part is in the first two segments.
+- `00:14:19,366 → 00:14:20,866` **Katrina:** 不是会得金币吗 / You can earn coins, right?
+- `00:14:21,000 → 00:14:23,466` **Katrina:** 然后3:40到4:20的时候 / And then from 3:40 to 4:20.
+- `00:14:23,466 → 00:14:25,033` **Katrina:** 我们介绍我们的产品 / We introduce our products.
+- `00:14:25,033 → 00:14:27,900` **Katrina:** 然后我想的是你放在最后 / I was thinking you go last.
+- `00:14:27,966 → 00:14:29,533` **Katrina:** 然后就是刚好这个part结束了 / So when this part ends
+- `00:14:29,533 → 00:14:31,366` **Katrina:** 以后大家就可以尝你的甜品 / Everyone can try your dessert.
+- `00:14:31,533 → 00:14:32,600` **Tasha:** 4:20 对 / 4:20, right.
+- `00:14:32,600 → 00:14:33,533` **Katrina:** 就是你压轴 / You're the finale.
+- `00:14:34,033 → 00:14:36,533` **Katrina:** 哈哈你介绍你的种子片和你的甜品 / Haha, you introduce your seed cookies and your dessert.
+- `00:14:37,333 → 00:14:39,500` **Katrina:** 我们介绍我们自己做的那种 / We'll introduce what we made ourselves.
+- `00:14:41,300 → 00:14:44,666` **Jake:** 嗯3点到5点两个小时够挺好 / Hmm, 3 to 5, two hours should be good.
+- `00:14:44,433 → 00:14:46,933` **Tasha:** 大概从早上就要开始准备 / We'll probably need to start preparing in the morning.
+- `00:14:46,933 → 00:14:48,966` **Tasha:** 然后需要配两个人 / And we'll need two people.
+- `00:14:49,166 → 00:14:50,333` **Katrina:** 可以我可以帮忙 / I can help.
+- `00:14:51,433 → 00:14:52,366` **Katrina:** 就想写 / Just want to write it.
+- `00:14:52,366 → 00:14:55,466` **Tasha:** 哈哈哈配两个人 / Hahaha, need two people.
+- `00:14:54,400 → 00:14:55,100` **Shure:** 真的起的来吗 / Can you really wake up?
+- `00:14:55,600 → 00:14:57,400` **Katrina:** 可以的我今天只是失误 / Yes, I just made a mistake today.
+- `00:14:57,400 → 00:15:00,266` **Katrina:** 哈哈哈到时候死都没想到 / Hahaha, I wouldn't have imagined it even in my wildest dreams.
+- `00:15:00,766 → 00:15:02,600` **Shure:** 我听到了你的闹钟 / I heard your alarm.
+- `00:15:02,400 → 00:15:04,800` **Jake:** 哈哈哈哈哈 / Hahahahaha.
+- `00:15:05,266 → 00:15:06,033` **Katrina:** 不是你怎么听到 / How did you hear it?
+- `00:15:06,033 → 00:15:07,333` **Katrina:** 你不是住一楼吗 / Aren't you living on the first floor?
+- `00:15:07,366 → 00:15:08,000` **Shure:** 是的 / Yes.
+- `00:15:08,000 → 00:15:11,100` **Shure:** 因为咱俩应该就是差不多上上下这种 / Because we're kind of like above and below each other.
+- `00:15:11,100 → 00:15:13,366` **Shure:** 啊你那个跟我是一样的 / Ah, yours is just like mine.
+- `00:15:13,466 → 00:15:14,400` **Lucia:** 不过也正常 / But it's normal.
+- `00:15:14,400 → 00:15:17,100` **Lucia:** 我我我本科舍友回我早晨定的闹铃 / My undergrad roommate would set an alarm in the morning.
+- `00:15:17,100 → 00:15:17,900` **Lucia:** 我舍友都醒了 / My roommate would wake up.
+- `00:15:17,900 → 00:15:20,800` **Lucia:** 我自己还没醒 / But I still wouldn't be awake myself.
+- `00:15:19,466 → 00:15:20,533` **Shure:** 自己就听不见 / You just can't hear it yourself.
+- `00:15:21,033 → 00:15:22,633` **Katrina:** 嗯明天定三个 / Hmm, I'll set three alarms tomorrow.
+- `00:15:24,100 → 00:15:25,700` **Katrina:** 那就差不多想想啊 / That should do the trick.
+- `00:15:26,533 → 00:15:27,633` **Katrina:** 嗯 / Hmm.
+- `00:15:28,833 → 00:15:30,700` **Jake:** 所以那一天的甜品是要当天做 / So, does the dessert need to be made on the same day?
+- `00:15:30,666 → 00:15:32,666` **Jake:** 还是可以前一天做 / Or can it be made the day before?
+- `00:15:33,100 → 00:15:35,466` **Tasha:** 有的需要冷藏的会前一天做 / Some that need to be refrigerated are made the day before.
+- `00:15:35,466 → 00:15:36,666` **Tasha:** 比如提拉米苏 / Like Tiramisu.
+- `00:15:37,466 → 00:15:38,400` **Katrina:** 哎其实像那种 / Oh, actually, things like that.
+- `00:15:38,400 → 00:15:41,100` **Katrina:** 就是我看他们那种清补凉那种 / I see them making that kind of Ching Po Leung.
+- `00:15:41,100 → 00:15:43,600` **Katrina:** 是不是就买点椰奶然后做点圆 / They just buy some coconut milk and make some balls.
+- `00:15:43,900 → 00:15:47,600` **Tasha:** 清补凉的话那是不是好调一点啊 / For Ching Po Leung, isn't it easier to prepare?
+- `00:15:47,600 → 00:15:48,733` **Tasha:** 也是前一天做好 / Also made the day before.
+- `00:15:48,733 → 00:15:50,466` **Tasha:** 然后第二天就直接把原料 / Then the next day, just use the ingredients.
+- `00:15:50,466 → 00:15:51,666` **Tasha:** 然后进行一个配就行 / And just mix them together.
+- `00:15:51,666 → 00:15:56,500` **Tasha:** 对对对就是用那个吉利丁片和椰奶 / Yeah, yeah, just use gelatine sheets and coconut milk.
+- `00:15:56,500 → 00:15:57,166` **Tasha:** 就可以做 / That would work.
+- `00:15:57,166 → 00:15:57,966` **Tasha:** 好像 / I think.
+- `00:15:58,933 → 00:15:59,533` **Katrina:** 哦 / Oh.
+- `00:15:59,533 → 00:16:02,400` **Katrina:** 我看他们有的那种糖水就是直接椰奶 / I see them making some of those desserts with just coconut milk.
+- `00:16:02,400 → 00:16:03,600` **Katrina:** 然后加一点水果 / And then adding some fruit.
+- `00:16:03,600 → 00:16:05,300` **Katrina:** 加一点芋圆就行了 / And adding some taro balls.
+- `00:16:05,333 → 00:16:06,666` **Katrina:** 感觉那样会不会简单一点 / That seems simpler.
+- `00:16:06,666 → 00:16:08,966` **Katrina:** 就不要做成那种冻不起的那种 / Without making it into a jelly.
+- `00:16:09,366 → 00:16:11,333` **Katrina:** 就不要用那个什么吉利饮片 / So we don't need to use gelatine sheets.
+- `00:16:11,466 → 00:16:13,400` **Tasha:** 那清补凉好吃吗你觉得 / Do you think Ching Po Leung tastes good?
+- `00:16:13,666 → 00:16:15,433` **Katrina:** 我觉得随便 / I think it's fine.
+- `00:16:15,666 → 00:16:17,933` **Katrina:** 就是我感觉会不会简单一点那种吗 / I feel like it might be a bit simpler?
+- `00:16:18,666 → 00:16:20,966` **Tasha:** 他说不要液体不要固体的啊 / He said no liquids, no solids.
+- `00:16:21,000 → 00:16:23,400` **Katrina:** 就是直接就像那种水牛奶一样的 / Just something like water or milk.
+- `00:16:23,400 → 00:16:25,166` **Katrina:** 因为我自己经常喝的糖水 / Because I often drink sugar water.
+- `00:16:25,166 → 00:16:27,666` **Katrina:** 我看他们就是一点椰奶啊 / I see they use a bit of coconut milk
+- `00:16:27,666 → 00:16:30,533` **Katrina:** 然后芒果然后一些那个红豆 / then mango, and some red beans.
+- `00:16:30,533 → 00:16:33,333` **Katrina:** 就就这样配就很快 / Just mix it like that, it's quick.
+- `00:16:34,500 → 00:16:37,033` **Katrina:** 嗯就是芋圆可能要熬一下 / Hmm, but the taro balls might need to be cooked a bit.
+- `00:16:37,033 → 00:16:38,666` **Katrina:** 椰果呢都能现买耶 / You can buy coconut jelly easily.
+- `00:16:40,733 → 00:16:41,900` **Katrina:** 随便看你看你吧 / It's up to you, whatever you prefer.
+- `00:16:41,900 → 00:16:43,500` **Katrina:** 你说什么就是什么 / Whatever you say goes.
+- `00:16:44,933 → 00:16:46,300` **Katrina:** 你准备了芋圆的东西吗 / Did you prepare the taro balls?
+- `00:16:46,333 → 00:16:46,700` **Tasha:** 芋圆我 / Taro balls, I...
+- `00:16:46,666 → 00:16:48,733` **Tasha:** 我没有买芋圆材料 / I didn't buy the ingredients for taro balls.
+- `00:16:48,966 → 00:16:50,200` **Katrina:** 芋圆是不是可以直接买 / Can we buy ready-made taro balls?
+- `00:16:50,166 → 00:16:51,433` **Lucia:** 芋圆也有成品吧 / There are ready-made ones, right?
+- `00:16:51,466 → 00:16:52,166` **Tasha:** 嗯对 / Yeah, right.
+- `00:16:52,400 → 00:16:53,233` **Katrina:** 直接买成品 / Just buy the ready-made ones.
+- `00:16:54,533 → 00:16:55,533` **Katrina:** 那我看看 / Let me check.
+- `00:16:55,600 → 00:16:57,166` **Katrina:** 4:20介绍完以后 / After the 4:20 introduction
+- `00:16:57,166 → 00:16:58,933` **Katrina:** 要有一个品尝甜品的时间 / there should be a dessert tasting time.
+- `00:16:58,933 → 00:17:00,766` **Katrina:** 那是不是要到4点 / So, it should be around 4.
+- `00:17:01,166 → 00:17:03,633` **Katrina:** 4:35开始 / Starts at 4:35.
+- `00:17:04,666 → 00:17:05,866` **Katrina:** 但是我到5点多 / But I’ll be there until past 5
+- `00:17:05,900 → 00:17:08,366` **Katrina:** 然后就开始吃晚饭晚饭 / then we start dinner.
+- `00:17:09,766 → 00:17:13,133` **Katrina:** 就是gas part之后我们就收眼镜传数据 / After the gas part, we'll collect the glasses and transfer data.
+- `00:17:13,100 → 00:17:15,833` **Jake:** 对对对然后吃饭就不录 / Yeah, yeah, and we won't record while eating.
+- `00:17:14,666 → 00:17:15,666` **Katrina:** 吃饭就不录 / We won't record while eating.
+- `00:17:15,900 → 00:17:16,533` **Jake:** 吃饭不录 / No recording during dinner.
+- `00:17:16,533 → 00:17:18,933` **Tasha:** 那那晚饭是自己做吗 / So, are we cooking dinner ourselves?
+- `00:17:19,266 → 00:17:21,033` **Katrina:** 晚饭就那个点披萨嘛 / Dinner is just ordering pizza.
+- `00:17:19,466 → 00:17:20,433` **Jake:** 晚饭大披萨 / Dinner, big pizza.
+- `00:17:21,033 → 00:17:22,933` **Katrina:** 然后一些烧烤 / And some BBQ.
+- `00:17:21,466 → 00:17:22,733` **Jake:** 大披萨对 / Big pizza, yeah.
+- `00:17:23,500 → 00:17:24,900` **Jake:** 烧烤也不能录烧烤把 / We can't record the BBQ either.
+- `00:17:24,900 → 00:17:25,666` **Jake:** 眼镜给烧坏了 / The glasses might get damaged.
+- `00:17:25,966 → 00:17:26,800` **Katrina:** 哦对 / Oh, right.
+- `00:17:26,800 → 00:17:28,500` **Katrina:** 没事刚好那那一个小时 / No problem, then for that hour
+- `00:17:28,500 → 00:17:29,400` **Katrina:** 那你就传数据 / you can transfer data.
+- `00:17:29,400 → 00:17:30,500` **Shure:** 订一个披萨得了 / Let's just order a pizza.
+- `00:17:30,666 → 00:17:31,333` **Jake:** 对对 / Yeah, yeah.
+- `00:17:31,533 → 00:17:32,733` **Shure:** BBQ再说 / We can do BBQ later.
+- `00:17:32,766 → 00:17:35,733` **Shure:** barbecue可以咱们咱们这两天自个吃 / We can have BBQ ourselves in the next couple of days.
+- `00:17:32,766 → 00:17:35,766` **Jake:** 五点到六点 / From 5 to 6.
+- `00:17:37,166 → 00:17:37,800` **Jake:** 啊什么东西 / What did you say?
+- `00:17:37,800 → 00:17:39,100` **Jake:** 芭比q自己吃是吗 / BBQ for ourselves, right?
+- `00:17:39,166 → 00:17:40,166` **Lucia:** 那个是烧烤炉吗 / Is that a grill?
+- `00:17:40,100 → 00:17:40,533` **Jake:** 是的是的 / Yes, it is.
+- `00:17:40,933 → 00:17:41,900` **Lucia:** 哦还挺大 / Oh, it's quite big.
+- `00:17:41,866 → 00:17:42,266` **Jake:** 对 / Yeah.
+- `00:17:43,100 → 00:17:44,166` **Shure:** 然后人太多的话 / If there are too many people
+- `00:17:44,166 → 00:17:45,533` **Shure:** 芭比q真的不好不好玩 / BBQ isn't really fun.
+- `00:17:45,533 → 00:17:46,100` **Alice:** 特别慢 / It's super slow.
+- `00:17:46,233 → 00:17:48,100` **Jake:** 嗯嗯嗯 那就不要芭比q / Yeah, yeah, let's skip the BBQ then.
+- `00:17:48,366 → 00:17:51,400` **Jake:** 没关系或者给他整两串得了 / No problem, or we can just make a few skewers.
+- `00:17:52,366 → 00:17:53,133` **Lucia:** 意思意思 / Just for the gesture.
+- `00:17:53,166 → 00:17:57,533` **Katrina:** 点吧点吧都是我自己烤的 / Go ahead, order. I'll be the one grilling them anyway.
+- `00:17:53,233 → 00:17:54,566` **Jake:** 对对对问就是有 / Yeah, yeah, just say we have it.
+- `00:17:56,233 → 00:17:57,000` **Jake:** 问就是有 / Just say we have it.
+- `00:17:56,933 → 00:18:00,666` **Lucia:** 可以对可以点进来然后到时候再拿出去说是烤的 / Yeah, we can order it in and then take it out saying it's grilled.
+- `00:18:01,066 → 00:18:04,700` **Shure:** 对碳咱们只买碳然后热一下 / Yeah, we just buy the charcoal and heat it up.
+- `00:18:03,933 → 00:18:07,066` **Jake:** 哦哦妙啊 / Oh, that's clever.
+- `00:18:08,366 → 00:18:09,266` **Jake:** 挺好挺好 / Pretty good.
+- `00:18:09,100 → 00:18:10,933` **Lucia:** 有西餐厅那种圆的那样罩住 / Like those round covers in Western restaurants.
+- `00:18:10,933 → 00:18:11,366` **Lucia:** 要不然话 / Otherwise
+- `00:18:11,366 → 00:18:12,166` **Lucia:** 大家就会发现 / People will notice.
+- `00:18:12,166 → 00:18:13,133` **Lucia:** 你这个拿出来的时候 / When you take it out
+- `00:18:13,133 → 00:18:14,700` **Lucia:** 就已经是烤好的了 / It's already grilled.
+- `00:18:15,200 → 00:18:16,466` **Lucia:** 然后就这样挡一下 / Just cover it up.
+- `00:18:16,466 → 00:18:17,566` **Lucia:** 然后放在炉上烤一烤 / And put it on the grill.
+- `00:18:17,566 → 00:18:18,366` **Lucia:** 说是刚烤的 / Say it's freshly grilled.
+- `00:18:18,966 → 00:18:19,933` **Jake:** 是是是 / Yes, yes, yes.
+- `00:18:21,566 → 00:18:22,500` **Shure:** 太天才了 / That's genius.
+- `00:18:22,500 → 00:18:24,166` **Jake:** 对一分钟考好 / Yeah, grilled in a minute.
+- `00:18:24,166 → 00:18:27,533` **Katrina:** 那就我们的那个活动就6点半到8点 / So our event will be from 6:30 to 8.
+- `00:18:27,766 → 00:18:29,333` **Katrina:** 节目唱唱歌跳舞 / Singing and dancing.
+- `00:18:29,333 → 00:18:32,500` **Katrina:** 一个半小时够了再长弄不下去了 / An hour and a half should be enough, any longer and it's too much.
+- `00:18:32,933 → 00:18:36,333` **Shure:** free time对大家可以表演一个半小时 / Free time, everyone can perform for an hour and a half.
+- `00:18:36,333 → 00:18:39,900` **Shure:** 然后我们可以auction拆出来也行 / Then we can auction things off too.
+- `00:18:39,900 → 00:18:41,866` **Shure:** 就是比如说没进行完有的人没拍 / For example, if some people didn't finish filming
+- `00:18:41,866 → 00:18:44,233` **Shure:** 卖 完然后晚饭之后接着 / they can continue after dinner.
+- `00:18:42,666 → 00:18:44,633` **Katrina:** 可以继续想分享的 / They can continue sharing if they want to.
+- `00:18:44,366 → 00:18:45,866` **Lucia:** 对大家自由的交换 / Yes, everyone can exchange freely.
+- `00:18:44,766 → 00:18:47,100` **Jake:** 哦哦也行也行 / Sure, that works.
+- `00:18:47,366 → 00:18:49,533` **Lucia:** 嗯反正一般等家务已经有了 / Yeah, usually after housework is done.
+- `00:18:49,533 → 00:18:51,933` **Katrina:** 那就是5点半开饭然后6点半 / So, dinner at 5:30, and then 6:30...
+- `00:18:51,033 → 00:18:52,900` **Tasha:** 那如果我要走了钱没花完怎么办 / What if I have to leave and haven't spent all my money?
+- `00:18:56,733 → 00:18:58,366` **Jake:** 哈哈哈人死了钱没花完 / Hahaha, if the person dies without spending all the money...
+- `00:18:58,366 → 00:18:59,833` **Jake:** 什么什么钱没花完 / What, what money isn't spent?
+- `00:19:00,333 → 00:19:01,866` **Shure:** 就是那个硬币 / Just the coins.
+- `00:19:00,833 → 00:19:01,800` **Tasha:** 硬币啊 / Coins?
+- `00:19:01,900 → 00:19:04,366` **Jake:** 硬币在 / The coins are still there.
+- `00:19:04,500 → 00:19:06,700` **Shure:** 我们要控制好这个通货 / We need to control this currency.
+- `00:19:05,233 → 00:19:06,866` **Katrina:** 我们把我们的送给他们 / We can give ours to them.
+- `00:19:06,600 → 00:19:08,333` **Jake:** 对对对送俩充电宝吧 要不 / Yeah, yeah, give them two power banks, maybe?
+- `00:19:09,166 → 00:19:10,833` **Katrina:** 送点充电宝 / Give them some power banks.
+- `00:19:10,100 → 00:19:11,066` **Tasha:** 这挺好的 / That sounds good.
+- `00:19:11,066 → 00:19:13,700` **Katrina:** 还可以反正最后一天了 / Anyway, it's the last day.
+- `00:19:13,700 → 00:19:14,766` **Katrina:** 你是不是也不太 / You don't really...
+- `00:19:13,700 → 00:19:15,566` **Jake:** 对对 是的是的 / Yeah, yeah, exactly.
+- `00:19:16,633 → 00:19:17,066` **Katrina:** 抽奖环节 / Raffle session.
+- `00:19:17,200 → 00:19:19,566` **Lucia:** 那我到时候也可以买一个充电宝 / Then I can buy a power bank too.
+- `00:19:18,400 → 00:19:21,600` **Katrina:** 我们学院每次晚会都送充电宝 / Our college gives out power banks at every party.
+- `00:19:21,600 → 00:19:22,300` **Lucia:** 我们也是 / Same here.
+- `00:19:22,300 → 00:19:24,133` **Lucia:** 我们招聘会也会送充电宝 / We give out power banks at job fairs too.
+- `00:19:24,133 → 00:19:25,800` **Jake:** 哦原因找到了是吧 / Oh, that's the reason, right?
+- `00:19:25,800 → 00:19:27,966` **Jake:** 哈哈哈 / Hahaha.
+- `00:19:28,800 → 00:19:30,600` **Katrina:** 可以那就把充电宝送出去 / Okay, let's give out the power banks.
+- `00:19:31,666 → 00:19:33,466` **Tasha:** 只要来就可以送一个充电宝 / Anyone who comes can get a power bank.
+- `00:19:33,533 → 00:19:34,733` **Katrina:** 看他们手上有 / Look, they already have them.
+- `00:19:36,300 → 00:19:38,466` **Lucia:** 哈哈哈哈哈 / Hahahaha.
+- `00:19:38,433 → 00:19:42,433` **Shure:** 那个好像没有没有没有没有插上 / That one isn't plugged in.
+- `00:19:43,900 → 00:19:44,766` **Shure:** 没有插上 / It's not plugged in.
+- `00:19:45,133 → 00:19:46,866` **Shure:** 嗯好这回插上 / Okay, it's plugged in now.
+- `00:19:47,533 → 00:19:48,766` **Jake:** 哎呀你这个没电了 / Oh no, it's out of battery.
+- `00:19:48,933 → 00:19:49,500` **Shure:** 已经没了 / It's dead already.
+- `00:19:49,500 → 00:19:50,566` **Jake:** 你这已经断掉了 / Yours is already disconnected.
+- `00:19:51,066 → 00:19:51,400` **Jake:** 对 / Yeah.
+- `00:19:51,933 → 00:19:52,666` **Shure:** 重新录一下 / Record it again.
+- `00:19:52,666 → 00:19:54,466` **Jake:** 对你你得 / Yeah, you need to.
+- `00:19:54,866 → 00:19:58,266` **Jake:** 没关系就是我们重新看一遍时间就行 / It's okay, we just need to check the time again.
+- `00:19:56,866 → 00:19:58,566` **Shure:** 好了现在好了因为 / Okay, it's good now because...
+- `00:19:59,166 → 00:19:59,800` **Katrina:** 我的亮吗 / Is mine on?
+- `00:20:00,300 → 00:20:01,166` **Lucia:** 它亮着呢 / It's on.
+- `00:20:02,166 → 00:20:03,433` **Jake:** 你再重新开一下 / Restart it again.
+- `00:20:07,900 → 00:20:09,133` **Shure:** 素材丢失 / The footage is lost.
+- `00:20:10,400 → 00:20:11,666` **Jake:** 稍有丢失问题不大 / Slight loss is not a big deal.
+- `00:20:20,333 → 00:20:23,500` **Katrina:** 那你你的那part的东西买了吗 / Did you buy your part's stuff?
+- `00:20:24,100 → 00:20:25,466` **Lucia:** 我们取决于我们要做什么 / It depends on what we're making.
+- `00:20:25,466 → 00:20:26,200` **Lucia:** 我要买水母 / I want to buy jellyfish.
+- `00:20:26,200 → 00:20:27,366` **Lucia:** 不是如果要买水母灯 / No, if we need to buy jellyfish lights.
+- `00:20:27,366 → 00:20:28,733` **Lucia:** 如果要做水母灯的话 / If we're making jellyfish lights.
+- `00:20:28,733 → 00:20:30,600` **Lucia:** 大家是想用材料包做还是 / Do we want to use a materials kit or...
+- `00:20:30,600 → 00:20:32,866` **Lucia:** 就是那种循环利用的做 / Use recycled materials?
+- `00:20:33,566 → 00:20:34,866` **Katrina:** 什么叫循环利用的做 / What do you mean by recycled materials?
+- `00:20:34,866 → 00:20:36,366` **Katrina:** 就是拿那个 / Like using...
+- `00:20:36,400 → 00:20:38,966` **Lucia:** 呃叫什么奶茶盖那种 / Uh, like bubble tea lids.
+- `00:20:39,133 → 00:20:40,366` **Lucia:** 虽然奶茶盖其实我也没做过 / Although I haven't done it with bubble tea lids before.
+- `00:20:40,366 → 00:20:41,400` **Lucia:** 我之前做过材料包 / I used a materials kit before.
+- `00:20:41,400 → 00:20:43,533` **Katrina:** 奶茶盖的话那是不是得买奶茶呀 / If we use bubble tea lids, do we need to buy bubble tea?
+- `00:20:44,133 → 00:20:46,933` **Lucia:** 确实啊我们可以买个奶茶盖哦 / True, we can buy a bubble tea lid.
+- `00:20:46,933 → 00:20:47,866` **Jake:** 好没问题 / Sure, no problem.
+- `00:20:48,266 → 00:20:50,200` **Lucia:** 然后它其实材料还蛮简单的 / The materials are actually quite simple.
+- `00:20:50,200 → 00:20:52,466` **Lucia:** 就丝带和串珠这些就行 / Just ribbons and beads.
+- `00:20:52,700 → 00:20:54,366` **Katrina:** 那可以直接买材料包了 / Then we can just buy a materials kit.
+- `00:20:56,100 → 00:20:58,266` **Lucia:** 买材料包的话好像就没有那种 / If we buy a materials kit, it won't have that...
+- `00:20:58,600 → 00:20:59,166` **Katrina:** 环保的 / Eco-friendly.
+- `00:20:58,933 → 00:21:01,000` **Lucia:** 对特别环保的概念体现 / Yeah, the eco-friendly concept.
+- `00:21:01,933 → 00:21:04,933` **Katrina:** 那就那就得喝奶茶了哈哈 / Then we'll just have to drink bubble tea, haha.
+- `00:21:04,966 → 00:21:05,900` **Lucia:** 或者也可以 / Or we could...
+- `00:21:05,900 → 00:21:06,500` **Lucia:** 应该应该 / Maybe...
+- `00:21:06,500 → 00:21:07,900` **Lucia:** 淘宝上有那种包装 / They might have some on Taobao.
+- `00:21:07,900 → 00:21:09,900` **Lucia:** 也可以买一个我看看 / We can buy one, let me check.
+- `00:21:09,900 → 00:21:12,533` **Katrina:** 但是你买包装跟买材料包感觉差不多意思 / But buying a package and buying a materials kit feels the same.
+- `00:21:13,700 → 00:21:14,400` **Lucia:** 但是就是 / But it's just...
+- `00:21:14,400 → 00:21:16,900` **Lucia:** 至少它给人的视觉效果是环保的 / At least it gives an eco-friendly visual effect.
+- `00:21:16,900 → 00:21:17,766` **Lucia:** 至于它流 / As for its flow
+- `00:21:17,766 → 00:21:21,000` **Lucia:** 程中这个就我们自行控制 / We can control this ourselves during the process
+- `00:21:23,600 → 00:21:25,233` **Katrina:** 那应该没啥问题了 / Then there shouldn't be any problem
+- `00:21:26,200 → 00:21:28,366` **Katrina:** 然后可能嗯 / And then maybe, um
+- `00:21:28,366 → 00:21:34,933` **Katrina:** 如果要唱歌那种音响话筒这音调节 / If we need to sing, we should adjust the sound system and microphone
+- `00:21:40,633 → 00:21:43,566` **Jake:** 我们之前让GPT出了几个plan / Earlier, we had GPT come up with a few plans
+- `00:21:44,566 → 00:21:45,866` **Jake:** 嗯嗯嗯 / Mm-hmm
+- `00:21:47,300 → 00:21:49,900` **Jake:** 环保版 你你说你画我猜 / The eco-friendly version of the "Draw and Guess" game
+- `00:21:52,266 → 00:21:54,866` **Katrina:** 这个小游戏呢可以设置在 / This little game can be set up in
+- `00:21:52,533 → 00:21:53,300` **Jake:** 参与者 / Participants
+- `00:21:53,966 → 00:21:56,133` **Jake:** 啊对参与者分组 / Ah yes, participants are grouped
+- `00:21:56,133 → 00:21:57,966` **Jake:** 每组选择一个环保词汇 / Each group chooses an eco-friendly word
+- `00:21:57,966 → 00:21:58,933` **Jake:** 如太阳能 / Like solar energy
+- `00:22:00,366 → 00:22:01,266` **Jake:** 零废弃 / Zero waste
+- `00:22:03,266 → 00:22:03,866` **Jake:** 用肢体 / Using gestures
+- `00:22:05,033 → 00:22:05,866` **Tasha:** 该怎么表达 / How to express it
+- `00:22:05,966 → 00:22:07,400` **Shure:** 就是这种特别抽象的 / It's very abstract
+- `00:22:07,400 → 00:22:08,800` **Shure:** 然后大家就不好画 / So it's hard for everyone to draw
+- `00:22:09,166 → 00:22:09,500` **Jake:** 对 / Yes
+- `00:22:09,266 → 00:22:10,066` **Lucia:** 只能画吗 / Can only draw?
+- `00:22:10,066 → 00:22:11,266` **Lucia:** 不能描述吗 / Can't describe it?
+- `00:22:11,266 → 00:22:12,066` **Jake:** 画画 / Drawing only
+- `00:22:12,100 → 00:22:13,433` **Jake:** 啊不能说话了 / Ah, no talking
+- `00:22:14,200 → 00:22:15,000` **Jake:** 嗯 / Mm
+- `00:22:15,733 → 00:22:18,500` **Katrina:** 那就设置在晚上吧 / Then let's set it up in the evening
+- `00:22:15,833 → 00:22:16,533` **Jake:** 太阳能 / Solar energy
+- `00:22:19,000 → 00:22:19,800` **Jake:** 可以 / Okay
+- `00:22:20,366 → 00:22:22,100` **Katrina:** 下午的时间不是很多 / We don't have much time in the afternoon
+- `00:22:22,166 → 00:22:23,700` **Katrina:** 下午3点开始到5点半 / It starts at 3 PM and ends at 5:30 PM
+- `00:22:23,700 → 00:22:24,766` **Katrina:** 就两个半小时 / Just two and a half hours
+- `00:22:25,300 → 00:22:25,933` **Katrina:** 介绍介绍 / A brief introduction
+- `00:22:25,933 → 00:22:27,666` **Katrina:** 逛一逛就差不多了 / And a little tour should be enough
+- `00:22:27,866 → 00:22:29,266` **Jake:** 嗯还有一个更离谱的 / Mm, there's an even wilder idea
+- `00:22:29,266 → 00:22:31,300` **Jake:** 他的GPT确实厉害 / GPT is really impressive
+- `00:22:31,766 → 00:22:34,333` **Jake:** 在沙盘或沙地中 / In a sandbox or sand area
+- `00:22:34,333 → 00:22:36,566` **Jake:** 隐藏一些微型塑料颗粒 / Hide some tiny plastic particles
+- `00:22:37,466 → 00:22:39,300` **Jake:** 参与者使用镊子和放大镜 / Participants use tweezers and magnifying glasses
+- `00:22:39,300 → 00:22:40,266` **Jake:** 在规定时间内 / Within a set time
+- `00:22:40,266 → 00:22:41,766` **Jake:** 尽可能找出这些塑料颗粒 / To find as many plastic particles as possible
+- `00:22:41,766 → 00:22:43,500` **Jake:** 哈哈这个游戏 / Haha, this game is fun
+- `00:22:43,933 → 00:22:44,533` **Jake:** 这个游戏 / This game
+- `00:22:44,533 → 00:22:46,300` **Jake:** 可以让大家直观的认识到 / can let everyone directly understand
+- `00:22:46,300 → 00:22:47,700` **Jake:** 微塑料污染的隐蔽性 / the hidden nature of microplastic pollution.
+- `00:22:48,500 → 00:22:50,400` **Jake:** 哈哈哈很妙 / Haha, it's pretty clever.
+- `00:22:50,400 → 00:22:52,366` **Jake:** 这个GPT就是使唤人 / This GPT just orders people around.
+- `00:22:53,466 → 00:22:55,833` **Jake:** AI使唤人挺能整 / AI ordering people around is quite something.
+- `00:22:55,966 → 00:22:58,400` **Shure:** 完了你可不能像他学 / Don't you dare learn from it.
+- `00:22:58,400 → 00:22:59,200` **Shure:** 听没听到 / Did you hear me?
+- `00:23:00,933 → 00:23:02,166` **Lucia:** 寻废品对 / Looking for scrap, right.
+- `00:23:01,800 → 00:23:04,400` **Jake:** 对而且你这个头发还是遮住了 / Yeah, and your hair is still covering it.
+- `00:23:05,800 → 00:23:07,300` **Jake:** 要不还是我们 / Why don't we just
+- `00:23:06,633 → 00:23:10,800` **Shure:** 我我我们下下下午对采购一波发卡 / We'll go shopping for some hairpins this afternoon.
+- `00:23:07,300 → 00:23:09,400` **Jake:** 我们下午下午采购一波 / We'll go shopping this afternoon.
+- `00:23:10,033 → 00:23:11,500` **Jake:** 采购一波对 / Go shopping, right.
+- `00:23:11,266 → 00:23:13,600` **Katrina:** 下午要去采购是吗 / We need to go shopping this afternoon, right?
+- `00:23:14,466 → 00:23:14,933` **Tasha:** 这个吗 / This one?
+- `00:23:15,600 → 00:23:17,100` **Shure:** 对就是这种 / Yeah, just like this.
+- `00:23:17,100 → 00:23:18,500` **Shure:** 这种小别的那种 / This kind of small one.
+- `00:23:19,066 → 00:23:20,033` **Jake:** 我们再看一圈吧 / Let's take another look around.
+- `00:23:24,966 → 00:23:25,933` **Jake:** 我们其实不用 / We actually don't need to
+- `00:23:25,933 → 00:23:26,600` **Jake:** 但是也看一眼 / but let's just take a look.
+- `00:23:26,600 → 00:23:28,066` **Lucia:** 哎停住了 / Oh, it stopped.
+- `00:23:28,700 → 00:23:29,933` **Jake:** 哎呀完了 / Oh no, it's over.
+- `00:23:28,966 → 00:23:29,433` **Shure:** 完了 / It's over.
+- `00:23:30,166 → 00:23:30,533` **Jake:** 没事 / It's okay.
+- `00:23:31,833 → 00:23:33,600` **Jake:** 我们其实剩下的一个人就行 / Actually, one person left is fine.
+- `00:23:34,800 → 00:23:36,700` **Jake:** 但是就转一圈比较稳妥 / But it's safer to take another round.
+- `00:23:37,400 → 00:23:39,200` **Katrina:** 我发现这名片好好看 / I found this business card so pretty.
+- `00:23:43,200 → 00:23:46,000` **Shure:** 哦你们看那个你想活出怎样的人生 / Oh, did you watch "What Kind of Life Do You Want to Live"?
+- `00:23:46,933 → 00:23:47,966` **Shure:** 关崎骏那个 / The one by Hayao Miyazaki.
+- `00:23:47,966 → 00:23:48,966` **Katrina:** 看没看懂 / Did you understand it?
+- `00:23:49,133 → 00:23:50,066` **Katrina:** 后来看解析 / Later, I watched the analysis.
+- `00:23:50,066 → 00:23:51,700` **Katrina:** 了回来看解析 / I watched the analysis later.
+- `00:23:51,700 → 00:23:53,533` **Katrina:** 应该先看解析再去看 / You should watch the analysis first and then watch it.
+- `00:23:55,300 → 00:23:56,333` **Shure:** 那些数字 / Those numbers...
+- `00:23:56,333 → 00:23:58,900` **Alice:** 他只有5%的电正充着电 / He only has 5% battery left, it's charging.
+- `00:23:58,733 → 00:24:00,800` **Alice:** 他不会充的没用的快吧 / It won't charge up fast enough, right?
+- `00:23:58,900 → 00:24:00,966` **Alice:** 他不会充的没用的快吧 / It won't charge up fast enough, right?
+- `00:24:00,900 → 00:24:02,833` **Jake:** 呃不会不会不会不会 / Uh, no, no, no, no.
+- `00:24:01,466 → 00:24:02,766` **Jake:** 呃不会不会不会不会 / Uh, no, no, no, no.
+- `00:24:05,333 → 00:24:06,866` **Shure:** 只要抱着太紧了就可以 / As long as you hold on tightly, it's fine.
+- `00:24:06,766 → 00:24:07,133` **Jake:** 对 / Yes.
+- `00:24:06,866 → 00:24:09,366` **Katrina:** OK那这就差不多敲定了 / Okay, then it's pretty much settled.
+- `00:24:09,366 → 00:24:11,566` **Jake:** 差不多了那我们看看要准备什么吧 / Almost. Let's see what we need to prepare.
+- `00:24:11,566 → 00:24:12,633` **Jake:** 这七天 / These seven days...
+- `00:24:12,266 → 00:24:17,166` **Katrina:** 嗯我想想啊就是各自买各自的材料 / Hmm, let me think. We each buy our own materials.
+- `00:24:17,566 → 00:24:18,533` **Katrina:** 然后 / And then...
+- `00:24:22,966 → 00:24:26,700` **Katrina:** 然后要有音响和话筒如果要唱歌的话 / And then we need speakers and microphones if we're going to sing.
+- `00:24:28,500 → 00:24:30,466` **Shure:** 这个我都能搞定 / I can handle that.
+- `00:24:31,033 → 00:24:31,333` **Jake:** 牛啊 / Awesome.
+- `00:24:32,233 → 00:24:34,166` **Katrina:** 啊你本来就乐队的是吧 / Oh, you were in a band, right?
+- `00:24:34,800 → 00:24:36,500` **Jake:** 你可以把音乐队都给弄来 / You can bring the whole band.
+- `00:24:36,500 → 00:24:40,533` **Katrina:** 我们当时就也总是那乐队同学带音响 / We always had our bandmates bring the sound system back then.
+- `00:24:42,133 → 00:24:43,966` **Shure:** 这这算商演吧应该 / This should be considered a commercial performance.
+- `00:24:44,600 → 00:24:45,600` **Jake:** 商演商演商演 / Commercial performance, commercial performance.
+- `00:24:44,666 → 00:24:45,666` **Katrina:** 商演商演商演 / Commercial performance, commercial performance.
+- `00:24:46,900 → 00:24:50,766` **Jake:** 学术商演学术商演学术商演 / Academic commercial performance, academic commercial performance.
+- `00:24:48,133 → 00:24:49,066` **Shure:** 学术商演 / Academic commercial performance.
+- `00:24:51,066 → 00:24:53,900` **Jake:** 在学术会议上面商演演唱会算什么呀 / What does it mean to have a concert at an academic conference?
+- `00:24:54,700 → 00:24:56,000` **Jake:** 你们接过这种活吗 / Have you ever taken such a gig?
+- `00:24:56,666 → 00:25:01,200` **Shure:** 之前邀邀请过但是没没去 / We were invited before, but we didn't go.
+- `00:25:00,066 → 00:25:01,833` **Jake:** 昂没去 / Oh, you didn't go.
+- `00:25:01,800 → 00:25:03,466` **Shure:** 有点太尴尬了主要是 / It was too awkward, mainly.
+- `00:25:03,466 → 00:25:05,800` **Jake:** 哦这下面人在看pose呢 / Oh, people down there watching poses.
+- `00:25:05,900 → 00:25:07,600` **Jake:** 然后你在这敲锣打鼓 / And you guys are making a ruckus.
+- `00:25:07,666 → 00:25:09,500` **Shure:** 对对啊多尬呀我靠 / Yeah, it's super awkward, damn.
+- `00:25:10,900 → 00:25:14,200` **Katrina:** 他那个呃你们买了什么 / So, what did you guys buy?
+- `00:25:14,200 → 00:25:15,900` **Katrina:** 支架和小桌子吗 / Stands and small tables?
+- `00:25:16,200 → 00:25:17,866` **Jake:** 嗯我们要不看看快递 / Hmm, should we check the deliveries?
+- `00:25:18,200 → 00:25:19,933` **Jake:** 或者我们到处看一看吧 / Or we can look around.
+- `00:25:19,933 → 00:25:20,700` **Jake:** 我们 / We...
+- `00:25:20,700 → 00:25:24,166` **Jake:** 因为这个房间我们可能也要收拾收拾 / Because we might need to tidy up this room.
+- `00:25:24,166 → 00:25:24,900` **Jake:** 装饰装饰 / Decorate it.
+- `00:25:26,666 → 00:25:28,033` **Jake:** 就是这个屋子 / This room...
+- `00:25:26,866 → 00:25:28,300` **Katrina:** 哦这个那我们是不是 / Oh, so should we...
+- `00:25:28,300 → 00:25:30,600` **Katrina:** 如果你要世界地球日为主题 / If you want an Earth Day theme
+- `00:25:30,600 → 00:25:31,733` **Katrina:** 要买一点贴画呀 / We need to buy some stickers.
+- `00:25:31,733 → 00:25:32,666` **Jake:** 对对对是的 / Yes, yes, exactly.
+- `00:25:32,666 → 00:25:33,766` **Jake:** 但是这个墙不能贴 / But we can't stick them on the wall.
+- `00:25:33,766 → 00:25:35,100` **Jake:** 我们也得想想办法怎么搞 / We need to figure out a way to do it.
+- `00:25:35,100 → 00:25:36,966` **Katrina:** 有那种无痕贴的挂钩 / There's that kind of hook with no trace adhesive.
+- `00:25:36,966 → 00:25:39,133` **Jake:** 就是他就不不能贴这种墙 / But it can't be stuck on this kind of wall.
+- `00:25:39,533 → 00:25:39,866` **Katrina:** 我知道 / I know.
+- `00:25:39,866 → 00:25:41,900` **Katrina:** 我姐结婚的时候他们就是那种贴的 / When my sister got married, they used that kind of adhesive.
+- `00:25:41,900 → 00:25:43,066` **Katrina:** 就是酒店贴的 / It was at the hotel.
+- `00:25:43,066 → 00:25:44,766` **Katrina:** 可以撕下来就完全无痕的 / You can peel it off without any traces.
+- `00:25:44,766 → 00:25:47,733` **Jake:** OKOK如果很稳妥的话可以不然的话赔钱 / OK, OK, if it's really secure, we can use it. Otherwise, we'll have to pay for the damages.
+- `00:25:48,166 → 00:25:52,866` **Jake:** 赔不起 哈哈哈对这样砍了有多稳妥 / We can't afford it, haha. Yeah, how secure is it?
+- `00:25:51,966 → 00:25:54,533` **Katrina:** 然后还有就是我们每个人的东西的话 / And also, for each of our things...
+- `00:25:54,600 → 00:25:56,200` **Katrina:** 他的甜品有自己的甜品家 / His desserts have their own display area.
+- `00:25:56,200 → 00:25:57,066` **Katrina:** 那我们每个人 / So each of us...
+- `00:25:57,066 → 00:26:00,966` **Katrina:** 东西是不是也要有装桌子摆摊 / Should we also have a table to display our stuff?
+- `00:26:01,600 → 00:26:03,366` **Jake:** 嗯可以啊桌子 / Hmm, yeah, a table is fine.
+- `00:26:02,900 → 00:26:04,933` **Katrina:** 因为那天 / Because that day...
+- `00:26:04,933 → 00:26:06,800` **Shure:** 去宜家采购一波吧 / Let's go on a shopping spree at IKEA.
+- `00:26:06,800 → 00:26:07,800` **Katrina:** 20多人 / Over 20 people.
+- `00:26:07,166 → 00:26:09,066` **Jake:** 哈哈哈过分了 / Haha, that's too much.
+- `00:26:09,800 → 00:26:11,866` **Lucia:** 直接给别墅主人添新家具 / We'll just be adding new furniture for the villa owner.
+- `00:26:12,133 → 00:26:12,800` **Jake:** 对啊 / Yeah.
+- `00:26:12,966 → 00:26:13,566` **Lucia:** 一个够吗 / Is one enough?
+- `00:26:13,866 → 00:26:15,033` **Lucia:** 还是要多买两个 / Or should we buy two more?
+- `00:26:18,166 → 00:26:21,900` **Katrina:** 你这一个是就是多少人可以一起玩 / How many people can play with this at the same time?
+- `00:26:22,900 → 00:26:24,800` **Shure:** 大概就一个人一起玩 / Probably just one person.
+- `00:26:24,866 → 00:26:28,933` **Lucia:** 哈哈哈两三个应该也行再多是不是可能 / Haha, two or three should be fine. More than that might be too much.
+- `00:26:28,100 → 00:26:29,400` **Shure:** 再多其实买3个差不多 / Actually, buying three should be about right.
+- `00:26:29,400 → 00:26:30,300` **Jake:** 我们要不玩一下 / Why don't we play a bit?
+- `00:26:30,300 → 00:26:30,833` **Jake:** 怎么玩 / How do we play?
+- `00:26:31,000 → 00:26:33,500` **Lucia:** 啊对我们先来试验一下 / Ah, right, let's test it out first.
+- `00:26:34,000 → 00:26:36,066` **Shure:** 我们这些这些都得试验一遍 / We should test all of these.
+- `00:26:36,400 → 00:26:39,666` **Shure:** 就是甜品我们得先先吃一遍 / For example, we should try all the desserts first.
+- `00:26:36,400 → 00:26:42,466` **Jake:** 对对对对 / Right, right, right.
+- `00:26:37,433 → 00:26:37,866` **Katrina:** 彩排 / Rehearsal.
+- `00:26:39,666 → 00:26:41,900` **Shure:** 然后烧烤也得先吃一遍 / And we should also try the barbecue.
+- `00:26:41,900 → 00:26:42,933` **Lucia:** 算盘打的 / Calculating it all...
+- `00:26:43,700 → 00:26:45,500` **Alice:** 这是一个支架的就不用管它 / This is a stand, so we don't need to worry about it.
+- `00:26:47,600 → 00:26:51,466` **Shure:** 毕竟其实这个比点外卖会便宜一些 / After all, this is actually cheaper than ordering takeout.
+- `00:26:51,466 → 00:26:52,966` **Tasha:** 什么会比点外卖便宜 / What is cheaper than ordering takeout?
+- `00:26:53,633 → 00:26:54,166` **Jake:** 什么东西 / What?
+- `00:26:54,000 → 00:26:55,933` **Shure:** 就是比如说自己搞顿烧烤 / Like, making our own barbecue.
+- `00:26:55,933 → 00:26:59,166` **Shure:** 比点一桌子这样的烤串肯定会便宜 / It's definitely cheaper than ordering a whole table of skewers.
+- `00:26:59,166 → 00:27:02,066` **Jake:** 嗯那是这烧烤卖的可贵了 / Hmm, this barbecue is sold at quite a high price.
+- `00:27:02,333 → 00:27:05,333` **Jake:** 一根啥也不是 / One stick is practically nothing.
+- `00:27:02,866 → 00:27:05,733` **Shure:** 是一串四五块钱哦 / It's like four or five bucks per skewer.
+- `00:27:07,966 → 00:27:08,533` **Shure:** 啪 / Wham.
+- `00:27:08,566 → 00:27:09,166` **Alice:** 挺多 / That's a lot.
+- `00:27:10,500 → 00:27:12,133` **Jake:** 哦看起来很难拼到吧 / Oh, it looks like it's hard to piece together.
+- `00:27:12,133 → 00:27:14,733` **Alice:** 确实不太好拼比较费时间 / It’s really not easy to piece together; it takes a lot of time.
+- `00:27:14,733 → 00:27:15,533` **Tasha:** 要怎么拼 / How do you piece it?
+- `00:27:15,700 → 00:27:17,500` **Jake:** 就把它给拼成一个圆啊 / You just piece it into a circle.
+- `00:27:17,800 → 00:27:19,366` **Jake:** 你要fit进去边缘 / You need to fit it along the edge.
+- `00:27:20,733 → 00:27:23,366` **Shure:** 这种弧形的都应该在边边 / These curved pieces should be on the edges.
+- `00:27:23,366 → 00:27:24,966` **Jake:** 他有可能骗你的吧 / He might be tricking you.
+- `00:27:24,966 → 00:27:26,000` **Jake:** 有会有可能吧 / It’s possible, right?
+- `00:27:26,800 → 00:27:29,400` **Tasha:** 哎你这个明显就不在边边你这个 / Hey, this piece obviously isn't on the edge.
+- `00:27:29,633 → 00:27:30,166` **Alice:** 所以 / So...
+- `00:27:30,966 → 00:27:31,766` **Tasha:** 不对 / That's not right.
+- `00:27:37,533 → 00:27:38,533` **Jake:** 毫无头绪 / Absolutely clueless.
+- `00:27:38,533 → 00:27:39,400` **Jake:** 一个都找不到 / Can’t find a single piece.
+- `00:27:38,866 → 00:27:41,300` **Lucia:** 这个应该是在边边的这个 / This piece should be on the edge.
+- `00:27:41,600 → 00:27:42,700` **Shure:** 这个某一个边 / This one is on some edge.
+- `00:27:42,733 → 00:27:44,700` **Jake:** 一个吻合的都找不到麻 / Can’t find one that fits.
+- `00:27:42,733 → 00:27:45,000` **Shure:** 对一个边是在边边的 / Yeah, one edge is on the edge.
+- `00:27:45,000 → 00:27:46,866` **Lucia:** 这个好像也能贴上 / This one seems to fit too.
+- `00:27:46,900 → 00:27:49,166` **Shure:** 这不完全OK / This isn’t completely OK.
+- `00:27:49,166 → 00:27:52,600` **Jake:** 他是一定会完全还是他他就会 / Is it supposed to be a perfect fit or what?
+- `00:27:52,600 → 00:27:55,066` **Katrina:** 这个很适合放在安全性那边 / This is perfect for the safety section.
+- `00:27:55,066 → 00:27:56,566` **Katrina:** 让大家熟悉起来 / To get everyone familiar.
+- `00:27:56,800 → 00:28:01,533` **Jake:** 昂 对 有那种特别大的吗就是 / Yeah, are there really big pieces?
+- `00:27:57,133 → 00:27:58,766` **Katrina:** 这几个人坐在一起 / With a few people sitting together.
+- `00:28:00,766 → 00:28:02,200` **Katrina:** 玩一把就熟 / They’ll get it after one go.
+- `00:28:01,200 → 00:28:03,900` **Tasha:** 我感觉这个是这样子的是吧 / I feel like it's like this, right?
+- `00:28:03,100 → 00:28:04,133` **Jake:** 昂ok / Yeah, OK.
+- `00:28:03,700 → 00:28:04,666` **Lucia:** 很有可能 / Very likely.
+- `00:28:09,333 → 00:28:09,766` **Shure:** 哎呦 / Ouch.
+- `00:28:09,900 → 00:28:10,466` **Tasha:** 是吧 / Right?
+- `00:28:11,066 → 00:28:11,566` **Shure:** 屌的嘞 / Awesome.
+- `00:28:13,400 → 00:28:15,500` **Lucia:** 感觉应该是看起来很 / It should look like it's very...
+- `00:28:15,866 → 00:28:18,400` **Lucia:** 就是密合程度是比较高的 / The degree of fit is quite high.
+- `00:28:17,766 → 00:28:18,200` **Tasha:** 嗯 / Hmm.
+- `00:28:18,533 → 00:28:21,366` **Lucia:** 那这个就是哎有可能 / So this is... it’s possible.
+- `00:28:23,933 → 00:28:25,633` **Tasha:** 天才三位天才诞生 / Three geniuses, three geniuses are born.
+- `00:28:25,200 → 00:28:26,466` **Shure:** 洒洒水啦 / Piece of cake.
+- `00:28:27,700 → 00:28:29,200` **Shure:** 这不两分钟搞定啊 / Didn't we finish this in two minutes?
+- `00:28:33,666 → 00:28:37,533` **Lucia:** 这里是缺一个什么呢啊 / What's missing here?
+- `00:28:35,733 → 00:28:38,033` **Shure:** 缺个脚比较啊 / Missing a leg comparison.
+- `00:28:38,900 → 00:28:40,266` **Alice:** 哦不是完全拼合的 / Oh, it's not completely aligned.
+- `00:28:40,266 → 00:28:41,400` **Alice:** 还是有一点点缝缝的 / There's still a bit of a gap.
+- `00:28:42,366 → 00:28:42,800` **Tasha:** 不对 / No, that's not right.
+- `00:28:42,933 → 00:28:43,933` **Alice:** 看一下答案吗 / Should we check the answer?
+- `00:28:44,300 → 00:28:46,200` **Shure:** 不需要开玩笑 / No need, are you kidding?
+- `00:28:44,300 → 00:28:47,300` **Jake:** 不要不要太早了太早了太早了 / No, no, too early, too early, too early.
+- `00:28:46,166 → 00:28:47,200` **Alice:** 就是你也记不住啊 / It's not like you'll remember it anyway.
+- `00:28:47,900 → 00:28:49,700` **Jake:** 没有没有我们能拼出来 / No, no, we can figure it out.
+- `00:28:49,700 → 00:28:50,166` **Jake:** 能拼出来 / We can figure it out.
+- `00:28:49,800 → 00:28:50,266` **Jake:** 能拼出来 / We can figure it out.
+- `00:28:51,466 → 00:28:52,300` **Shure:** 我们看答案 / Let's check the answer.
+- `00:28:52,300 → 00:28:53,266` **Shure:** 开什么玩笑 / Just kidding.
+- `00:28:53,400 → 00:28:56,500` **Lucia:** 不错我觉得这个游戏参与度还是很高的 / Not bad, I think this game has high participation.
+- `00:28:54,733 → 00:28:55,100` **Alice:** 不是你 / Not you.
+- `00:28:57,100 → 00:28:57,866` **Alice:** 反正你也记不住 / You can't remember it anyway.
+- `00:28:58,600 → 00:29:01,133` **Lucia:** 我刚刚看到了跟他很像的在这里 / I just saw something similar to it here.
+- `00:29:04,300 → 00:29:05,100` **Tasha:** 嗯 / Hmm.
+- `00:29:06,533 → 00:29:08,600` **Katrina:** 嵌不进去差一点点 / It doesn't fit, just a tiny bit off.
+- `00:29:11,100 → 00:29:12,600` **Jake:** 嗯怎么一个靠谱的都找不到呢 / Hmm, why can't we find a reliable one?
+- `00:29:12,600 → 00:29:14,800` **Jake:** 哈哈哈这算吗这个 / Hahaha, does this count?
+- `00:29:15,900 → 00:29:18,433` **Katrina:** 他中间应该不是严丝合缝把 / It shouldn't fit perfectly in the middle.
+- `00:29:18,133 → 00:29:18,966` **Lucia:** 这是不是 / Is this it?
+- `00:29:18,966 → 00:29:20,766` **Jake:** 对他不是严丝合缝但是 / Yeah, it's not a perfect fit, but...
+- `00:29:20,833 → 00:29:22,466` **Katrina:** 如果严丝合缝就很好找啊 / If it fits perfectly, it'd be easy to find.
+- `00:29:22,966 → 00:29:24,800` **Katrina:** 找那个不同的 / Look for the different one.
+- `00:29:24,800 → 00:29:26,466` **Jake:** 他有可能有很多解法 / There could be many solutions.
+- `00:29:27,266 → 00:29:28,166` **Shure:** 嗯 / Hmm.
+- `00:29:40,166 → 00:29:41,000` **Jake:** 毫无头绪 / No clue at all.
+- `00:29:44,900 → 00:29:46,200` **Jake:** 这可能就啥也没有啊 / Maybe there's nothing here at all.
+- `00:29:46,200 → 00:29:48,266` **Jake:** 逗你玩 / Just messing with you.
+- `00:29:51,566 → 00:29:53,900` **Tasha:** 我觉得都没有一圈怎么回事 / I don't think there's even a circle, what's going on?
+- `00:29:53,900 → 00:29:55,100` **Jake:** 对啊他面积都不够啊 / Yeah, the area isn't enough.
+- `00:29:55,133 → 00:29:56,866` **Jake:** 对我们要不直接往里面放吧 / Yeah, let's just put it inside directly.
+- `00:29:56,866 → 00:29:59,100` **Jake:** 你看能不能 / See if you can.
+- `00:29:58,933 → 00:29:59,200` **Shure:** 完了 / We're doomed.
+- `00:30:00,233 → 00:30:01,333` **Shure:** 急了有人急了 / Someone's getting anxious.
+- `00:30:02,933 → 00:30:04,000` **Jake:** 不是不是不是不是 / No, no, no, no.
+- `00:30:05,000 → 00:30:06,733` **Jake:** 往里面放看看面积 / Put it inside and see the area.
+- `00:30:05,966 → 00:30:07,666` **Lucia:** 面积可能还是差不多的吧 / The area might still be about the same.
+- `00:30:07,666 → 00:30:08,233` **Lucia:** 看起来 / It looks like it.
+- `00:30:09,400 → 00:30:13,133` **Lucia:** 就是这还有一些就感觉可能是差不多的 / There's still some here, so it feels like it's probably about the same.
+- `00:30:13,700 → 00:30:15,066` **Lucia:** 哎这是猫头鹰 / Hey, it's an owl!
+- `00:30:15,500 → 00:30:16,333` **Lucia:** 好可爱哦 / So cute!
+- `00:30:16,933 → 00:30:17,866` **Shure:** 有人急了呀 / Someone's getting anxious.
+- `00:30:17,866 → 00:30:20,566` **Alice:** 这样看起来几个人一起玩也可以 / It looks like several people could play together.
+- `00:30:20,566 → 00:30:22,900` **Jake:** 是的是的挺好的这个东西 / Yes, yes, this thing is pretty good.
+- `00:30:25,966 → 00:30:27,300` **Shure:** 这也不是严丝合缝 / It's not a perfect fit.
+- `00:30:41,566 → 00:30:42,366` **Lucia:** 好难哦 / So hard!
+- `00:30:54,066 → 00:30:54,933` **Jake:** 是什么东西 / What is this?
+- `00:30:57,766 → 00:30:58,833` **Lucia:** 是小老鼠吗 / Is it a little mouse?
+- `00:31:00,500 → 00:31:02,133` **Lucia:** 青蛙土地公公 / A frog Earth God?
+- `00:31:02,200 → 00:31:05,400` **Shure:** 哈哈哈哈咱们是野生动物 / Hahaha, we're talking about wild animals.
+- `00:31:05,400 → 00:31:06,766` **Shure:** 不是神话故事 / Not mythological stories.
+- `00:31:08,333 → 00:31:09,333` **Shure:** 还土地公公 / Earth God, really?
+- `00:31:09,333 → 00:31:10,233` **Jake:** 野生神仙 / A wild deity.
+- `00:31:10,566 → 00:31:10,966` **Lucia:** 野生 / Wild.
+- `00:31:14,133 → 00:31:15,566` **Katrina:** 特别像一个表情包 / It looks just like a meme.
+- `00:31:15,733 → 00:31:16,133` **Jake:** 没有 / No.
+- `00:31:16,366 → 00:31:17,466` **Tasha:** 怎么又不亮了 / Why isn't it lighting up again?
+- `00:31:19,566 → 00:31:20,266` **Jake:** 我看一下 / Let me see.
+- `00:31:20,900 → 00:31:21,733` **Shure:** 是那边没插上 / It's not plugged in over there.
+- `00:31:21,000 → 00:31:22,166` **Lucia:** 这个也不是耶 / This one isn't either.
+- `00:31:23,566 → 00:31:24,366` **Lucia:** 奇怪 / Weird.
+- `00:31:25,700 → 00:31:26,266` **Alice:** 但是他一直 / But it always...
+- `00:31:26,266 → 00:31:27,100` **Alice:** 是35的电 / It has 35 power.
+- `00:31:27,100 → 00:31:27,733` **Lucia:** 不好意思 / Sorry.
+- `00:31:27,733 → 00:31:28,566` **Alice:** 就没有 / And then it doesn't.
+- `00:31:28,566 → 00:31:29,900` **Katrina:** 我也是一直35 / Mine is always 35 too.
+- `00:31:29,900 → 00:31:30,866` **Jake:** 对他电很多 / Yes, it has a lot of power.
+- `00:31:30,866 → 00:31:31,733` **Lucia:** 嗯不是 / Hmm, no.
+- `00:31:31,733 → 00:31:33,133` **Shure:** 他是一个2万毫安时 / It's a 20, 000 mAh battery.
+- `00:31:34,100 → 00:31:35,966` **Jake:** 我看一下你的这个APP / Let me check your app.
+- `00:31:35,966 → 00:31:37,166` **Tasha:** 我觉得这个是这样子 / I think it's like this.
+- `00:31:37,166 → 00:31:38,266` **Katrina:** 就是那软件吗 / Is it the software?
+- `00:31:38,133 → 00:31:38,400` **Jake:** 对 / Yes.
+- `00:31:44,333 → 00:31:46,200` **Tasha:** 这个是不是这样子 / Is it supposed to be like this?
+- `00:31:45,433 → 00:31:46,100` **Jake:** 四十三 / Forty-three.
+- `00:31:46,866 → 00:31:47,666` **Tasha:** 嗯 / Hmm.
+- `00:31:50,533 → 00:31:52,200` **Alice:** 但是他显示待记录啊 / But it shows "Pending record."
+- `00:31:51,566 → 00:31:53,800` **Jake:** charge charge就对了
+- `00:31:55,766 → 00:31:57,033` **Jake:** 我看一下看一下 / Let me take a look.
+- `00:31:58,666 → 00:32:01,533` **Jake:** 我是l你是L2是吗 / I'm L1, you're L2, right?
+- `00:32:01,766 → 00:32:02,133` **Alice:** 对 / Yes.
+- `00:32:02,600 → 00:32:03,366` **Jake:** 嗯怎么回事 / Hmm, what's going on?
+- `00:32:04,866 → 00:32:06,766` **Jake:** 灯坏了呵呵呵 / The light's broken, haha.
+- `00:32:06,933 → 00:32:08,466` **Alice:** 他在录但是 / It's recording, but...
+- `00:32:10,300 → 00:32:11,966` **Lucia:** 他是就是是不是自动 / Is it automatic?
+- `00:32:11,966 → 00:32:12,666` **Lucia:** 自动监测 / Automatic monitoring?
+- `00:32:12,666 → 00:32:14,866` **Lucia:** 觉得现在这个环境不需要开灯 / Maybe it thinks the current environment doesn't need the light.
+- `00:32:14,866 → 00:32:16,300` **Jake:** 没有不是不是不是这个 / No, no, that's not it.
+- `00:32:16,300 → 00:32:21,766` **Jake:** 这个是为了保护被拍摄人的隐私就是 / This is to protect the privacy of the person being recorded.
+- `00:32:21,766 → 00:32:23,166` **Jake:** 被拍摄人知道自己 / So the person being recorded knows...
+- `00:32:22,066 → 00:32:23,400` **Alice:** 提示你你被录了 / To inform you that you're being recorded.
+- `00:32:23,166 → 00:32:24,300` **Jake:** 对对对是的 / Yes, yes, exactly.
+- `00:32:23,633 → 00:32:24,300` **Lucia:** 哦OK / Oh, OK.
+- `00:32:24,300 → 00:32:25,566` **Jake:** 但是其实拍摄人不知道 / But actually, the cameraman didn't know.
+- `00:32:25,566 → 00:32:27,000` **Jake:** 但是呵呵 / But, hehe.
+- `00:32:27,333 → 00:32:29,200` **Jake:** 拍摄人应该会感觉到吧 / The cameraman should have felt it, right?
+- `00:32:29,200 → 00:32:31,000` **Lucia:** 啊了胜于无 / Ah, better than nothing.
+- `00:32:30,466 → 00:32:31,000` **Jake:** 对 / Yeah.
+- `00:32:32,866 → 00:32:33,566` **Jake:** 再输一下 / Try again.
+- `00:32:34,100 → 00:32:37,733` **Jake:** 他  刚刚其实是软件没有更新你的状态 / Just now, the software didn't update your status.
+- `00:32:39,033 → 00:32:40,166` **Jake:** 所以你是没有在录 / So you weren't recording.
+- `00:32:40,166 → 00:32:41,700` **Jake:** 但是软件上也是我在录 / But on the software, it showed I was recording.
+- `00:32:46,466 → 00:32:47,266` **Jake:** 这另外的 / This is another one.
+- `00:32:47,266 → 00:32:48,333` **Alice:** 我按照现在的时间吧 / I'll go by the current time.
+- `00:32:50,700 → 00:32:51,066` **Jake:** 实在 / Indeed.
+- `00:32:50,700 → 00:32:51,900` **Lucia:** 所以这个到底是什么 / So, what is this exactly?
+- `00:32:51,900 → 00:32:53,000` **Lucia:** 他有5个角哎 / It has five corners.
+- `00:32:53,000 → 00:32:54,400` **Jake:** 嗯对 / Uh, yeah.
+- `00:32:54,400 → 00:32:55,600` **Jake:** 你按照现在的时间 / You go by the current time.
+- `00:32:56,666 → 00:32:57,233` **Lucia:** 神奇 / Amazing.
+- `00:32:58,333 → 00:33:01,566` **Jake:** 这个哈哈哈估计最后才能放吧 / This, hahaha, probably can only be shown at the end.
+- `00:33:03,866 → 00:33:05,500` **Jake:** 这是大嘴鸟是吧 / Is this a toucan?
+- `00:33:05,933 → 00:33:07,400` **Tasha:** 哦我靠 / Oh my god.
+- `00:33:08,100 → 00:33:09,200` **Lucia:** 好抽象啊 / So abstract.
+- `00:33:09,966 → 00:33:10,766` **Jake:** 大嘴鸟 / Toucan.
+- `00:33:18,866 → 00:33:19,800` **Jake:** 这个也很抽象 / This is also very abstract.
+- `00:33:19,800 → 00:33:20,833` **Jake:** 谁家牛长这样 / Whose cow looks like this?
+- `00:33:22,266 → 00:33:23,800` **Shure:** 野牛啊水牛 / A wild buffalo or water buffalo.
+- `00:33:23,900 → 00:33:26,533` **Jake:** 那水牛为什么下面会长稻草 / Then why does the water buffalo have straw underneath it?
+- `00:33:27,966 → 00:33:28,966` **Alice:** 他站在草上 / It's standing on grass.
+- `00:33:29,333 → 00:33:31,866` **Shure:** 毛很长这个这个 / The hair is very long, this, this...
+- `00:33:31,866 → 00:33:32,933` **Lucia:** 这个是不是他这一边 / Is this his side?
+- `00:33:32,933 → 00:33:33,466` **Lucia:** 是哎对 / Yes, it is.
+- `00:33:33,466 → 00:33:34,300` **Shure:** 他叫牦牛 / It's called a yak.
+- `00:33:34,300 → 00:33:35,400` **Jake:** 对这个很妙 / Yes, this is amazing.
+- `00:33:36,500 → 00:33:37,300` **Jake:** 嗯这个太妙了 / Hmm, this is really amazing.
+- `00:33:37,966 → 00:33:39,966` **Lucia:** 然后既然是这一边的话 / And since it's this side...
+- `00:33:39,966 → 00:33:42,200` **Lucia:** 那这里应该有一个能放的东西 / There should be something you can place here.
+- `00:33:42,466 → 00:33:43,300` **Alice:** 尖尖的 / Something sharp.
+- `00:33:47,533 → 00:33:49,066` **Lucia:** 好像不是耶 / Seems like it's not.
+- `00:33:50,666 → 00:33:53,200` **Shure:** 不是CPU白烧了 / If not, the CPU would be wasted.
+- `00:33:53,533 → 00:33:55,333` **Shure:** AI快给我一个解法 / AI, quickly give me a solution.
+- `00:34:01,333 → 00:34:02,100` **Jake:** 大家一直在看时间 / Everyone's been watching the time.
+- `00:34:02,100 → 00:34:03,933` **Jake:** 看秒表这个数据 / Looking at the stopwatch data.
+- `00:34:05,533 → 00:34:07,100` **Katrina:** 看这个是为了干啥 / What's the point of looking at this?
+- `00:34:07,100 → 00:34:08,866` **Jake:** 为了同步 / To synchronize.
+- `00:34:09,366 → 00:34:12,466` **Jake:** 回头就是在某一个帧上面把时间写上 / Later, we'll write the time on a specific frame.
+- `00:34:12,733 → 00:34:13,700` **Katrina:** 哦明白了 / Oh, got it.
+- `00:34:13,500 → 00:34:13,666` **Jake:** 对 / Yes.
+- `00:34:19,866 → 00:34:20,666` **Lucia:** 好难哦 / This is so hard.
+- `00:34:23,266 → 00:34:24,766` **Jake:** 这个会在边上吗 / Will this be at the edge?
+- `00:34:24,900 → 00:34:27,533` **Jake:** 还有没有边了 / Is there any edge left?
+- `00:34:29,933 → 00:34:32,700` **Lucia:** 这个边怎么给人一种不太够的感觉 / Why does this edge feel like it's not enough?
+- `00:34:32,700 → 00:34:34,333` **Alice:** 他这不是严丝合缝 / It's not perfectly aligned.
+- `00:34:34,333 → 00:34:36,400` **Alice:** 有的是差不多的那种 / Some are just approximately fitting.
+- `00:34:39,866 → 00:34:41,566` **Alice:** 嗯这回是比较不太像 / Hmm, this time it doesn't look quite right.
+- `00:34:45,933 → 00:34:47,633` **Jake:** 放回去吧要不还是全放进去吧 / Let's put it back, or just put everything in.
+- `00:34:47,700 → 00:34:49,633` **Jake:** 哈哈全放进去 / Haha, put everything in.
+- `00:34:49,633 → 00:34:53,200` **Jake:** 先看一看他乱拼的话能差多少 / Let's see how much it will differ if we randomly piece it together.
+- `00:34:57,600 → 00:34:58,766` **Tasha:** 这只鸟好占位 / This bird takes up so much space.
+- `00:34:58,766 → 00:35:00,000` **Katrina:** 所有的都可以放进去 / Everything can fit in.
+- `00:35:00,000 → 00:35:00,500` **Lucia:** 对 / Yes.
+- `00:35:01,700 → 00:35:03,066` **Jake:** 刚刚就是这么拿出来的是吧 / That's how you took it out, right?
+- `00:35:01,700 → 00:35:05,533` **Shure:** 不是用来比那个大的总面积 / It's not used to compare the total area.
+- `00:35:02,600 → 00:35:06,033` **Alice:** 他就不是严丝合缝有的是差不多的那种 / It's not a perfect fit, it's more like a close match.
+- `00:35:04,566 → 00:35:06,433` **Jake:** 哦哦哦OK / Oh oh oh, OK.
+- `00:35:07,600 → 00:35:08,300` **Tasha:** 那就塞个你 / Then try to fit it.
+- `00:35:08,300 → 00:35:10,266` **Tasha:** 你塞不进去换一个 / If it doesn't fit, try another one.
+- `00:35:10,300 → 00:35:11,666` **Tasha:** 你也塞不进去 / You can't fit it either.
+- `00:35:12,166 → 00:35:13,100` **Katrina:** 我们塞他 / Let's try him.
+- `00:35:13,100 → 00:35:14,566` **Alice:** 这啥这是刺猬吗 / What is this, a hedgehog?
+- `00:35:15,700 → 00:35:17,266` **Tasha:** 可以他肯定就在这了 / It can be here for sure.
+- `00:35:17,366 → 00:35:19,366` **Lucia:** 哦这是这是刺我以为他是太阳呢 / Oh, this is a hedgehog, I thought it was the sun.
+- `00:35:18,666 → 00:35:20,200` 小薇 : 土地公公的胯下 / Tasha: Under the Earth God.
+- `00:35:20,200 → 00:35:24,200` **Lucia:** 看哈哈哈像不像太阳 / Look, haha, doesn't it look like the sun?
+- `00:35:25,800 → 00:35:28,900` **Lucia:** 我觉得这个太阳应该很好找到对应的 / I think this sun should be easy to match.
+- `00:35:29,200 → 00:35:31,466` **Lucia:** 就因为他这里有很多的刺 / Because it has a lot of spikes.
+- `00:35:31,466 → 00:35:35,133` **Lucia:** 所以我觉得这个是这里耶 / So I think this goes here.
+- `00:35:32,066 → 00:35:34,533` **Jake:** 这边这个像 / This one looks like it.
+- `00:35:35,133 → 00:35:37,133` **Jake:** 哇这个这个太严格了吧 / Wow, this is too strict.
+- `00:35:37,133 → 00:35:37,500` **Lucia:** 耶 / Yeah.
+- `00:35:38,400 → 00:35:39,533` **Jake:** 我去这太严格了 / Wow, this is too strict.
+- `00:35:41,433 → 00:35:43,000` **Jake:** 如果都是这种严格程度的话 / If everything is this strict
+- `00:35:43,000 → 00:35:44,900` **Jake:** 那确实对 / then it really is.
+- `00:35:43,900 → 00:35:44,633` **Tasha:** 那就好找了 / Then it will be easy to find.
+- `00:35:44,333 → 00:35:47,433` **Lucia:** 胜利又顺利找到一个 / Victory, we found another one smoothly.
+- `00:35:49,966 → 00:35:50,766` **Alice:** 谁没家 / Who doesn't have a home?
+- `00:35:54,066 → 00:35:56,600` **Shure:** 如今你四海为家 / Now you feel at home everywhere.
+- `00:35:59,333 → 00:36:01,100` **Tasha:** 怎么办还有这么多人没有家 / What to do, there are still so many people without a home?
+- `00:36:02,066 → 00:36:02,433` **Jake:** 好吧 / Okay.
+- `00:36:05,300 → 00:36:08,300` **Shure:** 回家回家 / Going home, going home.
+- `00:36:08,600 → 00:36:12,200` **Shure:** 回家是最好的礼物 / Going home is the best gift.
+- `00:36:13,366 → 00:36:14,133` **Jake:** 放BGM吧 / Play the BGM.
+- `00:36:14,133 → 00:36:16,700` **Jake:** 要不BGM再继续进去 / Or continue the BGM.
+- `00:36:19,866 → 00:36:20,833` **Shure:** 这时候应该放这个 / This is the time to play this.
+- `00:36:22,033 → 00:36:22,433` **Tasha:** 怎么办 / What to do?
+- `00:36:23,433 → 00:36:26,100` **Alice:** 标注一下为什么这时候要放这个BJM / Mark why we should play this BGM now.
+- `00:36:23,533 → 00:36:24,100` **Shure:** BJM / BGM.
+- `00:36:24,100 → 00:36:25,400` **Lucia:** 这是不是可以把这些 / Can we put these...
+- `00:36:24,966 → 00:36:26,433` **Tasha:** 这个 好像真的是在这的 / This one really seems to be here.
+- `00:36:27,000 → 00:36:28,333` **Tasha:** 嗯是吧 / Hmm, right?
+- `00:36:29,700 → 00:36:31,433` **Jake:** 嗯很难很难说 / Hmm, hard to say.
+- `00:36:33,966 → 00:36:34,400` **Jake:** 有可能 / Maybe.
+- `00:36:34,300 → 00:36:36,500` **Lucia:** 能让AI把这些轮廓都扫描一下 / Can we get the AI to scan all these outlines?
+- `00:36:36,500 → 00:36:38,166` **Lucia:** 然后让他帮忙拼吗 / And then have it help us piece them together?
+- `00:36:39,266 → 00:36:39,766` **Jake:** 试试 / Let's try.
+- `00:36:39,766 → 00:36:41,000` **Alice:** 无限次试 / Try as many times as we want.
+- `00:36:41,700 → 00:36:42,033` **Jake:** 对 / Yeah.
+- `00:36:42,200 → 00:36:42,866` **Alice:** 反正他算的快 / Anyway, it's fast at calculating.
+- `00:36:44,666 → 00:36:47,266` **Lucia:** 对就是应该有这种类似的软件吧 / Yeah, there should be some similar software, right?
+- `00:36:47,266 → 00:36:49,966` **Lucia:** 不然就是那种乐高都是怎么设计的 / Otherwise, how do they design those Legos?
+- `00:36:47,633 → 00:36:48,133` **Jake:** 嗯 / Hmm.
+- `00:36:50,800 → 00:36:51,133` **Jake:** 对 / Right.
+- `00:36:52,633 → 00:36:53,066` **Alice:** 动物世界 / Animal world.
+- `00:36:53,066 → 00:36:55,166` **Alice:** 哈哈哈这个应该是这样子的吧 / Hahaha, it should be like this, right?
+- `00:36:55,166 → 00:36:56,466` **Tasha:** 哈哈哈哎 / Hahaha, yeah.
+- `00:36:56,466 → 00:36:57,166` **Lucia:** 很像很像 / Very similar.
+- `00:36:57,166 → 00:36:57,933` **Lucia:** 应该是的 / It should be.
+- `00:36:57,933 → 00:36:58,800` **Lucia:** 好厉害 / So impressive.
+- `00:37:03,700 → 00:37:05,066` **Tasha:** 他们俩捆绑了 / They're tied up.
+- `00:37:06,133 → 00:37:07,066` **Tasha:** 对就是把 / Yeah, just put...
+- `00:37:07,500 → 00:37:08,100` **Lucia:** 只要把那 / Just put those...
+- `00:37:08,100 → 00:37:10,533` **Lucia:** 个能合上的都放在一起先 / pieces that can fit together first.
+- `00:37:10,933 → 00:37:13,966` **Lucia:** 然后再看他们具体是个怎么回事把 / Then see how they actually fit.
+- `00:37:13,966 → 00:37:15,366` **Tasha:** 把不对的拿出来 / Take out the ones that don't fit.
+- `00:37:15,433 → 00:37:15,900` **Lucia:** 对对 / Yeah, yeah.
+- `00:37:17,600 → 00:37:19,233` **Lucia:** 昂这个这个肯定在边上 / Hmm, this one definitely goes on the edge.
+- `00:37:17,666 → 00:37:18,333` **Alice:** 他俩是不是 / Are they...
+- `00:37:19,233 → 00:37:21,933` **Lucia:** 所以这个也可以这样放一下先放着这 / So we can place this here for now.
+- `00:37:19,600 → 00:37:19,966` **Jake:** 对 / Right.
+- `00:37:22,900 → 00:37:25,066` **Lucia:** 但是这他这个这么明显 / But this one is so obvious.
+- `00:37:25,066 → 00:37:26,266` **Lucia:** 应该会有一个 / There should be...
+- `00:37:27,900 → 00:37:29,266` **Alice:** 他俩像不像一家的 / Do they look like they're from the same family?
+- `00:37:30,366 → 00:37:31,466` **Alice:** 感觉 是一家的 / Feels like they are.
+- `00:37:31,100 → 00:37:32,333` **Tasha:** 他们俩像一家的他 / They do look like family.
+- `00:37:34,300 → 00:37:35,533` **Alice:** 有没有那么严丝合缝的 / Are they that perfectly matched?
+- `00:37:34,433 → 00:37:35,533` **Tasha:** 他这样子吧 / Is it like this?
+- `00:37:36,600 → 00:37:38,700` **Tasha:** 中间能不能再塞一条东西进来 / Can we fit something in between?
+- `00:37:38,133 → 00:37:38,500` **Lucia:** 这个 / This one...
+- `00:37:40,166 → 00:37:41,366` **Lucia:** 是不是有点像啊 / Doesn't it look a bit like it?
+- `00:37:43,933 → 00:37:45,566` **Jake:** 反过来不至于 / It won't fit the other way around.
+- `00:37:47,633 → 00:37:48,233` **Jake:** 嗯 / Hmm.
+- `00:37:48,966 → 00:37:51,366` **Alice:** 或者在这里面谁是条条的 / Or who here is Tiao Tiao's friend?
+- `00:37:53,266 → 00:37:54,700` **Tasha:** 他他不一定对 / He, he might not be right
+- `00:37:54,800 → 00:37:57,600` **Tasha:** 他拿走这这些小家伙都不对 / He's taking away these little guys, that's not right
+- `00:37:58,500 → 00:38:00,533` **Lucia:** 这个有有谁是长成这样的 / Who here looks like this?
+- `00:38:00,533 → 00:38:01,133` **Tasha:** 这样子 / Like this
+- `00:38:00,533 → 00:38:03,133` **Shure:** 可以这个样子 / Yeah, it can be like this
+- `00:38:03,166 → 00:38:04,400` **Shure:** 在中间留着一点 / Leave a bit in the middle
+- `00:38:04,400 → 00:38:05,366` **Shure:** 然后这样 / And then like this
+- `00:38:05,600 → 00:38:06,933` **Lucia:** 昂有道理就可以 / Right, that makes sense
+- `00:38:07,333 → 00:38:10,000` **Lucia:** 看这个和这两边感觉就比较 / Look, this and these two sides feel more...
+- `00:38:10,500 → 00:38:12,100` **Tasha:** 哎我刚刚找的那个呢 / Hey, where's the one I just found?
+- `00:38:12,200 → 00:38:13,666` **Tasha:** 哦不是 / Oh, never mind
+- `00:38:13,666 → 00:38:14,766` **Tasha:** 我还找了一个呢 / I found another one
+- `00:38:14,766 → 00:38:15,866` **Alice:** 我把它拆了 / I took it apart
+- `00:38:15,866 → 00:38:16,966` **Alice:** 拆成他俩了 / Took it apart into two
+- `00:38:17,166 → 00:38:18,600` **Alice:** 就你刚刚说的是这个吧 / This is the one you were talking about, right?
+- `00:38:19,433 → 00:38:19,633` **Tasha:** 昂 / Yeah
+- `00:38:25,500 → 00:38:27,866` **Tasha:** 他又在上去存疑 / He's back up there being suspicious again
+- `00:38:33,000 → 00:38:35,500` **Lucia:** 完了咱他俩这么长时间都没拼出来 / Oh no, we haven't figured this out after so long
+- `00:38:35,500 → 00:38:38,166` **Lucia:** 要是放到下午大家拼可能也拼不出来 / If we leave it till the afternoon, everyone might still not figure it out
+- `00:38:38,166 → 00:38:39,300` **Katrina:** 让他们玩一下午吧 / Let them play all afternoon
+- `00:38:39,900 → 00:38:40,333` **Jake:** 对 / Right
+- `00:38:42,766 → 00:38:44,900` **Katrina:** 这拼出来了给多少金币 / How many coins do we get if we figure it out?
+- `00:38:44,966 → 00:38:45,766` **Katrina:** 哈哈 / Haha
+- `00:38:45,900 → 00:38:46,800` **Shure:** 先拼出来 / First, figure it out
+- `00:38:46,666 → 00:38:48,900` **Tasha:** 这个为什么在摸他的屁股 / Why is this one touching his butt?
+- `00:38:48,900 → 00:38:51,400` **Tasha:** 然后这个蹲在他的屁股上 / And this one is squatting on his butt
+- `00:38:52,666 → 00:38:54,100` **Alice:** 你是来拉屎的吧 / Are you here to poop?
+- `00:38:54,100 → 00:38:56,866` **Tasha:** 哈哈哈真的是这样放的吗 / Hahaha, is it really supposed to be placed like this?
+- `00:38:58,700 → 00:39:00,266` **Lucia:** 可也可能不是 / Maybe, maybe not
+- `00:39:00,766 → 00:39:02,266` **Shure:** 这绝对不是 / Definitely not
+- `00:39:02,766 → 00:39:03,666` **Shure:** 太变态了 / That's too weird
+- `00:39:03,666 → 00:39:06,133` **Tasha:** 好了只有目前这些是确定的 / Okay, so only these are confirmed for now
+- `00:39:39,666 → 00:39:41,033` **Alice:** 他的这个脚肯定 / His foot definitely...
+- `00:39:42,666 → 00:39:44,466` **Lucia:** 吗不太可能 / No way, that's not possible
+- `00:39:47,166 → 00:39:49,166` **Shure:** 这个脚肯定插到谁的屁股里 / This foot definitely goes into someone's butt
+- `00:39:52,200 → 00:39:53,000` **Tasha:** 嗯 / Hmm
+- `00:39:53,800 → 00:39:55,200` **Tasha:** 这个在这的 / This one goes here
+- `00:39:58,600 → 00:40:00,333` **Alice:** 他揭着他的屁股好 / He's lifting his butt, okay
+- `00:40:00,333 → 00:40:01,033` **Alice:** 好尴尬 / So awkward
+- `00:40:02,466 → 00:40:04,333` **Tasha:** 刚刚谁说他是土地公公的 / Who just said he was the land god?
+- `00:40:04,933 → 00:40:06,166` **Alice:** 哎这两个是不是可以在一块 / Hey, can these two go together?
+- `00:40:05,700 → 00:40:07,133` **Tasha:** 哦好了 / Oh, okay.
+- `00:40:07,733 → 00:40:08,333` **Alice:** 再来一个 / Let's do one more.
+- `00:40:08,466 → 00:40:09,266` **Lucia:** 好厉害 / Amazing.
+- `00:40:13,066 → 00:40:14,300` **Lucia:** 感觉胜利在望了 / Feels like victory is in sight.
+- `00:40:14,300 → 00:40:15,400` **Tasha:** 三人游戏 / Three-player game.
+- `00:40:16,533 → 00:40:17,733` **Shure:** 三人游戏 / Three-player game.
+- `00:40:17,733 → 00:40:18,733` **Jake:** 可以可以 / Yeah, yeah.
+- `00:40:19,600 → 00:40:20,866` **Katrina:** 这是个什么 / What's this?
+- `00:40:21,200 → 00:40:22,333` **Lucia:** 这是个猴子吧 / Is this a monkey?
+- `00:40:23,233 → 00:40:23,966` **Jake:** 哦是的 / Oh, yes.
+- `00:40:34,100 → 00:40:35,666` **Alice:** 哎这两个是不是可以在一块 / Hey, can these two go together?
+- `00:40:35,533 → 00:40:37,100` **Tasha:** 这样也挺搭的 / This looks good too.
+- `00:40:37,500 → 00:40:38,333` **Jake:** 像吗哎 / Really?
+- `00:40:41,666 → 00:40:42,133` **Tasha:** 好像 / Seems like it.
+- `00:40:42,300 → 00:40:43,100` **Jake:** 一般像吧
+- `00:40:43,533 → 00:40:44,200` **Tasha:** 两般吧 / Maybe twice?
+- `00:40:44,566 → 00:40:45,333` **Jake:** 有可能吧 / Possibly.
+- `00:40:56,966 → 00:40:57,566` **Jake:** 一般像 / Usually like...
+- `00:41:00,100 → 00:41:01,733` **Tasha:** 两个细长条形的 / Two long thin strips.
+- `00:41:22,433 → 00:41:24,733` **Jake:** 这片头多久啊 / How long is this intro?
+- `00:41:24,733 → 00:41:26,133` **Jake:** 几分钟刚刚的 / A few minutes just now.
+- `00:41:26,133 → 00:41:26,833` **Jake:** 动物世界 / Animal World.
+- `00:41:26,933 → 00:41:28,066` **Shure:** 4分32秒 / 4 minutes and 32 seconds.
+- `00:41:29,433 → 00:41:30,133` **Tasha:** 什么东西 / What?
+- `00:41:30,133 → 00:41:31,666` **Jake:** 刚刚那个动物世界 / The Animal World just now.
+- `00:41:31,700 → 00:41:34,400` **Jake:** 4分32秒已经悄悄的过去了 / 4 minutes and 32 seconds have quietly passed.
+- `00:41:35,566 → 00:41:36,766` **Tasha:** 才过去4分钟吗 / Only 4 minutes?
+- `00:41:36,766 → 00:41:37,133` **Jake:** 嗯 / Yeah.
+- `00:41:38,066 → 00:41:38,433` **Tasha:** 还好 / Not bad.
+- `00:41:38,933 → 00:41:39,533` **Jake:** 还好 / Not bad.
+- `00:41:44,733 → 00:41:47,400` **Lucia:** 怎么觉得这个弧形边完全找不全 / Why does it feel like I can't find the whole curved edge?
+- `00:41:47,633 → 00:41:47,933` **Jake:** 对 / Yeah.
+- `00:41:51,700 → 00:41:52,500` **Tasha:** 所以 / So...
+- `00:41:57,066 → 00:41:59,566` **Tasha:** 这个算是这样子 / So this is like...
+- `00:41:58,966 → 00:41:59,466` **Alice:** 反了 / It's reversed.
+- `00:42:01,866 → 00:42:02,266` **Tasha:** 是吧 / Right?
+- `00:42:02,800 → 00:42:04,666` **Alice:** 反了吧没有反 / Is it reversed? No, it's not.
+- `00:42:04,733 → 00:42:06,000` **Alice:** 采供就四个了么 / Only four suppliers now?
+- `00:42:14,733 → 00:42:17,266` **Tasha:** 哎你刚不是把那个放在一起了吗 / Hey, didn't you just put that together?
+- `00:42:18,233 → 00:42:18,633` **Alice:** 疑似 / Maybe.
+- `00:42:49,466 → 00:42:50,700` **Lucia:** 他到底是哪一边 / Which side is he really on?
+- `00:42:52,366 → 00:42:53,500` **Alice:** 他是来迷惑你的 / He's just trying to confuse you.
+- `00:42:54,266 → 00:42:55,866` **Lucia:** 感觉两个好像都可以 / Feels like either side could work.
+- `00:43:00,900 → 00:43:02,766` **Alice:** 不太不不太像这么大啊 / Doesn't look that big, huh?
+- `00:43:04,666 → 00:43:06,000` **Shure:** 血压高了怎么办 / What if my blood pressure goes up?
+- `00:43:06,000 → 00:43:07,466` **Lucia:** 哎会是这样的 / Hey, it could be like that.
+- `00:43:08,666 → 00:43:09,366` **Jake:** 嗯嗯 / Yeah, yeah.
+- `00:43:13,800 → 00:43:16,133` **Tasha:** 这个是在这个边边上吗 / Is this supposed to be on the edge?
+- `00:43:23,266 → 00:43:24,733` **Tasha:** 这个是在边边上 / This is on the edge.
+- `00:43:28,966 → 00:43:29,766` **Lucia:** don't you / don't you
+- `00:43:58,133 → 00:43:58,600` **Jake:** 拆快递吧 / Let's unbox the packages.
+- `00:43:58,600 → 00:44:00,033` **Jake:** 要不哈哈 / Or not, haha.
+- `00:44:00,033 → 00:44:03,433` **Jake:** 拆会儿快递去拆快递拆快递拆会儿快递 / Let's unbox some packages, unbox, unbox, unbox some packages.
+- `00:44:02,933 → 00:44:04,500` **Katrina:** 我要去把我的花啊什么的 / I need to get my flowers and stuff.
+- `00:44:03,933 → 00:44:05,266` **Shure:** 不行了 血压高了 / No way, my blood pressure is high.
+- `00:44:05,266 → 00:44:06,133` **Shure:** 血压高了 / Blood pressure is high.
+- `00:44:06,766 → 00:44:08,100` **Tasha:** 怎么怎么回事 / What's going on?
+- `00:44:07,866 → 00:44:09,533` **Jake:** 没有没有拆拆一会回来 / No, no, unbox for a while and come back.
+- `00:44:10,200 → 00:44:12,366` **Jake:** 呃呃就有灵感了你知道吧 / Uh, then you'll get some inspiration, you know?
+- `00:44:12,066 → 00:44:13,100` **Tasha:** 在哪拆快递 / Where to unbox?
+- `00:44:13,500 → 00:44:14,666` **Jake:** 呃那边有一些快递 / Uh, there are some packages over there.
+- `00:44:14,666 → 00:44:15,733` **Jake:** 然后就过来拆 / Then just come over and unbox.
+- `00:44:15,733 → 00:44:16,566` **Katrina:** 我要整一波我的 / I need to sort my stuff.
+- `00:44:16,566 → 00:44:19,100` **Tasha:** 我还有在菜鸟驿站的 / I still have some at the parcel station.
+- `00:44:19,866 → 00:44:21,866` **Jake:** 嗯哦我看一下他们 / Hmm, let me check them.
+- `00:44:34,966 → 00:44:35,900` **Tasha:** 这俩脚 / These two feet.
+- `00:44:36,800 → 00:44:39,500` **Lucia:** 哈哈好奇怪啊 / Haha, so weird.
+- `00:44:39,666 → 00:44:40,700` **Lucia:** 怎么会呢 / How could that be?
+- `00:44:44,900 → 00:44:46,266` **Alice:** 汉服不是在边边 / The Hanfu isn't on the edge.
+- `00:44:49,000 → 00:44:50,000` **Lucia:** 他在边也 / It's on the edge too.
+- `00:44:51,333 → 00:44:52,133` **Lucia:** 可以 / Okay.
+- `00:45:26,733 → 00:45:28,666` **Katrina:** 买几个 / Buy a few.
+- `00:45:56,266 → 00:45:58,133` **Tasha:** 那把它按在这里面的哪里呢 / So, where do we place it inside here?
+- `00:45:58,133 → 00:45:59,666` **Lucia:** 哈哈哈好问题 / Haha, good question.
+- `00:46:18,166 → 00:46:19,900` **Lucia:** 啊是吗 / Ah, really?
+- `00:46:19,966 → 00:46:20,733` **Tasha:** 是呀哎 / Yeah, hey.
+- `00:46:23,600 → 00:46:24,400` **Lucia:** 反正我就是 / Anyway, I just...
+- `00:46:24,400 → 00:46:26,600` **Lucia:** 我好不容易拼了其中的一部分 / I finally managed to piece together part of it.
+- `00:46:27,066 → 00:46:29,000` **Lucia:** 然后就不会拼了 / Then I couldn't piece it together anymore.
+- `00:46:29,000 → 00:46:30,366` **Lucia:** 然后我就放弃 / So I gave up.
+- `00:46:34,266 → 00:46:35,433` **Alice:** 玩困了怎么办 / What if we get tired of playing?
+- `00:46:42,133 → 00:46:43,366` **Shure:** 喝杯咖啡吧 / Have a cup of coffee.
+- `00:46:45,200 → 00:46:46,333` **Shure:** 喝杯咖啡喝 / Drink some coffee.
+- `00:47:05,000 → 00:47:06,966` **Alice:** 感觉他俩是不是也可以这样 / Do you think they could do it like this too?
+- `00:47:08,066 → 00:47:09,900` **Alice:** 就一点点就成这样了 / Just a little bit and it's done.
+- `00:47:11,866 → 00:47:13,500` **Katrina:** 对但是我以为每 / Yeah, but I thought everyone
+- `00:47:13,500 → 00:47:14,333` **Katrina:** 个人都要做 / had to do it.
+- `00:47:14,333 → 00:47:16,500` **Katrina:** 一到两边边都不播放了 / One or two sides and it won't play anymore.
+- `00:47:16,500 → 00:47:17,166` **Tasha:** 怎么回事 / What's going on?
+- `00:47:17,166 → 00:47:18,200` **Tasha:** 大家挤一挤 / Everyone squeeze in.
+- `00:47:18,933 → 00:47:20,933` **Lucia:** 哈哈电不够了 / Haha, the power is running out.
+- `00:47:24,800 → 00:47:26,766` **Alice:** 嗯勉强 / Hmm, barely.
+- `00:47:27,400 → 00:47:28,133` **Tasha:** 哎就这样 / Oh, just like that.
+- `00:47:28,133 → 00:47:30,600` **Lucia:** 就是这样的哈哈 / That's how it is, haha.
+- `00:47:33,500 → 00:47:34,333` **Lucia:** 非常对 / Exactly.
+- `00:47:35,533 → 00:47:36,666` **Tasha:** 我感觉边是对了 / I think the edge is right.
+- `00:47:38,666 → 00:47:39,566` **Alice:** 但我感觉这儿有点大 / But I think this part is a bit big.
+- `00:47:39,933 → 00:47:42,766` **Tasha:** 嗯但是感觉这边要重新组合组合 / Yeah, but I think this side needs to be reassembled.
+- `00:47:42,400 → 00:47:44,100` **Jake:** 我不知道为什么他 / I don't know why it...
+- `00:47:44,100 → 00:47:45,566` **Tasha:** 我觉得这边没问题 / I think this side is fine.
+- `00:47:46,400 → 00:47:48,266` **Tasha:** 这边这边有问题 / This side has a problem.
+- `00:47:46,866 → 00:47:50,200` **Jake:** 断了他电有电是有电 / It's disconnected, there's power though.
+- `00:47:49,100 → 00:47:51,000` **Tasha:** 要把这几个重新组合一下 / We need to reassemble these few pieces.
+- `00:47:51,266 → 00:47:52,533` **Tasha:** 但还是这几个边 / But still keep these edges.
+- `00:47:57,166 → 00:47:58,400` **Lucia:** 总感觉这个牛 / I always feel this is amazing.
+- `00:47:58,400 → 00:48:01,333` **Lucia:** 这里他应该能放一个什么东西进来 / Here, he should be able to put something in.
+- `00:48:01,333 → 00:48:01,866` **Lucia:** 但是 / But...
+- `00:48:04,933 → 00:48:06,966` **Lucia:** 难道他也是一个 / Could it be that this is also a...
+- `00:48:11,100 → 00:48:12,266` **Lucia:** 障眼法吗 / Deception?
+- `00:48:13,266 → 00:48:13,733` **Jake:** 有啊 / Yes.
+- `00:48:16,500 → 00:48:19,600` **Katrina:** 这样就可以扩延充足 / This way it can be extended enough.
+- `00:48:19,966 → 00:48:22,866` **Lucia:** 这个看起来其实也像在边上一样 / This actually looks like it's on the edge too.
+- `00:48:22,866 → 00:48:27,200` **Lucia:** 看就是如果如果这样的话是吧 / See, if it's like this, right?
+- `00:48:27,600 → 00:48:29,266` **Lucia:** 这个也是挺像在边上的 / This also looks like it's on the edge.
+- `00:48:28,133 → 00:48:29,666` **Katrina:** 你这个花瓶呢 / What about this vase?
+- `00:48:29,666 → 00:48:31,166` **Katrina:** 快递在哪看到的 / Where did you see it in the delivery?
+- `00:48:31,766 → 00:48:32,800` **Alice:** 花瓶不是快递 / The vase wasn't in the delivery.
+- `00:48:32,800 → 00:48:33,533` **Alice:** 就在桌子上 / It's on the table.
+- `00:48:33,533 → 00:48:34,866` **Alice:** 有两个瓶子 / There are two bottles.
+- `00:48:35,766 → 00:48:37,300` **Katrina:** 哎我买了6个啊 / Hey, I bought six of them.
+- `00:48:37,833 → 00:48:38,500` **Jake:** 你买了 / You bought them?
+- `00:48:40,200 → 00:48:42,533` **Tasha:** 取得了历史性的进步啊 / We've made historic progress!
+- `00:48:40,300 → 00:48:40,800` **Jake:** 哪一个 / Which one?
+- `00:48:42,966 → 00:48:45,466` **Lucia:** 哈哈哈我们刚发现这是这样的 / Hahaha, we just found out it's like this.
+- `00:48:45,466 → 00:48:47,933` **Lucia:** 然后这样又可以拼上哦 / And then you can piece it together like this.
+- `00:48:47,200 → 00:48:49,733` **Jake:** 哦妙啊 / Oh, that's brilliant.
+- `00:48:49,966 → 00:48:51,366` **Tasha:** 历史性的进步 / Historic progress.
+- `00:48:51,766 → 00:48:52,800` **Lucia:** 不错不错 / Not bad, not bad.
+- `00:48:52,800 → 00:48:53,600` **Lucia:** 胜利在望 / Victory is in sight.
+- `00:48:56,900 → 00:48:57,933` **Jake:** 你买了几个花瓶 / How many vases did you buy?
+- `00:48:58,466 → 00:49:00,733` **Katrina:** 6个我当时想的是一人一个 / Six, I thought one for each person.
+- `00:49:02,000 → 00:49:02,800` **Jake:** 嗯6个花瓶 / Hmm, six vases.
+- `00:49:03,800 → 00:49:05,766` **Jake:** 厨房看到了吗 / Did you see the kitchen?
+- `00:49:05,800 → 00:49:06,533` **Jake:** 看到了几个 / How many did you see?
+- `00:49:06,533 → 00:49:07,600` **Katrina:** 我看看都到了没 / Let me see if they all arrived.
+- `00:49:07,600 → 00:49:08,600` **Katrina:** 好像都到了 / Seems like they're all here.
+- `00:49:10,766 → 00:49:12,100` **Tasha:** 这个跟这个边上的 / This one and the one next to it.
+- `00:49:20,733 → 00:49:21,766` **Alice:** 但是这感觉 / But it feels like...
+- `00:49:24,400 → 00:49:25,766` **Lucia:** 这个有可能在里面 / This one might be inside.
+- `00:49:25,766 → 00:49:29,166` **Lucia:** 感觉它看起来好像都不太圆对吧 / Feels like it doesn't look very round, right?
+- `00:49:29,166 → 00:49:31,000` **Tasha:** 嗯先把它放 / Hmm, let's place it first.
+- `00:49:34,300 → 00:49:34,700` **Tasha:** 熊猫 / Panda.
+- `00:49:34,700 → 00:49:37,266` **Lucia:** 哎这个也很像在边上有道理 / Hey, this one also seems like it makes sense on the side.
+- `00:49:37,333 → 00:49:38,566` **Katrina:** 确实发了三个快递 / I did send three packages.
+- `00:49:38,566 → 00:49:39,566` **Katrina:** 但是都到了 / But they're all here.
+- `00:49:39,400 → 00:49:40,233` **Jake:** 好行 / Okay, good.
+- `00:49:39,600 → 00:49:40,766` **Tasha:** 你们换个边 / You guys switch sides.
+- `00:49:42,333 → 00:49:42,700` **Alice:** 更不像哎 / It looks even less like it now.
+- `00:49:44,900 → 00:49:49,100` **Tasha:** 这个感觉屏有点那种弧度是他吗 / This screen seems to have a bit of a curve, is it that one?
+- `00:49:49,100 → 00:49:52,366` **Alice:** 不是不是这个也不是 / No, no, it's not this one either.
+- `00:49:54,066 → 00:49:54,533` **Alice:** 挑不下 / Can't pick it out.
+- `00:50:02,333 → 00:50:06,300` **Lucia:** 如果把那个鸟嘴冲着那边就是 / If you turn that bird's beak towards that side, then it's...
+- `00:50:21,800 → 00:50:25,066` **Lucia:** 这样的话嗯好像也放不进去 / Like this, hmm, it doesn't seem to fit either.
+- `00:50:29,400 → 00:50:31,400` **Lucia:** 这些东西有可能吗 / Could these things be possible?
+- `00:50:32,866 → 00:50:34,300` **Jake:** 哎我拼几个这个吧 / Hey, let me piece a few of these together.
+- `00:50:35,400 → 00:50:36,033` **Jake:** 这个有用吗 / Is this useful?
+- `00:50:36,033 → 00:50:36,933` **Jake:** 这个这个要不 / This, this one or...
+- `00:50:36,933 → 00:50:38,766` **Jake:** 把白板给放下去 / Put the whiteboard down.
+- `00:50:39,800 → 00:50:42,033` **Jake:** 就是把白板给赶到这个上面 / Just move the whiteboard onto this.
+- `00:50:42,933 → 00:50:44,933` **Shure:** 要的怎么写太费劲了 / Writing it down is too much trouble.
+- `00:50:44,933 → 00:50:45,733` **Katrina:** 花都在这 / All the flowers are here.
+- `00:50:45,733 → 00:50:47,200` **Katrina:** 哇你已经弄好了 / Wow, you already finished it.
+- `00:50:47,266 → 00:50:48,266` **Jake:** 剪刀开 / Open the scissors.
+- `00:50:47,933 → 00:50:48,733` **Lucia:** 怎么会呢 / How could that be?
+- `00:50:48,533 → 00:50:49,133` **Shure:** 剪刀 / Scissors.
+- `00:50:50,666 → 00:50:51,800` **Katrina:** 剪刀在外面 / The scissors are outside.
+- `00:50:52,900 → 00:50:54,133` **Katrina:** 这加水了吗 / Did you add water to this?
+- `00:50:54,666 → 00:50:56,233` **Jake:** 加过了应该对 / Yes, it should be enough.
+- `00:50:55,366 → 00:50:56,166` **Katrina:** 加过了是吧 / You added it, right?
+- `00:50:57,500 → 00:50:58,300` **Katrina:** 哇 / Wow.
+- `00:50:58,666 → 00:50:59,566` **Jake:** 很专业 / Very professional.
+- `00:51:01,166 → 00:51:02,866` **Alice:** 好太难了太难了 / Oh, it's so hard, so hard.
+- `00:51:02,833 → 00:51:04,000` **Tasha:** 拼图天才 / Puzzle genius.
+- `00:51:04,266 → 00:51:06,833` **Lucia:** 哈哈天才又找到一块 / Haha, the genius found another piece.
+- `00:51:07,733 → 00:51:08,866` **Tasha:** 拼图天才 / Puzzle genius.
+- `00:51:10,966 → 00:51:12,300` **Tasha:** 出世出山 / Coming out of retirement.
+- `00:51:14,700 → 00:51:15,600` **Jake:** 真有意思 / This is really interesting.
+- `00:51:18,866 → 00:51:20,066` **Lucia:** 让我们看看有没有可能 / Let's see if it's possible.
+- `00:51:20,066 → 00:51:21,533` **Lucia:** 在不依靠 / Without relying on it.
+- `00:51:24,333 → 00:51:25,866` **Lucia:** 解析的情况下 / Without analysis.
+- `00:51:26,066 → 00:51:27,233` **Jake:** 这尾巴试过 / Have you tried this tail?
+- `00:51:31,066 → 00:51:31,866` **Alice:** 有点大 / It's a bit big.
+- `00:51:32,133 → 00:51:32,700` **Jake:** 没用确实 / Indeed, it's useless.
+- `00:51:35,766 → 00:51:37,166` **Lucia:** 这个呢有可能 / How about this one, maybe?
+- `00:51:41,333 → 00:51:42,133` **Lucia:** 不太行 / Not really.
+- `00:51:43,733 → 00:51:45,500` **Lucia:** 谁在中间呢 / Who's in the middle?
+- `00:51:50,200 → 00:51:52,900` **Tasha:** 嗯刚刚这个好像不太行 / Hmm, this one doesn't seem right.
+- `00:51:53,500 → 00:51:54,933` **Alice:** 他又跟谁分家了 / Who did he split with again?
+- `00:51:55,066 → 00:51:56,133` **Tasha:** 对他他在这 / Yes, he's here.
+- `00:51:56,700 → 00:51:58,533` **Tasha:** 哎把小伙伴丢了 / Oh no, he lost his buddy.
+- `00:51:58,533 → 00:52:00,666` **Lucia:** 哦这个这个这个在他的 / Oh, this, this, this is his.
+- `00:52:00,733 → 00:52:02,200` **Lucia:** sorry忘记了 / Sorry, I forgot.
+- `00:52:02,200 → 00:52:04,133` **Lucia:** 嗯对这是这样子的 / Hmm, yes, it's like this.
+- `00:52:04,133 → 00:52:06,533` **Lucia:** 对对对这块就这样挺好 / Yes, yes, this piece fits nicely.
+- `00:52:06,533 → 00:52:07,866` **Tasha:** 这样子挺好的 / This fits nicely.
+- `00:52:51,966 → 00:52:53,633` **Katrina:** 所有快递都在外面了吗 / Are all the packages outside?
+- `00:52:53,833 → 00:52:54,200` **Jake:** 对 / Yes.
+- `00:52:55,533 → 00:52:56,700` **Jake:** 今天还到了几个 / Today, a few more arrived.
+- `00:52:56,700 → 00:53:00,300` **Jake:** 但是还都会有管家过来送 / But the housekeeper will still come to deliver them.
+- `00:53:01,766 → 00:53:02,366` **Shure:** 还有管家 / There's a housekeeper?
+- `00:53:02,366 → 00:53:04,166` **Tasha:** 那他能把我的送来吗 / Can he deliver mine too?
+- `00:53:04,933 → 00:53:05,566` **Jake:** 什么东西 / What thing?
+- `00:53:06,966 → 00:53:09,166` **Jake:** 把什么东西培养皿 / What thing? The petri dish?
+- `00:53:08,733 → 00:53:10,033` **Tasha:** 我买的东西 / The stuff I bought.
+- `00:53:10,800 → 00:53:12,266` **Jake:** 可以啊今天会有 / Sure, it'll be here today.
+- `00:53:14,566 → 00:53:16,366` **Jake:** 我问一下他们什么时候能 / I'll ask them when they can...
+- `00:53:17,800 → 00:53:19,533` **Jake:** 能来送 / ...come to deliver.
+- `00:53:24,766 → 00:53:27,666` **Tasha:** 好这游戏三个人玩刚刚好我们的 / Alright, this game is perfect for three people.
+- `00:53:34,300 → 00:53:35,700` **Alice:** 掌管120组 / Managing 120 groups.
+- `00:53:50,800 → 00:53:52,333` **Alice:** 他俩会不会一家的 / Could the two of them be from the same family?
+- `00:53:53,500 → 00:53:55,333` **Tasha:** 他们仨是不是一个家的 / Are the three of them from the same family?
+- `00:53:57,500 → 00:53:59,733` **Lucia:** 有可能但是总觉得哎 / Possibly, but I always feel like...
+- `00:54:00,366 → 00:54:03,766` **Lucia:** 这里是不是应该稍微弧度再推一点 / Shouldn't we push this curve a bit more?
+- `00:54:05,133 → 00:54:07,533` **Tasha:** 可是感觉不是那么严丝合缝 / But it doesn't seem to fit perfectly.
+- `00:54:08,100 → 00:54:09,900` **Tasha:** 他们俩的宽度最匹配 / These two widths match the best.
+- `00:54:10,600 → 00:54:11,800` **Lucia:** 然后放一下 / Then place it here.
+- `00:54:12,733 → 00:54:13,733` **Tasha:** 是这个呢 / Is it this one?
+- `00:54:17,933 → 00:54:19,300` **Tasha:** 这两个都有可能 / Both of these could work.
+- `00:54:25,400 → 00:54:26,533` **Katrina:** 要帮忙不 / Need help?
+- `00:54:28,266 → 00:54:30,166` **Alice:** 哎你觉得这个像不像在这 / Hey, do you think this fits here?
+- `00:54:28,700 → 00:54:32,533` **Jake:** 额可以比划比划一块 / Uh, you can compare them side by side.
+- `00:54:30,500 → 00:54:31,133` **Tasha:** 这样子的 / Like this?
+- `00:54:31,133 → 00:54:32,700` **Lucia:** 哎是这两个应该是 / Hey, it's these two, right?
+- `00:54:32,966 → 00:54:33,766` **Katrina:** 这是什么呀 / What is this?
+- `00:54:34,400 → 00:54:40,200` **Alice:** 不过感觉这个搁哪儿都行啊只不过这个头对着他的屁股好像也挺严丝合缝的 / But I feel like this can go anywhere, and this head fits snugly against its back.
+- `00:54:34,733 → 00:54:35,333` **Katrina:** 我可以 / I can...
+- `00:54:35,333 → 00:54:36,566` **Katrina:** 帮你们拧螺丝 / ...help you guys screw in the bolts.
+- `00:54:37,800 → 00:54:39,266` **Jake:** 好 比划比划 / Alright, compare them.
+- `00:54:40,200 → 00:54:41,666` **Tasha:** 这个这个是对的 / This one, this one is correct.
+- `00:54:42,666 → 00:54:43,300` **Jake:** 喜欢拧螺丝 / You like screwing bolts?
+- `00:54:44,266 → 00:54:46,033` **Jake:** 就是刚刚拧的开心了 / You just enjoyed screwing them earlier.
+- `00:54:46,433 → 00:54:46,766` **Katrina:** 对 / Yeah.
+- `00:54:47,300 → 00:54:48,000` **Shure:** 要不装个机 / How about assembling a machine?
+- `00:54:48,000 → 00:54:49,133` **Tasha:** 咱俩配对啊 / Let's pair up.
+- `00:54:49,366 → 00:54:50,366` **Shure:** 要不咱装个机 / How about assembling a machine?
+- `00:54:50,366 → 00:54:51,800` **Jake:** 好给你买一个台电脑 / Alright, I'll get you a computer.
+- `00:54:52,900 → 00:54:53,966` **Jake:** 从头装哇 / We'll assemble it from scratch.
+- `00:54:53,966 → 00:54:55,066` **Jake:** 怎么出来的 / How did it come out?
+- `00:55:01,300 → 00:55:02,433` **Tasha:** 这个是吗 / Is this it?
+- `00:55:02,666 → 00:55:04,733` **Alice:** 有长有长这样的吗没有吧 / Does this look like it? No, right?
+- `00:55:04,833 → 00:55:05,500` **Jake:** 白板墙 / Whiteboard wall.
+- `00:55:06,200 → 00:55:07,266` **Tasha:** 嗯因为好 / Hmm, because it's good.
+- `00:55:08,266 → 00:55:08,966` **Lucia:** 长这样的 / Looks like this.
+- `00:55:09,033 → 00:55:10,366` **Jake:** 快弄出来了，回不去 / Hurry up, we can't go back.
+- `00:55:09,966 → 00:55:11,266` **Tasha:** 这不像应该不是 / This doesn't seem right, probably not.
+- `00:55:12,900 → 00:55:14,466` **Tasha:** 这个暂且配对吧 / Let's pair this for now.
+- `00:55:22,000 → 00:55:22,566` **Jake:** 这啥意思 / What does this mean?
+- `00:55:25,300 → 00:55:26,533` **Jake:** 试试比划比划 / Try it, compare it.
+- `00:55:26,500 → 00:55:28,333` **Tasha:** 这个跟谁都能配这个 / This can pair with anything.
+- `00:55:32,500 → 00:55:34,133` **Tasha:** 我就说我是个拼图天才 / I said I'm a puzzle genius.
+- `00:55:34,133 → 00:55:35,100` **Alice:** 我这个在亮吗 / Is this one on?
+- `00:55:35,100 → 00:55:36,466` **Alice:** 为什么感觉这是红色的 / Why does it look red?
+- `00:55:36,533 → 00:55:37,600` **Jake:** 在亮在亮 / It's on, it's on.
+- `00:55:39,333 → 00:55:41,333` **Shure:** 没问题看一下安装图纸 / No problem, check the installation manual.
+- `00:55:39,333 → 00:55:43,133` **Jake:** 看一下那个红色是红色你这电量太少了 / Look at it, that red is red. Your battery is too low.
+- `00:55:43,133 → 00:55:45,066` **Jake:** 我看一下你的这个电在哪冲 / Let me see where you charge this.
+- `00:55:45,066 → 00:55:47,666` **Shure:** 这个是我我看一下这个对 / This is mine, let me check, right.
+- `00:55:46,000 → 00:55:47,066` **Jake:** 我能看一下这个 / Can I check this?
+- `00:55:47,666 → 00:55:48,566` **Shure:** 放下面的 / Put it underneath.
+- `00:55:52,100 → 00:55:52,566` **Katrina:** 这是什么 / What is this?
+- `00:55:52,566 → 00:55:53,366` **Katrina:** 跟他对接 / Connect it with this.
+- `00:55:53,366 → 00:55:54,566` **Shure:** 这有两个螺丝 / There are two screws here.
+- `00:55:55,066 → 00:55:56,066` **Alice:** 这在录吗 / Is this recording?
+- `00:55:56,533 → 00:55:57,400` **Jake:** 这个在录 / This is recording.
+- `00:55:57,400 → 00:55:58,500` **Jake:** 然后这个正在充 / And this is charging.
+- `00:55:58,500 → 00:55:59,300` **Jake:** 所以没关系 / So it's okay.
+- `00:55:59,300 → 00:56:00,100` **Jake:** 对 / Yeah.
+- `00:56:00,366 → 00:56:01,166` **Jake:** 这就是电太少了 / It's just low on battery.
+- `00:56:02,100 → 00:56:02,900` **Shure:** 是的 / Yes.
+- `00:56:03,500 → 00:56:05,266` **Jake:** 这是干嘛的嗯 / What is this for, hmm?
+- `00:56:06,733 → 00:56:07,533` **Jake:** 嗯 / Hmm.
+- `00:56:08,000 → 00:56:08,966` **Katrina:** 叠开关 / Stack the switches.
+- `00:56:10,100 → 00:56:10,900` **Katrina:** 游戏 / Game.
+- `00:56:12,966 → 00:56:14,566` **Katrina:** 高度调节 / Adjust the height.
+- `00:56:20,466 → 00:56:22,000` **Jake:** 安装图这个样子 / The installation manual looks like this.
+- `00:56:30,833 → 00:56:31,633` **Jake:** 这样是吧 / Like this, right?
+- `00:56:31,633 → 00:56:33,900` **Shure:** 这两个是这儿嗯 / These two go here, hmm.
+- `00:56:32,800 → 00:56:33,700` **Jake:** 这是这 / This is this
+- `00:56:33,833 → 00:56:34,866` **Jake:** 下面这是什么 / What's this below
+- `00:56:37,533 → 00:56:38,600` **Jake:** 下面还有一条 / There's another one below
+- `00:56:39,866 → 00:56:41,533` **Katrina:** 你把它反过来是不是这 / If you flip it over, is it this
+- `00:56:43,733 → 00:56:44,533` **Shure:** oh / oh
+- `00:56:45,233 → 00:56:46,033` **Jake:** oh / oh
+- `00:56:46,700 → 00:56:48,533` **Shure:** holy shit what / holy shit what
+- `00:56:47,733 → 00:56:50,400` **Jake:** what what / what what
+- `00:56:52,733 → 00:56:54,933` **Shure:** 耶 / Yeah
+- `00:56:53,600 → 00:56:55,433` **Katrina:** 哈哈哈 / hahaha
+- `00:57:34,200 → 00:57:36,066` **Katrina:** 要这样弄紧靠紧 / You need to tighten it up like this
+- `00:57:51,866 → 00:57:53,166` **Jake:** 哪个距离不对吗 / Is the distance not right
+- `00:57:58,466 → 00:57:59,800` **Katrina:** 确实该弄长一点 / It should be a bit longer
+- `00:58:00,400 → 00:58:04,366` **Tasha:** 是吗中间这个中间中间这个是谁 / Really? Who is this in the middle, the middle one?
+- `00:58:00,466 → 00:58:03,466` **Jake:** 哎不这个有点 哎呦我去 / Oh no, this is a bit... Oh my gosh
+- `00:58:03,566 → 00:58:07,066` **Jake:** 这边这边有点别扭的这边就是这个大概是这个哎 / This side is a bit awkward, this side is like this, roughly like this
+- `00:58:08,900 → 00:58:10,600` **Jake:** 他是有斜度吗 / Is it slanted
+- `00:58:10,600 → 00:58:11,800` **Jake:** 还是他是直的呀 / Or is it straight
+- `00:58:11,800 → 00:58:13,433` **Jake:** 平行的看起来 / It looks parallel
+- `00:58:13,733 → 00:58:15,466` **Tasha:** 他俩好像是一起的 / They seem to be together
+- `00:58:15,533 → 00:58:17,733` **Jake:** 他两是平行的 / They are parallel
+- `00:58:15,533 → 00:58:17,733` Tasha: 可能原本不是挨着这个屁股对 / Jake: They are parallel
+- `00:58:19,500 → 00:58:22,000` **Katrina:** 他这个长度是固定的是吗 / Is the length fixed
+- `00:58:19,666 → 00:58:21,700` **Jake:** 他这个 他哎呦 / This one, this one, oh
+- `00:58:20,400 → 00:58:21,700` **Shure:** 放倒 / Lay it down
+- `00:58:22,000 → 00:58:26,266` **Jake:** 他这个他这个得弄长一点吗可以吧对 / This one, this one needs to be longer, right
+- `00:58:24,633 → 00:58:26,266` **Katrina:** 昂他是可以调节长度的 / Yeah, it can be adjusted
+- `00:58:30,100 → 00:58:35,066` **Jake:** 哎不对不对不对不是这个得是平行的这两平行的 / No, no, no, these two need to be parallel
+- `00:58:32,766 → 00:58:35,433` **Tasha:** 可能他不在这儿就是这只是大概的 / Maybe it's not here, this is just roughly
+- `00:58:34,533 → 00:58:35,100` **Alice:** 感觉 / It feels like
+- `00:58:35,700 → 00:58:38,200` **Jake:** 然后这个 / And then this
+- `00:58:39,666 → 00:58:41,066` **Lucia:** 如果真的在一块的话 / If they are really together
+- `00:58:40,300 → 00:58:41,666` **Jake:** 这个太长了可能 / This might be too long
+- `00:58:41,066 → 00:58:42,066` **Lucia:** 可能就变成这样了 / It might become like this
+- `00:58:42,066 → 00:58:42,900` **Lucia:** 但是我找不到了 / But I can't find it
+- `00:58:42,900 → 00:58:46,266` **Tasha:** 从中间这个如果没有的话就不是 / If this one in the middle is missing, then it's not
+- `00:58:50,566 → 00:58:51,866` **Jake:** 来一会咱用尺 / Let's use a ruler in a bit
+- `00:58:53,100 → 00:58:54,866` **Jake:** 来这样这样行吗 / Like this, is this okay
+- `00:58:54,866 → 00:58:56,100` **Shure:** 整个大概就行 / Just roughly
+- `00:58:55,133 → 00:58:56,566` **Tasha:** 也不知道谁和谁对 / No idea who goes with who
+- `00:58:56,100 → 00:58:59,500` **Jake:** 打开打开嗯 / Open it, open it, yeah.
+- `00:58:56,566 → 00:58:59,066` **Tasha:** 是他们俩对还是他们俩 / Is it those two or those two?
+- `00:58:57,600 → 00:59:02,066` **Shure:** 啊 不这样 我们先把一一边固定上就好了 / Ah, no, let's first secure one side.
+- `00:59:02,700 → 00:59:03,733` **Shure:** 让他不乱窜 / So it doesn't move around.
+- `00:59:13,533 → 00:59:14,500` **Jake:** 固定一个吧 / Let's secure one side.
+- `00:59:14,600 → 00:59:19,033` **Jake:** 行或者应该倒倒下来得了倒下来 / Or we could flip it over, flip it over.
+- `00:59:23,733 → 00:59:24,733` **Lucia:** 有点难搞 / It's a bit tricky.
+- `00:59:25,700 → 00:59:29,300` **Lucia:** 感觉拼困了累了歇一歇 / I feel like I'm tired from assembling, need a break.
+- `00:59:30,366 → 00:59:33,400` **Lucia:** 他们那边拼那个需要帮忙呢 / Do they need help with their assembly over there?
+- `00:59:33,933 → 00:59:35,300` **Shure:** 那个拿拿耳朵呢 / They're working on the ears.
+- `00:59:35,933 → 00:59:36,733` **Katrina:** 哎呀 / Oh no.
+- `00:59:44,066 → 00:59:45,866` **Jake:** 你们拼完了 / Are you guys done assembling?
+- `00:59:45,366 → 00:59:47,933` **Lucia:** 没有对 / No, not yet.
+- `00:59:46,166 → 00:59:47,266` **Jake:** 先休息一会是吧 / Let's take a break first.
+- `00:59:47,400 → 00:59:48,500` **Shure:** 对拼困了 / Yeah, tired from assembling.
+- `00:59:48,500 → 00:59:49,433` **Jake:** 对行 / Yeah, okay.
+- `00:59:48,566 → 00:59:51,266` **Lucia:** 决定看看有没有什么其他可以帮忙的 / I'll see if there's anything else I can help with.
+- `00:59:54,200 → 00:59:55,200` **Jake:** 我们房间要不要 / How about our room?
+- `00:59:55,333 → 00:59:56,700` **Jake:** 我可能要装饰一下 / I might need to decorate a bit.
+- `00:59:56,766 → 00:59:58,466` **Jake:** 要不我们踩个风 / Or we could check things out.
+- `00:59:59,100 → 00:59:59,700` **Lucia:** 也可以 / That's fine too.
+- `00:59:59,700 → 01:00:03,200` **Lucia:** 我们是只只把一楼这个客厅装饰一下 / Are we just decorating the living room on the first floor?
+
+### `A1_JAKE_DAY1_13000000.srt`
+
+- `00:00:00,000 → 00:00:00,400` **Jake:** 对
+- `00:00:00,600 → 00:00:02,033` **Lucia:** 是只把一楼这个客厅装饰一下
+- `00:00:03,200 → 00:00:04,633` **Lucia:** 还是二楼的客厅也要装饰 / Or also the second-floor living room?
+- `00:00:04,766 → 00:00:05,466` **Jake:** 就一楼吧 / Just the first floor.
+- `00:00:06,166 → 00:00:06,900` **Jake:** 然后还有各位的房间 / And also everyone's rooms.
+- `00:00:07,000 → 00:00:08,866` **Jake:** 我可能找个时间 / I'll find some time.
+- `00:00:08,866 → 00:00:10,733` **Jake:** 今天或者明天或者等你们收拾好 / Today, tomorrow, or whenever you guys are done.
+- `00:00:10,733 → 00:00:11,533` **Jake:** 总之就是 / Anyway
+- `00:00:11,533 → 00:00:15,000` **Jake:** 这几天我会把整个房子用iPhone扫一遍 / I'll scan the whole house with an iPhone in the next few days.
+- `00:00:15,266 → 00:00:19,033` **Jake:** 嗯然后各位的卧室就收拾收拾 / And you guys can tidy up your bedrooms.
+- `00:00:20,566 → 00:00:21,566` **Jake:** 对要扫进去 / Yes, it needs to be scanned.
+- `00:00:21,700 → 00:00:23,866` **Lucia:** 那你要不扫之前通知一声 / Can you let us know before you scan?
+- `00:00:23,066 → 00:00:27,733` **Jake:** 对对当然当然当然 / Yes, of course, of course.
+- `00:00:23,866 → 00:00:25,166` **Lucia:** 对这样我就可以在扫之前 / So I can move the boxes before you scan.
+- `00:00:25,166 → 00:00:27,733` **Lucia:** 把那个箱子拉起来 / I can move the boxes up.
+- `00:00:35,533 → 00:00:37,766` **Lucia:** 我这没口袋这个东西 / I don't have a pocket for this thing.
+- `00:00:37,766 → 00:00:39,400` **Lucia:** 要不然把它拔了 / Maybe I should unplug it.
+- `00:00:40,066 → 00:00:41,366` **Jake:** 呃你看一下它有多少电 / Check how much battery it has.
+- `00:00:41,366 → 00:00:42,833` **Jake:** 如果电很多的话没关系 / If it has a lot, it's fine.
+- `00:00:43,533 → 00:00:44,500` **Lucia:** 哦我在手机上能看 / Oh, I can check on my phone.
+- `00:00:44,500 → 00:00:45,400` **Lucia:** 到它有多少电 / How much battery does it have?
+- `00:00:44,800 → 00:00:45,833` **Jake:** 对对 / Yeah, yeah.
+- `00:01:09,900 → 00:01:12,300` **Lucia:** 93%是不是应该可以拔 / 93% should be enough to unplug it, right?
+- `00:01:11,300 → 00:01:12,866` **Jake:** 对可以拔可以拔 / Yes, you can unplug it.
+- `00:01:12,866 → 00:01:14,133` **Jake:** 对你坐着的时候充嘛 / Charge it while you're sitting.
+- `00:01:14,133 → 00:01:15,333` **Jake:** 然后站着就 / Then stand up and...
+- `00:01:27,866 → 00:01:29,500` **Tasha:** 但不一定他们俩在一起感觉 / But it's not necessarily that they feel...
+- `00:01:29,866 → 00:01:31,833` **Jake:** 来这边 / Come over here.
+- `00:01:30,333 → 00:01:32,500` **Lucia:** 哎他怎么突然变成 / Hey, why did it suddenly change?
+- `00:01:34,966 → 00:01:36,066` **Jake:** 昂我看一下 / Hmm, let me see.
+- `00:01:36,066 → 00:01:36,966` **Jake:** 可以给我看一下吗 / Can I take a look?
+- `00:01:36,966 → 00:01:39,766` **Lucia:** 就是在我把电拔掉之后 / After I unplugged it, it suddenly switched to this screen.
+- `00:01:39,766 → 00:01:42,266` **Lucia:** 他突然变成这个界面了 / It suddenly switched to this screen.
+- `00:01:43,200 → 00:01:44,766` **Lucia:** 是哎对 / Yeah, right.
+- `00:01:44,266 → 00:01:47,466` **Shure:** 这样你先把这几个对 / So, first, handle these... yeah.
+- `00:01:46,566 → 00:01:47,133` **Jake:** 哦 / Oh.
+- `00:01:46,566 → 00:01:48,633` **Lucia:** 这个什么意思 / What does this mean?
+- `00:01:50,400 → 00:01:51,033` **Jake:** 重开一下 / Restart it.
+- `00:01:51,033 → 00:01:52,233` **Jake:** 我也没见过这个 / I've never seen this before.
+- `00:01:53,333 → 00:01:54,366` **Lucia:** 就我把它这样 / So I just...
+- `00:01:54,400 → 00:01:56,400` **Jake:** 对对对对对 / Yeah, yeah, yeah, yeah.
+- `00:01:54,500 → 00:01:55,466` **Lucia:** 就是这样关掉 重开一下 / Just turn it off and on again.
+- `00:01:54,766 → 00:02:00,366` **Shure:** 哥先先先来这个先先把一根给一边给那什么 / Hey bro, first take this, yeah, and give one side to...
+- `00:02:00,533 → 00:02:02,133` **Jake:** 好我这出不来 / Alright, I can't get this out.
+- `00:02:04,733 → 00:02:05,800` **Shure:** 你把那缩一下 / Can you shrink that?
+- `00:02:09,466 → 00:02:11,300` **Tasha:** 这样这个猪就塞不下他 / This way, the pig won't fit.
+- `00:02:11,166 → 00:02:12,833` **Jake:** 这个长度是对的吗 / Is this the right length?
+- `00:02:13,066 → 00:02:13,566` **Katrina:** 都一样的 / They're all the same.
+- `00:02:13,566 → 00:02:14,366` **Shure:** 都是一样 / They're all the same.
+- `00:02:13,566 → 00:02:15,033` **Jake:** 哦OK行 / Oh, okay, fine.
+- `00:02:18,933 → 00:02:21,200` **Lucia:** 啊出来了他应该还是正常的吧 / Ah, it's back. It should be normal now, right?
+- `00:02:21,200 → 00:02:24,200` **Jake:** 好对对没问题嗯 / Yes, yes, no problem, hm.
+- `00:02:21,200 → 00:02:24,500` **Lucia:** 可能是刚才有什么bug了 / Maybe it was just a bug earlier.
+- `00:02:58,800 → 00:02:59,866` **Jake:** 或者装饰二楼 / Or decorate the second floor.
+- `00:02:59,966 → 00:03:03,466` **Jake:** 因为二楼的那个场地 / Because the space on the second floor...
+- `00:03:04,233 → 00:03:06,200` **Jake:** 就做PPT比较方便 / It's more convenient for making PPTs.
+- `00:03:06,566 → 00:03:09,733` **Jake:** 就是就可以摆那个 / Like, you can set up...
+- `00:03:10,500 → 00:03:11,166` **Jake:** 摆摆椅子 / Set up chairs.
+- `00:03:11,166 → 00:03:11,600` **Jake:** 摆很多椅子 / A lot of chairs.
+- `00:03:11,600 → 00:03:13,266` **Jake:** 对 / Yeah.
+- `00:03:13,700 → 00:03:16,000` **Lucia:** 因为二楼的桌子椅子搬到那边去了 / Because the tables and chairs from the second floor were moved over there.
+- `00:03:16,000 → 00:03:18,100` **Jake:** 对所以在二楼装饰 / Right, so we're decorating the second floor.
+- `00:03:19,766 → 00:03:21,400` **Tasha:** 他们这家该放哪里呢 / Where should they put this family?
+- `00:03:21,700 → 00:03:22,966` **Shure:** 是让毛血刷的 / It's for Mao Xueshu.
+- `00:03:22,966 → 00:03:25,100` **Alice:** 哈哈但我觉得他俩又不像一家 / Haha, but I don't think they look like a family.
+- `00:03:25,100 → 00:03:26,666` **Alice:** 因为这个角不太好拼 / Because this corner is hard to fit.
+- `00:03:26,666 → 00:03:27,933` **Alice:** 就比较尖的角 / It's a pretty sharp corner.
+- `00:03:28,600 → 00:03:30,066` **Alice:** 有没有比较尖的角 / Are there any sharper corners?
+- `00:03:30,800 → 00:03:31,766` **Alice:** 他的嘴是吗 / Like his mouth?
+- `00:03:33,300 → 00:03:34,633` **Jake:** 听了一圈了 / I've heard it all around.
+- `00:03:36,300 → 00:03:38,066` **Jake:** 这一圈很强 / This round is really strong.
+- `00:03:36,333 → 00:03:38,100` **Jake:** 这一圈很强 / This round is really strong.
+- `00:03:38,933 → 00:03:40,266` **Lucia:** 但是感觉只有 / But it feels like only...
+- `00:03:40,266 → 00:03:42,900` **Lucia:** 只有这几个是比较确定的 / Only these few are more certain.
+- `00:03:42,533 → 00:03:43,266` **Jake:** 嗯 / Yeah.
+- `00:03:44,066 → 00:03:45,600` **Lucia:** 我们找到了很多两个 / We've found a lot of pairs.
+- `00:03:45,600 → 00:03:46,966` **Lucia:** 两个是一起的 / Pairs that go together.
+- `00:03:46,966 → 00:03:49,333` **Lucia:** 但是不确定他们放在哪里 / But we're not sure where to place them.
+- `00:03:49,500 → 00:03:50,133` **Jake:** 嗯 / Hmm.
+- `00:03:49,500 → 00:03:51,033` **Alice:** 但是找不到他们的家 / But we can't find their home.
+- `00:03:56,433 → 00:03:57,566` **Jake:** 好多好朋友 / So many good friends.
+- `00:04:03,733 → 00:04:04,700` **Tasha:** 噔噔噔噔 / Dun dun dun dun.
+- `00:04:06,133 → 00:04:07,966` **Lucia:** 哇哎这个真的好一致啊 / Wow, this is really consistent.
+- `00:04:09,033 → 00:04:11,300` **Jake:** 我去哈哈哈 / Oh my gosh, haha.
+- `00:04:10,500 → 00:04:11,700` **Lucia:** 你是怎么找到的 / How did you find it?
+- `00:04:11,900 → 00:04:13,333` **Tasha:** 他这有两个尖尖 / He has two pointy parts here.
+- `00:04:13,466 → 00:04:15,200` **Jake:** 我去这尖尖你能看到 / Wow, you can see those pointy parts?
+- `00:04:15,200 → 00:04:16,100` **Jake:** 眼神真好 / Great eyesight.
+- `00:04:16,233 → 00:04:17,333` **Jake:** 我这看不清 / I can't see them clearly.
+- `00:04:19,500 → 00:04:22,100` **Tasha:** 哦这个弧度我之前看到过 / Oh, I saw this curve before.
+- `00:04:23,266 → 00:04:24,066` **Jake:** 有点6 / Pretty cool.
+- `00:04:24,966 → 00:04:26,500` **Shure:** 人生的最后7天 / The last 7 days of life.
+- `00:04:28,800 → 00:04:30,300` **Shure:** 来吧立起来 / Come on, stand it up.
+- `00:04:30,600 → 00:04:33,500` **Lucia:** 会不会是那个鸟翅膀 / Could it be that bird's wing?
+- `00:04:33,500 → 00:04:34,733` **Shure:** 哦还有一个是吗 / Oh, there's another one?
+- `00:04:34,733 → 00:04:35,966` **Jake:** 对还有一个 / Yeah, there's another one.
+- `00:04:37,466 → 00:04:38,033` **Alice:** 完美 / Perfect.
+- `00:04:39,500 → 00:04:40,766` **Lucia:** 哎棒棒 / Great job.
+- `00:04:42,200 → 00:04:43,700` **Alice:** 那 说明鸟不在边边 / That means the bird isn't on the edge.
+- `00:04:43,700 → 00:04:44,700` **Tasha:** 嗯对 / Yeah, right.
+- `00:04:44,700 → 00:04:45,366` **Tasha:** 这个这个 / This, this
+- `00:04:45,366 → 00:04:46,700` **Tasha:** 感觉这个弧度很像 / Feels like this curve is very similar
+- `00:04:48,800 → 00:04:51,800` **Jake:** 完了换了 / Done, it's changed
+- `00:04:52,733 → 00:04:53,533` **Tasha:** 很像 / Very similar
+- `00:04:53,900 → 00:04:55,633` **Tasha:** 又咋不像哎 / How does it not look alike, huh
+- `00:04:58,466 → 00:04:59,400` **Jake:** 确实有点像 / It does look a bit similar
+- `00:05:17,400 → 00:05:17,933` **Lucia:** 哎对 / Yeah, right
+- `00:05:17,933 → 00:05:19,066` **Lucia:** 这个也是对的 / This is also correct
+- `00:05:19,766 → 00:05:21,033` **Jake:** 这是你记住的吗 / Did you remember this?
+- `00:05:21,033 → 00:05:21,766` **Tasha:** 昂 / Yeah
+- `00:05:26,500 → 00:05:27,333` **Tasha:** 然后 / Then
+- `00:05:40,066 → 00:05:41,633` **Alice:** 这进去了杆不太 / This went in, the rod is not quite
+- `00:05:42,966 → 00:05:43,933` **Alice:** 像又不太像 / Like but not quite
+- `00:05:44,833 → 00:05:45,400` **Alice:** 这个头 / This head
+- `00:05:49,166 → 00:05:50,566` **Lucia:** 我们刚才是不是给这个蛇 / Did we just find a buddy for this snake
+- `00:05:50,566 → 00:05:52,400` **Lucia:** 已经找到了一个小伙伴 / Already found a buddy
+- `00:05:52,400 → 00:05:56,000` **Tasha:** 对蛇跟那个熊猫哎 / Right, the snake and that panda, huh
+- `00:05:56,000 → 00:05:57,733` **Tasha:** 怎么怎么怎么弄来着 / How, how did we do this
+- `00:06:03,200 → 00:06:04,433` **Alice:** 有人长这样吗 / Does anyone look like this
+- `00:06:03,200 → 00:06:04,733` **Alice:** 有人长这样吗 / Does anyone look like this
+- `00:06:06,933 → 00:06:08,666` **Lucia:** 好像不太有人长这样 / Seems like not many look like this
+- `00:06:46,466 → 00:06:47,266` **Shure:** 无敌 / Invincible
+- `00:07:11,500 → 00:07:13,000` **Jake:** 把它弄一边长是吧 / Make it grow longer, right
+- `00:07:13,000 → 00:07:17,066` **Jake:** 对那把它竖过来倒过来 / Yeah, make it vertical and upside down
+- `00:07:20,066 → 00:07:22,300` **Tasha:** 就还剩最后的 / Only the last ones left
+- `00:07:22,866 → 00:07:25,966` **Tasha:** 这这两个也没找着家是吗对 / These two haven't found a home yet, right
+- `00:07:27,700 → 00:07:30,000` **Tasha:** 还剩最后5个找着家的 / Only five left to find homes
+- `00:07:31,600 → 00:07:34,733` **Tasha:** 要不尝试着把它们把这些放进去吧 / How about we try putting them in
+- `00:07:35,066 → 00:07:36,733` **Jake:** 弄长一点呗 / Make it a bit longer
+- `00:07:35,600 → 00:07:37,133` **Tasha:** 这些形状就出来了 / These shapes will come out
+- `00:07:37,833 → 00:07:39,000` **Shure:** 都行
+- `00:07:39,033 → 00:07:39,933` **Jake:** 嗯 / Hmm
+- `00:07:42,933 → 00:07:43,733` **Shure:** 也别太长 / Not too long
+- `00:07:43,733 → 00:07:44,966` **Shure:** 别比那个黑板 / Not longer than the blackboard
+- `00:07:45,300 → 00:07:48,733` **Lucia:** 这怎么放能让他不不位移这样呗 / How to place it so it doesn't move like this
+- `00:07:47,200 → 00:07:48,766` **Jake:** 就这样呗 / Just like this
+- `00:07:52,200 → 00:07:54,366` **Shure:** 这个还是高 / This is still high
+- `00:07:53,600 → 00:07:54,366` **Jake:** 嗯 / Hmm
+- `00:07:57,700 → 00:07:59,666` **Jake:** 这个高一点 / This is a bit high
+- `00:08:00,400 → 00:08:01,933` **Shure:** 再高一点点这个 / Raise it a bit more
+- `00:08:03,300 → 00:08:03,700` **Shure:** 啊过了 / Ah, it's over
+- `00:08:03,700 → 00:08:04,566` **Shure:** 过了过了 / Passed, passed.
+- `00:08:04,966 → 00:08:06,366` **Shure:** OK OK好 / OK OK good.
+- `00:08:06,133 → 00:08:06,733` **Jake:** 好 / Okay.
+- `00:08:18,600 → 00:08:19,400` **Shure:** yes / Yes.
+- `00:08:26,166 → 00:08:27,200` **Shure:** 把它拼上对 / Put it together, right.
+- `00:08:40,266 → 00:08:41,066` **Shure:** good good good / Good, good, good.
+- `00:08:40,633 → 00:08:43,900` **Jake:** 妙啊goodgood / Brilliant, good, good.
+- `00:08:43,866 → 00:08:45,333` **Alice:** 这俩像在一块吗 / Do these two look like they're together?
+- `00:08:45,333 → 00:08:46,466` **Shure:** 人类的智慧 / Human wisdom.
+- `00:08:47,100 → 00:08:49,000` **Tasha:** 像又不太像 / They look similar but not quite.
+- `00:08:49,000 → 00:08:49,766` **Lucia:** 这个好像 / This one looks like it.
+- `00:08:49,766 → 00:08:51,300` **Lucia:** 是不是很像在一起啊 / Does it look like they go together?
+- `00:08:52,333 → 00:08:53,600` **Lucia:** 这俩嗯 / These two, hmm.
+- `00:08:53,700 → 00:08:55,766` **Lucia:** 然后这个如果还在这的话就是这样 / And if this one goes here, it's like this.
+- `00:08:55,766 → 00:08:57,333` **Shure:** 师傅你是干什么工作的 / Sir, what do you do for a living?
+- `00:08:57,666 → 00:09:00,500` **Jake:** 哼哼哼哼修空调是吧 / Hmm, fixing air conditioners, right?
+- `00:09:00,500 → 00:09:02,100` **Lucia:** 接下来这里还缺一口 / Here, there's still a gap.
+- `00:09:02,100 → 00:09:03,300` **Shure:** 先头先头按上去 / Push the top part first.
+- `00:09:03,300 → 00:09:04,100` **Shure:** 对 / Right.
+- `00:09:04,466 → 00:09:06,433` **Jake:** 这个怎么看起来很短呢 / Why does this look so short?
+- `00:09:07,266 → 00:09:07,900` **Shure:** 没有没有 / No, no.
+- `00:09:07,566 → 00:09:11,300` **Jake:** ok的这确实是有一个 / Okay, this indeed has a bit.
+- `00:09:07,900 → 00:09:08,700` **Shure:** OK的OK / Okay, okay.
+- `00:09:08,700 → 00:09:10,866` **Tasha:** 我们已经越来越接近真相了 / We're getting closer to the truth.
+- `00:09:10,866 → 00:09:12,400` **Tasha:** 对哈哈 / Yeah, haha.
+- `00:09:12,466 → 00:09:14,533` **Tasha:** 越来越有拼下去的动力了 / I'm getting more motivated to keep going.
+- `00:09:16,366 → 00:09:19,966` **Tasha:** 还有3个人无家可归 / There are still three people without a home.
+- `00:09:31,833 → 00:09:32,633` **Jake:** 哎呀 / Oh dear.
+- `00:09:34,766 → 00:09:35,566` **Jake:** 纯手工 / Pure handmade.
+- `00:09:39,100 → 00:09:43,066` **Shure:** 你要给他跟下面它是个六六边形的 / You need to align it with the bottom, it's a hexagon.
+- `00:09:43,500 → 00:09:46,066` **Shure:** 你要找好那个角度 / You need to find the right angle.
+- `00:09:43,500 → 00:09:48,633` **Jake:** 嗯 哦卡死了是吧 / Hmm, oh, it's stuck, right?

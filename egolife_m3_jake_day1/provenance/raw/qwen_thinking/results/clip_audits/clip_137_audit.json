@@ -1,0 +1,575 @@
+{
+  "clip_id": 137,
+  "clip_path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/work/segments/segment_0137.mp4",
+  "end_to_end_memory_generation_ms": 688536.3989699981,
+  "latency_ms": {
+    "clip_decode": 7561.734180999338,
+    "deepgram_asr": 229.76518400537316,
+    "mai_transcribe_asr": 1260.8274609956425,
+    "asr_total": 1262.0178270008182,
+    "audio_segmentation": 7.016713003395125,
+    "speech_embedding_campplus": 2121.642188008991,
+    "facial_detection_recognition_buffalo_l": 4216.442039993126,
+    "face_clustering": 9.957442001905292,
+    "vlm_memory_generation": 269771.97192099993,
+    "text_embedding": 598.4309049963485,
+    "graph_update_total": 1474.4649849890266
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 137,
+      "model": "openai/text-embedding-3-large",
+      "input_count": 14,
+      "input_chars": 910,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789444716.916186,
+          "status": "success",
+          "total_tokens": 359,
+          "request_end": 1789444717.5144675,
+          "latency_ms": 598.2819650089368
+        }
+      ],
+      "total_tokens": 359,
+      "latency_ms": 598.4309049963485
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": 229.76518400537316,
+        "openrouter-mai-transcribe-2": 1260.8274609956425
+      },
+      "asr_total_ms": 1262.0178270008182,
+      "audio_segmentation_ms": 7.016713003395125,
+      "speech_embedding_ms": 2121.642188008991,
+      "graph_update_ms": 1474.3137009936618,
+      "asr_segment_count": 11,
+      "speech_embedding_count": 11,
+      "voice_identity_count": 9,
+      "asr_precomputed": true,
+      "asr_execution": "concurrent_providers",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr",
+        "openrouter-mai-transcribe-2"
+      ],
+      "total_ms": 3622.907552999095
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 4216.442039993126,
+      "face_clustering_ms": 9.957442001905292,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 400,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 4443.817694002064
+    },
+    "vlm": {
+      "identity_system_prompt": "Preserve speaker identity when constructing memory from the supplied character features.\n\n- Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\n- For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker. Preserve distinct substantive utterances as separate atomic memories. Do not replace the ID with 'a speaker', 'the voice track', or an inferred visual role.\n- When a semantic conclusion concerns a known speaker, retain that speaker's exact voice ID. Use only IDs supplied in the input; do not copy example IDs from instructions.\n- A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person, or assert face/voice equivalence, without supporting evidence. If no face IDs are supplied, do not invent any.\n- Keep dialogue grounded in the provided transcript. Do not substitute a plausible scene description for what the speaker actually said.\n\nKeep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.",
+      "supplied_voice_ids": [
+        "<voice_1876>",
+        "<voice_1560>",
+        "<voice_364>",
+        "<voice_1845>",
+        "<voice_1208>",
+        "<voice_1909>",
+        "<voice_1910>",
+        "<voice_1911>",
+        "<voice_261>"
+      ],
+      "context_preparation_ms": 3906.8839620013023,
+      "vlm_ms": 269771.97192099993,
+      "raw_response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table covered with a red and white checkered tablecloth in a room with a whiteboard in the background.\",\n\t\t\"<voice_1876> says: '可以，纠正我们有把契他。'\",\n\t\t\"<voice_1560> says: '喏，对嘛，唱唱歌，跳跳舞。'\",\n\t\t\"<voice_364> says: '对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。'\",\n\t\t\"<voice_1845> says: '一起卡拉OK的环境吧。 喏，也可以。'\",\n\t\t\"<voice_1208> says: '传数据让他们自己通过我们的世界，然后喝喝酒。'\",\n\t\t\"<voice_1909> says: '传数据的时候大家唱唱歌好了。'\",\n\t\t\"<voice_1910> says: '可以，可以，可以。'\",\n\t\t\"<voice_1911> says: '放一个小电影或者干巴的。'\",\n\t\t\"<voice_261> says: '对不对，中间中间空一个小的。'\",\n\t\t\"At the end of the clip, a person's finger points towards the camera lens.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are planning a session that combines data transfer tasks with entertainment activities such as karaoke and dancing.\",\n\t\t\"There is consensus among the group to schedule breaks for singing and watching movies during the data transfer process.\",\n\t\t\"The discussion involves logistical details regarding timing and the environment for the activities.\"\n\t]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A group of people are seated around a table covered with a red and white checkered tablecloth in a room with a whiteboard in the background.",
+          "<voice_1876> says: '可以，纠正我们有把契他。'",
+          "<voice_1560> says: '喏，对嘛，唱唱歌，跳跳舞。'",
+          "<voice_364> says: '对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。'",
+          "<voice_1845> says: '一起卡拉OK的环境吧。 喏，也可以。'",
+          "<voice_1208> says: '传数据让他们自己通过我们的世界，然后喝喝酒。'",
+          "<voice_1909> says: '传数据的时候大家唱唱歌好了。'",
+          "<voice_1910> says: '可以，可以，可以。'",
+          "<voice_1911> says: '放一个小电影或者干巴的。'",
+          "<voice_261> says: '对不对，中间中间空一个小的。'",
+          "At the end of the clip, a person's finger points towards the camera lens."
+        ],
+        "high_level_conclusions": [
+          "The participants are planning a session that combines data transfer tasks with entertainment activities such as karaoke and dancing.",
+          "There is consensus among the group to schedule breaks for singing and watching movies during the data transfer process.",
+          "The discussion involves logistical details regarding timing and the environment for the activities."
+        ]
+      },
+      "media": {
+        "frame_count": 60,
+        "video_duration_seconds": 30.0
+      },
+      "attempts": [
+        {
+          "phase": "build",
+          "question_id": null,
+          "method": null,
+          "segment_id": 137,
+          "call_id": "6b206918-1c5a-4eae-a5a9-14d1c703eaf4",
+          "purpose": "memory_construction",
+          "model": "Qwen/Qwen3.5-4B",
+          "provider": "local CUDA",
+          "request_start": 1789444447.1430569,
+          "ttft_ms": null,
+          "media": {
+            "frame_count": 60,
+            "video_duration_seconds": 30.0
+          },
+          "response": "{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table covered with a red and white checkered tablecloth in a room with a whiteboard in the background.\",\n\t\t\"<voice_1876> says: '可以，纠正我们有把契他。'\",\n\t\t\"<voice_1560> says: '喏，对嘛，唱唱歌，跳跳舞。'\",\n\t\t\"<voice_364> says: '对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。'\",\n\t\t\"<voice_1845> says: '一起卡拉OK的环境吧。 喏，也可以。'\",\n\t\t\"<voice_1208> says: '传数据让他们自己通过我们的世界，然后喝喝酒。'\",\n\t\t\"<voice_1909> says: '传数据的时候大家唱唱歌好了。'\",\n\t\t\"<voice_1910> says: '可以，可以，可以。'\",\n\t\t\"<voice_1911> says: '放一个小电影或者干巴的。'\",\n\t\t\"<voice_261> says: '对不对，中间中间空一个小的。'\",\n\t\t\"At the end of the clip, a person's finger points towards the camera lens.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are planning a session that combines data transfer tasks with entertainment activities such as karaoke and dancing.\",\n\t\t\"There is consensus among the group to schedule breaks for singing and watching movies during the data transfer process.\",\n\t\t\"The discussion involves logistical details regarding timing and the environment for the activities.\"\n\t]\n}",
+          "raw_response": "The user wants me to generate a JSON object containing a `video_description` and `high_level_conclusions` based on the provided video frames and voice features.\n\n**1. Analyze the Input:**\n*   **Video Frames:** There are many frames (0.00s to 29.50s). The scene shows a group of people sitting around a table covered with a checkered tablecloth. They appear to be in a meeting or discussion setting. There is a whiteboard in the background. The faces are blurred out. One person on the left seems to be wearing VR glasses or a headset. Another person on the right also appears to have something on their head/face.\n*   **Voice Features:**\n    *   `<voice_1876>`: \"MAI: 可以，纠正我们有把契他。\" (Can, correct we have a contract/chit?) - Time: 00:01-00:04\n    *   `<voice_1560>`: \"MAI: 喏，对嘛，唱唱歌，跳跳舞。\" (Here, yes, sing songs, dance.) - Time: 00:03-00:08\n    *   `<voice_364>`: \"MAI: 对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。\" (Yes, this time is too long, middle need... No no, I mean middle might have an hour we transfer data, your eyeballs.) - Time: 00:07-00:10, 00:13-00:19\n    *   `<voice_1845>`: \"MAI: 一起卡拉OK的环境吧。 喏，也可以。\" (Together Karaoke environment. Here, can also.) - Time: 00:09-00:12, 00:11-00:13\n    *   `<voice_1208>`: \"MAI: 传数据让他们自己通过我们的世界，然后喝喝酒。\" (Transfer data let them pass through our world, then drink alcohol.) - Time: 00:18-00:23\n    *   `<voice_1909>`: \"MAI: 传数据的时候大家唱唱歌好了。\" (When transferring data everyone sing songs good.) - Time: 00:22-00:24\n    *   `<voice_1910>`: \"MAI: 可以，可以，可以。\" (Can, can, can.) - Time: 00:24-00:26\n    *   `<voice_1911>`: \"MAI: 放一个小电影或者干巴的。\" (Play a small movie or dry.) - Time: 00:25-00:27\n    *   `<voice_261>`: \"MAI: 对不对，中间中间空一个小的。\" (Right, middle middle empty a small one.) - Time: 00:27-00:30\n\n**2. Video Description Construction:**\n*   **Scene:** A group of people sitting around a table with a red and white checkered cloth.\n*   **Activity:** They seem to be discussing something, possibly related to a project involving VR or data transfer (based on dialogue).\n*   **Specific Actions:**\n    *   People are seated.\n    *   One person on the left gestures with their hand.\n    *   At 29.00s, a finger points into the camera lens.\n    *   The person on the far left is wearing dark clothing and what looks like a headset/glasses.\n    *   The person on the far right has reddish hair.\n    *   There is a laptop on the table.\n    *   A whiteboard is visible in the background.\n*   **Drafting descriptions:**\n    *   Group of people sitting around a table with a checkered tablecloth.\n    *   They are engaged in a discussion.\n    *   A person on the left gestures while talking.\n    *   A finger points towards the camera at the end.\n    *   A laptop is open on the table.\n    *   A whiteboard is visible behind them.\n\n**3. High-Level Conclusions Construction:**\n*   **Identity Resolution:** All voice features are labeled \"MAI\". This suggests a single speaker named MAI is providing the audio track, or the system is attributing all speech to this label. However, looking closely at the prompt instructions: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n*   Wait, the instruction says \"Preserve speaker identity when constructing memory from the supplied character features.\" and \"Use only IDs supplied in the input; do not copy example IDs from instructions.\"\n*   The voice features provided are all tagged with `<voice_xxx>`. The ASR text starts with \"MAI:\". This implies the speaker's name is likely MAI. But the instruction says \"Do not replace the ID with 'a speaker'... or an inferred visual role.\" It also says \"A voice ID does not establish which visible person is speaking. Do not assign it to the camera wearer or another visible person... without supporting evidence.\"\n*   Since there are multiple voice IDs (`<voice_1876>`, `<voice_1560>`, etc.), but they all say \"MAI:\", it's possible these are different recordings of the same person (MAI) or different people mislabeled. Given the context of \"memory construction\", usually, if multiple IDs exist, they represent different utterances. If they all say \"MAI\", it strongly suggests one speaker.\n*   However, the instruction regarding \"Equivalence\" says: \"If a face and a voice feature refer to the same character, indicate it using this exact format: Equivalence: <face_x>, <voice_y>\".\n*   Looking at the Face features section in the prompt template: \"Face features:Voice features:...\". Wait, the prompt text provided in the *user message* actually lists \"Face features:\" followed immediately by \"Voice features:\". But there are NO actual face feature IDs listed in the text block provided in the prompt! It just says \"Face features:Voice features:{...}\".\n*   Let me re-read the input carefully.\n    *   \"Face features:Voice features:{...}\"\n    *   There are no specific face IDs like `<face_1>`, `<face_2>` provided in the text block.\n    *   Therefore, I cannot create an \"Equivalence\" statement because I don't have face IDs to link to.\n    *   Wait, looking at the very beginning of the prompt instructions: \"You will be given a video and a set of character features. Each feature is either a face... or a voice... Each feature has a unique ID enclosed in angle brackets.\"\n    *   In the *actual input data* provided by the user:\n        *   \"Face features:Voice features:{...}\" -> This looks like a formatting error in the prompt provided to me, or it means there are no face features listed separately.\n        *   Actually, looking closer at the raw text: \"Face features:Voice features:{...}\". It seems the face features list is empty or missing.\n        *   If there are no face IDs, I cannot make equivalences.\n    *   Wait, I need to check if I missed anything. The prompt says \"Face features:Voice features:{...}\". It doesn't list any face IDs.\n    *   So, `high_level_conclusions` should probably contain the summaries of the speech attributed to the voice IDs, or general inferences.\n    *   Instruction: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   This is a bit conflicting with the standard \"High-Level Conclusions\" definition (\"reasoning-based conclusions\"). Usually, \"episodic memory\" goes into `video_description` or a separate field. But the instruction says \"include at least one episodic memory... using the exact ID as the speaker.\" inside the \"High-Level Conclusions\" section? Or is it part of the general task?\n    *   Re-reading the first paragraph of instructions: \"Your task consists of two parts: 1. Video Description... 2. High-Level Conclusions...\".\n    *   Then the second paragraph: \"Preserve speaker identity when constructing memory from the supplied character features... For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker...\".\n    *   This instruction about \"episodic memory\" seems to apply to the overall output generation process, potentially within the `video_description` or `high_level_conclusions`. Given the structure requested (JSON with `video_description` and `high_level_conclusions`), and the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\", I should integrate the memory requirements into the appropriate fields.\n    *   Usually, `video_description` describes *what happened*. `high_level_conclusions` describes *who did what* or *intentions*.\n    *   The instruction \"For every supplied voice ID... include at least one episodic memory... using the exact ID as the speaker\" sounds like it belongs in `video_description` as specific events, OR `high_level_conclusions` as specific attribution.\n    *   However, looking at the instruction \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\" implies I shouldn't change the schema.\n    *   Let's look at the instruction again: \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   This sounds like a requirement for the content of the output. Where does it fit best? `video_description` is for atomic events. `high_level_conclusions` is for reasoning.\n    *   If I put the quote in `video_description`, it fits \"atomic event\". E.g., \"Speaker <voice_1876> says: '...'\".\n    *   If I put it in `high_level_conclusions`, it fits \"identity resolution\" or \"summary\".\n    *   Let's check the constraint: \"Preserve speaker identity when constructing memory from the supplied character features.\"\n    *   Okay, I will add entries to `video_description` that capture the speech events using the voice IDs, as these are atomic events of communication.\n    *   Wait, the instruction says \"include at least one episodic memory...\".\n    *   Let's try to put the speech summaries in `video_description` as they describe the action of speaking.\n    *   Also, regarding `high_level_conclusions`: Since there are no face IDs, I cannot state equivalences. I can state that the group is discussing data transfer and entertainment (Karaoke/Dancing).\n    *   Wait, I need to check if there are implicit face IDs. The prompt says \"Each feature is either a face... or a voice... Each feature has a unique ID\". The input text shows \"Face features:Voice features:{...}\". This implies the Face features list is empty.\n    *   So I will not generate Equivalence lines.\n\n    *   **Refining Video Description:**\n        *   Need to incorporate the voice IDs into the description of the events.\n        *   Event 1: Group sitting at table.\n        *   Event 2: Person on left speaks (<voice_1876>).\n        *   Event 3: Discussion continues about singing/dancing (<voice_1560>).\n        *   Event 4: Discussion about timing and data transfer (<voice_364>).\n        *   Event 5: Suggestion of Karaoke environment (<voice_1845>).\n        *   Event 6: Discussion about passing through worlds/drinking (<voice_1208>).\n        *   Event 7: Agreement on singing during data transfer (<voice_1909>).\n        *   Event 8: Confirmation (<voice_1910>).\n        *   Event 9: Suggestion of watching a movie (<voice_1911>).\n        *   Event 10: Final comment on spacing (<voice_261>).\n        *   Event 11: Finger pointing at camera.\n\n    *   **Refining High-Level Conclusions:**\n        *   Since I can't do equivalences, I'll summarize the intent.\n        *   \"Group discusses integrating data transfer with entertainment activities like karaoke.\"\n        *   \"Participants agree on a plan involving singing and movies.\"\n        *   Wait, the instruction says \"For every supplied voice ID with nonempty speech, include at least one episodic memory...\". This might imply I need to list them specifically.\n        *   Let's ensure the `video_description` captures the speech using the IDs.\n        *   Example: \"<voice_1876> states: '可以，纠正我们有把契他。'\"\n        *   This satisfies the \"include at least one episodic memory... using the exact ID\" rule within the context of describing the video events.\n\n    *   **Wait, one more check on Face Features:**\n        *   The input text literally says \"Face features:Voice features:{...}\". There is nothing between the colon and the Voice features. So no face IDs.\n        *   So `high_level_conclusions` will not contain \"Equivalence: ...\".\n\n    *   **Constraint Check:** \"Preserve speaker identity when constructing memory from the supplied character features.\" -> Use `<voice_xxx>`.\n    *   \"Do not replace the ID with 'a speaker'...\" -> Use `<voice_xxx>`.\n    *   \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> Standard JSON.\n\n    *   **Plan:**\n        1.  Create `video_description` array. Each item describes an atomic event. Include the voice ID and transcript where speech occurs.\n        2.  Create `high_level_conclusions` array. Summarize the conversation flow and intent. Since no face IDs, no equivalences.\n\n    *   **Transcript Translation/Handling:** The ASR contains Chinese characters. I should preserve them or translate? The instruction says \"quotes or faithfully summarizes that speaker's transcript\". Preserving the original text (including Chinese) is safer for \"faithfully summarizes\". I will keep the Chinese text as provided in the ASR.\n\n    *   **Drafting Content:**\n        *   Frame 0-25: Group discussion around table.\n        *   <voice_1876>: \"可以，纠正我们有把契他。\"\n        *   <voice_1560>: \"喏，对嘛，唱唱歌，跳跳舞。\"\n        *   <voice_364>: \"对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。\"\n        *   <voice_1845>: \"一起卡拉OK的环境吧。 喏，也可以。\"\n        *   <voice_1208>: \"传数据让他们自己通过我们的世界，然后喝喝酒。\"\n        *   <voice_1909>: \"传数据的时候大家唱唱歌好了。\"\n        *   <voice_1910>: \"可以，可以，可以。\"\n        *   <voice_1911>: \"放一个小电影或者干巴的。\"\n        *   <voice_261>: \"对不对，中间中间空一个小的。\"\n        *   End: Finger points at camera.\n\n    *   **Optimizing for Conciseness:** Combine similar speech turns if they happen close together, but the instruction says \"Preserve distinct substantive utterances as separate atomic memories.\" So I should treat each distinct voice segment as a separate memory/event in the description.\n\n    *   **Final check on constraints:**\n        *   \"Do not substitute a plausible scene description for what the speaker actually said.\" -> Must use the transcript.\n        *   \"Keep the existing video_description/high_level_conclusions JSON schema...\" -> OK.\n        *   \"Return one complete JSON object...\" -> OK.\n\n    *   **One detail:** The prompt asks to \"include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\" This applies to *every* supplied voice ID. So I must ensure every `<voice_xxx>` appears in the output. I will put them in `video_description` as they represent the events of speaking.\n\n    *   **Wait, is `high_level_conclusions` better for summaries?**\n        *   \"High-Level Conclusions: Generate high-level reasoning-based conclusions that go beyond surface-level observations.\"\n        *   \"Video Description: Generate a detailed and cohesive description... Each description should focus on a single atomic event or fact.\"\n        *   Speech acts are atomic events. So putting them in `video_description` is correct.\n        *   `high_level_conclusions` should be about the *implication* of the speech. e.g., \"The group plans to combine data transfer tasks with leisure activities.\"\n\n    *   **Wait, checking the instruction again:** \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   This instruction is placed under the general \"Your task consists of two parts\" header but before the Output Format. It seems to be a global constraint on how to handle voice features.\n    *   I will embed these memories in `video_description`.\n\n    *   **Wait, one more thing:** The prompt says \"Face features:Voice features:{...}\". It's possible the user meant to provide face features but didn't. I must work with what I have. No face IDs = No Equivalence statements.\n\n    *   **Let's construct the JSON.**\n\n    *   **Video Description Items:**\n        1.  A group of people sit around a table with a checkered tablecloth in a room with a whiteboard.\n        2.  <voice_1876> says: \"可以，纠正我们有把契他。\"\n        3.  <voice_1560> says: \"喏，对嘛，唱唱歌，跳跳舞。\"\n        4.  <voice_364> says: \"对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。\"\n        5.  <voice_1845> says: \"一起卡拉OK的环境吧。 喏，也可以。\"\n        6.  <voice_1208> says: \"传数据让他们自己通过我们的世界，然后喝喝酒。\"\n        7.  <voice_1909> says: \"传数据的时候大家唱唱歌好了。\"\n        8.  <voice_1910> says: \"可以，可以，可以。\"\n        9.  <voice_1911> says: \"放一个小电影或者干巴的。\"\n        10. <voice_261> says: \"对不对，中间中间空一个小的。\"\n        11. A person's finger points towards the camera lens.\n\n    *   **High Level Conclusions:**\n        1.  The participants discuss scheduling data transfer sessions alongside entertainment activities like karaoke and dancing.\n        2.  There is agreement on the feasibility of combining technical tasks with leisure time.\n        3.  Suggestions include watching movies or having drinks during the process.\n\n    *   **Wait, I need to check if I should merge some items.** \"Be concise and avoid duplicate events.\"\n    *   The speech segments are distinct enough to warrant separate mentions if they convey different ideas (timing, activity type, confirmation).\n    *   I will group the speech into logical chunks in the description to maintain conciseness while preserving the ID usage.\n    *   Actually, \"Preserve distinct substantive utterances as separate atomic memories.\" -> I should keep them somewhat separate.\n    *   Let's refine the descriptions to be smoother.\n\n    *   **Revised Plan:**\n        *   Describe the scene setup.\n        *   List the speech events with IDs.\n        *   List the concluding actions (finger point).\n        *   High level conclusions about the meeting's purpose.\n\n    *   **Wait, one critical check:** \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   Does \"episodic memory\" mean it *must* be in `video_description`? Or can it be in `high_level_conclusions`?\n    *   Given `video_description` is for \"atomic event or fact\", quoting speech is an atomic event.\n    *   Given `high_level_conclusions` is for \"reasoning-based conclusions\", summarizing the *content* of the speech might fit there, but the instruction emphasizes \"quotes or faithfully summarizes... using the exact ID\". This feels like a specific requirement for the memory construction part of the task, often associated with the description of events. I will place the direct quotes in `video_description`.\n\n    *   **Wait, I notice the instruction says \"Keep the existing video_description/high_level_conclusions JSON schema and all other task instructions unchanged.\"**\n    *   This implies I should follow the standard pattern.\n    *   Okay, ready to write.\n\n    *   **Wait, one last check on Face Features:**\n        *   The input text is \"Face features:Voice features:{...}\".\n        *   There is absolutely no face ID like `<face_1>`.\n        *   So I definitely cannot write \"Equivalence: <face_1>, <voice_1876>\".\n        *   I will leave `high_level_conclusions` free of equivalences.\n\n    *   **Final check on Voice IDs:**\n        *   `<voice_1876>`\n        *   `<voice_1560>`\n        *   `<voice_364>`\n        *   `<voice_1845>`\n        *   `<voice_1208>`\n        *   `<voice_1909>`\n        *   `<voice_1910>`\n        *   `<voice_1911>`\n        *   `<voice_261>`\n        *   All must be used.\n\n    *   **Formatting:** Valid JSON. No markdown code blocks around the JSON itself? \"Please only return the valid JSON object, without any additional explanation or formatting.\" -> I will output raw JSON text. Wait, usually I wrap in ```json``` for clarity but the instruction says \"without any additional explanation or formatting\". I will output raw text. Wait, looking at previous examples, usually markdown is preferred for readability but strict instruction says \"only return the valid JSON object\". I will output the JSON string directly.\n    *   Actually, to be safe with parsing, I will output the JSON block.\n    *   Wait, \"without any additional explanation or formatting\" usually means no conversational text before/after. Markdown code blocks are technically formatting. I will output the raw JSON string.\n    *   Wait, I am an AI model. I should output the JSON.\n    *   Let's check the instruction \"Return one complete JSON object...\".\n    *   Okay.\n\n    *   **Wait, one nuance:** \"Preserve speaker identity when constructing memory from the supplied character features.\"\n    *   \"Voice features map exact IDs such as <voice_0> to timestamped transcripts. These IDs already identify the speakers; they remain usable even when no face features are supplied or the visible speaker cannot be identified.\"\n    *   This confirms I should use the IDs in the output.\n\n    *   **One more nuance:** \"For every supplied voice ID with nonempty speech, include at least one episodic memory that quotes or faithfully summarizes that speaker's transcript, using the exact ID as the speaker.\"\n    *   This instruction is slightly ambiguous on *where* to put the memory. But since `video_description` is for events, and speaking is an event, I'll put it there.\n    *   However, `high_level_conclusions` is for \"reasoning-based conclusions\".\n    *   Maybe I should put the summary in `high_level_conclusions`?\n    *   \"include at least one episodic memory...\". Episodic memory usually refers to specific instances.\n    *   I will put the specific quotes in `video_description` to satisfy \"atomic event\".\n    *   And I will put the general reasoning in `high_level_conclusions`.\n\n    *   **Wait, I need to make sure I don't hallucinate face IDs.**\n    *   I see no face IDs in the input.\n    *   So no Equivalence lines.\n\n    *   **Final check on JSON syntax:** Quotes escaped properly. Commas correct. Brackets closed.\n\n    *   **Wait, I need to check the timestamps.**\n    *   The voice features have start/end times.\n    *   I can mention the approximate time in the description if needed, but the instruction focuses on the ID and transcript.\n    *   I will focus on ID + Transcript.\n\n    *   **Wait, one detail in the prompt:** \"Face features:Voice features:{...}\".\n    *   Is it possible that \"Face features:\" is a header and the content follows? Yes.\n    *   Is it possible the content after \"Voice features:\" includes face features? No, it starts with `{`.\n    *   So Face features list is empty.\n\n    *   **Okay, proceeding.**\n</think>\n\n{\n\t\"video_description\": [\n\t\t\"A group of people are seated around a table covered with a red and white checkered tablecloth in a room with a whiteboard in the background.\",\n\t\t\"<voice_1876> says: '可以，纠正我们有把契他。'\",\n\t\t\"<voice_1560> says: '喏，对嘛，唱唱歌，跳跳舞。'\",\n\t\t\"<voice_364> says: '对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。'\",\n\t\t\"<voice_1845> says: '一起卡拉OK的环境吧。 喏，也可以。'\",\n\t\t\"<voice_1208> says: '传数据让他们自己通过我们的世界，然后喝喝酒。'\",\n\t\t\"<voice_1909> says: '传数据的时候大家唱唱歌好了。'\",\n\t\t\"<voice_1910> says: '可以，可以，可以。'\",\n\t\t\"<voice_1911> says: '放一个小电影或者干巴的。'\",\n\t\t\"<voice_261> says: '对不对，中间中间空一个小的。'\",\n\t\t\"At the end of the clip, a person's finger points towards the camera lens.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The participants are planning a session that combines data transfer tasks with entertainment activities such as karaoke and dancing.\",\n\t\t\"There is consensus among the group to schedule breaks for singing and watching movies during the data transfer process.\",\n\t\t\"The discussion involves logistical details regarding timing and the environment for the activities.\"\n\t]\n}\n",
+          "thinking_enabled": true,
+          "thinking_completed": true,
+          "returned_model": "Qwen/Qwen3.5-4B",
+          "input_tokens": 11101,
+          "output_tokens": 6054,
+          "total_tokens": 17155,
+          "finish_reason": "stop",
+          "generation": {
+            "max_new_tokens": 16384,
+            "do_sample": false,
+            "repetition_penalty": 1.08,
+            "enable_thinking": true
+          },
+          "timings": {
+            "queue_wait_ms": 0.002544999006204307,
+            "media_preparation_ms": 47.85659900517203,
+            "processor_tokenization_ms": 464.35031200235244,
+            "device_transfer_ms": 43.672340994817205,
+            "cuda_generation_ms": 269177.503111001,
+            "decoding_ms": 7.254402007674798
+          },
+          "submitted_image_count": 60,
+          "processed_image_count": 60,
+          "video_frame_count": 60,
+          "vlm_fps": 2.0,
+          "cuda_synchronized": true,
+          "server_total_ms": 269740.9833559941,
+          "request_end": 1789444716.9150314,
+          "latency_ms": 269771.97192099993,
+          "client_wall_clock_latency_ms": 269771.97192099993
+        }
+      ],
+      "episodic_memory_count": 11,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 11,
+      "text_embedding_ms": null,
+      "text_embedding_count": 11,
+      "graph_update_ms": 0.12862200674135238,
+      "nodes_added": 11,
+      "directed_edges_added": 18,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.022661988623440266,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 11,
+    "speech_embeddings": 11,
+    "voice_identities": 9,
+    "detected_faces": 400,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 11,
+    "semantic_memories": 3,
+    "nodes_after_clip": 1926,
+    "edges_after_clip": 735,
+    "nodes_added_by_clip": 17,
+    "edges_added_by_clip": 9
+  },
+  "generated_memory": {
+    "video_description": [
+      "A group of people are seated around a table covered with a red and white checkered tablecloth in a room with a whiteboard in the background.",
+      "<voice_1876> says: '可以，纠正我们有把契他。'",
+      "<voice_1560> says: '喏，对嘛，唱唱歌，跳跳舞。'",
+      "<voice_364> says: '对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。'",
+      "<voice_1845> says: '一起卡拉OK的环境吧。 喏，也可以。'",
+      "<voice_1208> says: '传数据让他们自己通过我们的世界，然后喝喝酒。'",
+      "<voice_1909> says: '传数据的时候大家唱唱歌好了。'",
+      "<voice_1910> says: '可以，可以，可以。'",
+      "<voice_1911> says: '放一个小电影或者干巴的。'",
+      "<voice_261> says: '对不对，中间中间空一个小的。'",
+      "At the end of the clip, a person's finger points towards the camera lens."
+    ],
+    "high_level_conclusions": [
+      "The participants are planning a session that combines data transfer tasks with entertainment activities such as karaoke and dancing.",
+      "There is consensus among the group to schedule breaks for singing and watching movies during the data transfer process.",
+      "The discussion involves logistical details regarding timing and the environment for the activities."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A group of people are seated around a table covered with a red and white checkered tablecloth in a room with a whiteboard in the background.",
+      "<voice_1876> says: '可以，纠正我们有把契他。'",
+      "<voice_1560> says: '喏，对嘛，唱唱歌，跳跳舞。'",
+      "<voice_364> says: '对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。'",
+      "<voice_1845> says: '一起卡拉OK的环境吧。 喏，也可以。'",
+      "<voice_1208> says: '传数据让他们自己通过我们的世界，然后喝喝酒。'",
+      "<voice_1909> says: '传数据的时候大家唱唱歌好了。'",
+      "<voice_1910> says: '可以，可以，可以。'",
+      "<voice_1911> says: '放一个小电影或者干巴的。'",
+      "<voice_261> says: '对不对，中间中间空一个小的。'",
+      "At the end of the clip, a person's finger points towards the camera lens."
+    ],
+    "high_level_conclusions": [
+      "The participants are planning a session that combines data transfer tasks with entertainment activities such as karaoke and dancing.",
+      "There is consensus among the group to schedule breaks for singing and watching movies during the data transfer process.",
+      "The discussion involves logistical details regarding timing and the environment for the activities."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_137_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 17,
+    "edges_added": 9,
+    "nodes": [
+      {
+        "id": 1909,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 传数据的时候大家唱唱歌好了。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1910,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 可以，可以，可以。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1911,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "MAI: 放一个小电影或者干嘛的。"
+          ]
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1912,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A group of people are seated around a table covered with a red and white checkered tablecloth in a room with a whiteboard in the background."
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1913,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1876> says: '可以，纠正我们有把契他。'"
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1914,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1560> says: '喏，对嘛，唱唱歌，跳跳舞。'"
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1915,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_364> says: '对，这时间太长了，中间得... 不是不是，我是说中间可能有一个小时我们要传数据，你们的眼球。'"
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1916,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1845> says: '一起卡拉OK的环境吧。 喏，也可以。'"
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1917,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1208> says: '传数据让他们自己通过我们的世界，然后喝喝酒。'"
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1918,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1909> says: '传数据的时候大家唱唱歌好了。'"
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1919,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1910> says: '可以，可以，可以。'"
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1920,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_1911> says: '放一个小电影或者干巴的。'"
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1921,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "<voice_261> says: '对不对，中间中间空一个小的。'"
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1922,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At the end of the clip, a person's finger points towards the camera lens."
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1923,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The participants are planning a session that combines data transfer tasks with entertainment activities such as karaoke and dancing."
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1924,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "There is consensus among the group to schedule breaks for singing and watching movies during the data transfer process."
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1925,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The discussion involves logistical details regarding timing and the environment for the activities."
+          ],
+          "timestamp": 137
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": 261,
+        "target": 1921,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 364,
+        "target": 1915,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1208,
+        "target": 1917,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1560,
+        "target": 1914,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1845,
+        "target": 1916,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1876,
+        "target": 1913,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1909,
+        "target": 1918,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1910,
+        "target": 1919,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      },
+      {
+        "source": 1911,
+        "target": 1920,
+        "weight": 1.0,
+        "source_type": "voice",
+        "target_type": "episodic"
+      }
+    ]
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_137_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/egolife_10q_qwen35_4b_fps2_thinking_ids_v2_full/results/clip_audits/clip_137_graph.pkl"
+  },
+  "memory_pickle_bytes": 45808249,
+  "reasoning_model": "Qwen/Qwen3.5-4B",
+  "execution_policy": "concurrent_asr_pooled_http_clip_embedding_batch_prefetch",
+  "pipeline_timing": {
+    "admitted_perf": 85215.995386459,
+    "prepared_perf": 85226.410946893,
+    "ordered_start_perf": 85618.793180584,
+    "consumer_wait_ms": 0.008676011930219829,
+    "ready_to_ordered_ms": 392382.2336910089,
+    "preparation_work_ms": 10410.28305699001,
+    "lookahead_segments": 2
+  },
+  "ordered_processing_ms": 282347.87290699023
+}

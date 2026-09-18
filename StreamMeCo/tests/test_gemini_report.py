@@ -15,7 +15,7 @@ def dump(p,value):
 def test_full_report_and_lineage_guard(tmp_path):
     root=tmp_path
     (root/'mandol').mkdir()
-    gemini={'model':'gemini-3.8-flash','returned_model':'gemini-3.8-flash','latency_ms':10}
+    gemini={'model':'gpt-5.6-sol','returned_model':'gpt-5.6-sol','latency_ms':10}
     for i in range(1,11):
         native=root/'memory'/f'q{i:02d}_uncompressed'/'graph.pkl';native.parent.mkdir(parents=True);native.write_bytes(f'graph{i}'.encode())
         h=hashlib.sha256(native.read_bytes()).hexdigest()

@@ -1,211 +1,156 @@
-# StreamMeCo: Long-Term Agent Memory Compression for Efficient Streaming Video Understanding
+# M3-streamconative
+
+## Architecture
 
 <p align="center">
-  <img src="/StreamMeCo/StreamMeCo.png" width="95%"><br>
-  <em>Figure 1: The overview of StreamMeCo.</em>
+  <img src="architecture.png" alt="M3-streamconative architecture" width="100%">
 </p>
 
-
-## 📦 1. Model and Data Preparation
-
-This study builds upon the M3-Agent framework; therefore, the M3-Agent model and the corresponding datasets must be downloaded and prepared in advance.
-
-### 1.1. Model: M3-Agent
-
-- **Description**: The first streaming video model based on Agent Memory.
-- **Access**: [ByteDance-Seed/M3-Agent](https://github.com/ByteDance-Seed/m3-agent)  
-  📄 *Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory*, Arxiv 2025.
-
-### 1.2. Data
-
-- **Description**: The memory graphs of M3-Bench-robot and M3-Bench-web.
-- **Access**: [ByteDance-Seed/M3-Agent](https://github.com/ByteDance-Seed/m3-agent)  
-  📄 *Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory*, Arxiv 2025.
-
-For detailed information on the required resources and downloading procedures, please refer to the links provided by M3-Agent. The overall structure of this project is organized as follows:
-
-```text
-StreamMeCo/
-
-├── configs/
-│   ├── __init__.py
-│   ├── api_config.json
-│   ├── memory_config.json
-│   └── processing_config.json
-│
-├── data/
-│   ├── annotations/
-│   │   ├── robot.json
-│   │   ├── web.json
-│   │   └── videomme.json
-│   │
-│   ├── videos/
-│   │   ├── robot/
-│   │   │   └── ...
-│   │   ├── web/
-│   │   │   └── ...
-│   │   └── videomme/
-│   │       └── ...
-│   │
-│   └── memory_graphs/
-│       ├── robot/
-│       │   └── ...
-│       ├── web/
-│       │   └── ...
-│       └── videomme/
-│           └── ...
-│
-├── m3_agent/
-│   ├── control.py
-│   ├── memorization_intermediate_outputs.py
-│   └── memorization_memory_graphs.py
-│
-├── mmagent/
-│   ├── src/
-│   │   ├── face_clustering.py
-│   │   └── face_extraction.py
-│   │
-│   ├── utils/
-│   │   ├── chat_api.py
-│   │   ├── chat_qwen.py
-│   │   ├── general.py
-│   │   ├── video_processing.py
-│   │   └── video_verification.py
-│   │
-│   ├── __init__.py
-│   ├── face_processing.py
-│   ├── memory_processing.py
-│   ├── memory_processing_qwen.py
-│   ├── prompts.py
-│   ├── retrieve.py
-│   ├── videograph.py
-│   └── voice_processing.py
-│
-├── models/
-│   ├── M3-Agent-Control/
-│   │   └── ...
-│   ├── M3-Agent-Memorization/
-│   │   └── ...
-│   └── pretrained_eres2netv2.ckpt
-│
-├── speakerlab/
-│   └── ...
-│
-├── cut_videomme.py
-├── memory_videomme.jsonl
-├── requirements.txt
-├── score.py
-├── setup.sh
-├── streammeco.py
-└── visualization.py                                   
-```
-
 ---
 
-## ⚙️ 2. Environment Setup
+Multimodal streaming memory with callable compression and two alternative, controller-free retrieval paths.
 
-We recommend using a Python virtual environment to avoid conflicts. Our implementation has been tested with `PyTorch 2.6.0+cu124`.
+M3-streamconative builds structured memory from video clips and their audio. It retains episodic, semantic, voice, and face information together with character mappings and temporal indexes. Retrieval uses either the native M3 path or an adapter into Mandol’s built-in hybrid retrieval stack.
 
-
-### 2.1. Create and activate a virtual environment (e.g., with conda):
-
-```bash
-conda create -n streammeco python=3.11.14 -y
-conda activate streammeco
-cd StreamMeCo-main
-```
-
-### 2.2. Install Python dependencies:
-
-```bash
-bash setup.sh
-pip install qwen-omni-utils==0.0.4
-pip install transformers==4.51.0
-pip install vllm==0.8.4
-pip install numpy==1.26.4
-pip install flash-attn==2.6.3
-```
-
----
-
-## 🛠️ 3. Memory Graph Generation
-
-For the M3-Bench-robot and M3-Bench-web datasets, the memory graphs provided by the official M3-Agent implementation can be directly used. In contrast, for the VideoMME dataset, the memory graphs need to be constructed from scratch, and the detailed procedure is described as follows.
-
-### 3.1. Cut Video
-
-You need to split each video into 30-second segments. This can be done using the script `cut_videomme.py`.
-
-### 3.2. Prepare the JSONL files
-
-You need to prepare a JSONL file to specify the storage paths of video segments, memory graphs, and intermediate outputs. We provide such a file named `memory_videomme.jsonl`.
-
-### 3.3. Generate Intermediate Outputs
-
-This step uses Face Detection and Speaker Diarization tools to generate intermediate outputs. You can run the following code.
-
-```bash
-python -m m3_agent.memorization_intermediate_outputs --data_file /StreamMeCo/memory_videomme.jsonl
-```
-
-### 3.4. Generate Memory Graphs
-
-This step uses the M3-Agent-Memorization model to generate memory graphs. You can run the following code.
-
-```bash
-python -m m3_agent.memorization_memory_graphs --data_file /StreamMeCo/memory_videomme.jsonl
-```
-
----
-
-## ✅ 4. Memory Graph Compression
-
-You can use our **StreamMeCo** framework to compress the previously generated memory graphs, as detailed below.
-
-```bash
-python streammeco.py
-```
-
-You can control the dataset selection and the saving path of the compressed memory graphs by specifying the `--mem_path` and `--compressed_mem_path` parameters.
-
----
-
-## 🚀 5. Inference
-
-You can run the model using the compressed memory graphs with the following code.
-
-```bash
-CUDA_VISIBLE_DEVICES=0,1 python -m m3_agent.control
-```
-Note that you should modify the `--data_file` parameter and replace it with the path to the compressed memory graphs.
-
----
-
-## 🔍 6. Memory Graph Visualization
-
-If you need to inspect the contents of the memory graphs, please run the following code.
-
-```bash
-python visualization.py
-```
-
-Note that the memory graph path specified by `--mem_path` should be replaced with the one you intend to inspect.
-
----
-
-## 🙏 7. Acknowledgements
-
-- We sincerely thank the developers of the [**ByteDance-Seed/M3-Agent**](https://github.com/ByteDance-Seed/m3-agent) model for their outstanding work and for making their codebase publicly available.
-
----
-
-## 📬 8. Contact
-
-If you have any questions or encounter any issues, feel free to open an issue or contact me directly.
+Documentation basis: this draft reflects the maintainer’s pipeline description. The repository could not be fetched during preparation, so implementation status is maintainer-reported rather than code-audited. Module paths, installation commands, exact model names, and backend defaults are deliberately not invented.
 
 
 
+Architecture and design contracts · Vector diagram · Mermaid source
 
+Pipeline at a glance
 
+Video clip + associated audio
+    → M3 memory construction
+    → Shared multimodal memory
+        ├─ Episodic nodes
+        ├─ Semantic nodes
+        ├─ Voice nodes
+        ├─ Face nodes
+        ├─ Character mappings
+        └─ Temporal indexes
+    → Use raw memory OR explicitly invoke StreamMCCO compression
+    → Prepare the selected retrieval backend
+        ├─ Native M3 retrieval
+        └─ M3–Mandol adapter → Mandol search representations
+    → One retrieval request, without an LLM controller loop
+    → Ranked evidence
 
+Compression is optional, not a mandatory stage that every clip or query must pass through. Native and Mandol retrieval are alternative backends, not two consecutive searches.
 
+Memory construction
+
+The construction pipeline consumes a clip and its associated audio and produces four logical kinds of nodes:
+
+Memory component
+
+Role
+
+Episodic nodes
+
+Clip-grounded events, actions, and observations.
+
+Semantic nodes
+
+Extracted facts and semantic descriptions.
+
+Voice nodes
+
+Speaker-related audio evidence or features.
+
+Face nodes
+
+Visual identity evidence or features.
+
+Two additional structures organize the memory. Character mappings associate face/voice evidence with character identifiers. Temporal indexes support access by clip and time. These are auxiliary structures, not additional text-memory node types.
+
+The existence of a character identifier does not establish that every observation of the same real person has already been merged. Persistent identity consolidation remains ongoing work.
+
+Callable memory compression
+
+The StreamMCCO-derived compression algorithm is exposed as a callable operation over existing memory. It can be invoked separately from normal construction and retrieval.
+
+At the architecture level, retrieval may consume either the raw memory or an output of the compression operation. Any derived retrieval representation must correspond to the memory version being searched. The diagram’s memory view is a logical description of this choice, not a claim that a particular selector class already exists.
+
+The exact compression scope, mutation behavior, scheduling, and return type require source-level confirmation. This documentation does not assume that all four node modalities are compressed in the same way.
+
+Retrieval path 1: native M3
+
+User query → query encoding → native memory retrieval → ranked evidence
+
+The application makes one retrieval call, with no LLM controller call to choose successive searches, inspect intermediate results, or reformulate the query.
+
+“One retrieval call” describes the application-level retrieval contract. It does not prohibit internal encoding, ranking, metadata lookups, or evidence assembly. Any downstream answer-generation model is separate from retrieval.
+
+Retrieval path 2: Mandol through an adapter
+
+The adapter translates M3’s memory organization into Mandol-compatible representations without making Mandol a prerequisite for the native path.
+
+M3 source
+
+Mandol-side representation
+
+Episodic memory
+
+Memory units, grouped into clip-based spaces.
+
+Semantic memory
+
+Hierarchical-memory-like representation.
+
+Character mappings
+
+Entity representation.
+
+The current description specifies grouping by clip. It does not establish an additional fixed-size parent grouping or exact hierarchical levels.
+
+Mandol’s retrieval stack is used after adaptation:
+
+                          ┌─ BM25 lexical search ────┐
+Query → tokenize / encode ├─ 1024-D dense search ───┼→ candidate fusion
+                          └─ Sparse-vector search ───┘       → reranker
+                                                            → ranked evidence
+
+BM25, dense search, and sparse search are parallel candidate sources—not a serial BM25 → dense → sparse pipeline. The 1024-dimensional setting describes the dense representation, not the sparse one. Encoding prepares representations before retrieval; it is not a final stage after reranking.
+
+The adapter and memory-side representations are prepared during ingestion or refresh, rather than being conceptually rebuilt from the full graph for every query. The exact scheduling and cache implementation need code verification.
+
+What is available, and what is still being developed?
+
+Component
+
+Status in this documentation
+
+Clip/audio construction of multimodal memory
+
+Present, as reported by the maintainer.
+
+Character mappings and temporal indexes
+
+Present, as reported by the maintainer.
+
+Callable StreamMCCO compression
+
+Present, as reported by the maintainer.
+
+Native single-shot retrieval without a controller
+
+Present, as reported by the maintainer.
+
+M3–Mandol adapter and hybrid retrieval path
+
+Present, as reported by the maintainer.
+
+Persistent character/entity consolidation
+
+In progress.
+
+Consolidation concerns who an observation belongs to across clips and time. Compression concerns the representation and redundancy of stored memory. These are different operations; compression should not be presented as having solved fragmented person identity.
+
+Dependencies and boundaries
+
+Both retrieval paths depend on the M3 memory and the representations required by their own search stack. The native path does not require the Mandol adapter. The Mandol path requires the adapter, lexical/dense/sparse search representations, query preparation, candidate fusion, and a reranker. StreamMCCO is required only when compression is invoked. Consolidation is not a completed prerequisite for either existing retrieval path.
+
+Concrete embedding and reranker models, local-versus-cloud execution, vector storage, package versions, and launch commands must be documented from the implementation. No particular vector database, GPU configuration, or external service is implied here.
+
+See ARCHITECTURE.md for data flow, representation mappings, dependency contracts, and the consolidation boundary.

@@ -1,6 +1,6 @@
 # Qwen3.5 4B thinking — baseline prompt preflight — latency
 
-Updated: 2026-09-15T03:12:56+00:00. **Stage/preflight exited successfully; full benchmark not verified**.
+Updated: 2026-09-15T16:00:47+00:00. **Stage/preflight exited successfully; full benchmark not verified**.
 
 All values below are measured milliseconds unless stated otherwise. Empty fields mean unavailable, not zero. Overlapping stages must not be added as end-to-end latency. Cached acquisition, warmup, retries and execution-policy changes remain separate.
 

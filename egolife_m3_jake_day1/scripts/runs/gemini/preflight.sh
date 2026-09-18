@@ -9,8 +9,8 @@ from pathlib import Path
 r.configure(Path('/opt/streammeco/run/egolife_10q_gemini/results'), 'preflight')
 x=torch.arange(16, device='cuda'); assert x.sum().item()==120
 print('CUDA_OK', torch.__version__, torch.cuda.get_device_name(0), flush=True)
-a=r.text_call('gemini','Return exactly OK.',purpose='endpoint_preflight')
-print('GEMINI_ENDPOINT_OK', a['model'], a['returned_model'], a['response'], flush=True)
+a=r.text_call('openai','Return exactly OK.',purpose='endpoint_preflight')
+print('OPENAI_ENDPOINT_OK', a['model'], a['returned_model'], a['response'], flush=True)
 PY
 python benchmarks/egolife_first10.py build --qa "$QA" --clips "$CLIPS" --results "$RESULTS" --work "$WORK" --max-segments 3
 python - <<'PY'
@@ -19,23 +19,23 @@ from pathlib import Path
 import pickle
 root=Path('/opt/streammeco/run/egolife_10q_gemini')
 s=pickle.load((root/'work/build_state.pkl').open('rb'))
-assert s['reasoning_model']=='gemini-3.8-flash' and len(s['completed'])==3
+assert s['reasoning_model']=='gpt-5.6-sol' and len(s['completed'])==3
 q,_=b.load_questions(Path('/opt/streammeco/data/EgoLifeQA_A1_JAKE.json'))
 b.save_snapshot(s['graph'], q[0], 1, s['segment_map'], root/'smoke/results')
-print('GEMINI_MEMORY_PREFLIGHT_OK segments=3',flush=True)
+print('OPENAI_MEMORY_PREFLIGHT_OK segments=3',flush=True)
 PY
 TEST=$RUN/smoke/results
 COMMON=(--qa "$QA" --results "$TEST" --work "$RUN/smoke/work" --limit 1)
 python benchmarks/egolife_first10.py compress "${COMMON[@]}"
 python benchmarks/egolife_first10.py export-mandol "${COMMON[@]}"
 for method in A B C; do
- python benchmarks/egolife_first10.py eval "${COMMON[@]}" --method "$method" --backend gemini
+ python benchmarks/egolife_first10.py eval "${COMMON[@]}" --method "$method" --backend openai
 done
 deactivate
 cd "$MANDOL"
 source /opt/streammeco/mandol-venv/bin/activate
 python benchmarks/egolife_m3_first10.py adapt --qa "$QA" --results "$TEST" --limit 1
-python benchmarks/egolife_m3_first10.py eval --qa "$QA" --results "$TEST" --limit 1 --backend gemini
+python benchmarks/egolife_m3_first10.py eval --qa "$QA" --results "$TEST" --limit 1 --backend openai
 python - <<'PY'
 import json
 from pathlib import Path
@@ -44,7 +44,7 @@ for method in 'ABCD':
  p=list(r.glob(f'method_{method}_*.jsonl')); assert len(p)==1
  rows=[json.loads(x) for x in p[0].read_text().splitlines()]; assert len(rows)==1
  x=rows[0]; assert x['prediction'] in 'ABCD' and x['retrieved_node_ids']
- assert x['final_answer_call']['returned_model']=='gemini-3.8-flash'
+ assert x['final_answer_call']['returned_model']=='gpt-5.6-sol'
  if method!='A': assert x['retrieval_round_count']==1 and not x['controller_calls']
  print('RETRIEVAL_PREFLIGHT_OK',method,x['retrieval_round_count'],flush=True)
 (r/'preflight_validation.json').write_text(json.dumps({'status':'passed','methods':list('ABCD'),'scope':'three-clip smoke; not benchmark QA results'}))

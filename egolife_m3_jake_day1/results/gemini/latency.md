@@ -1,6 +1,6 @@
 # Gemini — first ten questions — latency
 
-Updated: 2026-09-15T03:12:56+00:00. **Complete: 40 verified QA predictions**.
+Updated: 2026-09-15T16:00:47+00:00. **Complete: 40 verified QA predictions**.
 
 **Method D:** up to **100 candidates → 20 final evidence nodes**, Qwen embedding and reranking via **302.ai**. These are the later rerun measurements; A/B/C retain their original measurements. The earlier two-node D result is retained only in provenance.
 
