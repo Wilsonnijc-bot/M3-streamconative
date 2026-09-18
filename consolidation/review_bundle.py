@@ -40,7 +40,7 @@ def build_review(root='consolidation/runs/live'):
             shutil.copyfile(moss_folder/'moss.json',metadata/'moss_segments.json')
             sources['metadata/moss_segments.json']=str(moss_folder/'moss.json')
             timeline=[f'# MOSS timeline — {minutes}-minute checkpoint','',
-                f"Input prefix: 0–{moss['cutoff_s']} s. Run: `{moss['run_id']}`.",
+                f"Input window: {moss.get('start_s',0)}–{moss['cutoff_s']} s. Run: `{moss['run_id']}`.",
                 'Times below are relative to the session start. The exact decoded transcript is in `02_moss_transcript.txt`.','']
             for s in moss['segments']:
                 timeline.extend([f"**{s['start']:.2f}–{s['end']:.2f} s · {s['speaker']}**",'',s['text'],''])

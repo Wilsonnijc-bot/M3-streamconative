@@ -1,0 +1,19 @@
+{
+  "text-embedding-3-large": {
+    "provider": "openai",
+    "capability": "embeddings",
+    "base_url": "https://api.openai.com/v1",
+    "api_key_env": "OPENAI_API_KEY",
+    "model": "text-embedding-3-large",
+    "qpm": 60
+  },
+  "deepgram-asr": {
+    "provider": "deepgram",
+    "base_url": "https://api.deepgram.com",
+    "api_key_env": "DEEPGRAM_API_KEY",
+    "model": "nova-3",
+    "diarize_model": "v2",
+    "retries": 2,
+    "qpm": 60
+  }
+}

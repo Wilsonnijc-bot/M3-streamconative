@@ -1,0 +1,527 @@
+{
+  "dataset": "jake",
+  "construction_method": "C2",
+  "retrieval_method": "R2",
+  "question": {
+    "dataset": "jake",
+    "question_id": "smoke_egolifeqa-a1-jake-1",
+    "question": "Who used the screwdriver first?",
+    "ground_truth": "B",
+    "options": {
+      "A": "Tasha",
+      "B": "Alice",
+      "C": "Shure",
+      "D": "Lucia"
+    },
+    "query_timestamp": 17.6,
+    "source_annotation": {
+      "repo": "kfkas/egolifeqa-imu-benchmark",
+      "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+      "file": "data/v2/benchmark.csv",
+      "question_id": "egolifeqa-a1-jake-1",
+      "query_time_raw": "DAY1@11210217",
+      "evidence_time_raw": [
+        "DAY1@11152408"
+      ],
+      "source_ids": [
+        "DAY1_A1_JAKE_11210000",
+        "DAY1_A1_JAKE_11150000"
+      ],
+      "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+    },
+    "diagnostic_only": true,
+    "original_query_timestamp": 40862.17
+  },
+  "benchmark_timestamp": 17.6,
+  "snapshot_sha256": "dbb28df5f5855c13bce328787abbab5d26b8992a0d4cc034846479f5db1b4c3f",
+  "snapshot": "smoke/shared01/jake/C2/snapshots/t_00017.600000/validation_graph.pkl",
+  "retrieval": {
+    "snapshot_sha256": "dbb28df5f5855c13bce328787abbab5d26b8992a0d4cc034846479f5db1b4c3f",
+    "evidence": [
+      {
+        "uid": "m3:jake_C2:clip:1:episodic:4",
+        "score": 0.00015656455070711672,
+        "text": "A first-person view shows a person holding a smartphone while standing near a table where four people are seated.",
+        "raw_data": {
+          "text_content": "A first-person view shows a person holding a smartphone while standing near a table where four people are seated."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "4",
+          "video_id": "jake_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "4",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "4",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C2:block:0",
+          "m3:video:jake_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C2:clip:1:episodic:5",
+        "score": 2.072764800686855e-05,
+        "text": "The seated individuals are looking towards the camera and the phone screen.",
+        "raw_data": {
+          "text_content": "The seated individuals are looking towards the camera and the phone screen."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "5",
+          "video_id": "jake_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "5",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "5",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C2:block:0",
+          "m3:video:jake_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C2:clip:1:episodic:6",
+        "score": 1.9325772882439196e-05,
+        "text": "The person holding the phone displays a countdown timer on the screen, starting at 00:03:00.",
+        "raw_data": {
+          "text_content": "The person holding the phone displays a countdown timer on the screen, starting at 00:03:00."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "6",
+          "video_id": "jake_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "6",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "6",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C2:block:0",
+          "m3:video:jake_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C2:clip:1:semantic:9",
+        "score": 1.7213898900081404e-05,
+        "text": "The group appears to be participating in a timed activity or challenge.",
+        "raw_data": {
+          "text_content": "The group appears to be participating in a timed activity or challenge."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "semantic",
+          "m3_node_id": "9",
+          "video_id": "jake_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "9",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "9",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "m3:type:semantic",
+          "m3:video:jake_C2:block:0",
+          "m3:video:jake_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C2:clip:1:semantic:10",
+        "score": 1.545419218018651e-05,
+        "text": "The person filming is acting as the facilitator or timer for the group.",
+        "raw_data": {
+          "text_content": "The person filming is acting as the facilitator or timer for the group."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "semantic",
+          "m3_node_id": "10",
+          "video_id": "jake_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "10",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "10",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "m3:type:semantic",
+          "m3:video:jake_C2:block:0",
+          "m3:video:jake_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C2:clip:1:episodic:7",
+        "score": 1.2092786164430436e-05,
+        "text": "The group watches the timer count down as it progresses.",
+        "raw_data": {
+          "text_content": "The group watches the timer count down as it progresses."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "7",
+          "video_id": "jake_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "7",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "7",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C2:block:0",
+          "m3:video:jake_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C2:clip:1:semantic:11",
+        "score": 1.0588984878268093e-05,
+        "text": "The items on the table, such as black cases and headsets, suggest a technology or VR-related task.",
+        "raw_data": {
+          "text_content": "The items on the table, such as black cases and headsets, suggest a technology or VR-related task."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "semantic",
+          "m3_node_id": "11",
+          "video_id": "jake_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "11",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "11",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "m3:type:semantic",
+          "m3:video:jake_C2:block:0",
+          "m3:video:jake_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C2:clip:1:episodic:8",
+        "score": 8.77356251294259e-06,
+        "text": "When the timer reaches 00:00:00, the person places the phone on the table.",
+        "raw_data": {
+          "text_content": "When the timer reaches 00:00:00, the person places the phone on the table."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "8",
+          "video_id": "jake_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "8",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "8",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C2:block:0",
+          "m3:video:jake_C2:clip:1"
+        ]
+      }
+    ],
+    "retrieval_calls": 1,
+    "retrieval_ms": 2345.486026009894,
+    "dense_embedding_ms": 1141.498529992532,
+    "start_ts": 1789752516.553292,
+    "end_ts": 1789752518.8988345,
+    "load_ms": 27.855350999743678,
+    "method": "BM25+dense+SPLADE; RRF; Qwen reranking via 302; graph expansion disabled",
+    "metrics": {
+      "hybrid_dense_bm25_splade_fusion_ms": 1158.8774129922967,
+      "reranking": {
+        "calls": 1,
+        "reranking_ms": 1186.3806070032297,
+        "start_ts": 1789752517.7122939,
+        "end_ts": 1789752518.8986745,
+        "status": "success",
+        "endpoint": "https://api.302.ai/v1/rerank",
+        "model": "Qwen/Qwen3-Reranker-0.6B",
+        "candidate_count": 8,
+        "document_sha256": [
+          "e8c87043edacd83b0561370548c57eb1155527436ff336a370cd3a4d1a0d06e8",
+          "4d010d1b0cf37f95133e3b73ed5b69f21df43c54e148c2b803e2ddced1630f67",
+          "75425d21e7959aac68d10e15747415a44cfb2f1e4be3eb3ece58d186ff874892",
+          "754bdc547a41ea1aaff79f1a0bfca9a200f291a558097ae22a22ad298f3c72e1",
+          "55d0b1a07c35fefb0b84318a64cc6940cb5c689bdbd49e8b87e148a0201dffce",
+          "226c6776cafd90adfaf8183648e1a560756928e47a3f37caa8bd1a4183a47ae6",
+          "b92551db5b182d0d162a161ad804bdbf9b766cbcdb3eb0aa000367db0c5de173",
+          "73024014b40a399c2a3fcae7fadba3c72c8266bb036849a48249ab02e8ba4cbd"
+        ],
+        "candidate_uids": [
+          "m3:jake_C2:clip:1:semantic:11",
+          "m3:jake_C2:clip:1:semantic:10",
+          "m3:jake_C2:clip:1:episodic:4",
+          "m3:jake_C2:clip:1:episodic:8",
+          "m3:jake_C2:clip:1:episodic:6",
+          "m3:jake_C2:clip:1:semantic:9",
+          "m3:jake_C2:clip:1:episodic:7",
+          "m3:jake_C2:clip:1:episodic:5"
+        ],
+        "pre_rerank_scores": [
+          0.032266458495966696,
+          0.03225806451612903,
+          0.03177805800756621,
+          0.031009615384615385,
+          0.030776515151515152,
+          0.03057889822595705,
+          0.03007688828584351,
+          0.029631255487269532
+        ],
+        "request_payload": {
+          "model": "Qwen/Qwen3-Reranker-0.6B",
+          "query": "Who used the screwdriver first?",
+          "documents": [
+            "The items on the table, such as black cases and headsets, suggest a technology or VR-related task.",
+            "The person filming is acting as the facilitator or timer for the group.",
+            "A first-person view shows a person holding a smartphone while standing near a table where four people are seated.",
+            "When the timer reaches 00:00:00, the person places the phone on the table.",
+            "The person holding the phone displays a countdown timer on the screen, starting at 00:03:00.",
+            "The group appears to be participating in a timed activity or challenge.",
+            "The group watches the timer count down as it progresses.",
+            "The seated individuals are looking towards the camera and the phone screen."
+          ],
+          "top_n": 8,
+          "return_documents": false
+        },
+        "raw_response": {
+          "id": "01a0b590278872f49521423b55e54ab5",
+          "results": [
+            {
+              "index": 2,
+              "document": null,
+              "relevance_score": 0.00015656455070711672
+            },
+            {
+              "index": 7,
+              "document": null,
+              "relevance_score": 2.072764800686855e-05
+            },
+            {
+              "index": 4,
+              "document": null,
+              "relevance_score": 1.9325772882439196e-05
+            },
+            {
+              "index": 5,
+              "document": null,
+              "relevance_score": 1.7213898900081404e-05
+            },
+            {
+              "index": 1,
+              "document": null,
+              "relevance_score": 1.545419218018651e-05
+            },
+            {
+              "index": 6,
+              "document": null,
+              "relevance_score": 1.2092786164430436e-05
+            },
+            {
+              "index": 0,
+              "document": null,
+              "relevance_score": 1.0588984878268093e-05
+            },
+            {
+              "index": 3,
+              "document": null,
+              "relevance_score": 8.77356251294259e-06
+            }
+          ],
+          "meta": {
+            "tokens": {
+              "input_tokens": 767,
+              "output_tokens": 0,
+              "image_tokens": 0
+            },
+            "billed_units": {
+              "input_tokens": 767,
+              "output_tokens": 0,
+              "image_tokens": 0,
+              "search_units": 0,
+              "classifications": 0
+            }
+          }
+        }
+      },
+      "result_lookup_ms": 0.06987099186517298,
+      "components": [
+        {
+          "method": "BM25",
+          "status": "success",
+          "count": 0,
+          "duration_ms": 3.7316630041459575
+        },
+        {
+          "method": "SPLADE",
+          "status": "success",
+          "count": 8,
+          "duration_ms": 165.18167899630498
+        },
+        {
+          "method": "COSINE_SIMILARITY",
+          "status": "success",
+          "count": 8,
+          "duration_ms": 1154.5010760019068
+        }
+      ]
+    },
+    "component_timings_note": "Adapter search exposes combined fusion/search/lookup wall time; missing component timings are not zero.",
+    "question_start_ts": 1789752516.5528667
+  },
+  "answer": {
+    "request_digest": "8992388f44afd311e09065a1e247feee5acda076d5fc5f880274d23c7a1c5c50",
+    "model": "gpt-5.6-terra",
+    "provider": "official_openai_responses",
+    "answer": "Insufficient evidence. The supplied memories do not mention anyone using a screwdriver.",
+    "request_start_ts": 1789752518.930416,
+    "first_content_token_ts": 1789752519.9287353,
+    "response_end_ts": 1789752520.4658735,
+    "ttft_ms": 998.3176339883357,
+    "generation_complete_ms": 1535.4548879986396,
+    "after_first_token_ms": 537.1372540103039,
+    "input_tokens": 2675,
+    "output_tokens": 19,
+    "reasoning_tokens": 0,
+    "answer_calls": 1,
+    "ttft_event": "first_nonempty_response.output_text.delta",
+    "response_id": "resp_01d238e486c178cb006aad74c70b1487d28ab46b544623c6ee"
+  },
+  "correct": false,
+  "evaluator": "leading option letter exact match; missing letter is incorrect",
+  "question_to_first_token_ms": 3375.868558883667,
+  "question_to_complete_answer_ms": 3913.0067825317383,
+  "answer_calls": 1,
+  "retrieval_calls": 1
+}

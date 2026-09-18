@@ -1,0 +1,36 @@
+{
+  "snapshot_sha256": "dbb28df5f5855c13bce328787abbab5d26b8992a0d4cc034846479f5db1b4c3f",
+  "questions": [
+    {
+      "dataset": "jake",
+      "question_id": "smoke_egolifeqa-a1-jake-1",
+      "question": "Who used the screwdriver first?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Tasha",
+        "B": "Alice",
+        "C": "Shure",
+        "D": "Lucia"
+      },
+      "query_timestamp": 17.6,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-1",
+        "query_time_raw": "DAY1@11210217",
+        "evidence_time_raw": [
+          "DAY1@11152408"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_11210000",
+          "DAY1_A1_JAKE_11150000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      },
+      "diagnostic_only": true,
+      "original_query_timestamp": 40862.17
+    }
+  ],
+  "export_ms": 2.217243003542535
+}

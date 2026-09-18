@@ -61,6 +61,7 @@ def proposal_state(graph, session, observations, source_version):
     identity.initialize(graph)
     state = initial_state(session, getattr(graph, 'graph_version', source_version))
     state['cutoff'] = getattr(graph, 'identity_cutoff', 0)
+    state['cutoff_clip'] = getattr(graph, 'identity_cutoff_clip', None)
     state['consolidation_index'] = getattr(graph, 'identity_revision', 0)
     aliases = {c: 'person_' + c.split('_')[-1] for c in graph.character_mappings}
     for character, alias in aliases.items():
@@ -74,7 +75,9 @@ def proposal_state(graph, session, observations, source_version):
         character = graph.observation_character_mappings.get(uid)
         if character:
             state['assignments'][uid] = aliases[character]
-    for key, reference in graph.reference_character_mappings.items():
+    for reference in graph.reference_character_mappings.values():
+        key = (str(reference['node_id']) + '::' + reference['mention'] + '::' +
+               str(reference['content_index']) + ':' + str(reference['start']) + ':' + str(reference['end']))
         state['references'][key] = dict(memory_node_id=str(reference['node_id']),
             mention=reference['mention'], entity_id=aliases[reference['character_id']],
             evidence_ids=reference['evidence_ids'], content_index=reference['content_index'],
@@ -126,7 +129,9 @@ def project(graph, state, packet):
     report = identity.apply_conclusions(graph, conclusions, observations,
         list(state['references'].values()), cutoff=packet['current_cutoff'], provenance=provenance)
     graph.identity_session = packet['session_id']
-    graph.identity_cutoff_clip = max([o.get('clip_id', 0) for o in packet['observations']] + [0])
+    graph.identity_cutoff_clip = packet.get('current_cutoff_clip', max(
+        [o.get('clip_id', 0) for o in packet['observations']] +
+        [m.get('clip_id', 0) for m in packet['memories']] + [0]))
     graph.memory_claim_revisions = deepcopy(state['claims'])
     graph.character_constraints = [[report['conclusion_characters'].get(key,
         state['entities'].get(key, {}).get('native_character_id', key)) for key in pair]
@@ -180,7 +185,8 @@ def publish_native(replay, output, state, packet, patch, graph, embedder=None,
                                 ('embedding_manifest', embedding_report)]:
                 write(staged / (name + '.json'), value)
             if llm_artifacts:
-                for name in ('llm_input.json', 'llm_output.txt', 'llm_response.json', 'llm_metadata.json'):
+                for name in ('llm_input.json', 'llm_output.txt', 'llm_response.json', 'llm_metadata.json',
+                             'prompt_packet.json', 'prompt_scope.json', 'prompt_size.json'):
                     source = Path(llm_artifacts) / name
                     if source.exists():
                         shutil.copyfile(source, staged / name)

@@ -29,9 +29,9 @@ def main():
     args = parser.parse_args()
     jake = json.loads(args.jake_qa.read_text(encoding="utf-8"))
     day1 = sorted((row for row in jake if row.get("query_time", {}).get("date") == "DAY1"),
-                  key=lambda row: clock_seconds(row["query_time"]["time"]))[:10]
-    if len(day1) != 10:
-        raise ValueError(f"Expected the existing first-ten Jake schedule, got {len(day1)}")
+                  key=lambda row: clock_seconds(row["query_time"]["time"]))
+    if len(day1) != 102:
+        raise ValueError(f"Expected all 102 Jake Day 1 questions, got {len(day1)}")
     jake_rows = []
     for row in day1:
         answer = row["answer"]
@@ -57,6 +57,8 @@ def main():
                                "evidence_global_s": row["evidence_global_s"],
                                "schedule_file": args.aea_schedule.name,
                                "schedule_policy": aea["schedule_policy"]}, options=options))
+    aea_rows.sort(key=lambda r:(r["query_timestamp"],r["question_id"]))
+    aea_rows=[aea_rows[(i*(len(aea_rows)-1))//999] for i in range(1000)]
     for name, rows, basis in (("jake", jake_rows, "DAY1 HHMMSScc wall clock converted to seconds since midnight"),
                               ("aea", aea_rows, "derived causal seconds in assembled AEA stream")):
         if len({r["question_id"] for r in rows}) != len(rows):

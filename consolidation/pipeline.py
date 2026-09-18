@@ -109,7 +109,8 @@ def publish(replay, output, state, packet, patch, embedder=None, llm_artifacts=N
             provenance=read(Path(llm_artifacts)/'llm_metadata.json') if llm_artifacts and (Path(llm_artifacts)/'llm_metadata.json').exists() else {'backend':'direct structured patch; no model invocation recorded'}
             (staged/'audit.md').write_text(audit+'\n## Proposal provenance\n'+dumps(provenance)+'\n')
             if llm_artifacts:
-                for name in ('llm_input.json','llm_response.json','llm_output.txt','llm_metadata.json'):
+                for name in ('llm_input.json','llm_response.json','llm_output.txt','llm_metadata.json',
+                             'prompt_packet.json','prompt_scope.json','prompt_size.json'):
                     source=Path(llm_artifacts)/name
                     if source.exists():
                         shutil.copyfile(source,staged/name)

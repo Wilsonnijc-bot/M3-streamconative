@@ -1,0 +1,16 @@
+{
+  "method_id": "b3a610b706a51087685a5b18bd88ef17ee25f37d56dddb7807949d3a44cab3d4",
+  "threshold": 0.06254411008310594,
+  "calibration_data_id": "55fc6fcf8f6c4d589573a843f1a8b929e907f4d5969ed0f2dc0c76dd09c0eeb3",
+  "FAR": 0.5,
+  "FRR": 0.0,
+  "EER": 0.4,
+  "EER_threshold": 0.10014898854268992,
+  "closed_set_accept_accuracy": 0.6,
+  "positive_trials": 5,
+  "negative_trials": 20,
+  "enrollment_count": 9,
+  "calibration_count": 5,
+  "optimization": "Minimize balanced FAR/FRR on all candidate midpoints; tie lower FAR then higher threshold. EER nearest discrete operating point.",
+  "limitations": "Small development calibration; no independent test error estimate. AEA labels are manifest-defined wearer hypotheses."
+}

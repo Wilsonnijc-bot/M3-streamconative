@@ -2,17 +2,30 @@ from collections import Counter, defaultdict
 from .common import interval
 
 
-def align(observations, moss, session_id, cutoff):
+def validate_window(moss, session_id, start_s, cutoff):
+    interval(start_s,cutoff)
+    interval(moss.get('start_s',0),moss['cutoff_s'])
+    if (moss['session_id'] != session_id or abs(moss['cutoff_s']-cutoff)>1e-6
+            or abs(moss.get('start_s',0)-start_s)>1e-6):
+        raise ValueError('MOSS session/window mismatch')
+    if moss.get('timestamp_origin','session') != 'session':
+        raise ValueError('MOSS timestamps must be normalized to session time')
+    for s in moss['segments']:
+        interval(s['start'], s['end'], cutoff)
+        if s['start'] < start_s or not s.get('speaker'):
+            raise ValueError('MOSS segment outside window or missing speaker')
+
+
+def align(observations, moss, session_id, cutoff, start_s=0):
     if moss is None:
         return [], {}, []
-    if moss['session_id'] != session_id or abs(moss['cutoff_s']-cutoff)>1e-6:
-        raise ValueError('MOSS session/prefix mismatch')
+    validate_window(moss,session_id,start_s,cutoff)
     run = moss['run_id']
     segments = moss['segments']
-    for s in segments:
-        interval(s['start'], s['end'], cutoff)
     records, counts = [], defaultdict(Counter)
     for o in observations:
+        if o['end_time'] <= start_s:
+            continue  # Historical anchors were not included in this audio window.
         overlaps = defaultdict(float)
         for s in segments:
             overlap = min(s['end'], o['end_time']) - max(s['start'], o['start_time'])

@@ -1,0 +1,43 @@
+{
+  "calls": 1,
+  "reranking_ms": 5112.806372002524,
+  "start_ts": 1789711823.124521,
+  "end_ts": 1789711828.2373273,
+  "status": "success",
+  "endpoint": "https://api.302.ai/v1/rerank",
+  "model": "Qwen/Qwen3-Reranker-0.6B",
+  "candidate_count": 2,
+  "document_sha256": [
+    "79967e8ae7198869a6da6988eeefc9e780b6f864e00e16318be61fee998fd66f",
+    "61eaba52aecb15937523fa349a66e6f8c99315badbf372124e3a616d8c653fc3"
+  ],
+  "raw_response": {
+    "id": "01a0b3233ee4731ab2d944075d3c4cc7",
+    "results": [
+      {
+        "index": 0,
+        "document": null,
+        "relevance_score": 0.9893136620521545
+      },
+      {
+        "index": 1,
+        "document": null,
+        "relevance_score": 0.0005015840870328248
+      }
+    ],
+    "meta": {
+      "tokens": {
+        "input_tokens": 164,
+        "output_tokens": 0,
+        "image_tokens": 0
+      },
+      "billed_units": {
+        "input_tokens": 164,
+        "output_tokens": 0,
+        "image_tokens": 0,
+        "search_units": 0,
+        "classifications": 0
+      }
+    }
+  }
+}

@@ -1,5 +1,75 @@
 # Offline entity memory consolidation
 
+## Callable port
+
+Use the shared package directly; benchmark callers do not need a copied
+consolidation implementation:
+
+```python
+from consolidation.port import consolidate
+from consolidation.llm_consolidator import propose_official
+
+result = consolidate(
+    videograph, committed_replay,
+    assignment_jsonl="run/assignments.jsonl",
+    work="run/consolidation/1200", output="run/publications",
+    proposer=lambda packet, work: propose_official(packet, work, "api_config.json"),
+    moss_runner=window_moss,
+)
+videograph = result.graph
+```
+
+Call at a graph-writer barrier with the existing replay evidence dictionary
+(`session_id`, `source_graph_version`, `current_cutoff`, observations, memories,
+graph export, and source gaps). The input graph is preserved. The returned graph
+is the published successor, after native and Mandol retrieval rebuilding. A failure
+raises instead of returning an unready graph. For concurrent construction, retain
+the existing `ConsolidationRuntime` snapshot/commit interface.
+
+For synchronized streaming callers, use `consolidation.port.attach_online(graph,
+evidence, directory, api_config=..., model=..., moss_config=...)`. Construct through
+the runtime's `segment(...)`, then call `consolidate_until(cutoff)` at a committed
+boundary. The shared package owns scheduling, timing, native application and
+reindexing; callers receive a timing/audit record. Benchmark code must not override
+private runtime methods. Debug and fix the process here, then test this interface.
+
+For asynchronous construction, `consolidation.port.make_worker(evidence, proposer,
+directory, moss=runner)` returns the shared worker for `ConsolidationRuntime`.
+The evidence callback can return `assignment_jsonl` alongside `replay`; the port
+fetches its committed score records. `LocalWindowMoss` in `moss_local` invokes the
+existing local inference CLI in a child process. Windows containing only declared
+media gaps return an explicitly labeled empty record without model inference.
+The local runner omits only a declared missing-media tail from model audio, recording
+its `inference_cutoff_s` and `unobserved_tail` separately from the committed cutoff.
+Recorded silence and internal clock gaps remain intact. Strict output parsing is
+unchanged; incomplete model text is never accepted.
+Diagnostic runtimes can use `close(flush_final=False)` to drain scheduled work
+without inventing a final consolidation interval.
+
+The same boundary is available as a command:
+
+```bash
+python -m consolidation.port \
+  --native-graph run/graph.pkl --replay-json run/replay.json \
+  --assignment-jsonl run/assignments.jsonl \
+  --work run/consolidation/1200 --output run/publications \
+  --official-config api_config.json --model gpt-6-astra \
+  --moss-json run/moss.json
+```
+
+Alternatively use `--endpoint` with `--model`, or `--patch` for recorded decisions.
+`--moss-endpoint` and `--media-root` run the new audio window inside the call.
+The work directory contains `result.json`, fetched `voice_similarity.json`, full
+evidence, compact prompt, and transport artifacts. The published directory contains
+the graph, execution audit, and retrieval bundle.
+
+`fetch_voice_log(path, replay)` takes a shared lock compatible with
+`AssignmentLogger`, reads both CAM++ and TST records without altering scores, and
+selects committed observations through the cutoff. Foreign sessions and conflicting
+duplicate evidence fail. An empty log explicitly means no recorded scores; historical
+scores are never reconstructed. Record scores during voice assignment using the
+integration below. Only load graph pickle files from trusted runs.
+
 [Live runtime](RUNTIME.md): asynchronous snapshots, clip-boundary native identity
 commits, hot-memory retrieval, and background selective reindexing. Existing
 consolidation decision logic is reused unchanged.
@@ -79,7 +149,7 @@ consolidation/.venv/bin/python -m consolidation run \
 ```
 
 Endpoints follow the chat-completions / embeddings JSON protocols. No API key is
-written to artifacts. All evidence is sent to the explicitly configured endpoint.
+written to artifacts. The compact selected evidence is sent to the explicitly configured endpoint.
 JSON mode plus the supplied schema is used; every decision is validated locally.
 The model returns data only. No `eval`, `exec`, or generated mutation code is used.
 
@@ -104,7 +174,7 @@ consolidation/.venv/bin/python -m consolidation prepare \
 That metadata's last committed segment ends at 1265 s; the requested time never
 fabricates additional committed coverage.
 
-## Full-prefix MOSS
+## Windowed MOSS
 
 The implementation follows the upstream [MOSS model card](https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize).
 Configure a MOSS transcription server separately. No GPU instance is launched or
@@ -117,17 +187,37 @@ consolidation/.venv/bin/python -m consolidation moss \
   --moss-revision YOUR_DEPLOYED_CHECKPOINT_REVISION
 ```
 
-This writes a 16 kHz mono WAV covering the entire committed prefix, preserving
-source-clock gaps as silence. It requests `verbose_json` and saves raw output,
-normalized speaker segments, model/revision/configuration and audio SHA-256.
-Repeat at 2400 s for the complete 40-minute prefix; do not concatenate separately
-diarized windows or equate their speaker labels. Imported `moss.json` needs:
+This writes a 16 kHz mono `window.wav`, preserving source-clock gaps as silence.
+The first window starts at zero. Later standalone `moss` commands must supply the
+previous committed cutoff with `--start-s`, or load its native graph/publication.
+For example, the historical second window is 1187.92-2387.92 seconds:
+
+```bash
+consolidation/.venv/bin/python -m consolidation moss \
+  --cutoff 2400 --start-s 1187.92 --work consolidation/runs/metadata/moss_40 \
+  --media-root egolife_day1 --moss-endpoint http://localhost:8000/v1
+```
+
+Normal live `run` calls can supply `--moss-endpoint` and `--media-root` to run MOSS
+inside consolidation, before reasoning. They derive the start from native identity
+state. `MOSS_ENDPOINT`, `MOSS_MEDIA_ROOT`, and optional `MOSS_REVISION` also configure
+the online worker. A model call without MOSS configuration or supplied window evidence
+fails; recorded-patch runs can still omit it.
+
+MOSS receives only the new audio interval, typically 0-20, 20-40, then 40-60 minutes,
+aligned to committed clips. The final interval can be shorter. Raw model timestamps
+are window-relative; normalization adds the start offset once so stored segments and
+observations use session time. Old anchors do not receive alignments in the new run.
+Speaker labels remain window-local and cannot be equated across calls.
+Imported `moss.json` needs:
 
 ```json
 {
   "session_id": "egolife_m3_jake_day1/gemini",
   "run_id": "egolife_m3_jake_day1/gemini/moss_20",
+  "start_s": 0,
   "cutoff_s": 1187.92,
+  "timestamp_origin": "session",
   "segments": [{"start": 0.5, "end": 2.0, "speaker": "S01", "text": "example"}]
 }
 ```
@@ -135,7 +225,8 @@ diarized windows or equate their speaker labels. Imported `moss.json` needs:
 Overlap with multiple speakers remains ambiguous even when one overlap is larger.
 MOSS alone cannot authorize a merge. Its suggestions and mixed-cluster summaries
 are hypotheses for the reconciler. Imported outputs must match the exact session
-and committed cutoff; future segments are rejected.
+and committed window start/end; out-of-window segments are rejected. Legacy full-prefix
+results can only match the first window, never silently substitute for a later window.
 
 ## Online assignment evidence and schedule
 
@@ -227,7 +318,9 @@ The current regression demonstrates implementation behavior, not their accuracy.
 
 `moss_local.py` supports pinned, locally downloaded MOSS weights on a CUDA GPU.
 `consolidation/scripts/run_moss_hyperstack.sh` records an exit status and durable log
-for the two complete prefixes in a detached tmux job. Model inputs, WAV hashes, raw
+for two consecutive windows in a detached tmux job. `moss_local.py` starts each later
+manifest at the preceding manifest's cutoff (or an explicit `previous_cutoff`). Use
+`--start-s` when running a later window alone. Model inputs, WAV hashes, raw
 outputs, normalized segments, checkpoint revision and runtime versions are retained.
 Any invalid or out-of-input timestamp predictions are explicitly recorded as anomalies;
 they are excluded or bounded to the audio actually supplied, never future audio.
@@ -240,10 +333,10 @@ can resume that same request rather than issuing a duplicate paid request. Exact
 requests and raw completed responses are retained. Native text reindexing uses the
 existing configured M3 `text-embedding-3-large` backend and its configured credential.
 
-After syncing MOSS results into `runs/live/moss/prefix_20` and `prefix_40`:
+After syncing exact-window MOSS results (historical full-prefix results remain archives):
 
 ```bash
-consolidation/.venv/bin/python -m consolidation.live_run --minutes 20 --native-graph /path/to/current_native_graph.pkl --output consolidation/runs/native_live
+consolidation/.venv/bin/python -m consolidation.live_run --minutes 20 --native-graph /path/to/current_native_graph.pkl --output consolidation/runs/native_live --moss-json /path/to/window_20/moss.json
 ```
 
 Astra accepts the MOSS-derived transcripts and speaker/timestamp evidence, not raw
@@ -256,7 +349,7 @@ audio. The raw WAV files remain on the GPU machine with their hashes in the evid
 
 ## Recall-oriented consolidation
 
-The current policy infers a person per voice/cluster, propagates to the reviewed
+The current policy infers a person per voice/cluster, propagates to the new window's
 observations, and handles contrary utterances as explicit exceptions. `assign_cluster`
 requires confidence, rationale, evidence IDs and an exception list. A possible mixed
 MOSS cluster is advisory for this operation, not an automatic refusal. Existing
@@ -265,10 +358,12 @@ conflicting assignments and cannot-link constraints still block defaults; explic
 new observations provisionally under the >75% rule. Assignment history preserves IDs, reasons,
 confidence and evidence; published versions remain independently recoverable.
 
-The evidence packet includes cluster inventory, unresolved counts, existing defaults,
-assignment metadata and the previous round's accepted/rejected decisions. Astra reviews
-all unresolved clusters, including fragments, using contextual support rather than
-requiring an identity proof from every short utterance. Coverage is not identity accuracy.
+The [compact incremental packet](INCREMENTAL.md) contains new observations and memories,
+compact current characters, and bounded original historical anchors. It excludes local
+paths, repeated evidence bodies, previous decisions, and repeated rationales. Explicit
+historical corrections are limited to the supplied evidence; cluster defaults apply only
+to new observations. Full evidence and native historical state remain internal.
+Coverage is not identity accuracy.
 
 The completed historical two-round results and exact review artifacts are retained
 under `consolidation/runs/recall_20/`. The native integration reuses the accepted round-1

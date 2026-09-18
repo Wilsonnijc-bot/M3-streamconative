@@ -2,6 +2,14 @@
 
 This document describes the **current repository architecture and its runtime/model dependencies** for M3-StreamConative. It covers the construction path, alternative Mandol retrieval path, separate offline TST experiment, implemented native character consolidation, and opt-in asynchronous streaming runtime. Recorded deployment results are distinguished from current configuration and deterministic runtime tests.
 
+**Current online benchmark backend roles:** Terra (`gpt-5.6-terra`, medium reasoning)
+generates the final answer after either R1 or R2 retrieval. Sol (`gpt-5.6-sol`, high
+reasoning) performs memory consolidation for C3/C4. Both use the official OpenAI
+Responses API. Qwen 3.5 4B remains the local multimodal memory-construction model.
+Historical Astra results below describe earlier experiments, not the selected
+benchmark backend. The existing directory name `20260918_sol_astra` is retained
+for artifact continuity; model selection comes from its `configs/run_request.json`.
+
 > **Source boundary.** This document is based on files in this repository plus the maintainer-specified integration contract for the current branch (for example, the Mandol 1024-D dense path). No external model documentation is used to fill gaps. When the repository does not pin an exact checkpoint or implementation, that dependency is explicitly marked **un-pinned** rather than guessed.
 
 [Earlier architecture illustration](architecture.png). The diagrams below and section 11 describe the current consolidation/runtime additions.
@@ -75,8 +83,12 @@ query ─────────► text-embedding-3-large      │ query      
                │                             │ top-k evidence              │
                └─────────────────────────────┴─────────────────────────────┘
 
+                 evidence from the selected retrieval path
+                                  ↓
+                  Terra → streamed final answer (medium)
+
                   ASYNCHRONOUS CONSOLIDATION (OPT-IN)
-              frozen prefix → Astra → native character patch
+              frozen prefix → Sol → native character patch
               → commit between clip writes → background reindex
               → verified native/Mandol retrieval publication
 ```
@@ -111,8 +123,8 @@ Dependency status terminology:
 | Multimodal memory generation | **Qwen 3.5 4B** | `qwen_model_path: models/Qwen3.5-4B`; runbook target `Qwen/Qwen3.5-4B` | Local GPU | Episodic text, semantic text, identity-equivalence statements | **Pinned** |
 | Native M3 text embedding | **`text-embedding-3-large`** | hard-coded alias in construction and retrieval; measured run uses OpenRouter `openai/text-embedding-3-large` | Remote OpenAI-compatible endpoint in current deployment | **3072-D** vectors for episodic/semantic nodes and queries | **Pinned** |
 | Character mapping | Native deterministic identity logic | legacy union-find construction; consolidation updates native characters and scoped assignments | CPU | Authoritative `character_mappings`, metadata and scoped mappings | **Implemented; section 5.3** |
-| Consolidation audio evidence | **MOSS-Transcribe-Diarize** | `OpenMOSS-Team/MOSS-Transcribe-Diarize`; checkpoint revision recorded per run | Separate inference worker | Full-prefix transcript, run-local speaker labels and alignments | **20-minute evidence verified** |
-| Consolidation reasoning | **GPT-6 Astra** | configured `gpt-6-astra`, official Responses API, existing recall-oriented prompt | Remote API, outside live mutation path | Structured decisions projected into native character state | **Implemented; saved round-1 fixture reused for integration** |
+| Consolidation audio evidence | **MOSS-Transcribe-Diarize** | `OpenMOSS-Team/MOSS-Transcribe-Diarize`; checkpoint revision recorded per run | Consolidation worker calls configured inference server | Same-window transcript, run-local speaker labels and session-time alignments | **Historical 20-minute evidence verified; incremental orchestration tested with mocks** |
+| Consolidation reasoning | **GPT-5.6 Sol** | benchmark selects `gpt-5.6-sol`, high reasoning, official Responses API | Remote API, outside live mutation path | Structured decisions projected into native character state | **Selected for C3/C4; earlier integration fixtures used Astra** |
 | StreamMeCo compression | **No learned model** | NumPy + scikit-learn KMeans over embeddings already in the graph | CPU | Reduced text-node graph | **Pinned** |
 | Native query retrieval | No additional retrieval checkpoint | query uses `text-embedding-3-large`; graph uses cosine similarity | API + CPU | Ranked text nodes / clips | **Pinned** |
 | Mandol lexical branch | **BM25** | specified in `mandoladaptor.md` | CPU/index layer | lexical candidates | **Pinned algorithm** |
@@ -120,7 +132,7 @@ Dependency status terminology:
 | Mandol sparse branch | **SPLADE sparse retrieval** | verified deployment uses cocondenser weights under local `naver/splade-v3` alias | model/index layer | sparse candidates | **Recorded deployment provenance; section 9.3** |
 | Mandol reranking | Reranker | reranker is part of planned/used Mandol hybrid stack | model layer | final candidate ordering | **Exact checkpoint un-pinned** |
 | Mandol relation construction | Optional relation-extraction LLM | generic adapter defaults to configured `gemini-3.8-flash-302`; consolidation deployment disables relations | API depending configuration | searchable `entity_relation` MemoryUnits and relations | **Optional; not exercised by verified consolidation cycle** |
-| Final answer generation | Answer LLM | logically downstream of retrieval | configurable | natural-language answer | **Not part of retrieval dependency contract; exact target model un-pinned** |
+| Final answer generation | **GPT-5.6 Terra** | `gpt-5.6-terra`, medium reasoning, official streamed Responses API | Remote API, after R1 or R2 retrieval | Final answer; first content-token latency recorded | **Selected main benchmark backend** |
 
 ### The most important embedding distinction
 
@@ -1205,9 +1217,9 @@ clip/time provenance
 embedding similarity values / matching history
 ```
 
-The evidence builder also accepts full-prefix MOSS transcription/diarization and available assignment logs. MOSS speaker labels are run-local evidence, not persistent identities; missing historical scores remain unknown. Prefix duration, parsing and truncation checks protect the evidence horizon.
+The consolidation worker runs MOSS on exactly the interval from the previous successful identity cutoff to the current committed snapshot, before reasoning. Supplied MOSS output must match both window endpoints. Window-local model timestamps are converted to session time; old observations used as anchors are not retranscribed or marked unmatched. MOSS speaker labels are run-local evidence, not persistent identities; missing historical assignment scores remain unknown. Audio duration, parsing and interval checks protect the evidence horizon.
 
-`llm_consolidator.propose_official` uses the configured `gpt-6-astra` official Responses endpoint, saves resumable response IDs, and preserves exact prompt/request/output artifacts. Astra receives the organized packet, including transcript/alignment evidence; this does not imply uploading the full raw waveform in that request. `patch_executor.execute` validates structured decisions, and `native.project` translates them into native character operations. Subsequent proposal state is reconstructed from current native characters, not previous person-based audit state.
+The benchmark calls `llm_consolidator.propose_official` with an explicit `gpt-5.6-sol` model override and high reasoning. The shared transport saves resumable response IDs and exact prompt/request/output artifacts. Sol receives the organized packet, including transcript/alignment evidence; this does not imply uploading the full raw waveform in that request. The transport's historical Astra default does not select the benchmark model. `patch_executor.execute` validates structured decisions, and `native.project` translates them into native character operations. Subsequent proposal state is reconstructed from current native characters, not previous person-based audit state.
 
 ## 11.4 Correct write-back boundary
 
@@ -1249,7 +1261,7 @@ normal ordered clip writer → LIVE VideoGraph → immediate native retrieval
                                   ↓
                          frozen native snapshot
                                   ↓
-                 evidence / Astra / existing executor
+                 evidence / Sol / existing executor
                                   ↓
                  staged native identity patch result
                                   ↓
@@ -1264,11 +1276,11 @@ normal ordered clip writer → LIVE VideoGraph → immediate native retrieval
 
 At a completed clip boundary, `ConsolidationSnapshot` records the live integer graph revision, cutoff clip, exact media end timestamp and detached graph/edge/identity state. A clip-39 job does not acquire clips 40–45 or later raw-feature observations as construction continues. A worker modifying its input snapshot is rejected.
 
-The default period is 1,200 media seconds. Slow jobs cause pending windows to coalesce to the newest completed cutoff; conflicting reasoning jobs do not run concurrently. Scheduling uses committed media time, not nominal clip duration or wall time.
+The default period is 1,200 media seconds. One active and one waiting snapshot preserve each completed boundary. When the waiting slot is full, the writer pauses before the next boundary-crossing clip until capacity becomes available. Queued snapshots receive preceding accepted identity updates with the live commit's ID remapping before their prompts are built. Scheduling uses committed media time, not nominal clip duration or wall time.
 
 ## 11.6 Atomic native identity reconciliation
 
-`NativeConsolidationWorker` wraps the existing evidence builder, configured proposal callable, executor and `native.project`. It returns `ConsolidationPatch(snapshot, graph)`, a native identity result bound to the historical snapshot. The original model patch/execution report remains a separate audit artifact.
+`NativeConsolidationWorker` wraps the full evidence builder, compact prompt builder, configured proposal callable, scoped executor and `native.project`. New observations and memories enter the prompt with compact native characters and bounded original historical anchors; paths, duplicate evidence bodies, and prior decision prose stay internal. Defaults apply only to the new window; explicit historical corrections require visible evidence. Projection receives the complete resulting state. It returns `ConsolidationPatch(snapshot, graph)`, a native identity result bound to the historical snapshot. The original model patch/execution report remains a separate audit artifact. See [packet format and budgets](consolidation/INCREMENTAL.md).
 
 The runtime validates cutoffs and node/edge integrity before commit. It rejects direct edits to raw node contents, metadata, vectors or edges. At commit it verifies the unchanged identity base and historical source; normal voice/face observation suffixes may have grown. `reconcile` combines the base, accepted result and current live identity state without replacing nodes, vectors, edges or temporal indexes.
 
@@ -1300,9 +1312,15 @@ When configured, `RetrievalPublisher` builds/verifies a complete native/Mandol c
 
 The application explicitly supplies an evidence callback, configured proposal callable and optional `RetrievalPublisher`, then attaches `ConsolidationRuntime` to its native graph. The shared `process_segment` wrapper participates automatically when attached and requires `sample['segment_end_s']` from the scheduler. Other entry points wrap their existing writer call in `runtime.segment(clip_id, end_seconds)`. Mutation outside that single-writer contract is not coordinated streaming.
 
+The online benchmark uses the higher-level `consolidation.port.attach_online`
+interface and `consolidate_until(cutoff)` to synchronize C1-C4 boundaries. Scheduling,
+model transport, MOSS, timing and native reindexing are implemented and debugged in
+the shared consolidation package. The benchmark supplies committed evidence and
+records returned results; it does not subclass or call private runtime methods.
+
 Model/evidence or patch-validation failure leaves identity and watermark unchanged while construction continues. `runtime.errors` records failures; `runtime.retry()` retries retained failed work when idle. Index failures retain old vectors and the prior publication; they can retry explicitly or at the next completed clip without a tight failure loop.
 
-Runtime objects, locks and executors are excluded from pickles; native identity/watermarks persist. Attach a new runtime after loading a checkpoint. `close()` waits for active work at stream shutdown, never within a clip. Retry scheduling is process-local, not a durable distributed queue. The runtime does not silently provision models, install an evidence collector or enable paid API calls.
+Runtime objects, locks and executors are excluded from pickles; native identity/watermarks persist. Attach a new runtime after loading a checkpoint. `close()` drains ordered work and a remaining final interval at stream shutdown, never within a clip; retained failures raise a retry-required error. Failed reasoning windows retain their slot and block later windows until explicit retry. Retry scheduling is process-local, not a durable distributed queue. The runtime does not silently provision models, install an evidence collector or enable paid API calls.
 
 See [runtime wiring and contract](consolidation/RUNTIME.md) and [automatic reindexing](consolidation/AUTOMATIC_REINDEX.md).
 
@@ -1312,7 +1330,7 @@ The selected native fixture reuses accepted **20-minute recall round-1** decisio
 
 The combined cycle re-embedded 105 of 383 native text nodes and preserved 278 text plus all 106 voice embedding collections. Raw contents/edges were unchanged. Mandol verified all 383 memories with dense/BM25/SPLADE and successful hybrid/published-reader probes. The successful version is `v_66eb04de45183ff45dd782fdfb306defbbc592fc4b50113983c2c626420e53d7`. Its first missing-SPLADE-path attempt published nothing; the repaired run exited 0. Face behavior is covered by synthetic fixtures because the real fixture has no face nodes. The stopped 40-minute work has no validated published graph.
 
-Native architecture tests cover merges, partial moves, scoped precedence, mixed fallback, strict majority admission, refresh/reload, selective reindexing and rollback. Twelve runtime tests cover continued hot construction/retrieval, frozen snapshots, cutoff rejection, failure/retry, hot identity inheritance, coalescing, boundary commits, concurrent ID allocation and superseded-index rejection. These deterministic checks do not establish sustained hosted streaming performance or independent identity accuracy.
+Native architecture tests cover merges, partial moves, scoped precedence, mixed fallback, strict majority admission, refresh/reload, selective reindexing, incremental history preservation and reference correction after reload. Runtime tests cover continued hot construction/retrieval, frozen snapshots, cutoff rejection, failure/retry, hot identity inheritance, ordered windows, backpressure, queued identity rebasing, final draining, boundary commits, concurrent ID allocation and superseded-index rejection. These deterministic checks do not establish sustained hosted streaming performance or independent identity accuracy.
 
 Artifacts: [native integration](consolidation/NATIVE_CHARACTER_INTEGRATION.md), [combined-cycle replay and hashes](consolidation/runs/deployment_cycle/README.md), and [runtime tests](consolidation/tests/test_runtime.py). Shared GPU/network contention and snapshot/commit latency still require deployment measurement. The current provider/configuration distinction in section 9.3 must be resolved before repeating the historical cycle with current Mandol source.
 
@@ -1431,7 +1449,7 @@ The repository also references:
 API_302_KEY
 ```
 
-for the Gemini comparison and configured 302.AI integrations, including the recorded Mandol cycle. Current Mandol dense defaults resolve an OpenRouter credential instead (section 9.3). Official Astra uses its existing API-config credential reference. Credentials are never part of public build settings or review artifacts.
+for the Gemini comparison and configured 302.AI integrations, including the recorded Mandol cycle. Current Mandol dense defaults resolve an OpenRouter credential instead (section 9.3). Official Terra and Sol use the benchmark's API-config environment credential references. Credentials are never part of public build settings or review artifacts.
 
 The OpenAI-compatible text-embedding client additionally depends on the provider mapping/credentials configured for `text-embedding-3-large` in runtime API configuration.
 
@@ -1731,7 +1749,7 @@ This table makes it explicit which dependencies should be running for each exper
 | Query existing compressed graph, native | – | – | – | – | ✓ | already done | – | – | **No** |
 | Build Mandol representation from existing graph | – | – | – | relation builder only if enabled | – for M3 native vectors | optional pre-step | ✓ | optional | **No** |
 | Query Mandol representation | – | – | – | – | – | – | ✓ | optional | **No** |
-| Character/entity consolidation | construction continues independently | stored evidence | stored evidence when available | Astra reasoning is separate from Qwen | changed canonical text only | coordinate separately | staged rebuild for publication | optional | **No requirement** |
+| Character/entity consolidation | construction continues independently | stored evidence | stored evidence when available | Sol reasoning is separate from Qwen | changed canonical text only | coordinate separately | staged rebuild for publication | optional | **No requirement** |
 
 A dash means that model/service does not need to be invoked at that stage if its output has already been persisted.
 

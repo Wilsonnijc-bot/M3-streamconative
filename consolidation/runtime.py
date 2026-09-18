@@ -1,4 +1,4 @@
-"""Single-writer streaming coordination around the unchanged consolidator.
+"""Single-writer streaming coordination with bounded, ordered evidence windows.
 
 Model calls and embedding calls run on workers. The existing clip writer owns
 nodes/edges; a worker can commit identity/index results only between clips.
@@ -55,7 +55,7 @@ def validate_patch(patch):
         raise ValueError('identity clip exceeds snapshot cutoff')
 
 
-def reconcile(live, patch):
+def reconcile(live, patch, *, committed_remap=None, remap_out=None):
     """Three-way native identity merge; never replace live nodes or edges."""
     identity = m3_module('mmagent.character_identity')
     base, result = patch.snapshot.graph, patch.graph
@@ -76,13 +76,18 @@ def reconcile(live, patch):
         if hasattr(live, field):
             setattr(staged, field, deepcopy(getattr(live, field)))
     # New IDs allocated by hot construction take priority over worker-local IDs.
-    remap = {}
+    remap = dict(committed_remap or {})
     used = set(live.character_mappings) | set(live.retired_character_ids)
     next_id = max(live.next_character_id, result.next_character_id)
-    for char in sorted(set(result.character_mappings) - set(base.character_mappings)):
-        if char in used:
-            remap[char] = 'character_' + str(next_id)
-            next_id += 1
+    if committed_remap is None:
+        for char in sorted(set(result.character_mappings) - set(base.character_mappings)):
+            if char in used:
+                remap[char] = 'character_' + str(next_id)
+                next_id += 1
+    if remap:
+        next_id = max(next_id, max(int(c.split('_')[-1]) + 1 for c in remap.values()))
+    if remap_out is not None:
+        remap_out.update(remap)
     def mapped(value):
         if isinstance(value, str):
             return remap.get(value, value)
@@ -178,7 +183,8 @@ class ConsolidationRuntime:
         self.active = self.closed = False
         self.closing = False
         self.job = self.index_job = None
-        self.pending = False
+        self.pending = None
+        self.writer_waiting = False
         self.failed_snapshot = None
         self.errors = []
         self.index_failed = False
@@ -199,9 +205,19 @@ class ConsolidationRuntime:
     def segment(self, clip_id, cutoff_timestamp):
         """One existing construction call. No lock is held during that call."""
         with self.lock:
-            if self.closed or self.active or clip_id <= self.last_clip or cutoff_timestamp < self.last_time:
+            if (self.closed or self.closing or self.active or self.writer_waiting
+                    or clip_id <= self.last_clip or cutoff_timestamp < self.last_time):
                 raise ValueError('runtime requires one ordered clip writer')
             self._drain()
+            self.writer_waiting = True
+            try:
+                while cutoff_timestamp >= self.boundary and self.pending is not None:
+                    self.condition.wait()
+                    if self.closed or self.closing:
+                        raise ValueError('runtime is closing')
+                    self._drain()
+            finally:
+                self.writer_waiting = False
             self.active = True
         try:
             yield
@@ -219,9 +235,11 @@ class ConsolidationRuntime:
                 self.index_failed = False
                 self._drain()
                 if cutoff_timestamp >= self.boundary:
-                    self.pending = True
+                    self.pending = self._snapshot()
+                    self.boundary = (int(cutoff_timestamp // self.period_s) + 1) * self.period_s
                 self._schedule()
                 self._index()
+                self.condition.notify_all()
 
     def _snapshot(self):
         return ConsolidationSnapshot(self.graph.current_graph_version, self.last_clip,
@@ -233,12 +251,13 @@ class ConsolidationRuntime:
             return deepcopy(self.graph)
 
     def _schedule(self):
-        if self.closed or self.closing or self.active or self.job is not None or not self.pending:
+        if (self.closed or self.active or self.job is not None or self.failed_snapshot is not None
+                or self.pending is None):
             return
-        snapshot = self._snapshot()
-        self.pending = False
-        self.boundary = (int(self.last_time // self.period_s) + 1) * self.period_s
+        snapshot = self.pending
+        self.pending = None
         self._launch(snapshot)
+        self.condition.notify_all()
 
     def _launch(self, snapshot):
         self.job = self.pool.submit(self._reason, snapshot)
@@ -246,13 +265,20 @@ class ConsolidationRuntime:
 
     def _reason(self, snapshot):
         frozen = pickle.dumps(snapshot.graph)
-        result = self.worker(snapshot)
-        if not isinstance(result, ConsolidationPatch) or result.snapshot is not snapshot:
-            raise ValueError('patch belongs to another historical snapshot')
-        if pickle.dumps(snapshot.graph) != frozen:
-            raise ValueError('worker modified its historical snapshot')
-        validate_patch(result)
-        return result
+        try:
+            result = self.worker(snapshot)
+            if not isinstance(result, ConsolidationPatch) or result.snapshot is not snapshot:
+                raise ValueError('patch belongs to another historical snapshot')
+            if pickle.dumps(snapshot.graph) != frozen:
+                raise ValueError('worker modified its historical snapshot')
+            validate_patch(result)
+            return result
+        except BaseException:
+            # A faulty worker must not poison the frozen window retained for retry.
+            original = pickle.loads(frozen)
+            snapshot.graph.__dict__.clear()
+            snapshot.graph.__dict__.update(original.__dict__)
+            raise
 
     def _complete(self, kind, snapshot, future):
         with self.lock:
@@ -288,7 +314,21 @@ class ConsolidationRuntime:
                     self.index_job = None
 
     def _commit(self, patch):
-        staged = reconcile(self.graph, patch)
+        remap = {}
+        staged = reconcile(self.graph, patch, remap_out=remap)
+        staged.identity_cutoff_clip = patch.snapshot.cutoff_clip_id
+        pending = self.pending
+        if pending is not None:
+            # Rebase only identity fields, with IDs chosen by the live commit.
+            # The queued graph's raw prefix and embeddings stay frozen.
+            rebased = reconcile(pending.graph, patch, committed_remap=remap)
+            rebased.next_character_id = max(rebased.next_character_id, staged.next_character_id)
+            rebased.identity_cutoff_clip = patch.snapshot.cutoff_clip_id
+            rebased.last_consolidated_clip_id = patch.snapshot.cutoff_clip_id
+            rebased.last_consolidated_timestamp = patch.snapshot.cutoff_timestamp
+            rebased.entity_registry_version = rebased.identity_revision
+            pending = ConsolidationSnapshot(pending.graph_version, pending.cutoff_clip_id,
+                                            pending.cutoff_timestamp, rebased)
         # Validate all canonical texts before touching the live state.
         changed = []
         for node in self.graph.nodes.values():
@@ -303,6 +343,7 @@ class ConsolidationRuntime:
             last_consolidated_clip_id=patch.snapshot.cutoff_clip_id,
             last_consolidated_timestamp=patch.snapshot.cutoff_timestamp)
         self.graph.__dict__.update(fields)
+        self.pending = pending
         self.publication_pending = self.publish_index is not None
         changed = set(changed)
         for node in self.graph.nodes.values():
@@ -356,14 +397,29 @@ class ConsolidationRuntime:
             self.index_failed = False
             self._index()
 
-    def close(self):
-        """Drain at shutdown only; never called by an active construction clip."""
+    def close(self, *, flush_final=True):
+        """Drain ordered windows and one final tail; a failed window remains retryable."""
         with self.lock:
+            if self.closed:
+                return
             if self.active:
                 raise ValueError('finish the current clip before closing')
             self.closing = True
-            while self.job is not None or self.index_job is not None:
-                self.condition.wait()
+            self.condition.notify_all()
+            while True:
+                self._drain()
+                self._schedule()
+                self._index()
+                if self.job is not None or self.index_job is not None:
+                    self.condition.wait()
+                    continue
+                if self.failed_snapshot is not None or self.index_failed:
+                    self.closing = False
+                    raise RuntimeError('consolidation shutdown requires retry: ' + str(self.errors[-1:]))
+                if flush_final and self.last_time > self.graph.last_consolidated_timestamp:
+                    self.pending = self._snapshot()
+                    continue
+                break
             self.closed = True
         self.pool.shutdown(wait=True)
         with self.lock:

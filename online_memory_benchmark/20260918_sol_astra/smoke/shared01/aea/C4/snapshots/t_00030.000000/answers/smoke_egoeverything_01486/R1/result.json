@@ -1,0 +1,127 @@
+{
+  "dataset": "aea",
+  "construction_method": "C4",
+  "retrieval_method": "R1",
+  "question": {
+    "dataset": "aea",
+    "question_id": "smoke_egoeverything_01486",
+    "question": "What color was the blanket on the bed while I was reading?",
+    "ground_truth": "A",
+    "query_timestamp": 30.0,
+    "source_annotation": {
+      "file": "Egoeverything_VQA.json",
+      "source_video": "loc1_script1_seq7_rec1",
+      "evidence_global_s": 1116.921,
+      "schedule_file": "aea_6h_qa_schedule.json",
+      "schedule_policy": "derived causal ask times; original QA fields unchanged"
+    },
+    "options": {
+      "A": "White",
+      "B": "Beige",
+      "C": "Light Gray",
+      "D": "Cream",
+      "E": "Off-white"
+    },
+    "diagnostic_only": true,
+    "original_query_timestamp": 1200.0
+  },
+  "benchmark_timestamp": 30.0,
+  "snapshot_sha256": "bf9df002334687d79945026d792c37545563c6cc5f61d25599bd23e7fea7a215",
+  "snapshot": "smoke/shared01/aea/C4/snapshots/t_00030.000000/validation_graph.pkl",
+  "retrieval": {
+    "evidence": {
+      "CLIP_1": [
+        "The camera pans back inside the bedroom, showing the bed and a closet door.",
+        "The camera turns left to enter a bedroom containing a large bed, a dresser, and a mirror.",
+        "The view focuses on the patio, showing a fence with pink flowers and covered objects outside.",
+        "A first-person perspective shows a hand holding a smartphone while walking down a hallway with star-patterned tiles.",
+        "The individual is exploring the interior of a residential house.",
+        "The person is observing the backyard through the glass doors.",
+        "The person is checking a smartphone, possibly for navigation or information.",
+        "The camera moves towards glass sliding doors that lead to an outdoor patio area."
+      ]
+    },
+    "metrics": {
+      "query_text": "What color was the blanket on the bed while I was reading?",
+      "query_preparation_ms": 0.025007000658661127,
+      "embedding_ms": 310.8012599986978,
+      "embedding_calls": 1,
+      "vector_search_ms": 2.903094995417632,
+      "streammeco_tmr_scoring_ms": 0.012985008652321994,
+      "candidate_node_ids": [
+        4,
+        1,
+        3,
+        0,
+        5,
+        7,
+        6,
+        2
+      ],
+      "candidate_node_scores": {
+        "4": 0.26914835435257695,
+        "1": 0.25763455321018575,
+        "3": 0.1955702041185181,
+        "0": 0.14548992846275666,
+        "5": 0.1414570805621177,
+        "7": 0.11815759492333704,
+        "6": 0.1028817959265493,
+        "2": 0.0790911942273563
+      },
+      "clip_scores": {
+        "1": 0.26914835435257695
+      },
+      "graph_node_selection_ms": 0.09300299279857427,
+      "reranking_ms": 0.0,
+      "returned_node_ids": [
+        4,
+        1,
+        3,
+        0,
+        5,
+        7,
+        6,
+        2
+      ],
+      "returned_node_scores": {
+        "4": 0.26914835435257695,
+        "1": 0.25763455321018575,
+        "3": 0.1955702041185181,
+        "0": 0.14548992846275666,
+        "5": 0.1414570805621177,
+        "7": 0.11815759492333704,
+        "6": 0.1028817959265493,
+        "2": 0.0790911942273563
+      },
+      "retrieval_round_total_ms": 314.0325690037571
+    },
+    "retrieval_calls": 1,
+    "retrieval_ms": 315.25485299061984,
+    "snapshot_sha256": "bf9df002334687d79945026d792c37545563c6cc5f61d25599bd23e7fea7a215",
+    "question_start_ts": 1789752869.6916127
+  },
+  "answer": {
+    "request_digest": "6f2189f852d98a66675127d9e9c31dfb98001859d9ea7e4153d91997f3a4fd00",
+    "model": "gpt-5.6-terra",
+    "provider": "official_openai_responses",
+    "answer": "C. Light Gray — the available evidence only mentions the bed, not the blanket color, so this cannot be determined from the provided information.",
+    "request_start_ts": 1789752870.036146,
+    "first_content_token_ts": 1789752870.8319175,
+    "response_end_ts": 1789752871.4538445,
+    "ttft_ms": 795.7710429909639,
+    "generation_complete_ms": 1417.6979679905344,
+    "after_first_token_ms": 621.9269249995705,
+    "input_tokens": 266,
+    "output_tokens": 32,
+    "reasoning_tokens": 0,
+    "answer_calls": 1,
+    "ttft_event": "first_nonempty_response.output_text.delta",
+    "response_id": "resp_0643fd452609da8c006aad7626275087d2896fbce68216f421"
+  },
+  "correct": false,
+  "evaluator": "leading option letter exact match; missing letter is incorrect",
+  "question_to_first_token_ms": 1140.3048038482666,
+  "question_to_complete_answer_ms": 1762.2318267822266,
+  "answer_calls": 1,
+  "retrieval_calls": 1
+}

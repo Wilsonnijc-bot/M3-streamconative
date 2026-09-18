@@ -26,6 +26,7 @@ class Manifest(BaseModel):
     memory_count: int = Field(ge=0)
     entity_count: int = Field(ge=0)
     clip_ids: list[int]
+    clip_intervals: dict[str, tuple[float, float]] | None = None
 
     @field_validator("video_id")
     @classmethod
@@ -121,12 +122,20 @@ def load_interchange(input_dir: str | Path) -> Interchange:
         if memory.block_id != memory.clip_id // manifest.clips_per_block:
             raise ValueError(f"Invalid block ID for M3 node {memory.m3_node_id}")
         expected_start = memory.clip_id * manifest.clip_duration_seconds
+        expected_end = expected_start + manifest.clip_duration_seconds
+        if manifest.clip_intervals is not None:
+            import math
+            if set(manifest.clip_intervals) != {str(c) for c in manifest.clip_ids}:
+                raise ValueError('Exact intervals must cover precisely the exported clips')
+            expected_start, expected_end = manifest.clip_intervals[str(memory.clip_id)]
+            if not (math.isfinite(expected_start) and math.isfinite(expected_end) and 0 <= expected_start < expected_end):
+                raise ValueError('Invalid exact clip interval')
         if abs(memory.provenance.start_time_seconds - expected_start) > 1e-6:
             raise ValueError(f"Invalid start timestamp for M3 node {memory.m3_node_id}")
         if (
             abs(
                 memory.provenance.end_time_seconds
-                - (expected_start + manifest.clip_duration_seconds)
+                - expected_end
             )
             > 1e-6
         ):

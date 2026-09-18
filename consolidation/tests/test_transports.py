@@ -100,10 +100,19 @@ def test_official_responses_preserves_model_reasoning_and_resume(tmp_path,monkey
     work=tmp_path/'work'
     assert propose_official(packet,work,config)['decisions'][0]['op']=='merge_voice'
     payload=read(work/'llm_input.json')
+    assert any('json' in message['content'].lower() for message in payload['input'])
+    assert json.loads(payload['input'][0]['content']) == read(work/'prompt_packet.json')
     assert payload['model']=='gpt-6-astra' and payload['reasoning']['effort']=='high'
     assert payload['background'] is True
     assert 'test-key' not in (work/'llm_input.json').read_text()
     propose_official(packet,work,config)
     assert requests[-1].full_url=='https://api.openai.com/v1/responses/resp_test'
+    saved_packet = (work/'prompt_packet.json').read_bytes()
+    previous_calls = len(requests)
+    changed = dict(packet, session_id='another-session')
+    with pytest.raises(ValueError, match='different model request'):
+        propose_official(changed,work,config)
+    assert len(requests) == previous_calls
+    assert (work/'prompt_packet.json').read_bytes() == saved_packet
     write(config,{'gpt-6-astra':{'base_url':'https://example.com/v1','api_key':'test-key'}})
     with pytest.raises(ValueError):propose_official(packet,work,config)

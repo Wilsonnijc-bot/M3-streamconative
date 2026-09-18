@@ -1,0 +1,63 @@
+# Consolidation at 2400 media seconds
+
+Detailed snapshot, evidence, official request/response, accepted/rejected decisions, and native identity changes are in snapshot job directories.
+
+```json
+{
+  "cutoff": 2400,
+  "input_nodes": 12,
+  "consolidation_start": 1789752974.9711566,
+  "snapshot_copy_ms": 14.321505994303152,
+  "queue_ms": 0.1026719983201474,
+  "before_mappings": {
+    "character_0": [
+      "voice_0",
+      "voice_1",
+      "voice_3"
+    ],
+    "character_2": [
+      "voice_2"
+    ]
+  },
+  "snapshot_input_preparation_ms": 2.23585800267756,
+  "llm_ms": 6198.527428001398,
+  "usage": {
+    "input_tokens": 4502,
+    "input_tokens_details": {
+      "cache_write_tokens": 1002,
+      "cached_tokens": 3484
+    },
+    "output_tokens": 96,
+    "output_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "total_tokens": 4598
+  },
+  "reason_worker_ms": 6230.642437003553,
+  "phase_timings": {
+    "scope": "shared worker including evidence, MOSS, reasoning and projection",
+    "worker_wall_ms": 6227.823838999029
+  },
+  "accepted_decisions": 0,
+  "rejected_decisions": 0,
+  "job_directory": "smoke/maintenance_sol03/C3/consolidation/snapshot_4",
+  "write_back_ms": 0.5561690049944445,
+  "after_mappings": {
+    "character_0": [
+      "voice_0",
+      "voice_1",
+      "voice_3"
+    ],
+    "character_2": [
+      "voice_2"
+    ]
+  },
+  "affected_nodes": [],
+  "consolidation_end": 1789752981.2027833,
+  "total_consolidation_wall_ms": 6231.631626011222,
+  "construction_blocked_ms": 6231.726052006707,
+  "llm_call_count": 1,
+  "status": "accepted",
+  "media_timestamp": 2400
+}
+```

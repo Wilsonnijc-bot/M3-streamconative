@@ -1,0 +1,319 @@
+{
+  "clip_id": 1,
+  "voice_observations": [],
+  "clip_path": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/tmp/aea_1_952tuj8x/segment.mp4",
+  "shared_asr_provenance": {
+    "cache_hit": true,
+    "cache_path": "cache/aea/asr/310d813b770300657cfd2382988bcf52ed97681af50fa818bc6f0e5e0ec059c6.json",
+    "lookup_or_request_ms": 0.27642599889077246,
+    "timing_scope": "shared event ASR; cached request duration not reported as new inference"
+  },
+  "asr_selected_provider": "deepgram-asr",
+  "end_to_end_memory_generation_ms": 67153.11106300214,
+  "latency_ms": {
+    "clip_decode": 3259.2361889983295,
+    "deepgram_asr": null,
+    "mai_transcribe_asr": null,
+    "asr_total": null,
+    "audio_segmentation": 4.528121993644163,
+    "speech_embedding_campplus": null,
+    "speech_embedding_ecapa": null,
+    "speaker_mapping_including_embedding": null,
+    "facial_detection_recognition_buffalo_l": 2197.768864003592,
+    "face_clustering": 0.22561100195161998,
+    "vlm_memory_generation": 64046.765339997364,
+    "text_embedding": 892.6828080002451,
+    "graph_update_total": 0.10664000001270324
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 1,
+      "model": "text-embedding-3-large",
+      "input_count": 8,
+      "input_chars": 654,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789752629.0682309,
+          "status": "success",
+          "total_tokens": 125,
+          "request_end": 1789752629.9609027,
+          "latency_ms": 892.6727899961406
+        }
+      ],
+      "total_tokens": 125,
+      "latency_ms": 892.6828080002451
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": null
+      },
+      "asr_total_ms": null,
+      "audio_segmentation_ms": 4.528121993644163,
+      "speech_embedding_ms": null,
+      "graph_update_ms": null,
+      "asr_segment_count": 0,
+      "speech_embedding_count": 0,
+      "voice_identity_count": 0,
+      "asr_selected_provider": "deepgram-asr",
+      "speaker_mapping": "CAM++",
+      "asr_precomputed": true,
+      "asr_execution": "single_provider",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr"
+      ],
+      "total_ms": 13.108785002259538
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 2197.768864003592,
+      "face_clustering_ms": 0.22561100195161998,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 0,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 2198.5392040078295
+    },
+    "vlm": {
+      "context_preparation_ms": 0.08517901005689055,
+      "attempts": [
+        {
+          "attempt": 1,
+          "max_new_tokens": 1536,
+          "latency_ms": 64046.58457300684,
+          "response_chars": 775,
+          "generation": {
+            "raw_response": "The user wants a detailed description of the video and high-level conclusions based on the provided frames.\n\n**Video Analysis:**\n1.  **Start (0.0s - 2.0s):** The video starts with a first-person perspective (POV) looking down a hallway. The camera is moving forward. A hand holding a smartphone is visible in the lower right corner. The phone screen is lit up, showing a white interface. The hallway has a dark tiled floor with a star pattern. There are mirrors on the walls.\n2.  **Transition (2.0s - 4.0s):** The camera turns left, entering a bedroom. The room is well-lit with natural light coming from a window or door. There's a bed with white linens, a nightstand, and a dresser. A large mirror hangs on the wall.\n3.  **Exploration (4.0s - 7.0s):** The camera moves further into the bedroom, panning towards a set of glass sliding doors leading to a patio. The room has a large bed, a dresser, and a chair. The floor is carpeted.\n4.  **Patio View (7.0s - 26.0s):** The camera focuses on the glass sliding doors. The doors are slightly ajar. Through the glass, a backyard is visible. There are pink flowers (bougainvillea) climbing a fence. There's a covered object (maybe a grill or furniture) and some gardening tools. The camera moves back and forth, looking through the open and closed doors. The lighting suggests it's daytime outside, but the room is somewhat dim inside.\n5.  **Return to Bedroom (26.0s - 30.0s):** The camera turns away from the patio doors and pans back towards the bed and the rest of the bedroom. It shows the bed, the nightstand with a lamp, and a closet door. The camera movement is a bit shaky, typical of a handheld device.\n\n**Character Features:**\n*   **Face:** None visible.\n*   **Voice:** None provided.\n\n**Video Description Construction:**\n*   Start with the hallway walk. Mention the phone.\n*   Describe entering the bedroom.\n*   Describe the focus on the patio doors and the view outside.\n*   Describe the return to the bedroom interior.\n\n**High-Level Conclusions:**\n*   The person is exploring the house.\n*   They are checking the phone, possibly looking for something or just checking the time/location.\n*   They are looking out the window/door, perhaps checking the outside or waiting for someone.\n*   The environment looks like a residential home.\n\n**Drafting the JSON:**\n*   `video_description`:\n    *   A person holding a smartphone walks down a hallway with star-patterned tiles.\n    *   The person enters a bedroom with a large bed and a dresser.\n    *   The camera pans towards glass sliding doors leading to a backyard patio.\n    *   The view outside shows a fence with pink flowers and covered items.\n    *   The person looks back into the bedroom, showing the bed and closet.\n*   `high_level_conclusions`:\n    *   The person is navigating through a residential interior.\n    *   The focus on the phone suggests checking information or navigation.\n    *   The repeated looking at the patio suggests checking the outside environment.\n\nLet's refine the descriptions to be atomic events.\n1.  A first-person view shows a hand holding a smartphone while walking down a hallway.\n2.  The camera turns left to enter a bedroom with a large bed and a dresser.\n3.  The camera moves towards glass sliding doors that lead to an outdoor patio area.\n4.  The view focuses on the patio, showing a fence with pink flowers and covered objects.\n5.  The camera pans back inside the bedroom, showing the bed and a closet door.\n\nLet's refine the conclusions.\n1.  The individual is exploring the interior of a house.\n2.  The person is checking a smartphone, possibly for navigation or information.\n3.  The person is observing the backyard through the glass doors.\n\nWait, I need to check if there are any voice features. The prompt says \"Voice features: {}\". So no voice features.\n\nFinal check of the JSON structure.\n</think>\n\n```json\n{\n\t\"video_description\": [\n\t\t\"A first-person perspective shows a hand holding a smartphone while walking down a hallway with star-patterned tiles.\",\n\t\t\"The camera turns left to enter a bedroom containing a large bed, a dresser, and a mirror.\",\n\t\t\"The camera moves towards glass sliding doors that lead to an outdoor patio area.\",\n\t\t\"The view focuses on the patio, showing a fence with pink flowers and covered objects outside.\",\n\t\t\"The camera pans back inside the bedroom, showing the bed and a closet door.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The individual is exploring the interior of a residential house.\",\n\t\t\"The person is checking a smartphone, possibly for navigation or information.\",\n\t\t\"The person is observing the backyard through the glass doors.\"\n\t]\n}\n```\n",
+            "response": "```json\n{\n\t\"video_description\": [\n\t\t\"A first-person perspective shows a hand holding a smartphone while walking down a hallway with star-patterned tiles.\",\n\t\t\"The camera turns left to enter a bedroom containing a large bed, a dresser, and a mirror.\",\n\t\t\"The camera moves towards glass sliding doors that lead to an outdoor patio area.\",\n\t\t\"The view focuses on the patio, showing a fence with pink flowers and covered objects outside.\",\n\t\t\"The camera pans back inside the bedroom, showing the bed and a closet door.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The individual is exploring the interior of a residential house.\",\n\t\t\"The person is checking a smartphone, possibly for navigation or information.\",\n\t\t\"The person is observing the backyard through the glass doors.\"\n\t]\n}\n```",
+            "output_tokens": 1104,
+            "max_new_tokens": 1536,
+            "hit_max_new_tokens": false,
+            "thinking_started": false,
+            "thinking_completed": true
+          },
+          "enable_thinking": true
+        }
+      ],
+      "vlm_ms": 64046.765339997364,
+      "raw_response": "```json\n{\n\t\"video_description\": [\n\t\t\"A first-person perspective shows a hand holding a smartphone while walking down a hallway with star-patterned tiles.\",\n\t\t\"The camera turns left to enter a bedroom containing a large bed, a dresser, and a mirror.\",\n\t\t\"The camera moves towards glass sliding doors that lead to an outdoor patio area.\",\n\t\t\"The view focuses on the patio, showing a fence with pink flowers and covered objects outside.\",\n\t\t\"The camera pans back inside the bedroom, showing the bed and a closet door.\"\n\t],\n\t\"high_level_conclusions\": [\n\t\t\"The individual is exploring the interior of a residential house.\",\n\t\t\"The person is checking a smartphone, possibly for navigation or information.\",\n\t\t\"The person is observing the backyard through the glass doors.\"\n\t]\n}\n```",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "A first-person perspective shows a hand holding a smartphone while walking down a hallway with star-patterned tiles.",
+          "The camera turns left to enter a bedroom containing a large bed, a dresser, and a mirror.",
+          "The camera moves towards glass sliding doors that lead to an outdoor patio area.",
+          "The view focuses on the patio, showing a fence with pink flowers and covered objects outside.",
+          "The camera pans back inside the bedroom, showing the bed and a closet door."
+        ],
+        "high_level_conclusions": [
+          "The individual is exploring the interior of a residential house.",
+          "The person is checking a smartphone, possibly for navigation or information.",
+          "The person is observing the backyard through the glass doors."
+        ]
+      },
+      "episodic_memory_count": 5,
+      "semantic_memory_count": 3
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 5,
+      "text_embedding_ms": null,
+      "text_embedding_count": 5,
+      "graph_update_ms": 0.08803501259535551,
+      "nodes_added": 5,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 3,
+      "text_embedding_ms": null,
+      "text_embedding_count": 3,
+      "graph_update_ms": 0.01860498741734773,
+      "nodes_added": 3,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 0,
+    "speech_embeddings": 0,
+    "voice_identities": 0,
+    "detected_faces": 0,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 5,
+    "semantic_memories": 3,
+    "nodes_after_clip": 8,
+    "edges_after_clip": 0,
+    "nodes_added_by_clip": 8,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "A first-person perspective shows a hand holding a smartphone while walking down a hallway with star-patterned tiles.",
+      "The camera turns left to enter a bedroom containing a large bed, a dresser, and a mirror.",
+      "The camera moves towards glass sliding doors that lead to an outdoor patio area.",
+      "The view focuses on the patio, showing a fence with pink flowers and covered objects outside.",
+      "The camera pans back inside the bedroom, showing the bed and a closet door."
+    ],
+    "high_level_conclusions": [
+      "The individual is exploring the interior of a residential house.",
+      "The person is checking a smartphone, possibly for navigation or information.",
+      "The person is observing the backyard through the glass doors."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "A first-person perspective shows a hand holding a smartphone while walking down a hallway with star-patterned tiles.",
+      "The camera turns left to enter a bedroom containing a large bed, a dresser, and a mirror.",
+      "The camera moves towards glass sliding doors that lead to an outdoor patio area.",
+      "The view focuses on the patio, showing a fence with pink flowers and covered objects outside.",
+      "The camera pans back inside the bedroom, showing the bed and a closet door."
+    ],
+    "high_level_conclusions": [
+      "The individual is exploring the interior of a residential house.",
+      "The person is checking a smartphone, possibly for navigation or information.",
+      "The person is observing the backyard through the glass doors."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/smoke/shared01/aea/C1/audits/clip_1_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 8,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 0,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A first-person perspective shows a hand holding a smartphone while walking down a hallway with star-patterned tiles."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera turns left to enter a bedroom containing a large bed, a dresser, and a mirror."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera moves towards glass sliding doors that lead to an outdoor patio area."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 3,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The view focuses on the patio, showing a fence with pink flowers and covered objects outside."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 4,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera pans back inside the bedroom, showing the bed and a closet door."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 5,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The individual is exploring the interior of a residential house."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 6,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person is checking a smartphone, possibly for navigation or information."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 7,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The person is observing the backyard through the glass doors."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/smoke/shared01/aea/C1/audits/clip_1_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/smoke/shared01/aea/C1/audits/clip_1_graph.pkl"
+  }
+}

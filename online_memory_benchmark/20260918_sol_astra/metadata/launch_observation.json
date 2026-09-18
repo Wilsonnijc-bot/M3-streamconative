@@ -1,0 +1,31 @@
+{
+  "status": "running",
+  "observed_unix": 1789753148.7873638,
+  "session": "online-memory-terra-sol-20260918-full-01",
+  "pane": "352844 0",
+  "workers": [
+    {
+      "pid": 352850,
+      "argv": [
+        "/opt/streammeco/.venv/bin/python",
+        "-u",
+        "scripts/online_benchmark.py",
+        "--run-root",
+        "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra",
+        "--results",
+        "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/results",
+        "--resume",
+        ""
+      ],
+      "cwd": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra"
+    }
+  ],
+  "gpu_processes": "352850, 11418 MiB",
+  "log": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/logs/online-memory-terra-sol-20260918-full-01.log",
+  "instance_id": "1042997",
+  "primary_model": "gpt-5.6-terra",
+  "consolidation_model": "gpt-5.6-sol",
+  "validation_gate_sha256": "28f8f0ffcd4cbf15ccb9dc8455465d83fc15a4aa1e74089ba77a2890f6583800",
+  "validation": "17 remote static tests; 16 real Terra answers; six Sol maintenance events",
+  "completion_claimed": false
+}

@@ -1,21 +1,74 @@
 {
-  "status": "blocked",
+  "status": "ready",
+  "checks": {
+    "cuda": {
+      "gpu": "NVIDIA RTX A6000",
+      "torch": "2.6.0+cu124"
+    },
+    "import:speechbrain": true,
+    "import:m3_agent.memorization_memory_graphs": true,
+    "import:mmagent.tst_mapper": true,
+    "import:mmagent.retrieve": true,
+    "import:streammeco": true,
+    "import:consolidation.runtime_io": true,
+    "import:consolidation.llm_consolidator": true,
+    "tst:jake": {
+      "policy": "online_native_m3",
+      "pre_enrollment": false,
+      "threshold": 0.6,
+      "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8",
+      "encoder_revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286"
+    },
+    "media:jake": {
+      "recordings": 828,
+      "events": 1052,
+      "questions": 102,
+      "plan_hash": "8fcec7e3a50c06da5d94379230cd60ae885b9aeda4adbc671bb33994a69a3ba8",
+      "duration_s": 39367.594
+    },
+    "tst:aea": {
+      "policy": "online_native_m3",
+      "pre_enrollment": false,
+      "threshold": 0.6,
+      "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8",
+      "encoder_revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286"
+    },
+    "media:aea": {
+      "recordings": 109,
+      "events": 937,
+      "questions": 1000,
+      "plan_hash": "4f9927bfcb55bcd78c8343a97ccfc23937c6f6420a2b6eac41d061d4a4272da9",
+      "duration_s": 21788.95
+    },
+    "official_model_access": [
+      "gpt-5.6-terra",
+      "gpt-5.6-sol"
+    ],
+    "shared_consolidation": "/opt/streammeco/run/consolidation/port.py",
+    "moss_window_runner": {
+      "configured": true,
+      "revision": "704aa4a9c304e8520be88901e0d1960158ef5b15",
+      "repository_revision": "61bc29cd4120be7b5d3b761b64cd5dff57263642"
+    },
+    "official_embedding_quota": {
+      "status": "ready",
+      "dimensions": 3072
+    },
+    "local_model_hashes": 47,
+    "credential_present:OPENAI_API_KEY": true,
+    "credential_present:DEEPGRAM_API_KEY": true,
+    "credential_present:API_302_KEY": true,
+    "disk_free_bytes": 19980480512,
+    "mandol": true,
+    "reranking_config": {
+      "method": "qwen-302",
+      "model": "Qwen/Qwen3-Reranker-0.6B",
+      "endpoint": "https://api.302.ai/v1/rerank",
+      "api_key_env": "API_302_KEY",
+      "timeout_s": 60
+    }
+  },
+  "blockers": [],
   "benchmark_started": false,
-  "instance_id": "1042997",
-  "primary_backend": "gpt-5.6-sol",
-  "primary_reasoning_effort": "medium",
-  "consolidation_backend": "gpt-6-astra",
-  "gpu": "NVIDIA RTX A6000",
-  "torch": "2.6.0+cu124",
-  "cuda_tensor_check": true,
-  "disk_free_bytes": 2953682944,
-  "storage_note": "Measure peak working and artifact bytes on a short prefix before full execution",
-  "aea_recordings": 109,
-  "aea_missing_media": [],
-  "model_access": true,
-  "blockers": [
-    "Integrated online C1-C4 benchmark entrypoint is absent",
-    "Verified TST enrollment and independent threshold calibration absent for jake",
-    "Verified TST enrollment and independent threshold calibration absent for aea"
-  ]
+  "instance_id": "1042997"
 }

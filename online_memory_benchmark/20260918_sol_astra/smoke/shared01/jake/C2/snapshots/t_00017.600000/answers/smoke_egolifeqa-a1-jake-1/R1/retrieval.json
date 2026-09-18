@@ -1,0 +1,72 @@
+{
+  "evidence": {
+    "CLIP_1": [
+      "The person filming is acting as the facilitator or timer for the group.",
+      "The items on the table, such as black cases and headsets, suggest a technology or VR-related task.",
+      "A first-person view shows a person holding a smartphone while standing near a table where four people are seated.",
+      "The person holding the phone displays a countdown timer on the screen, starting at 00:03:00.",
+      "When the timer reaches 00:00:00, the person places the phone on the table.",
+      "The group watches the timer count down as it progresses.",
+      "The seated individuals are looking towards the camera and the phone screen.",
+      "The group appears to be participating in a timed activity or challenge."
+    ]
+  },
+  "metrics": {
+    "query_text": "Who used the screwdriver first?",
+    "query_preparation_ms": 0.020960011170245707,
+    "embedding_ms": 312.9283169982955,
+    "embedding_calls": 1,
+    "vector_search_ms": 2.3545790027128533,
+    "streammeco_tmr_scoring_ms": 0.01198200334329158,
+    "candidate_node_ids": [
+      10,
+      11,
+      4,
+      6,
+      8,
+      7,
+      5,
+      9
+    ],
+    "candidate_node_scores": {
+      "10": 0.12336670407587204,
+      "11": 0.1143026112189737,
+      "4": 0.11194320539285685,
+      "6": 0.09691179294524865,
+      "8": 0.0705399413554001,
+      "7": 0.059946800802499464,
+      "5": 0.05726938726284124,
+      "9": 0.05002894925116526
+    },
+    "clip_scores": {
+      "1": 0.12336670407587204
+    },
+    "graph_node_selection_ms": 0.07861699850764126,
+    "reranking_ms": 0.0,
+    "returned_node_ids": [
+      10,
+      11,
+      4,
+      6,
+      8,
+      7,
+      5,
+      9
+    ],
+    "returned_node_scores": {
+      "10": 0.12336670407587204,
+      "11": 0.1143026112189737,
+      "4": 0.11194320539285685,
+      "6": 0.09691179294524865,
+      "8": 0.0705399413554001,
+      "7": 0.059946800802499464,
+      "5": 0.05726938726284124,
+      "9": 0.05002894925116526
+    },
+    "retrieval_round_total_ms": 315.6048780074343
+  },
+  "retrieval_calls": 1,
+  "retrieval_ms": 316.3260360015556,
+  "snapshot_sha256": "dbb28df5f5855c13bce328787abbab5d26b8992a0d4cc034846479f5db1b4c3f",
+  "question_start_ts": 1789752514.939946
+}

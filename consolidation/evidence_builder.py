@@ -7,7 +7,7 @@ def build_evidence(replay, state, moss=None, assignments=()):
     session, cutoff = replay['session_id'], replay['current_cutoff']
     if state['session_id'] != session or state['cutoff'] > cutoff:
         raise ValueError('state namespace or chronology mismatch')
-    alignments, summaries, mixed = align(replay['observations'], moss, session, cutoff)
+    alignments, summaries, mixed = align(replay['observations'], moss, session, cutoff,state['cutoff'])
     evidence = {}
     observations = deepcopy(replay['observations'])
     for o in observations:
@@ -47,6 +47,11 @@ def build_evidence(replay, state, moss=None, assignments=()):
             unresolved_count=sum(o['current_entity_id'] is None for o in members),
             moss_summary=summaries.get(voice,{}), possible_mixed=voice in mixed))
     return dict(previous_execution=deepcopy(state["decision_history"][-1] if state["decision_history"] else None),
+        previous_cutoff_clip=state.get('cutoff_clip'),
+        current_cutoff_clip=replay.get('current_cutoff_clip', max(
+            [o['clip_id'] for o in observations] + [m['clip_id'] for m in memories] +
+            [s['segment_id'] for s in replay.get('segments', [])] + [-1])),
+        current_references=deepcopy(state['references']), current_claims=deepcopy(state['claims']),
         cluster_inventory=clusters, cluster_defaults=deepcopy(state.get('cluster_defaults',{})),
         assignment_metadata=deepcopy(state.get('assignment_metadata',{})),
         coverage=dict(total=len(observations),assigned=len(state['assignments']),

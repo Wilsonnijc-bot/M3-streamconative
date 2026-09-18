@@ -4,19 +4,21 @@ import urllib.request
 from pathlib import Path
 from .common import dumps, write
 from .schema import PATCH_SCHEMA
+from .prompt_packet import prepare_prompt, compact
 
 
-def request_payload(packet, model):
+def request_payload(packet, model, directory=None):
     system = (Path(__file__).parent/'prompts/system.md').read_text()
+    model_packet = prepare_prompt(packet, directory)
     return {'model':model, 'messages':[
         {'role':'system','content':system+'\n\nPatch JSON Schema:\n'+dumps(PATCH_SCHEMA)},
-        {'role':'user','content':dumps(packet)}],
+        {'role':'user','content':compact(model_packet)}],
         'response_format':{'type':'json_object'}}
 
 
 def propose(packet, directory, model, endpoint=None, key_env='CONSOLIDATION_API_KEY', patch_file=None):
     directory = Path(directory)
-    payload = request_payload(packet, model)
+    payload = request_payload(packet, model, directory)
     write(directory/'llm_input.json', payload)
     if patch_file:
         raw = Path(patch_file).read_text()
@@ -58,15 +60,18 @@ def propose_official(packet, directory, api_config, model='gpt-6-astra'):
         raise ValueError('official run requires api.openai.com')
     key=os.environ.get(config.get('api_key_env','')) or config.get('api_key')
     if not key:raise ValueError('official model API key is missing')
-    chat=request_payload(packet,model)
+    request_path=directory/'llm_input.json'
+    chat=request_payload(packet,model,None if request_path.exists() else directory)
     payload={'model':model,'instructions':chat['messages'][0]['content'],
-        'input':[chat['messages'][1]],'reasoning':{'effort':config.get('reasoning_effort','high')},
+        'input':[chat['messages'][1], {'role':'developer','content':'Return the consolidation patch as a JSON object.'}],
+        'reasoning':{'effort':config.get('reasoning_effort','high')},
         'text':{'format':{'type':'json_object'}},'max_output_tokens':65536,
         'background':True,'store':True}
     fingerprint=digest(payload)
-    request_path=directory/'llm_input.json'
     if request_path.exists() and read(request_path)!=payload:
         raise ValueError('work directory already contains a different model request')
+    if request_path.exists():
+        prepare_prompt(packet,directory)
     write(request_path,payload)
     headers={'Authorization':'Bearer '+key,'Content-Type':'application/json','User-Agent':'StreamMeCo-consolidation/0.1'}
     def call(path,body=None):

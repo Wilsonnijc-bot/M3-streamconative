@@ -4,15 +4,15 @@
   "instance_id": "1042997",
   "host": "38.80.122.150",
   "primary_backend": {
-    "requested": "GPT 5.6 sol median",
-    "model_id": "gpt-5.6-sol",
+    "requested": "GPT 5.6 terra median",
+    "model_id": "gpt-5.6-terra",
     "reasoning_effort": "medium",
     "model_access_verified": true
   },
   "consolidation_backend": {
-    "model": "gpt-6-astra",
+    "model": "gpt-5.6-sol",
     "reasoning_effort": "high",
-    "source": "existing consolidation default"
+    "source": "user-selected consolidation backend; overrides shared transport default"
   },
   "datasets": [
     "jake",
@@ -42,5 +42,15 @@
   "retrieval": [
     "R1",
     "R2"
-  ]
+  ],
+  "question_counts": {
+    "jake": 102,
+    "aea": 1000
+  },
+  "tst_policy": "online_native_m3_no_pre_enrollment",
+  "retrieval_policy": {
+    "R1": "one current M3 search",
+    "R2": "BM25+dense+SPLADE+302 reranking; separate build timing; warm search"
+  },
+  "graph_snapshot_interval_s": 300
 }

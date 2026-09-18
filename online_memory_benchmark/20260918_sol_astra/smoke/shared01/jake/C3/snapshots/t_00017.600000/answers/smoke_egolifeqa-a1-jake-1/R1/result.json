@@ -1,0 +1,134 @@
+{
+  "dataset": "jake",
+  "construction_method": "C3",
+  "retrieval_method": "R1",
+  "question": {
+    "dataset": "jake",
+    "question_id": "smoke_egolifeqa-a1-jake-1",
+    "question": "Who used the screwdriver first?",
+    "ground_truth": "B",
+    "options": {
+      "A": "Tasha",
+      "B": "Alice",
+      "C": "Shure",
+      "D": "Lucia"
+    },
+    "query_timestamp": 17.6,
+    "source_annotation": {
+      "repo": "kfkas/egolifeqa-imu-benchmark",
+      "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+      "file": "data/v2/benchmark.csv",
+      "question_id": "egolifeqa-a1-jake-1",
+      "query_time_raw": "DAY1@11210217",
+      "evidence_time_raw": [
+        "DAY1@11152408"
+      ],
+      "source_ids": [
+        "DAY1_A1_JAKE_11210000",
+        "DAY1_A1_JAKE_11150000"
+      ],
+      "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+    },
+    "diagnostic_only": true,
+    "original_query_timestamp": 40862.17
+  },
+  "benchmark_timestamp": 17.6,
+  "snapshot_sha256": "fb26d14bb025c566f7427ddf29beb4a1bcf9d53854df0d7849fe1c3945ba7b69",
+  "snapshot": "smoke/shared01/jake/C3/snapshots/t_00017.600000/validation_graph.pkl",
+  "retrieval": {
+    "evidence": {
+      "CLIP_1": [
+        "The person filming is acting as the facilitator or timer for the group.",
+        "The items on the table, such as black cases and headsets, suggest a technology or VR-related task.",
+        "A first-person view shows a person holding a smartphone while standing near a table where four people are seated.",
+        "The person holding the phone displays a countdown timer on the screen, starting at 00:03:00.",
+        "When the timer reaches 00:00:00, the person places the phone on the table.",
+        "The group watches the timer count down as it progresses.",
+        "The seated individuals are looking towards the camera and the phone screen.",
+        "The group appears to be participating in a timed activity or challenge."
+      ]
+    },
+    "metrics": {
+      "query_text": "Who used the screwdriver first?",
+      "query_preparation_ms": 0.04996299685444683,
+      "embedding_ms": 354.99646999232937,
+      "embedding_calls": 1,
+      "vector_search_ms": 2.4076689878711477,
+      "streammeco_tmr_scoring_ms": 0.008406001143157482,
+      "candidate_node_ids": [
+        10,
+        11,
+        4,
+        6,
+        8,
+        7,
+        5,
+        9
+      ],
+      "candidate_node_scores": {
+        "10": 0.1231313884938301,
+        "11": 0.11304833096319304,
+        "4": 0.1119047439543364,
+        "6": 0.09692863118156857,
+        "8": 0.07126865034511902,
+        "7": 0.060008468473513266,
+        "5": 0.05727446528879257,
+        "9": 0.050023854821515196
+      },
+      "clip_scores": {
+        "1": 0.1231313884938301
+      },
+      "graph_node_selection_ms": 0.05553400842472911,
+      "reranking_ms": 0.0,
+      "returned_node_ids": [
+        10,
+        11,
+        4,
+        6,
+        8,
+        7,
+        5,
+        9
+      ],
+      "returned_node_scores": {
+        "10": 0.1231313884938301,
+        "11": 0.11304833096319304,
+        "4": 0.1119047439543364,
+        "6": 0.09692863118156857,
+        "8": 0.07126865034511902,
+        "7": 0.060008468473513266,
+        "5": 0.05727446528879257,
+        "9": 0.050023854821515196
+      },
+      "retrieval_round_total_ms": 357.6998119970085
+    },
+    "retrieval_calls": 1,
+    "retrieval_ms": 358.43752000073437,
+    "snapshot_sha256": "fb26d14bb025c566f7427ddf29beb4a1bcf9d53854df0d7849fe1c3945ba7b69",
+    "question_start_ts": 1789752533.0568433
+  },
+  "answer": {
+    "request_digest": "789ab900d1fbb4634de3ec29fef38e9ba289bdee07b4b307010e29b81d7124b4",
+    "model": "gpt-5.6-terra",
+    "provider": "official_openai_responses",
+    "answer": "B. Alice — the provided evidence does not identify anyone using a screwdriver, so this cannot be determined from the clip description.",
+    "request_start_ts": 1789752533.4409635,
+    "first_content_token_ts": 1789752534.1609735,
+    "response_end_ts": 1789752534.7285635,
+    "ttft_ms": 720.0094660074683,
+    "generation_complete_ms": 1287.599361006869,
+    "after_first_token_ms": 567.5898949994007,
+    "input_tokens": 264,
+    "output_tokens": 29,
+    "reasoning_tokens": 0,
+    "answer_calls": 1,
+    "ttft_event": "first_nonempty_response.output_text.delta",
+    "response_id": "resp_01baff204b813e6f006aad74d5893487d2b47afbcf9f89e2c3"
+  },
+  "correct": true,
+  "evaluator": "leading option letter exact match; missing letter is incorrect",
+  "question_to_first_token_ms": 1104.1302680969238,
+  "question_to_complete_answer_ms": 1671.720266342163,
+  "answer_calls": 1,
+  "retrieval_calls": 1
+}

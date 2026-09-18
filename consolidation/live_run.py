@@ -1,5 +1,6 @@
 """Run real MOSS-backed checkpoints through the configured official GPT-6 Astra."""
 import argparse
+import os
 from pathlib import Path
 from .common import read,write
 from .replay import load_replay
@@ -9,20 +10,33 @@ from .llm_consolidator import propose_official
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument('--minutes',type=int,required=True,choices=[20,40])
+    parser.add_argument('--minutes',type=int,required=True)
     parser.add_argument('--output',default='consolidation/runs/live')
     parser.add_argument('--api-config',default='StreamMeCo/configs/api_config.json')
     parser.add_argument('--native-graph', help='native M3 pickle required for initial publication')
+    parser.add_argument('--moss-json',help='precomputed MOSS output for exactly this native-state window')
+    parser.add_argument('--moss-endpoint',default=os.environ.get('MOSS_ENDPOINT'))
+    parser.add_argument('--media-root',default=os.environ.get('MOSS_MEDIA_ROOT'))
+    parser.add_argument('--moss-revision',default=os.environ.get('MOSS_REVISION','server-unspecified'))
     args=parser.parse_args()
     root=Path(args.output)
-    moss=read(root/f'moss/prefix_{args.minutes}/moss.json')
+    if args.minutes<=0:
+        parser.error('--minutes must be positive')
     replay=load_replay('egolife_m3_jake_day1','egolife_m3_jake_day1/gemini',args.minutes*60)
     from .native import load_graph, current_graph
     native = load_graph(args.native_graph) if args.native_graph else current_graph(root/'published', replay['session_id'])
     if native is None:
         parser.error('provide --native-graph for the first native consolidation')
-    state,packet=prepare(replay,root/'published',moss,native_graph=native)
     work=root/'metadata'/f'astra_{args.minutes}'
+    if args.moss_json:
+        moss=read(args.moss_json)
+    elif args.moss_endpoint and args.media_root:
+        from .moss_runner import WindowMoss
+        moss=WindowMoss(args.moss_endpoint,args.media_root,revision=args.moss_revision)(
+            replay,getattr(native,'identity_cutoff',0),work/'moss')
+    else:
+        parser.error('configure --moss-endpoint and --media-root or supply exact-window --moss-json')
+    state,packet=prepare(replay,root/'published',moss,native_graph=native)
     write(work/'evidence.json',packet)
     print('ASTRA_BEGIN',args.minutes,'observations',len(packet['observations']),
         'MOSS_segments',len(moss['segments']),flush=True)

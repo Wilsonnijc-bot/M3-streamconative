@@ -1,0 +1,460 @@
+{
+  "version": "3.0_safetensors",
+  "config": {
+    "embedding_dim": 1024,
+    "faiss_index_type": "IDMap,Flat",
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "supported_modalities": [
+      "text"
+    ],
+    "image_model": null,
+    "text_model": "Qwen/Qwen3-Embedding-0.6B"
+  },
+  "memory_spaces": {
+    "hierarchical_memory": {
+      "name": "hierarchical_memory",
+      "unit_uids": [],
+      "child_space_names": [
+        "hierarchical_memory:L0_Observation",
+        "hierarchical_memory:L2_Insight",
+        "hierarchical_memory:L1_Summary"
+      ],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L0_Observation": {
+      "name": "hierarchical_memory:L0_Observation",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L1_Summary": {
+      "name": "hierarchical_memory:L1_Summary",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L2_Insight": {
+      "name": "hierarchical_memory:L2_Insight",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation": {
+      "name": "entity_relation",
+      "unit_uids": [],
+      "child_space_names": [
+        "entity_relation:entities",
+        "entity_relation:relations",
+        "entity_relation:mentions"
+      ],
+      "faiss_index_type": null
+    },
+    "entity_relation:entities": {
+      "name": "entity_relation:entities",
+      "unit_uids": [
+        "m3:jake_C1:entity:character_1",
+        "m3:jake_C1:entity:character_0",
+        "m3:jake_C1:entity:character_2"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation:mentions": {
+      "name": "entity_relation:mentions",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation:relations": {
+      "name": "entity_relation:relations",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "episodic_memory": {
+      "name": "episodic_memory",
+      "unit_uids": [
+        "m3:jake_C1:clip:1:episodic:3",
+        "m3:jake_C1:clip:1:episodic:6",
+        "m3:jake_C1:clip:1:episodic:7",
+        "m3:jake_C1:clip:1:episodic:5",
+        "m3:jake_C1:clip:1:episodic:4"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:jake_C1": {
+      "name": "m3:video:jake_C1",
+      "unit_uids": [],
+      "child_space_names": [
+        "m3:video:jake_C1:block:0"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:type:semantic": {
+      "name": "m3:type:semantic",
+      "unit_uids": [
+        "m3:jake_C1:clip:1:semantic:9",
+        "m3:jake_C1:clip:1:semantic:8",
+        "m3:jake_C1:clip:1:semantic:10"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:jake_C1:block:0": {
+      "name": "m3:video:jake_C1:block:0",
+      "unit_uids": [
+        "m3:jake_C1:clip:1:semantic:9",
+        "m3:jake_C1:clip:1:episodic:3",
+        "m3:jake_C1:clip:1:semantic:10",
+        "m3:jake_C1:clip:1:episodic:6",
+        "m3:jake_C1:clip:1:episodic:7",
+        "m3:jake_C1:clip:1:semantic:8",
+        "m3:jake_C1:clip:1:episodic:5",
+        "m3:jake_C1:clip:1:episodic:4"
+      ],
+      "child_space_names": [
+        "m3:video:jake_C1:clip:1"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:video:jake_C1:clip:1": {
+      "name": "m3:video:jake_C1:clip:1",
+      "unit_uids": [
+        "m3:jake_C1:clip:1:semantic:9",
+        "m3:jake_C1:clip:1:episodic:3",
+        "m3:jake_C1:clip:1:semantic:10",
+        "m3:jake_C1:clip:1:episodic:6",
+        "m3:jake_C1:clip:1:episodic:7",
+        "m3:jake_C1:clip:1:semantic:8",
+        "m3:jake_C1:clip:1:episodic:5",
+        "m3:jake_C1:clip:1:episodic:4"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    }
+  },
+  "memory_units_meta": {
+    "m3:jake_C1:entity:character_0": {
+      "uid": "m3:jake_C1:entity:character_0",
+      "raw_data": {
+        "text_content": "M3 person character_0 in video jake_C1",
+        "entity_id": "character_0",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          0
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:jake_C1:entity:character_1": {
+      "uid": "m3:jake_C1:entity:character_1",
+      "raw_data": {
+        "text_content": "M3 person character_1 in video jake_C1",
+        "entity_id": "character_1",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          1
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:jake_C1:entity:character_2": {
+      "uid": "m3:jake_C1:entity:character_2",
+      "raw_data": {
+        "text_content": "M3 person character_2 in video jake_C1",
+        "entity_id": "character_2",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          2
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:jake_C1:clip:1:episodic:3": {
+      "uid": "m3:jake_C1:clip:1:episodic:3",
+      "raw_data": {
+        "text_content": "A first-person perspective shows a person holding a smartphone in a room."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "3",
+        "video_id": "jake_C1",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "3",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C1:clip:1:episodic:4": {
+      "uid": "m3:jake_C1:clip:1:episodic:4",
+      "raw_data": {
+        "text_content": "Five people are seated around a table, all wearing VR headsets."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "4",
+        "video_id": "jake_C1",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "4",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C1:clip:1:episodic:5": {
+      "uid": "m3:jake_C1:clip:1:episodic:5",
+      "raw_data": {
+        "text_content": "The person holding the phone looks at the screen and interacts with the interface."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "5",
+        "video_id": "jake_C1",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "5",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C1:clip:1:episodic:6": {
+      "uid": "m3:jake_C1:clip:1:episodic:6",
+      "raw_data": {
+        "text_content": "The phone screen displays a timer or application menu."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "6",
+        "video_id": "jake_C1",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "6",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C1:clip:1:episodic:7": {
+      "uid": "m3:jake_C1:clip:1:episodic:7",
+      "raw_data": {
+        "text_content": "The person places the smartphone on the table in front of the group."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "7",
+        "video_id": "jake_C1",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "7",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C1:clip:1:semantic:10": {
+      "uid": "m3:jake_C1:clip:1:semantic:10",
+      "raw_data": {
+        "text_content": "The voice features indicate greetings and a name ('Zhipeng'), suggesting the session is starting or participants are being introduced."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "10",
+        "video_id": "jake_C1",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "10",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C1:clip:1:semantic:8": {
+      "uid": "m3:jake_C1:clip:1:semantic:8",
+      "raw_data": {
+        "text_content": "The group is participating in a virtual reality session or workshop."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "8",
+        "video_id": "jake_C1",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "8",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C1:clip:1:semantic:9": {
+      "uid": "m3:jake_C1:clip:1:semantic:9",
+      "raw_data": {
+        "text_content": "The person holding the camera is likely facilitating the session, possibly timing an activity or controlling the VR environment."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "9",
+        "video_id": "jake_C1",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "9",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    }
+  },
+  "internal_state": {
+    "_next_int_id": 11,
+    "_uid_to_int_id": {
+      "m3:jake_C1:entity:character_0": 0,
+      "m3:jake_C1:entity:character_1": 1,
+      "m3:jake_C1:entity:character_2": 2,
+      "m3:jake_C1:clip:1:episodic:3": 3,
+      "m3:jake_C1:clip:1:episodic:4": 4,
+      "m3:jake_C1:clip:1:episodic:5": 5,
+      "m3:jake_C1:clip:1:episodic:6": 6,
+      "m3:jake_C1:clip:1:episodic:7": 7,
+      "m3:jake_C1:clip:1:semantic:10": 8,
+      "m3:jake_C1:clip:1:semantic:8": 9,
+      "m3:jake_C1:clip:1:semantic:9": 10
+    },
+    "_modified_units": [
+      "m3:jake_C1:entity:character_1",
+      "m3:jake_C1:clip:1:semantic:9",
+      "m3:jake_C1:clip:1:episodic:3",
+      "m3:jake_C1:clip:1:semantic:10",
+      "m3:jake_C1:clip:1:episodic:6",
+      "m3:jake_C1:clip:1:episodic:7",
+      "m3:jake_C1:clip:1:semantic:8",
+      "m3:jake_C1:entity:character_2",
+      "m3:jake_C1:clip:1:episodic:5",
+      "m3:jake_C1:clip:1:episodic:4",
+      "m3:jake_C1:entity:character_0"
+    ],
+    "_deleted_units": [],
+    "_access_counts": {
+      "m3:jake_C1:entity:character_0": 1,
+      "m3:jake_C1:entity:character_1": 1,
+      "m3:jake_C1:entity:character_2": 1,
+      "m3:jake_C1:clip:1:episodic:3": 1,
+      "m3:jake_C1:clip:1:episodic:4": 1,
+      "m3:jake_C1:clip:1:episodic:5": 1,
+      "m3:jake_C1:clip:1:episodic:6": 1,
+      "m3:jake_C1:clip:1:episodic:7": 1,
+      "m3:jake_C1:clip:1:semantic:10": 1,
+      "m3:jake_C1:clip:1:semantic:8": 1,
+      "m3:jake_C1:clip:1:semantic:9": 1
+    }
+  },
+  "retrieval": {
+    "indices_saved": {},
+    "frozen_matrices_saved": {}
+  },
+  "high_level_memory_build": {}
+}

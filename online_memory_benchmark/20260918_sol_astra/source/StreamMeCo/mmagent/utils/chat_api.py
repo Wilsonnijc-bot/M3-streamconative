@@ -395,7 +395,6 @@ def transcribe_audio(model, audio_data, audio_format="wav", timeout=180):
             "model": model_config.get("model", "nova-3"),
             "smart_format": "true",
             "utterances": "true",
-            "diarize": "true",
             "language": model_config.get("language", "multi"),
             "diarize_model": model_config.get("diarize_model", "latest"),
         }

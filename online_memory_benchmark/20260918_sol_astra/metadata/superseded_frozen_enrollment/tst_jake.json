@@ -1,0 +1,169 @@
+{
+  "enrollment": "tst_assets/jake/enrollment.jsonl",
+  "calibration": "tst_assets/jake/calibration.jsonl",
+  "threshold_artifact": "tst_assets/jake/threshold.json",
+  "encoder_provenance": "tst_assets/jake/encoder.json",
+  "threshold": 0.15350107675107832,
+  "method_id": "a4d4ce164c1fe53c380e83da7b94ade767e69fd04128b87e395faceba3875da9",
+  "gallery_id": "c039ab9e0eb4c01b2ce35f0d71b6ab438c5d2c166be4f13a83f78a732783a077",
+  "encoder_fingerprint": "1b88b6fd38d128a3364e658003784628d7c89a2ba13fcab6738ba6eb31f5ed3a",
+  "diarization_provider": "deepgram-asr",
+  "encoder": {
+    "model": "speechbrain/spkrec-ecapa-voxceleb",
+    "revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+    "expected_embedding_dim": 192
+  },
+  "gallery": {
+    "policy": "all_enrolled"
+  },
+  "scoring": {
+    "normalization": "cosine",
+    "threshold": 0.15350107675107832,
+    "threshold_artifact": {
+      "method_id": "a4d4ce164c1fe53c380e83da7b94ade767e69fd04128b87e395faceba3875da9",
+      "threshold": 0.15350107675107832,
+      "calibration_data_id": "23914a7b991a80be06f05dddc0dc7780c2a35d0cf1f34c2baf9bad26b735344b",
+      "FAR": 0.2916666666666667,
+      "FRR": 0.0,
+      "EER": 0.22916666666666669,
+      "EER_threshold": 0.17920782283990155,
+      "closed_set_accept_accuracy": 0.5,
+      "positive_trials": 8,
+      "negative_trials": 24,
+      "enrollment_count": 8,
+      "calibration_count": 8,
+      "optimization": "Minimize balanced FAR/FRR on all candidate midpoints; tie lower FAR then higher threshold. EER nearest discrete operating point.",
+      "limitations": "Small development calibration; no independent test error estimate. AEA labels are manifest-defined wearer hypotheses."
+    }
+  },
+  "compensation": {
+    "mode": "none"
+  },
+  "excluded_intervals": [
+    {
+      "start_s": 1160.92,
+      "end_s": 1173.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0041_0000",
+      "role": "enrollment"
+    },
+    {
+      "start_s": 688.09,
+      "end_s": 694.09,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0025_0003",
+      "role": "enrollment"
+    },
+    {
+      "start_s": 463.92,
+      "end_s": 467.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0016_0008",
+      "role": "calibration"
+    },
+    {
+      "start_s": 1029.92,
+      "end_s": 1032.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0036_0007",
+      "role": "calibration"
+    },
+    {
+      "start_s": 576.92,
+      "end_s": 586.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0020_0005",
+      "role": "enrollment"
+    },
+    {
+      "start_s": 603.92,
+      "end_s": 609.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0021_0005",
+      "role": "enrollment"
+    },
+    {
+      "start_s": 657.92,
+      "end_s": 663.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0023_0002",
+      "role": "calibration"
+    },
+    {
+      "start_s": 770.92,
+      "end_s": 776.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0028_0002",
+      "role": "calibration"
+    },
+    {
+      "start_s": 377.92,
+      "end_s": 389.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0014_0000",
+      "role": "enrollment"
+    },
+    {
+      "start_s": 928.92,
+      "end_s": 939.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0033_0004",
+      "role": "enrollment"
+    },
+    {
+      "start_s": 361.92,
+      "end_s": 372.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0013_0002",
+      "role": "calibration"
+    },
+    {
+      "start_s": 410.92,
+      "end_s": 421.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0015_0001",
+      "role": "calibration"
+    },
+    {
+      "start_s": 227.92,
+      "end_s": 257.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0009_0000",
+      "role": "enrollment"
+    },
+    {
+      "start_s": 257.92,
+      "end_s": 287.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0010_0000",
+      "role": "enrollment"
+    },
+    {
+      "start_s": 17.92,
+      "end_s": 46.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0002_0000",
+      "role": "calibration"
+    },
+    {
+      "start_s": 47.92,
+      "end_s": 72.92,
+      "source_id": "egolife_m3_jake_day1/gemini/utt_0003_0000",
+      "role": "calibration"
+    }
+  ],
+  "manifest_hashes": {
+    "tst_assets/jake/enrollment.jsonl": "c9a7a3da9e2e0190c5679dfa2c47b8525af436cd57da518da1b05de4e0125cc8",
+    "tst_assets/jake/threshold.json": "56efd9cae380e434e87e8097ac28c4ea290e9588c794d9a0ee5f8707760a03ae",
+    "tst_assets/jake/calibration.jsonl": "23914a7b991a80be06f05dddc0dc7780c2a35d0cf1f34c2baf9bad26b735344b",
+    "tst_assets/jake/encoder.json": "39cc9d1d23d6878a98d9a062962d69611cfb02380081b72312fb6c92925ed911",
+    "tst_assets/jake/candidates.jsonl": "81087510b5085019542bd662561c9bd09ee1ce9ca25e61e4761b73257d2625a2",
+    "tst_assets/jake/calibration_scores.json": "c4f3575880d40c08344203b902698ec64eb42f5dad7b988230d34b6f24d26ed7",
+    "tst_assets/jake/trials.jsonl": "341befad26650a5d5afb8e82038e602dfdf1fd6552d18cfff1ff64771a7db178",
+    "tst_assets/jake/overlap_audit.json": "b00a708bf14b584181ecbd98c757c2315128812bdb49b8bb624456a4b85e9c85",
+    "tst_assets/jake/provenance.json": "66177489d25fae44cc29b1162703134f4babcde90e91ba20beb757b348fa28f8",
+    "tst_assets/jake/audio/person_2_utt_0033_0004.wav": "cdb62b8cd1f7d90896b6ace69ffcc004449c6bc348c511255865cd9e1ad55b36",
+    "tst_assets/jake/audio/person_1_utt_0020_0005.wav": "c49d705f75f59a80799b59e1e958c6a45f6694147860e6765d21f2fe9e46b5b7",
+    "tst_assets/jake/audio/person_2_utt_0013_0002.wav": "f9c69fa92035a69332becf2c26c8b2bff2288582fbcae5f1c37109ace205170c",
+    "tst_assets/jake/audio/person_1_utt_0021_0005.wav": "dc0e8332c5b35aecffcad1adc5d96453560f479ab7ae33a73344d5d399f44f46",
+    "tst_assets/jake/audio/person_1_utt_0028_0002.wav": "f91d03d4e9b5fba27dbca335ffeb04de18f0a15ef368f7be345126d64c105e7d",
+    "tst_assets/jake/audio/person_2_utt_0015_0001.wav": "79ab215255c91bd02e520fb3cac775e695ff615ed722a1a838026d6c189ede18",
+    "tst_assets/jake/audio/person_0_utt_0002_0000.wav": "b3f40ab6764ca1146106e25ae16eefca2751ee6689060eb07fff8f2e5c885a97",
+    "tst_assets/jake/audio/person_2_utt_0014_0000.wav": "1acec6131b2fde3f75a311eb6c38c41b9b9080fdb986ddfd1d490d9e38035560",
+    "tst_assets/jake/audio/person_3_utt_0025_0003.wav": "652c1c176cc579f4bfc0d898e4c737dd9086bbb4eea3bc0a10fa6323d466d351",
+    "tst_assets/jake/audio/person_3_utt_0036_0007.wav": "ff4499b30c0894105d562304d84d895797bf9d159b0ef550f0ebed2e61aa8bad",
+    "tst_assets/jake/audio/person_0_utt_0009_0000.wav": "f5d9cfa8467e7fcca16f2c68f148f6da4423ba01eab95c2585a6a1762dd8fdb8",
+    "tst_assets/jake/audio/person_3_utt_0041_0000.wav": "adf2bc856cee9474a00693da41a593307f31638c1d1ff0a5459101d5b7f18971",
+    "tst_assets/jake/audio/person_3_utt_0016_0008.wav": "121d91fc3e371119f5c77921193309428e59d788f9b471f973120f4ea1e936e5",
+    "tst_assets/jake/audio/person_0_utt_0010_0000.wav": "8d414d19390ac9e2307e6b992650e482c9a2d8741f6b907462a5420a7c42c123",
+    "tst_assets/jake/audio/person_0_utt_0003_0000.wav": "54777728ddbe3b4ad8a7c3666b5dc2eeaca4cc6d29241d2ad39d1afc7ecbab24",
+    "tst_assets/jake/audio/person_1_utt_0023_0002.wav": "680bae3bb978efacec8dce921c6d853e9e32068ac915b45973175e02c19109fc"
+  },
+  "validation_passed": true,
+  "calibration_quality_warning": true
+}

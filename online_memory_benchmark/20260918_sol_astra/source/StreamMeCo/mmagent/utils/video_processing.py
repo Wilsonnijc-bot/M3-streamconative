@@ -86,11 +86,11 @@ def process_video_clip(video_path, fps=5, audio_fps=16000, audio_duration_limit=
         video = VideoFileClip(video_path)
         with open(video_path, 'rb') as handle:
             encoded_video = base64.b64encode(handle.read())
-        frames = extract_frames(video, sample_fps=fps)
+        frames = extract_frames(video, start_time=0, interval=min(video.duration, audio_duration_limit) if audio_duration_limit is not None else video.duration, sample_fps=fps)
         audio = None
         if video.audio is not None:
             with tempfile.NamedTemporaryFile(suffix='.wav') as target:
-                if video.duration < 1.0:
+                if video.duration < 1.0 or audio_duration_limit is not None:
                     duration = min(video.duration, audio_duration_limit) if audio_duration_limit is not None else video.duration
                     subprocess.run([
                         'ffmpeg','-hide_banner','-loglevel','error','-y',

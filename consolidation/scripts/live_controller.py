@@ -28,9 +28,10 @@ def main():
             time.sleep(20)
         local=ROOT/f'moss/prefix_{minutes}'
         local.mkdir(parents=True,exist_ok=True)
-        subprocess.run(['rsync','-az','--exclude=prefix.wav','-e','ssh -i '+KEY,HOST+':'+remote+'/',str(local)+'/'],check=True)
+        subprocess.run(['rsync','-az','--exclude=prefix.wav','--exclude=window.wav','-e','ssh -i '+KEY,HOST+':'+remote+'/',str(local)+'/'],check=True)
         print('MOSS_SYNCED',minutes,flush=True)
-        subprocess.run([sys.executable,'-u','-m','consolidation.live_run','--minutes',str(minutes)],check=True)
+        subprocess.run([sys.executable,'-u','-m','consolidation.live_run','--minutes',str(minutes),
+                        '--moss-json',str(local/'moss.json')],check=True)
     subprocess.run([sys.executable,'-m','consolidation.render_live'],check=True)
     print('LIVE_CONTROLLER_COMPLETE',flush=True)
 

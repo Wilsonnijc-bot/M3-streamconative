@@ -385,3 +385,76 @@ def test_current_verifies_nested_retrieval_files(tmp_path):
     (version/'mandol/test_index.json').write_text('{}')
     with pytest.raises(ValueError,match='integrity'):
         current_graph(tmp_path,'s')
+
+
+def test_incremental_publication_preserves_omitted_mixed_history(tmp_path, monkeypatch):
+    from consolidation.pipeline import prepare, publish
+    from consolidation.prompt_packet import prepare_prompt
+    g = graph()
+    replay, state, packet, patch = publication_inputs(g)
+    patch['decisions'][0]['excluded_utterance_ids'] = ['u1']
+    patch['decisions'].extend([
+        dict(decision_id='exception', op='reassign_utterances', utterance_ids=['u1'],
+             from_voice_id='voice_0', target_entity_id='person_3', evidence_ids=['u1']),
+        dict(decision_id='reference', op='resolve_reference', memory_node_id='3',
+             mention='<voice_0>', entity_id='person_0', evidence_ids=['u0'])])
+    class Embed:
+        def encode(self, texts): return [[1., 0., 0.] for _ in texts]
+    publish_native(replay, tmp_path, state, packet, patch, g, Embed())
+    continued = current_graph(tmp_path, 's')
+    old_assignments = dict(continued.observation_character_mappings)
+    old_references = copy.deepcopy(continued.reference_character_mappings)
+    assert old_assignments['u0'] != old_assignments['u1']
+    continued.update_node(0, dict(contents=['new turn'], embeddings=[[1., 0., 0.]]))
+    replay2 = copy.deepcopy(replay)
+    replay2['current_cutoff'] = 20
+    replay2['observations'].append(dict(utterance_id='u3', original_voice_id='voice_0',
+        session_id='s', clip_id=2, start_time=11, end_time=12))
+    state2, packet2 = prepare(replay2, tmp_path, native_graph=continued)
+    monkeypatch.setenv('CONSOLIDATION_HISTORY_BYTES', '0')
+    model_view = prepare_prompt(packet2)
+    assert [o['utterance_id'] for o in model_view['observations']] == ['u3']
+    assert not model_view['memories'] and not model_view['references']
+    patch2 = dict(patch, base_graph_version=continued.graph_version, evidence_cutoff_s=20,
+        decisions=[dict(decision_id='new', op='assign_cluster', voice_ids=['voice_0'],
+            target_entity_id='person_0', evidence_ids=['u3'], confidence=.8,
+            rationale='Returning speaker.', excluded_utterance_ids=[])])
+    _, report = publish(replay2, tmp_path, state2, packet2, patch2, Embed())
+    assert not report['rejected']
+    final = current_graph(tmp_path, 's')
+    assert {u: final.observation_character_mappings[u] for u in old_assignments} == old_assignments
+    assert final.observation_character_mappings['u3'] == old_assignments['u0']
+    assert final.reference_character_mappings == old_references
+    assert final.reviewed_feature_support['voice_0']['total'] == 3
+    assert sorted(final.reviewed_feature_support['voice_0']['counts'].values()) == [1, 2]
+    assert final.resolve_identity('voice_0')['source'] == 'raw_fallback'
+    assert final.identity_cutoff_clip == 2
+
+
+@pytest.mark.parametrize('exact', [True, False])
+def test_scoped_reference_correction_after_native_reload(tmp_path, exact):
+    from consolidation.pipeline import prepare, publish
+    from consolidation.prompt_packet import prepare_prompt
+    g = graph()
+    replay, state, packet, patch = publication_inputs(g)
+    patch['decisions'].append(dict(decision_id='ref', op='resolve_reference', memory_node_id='3',
+        mention='<voice_0>', entity_id='person_0', evidence_ids=['u0']))
+    class Embed:
+        def encode(self, texts): return [[1., 0., 0.] for _ in texts]
+    publish_native(replay, tmp_path, state, packet, patch, g, Embed())
+    current = current_graph(tmp_path, 's')
+    replay['current_cutoff'] = 20
+    state2, packet2 = prepare(replay, tmp_path, native_graph=current)
+    prepare_prompt(packet2)
+    decision = dict(decision_id='correct', op='resolve_reference', memory_node_id='3',
+        mention='<voice_0>', entity_id='person_2', evidence_ids=['episodic_3'])
+    if exact:
+        decision.update(content_index=0, start=0, end=9)
+    patch2 = dict(patch, base_graph_version=current.graph_version, evidence_cutoff_s=20,
+                  decisions=[decision])
+    _, report = publish(replay, tmp_path, state2, packet2, patch2, Embed())
+    assert not report['rejected']
+    final = current_graph(tmp_path, 's')
+    assert len(final.reference_character_mappings) == 1
+    assert next(iter(final.reference_character_mappings.values()))['character_id'] == 'character_2'
+    assert final.get_retrieval_contents(3) == ['character_2 speaks']

@@ -1,0 +1,22 @@
+{
+  "patch_sha256": "87ff6ec308bfa11591c94e4fcb6e192d33ad8071a553922e1ea4c9e5f37f01a5",
+  "views_sha256": "45a11ae1f8921b3a772fda6beb8ff5f4b9f1c1a4760d869297ad7355baf542a4",
+  "observations_sha256": "240eae5385d5297cbd36f11e66e99998bd3ef0c6375b43df1511b1008e7bf86d",
+  "excluded_utterance_ids": [
+    "egolife_m3_jake_day1/gemini/utt_0004_0001",
+    "egolife_m3_jake_day1/gemini/utt_0014_0005",
+    "egolife_m3_jake_day1/gemini/utt_0017_0001",
+    "egolife_m3_jake_day1/gemini/utt_0018_0005",
+    "egolife_m3_jake_day1/gemini/utt_0019_0006",
+    "egolife_m3_jake_day1/gemini/utt_0021_0004",
+    "egolife_m3_jake_day1/gemini/utt_0029_0001",
+    "egolife_m3_jake_day1/gemini/utt_0029_0004",
+    "egolife_m3_jake_day1/gemini/utt_0034_0002",
+    "egolife_m3_jake_day1/gemini/utt_0036_0006",
+    "egolife_m3_jake_day1/gemini/utt_0037_0001",
+    "egolife_m3_jake_day1/gemini/utt_0039_0004",
+    "egolife_m3_jake_day1/gemini/utt_0039_0005",
+    "egolife_m3_jake_day1/gemini/utt_0040_0005"
+  ],
+  "selection": "confidence >= .79, duration >=3s, sort confidence/duration/ID; 2 enroll + 2 calibrate, globally disjoint clips"
+}

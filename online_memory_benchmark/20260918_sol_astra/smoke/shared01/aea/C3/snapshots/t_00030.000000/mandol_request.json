@@ -1,0 +1,29 @@
+{
+  "snapshot_sha256": "a1ce6fbc8713fb942717e251707af1a2e562edd02b428fbe407aa85931d5405b",
+  "questions": [
+    {
+      "dataset": "aea",
+      "question_id": "smoke_egoeverything_01486",
+      "question": "What color was the blanket on the bed while I was reading?",
+      "ground_truth": "A",
+      "query_timestamp": 30.0,
+      "source_annotation": {
+        "file": "Egoeverything_VQA.json",
+        "source_video": "loc1_script1_seq7_rec1",
+        "evidence_global_s": 1116.921,
+        "schedule_file": "aea_6h_qa_schedule.json",
+        "schedule_policy": "derived causal ask times; original QA fields unchanged"
+      },
+      "options": {
+        "A": "White",
+        "B": "Beige",
+        "C": "Light Gray",
+        "D": "Cream",
+        "E": "Off-white"
+      },
+      "diagnostic_only": true,
+      "original_query_timestamp": 1200.0
+    }
+  ],
+  "export_ms": 2.056323006399907
+}

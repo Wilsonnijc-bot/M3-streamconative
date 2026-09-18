@@ -2,8 +2,9 @@
 
 The runtime is an opt-in wrapper around the existing M3 writer and consolidation
 logic. It adds no identity namespace: native `character_mappings`, metadata,
-observation assignments, and reference assignments remain authoritative. The
-prompt, evidence policy, patch executor, and `native.project` are unchanged.
+observation assignments, and reference assignments remain authoritative. Full internal
+evidence is retained while [compact incremental packets](INCREMENTAL.md) scope each
+model call and its decisions. `native.project` receives the complete resulting state.
 
 ## Construction and snapshots
 
@@ -25,6 +26,9 @@ At a completed clip boundary, the default 1,200-second scheduler deep-copies the
 native graph and records its construction revision, clip cutoff, and timestamp.
 Nodes, edges, identity state, and embedding inputs in that snapshot cannot acquire
 later observations. A worker that mutates its input snapshot is rejected.
+One active and one waiting snapshot are retained. The waiting snapshot receives
+preceding accepted identity changes with the live commit's character-ID remapping;
+its raw nodes, observations, and cutoff stay frozen.
 
 ## Worker, patch, and commit
 
@@ -32,7 +36,22 @@ later observations. A worker that mutates its input snapshot is rejected.
 collector and the configured proposal callable. It passes frozen-prefix evidence
 through the existing evidence builder, proposal call, executor, and native
 application stage. It saves the snapshot, evidence, patch, execution report, and
-identity report; existing proposal callables retain exact prompt/response files.
+identity report, `prompt_packet.json`, `prompt_scope.json`, and `prompt_size.json`;
+proposal callables retain exact prompt/response files. The worker establishes scope
+even when the proposal callback supplies recorded decisions.
+
+The worker runs a configured `WindowMoss` stage before preparing evidence and calling
+the reasoner. Audio starts at the frozen graph's previous successful identity cutoff
+and ends at the snapshot cutoff. It never reprocesses an earlier prefix for a later
+window. Imported evidence must match both endpoints and use session-time timestamps.
+MOSS failure or a mismatched interval prevents reasoning and leaves the window retryable.
+Completed HTTP MOSS results are reused on retry only if the window, audio hash, model,
+and revision match.
+
+For automatic audio preparation, the evidence collector supplies `replay.segments`
+with `absolute_start_seconds`, `absolute_end_seconds`, `source`, and
+`start_seconds_in_source`, plus `replay.origin_seconds`. The renderer selects only the
+window's audio and preserves gaps as silence. Speaker labels remain scoped to each run.
 
 The returned patch contains the original snapshot and the staged native identity
 result. Source-node or edge edits, cutoff violations, and mismatched identity bases
@@ -77,6 +96,7 @@ from functools import partial
 from consolidation.runtime import ConsolidationRuntime
 from consolidation.runtime_io import NativeConsolidationWorker, RetrievalPublisher
 from consolidation.llm_consolidator import propose_official
+from consolidation.moss_runner import WindowMoss
 
 # collect_evidence(snapshot) returns {replay, moss, assignments} using only the
 # frozen prefix and its saved observation/audio evidence. Replay cutoff must match.
@@ -84,6 +104,7 @@ worker = NativeConsolidationWorker(
     collect_evidence,
     partial(propose_official, api_config=api_config_path),
     directory=run_directory / 'jobs',
+    moss=WindowMoss(moss_endpoint, media_root, revision=moss_revision),
 )
 runtime = ConsolidationRuntime(
     video_graph, worker,
@@ -99,18 +120,33 @@ No default API call is silently enabled. The deployment explicitly supplies its
 existing evidence collector and configured proposal callable; tests use saved or
 deterministic decisions. Runtime objects/locks/executors are excluded from pickles.
 Native identity and watermarks persist; attach a new runtime after loading a checkpoint.
+Instead of passing `WindowMoss`, set `MOSS_ENDPOINT`, `MOSS_MEDIA_ROOT`, and optional
+`MOSS_REVISION`, or return exact-window `moss` from the evidence collector. With none
+of these, the worker raises a configuration error before reasoning. Explicit
+`moss=False` permits recorded/no-MOSS test or ablation runs.
 
 ## Scheduling and failures
 
-One sequential reasoning worker prevents conflicting historical jobs. While it is
-busy, elapsed windows coalesce into the newest completed cutoff. A separate worker
-handles indexing. Model or patch validation failure leaves identity and watermark
-unchanged; streaming continues. `runtime.errors` records failures and
-`runtime.retry()` retries the frozen failed window. Index failure retains old
-vectors and the previous published index; retry explicitly or at the next completed
-clip. No tight retry loop is used. `close()` waits for active jobs at shutdown only.
+One sequential reasoning worker processes every 1,200-second boundary, aligned to
+completed clips. Windows do not coalesce. When one job is active (or retained for
+retry) and another snapshot is waiting, the writer pauses before the next
+boundary-crossing clip. The condition wait releases the lock so workers and readers
+can proceed. This deliberately applies backpressure if reasoning cannot keep up.
+
+Model, budget, or patch validation failure leaves identity and watermark unchanged.
+`runtime.errors` records failures; `runtime.retry()` retries the original frozen
+window before the waiting window can run. There is no automatic model retry loop.
+Index failures retain old vectors and publication; retry explicitly or at the next
+completed clip. `close()` drains queued jobs and consolidates a remaining final tail
+exactly once. A retained failure raises a retry-required error and leaves the runtime
+attached for recovery. Finish the active clip before calling `close()`.
+
+The queue is process-local and is not serialized into graph pickles. Recovery after
+process loss must restore/replay from an appropriate completed checkpoint; queued
+jobs are not a durable work queue.
 
 Deterministic tests cover clips 40–45 created/retrieved during a blocked clip-39
 job, hot identity inheritance, immutable snapshots, cutoff rejection, atomic
 failure/retry, selective/background reindexing, suffix completeness invalidation,
-coalescing, writer-boundary commits, native application reuse, and publication rollback.
+ordered windows, backpressure, queued identity rebasing, final draining,
+writer-boundary commits, native application reuse, and publication rollback.

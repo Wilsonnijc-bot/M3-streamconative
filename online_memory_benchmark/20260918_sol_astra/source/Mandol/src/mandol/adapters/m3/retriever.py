@@ -6,6 +6,7 @@ import json
 import shutil
 import tempfile
 import threading
+import time
 from pathlib import Path
 from typing import Any
 
@@ -89,6 +90,10 @@ class M3MandolRetriever:
             embedding_client=embedding_client)
         return result
 
+    def prepare_reranker_302(self, config):
+        from .rerank_302 import Reranker302
+        self.reranker_302 = Reranker302(config)
+
     def search(
         self,
         query: str,
@@ -113,7 +118,10 @@ class M3MandolRetriever:
             raise ValueError("query must be non-empty and top_k must be positive")
         candidate_uids = self._candidate_uids(scope)
         if not candidate_uids:
+            self.last_search_metrics=dict(hybrid_dense_bm25_splade_fusion_ms=0.,reranking=dict(calls=0,reranking_ms=0.,status='empty_candidates'),result_lookup_ms=0.)
             return []
+        hybrid_started=time.perf_counter()
+        use_302=rerank_method=='qwen-302'
         detailed = self.graph.get_multi_retriever().smart_search(
             query,
             methods=[
@@ -123,12 +131,19 @@ class M3MandolRetriever:
             ],
             top_k=max(top_k, min(len(candidate_uids), top_k * 3)),
             fusion_method="rrf",
-            rerank_method=rerank_method,
+            rerank_method=None if use_302 else rerank_method,
             enable_graph_expansion=enable_graph_expansion,
             candidate_uids=sorted(candidate_uids),
             return_detailed=True,
         )
+        hybrid_ms=(time.perf_counter()-hybrid_started)*1000
+        if isinstance(detailed,dict) and detailed.get('error'):raise RuntimeError(detailed['error'])
         ranked = detailed.get("results", []) if isinstance(detailed, dict) else detailed
+        rerank_metrics=None
+        if use_302:
+            if not hasattr(self,'reranker_302'):raise RuntimeError('302 reranker was not initialized before warm retrieval')
+            ranked,rerank_metrics=self.reranker_302.rerank(query,ranked)
+        lookup_started=time.perf_counter()
         output: list[dict[str, Any]] = []
         for unit, score in ranked:
             if unit.uid not in candidate_uids:
@@ -147,6 +162,7 @@ class M3MandolRetriever:
             output.append(item)
             if len(output) >= top_k:
                 break
+        self.last_search_metrics=dict(hybrid_dense_bm25_splade_fusion_ms=hybrid_ms,reranking=rerank_metrics,result_lookup_ms=(time.perf_counter()-lookup_started)*1000)
         return output
 
     def _candidate_uids(self, scope: str | dict[str, Any] | None) -> set[str]:

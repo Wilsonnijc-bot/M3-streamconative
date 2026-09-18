@@ -83,6 +83,7 @@ class VideoGraph:
     def __getstate__(self):
         state = self.__dict__.copy()
         state.pop('_consolidation_runtime', None)
+        state.pop('speaker_mapper', None)
         return state
 
     def resolve_identity(self, feature_id, *, observation_id=None, memory_reference=None):

@@ -149,16 +149,19 @@ def _process_segment(
         precomputed_contents=retrieval_texts[split:],
     )
 
+    video_graph.refresh_equivalences()
     total_ms = (time.perf_counter() - total_started) * 1000
     graph = graph_view(video_graph)
     delta = graph_delta(video_graph, before_nodes, before_edges)
     graph_json_path = os.path.join(audit_dir, f"clip_{clip_id}_graph.json")
     graph_pickle_path = os.path.join(audit_dir, f"clip_{clip_id}_graph.pkl")
-    write_json(graph_json_path, graph)
+    if sample.get("persist_clip_graphs", True):
+        write_json(graph_json_path, graph)
     temp_pickle = graph_pickle_path + ".tmp"
-    with open(temp_pickle, "wb") as handle:
-        pickle.dump(video_graph, handle)
-    os.replace(temp_pickle, graph_pickle_path)
+    if sample.get("persist_clip_graphs", True):
+        with open(temp_pickle, "wb") as handle:
+            pickle.dump(video_graph, handle)
+        os.replace(temp_pickle, graph_pickle_path)
 
     text_embedding_ms = batch_metrics['latency_ms']
     for subtype in (episodic_metrics, semantic_metrics):
@@ -175,7 +178,9 @@ def _process_segment(
     )
     audit = {
         "clip_id": clip_id,
+        "voice_observations": [{"voice_node_id": node, **{k: v for k, v in a.items() if k not in ("embedding", "audio_segment")}} for node, audios in id2voices.items() for a in audios],
         "clip_path": str(clip_path),
+        "shared_asr_provenance": sample.get("asr_context"),
         "asr_selected_provider": voice_metrics.get("asr_selected_provider"),
         "end_to_end_memory_generation_ms": total_ms,
         "latency_ms": {
@@ -185,6 +190,8 @@ def _process_segment(
             "asr_total": voice_metrics.get("asr_total_ms"),
             "audio_segmentation": voice_metrics.get("audio_segmentation_ms"),
             "speech_embedding_campplus": voice_metrics.get("speech_embedding_ms"),
+            "speech_embedding_ecapa": voice_metrics.get("tst_embedding_ms"),
+            "speaker_mapping_including_embedding": voice_metrics.get("speaker_mapping_ms"),
             "facial_detection_recognition_buffalo_l": face_metrics.get("face_detection_recognition_ms"),
             "face_clustering": face_metrics.get("face_clustering_ms"),
             "vlm_memory_generation": vlm_metrics.get("vlm_ms"),

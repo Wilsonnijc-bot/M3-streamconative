@@ -1,0 +1,21 @@
+{
+  "enrollment_policy": "online_native_m3",
+  "pre_enrollment": false,
+  "threshold": 0.6,
+  "max_audio_embeddings": 20,
+  "matching": "VideoGraph.search_voice_nodes mean pairwise cosine; native update/create and bounded embedding history",
+  "encoder": {
+    "model": "speechbrain/spkrec-ecapa-voxceleb",
+    "revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+    "expected_embedding_dim": 192
+  },
+  "encoder_fingerprint": "1b88b6fd38d128a3364e658003784628d7c89a2ba13fcab6738ba6eb31f5ed3a",
+  "encoder_provenance": "tst_assets/encoder.json",
+  "audio": {
+    "sample_rate": 16000,
+    "window_s": 4.0,
+    "shift_s": 1.5
+  },
+  "excluded_intervals": [],
+  "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8"
+}

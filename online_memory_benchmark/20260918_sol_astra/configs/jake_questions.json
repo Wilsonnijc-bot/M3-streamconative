@@ -1,215 +1,2891 @@
 {
   "dataset": "jake",
-  "timestamp_basis": "DAY1 HHMMSScc wall clock converted to seconds since midnight",
+  "timestamp_basis": "DAY1 source wall clock in seconds since midnight",
   "questions": [
     {
       "dataset": "jake",
-      "question_id": "1",
+      "question_id": "egolifeqa-a1-jake-1",
       "question": "Who used the screwdriver first?",
       "ground_truth": "B",
-      "query_timestamp": 40862.17,
-      "source_annotation": {
-        "file": "EgoLifeQA_A1_JAKE.json",
-        "ID": "1",
-        "query_time": {
-          "date": "DAY1",
-          "time": "11210217"
-        }
-      },
       "options": {
         "A": "Tasha",
         "B": "Alice",
         "C": "Shure",
         "D": "Lucia"
+      },
+      "query_timestamp": 40862.17,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-1",
+        "query_time_raw": "DAY1@11210217",
+        "evidence_time_raw": [
+          "DAY1@11152408"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_11210000",
+          "DAY1_A1_JAKE_11150000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
       }
     },
     {
       "dataset": "jake",
-      "question_id": "2",
+      "question_id": "egolifeqa-a1-jake-2",
       "question": "Where was the black marker in Shure's hand before?",
       "ground_truth": "C",
-      "query_timestamp": 41700.0,
-      "source_annotation": {
-        "file": "EgoLifeQA_A1_JAKE.json",
-        "ID": "2",
-        "query_time": {
-          "date": "DAY1",
-          "time": "11350000"
-        }
-      },
       "options": {
         "A": "In my room",
         "B": "On the living room table",
         "C": "On the table on the second floor",
         "D": "In Shure's room"
+      },
+      "query_timestamp": 41700.0,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-2",
+        "query_time_raw": "DAY1@11350000",
+        "evidence_time_raw": [
+          "DAY1@11244408"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_11350000",
+          "DAY1_A1_JAKE_11243000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
       }
     },
     {
       "dataset": "jake",
-      "question_id": "3",
+      "question_id": "egolifeqa-a1-jake-3",
       "question": "Where was the small clapperboard on the table placed before?",
       "ground_truth": "D",
-      "query_timestamp": 41719.11,
-      "source_annotation": {
-        "file": "EgoLifeQA_A1_JAKE.json",
-        "ID": "3",
-        "query_time": {
-          "date": "DAY1",
-          "time": "11351911"
-        }
-      },
       "options": {
         "A": "In Shure's room",
         "B": "On the living room table",
         "C": "In my room",
         "D": "On the table on the second floor"
+      },
+      "query_timestamp": 41719.11,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-3",
+        "query_time_raw": "DAY1@11351911",
+        "evidence_time_raw": [
+          "DAY1@11244408"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_11350000",
+          "DAY1_A1_JAKE_11243000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
       }
     },
     {
       "dataset": "jake",
-      "question_id": "4",
+      "question_id": "egolifeqa-a1-jake-4",
       "question": "Who just helped Katrina put the flowers on the table",
       "ground_truth": "C",
-      "query_timestamp": 42188.02,
-      "source_annotation": {
-        "file": "EgoLifeQA_A1_JAKE.json",
-        "ID": "4",
-        "query_time": {
-          "date": "DAY1",
-          "time": "11430802"
-        }
-      },
       "options": {
         "A": "Shure",
         "B": "Tasha",
         "C": "Me",
         "D": "Alice"
+      },
+      "query_timestamp": 42188.02,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-4",
+        "query_time_raw": "DAY1@11430802",
+        "evidence_time_raw": [
+          "DAY1@11344900"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_11430000",
+          "DAY1_A1_JAKE_11343000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
       }
     },
     {
       "dataset": "jake",
-      "question_id": "5",
+      "question_id": "egolifeqa-a1-jake-5",
       "question": "Katrina is now suggesting dancing, what other activities has she suggested before?",
       "ground_truth": "B",
-      "query_timestamp": 42990.03,
-      "source_annotation": {
-        "file": "EgoLifeQA_A1_JAKE.json",
-        "ID": "5",
-        "query_time": {
-          "date": "DAY1",
-          "time": "11563003"
-        }
-      },
       "options": {
         "A": "Pressed flowers",
         "B": "Suggested collecting leaves to make bookmarks",
         "C": "Made food",
         "D": "Made paper puppies"
+      },
+      "query_timestamp": 42990.03,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-5",
+        "query_time_raw": "DAY1@11563003",
+        "evidence_time_raw": [
+          "DAY1@11191708"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_11563000",
+          "DAY1_A1_JAKE_11190000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
       }
     },
     {
       "dataset": "jake",
-      "question_id": "6",
+      "question_id": "egolifeqa-a1-jake-6",
       "question": "Who plans to grow flowers",
       "ground_truth": "D",
-      "query_timestamp": 43056.06,
-      "source_annotation": {
-        "file": "EgoLifeQA_A1_JAKE.json",
-        "ID": "6",
-        "query_time": {
-          "date": "DAY1",
-          "time": "11573606"
-        }
-      },
       "options": {
         "A": "Alice",
         "B": "Tasha",
         "C": "Me",
         "D": "Katrina"
+      },
+      "query_timestamp": 43056.06,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-6",
+        "query_time_raw": "DAY1@11573606",
+        "evidence_time_raw": [
+          "DAY1@11344019"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_11573000",
+          "DAY1_A1_JAKE_11343000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
       }
     },
     {
       "dataset": "jake",
-      "question_id": "7",
+      "question_id": "egolifeqa-a1-jake-7",
       "question": "Whose phone is on the table?",
       "ground_truth": "C",
-      "query_timestamp": 43355.08,
-      "source_annotation": {
-        "file": "EgoLifeQA_A1_JAKE.json",
-        "ID": "7",
-        "query_time": {
-          "date": "DAY1",
-          "time": "12023508"
-        }
-      },
       "options": {
         "A": "Alice's",
         "B": "Shure's",
         "C": "Mine",
         "D": "Tasha's"
+      },
+      "query_timestamp": 43355.08,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-7",
+        "query_time_raw": "DAY1@12023508",
+        "evidence_time_raw": [
+          "DAY1@11440808"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_12023000",
+          "DAY1_A1_JAKE_11440000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
       }
     },
     {
       "dataset": "jake",
-      "question_id": "8",
+      "question_id": "egolifeqa-a1-jake-8",
       "question": "What might we do next?",
       "ground_truth": "D",
-      "query_timestamp": 43812.08,
-      "source_annotation": {
-        "file": "EgoLifeQA_A1_JAKE.json",
-        "ID": "8",
-        "query_time": {
-          "date": "DAY1",
-          "time": "12101208"
-        }
-      },
       "options": {
         "A": "Shopping",
         "B": "Eat watermelon",
         "C": "Distinguish mineral water",
         "D": "Do a puzzle"
+      },
+      "query_timestamp": 43812.08,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-8",
+        "query_time_raw": "DAY1@12101208",
+        "evidence_time_raw": [
+          "DAY1@11460908"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_12100000",
+          "DAY1_A1_JAKE_11460000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
       }
     },
     {
       "dataset": "jake",
-      "question_id": "9",
+      "question_id": "egolifeqa-a1-jake-9",
       "question": "Who just helped Alice unpack and arrange the flowers",
       "ground_truth": "D",
-      "query_timestamp": 43902.04,
-      "source_annotation": {
-        "file": "EgoLifeQA_A1_JAKE.json",
-        "ID": "9",
-        "query_time": {
-          "date": "DAY1",
-          "time": "12114204"
-        }
-      },
       "options": {
         "A": "Shure, Me, Lucia",
         "B": "Shure, Lucia, Tasha",
         "C": "Me, Katrina, Shure",
         "D": "Katrina, Lucia, Tasha"
+      },
+      "query_timestamp": 43902.04,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-9",
+        "query_time_raw": "DAY1@12114204",
+        "evidence_time_raw": [
+          "DAY1@11365518"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_12113000",
+          "DAY1_A1_JAKE_11363000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
       }
     },
     {
       "dataset": "jake",
-      "question_id": "10",
+      "question_id": "egolifeqa-a1-jake-10",
       "question": "Who was the first to write the meeting notes on the whiteboard in the meeting room?",
       "ground_truth": "A",
-      "query_timestamp": 44247.18,
-      "source_annotation": {
-        "file": "EgoLifeQA_A1_JAKE.json",
-        "ID": "10",
-        "query_time": {
-          "date": "DAY1",
-          "time": "12172718"
-        }
-      },
       "options": {
         "A": "Shure",
         "B": "Alice",
         "C": "Katrina",
         "D": "Me"
+      },
+      "query_timestamp": 44247.18,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-10",
+        "query_time_raw": "DAY1@12172718",
+        "evidence_time_raw": [
+          "DAY1@11264208"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_12170000",
+          "DAY1_A1_JAKE_11263000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-11",
+      "question": "This morning during our discussion, which two people did I remind not to let their hair cover their glasses?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Katrina, Alice",
+        "B": "Shure, Tasha",
+        "C": "Alice, Tasha",
+        "D": "Shure, Katrina"
+      },
+      "query_timestamp": 44939.13,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-11",
+        "query_time_raw": "DAY1@12285913",
+        "evidence_time_raw": [
+          "DAY1@11153417DAY1_11181201"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_12283000",
+          "DAY1_A1_JAKE_11153000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-12",
+      "question": "When I handed out the charging cables just now, who had already started charging?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Katrina",
+        "B": "Tasha",
+        "C": "Alice",
+        "D": "Shure"
+      },
+      "query_timestamp": 45192.04,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-12",
+        "query_time_raw": "DAY1@12331204",
+        "evidence_time_raw": [
+          "DAY1@11464201"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_12330000",
+          "DAY1_A1_JAKE_11463000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-13",
+      "question": "Now Lucia asks, \"What is this, is this a hedgehog?\" What were we discussing the last time she asked a question?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Bartender",
+        "B": "Puzzle Board",
+        "C": "Cake Making",
+        "D": "Embossing"
+      },
+      "query_timestamp": 45314.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-13",
+        "query_time_raw": "DAY1@12351415",
+        "evidence_time_raw": [
+          "DAY1@12161808"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_12350000",
+          "DAY1_A1_JAKE_12160000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-14",
+      "question": "Who is missing compared to when we first started the puzzle?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Katrina",
+        "B": "Tasha",
+        "C": "Alice",
+        "D": "Lucia"
+      },
+      "query_timestamp": 45987.16,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-14",
+        "query_time_raw": "DAY1@12462716",
+        "evidence_time_raw": [
+          "DAY1@12291509"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_12460000",
+          "DAY1_A1_JAKE_12290000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-15",
+      "question": "While puzzling, who am I guiding to use the app on the phone",
+      "ground_truth": "B",
+      "options": {
+        "A": "Lucia, Shure",
+        "B": "Katrina, Alice",
+        "C": "Shure, Tasha",
+        "D": "Alice, Shure"
+      },
+      "query_timestamp": 46006.04,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-15",
+        "query_time_raw": "DAY1@12464604",
+        "evidence_time_raw": [
+          "DAY1@12315314DAY1_12320311"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_12463000",
+          "DAY1_A1_JAKE_12313000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-16",
+      "question": "Who was the first to move the puzzle board on the table?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Shure",
+        "B": "Alice",
+        "C": "Lucia",
+        "D": "Katrina"
+      },
+      "query_timestamp": 46288.02,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-16",
+        "query_time_raw": "DAY1@12512802",
+        "evidence_time_raw": [
+          "DAY1@12264908"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_12510000",
+          "DAY1_A1_JAKE_12263000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-17",
+      "question": "Who wrote most of the words on the whiteboard?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Shure",
+        "B": "Me",
+        "C": "Lucia",
+        "D": "Katrina"
+      },
+      "query_timestamp": 46952.08,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-17",
+        "query_time_raw": "DAY1@13023208",
+        "evidence_time_raw": [
+          "DAY1@11253500DAY1_12122213"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13023000",
+          "DAY1_A1_JAKE_11253000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-18",
+      "question": "Who joined us when Shure and I were setting up the rack?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Katrina",
+        "B": "Alice",
+        "C": "Lucia",
+        "D": "Tasha"
+      },
+      "query_timestamp": 47689.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-18",
+        "query_time_raw": "DAY1@13144919",
+        "evidence_time_raw": [
+          "DAY1@12545413"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13143000",
+          "DAY1_A1_JAKE_12543000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-19",
+      "question": "What do I usually do after getting close to the sports camera today?",
+      "ground_truth": "D",
+      "options": {
+        "A": "I will rotate the direction of the camera.",
+        "B": "I will glance at the timer on my phone for the camera.",
+        "C": "I will see if the camera can swing.",
+        "D": "I will pick up the power bank charging the camera, take a look, and then put it down."
+      },
+      "query_timestamp": 47944.14,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-19",
+        "query_time_raw": "DAY1@13190414",
+        "evidence_time_raw": [
+          "DAY1@12471319DAY1_12474208"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13190000",
+          "DAY1_A1_JAKE_12470000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-20",
+      "question": "We are currently discussing the details of the puzzle. When was this discussed before?",
+      "ground_truth": "D",
+      "options": {
+        "A": "About four hours ago",
+        "B": "About three hours ago",
+        "C": "About eight hours ago",
+        "D": "About an hour ago"
+      },
+      "query_timestamp": 48129.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-20",
+        "query_time_raw": "DAY1@13220915",
+        "evidence_time_raw": [
+          "DAY1@12283408"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13220000",
+          "DAY1_A1_JAKE_12283000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-21",
+      "question": "Who always sits on that pony hair this morning",
+      "ground_truth": "A",
+      "options": {
+        "A": "Me",
+        "B": "Alice",
+        "C": "Lucia",
+        "D": "Shure"
+      },
+      "query_timestamp": 48402.05,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-21",
+        "query_time_raw": "DAY1@13264205",
+        "evidence_time_raw": [
+          "DAY1@11191805DAY1_11425000"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13263000",
+          "DAY1_A1_JAKE_11190000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-22",
+      "question": "Who did I just move the whiteboard to the wall with?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Katrina",
+        "B": "Alice",
+        "C": "Lucia",
+        "D": "Shure"
+      },
+      "query_timestamp": 48578.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-22",
+        "query_time_raw": "DAY1@13293815",
+        "evidence_time_raw": [
+          "DAY1@13163014"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13293000",
+          "DAY1_A1_JAKE_13163000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-23",
+      "question": "Who took out the tools on the table?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Alice",
+        "B": "Tasha",
+        "C": "Lucia",
+        "D": "Katrina"
+      },
+      "query_timestamp": 49032.02,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-23",
+        "query_time_raw": "DAY1@13371202",
+        "evidence_time_raw": [
+          "DAY1@13253708"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13370000",
+          "DAY1_A1_JAKE_13253000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-24",
+      "question": "What are the lunch options?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Beijing-style Braised Pork",
+        "B": "Pizza",
+        "C": "Dumplings",
+        "D": "Noodles"
+      },
+      "query_timestamp": 49324.08,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-24",
+        "query_time_raw": "DAY1@13420408",
+        "evidence_time_raw": [
+          "DAY1@13363208"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13420000",
+          "DAY1_A1_JAKE_13363000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-25",
+      "question": "Who originally used the scissors in my hand?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Alice",
+        "B": "Tasha",
+        "C": "Katrina",
+        "D": "Shure"
+      },
+      "query_timestamp": 49793.1,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-25",
+        "query_time_raw": "DAY1@13495310",
+        "evidence_time_raw": [
+          "DAY1@12513508"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13493000",
+          "DAY1_A1_JAKE_12513000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-26",
+      "question": "Who has been assembling the shelf",
+      "ground_truth": "C",
+      "options": {
+        "A": "Alice, Shure",
+        "B": "Alice, Tasha",
+        "C": "Katrina, Shure",
+        "D": "Tasha, Katrina"
+      },
+      "query_timestamp": 50050.07,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-26",
+        "query_time_raw": "DAY1@13541007",
+        "evidence_time_raw": [
+          "DAY1@13043609"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13540000",
+          "DAY1_A1_JAKE_13043000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-27",
+      "question": "I put the pot aside, what was in the pot before?",
+      "ground_truth": "B",
+      "options": {
+        "A": "egg",
+        "B": "Whisk",
+        "C": "puzzle",
+        "D": "Bowl"
+      },
+      "query_timestamp": 50098.03,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-27",
+        "query_time_raw": "DAY1@13545803",
+        "evidence_time_raw": [
+          "DAY1@13471317"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13543000",
+          "DAY1_A1_JAKE_13470000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-28",
+      "question": "Who am I always busy with in the kitchen today",
+      "ground_truth": "C",
+      "options": {
+        "A": "Alice",
+        "B": "Lucia",
+        "C": "Tasha",
+        "D": "Shure"
+      },
+      "query_timestamp": 50270.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-28",
+        "query_time_raw": "DAY1@13575015",
+        "evidence_time_raw": [
+          "DAY1@13394908",
+          "DAY1@13512718"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_13573000",
+          "DAY1_A1_JAKE_13393000",
+          "DAY1_A1_JAKE_13510000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-29",
+      "question": "What does Tasha not like to eat?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Chicken wrap",
+        "B": "Barbecue",
+        "C": "Hamburger",
+        "D": "Dessert"
+      },
+      "query_timestamp": 50618.16,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-29",
+        "query_time_raw": "DAY1@14033816",
+        "evidence_time_raw": [
+          "DAY1@13391604"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_14033000",
+          "DAY1_A1_JAKE_13390000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-30",
+      "question": "Who was I mostly busy with in the kitchen today",
+      "ground_truth": "C",
+      "options": {
+        "A": "Katrina",
+        "B": "Lucia",
+        "C": "Tasha",
+        "D": "Alice"
+      },
+      "query_timestamp": 50650.0,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-30",
+        "query_time_raw": "DAY1@14041000",
+        "evidence_time_raw": [
+          "DAY1@13394908",
+          "DAY1@13512717"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_14040000",
+          "DAY1_A1_JAKE_13393000",
+          "DAY1_A1_JAKE_13510000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-31",
+      "question": "Who used the black signature pen last time?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Tasha",
+        "B": "Me",
+        "C": "Katrina",
+        "D": "Shure"
+      },
+      "query_timestamp": 50815.14,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-31",
+        "query_time_raw": "DAY1@14065514",
+        "evidence_time_raw": [
+          "DAY1@13455208"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_14063000",
+          "DAY1_A1_JAKE_13453000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-32",
+      "question": "What are we planning to eat for lunch?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Dicos",
+        "B": "McDonald's",
+        "C": "Wallace",
+        "D": "KFC"
+      },
+      "query_timestamp": 50931.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-32",
+        "query_time_raw": "DAY1@14085119",
+        "evidence_time_raw": [
+          "DAY1@13373000"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_14083000",
+          "DAY1_A1_JAKE_13373000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-33",
+      "question": "What app did I order the takeout in my hand?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Meituan",
+        "B": "Ele.me",
+        "C": "JD.com",
+        "D": "Taobao"
+      },
+      "query_timestamp": 51330.02,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-33",
+        "query_time_raw": "DAY1@14153002",
+        "evidence_time_raw": [
+          "DAY1@13355400"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_14153000",
+          "DAY1_A1_JAKE_13353000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-34",
+      "question": "What do we decide to eat for lunch?",
+      "ground_truth": "A",
+      "options": {
+        "A": "KFC",
+        "B": "Hotpot",
+        "C": "Spicy Soup",
+        "D": "Beef"
+      },
+      "query_timestamp": 56854.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-34",
+        "query_time_raw": "DAY1@15473415",
+        "evidence_time_raw": [
+          "DAY1@13372812"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_14183000",
+          "DAY1_A1_JAKE_13370000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-35",
+      "question": "Who mentioned something related to durian before?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Katrina",
+        "B": "Lucia",
+        "C": "Me",
+        "D": "Shure"
+      },
+      "query_timestamp": 62401.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-35",
+        "query_time_raw": "DAY1@17200119",
+        "evidence_time_raw": [
+          "DAY1@13445510"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17200000",
+          "DAY1_A1_JAKE_13443000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-36",
+      "question": "What other drinks are needed to mix with rum?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Huiyuan Peach Juice, Sprite",
+        "B": "Genki Forest, Fanta",
+        "C": "Vita, Iced Tea",
+        "D": "Yakult, Coconut Milk"
+      },
+      "query_timestamp": 62464.1,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-36",
+        "query_time_raw": "DAY1@17210410",
+        "evidence_time_raw": [
+          "DAY1@14065608"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17210000",
+          "DAY1_A1_JAKE_14063000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-37",
+      "question": "What does Shure especially love to drink",
+      "ground_truth": "A",
+      "options": {
+        "A": "Coffee",
+        "B": "Milk",
+        "C": "Cola",
+        "D": "Juice"
+      },
+      "query_timestamp": 62860.05,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-37",
+        "query_time_raw": "DAY1@17274005",
+        "evidence_time_raw": [
+          "DAY1@13490700"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17273000",
+          "DAY1_A1_JAKE_13490000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-38",
+      "question": "What do Shure, Katrina, and Lucia mainly purchase",
+      "ground_truth": "D",
+      "options": {
+        "A": "Decorations",
+        "B": "Fruits",
+        "C": "Ingredients",
+        "D": "Alcohol"
+      },
+      "query_timestamp": 62944.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-38",
+        "query_time_raw": "DAY1@17290415",
+        "evidence_time_raw": [
+          "DAY1@17210412"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17290000",
+          "DAY1_A1_JAKE_17210000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-39",
+      "question": "Who was the first to mention the century eggs we need to buy?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Tasha",
+        "B": "Shure",
+        "C": "Katrina",
+        "D": "Alice"
+      },
+      "query_timestamp": 63169.07,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-39",
+        "query_time_raw": "DAY1@17324907",
+        "evidence_time_raw": [
+          "DAY1@14002708"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17323000",
+          "DAY1_A1_JAKE_14000000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-40",
+      "question": "Shure mentioned Tiramisu, when was the last time we discussed making Tiramisu?",
+      "ground_truth": "C",
+      "options": {
+        "A": "About 4 hours ago",
+        "B": "About 6 hours ago",
+        "C": "About 5 hours ago",
+        "D": "About 7 hours ago"
+      },
+      "query_timestamp": 63222.05,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-40",
+        "query_time_raw": "DAY1@17334205",
+        "evidence_time_raw": [
+          "DAY1@12153508"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17333000",
+          "DAY1_A1_JAKE_12153000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-41",
+      "question": "When did we first mention having hot pot?",
+      "ground_truth": "B",
+      "options": {
+        "A": "About three hours ago",
+        "B": "About four hours ago",
+        "C": "About two hours ago",
+        "D": "About an hour ago"
+      },
+      "query_timestamp": 63590.03,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-41",
+        "query_time_raw": "DAY1@17395003",
+        "evidence_time_raw": [
+          "DAY1@13593908"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17393000",
+          "DAY1_A1_JAKE_13593000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-42",
+      "question": "What drinks are you planning to buy?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Sprite",
+        "B": "Coke",
+        "C": "Fanta",
+        "D": "Mineral Water"
+      },
+      "query_timestamp": 63998.18,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-42",
+        "query_time_raw": "DAY1@17463818",
+        "evidence_time_raw": [
+          "DAY1@13283808"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17463000",
+          "DAY1_A1_JAKE_13283000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-43",
+      "question": "Why is there no barbecue for dinner?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Too many people, it would be a bit troublesome",
+        "B": "No time",
+        "C": "Not really in the mood for it",
+        "D": "Ingredients are too expensive"
+      },
+      "query_timestamp": 64054.05,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-43",
+        "query_time_raw": "DAY1@17473405",
+        "evidence_time_raw": [
+          "DAY1@12103508"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17473000",
+          "DAY1_A1_JAKE_12103000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-44",
+      "question": "What to eat for dinner?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Hot Pot",
+        "B": "Barbecue",
+        "C": "Pizza",
+        "D": "Fried Chicken"
+      },
+      "query_timestamp": 64054.05,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-44",
+        "query_time_raw": "DAY1@17473405",
+        "evidence_time_raw": [
+          "DAY1@12104904"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17473000",
+          "DAY1_A1_JAKE_12103000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-45",
+      "question": "When was the last time we talked about coffee?",
+      "ground_truth": "A",
+      "options": {
+        "A": "About four hours ago",
+        "B": "About eight hours ago",
+        "C": "About an hour ago",
+        "D": "One day ago"
+      },
+      "query_timestamp": 64141.08,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-45",
+        "query_time_raw": "DAY1@17490108",
+        "evidence_time_raw": [
+          "DAY1@13345708"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_17490000",
+          "DAY1_A1_JAKE_13343000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-46",
+      "question": "Compared to our first photo at the supermarket, who is missing this time?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Tasha, Katrina",
+        "B": "Tasha, Alice",
+        "C": "Alice, Katrina",
+        "D": "Tasha, Lucia"
+      },
+      "query_timestamp": 65320.0,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-46",
+        "query_time_raw": "DAY1@18084000",
+        "evidence_time_raw": [
+          "DAY1@18015910"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_18083000",
+          "DAY1_A1_JAKE_18013000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-47",
+      "question": "What food does Alice love to eat?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Hot pot",
+        "B": "Steak",
+        "C": "Chicken steak",
+        "D": "Sour and spicy dishes"
+      },
+      "query_timestamp": 66564.0,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-47",
+        "query_time_raw": "DAY1@18292400",
+        "evidence_time_raw": [
+          "DAY1@14001812"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_18290000",
+          "DAY1_A1_JAKE_14000000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-48",
+      "question": "What did we end up eating the last time we ordered takeout?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Pizza",
+        "B": "KFC",
+        "C": "Dumplings",
+        "D": "Noodles"
+      },
+      "query_timestamp": 66642.14,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-48",
+        "query_time_raw": "DAY1@18304214",
+        "evidence_time_raw": [
+          "DAY1@14163608"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_18303000",
+          "DAY1_A1_JAKE_14163000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-49",
+      "question": "What interesting topic did we discuss the last time we took the escalator?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Burger",
+        "B": "Bracelet",
+        "C": "Photography",
+        "D": "Rum"
+      },
+      "query_timestamp": 66932.14,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-49",
+        "query_time_raw": "DAY1@18353214",
+        "evidence_time_raw": [
+          "DAY1@17161616"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_18353000",
+          "DAY1_A1_JAKE_17160000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-50",
+      "question": "What do I usually show everyone on my phone?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Share interesting videos with everyone",
+        "B": "Show everyone what they want to eat",
+        "C": "I'm recording a video and want everyone to be in it",
+        "D": "Take a look at the timer interface on my phone"
+      },
+      "query_timestamp": 68573.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-50",
+        "query_time_raw": "DAY1@19025319",
+        "evidence_time_raw": [
+          "DAY1@12234300DAY1_17114401"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19024118",
+          "DAY1_A1_JAKE_12233000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-51",
+      "question": "Who else was with us the last time we took the car?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Nicous",
+        "B": "Choiszt",
+        "C": "Shure",
+        "D": "Violet"
+      },
+      "query_timestamp": 68595.18,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-51",
+        "query_time_raw": "DAY1@19031518",
+        "evidence_time_raw": [
+          "DAY1@17124116"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19030000",
+          "DAY1_A1_JAKE_17123000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-52",
+      "question": "To shop faster, how did we divide into groups?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Grocery group and alcohol group",
+        "B": "Grocery group and daily necessities group",
+        "C": "Grocery group and snacks group",
+        "D": "Daily necessities group and alcohol group"
+      },
+      "query_timestamp": 69156.18,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-52",
+        "query_time_raw": "DAY1@19123618",
+        "evidence_time_raw": [
+          "DAY1@17210111",
+          "DAY1@17205915"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19123000",
+          "DAY1_A1_JAKE_17210000",
+          "DAY1_A1_JAKE_17203000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-53",
+      "question": "Who bought the hot pot base on the table?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Shure",
+        "B": "Me",
+        "C": "Tasha",
+        "D": "Lucia"
+      },
+      "query_timestamp": 69342.12,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-53",
+        "query_time_raw": "DAY1@19154212",
+        "evidence_time_raw": [
+          "DAY1@17364916"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19153000",
+          "DAY1_A1_JAKE_17363000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-54",
+      "question": "Who purchased the scallion in my hand?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Me",
+        "B": "Tasha",
+        "C": "Alice",
+        "D": "Lucia"
+      },
+      "query_timestamp": 69407.1,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-54",
+        "query_time_raw": "DAY1@19164710",
+        "evidence_time_raw": [
+          "DAY1@17392516"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19163000",
+          "DAY1_A1_JAKE_17390000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-55",
+      "question": "Who among us hasn't eaten century eggs",
+      "ground_truth": "D",
+      "options": {
+        "A": "me",
+        "B": "Shure",
+        "C": "Lucia",
+        "D": "Tasha"
+      },
+      "query_timestamp": 70671.08,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-55",
+        "query_time_raw": "DAY1@19375108",
+        "evidence_time_raw": [
+          "DAY1@14003400"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19373000",
+          "DAY1_A1_JAKE_14003000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-56",
+      "question": "While I was cleaning the egg mixer, who joined in to help?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Alice",
+        "B": "Tasha",
+        "C": "Shure",
+        "D": "Lucia"
+      },
+      "query_timestamp": 70671.09,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-56",
+        "query_time_raw": "DAY1@19375109",
+        "evidence_time_raw": [
+          "DAY1@14012000"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19373000",
+          "DAY1_A1_JAKE_14010000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-57",
+      "question": "Who chats with me the most when I'm cleaning in the kitchen?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Lucia",
+        "B": "Alice",
+        "C": "Tasha",
+        "D": "Shure"
+      },
+      "query_timestamp": 70671.11,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-57",
+        "query_time_raw": "DAY1@19375111",
+        "evidence_time_raw": [
+          "DAY1@14061215",
+          "DAY1@14081614"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19373000",
+          "DAY1_A1_JAKE_14060000",
+          "DAY1_A1_JAKE_14080000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-58",
+      "question": "Who are the member of ingredients group",
+      "ground_truth": "D",
+      "options": {
+        "A": "Tasha, Shure, and Lucia",
+        "B": "Me, Alice, and Lucia",
+        "C": "Alice, Shure, and Lucia",
+        "D": "Me, Alice, and Tasha"
+      },
+      "query_timestamp": 70671.16,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-58",
+        "query_time_raw": "DAY1@19375116",
+        "evidence_time_raw": [
+          "DAY1@17212615"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19373000",
+          "DAY1_A1_JAKE_17210000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-59",
+      "question": "After Lucia said she wanted to buy some fruit, what fruit did Katrina mention?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Apple",
+        "B": "Pear",
+        "C": "Banana",
+        "D": "Green grapes"
+      },
+      "query_timestamp": 70671.17,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-59",
+        "query_time_raw": "DAY1@19375117",
+        "evidence_time_raw": [
+          "DAY1@17214402"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19373000",
+          "DAY1_A1_JAKE_17213000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-60",
+      "question": "Why did Tasha say not to eat freshly cut ones when I was looking at fruit?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Because freshly cut ones are not free",
+        "B": "Because it's embarrassing",
+        "C": "Because freshly cut fruit is not fresh",
+        "D": "Because when merchants prepare fruit, they cut off the bad parts and leave the good ones for customers to eat"
+      },
+      "query_timestamp": 70671.18,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-60",
+        "query_time_raw": "DAY1@19375118",
+        "evidence_time_raw": [
+          "DAY1@17234710"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19373000",
+          "DAY1_A1_JAKE_17233000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-61",
+      "question": "Who joined in while me and Shure were setting up the shelf?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Tasha",
+        "B": "Katrina",
+        "C": "Lucia",
+        "D": "Alice"
+      },
+      "query_timestamp": 70855.14,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-61",
+        "query_time_raw": "DAY1@19405514",
+        "evidence_time_raw": [
+          "DAY1@12542616"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19403000",
+          "DAY1_A1_JAKE_12540000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-62",
+      "question": "Besides me, Katrina, and Shure, who else joined in to set up the shelf?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Tasha",
+        "B": "Lucia",
+        "C": "Choiszt",
+        "D": "Alice"
+      },
+      "query_timestamp": 70855.17,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-62",
+        "query_time_raw": "DAY1@19405517",
+        "evidence_time_raw": [
+          "DAY1@13015719"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19403000",
+          "DAY1_A1_JAKE_13013000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-63",
+      "question": "How long should the self-introduction and quiz session take approximately?",
+      "ground_truth": "C",
+      "options": {
+        "A": "30min",
+        "B": "50min",
+        "C": "40min",
+        "D": "60min"
+      },
+      "query_timestamp": 71254.05,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-63",
+        "query_time_raw": "DAY1@19473405",
+        "evidence_time_raw": [
+          "DAY1@12034005"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_12033000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-64",
+      "question": "What items are still not bought?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Meat, fish, and tart crust",
+        "B": "Tomatoes, eggs, and tart crust",
+        "C": "Taro, mint, and tart crust",
+        "D": "Taro, pomegranate, and tart crust"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-64",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@18043002"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_18043000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-65",
+      "question": "We decided to buy how many boxes of green grapes",
+      "ground_truth": "A",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "1",
+        "D": "4"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-65",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@17220406"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_17220000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-66",
+      "question": "Why do we want to buy sterile eggs",
+      "ground_truth": "D",
+      "options": {
+        "A": "Because sterile eggs are delicious",
+        "B": "Because everyone likes to eat sterile eggs",
+        "C": "Because sterile eggs are on promotion",
+        "D": "Because sterile eggs can be used to make tiramisu"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-66",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@17334412"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_17333000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-67",
+      "question": "Why did the clerk not agree when we asked them to cut the pineapple?",
+      "ground_truth": "D",
+      "options": {
+        "A": "Because there were pre-cut ones available, so the clerk didn't agree",
+        "B": "Because the clerk didn't know how to cut it",
+        "C": "Because the clerk found it troublesome",
+        "D": "Because the fruit-cutting clerk was off duty at that time"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-67",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@17261509"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_17260000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-68",
+      "question": "Why didn't we buy chestnut kernels",
+      "ground_truth": "A",
+      "options": {
+        "A": "Because they are hard to cook",
+        "B": "Because they are too expensive",
+        "C": "Because there is no need to buy them",
+        "D": "Because Tasha doesn't like to eat them"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-68",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@17410614"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_17410000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-69",
+      "question": "During group discussions, who usually speaks the least?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Lucia",
+        "B": "Me",
+        "C": "Alice",
+        "D": "Tasha"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-69",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@12235819"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_12233000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-70",
+      "question": "Why do we need to buy two boxes of green grapes?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Because one box can be used for making a cake, and the other can be eaten",
+        "B": "Because Lucia likes to eat them",
+        "C": "Because Katrina likes to eat them",
+        "D": "Because buying two boxes comes with a discount"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-70",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@17220307"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_17220000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-71",
+      "question": "What prize does Alice plan to give the participants",
+      "ground_truth": "A",
+      "options": {
+        "A": "Daffodil bulbs",
+        "B": "Sunflower",
+        "C": "Power bank",
+        "D": "Sunflower"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-71",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@11471209",
+          "DAY1@11472613"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_11470000",
+          "DAY1_A1_JAKE_11470000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-72",
+      "question": "What does Lucia plan to make on World Earth Day?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Jellyfish lamp or cardboard puppy",
+        "B": "Lantern or cardboard puppy",
+        "C": "Greeting card or cardboard puppy",
+        "D": "Video or cardboard puppy"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-72",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@11391716",
+          "DAY1@11395913"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_11390000",
+          "DAY1_A1_JAKE_11393000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-73",
+      "question": "What materials does Tasha plan to use to make seed paper?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Regular paper and sunflower seeds",
+        "B": "Paper made from discarded coffee grounds and sunflower seeds",
+        "C": "Paper made from discarded coffee grounds and sunflower seeds",
+        "D": "Regular paper and sunflower seeds"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-73",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@11444609",
+          "DAY1@11445508"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_11443000",
+          "DAY1_A1_JAKE_11443000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-74",
+      "question": "Among us, who often goes out wearing slippers",
+      "ground_truth": "A",
+      "options": {
+        "A": "Me",
+        "B": "Tasha",
+        "C": "Lucia",
+        "D": "Alice"
+      },
+      "query_timestamp": 71254.15,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-74",
+        "query_time_raw": "DAY1@19473415",
+        "evidence_time_raw": [
+          "DAY1@14094102",
+          "DAY1@17125209"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19473000",
+          "DAY1_A1_JAKE_14093000",
+          "DAY1_A1_JAKE_17123000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-75",
+      "question": "Tasha is now saying she will wash the dishes, who washed the dishes last time",
+      "ground_truth": "A",
+      "options": {
+        "A": "Me",
+        "B": "Katrina",
+        "C": "Tasha",
+        "D": "Shure"
+      },
+      "query_timestamp": 71445.07,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-75",
+        "query_time_raw": "DAY1@19504507",
+        "evidence_time_raw": [
+          "DAY1@14014508"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_19503000",
+          "DAY1_A1_JAKE_14013000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-76",
+      "question": "What am I usually doing on the second floor today?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Too hungry, waiting too bored, playing on the phone to divert attention to prevent hunger",
+        "B": "Playing on the phone, slacking off, and resting",
+        "C": "Using the computer to handle my various information",
+        "D": "Using the computer to play online games"
+      },
+      "query_timestamp": 73930.09,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-76",
+        "query_time_raw": "DAY1@20321009",
+        "evidence_time_raw": [
+          "DAY1@19512317",
+          "DAY1@19313500"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_20320000",
+          "DAY1_A1_JAKE_19510000",
+          "DAY1_A1_JAKE_19313000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-77",
+      "question": "Who helps Alice look after the ring",
+      "ground_truth": "A",
+      "options": {
+        "A": "Me",
+        "B": "Katrina",
+        "C": "Shure",
+        "D": "Tasha"
+      },
+      "query_timestamp": 74680.09,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-77",
+        "query_time_raw": "DAY1@20444009",
+        "evidence_time_raw": [
+          "DAY1@19391612"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_20443000",
+          "DAY1_A1_JAKE_19390000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-78",
+      "question": "Who helped Alice take off the bracelet",
+      "ground_truth": "B",
+      "options": {
+        "A": "Me",
+        "B": "Tasha",
+        "C": "Katrina",
+        "D": "Lucia"
+      },
+      "query_timestamp": 74680.09,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-78",
+        "query_time_raw": "DAY1@20444009",
+        "evidence_time_raw": [
+          "DAY1@19405407"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_20443000",
+          "DAY1_A1_JAKE_19403000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-79",
+      "question": "Previously, Alice couldn't open the can. Who helped Alice open the can?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Lucia",
+        "B": "Me",
+        "C": "Katrina",
+        "D": "Tasha"
+      },
+      "query_timestamp": 74680.09,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-79",
+        "query_time_raw": "DAY1@20444009",
+        "evidence_time_raw": [
+          "DAY1@19432118"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_20443000",
+          "DAY1_A1_JAKE_19430000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-80",
+      "question": "Who used the kitchen knife on the counter last time?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Lucia",
+        "B": "Alice",
+        "C": "Tasha",
+        "D": "Katrina"
+      },
+      "query_timestamp": 77811.1,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-80",
+        "query_time_raw": "DAY1@21365110",
+        "evidence_time_raw": [
+          "DAY1@20245013"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21363000",
+          "DAY1_A1_JAKE_20243000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-81",
+      "question": "Who came to visit my room at noon",
+      "ground_truth": "D",
+      "options": {
+        "A": "Tasha, Alice, Shure",
+        "B": "Katrina, Shure, Alice",
+        "C": "Tasha, Katrina, Lucia",
+        "D": "Katrina, Lucia, Shure"
+      },
+      "query_timestamp": 78096.05,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-81",
+        "query_time_raw": "DAY1@21413605",
+        "evidence_time_raw": [
+          "DAY1@11133017"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21413000",
+          "DAY1_A1_JAKE_11133000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-82",
+      "question": "When I usually buy clothes, what type of clothing do I not purchase?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Similar to Hainan Home men's clothing",
+        "B": "Hip-hop trendy men's clothing",
+        "C": "Similar to vacation wear casual clothing",
+        "D": "Similar to Semir's artistic men's clothing"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-82",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17200819"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17200000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-83",
+      "question": "when Tasha and Alice and I were buying fruit at the supermarket, who was mainly responsible for selecting the fruit",
+      "ground_truth": "C",
+      "options": {
+        "A": "We selected the fruit together",
+        "B": "Tasha, me",
+        "C": "Tasha, Alice",
+        "D": "Alice, me"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-83",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17213719"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17213000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-84",
+      "question": "Who discussed sterile eggs with me while shopping at the supermarket",
+      "ground_truth": "B",
+      "options": {
+        "A": "Shure, Alice",
+        "B": "Tasha, Alice",
+        "C": "Tasha, Katrina",
+        "D": "Tasha, Shure"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-84",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17342100"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17340000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-85",
+      "question": "Who usually frequents the vegetable market",
+      "ground_truth": "B",
+      "options": {
+        "A": "Alice",
+        "B": "Tasha",
+        "C": "Me",
+        "D": "Shure"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-85",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17391292"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17390000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-86",
+      "question": "What do I always do when I go to the supermarket",
+      "ground_truth": "B",
+      "options": {
+        "A": "Hum songs",
+        "B": "Watch videos on my phone",
+        "C": "Read novels on my phone",
+        "D": "Play games on my phone"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-86",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17442113",
+          "DAY1@18002012"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17440000",
+          "DAY1_A1_JAKE_18000000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-87",
+      "question": "what beverages i rarely drink",
+      "ground_truth": "B",
+      "options": {
+        "A": "alcohol",
+        "B": "coffee",
+        "C": "juice",
+        "D": "milk"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-87",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17502212"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17500000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-88",
+      "question": "When shopping at the supermarket on day1, who did I lose track of and took a long time to find?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Tasha, Alice",
+        "B": "Shure, Alice",
+        "C": "Shure, Tasha",
+        "D": "Katrina, Tasha"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-88",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17585703"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17583000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-89",
+      "question": "What drinks do I usually not buy when shopping at the supermarket?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Milk",
+        "B": "Juice",
+        "C": "Alcohol and coffee",
+        "D": "Soda water"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-89",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17212813"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17210000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-90",
+      "question": "where is the place I will never go to",
+      "ground_truth": "A",
+      "options": {
+        "A": "market",
+        "B": "library",
+        "C": "bar",
+        "D": "gym"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-90",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17393716"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17393000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-91",
+      "question": "Who is always the first to get off the car",
+      "ground_truth": "B",
+      "options": {
+        "A": "Alice",
+        "B": "Me",
+        "C": "Lucia",
+        "D": "Tasha"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-91",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@19031617",
+          "DAY1@17125316"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_19030000",
+          "DAY1_A1_JAKE_17123000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-92",
+      "question": "What do I usually use to control the computer when I use it?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Mouse",
+        "B": "Touchpad",
+        "C": "Graphics tablet",
+        "D": "Touchscreen"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-92",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@19532615",
+          "DAY1@19564703"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_19530000",
+          "DAY1_A1_JAKE_19563000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-93",
+      "question": "when Tasha and Alice and I entered the supermarket first, who were we waiting for",
+      "ground_truth": "D",
+      "options": {
+        "A": "Shure, Nicous, Choiszt",
+        "B": "Shure, Katrina, Jack",
+        "C": "Katrina, Shure, Nicous",
+        "D": "Katrina, Shure, Lucia"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-93",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "Day1@17160718"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "Day1_A1_JAKE_17160718"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-94",
+      "question": "Whose hometown is close to mine",
+      "ground_truth": "D",
+      "options": {
+        "A": "Alice",
+        "B": "Shure",
+        "C": "Katrina",
+        "D": "Tasha"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-94",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17333416"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17333000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-95",
+      "question": "What cuisine are we going to make on the last day?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Cake",
+        "B": "Hot pot",
+        "C": "Rice noodles",
+        "D": "Turkey"
+      },
+      "query_timestamp": 78233.19,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-95",
+        "query_time_raw": "DAY1@21435319",
+        "evidence_time_raw": [
+          "DAY1@17321011"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21433000",
+          "DAY1_A1_JAKE_17320000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-96",
+      "question": "Who took the group photo today?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Me",
+        "B": "Katrina",
+        "C": "Lucia",
+        "D": "Tasha"
+      },
+      "query_timestamp": 78334.18,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-96",
+        "query_time_raw": "DAY1@21453418",
+        "evidence_time_raw": [
+          "DAY1@18035000",
+          "DAY1@18080008"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21453000",
+          "DAY1_A1_JAKE_18033000",
+          "DAY1_A1_JAKE_18080000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-97",
+      "question": "What does Alice not eat?",
+      "ground_truth": "C",
+      "options": {
+        "A": "Noodles",
+        "B": "Bread",
+        "C": "Cream",
+        "D": "Pizza"
+      },
+      "query_timestamp": 78382.16,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-97",
+        "query_time_raw": "DAY1@21462216",
+        "evidence_time_raw": [
+          "DAY1@21413016"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21460000",
+          "DAY1_A1_JAKE_21413000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-98",
+      "question": "Who usually writes the shopping list on the whiteboard?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Lucia",
+        "B": "Katrina",
+        "C": "Shure",
+        "D": "Tasha"
+      },
+      "query_timestamp": 78641.04,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-98",
+        "query_time_raw": "DAY1@21504104",
+        "evidence_time_raw": [
+          "DAY1@13455500",
+          "DAY1@19214807"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21503000",
+          "DAY1_A1_JAKE_13453000",
+          "DAY1_A1_JAKE_19213000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-99",
+      "question": "Who helped Tasha spread cream on the cake?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Lucia, Katrina, Alice",
+        "B": "Lucia, Shure, Alice",
+        "C": "Me, Lucia, Shure",
+        "D": "Lucia, Shure, Katrina"
+      },
+      "query_timestamp": 78690.17,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-99",
+        "query_time_raw": "DAY1@21513017",
+        "evidence_time_raw": [
+          "DAY1@21435319"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21513000",
+          "DAY1_A1_JAKE_21433000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-100",
+      "question": "when I was eating the cake, I accidentally dropped the strawberry on the ground. Who helped me pick it up and throw it in the trash can?",
+      "ground_truth": "A",
+      "options": {
+        "A": "Tasha",
+        "B": "Alice",
+        "C": "Katrina",
+        "D": "Shure"
+      },
+      "query_timestamp": 78990.17,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-100",
+        "query_time_raw": "DAY1@21563017",
+        "evidence_time_raw": [
+          "DAY1@21480908"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21563000",
+          "DAY1_A1_JAKE_21480000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-101",
+      "question": "What should I buy tomorrow",
+      "ground_truth": "D",
+      "options": {
+        "A": "phone case",
+        "B": "watch",
+        "C": "phone",
+        "D": "clock"
+      },
+      "query_timestamp": 78990.17,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-101",
+        "query_time_raw": "DAY1@21563017",
+        "evidence_time_raw": [
+          "DAY1@21504100"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_21563000",
+          "DAY1_A1_JAKE_21503000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+      }
+    },
+    {
+      "dataset": "jake",
+      "question_id": "egolifeqa-a1-jake-102",
+      "question": "In the morning, while we were chatting and discussing by the table on the first floor, what replaced the tripod?",
+      "ground_truth": "B",
+      "options": {
+        "A": "Chair",
+        "B": "Little Horse Chair",
+        "C": "Little Bench",
+        "D": "No replacement"
+      },
+      "query_timestamp": 79526.18,
+      "source_annotation": {
+        "repo": "kfkas/egolifeqa-imu-benchmark",
+        "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+        "file": "data/v2/benchmark.csv",
+        "question_id": "egolifeqa-a1-jake-102",
+        "query_time_raw": "DAY1@22052618",
+        "evidence_time_raw": [
+          "DAY1@11165215",
+          "DAY1@11113810"
+        ],
+        "source_ids": [
+          "DAY1_A1_JAKE_22050000",
+          "DAY1_A1_JAKE_11163000",
+          "DAY1_A1_JAKE_11113000"
+        ],
+        "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
       }
     }
   ]
