@@ -22,7 +22,7 @@ ssh -i '/Users/nijiachen/Downloads/njc_Hyperstack (1).txt' \
 
 The instance remains **ACTIVE**. The full Gemini versus Qwen comparison was not launched; the machine is prepared and preflight-verified for it.
 This is the shortest reproducible path to a Hyperstack GPU that can run the
-real first-clip comparison from `experiment_GPU_record.md`:
+real first-clip comparison from `docs/experiment_GPU_record.md`:
 
 > Gemini 3.8 vs Qwen 3.5 4B first-clip comparison - 2026-09-14
 
@@ -175,7 +175,7 @@ rsync -az --info=progress2 -e "ssh -i $HYPERSTACK_KEY" \
 
 rsync -az -e "ssh -i $HYPERSTACK_KEY" \
   egolife_day1/DAY1_A1_JAKE_11094208.mp4 \
-  egolife_m3_jake_day1/EgoLifeQA_A1_JAKE.json \
+  benchmark/egolife_m3_jake_day1/EgoLifeQA_A1_JAKE.json \
   ubuntu@"$HYPERSTACK_HOST":/opt/streammeco/data/
 ```
 
@@ -198,7 +198,7 @@ API_302_KEY
 ```
 
 Store them in `/opt/streammeco/secrets/runtime.env` with mode `600`. Do not put
-keys in this runbook, Git, logs, snapshots, or `experiment_GPU_record.md`.
+keys in this runbook, Git, logs, snapshots, or `docs/experiment_GPU_record.md`.
 
 ## 5. Create the Runtime Layout
 

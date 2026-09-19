@@ -11,8 +11,8 @@ from .moss_runner import WindowMoss
 def main():
     p=argparse.ArgumentParser(description='Offline M3 entity consolidation')
     p.add_argument('command',choices=['prepare','run','moss'])
-    p.add_argument('--root',default='egolife_m3_jake_day1')
-    p.add_argument('--session',default='egolife_m3_jake_day1/gemini')
+    p.add_argument('--root',default='benchmark/egolife_m3_jake_day1')
+    p.add_argument('--session',default='benchmark/egolife_m3_jake_day1/gemini')
     p.add_argument('--cutoff',type=float,required=True,help='requested elapsed seconds')
     p.add_argument('--metadata',help='override M3 source-segment metadata JSON')
     p.add_argument('--output',default='consolidation/runs')

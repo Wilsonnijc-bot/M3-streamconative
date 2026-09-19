@@ -15,7 +15,7 @@ while True:
    complete=code==0 and validation.get('status')=='complete' and validation.get('qa_rows')==60 and not validation.get('problems') and 'PIPELINE_COMPLETE' in log
    observed={'exit_status':code,'verified_complete':complete,'validation':validation,'observed_at':datetime.datetime.now(datetime.timezone.utc).isoformat()}
    (ROOT/'provenance/final_observation.json').write_text(json.dumps(observed,indent=2)+'\n')
-   ledger=ROOT.parent/'experiment_GPU_record.md'
+   ledger=ROOT.parent/'docs'/'experiment_GPU_record.md'
    text=ledger.read_text();marker='## M3-Bench bedroom_01 — Gemini four-method benchmark'
    start=text.index(marker);end=text.find('\n## ',start+3);end=len(text) if end<0 else end
    block=text[start:end]

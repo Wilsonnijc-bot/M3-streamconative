@@ -80,9 +80,10 @@ def build(urls, qa, measurements, target):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--urls", type=Path, default=ROOT / "aea_6h" / "aea_download_urls.json")
-    parser.add_argument("--qa", type=Path, default=ROOT / "aea_6h" / "Egoeverything_VQA.json")
-    parser.add_argument("--out", type=Path, default=ROOT / "aea_6h" / "aea_6h_manifest.json")
+    dataset = ROOT / "benchmark" / "aea_6h"
+    parser.add_argument("--urls", type=Path, default=dataset / "aea_download_urls.json")
+    parser.add_argument("--qa", type=Path, default=dataset / "Egoeverything_VQA.json")
+    parser.add_argument("--out", type=Path, default=dataset / "aea_6h_manifest.json")
     parser.add_argument("--target", type=float, default=21600)
     parser.add_argument("--workers", type=int, default=8)
     args = parser.parse_args()

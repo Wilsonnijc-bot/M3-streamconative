@@ -72,9 +72,10 @@ def build(manifest, source_rows, seed=42, interval=1200):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--manifest", type=Path, default=ROOT / "aea_6h" / "aea_6h_manifest.json")
-    parser.add_argument("--qa", type=Path, default=ROOT / "aea_6h" / "Egoeverything_VQA.json")
-    parser.add_argument("--out", type=Path, default=ROOT / "aea_6h" / "aea_6h_qa_schedule.json")
+    dataset = ROOT / "benchmark" / "aea_6h"
+    parser.add_argument("--manifest", type=Path, default=dataset / "aea_6h_manifest.json")
+    parser.add_argument("--qa", type=Path, default=dataset / "Egoeverything_VQA.json")
+    parser.add_argument("--out", type=Path, default=dataset / "aea_6h_qa_schedule.json")
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
     schedule = build(json.loads(args.manifest.read_text()), json.loads(args.qa.read_text()), args.seed)

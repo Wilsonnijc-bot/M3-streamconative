@@ -40,7 +40,7 @@ def jake(repo):
         for confidence, duration, obs in sorted(groups[ident], key=lambda v:(-v[1],-v[0],v[2]['utterance_id'])):
             if obs['clip_id'] in used_clips: continue
             cache_ref, fragment = obs['audio_ref'].split('#')
-            cache = repo / 'egolife_m3_jake_day1/cache/voices/gemini/work/intermediate' / Path(cache_ref).name
+            cache = repo / 'benchmark/egolife_m3_jake_day1/cache/voices/gemini/work/intermediate' / Path(cache_ref).name
             item = read(cache)[int(fragment.split('/')[2])]
             data = base64.b64decode(item['audio_segment'])
             with wave.open(io.BytesIO(data)) as wav:
