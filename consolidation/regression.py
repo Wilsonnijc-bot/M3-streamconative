@@ -53,8 +53,8 @@ def main():
         dict(decision_id='d3',op='set_name',entity_id='person_2',name='Tasha',evidence_ids=['semantic_654']),
         dict(decision_id='d4',op='resolve_reference',memory_node_id=654,mention='<voice_643>',entity_id='person_2',evidence_ids=['semantic_654']),
         dict(decision_id='d5',op='set_name',entity_id='person_1',name='Katrina',evidence_ids=['semantic_740'])]))
-    m3=load_replay('m3bench_bedroom_01','m3bench_bedroom_01/gemini',2400,
-                  'm3bench_bedroom_01/provenance/raw/gemini/results/memory/q11_uncompressed/metadata.json')
+    m3=load_replay('benchmark/m3bench_bedroom_01','benchmark/m3bench_bedroom_01/gemini',2400,
+                  'benchmark/m3bench_bedroom_01/provenance/raw/gemini/results/memory/q11_uncompressed/metadata.json')
     cases.append(run_case(m3,output,'m3bench',[
         merge('d1',['voice_10','voice_310'],'person_0',['semantic_356']),
         merge('d2',['voice_10','voice_321','voice_322'],'person_0',['semantic_357']),

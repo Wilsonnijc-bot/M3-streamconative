@@ -1799,7 +1799,7 @@ tst/runner.py
 tst/audio.py
 tst/encoder.py
 tst/scoring.py
-tests/test_tst.py
+benchmark/aea_6h/tests/test_tst.py
 TST_ALGORITHM_SPEC.md
 mandoladaptor.md
 GPU_PIPELINE_REQUIREMENTS.md

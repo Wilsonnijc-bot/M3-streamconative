@@ -166,8 +166,8 @@ M3-Bench uses the same importer, with explicit metadata and an isolated namespac
 ```bash
 consolidation/.venv/bin/python -m consolidation prepare \
   --native-graph /path/to/current_native_graph.pkl \
-  --root m3bench_bedroom_01 --session m3bench_bedroom_01/gemini --cutoff 2400 \
-  --metadata m3bench_bedroom_01/provenance/raw/gemini/results/memory/q11_uncompressed/metadata.json \
+  --root benchmark/m3bench_bedroom_01 --session benchmark/m3bench_bedroom_01/gemini --cutoff 2400 \
+  --metadata benchmark/m3bench_bedroom_01/provenance/raw/gemini/results/memory/q11_uncompressed/metadata.json \
   --work consolidation/runs/metadata/m3bench
 ```
 

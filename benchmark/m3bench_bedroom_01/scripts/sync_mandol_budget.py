@@ -1,10 +1,10 @@
 """Sync the selected D100/20 results into the existing A/B/C/D reports."""
 import argparse,hashlib,json,shutil,subprocess,sys
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[2]
+ROOT=Path(__file__).resolve().parents[3]
 HOST='ubuntu@185.216.21.158';KEY='/Users/nijiachen/.ssh/streammeco_hyperstack_1042997'
 CASES={'egolife':('egolife_m3_jake_day1','egolife_10q_gemini',10),
-       'bedroom':('m3bench_bedroom_01','m3bench_bedroom_gemini',15)}
+       'bedroom':('benchmark/m3bench_bedroom_01','m3bench_bedroom_gemini',15)}
 SELECTED=['method_D_mandol.jsonl','method_D_selection.json','aggregate_metrics.json',
           'comparison.csv','comparison.md','detailed_retrieval_events.jsonl',
           'detailed_latency_events.jsonl','gemini_calls.jsonl','retrieval_warmup.jsonl',

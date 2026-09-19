@@ -12,7 +12,7 @@ import time
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1] / "StreamMeCo"
+ROOT = Path(__file__).resolve().parents[3] / "StreamMeCo"
 sys.path.insert(0, str(ROOT))
 os.chdir(ROOT)
 

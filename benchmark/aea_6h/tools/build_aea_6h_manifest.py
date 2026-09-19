@@ -10,7 +10,7 @@ from collections import Counter
 from pathlib import Path
 
 PATTERN = re.compile(r"loc(\d+)_script(\d+)_seq(\d+)_rec(\d+)$")
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[3]
 
 
 def probe(item):

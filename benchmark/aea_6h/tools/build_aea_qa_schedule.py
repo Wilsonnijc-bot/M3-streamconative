@@ -8,7 +8,7 @@ import math
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[3]
 
 
 def build(manifest, source_rows, seed=42, interval=1200):

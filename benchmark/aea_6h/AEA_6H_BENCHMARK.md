@@ -35,13 +35,13 @@ From the repository root, with `ffprobe`, `ffmpeg`, and Python 3 available:
 ```bash
 curl -fL -o aea_6h/Egoeverything_VQA.json \
   https://huggingface.co/datasets/roxqtang/EgoEverything/resolve/main/Egoeverything_VQA.json
-python3 tools/build_aea_6h_manifest.py \
+python3 benchmark/aea_6h/tools/build_aea_6h_manifest.py \
   --urls aea_6h/aea_download_urls.json --qa aea_6h/Egoeverything_VQA.json \
   --out aea_6h/aea_6h_manifest.json
-python3 tools/build_aea_qa_schedule.py \
+python3 benchmark/aea_6h/tools/build_aea_qa_schedule.py \
   --manifest aea_6h/aea_6h_manifest.json --qa aea_6h/Egoeverything_VQA.json \
   --out aea_6h/aea_6h_qa_schedule.json --seed 42
-python3 tools/download_aea_6h.py \
+python3 benchmark/aea_6h/tools/download_aea_6h.py \
   --urls aea_6h/aea_download_urls.json --manifest aea_6h/aea_6h_manifest.json \
   --destination /path/to/aea_6h --workers 8
 ```
@@ -50,7 +50,7 @@ When the media host is slow from the GPU network, download to local temporary
 storage, then transfer verified files over SSH in parallel:
 
 ```bash
-python3 tools/transfer_aea_6h.py \
+python3 benchmark/aea_6h/tools/transfer_aea_6h.py \
   --urls aea_6h/aea_download_urls.json --manifest aea_6h/aea_6h_manifest.json \
   --source /path/to/local/aea_6h --host ubuntu@GPU_IP \
   --key /path/to/ssh_key --destination /opt/streammeco/aea_6h --workers 8
@@ -70,7 +70,7 @@ inside that final dataset.
 
 ## Questions and runner
 
-`tools/build_aea_qa_schedule.py` assigns derived `ask_global_s` values at
+`benchmark/aea_6h/tools/build_aea_qa_schedule.py` assigns derived `ask_global_s` values at
 20-minute checkpoints (fixed seed 42); original QA fields are not modified.
 All scheduled questions satisfy `ask_global_s > evidence_global_s` and
 `evidence_local_s <= duration_s`. Lag buckets and clip/session-crossing flags
@@ -89,7 +89,7 @@ logs. It does not reset memory at session boundaries or include future media.
 The full inference run can be expensive and is **not** part of the download:
 
 ```bash
-python3 tools/run_aea_stream_benchmark.py \
+python3 benchmark/aea_6h/tools/run_aea_stream_benchmark.py \
   --dataset /opt/streammeco/aea_6h --results /opt/streammeco/run/aea_6h
 ```
 
