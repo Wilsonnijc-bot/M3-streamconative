@@ -1,0 +1,777 @@
+{
+  "clip_id": 1,
+  "voice_observations": [
+    {
+      "voice_node_id": 0,
+      "start_time": "00:04",
+      "end_time": "00:06",
+      "asr": "你好你",
+      "speaker": 0,
+      "asr_provider": "deepgram-asr",
+      "asr_sources": [
+        "deepgram-asr"
+      ],
+      "duration": 2,
+      "source_row_index": 0,
+      "assignment_scores": {
+        "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8",
+        "best_score": null,
+        "threshold": 0.6,
+        "predicted_identity": "voice_0",
+        "created_new_identity": true,
+        "cache_hit": true,
+        "embedding_ms": 0.0,
+        "mapping_total_ms": 0.8820799994282424,
+        "audio_sha256": "6a56d3aeb5d0f24cb73b7e4ed8974eed6b32b5e732254751dc439dd38760e175",
+        "candidate_scores": {},
+        "query_window_count": 1,
+        "retained_embeddings": 1,
+        "enrollment_policy": "online_native_m3"
+      },
+      "matched_node": 0
+    },
+    {
+      "voice_node_id": 1,
+      "start_time": "00:06",
+      "end_time": "00:13",
+      "asr": "好意外好bie你",
+      "speaker": 0,
+      "asr_provider": "deepgram-asr",
+      "asr_sources": [
+        "deepgram-asr"
+      ],
+      "duration": 7,
+      "source_row_index": 1,
+      "assignment_scores": {
+        "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8",
+        "best_score": 0.40451475306006207,
+        "threshold": 0.6,
+        "predicted_identity": "voice_1",
+        "created_new_identity": true,
+        "cache_hit": true,
+        "embedding_ms": 0.0,
+        "mapping_total_ms": 2.6465129922144115,
+        "audio_sha256": "afacab0cfd984be73e09bc4a1bb748c54eaed0518838b64dc8ee4455577015cd",
+        "candidate_scores": {
+          "voice_0": 0.40451475306006207
+        },
+        "query_window_count": 3,
+        "retained_embeddings": 3,
+        "enrollment_policy": "online_native_m3"
+      },
+      "matched_node": 1
+    },
+    {
+      "voice_node_id": 2,
+      "start_time": "00:12",
+      "end_time": "00:14",
+      "asr": "好意",
+      "speaker": 0,
+      "asr_provider": "deepgram-asr",
+      "asr_sources": [
+        "deepgram-asr"
+      ],
+      "duration": 2,
+      "source_row_index": 2,
+      "assignment_scores": {
+        "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8",
+        "best_score": 0.30037396394975185,
+        "threshold": 0.6,
+        "predicted_identity": "voice_2",
+        "created_new_identity": true,
+        "cache_hit": true,
+        "embedding_ms": 0.0,
+        "mapping_total_ms": 2.4421999987680465,
+        "audio_sha256": "974e64993e0082e343aa20676d7581dd821ab2e39b119190408181b94eb3c097",
+        "candidate_scores": {
+          "voice_0": 0.19519658556753838,
+          "voice_1": 0.30037396394975185
+        },
+        "query_window_count": 1,
+        "retained_embeddings": 1,
+        "enrollment_policy": "online_native_m3"
+      },
+      "matched_node": 2
+    },
+    {
+      "voice_node_id": 3,
+      "start_time": "00:14",
+      "end_time": "00:16",
+      "asr": "志願",
+      "speaker": 0,
+      "asr_provider": "deepgram-asr",
+      "asr_sources": [
+        "deepgram-asr"
+      ],
+      "duration": 2,
+      "source_row_index": 3,
+      "assignment_scores": {
+        "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8",
+        "best_score": 0.3840668376843475,
+        "threshold": 0.6,
+        "predicted_identity": "voice_3",
+        "created_new_identity": true,
+        "cache_hit": true,
+        "embedding_ms": 0.0,
+        "mapping_total_ms": 3.131762001430616,
+        "audio_sha256": "75d364484fbb0b3e096abc0309b53b151bcf9d221153f0e0557fcc015fcb882f",
+        "candidate_scores": {
+          "voice_0": 0.3840668376843475,
+          "voice_1": 0.3519591532029048,
+          "voice_2": 0.2908049299550034
+        },
+        "query_window_count": 1,
+        "retained_embeddings": 1,
+        "enrollment_policy": "online_native_m3"
+      },
+      "matched_node": 3
+    }
+  ],
+  "clip_path": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/tmp/jake_1__x3ypyj0/segment.mp4",
+  "shared_asr_provenance": {
+    "cache_hit": true,
+    "cache_path": "cache/jake/asr/4e61a905ceab96aa5005fea02385aafe5e2367e17d768f7f1056163a255661e2.json",
+    "lookup_or_request_ms": 0.0805910094641149,
+    "timing_scope": "shared event ASR; cached request duration not reported as new inference"
+  },
+  "asr_selected_provider": "deepgram-asr",
+  "end_to_end_memory_generation_ms": 16699.844836999546,
+  "latency_ms": {
+    "clip_decode": 1981.6958620067453,
+    "deepgram_asr": null,
+    "mai_transcribe_asr": null,
+    "asr_total": null,
+    "audio_segmentation": 3.408438991755247,
+    "speech_embedding_campplus": null,
+    "speech_embedding_ecapa": 0.0,
+    "speaker_mapping_including_embedding": 9.102554991841316,
+    "facial_detection_recognition_buffalo_l": 1247.8185669897357,
+    "face_clustering": 3.0393579945666716,
+    "vlm_memory_generation": 14771.392527007265,
+    "text_embedding": 569.2231459979666,
+    "graph_update_total": 9.294955001678318
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 1,
+      "model": "text-embedding-3-large",
+      "input_count": 19,
+      "input_chars": 769,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789756754.4657202,
+          "status": "success",
+          "total_tokens": 887,
+          "request_end": 1789756755.0349305,
+          "latency_ms": 569.2110430100001
+        }
+      ],
+      "total_tokens": 887,
+      "latency_ms": 569.2231459979666
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": null
+      },
+      "asr_total_ms": null,
+      "audio_segmentation_ms": 3.408438991755247,
+      "speech_embedding_ms": null,
+      "graph_update_ms": 9.153570994385518,
+      "asr_segment_count": 4,
+      "speech_embedding_count": 4,
+      "voice_identity_count": 4,
+      "asr_selected_provider": "deepgram-asr",
+      "speaker_mapping": "TST",
+      "asr_precomputed": true,
+      "asr_execution": "single_provider",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr"
+      ],
+      "tst_mappings": [
+        {
+          "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8",
+          "best_score": null,
+          "threshold": 0.6,
+          "predicted_identity": "voice_0",
+          "created_new_identity": true,
+          "cache_hit": true,
+          "embedding_ms": 0.0,
+          "mapping_total_ms": 0.8820799994282424,
+          "audio_sha256": "6a56d3aeb5d0f24cb73b7e4ed8974eed6b32b5e732254751dc439dd38760e175",
+          "candidate_scores": {},
+          "query_window_count": 1,
+          "retained_embeddings": 1,
+          "enrollment_policy": "online_native_m3"
+        },
+        {
+          "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8",
+          "best_score": 0.40451475306006207,
+          "threshold": 0.6,
+          "predicted_identity": "voice_1",
+          "created_new_identity": true,
+          "cache_hit": true,
+          "embedding_ms": 0.0,
+          "mapping_total_ms": 2.6465129922144115,
+          "audio_sha256": "afacab0cfd984be73e09bc4a1bb748c54eaed0518838b64dc8ee4455577015cd",
+          "candidate_scores": {
+            "voice_0": 0.40451475306006207
+          },
+          "query_window_count": 3,
+          "retained_embeddings": 3,
+          "enrollment_policy": "online_native_m3"
+        },
+        {
+          "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8",
+          "best_score": 0.30037396394975185,
+          "threshold": 0.6,
+          "predicted_identity": "voice_2",
+          "created_new_identity": true,
+          "cache_hit": true,
+          "embedding_ms": 0.0,
+          "mapping_total_ms": 2.4421999987680465,
+          "audio_sha256": "974e64993e0082e343aa20676d7581dd821ab2e39b119190408181b94eb3c097",
+          "candidate_scores": {
+            "voice_0": 0.19519658556753838,
+            "voice_1": 0.30037396394975185
+          },
+          "query_window_count": 1,
+          "retained_embeddings": 1,
+          "enrollment_policy": "online_native_m3"
+        },
+        {
+          "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8",
+          "best_score": 0.3840668376843475,
+          "threshold": 0.6,
+          "predicted_identity": "voice_3",
+          "created_new_identity": true,
+          "cache_hit": true,
+          "embedding_ms": 0.0,
+          "mapping_total_ms": 3.131762001430616,
+          "audio_sha256": "75d364484fbb0b3e096abc0309b53b151bcf9d221153f0e0557fcc015fcb882f",
+          "candidate_scores": {
+            "voice_0": 0.3840668376843475,
+            "voice_1": 0.3519591532029048,
+            "voice_2": 0.2908049299550034
+          },
+          "query_window_count": 1,
+          "retained_embeddings": 1,
+          "enrollment_policy": "online_native_m3"
+        }
+      ],
+      "tst_embedding_ms": 0.0,
+      "speaker_mapping_ms": 9.102554991841316,
+      "graph_update_timing_scope": "includes nested TST embedding/mapping; do not sum overlapping stages",
+      "total_ms": 21.47590200183913
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 1247.8185669897357,
+      "face_clustering_ms": 3.0393579945666716,
+      "graph_update_ms": null,
+      "frame_count": 88,
+      "detected_face_count": 111,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 1309.11001599452
+    },
+    "vlm": {
+      "context_preparation_ms": 0.6286379939410836,
+      "vlm_ms": 14771.392527007265,
+      "model": "gpt-5.6-terra",
+      "provider": "official_openai_responses",
+      "reasoning_effort": "medium",
+      "raw_response": "{\n  \"video_description\": [\n    \"视频采用带黑色圆形边框的广角第一人称视角，画面左上角叠加“DAY1”和持续递增的时间码，右上角显示“A1_JAKE”。\",\n    \"拍摄者站在一张铺有红白格桌布的长桌旁，右手起初举着一部显示文字列表的智能手机。\",\n    \"五名面部被遮挡的成年人围坐在桌边，桌上摆放着数个黑色拉链收纳包、笔记本、纸张、文具和小型电子物品。\",\n    \"靠右、穿浅粉色上衣并留卷发的人低头查看或操作手中的手机。\",\n    \"桌子左侧穿深色上衣的人坐在椅子上，旁边穿浅色上衣的人也面向桌面坐着。\",\n    \"桌子远端有两名长发者坐在一起，其中一人穿浅色上衣，另一人穿蓝绿色上衣并低头看向桌面或手中物品。\",\n    \"房间后墙立着一块白板，白板上有少量磁贴或标记，桌边还摆有一束粉色花朵。\",\n    \"窗边的明亮日光照进房间，右侧可见厨房式台面、水槽区域和窗外建筑。\",\n    \"拍摄者逐渐把手机移到画面中央，并用双手操作屏幕，在多个应用或页面之间切换。\",\n    \"约8秒后，手机屏幕显示带方形按键的计时器/时钟界面。\",\n    \"约11秒后，手机短暂显示锁屏时间“11:09”，随后又回到文本页面和手机主屏幕。\",\n    \"约14秒后，拍摄者打开秒表界面，屏幕先显示约“00:23.40”的已有计时。\",\n    \"约16秒后，拍摄者将秒表归零为“00:00.00”，随后启动计时，秒表开始递增。\",\n    \"围坐的人大多保持安静坐姿并看向桌面、手机或拍摄者；右侧卷发者在后段抬手触碰脸侧或头部。\",\n    \"约4至16秒间可听到多人简短说话，包括“你好”和“好意”等简短语句，末尾有人说“志愿”。\"\n  ],\n  \"high_level_conclusions\": [\n    \"围桌者与桌上成组收纳包、纸笔和电子设备表明他们正在参加一项有组织的集体活动、讨论或任务准备，而非普通用餐。\",\n    \"拍摄者反复查看并最终归零启动秒表，说明其可能在为接下来的活动设定时限或记录任务时间。\",\n    \"参与者在拍摄者操作计时器时持续坐在各自位置，显示他们可能正在等待计时任务开始或听取安排。\",\n    \"现有画面未提供任何带ID的面部特征，因此无法可靠建立面部与语音特征的等价关系。\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "视频采用带黑色圆形边框的广角第一人称视角，画面左上角叠加“DAY1”和持续递增的时间码，右上角显示“A1_JAKE”。",
+          "拍摄者站在一张铺有红白格桌布的长桌旁，右手起初举着一部显示文字列表的智能手机。",
+          "五名面部被遮挡的成年人围坐在桌边，桌上摆放着数个黑色拉链收纳包、笔记本、纸张、文具和小型电子物品。",
+          "靠右、穿浅粉色上衣并留卷发的人低头查看或操作手中的手机。",
+          "桌子左侧穿深色上衣的人坐在椅子上，旁边穿浅色上衣的人也面向桌面坐着。",
+          "桌子远端有两名长发者坐在一起，其中一人穿浅色上衣，另一人穿蓝绿色上衣并低头看向桌面或手中物品。",
+          "房间后墙立着一块白板，白板上有少量磁贴或标记，桌边还摆有一束粉色花朵。",
+          "窗边的明亮日光照进房间，右侧可见厨房式台面、水槽区域和窗外建筑。",
+          "拍摄者逐渐把手机移到画面中央，并用双手操作屏幕，在多个应用或页面之间切换。",
+          "约8秒后，手机屏幕显示带方形按键的计时器/时钟界面。",
+          "约11秒后，手机短暂显示锁屏时间“11:09”，随后又回到文本页面和手机主屏幕。",
+          "约14秒后，拍摄者打开秒表界面，屏幕先显示约“00:23.40”的已有计时。",
+          "约16秒后，拍摄者将秒表归零为“00:00.00”，随后启动计时，秒表开始递增。",
+          "围坐的人大多保持安静坐姿并看向桌面、手机或拍摄者；右侧卷发者在后段抬手触碰脸侧或头部。",
+          "约4至16秒间可听到多人简短说话，包括“你好”和“好意”等简短语句，末尾有人说“志愿”。"
+        ],
+        "high_level_conclusions": [
+          "围桌者与桌上成组收纳包、纸笔和电子设备表明他们正在参加一项有组织的集体活动、讨论或任务准备，而非普通用餐。",
+          "拍摄者反复查看并最终归零启动秒表，说明其可能在为接下来的活动设定时限或记录任务时间。",
+          "参与者在拍摄者操作计时器时持续坐在各自位置，显示他们可能正在等待计时任务开始或听取安排。",
+          "现有画面未提供任何带ID的面部特征，因此无法可靠建立面部与语音特征的等价关系。"
+        ]
+      },
+      "request_artifacts": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/cache/terra_construction/requests/8e04fbbe4a214c49b83aac12c81edee3",
+      "usage": {
+        "input_tokens": 17589,
+        "input_tokens_details": {
+          "cached_tokens": 17586,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 789,
+        "output_tokens_details": {
+          "reasoning_tokens": 77
+        },
+        "total_tokens": 18378
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 14771.392527007265,
+          "model": "gpt-5.6-terra"
+        }
+      ],
+      "episodic_memory_count": 15,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 15,
+      "text_embedding_ms": null,
+      "text_embedding_count": 15,
+      "graph_update_ms": 0.11669800733216107,
+      "nodes_added": 15,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.024685999960638583,
+      "nodes_added": 4,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 88,
+    "asr_segments": 4,
+    "speech_embeddings": 4,
+    "voice_identities": 4,
+    "detected_faces": 111,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 15,
+    "semantic_memories": 4,
+    "nodes_after_clip": 23,
+    "edges_after_clip": 0,
+    "nodes_added_by_clip": 23,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "视频采用带黑色圆形边框的广角第一人称视角，画面左上角叠加“DAY1”和持续递增的时间码，右上角显示“A1_JAKE”。",
+      "拍摄者站在一张铺有红白格桌布的长桌旁，右手起初举着一部显示文字列表的智能手机。",
+      "五名面部被遮挡的成年人围坐在桌边，桌上摆放着数个黑色拉链收纳包、笔记本、纸张、文具和小型电子物品。",
+      "靠右、穿浅粉色上衣并留卷发的人低头查看或操作手中的手机。",
+      "桌子左侧穿深色上衣的人坐在椅子上，旁边穿浅色上衣的人也面向桌面坐着。",
+      "桌子远端有两名长发者坐在一起，其中一人穿浅色上衣，另一人穿蓝绿色上衣并低头看向桌面或手中物品。",
+      "房间后墙立着一块白板，白板上有少量磁贴或标记，桌边还摆有一束粉色花朵。",
+      "窗边的明亮日光照进房间，右侧可见厨房式台面、水槽区域和窗外建筑。",
+      "拍摄者逐渐把手机移到画面中央，并用双手操作屏幕，在多个应用或页面之间切换。",
+      "约8秒后，手机屏幕显示带方形按键的计时器/时钟界面。",
+      "约11秒后，手机短暂显示锁屏时间“11:09”，随后又回到文本页面和手机主屏幕。",
+      "约14秒后，拍摄者打开秒表界面，屏幕先显示约“00:23.40”的已有计时。",
+      "约16秒后，拍摄者将秒表归零为“00:00.00”，随后启动计时，秒表开始递增。",
+      "围坐的人大多保持安静坐姿并看向桌面、手机或拍摄者；右侧卷发者在后段抬手触碰脸侧或头部。",
+      "约4至16秒间可听到多人简短说话，包括“你好”和“好意”等简短语句，末尾有人说“志愿”。"
+    ],
+    "high_level_conclusions": [
+      "围桌者与桌上成组收纳包、纸笔和电子设备表明他们正在参加一项有组织的集体活动、讨论或任务准备，而非普通用餐。",
+      "拍摄者反复查看并最终归零启动秒表，说明其可能在为接下来的活动设定时限或记录任务时间。",
+      "参与者在拍摄者操作计时器时持续坐在各自位置，显示他们可能正在等待计时任务开始或听取安排。",
+      "现有画面未提供任何带ID的面部特征，因此无法可靠建立面部与语音特征的等价关系。"
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "视频采用带黑色圆形边框的广角第一人称视角，画面左上角叠加“DAY1”和持续递增的时间码，右上角显示“A1_JAKE”。",
+      "拍摄者站在一张铺有红白格桌布的长桌旁，右手起初举着一部显示文字列表的智能手机。",
+      "五名面部被遮挡的成年人围坐在桌边，桌上摆放着数个黑色拉链收纳包、笔记本、纸张、文具和小型电子物品。",
+      "靠右、穿浅粉色上衣并留卷发的人低头查看或操作手中的手机。",
+      "桌子左侧穿深色上衣的人坐在椅子上，旁边穿浅色上衣的人也面向桌面坐着。",
+      "桌子远端有两名长发者坐在一起，其中一人穿浅色上衣，另一人穿蓝绿色上衣并低头看向桌面或手中物品。",
+      "房间后墙立着一块白板，白板上有少量磁贴或标记，桌边还摆有一束粉色花朵。",
+      "窗边的明亮日光照进房间，右侧可见厨房式台面、水槽区域和窗外建筑。",
+      "拍摄者逐渐把手机移到画面中央，并用双手操作屏幕，在多个应用或页面之间切换。",
+      "约8秒后，手机屏幕显示带方形按键的计时器/时钟界面。",
+      "约11秒后，手机短暂显示锁屏时间“11:09”，随后又回到文本页面和手机主屏幕。",
+      "约14秒后，拍摄者打开秒表界面，屏幕先显示约“00:23.40”的已有计时。",
+      "约16秒后，拍摄者将秒表归零为“00:00.00”，随后启动计时，秒表开始递增。",
+      "围坐的人大多保持安静坐姿并看向桌面、手机或拍摄者；右侧卷发者在后段抬手触碰脸侧或头部。",
+      "约4至16秒间可听到多人简短说话，包括“你好”和“好意”等简短语句，末尾有人说“志愿”。"
+    ],
+    "high_level_conclusions": [
+      "围桌者与桌上成组收纳包、纸笔和电子设备表明他们正在参加一项有组织的集体活动、讨论或任务准备，而非普通用餐。",
+      "拍摄者反复查看并最终归零启动秒表，说明其可能在为接下来的活动设定时限或记录任务时间。",
+      "参与者在拍摄者操作计时器时持续坐在各自位置，显示他们可能正在等待计时任务开始或听取安排。",
+      "现有画面未提供任何带ID的面部特征，因此无法可靠建立面部与语音特征的等价关系。"
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/smoke/terra_construction01/jake/C3/audits/clip_1_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 23,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 0,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "你好你"
+          ],
+          "speaker_mapping": "TST",
+          "embedding_space": "speechbrain_ecapa_192",
+          "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8"
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 1,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "好意外好bie你"
+          ],
+          "speaker_mapping": "TST",
+          "embedding_space": "speechbrain_ecapa_192",
+          "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8"
+        },
+        "embedding_count": 3,
+        "embedding_dimensions": [
+          192,
+          192,
+          192
+        ]
+      },
+      {
+        "id": 2,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "好意"
+          ],
+          "speaker_mapping": "TST",
+          "embedding_space": "speechbrain_ecapa_192",
+          "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8"
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 3,
+        "type": "voice",
+        "metadata": {
+          "contents": [
+            "志願"
+          ],
+          "speaker_mapping": "TST",
+          "embedding_space": "speechbrain_ecapa_192",
+          "method_id": "20eb485565d032994d63e51ecbbf7229184c49d5a23a73116a8a6b15a3279cc8"
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          192
+        ]
+      },
+      {
+        "id": 4,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "视频采用带黑色圆形边框的广角第一人称视角，画面左上角叠加“DAY1”和持续递增的时间码，右上角显示“A1_JAKE”。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 5,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "拍摄者站在一张铺有红白格桌布的长桌旁，右手起初举着一部显示文字列表的智能手机。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 6,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "五名面部被遮挡的成年人围坐在桌边，桌上摆放着数个黑色拉链收纳包、笔记本、纸张、文具和小型电子物品。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 7,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "靠右、穿浅粉色上衣并留卷发的人低头查看或操作手中的手机。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 8,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "桌子左侧穿深色上衣的人坐在椅子上，旁边穿浅色上衣的人也面向桌面坐着。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 9,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "桌子远端有两名长发者坐在一起，其中一人穿浅色上衣，另一人穿蓝绿色上衣并低头看向桌面或手中物品。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 10,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "房间后墙立着一块白板，白板上有少量磁贴或标记，桌边还摆有一束粉色花朵。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 11,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "窗边的明亮日光照进房间，右侧可见厨房式台面、水槽区域和窗外建筑。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 12,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "拍摄者逐渐把手机移到画面中央，并用双手操作屏幕，在多个应用或页面之间切换。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 13,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "约8秒后，手机屏幕显示带方形按键的计时器/时钟界面。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 14,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "约11秒后，手机短暂显示锁屏时间“11:09”，随后又回到文本页面和手机主屏幕。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 15,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "约14秒后，拍摄者打开秒表界面，屏幕先显示约“00:23.40”的已有计时。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 16,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "约16秒后，拍摄者将秒表归零为“00:00.00”，随后启动计时，秒表开始递增。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 17,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "围坐的人大多保持安静坐姿并看向桌面、手机或拍摄者；右侧卷发者在后段抬手触碰脸侧或头部。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 18,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "约4至16秒间可听到多人简短说话，包括“你好”和“好意”等简短语句，末尾有人说“志愿”。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 19,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "围桌者与桌上成组收纳包、纸笔和电子设备表明他们正在参加一项有组织的集体活动、讨论或任务准备，而非普通用餐。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 20,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "拍摄者反复查看并最终归零启动秒表，说明其可能在为接下来的活动设定时限或记录任务时间。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 21,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "参与者在拍摄者操作计时器时持续坐在各自位置，显示他们可能正在等待计时任务开始或听取安排。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 22,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "现有画面未提供任何带ID的面部特征，因此无法可靠建立面部与语音特征的等价关系。"
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/smoke/terra_construction01/jake/C3/audits/clip_1_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/smoke/terra_construction01/jake/C3/audits/clip_1_graph.pkl"
+  }
+}

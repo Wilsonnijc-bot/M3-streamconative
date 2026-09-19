@@ -1,0 +1,730 @@
+{
+  "dataset": "jake",
+  "construction_method": "C4",
+  "retrieval_method": "R2",
+  "question": {
+    "dataset": "jake",
+    "question_id": "smoke_egolifeqa-a1-jake-1",
+    "question": "Who used the screwdriver first?",
+    "ground_truth": "B",
+    "options": {
+      "A": "Tasha",
+      "B": "Alice",
+      "C": "Shure",
+      "D": "Lucia"
+    },
+    "query_timestamp": 17.6,
+    "source_annotation": {
+      "repo": "kfkas/egolifeqa-imu-benchmark",
+      "revision": "992544af32686f2a977aa55a122dc3944264cbea",
+      "file": "data/v2/benchmark.csv",
+      "question_id": "egolifeqa-a1-jake-1",
+      "query_time_raw": "DAY1@11210217",
+      "evidence_time_raw": [
+        "DAY1@11152408"
+      ],
+      "source_ids": [
+        "DAY1_A1_JAKE_11210000",
+        "DAY1_A1_JAKE_11150000"
+      ],
+      "sha256": "64782b76b9288a76d11c02f995f483dfa70a75db437bce3b931db92a02e0fa9a"
+    },
+    "diagnostic_only": true,
+    "original_query_timestamp": 40862.17
+  },
+  "benchmark_timestamp": 17.6,
+  "snapshot_sha256": "8cb0bfb40f2df28dd1a08a53876cd74378f2f1288b997e3f8815ae6e68ddea0e",
+  "snapshot": "smoke/terra_construction01/jake/C4/snapshots/t_00017.600000/validation_graph.pkl",
+  "retrieval": {
+    "snapshot_sha256": "8cb0bfb40f2df28dd1a08a53876cd74378f2f1288b997e3f8815ae6e68ddea0e",
+    "evidence": [
+      {
+        "uid": "m3:jake_C4:clip:1:episodic:10",
+        "score": 5.440187669591978e-05,
+        "text": "拍摄者逐渐靠近桌子，并将手机举到所有坐着的人面前。",
+        "raw_data": {
+          "text_content": "拍摄者逐渐靠近桌子，并将手机举到所有坐着的人面前。"
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "10",
+          "video_id": "jake_C4",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "10",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "10",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C4:block:0",
+          "m3:video:jake_C4:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C4:clip:1:episodic:17",
+        "score": 3.748922244994901e-05,
+        "text": "约00:04至00:06，<voice_0>说：“你好你”。",
+        "raw_data": {
+          "text_content": "约00:04至00:06，<voice_0>说：“你好你”。"
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "17",
+          "video_id": "jake_C4",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [
+            "character_0"
+          ],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "17",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "17",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C4:block:0",
+          "m3:video:jake_C4:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C4:clip:1:episodic:13",
+        "score": 3.730690514203161e-05,
+        "text": "拍摄者用双手操作手机，在不同页面之间切换，包括主屏幕和带数字按钮的界面。",
+        "raw_data": {
+          "text_content": "拍摄者用双手操作手机，在不同页面之间切换，包括主屏幕和带数字按钮的界面。"
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "13",
+          "video_id": "jake_C4",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "13",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "13",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C4:block:0",
+          "m3:video:jake_C4:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C4:clip:1:episodic:20",
+        "score": 3.3960601285798475e-05,
+        "text": "约00:14至00:16，<voice_3>说：“志愿”。",
+        "raw_data": {
+          "text_content": "约00:14至00:16，<voice_3>说：“志愿”。"
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "20",
+          "video_id": "jake_C4",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [
+            "character_3"
+          ],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "20",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "20",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C4:block:0",
+          "m3:video:jake_C4:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C4:clip:1:episodic:19",
+        "score": 2.8887185180792585e-05,
+        "text": "约00:12至00:14，<voice_2>说：“好意”。",
+        "raw_data": {
+          "text_content": "约00:12至00:14，<voice_2>说：“好意”。"
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "19",
+          "video_id": "jake_C4",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [
+            "character_2"
+          ],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "19",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "19",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C4:block:0",
+          "m3:video:jake_C4:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C4:clip:1:episodic:18",
+        "score": 2.88127066596644e-05,
+        "text": "约00:06至00:13，<voice_1>说：“好意外好bie你”，其中部分内容因识别不清而难以确定。",
+        "raw_data": {
+          "text_content": "约00:06至00:13，<voice_1>说：“好意外好bie你”，其中部分内容因识别不清而难以确定。"
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "18",
+          "video_id": "jake_C4",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [
+            "character_1"
+          ],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "18",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "18",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C4:block:0",
+          "m3:video:jake_C4:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C4:clip:1:episodic:16",
+        "score": 2.420726013951935e-05,
+        "text": "拍摄者启动或继续操作秒表，屏幕上的计时数字开始变化。",
+        "raw_data": {
+          "text_content": "拍摄者启动或继续操作秒表，屏幕上的计时数字开始变化。"
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "16",
+          "video_id": "jake_C4",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "16",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "16",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C4:block:0",
+          "m3:video:jake_C4:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C4:clip:1:episodic:15",
+        "score": 2.1314541299943812e-05,
+        "text": "拍摄者将秒表归零，手机屏幕显示00:00:00。",
+        "raw_data": {
+          "text_content": "拍摄者将秒表归零，手机屏幕显示00:00:00。"
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "15",
+          "video_id": "jake_C4",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "15",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "15",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C4:block:0",
+          "m3:video:jake_C4:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C4:clip:1:episodic:5",
+        "score": 1.7533364371047355e-05,
+        "text": "拍摄者站在一间明亮的小型室内空间中，右手举着一部手机，屏幕上先显示文字列表界面。",
+        "raw_data": {
+          "text_content": "拍摄者站在一间明亮的小型室内空间中，右手举着一部手机，屏幕上先显示文字列表界面。"
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "5",
+          "video_id": "jake_C4",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "5",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "5",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C4:block:0",
+          "m3:video:jake_C4:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:jake_C4:clip:1:episodic:7",
+        "score": 1.540867378935218e-05,
+        "text": "桌面上摆放着多个黑色收纳盒、书本或纸张、笔、一个白色盒子和其他小物品。",
+        "raw_data": {
+          "text_content": "桌面上摆放着多个黑色收纳盒、书本或纸张、笔、一个白色盒子和其他小物品。"
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "7",
+          "video_id": "jake_C4",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "7",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 17.6
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "7",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:jake_C4:block:0",
+          "m3:video:jake_C4:clip:1"
+        ]
+      }
+    ],
+    "retrieval_calls": 1,
+    "retrieval_ms": 2450.4258160013705,
+    "dense_embedding_ms": 1104.296580000664,
+    "start_ts": 1789756841.880334,
+    "end_ts": 1789756844.330831,
+    "load_ms": 30.47996600798797,
+    "method": "BM25+dense+SPLADE; RRF; Qwen reranking via 302; graph expansion disabled",
+    "metrics": {
+      "hybrid_dense_bm25_splade_fusion_ms": 1124.3680189945735,
+      "reranking": {
+        "calls": 1,
+        "reranking_ms": 1325.7568319968414,
+        "start_ts": 1789756843.0048873,
+        "end_ts": 1789756844.3306444,
+        "status": "success",
+        "endpoint": "https://api.302.ai/v1/rerank",
+        "model": "Qwen/Qwen3-Reranker-0.6B",
+        "candidate_count": 21,
+        "document_sha256": [
+          "f5d79af582ae375c9def2bb0943676cc1ff2aaa0d7cfa0835a319bf8f06c12b4",
+          "38ceb1c801a311dcae84632cdc962c117c4660a87b7948d624e5cde6df867932",
+          "3f1b4e421c4e2b0846e88e63b26ebf1020d2bace7720bb9c2a01afbee5e9acfc",
+          "6871ab2469b13c774c2211d5dc6435a0a7478cab773e90daf554bb60b4b8e269",
+          "32a34c9c1317cedf3ac6a93a65db2ee079b5db1353f4b901352dab3c820914ff",
+          "efdea41ca171d3fc777ed1c13da5c59c3c3e470a9388e6e0f38f299186c1f19d",
+          "1ff4dec2b07049a8889338016749cac27354ebd768513745366dd92fb83bbe97",
+          "13c2f0d1bad47d951ba1269e2055ca3943f282e98c83b82dd6c455f95dc3020a",
+          "9c2ef4467a19aff73dbd2f6aa250fb987abf6226d92bdf446049c7bc9cd117b3",
+          "86b54d2ed71dda040b575191c15d06d484065e9b01be13ce0fdc5b17921c44e9",
+          "3c404e5b256cc12a74f4156e29d52fdca462e8dcea13c32953baf9b8933f344f",
+          "0f33af7b8d7ae9a56eea3fbe5bc487cfcf557f0342d47822304f5407d69d8d34",
+          "b50b5f502ca01004a7862d73a9290684a30432da0ea865f189bd1ade09a378b5",
+          "297ad5e7fdf758cfd7f651ff901320e12ec9072c2c301feb6370103bf040cb8e",
+          "2e5daebefc34a83ddb197afc4b637262fd411970f6bc9791da605d0a69a15a75",
+          "848f3062e6baaf92596cfad69552b74e58efda1af847b98d81fc2bf801d5a820",
+          "1260996fe6ccb703d120598356de1f5cabbdca3aa3b39a3ceda44fe44aa3b8ae",
+          "7e14aeb6663fbb6e3adbdde9861462bd5b09f33d2eb58c968c94c6dc0be9f817",
+          "cd49262fcf00e2e0a6d90f064949c29ac86ac31d74856826367a51981eb13b9c",
+          "e397faf4b8fa8d1d1b1eb791a5da151d09b20053141ed44d8925996223b4b02a",
+          "05aecd05c0fe0470b42f7c7ebb5c9361f1928cc2969440d3c5b214e267bb3854"
+        ],
+        "candidate_uids": [
+          "m3:jake_C4:clip:1:episodic:11",
+          "m3:jake_C4:clip:1:episodic:13",
+          "m3:jake_C4:clip:1:semantic:23",
+          "m3:jake_C4:clip:1:semantic:22",
+          "m3:jake_C4:clip:1:episodic:14",
+          "m3:jake_C4:clip:1:episodic:10",
+          "m3:jake_C4:clip:1:episodic:12",
+          "m3:jake_C4:clip:1:episodic:16",
+          "m3:jake_C4:clip:1:episodic:15",
+          "m3:jake_C4:clip:1:episodic:9",
+          "m3:jake_C4:clip:1:episodic:5",
+          "m3:jake_C4:clip:1:episodic:20",
+          "m3:jake_C4:clip:1:episodic:4",
+          "m3:jake_C4:clip:1:episodic:7",
+          "m3:jake_C4:clip:1:semantic:21",
+          "m3:jake_C4:clip:1:episodic:18",
+          "m3:jake_C4:clip:1:episodic:17",
+          "m3:jake_C4:clip:1:semantic:24",
+          "m3:jake_C4:clip:1:episodic:19",
+          "m3:jake_C4:clip:1:episodic:8",
+          "m3:jake_C4:clip:1:episodic:6"
+        ],
+        "pre_rerank_scores": [
+          0.03225806451612903,
+          0.031024531024531024,
+          0.030886196246139225,
+          0.03076923076923077,
+          0.03007688828584351,
+          0.029957522915269395,
+          0.029709507042253523,
+          0.029051670471052088,
+          0.028991596638655463,
+          0.02877846790890269,
+          0.02862400327131466,
+          0.02797067901234568,
+          0.02786377708978328,
+          0.02758751902587519,
+          0.02684684684684685,
+          0.026709401709401708,
+          0.026500526500526502,
+          0.0259915611814346,
+          0.025807525807525808,
+          0.025503573749187783,
+          0.025
+        ],
+        "request_payload": {
+          "model": "Qwen/Qwen3-Reranker-0.6B",
+          "query": "Who used the screwdriver first?",
+          "documents": [
+            "坐在右侧、穿浅色上衣的人低头看向手中的物品或手机，随后抬手靠近脸部。",
+            "拍摄者用双手操作手机，在不同页面之间切换，包括主屏幕和带数字按钮的界面。",
+            "在拍摄者操作手机期间，其余参与者大多等待并关注桌面或手机，说明他们可能正在等待活动正式开始。",
+            "拍摄者将手机和秒表展示在众人面前，并将计时归零，表明其可能在负责开始、记录或协调一项限时活动。",
+            "手机随后显示计时器或秒表界面，屏幕上可见约00:23:40的已有计时记录。",
+            "拍摄者逐渐靠近桌子，并将手机举到所有坐着的人面前。",
+            "其他人基本保持坐姿，有人望向拍摄者举起的手机，也有人望向桌面。",
+            "拍摄者启动或继续操作秒表，屏幕上的计时数字开始变化。",
+            "拍摄者将秒表归零，手机屏幕显示00:00:00。",
+            "桌旁立着三脚架或支架，背景墙上有一块带磁贴或标记的白板。",
+            "拍摄者站在一间明亮的小型室内空间中，右手举着一部手机，屏幕上先显示文字列表界面。",
+            "约00:14至00:16，<voice_3>说：“志愿”。",
+            "鱼眼视角画面带有“DAY1”和“A1_JAKE”标记，时间戳从11:09:42左右持续推进。",
+            "桌面上摆放着多个黑色收纳盒、书本或纸张、笔、一个白色盒子和其他小物品。",
+            "围坐的人似乎正在参加一项集体活动或会议，桌上的收纳盒、资料和白板表明活动可能包含组织、学习或游戏环节。",
+            "约00:06至00:13，<voice_1>说：“好意外好bie你”，其中部分内容因识别不清而难以确定。",
+            "约00:04至00:06，<voice_0>说：“你好你”。",
+            "语音中出现问候、意外感叹和“志愿”等词语，暗示参与者之间正在进行简短交流，但现有转写不足以可靠确定每位说话者的身份或具体关系。",
+            "约00:12至00:14，<voice_2>说：“好意”。",
+            "靠窗的一侧有厨房台面、水槽和瓶罐，阳光从窗户照进房间。",
+            "五名面部被遮挡的人围坐在铺有红白格桌布的长桌旁。"
+          ],
+          "top_n": 21,
+          "return_documents": false
+        },
+        "raw_response": {
+          "id": "01a0b5d227427980b1eb8142a558e4b6",
+          "results": [
+            {
+              "index": 5,
+              "document": null,
+              "relevance_score": 5.440187669591978e-05
+            },
+            {
+              "index": 16,
+              "document": null,
+              "relevance_score": 3.748922244994901e-05
+            },
+            {
+              "index": 1,
+              "document": null,
+              "relevance_score": 3.730690514203161e-05
+            },
+            {
+              "index": 11,
+              "document": null,
+              "relevance_score": 3.3960601285798475e-05
+            },
+            {
+              "index": 18,
+              "document": null,
+              "relevance_score": 2.8887185180792585e-05
+            },
+            {
+              "index": 15,
+              "document": null,
+              "relevance_score": 2.88127066596644e-05
+            },
+            {
+              "index": 7,
+              "document": null,
+              "relevance_score": 2.420726013951935e-05
+            },
+            {
+              "index": 8,
+              "document": null,
+              "relevance_score": 2.1314541299943812e-05
+            },
+            {
+              "index": 10,
+              "document": null,
+              "relevance_score": 1.7533364371047355e-05
+            },
+            {
+              "index": 13,
+              "document": null,
+              "relevance_score": 1.540867378935218e-05
+            },
+            {
+              "index": 0,
+              "document": null,
+              "relevance_score": 1.5405470549012534e-05
+            },
+            {
+              "index": 3,
+              "document": null,
+              "relevance_score": 1.5379431715700775e-05
+            },
+            {
+              "index": 6,
+              "document": null,
+              "relevance_score": 1.4088623174757231e-05
+            },
+            {
+              "index": 9,
+              "document": null,
+              "relevance_score": 1.3336954907572363e-05
+            },
+            {
+              "index": 2,
+              "document": null,
+              "relevance_score": 1.059226633515209e-05
+            },
+            {
+              "index": 12,
+              "document": null,
+              "relevance_score": 1.0085582289320882e-05
+            },
+            {
+              "index": 4,
+              "document": null,
+              "relevance_score": 8.29081818665145e-06
+            },
+            {
+              "index": 20,
+              "document": null,
+              "relevance_score": 6.798019967391156e-06
+            },
+            {
+              "index": 19,
+              "document": null,
+              "relevance_score": 6.286484222073341e-06
+            },
+            {
+              "index": 17,
+              "document": null,
+              "relevance_score": 4.014528258267092e-06
+            },
+            {
+              "index": 14,
+              "document": null,
+              "relevance_score": 3.7871161566727096e-06
+            }
+          ],
+          "meta": {
+            "tokens": {
+              "input_tokens": 2202,
+              "output_tokens": 0,
+              "image_tokens": 0
+            },
+            "billed_units": {
+              "input_tokens": 2202,
+              "output_tokens": 0,
+              "image_tokens": 0,
+              "search_units": 0,
+              "classifications": 0
+            }
+          }
+        }
+      },
+      "result_lookup_ms": 0.07257600373122841,
+      "components": [
+        {
+          "method": "BM25",
+          "status": "success",
+          "count": 0,
+          "duration_ms": 3.4272420016350225
+        },
+        {
+          "method": "SPLADE",
+          "status": "success",
+          "count": 21,
+          "duration_ms": 160.3187889995752
+        },
+        {
+          "method": "COSINE_SIMILARITY",
+          "status": "success",
+          "count": 21,
+          "duration_ms": 1121.5268820087658
+        }
+      ]
+    },
+    "component_timings_note": "Adapter search exposes combined fusion/search/lookup wall time; missing component timings are not zero.",
+    "question_start_ts": 1789756841.8799431
+  },
+  "answer": {
+    "request_digest": "e25316579f7f93b0e04c6cf9ebafcf56f132568b88154eefd247e8e70d971682",
+    "model": "gpt-5.6-terra",
+    "provider": "official_openai_responses",
+    "answer": "Insufficient evidence. The provided memories do not mention anyone using a screwdriver.",
+    "request_start_ts": 1789756844.4574423,
+    "first_content_token_ts": 1789756845.653132,
+    "response_end_ts": 1789756846.359402,
+    "ttft_ms": 1195.688368010451,
+    "generation_complete_ms": 1901.9585519999964,
+    "after_first_token_ms": 706.2701839895453,
+    "input_tokens": 3501,
+    "output_tokens": 19,
+    "reasoning_tokens": 0,
+    "answer_calls": 1,
+    "ttft_event": "first_nonempty_response.output_text.delta",
+    "response_id": "resp_08ce04a906d4c5f4006aad85accbb487d2b205608be1237be1"
+  },
+  "correct": false,
+  "evaluator": "leading option letter exact match; missing letter is incorrect",
+  "question_to_first_token_ms": 3773.188829421997,
+  "question_to_complete_answer_ms": 4479.458808898926,
+  "answer_calls": 1,
+  "retrieval_calls": 1
+}

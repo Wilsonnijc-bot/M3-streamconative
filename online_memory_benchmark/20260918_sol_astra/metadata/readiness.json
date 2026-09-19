@@ -45,6 +45,10 @@
       "gpt-5.6-sol"
     ],
     "shared_consolidation": "/opt/streammeco/run/consolidation/port.py",
+    "memory_backend": {
+      "model": "gpt-5.6-terra",
+      "implementation": "/opt/streammeco/run/StreamMeCo/mmagent/memory_processing_terra.py"
+    },
     "moss_window_runner": {
       "configured": true,
       "revision": "704aa4a9c304e8520be88901e0d1960158ef5b15",
@@ -54,11 +58,11 @@
       "status": "ready",
       "dimensions": 3072
     },
-    "local_model_hashes": 47,
+    "local_model_hashes": 37,
     "credential_present:OPENAI_API_KEY": true,
     "credential_present:DEEPGRAM_API_KEY": true,
     "credential_present:API_302_KEY": true,
-    "disk_free_bytes": 19980480512,
+    "disk_free_bytes": 19865341952,
     "mandol": true,
     "reranking_config": {
       "method": "qwen-302",

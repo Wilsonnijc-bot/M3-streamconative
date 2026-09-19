@@ -21,14 +21,34 @@ the last valid committed observations. TST uses no pre-enrollment and excludes n
 ## Implementation
 
 `Benchmarksep18.md` and the attached continuation request define the run. The
-benchmark-specific implementation is isolated here. `source/consolidation` links
-to the shared root package; `consolidation.port.attach_online` and the public
-`consolidate_until` method handle streaming maintenance without a copied
-implementation or runtime-internal hooks in the benchmark. Process fixes belong
-in the shared package. Shared source hashes are included in the
-launch and resume gates. The superseded copy is archived under
-`metadata/superseded_consolidation_source.tar.gz`. The root M3 and dirty Mandol
-checkout are not modified. The primary model is official Responses `gpt-5.6-terra`, medium;
+benchmark-specific implementation is isolated here. There are no copied or
+linked production packages under `source/`. Runtime imports resolve directly to
+the original StreamMeCo, Mandol, TST, and consolidation roots beside this
+benchmark. The superseded package trees remain under
+`metadata/upstreamed_source_packages_20260918/` as inactive provenance.
+
+Reusable online behavior now belongs to the original systems. M3 owns the
+CAM++/TST assignment contract and pre-mutation evidence, content-addressed ASR
+reuse, exact media boundaries, consolidation evidence export, durable graph
+transactions, immutable cutoff snapshots, configurable compression, and exact
+Mandol clip intervals. Mandol owns the 302 reranking transport and its hybrid
+retriever integration. The benchmark owns only interface calls, C1-C4
+construction and assertions, Jake/AEA schedules and question manifests,
+exact-choice accuracy calculation, reports, validation gates, and launch
+control.
+`consolidation.port.attach_online` and `consolidate_until` remain the public
+maintenance interface. Benchmark files and directly used production
+dependencies are fingerprinted separately and included in launch and resume
+gates.
+The primary model is official Responses `gpt-5.6-terra`, medium;
+Terra also constructs video memories through the shared native
+`mmagent.memory_backend` interface. Its implementation lives in the original
+`StreamMeCo/mmagent/memory_processing_terra.py`, imported directly from the
+production package.
+It sends frames sampled at 2 fps plus existing face/voice evidence, with one
+structured JSON request per construction. Exact requests (content-addressed image
+references), images, raw responses and usage are retained in `cache/terra_construction`.
+The superseded Qwen run stays in `results/`; the corrected run uses `results_terra/`.
 consolidation uses the existing official `propose_official` with `gpt-5.6-sol`, high.
 The directory name is retained for artifact continuity; it does not select models.
 

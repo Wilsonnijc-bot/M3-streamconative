@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 RUN_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
-SESSION="${1:-online-memory-terra-sol-20260918-full-01}"
+SESSION="${1:-online-memory-terra-sol-20260918-full-02}"
 [[ "$SESSION" =~ ^[a-zA-Z0-9_-]+$ ]] || { echo 'Invalid session name' >&2; exit 2; }
 command -v tmux >/dev/null
 if tmux has-session -t "$SESSION" 2>/dev/null; then echo "Session already exists: $SESSION" >&2; exit 1; fi

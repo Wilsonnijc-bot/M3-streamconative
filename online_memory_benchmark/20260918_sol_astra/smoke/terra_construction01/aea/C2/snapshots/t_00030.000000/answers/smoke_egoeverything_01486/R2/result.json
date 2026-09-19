@@ -1,0 +1,679 @@
+{
+  "dataset": "aea",
+  "construction_method": "C2",
+  "retrieval_method": "R2",
+  "question": {
+    "dataset": "aea",
+    "question_id": "smoke_egoeverything_01486",
+    "question": "What color was the blanket on the bed while I was reading?",
+    "ground_truth": "A",
+    "query_timestamp": 30.0,
+    "source_annotation": {
+      "file": "Egoeverything_VQA.json",
+      "source_video": "loc1_script1_seq7_rec1",
+      "evidence_global_s": 1116.921,
+      "schedule_file": "aea_6h_qa_schedule.json",
+      "schedule_policy": "derived causal ask times; original QA fields unchanged"
+    },
+    "options": {
+      "A": "White",
+      "B": "Beige",
+      "C": "Light Gray",
+      "D": "Cream",
+      "E": "Off-white"
+    },
+    "diagnostic_only": true,
+    "original_query_timestamp": 1200.0
+  },
+  "benchmark_timestamp": 30.0,
+  "snapshot_sha256": "b715092a00b8c40744143bbbf4553e9ecbefaf0a1e15b19b3c48908b2fe3756e",
+  "snapshot": "smoke/terra_construction01/aea/C2/snapshots/t_00030.000000/validation_graph.pkl",
+  "retrieval": {
+    "snapshot_sha256": "b715092a00b8c40744143bbbf4553e9ecbefaf0a1e15b19b3c48908b2fe3756e",
+    "evidence": [
+      {
+        "uid": "m3:aea_C2:clip:1:episodic:4",
+        "score": 0.015943074598908424,
+        "text": "The bedroom contains a large neatly made bed with a padded headboard, pillows, bedside furniture, lamps, a ceiling fan, and a light-colored rug.",
+        "raw_data": {
+          "text_content": "The bedroom contains a large neatly made bed with a padded headboard, pillows, bedside furniture, lamps, a ceiling fan, and a light-colored rug."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "4",
+          "video_id": "aea_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "4",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 30.0
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "4",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:aea_C2:block:0",
+          "m3:video:aea_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:aea_C2:clip:1:semantic:13",
+        "score": 0.0003543068014550954,
+        "text": "The camera wearer appears to be deliberately surveying the bathroom, bedroom, and patio rather than interacting with the furnishings.",
+        "raw_data": {
+          "text_content": "The camera wearer appears to be deliberately surveying the bathroom, bedroom, and patio rather than interacting with the furnishings."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "semantic",
+          "m3_node_id": "13",
+          "video_id": "aea_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "13",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 30.0
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "13",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        },
+        "spaces": [
+          "m3:type:semantic",
+          "m3:video:aea_C2:block:0",
+          "m3:video:aea_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:aea_C2:clip:1:episodic:2",
+        "score": 0.00032184895826503634,
+        "text": "A hand briefly holds a lit smartphone in front of the camera; the screen content is too small and bright to read.",
+        "raw_data": {
+          "text_content": "A hand briefly holds a lit smartphone in front of the camera; the screen content is too small and bright to read."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "2",
+          "video_id": "aea_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "2",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 30.0
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "2",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:aea_C2:block:0",
+          "m3:video:aea_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:aea_C2:clip:1:episodic:7",
+        "score": 0.00024127421784214675,
+        "text": "Bright sunlight streams through the glass doors, casting sharp rectangular shadows across the rug and chair cushions.",
+        "raw_data": {
+          "text_content": "Bright sunlight streams through the glass doors, casting sharp rectangular shadows across the rug and chair cushions."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "7",
+          "video_id": "aea_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "7",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 30.0
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "7",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:aea_C2:block:0",
+          "m3:video:aea_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:aea_C2:clip:1:semantic:14",
+        "score": 0.0001728917268337682,
+        "text": "The lit smartphone suggests the wearer may be following or checking information while moving through the home, though its content cannot be determined.",
+        "raw_data": {
+          "text_content": "The lit smartphone suggests the wearer may be following or checking information while moving through the home, though its content cannot be determined."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "semantic",
+          "m3_node_id": "14",
+          "video_id": "aea_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "14",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 30.0
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "14",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        },
+        "spaces": [
+          "m3:type:semantic",
+          "m3:video:aea_C2:block:0",
+          "m3:video:aea_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:aea_C2:clip:1:episodic:9",
+        "score": 0.0001526697597000748,
+        "text": "The patio contains a red cylindrical container, upright garden tools, a dark object at the left, and a larger item covered by a dark tarp against the wall.",
+        "raw_data": {
+          "text_content": "The patio contains a red cylindrical container, upright garden tools, a dark object at the left, and a larger item covered by a dark tarp against the wall."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "9",
+          "video_id": "aea_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "9",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 30.0
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "9",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:aea_C2:block:0",
+          "m3:video:aea_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:aea_C2:clip:1:episodic:1",
+        "score": 0.0001409295800840482,
+        "text": "The camera begins in a dim bathroom with gray walls, patterned dark floor tiles, twin white vanities, sinks, and decorative circular mirrors.",
+        "raw_data": {
+          "text_content": "The camera begins in a dim bathroom with gray walls, patterned dark floor tiles, twin white vanities, sinks, and decorative circular mirrors."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "1",
+          "video_id": "aea_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "1",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 30.0
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "1",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:aea_C2:block:0",
+          "m3:video:aea_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:aea_C2:clip:1:episodic:8",
+        "score": 0.00013970638974569738,
+        "text": "Through the doors, a small enclosed patio is visible with pale paving, a patterned doormat, a low wall, and vivid pink flowering plants.",
+        "raw_data": {
+          "text_content": "Through the doors, a small enclosed patio is visible with pale paving, a patterned doormat, a low wall, and vivid pink flowering plants."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "8",
+          "video_id": "aea_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "8",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 30.0
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "8",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:aea_C2:block:0",
+          "m3:video:aea_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:aea_C2:clip:1:episodic:5",
+        "score": 0.00011379334318917245,
+        "text": "The camera advances into the bedroom and pans toward a pair of glass French doors.",
+        "raw_data": {
+          "text_content": "The camera advances into the bedroom and pans toward a pair of glass French doors."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "5",
+          "video_id": "aea_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "5",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 30.0
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "5",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:aea_C2:block:0",
+          "m3:video:aea_C2:clip:1"
+        ]
+      },
+      {
+        "uid": "m3:aea_C2:clip:1:episodic:10",
+        "score": 8.588100172346458e-05,
+        "text": "The camera remains inside while slowly shifting its view across the closed French doors and the patio outside.",
+        "raw_data": {
+          "text_content": "The camera remains inside while slowly shifting its view across the closed French doors and the patio outside."
+        },
+        "metadata": {
+          "adapter": "m3-mandol/v1",
+          "retrieval_candidate": true,
+          "memory_type": "episodic",
+          "m3_node_id": "10",
+          "video_id": "aea_C2",
+          "clip_id": 1,
+          "block_id": 0,
+          "canonical_entity_ids": [],
+          "provenance": {
+            "source": "StreamMeCo/M3",
+            "source_node_id": "10",
+            "source_embedding_model": "text-embedding-3-large",
+            "source_embedding_dimension": 3072,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 30.0
+          }
+        },
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "10",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        },
+        "spaces": [
+          "episodic_memory",
+          "m3:video:aea_C2:block:0",
+          "m3:video:aea_C2:clip:1"
+        ]
+      }
+    ],
+    "retrieval_calls": 1,
+    "retrieval_ms": 2517.2946020029485,
+    "dense_embedding_ms": 1166.556477008271,
+    "start_ts": 1789756929.090298,
+    "end_ts": 1789756931.6076522,
+    "load_ms": 26.80263901129365,
+    "method": "BM25+dense+SPLADE; RRF; Qwen reranking via 302; graph expansion disabled",
+    "metrics": {
+      "hybrid_dense_bm25_splade_fusion_ms": 1191.5420959994663,
+      "reranking": {
+        "calls": 1,
+        "reranking_ms": 1325.4944029904436,
+        "start_ts": 1789756930.2819903,
+        "end_ts": 1789756931.6074848,
+        "status": "success",
+        "endpoint": "https://api.302.ai/v1/rerank",
+        "model": "Qwen/Qwen3-Reranker-0.6B",
+        "candidate_count": 17,
+        "document_sha256": [
+          "cffcfdd3d4903d1d2afab15843dcc2fd8ec7a5b2528f490db56984eaaea2eb83",
+          "dc94e73663fa776b81383f9ce7bf26f11441e62fb0c402717d452900ba18acad",
+          "a08fb69e2f42525316ff2146d8dbcc1c6cfbae2da59d94b76645be258ab2cb06",
+          "cad9976e8721b6b15c00c1e07e530d0d41e14f2edcc400fbd35cce540966bd27",
+          "ee3d7e923dead0b202ca4f327e8693a6f6e931446bf536e66011b14653e5c968",
+          "0dea24485d92a32208c309eed38272d7ddc4d5589b0da5e7dac819c04a21ab43",
+          "29b036a4d40394c61552f2522c206623abd77c23e5a17a255c5fc7be22ac9695",
+          "6b05d38f9f6fc637819222fe07276e0152060874d02c832dcd15aea473276fe1",
+          "b1afd98a97bde90fc4ed666a4b78eebab86a973b6398e28152f700866aa2e5bd",
+          "cfc5f2d350744c155315295e0fa25e401018165a7a33c28fc9a1e6b99fca901e",
+          "43377b838707c42be4c90ac81a20414bd3488d6bd36aebd2741298a71d621b09",
+          "e7b55100081e9fcff9d9696960a9ec202250d80d5cf869ba8a46e8ccbbe430a2",
+          "9f64de19baf9e4a578db94f8b2c7681934cb655e21839a5e384f37359ef8e651",
+          "fbfb51ec720a12572119393935b9643fcd013a28d8dfe88d82193994bca881c3",
+          "5861d176edc7060770ad985ce6e551f6205021dce31381ff6be504b180026370",
+          "d5a9f70a5e935974758eb578dabc30c7ec7ac8f7d3dc4793d8481d321e78c6e8",
+          "3cd9739d6413d549c77e0fbc794b436ba4f7e48cd2f712450d9f7d39db830c9f"
+        ],
+        "candidate_uids": [
+          "m3:aea_C2:clip:1:episodic:4",
+          "m3:aea_C2:clip:1:episodic:11",
+          "m3:aea_C2:clip:1:episodic:2",
+          "m3:aea_C2:clip:1:semantic:14",
+          "m3:aea_C2:clip:1:episodic:9",
+          "m3:aea_C2:clip:1:episodic:7",
+          "m3:aea_C2:clip:1:episodic:1",
+          "m3:aea_C2:clip:1:semantic:16",
+          "m3:aea_C2:clip:1:semantic:15",
+          "m3:aea_C2:clip:1:semantic:13",
+          "m3:aea_C2:clip:1:episodic:8",
+          "m3:aea_C2:clip:1:episodic:5",
+          "m3:aea_C2:clip:1:episodic:12",
+          "m3:aea_C2:clip:1:episodic:6",
+          "m3:aea_C2:clip:1:episodic:10",
+          "m3:aea_C2:clip:1:episodic:3",
+          "m3:aea_C2:clip:1:episodic:0"
+        ],
+        "pre_rerank_scores": [
+          0.04918032786885246,
+          0.04787506400409626,
+          0.04554079696394687,
+          0.030309988518943745,
+          0.03021353930031804,
+          0.030117753623188408,
+          0.030117753623188408,
+          0.029957522915269395,
+          0.02967032967032967,
+          0.029211087420042643,
+          0.028665028665028666,
+          0.02813852813852814,
+          0.027222222222222224,
+          0.027222222222222224,
+          0.026856524873828405,
+          0.026856524873828405,
+          0.026500526500526502
+        ],
+        "request_payload": {
+          "model": "Qwen/Qwen3-Reranker-0.6B",
+          "query": "What color was the blanket on the bed while I was reading?",
+          "documents": [
+            "The bedroom contains a large neatly made bed with a padded headboard, pillows, bedside furniture, lamps, a ceiling fan, and a light-colored rug.",
+            "The camera eventually pans back across the bedroom, showing the bed, an open interior door, and a closed closet door.",
+            "A hand briefly holds a lit smartphone in front of the camera; the screen content is too small and bright to read.",
+            "The lit smartphone suggests the wearer may be following or checking information while moving through the home, though its content cannot be determined.",
+            "The patio contains a red cylindrical container, upright garden tools, a dark object at the left, and a larger item covered by a dark tarp against the wall.",
+            "Bright sunlight streams through the glass doors, casting sharp rectangular shadows across the rug and chair cushions.",
+            "The camera begins in a dim bathroom with gray walls, patterned dark floor tiles, twin white vanities, sinks, and decorative circular mirrors.",
+            "The room appears orderly and unoccupied during the recorded interval.",
+            "The sunlit patio and flowering plants indicate it is daytime.",
+            "The camera wearer appears to be deliberately surveying the bathroom, bedroom, and patio rather than interacting with the furnishings.",
+            "Through the doors, a small enclosed patio is visible with pale paving, a patterned doormat, a low wall, and vivid pink flowering plants.",
+            "The camera advances into the bedroom and pans toward a pair of glass French doors.",
+            "No people or faces are visible apart from the camera wearer's hand.",
+            "Two cushioned lounge chairs are positioned inside directly in front of the French doors.",
+            "The camera remains inside while slowly shifting its view across the closed French doors and the patio outside.",
+            "The camera turns away from an arched opening toward a doorway leading into a bedroom.",
+            "The clip is filmed from a moving first-person perspective with a wide-angle, fisheye-like view."
+          ],
+          "top_n": 17,
+          "return_documents": false
+        },
+        "raw_response": {
+          "id": "01a0b5d37c32770fb5a1fcf44f5ca974",
+          "results": [
+            {
+              "index": 0,
+              "document": null,
+              "relevance_score": 0.015943074598908424
+            },
+            {
+              "index": 9,
+              "document": null,
+              "relevance_score": 0.0003543068014550954
+            },
+            {
+              "index": 2,
+              "document": null,
+              "relevance_score": 0.00032184895826503634
+            },
+            {
+              "index": 5,
+              "document": null,
+              "relevance_score": 0.00024127421784214675
+            },
+            {
+              "index": 3,
+              "document": null,
+              "relevance_score": 0.0001728917268337682
+            },
+            {
+              "index": 4,
+              "document": null,
+              "relevance_score": 0.0001526697597000748
+            },
+            {
+              "index": 6,
+              "document": null,
+              "relevance_score": 0.0001409295800840482
+            },
+            {
+              "index": 10,
+              "document": null,
+              "relevance_score": 0.00013970638974569738
+            },
+            {
+              "index": 11,
+              "document": null,
+              "relevance_score": 0.00011379334318917245
+            },
+            {
+              "index": 14,
+              "document": null,
+              "relevance_score": 8.588100172346458e-05
+            },
+            {
+              "index": 1,
+              "document": null,
+              "relevance_score": 8.055208309087902e-05
+            },
+            {
+              "index": 12,
+              "document": null,
+              "relevance_score": 7.910235581221059e-05
+            },
+            {
+              "index": 15,
+              "document": null,
+              "relevance_score": 5.493100616149604e-05
+            },
+            {
+              "index": 16,
+              "document": null,
+              "relevance_score": 4.263071605237201e-05
+            },
+            {
+              "index": 8,
+              "document": null,
+              "relevance_score": 3.0462957511190325e-05
+            },
+            {
+              "index": 7,
+              "document": null,
+              "relevance_score": 2.5840432499535382e-05
+            },
+            {
+              "index": 13,
+              "document": null,
+              "relevance_score": 1.2868778867414221e-05
+            }
+          ],
+          "meta": {
+            "tokens": {
+              "input_tokens": 1794,
+              "output_tokens": 0,
+              "image_tokens": 0
+            },
+            "billed_units": {
+              "input_tokens": 1794,
+              "output_tokens": 0,
+              "image_tokens": 0,
+              "search_units": 0,
+              "classifications": 0
+            }
+          }
+        }
+      },
+      "result_lookup_ms": 0.06945000495761633,
+      "components": [
+        {
+          "method": "BM25",
+          "status": "success",
+          "count": 3,
+          "duration_ms": 136.94703600776847
+        },
+        {
+          "method": "SPLADE",
+          "status": "success",
+          "count": 17,
+          "duration_ms": 28.84973000618629
+        },
+        {
+          "method": "COSINE_SIMILARITY",
+          "status": "success",
+          "count": 17,
+          "duration_ms": 1184.385435000877
+        }
+      ]
+    },
+    "component_timings_note": "Adapter search exposes combined fusion/search/lookup wall time; missing component timings are not zero.",
+    "question_start_ts": 1789756929.0899932
+  },
+  "answer": {
+    "request_digest": "e306011ac3bab8d79a85110f0071ea26363566af0afd76ced9f50958ff90f242",
+    "model": "gpt-5.6-terra",
+    "provider": "official_openai_responses",
+    "answer": "Insufficient evidence. The blanket’s color is not described.",
+    "request_start_ts": 1789756931.6400506,
+    "first_content_token_ts": 1789756932.339632,
+    "response_end_ts": 1789756932.6319451,
+    "ttft_ms": 699.5802110031946,
+    "generation_complete_ms": 991.8932349974057,
+    "after_first_token_ms": 292.3130239942111,
+    "input_tokens": 3460,
+    "output_tokens": 16,
+    "reasoning_tokens": 0,
+    "answer_calls": 1,
+    "ttft_event": "first_nonempty_response.output_text.delta",
+    "response_id": "resp_0b2e0d9d941113b7006aad8603bf6087d29cba7deeb65a5b92"
+  },
+  "correct": false,
+  "evaluator": "leading option letter exact match; missing letter is incorrect",
+  "question_to_first_token_ms": 3249.638795852661,
+  "question_to_complete_answer_ms": 3541.951894760132,
+  "answer_calls": 1,
+  "retrieval_calls": 1
+}

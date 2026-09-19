@@ -1,0 +1,53 @@
+{
+  "schema_version": "m3-mandol/v1",
+  "video_id": "aea_C3",
+  "source_embedding": {
+    "model": "text-embedding-3-large",
+    "dimension": 3072,
+    "vectors_imported": false
+  },
+  "mandol_embedding": {
+    "provider": "302.ai",
+    "base_url": "https://api.302.ai/v1",
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "dimension": 1024
+  },
+  "counts": {
+    "source_memories": 19,
+    "entities": 0,
+    "relations": 0,
+    "relation_llm_calls": 0
+  },
+  "index_build": {
+    "total_retrievers": 2,
+    "built_count": 2,
+    "skipped_count": 0,
+    "failed_count": 0,
+    "total_duration": 0.055165767669677734,
+    "details": {
+      "bm25": {
+        "status": "success",
+        "duration": 0.0473933219909668
+      },
+      "splade": {
+        "status": "success",
+        "duration": 0.0076808929443359375
+      }
+    }
+  },
+  "config": {
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "embedding_dimension": 1024,
+    "embedding_base_url": "https://api.302.ai/v1",
+    "embedding_batch_size": 32,
+    "embedding_max_retries": 2,
+    "embedding_timeout_seconds": 60,
+    "relation_model": "gemini-3.8-flash-302",
+    "relation_base_url": "https://api.302.ai/v1",
+    "relation_max_retries": 2,
+    "relation_timeout_seconds": 60.0,
+    "build_relations": false,
+    "generate_sparse_embeddings": true,
+    "overwrite": false
+  }
+}

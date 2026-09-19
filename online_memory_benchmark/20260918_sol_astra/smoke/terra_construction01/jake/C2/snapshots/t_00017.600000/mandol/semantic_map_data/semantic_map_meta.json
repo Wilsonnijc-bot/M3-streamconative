@@ -1,0 +1,854 @@
+{
+  "version": "3.0_safetensors",
+  "config": {
+    "embedding_dim": 1024,
+    "faiss_index_type": "IDMap,Flat",
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "supported_modalities": [
+      "text"
+    ],
+    "image_model": null,
+    "text_model": "Qwen/Qwen3-Embedding-0.6B"
+  },
+  "memory_spaces": {
+    "hierarchical_memory": {
+      "name": "hierarchical_memory",
+      "unit_uids": [],
+      "child_space_names": [
+        "hierarchical_memory:L0_Observation",
+        "hierarchical_memory:L2_Insight",
+        "hierarchical_memory:L1_Summary"
+      ],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L0_Observation": {
+      "name": "hierarchical_memory:L0_Observation",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L1_Summary": {
+      "name": "hierarchical_memory:L1_Summary",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L2_Insight": {
+      "name": "hierarchical_memory:L2_Insight",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation": {
+      "name": "entity_relation",
+      "unit_uids": [],
+      "child_space_names": [
+        "entity_relation:entities",
+        "entity_relation:relations",
+        "entity_relation:mentions"
+      ],
+      "faiss_index_type": null
+    },
+    "entity_relation:entities": {
+      "name": "entity_relation:entities",
+      "unit_uids": [
+        "m3:jake_C2:entity:character_1",
+        "m3:jake_C2:entity:character_3",
+        "m3:jake_C2:entity:character_0",
+        "m3:jake_C2:entity:character_2"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation:mentions": {
+      "name": "entity_relation:mentions",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation:relations": {
+      "name": "entity_relation:relations",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "episodic_memory": {
+      "name": "episodic_memory",
+      "unit_uids": [
+        "m3:jake_C2:clip:1:episodic:12",
+        "m3:jake_C2:clip:1:episodic:13",
+        "m3:jake_C2:clip:1:episodic:7",
+        "m3:jake_C2:clip:1:episodic:16",
+        "m3:jake_C2:clip:1:episodic:5",
+        "m3:jake_C2:clip:1:episodic:9",
+        "m3:jake_C2:clip:1:episodic:18",
+        "m3:jake_C2:clip:1:episodic:15",
+        "m3:jake_C2:clip:1:episodic:4",
+        "m3:jake_C2:clip:1:episodic:8",
+        "m3:jake_C2:clip:1:episodic:10",
+        "m3:jake_C2:clip:1:episodic:17",
+        "m3:jake_C2:clip:1:episodic:14",
+        "m3:jake_C2:clip:1:episodic:6",
+        "m3:jake_C2:clip:1:episodic:11"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:jake_C2": {
+      "name": "m3:video:jake_C2",
+      "unit_uids": [],
+      "child_space_names": [
+        "m3:video:jake_C2:block:0"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:type:semantic": {
+      "name": "m3:type:semantic",
+      "unit_uids": [
+        "m3:jake_C2:clip:1:semantic:19",
+        "m3:jake_C2:clip:1:semantic:22",
+        "m3:jake_C2:clip:1:semantic:21",
+        "m3:jake_C2:clip:1:semantic:20"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:jake_C2:block:0": {
+      "name": "m3:video:jake_C2:block:0",
+      "unit_uids": [
+        "m3:jake_C2:clip:1:episodic:16",
+        "m3:jake_C2:clip:1:semantic:20",
+        "m3:jake_C2:clip:1:episodic:5",
+        "m3:jake_C2:clip:1:episodic:18",
+        "m3:jake_C2:clip:1:episodic:8",
+        "m3:jake_C2:clip:1:semantic:19",
+        "m3:jake_C2:clip:1:episodic:6",
+        "m3:jake_C2:clip:1:episodic:12",
+        "m3:jake_C2:clip:1:episodic:7",
+        "m3:jake_C2:clip:1:episodic:9",
+        "m3:jake_C2:clip:1:episodic:10",
+        "m3:jake_C2:clip:1:semantic:21",
+        "m3:jake_C2:clip:1:episodic:14",
+        "m3:jake_C2:clip:1:episodic:13",
+        "m3:jake_C2:clip:1:semantic:22",
+        "m3:jake_C2:clip:1:episodic:4",
+        "m3:jake_C2:clip:1:episodic:15",
+        "m3:jake_C2:clip:1:episodic:17",
+        "m3:jake_C2:clip:1:episodic:11"
+      ],
+      "child_space_names": [
+        "m3:video:jake_C2:clip:1"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:video:jake_C2:clip:1": {
+      "name": "m3:video:jake_C2:clip:1",
+      "unit_uids": [
+        "m3:jake_C2:clip:1:episodic:16",
+        "m3:jake_C2:clip:1:semantic:20",
+        "m3:jake_C2:clip:1:episodic:5",
+        "m3:jake_C2:clip:1:episodic:18",
+        "m3:jake_C2:clip:1:episodic:8",
+        "m3:jake_C2:clip:1:semantic:19",
+        "m3:jake_C2:clip:1:episodic:6",
+        "m3:jake_C2:clip:1:episodic:12",
+        "m3:jake_C2:clip:1:episodic:7",
+        "m3:jake_C2:clip:1:episodic:9",
+        "m3:jake_C2:clip:1:episodic:10",
+        "m3:jake_C2:clip:1:semantic:21",
+        "m3:jake_C2:clip:1:episodic:14",
+        "m3:jake_C2:clip:1:episodic:13",
+        "m3:jake_C2:clip:1:semantic:22",
+        "m3:jake_C2:clip:1:episodic:4",
+        "m3:jake_C2:clip:1:episodic:15",
+        "m3:jake_C2:clip:1:episodic:17",
+        "m3:jake_C2:clip:1:episodic:11"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    }
+  },
+  "memory_units_meta": {
+    "m3:jake_C2:entity:character_0": {
+      "uid": "m3:jake_C2:entity:character_0",
+      "raw_data": {
+        "text_content": "M3 person character_0 in video jake_C2",
+        "entity_id": "character_0",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          0
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:jake_C2:entity:character_1": {
+      "uid": "m3:jake_C2:entity:character_1",
+      "raw_data": {
+        "text_content": "M3 person character_1 in video jake_C2",
+        "entity_id": "character_1",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          1
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:jake_C2:entity:character_2": {
+      "uid": "m3:jake_C2:entity:character_2",
+      "raw_data": {
+        "text_content": "M3 person character_2 in video jake_C2",
+        "entity_id": "character_2",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          2
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:jake_C2:entity:character_3": {
+      "uid": "m3:jake_C2:entity:character_3",
+      "raw_data": {
+        "text_content": "M3 person character_3 in video jake_C2",
+        "entity_id": "character_3",
+        "entity_type": "person"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": false,
+        "face_node_ids": [],
+        "voice_node_ids": [
+          3
+        ]
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": false
+    },
+    "m3:jake_C2:clip:1:episodic:10": {
+      "uid": "m3:jake_C2:clip:1:episodic:10",
+      "raw_data": {
+        "text_content": "右侧窗户透入强烈日光，窗边柜台上放着瓶子和其他杂物，窗外可见邻近建筑。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "10",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "10",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:11": {
+      "uid": "m3:jake_C2:clip:1:episodic:11",
+      "raw_data": {
+        "text_content": "拍摄者缓慢靠近桌边，并将手机从单手持握改为双手操作。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "11",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "11",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:12": {
+      "uid": "m3:jake_C2:clip:1:episodic:12",
+      "raw_data": {
+        "text_content": "拍摄者在手机上切换多个界面，包括应用图标页、带键盘的输入界面和计时器界面。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "12",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "12",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:13": {
+      "uid": "m3:jake_C2:clip:1:episodic:13",
+      "raw_data": {
+        "text_content": "手机计时器界面先显示约23分40秒，随后被重置为00:00:00，并开始计时。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "13",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "13",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:14": {
+      "uid": "m3:jake_C2:clip:1:episodic:14",
+      "raw_data": {
+        "text_content": "围桌者大多保持坐姿并看向桌面、手机或拍摄者；右侧穿粉色上衣的人一度用手扶着头部。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "14",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "14",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:15": {
+      "uid": "m3:jake_C2:clip:1:episodic:15",
+      "raw_data": {
+        "text_content": "约00:04至00:06可听到<voice_0>说“你好你”。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "15",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_0"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "15",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:16": {
+      "uid": "m3:jake_C2:clip:1:episodic:16",
+      "raw_data": {
+        "text_content": "约00:06至00:13可听到<voice_1>说“好意外好bie你”，其中部分内容因识别不清而难以确定。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "16",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_1"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "16",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:17": {
+      "uid": "m3:jake_C2:clip:1:episodic:17",
+      "raw_data": {
+        "text_content": "约00:12至00:14可听到<voice_2>说“好意”。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "17",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_2"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "17",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:18": {
+      "uid": "m3:jake_C2:clip:1:episodic:18",
+      "raw_data": {
+        "text_content": "约00:14至00:16可听到<voice_3>说“志愿”。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "18",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [
+          "character_3"
+        ],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "18",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:4": {
+      "uid": "m3:jake_C2:clip:1:episodic:4",
+      "raw_data": {
+        "text_content": "画面为带圆形鱼眼边框的第一人称视角，左上角叠加“DAY1”和约11:09:42至11:09:59的时间码，右上角显示“A1_JAKE”。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "4",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "4",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:5": {
+      "uid": "m3:jake_C2:clip:1:episodic:5",
+      "raw_data": {
+        "text_content": "拍摄者站在一间明亮的小房间内，面向一张铺着红白格桌布的长桌，并单手举着一部手机。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "5",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "5",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:6": {
+      "uid": "m3:jake_C2:clip:1:episodic:6",
+      "raw_data": {
+        "text_content": "五名面部被遮挡的人围坐在桌旁：左侧一人穿深色上衣，旁边一人穿白色上衣，桌子远端有两名长发者，右侧一人穿粉色上衣。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "6",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "6",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:7": {
+      "uid": "m3:jake_C2:clip:1:episodic:7",
+      "raw_data": {
+        "text_content": "桌面上摆放着数个黑色拉链收纳包、书本或纸张、笔、盒子和小型电子物品，显示这群人正在进行某种桌面活动或整理工作。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "7",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "7",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:8": {
+      "uid": "m3:jake_C2:clip:1:episodic:8",
+      "raw_data": {
+        "text_content": "桌后墙上立着一块白板，白板左侧可见一组彩色磁贴或标记。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "8",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "8",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:episodic:9": {
+      "uid": "m3:jake_C2:clip:1:episodic:9",
+      "raw_data": {
+        "text_content": "房间左侧有一盏带柔光布的摄影灯，桌旁和右侧还架着杆状支架，表明现场可能设置了拍摄或录制设备。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "9",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "9",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:semantic:19": {
+      "uid": "m3:jake_C2:clip:1:semantic:19",
+      "raw_data": {
+        "text_content": "拍摄者重置并启动手机计时器，而其他人围坐等待或观察，说明该群体很可能正准备开始一项限时活动、游戏或记录环节。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "19",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "19",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:semantic:20": {
+      "uid": "m3:jake_C2:clip:1:semantic:20",
+      "raw_data": {
+        "text_content": "桌上的多个相似收纳包、文具和材料，以及白板和摄影灯架，暗示这不是普通用餐场景，而更像有组织的小组活动或拍摄布置。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "20",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "20",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:semantic:21": {
+      "uid": "m3:jake_C2:clip:1:semantic:21",
+      "raw_data": {
+        "text_content": "简短的招呼和零散回应表明参与者在开始计时前后进行交流或确认，但现有语音内容不足以可靠判断各说话者的具体身份和关系。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "21",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "21",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:jake_C2:clip:1:semantic:22": {
+      "uid": "m3:jake_C2:clip:1:semantic:22",
+      "raw_data": {
+        "text_content": "没有提供可用于人物匹配的面部特征，因此无法确认任何声音特征与画面中某位人物的等同性。"
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "22",
+        "video_id": "jake_C2",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "22",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 17.6
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    }
+  },
+  "internal_state": {
+    "_next_int_id": 23,
+    "_uid_to_int_id": {
+      "m3:jake_C2:entity:character_0": 0,
+      "m3:jake_C2:entity:character_1": 1,
+      "m3:jake_C2:entity:character_2": 2,
+      "m3:jake_C2:entity:character_3": 3,
+      "m3:jake_C2:clip:1:episodic:10": 4,
+      "m3:jake_C2:clip:1:episodic:11": 5,
+      "m3:jake_C2:clip:1:episodic:12": 6,
+      "m3:jake_C2:clip:1:episodic:13": 7,
+      "m3:jake_C2:clip:1:episodic:14": 8,
+      "m3:jake_C2:clip:1:episodic:15": 9,
+      "m3:jake_C2:clip:1:episodic:16": 10,
+      "m3:jake_C2:clip:1:episodic:17": 11,
+      "m3:jake_C2:clip:1:episodic:18": 12,
+      "m3:jake_C2:clip:1:episodic:4": 13,
+      "m3:jake_C2:clip:1:episodic:5": 14,
+      "m3:jake_C2:clip:1:episodic:6": 15,
+      "m3:jake_C2:clip:1:episodic:7": 16,
+      "m3:jake_C2:clip:1:episodic:8": 17,
+      "m3:jake_C2:clip:1:episodic:9": 18,
+      "m3:jake_C2:clip:1:semantic:19": 19,
+      "m3:jake_C2:clip:1:semantic:20": 20,
+      "m3:jake_C2:clip:1:semantic:21": 21,
+      "m3:jake_C2:clip:1:semantic:22": 22
+    },
+    "_modified_units": [
+      "m3:jake_C2:clip:1:episodic:16",
+      "m3:jake_C2:clip:1:semantic:20",
+      "m3:jake_C2:clip:1:episodic:5",
+      "m3:jake_C2:clip:1:episodic:18",
+      "m3:jake_C2:clip:1:episodic:8",
+      "m3:jake_C2:clip:1:semantic:19",
+      "m3:jake_C2:entity:character_0",
+      "m3:jake_C2:clip:1:episodic:6",
+      "m3:jake_C2:clip:1:episodic:12",
+      "m3:jake_C2:clip:1:episodic:7",
+      "m3:jake_C2:clip:1:episodic:9",
+      "m3:jake_C2:clip:1:episodic:10",
+      "m3:jake_C2:clip:1:semantic:21",
+      "m3:jake_C2:clip:1:episodic:14",
+      "m3:jake_C2:clip:1:episodic:13",
+      "m3:jake_C2:clip:1:semantic:22",
+      "m3:jake_C2:clip:1:episodic:4",
+      "m3:jake_C2:clip:1:episodic:15",
+      "m3:jake_C2:clip:1:episodic:17",
+      "m3:jake_C2:clip:1:episodic:11",
+      "m3:jake_C2:entity:character_2",
+      "m3:jake_C2:entity:character_1",
+      "m3:jake_C2:entity:character_3"
+    ],
+    "_deleted_units": [],
+    "_access_counts": {
+      "m3:jake_C2:entity:character_0": 1,
+      "m3:jake_C2:entity:character_1": 1,
+      "m3:jake_C2:entity:character_2": 1,
+      "m3:jake_C2:entity:character_3": 1,
+      "m3:jake_C2:clip:1:episodic:10": 1,
+      "m3:jake_C2:clip:1:episodic:11": 1,
+      "m3:jake_C2:clip:1:episodic:12": 1,
+      "m3:jake_C2:clip:1:episodic:13": 1,
+      "m3:jake_C2:clip:1:episodic:14": 1,
+      "m3:jake_C2:clip:1:episodic:15": 1,
+      "m3:jake_C2:clip:1:episodic:16": 1,
+      "m3:jake_C2:clip:1:episodic:17": 1,
+      "m3:jake_C2:clip:1:episodic:18": 1,
+      "m3:jake_C2:clip:1:episodic:4": 1,
+      "m3:jake_C2:clip:1:episodic:5": 1,
+      "m3:jake_C2:clip:1:episodic:6": 1,
+      "m3:jake_C2:clip:1:episodic:7": 1,
+      "m3:jake_C2:clip:1:episodic:8": 1,
+      "m3:jake_C2:clip:1:episodic:9": 1,
+      "m3:jake_C2:clip:1:semantic:19": 1,
+      "m3:jake_C2:clip:1:semantic:20": 1,
+      "m3:jake_C2:clip:1:semantic:21": 1,
+      "m3:jake_C2:clip:1:semantic:22": 1
+    }
+  },
+  "retrieval": {
+    "indices_saved": {},
+    "frozen_matrices_saved": {}
+  },
+  "high_level_memory_build": {}
+}

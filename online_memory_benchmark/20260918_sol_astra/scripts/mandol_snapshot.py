@@ -4,8 +4,8 @@ import os
 from pathlib import Path
 import sys
 import time
-from bench_common import ROOT, atomic, read, sha
-sys.path.insert(0,str(ROOT/'source/Mandol/src'))
+from bench_common import ROOT, PRODUCTION_ROOTS, atomic, read, sha
+sys.path.insert(0,str(PRODUCTION_ROOTS['Mandol']/'src'))
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--snapshot',type=Path,required=True);p.add_argument('--serve',action='store_true');a=p.parse_args()

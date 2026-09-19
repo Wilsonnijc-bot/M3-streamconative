@@ -1,0 +1,108 @@
+# Consolidation at 1200 media seconds
+
+Detailed snapshot, evidence, official request/response, accepted/rejected decisions, and native identity changes are in snapshot job directories.
+
+```json
+{
+  "cutoff": 1200,
+  "input_nodes": 25,
+  "consolidation_start": 1789756865.3169558,
+  "snapshot_copy_ms": 34.99627400015015,
+  "queue_ms": 0.23272499674931169,
+  "before_mappings": {
+    "character_0": [
+      "voice_0"
+    ],
+    "character_1": [
+      "voice_1"
+    ],
+    "character_2": [
+      "voice_2"
+    ],
+    "character_3": [
+      "voice_3"
+    ]
+  },
+  "snapshot_input_preparation_ms": 2.485902004991658,
+  "llm_ms": 67039.9801809981,
+  "usage": {
+    "input_tokens": 6418,
+    "input_tokens_details": {
+      "cache_write_tokens": 2918,
+      "cached_tokens": 3484
+    },
+    "output_tokens": 4200,
+    "output_tokens_details": {
+      "reasoning_tokens": 3106
+    },
+    "total_tokens": 10618
+  },
+  "reason_worker_ms": 77163.90590601077,
+  "phase_timings": {
+    "scope": "shared worker including evidence, MOSS, reasoning and projection",
+    "worker_wall_ms": 77158.38492500188
+  },
+  "accepted_decisions": 4,
+  "rejected_decisions": 3,
+  "job_directory": "smoke/maintenance_terra01/C4/consolidation/snapshot_2",
+  "write_back_ms": 0.5430059973150492,
+  "after_mappings": {
+    "character_0": [],
+    "character_2": [
+      "voice_2"
+    ],
+    "character_3": [],
+    "character_1": [
+      "voice_1"
+    ]
+  },
+  "affected_nodes": [
+    17,
+    18,
+    19,
+    20
+  ],
+  "reindex_ms": 663.6335079965647,
+  "reindex_report": {
+    "changed_node_ids": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "embedded_text_count": 4,
+    "backend": {
+      "kind": "configured_m3",
+      "alias": "text-embedding-3-large",
+      "model": "text-embedding-3-large",
+      "endpoint": "https://api.openai.com/v1",
+      "provider": "openai"
+    },
+    "unchanged_text_node_ids": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      21,
+      22,
+      23,
+      24
+    ]
+  },
+  "consolidation_end": 1789756943.1808777,
+  "total_consolidation_wall_ms": 77863.92644800071,
+  "construction_blocked_ms": 77864.15349299205,
+  "llm_call_count": 1,
+  "status": "accepted",
+  "media_timestamp": 1200
+}
+```

@@ -286,11 +286,12 @@ def generate_all_memories(video_context, model_type="sft", metrics=None):
         raw_response, _tokens, generation = get_response(
             messages,
             enable_thinking=enable_thinking,
-            max_new_tokens=max_new_tokens,
+            max_new_tokens=max_new_tokens * (2 ** (attempt - 1)),
             return_details=True,
         )
         attempt_metrics = {
             "attempt": attempt,
+            "max_new_tokens": max_new_tokens * (2 ** (attempt - 1)),
             "latency_ms": (time.perf_counter() - attempt_started) * 1000,
             "response_chars": len(raw_response or ""),
             "generation": generation,

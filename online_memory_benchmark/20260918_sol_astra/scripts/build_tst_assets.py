@@ -14,8 +14,8 @@ from pathlib import Path
 import subprocess
 import sys
 import wave
-from bench_common import ROOT, REVISION, atomic, read, rows, jsonl, sha, digest
-sys.path.insert(0, str(ROOT / 'source'))
+from bench_common import REPOSITORY_ROOT, ROOT, REVISION, atomic, read, rows, jsonl, sha, digest
+sys.path.insert(0, str(REPOSITORY_ROOT))
 
 
 def jake(repo):

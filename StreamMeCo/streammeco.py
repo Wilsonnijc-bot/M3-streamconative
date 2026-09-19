@@ -410,6 +410,12 @@ def remove_text_nodes_from_graph(graph, node_ids: Iterable[int]):
         return graph
     for node_id in removal_set:
         graph.nodes.pop(node_id, None)
+    if hasattr(graph, "reference_character_mappings"):
+        graph.reference_character_mappings = {key: record for key, record in graph.reference_character_mappings.items()
+            if int(record['node_id']) not in removal_set}
+    if hasattr(graph, "memory_claim_revisions"):
+        graph.memory_claim_revisions = {key: record for key, record in graph.memory_claim_revisions.items()
+            if int(key) not in removal_set}
     if hasattr(graph, "text_nodes"):
         graph.text_nodes = [node_id for node_id in graph.text_nodes if node_id not in removal_set]
     if hasattr(graph, "edges"):
@@ -433,15 +439,18 @@ def remove_text_nodes_from_graph(graph, node_ids: Iterable[int]):
     return graph
 
 
-def compress_graph(graph, alpha: float = 0.1):
+def compress_graph(graph, alpha: float = 0.1, retain_ratio: float = 0.7):
     """Full compression pipeline for a single VideoGraph object."""
+    if not 0 < retain_ratio <= 1:
+        raise ValueError("retain_ratio must be in (0, 1]")
     text_without_media, text_with_media, weight_matrix = classify_text_nodes(graph)
-    first_kept, first_removed = compress_first_class_nodes(graph, text_without_media)
+    first_kept, first_removed = compress_first_class_nodes(graph, text_without_media, keep_ratio=retain_ratio)
     second_kept, second_removed = compress_second_class_nodes(
         graph,
         text_with_media,
         weight_matrix,
         alpha=alpha,
+        keep_ratio=retain_ratio,
     )
     nodes_to_remove = first_removed + second_removed
     updated_graph = remove_text_nodes_from_graph(graph, nodes_to_remove)

@@ -1,0 +1,687 @@
+{
+  "version": "3.0_safetensors",
+  "config": {
+    "embedding_dim": 1024,
+    "faiss_index_type": "IDMap,Flat",
+    "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+    "supported_modalities": [
+      "text"
+    ],
+    "image_model": null,
+    "text_model": "Qwen/Qwen3-Embedding-0.6B"
+  },
+  "memory_spaces": {
+    "hierarchical_memory": {
+      "name": "hierarchical_memory",
+      "unit_uids": [],
+      "child_space_names": [
+        "hierarchical_memory:L0_Observation",
+        "hierarchical_memory:L2_Insight",
+        "hierarchical_memory:L1_Summary"
+      ],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L0_Observation": {
+      "name": "hierarchical_memory:L0_Observation",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L1_Summary": {
+      "name": "hierarchical_memory:L1_Summary",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "hierarchical_memory:L2_Insight": {
+      "name": "hierarchical_memory:L2_Insight",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation": {
+      "name": "entity_relation",
+      "unit_uids": [],
+      "child_space_names": [
+        "entity_relation:entities",
+        "entity_relation:relations",
+        "entity_relation:mentions"
+      ],
+      "faiss_index_type": null
+    },
+    "entity_relation:entities": {
+      "name": "entity_relation:entities",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation:mentions": {
+      "name": "entity_relation:mentions",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "entity_relation:relations": {
+      "name": "entity_relation:relations",
+      "unit_uids": [],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "episodic_memory": {
+      "name": "episodic_memory",
+      "unit_uids": [
+        "m3:aea_C4:clip:1:episodic:10",
+        "m3:aea_C4:clip:1:episodic:2",
+        "m3:aea_C4:clip:1:episodic:3",
+        "m3:aea_C4:clip:1:episodic:5",
+        "m3:aea_C4:clip:1:episodic:6",
+        "m3:aea_C4:clip:1:episodic:8",
+        "m3:aea_C4:clip:1:episodic:11",
+        "m3:aea_C4:clip:1:episodic:4",
+        "m3:aea_C4:clip:1:episodic:1",
+        "m3:aea_C4:clip:1:episodic:9",
+        "m3:aea_C4:clip:1:episodic:7",
+        "m3:aea_C4:clip:1:episodic:0",
+        "m3:aea_C4:clip:1:episodic:12"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:aea_C4": {
+      "name": "m3:video:aea_C4",
+      "unit_uids": [],
+      "child_space_names": [
+        "m3:video:aea_C4:block:0"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:type:semantic": {
+      "name": "m3:type:semantic",
+      "unit_uids": [
+        "m3:aea_C4:clip:1:semantic:15",
+        "m3:aea_C4:clip:1:semantic:16",
+        "m3:aea_C4:clip:1:semantic:13",
+        "m3:aea_C4:clip:1:semantic:14"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    },
+    "m3:video:aea_C4:block:0": {
+      "name": "m3:video:aea_C4:block:0",
+      "unit_uids": [
+        "m3:aea_C4:clip:1:episodic:10",
+        "m3:aea_C4:clip:1:episodic:2",
+        "m3:aea_C4:clip:1:episodic:3",
+        "m3:aea_C4:clip:1:episodic:5",
+        "m3:aea_C4:clip:1:episodic:6",
+        "m3:aea_C4:clip:1:episodic:8",
+        "m3:aea_C4:clip:1:semantic:13",
+        "m3:aea_C4:clip:1:episodic:11",
+        "m3:aea_C4:clip:1:episodic:4",
+        "m3:aea_C4:clip:1:episodic:1",
+        "m3:aea_C4:clip:1:episodic:9",
+        "m3:aea_C4:clip:1:episodic:7",
+        "m3:aea_C4:clip:1:semantic:15",
+        "m3:aea_C4:clip:1:episodic:0",
+        "m3:aea_C4:clip:1:semantic:16",
+        "m3:aea_C4:clip:1:episodic:12",
+        "m3:aea_C4:clip:1:semantic:14"
+      ],
+      "child_space_names": [
+        "m3:video:aea_C4:clip:1"
+      ],
+      "faiss_index_type": null
+    },
+    "m3:video:aea_C4:clip:1": {
+      "name": "m3:video:aea_C4:clip:1",
+      "unit_uids": [
+        "m3:aea_C4:clip:1:episodic:10",
+        "m3:aea_C4:clip:1:episodic:2",
+        "m3:aea_C4:clip:1:episodic:3",
+        "m3:aea_C4:clip:1:episodic:5",
+        "m3:aea_C4:clip:1:episodic:6",
+        "m3:aea_C4:clip:1:episodic:8",
+        "m3:aea_C4:clip:1:semantic:13",
+        "m3:aea_C4:clip:1:episodic:11",
+        "m3:aea_C4:clip:1:episodic:4",
+        "m3:aea_C4:clip:1:episodic:1",
+        "m3:aea_C4:clip:1:episodic:9",
+        "m3:aea_C4:clip:1:episodic:7",
+        "m3:aea_C4:clip:1:semantic:15",
+        "m3:aea_C4:clip:1:episodic:0",
+        "m3:aea_C4:clip:1:semantic:16",
+        "m3:aea_C4:clip:1:episodic:12",
+        "m3:aea_C4:clip:1:semantic:14"
+      ],
+      "child_space_names": [],
+      "faiss_index_type": null
+    }
+  },
+  "memory_units_meta": {
+    "m3:aea_C4:clip:1:episodic:0": {
+      "uid": "m3:aea_C4:clip:1:episodic:0",
+      "raw_data": {
+        "text_content": "The clip is filmed from a moving first-person perspective with a wide-angle, fisheye view."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "0",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "0",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:1": {
+      "uid": "m3:aea_C4:clip:1:episodic:1",
+      "raw_data": {
+        "text_content": "The camera begins in a dim bathroom with gray walls, star-patterned floor tiles, an arched doorway, and a vanity sink beneath a decorative round mirror."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "1",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "1",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:10": {
+      "uid": "m3:aea_C4:clip:1:episodic:10",
+      "raw_data": {
+        "text_content": "The camera slowly shifts its view across the French doors and the patio while remaining indoors."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "10",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "10",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:11": {
+      "uid": "m3:aea_C4:clip:1:episodic:11",
+      "raw_data": {
+        "text_content": "The camera later pans back across the bedroom, showing an open doorway leading to another interior area and a closed closet door."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "11",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "11",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:12": {
+      "uid": "m3:aea_C4:clip:1:episodic:12",
+      "raw_data": {
+        "text_content": "No people or identifiable faces are visible in the clip."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "12",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "12",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:2": {
+      "uid": "m3:aea_C4:clip:1:episodic:2",
+      "raw_data": {
+        "text_content": "A hand briefly holds a smartphone with a bright screen in front of the bathroom vanity."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "2",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "2",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:3": {
+      "uid": "m3:aea_C4:clip:1:episodic:3",
+      "raw_data": {
+        "text_content": "The camera turns from the bathroom toward an adjoining bedroom."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "3",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "3",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:4": {
+      "uid": "m3:aea_C4:clip:1:episodic:4",
+      "raw_data": {
+        "text_content": "The bedroom contains a large made bed with a padded headboard, bedside tables and lamps, a ceiling fan, and a light-colored rug."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "4",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "4",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:5": {
+      "uid": "m3:aea_C4:clip:1:episodic:5",
+      "raw_data": {
+        "text_content": "Sunlight enters the bedroom through glass French doors, casting bright rectangular shadows across the rug and furniture."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "5",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "5",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:6": {
+      "uid": "m3:aea_C4:clip:1:episodic:6",
+      "raw_data": {
+        "text_content": "Two upholstered lounge chairs sit in front of the French doors."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "6",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "6",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:7": {
+      "uid": "m3:aea_C4:clip:1:episodic:7",
+      "raw_data": {
+        "text_content": "The camera approaches the closed French doors and looks out onto a small patio."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "7",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "7",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:8": {
+      "uid": "m3:aea_C4:clip:1:episodic:8",
+      "raw_data": {
+        "text_content": "The patio is enclosed by a low wall covered with vivid pink flowering plants."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "8",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "8",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:episodic:9": {
+      "uid": "m3:aea_C4:clip:1:episodic:9",
+      "raw_data": {
+        "text_content": "A covered object, a red container, and outdoor items are visible against the patio wall."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "episodic",
+        "m3_node_id": "9",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "9",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:semantic:13": {
+      "uid": "m3:aea_C4:clip:1:semantic:13",
+      "raw_data": {
+        "text_content": "The camera wearer appears to be walking through and visually inspecting a private bedroom suite, moving from the bathroom to the bedroom and toward its patio doors."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "13",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "13",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:semantic:14": {
+      "uid": "m3:aea_C4:clip:1:semantic:14",
+      "raw_data": {
+        "text_content": "The bright outdoor patio and the bedroom's orderly furnishings suggest a quiet residential setting during daylight."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "14",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "14",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:semantic:15": {
+      "uid": "m3:aea_C4:clip:1:semantic:15",
+      "raw_data": {
+        "text_content": "The smartphone is only briefly visible, and its on-screen content is not legible enough to infer its purpose."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "15",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "15",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    },
+    "m3:aea_C4:clip:1:semantic:16": {
+      "uid": "m3:aea_C4:clip:1:semantic:16",
+      "raw_data": {
+        "text_content": "There is insufficient face or voice evidence to establish any character identities or face-voice equivalences."
+      },
+      "metadata": {
+        "adapter": "m3-mandol/v1",
+        "retrieval_candidate": true,
+        "memory_type": "semantic",
+        "m3_node_id": "16",
+        "video_id": "aea_C4",
+        "clip_id": 1,
+        "block_id": 0,
+        "canonical_entity_ids": [],
+        "provenance": {
+          "source": "StreamMeCo/M3",
+          "source_node_id": "16",
+          "source_embedding_model": "text-embedding-3-large",
+          "source_embedding_dimension": 3072,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 30.0
+        }
+      },
+      "created_time": null,
+      "has_embedding": true,
+      "has_sparse": true
+    }
+  },
+  "internal_state": {
+    "_next_int_id": 17,
+    "_uid_to_int_id": {
+      "m3:aea_C4:clip:1:episodic:0": 0,
+      "m3:aea_C4:clip:1:episodic:1": 1,
+      "m3:aea_C4:clip:1:episodic:10": 2,
+      "m3:aea_C4:clip:1:episodic:11": 3,
+      "m3:aea_C4:clip:1:episodic:12": 4,
+      "m3:aea_C4:clip:1:episodic:2": 5,
+      "m3:aea_C4:clip:1:episodic:3": 6,
+      "m3:aea_C4:clip:1:episodic:4": 7,
+      "m3:aea_C4:clip:1:episodic:5": 8,
+      "m3:aea_C4:clip:1:episodic:6": 9,
+      "m3:aea_C4:clip:1:episodic:7": 10,
+      "m3:aea_C4:clip:1:episodic:8": 11,
+      "m3:aea_C4:clip:1:episodic:9": 12,
+      "m3:aea_C4:clip:1:semantic:13": 13,
+      "m3:aea_C4:clip:1:semantic:14": 14,
+      "m3:aea_C4:clip:1:semantic:15": 15,
+      "m3:aea_C4:clip:1:semantic:16": 16
+    },
+    "_modified_units": [
+      "m3:aea_C4:clip:1:episodic:10",
+      "m3:aea_C4:clip:1:episodic:2",
+      "m3:aea_C4:clip:1:episodic:3",
+      "m3:aea_C4:clip:1:episodic:5",
+      "m3:aea_C4:clip:1:episodic:6",
+      "m3:aea_C4:clip:1:episodic:8",
+      "m3:aea_C4:clip:1:semantic:13",
+      "m3:aea_C4:clip:1:episodic:11",
+      "m3:aea_C4:clip:1:episodic:4",
+      "m3:aea_C4:clip:1:episodic:1",
+      "m3:aea_C4:clip:1:episodic:9",
+      "m3:aea_C4:clip:1:episodic:7",
+      "m3:aea_C4:clip:1:semantic:15",
+      "m3:aea_C4:clip:1:episodic:0",
+      "m3:aea_C4:clip:1:semantic:16",
+      "m3:aea_C4:clip:1:episodic:12",
+      "m3:aea_C4:clip:1:semantic:14"
+    ],
+    "_deleted_units": [],
+    "_access_counts": {
+      "m3:aea_C4:clip:1:episodic:0": 1,
+      "m3:aea_C4:clip:1:episodic:1": 1,
+      "m3:aea_C4:clip:1:episodic:10": 1,
+      "m3:aea_C4:clip:1:episodic:11": 1,
+      "m3:aea_C4:clip:1:episodic:12": 1,
+      "m3:aea_C4:clip:1:episodic:2": 1,
+      "m3:aea_C4:clip:1:episodic:3": 1,
+      "m3:aea_C4:clip:1:episodic:4": 1,
+      "m3:aea_C4:clip:1:episodic:5": 1,
+      "m3:aea_C4:clip:1:episodic:6": 1,
+      "m3:aea_C4:clip:1:episodic:7": 1,
+      "m3:aea_C4:clip:1:episodic:8": 1,
+      "m3:aea_C4:clip:1:episodic:9": 1,
+      "m3:aea_C4:clip:1:semantic:13": 1,
+      "m3:aea_C4:clip:1:semantic:14": 1,
+      "m3:aea_C4:clip:1:semantic:15": 1,
+      "m3:aea_C4:clip:1:semantic:16": 1
+    }
+  },
+  "retrieval": {
+    "indices_saved": {},
+    "frozen_matrices_saved": {}
+  },
+  "high_level_memory_build": {}
+}

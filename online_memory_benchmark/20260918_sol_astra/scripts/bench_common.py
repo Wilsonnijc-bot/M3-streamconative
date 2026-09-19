@@ -5,7 +5,23 @@ import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+REPOSITORY_ROOT = ROOT.parents[1]
+PRODUCTION_ROOTS = {
+    'StreamMeCo': REPOSITORY_ROOT / 'StreamMeCo',
+    'Mandol': REPOSITORY_ROOT / 'Mandol',
+    'tst': REPOSITORY_ROOT / 'tst',
+    'consolidation': REPOSITORY_ROOT / 'consolidation',
+}
 REVISION = '0f99f2d0ebe89ac095bcc5903c4dd8f72b367286'
+
+
+def production_pythonpath():
+    return [
+        PRODUCTION_ROOTS['StreamMeCo'],
+        REPOSITORY_ROOT,
+        PRODUCTION_ROOTS['Mandol'] / 'src',
+        Path('/opt/streammeco/repos/3D-Speaker'),
+    ]
 
 def digest(value):
     return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest()

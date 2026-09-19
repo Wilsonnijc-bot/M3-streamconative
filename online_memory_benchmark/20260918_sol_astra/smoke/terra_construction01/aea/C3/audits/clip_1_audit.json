@@ -1,0 +1,511 @@
+{
+  "clip_id": 1,
+  "voice_observations": [],
+  "clip_path": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/tmp/aea_1_8xacjjaa/segment.mp4",
+  "shared_asr_provenance": {
+    "cache_hit": true,
+    "cache_path": "cache/aea/asr/310d813b770300657cfd2382988bcf52ed97681af50fa818bc6f0e5e0ec059c6.json",
+    "lookup_or_request_ms": 0.06421000580303371,
+    "timing_scope": "shared event ASR; cached request duration not reported as new inference"
+  },
+  "asr_selected_provider": "deepgram-asr",
+  "end_to_end_memory_generation_ms": 12628.689239994856,
+  "latency_ms": {
+    "clip_decode": 3474.2691870051203,
+    "deepgram_asr": null,
+    "mai_transcribe_asr": null,
+    "asr_total": null,
+    "audio_segmentation": 3.522621002048254,
+    "speech_embedding_campplus": null,
+    "speech_embedding_ecapa": null,
+    "speaker_mapping_including_embedding": null,
+    "facial_detection_recognition_buffalo_l": 1566.5476569993189,
+    "face_clustering": 0.04488400008995086,
+    "vlm_memory_generation": 10518.694750004215,
+    "text_embedding": 487.33088999870233,
+    "graph_update_total": 0.12704699474852532
+  },
+  "stage_details": {
+    "text_embedding_batch": {
+      "segment_id": 1,
+      "model": "text-embedding-3-large",
+      "input_count": 19,
+      "input_chars": 2045,
+      "timing_scope": "whole_batch",
+      "per_text_latency_ms": null,
+      "calls": [
+        {
+          "attempt": 1,
+          "request_start": 1789756887.7993395,
+          "status": "success",
+          "total_tokens": 389,
+          "request_end": 1789756888.2866573,
+          "latency_ms": 487.31852699711453
+        }
+      ],
+      "total_tokens": 389,
+      "latency_ms": 487.33088999870233
+    },
+    "voice": {
+      "cache_hit": false,
+      "asr_provider_ms": {
+        "deepgram-asr": null
+      },
+      "asr_total_ms": null,
+      "audio_segmentation_ms": 3.522621002048254,
+      "speech_embedding_ms": null,
+      "graph_update_ms": null,
+      "asr_segment_count": 0,
+      "speech_embedding_count": 0,
+      "voice_identity_count": 0,
+      "asr_selected_provider": "deepgram-asr",
+      "speaker_mapping": "TST",
+      "asr_precomputed": true,
+      "asr_execution": "single_provider",
+      "asr_failures": [],
+      "asr_successful_providers": [
+        "deepgram-asr"
+      ],
+      "total_ms": 12.103127999580465
+    },
+    "face": {
+      "cache_hit": false,
+      "face_detection_recognition_ms": 1566.5476569993189,
+      "face_clustering_ms": 0.04488400008995086,
+      "graph_update_ms": null,
+      "frame_count": 150,
+      "detected_face_count": 0,
+      "qualified_face_count": 0,
+      "raw_cluster_count": 0,
+      "face_identity_count": 0,
+      "total_ms": 1566.8757609964814
+    },
+    "vlm": {
+      "context_preparation_ms": 1.1389900028007105,
+      "vlm_ms": 10518.694750004215,
+      "model": "gpt-5.6-terra",
+      "provider": "official_openai_responses",
+      "reasoning_effort": "medium",
+      "raw_response": "{\n  \"video_description\": [\n    \"The clip is filmed with a wide-angle, fisheye-like camera from a moving first-person perspective inside a home.\",\n    \"At the beginning, the camera faces an arched doorway from a small bathroom with dark star-patterned floor tiles.\",\n    \"A smartphone with a bright screen is briefly held in front of the camera near the bathroom sink.\",\n    \"The bathroom contains a white vanity with a rectangular sink, metallic faucet fixtures, a decorative round mirror, and small toiletry items on the counter.\",\n    \"Beyond the bathroom doorway, an open closet or dressing area with hanging clothes is visible.\",\n    \"The camera turns toward an adjoining bedroom, passing the bathroom vanity and doorway.\",\n    \"The bedroom contains a made bed with pale bedding, a padded bench or ottoman at its foot, a bedside dresser with a lamp, and a ceiling fan.\",\n    \"Sunlight enters the bedroom through glass French doors and casts bright rectangular shadows across the rug and furniture.\",\n    \"The camera moves closer to the closed French doors, which look out onto a small enclosed patio.\",\n    \"Two cushioned lounge chairs are positioned inside directly in front of the French doors.\",\n    \"Outside, the patio has a light-colored wall topped or bordered by vivid pink flowering vines.\",\n    \"A dark tarp-covered object rests against the patio wall, alongside a red container and other garden or stored items.\",\n    \"The camera slowly shifts its view across the French doors and patio, while the doors remain closed and no one appears outside.\",\n    \"The camera then pans back across the bedroom, showing open interior doors leading to a hallway or adjacent room.\",\n    \"No faces or identifiable people are visible during the clip.\"\n  ],\n  \"high_level_conclusions\": [\n    \"The camera operator appears to be walking through and visually inspecting the bathroom, bedroom, and patio-facing doors.\",\n    \"The home appears orderly and unoccupied at the time of recording, with no visible interaction with the furnishings or doors beyond the camera movement.\",\n    \"The bright outdoor light and flowering patio indicate daytime conditions.\",\n    \"No face or voice features are available, so no character identity equivalences can be established.\"\n  ]\n}",
+      "valid_memory_json": true,
+      "generated_memory": {
+        "video_description": [
+          "The clip is filmed with a wide-angle, fisheye-like camera from a moving first-person perspective inside a home.",
+          "At the beginning, the camera faces an arched doorway from a small bathroom with dark star-patterned floor tiles.",
+          "A smartphone with a bright screen is briefly held in front of the camera near the bathroom sink.",
+          "The bathroom contains a white vanity with a rectangular sink, metallic faucet fixtures, a decorative round mirror, and small toiletry items on the counter.",
+          "Beyond the bathroom doorway, an open closet or dressing area with hanging clothes is visible.",
+          "The camera turns toward an adjoining bedroom, passing the bathroom vanity and doorway.",
+          "The bedroom contains a made bed with pale bedding, a padded bench or ottoman at its foot, a bedside dresser with a lamp, and a ceiling fan.",
+          "Sunlight enters the bedroom through glass French doors and casts bright rectangular shadows across the rug and furniture.",
+          "The camera moves closer to the closed French doors, which look out onto a small enclosed patio.",
+          "Two cushioned lounge chairs are positioned inside directly in front of the French doors.",
+          "Outside, the patio has a light-colored wall topped or bordered by vivid pink flowering vines.",
+          "A dark tarp-covered object rests against the patio wall, alongside a red container and other garden or stored items.",
+          "The camera slowly shifts its view across the French doors and patio, while the doors remain closed and no one appears outside.",
+          "The camera then pans back across the bedroom, showing open interior doors leading to a hallway or adjacent room.",
+          "No faces or identifiable people are visible during the clip."
+        ],
+        "high_level_conclusions": [
+          "The camera operator appears to be walking through and visually inspecting the bathroom, bedroom, and patio-facing doors.",
+          "The home appears orderly and unoccupied at the time of recording, with no visible interaction with the furnishings or doors beyond the camera movement.",
+          "The bright outdoor light and flowering patio indicate daytime conditions.",
+          "No face or voice features are available, so no character identity equivalences can be established."
+        ]
+      },
+      "request_artifacts": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/cache/terra_construction/requests/8471bd73195d449490e10a94af4b6487",
+      "usage": {
+        "input_tokens": 29623,
+        "input_tokens_details": {
+          "cached_tokens": 29620,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 492,
+        "output_tokens_details": {
+          "reasoning_tokens": 38
+        },
+        "total_tokens": 30115
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "latency_ms": 10518.694750004215,
+          "model": "gpt-5.6-terra"
+        }
+      ],
+      "episodic_memory_count": 15,
+      "semantic_memory_count": 4
+    },
+    "episodic_memory": {
+      "memory_type": "episodic",
+      "input_count": 15,
+      "text_embedding_ms": null,
+      "text_embedding_count": 15,
+      "graph_update_ms": 0.1026719983201474,
+      "nodes_added": 15,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    },
+    "semantic_memory": {
+      "memory_type": "semantic",
+      "input_count": 4,
+      "text_embedding_ms": null,
+      "text_embedding_count": 4,
+      "graph_update_ms": 0.024374996428377926,
+      "nodes_added": 4,
+      "directed_edges_added": 0,
+      "text_embedding_execution": "precomputed_handoff",
+      "embedding_timing_scope": "shared_clip_batch"
+    }
+  },
+  "counts": {
+    "input_frames": 150,
+    "asr_segments": 0,
+    "speech_embeddings": 0,
+    "voice_identities": 0,
+    "detected_faces": 0,
+    "qualified_faces": 0,
+    "face_identities": 0,
+    "episodic_memories": 15,
+    "semantic_memories": 4,
+    "nodes_after_clip": 19,
+    "edges_after_clip": 0,
+    "nodes_added_by_clip": 19,
+    "edges_added_by_clip": 0
+  },
+  "generated_memory": {
+    "video_description": [
+      "The clip is filmed with a wide-angle, fisheye-like camera from a moving first-person perspective inside a home.",
+      "At the beginning, the camera faces an arched doorway from a small bathroom with dark star-patterned floor tiles.",
+      "A smartphone with a bright screen is briefly held in front of the camera near the bathroom sink.",
+      "The bathroom contains a white vanity with a rectangular sink, metallic faucet fixtures, a decorative round mirror, and small toiletry items on the counter.",
+      "Beyond the bathroom doorway, an open closet or dressing area with hanging clothes is visible.",
+      "The camera turns toward an adjoining bedroom, passing the bathroom vanity and doorway.",
+      "The bedroom contains a made bed with pale bedding, a padded bench or ottoman at its foot, a bedside dresser with a lamp, and a ceiling fan.",
+      "Sunlight enters the bedroom through glass French doors and casts bright rectangular shadows across the rug and furniture.",
+      "The camera moves closer to the closed French doors, which look out onto a small enclosed patio.",
+      "Two cushioned lounge chairs are positioned inside directly in front of the French doors.",
+      "Outside, the patio has a light-colored wall topped or bordered by vivid pink flowering vines.",
+      "A dark tarp-covered object rests against the patio wall, alongside a red container and other garden or stored items.",
+      "The camera slowly shifts its view across the French doors and patio, while the doors remain closed and no one appears outside.",
+      "The camera then pans back across the bedroom, showing open interior doors leading to a hallway or adjacent room.",
+      "No faces or identifiable people are visible during the clip."
+    ],
+    "high_level_conclusions": [
+      "The camera operator appears to be walking through and visually inspecting the bathroom, bedroom, and patio-facing doors.",
+      "The home appears orderly and unoccupied at the time of recording, with no visible interaction with the furnishings or doors beyond the camera movement.",
+      "The bright outdoor light and flowering patio indicate daytime conditions.",
+      "No face or voice features are available, so no character identity equivalences can be established."
+    ]
+  },
+  "effective_memory": {
+    "video_description": [
+      "The clip is filmed with a wide-angle, fisheye-like camera from a moving first-person perspective inside a home.",
+      "At the beginning, the camera faces an arched doorway from a small bathroom with dark star-patterned floor tiles.",
+      "A smartphone with a bright screen is briefly held in front of the camera near the bathroom sink.",
+      "The bathroom contains a white vanity with a rectangular sink, metallic faucet fixtures, a decorative round mirror, and small toiletry items on the counter.",
+      "Beyond the bathroom doorway, an open closet or dressing area with hanging clothes is visible.",
+      "The camera turns toward an adjoining bedroom, passing the bathroom vanity and doorway.",
+      "The bedroom contains a made bed with pale bedding, a padded bench or ottoman at its foot, a bedside dresser with a lamp, and a ceiling fan.",
+      "Sunlight enters the bedroom through glass French doors and casts bright rectangular shadows across the rug and furniture.",
+      "The camera moves closer to the closed French doors, which look out onto a small enclosed patio.",
+      "Two cushioned lounge chairs are positioned inside directly in front of the French doors.",
+      "Outside, the patio has a light-colored wall topped or bordered by vivid pink flowering vines.",
+      "A dark tarp-covered object rests against the patio wall, alongside a red container and other garden or stored items.",
+      "The camera slowly shifts its view across the French doors and patio, while the doors remain closed and no one appears outside.",
+      "The camera then pans back across the bedroom, showing open interior doors leading to a hallway or adjacent room.",
+      "No faces or identifiable people are visible during the clip."
+    ],
+    "high_level_conclusions": [
+      "The camera operator appears to be walking through and visually inspecting the bathroom, bedroom, and patio-facing doors.",
+      "The home appears orderly and unoccupied at the time of recording, with no visible interaction with the furnishings or doors beyond the camera movement.",
+      "The bright outdoor light and flowering patio indicate daytime conditions.",
+      "No face or voice features are available, so no character identity equivalences can be established."
+    ]
+  },
+  "override": {
+    "path": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/smoke/terra_construction01/aea/C3/audits/clip_1_memory_override.json",
+    "applied": {
+      "video_description": false,
+      "high_level_conclusions": false
+    }
+  },
+  "graph_delta": {
+    "nodes_added": 19,
+    "edges_added": 0,
+    "nodes": [
+      {
+        "id": 0,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The clip is filmed with a wide-angle, fisheye-like camera from a moving first-person perspective inside a home."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 1,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "At the beginning, the camera faces an arched doorway from a small bathroom with dark star-patterned floor tiles."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 2,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A smartphone with a bright screen is briefly held in front of the camera near the bathroom sink."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 3,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The bathroom contains a white vanity with a rectangular sink, metallic faucet fixtures, a decorative round mirror, and small toiletry items on the counter."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 4,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Beyond the bathroom doorway, an open closet or dressing area with hanging clothes is visible."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 5,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera turns toward an adjoining bedroom, passing the bathroom vanity and doorway."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 6,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The bedroom contains a made bed with pale bedding, a padded bench or ottoman at its foot, a bedside dresser with a lamp, and a ceiling fan."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 7,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Sunlight enters the bedroom through glass French doors and casts bright rectangular shadows across the rug and furniture."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 8,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera moves closer to the closed French doors, which look out onto a small enclosed patio."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 9,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Two cushioned lounge chairs are positioned inside directly in front of the French doors."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 10,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "Outside, the patio has a light-colored wall topped or bordered by vivid pink flowering vines."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 11,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "A dark tarp-covered object rests against the patio wall, alongside a red container and other garden or stored items."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 12,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera slowly shifts its view across the French doors and patio, while the doors remain closed and no one appears outside."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 13,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "The camera then pans back across the bedroom, showing open interior doors leading to a hallway or adjacent room."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 14,
+        "type": "episodic",
+        "metadata": {
+          "contents": [
+            "No faces or identifiable people are visible during the clip."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 15,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The camera operator appears to be walking through and visually inspecting the bathroom, bedroom, and patio-facing doors."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 16,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The home appears orderly and unoccupied at the time of recording, with no visible interaction with the furnishings or doors beyond the camera movement."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 17,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "The bright outdoor light and flowering patio indicate daytime conditions."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      },
+      {
+        "id": 18,
+        "type": "semantic",
+        "metadata": {
+          "contents": [
+            "No face or voice features are available, so no character identity equivalences can be established."
+          ],
+          "timestamp": 1
+        },
+        "embedding_count": 1,
+        "embedding_dimensions": [
+          3072
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "artifacts": {
+    "readable_graph_json": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/smoke/terra_construction01/aea/C3/audits/clip_1_graph.json",
+    "exact_graph_pickle": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/smoke/terra_construction01/aea/C3/audits/clip_1_graph.pkl"
+  }
+}

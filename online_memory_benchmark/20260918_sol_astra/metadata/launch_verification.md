@@ -1,5 +1,20 @@
 # Verified Full Benchmark Launch
 
+## Current Terra Construction Run
+
+The earlier launch below is superseded. Current session:
+`online-memory-terra-sol-20260918-full-02`, PID `692201`, results `results_terra/`.
+Terra medium now performs both video memory construction and final answering;
+Sol high performs consolidation. Live pane, worker command, launch gate and Jake
+processing were verified. See `launch_observation.json` for the current observation.
+The stop watcher is armed to pause at the first Sol submission at 2400 media seconds.
+
+Eight real Terra prefix constructions, 16 final answers and six Sol maintenance
+events passed. Jake prefix generation took 12.66-14.77 seconds per method with one
+attempt each. The old Qwen run and its data remain preserved.
+
+## Superseded Qwen Construction Launch
+
 Session: `online-memory-terra-sol-20260918-full-01` on Hyperstack instance `1042997`.
 The full worker PID was `352850`, with 11,418 MiB GPU memory in use, a live tmux
 pane, `LAUNCH_GATE_PASS`, and `EVENT_START jake`. No exit-status file existed.

@@ -45,6 +45,7 @@ class ExportManifest(BaseModel):
     memory_count: int = Field(ge=0)
     entity_count: int = Field(ge=0)
     clip_ids: list[int]
+    clip_intervals: dict[str, tuple[float, float]] | None = None
 
     @field_validator("video_id")
     @classmethod
@@ -280,6 +281,9 @@ def export_graph(
                 f"M3 node {node_id} references unmapped entities: {sorted(missing_entities)}"
             )
         start = clip_id * clip_duration_seconds
+        end = start + clip_duration_seconds
+        if hasattr(graph, "segment_times"):
+            start, end = graph.segment_times[clip_id]
         memories.append(
             MemoryRecord(
                 m3_node_id=str(node_id),
@@ -292,7 +296,7 @@ def export_graph(
                     source_node_id=str(node_id),
                     source_embedding_dimension=embedding_dimension,
                     start_time_seconds=start,
-                    end_time_seconds=start + clip_duration_seconds,
+                    end_time_seconds=end,
                 ),
             )
         )
@@ -301,6 +305,7 @@ def export_graph(
     manifest = ExportManifest(
         video_id=video_id,
         clip_duration_seconds=clip_duration_seconds,
+        clip_intervals={str(m.clip_id): graph.segment_times[m.clip_id] for m in memories} if hasattr(graph, "segment_times") else None,
         compressed=compressed,
         source_graph_sha256=_source_sha256(input_path),
         source_embedding_dimension=embedding_dimension,

@@ -44,6 +44,11 @@ def audit_prefix(prefix,dataset):
         audits=rows(folder/method/'construction.jsonl');assert audits
         for audit in audits:
             if audit.get('gap'):continue
+            vlm=audit['stage_details']['vlm']
+            assert vlm['model']=='gpt-5.6-terra' and vlm['reasoning_effort']=='medium'
+            assert len(vlm['attempts'])==1
+            artifacts=Path(vlm['request_artifacts'])
+            evidence.extend([artifacts/'request.json',artifacts/'response.json'])
             voice=audit['stage_details']['voice']
             assert voice['speaker_mapping']==('CAM++' if method=='C1' else 'TST')
             if method!='C1':

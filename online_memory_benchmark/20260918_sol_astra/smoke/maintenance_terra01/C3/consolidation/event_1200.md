@@ -1,0 +1,67 @@
+# Consolidation at 1200 media seconds
+
+Detailed snapshot, evidence, official request/response, accepted/rejected decisions, and native identity changes are in snapshot job directories.
+
+```json
+{
+  "cutoff": 1200,
+  "input_nodes": 23,
+  "consolidation_start": 1789756810.549969,
+  "snapshot_copy_ms": 33.074022008804604,
+  "queue_ms": 3.077910005231388,
+  "before_mappings": {
+    "character_0": [
+      "voice_0"
+    ],
+    "character_1": [
+      "voice_1"
+    ],
+    "character_2": [
+      "voice_2"
+    ],
+    "character_3": [
+      "voice_3"
+    ]
+  },
+  "snapshot_input_preparation_ms": 3.5759020101977512,
+  "llm_ms": 32437.26361700101,
+  "usage": {
+    "input_tokens": 6392,
+    "input_tokens_details": {
+      "cache_write_tokens": 6376,
+      "cached_tokens": 0
+    },
+    "output_tokens": 2054,
+    "output_tokens_details": {
+      "reasoning_tokens": 1552
+    },
+    "total_tokens": 8446
+  },
+  "reason_worker_ms": 42975.68406899518,
+  "phase_timings": {
+    "scope": "shared worker including evidence, MOSS, reasoning and projection",
+    "worker_wall_ms": 42970.04566800024
+  },
+  "accepted_decisions": 2,
+  "rejected_decisions": 0,
+  "job_directory": "smoke/maintenance_terra01/C3/consolidation/snapshot_2",
+  "write_back_ms": 0.44534400512930006,
+  "after_mappings": {
+    "character_0": [
+      "voice_0",
+      "voice_1",
+      "voice_3"
+    ],
+    "character_2": [
+      "voice_2"
+    ]
+  },
+  "affected_nodes": [],
+  "consolidation_end": 1789756853.526568,
+  "total_consolidation_wall_ms": 42976.60473099677,
+  "construction_blocked_ms": 42979.672121000476,
+  "llm_call_count": 1,
+  "status": "accepted",
+  "media_timestamp": 1200
+}
+```

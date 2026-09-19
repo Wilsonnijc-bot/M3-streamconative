@@ -28,6 +28,7 @@ from pydub import AudioSegment
 from .utils.chat_api import config as api_config, transcribe_audio_with_retry
 from .utils.asr_selection import cached_voice_segments, run_selected_asr, selected_asr_provider, selected_segments
 from .utils.general import normalize_embedding
+from .speaker_mapping import assign_voice
 import io
 
 processing_config = json.load(open("configs/processing_config.json"))
@@ -180,19 +181,28 @@ def process_voices(
     def filter_duration_based(audio):
         return audio["duration"] >= processing_config["min_duration_for_audio"]
 
+    mapper = getattr(video_graph, "speaker_mapper", None)
+    if mapper is None and getattr(video_graph, "speaker_encoder_fingerprint", None):
+        raise ValueError("ECAPA graph requires its TST mapper; refusing CAM++ fallback")
+    metrics["speaker_mapping"] = "TST" if mapper else "CAM++"
+
     def update_videograph(audios):
         id2audios = {}
-        for audio in audios:
-            audio_info = {
-                "embeddings": [audio["embedding"]],
-                "contents": [audio["asr"]],
-            }
-            matched_nodes = video_graph.search_voice_nodes(audio_info)
-            if matched_nodes:
-                matched_node = matched_nodes[0][0]
-                video_graph.update_node(matched_node, audio_info)
+        for source_row_index, audio in enumerate(audios):
+            audio["source_row_index"] = source_row_index
+            if mapper is not None:
+                matched_node, mapping = mapper.map(
+                    video_graph, audio["audio_segment"], audio["asr"]
+                )
+                metrics.setdefault("tst_mappings", []).append(mapping)
             else:
-                matched_node = video_graph.add_voice_node(audio_info)
+                matched_node, mapping = assign_voice(
+                    video_graph,
+                    [audio["embedding"]],
+                    audio["asr"],
+                    method="CAM++",
+                )
+            audio["assignment_scores"] = mapping
             audio["matched_node"] = matched_node
             id2audios.setdefault(matched_node, []).append(audio)
         return id2audios
@@ -208,6 +218,8 @@ def process_voices(
     video_graph.asr_provider = provider
     audio_data = base64.b64decode(base64_audio)
     audio_hash = hashlib.sha256(audio_data).hexdigest()
+    if mapper is not None:
+        save_path = save_path.removesuffix(".json") + ".tst.json"
     cache_meta_path = save_path + ".provider.json"
 
     cache_started = time.perf_counter()
@@ -230,7 +242,7 @@ def process_voices(
         metrics["audio_segmentation_ms"] = (
             time.perf_counter() - segment_started
         ) * 1000
-        if audios:
+        if audios and mapper is None:
             embedding_started = time.perf_counter()
             embeddings = get_audio_embeddings(
                 [audio["audio_segment"] for audio in audios]
@@ -260,6 +272,17 @@ def process_voices(
     graph_started = time.perf_counter()
     id2audios = update_videograph(audios)
     metrics["graph_update_ms"] = (time.perf_counter() - graph_started) * 1000
+    if mapper is not None:
+        mappings = metrics.get("tst_mappings", [])
+        metrics["tst_embedding_ms"] = sum(
+            record.get("embedding_ms", 0) for record in mappings
+        )
+        metrics["speaker_mapping_ms"] = sum(
+            record.get("mapping_total_ms", 0) for record in mappings
+        )
+        metrics["graph_update_timing_scope"] = (
+            "includes nested TST embedding/mapping; do not sum overlapping stages"
+        )
     metrics["voice_identity_count"] = len(id2audios)
     return finish(id2audios)
 

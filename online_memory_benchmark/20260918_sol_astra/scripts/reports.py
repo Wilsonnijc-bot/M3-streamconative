@@ -5,6 +5,7 @@ import math
 import pickle
 import statistics
 from bench_common import rows, read
+from accuracy import summarize
 
 
 def stats(values):
@@ -80,8 +81,9 @@ def write_hour(graph,event,directory,folder,dataset,method,compression):
     retrieval='# Retrieval through this hour\n\nConstruction | Retrieval | Correct/N | Retrieval median ms | TTFT median ms | End-to-end median ms\n--- | --- | --- | ---: | ---: | ---:\n'
     for path in ('R1','R2'):
         sub=[r for r in qa if r['retrieval_method']==path]
+        score=summarize(sub)
         med=lambda xs: f'{statistics.median(xs):.2f}' if xs else '—'
-        retrieval+=f"{method} | {path} | {sum(r['correct'] for r in sub)}/{len(sub)} | {med([r['retrieval']['retrieval_ms'] for r in sub])} | {med([r['answer']['ttft_ms'] for r in sub])} | {med([r['question_to_complete_answer_ms'] for r in sub])}\n"
+        retrieval+=f"{method} | {path} | {score['correct']}/{score['total']} | {med([r['retrieval']['retrieval_ms'] for r in sub])} | {med([r['answer']['ttft_ms'] for r in sub])} | {med([r['question_to_complete_answer_ms'] for r in sub])}\n"
     for r in sorted(qa,key=lambda r:(r['benchmark_timestamp'],r['question']['question_id'],r['retrieval_method'])):
         retrieval+=f"\n## {r['question']['question_id']} / {r['retrieval_method']} / {r['benchmark_timestamp']:g}s\n\n"
         retrieval+='```json\n'+json.dumps(r,ensure_ascii=False,indent=2)+'\n```\n'

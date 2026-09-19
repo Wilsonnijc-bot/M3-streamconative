@@ -12,6 +12,16 @@ qwen35_4b/
 *.env
 !*.env.example
 StreamMeCo/configs/api_config.json
+keys/
+*.key
+*.pem
+*.p8
+*.p12
+*.pfx
+
+# Local EgoLife datasets and transcripts
+egolife_day1/
+egolife_ori_transcript/
 
 # Python-generated files
 __pycache__/

@@ -1,34 +1,56 @@
 """Deterministic online C1-C4 construction and one-shot R1/R2 evaluation."""
 import argparse
-import base64
 from collections import Counter
 import copy
-import hashlib
 import json
 import os
 from pathlib import Path
 import pickle
-import re
 import random
 import shutil
 import subprocess
 import sys
 import tempfile
 import time
-from bench_common import ROOT, atomic, read, rows, sha, digest, append
+from accuracy import score_answer
+from bench_common import ROOT, PRODUCTION_ROOTS, atomic, read, rows, sha, digest, append
 from event_plan import make_plan, maintenance_actions
 
 METHODS={'C1':('CAM++',.5,False),'C2':('TST',.5,False),'C3':('TST',.5,True),'C4':('TST',.7,True)}
 
 
+def _fingerprint_roots():
+    return {
+        'configs':(ROOT/'configs',{'.py','.json','.sh','.md','.yaml'}),
+        'scripts':(ROOT/'scripts',{'.py','.json','.sh','.md','.yaml'}),
+        'production/StreamMeCo':(PRODUCTION_ROOTS['StreamMeCo'],{'.py'}),
+        'production/Mandol/src':(PRODUCTION_ROOTS['Mandol']/'src',{'.py'}),
+        'production/tst':(PRODUCTION_ROOTS['tst'],{'.py'}),
+        'production/consolidation':(PRODUCTION_ROOTS['consolidation'],{'.py','.json','.md'}),
+    }
+
+
+def source_fingerprint_path(logical):
+    for prefix,(base,_) in _fingerprint_roots().items():
+        if logical==prefix:return base
+        marker=prefix+'/'
+        if logical.startswith(marker):return base/logical[len(marker):]
+    raise KeyError(logical)
+
+
 def source_fingerprint():
-    paths=[]
-    for base in (ROOT/'configs',ROOT/'scripts',ROOT/'source'):
-        paths += [p for p in base.rglob('*') if p.is_file() and p.suffix in ('.py','.json','.sh','.md','.yaml') and '__pycache__' not in str(p)]
-    shared=ROOT/'source/consolidation'
-    paths += [p for p in shared.rglob('*') if p.is_file() and p.suffix in ('.py','.json','.md')
-              and not any(part in ('runs','.venv','__pycache__','tests') for part in p.relative_to(shared).parts)]
-    return {str(p.relative_to(ROOT)):sha(p) for p in sorted(paths)}
+    roots=_fingerprint_roots()
+    excluded={'.git','.pytest_cache','.venv','__pycache__','data','runs','tests','benchmarks'}
+    result={}
+    for logical,(base,extensions) in roots.items():
+        for source in base.rglob('*'):
+            if not source.is_file() or source.suffix not in extensions:
+                continue
+            relative=source.relative_to(base)
+            if any(part in excluded for part in relative.parts):
+                continue
+            result[str(Path(logical)/relative)]=sha(source)
+    return dict(sorted(result.items()))
 
 
 def dataset_plan(dataset):
@@ -41,59 +63,40 @@ def dataset_plan(dataset):
     return plan
 
 
-def graph_bytes(graph):return pickle.dumps(graph,protocol=pickle.HIGHEST_PROTOCOL)
+def _checkpoint_store(folder):
+    from m3_agent.online_state import GraphCheckpointStore
+
+    return GraphCheckpointStore(folder,METHODS,snapshot_interval_s=300)
+
+
+def graph_bytes(graph):
+    from m3_agent.online_state import graph_bytes as serialize
+
+    return serialize(graph)
+
 
 def periodic_graph_path(folder,method,cutoff):
-    return folder/method/'graph_snapshots'/f't_{cutoff:012.6f}'/'graph.pkl'
+    return _checkpoint_store(folder).periodic_path(method,cutoff)
 
 
 def checkpoint(folder,graphs,index,fingerprint,plan_hash,phase="complete",media_timestamp=None):
-    periodic=media_timestamp is not None and round(media_timestamp*1e6)%300000000==0 and phase!='observations_committed'
-    generation=folder/'transactions'/f'event_{index:06d}_{phase}'
-    files={}
-    for method,graph in graphs.items():
-        path=periodic_graph_path(folder,method,media_timestamp) if periodic else generation/method/'pending.pkl'
-        payload=graph_bytes(graph);expected=hashlib.sha256(payload).hexdigest()
-        if path.exists():
-            if sha(path)!=expected:raise ValueError('checkpoint state changed within a timestamp')
-        else:atomic(path,payload,True)
-        files[method]=dict(path=str(path.relative_to(folder)),sha256=expected)
-    old=read(folder/'CURRENT.json') if (folder/'CURRENT.json').exists() else None
-    atomic(folder/'CURRENT.json',dict(event_index=index,phase=phase,media_timestamp=media_timestamp,periodic=periodic,
-        generation=None if periodic else str(generation.relative_to(folder)),fingerprint=fingerprint,plan_hash=plan_hash,graphs=files))
-    # Temporary transaction state survives a crash, then expires at the next
-    # published checkpoint. Five-minute snapshots remain permanent.
-    if old and not old.get('periodic',False) and old.get('generation') and old['generation']!=str(generation.relative_to(folder)):
-        previous=folder/old['generation']
-        if previous.is_dir():shutil.rmtree(previous)
+    return _checkpoint_store(folder).checkpoint(
+        graphs,index,fingerprint,plan_hash,phase=phase,media_timestamp=media_timestamp
+    )
 
 
 def finish_transaction(folder,index):
-    if not (folder/'CURRENT.json').exists():return
-    state=read(folder/'CURRENT.json')
-    if state['event_index']==index:
-        state['phase']='complete';atomic(folder/'CURRENT.json',state)
+    return _checkpoint_store(folder).finish(index)
 
 
 def resume(folder,fingerprint,plan_hash):
-    state=read(folder/'CURRENT.json')
-    if state['fingerprint']!=fingerprint or state['plan_hash']!=plan_hash:raise ValueError('resume refused: config/model/source/manifest mismatch')
-    graphs={}
-    for method,item in state['graphs'].items():
-        p=folder/item['path']
-        if sha(p)!=item['sha256']:raise ValueError('checkpoint hash mismatch')
-        graphs[method]=pickle.loads(p.read_bytes())
-    if set(graphs)!=set(METHODS):raise ValueError('incomplete C1-C4 checkpoint')
-    return graphs,state['event_index']
+    return _checkpoint_store(folder).resume(fingerprint,plan_hash)
 
 
 def freeze(graph,path,cutoff):
-    for node in graph.nodes.values():
-        if node.type in ('episodic','semantic'):
-            if graph.segment_times[node.metadata['timestamp']][1]>cutoff:raise ValueError('future memory in snapshot')
-    payload=graph_bytes(graph);hash_=hashlib.sha256(payload).hexdigest()
-    if path.exists() and path.read_bytes()!=payload:raise ValueError('snapshot changed on resume')
-    atomic(path,payload,True);return hash_
+    from m3_agent.online_state import freeze_graph
+
+    return freeze_graph(graph,path,cutoff)
 
 
 class MandolWorker:
@@ -163,11 +166,10 @@ def queries(graph,event,directory,dataset,method):
                     atomic(retrieval_path,retrieval)
                 if retrieval['snapshot_sha256']!=hash_:raise ValueError('R1/R2 snapshot mismatch')
                 response=answer(q,evidence,output)
-                letter=re.match(r'^\s*([A-E])\b',response['answer'])
+                score=score_answer(response['answer'],q['ground_truth'])
                 result=dict(dataset=dataset,construction_method=method,retrieval_method=path,question=q,
                     benchmark_timestamp=event['end_s'],snapshot_sha256=hash_,snapshot=str(snapshot.relative_to(ROOT)),
-                    retrieval=retrieval,answer=response,correct=bool(letter and letter.group(1)==q['ground_truth']),
-                    evaluator='leading option letter exact match; missing letter is incorrect',
+                    retrieval=retrieval,answer=response,**score,
                     question_to_first_token_ms=(response['first_content_token_ts']-question_wall)*1000,
                     question_to_complete_answer_ms=(response['response_end_ts']-question_wall)*1000,
                     answer_calls=1,retrieval_calls=1)
@@ -194,8 +196,7 @@ def run_dataset(dataset,results,do_resume=False,max_events=None,smoke=False):
     from mmagent.videograph import VideoGraph
     from mmagent.tst_mapper import TSTVoiceMapper
     from mmagent.utils.video_processing import process_video_clip
-    from mmagent.utils.chat_api import transcribe_audio_with_retry
-    from mmagent.utils.asr_selection import run_selected_asr
+    from mmagent.asr_cache import PreparedASRCache
     from m3_agent.memorization_memory_graphs import process_segment
     from streammeco import compress_graph
     from runtime_support import attach,barrier
@@ -218,6 +219,9 @@ def run_dataset(dataset,results,do_resume=False,max_events=None,smoke=False):
         if method!='C1':graph.speaker_mapper=mapper
         if METHODS[method][2]:runtimes[method]=attach(graph,d,f'{dataset}/{method}',plan)
     cache=ROOT/'cache'/dataset;cache.mkdir(parents=True,exist_ok=True)
+    processing=read(ROOT/'configs/processing_config.json')
+    provider=processing['asr_provider']
+    asr_cache=PreparedASRCache(cache/'asr',provider,read(ROOT/'configs/api_config.json')[provider],display_root=ROOT)
     try:
         for index,event in enumerate(plan,1):
             if index<start_index or (index==start_index and resume_phase=='complete'):continue
@@ -246,17 +250,7 @@ def run_dataset(dataset,results,do_resume=False,max_events=None,smoke=False):
                     temporary_peak=media.stat().st_size
                     video,frames,audio=process_video_clip(media,fps=read(ROOT/'configs/processing_config.json')['fps'],audio_duration_limit=length)
                     decode_ms=(time.perf_counter()-t)*1000
-                    asr_key=digest(dict(audio_sha256=hashlib.sha256(base64.b64decode(audio)).hexdigest() if audio else None,provider=read(ROOT/'configs/api_config.json')['deepgram-asr']))
-                    asr_path=cache/'asr'/f'{asr_key}.json'
-                    asr_cache_hit=asr_path.exists();asr_lookup_started=time.perf_counter()
-                    if asr_cache_hit:
-                        stored=read(asr_path)
-                        prepared=(stored[0],stored[1],{'deepgram-asr':None},None) if stored else None
-                    else:
-                        prepared=run_selected_asr('deepgram-asr',lambda name:transcribe_audio_with_retry(name,base64.b64decode(audio),audio_format='wav')) if audio else None
-                        atomic(asr_path,prepared)
-                    asr_context=dict(cache_hit=asr_cache_hit,cache_path=str(asr_path.relative_to(ROOT)),lookup_or_request_ms=(time.perf_counter()-asr_lookup_started)*1000,timing_scope='shared event ASR; cached request duration not reported as new inference')
-                    if audio and ('deepgram-asr' not in prepared[0] or prepared[1]):raise RuntimeError('selected ASR failed')
+                    prepared,asr_context=asr_cache.get(audio)
                 for method,graph in graphs.items():
                     if replay_committed:continue
                     directory=folder/method

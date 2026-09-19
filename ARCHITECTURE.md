@@ -1,11 +1,12 @@
 # M3-StreamConative Architecture
 
-This document describes the **current repository architecture and its runtime/model dependencies** for M3-StreamConative. It covers the construction path, alternative Mandol retrieval path, separate offline TST experiment, implemented native character consolidation, and opt-in asynchronous streaming runtime. Recorded deployment results are distinguished from current configuration and deterministic runtime tests.
+This document describes the **current repository architecture and its runtime/model dependencies** for M3-StreamConative. It covers the construction path, alternative Mandol retrieval path, online TST condition, implemented native character consolidation, and opt-in asynchronous streaming runtime. Recorded deployment results are distinguished from current configuration and deterministic runtime tests.
 
 **Current online benchmark backend roles:** Terra (`gpt-5.6-terra`, medium reasoning)
-generates the final answer after either R1 or R2 retrieval. Sol (`gpt-5.6-sol`, high
+constructs video memories and generates the final answer after either R1 or R2 retrieval. Sol (`gpt-5.6-sol`, high
 reasoning) performs memory consolidation for C3/C4. Both use the official OpenAI
-Responses API. Qwen 3.5 4B remains the local multimodal memory-construction model.
+Responses API. Terra replaces Qwen 3.5 4B for this benchmark's memory construction.
+Qwen remains a retained legacy backend implementation.
 Historical Astra results below describe earlier experiments, not the selected
 benchmark backend. The existing directory name `20260918_sol_astra` is retained
 for artifact continuity; model selection comes from its `configs/run_request.json`.
@@ -32,15 +33,28 @@ Selected ASR      Face pipeline
 Deepgram OR MAI   InsightFace Buffalo-L
 or adapter        + HDBSCAN clustering
       │               │
+      ├───────────────┐
+      │               │
       ▼               ▼
-CAM++ speaker      face embeddings
-embeddings             │
-      │                │
-      └───────┬────────┘
+CAM++ speaker    ECAPA/TST speaker
+embeddings      192-D per utterance
+(C1)            (C2/C3/C4)
+      │               │
+      └───────┬───────┘
               ▼
-       Qwen 3.5 4B VLM
-       multimodal memory generation
+      native M3 voice policy
+      search → match/update
+      or create voice node
               │
+              ├───────────────┐
+              │               │
+              ▼               ▼
+       face embeddings        │
+              │               │
+              └───────┬───────┘
+                      ▼
+              multimodal VLM backend
+              memory generation
               ├─ episodic memories
               ├─ semantic memories
               └─ face/voice equivalence statements
@@ -93,7 +107,7 @@ query ─────────► text-embedding-3-large      │ query      
               → verified native/Mandol retrieval publication
 ```
 
-The two retrieval paths are **alternatives**. The target direct path deliberately removes the original iterative controller loop: one user query produces one retrieval invocation and returns evidence. Mandol is a second retrieval backend, not a second stage after native retrieval. The standalone TST mapper is omitted from this production construction/retrieval diagram because it does not feed either path or write to the graph.
+The two retrieval paths are **alternatives**. The target direct path deliberately removes the original iterative controller loop: one user query produces one retrieval invocation and returns evidence. Mandol is a second retrieval backend, not a second stage after native retrieval. The standalone frozen-enrollment TST utility is omitted from this production construction/retrieval diagram; the online `TSTVoiceMapper` is part of C2/C3/C4 construction and writes native voice nodes.
 
 Native live retrieval includes newly constructed hot memories while consolidation runs. A published Mandol checkpoint includes only its indexed snapshot. Consolidation updates native `character_N` identities; it does not introduce a separate runtime `person_N` layer. Canonical retrieval text is produced before embedding, while original memory text remains evidence.
 
@@ -117,10 +131,10 @@ Dependency status terminology:
 | Speech recognition / utterance timing | **Deepgram Nova-3**, selectable | Provider key `deepgram-asr`; runbook pins `nova-3` | Remote API | Timestamped transcript / utterance evidence | **Pinned alternative** |
 | Speech recognition / diarization | **Microsoft MAI-Transcribe-2** through OpenRouter, Azure provider, selectable | Provider key `openrouter-mai-transcribe-2`; runbook pins `microsoft/mai-transcribe-2` | Remote API | Timestamped transcript + speaker-turn evidence | **Pinned alternative** |
 | Speaker embedding | **SpeakerLab CAM++ / CAMPPlus** | `speaker_embedding_model: speakerlab-campplus`; checkpoint `models/camplus/campplus_cn_en_common.pt` | Local GPU | **192-D** normalized voice embeddings | **Pinned** |
-| Separate offline speaker mapping (TST) | **SpeechBrain ECAPA-TDNN** | `speechbrain/spkrec-ecapa-voxceleb`; run config must supply an immutable 40-character revision | CPU or CUDA | **192-D** embeddings scored against externally enrolled global speaker IDs; no M3 graph writes | **Implemented separately; model selected, checkpoint pinned per run, no benchmark claimed** |
+| Online TST speaker mapping | **SpeechBrain ECAPA-TDNN** | `speechbrain/spkrec-ecapa-voxceleb`; immutable revision pinned by the run config and loaded locally without network access | CUDA | **192-D** embeddings used by native M3 voice-node search, update, and creation; no pre-enrollment | **Selected for C2/C3/C4 in the online benchmark** |
 | Face detection | **InsightFace Buffalo-L detector** | `face_model: buffalo_l`; model root `models/insightface` | Local GPU through ONNX Runtime | Face bounding boxes + detection metadata | **Pinned** |
 | Face recognition / embedding | **InsightFace Buffalo-L recognizer** | same Buffalo-L pack; `allowed_modules=[detection, recognition]` | Local GPU through ONNX Runtime | Face embeddings stored in `img` nodes | **Pinned; vector dimension is not explicitly asserted by repo code** |
-| Multimodal memory generation | **Qwen 3.5 4B** | `qwen_model_path: models/Qwen3.5-4B`; runbook target `Qwen/Qwen3.5-4B` | Local GPU | Episodic text, semantic text, identity-equivalence statements | **Pinned** |
+| Multimodal memory generation | **VLM backend** | Native `mmagent.memory_backend` selector; current examples are Terra, Qwen, and the optional Gemini comparison path | Local or remote model, depending on backend, with sampled frames and face/voice evidence | Episodic text and semantic conclusions using native IDs | **Backend role; Terra selected for the online benchmark** |
 | Native M3 text embedding | **`text-embedding-3-large`** | hard-coded alias in construction and retrieval; measured run uses OpenRouter `openai/text-embedding-3-large` | Remote OpenAI-compatible endpoint in current deployment | **3072-D** vectors for episodic/semantic nodes and queries | **Pinned** |
 | Character mapping | Native deterministic identity logic | legacy union-find construction; consolidation updates native characters and scoped assignments | CPU | Authoritative `character_mappings`, metadata and scoped mappings | **Implemented; section 5.3** |
 | Consolidation audio evidence | **MOSS-Transcribe-Diarize** | `OpenMOSS-Team/MOSS-Transcribe-Diarize`; checkpoint revision recorded per run | Consolidation worker calls configured inference server | Same-window transcript, run-local speaker labels and session-time alignments | **Historical 20-minute evidence verified; incremental orchestration tested with mocks** |
@@ -136,7 +150,7 @@ Dependency status terminology:
 
 ### The most important embedding distinction
 
-There are **five distinct embedding spaces** across production M3, the separate TST experiment, and Mandol; equal dimensions do not make them compatible:
+There are **five distinct embedding spaces** across the online M3 conditions and Mandol; equal dimensions do not make them compatible:
 
 ```text
 Speaker identity space
@@ -144,10 +158,11 @@ CAM++
 192-D
 used only to match / update voice nodes
 
-Offline TST speaker identity space
+Online TST speaker identity space
 SpeechBrain ECAPA-TDNN
 192-D (a different space from CAM++)
-used only to score fixed enrollment and query audio
+used by native M3 voice-node match / update / create
+no pre-enrollment; identities emerge incrementally within each graph
 
 Face identity space
 InsightFace Buffalo-L
@@ -167,7 +182,7 @@ used only by the Mandol retrieval backend
 
 Therefore:
 
-- CAM++ and ECAPA vectors cannot be compared or placed in each other's caches, despite both being 192-D;
+- CAM++ and ECAPA vectors cannot be compared or placed in each other's caches, despite both being 192-D. They follow the same native M3 identity policy in separate embedding spaces;
 - a speaker vector is **not** a text retrieval vector;
 - a Buffalo-L face vector is **not** a text retrieval vector;
 - the M3 3072-D `text-embedding-3-large` vector cannot be inserted directly into the Mandol 1024-D dense index;
@@ -237,7 +252,7 @@ The raw clip is then processed in this order in `process_segment()`:
 7. after all clips: refresh_equivalences()
 ```
 
-The voice and face stages therefore run **before** the VLM memory stage because their IDs and evidence are injected into the Qwen context.
+The voice and face stages therefore run **before** the VLM memory stage because their IDs and evidence are injected into the selected backend context.
 
 ---
 
@@ -285,7 +300,7 @@ are passed to the speaker-embedding stage. The separate TST runner does not inhe
 
 ---
 
-## 4.3 Speaker embedding dependency: CAM++
+## 4.3 Speaker embedding dependencies: CAM++ and online TST
 
 Implementation:
 
@@ -349,7 +364,7 @@ Runtime location:
 embedding_model.to(torch.device("cuda"))
 ```
 
-So CAM++ is a **mandatory local GPU model dependency for memory construction**, but it is **not called during normal text query retrieval**.
+So CAM++ is the **C1 local GPU speaker frontend** for memory construction, but it is **not called during normal text query retrieval**.
 
 ### Voice identity matching
 
@@ -363,19 +378,32 @@ stored limit  = max_audio_embeddings = 20 per voice node
 
 A new segment is compared to existing `voice` nodes. If the best candidate passes the threshold, the node is updated; otherwise a new voice node is created.
 
-The voice node retains ASR text entries in `metadata["contents"]` and at most 20 CAM++ embeddings. Per-clip `clip_<id>_voices.json` caches retain segment audio, rounded timestamps, text, local speaker labels, and embeddings separately. Their `.provider.json` sidecars bind the selected alias and input-audio SHA-256; legacy/fused caches are recomputed. The graph records its `asr_provider` and rejects resuming voice processing under another provider (or resuming an unlabeled legacy voice graph). The graph does not maintain a named person's complete raw-audio collection.
+The voice node retains ASR text entries in `metadata["contents"]` and at most 20 embeddings from the selected speaker frontend. Per-clip `clip_<id>_voices.json` caches retain segment audio, rounded timestamps, text, local speaker labels, and embeddings separately. Their `.provider.json` sidecars bind the selected alias and input-audio SHA-256; legacy/fused caches are recomputed. The graph records its `asr_provider` and rejects resuming voice processing under another provider (or resuming an unlabeled legacy voice graph). The graph does not maintain a named person's complete raw-audio collection.
 
-This is an important limitation for persistent identity: an embedding miss can create a new voice node even if the physical speaker is the same person. The implemented consolidation stage addresses supported fragmentation through native character merges and scoped assignments (section 11), without changing CAM++ matching.
+This is an important limitation for persistent identity: an embedding miss can create a new voice node even if the physical speaker is the same person. The implemented consolidation stage addresses supported fragmentation through native character merges and scoped assignments (section 11), without changing the CAM++ matching policy.
 
-### Separate offline TST speaker identity mapper
+### Online TST speaker identity mapping
 
-`tst/runner.py` is an audio-only, paper-informed mapper using the standard pretrained SpeechBrain ECAPA-TDNN, **not** the paper's exact encoder checkpoint. It accepts explicit segment, verified enrollment, configuration, and (for AS-Norm) cohort manifests. The configuration declares one `diarization_provider`; every segment must have matching `diarization_provenance`, an invocation-scoped `session_id`, audio intervals, and declared timestamp precision. It does not call any ASR service itself. Provider identity participates in the calibrated method ID, so thresholds cannot silently transfer across providers. Optional transcript text passes through to the output; it does not select enrollment or affect identity scores.
+The original `StreamMeCo/mmagent/tst_mapper.py` is the alternative speaker frontend for C2/C3/C4. The benchmark imports it directly from the production package and attaches one `TSTVoiceMapper` to each independent `VideoGraph`; C1 leaves the mapper unset and uses CAM++. Both frontends call `mmagent.speaker_mapping.assign_voice`, which owns candidate scoring and the native match/update/create decision before returning immutable assignment evidence.
 
-The runner extracts first-channel 16 kHz audio into 192-D unit vectors. Up to 4 seconds uses the whole crop once; over 4 through 5.5 seconds uses start and end-aligned 4-second windows; longer crops use 4-second windows at 1.5-second shifts with a unique end-aligned tail. Queries shorter than 1 second are flagged separately but remain scorable if valid. Multiple enrollment utterances for one global ID contribute **all** their window vectors, with no per-ID cap: the mean of all enrollment/query window-pair scores is used, not cosine between centroids. More references increase preparation, storage, and scoring work.
+`TSTVoiceMapper` validates `enrollment_policy: online_native_m3` and `pre_enrollment: false`. It loads the pinned SpeechBrain `spkrec-ecapa-voxceleb` snapshot and extracts one or more 192-D ECAPA vectors from each incoming utterance using the configured 16 kHz, 4-second window and 1.5-second shift policy. It then passes those vectors directly to the same native M3 voice-node policy used by CAM++:
 
-Scoring supports cosine or symmetric AS-Norm (normalize each pair before pooling). Strict AS-Norm requires a manifest of 2,000 distinct VoxBlink2 speakers, represented by one normalized centroid per speaker, with top-20 adaptive statistics; an explicitly marked approximate cohort is a different profile. Optional `top1`/`top2`/`top3` compensation uses only acoustically ranked neighbors with the same local label **within one session** for queries under 4 seconds. The default is no compensation. Candidate policy is `all_enrolled` by default or an explicit per-session subset. Without a threshold the output is score-only; mapping requires a threshold artifact tied to the method and separate calibration data. A valid rejected query becomes `non_target`, never a newly enrolled identity.
+```text
+incoming utterance
+        │
+        ▼
+SpeechBrain ECAPA, 192-D vector(s)
+        │
+        ▼
+VideoGraph.search_voice_nodes(...)
+        │
+        ├─ accepted match → VideoGraph.update_node(...)
+        └─ no match       → VideoGraph.add_voice_node(...)
+```
 
-The result is one JSONL row per input segment with scores, predicted global ID, transcript and timing/provenance; ECAPA extraction caches and run metadata are separate from CAM++ caches. Enrollment remains frozen. TST neither mutates `VideoGraph` nor creates `character_N` mappings, and no TST-vs-CAM++ evaluation is claimed. See `TST_ALGORITHM_SPEC.md`, `tst/README.md`, and `tests/test_tst.py` for the reproducible input and test contract.
+There is no pre-enrollment, named-identity gallery, or fixed gallery in this online path. Each of C2, C3, and C4 therefore builds voice identities incrementally in its own graph. The graphs retain only their own ECAPA voice-node history; C1's CAM++ vectors and the TST graphs' ECAPA vectors are never mixed. The native threshold and retained-embedding cap remain `audio_matching_threshold = 0.6` and `max_audio_embeddings = 20`.
+
+`offline=True` is passed to the SpeechBrain loader only to require that the pinned model snapshot is already local (`local_files_only=True`). It controls model acquisition, not identity mapping: utterances still arrive online, are embedded, searched against the current graph, and either update an existing voice node or create a new one. The standalone `tst/runner.py` remains a separate frozen-enrollment, score/mapping utility and is not the online benchmark path.
 
 ---
 
@@ -473,48 +501,27 @@ The repository does not need a separate text model to match face nodes. Face ide
 
 ---
 
-## 4.5 Multimodal memory generation dependency: Qwen 3.5 4B
+## 4.5 Multimodal Memory Construction
 
-Primary path:
-
-```text
-StreamMeCo/mmagent/memory_processing_qwen.py
-StreamMeCo/mmagent/utils/chat_qwen.py
-```
-
-Default model config:
+Memory generation is a **multimodal VLM backend role**, selected through the native
+`mmagent.memory_backend` interface. The backend receives chronological sampled frames,
+qualified face crops with native IDs, timestamped ASR text, and voice IDs. It returns
+the existing memory schema:
 
 ```text
-qwen_model_path = models/Qwen3.5-4B
-model           = qwen3.5
+video_description        → episodic memories
+high_level_conclusions   → semantic memories
 ```
 
-The deployment runbook identifies the intended checkpoint as:
+The current repository includes multiple backend implementations. Terra is the
+selected online benchmark backend; Qwen is the retained local-model implementation;
+the Gemini path is an experimental comparison backend. These are backend examples,
+not a constraint on the memory graph contract. The backend may be local or remote,
+but it must preserve native IDs and return nonempty string lists for both memory
+classes. Request/response provenance and token usage are retained when the backend
+provides them.
 
-```text
-Qwen/Qwen3.5-4B
-```
-
-Model path resolution:
-
-```text
-$QWEN_MODEL_PATH
-    else
-processing_config["qwen_model_path"]
-```
-
-Loading uses the Transformers multimodal classes:
-
-```text
-AutoModelForMultimodalLM
-AutoProcessor
-```
-
-with automatic device placement and a configured attention implementation. This is a **local GPU VLM dependency**.
-
-### Qwen does not receive raw video alone
-
-The memory-generation context is constructed from multiple upstream products:
+The shared context is constructed from multiple upstream products:
 
 ```text
 video clip
@@ -527,30 +534,12 @@ voice segments labeled <voice_ID>
 structured memory-generation prompt
         │
         ▼
-Qwen 3.5 4B
+configured multimodal VLM backend
 ```
 
-This dependency chain matters: Qwen's memory is only as identity-aware as the face/voice nodes and ASR labels it receives.
-
-### Qwen output contract
-
-The expected normalized output is:
-
-```json
-{
-  "video_description": ["..."],
-  "high_level_conclusions": ["..."]
-}
-```
-
-These become:
-
-```text
-video_description        → episodic nodes
-high_level_conclusions   → semantic nodes
-```
-
-The prompt can also cause semantic output to contain identity links such as:
+The memory is only as identity-aware as the face/voice nodes and ASR labels supplied
+to the backend. The backend must not replace native graph identity matching; it can
+emit evidence such as:
 
 ```text
 Equivalence: <face_x>, <voice_y>
@@ -558,31 +547,11 @@ Equivalence: <face_x>, <voice_y>
 
 Those equivalence statements are later consumed by `VideoGraph.refresh_equivalences()` to create character mappings.
 
-### Thinking behavior
-
-The generic Qwen config contains `qwen_enable_thinking`, but the current memory-generation function has a more specific environment switch:
-
-```text
-QWEN_MEMORY_ENABLE_THINKING
-```
-
-and defaults it to `false` inside `generate_all_memories()` unless explicitly overridden. This is a runtime-generation setting, not a new model dependency.
-
-### Experimental backend
-
-`memorization_memory_graphs.py` can switch to `memory_processing_gemini` when:
-
-```text
-EGOLIFE_GEMINI_ONLY=1
-```
-
-That branch is an experimental comparison path and is **not part of the default Qwen architecture** described here.
-
 ---
 
 ## 4.6 Text embedding dependency: `text-embedding-3-large`
 
-After memory generation, the current shared Qwen/Gemini construction path canonicalizes and batches the text:
+After memory generation, the current shared construction path canonicalizes and batches the text:
 
 ```python
 raw_texts = episodic_memories + semantic_memories
@@ -638,9 +607,9 @@ The graph is the canonical memory representation before Mandol adaptation.
 
 | Node type in code | Payload / embedding source | Main role |
 | --- | --- | --- |
-| `episodic` | Qwen episodic text + 3072-D `text-embedding-3-large` vector | clip-grounded observations/events |
-| `semantic` | Qwen semantic text + 3072-D `text-embedding-3-large` vector | higher-level facts/conclusions/equivalence statements |
-| `voice` | ASR content + one or more 192-D CAM++ vectors | speaker evidence / speaker identity cluster |
+| `episodic` | VLM episodic text + 3072-D `text-embedding-3-large` vector | clip-grounded observations/events |
+| `semantic` | VLM semantic text + 3072-D `text-embedding-3-large` vector | higher-level facts/conclusions/equivalence statements |
+| `voice` | ASR content + one or more 192-D CAM++ or ECAPA vectors | speaker evidence / speaker identity cluster |
 | `img` | face crops + one or more Buffalo-L face vectors | face evidence / visual identity cluster |
 
 The term **face node** in diagrams corresponds to code type `img`.
@@ -1179,9 +1148,9 @@ Buffalo-L embedding
   → img node association
 ```
 
-Qwen can then produce face↔voice equivalence statements, and legacy `refresh_equivalences()` turns those links into `character_N` mappings. Consolidated/runtime-managed graphs preserve established native identity state during refresh as described in section 5.3.
+The selected VLM backend can then produce face↔voice equivalence statements, and legacy `refresh_equivalences()` turns those links into `character_N` mappings. Consolidated/runtime-managed graphs preserve established native identity state during refresh as described in section 5.3.
 
-The separate TST runner can score externally enrolled global speaker IDs from audio, but it does not attach those IDs to these `voice_N` nodes or merge `character_N` entries. That integration and any cross-modal consolidation remain outside the implemented TST scope.
+The standalone `tst/runner.py` can still score externally enrolled global speaker IDs from audio, but the online benchmark's `TSTVoiceMapper` attaches ECAPA vectors directly to native `voice_N` nodes. It does not create named global identities or bypass native `character_N` consolidation.
 
 ## 11.2 Fragmentation addressed by consolidation
 
@@ -1206,11 +1175,11 @@ The implemented recall-oriented prompt infers likely cluster/person identities, 
 Without adding any new upstream sensing model, the repository already exposes useful evidence:
 
 ```text
-CAM++ 192-D voice embeddings
+CAM++ or ECAPA 192-D voice embeddings, depending on the construction condition
 Buffalo-L face embeddings
 ASR transcript + speaker-turn timestamps
-Qwen episodic memories
-Qwen semantic memories
+VLM episodic memories
+VLM semantic memories
 existing Equivalence statements
 character_mappings
 clip/time provenance
@@ -1311,6 +1280,8 @@ When configured, `RetrievalPublisher` builds/verifies a complete native/Mandol c
 ## 11.8 Deployment, persistence and retry
 
 The application explicitly supplies an evidence callback, configured proposal callable and optional `RetrievalPublisher`, then attaches `ConsolidationRuntime` to its native graph. The shared `process_segment` wrapper participates automatically when attached and requires `sample['segment_end_s']` from the scheduler. Other entry points wrap their existing writer call in `runtime.segment(clip_id, end_seconds)`. Mutation outside that single-writer contract is not coordinated streaming.
+
+The reusable online services are owned by the original M3 package: `PreparedASRCache` performs one content-addressed provider call per audio payload, `export_consolidation_evidence` exports a committed prefix, and `GraphCheckpointStore` owns transactional graph checkpoints plus immutable cutoff snapshots. The benchmark keeps only thin adapters around these services.
 
 The online benchmark uses the higher-level `consolidation.port.attach_online`
 interface and `consolidate_until(cutoff)` to synchronize C1-C4 boundaries. Scheduling,
@@ -1523,15 +1494,19 @@ video/audio ──► decode ──► audio ───────────�
                                          │ or supported adapter│
                                          └────────┬────────────┘
                                                   │ transcript / turns
-                                                  ▼
-                                         ┌─────────────────────┐
-                                         │ CAM++ / CAMPPlus    │
-                                         │ 80-bin FBank         │
-                                         │ 16 kHz → 192-D       │
-                                         └────────┬─────────────┘
-                                                  │
-                                                  ▼
-                                              voice nodes
+                              ┌───────────────────┴───────────────────┐
+                              ▼                                       ▼
+                    ┌─────────────────────┐                 ┌─────────────────────┐
+                    │ CAM++ / CAMPPlus    │                 │ SpeechBrain ECAPA   │
+                    │ C1                  │                 │ C2/C3/C4, TST       │
+                    │ 16 kHz → 192-D      │                 │ 16 kHz → 192-D      │
+                    └────────┬────────────┘                 └────────┬────────────┘
+                             └───────────────────┬───────────────────┘
+                                                 ▼
+                                      native M3 voice search
+                                      match/update or create
+                                                 │
+                                             voice nodes
 
 video ──► frames ──► Buffalo-L detection + recognition ──► HDBSCAN ──► img nodes
    │                                                                       │
@@ -1539,7 +1514,7 @@ video ──► frames ──► Buffalo-L detection + recognition ──► HDB
    └───────────────────────────────┬───────────────────────────────────────┘
                                    │
                                    ▼
-                           Qwen 3.5 4B VLM
+                           configured VLM backend
                     video + face IDs + voice IDs/ASR
                                    │
                       ┌────────────┴────────────┐
@@ -1608,17 +1583,18 @@ For live consolidation, attach the runtime before the ordered clip loop and supp
 ```text
 1. load processing_config + memory_config
 2. validate API credentials
-3. initialize / lazily load CAM++ on CUDA
-4. initialize / lazily load Buffalo-L via ONNX Runtime GPU
-5. load Qwen 3.5 model + processor
-6. initialize API client for text embeddings
-7. process clips into VideoGraph
-8. refresh character equivalences
-9. optionally compress graph
-10. serialize graph
+3. select the speaker frontend: CAM++ for C1 or ECAPA/TST for C2/C3/C4
+4. initialize / lazily load the selected speaker frontend
+5. initialize / lazily load Buffalo-L via ONNX Runtime GPU
+6. initialize the configured VLM backend
+7. initialize API client for text embeddings
+8. process clips into VideoGraph
+9. refresh character equivalences
+10. optionally compress graph
+11. serialize graph
 ```
 
-## Offline TST worker (separate)
+## Standalone frozen-enrollment TST utility (separate)
 
 ```text
 1. validate selected-provider segment provenance, verified enrollment, configuration, and optional cohort manifests
@@ -1629,7 +1605,7 @@ For live consolidation, attach the runtime before the ordered clip loop and supp
 6. emit score-only or calibrated open-set decisions plus run provenance
 ```
 
-This worker does not load a VideoGraph or perform construction/retrieval steps above or below it.
+This utility does not load a VideoGraph or perform construction/retrieval steps above or below it. Its `offline` flag controls local model loading only; the online benchmark uses `TSTVoiceMapper` instead.
 
 ## Native retrieval worker
 
@@ -1691,7 +1667,7 @@ api_chat_model
 
 Those remain relevant for reproducing the original M3 controller pipeline, but **M3-StreamConative's target direct retrieval path does not require M3-Agent-Control**.
 
-Similarly, the new Qwen 3.5 memory-generation path in `memorization_memory_graphs.py` is the default branch unless the explicit Gemini comparison switch is enabled.
+Similarly, `memorization_memory_graphs.py` selects the configured VLM backend through `mmagent.memory_backend`; the online benchmark selects Terra, while Qwen and Gemini remain available as alternate implementations.
 
 This distinction prevents the dependency list from overstating what a simple construction + one-shot retrieval deployment actually needs.
 
@@ -1701,21 +1677,21 @@ This distinction prevents the dependency list from overstating what a simple con
 
 ## ASR failure
 
-If the selected ASR provider fails, voice segmentation/identity evidence may be missing or partial. That propagates to Qwen because the VLM receives fewer or lower-quality `<voice_ID>` observations. Provider failure does not implicitly select another ASR branch.
+If the selected ASR provider fails, voice segmentation/identity evidence may be missing or partial. That propagates to the VLM because the backend receives fewer or lower-quality `<voice_ID>` observations. Provider failure does not implicitly select another ASR branch.
 
 ## CAM++ mismatch
 
 If the same speaker falls below the `0.6` voice-match threshold, a new voice node can be created. This is a major input to persistent identity fragmentation.
 
-## Offline TST input/calibration failure
+## Standalone TST input/calibration failure
 
-TST fails validation if a required cohort, immutable encoder revision, or declared gallery is missing; it never falls back to CAM++ or a smaller strict cohort. A missing threshold yields score-only output, not a calibrated identity decision. Invalid audio/embeddings are reported separately from valid `non_target` decisions, and subsecond queries carry a reliability flag.
+The standalone frozen-enrollment utility fails validation if a required cohort, immutable encoder revision, or declared gallery is missing; it never falls back to CAM++ or a smaller strict cohort. The online TST mapper has no gallery or calibration requirement: it uses the current graph's native threshold and creates a voice node when no existing node matches.
 
 ## Buffalo-L / face-quality failure
 
-If no face passes detection/quality/clustering, Qwen receives no usable face identity label for that person in the clip.
+If no face passes detection/quality/clustering, the VLM receives no usable face identity label for that person in the clip.
 
-## Qwen identity omission
+## VLM identity omission
 
 Even if a face and voice belong to the same person, `refresh_equivalences()` cannot merge them unless sufficient equivalence evidence reaches the graph. Union-find itself cannot infer missing edges.
 
@@ -1741,19 +1717,19 @@ The runtime requires one ordered clip writer. Model work holds no live mutation 
 
 This table makes it explicit which dependencies should be running for each experiment.
 
-| Experiment | Selected ASR | CAM++ | Buffalo-L | Qwen 3.5 | M3 text embedding | StreamMeCo | Mandol encoders/index | Reranker | Controller |
+| Experiment | Selected ASR | Speaker frontend | Buffalo-L | VLM backend | M3 text embedding | StreamMeCo | Mandol encoders/index | Reranker | Controller |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Build fresh M3 memory | ✓ | ✓ | ✓ | ✓ | ✓ | – | – | – | – |
-| Build + compress | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | – | – | – |
+| Build fresh M3 memory | ✓ | CAM++ or ECAPA/TST | ✓ | configured backend | ✓ | – | – | – | – |
+| Build + compress | ✓ | CAM++ or ECAPA/TST | ✓ | configured backend | ✓ | ✓ | – | – | – |
 | Query existing graph, native | – | – | – | – | ✓ | – | – | – | **No** |
 | Query existing compressed graph, native | – | – | – | – | ✓ | already done | – | – | **No** |
 | Build Mandol representation from existing graph | – | – | – | relation builder only if enabled | – for M3 native vectors | optional pre-step | ✓ | optional | **No** |
 | Query Mandol representation | – | – | – | – | – | – | ✓ | optional | **No** |
-| Character/entity consolidation | construction continues independently | stored evidence | stored evidence when available | Sol reasoning is separate from Qwen | changed canonical text only | coordinate separately | staged rebuild for publication | optional | **No requirement** |
+| Character/entity consolidation | construction continues independently | stored evidence | stored evidence when available | Sol reasoning is separate from construction VLM | changed canonical text only | coordinate separately | staged rebuild for publication | optional | **No requirement** |
 
 A dash means that model/service does not need to be invoked at that stage if its output has already been persisted.
 
-The **offline TST comparison** is a separate experiment: it consumes prepared diarized segments from its one declared provider and externally verified enrollment audio, runs SpeechBrain ECAPA on CPU or CUDA, and requires a cohort only for AS-Norm. It does not invoke any of the production construction or retrieval dependencies in the table during mapping. Evaluation against CAM++ on identical intervals and references remains a later, unmeasured step; TST has not replaced the production speaker path.
+The online TST condition is part of construction for C2/C3/C4: it consumes each selected-ASR utterance, generates ECAPA vectors, and writes through native M3 voice-node matching. The standalone frozen-enrollment TST utility remains a separate experiment with its own enrollment/cohort contract and is not evidence about the online graph policy.
 
 ---
 
@@ -1771,7 +1747,7 @@ The implementation should preserve these rules as the project evolves:
 8. **Every derived representation should retain source provenance.** A Mandol MemoryUnit should be traceable to M3 node/clip/time evidence.
 9. **Canonicalization precedes embedding.** Raw memory remains unchanged; selective native reindexing and verified Mandol publication are part of the consolidation cycle.
 10. **Model provenance and provider configuration remain explicit.** Current defaults, the recorded deployment, and local checkpoint aliases are distinct; section 9.3 records the known Mandol configuration difference.
-11. **TST is a frozen-enrollment experiment, not a graph update.** It cannot create `voice_N`/`character_N` nodes, infer a named person from transcript text, or silently feed ECAPA vectors into CAM++ storage.
+11. **Online TST uses native graph identity formation.** It has no pre-enrollment or fixed gallery; it creates/updates `voice_N` nodes in each C2/C3/C4 graph using ECAPA vectors, never mixing those vectors with CAM++ storage. The standalone `tst/runner.py` remains frozen-enrollment and graph-independent.
 12. **Resolution is scoped-first.** Observation, reference occurrence, current global ownership, then raw ID; mixed/incomplete features cannot acquire an unsafe unscoped name.
 13. **Historical refinement preserves live construction.** Snapshot workers cannot directly edit post-cutoff nodes or replace the growing graph. Native identity commits occur between clip writes, with model/index work outside the mutation path.
 14. **Identity commit and retrieval publication have separate readiness boundaries.** Old vectors remain usable during live catch-up; stale results cannot overwrite newer identity state and incomplete index bundles cannot become current.

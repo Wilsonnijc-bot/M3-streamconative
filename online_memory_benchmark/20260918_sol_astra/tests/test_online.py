@@ -9,8 +9,9 @@ import unittest
 from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from event_plan import make_plan
-from bench_common import read,digest
-from online_benchmark import checkpoint,resume,freeze,METHODS
+from accuracy import score_answer,summarize
+from bench_common import PRODUCTION_ROOTS,read,digest
+from online_benchmark import checkpoint,resume,freeze,METHODS,source_fingerprint_path
 from answer_stream import answer
 
 class ClockTests(unittest.TestCase):
@@ -210,8 +211,16 @@ class FailureTests(unittest.TestCase):
         from online_benchmark import source_fingerprint
         before=source_fingerprint()
         self.assertIn('configs/run_request.json',before)
-        self.assertIn('source/StreamMeCo/mmagent/voice_processing.py',before)
+        self.assertIn('production/StreamMeCo/mmagent/voice_processing.py',before)
         self.assertIn('scripts/online_benchmark.py',before)
+        self.assertEqual(source_fingerprint_path('production/StreamMeCo/mmagent/voice_processing.py'),PRODUCTION_ROOTS['StreamMeCo']/'mmagent/voice_processing.py')
+
+    def test_accuracy_is_exact_choice_and_handles_empty_sets(self):
+        self.assertEqual(score_answer(' B because the evidence matches.', 'B')['prediction'],'B')
+        self.assertTrue(score_answer(' B because the evidence matches.', 'B')['correct'])
+        self.assertFalse(score_answer('The answer is B.', 'B')['correct'])
+        self.assertEqual(summarize([{'correct':True},{'correct':False}]),{'correct':1,'total':2,'accuracy':.5})
+        self.assertEqual(summarize([]),{'correct':0,'total':0,'accuracy':None})
 
 class MediaBoundaryTests(unittest.TestCase):
     def test_container_tail_is_explicit_gap_and_qa_uses_committed_prefix(self):
@@ -245,7 +254,7 @@ class RerankTransportTests(unittest.TestCase):
     def test_302_reranker_orders_scores_and_rejects_incomplete_results(self):
         import importlib.util
         if not importlib.util.find_spec('httpx'):self.skipTest('requires remote httpx')
-        spec=importlib.util.spec_from_file_location('tested_reranker',ROOT/'source/Mandol/src/mandol/adapters/m3/rerank_302.py')
+        spec=importlib.util.spec_from_file_location('tested_reranker',PRODUCTION_ROOTS['Mandol']/'src/mandol/adapters/m3/rerank_302.py')
         module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
         reranker=module.Reranker302.__new__(module.Reranker302)
         reranker.config=dict(endpoint='https://api.302.ai/v1/rerank',model='Qwen/Qwen3-Reranker-0.6B')

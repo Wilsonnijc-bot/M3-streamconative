@@ -1,0 +1,57 @@
+{
+  "cutoff": 3600,
+  "input_nodes": 23,
+  "consolidation_start": 1789756859.58424,
+  "snapshot_copy_ms": 32.575566990999505,
+  "queue_ms": 0.10203100100625306,
+  "before_mappings": {
+    "character_0": [
+      "voice_0",
+      "voice_1",
+      "voice_3"
+    ],
+    "character_2": [
+      "voice_2"
+    ]
+  },
+  "snapshot_input_preparation_ms": 2.3950320028234273,
+  "llm_ms": 5621.203032991616,
+  "usage": {
+    "input_tokens": 4502,
+    "input_tokens_details": {
+      "cache_write_tokens": 1002,
+      "cached_tokens": 3484
+    },
+    "output_tokens": 90,
+    "output_tokens_details": {
+      "reasoning_tokens": 46
+    },
+    "total_tokens": 4592
+  },
+  "reason_worker_ms": 5676.653118993272,
+  "phase_timings": {
+    "scope": "shared worker including evidence, MOSS, reasoning and projection",
+    "worker_wall_ms": 5671.422611994785
+  },
+  "accepted_decisions": 0,
+  "rejected_decisions": 0,
+  "job_directory": "smoke/maintenance_terra01/C3/consolidation/snapshot_6",
+  "write_back_ms": 0.6563779897987843,
+  "after_mappings": {
+    "character_0": [
+      "voice_0",
+      "voice_1",
+      "voice_3"
+    ],
+    "character_2": [
+      "voice_2"
+    ]
+  },
+  "affected_nodes": [],
+  "consolidation_end": 1789756865.262044,
+  "total_consolidation_wall_ms": 5677.8093530010665,
+  "construction_blocked_ms": 5677.901577000739,
+  "llm_call_count": 1,
+  "status": "accepted",
+  "media_timestamp": 3600
+}

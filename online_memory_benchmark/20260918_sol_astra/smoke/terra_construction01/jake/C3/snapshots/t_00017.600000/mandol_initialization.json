@@ -1,0 +1,11 @@
+{
+  "index_reload_and_warmup_ms": 28.721256996504962,
+  "reranker": {
+    "method": "qwen-302",
+    "model": "Qwen/Qwen3-Reranker-0.6B",
+    "endpoint": "https://api.302.ai/v1/rerank",
+    "api_key_env": "API_302_KEY",
+    "timeout_s": 60
+  },
+  "excluded_from_warm_retrieval": true
+}

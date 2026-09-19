@@ -8,7 +8,7 @@ import shutil
 import subprocess
 import sys
 import urllib.request
-from bench_common import ROOT, REVISION, atomic, read, rows, sha, digest
+from bench_common import ROOT, PRODUCTION_ROOTS, REVISION, atomic, read, rows, sha, digest
 
 
 def validate_tst(dataset):
@@ -83,14 +83,25 @@ def main():
             with urllib.request.urlopen(req,timeout=30) as r:assert json.load(r)['id']==model
         return ['gpt-5.6-terra','gpt-5.6-sol']
     check('official_model_access',models)
-    def shared_consolidation():
+    def shared_sources():
+        source=ROOT/'source'
+        assert not source.exists() or not any(source.iterdir()), 'source/ must not vendor or link production packages'
+        for name,target in PRODUCTION_ROOTS.items():
+            assert target.is_dir(), f'missing production package: {name}'
         import consolidation.port
         actual=Path(consolidation.port.__file__).resolve()
-        expected=ROOT.parents[1]/'consolidation/port.py'
-        assert actual==expected.resolve(), 'benchmark must import shared consolidation'
-        assert (ROOT/'source/consolidation').is_symlink()
-        return str(actual)
-    check('shared_consolidation',shared_consolidation)
+        assert actual==(PRODUCTION_ROOTS['consolidation']/'port.py').resolve()
+        return {name:str(target.resolve()) for name,target in PRODUCTION_ROOTS.items()}
+    check('shared_sources',shared_sources)
+    def memory_backend():
+        import mmagent.memory_backend as backend
+        import mmagent.memory_processing_terra as implementation
+        assert backend.generate_memories is implementation.generate_memories
+        assert Path(implementation.__file__).resolve()==(PRODUCTION_ROOTS['StreamMeCo']/'mmagent/memory_processing_terra.py').resolve()
+        assert 'mmagent.utils.chat_qwen' not in sys.modules, 'Qwen generation must not load'
+        assert read(ROOT/'configs/run_request.json')['memory_backend']['model']=='gpt-5.6-terra'
+        return dict(model='gpt-5.6-terra',implementation=str(Path(implementation.__file__).resolve()))
+    check('memory_backend',memory_backend)
     def moss_config():
         cfg=read(ROOT/'configs/moss.json')
         assert cfg['backend']=='local' and (Path(cfg['checkpoint'])/'config.json').is_file()

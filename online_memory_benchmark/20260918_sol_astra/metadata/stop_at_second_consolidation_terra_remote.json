@@ -1,0 +1,20 @@
+{
+  "target_media_seconds": 2400,
+  "interpretation": "second scheduled 20-minute cycle",
+  "worker_pid": 692201,
+  "results": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/results_terra",
+  "observed_unix": 1789765892.1906295,
+  "status": "paused",
+  "signal": "SIGSTOP",
+  "stopped_pids": [
+    692201
+  ],
+  "trigger_snapshot": "/opt/streammeco/run/online_memory_benchmark/20260918_sol_astra/results_terra/jake/C3/consolidation/snapshot_94/snapshot.json",
+  "response": {
+    "request_digest": "10e734801abe76152f7529ab71e83359af62b1802ab099f245fabe8cc698cd91",
+    "response_id": "resp_028768a8e61516c6006aada9039a7c87d29c0dcd9ae10b1768",
+    "status": "queued"
+  },
+  "actual_cutoff": 2400.0,
+  "note": "Remote background API request may finish; local benchmark processing is suspended."
+}
